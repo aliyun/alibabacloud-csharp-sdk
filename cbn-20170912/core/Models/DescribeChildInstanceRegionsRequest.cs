@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The network instance type. Valid values:
+        /// 
+        /// *   **VPC**: virtual private cloud (VPC)
+        /// *   **VBR**: virtual border router (VBR)
+        /// *   **CCN**: Cloud Connect Network (CCN) instance
+        /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }

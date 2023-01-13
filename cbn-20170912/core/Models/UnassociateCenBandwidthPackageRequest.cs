@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class UnassociateCenBandwidthPackageRequest : TeaModel {
+        /// <summary>
+        /// The ID of the bandwidth plan.
+        /// </summary>
         [NameInMap("CenBandwidthPackageId")]
         [Validation(Required=false)]
         public string CenBandwidthPackageId { get; set; }
 
+        /// <summary>
+        /// The ID of the Cloud Enterprise Network (CEN) instance.
+        /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }

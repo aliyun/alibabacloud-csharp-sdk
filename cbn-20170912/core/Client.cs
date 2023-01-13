@@ -37,6 +37,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          * ## Usage notes
+          * *   After you create a flow log, it is enabled by default. You can call this operation to enable a disabled flow log.
+          * *   `ActiveFlowLog` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          *     *   If a flow log is in the **Modifying** state, the flow log is being enabled. In this case, you can query the flow log but cannot perform other operations.
+          *     *   If a flow log is in the **Active** state, the flow log is enabled.
+          *
+          * @param request ActiveFlowLogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ActiveFlowLogResponse
+         */
         public ActiveFlowLogResponse ActiveFlowLogWithOptions(ActiveFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -92,6 +103,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ActiveFlowLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   After you create a flow log, it is enabled by default. You can call this operation to enable a disabled flow log.
+          * *   `ActiveFlowLog` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          *     *   If a flow log is in the **Modifying** state, the flow log is being enabled. In this case, you can query the flow log but cannot perform other operations.
+          *     *   If a flow log is in the **Active** state, the flow log is enabled.
+          *
+          * @param request ActiveFlowLogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ActiveFlowLogResponse
+         */
         public async Task<ActiveFlowLogResponse> ActiveFlowLogWithOptionsAsync(ActiveFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -147,18 +169,47 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ActiveFlowLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   After you create a flow log, it is enabled by default. You can call this operation to enable a disabled flow log.
+          * *   `ActiveFlowLog` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          *     *   If a flow log is in the **Modifying** state, the flow log is being enabled. In this case, you can query the flow log but cannot perform other operations.
+          *     *   If a flow log is in the **Active** state, the flow log is enabled.
+          *
+          * @param request ActiveFlowLogRequest
+          * @return ActiveFlowLogResponse
+         */
         public ActiveFlowLogResponse ActiveFlowLog(ActiveFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ActiveFlowLogWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   After you create a flow log, it is enabled by default. You can call this operation to enable a disabled flow log.
+          * *   `ActiveFlowLog` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          *     *   If a flow log is in the **Modifying** state, the flow log is being enabled. In this case, you can query the flow log but cannot perform other operations.
+          *     *   If a flow log is in the **Active** state, the flow log is enabled.
+          *
+          * @param request ActiveFlowLogRequest
+          * @return ActiveFlowLogResponse
+         */
         public async Task<ActiveFlowLogResponse> ActiveFlowLogAsync(ActiveFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ActiveFlowLogWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * **AddTrafficMatchRuleToTrafficMarkingPolicy** is an asynchronous operation. After you send a request, a **request ID** is returned but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic classification rule.
+          * *   If a traffic classification rule is in the **Creating** state, the traffic classification rule is being created. In this case, you can query the traffic classification rule but cannot perform other operations.
+          * *   If a traffic classification rule is in the **Active** state, the traffic classification rule is added to the traffic marking policy.
+          *
+          * @param request AddTrafficMatchRuleToTrafficMarkingPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddTrafficMatchRuleToTrafficMarkingPolicyResponse
+         */
         public AddTrafficMatchRuleToTrafficMarkingPolicyResponse AddTrafficMatchRuleToTrafficMarkingPolicyWithOptions(AddTrafficMatchRuleToTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -214,6 +265,15 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<AddTrafficMatchRuleToTrafficMarkingPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * **AddTrafficMatchRuleToTrafficMarkingPolicy** is an asynchronous operation. After you send a request, a **request ID** is returned but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic classification rule.
+          * *   If a traffic classification rule is in the **Creating** state, the traffic classification rule is being created. In this case, you can query the traffic classification rule but cannot perform other operations.
+          * *   If a traffic classification rule is in the **Active** state, the traffic classification rule is added to the traffic marking policy.
+          *
+          * @param request AddTrafficMatchRuleToTrafficMarkingPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddTrafficMatchRuleToTrafficMarkingPolicyResponse
+         */
         public async Task<AddTrafficMatchRuleToTrafficMarkingPolicyResponse> AddTrafficMatchRuleToTrafficMarkingPolicyWithOptionsAsync(AddTrafficMatchRuleToTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -269,18 +329,44 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<AddTrafficMatchRuleToTrafficMarkingPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * **AddTrafficMatchRuleToTrafficMarkingPolicy** is an asynchronous operation. After you send a request, a **request ID** is returned but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic classification rule.
+          * *   If a traffic classification rule is in the **Creating** state, the traffic classification rule is being created. In this case, you can query the traffic classification rule but cannot perform other operations.
+          * *   If a traffic classification rule is in the **Active** state, the traffic classification rule is added to the traffic marking policy.
+          *
+          * @param request AddTrafficMatchRuleToTrafficMarkingPolicyRequest
+          * @return AddTrafficMatchRuleToTrafficMarkingPolicyResponse
+         */
         public AddTrafficMatchRuleToTrafficMarkingPolicyResponse AddTrafficMatchRuleToTrafficMarkingPolicy(AddTrafficMatchRuleToTrafficMarkingPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddTrafficMatchRuleToTrafficMarkingPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * **AddTrafficMatchRuleToTrafficMarkingPolicy** is an asynchronous operation. After you send a request, a **request ID** is returned but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic classification rule.
+          * *   If a traffic classification rule is in the **Creating** state, the traffic classification rule is being created. In this case, you can query the traffic classification rule but cannot perform other operations.
+          * *   If a traffic classification rule is in the **Active** state, the traffic classification rule is added to the traffic marking policy.
+          *
+          * @param request AddTrafficMatchRuleToTrafficMarkingPolicyRequest
+          * @return AddTrafficMatchRuleToTrafficMarkingPolicyResponse
+         */
         public async Task<AddTrafficMatchRuleToTrafficMarkingPolicyResponse> AddTrafficMatchRuleToTrafficMarkingPolicyAsync(AddTrafficMatchRuleToTrafficMarkingPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddTrafficMatchRuleToTrafficMarkingPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : AddTraficMatchRuleToTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::AddTrafficMatchRuleToTrafficMarkingPolicy instead.
+          * ## Usage notes
+          * The **AddTraficMatchRuleToTrafficMarkingPolicy** operation is deprecated and will be discontinued soon. If you need to add a traffic classification rule to a traffic marking policy, call the [AddTrafficMatchRuleToTrafficMarkingPolicy](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/addtrafficmatchruletotrafficmarkingpolicy) operation.
+          *
+          * @param request AddTraficMatchRuleToTrafficMarkingPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddTraficMatchRuleToTrafficMarkingPolicyResponse
+         */
+        // Deprecated
         public AddTraficMatchRuleToTrafficMarkingPolicyResponse AddTraficMatchRuleToTrafficMarkingPolicyWithOptions(AddTraficMatchRuleToTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -336,6 +422,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<AddTraficMatchRuleToTrafficMarkingPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : AddTraficMatchRuleToTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::AddTrafficMatchRuleToTrafficMarkingPolicy instead.
+          * ## Usage notes
+          * The **AddTraficMatchRuleToTrafficMarkingPolicy** operation is deprecated and will be discontinued soon. If you need to add a traffic classification rule to a traffic marking policy, call the [AddTrafficMatchRuleToTrafficMarkingPolicy](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/addtrafficmatchruletotrafficmarkingpolicy) operation.
+          *
+          * @param request AddTraficMatchRuleToTrafficMarkingPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddTraficMatchRuleToTrafficMarkingPolicyResponse
+         */
+        // Deprecated
         public async Task<AddTraficMatchRuleToTrafficMarkingPolicyResponse> AddTraficMatchRuleToTrafficMarkingPolicyWithOptionsAsync(AddTraficMatchRuleToTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -391,18 +487,45 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<AddTraficMatchRuleToTrafficMarkingPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : AddTraficMatchRuleToTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::AddTrafficMatchRuleToTrafficMarkingPolicy instead.
+          * ## Usage notes
+          * The **AddTraficMatchRuleToTrafficMarkingPolicy** operation is deprecated and will be discontinued soon. If you need to add a traffic classification rule to a traffic marking policy, call the [AddTrafficMatchRuleToTrafficMarkingPolicy](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/addtrafficmatchruletotrafficmarkingpolicy) operation.
+          *
+          * @param request AddTraficMatchRuleToTrafficMarkingPolicyRequest
+          * @return AddTraficMatchRuleToTrafficMarkingPolicyResponse
+         */
+        // Deprecated
         public AddTraficMatchRuleToTrafficMarkingPolicyResponse AddTraficMatchRuleToTrafficMarkingPolicy(AddTraficMatchRuleToTrafficMarkingPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddTraficMatchRuleToTrafficMarkingPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : AddTraficMatchRuleToTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::AddTrafficMatchRuleToTrafficMarkingPolicy instead.
+          * ## Usage notes
+          * The **AddTraficMatchRuleToTrafficMarkingPolicy** operation is deprecated and will be discontinued soon. If you need to add a traffic classification rule to a traffic marking policy, call the [AddTrafficMatchRuleToTrafficMarkingPolicy](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/addtrafficmatchruletotrafficmarkingpolicy) operation.
+          *
+          * @param request AddTraficMatchRuleToTrafficMarkingPolicyRequest
+          * @return AddTraficMatchRuleToTrafficMarkingPolicyResponse
+         */
+        // Deprecated
         public async Task<AddTraficMatchRuleToTrafficMarkingPolicyResponse> AddTraficMatchRuleToTrafficMarkingPolicyAsync(AddTraficMatchRuleToTrafficMarkingPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddTraficMatchRuleToTrafficMarkingPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Limits
+          * You can associate multiple bandwidth plans with a CEN instance, but the combination of areas connected by each bandwidth plan must be unique.
+          * For example, if the CEN instance is associated with a bandwidth plan that connects the Chinese mainland to the Chinese mainland, you cannot associate the CEN instance with another bandwidth plan that connects the Chinese mainland to the Chinese mainland. However, you can associate the CEN instance with a bandwidth plan that connects the Chinese mainland to North America.
+          *
+          * @param request AssociateCenBandwidthPackageRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AssociateCenBandwidthPackageResponse
+         */
         public AssociateCenBandwidthPackageResponse AssociateCenBandwidthPackageWithOptions(AssociateCenBandwidthPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -450,6 +573,15 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<AssociateCenBandwidthPackageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Limits
+          * You can associate multiple bandwidth plans with a CEN instance, but the combination of areas connected by each bandwidth plan must be unique.
+          * For example, if the CEN instance is associated with a bandwidth plan that connects the Chinese mainland to the Chinese mainland, you cannot associate the CEN instance with another bandwidth plan that connects the Chinese mainland to the Chinese mainland. However, you can associate the CEN instance with a bandwidth plan that connects the Chinese mainland to North America.
+          *
+          * @param request AssociateCenBandwidthPackageRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AssociateCenBandwidthPackageResponse
+         */
         public async Task<AssociateCenBandwidthPackageResponse> AssociateCenBandwidthPackageWithOptionsAsync(AssociateCenBandwidthPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -497,18 +629,46 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<AssociateCenBandwidthPackageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Limits
+          * You can associate multiple bandwidth plans with a CEN instance, but the combination of areas connected by each bandwidth plan must be unique.
+          * For example, if the CEN instance is associated with a bandwidth plan that connects the Chinese mainland to the Chinese mainland, you cannot associate the CEN instance with another bandwidth plan that connects the Chinese mainland to the Chinese mainland. However, you can associate the CEN instance with a bandwidth plan that connects the Chinese mainland to North America.
+          *
+          * @param request AssociateCenBandwidthPackageRequest
+          * @return AssociateCenBandwidthPackageResponse
+         */
         public AssociateCenBandwidthPackageResponse AssociateCenBandwidthPackage(AssociateCenBandwidthPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssociateCenBandwidthPackageWithOptions(request, runtime);
         }
 
+        /**
+          * ## Limits
+          * You can associate multiple bandwidth plans with a CEN instance, but the combination of areas connected by each bandwidth plan must be unique.
+          * For example, if the CEN instance is associated with a bandwidth plan that connects the Chinese mainland to the Chinese mainland, you cannot associate the CEN instance with another bandwidth plan that connects the Chinese mainland to the Chinese mainland. However, you can associate the CEN instance with a bandwidth plan that connects the Chinese mainland to North America.
+          *
+          * @param request AssociateCenBandwidthPackageRequest
+          * @return AssociateCenBandwidthPackageResponse
+         */
         public async Task<AssociateCenBandwidthPackageResponse> AssociateCenBandwidthPackageAsync(AssociateCenBandwidthPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssociateCenBandwidthPackageWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * After you create a network instance connection on a transit router, you can configure an associated forwarding correlation to associate the network instance connection with a route table. Then, the network instance connection can forward network traffic based on the associated route table. Before you begin, we recommend that you read and understand the following rules:
+          * *   Only Enterprise Edition transit routers support associated forwarding correlations. For more information about the regions and zones that support Enterprise Edition transit routers, see [Transit routers](~~181681~~).
+          * *   **AssociateTransitRouterAttachmentWithRouteTable** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTableAssociations** to query the status of an associated forwarding correlation.
+          *     *   If an associated forwarding correlation is in the **Associating** state, the associated forwarding correlation is being created. You can query the associated forwarding correlation but cannot perform other operations.
+          *     *   If an associated forwarding correlation is in the **Active** state, the associated forwarding correlation is created.
+          *
+          * @param request AssociateTransitRouterAttachmentWithRouteTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AssociateTransitRouterAttachmentWithRouteTableResponse
+         */
         public AssociateTransitRouterAttachmentWithRouteTableResponse AssociateTransitRouterAttachmentWithRouteTableWithOptions(AssociateTransitRouterAttachmentWithRouteTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -564,6 +724,18 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<AssociateTransitRouterAttachmentWithRouteTableResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * After you create a network instance connection on a transit router, you can configure an associated forwarding correlation to associate the network instance connection with a route table. Then, the network instance connection can forward network traffic based on the associated route table. Before you begin, we recommend that you read and understand the following rules:
+          * *   Only Enterprise Edition transit routers support associated forwarding correlations. For more information about the regions and zones that support Enterprise Edition transit routers, see [Transit routers](~~181681~~).
+          * *   **AssociateTransitRouterAttachmentWithRouteTable** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTableAssociations** to query the status of an associated forwarding correlation.
+          *     *   If an associated forwarding correlation is in the **Associating** state, the associated forwarding correlation is being created. You can query the associated forwarding correlation but cannot perform other operations.
+          *     *   If an associated forwarding correlation is in the **Active** state, the associated forwarding correlation is created.
+          *
+          * @param request AssociateTransitRouterAttachmentWithRouteTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AssociateTransitRouterAttachmentWithRouteTableResponse
+         */
         public async Task<AssociateTransitRouterAttachmentWithRouteTableResponse> AssociateTransitRouterAttachmentWithRouteTableWithOptionsAsync(AssociateTransitRouterAttachmentWithRouteTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -619,18 +791,51 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<AssociateTransitRouterAttachmentWithRouteTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * After you create a network instance connection on a transit router, you can configure an associated forwarding correlation to associate the network instance connection with a route table. Then, the network instance connection can forward network traffic based on the associated route table. Before you begin, we recommend that you read and understand the following rules:
+          * *   Only Enterprise Edition transit routers support associated forwarding correlations. For more information about the regions and zones that support Enterprise Edition transit routers, see [Transit routers](~~181681~~).
+          * *   **AssociateTransitRouterAttachmentWithRouteTable** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTableAssociations** to query the status of an associated forwarding correlation.
+          *     *   If an associated forwarding correlation is in the **Associating** state, the associated forwarding correlation is being created. You can query the associated forwarding correlation but cannot perform other operations.
+          *     *   If an associated forwarding correlation is in the **Active** state, the associated forwarding correlation is created.
+          *
+          * @param request AssociateTransitRouterAttachmentWithRouteTableRequest
+          * @return AssociateTransitRouterAttachmentWithRouteTableResponse
+         */
         public AssociateTransitRouterAttachmentWithRouteTableResponse AssociateTransitRouterAttachmentWithRouteTable(AssociateTransitRouterAttachmentWithRouteTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssociateTransitRouterAttachmentWithRouteTableWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * After you create a network instance connection on a transit router, you can configure an associated forwarding correlation to associate the network instance connection with a route table. Then, the network instance connection can forward network traffic based on the associated route table. Before you begin, we recommend that you read and understand the following rules:
+          * *   Only Enterprise Edition transit routers support associated forwarding correlations. For more information about the regions and zones that support Enterprise Edition transit routers, see [Transit routers](~~181681~~).
+          * *   **AssociateTransitRouterAttachmentWithRouteTable** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTableAssociations** to query the status of an associated forwarding correlation.
+          *     *   If an associated forwarding correlation is in the **Associating** state, the associated forwarding correlation is being created. You can query the associated forwarding correlation but cannot perform other operations.
+          *     *   If an associated forwarding correlation is in the **Active** state, the associated forwarding correlation is created.
+          *
+          * @param request AssociateTransitRouterAttachmentWithRouteTableRequest
+          * @return AssociateTransitRouterAttachmentWithRouteTableResponse
+         */
         public async Task<AssociateTransitRouterAttachmentWithRouteTableResponse> AssociateTransitRouterAttachmentWithRouteTableAsync(AssociateTransitRouterAttachmentWithRouteTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssociateTransitRouterAttachmentWithRouteTableWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   A vSwitch can be associated with only one multicast domain. Make sure that the vSwitch is not associated with other multicast domains. For more information about how to disassociate a vSwitch from a multicast domain, see [DisassociateTransitRouterMulticastDomain](~~429774~~).
+          * *   **AssociateTransitRouterMulticastDomain** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouterMulticastDomainAssociations** to query the association status between a vSwitch and a multicast domain.
+          *     *   **Associating**: The vSwitch is being associated with the multicast domain. In this case, you can query the vSwitch but cannot perform other operations.
+          *     *   **Associated**: The vSwitch is associated with the multicast domain.
+          *
+          * @param request AssociateTransitRouterMulticastDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AssociateTransitRouterMulticastDomainResponse
+         */
         public AssociateTransitRouterMulticastDomainResponse AssociateTransitRouterMulticastDomainWithOptions(AssociateTransitRouterMulticastDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -690,6 +895,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<AssociateTransitRouterMulticastDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   A vSwitch can be associated with only one multicast domain. Make sure that the vSwitch is not associated with other multicast domains. For more information about how to disassociate a vSwitch from a multicast domain, see [DisassociateTransitRouterMulticastDomain](~~429774~~).
+          * *   **AssociateTransitRouterMulticastDomain** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouterMulticastDomainAssociations** to query the association status between a vSwitch and a multicast domain.
+          *     *   **Associating**: The vSwitch is being associated with the multicast domain. In this case, you can query the vSwitch but cannot perform other operations.
+          *     *   **Associated**: The vSwitch is associated with the multicast domain.
+          *
+          * @param request AssociateTransitRouterMulticastDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AssociateTransitRouterMulticastDomainResponse
+         */
         public async Task<AssociateTransitRouterMulticastDomainResponse> AssociateTransitRouterMulticastDomainWithOptionsAsync(AssociateTransitRouterMulticastDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -749,18 +965,49 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<AssociateTransitRouterMulticastDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   A vSwitch can be associated with only one multicast domain. Make sure that the vSwitch is not associated with other multicast domains. For more information about how to disassociate a vSwitch from a multicast domain, see [DisassociateTransitRouterMulticastDomain](~~429774~~).
+          * *   **AssociateTransitRouterMulticastDomain** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouterMulticastDomainAssociations** to query the association status between a vSwitch and a multicast domain.
+          *     *   **Associating**: The vSwitch is being associated with the multicast domain. In this case, you can query the vSwitch but cannot perform other operations.
+          *     *   **Associated**: The vSwitch is associated with the multicast domain.
+          *
+          * @param request AssociateTransitRouterMulticastDomainRequest
+          * @return AssociateTransitRouterMulticastDomainResponse
+         */
         public AssociateTransitRouterMulticastDomainResponse AssociateTransitRouterMulticastDomain(AssociateTransitRouterMulticastDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssociateTransitRouterMulticastDomainWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   A vSwitch can be associated with only one multicast domain. Make sure that the vSwitch is not associated with other multicast domains. For more information about how to disassociate a vSwitch from a multicast domain, see [DisassociateTransitRouterMulticastDomain](~~429774~~).
+          * *   **AssociateTransitRouterMulticastDomain** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouterMulticastDomainAssociations** to query the association status between a vSwitch and a multicast domain.
+          *     *   **Associating**: The vSwitch is being associated with the multicast domain. In this case, you can query the vSwitch but cannot perform other operations.
+          *     *   **Associated**: The vSwitch is associated with the multicast domain.
+          *
+          * @param request AssociateTransitRouterMulticastDomainRequest
+          * @return AssociateTransitRouterMulticastDomainResponse
+         */
         public async Task<AssociateTransitRouterMulticastDomainResponse> AssociateTransitRouterMulticastDomainAsync(AssociateTransitRouterMulticastDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssociateTransitRouterMulticastDomainWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Description
+          * CEN allows you to attach a network instance that belongs to another Alibaba Cloud account. Before you attach the network instance, CEN must acquire permissions to access the network instance that belongs to another Alibaba Cloud account.
+          * *   For more information about how to grant CEN permissions on accessing virtual private clouds (VPCs) that belong to another Alibaba Cloud account, see [GrantInstanceToCen](~~126224~~).
+          * *   For more information about how to grant CEN permissions on accessing Cloud Connect Network (CCN) instances that belong to another Alibaba Cloud account, see [GrantInstanceToCbn](~~126141~~).
+          * *   By default, you cannot grant CEN permissions on accessing virtual border routers (VBRs) that belong to another Alibaba Cloud account. To grant the permissions, you must [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request AttachCenChildInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AttachCenChildInstanceResponse
+         */
         public AttachCenChildInstanceResponse AttachCenChildInstanceWithOptions(AttachCenChildInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -820,6 +1067,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<AttachCenChildInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * CEN allows you to attach a network instance that belongs to another Alibaba Cloud account. Before you attach the network instance, CEN must acquire permissions to access the network instance that belongs to another Alibaba Cloud account.
+          * *   For more information about how to grant CEN permissions on accessing virtual private clouds (VPCs) that belong to another Alibaba Cloud account, see [GrantInstanceToCen](~~126224~~).
+          * *   For more information about how to grant CEN permissions on accessing Cloud Connect Network (CCN) instances that belong to another Alibaba Cloud account, see [GrantInstanceToCbn](~~126141~~).
+          * *   By default, you cannot grant CEN permissions on accessing virtual border routers (VBRs) that belong to another Alibaba Cloud account. To grant the permissions, you must [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request AttachCenChildInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AttachCenChildInstanceResponse
+         */
         public async Task<AttachCenChildInstanceResponse> AttachCenChildInstanceWithOptionsAsync(AttachCenChildInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -879,12 +1137,32 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<AttachCenChildInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * CEN allows you to attach a network instance that belongs to another Alibaba Cloud account. Before you attach the network instance, CEN must acquire permissions to access the network instance that belongs to another Alibaba Cloud account.
+          * *   For more information about how to grant CEN permissions on accessing virtual private clouds (VPCs) that belong to another Alibaba Cloud account, see [GrantInstanceToCen](~~126224~~).
+          * *   For more information about how to grant CEN permissions on accessing Cloud Connect Network (CCN) instances that belong to another Alibaba Cloud account, see [GrantInstanceToCbn](~~126141~~).
+          * *   By default, you cannot grant CEN permissions on accessing virtual border routers (VBRs) that belong to another Alibaba Cloud account. To grant the permissions, you must [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request AttachCenChildInstanceRequest
+          * @return AttachCenChildInstanceResponse
+         */
         public AttachCenChildInstanceResponse AttachCenChildInstance(AttachCenChildInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AttachCenChildInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * ## Description
+          * CEN allows you to attach a network instance that belongs to another Alibaba Cloud account. Before you attach the network instance, CEN must acquire permissions to access the network instance that belongs to another Alibaba Cloud account.
+          * *   For more information about how to grant CEN permissions on accessing virtual private clouds (VPCs) that belong to another Alibaba Cloud account, see [GrantInstanceToCen](~~126224~~).
+          * *   For more information about how to grant CEN permissions on accessing Cloud Connect Network (CCN) instances that belong to another Alibaba Cloud account, see [GrantInstanceToCbn](~~126141~~).
+          * *   By default, you cannot grant CEN permissions on accessing virtual border routers (VBRs) that belong to another Alibaba Cloud account. To grant the permissions, you must [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          *
+          * @param request AttachCenChildInstanceRequest
+          * @return AttachCenChildInstanceResponse
+         */
         public async Task<AttachCenChildInstanceResponse> AttachCenChildInstanceAsync(AttachCenChildInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -989,6 +1267,15 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await CheckTransitRouterServiceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * **CreateCen** is an asynchronous operation. After you send a request, the system returns the CEN instance ID but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.
+          * * If a CEN instance is in the **Creating** state, the CEN instance is being created. You can query the CEN instance but cannot perform other operations.
+          * * If a CEN instance is in the **Active** state, the CEN instance is created.
+          *
+          * @param request CreateCenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCenResponse
+         */
         public CreateCenResponse CreateCenWithOptions(CreateCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1048,6 +1335,15 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateCenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * **CreateCen** is an asynchronous operation. After you send a request, the system returns the CEN instance ID but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.
+          * * If a CEN instance is in the **Creating** state, the CEN instance is being created. You can query the CEN instance but cannot perform other operations.
+          * * If a CEN instance is in the **Active** state, the CEN instance is created.
+          *
+          * @param request CreateCenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCenResponse
+         */
         public async Task<CreateCenResponse> CreateCenWithOptionsAsync(CreateCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1107,18 +1403,44 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateCenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * **CreateCen** is an asynchronous operation. After you send a request, the system returns the CEN instance ID but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.
+          * * If a CEN instance is in the **Creating** state, the CEN instance is being created. You can query the CEN instance but cannot perform other operations.
+          * * If a CEN instance is in the **Active** state, the CEN instance is created.
+          *
+          * @param request CreateCenRequest
+          * @return CreateCenResponse
+         */
         public CreateCenResponse CreateCen(CreateCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCenWithOptions(request, runtime);
         }
 
+        /**
+          * **CreateCen** is an asynchronous operation. After you send a request, the system returns the CEN instance ID but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.
+          * * If a CEN instance is in the **Creating** state, the CEN instance is being created. You can query the CEN instance but cannot perform other operations.
+          * * If a CEN instance is in the **Active** state, the CEN instance is created.
+          *
+          * @param request CreateCenRequest
+          * @return CreateCenResponse
+         */
         public async Task<CreateCenResponse> CreateCenAsync(CreateCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCenWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   You must specify the areas to be connected when you create a bandwidth plan. An area contains one or more Alibaba Cloud regions. When you select areas for a bandwidth plan, make sure that the areas contain the regions that you want to connect. For more information about the supported areas and regions, see [Purchase a bandwidth plan](~~181560~~).
+          * *   For more information about the billing rules, see [Billing](~~189836~~).
+          * *   **CreateCenBandwidthPackage** is an asynchronous operation. After you send a request, the system returns the bandwidth plan ID but the operation is still being performed in the system background. You can call **DescribeCenBandwidthPackages** to query the status of a bandwidth plan. If a bandwidth plan is in the **Idle** or **InUse** state, the bandwidth plan is created.
+          *
+          * @param request CreateCenBandwidthPackageRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCenBandwidthPackageResponse
+         */
         public CreateCenBandwidthPackageResponse CreateCenBandwidthPackageWithOptions(CreateCenBandwidthPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1210,6 +1532,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateCenBandwidthPackageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   You must specify the areas to be connected when you create a bandwidth plan. An area contains one or more Alibaba Cloud regions. When you select areas for a bandwidth plan, make sure that the areas contain the regions that you want to connect. For more information about the supported areas and regions, see [Purchase a bandwidth plan](~~181560~~).
+          * *   For more information about the billing rules, see [Billing](~~189836~~).
+          * *   **CreateCenBandwidthPackage** is an asynchronous operation. After you send a request, the system returns the bandwidth plan ID but the operation is still being performed in the system background. You can call **DescribeCenBandwidthPackages** to query the status of a bandwidth plan. If a bandwidth plan is in the **Idle** or **InUse** state, the bandwidth plan is created.
+          *
+          * @param request CreateCenBandwidthPackageRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCenBandwidthPackageResponse
+         */
         public async Task<CreateCenBandwidthPackageResponse> CreateCenBandwidthPackageWithOptionsAsync(CreateCenBandwidthPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1301,18 +1633,48 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateCenBandwidthPackageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   You must specify the areas to be connected when you create a bandwidth plan. An area contains one or more Alibaba Cloud regions. When you select areas for a bandwidth plan, make sure that the areas contain the regions that you want to connect. For more information about the supported areas and regions, see [Purchase a bandwidth plan](~~181560~~).
+          * *   For more information about the billing rules, see [Billing](~~189836~~).
+          * *   **CreateCenBandwidthPackage** is an asynchronous operation. After you send a request, the system returns the bandwidth plan ID but the operation is still being performed in the system background. You can call **DescribeCenBandwidthPackages** to query the status of a bandwidth plan. If a bandwidth plan is in the **Idle** or **InUse** state, the bandwidth plan is created.
+          *
+          * @param request CreateCenBandwidthPackageRequest
+          * @return CreateCenBandwidthPackageResponse
+         */
         public CreateCenBandwidthPackageResponse CreateCenBandwidthPackage(CreateCenBandwidthPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCenBandwidthPackageWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   You must specify the areas to be connected when you create a bandwidth plan. An area contains one or more Alibaba Cloud regions. When you select areas for a bandwidth plan, make sure that the areas contain the regions that you want to connect. For more information about the supported areas and regions, see [Purchase a bandwidth plan](~~181560~~).
+          * *   For more information about the billing rules, see [Billing](~~189836~~).
+          * *   **CreateCenBandwidthPackage** is an asynchronous operation. After you send a request, the system returns the bandwidth plan ID but the operation is still being performed in the system background. You can call **DescribeCenBandwidthPackages** to query the status of a bandwidth plan. If a bandwidth plan is in the **Idle** or **InUse** state, the bandwidth plan is created.
+          *
+          * @param request CreateCenBandwidthPackageRequest
+          * @return CreateCenBandwidthPackageResponse
+         */
         public async Task<CreateCenBandwidthPackageResponse> CreateCenBandwidthPackageAsync(CreateCenBandwidthPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCenBandwidthPackageWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   You can add routes only to virtual private clouds (VPCs) or virtual border routers (VBRs) that are connected to an Enterprise Edition transit router.
+          * *   By default, the next hop of the routes is the **transit router connection**, which is the connection between the VBR and the Enterprise Edition transit router. You cannot modify the next hop.
+          * *   **CreateCenChildInstanceRouteEntryToAttachment** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeRouteEntryList** to query the status of a route.
+          *     *   If a route is in the **Pending** state, the route is being created. You can query the route but cannot perform other operations.
+          *     *   If a route is in the **Available** state, the route is created.
+          *
+          * @param request CreateCenChildInstanceRouteEntryToAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCenChildInstanceRouteEntryToAttachmentResponse
+         */
         public CreateCenChildInstanceRouteEntryToAttachmentResponse CreateCenChildInstanceRouteEntryToAttachmentWithOptions(CreateCenChildInstanceRouteEntryToAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1376,6 +1738,18 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateCenChildInstanceRouteEntryToAttachmentResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   You can add routes only to virtual private clouds (VPCs) or virtual border routers (VBRs) that are connected to an Enterprise Edition transit router.
+          * *   By default, the next hop of the routes is the **transit router connection**, which is the connection between the VBR and the Enterprise Edition transit router. You cannot modify the next hop.
+          * *   **CreateCenChildInstanceRouteEntryToAttachment** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeRouteEntryList** to query the status of a route.
+          *     *   If a route is in the **Pending** state, the route is being created. You can query the route but cannot perform other operations.
+          *     *   If a route is in the **Available** state, the route is created.
+          *
+          * @param request CreateCenChildInstanceRouteEntryToAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCenChildInstanceRouteEntryToAttachmentResponse
+         */
         public async Task<CreateCenChildInstanceRouteEntryToAttachmentResponse> CreateCenChildInstanceRouteEntryToAttachmentWithOptionsAsync(CreateCenChildInstanceRouteEntryToAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1439,18 +1813,50 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateCenChildInstanceRouteEntryToAttachmentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   You can add routes only to virtual private clouds (VPCs) or virtual border routers (VBRs) that are connected to an Enterprise Edition transit router.
+          * *   By default, the next hop of the routes is the **transit router connection**, which is the connection between the VBR and the Enterprise Edition transit router. You cannot modify the next hop.
+          * *   **CreateCenChildInstanceRouteEntryToAttachment** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeRouteEntryList** to query the status of a route.
+          *     *   If a route is in the **Pending** state, the route is being created. You can query the route but cannot perform other operations.
+          *     *   If a route is in the **Available** state, the route is created.
+          *
+          * @param request CreateCenChildInstanceRouteEntryToAttachmentRequest
+          * @return CreateCenChildInstanceRouteEntryToAttachmentResponse
+         */
         public CreateCenChildInstanceRouteEntryToAttachmentResponse CreateCenChildInstanceRouteEntryToAttachment(CreateCenChildInstanceRouteEntryToAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCenChildInstanceRouteEntryToAttachmentWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   You can add routes only to virtual private clouds (VPCs) or virtual border routers (VBRs) that are connected to an Enterprise Edition transit router.
+          * *   By default, the next hop of the routes is the **transit router connection**, which is the connection between the VBR and the Enterprise Edition transit router. You cannot modify the next hop.
+          * *   **CreateCenChildInstanceRouteEntryToAttachment** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeRouteEntryList** to query the status of a route.
+          *     *   If a route is in the **Pending** state, the route is being created. You can query the route but cannot perform other operations.
+          *     *   If a route is in the **Available** state, the route is created.
+          *
+          * @param request CreateCenChildInstanceRouteEntryToAttachmentRequest
+          * @return CreateCenChildInstanceRouteEntryToAttachmentResponse
+         */
         public async Task<CreateCenChildInstanceRouteEntryToAttachmentResponse> CreateCenChildInstanceRouteEntryToAttachmentAsync(CreateCenChildInstanceRouteEntryToAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCenChildInstanceRouteEntryToAttachmentWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Limits
+          * *   By default, the CreateCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   You cannot add a route entry to an Enterprise Edition transit router by calling the CreateCenChildInstanceRouteEntryToCen operation.
+          * *   By default, the next hop of the route entry is the regional gateway of the CEN instance. You cannot modify the next hop.
+          *
+          * @param request CreateCenChildInstanceRouteEntryToCenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCenChildInstanceRouteEntryToCenResponse
+         */
         public CreateCenChildInstanceRouteEntryToCenResponse CreateCenChildInstanceRouteEntryToCenWithOptions(CreateCenChildInstanceRouteEntryToCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1518,6 +1924,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateCenChildInstanceRouteEntryToCenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Limits
+          * *   By default, the CreateCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   You cannot add a route entry to an Enterprise Edition transit router by calling the CreateCenChildInstanceRouteEntryToCen operation.
+          * *   By default, the next hop of the route entry is the regional gateway of the CEN instance. You cannot modify the next hop.
+          *
+          * @param request CreateCenChildInstanceRouteEntryToCenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCenChildInstanceRouteEntryToCenResponse
+         */
         public async Task<CreateCenChildInstanceRouteEntryToCenResponse> CreateCenChildInstanceRouteEntryToCenWithOptionsAsync(CreateCenChildInstanceRouteEntryToCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1585,18 +2001,53 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateCenChildInstanceRouteEntryToCenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Limits
+          * *   By default, the CreateCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   You cannot add a route entry to an Enterprise Edition transit router by calling the CreateCenChildInstanceRouteEntryToCen operation.
+          * *   By default, the next hop of the route entry is the regional gateway of the CEN instance. You cannot modify the next hop.
+          *
+          * @param request CreateCenChildInstanceRouteEntryToCenRequest
+          * @return CreateCenChildInstanceRouteEntryToCenResponse
+         */
         public CreateCenChildInstanceRouteEntryToCenResponse CreateCenChildInstanceRouteEntryToCen(CreateCenChildInstanceRouteEntryToCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCenChildInstanceRouteEntryToCenWithOptions(request, runtime);
         }
 
+        /**
+          * ## Limits
+          * *   By default, the CreateCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   You cannot add a route entry to an Enterprise Edition transit router by calling the CreateCenChildInstanceRouteEntryToCen operation.
+          * *   By default, the next hop of the route entry is the regional gateway of the CEN instance. You cannot modify the next hop.
+          *
+          * @param request CreateCenChildInstanceRouteEntryToCenRequest
+          * @return CreateCenChildInstanceRouteEntryToCenResponse
+         */
         public async Task<CreateCenChildInstanceRouteEntryToCenResponse> CreateCenChildInstanceRouteEntryToCenAsync(CreateCenChildInstanceRouteEntryToCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCenChildInstanceRouteEntryToCenWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   Only inter-region connections created on Enterprise Edition transit routers support QoS policies.
+          *         If your inter-region connection uses test bandwidth, you cannot create QoS policies for the inter-region connection. 
+          * *   QoS policies apply only to outbound traffic on Enterprise Edition transit routers.
+          *         If you create an inter-region connection between the China (Hangzhou) region and the China (Qingdao) region, and create QoS policies for the transit router in the China (Hangzhou) region and the transit router in the China (Qingdao) region, the QoS policies apply only to the network traffic that flows from China (Hangzhou) to China (Qingdao). QoS policies allocate bandwidth resources to different services. 
+          * *   **CreateCenInterRegionTrafficQosPolicy** is an asynchronous operation. After you send a request, the system returns a QoS policy ID and runs the task in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of a QoS policy.
+          *     *   If a QoS policy is in the **Creating** state, the QoS policy is being created. You can query the QoS policy but cannot perform other operations.
+          *     *   If a QoS policy is in the **Active** state, the QoS policy is created.
+          * ### Prerequisites
+          * Make sure that the following requirements are met before you call the **CreateCenInterRegionTrafficQosPolicy** operation:
+          * *   An inter-region connection is created. For more information, see [CreateTransitRouterPeerAttachment](~~261363~~).
+          * *   A traffic marking policy is created. For more information, see [CreateTrafficMarkingPolicy](~~419025~~).
+          *
+          * @param request CreateCenInterRegionTrafficQosPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCenInterRegionTrafficQosPolicyResponse
+         */
         public CreateCenInterRegionTrafficQosPolicyResponse CreateCenInterRegionTrafficQosPolicyWithOptions(CreateCenInterRegionTrafficQosPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1664,6 +2115,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateCenInterRegionTrafficQosPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   Only inter-region connections created on Enterprise Edition transit routers support QoS policies.
+          *         If your inter-region connection uses test bandwidth, you cannot create QoS policies for the inter-region connection. 
+          * *   QoS policies apply only to outbound traffic on Enterprise Edition transit routers.
+          *         If you create an inter-region connection between the China (Hangzhou) region and the China (Qingdao) region, and create QoS policies for the transit router in the China (Hangzhou) region and the transit router in the China (Qingdao) region, the QoS policies apply only to the network traffic that flows from China (Hangzhou) to China (Qingdao). QoS policies allocate bandwidth resources to different services. 
+          * *   **CreateCenInterRegionTrafficQosPolicy** is an asynchronous operation. After you send a request, the system returns a QoS policy ID and runs the task in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of a QoS policy.
+          *     *   If a QoS policy is in the **Creating** state, the QoS policy is being created. You can query the QoS policy but cannot perform other operations.
+          *     *   If a QoS policy is in the **Active** state, the QoS policy is created.
+          * ### Prerequisites
+          * Make sure that the following requirements are met before you call the **CreateCenInterRegionTrafficQosPolicy** operation:
+          * *   An inter-region connection is created. For more information, see [CreateTransitRouterPeerAttachment](~~261363~~).
+          * *   A traffic marking policy is created. For more information, see [CreateTrafficMarkingPolicy](~~419025~~).
+          *
+          * @param request CreateCenInterRegionTrafficQosPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCenInterRegionTrafficQosPolicyResponse
+         */
         public async Task<CreateCenInterRegionTrafficQosPolicyResponse> CreateCenInterRegionTrafficQosPolicyWithOptionsAsync(CreateCenInterRegionTrafficQosPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1731,18 +2199,60 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateCenInterRegionTrafficQosPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   Only inter-region connections created on Enterprise Edition transit routers support QoS policies.
+          *         If your inter-region connection uses test bandwidth, you cannot create QoS policies for the inter-region connection. 
+          * *   QoS policies apply only to outbound traffic on Enterprise Edition transit routers.
+          *         If you create an inter-region connection between the China (Hangzhou) region and the China (Qingdao) region, and create QoS policies for the transit router in the China (Hangzhou) region and the transit router in the China (Qingdao) region, the QoS policies apply only to the network traffic that flows from China (Hangzhou) to China (Qingdao). QoS policies allocate bandwidth resources to different services. 
+          * *   **CreateCenInterRegionTrafficQosPolicy** is an asynchronous operation. After you send a request, the system returns a QoS policy ID and runs the task in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of a QoS policy.
+          *     *   If a QoS policy is in the **Creating** state, the QoS policy is being created. You can query the QoS policy but cannot perform other operations.
+          *     *   If a QoS policy is in the **Active** state, the QoS policy is created.
+          * ### Prerequisites
+          * Make sure that the following requirements are met before you call the **CreateCenInterRegionTrafficQosPolicy** operation:
+          * *   An inter-region connection is created. For more information, see [CreateTransitRouterPeerAttachment](~~261363~~).
+          * *   A traffic marking policy is created. For more information, see [CreateTrafficMarkingPolicy](~~419025~~).
+          *
+          * @param request CreateCenInterRegionTrafficQosPolicyRequest
+          * @return CreateCenInterRegionTrafficQosPolicyResponse
+         */
         public CreateCenInterRegionTrafficQosPolicyResponse CreateCenInterRegionTrafficQosPolicy(CreateCenInterRegionTrafficQosPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCenInterRegionTrafficQosPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * *   Only inter-region connections created on Enterprise Edition transit routers support QoS policies.
+          *         If your inter-region connection uses test bandwidth, you cannot create QoS policies for the inter-region connection. 
+          * *   QoS policies apply only to outbound traffic on Enterprise Edition transit routers.
+          *         If you create an inter-region connection between the China (Hangzhou) region and the China (Qingdao) region, and create QoS policies for the transit router in the China (Hangzhou) region and the transit router in the China (Qingdao) region, the QoS policies apply only to the network traffic that flows from China (Hangzhou) to China (Qingdao). QoS policies allocate bandwidth resources to different services. 
+          * *   **CreateCenInterRegionTrafficQosPolicy** is an asynchronous operation. After you send a request, the system returns a QoS policy ID and runs the task in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of a QoS policy.
+          *     *   If a QoS policy is in the **Creating** state, the QoS policy is being created. You can query the QoS policy but cannot perform other operations.
+          *     *   If a QoS policy is in the **Active** state, the QoS policy is created.
+          * ### Prerequisites
+          * Make sure that the following requirements are met before you call the **CreateCenInterRegionTrafficQosPolicy** operation:
+          * *   An inter-region connection is created. For more information, see [CreateTransitRouterPeerAttachment](~~261363~~).
+          * *   A traffic marking policy is created. For more information, see [CreateTrafficMarkingPolicy](~~419025~~).
+          *
+          * @param request CreateCenInterRegionTrafficQosPolicyRequest
+          * @return CreateCenInterRegionTrafficQosPolicyResponse
+         */
         public async Task<CreateCenInterRegionTrafficQosPolicyResponse> CreateCenInterRegionTrafficQosPolicyAsync(CreateCenInterRegionTrafficQosPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCenInterRegionTrafficQosPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage note
+          * **CreateCenInterRegionTrafficQosQueue** is an asynchronous operation. After you send a request, the queue ID is returned but the operation is still being performed in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of the QoS policy to determine the status of the queue. When you call this operation, you must set the **TrafficQosPolicyId** parameter.
+          * *   If a QoS policy is in the **Modifying** state, the queue is being created. In this case, you can query the QoS policy and queue but cannot perform other operations.
+          * *   If a QoS policy is in the **Active** state, the queue is created.
+          *
+          * @param request CreateCenInterRegionTrafficQosQueueRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCenInterRegionTrafficQosQueueResponse
+         */
         public CreateCenInterRegionTrafficQosQueueResponse CreateCenInterRegionTrafficQosQueueWithOptions(CreateCenInterRegionTrafficQosQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1810,6 +2320,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateCenInterRegionTrafficQosQueueResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage note
+          * **CreateCenInterRegionTrafficQosQueue** is an asynchronous operation. After you send a request, the queue ID is returned but the operation is still being performed in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of the QoS policy to determine the status of the queue. When you call this operation, you must set the **TrafficQosPolicyId** parameter.
+          * *   If a QoS policy is in the **Modifying** state, the queue is being created. In this case, you can query the QoS policy and queue but cannot perform other operations.
+          * *   If a QoS policy is in the **Active** state, the queue is created.
+          *
+          * @param request CreateCenInterRegionTrafficQosQueueRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCenInterRegionTrafficQosQueueResponse
+         */
         public async Task<CreateCenInterRegionTrafficQosQueueResponse> CreateCenInterRegionTrafficQosQueueWithOptionsAsync(CreateCenInterRegionTrafficQosQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1877,18 +2397,46 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateCenInterRegionTrafficQosQueueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage note
+          * **CreateCenInterRegionTrafficQosQueue** is an asynchronous operation. After you send a request, the queue ID is returned but the operation is still being performed in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of the QoS policy to determine the status of the queue. When you call this operation, you must set the **TrafficQosPolicyId** parameter.
+          * *   If a QoS policy is in the **Modifying** state, the queue is being created. In this case, you can query the QoS policy and queue but cannot perform other operations.
+          * *   If a QoS policy is in the **Active** state, the queue is created.
+          *
+          * @param request CreateCenInterRegionTrafficQosQueueRequest
+          * @return CreateCenInterRegionTrafficQosQueueResponse
+         */
         public CreateCenInterRegionTrafficQosQueueResponse CreateCenInterRegionTrafficQosQueue(CreateCenInterRegionTrafficQosQueueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCenInterRegionTrafficQosQueueWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage note
+          * **CreateCenInterRegionTrafficQosQueue** is an asynchronous operation. After you send a request, the queue ID is returned but the operation is still being performed in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of the QoS policy to determine the status of the queue. When you call this operation, you must set the **TrafficQosPolicyId** parameter.
+          * *   If a QoS policy is in the **Modifying** state, the queue is being created. In this case, you can query the QoS policy and queue but cannot perform other operations.
+          * *   If a QoS policy is in the **Active** state, the queue is created.
+          *
+          * @param request CreateCenInterRegionTrafficQosQueueRequest
+          * @return CreateCenInterRegionTrafficQosQueueResponse
+         */
         public async Task<CreateCenInterRegionTrafficQosQueueResponse> CreateCenInterRegionTrafficQosQueueAsync(CreateCenInterRegionTrafficQosQueueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCenInterRegionTrafficQosQueueWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Routing policies are sorted by priority. A smaller value indicates a higher priority. Each routing policy is a collection of conditional statements and execution statements. Starting from the routing policy with the highest priority, the system matches routes against the match conditions specified by routing policies. If a route meets all the match conditions of a routing policy, the system permits or denies the route based on the action specified in the routing policy. You can also modify the attributes of permitted routes. By default, the system permits routes that meet none of the match conditions. For more information, see [Routing policy overview](~~124157~~).
+          * `CreateCenRouteMap` is an asynchronous operation. After you send a request, the routing policy ID is returned but the operation is still being performed in the system background. You can call `DescribeCenRouteMaps` to query the status of a routing policy.
+          * *   If a routing policy is in the **Creating** state, the routing policy is being created. In this case, you can query the routing policy but cannot perform other operations.
+          * *   If a routing policy is in the **Active** state, the routing policy is created.
+          *
+          * @param request CreateCenRouteMapRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCenRouteMapResponse
+         */
         public CreateCenRouteMapResponse CreateCenRouteMapWithOptions(CreateCenRouteMapRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2044,6 +2592,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateCenRouteMapResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Routing policies are sorted by priority. A smaller value indicates a higher priority. Each routing policy is a collection of conditional statements and execution statements. Starting from the routing policy with the highest priority, the system matches routes against the match conditions specified by routing policies. If a route meets all the match conditions of a routing policy, the system permits or denies the route based on the action specified in the routing policy. You can also modify the attributes of permitted routes. By default, the system permits routes that meet none of the match conditions. For more information, see [Routing policy overview](~~124157~~).
+          * `CreateCenRouteMap` is an asynchronous operation. After you send a request, the routing policy ID is returned but the operation is still being performed in the system background. You can call `DescribeCenRouteMaps` to query the status of a routing policy.
+          * *   If a routing policy is in the **Creating** state, the routing policy is being created. In this case, you can query the routing policy but cannot perform other operations.
+          * *   If a routing policy is in the **Active** state, the routing policy is created.
+          *
+          * @param request CreateCenRouteMapRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCenRouteMapResponse
+         */
         public async Task<CreateCenRouteMapResponse> CreateCenRouteMapWithOptionsAsync(CreateCenRouteMapRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2199,18 +2757,53 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateCenRouteMapResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Routing policies are sorted by priority. A smaller value indicates a higher priority. Each routing policy is a collection of conditional statements and execution statements. Starting from the routing policy with the highest priority, the system matches routes against the match conditions specified by routing policies. If a route meets all the match conditions of a routing policy, the system permits or denies the route based on the action specified in the routing policy. You can also modify the attributes of permitted routes. By default, the system permits routes that meet none of the match conditions. For more information, see [Routing policy overview](~~124157~~).
+          * `CreateCenRouteMap` is an asynchronous operation. After you send a request, the routing policy ID is returned but the operation is still being performed in the system background. You can call `DescribeCenRouteMaps` to query the status of a routing policy.
+          * *   If a routing policy is in the **Creating** state, the routing policy is being created. In this case, you can query the routing policy but cannot perform other operations.
+          * *   If a routing policy is in the **Active** state, the routing policy is created.
+          *
+          * @param request CreateCenRouteMapRequest
+          * @return CreateCenRouteMapResponse
+         */
         public CreateCenRouteMapResponse CreateCenRouteMap(CreateCenRouteMapRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCenRouteMapWithOptions(request, runtime);
         }
 
+        /**
+          * Routing policies are sorted by priority. A smaller value indicates a higher priority. Each routing policy is a collection of conditional statements and execution statements. Starting from the routing policy with the highest priority, the system matches routes against the match conditions specified by routing policies. If a route meets all the match conditions of a routing policy, the system permits or denies the route based on the action specified in the routing policy. You can also modify the attributes of permitted routes. By default, the system permits routes that meet none of the match conditions. For more information, see [Routing policy overview](~~124157~~).
+          * `CreateCenRouteMap` is an asynchronous operation. After you send a request, the routing policy ID is returned but the operation is still being performed in the system background. You can call `DescribeCenRouteMaps` to query the status of a routing policy.
+          * *   If a routing policy is in the **Creating** state, the routing policy is being created. In this case, you can query the routing policy but cannot perform other operations.
+          * *   If a routing policy is in the **Active** state, the routing policy is created.
+          *
+          * @param request CreateCenRouteMapRequest
+          * @return CreateCenRouteMapResponse
+         */
         public async Task<CreateCenRouteMapResponse> CreateCenRouteMapAsync(CreateCenRouteMapRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCenRouteMapWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Flow logs are used to capture the information about network traffic between transit routers and between virtual border routers (VBRs). Before you create a flow log, take note of the following items:
+          * *   Flow logs are supported only by Enterprise Edition transit routers.
+          * *   Only flow logs in some regions can capture the information about network traffic over VBR connections. For more information, see [Limits](~~339822~~).
+          * *   Flow logs are used to capture the information about outbound traffic on transit routers. Information about inbound traffic on transit routers is not captured.
+          *     For example, an Elastic Compute Service (ECS) instance in the US (Silicon Valley) region accesses an ECS instance in the US (Virginia) region through CEN. After you enable the flow log feature for the transit router in the US (Virginia) region, you can check the log entries about packets sent from the ECS instance in the US (Virginia) region to the ECS instance in the US (Silicon Valley) region. However, packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region are not recorded. If you want to record the packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region, you must also enable the flow log feature on the transit router that is in the US (Silicon Valley) region.
+          * *   `CreateFlowLog` is an asynchronous operation. After you send a request, the system returns the request ID but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          *     *   If a flow log is in the **Creating** state, the flow log is being created. In this case, you can query the flow log but cannot perform other operations.
+          *     *   If a flow log is in the **Active** state, the flow log is created.
+          * ## Prerequisites
+          * An inter-region connection or a VBR connection is created. For more information, see [CreateTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createtransitrouterpeerattachment) or [CreateTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createtransitroutervbrattachment)
+          *
+          * @param request CreateFlowlogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateFlowlogResponse
+         */
         public CreateFlowlogResponse CreateFlowlogWithOptions(CreateFlowlogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2290,6 +2883,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateFlowlogResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Flow logs are used to capture the information about network traffic between transit routers and between virtual border routers (VBRs). Before you create a flow log, take note of the following items:
+          * *   Flow logs are supported only by Enterprise Edition transit routers.
+          * *   Only flow logs in some regions can capture the information about network traffic over VBR connections. For more information, see [Limits](~~339822~~).
+          * *   Flow logs are used to capture the information about outbound traffic on transit routers. Information about inbound traffic on transit routers is not captured.
+          *     For example, an Elastic Compute Service (ECS) instance in the US (Silicon Valley) region accesses an ECS instance in the US (Virginia) region through CEN. After you enable the flow log feature for the transit router in the US (Virginia) region, you can check the log entries about packets sent from the ECS instance in the US (Virginia) region to the ECS instance in the US (Silicon Valley) region. However, packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region are not recorded. If you want to record the packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region, you must also enable the flow log feature on the transit router that is in the US (Silicon Valley) region.
+          * *   `CreateFlowLog` is an asynchronous operation. After you send a request, the system returns the request ID but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          *     *   If a flow log is in the **Creating** state, the flow log is being created. In this case, you can query the flow log but cannot perform other operations.
+          *     *   If a flow log is in the **Active** state, the flow log is created.
+          * ## Prerequisites
+          * An inter-region connection or a VBR connection is created. For more information, see [CreateTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createtransitrouterpeerattachment) or [CreateTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createtransitroutervbrattachment)
+          *
+          * @param request CreateFlowlogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateFlowlogResponse
+         */
         public async Task<CreateFlowlogResponse> CreateFlowlogWithOptionsAsync(CreateFlowlogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2369,18 +2979,61 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateFlowlogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Flow logs are used to capture the information about network traffic between transit routers and between virtual border routers (VBRs). Before you create a flow log, take note of the following items:
+          * *   Flow logs are supported only by Enterprise Edition transit routers.
+          * *   Only flow logs in some regions can capture the information about network traffic over VBR connections. For more information, see [Limits](~~339822~~).
+          * *   Flow logs are used to capture the information about outbound traffic on transit routers. Information about inbound traffic on transit routers is not captured.
+          *     For example, an Elastic Compute Service (ECS) instance in the US (Silicon Valley) region accesses an ECS instance in the US (Virginia) region through CEN. After you enable the flow log feature for the transit router in the US (Virginia) region, you can check the log entries about packets sent from the ECS instance in the US (Virginia) region to the ECS instance in the US (Silicon Valley) region. However, packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region are not recorded. If you want to record the packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region, you must also enable the flow log feature on the transit router that is in the US (Silicon Valley) region.
+          * *   `CreateFlowLog` is an asynchronous operation. After you send a request, the system returns the request ID but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          *     *   If a flow log is in the **Creating** state, the flow log is being created. In this case, you can query the flow log but cannot perform other operations.
+          *     *   If a flow log is in the **Active** state, the flow log is created.
+          * ## Prerequisites
+          * An inter-region connection or a VBR connection is created. For more information, see [CreateTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createtransitrouterpeerattachment) or [CreateTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createtransitroutervbrattachment)
+          *
+          * @param request CreateFlowlogRequest
+          * @return CreateFlowlogResponse
+         */
         public CreateFlowlogResponse CreateFlowlog(CreateFlowlogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateFlowlogWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Flow logs are used to capture the information about network traffic between transit routers and between virtual border routers (VBRs). Before you create a flow log, take note of the following items:
+          * *   Flow logs are supported only by Enterprise Edition transit routers.
+          * *   Only flow logs in some regions can capture the information about network traffic over VBR connections. For more information, see [Limits](~~339822~~).
+          * *   Flow logs are used to capture the information about outbound traffic on transit routers. Information about inbound traffic on transit routers is not captured.
+          *     For example, an Elastic Compute Service (ECS) instance in the US (Silicon Valley) region accesses an ECS instance in the US (Virginia) region through CEN. After you enable the flow log feature for the transit router in the US (Virginia) region, you can check the log entries about packets sent from the ECS instance in the US (Virginia) region to the ECS instance in the US (Silicon Valley) region. However, packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region are not recorded. If you want to record the packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region, you must also enable the flow log feature on the transit router that is in the US (Silicon Valley) region.
+          * *   `CreateFlowLog` is an asynchronous operation. After you send a request, the system returns the request ID but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          *     *   If a flow log is in the **Creating** state, the flow log is being created. In this case, you can query the flow log but cannot perform other operations.
+          *     *   If a flow log is in the **Active** state, the flow log is created.
+          * ## Prerequisites
+          * An inter-region connection or a VBR connection is created. For more information, see [CreateTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createtransitrouterpeerattachment) or [CreateTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createtransitroutervbrattachment)
+          *
+          * @param request CreateFlowlogRequest
+          * @return CreateFlowlogResponse
+         */
         public async Task<CreateFlowlogResponse> CreateFlowlogAsync(CreateFlowlogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateFlowlogWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   Only Enterprise Edition transit routers support traffic marking policies.
+          * *   **CreateTrafficMarkingPolicy** is an asynchronous operation. After you send a request, the system returns the traffic marking policy ID but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic marking policy.
+          *     *   If a traffic marking policy is in the **Creating** state, the traffic marking policy is being created. You can query the traffic marking policy but cannot perform other operations.
+          *     *   If a traffic marking policy is in the **Active** state, the traffic marking policy is created.
+          *
+          * @param request CreateTrafficMarkingPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTrafficMarkingPolicyResponse
+         */
         public CreateTrafficMarkingPolicyResponse CreateTrafficMarkingPolicyWithOptions(CreateTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2452,6 +3105,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTrafficMarkingPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   Only Enterprise Edition transit routers support traffic marking policies.
+          * *   **CreateTrafficMarkingPolicy** is an asynchronous operation. After you send a request, the system returns the traffic marking policy ID but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic marking policy.
+          *     *   If a traffic marking policy is in the **Creating** state, the traffic marking policy is being created. You can query the traffic marking policy but cannot perform other operations.
+          *     *   If a traffic marking policy is in the **Active** state, the traffic marking policy is created.
+          *
+          * @param request CreateTrafficMarkingPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTrafficMarkingPolicyResponse
+         */
         public async Task<CreateTrafficMarkingPolicyResponse> CreateTrafficMarkingPolicyWithOptionsAsync(CreateTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2523,18 +3187,194 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTrafficMarkingPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   Only Enterprise Edition transit routers support traffic marking policies.
+          * *   **CreateTrafficMarkingPolicy** is an asynchronous operation. After you send a request, the system returns the traffic marking policy ID but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic marking policy.
+          *     *   If a traffic marking policy is in the **Creating** state, the traffic marking policy is being created. You can query the traffic marking policy but cannot perform other operations.
+          *     *   If a traffic marking policy is in the **Active** state, the traffic marking policy is created.
+          *
+          * @param request CreateTrafficMarkingPolicyRequest
+          * @return CreateTrafficMarkingPolicyResponse
+         */
         public CreateTrafficMarkingPolicyResponse CreateTrafficMarkingPolicy(CreateTrafficMarkingPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTrafficMarkingPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   Only Enterprise Edition transit routers support traffic marking policies.
+          * *   **CreateTrafficMarkingPolicy** is an asynchronous operation. After you send a request, the system returns the traffic marking policy ID but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic marking policy.
+          *     *   If a traffic marking policy is in the **Creating** state, the traffic marking policy is being created. You can query the traffic marking policy but cannot perform other operations.
+          *     *   If a traffic marking policy is in the **Active** state, the traffic marking policy is created.
+          *
+          * @param request CreateTrafficMarkingPolicyRequest
+          * @return CreateTrafficMarkingPolicyResponse
+         */
         public async Task<CreateTrafficMarkingPolicyResponse> CreateTrafficMarkingPolicyAsync(CreateTrafficMarkingPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTrafficMarkingPolicyWithOptionsAsync(request, runtime);
         }
 
+        public CreateTransitRouteTableAggregationResponse CreateTransitRouteTableAggregationWithOptions(CreateTransitRouteTableAggregationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationCidr))
+            {
+                query["TransitRouteTableAggregationCidr"] = request.TransitRouteTableAggregationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationDescription))
+            {
+                query["TransitRouteTableAggregationDescription"] = request.TransitRouteTableAggregationDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationName))
+            {
+                query["TransitRouteTableAggregationName"] = request.TransitRouteTableAggregationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationScop))
+            {
+                query["TransitRouteTableAggregationScop"] = request.TransitRouteTableAggregationScop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableId))
+            {
+                query["TransitRouteTableId"] = request.TransitRouteTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTransitRouteTableAggregation",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTransitRouteTableAggregationResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateTransitRouteTableAggregationResponse> CreateTransitRouteTableAggregationWithOptionsAsync(CreateTransitRouteTableAggregationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationCidr))
+            {
+                query["TransitRouteTableAggregationCidr"] = request.TransitRouteTableAggregationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationDescription))
+            {
+                query["TransitRouteTableAggregationDescription"] = request.TransitRouteTableAggregationDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationName))
+            {
+                query["TransitRouteTableAggregationName"] = request.TransitRouteTableAggregationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationScop))
+            {
+                query["TransitRouteTableAggregationScop"] = request.TransitRouteTableAggregationScop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableId))
+            {
+                query["TransitRouteTableId"] = request.TransitRouteTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTransitRouteTableAggregation",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTransitRouteTableAggregationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateTransitRouteTableAggregationResponse CreateTransitRouteTableAggregation(CreateTransitRouteTableAggregationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateTransitRouteTableAggregationWithOptions(request, runtime);
+        }
+
+        public async Task<CreateTransitRouteTableAggregationResponse> CreateTransitRouteTableAggregationAsync(CreateTransitRouteTableAggregationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateTransitRouteTableAggregationWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * *   You can call **CreateTransitRouter** to create an Enterprise Edition transit router. For more information about the regions that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **CreateTransitRouter** is an asynchronous operation. After you send a request, the transit router ID is returned but the operation is still being performed in the system background. You can call **ListTransitRouters** to query the status of an Enterprise Edition transit router transit router.
+          *     *   If an Enterprise Edition transit router is in the **Creating** state, the Enterprise Edition transit router is being created. In this case, you can query the Enterprise Edition transit router but cannot perform other operations.
+          *     *   If an Enterprise Edition transit router is in the **Active** state, the Enterprise Edition transit router is created.
+          *
+          * @param tmpReq CreateTransitRouterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterResponse
+         */
         public CreateTransitRouterResponse CreateTransitRouterWithOptions(CreateTransitRouterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2616,6 +3456,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can call **CreateTransitRouter** to create an Enterprise Edition transit router. For more information about the regions that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **CreateTransitRouter** is an asynchronous operation. After you send a request, the transit router ID is returned but the operation is still being performed in the system background. You can call **ListTransitRouters** to query the status of an Enterprise Edition transit router transit router.
+          *     *   If an Enterprise Edition transit router is in the **Creating** state, the Enterprise Edition transit router is being created. In this case, you can query the Enterprise Edition transit router but cannot perform other operations.
+          *     *   If an Enterprise Edition transit router is in the **Active** state, the Enterprise Edition transit router is created.
+          *
+          * @param tmpReq CreateTransitRouterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterResponse
+         */
         public async Task<CreateTransitRouterResponse> CreateTransitRouterWithOptionsAsync(CreateTransitRouterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2697,18 +3547,53 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can call **CreateTransitRouter** to create an Enterprise Edition transit router. For more information about the regions that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **CreateTransitRouter** is an asynchronous operation. After you send a request, the transit router ID is returned but the operation is still being performed in the system background. You can call **ListTransitRouters** to query the status of an Enterprise Edition transit router transit router.
+          *     *   If an Enterprise Edition transit router is in the **Creating** state, the Enterprise Edition transit router is being created. In this case, you can query the Enterprise Edition transit router but cannot perform other operations.
+          *     *   If an Enterprise Edition transit router is in the **Active** state, the Enterprise Edition transit router is created.
+          *
+          * @param request CreateTransitRouterRequest
+          * @return CreateTransitRouterResponse
+         */
         public CreateTransitRouterResponse CreateTransitRouter(CreateTransitRouterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTransitRouterWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can call **CreateTransitRouter** to create an Enterprise Edition transit router. For more information about the regions that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **CreateTransitRouter** is an asynchronous operation. After you send a request, the transit router ID is returned but the operation is still being performed in the system background. You can call **ListTransitRouters** to query the status of an Enterprise Edition transit router transit router.
+          *     *   If an Enterprise Edition transit router is in the **Creating** state, the Enterprise Edition transit router is being created. In this case, you can query the Enterprise Edition transit router but cannot perform other operations.
+          *     *   If an Enterprise Edition transit router is in the **Active** state, the Enterprise Edition transit router is created.
+          *
+          * @param request CreateTransitRouterRequest
+          * @return CreateTransitRouterResponse
+         */
         public async Task<CreateTransitRouterResponse> CreateTransitRouterAsync(CreateTransitRouterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTransitRouterWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can specify a CIDR block for a transit router. The CIDR block works in a similar way as the CIDR block of the loopback interface on a router. IP addresses within the CIDR block can be assigned to IPsec-VPN connections. For more information, see [Transit router CIDR blocks](~~462635~~).
+          * The **CreateTransitRouterCidr** operation can be used to create a CIDR block only after you create a transit router.
+          * The CIDR block must meet the following requirements:
+          * *   Only Enterprise Edition transit routers support custom CIDR blocks.
+          * *   This feature is in pubic preview and is available only in some regions. For more information about the supported regions, see [Limits on transit router CIDR blocks](~~462635~~).
+          * *   Each transit router supports at most five CIDR blocks. The subnet mask of a CIDR block must be 16 bits to 24 bits in length.
+          * *   The following CIDR blocks and their subnets are not supported: 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, and 169.254.0.0/16.
+          * *   The CIDR block cannot overlap with CIDR blocks that network instances attached to the CEN instance use to communicate with each other.
+          * *   On the same CEN instance, each transit router CIDR block must be unique.
+          * *   When you create the first VPN connection after you add a CIDR block for a transit router, three CIDR blocks within the CIDR block are reserved. An IP address is allocated from the remaining CIDR blocks to the IPsec-VPN connection.
+          *     You can call [ListTransitRouterCidrAllocation](~~464173~~) to query reserved CIDR blocks and IP addresses allocated to network connections.
+          *
+          * @param request CreateTransitRouterCidrRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterCidrResponse
+         */
         public CreateTransitRouterCidrResponse CreateTransitRouterCidrWithOptions(CreateTransitRouterCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2780,6 +3665,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterCidrResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can specify a CIDR block for a transit router. The CIDR block works in a similar way as the CIDR block of the loopback interface on a router. IP addresses within the CIDR block can be assigned to IPsec-VPN connections. For more information, see [Transit router CIDR blocks](~~462635~~).
+          * The **CreateTransitRouterCidr** operation can be used to create a CIDR block only after you create a transit router.
+          * The CIDR block must meet the following requirements:
+          * *   Only Enterprise Edition transit routers support custom CIDR blocks.
+          * *   This feature is in pubic preview and is available only in some regions. For more information about the supported regions, see [Limits on transit router CIDR blocks](~~462635~~).
+          * *   Each transit router supports at most five CIDR blocks. The subnet mask of a CIDR block must be 16 bits to 24 bits in length.
+          * *   The following CIDR blocks and their subnets are not supported: 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, and 169.254.0.0/16.
+          * *   The CIDR block cannot overlap with CIDR blocks that network instances attached to the CEN instance use to communicate with each other.
+          * *   On the same CEN instance, each transit router CIDR block must be unique.
+          * *   When you create the first VPN connection after you add a CIDR block for a transit router, three CIDR blocks within the CIDR block are reserved. An IP address is allocated from the remaining CIDR blocks to the IPsec-VPN connection.
+          *     You can call [ListTransitRouterCidrAllocation](~~464173~~) to query reserved CIDR blocks and IP addresses allocated to network connections.
+          *
+          * @param request CreateTransitRouterCidrRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterCidrResponse
+         */
         public async Task<CreateTransitRouterCidrResponse> CreateTransitRouterCidrWithOptionsAsync(CreateTransitRouterCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2851,18 +3753,61 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterCidrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can specify a CIDR block for a transit router. The CIDR block works in a similar way as the CIDR block of the loopback interface on a router. IP addresses within the CIDR block can be assigned to IPsec-VPN connections. For more information, see [Transit router CIDR blocks](~~462635~~).
+          * The **CreateTransitRouterCidr** operation can be used to create a CIDR block only after you create a transit router.
+          * The CIDR block must meet the following requirements:
+          * *   Only Enterprise Edition transit routers support custom CIDR blocks.
+          * *   This feature is in pubic preview and is available only in some regions. For more information about the supported regions, see [Limits on transit router CIDR blocks](~~462635~~).
+          * *   Each transit router supports at most five CIDR blocks. The subnet mask of a CIDR block must be 16 bits to 24 bits in length.
+          * *   The following CIDR blocks and their subnets are not supported: 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, and 169.254.0.0/16.
+          * *   The CIDR block cannot overlap with CIDR blocks that network instances attached to the CEN instance use to communicate with each other.
+          * *   On the same CEN instance, each transit router CIDR block must be unique.
+          * *   When you create the first VPN connection after you add a CIDR block for a transit router, three CIDR blocks within the CIDR block are reserved. An IP address is allocated from the remaining CIDR blocks to the IPsec-VPN connection.
+          *     You can call [ListTransitRouterCidrAllocation](~~464173~~) to query reserved CIDR blocks and IP addresses allocated to network connections.
+          *
+          * @param request CreateTransitRouterCidrRequest
+          * @return CreateTransitRouterCidrResponse
+         */
         public CreateTransitRouterCidrResponse CreateTransitRouterCidr(CreateTransitRouterCidrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTransitRouterCidrWithOptions(request, runtime);
         }
 
+        /**
+          * You can specify a CIDR block for a transit router. The CIDR block works in a similar way as the CIDR block of the loopback interface on a router. IP addresses within the CIDR block can be assigned to IPsec-VPN connections. For more information, see [Transit router CIDR blocks](~~462635~~).
+          * The **CreateTransitRouterCidr** operation can be used to create a CIDR block only after you create a transit router.
+          * The CIDR block must meet the following requirements:
+          * *   Only Enterprise Edition transit routers support custom CIDR blocks.
+          * *   This feature is in pubic preview and is available only in some regions. For more information about the supported regions, see [Limits on transit router CIDR blocks](~~462635~~).
+          * *   Each transit router supports at most five CIDR blocks. The subnet mask of a CIDR block must be 16 bits to 24 bits in length.
+          * *   The following CIDR blocks and their subnets are not supported: 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, and 169.254.0.0/16.
+          * *   The CIDR block cannot overlap with CIDR blocks that network instances attached to the CEN instance use to communicate with each other.
+          * *   On the same CEN instance, each transit router CIDR block must be unique.
+          * *   When you create the first VPN connection after you add a CIDR block for a transit router, three CIDR blocks within the CIDR block are reserved. An IP address is allocated from the remaining CIDR blocks to the IPsec-VPN connection.
+          *     You can call [ListTransitRouterCidrAllocation](~~464173~~) to query reserved CIDR blocks and IP addresses allocated to network connections.
+          *
+          * @param request CreateTransitRouterCidrRequest
+          * @return CreateTransitRouterCidrResponse
+         */
         public async Task<CreateTransitRouterCidrResponse> CreateTransitRouterCidrAsync(CreateTransitRouterCidrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTransitRouterCidrWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you have knowledge of the following rules:
+          * *   Only Enterprise Edition transit routers in the Australia (Sydney) and UK (London) regions support the multicast feature. Multicast is unavailable by default. If you want to enable multicast, contact your sales manager or [submit a ticket](https://selfservice.console.aliyun.com/ticket/category/cbn/today) to apply for multicast resources.
+          * *   Make sure that an Enterprise Edition transit router is deployed in the region where you want to create the multicast domain, and the multicast feature is enabled for the Enterprise Edition transit router. For more information, see [CreateTransitRouter](~~261169~~).
+          *     If an Enterprise Edition transit router was created before you apply for multicast resources, the transit router does not support multicast. You can delete the transit router and create a new one. For more information about how to delete an Enterprise Edition transit router, see [DeleteTransitRouter](~~261218~~).
+          * *   When you call **CreateTransitRouterMulticastDomain**, if you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId**, you do not need to set **CenId** or **RegionId**.
+          *
+          * @param request CreateTransitRouterMulticastDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterMulticastDomainResponse
+         */
         public CreateTransitRouterMulticastDomainResponse CreateTransitRouterMulticastDomainWithOptions(CreateTransitRouterMulticastDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2934,6 +3879,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterMulticastDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you have knowledge of the following rules:
+          * *   Only Enterprise Edition transit routers in the Australia (Sydney) and UK (London) regions support the multicast feature. Multicast is unavailable by default. If you want to enable multicast, contact your sales manager or [submit a ticket](https://selfservice.console.aliyun.com/ticket/category/cbn/today) to apply for multicast resources.
+          * *   Make sure that an Enterprise Edition transit router is deployed in the region where you want to create the multicast domain, and the multicast feature is enabled for the Enterprise Edition transit router. For more information, see [CreateTransitRouter](~~261169~~).
+          *     If an Enterprise Edition transit router was created before you apply for multicast resources, the transit router does not support multicast. You can delete the transit router and create a new one. For more information about how to delete an Enterprise Edition transit router, see [DeleteTransitRouter](~~261218~~).
+          * *   When you call **CreateTransitRouterMulticastDomain**, if you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId**, you do not need to set **CenId** or **RegionId**.
+          *
+          * @param request CreateTransitRouterMulticastDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterMulticastDomainResponse
+         */
         public async Task<CreateTransitRouterMulticastDomainResponse> CreateTransitRouterMulticastDomainWithOptionsAsync(CreateTransitRouterMulticastDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3005,18 +3961,53 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterMulticastDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you have knowledge of the following rules:
+          * *   Only Enterprise Edition transit routers in the Australia (Sydney) and UK (London) regions support the multicast feature. Multicast is unavailable by default. If you want to enable multicast, contact your sales manager or [submit a ticket](https://selfservice.console.aliyun.com/ticket/category/cbn/today) to apply for multicast resources.
+          * *   Make sure that an Enterprise Edition transit router is deployed in the region where you want to create the multicast domain, and the multicast feature is enabled for the Enterprise Edition transit router. For more information, see [CreateTransitRouter](~~261169~~).
+          *     If an Enterprise Edition transit router was created before you apply for multicast resources, the transit router does not support multicast. You can delete the transit router and create a new one. For more information about how to delete an Enterprise Edition transit router, see [DeleteTransitRouter](~~261218~~).
+          * *   When you call **CreateTransitRouterMulticastDomain**, if you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId**, you do not need to set **CenId** or **RegionId**.
+          *
+          * @param request CreateTransitRouterMulticastDomainRequest
+          * @return CreateTransitRouterMulticastDomainResponse
+         */
         public CreateTransitRouterMulticastDomainResponse CreateTransitRouterMulticastDomain(CreateTransitRouterMulticastDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTransitRouterMulticastDomainWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you have knowledge of the following rules:
+          * *   Only Enterprise Edition transit routers in the Australia (Sydney) and UK (London) regions support the multicast feature. Multicast is unavailable by default. If you want to enable multicast, contact your sales manager or [submit a ticket](https://selfservice.console.aliyun.com/ticket/category/cbn/today) to apply for multicast resources.
+          * *   Make sure that an Enterprise Edition transit router is deployed in the region where you want to create the multicast domain, and the multicast feature is enabled for the Enterprise Edition transit router. For more information, see [CreateTransitRouter](~~261169~~).
+          *     If an Enterprise Edition transit router was created before you apply for multicast resources, the transit router does not support multicast. You can delete the transit router and create a new one. For more information about how to delete an Enterprise Edition transit router, see [DeleteTransitRouter](~~261218~~).
+          * *   When you call **CreateTransitRouterMulticastDomain**, if you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId**, you do not need to set **CenId** or **RegionId**.
+          *
+          * @param request CreateTransitRouterMulticastDomainRequest
+          * @return CreateTransitRouterMulticastDomainResponse
+         */
         public async Task<CreateTransitRouterMulticastDomainResponse> CreateTransitRouterMulticastDomainAsync(CreateTransitRouterMulticastDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTransitRouterMulticastDomainWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * By default, 1 Kbit/s of bandwidth is provided for inter-region communication between transit routers. This allows you to test the connectivity of inter-region IPv4 networks. To allow services that are deployed in different regions to communicate with each other, you must create an inter-region connection and allocate bandwidth resources to the connection.  
+          * Enterprise Edition transit routers allow you to allocate bandwidth resources to inter-region connections by using the following methods: 
+          * - **Allocate bandwidth resources from a bandwidth plan**:  You must purchase a bandwidth plan, and then allocate bandwidth resources from the bandwidth plan to inter-region connections. For more information, see [CreateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createcenbandwidthpackage).
+          * - **Use pay-by-data-transfer bandwidth resources**:  You can set a maximum bandwidth value for an inter-region connection. Then, you are charged for the amount of data transfer over the connection. For more information, see [Cross-region data transfers](https://www.alibabacloud.com/help/en/cloud-data-transmission/latest/cross-region-data-transfers).
+          * ## Usage notes
+          * **CreateTransitRouterPeerAttachment** is an asynchronous operation. After you send a request, the system returns the inter-region connection ID but the operation is still being performed in the system background. You can call **ListTransitRouterPeerAttachments** to query the status of an inter-region connection.  
+          * - If an inter-region connection is in the **Attaching** state, the inter-region connection is being created. You can query the inter-region connection but cannot perform other regions.
+          * - If an inter-region connection is in the **Attached** state, the inter-region connection is created.
+          *
+          * @param request CreateTransitRouterPeerAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterPeerAttachmentResponse
+         */
         public CreateTransitRouterPeerAttachmentResponse CreateTransitRouterPeerAttachmentWithOptions(CreateTransitRouterPeerAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3112,6 +4103,21 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterPeerAttachmentResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * By default, 1 Kbit/s of bandwidth is provided for inter-region communication between transit routers. This allows you to test the connectivity of inter-region IPv4 networks. To allow services that are deployed in different regions to communicate with each other, you must create an inter-region connection and allocate bandwidth resources to the connection.  
+          * Enterprise Edition transit routers allow you to allocate bandwidth resources to inter-region connections by using the following methods: 
+          * - **Allocate bandwidth resources from a bandwidth plan**:  You must purchase a bandwidth plan, and then allocate bandwidth resources from the bandwidth plan to inter-region connections. For more information, see [CreateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createcenbandwidthpackage).
+          * - **Use pay-by-data-transfer bandwidth resources**:  You can set a maximum bandwidth value for an inter-region connection. Then, you are charged for the amount of data transfer over the connection. For more information, see [Cross-region data transfers](https://www.alibabacloud.com/help/en/cloud-data-transmission/latest/cross-region-data-transfers).
+          * ## Usage notes
+          * **CreateTransitRouterPeerAttachment** is an asynchronous operation. After you send a request, the system returns the inter-region connection ID but the operation is still being performed in the system background. You can call **ListTransitRouterPeerAttachments** to query the status of an inter-region connection.  
+          * - If an inter-region connection is in the **Attaching** state, the inter-region connection is being created. You can query the inter-region connection but cannot perform other regions.
+          * - If an inter-region connection is in the **Attached** state, the inter-region connection is created.
+          *
+          * @param request CreateTransitRouterPeerAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterPeerAttachmentResponse
+         */
         public async Task<CreateTransitRouterPeerAttachmentResponse> CreateTransitRouterPeerAttachmentWithOptionsAsync(CreateTransitRouterPeerAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3207,18 +4213,57 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterPeerAttachmentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * By default, 1 Kbit/s of bandwidth is provided for inter-region communication between transit routers. This allows you to test the connectivity of inter-region IPv4 networks. To allow services that are deployed in different regions to communicate with each other, you must create an inter-region connection and allocate bandwidth resources to the connection.  
+          * Enterprise Edition transit routers allow you to allocate bandwidth resources to inter-region connections by using the following methods: 
+          * - **Allocate bandwidth resources from a bandwidth plan**:  You must purchase a bandwidth plan, and then allocate bandwidth resources from the bandwidth plan to inter-region connections. For more information, see [CreateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createcenbandwidthpackage).
+          * - **Use pay-by-data-transfer bandwidth resources**:  You can set a maximum bandwidth value for an inter-region connection. Then, you are charged for the amount of data transfer over the connection. For more information, see [Cross-region data transfers](https://www.alibabacloud.com/help/en/cloud-data-transmission/latest/cross-region-data-transfers).
+          * ## Usage notes
+          * **CreateTransitRouterPeerAttachment** is an asynchronous operation. After you send a request, the system returns the inter-region connection ID but the operation is still being performed in the system background. You can call **ListTransitRouterPeerAttachments** to query the status of an inter-region connection.  
+          * - If an inter-region connection is in the **Attaching** state, the inter-region connection is being created. You can query the inter-region connection but cannot perform other regions.
+          * - If an inter-region connection is in the **Attached** state, the inter-region connection is created.
+          *
+          * @param request CreateTransitRouterPeerAttachmentRequest
+          * @return CreateTransitRouterPeerAttachmentResponse
+         */
         public CreateTransitRouterPeerAttachmentResponse CreateTransitRouterPeerAttachment(CreateTransitRouterPeerAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTransitRouterPeerAttachmentWithOptions(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * By default, 1 Kbit/s of bandwidth is provided for inter-region communication between transit routers. This allows you to test the connectivity of inter-region IPv4 networks. To allow services that are deployed in different regions to communicate with each other, you must create an inter-region connection and allocate bandwidth resources to the connection.  
+          * Enterprise Edition transit routers allow you to allocate bandwidth resources to inter-region connections by using the following methods: 
+          * - **Allocate bandwidth resources from a bandwidth plan**:  You must purchase a bandwidth plan, and then allocate bandwidth resources from the bandwidth plan to inter-region connections. For more information, see [CreateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createcenbandwidthpackage).
+          * - **Use pay-by-data-transfer bandwidth resources**:  You can set a maximum bandwidth value for an inter-region connection. Then, you are charged for the amount of data transfer over the connection. For more information, see [Cross-region data transfers](https://www.alibabacloud.com/help/en/cloud-data-transmission/latest/cross-region-data-transfers).
+          * ## Usage notes
+          * **CreateTransitRouterPeerAttachment** is an asynchronous operation. After you send a request, the system returns the inter-region connection ID but the operation is still being performed in the system background. You can call **ListTransitRouterPeerAttachments** to query the status of an inter-region connection.  
+          * - If an inter-region connection is in the **Attaching** state, the inter-region connection is being created. You can query the inter-region connection but cannot perform other regions.
+          * - If an inter-region connection is in the **Attached** state, the inter-region connection is created.
+          *
+          * @param request CreateTransitRouterPeerAttachmentRequest
+          * @return CreateTransitRouterPeerAttachmentResponse
+         */
         public async Task<CreateTransitRouterPeerAttachmentResponse> CreateTransitRouterPeerAttachmentAsync(CreateTransitRouterPeerAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTransitRouterPeerAttachmentWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you begin, we recommend that you read and understand the limits, compatibility, and route advertising scope of a prefix. For more information, see [Prefix lists](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/prefix-lists).  
+          * ## Prerequisites
+          * - A prefix list is created. For more information, see [CreateVpcPrefixList](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/creatvpcprefixlist).
+          * - The prefix list is shared with the Alibaba Cloud account that owns the Enterprise Edition transit router if the prefix list and the Enterprise Edition transit router belong to different Alibaba Cloud accounts. For more information about how to share a prefix list with another Alibaba Cloud account, see [Resource sharing overview](https://www.alibabacloud.com/help/en/resource-management/latest/resource-sharing-overview) and [API reference for resource sharing](https://www.alibabacloud.com/help/en/resource-management/latest/api-reference-3).
+          *
+          * @param request CreateTransitRouterPrefixListAssociationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterPrefixListAssociationResponse
+         */
         public CreateTransitRouterPrefixListAssociationResponse CreateTransitRouterPrefixListAssociationWithOptions(CreateTransitRouterPrefixListAssociationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3294,6 +4339,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterPrefixListAssociationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you begin, we recommend that you read and understand the limits, compatibility, and route advertising scope of a prefix. For more information, see [Prefix lists](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/prefix-lists).  
+          * ## Prerequisites
+          * - A prefix list is created. For more information, see [CreateVpcPrefixList](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/creatvpcprefixlist).
+          * - The prefix list is shared with the Alibaba Cloud account that owns the Enterprise Edition transit router if the prefix list and the Enterprise Edition transit router belong to different Alibaba Cloud accounts. For more information about how to share a prefix list with another Alibaba Cloud account, see [Resource sharing overview](https://www.alibabacloud.com/help/en/resource-management/latest/resource-sharing-overview) and [API reference for resource sharing](https://www.alibabacloud.com/help/en/resource-management/latest/api-reference-3).
+          *
+          * @param request CreateTransitRouterPrefixListAssociationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterPrefixListAssociationResponse
+         */
         public async Task<CreateTransitRouterPrefixListAssociationResponse> CreateTransitRouterPrefixListAssociationWithOptionsAsync(CreateTransitRouterPrefixListAssociationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3369,18 +4425,48 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterPrefixListAssociationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you begin, we recommend that you read and understand the limits, compatibility, and route advertising scope of a prefix. For more information, see [Prefix lists](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/prefix-lists).  
+          * ## Prerequisites
+          * - A prefix list is created. For more information, see [CreateVpcPrefixList](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/creatvpcprefixlist).
+          * - The prefix list is shared with the Alibaba Cloud account that owns the Enterprise Edition transit router if the prefix list and the Enterprise Edition transit router belong to different Alibaba Cloud accounts. For more information about how to share a prefix list with another Alibaba Cloud account, see [Resource sharing overview](https://www.alibabacloud.com/help/en/resource-management/latest/resource-sharing-overview) and [API reference for resource sharing](https://www.alibabacloud.com/help/en/resource-management/latest/api-reference-3).
+          *
+          * @param request CreateTransitRouterPrefixListAssociationRequest
+          * @return CreateTransitRouterPrefixListAssociationResponse
+         */
         public CreateTransitRouterPrefixListAssociationResponse CreateTransitRouterPrefixListAssociation(CreateTransitRouterPrefixListAssociationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTransitRouterPrefixListAssociationWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you begin, we recommend that you read and understand the limits, compatibility, and route advertising scope of a prefix. For more information, see [Prefix lists](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/prefix-lists).  
+          * ## Prerequisites
+          * - A prefix list is created. For more information, see [CreateVpcPrefixList](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/creatvpcprefixlist).
+          * - The prefix list is shared with the Alibaba Cloud account that owns the Enterprise Edition transit router if the prefix list and the Enterprise Edition transit router belong to different Alibaba Cloud accounts. For more information about how to share a prefix list with another Alibaba Cloud account, see [Resource sharing overview](https://www.alibabacloud.com/help/en/resource-management/latest/resource-sharing-overview) and [API reference for resource sharing](https://www.alibabacloud.com/help/en/resource-management/latest/api-reference-3).
+          *
+          * @param request CreateTransitRouterPrefixListAssociationRequest
+          * @return CreateTransitRouterPrefixListAssociationResponse
+         */
         public async Task<CreateTransitRouterPrefixListAssociationResponse> CreateTransitRouterPrefixListAssociationAsync(CreateTransitRouterPrefixListAssociationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTransitRouterPrefixListAssociationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **CreateTransitRouterRouteEntry** is an asynchronous operation. After you send a request, the route ID is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteEntries** to query the status of a route.
+          * *   If a route is in the **Creating** state, the route is being created. In this case, you can query the route but cannot perform other operations.
+          * *   If a route is in the **Active** state, the route is created.
+          *
+          * @param request CreateTransitRouterRouteEntryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterRouteEntryResponse
+         */
         public CreateTransitRouterRouteEntryResponse CreateTransitRouterRouteEntryWithOptions(CreateTransitRouterRouteEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3452,6 +4538,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterRouteEntryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **CreateTransitRouterRouteEntry** is an asynchronous operation. After you send a request, the route ID is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteEntries** to query the status of a route.
+          * *   If a route is in the **Creating** state, the route is being created. In this case, you can query the route but cannot perform other operations.
+          * *   If a route is in the **Active** state, the route is created.
+          *
+          * @param request CreateTransitRouterRouteEntryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterRouteEntryResponse
+         */
         public async Task<CreateTransitRouterRouteEntryResponse> CreateTransitRouterRouteEntryWithOptionsAsync(CreateTransitRouterRouteEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3523,18 +4619,47 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterRouteEntryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **CreateTransitRouterRouteEntry** is an asynchronous operation. After you send a request, the route ID is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteEntries** to query the status of a route.
+          * *   If a route is in the **Creating** state, the route is being created. In this case, you can query the route but cannot perform other operations.
+          * *   If a route is in the **Active** state, the route is created.
+          *
+          * @param request CreateTransitRouterRouteEntryRequest
+          * @return CreateTransitRouterRouteEntryResponse
+         */
         public CreateTransitRouterRouteEntryResponse CreateTransitRouterRouteEntry(CreateTransitRouterRouteEntryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTransitRouterRouteEntryWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **CreateTransitRouterRouteEntry** is an asynchronous operation. After you send a request, the route ID is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteEntries** to query the status of a route.
+          * *   If a route is in the **Creating** state, the route is being created. In this case, you can query the route but cannot perform other operations.
+          * *   If a route is in the **Active** state, the route is created.
+          *
+          * @param request CreateTransitRouterRouteEntryRequest
+          * @return CreateTransitRouterRouteEntryResponse
+         */
         public async Task<CreateTransitRouterRouteEntryResponse> CreateTransitRouterRouteEntryAsync(CreateTransitRouterRouteEntryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTransitRouterRouteEntryWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   Only Enterprise Edition transit routers support custom route tables. For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **CreateTransitRouterRouteTable** is an asynchronous operation. After you send a request, the route table ID is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTables** to query the status of a route table.
+          *     *   If a route table is in the **Creating** state, the route table is being created. In this case, you can query the route table but cannot perform other operations.
+          *     *   If a route table is in the **Active** state, the route table is created.
+          *
+          * @param request CreateTransitRouterRouteTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterRouteTableResponse
+         */
         public CreateTransitRouterRouteTableResponse CreateTransitRouterRouteTableWithOptions(CreateTransitRouterRouteTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3562,6 +4687,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTableOptions))
+            {
+                query["RouteTableOptions"] = request.RouteTableOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -3598,6 +4727,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterRouteTableResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   Only Enterprise Edition transit routers support custom route tables. For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **CreateTransitRouterRouteTable** is an asynchronous operation. After you send a request, the route table ID is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTables** to query the status of a route table.
+          *     *   If a route table is in the **Creating** state, the route table is being created. In this case, you can query the route table but cannot perform other operations.
+          *     *   If a route table is in the **Active** state, the route table is created.
+          *
+          * @param request CreateTransitRouterRouteTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterRouteTableResponse
+         */
         public async Task<CreateTransitRouterRouteTableResponse> CreateTransitRouterRouteTableWithOptionsAsync(CreateTransitRouterRouteTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3625,6 +4765,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTableOptions))
+            {
+                query["RouteTableOptions"] = request.RouteTableOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -3661,18 +4805,51 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterRouteTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   Only Enterprise Edition transit routers support custom route tables. For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **CreateTransitRouterRouteTable** is an asynchronous operation. After you send a request, the route table ID is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTables** to query the status of a route table.
+          *     *   If a route table is in the **Creating** state, the route table is being created. In this case, you can query the route table but cannot perform other operations.
+          *     *   If a route table is in the **Active** state, the route table is created.
+          *
+          * @param request CreateTransitRouterRouteTableRequest
+          * @return CreateTransitRouterRouteTableResponse
+         */
         public CreateTransitRouterRouteTableResponse CreateTransitRouterRouteTable(CreateTransitRouterRouteTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTransitRouterRouteTableWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   Only Enterprise Edition transit routers support custom route tables. For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **CreateTransitRouterRouteTable** is an asynchronous operation. After you send a request, the route table ID is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTables** to query the status of a route table.
+          *     *   If a route table is in the **Creating** state, the route table is being created. In this case, you can query the route table but cannot perform other operations.
+          *     *   If a route table is in the **Active** state, the route table is created.
+          *
+          * @param request CreateTransitRouterRouteTableRequest
+          * @return CreateTransitRouterRouteTableResponse
+         */
         public async Task<CreateTransitRouterRouteTableResponse> CreateTransitRouterRouteTableAsync(CreateTransitRouterRouteTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTransitRouterRouteTableWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   You can use the following methods to create a VBR connection on an Enterprise Edition transit router:
+          *     *   If an Enterprise Edition transit router is already created in the region where you want to create a VBR connection, set the **VbrId** and **TransitRouterId** parameters.
+          *     *   If no Enterprise Edition transit router is created in the region where you want to create a VBR connection, set the **VbrId**, **CenId**, and **RegionId** parameters. Then, the system automatically creates an Enterprise Edition transit router in the specified region.
+          * *   **CreateTransitRouterVbrAttachment** is an asynchronous operation. After you send a request, the ID of the VBR connection is returned but the operation is still being performed in the system background. You can call **ListTransitRouterVbrAttachments** to query the status of a VBR connection.
+          *     *   If a VBR is in the **Attaching** state, the VBR connection is being created. You can query the VBR connection but cannot perform other operations.
+          *     *   If a VBR connection is in the **Attached** state, the VBR connection is created.
+          *
+          * @param request CreateTransitRouterVbrAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterVbrAttachmentResponse
+         */
         public CreateTransitRouterVbrAttachmentResponse CreateTransitRouterVbrAttachmentWithOptions(CreateTransitRouterVbrAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3756,6 +4933,19 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterVbrAttachmentResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   You can use the following methods to create a VBR connection on an Enterprise Edition transit router:
+          *     *   If an Enterprise Edition transit router is already created in the region where you want to create a VBR connection, set the **VbrId** and **TransitRouterId** parameters.
+          *     *   If no Enterprise Edition transit router is created in the region where you want to create a VBR connection, set the **VbrId**, **CenId**, and **RegionId** parameters. Then, the system automatically creates an Enterprise Edition transit router in the specified region.
+          * *   **CreateTransitRouterVbrAttachment** is an asynchronous operation. After you send a request, the ID of the VBR connection is returned but the operation is still being performed in the system background. You can call **ListTransitRouterVbrAttachments** to query the status of a VBR connection.
+          *     *   If a VBR is in the **Attaching** state, the VBR connection is being created. You can query the VBR connection but cannot perform other operations.
+          *     *   If a VBR connection is in the **Attached** state, the VBR connection is created.
+          *
+          * @param request CreateTransitRouterVbrAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterVbrAttachmentResponse
+         */
         public async Task<CreateTransitRouterVbrAttachmentResponse> CreateTransitRouterVbrAttachmentWithOptionsAsync(CreateTransitRouterVbrAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3839,18 +5029,59 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterVbrAttachmentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   You can use the following methods to create a VBR connection on an Enterprise Edition transit router:
+          *     *   If an Enterprise Edition transit router is already created in the region where you want to create a VBR connection, set the **VbrId** and **TransitRouterId** parameters.
+          *     *   If no Enterprise Edition transit router is created in the region where you want to create a VBR connection, set the **VbrId**, **CenId**, and **RegionId** parameters. Then, the system automatically creates an Enterprise Edition transit router in the specified region.
+          * *   **CreateTransitRouterVbrAttachment** is an asynchronous operation. After you send a request, the ID of the VBR connection is returned but the operation is still being performed in the system background. You can call **ListTransitRouterVbrAttachments** to query the status of a VBR connection.
+          *     *   If a VBR is in the **Attaching** state, the VBR connection is being created. You can query the VBR connection but cannot perform other operations.
+          *     *   If a VBR connection is in the **Attached** state, the VBR connection is created.
+          *
+          * @param request CreateTransitRouterVbrAttachmentRequest
+          * @return CreateTransitRouterVbrAttachmentResponse
+         */
         public CreateTransitRouterVbrAttachmentResponse CreateTransitRouterVbrAttachment(CreateTransitRouterVbrAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTransitRouterVbrAttachmentWithOptions(request, runtime);
         }
 
+        /**
+          * *   For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   You can use the following methods to create a VBR connection on an Enterprise Edition transit router:
+          *     *   If an Enterprise Edition transit router is already created in the region where you want to create a VBR connection, set the **VbrId** and **TransitRouterId** parameters.
+          *     *   If no Enterprise Edition transit router is created in the region where you want to create a VBR connection, set the **VbrId**, **CenId**, and **RegionId** parameters. Then, the system automatically creates an Enterprise Edition transit router in the specified region.
+          * *   **CreateTransitRouterVbrAttachment** is an asynchronous operation. After you send a request, the ID of the VBR connection is returned but the operation is still being performed in the system background. You can call **ListTransitRouterVbrAttachments** to query the status of a VBR connection.
+          *     *   If a VBR is in the **Attaching** state, the VBR connection is being created. You can query the VBR connection but cannot perform other operations.
+          *     *   If a VBR connection is in the **Attached** state, the VBR connection is created.
+          *
+          * @param request CreateTransitRouterVbrAttachmentRequest
+          * @return CreateTransitRouterVbrAttachmentResponse
+         */
         public async Task<CreateTransitRouterVbrAttachmentResponse> CreateTransitRouterVbrAttachmentAsync(CreateTransitRouterVbrAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTransitRouterVbrAttachmentWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * - You can use the following methods to create a VPC connection on an Enterprise Edition transit router:   - If an Enterprise Edition transit router is already created in the region where you want to create a VPC connection, set **VpcId**, **ZoneMappings.N.VSwitchId**, **ZoneMappings.N.ZoneId**, and **TransitRouterId**.
+          *   - If no Enterprise Edition transit router is created in the region where you want to create a VPC connection, set **VpcId**, **ZoneMappings.N.VSwitchId**, **ZoneMappings.N.ZoneId**, **CenId**, and **RegionId**. When you create a VPC connection, the system automatically creates an Enterprise Edition transit router in the specified region.
+          * - **CreateTransitRouterVpcAttachment** is an asynchronous operation. After you send a request, the VPC connection ID is returned but the operation is still being performed in the system background. You can call [ListTransitRouterVpcAttachments](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/listtransitroutervpcattachments) to query the status of a VPC connection.    - If a VPC is in the **Attaching** state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.
+          *   - If a VPC connection is in the **Attached** state, the VPC connection is created.
+          * - By default, route learning and associated forwarding are disabled between transit router route tables and VPC connections.
+          * ## Prerequisites
+          * Before you call this operation, make sure that the following requirements are met:
+          * - At least one vSwitch is deployed for each VPC in the zones supported by Enterprise Edition transit routers. Each vSwitch must have at least one idle IP address. For more information, see [Regions and zones supported by Enterprise Edition transit routers](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/what-is-cen).
+          * - To connect to a network instance that belongs to another Alibaba Cloud account, you must first acquire the permissions from the account. For more information, see [Acquire permissions to connect to a network instance that belongs to another account](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/grant-permissions-to-another-alibaba-cloud-account).
+          * - VPC connections incur fees. Take note of the billing rules of VPC connections before you create a VPC connection. For more information, see [Billing](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/billing-billing).
+          *
+          * @param request CreateTransitRouterVpcAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterVpcAttachmentResponse
+         */
         public CreateTransitRouterVpcAttachmentResponse CreateTransitRouterVpcAttachmentWithOptions(CreateTransitRouterVpcAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3938,6 +5169,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterVpcAttachmentResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * - You can use the following methods to create a VPC connection on an Enterprise Edition transit router:   - If an Enterprise Edition transit router is already created in the region where you want to create a VPC connection, set **VpcId**, **ZoneMappings.N.VSwitchId**, **ZoneMappings.N.ZoneId**, and **TransitRouterId**.
+          *   - If no Enterprise Edition transit router is created in the region where you want to create a VPC connection, set **VpcId**, **ZoneMappings.N.VSwitchId**, **ZoneMappings.N.ZoneId**, **CenId**, and **RegionId**. When you create a VPC connection, the system automatically creates an Enterprise Edition transit router in the specified region.
+          * - **CreateTransitRouterVpcAttachment** is an asynchronous operation. After you send a request, the VPC connection ID is returned but the operation is still being performed in the system background. You can call [ListTransitRouterVpcAttachments](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/listtransitroutervpcattachments) to query the status of a VPC connection.    - If a VPC is in the **Attaching** state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.
+          *   - If a VPC connection is in the **Attached** state, the VPC connection is created.
+          * - By default, route learning and associated forwarding are disabled between transit router route tables and VPC connections.
+          * ## Prerequisites
+          * Before you call this operation, make sure that the following requirements are met:
+          * - At least one vSwitch is deployed for each VPC in the zones supported by Enterprise Edition transit routers. Each vSwitch must have at least one idle IP address. For more information, see [Regions and zones supported by Enterprise Edition transit routers](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/what-is-cen).
+          * - To connect to a network instance that belongs to another Alibaba Cloud account, you must first acquire the permissions from the account. For more information, see [Acquire permissions to connect to a network instance that belongs to another account](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/grant-permissions-to-another-alibaba-cloud-account).
+          * - VPC connections incur fees. Take note of the billing rules of VPC connections before you create a VPC connection. For more information, see [Billing](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/billing-billing).
+          *
+          * @param request CreateTransitRouterVpcAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterVpcAttachmentResponse
+         */
         public async Task<CreateTransitRouterVpcAttachmentResponse> CreateTransitRouterVpcAttachmentWithOptionsAsync(CreateTransitRouterVpcAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4025,18 +5273,62 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterVpcAttachmentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * - You can use the following methods to create a VPC connection on an Enterprise Edition transit router:   - If an Enterprise Edition transit router is already created in the region where you want to create a VPC connection, set **VpcId**, **ZoneMappings.N.VSwitchId**, **ZoneMappings.N.ZoneId**, and **TransitRouterId**.
+          *   - If no Enterprise Edition transit router is created in the region where you want to create a VPC connection, set **VpcId**, **ZoneMappings.N.VSwitchId**, **ZoneMappings.N.ZoneId**, **CenId**, and **RegionId**. When you create a VPC connection, the system automatically creates an Enterprise Edition transit router in the specified region.
+          * - **CreateTransitRouterVpcAttachment** is an asynchronous operation. After you send a request, the VPC connection ID is returned but the operation is still being performed in the system background. You can call [ListTransitRouterVpcAttachments](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/listtransitroutervpcattachments) to query the status of a VPC connection.    - If a VPC is in the **Attaching** state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.
+          *   - If a VPC connection is in the **Attached** state, the VPC connection is created.
+          * - By default, route learning and associated forwarding are disabled between transit router route tables and VPC connections.
+          * ## Prerequisites
+          * Before you call this operation, make sure that the following requirements are met:
+          * - At least one vSwitch is deployed for each VPC in the zones supported by Enterprise Edition transit routers. Each vSwitch must have at least one idle IP address. For more information, see [Regions and zones supported by Enterprise Edition transit routers](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/what-is-cen).
+          * - To connect to a network instance that belongs to another Alibaba Cloud account, you must first acquire the permissions from the account. For more information, see [Acquire permissions to connect to a network instance that belongs to another account](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/grant-permissions-to-another-alibaba-cloud-account).
+          * - VPC connections incur fees. Take note of the billing rules of VPC connections before you create a VPC connection. For more information, see [Billing](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/billing-billing).
+          *
+          * @param request CreateTransitRouterVpcAttachmentRequest
+          * @return CreateTransitRouterVpcAttachmentResponse
+         */
         public CreateTransitRouterVpcAttachmentResponse CreateTransitRouterVpcAttachment(CreateTransitRouterVpcAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTransitRouterVpcAttachmentWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * - You can use the following methods to create a VPC connection on an Enterprise Edition transit router:   - If an Enterprise Edition transit router is already created in the region where you want to create a VPC connection, set **VpcId**, **ZoneMappings.N.VSwitchId**, **ZoneMappings.N.ZoneId**, and **TransitRouterId**.
+          *   - If no Enterprise Edition transit router is created in the region where you want to create a VPC connection, set **VpcId**, **ZoneMappings.N.VSwitchId**, **ZoneMappings.N.ZoneId**, **CenId**, and **RegionId**. When you create a VPC connection, the system automatically creates an Enterprise Edition transit router in the specified region.
+          * - **CreateTransitRouterVpcAttachment** is an asynchronous operation. After you send a request, the VPC connection ID is returned but the operation is still being performed in the system background. You can call [ListTransitRouterVpcAttachments](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/listtransitroutervpcattachments) to query the status of a VPC connection.    - If a VPC is in the **Attaching** state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.
+          *   - If a VPC connection is in the **Attached** state, the VPC connection is created.
+          * - By default, route learning and associated forwarding are disabled between transit router route tables and VPC connections.
+          * ## Prerequisites
+          * Before you call this operation, make sure that the following requirements are met:
+          * - At least one vSwitch is deployed for each VPC in the zones supported by Enterprise Edition transit routers. Each vSwitch must have at least one idle IP address. For more information, see [Regions and zones supported by Enterprise Edition transit routers](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/what-is-cen).
+          * - To connect to a network instance that belongs to another Alibaba Cloud account, you must first acquire the permissions from the account. For more information, see [Acquire permissions to connect to a network instance that belongs to another account](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/grant-permissions-to-another-alibaba-cloud-account).
+          * - VPC connections incur fees. Take note of the billing rules of VPC connections before you create a VPC connection. For more information, see [Billing](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/billing-billing).
+          *
+          * @param request CreateTransitRouterVpcAttachmentRequest
+          * @return CreateTransitRouterVpcAttachmentResponse
+         */
         public async Task<CreateTransitRouterVpcAttachmentResponse> CreateTransitRouterVpcAttachmentAsync(CreateTransitRouterVpcAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTransitRouterVpcAttachmentWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   IPsec-VPN connections are supported only by Enterprise Edition transit routers deployed in some regions. If you want to create a VPN connection in regions that do not support IPsec-VPN connections, [submit a ticket](https://ia.aliyun.com/home?channel=ticket\\&mark=console-home) or contact your account manager. For more information about the regions, see [Connect a transit router to an IPsec-VPN connection](~~445769~~).
+          * *   By default, route learning and associated forwarding are disabled between transit router route tables and IPsec-VPN attachments.
+          * *   When you call `CreateTransitRouterVpnAttachment`, if you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId** and **RegionId**, you do not need to set **CenId**.
+          * ## Prerequisites
+          * *   Before you connect a transit router to an IPsec-VPN connection, make sure that an IPsec-VPN connection is created in the region where the transit router is deployed. The IPsec-VPN connection cannot be associated with a resource. For more information, see [CreateVpnAttachment](~~442455~~).
+          * *   If the transit router needs to be associated with an IPsec-VPN connection within a different Alibaba Cloud account, make sure that the transit router has obtained the required permissions from the IPsec-VPN connection. For more information, see [GrantInstanceToTransitRouter](~~417520~~).
+          *
+          * @param request CreateTransitRouterVpnAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterVpnAttachmentResponse
+         */
         public CreateTransitRouterVpnAttachmentResponse CreateTransitRouterVpnAttachmentWithOptions(CreateTransitRouterVpnAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4128,6 +5420,18 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterVpnAttachmentResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   IPsec-VPN connections are supported only by Enterprise Edition transit routers deployed in some regions. If you want to create a VPN connection in regions that do not support IPsec-VPN connections, [submit a ticket](https://ia.aliyun.com/home?channel=ticket\\&mark=console-home) or contact your account manager. For more information about the regions, see [Connect a transit router to an IPsec-VPN connection](~~445769~~).
+          * *   By default, route learning and associated forwarding are disabled between transit router route tables and IPsec-VPN attachments.
+          * *   When you call `CreateTransitRouterVpnAttachment`, if you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId** and **RegionId**, you do not need to set **CenId**.
+          * ## Prerequisites
+          * *   Before you connect a transit router to an IPsec-VPN connection, make sure that an IPsec-VPN connection is created in the region where the transit router is deployed. The IPsec-VPN connection cannot be associated with a resource. For more information, see [CreateVpnAttachment](~~442455~~).
+          * *   If the transit router needs to be associated with an IPsec-VPN connection within a different Alibaba Cloud account, make sure that the transit router has obtained the required permissions from the IPsec-VPN connection. For more information, see [GrantInstanceToTransitRouter](~~417520~~).
+          *
+          * @param request CreateTransitRouterVpnAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTransitRouterVpnAttachmentResponse
+         */
         public async Task<CreateTransitRouterVpnAttachmentResponse> CreateTransitRouterVpnAttachmentWithOptionsAsync(CreateTransitRouterVpnAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4219,18 +5523,50 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<CreateTransitRouterVpnAttachmentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   IPsec-VPN connections are supported only by Enterprise Edition transit routers deployed in some regions. If you want to create a VPN connection in regions that do not support IPsec-VPN connections, [submit a ticket](https://ia.aliyun.com/home?channel=ticket\\&mark=console-home) or contact your account manager. For more information about the regions, see [Connect a transit router to an IPsec-VPN connection](~~445769~~).
+          * *   By default, route learning and associated forwarding are disabled between transit router route tables and IPsec-VPN attachments.
+          * *   When you call `CreateTransitRouterVpnAttachment`, if you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId** and **RegionId**, you do not need to set **CenId**.
+          * ## Prerequisites
+          * *   Before you connect a transit router to an IPsec-VPN connection, make sure that an IPsec-VPN connection is created in the region where the transit router is deployed. The IPsec-VPN connection cannot be associated with a resource. For more information, see [CreateVpnAttachment](~~442455~~).
+          * *   If the transit router needs to be associated with an IPsec-VPN connection within a different Alibaba Cloud account, make sure that the transit router has obtained the required permissions from the IPsec-VPN connection. For more information, see [GrantInstanceToTransitRouter](~~417520~~).
+          *
+          * @param request CreateTransitRouterVpnAttachmentRequest
+          * @return CreateTransitRouterVpnAttachmentResponse
+         */
         public CreateTransitRouterVpnAttachmentResponse CreateTransitRouterVpnAttachment(CreateTransitRouterVpnAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTransitRouterVpnAttachmentWithOptions(request, runtime);
         }
 
+        /**
+          * *   IPsec-VPN connections are supported only by Enterprise Edition transit routers deployed in some regions. If you want to create a VPN connection in regions that do not support IPsec-VPN connections, [submit a ticket](https://ia.aliyun.com/home?channel=ticket\\&mark=console-home) or contact your account manager. For more information about the regions, see [Connect a transit router to an IPsec-VPN connection](~~445769~~).
+          * *   By default, route learning and associated forwarding are disabled between transit router route tables and IPsec-VPN attachments.
+          * *   When you call `CreateTransitRouterVpnAttachment`, if you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId** and **RegionId**, you do not need to set **CenId**.
+          * ## Prerequisites
+          * *   Before you connect a transit router to an IPsec-VPN connection, make sure that an IPsec-VPN connection is created in the region where the transit router is deployed. The IPsec-VPN connection cannot be associated with a resource. For more information, see [CreateVpnAttachment](~~442455~~).
+          * *   If the transit router needs to be associated with an IPsec-VPN connection within a different Alibaba Cloud account, make sure that the transit router has obtained the required permissions from the IPsec-VPN connection. For more information, see [GrantInstanceToTransitRouter](~~417520~~).
+          *
+          * @param request CreateTransitRouterVpnAttachmentRequest
+          * @return CreateTransitRouterVpnAttachmentResponse
+         */
         public async Task<CreateTransitRouterVpnAttachmentResponse> CreateTransitRouterVpnAttachmentAsync(CreateTransitRouterVpnAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTransitRouterVpnAttachmentWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `DeactiveFlowLog` is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          * *   If a flow log is in the **Modifying** state, the flow log is being disabled. You can query the flow log but cannot perform other operations.
+          * *   If a flow log is in the **Inactive** state, the flow log is disabled.
+          *
+          * @param request DeactiveFlowLogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeactiveFlowLogResponse
+         */
         public DeactiveFlowLogResponse DeactiveFlowLogWithOptions(DeactiveFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4286,6 +5622,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeactiveFlowLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `DeactiveFlowLog` is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          * *   If a flow log is in the **Modifying** state, the flow log is being disabled. You can query the flow log but cannot perform other operations.
+          * *   If a flow log is in the **Inactive** state, the flow log is disabled.
+          *
+          * @param request DeactiveFlowLogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeactiveFlowLogResponse
+         */
         public async Task<DeactiveFlowLogResponse> DeactiveFlowLogWithOptionsAsync(DeactiveFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4341,18 +5687,53 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeactiveFlowLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `DeactiveFlowLog` is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          * *   If a flow log is in the **Modifying** state, the flow log is being disabled. You can query the flow log but cannot perform other operations.
+          * *   If a flow log is in the **Inactive** state, the flow log is disabled.
+          *
+          * @param request DeactiveFlowLogRequest
+          * @return DeactiveFlowLogResponse
+         */
         public DeactiveFlowLogResponse DeactiveFlowLog(DeactiveFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeactiveFlowLogWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `DeactiveFlowLog` is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          * *   If a flow log is in the **Modifying** state, the flow log is being disabled. You can query the flow log but cannot perform other operations.
+          * *   If a flow log is in the **Inactive** state, the flow log is disabled.
+          *
+          * @param request DeactiveFlowLogRequest
+          * @return DeactiveFlowLogResponse
+         */
         public async Task<DeactiveFlowLogResponse> DeactiveFlowLogAsync(DeactiveFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeactiveFlowLogWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * **DeleteCen** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.   
+          * - If a CEN instance is in the **Deleting** state, the CEN instance is being deleted. In this case, you can query the CEN instance but cannot perform other operations.
+          * - If a CEN instance cannot be found, the CEN instance is deleted.
+          * ## Prerequisites
+          * The CEN instance that you want to delete is not associated with a bandwidth plan, and the transit router associated with the CEN instance does not have a network instance connection or a custom route table. 
+          * - For more information about how to detach a network instance, see the following topics:   - [DeleteTransitRouterVpcAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpcattachment)
+          *   - [DeleteTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervbrattachment)
+          *   - [DeleteTransitRouterVpnAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpnattachment)
+          *   - [DeleteTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterpeerattachment)>  For more information about how to detach network instances from a Basic Edition transit router, see [DetachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/detachcenchildinstance).
+          * - For more information about how to delete a custom route table, see [DeleteTransitRouterRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterroutetable).
+          * - For more information about how to disassociate a bandwidth plan from a CEN instance, see [UnassociateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/unassociatecenbandwidthpackage).
+          *
+          * @param request DeleteCenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCenResponse
+         */
         public DeleteCenResponse DeleteCenWithOptions(DeleteCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4396,6 +5777,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * **DeleteCen** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.   
+          * - If a CEN instance is in the **Deleting** state, the CEN instance is being deleted. In this case, you can query the CEN instance but cannot perform other operations.
+          * - If a CEN instance cannot be found, the CEN instance is deleted.
+          * ## Prerequisites
+          * The CEN instance that you want to delete is not associated with a bandwidth plan, and the transit router associated with the CEN instance does not have a network instance connection or a custom route table. 
+          * - For more information about how to detach a network instance, see the following topics:   - [DeleteTransitRouterVpcAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpcattachment)
+          *   - [DeleteTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervbrattachment)
+          *   - [DeleteTransitRouterVpnAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpnattachment)
+          *   - [DeleteTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterpeerattachment)>  For more information about how to detach network instances from a Basic Edition transit router, see [DetachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/detachcenchildinstance).
+          * - For more information about how to delete a custom route table, see [DeleteTransitRouterRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterroutetable).
+          * - For more information about how to disassociate a bandwidth plan from a CEN instance, see [UnassociateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/unassociatecenbandwidthpackage).
+          *
+          * @param request DeleteCenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCenResponse
+         */
         public async Task<DeleteCenResponse> DeleteCenWithOptionsAsync(DeleteCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4439,18 +5837,58 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * **DeleteCen** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.   
+          * - If a CEN instance is in the **Deleting** state, the CEN instance is being deleted. In this case, you can query the CEN instance but cannot perform other operations.
+          * - If a CEN instance cannot be found, the CEN instance is deleted.
+          * ## Prerequisites
+          * The CEN instance that you want to delete is not associated with a bandwidth plan, and the transit router associated with the CEN instance does not have a network instance connection or a custom route table. 
+          * - For more information about how to detach a network instance, see the following topics:   - [DeleteTransitRouterVpcAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpcattachment)
+          *   - [DeleteTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervbrattachment)
+          *   - [DeleteTransitRouterVpnAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpnattachment)
+          *   - [DeleteTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterpeerattachment)>  For more information about how to detach network instances from a Basic Edition transit router, see [DetachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/detachcenchildinstance).
+          * - For more information about how to delete a custom route table, see [DeleteTransitRouterRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterroutetable).
+          * - For more information about how to disassociate a bandwidth plan from a CEN instance, see [UnassociateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/unassociatecenbandwidthpackage).
+          *
+          * @param request DeleteCenRequest
+          * @return DeleteCenResponse
+         */
         public DeleteCenResponse DeleteCen(DeleteCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCenWithOptions(request, runtime);
         }
 
+        /**
+          * **DeleteCen** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.   
+          * - If a CEN instance is in the **Deleting** state, the CEN instance is being deleted. In this case, you can query the CEN instance but cannot perform other operations.
+          * - If a CEN instance cannot be found, the CEN instance is deleted.
+          * ## Prerequisites
+          * The CEN instance that you want to delete is not associated with a bandwidth plan, and the transit router associated with the CEN instance does not have a network instance connection or a custom route table. 
+          * - For more information about how to detach a network instance, see the following topics:   - [DeleteTransitRouterVpcAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpcattachment)
+          *   - [DeleteTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervbrattachment)
+          *   - [DeleteTransitRouterVpnAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpnattachment)
+          *   - [DeleteTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterpeerattachment)>  For more information about how to detach network instances from a Basic Edition transit router, see [DetachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/detachcenchildinstance).
+          * - For more information about how to delete a custom route table, see [DeleteTransitRouterRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterroutetable).
+          * - For more information about how to disassociate a bandwidth plan from a CEN instance, see [UnassociateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/unassociatecenbandwidthpackage).
+          *
+          * @param request DeleteCenRequest
+          * @return DeleteCenResponse
+         */
         public async Task<DeleteCenResponse> DeleteCenAsync(DeleteCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCenWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage
+          * Before you delete a bandwidth plan, make sure that it is disassociated from all Cloud Enterprise Network (CEN) instances. For more information, see [UnassociateCenBandwidthPackage](~~65935~~).
+          *
+          * @param request DeleteCenBandwidthPackageRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCenBandwidthPackageResponse
+         */
         public DeleteCenBandwidthPackageResponse DeleteCenBandwidthPackageWithOptions(DeleteCenBandwidthPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4494,6 +5932,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenBandwidthPackageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage
+          * Before you delete a bandwidth plan, make sure that it is disassociated from all Cloud Enterprise Network (CEN) instances. For more information, see [UnassociateCenBandwidthPackage](~~65935~~).
+          *
+          * @param request DeleteCenBandwidthPackageRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCenBandwidthPackageResponse
+         */
         public async Task<DeleteCenBandwidthPackageResponse> DeleteCenBandwidthPackageWithOptionsAsync(DeleteCenBandwidthPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4537,18 +5983,43 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenBandwidthPackageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage
+          * Before you delete a bandwidth plan, make sure that it is disassociated from all Cloud Enterprise Network (CEN) instances. For more information, see [UnassociateCenBandwidthPackage](~~65935~~).
+          *
+          * @param request DeleteCenBandwidthPackageRequest
+          * @return DeleteCenBandwidthPackageResponse
+         */
         public DeleteCenBandwidthPackageResponse DeleteCenBandwidthPackage(DeleteCenBandwidthPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCenBandwidthPackageWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage
+          * Before you delete a bandwidth plan, make sure that it is disassociated from all Cloud Enterprise Network (CEN) instances. For more information, see [UnassociateCenBandwidthPackage](~~65935~~).
+          *
+          * @param request DeleteCenBandwidthPackageRequest
+          * @return DeleteCenBandwidthPackageResponse
+         */
         public async Task<DeleteCenBandwidthPackageResponse> DeleteCenBandwidthPackageAsync(DeleteCenBandwidthPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCenBandwidthPackageWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   You can delete routes only from virtual private clouds (VPCs) and virtual border routers (VBRs) whose next hop is an **Enterprise Edition transit router connection**, which is the connection to the network instance.
+          * *   **DeleteCenChildInstanceRouteEntryToAttachment** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeRouteEntryList** to query the status of a route.
+          *     *   If a route is in the **Deleting** state, the route is being deleted. You can query the route but cannot perform other operations.
+          *     *   If a route cannot be found, the route is deleted.
+          *
+          * @param request DeleteCenChildInstanceRouteEntryToAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCenChildInstanceRouteEntryToAttachmentResponse
+         */
         public DeleteCenChildInstanceRouteEntryToAttachmentResponse DeleteCenChildInstanceRouteEntryToAttachmentWithOptions(DeleteCenChildInstanceRouteEntryToAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4612,6 +6083,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenChildInstanceRouteEntryToAttachmentResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   You can delete routes only from virtual private clouds (VPCs) and virtual border routers (VBRs) whose next hop is an **Enterprise Edition transit router connection**, which is the connection to the network instance.
+          * *   **DeleteCenChildInstanceRouteEntryToAttachment** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeRouteEntryList** to query the status of a route.
+          *     *   If a route is in the **Deleting** state, the route is being deleted. You can query the route but cannot perform other operations.
+          *     *   If a route cannot be found, the route is deleted.
+          *
+          * @param request DeleteCenChildInstanceRouteEntryToAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCenChildInstanceRouteEntryToAttachmentResponse
+         */
         public async Task<DeleteCenChildInstanceRouteEntryToAttachmentResponse> DeleteCenChildInstanceRouteEntryToAttachmentWithOptionsAsync(DeleteCenChildInstanceRouteEntryToAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4675,18 +6157,47 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenChildInstanceRouteEntryToAttachmentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   You can delete routes only from virtual private clouds (VPCs) and virtual border routers (VBRs) whose next hop is an **Enterprise Edition transit router connection**, which is the connection to the network instance.
+          * *   **DeleteCenChildInstanceRouteEntryToAttachment** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeRouteEntryList** to query the status of a route.
+          *     *   If a route is in the **Deleting** state, the route is being deleted. You can query the route but cannot perform other operations.
+          *     *   If a route cannot be found, the route is deleted.
+          *
+          * @param request DeleteCenChildInstanceRouteEntryToAttachmentRequest
+          * @return DeleteCenChildInstanceRouteEntryToAttachmentResponse
+         */
         public DeleteCenChildInstanceRouteEntryToAttachmentResponse DeleteCenChildInstanceRouteEntryToAttachment(DeleteCenChildInstanceRouteEntryToAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCenChildInstanceRouteEntryToAttachmentWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   You can delete routes only from virtual private clouds (VPCs) and virtual border routers (VBRs) whose next hop is an **Enterprise Edition transit router connection**, which is the connection to the network instance.
+          * *   **DeleteCenChildInstanceRouteEntryToAttachment** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeRouteEntryList** to query the status of a route.
+          *     *   If a route is in the **Deleting** state, the route is being deleted. You can query the route but cannot perform other operations.
+          *     *   If a route cannot be found, the route is deleted.
+          *
+          * @param request DeleteCenChildInstanceRouteEntryToAttachmentRequest
+          * @return DeleteCenChildInstanceRouteEntryToAttachmentResponse
+         */
         public async Task<DeleteCenChildInstanceRouteEntryToAttachmentResponse> DeleteCenChildInstanceRouteEntryToAttachmentAsync(DeleteCenChildInstanceRouteEntryToAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCenChildInstanceRouteEntryToAttachmentWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Limits
+          * *   By default, the DeleteCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   You cannot delete a route entry from an Enterprise Edition transit router by calling the DeleteCenChildInstanceRouteEntryToCen operation.
+          *
+          * @param request DeleteCenChildInstanceRouteEntryToCenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCenChildInstanceRouteEntryToCenResponse
+         */
         public DeleteCenChildInstanceRouteEntryToCenResponse DeleteCenChildInstanceRouteEntryToCenWithOptions(DeleteCenChildInstanceRouteEntryToCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4754,6 +6265,15 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenChildInstanceRouteEntryToCenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Limits
+          * *   By default, the DeleteCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   You cannot delete a route entry from an Enterprise Edition transit router by calling the DeleteCenChildInstanceRouteEntryToCen operation.
+          *
+          * @param request DeleteCenChildInstanceRouteEntryToCenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCenChildInstanceRouteEntryToCenResponse
+         */
         public async Task<DeleteCenChildInstanceRouteEntryToCenResponse> DeleteCenChildInstanceRouteEntryToCenWithOptionsAsync(DeleteCenChildInstanceRouteEntryToCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4821,18 +6341,45 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenChildInstanceRouteEntryToCenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Limits
+          * *   By default, the DeleteCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   You cannot delete a route entry from an Enterprise Edition transit router by calling the DeleteCenChildInstanceRouteEntryToCen operation.
+          *
+          * @param request DeleteCenChildInstanceRouteEntryToCenRequest
+          * @return DeleteCenChildInstanceRouteEntryToCenResponse
+         */
         public DeleteCenChildInstanceRouteEntryToCenResponse DeleteCenChildInstanceRouteEntryToCen(DeleteCenChildInstanceRouteEntryToCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCenChildInstanceRouteEntryToCenWithOptions(request, runtime);
         }
 
+        /**
+          * ## Limits
+          * *   By default, the DeleteCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+          * *   You cannot delete a route entry from an Enterprise Edition transit router by calling the DeleteCenChildInstanceRouteEntryToCen operation.
+          *
+          * @param request DeleteCenChildInstanceRouteEntryToCenRequest
+          * @return DeleteCenChildInstanceRouteEntryToCenResponse
+         */
         public async Task<DeleteCenChildInstanceRouteEntryToCenResponse> DeleteCenChildInstanceRouteEntryToCenAsync(DeleteCenChildInstanceRouteEntryToCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCenChildInstanceRouteEntryToCenWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   Before you delete a QoS policy, you must delete all queues in the QoS policy except the default queue. For more information, see [DeleteCenInterRegionTrafficQosQueue](~~419062~~).
+          * *   **DeleteCenInterRegionTrafficQosPolicy** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of a QoS policy.
+          *     *   If a QoS policy is in the **Deleting** state, the QoS policy is being deleted. You can query the QoS policy but cannot perform other operations.
+          *     *   If a QoS policy cannot be found, the QoS policy is deleted.
+          *
+          * @param request DeleteCenInterRegionTrafficQosPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCenInterRegionTrafficQosPolicyResponse
+         */
         public DeleteCenInterRegionTrafficQosPolicyResponse DeleteCenInterRegionTrafficQosPolicyWithOptions(DeleteCenInterRegionTrafficQosPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4884,6 +6431,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenInterRegionTrafficQosPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   Before you delete a QoS policy, you must delete all queues in the QoS policy except the default queue. For more information, see [DeleteCenInterRegionTrafficQosQueue](~~419062~~).
+          * *   **DeleteCenInterRegionTrafficQosPolicy** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of a QoS policy.
+          *     *   If a QoS policy is in the **Deleting** state, the QoS policy is being deleted. You can query the QoS policy but cannot perform other operations.
+          *     *   If a QoS policy cannot be found, the QoS policy is deleted.
+          *
+          * @param request DeleteCenInterRegionTrafficQosPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCenInterRegionTrafficQosPolicyResponse
+         */
         public async Task<DeleteCenInterRegionTrafficQosPolicyResponse> DeleteCenInterRegionTrafficQosPolicyWithOptionsAsync(DeleteCenInterRegionTrafficQosPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4935,18 +6493,47 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenInterRegionTrafficQosPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   Before you delete a QoS policy, you must delete all queues in the QoS policy except the default queue. For more information, see [DeleteCenInterRegionTrafficQosQueue](~~419062~~).
+          * *   **DeleteCenInterRegionTrafficQosPolicy** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of a QoS policy.
+          *     *   If a QoS policy is in the **Deleting** state, the QoS policy is being deleted. You can query the QoS policy but cannot perform other operations.
+          *     *   If a QoS policy cannot be found, the QoS policy is deleted.
+          *
+          * @param request DeleteCenInterRegionTrafficQosPolicyRequest
+          * @return DeleteCenInterRegionTrafficQosPolicyResponse
+         */
         public DeleteCenInterRegionTrafficQosPolicyResponse DeleteCenInterRegionTrafficQosPolicy(DeleteCenInterRegionTrafficQosPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCenInterRegionTrafficQosPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   Before you delete a QoS policy, you must delete all queues in the QoS policy except the default queue. For more information, see [DeleteCenInterRegionTrafficQosQueue](~~419062~~).
+          * *   **DeleteCenInterRegionTrafficQosPolicy** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of a QoS policy.
+          *     *   If a QoS policy is in the **Deleting** state, the QoS policy is being deleted. You can query the QoS policy but cannot perform other operations.
+          *     *   If a QoS policy cannot be found, the QoS policy is deleted.
+          *
+          * @param request DeleteCenInterRegionTrafficQosPolicyRequest
+          * @return DeleteCenInterRegionTrafficQosPolicyResponse
+         */
         public async Task<DeleteCenInterRegionTrafficQosPolicyResponse> DeleteCenInterRegionTrafficQosPolicyAsync(DeleteCenInterRegionTrafficQosPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCenInterRegionTrafficQosPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   You cannot delete the default queue.
+          * *   **DeleteCenInterRegionTrafficQosQueue** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of a queue. If a queue cannot be found, the queue is deleted.
+          *
+          * @param request DeleteCenInterRegionTrafficQosQueueRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCenInterRegionTrafficQosQueueResponse
+         */
         public DeleteCenInterRegionTrafficQosQueueResponse DeleteCenInterRegionTrafficQosQueueWithOptions(DeleteCenInterRegionTrafficQosQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4998,6 +6585,15 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenInterRegionTrafficQosQueueResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   You cannot delete the default queue.
+          * *   **DeleteCenInterRegionTrafficQosQueue** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of a queue. If a queue cannot be found, the queue is deleted.
+          *
+          * @param request DeleteCenInterRegionTrafficQosQueueRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCenInterRegionTrafficQosQueueResponse
+         */
         public async Task<DeleteCenInterRegionTrafficQosQueueResponse> DeleteCenInterRegionTrafficQosQueueWithOptionsAsync(DeleteCenInterRegionTrafficQosQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5049,18 +6645,44 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenInterRegionTrafficQosQueueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   You cannot delete the default queue.
+          * *   **DeleteCenInterRegionTrafficQosQueue** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of a queue. If a queue cannot be found, the queue is deleted.
+          *
+          * @param request DeleteCenInterRegionTrafficQosQueueRequest
+          * @return DeleteCenInterRegionTrafficQosQueueResponse
+         */
         public DeleteCenInterRegionTrafficQosQueueResponse DeleteCenInterRegionTrafficQosQueue(DeleteCenInterRegionTrafficQosQueueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCenInterRegionTrafficQosQueueWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   You cannot delete the default queue.
+          * *   **DeleteCenInterRegionTrafficQosQueue** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of a queue. If a queue cannot be found, the queue is deleted.
+          *
+          * @param request DeleteCenInterRegionTrafficQosQueueRequest
+          * @return DeleteCenInterRegionTrafficQosQueueResponse
+         */
         public async Task<DeleteCenInterRegionTrafficQosQueueResponse> DeleteCenInterRegionTrafficQosQueueAsync(DeleteCenInterRegionTrafficQosQueueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCenInterRegionTrafficQosQueueWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `DeleteCenRouteMap` is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call `DescribeCenRouteMaps` to query the status of a routing policy.
+          * *   If a routing policy is in the **Deleting** state, the routing policy is being deleted. You can query the routing policy but cannot perform other operations.
+          * *   If a routing policy cannot be found, it is deleted.
+          *
+          * @param request DeleteCenRouteMapRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCenRouteMapResponse
+         */
         public DeleteCenRouteMapResponse DeleteCenRouteMapWithOptions(DeleteCenRouteMapRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5112,6 +6734,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenRouteMapResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `DeleteCenRouteMap` is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call `DescribeCenRouteMaps` to query the status of a routing policy.
+          * *   If a routing policy is in the **Deleting** state, the routing policy is being deleted. You can query the routing policy but cannot perform other operations.
+          * *   If a routing policy cannot be found, it is deleted.
+          *
+          * @param request DeleteCenRouteMapRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteCenRouteMapResponse
+         */
         public async Task<DeleteCenRouteMapResponse> DeleteCenRouteMapWithOptionsAsync(DeleteCenRouteMapRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5163,18 +6795,46 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenRouteMapResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `DeleteCenRouteMap` is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call `DescribeCenRouteMaps` to query the status of a routing policy.
+          * *   If a routing policy is in the **Deleting** state, the routing policy is being deleted. You can query the routing policy but cannot perform other operations.
+          * *   If a routing policy cannot be found, it is deleted.
+          *
+          * @param request DeleteCenRouteMapRequest
+          * @return DeleteCenRouteMapResponse
+         */
         public DeleteCenRouteMapResponse DeleteCenRouteMap(DeleteCenRouteMapRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCenRouteMapWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `DeleteCenRouteMap` is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call `DescribeCenRouteMaps` to query the status of a routing policy.
+          * *   If a routing policy is in the **Deleting** state, the routing policy is being deleted. You can query the routing policy but cannot perform other operations.
+          * *   If a routing policy cannot be found, it is deleted.
+          *
+          * @param request DeleteCenRouteMapRequest
+          * @return DeleteCenRouteMapResponse
+         */
         public async Task<DeleteCenRouteMapResponse> DeleteCenRouteMapAsync(DeleteCenRouteMapRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCenRouteMapWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `DeleteFlowlog` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          * *   If a flow log is in the **Deleting** state, the flow log is being deleted. In this case, you can query the flow log but cannot perform other operations.
+          * *   If a flow log cannot be found, the flow log is deleted.
+          *
+          * @param request DeleteFlowlogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteFlowlogResponse
+         */
         public DeleteFlowlogResponse DeleteFlowlogWithOptions(DeleteFlowlogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5230,6 +6890,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteFlowlogResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `DeleteFlowlog` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          * *   If a flow log is in the **Deleting** state, the flow log is being deleted. In this case, you can query the flow log but cannot perform other operations.
+          * *   If a flow log cannot be found, the flow log is deleted.
+          *
+          * @param request DeleteFlowlogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteFlowlogResponse
+         */
         public async Task<DeleteFlowlogResponse> DeleteFlowlogWithOptionsAsync(DeleteFlowlogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5285,18 +6955,46 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteFlowlogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `DeleteFlowlog` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          * *   If a flow log is in the **Deleting** state, the flow log is being deleted. In this case, you can query the flow log but cannot perform other operations.
+          * *   If a flow log cannot be found, the flow log is deleted.
+          *
+          * @param request DeleteFlowlogRequest
+          * @return DeleteFlowlogResponse
+         */
         public DeleteFlowlogResponse DeleteFlowlog(DeleteFlowlogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteFlowlogWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `DeleteFlowlog` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          * *   If a flow log is in the **Deleting** state, the flow log is being deleted. In this case, you can query the flow log but cannot perform other operations.
+          * *   If a flow log cannot be found, the flow log is deleted.
+          *
+          * @param request DeleteFlowlogRequest
+          * @return DeleteFlowlogResponse
+         */
         public async Task<DeleteFlowlogResponse> DeleteFlowlogAsync(DeleteFlowlogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFlowlogWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteRouteServiceInCen** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **DescribeRouteServicesInCen** to query the status of the connection to a cloud service.
+          * *   If a cloud service is in the **Deleting** state, the connection to the cloud service is being deleted. You can query the connection but you cannot perform other operations.
+          * *   If no connection to a cloud service can be found, the connection to the cloud service is deleted.
+          *
+          * @param request DeleteRouteServiceInCenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteRouteServiceInCenResponse
+         */
         public DeleteRouteServiceInCenResponse DeleteRouteServiceInCenWithOptions(DeleteRouteServiceInCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5356,6 +7054,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteRouteServiceInCenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteRouteServiceInCen** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **DescribeRouteServicesInCen** to query the status of the connection to a cloud service.
+          * *   If a cloud service is in the **Deleting** state, the connection to the cloud service is being deleted. You can query the connection but you cannot perform other operations.
+          * *   If no connection to a cloud service can be found, the connection to the cloud service is deleted.
+          *
+          * @param request DeleteRouteServiceInCenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteRouteServiceInCenResponse
+         */
         public async Task<DeleteRouteServiceInCenResponse> DeleteRouteServiceInCenWithOptionsAsync(DeleteRouteServiceInCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5415,18 +7123,47 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteRouteServiceInCenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteRouteServiceInCen** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **DescribeRouteServicesInCen** to query the status of the connection to a cloud service.
+          * *   If a cloud service is in the **Deleting** state, the connection to the cloud service is being deleted. You can query the connection but you cannot perform other operations.
+          * *   If no connection to a cloud service can be found, the connection to the cloud service is deleted.
+          *
+          * @param request DeleteRouteServiceInCenRequest
+          * @return DeleteRouteServiceInCenResponse
+         */
         public DeleteRouteServiceInCenResponse DeleteRouteServiceInCen(DeleteRouteServiceInCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteRouteServiceInCenWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteRouteServiceInCen** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **DescribeRouteServicesInCen** to query the status of the connection to a cloud service.
+          * *   If a cloud service is in the **Deleting** state, the connection to the cloud service is being deleted. You can query the connection but you cannot perform other operations.
+          * *   If no connection to a cloud service can be found, the connection to the cloud service is deleted.
+          *
+          * @param request DeleteRouteServiceInCenRequest
+          * @return DeleteRouteServiceInCenResponse
+         */
         public async Task<DeleteRouteServiceInCenResponse> DeleteRouteServiceInCenAsync(DeleteRouteServiceInCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteRouteServiceInCenWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   **DeleteTrafficMarkingPolicy** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic marking policy.
+          *     *   If a traffic marking policy is in the **Deleting** state, the traffic marking policy is being deleted. You can query the traffic marking policy, but cannot perform other operations.
+          *     *   If a traffic marking policy cannot be found, the traffic marking policy is deleted.
+          * *   Before you delete a traffic marking policy, you must delete all traffic classification rules from the policy. For more information, see [RemoveTraficMatchRuleFromTrafficMarkingPolicy](~~419012~~).
+          *
+          * @param request DeleteTrafficMarkingPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTrafficMarkingPolicyResponse
+         */
         public DeleteTrafficMarkingPolicyResponse DeleteTrafficMarkingPolicyWithOptions(DeleteTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5478,6 +7215,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTrafficMarkingPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   **DeleteTrafficMarkingPolicy** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic marking policy.
+          *     *   If a traffic marking policy is in the **Deleting** state, the traffic marking policy is being deleted. You can query the traffic marking policy, but cannot perform other operations.
+          *     *   If a traffic marking policy cannot be found, the traffic marking policy is deleted.
+          * *   Before you delete a traffic marking policy, you must delete all traffic classification rules from the policy. For more information, see [RemoveTraficMatchRuleFromTrafficMarkingPolicy](~~419012~~).
+          *
+          * @param request DeleteTrafficMarkingPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTrafficMarkingPolicyResponse
+         */
         public async Task<DeleteTrafficMarkingPolicyResponse> DeleteTrafficMarkingPolicyWithOptionsAsync(DeleteTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5529,18 +7277,177 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTrafficMarkingPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   **DeleteTrafficMarkingPolicy** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic marking policy.
+          *     *   If a traffic marking policy is in the **Deleting** state, the traffic marking policy is being deleted. You can query the traffic marking policy, but cannot perform other operations.
+          *     *   If a traffic marking policy cannot be found, the traffic marking policy is deleted.
+          * *   Before you delete a traffic marking policy, you must delete all traffic classification rules from the policy. For more information, see [RemoveTraficMatchRuleFromTrafficMarkingPolicy](~~419012~~).
+          *
+          * @param request DeleteTrafficMarkingPolicyRequest
+          * @return DeleteTrafficMarkingPolicyResponse
+         */
         public DeleteTrafficMarkingPolicyResponse DeleteTrafficMarkingPolicy(DeleteTrafficMarkingPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTrafficMarkingPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   **DeleteTrafficMarkingPolicy** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic marking policy.
+          *     *   If a traffic marking policy is in the **Deleting** state, the traffic marking policy is being deleted. You can query the traffic marking policy, but cannot perform other operations.
+          *     *   If a traffic marking policy cannot be found, the traffic marking policy is deleted.
+          * *   Before you delete a traffic marking policy, you must delete all traffic classification rules from the policy. For more information, see [RemoveTraficMatchRuleFromTrafficMarkingPolicy](~~419012~~).
+          *
+          * @param request DeleteTrafficMarkingPolicyRequest
+          * @return DeleteTrafficMarkingPolicyResponse
+         */
         public async Task<DeleteTrafficMarkingPolicyResponse> DeleteTrafficMarkingPolicyAsync(DeleteTrafficMarkingPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTrafficMarkingPolicyWithOptionsAsync(request, runtime);
         }
 
+        public DeleteTransitRouteTableAggregationResponse DeleteTransitRouteTableAggregationWithOptions(DeleteTransitRouteTableAggregationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationCidr))
+            {
+                query["TransitRouteTableAggregationCidr"] = request.TransitRouteTableAggregationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableId))
+            {
+                query["TransitRouteTableId"] = request.TransitRouteTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTransitRouteTableAggregation",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTransitRouteTableAggregationResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteTransitRouteTableAggregationResponse> DeleteTransitRouteTableAggregationWithOptionsAsync(DeleteTransitRouteTableAggregationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationCidr))
+            {
+                query["TransitRouteTableAggregationCidr"] = request.TransitRouteTableAggregationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableId))
+            {
+                query["TransitRouteTableId"] = request.TransitRouteTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTransitRouteTableAggregation",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTransitRouteTableAggregationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteTransitRouteTableAggregationResponse DeleteTransitRouteTableAggregation(DeleteTransitRouteTableAggregationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteTransitRouteTableAggregationWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteTransitRouteTableAggregationResponse> DeleteTransitRouteTableAggregationAsync(DeleteTransitRouteTableAggregationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteTransitRouteTableAggregationWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * **DeleteTransitRouter** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouters** to query the status of a transit router.   
+          * - If a transit router is in the **Deleting** state, the transit router is being deleted. In this case, you can query the transit router but cannot perform other operations.
+          * - If a transit router cannot be found, the transit router is deleted.
+          * ## Prerequisites
+          * Before you delete a transit router, make sure that the following prerequisites are met: 
+          * - No network instance connections are created on the transit router.    - For more information about how to delete a virtual private cloud (VPC) connection, see [DeleteTransitRouterVpcAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpcattachment).
+          *   - For more information about how to delete a virtual border router (VBR) connection, see [DeleteTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervbrattachment).
+          *   - For more information about how to delete a Cloud Connect Network (CCN) connection, see [DetachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/detachcenchildinstance).
+          *   - For more information about how to delete a VPN connection, see [DeleteTransitRouterVpnAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpnattachment).
+          *   - For more information about how to delete an inter-region connection, see [DeleteTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterpeerattachment).
+          * - No custom route tables are created on the transit router. For more information about how to delete a custom route table, see [DeleteTransitRouterRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterroutetable).
+          *
+          * @param request DeleteTransitRouterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterResponse
+         */
         public DeleteTransitRouterResponse DeleteTransitRouterWithOptions(DeleteTransitRouterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5592,6 +7499,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * **DeleteTransitRouter** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouters** to query the status of a transit router.   
+          * - If a transit router is in the **Deleting** state, the transit router is being deleted. In this case, you can query the transit router but cannot perform other operations.
+          * - If a transit router cannot be found, the transit router is deleted.
+          * ## Prerequisites
+          * Before you delete a transit router, make sure that the following prerequisites are met: 
+          * - No network instance connections are created on the transit router.    - For more information about how to delete a virtual private cloud (VPC) connection, see [DeleteTransitRouterVpcAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpcattachment).
+          *   - For more information about how to delete a virtual border router (VBR) connection, see [DeleteTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervbrattachment).
+          *   - For more information about how to delete a Cloud Connect Network (CCN) connection, see [DetachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/detachcenchildinstance).
+          *   - For more information about how to delete a VPN connection, see [DeleteTransitRouterVpnAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpnattachment).
+          *   - For more information about how to delete an inter-region connection, see [DeleteTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterpeerattachment).
+          * - No custom route tables are created on the transit router. For more information about how to delete a custom route table, see [DeleteTransitRouterRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterroutetable).
+          *
+          * @param request DeleteTransitRouterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterResponse
+         */
         public async Task<DeleteTransitRouterResponse> DeleteTransitRouterWithOptionsAsync(DeleteTransitRouterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5643,18 +7567,58 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * **DeleteTransitRouter** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouters** to query the status of a transit router.   
+          * - If a transit router is in the **Deleting** state, the transit router is being deleted. In this case, you can query the transit router but cannot perform other operations.
+          * - If a transit router cannot be found, the transit router is deleted.
+          * ## Prerequisites
+          * Before you delete a transit router, make sure that the following prerequisites are met: 
+          * - No network instance connections are created on the transit router.    - For more information about how to delete a virtual private cloud (VPC) connection, see [DeleteTransitRouterVpcAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpcattachment).
+          *   - For more information about how to delete a virtual border router (VBR) connection, see [DeleteTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervbrattachment).
+          *   - For more information about how to delete a Cloud Connect Network (CCN) connection, see [DetachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/detachcenchildinstance).
+          *   - For more information about how to delete a VPN connection, see [DeleteTransitRouterVpnAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpnattachment).
+          *   - For more information about how to delete an inter-region connection, see [DeleteTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterpeerattachment).
+          * - No custom route tables are created on the transit router. For more information about how to delete a custom route table, see [DeleteTransitRouterRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterroutetable).
+          *
+          * @param request DeleteTransitRouterRequest
+          * @return DeleteTransitRouterResponse
+         */
         public DeleteTransitRouterResponse DeleteTransitRouter(DeleteTransitRouterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTransitRouterWithOptions(request, runtime);
         }
 
+        /**
+          * **DeleteTransitRouter** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouters** to query the status of a transit router.   
+          * - If a transit router is in the **Deleting** state, the transit router is being deleted. In this case, you can query the transit router but cannot perform other operations.
+          * - If a transit router cannot be found, the transit router is deleted.
+          * ## Prerequisites
+          * Before you delete a transit router, make sure that the following prerequisites are met: 
+          * - No network instance connections are created on the transit router.    - For more information about how to delete a virtual private cloud (VPC) connection, see [DeleteTransitRouterVpcAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpcattachment).
+          *   - For more information about how to delete a virtual border router (VBR) connection, see [DeleteTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervbrattachment).
+          *   - For more information about how to delete a Cloud Connect Network (CCN) connection, see [DetachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/detachcenchildinstance).
+          *   - For more information about how to delete a VPN connection, see [DeleteTransitRouterVpnAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpnattachment).
+          *   - For more information about how to delete an inter-region connection, see [DeleteTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterpeerattachment).
+          * - No custom route tables are created on the transit router. For more information about how to delete a custom route table, see [DeleteTransitRouterRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterroutetable).
+          *
+          * @param request DeleteTransitRouterRequest
+          * @return DeleteTransitRouterResponse
+         */
         public async Task<DeleteTransitRouterResponse> DeleteTransitRouterAsync(DeleteTransitRouterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTransitRouterWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * If IP addresses within the CIDR block have been allocated to network instances, the CIDR block cannot be deleted.
+          *
+          * @param request DeleteTransitRouterCidrRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterCidrResponse
+         */
         public DeleteTransitRouterCidrResponse DeleteTransitRouterCidrWithOptions(DeleteTransitRouterCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5714,6 +7678,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterCidrResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * If IP addresses within the CIDR block have been allocated to network instances, the CIDR block cannot be deleted.
+          *
+          * @param request DeleteTransitRouterCidrRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterCidrResponse
+         */
         public async Task<DeleteTransitRouterCidrResponse> DeleteTransitRouterCidrWithOptionsAsync(DeleteTransitRouterCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5773,18 +7745,43 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterCidrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * If IP addresses within the CIDR block have been allocated to network instances, the CIDR block cannot be deleted.
+          *
+          * @param request DeleteTransitRouterCidrRequest
+          * @return DeleteTransitRouterCidrResponse
+         */
         public DeleteTransitRouterCidrResponse DeleteTransitRouterCidr(DeleteTransitRouterCidrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTransitRouterCidrWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * If IP addresses within the CIDR block have been allocated to network instances, the CIDR block cannot be deleted.
+          *
+          * @param request DeleteTransitRouterCidrRequest
+          * @return DeleteTransitRouterCidrResponse
+         */
         public async Task<DeleteTransitRouterCidrResponse> DeleteTransitRouterCidrAsync(DeleteTransitRouterCidrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTransitRouterCidrWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you delete a multicast domain, make sure that the following requirements are met:
+          * *   The multicast domain is disassociated from all vSwitches. For more information, see [DisassociateTransitRouterMulticastDomain](~~429774~~).
+          * *   All multicast sources and members are removed from the multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupSources](~~429776~~) and [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          * *   The multicast domain is not added to other multicast domains as a multicast member. If the multicast domain is added to another multicast domain as a multicast member, you must remove the multicast domain from the other multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          *
+          * @param request DeleteTransitRouterMulticastDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterMulticastDomainResponse
+         */
         public DeleteTransitRouterMulticastDomainResponse DeleteTransitRouterMulticastDomainWithOptions(DeleteTransitRouterMulticastDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5836,6 +7833,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterMulticastDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you delete a multicast domain, make sure that the following requirements are met:
+          * *   The multicast domain is disassociated from all vSwitches. For more information, see [DisassociateTransitRouterMulticastDomain](~~429774~~).
+          * *   All multicast sources and members are removed from the multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupSources](~~429776~~) and [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          * *   The multicast domain is not added to other multicast domains as a multicast member. If the multicast domain is added to another multicast domain as a multicast member, you must remove the multicast domain from the other multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          *
+          * @param request DeleteTransitRouterMulticastDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterMulticastDomainResponse
+         */
         public async Task<DeleteTransitRouterMulticastDomainResponse> DeleteTransitRouterMulticastDomainWithOptionsAsync(DeleteTransitRouterMulticastDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5887,18 +7895,55 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterMulticastDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you delete a multicast domain, make sure that the following requirements are met:
+          * *   The multicast domain is disassociated from all vSwitches. For more information, see [DisassociateTransitRouterMulticastDomain](~~429774~~).
+          * *   All multicast sources and members are removed from the multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupSources](~~429776~~) and [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          * *   The multicast domain is not added to other multicast domains as a multicast member. If the multicast domain is added to another multicast domain as a multicast member, you must remove the multicast domain from the other multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          *
+          * @param request DeleteTransitRouterMulticastDomainRequest
+          * @return DeleteTransitRouterMulticastDomainResponse
+         */
         public DeleteTransitRouterMulticastDomainResponse DeleteTransitRouterMulticastDomain(DeleteTransitRouterMulticastDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTransitRouterMulticastDomainWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you delete a multicast domain, make sure that the following requirements are met:
+          * *   The multicast domain is disassociated from all vSwitches. For more information, see [DisassociateTransitRouterMulticastDomain](~~429774~~).
+          * *   All multicast sources and members are removed from the multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupSources](~~429776~~) and [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          * *   The multicast domain is not added to other multicast domains as a multicast member. If the multicast domain is added to another multicast domain as a multicast member, you must remove the multicast domain from the other multicast domain. For more information, see [DeregisterTransitRouterMulticastGroupMembers](~~429779~~).
+          *
+          * @param request DeleteTransitRouterMulticastDomainRequest
+          * @return DeleteTransitRouterMulticastDomainResponse
+         */
         public async Task<DeleteTransitRouterMulticastDomainResponse> DeleteTransitRouterMulticastDomainAsync(DeleteTransitRouterMulticastDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTransitRouterMulticastDomainWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteTransitRouterPeerAttachment** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterPeerAttachments** to query the status of an inter-region connection.  
+          * - If an inter-region connection is in the **Detaching** state, the inter-region connection is being deleted. You can query the inter-region connection but cannot perform other operations.
+          * - If an inter-region connection cannot be found, the inter-region connection is deleted.
+          * ## Prerequisites
+          * Before you begin, make sure that the Enterprise Edition transit router that you use to create inter-region connections meets the following prerequisites: 
+          * - No associated forwarding correlation is established between the inter-region connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/dissociatetransitrouterattachmentfromroutetable).
+          * - No route learning correlation is established between the inter-region connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/disabletransitrouterroutetablepropagation).
+          * - The route tables of the Enterprise Edition transit router do not contain a custom route entry whose next hop is the network instance connection. For more information about how to delete custom routes from route tables of Enterprise Edition transit routers, see [DeleteTransitRouterRouteEntry](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterrouteentry).
+          * - The route table does not contain a route whose next hop is the inter-region connection and that is generated from a prefix list. You can delete such routes by disassociating the route table from the prefix list. For more information, see [DeleteTransitRouterPrefixListAssociation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterprefixlistassociation).
+          * - No quality of service (QoS) policy is configured for the inter-region connection. For more information about how to delete QoS policies, see [DeleteCenInterRegionTrafficQosPolicy](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deleteceninterregiontrafficqospolicy).
+          *
+          * @param request DeleteTransitRouterPeerAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterPeerAttachmentResponse
+         */
         public DeleteTransitRouterPeerAttachmentResponse DeleteTransitRouterPeerAttachmentWithOptions(DeleteTransitRouterPeerAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5950,6 +7995,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterPeerAttachmentResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteTransitRouterPeerAttachment** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterPeerAttachments** to query the status of an inter-region connection.  
+          * - If an inter-region connection is in the **Detaching** state, the inter-region connection is being deleted. You can query the inter-region connection but cannot perform other operations.
+          * - If an inter-region connection cannot be found, the inter-region connection is deleted.
+          * ## Prerequisites
+          * Before you begin, make sure that the Enterprise Edition transit router that you use to create inter-region connections meets the following prerequisites: 
+          * - No associated forwarding correlation is established between the inter-region connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/dissociatetransitrouterattachmentfromroutetable).
+          * - No route learning correlation is established between the inter-region connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/disabletransitrouterroutetablepropagation).
+          * - The route tables of the Enterprise Edition transit router do not contain a custom route entry whose next hop is the network instance connection. For more information about how to delete custom routes from route tables of Enterprise Edition transit routers, see [DeleteTransitRouterRouteEntry](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterrouteentry).
+          * - The route table does not contain a route whose next hop is the inter-region connection and that is generated from a prefix list. You can delete such routes by disassociating the route table from the prefix list. For more information, see [DeleteTransitRouterPrefixListAssociation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterprefixlistassociation).
+          * - No quality of service (QoS) policy is configured for the inter-region connection. For more information about how to delete QoS policies, see [DeleteCenInterRegionTrafficQosPolicy](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deleteceninterregiontrafficqospolicy).
+          *
+          * @param request DeleteTransitRouterPeerAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterPeerAttachmentResponse
+         */
         public async Task<DeleteTransitRouterPeerAttachmentResponse> DeleteTransitRouterPeerAttachmentWithOptionsAsync(DeleteTransitRouterPeerAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6001,18 +8063,58 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterPeerAttachmentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteTransitRouterPeerAttachment** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterPeerAttachments** to query the status of an inter-region connection.  
+          * - If an inter-region connection is in the **Detaching** state, the inter-region connection is being deleted. You can query the inter-region connection but cannot perform other operations.
+          * - If an inter-region connection cannot be found, the inter-region connection is deleted.
+          * ## Prerequisites
+          * Before you begin, make sure that the Enterprise Edition transit router that you use to create inter-region connections meets the following prerequisites: 
+          * - No associated forwarding correlation is established between the inter-region connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/dissociatetransitrouterattachmentfromroutetable).
+          * - No route learning correlation is established between the inter-region connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/disabletransitrouterroutetablepropagation).
+          * - The route tables of the Enterprise Edition transit router do not contain a custom route entry whose next hop is the network instance connection. For more information about how to delete custom routes from route tables of Enterprise Edition transit routers, see [DeleteTransitRouterRouteEntry](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterrouteentry).
+          * - The route table does not contain a route whose next hop is the inter-region connection and that is generated from a prefix list. You can delete such routes by disassociating the route table from the prefix list. For more information, see [DeleteTransitRouterPrefixListAssociation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterprefixlistassociation).
+          * - No quality of service (QoS) policy is configured for the inter-region connection. For more information about how to delete QoS policies, see [DeleteCenInterRegionTrafficQosPolicy](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deleteceninterregiontrafficqospolicy).
+          *
+          * @param request DeleteTransitRouterPeerAttachmentRequest
+          * @return DeleteTransitRouterPeerAttachmentResponse
+         */
         public DeleteTransitRouterPeerAttachmentResponse DeleteTransitRouterPeerAttachment(DeleteTransitRouterPeerAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTransitRouterPeerAttachmentWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteTransitRouterPeerAttachment** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterPeerAttachments** to query the status of an inter-region connection.  
+          * - If an inter-region connection is in the **Detaching** state, the inter-region connection is being deleted. You can query the inter-region connection but cannot perform other operations.
+          * - If an inter-region connection cannot be found, the inter-region connection is deleted.
+          * ## Prerequisites
+          * Before you begin, make sure that the Enterprise Edition transit router that you use to create inter-region connections meets the following prerequisites: 
+          * - No associated forwarding correlation is established between the inter-region connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/dissociatetransitrouterattachmentfromroutetable).
+          * - No route learning correlation is established between the inter-region connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/disabletransitrouterroutetablepropagation).
+          * - The route tables of the Enterprise Edition transit router do not contain a custom route entry whose next hop is the network instance connection. For more information about how to delete custom routes from route tables of Enterprise Edition transit routers, see [DeleteTransitRouterRouteEntry](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterrouteentry).
+          * - The route table does not contain a route whose next hop is the inter-region connection and that is generated from a prefix list. You can delete such routes by disassociating the route table from the prefix list. For more information, see [DeleteTransitRouterPrefixListAssociation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterprefixlistassociation).
+          * - No quality of service (QoS) policy is configured for the inter-region connection. For more information about how to delete QoS policies, see [DeleteCenInterRegionTrafficQosPolicy](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deleteceninterregiontrafficqospolicy).
+          *
+          * @param request DeleteTransitRouterPeerAttachmentRequest
+          * @return DeleteTransitRouterPeerAttachmentResponse
+         */
         public async Task<DeleteTransitRouterPeerAttachmentResponse> DeleteTransitRouterPeerAttachmentAsync(DeleteTransitRouterPeerAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTransitRouterPeerAttachmentWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * After you disassociate a route table of an Enterprise Edition transit router from a prefix list, the routes that point to the CIDR blocks in the prefix list are automatically withdrawn from the route table. Before you disassociate the route table of an Enterprise Edition transit router from a prefix list, you must migrate workloads that use the routes in case services are interrupted.
+          *
+          * @param request DeleteTransitRouterPrefixListAssociationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterPrefixListAssociationResponse
+         */
         public DeleteTransitRouterPrefixListAssociationResponse DeleteTransitRouterPrefixListAssociationWithOptions(DeleteTransitRouterPrefixListAssociationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6084,6 +8186,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterPrefixListAssociationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * After you disassociate a route table of an Enterprise Edition transit router from a prefix list, the routes that point to the CIDR blocks in the prefix list are automatically withdrawn from the route table. Before you disassociate the route table of an Enterprise Edition transit router from a prefix list, you must migrate workloads that use the routes in case services are interrupted.
+          *
+          * @param request DeleteTransitRouterPrefixListAssociationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterPrefixListAssociationResponse
+         */
         public async Task<DeleteTransitRouterPrefixListAssociationResponse> DeleteTransitRouterPrefixListAssociationWithOptionsAsync(DeleteTransitRouterPrefixListAssociationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6155,18 +8265,47 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterPrefixListAssociationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * After you disassociate a route table of an Enterprise Edition transit router from a prefix list, the routes that point to the CIDR blocks in the prefix list are automatically withdrawn from the route table. Before you disassociate the route table of an Enterprise Edition transit router from a prefix list, you must migrate workloads that use the routes in case services are interrupted.
+          *
+          * @param request DeleteTransitRouterPrefixListAssociationRequest
+          * @return DeleteTransitRouterPrefixListAssociationResponse
+         */
         public DeleteTransitRouterPrefixListAssociationResponse DeleteTransitRouterPrefixListAssociation(DeleteTransitRouterPrefixListAssociationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTransitRouterPrefixListAssociationWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * After you disassociate a route table of an Enterprise Edition transit router from a prefix list, the routes that point to the CIDR blocks in the prefix list are automatically withdrawn from the route table. Before you disassociate the route table of an Enterprise Edition transit router from a prefix list, you must migrate workloads that use the routes in case services are interrupted.
+          *
+          * @param request DeleteTransitRouterPrefixListAssociationRequest
+          * @return DeleteTransitRouterPrefixListAssociationResponse
+         */
         public async Task<DeleteTransitRouterPrefixListAssociationResponse> DeleteTransitRouterPrefixListAssociationAsync(DeleteTransitRouterPrefixListAssociationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTransitRouterPrefixListAssociationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, take note of the following items:
+          * - If **TransitRouterRouteEntryId** is set, you must not specify **TransitRouterRouteTableId** or **TransitRouterRouteEntryDestinationCidrBlock**. Otherwise, parameter conflicts will occur.
+          * - If **TransitRouterRouteEntryId** is not set, you must specify the following parameters based on the type of the next hop:   - To delete a black hole route, you must set **TransitRouterRouteTableId**, **TransitRouterRouteEntryDestinationCidrBlock**, and **TransitRouterRouteEntryNextHopType**.
+          *   - If the route that you want to delete is not a black hole route, you must set **TransitRouterRouteTableId**, **TransitRouterRouteEntryDestinationCidrBlock**, **TransitRouterRouteEntryNextHopType**, and **TransitRouterRouteEntryNextHopId**.
+          * - **DeleteTransitRouterRouteEntry** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteEntries** to query the status of a route entry.     - If a route entry is in the **Deleting** state, the route entry is being deleted. You can query the route entry but cannot perform other operations.
+          *   - If a route entry cannot be found, it is deleted.
+          * ## Limits
+          * You can call this operation to delete only static routes. Automatically learned routes are not supported. You can call the [ListTransitRouterRouteEntries](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/listtransitrouterrouteentries) operation to query route types.
+          *
+          * @param request DeleteTransitRouterRouteEntryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterRouteEntryResponse
+         */
         public DeleteTransitRouterRouteEntryResponse DeleteTransitRouterRouteEntryWithOptions(DeleteTransitRouterRouteEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6234,6 +8373,21 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterRouteEntryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, take note of the following items:
+          * - If **TransitRouterRouteEntryId** is set, you must not specify **TransitRouterRouteTableId** or **TransitRouterRouteEntryDestinationCidrBlock**. Otherwise, parameter conflicts will occur.
+          * - If **TransitRouterRouteEntryId** is not set, you must specify the following parameters based on the type of the next hop:   - To delete a black hole route, you must set **TransitRouterRouteTableId**, **TransitRouterRouteEntryDestinationCidrBlock**, and **TransitRouterRouteEntryNextHopType**.
+          *   - If the route that you want to delete is not a black hole route, you must set **TransitRouterRouteTableId**, **TransitRouterRouteEntryDestinationCidrBlock**, **TransitRouterRouteEntryNextHopType**, and **TransitRouterRouteEntryNextHopId**.
+          * - **DeleteTransitRouterRouteEntry** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteEntries** to query the status of a route entry.     - If a route entry is in the **Deleting** state, the route entry is being deleted. You can query the route entry but cannot perform other operations.
+          *   - If a route entry cannot be found, it is deleted.
+          * ## Limits
+          * You can call this operation to delete only static routes. Automatically learned routes are not supported. You can call the [ListTransitRouterRouteEntries](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/listtransitrouterrouteentries) operation to query route types.
+          *
+          * @param request DeleteTransitRouterRouteEntryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterRouteEntryResponse
+         */
         public async Task<DeleteTransitRouterRouteEntryResponse> DeleteTransitRouterRouteEntryWithOptionsAsync(DeleteTransitRouterRouteEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6301,18 +8455,57 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterRouteEntryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, take note of the following items:
+          * - If **TransitRouterRouteEntryId** is set, you must not specify **TransitRouterRouteTableId** or **TransitRouterRouteEntryDestinationCidrBlock**. Otherwise, parameter conflicts will occur.
+          * - If **TransitRouterRouteEntryId** is not set, you must specify the following parameters based on the type of the next hop:   - To delete a black hole route, you must set **TransitRouterRouteTableId**, **TransitRouterRouteEntryDestinationCidrBlock**, and **TransitRouterRouteEntryNextHopType**.
+          *   - If the route that you want to delete is not a black hole route, you must set **TransitRouterRouteTableId**, **TransitRouterRouteEntryDestinationCidrBlock**, **TransitRouterRouteEntryNextHopType**, and **TransitRouterRouteEntryNextHopId**.
+          * - **DeleteTransitRouterRouteEntry** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteEntries** to query the status of a route entry.     - If a route entry is in the **Deleting** state, the route entry is being deleted. You can query the route entry but cannot perform other operations.
+          *   - If a route entry cannot be found, it is deleted.
+          * ## Limits
+          * You can call this operation to delete only static routes. Automatically learned routes are not supported. You can call the [ListTransitRouterRouteEntries](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/listtransitrouterrouteentries) operation to query route types.
+          *
+          * @param request DeleteTransitRouterRouteEntryRequest
+          * @return DeleteTransitRouterRouteEntryResponse
+         */
         public DeleteTransitRouterRouteEntryResponse DeleteTransitRouterRouteEntry(DeleteTransitRouterRouteEntryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTransitRouterRouteEntryWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, take note of the following items:
+          * - If **TransitRouterRouteEntryId** is set, you must not specify **TransitRouterRouteTableId** or **TransitRouterRouteEntryDestinationCidrBlock**. Otherwise, parameter conflicts will occur.
+          * - If **TransitRouterRouteEntryId** is not set, you must specify the following parameters based on the type of the next hop:   - To delete a black hole route, you must set **TransitRouterRouteTableId**, **TransitRouterRouteEntryDestinationCidrBlock**, and **TransitRouterRouteEntryNextHopType**.
+          *   - If the route that you want to delete is not a black hole route, you must set **TransitRouterRouteTableId**, **TransitRouterRouteEntryDestinationCidrBlock**, **TransitRouterRouteEntryNextHopType**, and **TransitRouterRouteEntryNextHopId**.
+          * - **DeleteTransitRouterRouteEntry** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteEntries** to query the status of a route entry.     - If a route entry is in the **Deleting** state, the route entry is being deleted. You can query the route entry but cannot perform other operations.
+          *   - If a route entry cannot be found, it is deleted.
+          * ## Limits
+          * You can call this operation to delete only static routes. Automatically learned routes are not supported. You can call the [ListTransitRouterRouteEntries](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/listtransitrouterrouteentries) operation to query route types.
+          *
+          * @param request DeleteTransitRouterRouteEntryRequest
+          * @return DeleteTransitRouterRouteEntryResponse
+         */
         public async Task<DeleteTransitRouterRouteEntryResponse> DeleteTransitRouterRouteEntryAsync(DeleteTransitRouterRouteEntryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTransitRouterRouteEntryWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   You cannot delete the default route table of an Enterprise Edition transit router.
+          * *   **DeleteTransitRouterRouteTable** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTables** to query the status of a custom route table.
+          *     *   If a custom route table is in the Deleting state, the custom route table is being deleted. In this case, you can query the custom route table but cannot perform other operations.
+          *     *   If a custom route table cannot be found, the custom route table is deleted.
+          *
+          * @param request DeleteTransitRouterRouteTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterRouteTableResponse
+         */
         public DeleteTransitRouterRouteTableResponse DeleteTransitRouterRouteTableWithOptions(DeleteTransitRouterRouteTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6364,6 +8557,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterRouteTableResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   You cannot delete the default route table of an Enterprise Edition transit router.
+          * *   **DeleteTransitRouterRouteTable** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTables** to query the status of a custom route table.
+          *     *   If a custom route table is in the Deleting state, the custom route table is being deleted. In this case, you can query the custom route table but cannot perform other operations.
+          *     *   If a custom route table cannot be found, the custom route table is deleted.
+          *
+          * @param request DeleteTransitRouterRouteTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterRouteTableResponse
+         */
         public async Task<DeleteTransitRouterRouteTableResponse> DeleteTransitRouterRouteTableWithOptionsAsync(DeleteTransitRouterRouteTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6415,18 +8619,54 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterRouteTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   You cannot delete the default route table of an Enterprise Edition transit router.
+          * *   **DeleteTransitRouterRouteTable** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTables** to query the status of a custom route table.
+          *     *   If a custom route table is in the Deleting state, the custom route table is being deleted. In this case, you can query the custom route table but cannot perform other operations.
+          *     *   If a custom route table cannot be found, the custom route table is deleted.
+          *
+          * @param request DeleteTransitRouterRouteTableRequest
+          * @return DeleteTransitRouterRouteTableResponse
+         */
         public DeleteTransitRouterRouteTableResponse DeleteTransitRouterRouteTable(DeleteTransitRouterRouteTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTransitRouterRouteTableWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   You cannot delete the default route table of an Enterprise Edition transit router.
+          * *   **DeleteTransitRouterRouteTable** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTables** to query the status of a custom route table.
+          *     *   If a custom route table is in the Deleting state, the custom route table is being deleted. In this case, you can query the custom route table but cannot perform other operations.
+          *     *   If a custom route table cannot be found, the custom route table is deleted.
+          *
+          * @param request DeleteTransitRouterRouteTableRequest
+          * @return DeleteTransitRouterRouteTableResponse
+         */
         public async Task<DeleteTransitRouterRouteTableResponse> DeleteTransitRouterRouteTableAsync(DeleteTransitRouterRouteTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTransitRouterRouteTableWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteTransitRouterVbrAttachment** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVbrAttachments** to query the status of VBR connection.   
+          * - If a VBR connection is in the **Detaching** state, the VBR connection is being deleted. You can query the VBR connection but cannot perform other operations.
+          * - If a VBR connection cannot be found, the VBR connection is deleted.
+          * ## Prerequisites
+          * Before you delete a VBR connection for an Enterprise Edition transit router, make sure that the following requirements are met: 
+          * - No associated forwarding correlation is established between the VBR connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/dissociatetransitrouterattachmentfromroutetable).
+          * - No route learning correlation is established between the VBR connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/disabletransitrouterroutetablepropagation).
+          * - The route tables of the Enterprise Edition transit router do not contain a custom route entry whose next hop is the network instance connection. For more information about how to delete custom route entries, see [DeleteTransitRouterRouteEntry](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterrouteentry).
+          * - The route tables of the Enterprise Edition transit router do not contain a route whose next hop is the VBR connection and that is generated from a prefix list. You can delete such routes by disassociating the route table from the prefix list. For more information, see [DeleteTransitRouterPrefixListAssociation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterprefixlistassociation).
+          *
+          * @param request DeleteTransitRouterVbrAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterVbrAttachmentResponse
+         */
         public DeleteTransitRouterVbrAttachmentResponse DeleteTransitRouterVbrAttachmentWithOptions(DeleteTransitRouterVbrAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6482,6 +8722,22 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterVbrAttachmentResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteTransitRouterVbrAttachment** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVbrAttachments** to query the status of VBR connection.   
+          * - If a VBR connection is in the **Detaching** state, the VBR connection is being deleted. You can query the VBR connection but cannot perform other operations.
+          * - If a VBR connection cannot be found, the VBR connection is deleted.
+          * ## Prerequisites
+          * Before you delete a VBR connection for an Enterprise Edition transit router, make sure that the following requirements are met: 
+          * - No associated forwarding correlation is established between the VBR connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/dissociatetransitrouterattachmentfromroutetable).
+          * - No route learning correlation is established between the VBR connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/disabletransitrouterroutetablepropagation).
+          * - The route tables of the Enterprise Edition transit router do not contain a custom route entry whose next hop is the network instance connection. For more information about how to delete custom route entries, see [DeleteTransitRouterRouteEntry](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterrouteentry).
+          * - The route tables of the Enterprise Edition transit router do not contain a route whose next hop is the VBR connection and that is generated from a prefix list. You can delete such routes by disassociating the route table from the prefix list. For more information, see [DeleteTransitRouterPrefixListAssociation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterprefixlistassociation).
+          *
+          * @param request DeleteTransitRouterVbrAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterVbrAttachmentResponse
+         */
         public async Task<DeleteTransitRouterVbrAttachmentResponse> DeleteTransitRouterVbrAttachmentWithOptionsAsync(DeleteTransitRouterVbrAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6537,18 +8793,65 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterVbrAttachmentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteTransitRouterVbrAttachment** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVbrAttachments** to query the status of VBR connection.   
+          * - If a VBR connection is in the **Detaching** state, the VBR connection is being deleted. You can query the VBR connection but cannot perform other operations.
+          * - If a VBR connection cannot be found, the VBR connection is deleted.
+          * ## Prerequisites
+          * Before you delete a VBR connection for an Enterprise Edition transit router, make sure that the following requirements are met: 
+          * - No associated forwarding correlation is established between the VBR connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/dissociatetransitrouterattachmentfromroutetable).
+          * - No route learning correlation is established between the VBR connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/disabletransitrouterroutetablepropagation).
+          * - The route tables of the Enterprise Edition transit router do not contain a custom route entry whose next hop is the network instance connection. For more information about how to delete custom route entries, see [DeleteTransitRouterRouteEntry](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterrouteentry).
+          * - The route tables of the Enterprise Edition transit router do not contain a route whose next hop is the VBR connection and that is generated from a prefix list. You can delete such routes by disassociating the route table from the prefix list. For more information, see [DeleteTransitRouterPrefixListAssociation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterprefixlistassociation).
+          *
+          * @param request DeleteTransitRouterVbrAttachmentRequest
+          * @return DeleteTransitRouterVbrAttachmentResponse
+         */
         public DeleteTransitRouterVbrAttachmentResponse DeleteTransitRouterVbrAttachment(DeleteTransitRouterVbrAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTransitRouterVbrAttachmentWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteTransitRouterVbrAttachment** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVbrAttachments** to query the status of VBR connection.   
+          * - If a VBR connection is in the **Detaching** state, the VBR connection is being deleted. You can query the VBR connection but cannot perform other operations.
+          * - If a VBR connection cannot be found, the VBR connection is deleted.
+          * ## Prerequisites
+          * Before you delete a VBR connection for an Enterprise Edition transit router, make sure that the following requirements are met: 
+          * - No associated forwarding correlation is established between the VBR connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/dissociatetransitrouterattachmentfromroutetable).
+          * - No route learning correlation is established between the VBR connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/disabletransitrouterroutetablepropagation).
+          * - The route tables of the Enterprise Edition transit router do not contain a custom route entry whose next hop is the network instance connection. For more information about how to delete custom route entries, see [DeleteTransitRouterRouteEntry](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterrouteentry).
+          * - The route tables of the Enterprise Edition transit router do not contain a route whose next hop is the VBR connection and that is generated from a prefix list. You can delete such routes by disassociating the route table from the prefix list. For more information, see [DeleteTransitRouterPrefixListAssociation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterprefixlistassociation).
+          *
+          * @param request DeleteTransitRouterVbrAttachmentRequest
+          * @return DeleteTransitRouterVbrAttachmentResponse
+         */
         public async Task<DeleteTransitRouterVbrAttachmentResponse> DeleteTransitRouterVbrAttachmentAsync(DeleteTransitRouterVbrAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTransitRouterVbrAttachmentWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteTransitRouterVpcAttachment** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVpcAttachments** to query the status of a VPC connection.   
+          * - If a VPC is in the **Detaching** state, the VPC connection is being deleted. You can query the VPC connection but cannot perform other operations.
+          * - If a VPC connection cannot be found, it is deleted.
+          * ## Prerequisites
+          * Before you delete a VPC connection, make sure that the following requirements are met: 
+          * - No associated forwarding correlation is established between the VPC connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/dissociatetransitrouterattachmentfromroutetable).
+          * - No route learning correlation is established between the VPC connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/disabletransitrouterroutetablepropagation).
+          * - The route table of the VPC does not contain routes that point to the VPC connection. For more information about how to delete routes from a VPC route table, see [DeleteRouteEntry](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/deleterouteentry).
+          * - The route tables of the Enterprise Edition transit router do not contain a custom route entry whose next hop is the network instance connection. For more information about how to delete custom routes from the route tables of an Enterprise Edition transit router, see [DeleteTransitRouterRouteEntry](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterrouteentry).
+          * - The route tables of the Enterprise Edition transit router do not contain a route that is generated from a prefix list and the next hop is the VPC connection. You can delete routes from a route table by disassociating the route table from the prefix list. For more information, see [DeleteTransitRouterPrefixListAssociation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterprefixlistassociation).
+          *
+          * @param request DeleteTransitRouterVpcAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterVpcAttachmentResponse
+         */
         public DeleteTransitRouterVpcAttachmentResponse DeleteTransitRouterVpcAttachmentWithOptions(DeleteTransitRouterVpcAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6604,6 +8907,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterVpcAttachmentResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteTransitRouterVpcAttachment** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVpcAttachments** to query the status of a VPC connection.   
+          * - If a VPC is in the **Detaching** state, the VPC connection is being deleted. You can query the VPC connection but cannot perform other operations.
+          * - If a VPC connection cannot be found, it is deleted.
+          * ## Prerequisites
+          * Before you delete a VPC connection, make sure that the following requirements are met: 
+          * - No associated forwarding correlation is established between the VPC connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/dissociatetransitrouterattachmentfromroutetable).
+          * - No route learning correlation is established between the VPC connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/disabletransitrouterroutetablepropagation).
+          * - The route table of the VPC does not contain routes that point to the VPC connection. For more information about how to delete routes from a VPC route table, see [DeleteRouteEntry](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/deleterouteentry).
+          * - The route tables of the Enterprise Edition transit router do not contain a custom route entry whose next hop is the network instance connection. For more information about how to delete custom routes from the route tables of an Enterprise Edition transit router, see [DeleteTransitRouterRouteEntry](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterrouteentry).
+          * - The route tables of the Enterprise Edition transit router do not contain a route that is generated from a prefix list and the next hop is the VPC connection. You can delete routes from a route table by disassociating the route table from the prefix list. For more information, see [DeleteTransitRouterPrefixListAssociation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterprefixlistassociation).
+          *
+          * @param request DeleteTransitRouterVpcAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterVpcAttachmentResponse
+         */
         public async Task<DeleteTransitRouterVpcAttachmentResponse> DeleteTransitRouterVpcAttachmentWithOptionsAsync(DeleteTransitRouterVpcAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6659,18 +8979,61 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterVpcAttachmentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteTransitRouterVpcAttachment** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVpcAttachments** to query the status of a VPC connection.   
+          * - If a VPC is in the **Detaching** state, the VPC connection is being deleted. You can query the VPC connection but cannot perform other operations.
+          * - If a VPC connection cannot be found, it is deleted.
+          * ## Prerequisites
+          * Before you delete a VPC connection, make sure that the following requirements are met: 
+          * - No associated forwarding correlation is established between the VPC connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/dissociatetransitrouterattachmentfromroutetable).
+          * - No route learning correlation is established between the VPC connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/disabletransitrouterroutetablepropagation).
+          * - The route table of the VPC does not contain routes that point to the VPC connection. For more information about how to delete routes from a VPC route table, see [DeleteRouteEntry](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/deleterouteentry).
+          * - The route tables of the Enterprise Edition transit router do not contain a custom route entry whose next hop is the network instance connection. For more information about how to delete custom routes from the route tables of an Enterprise Edition transit router, see [DeleteTransitRouterRouteEntry](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterrouteentry).
+          * - The route tables of the Enterprise Edition transit router do not contain a route that is generated from a prefix list and the next hop is the VPC connection. You can delete routes from a route table by disassociating the route table from the prefix list. For more information, see [DeleteTransitRouterPrefixListAssociation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterprefixlistassociation).
+          *
+          * @param request DeleteTransitRouterVpcAttachmentRequest
+          * @return DeleteTransitRouterVpcAttachmentResponse
+         */
         public DeleteTransitRouterVpcAttachmentResponse DeleteTransitRouterVpcAttachment(DeleteTransitRouterVpcAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTransitRouterVpcAttachmentWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **DeleteTransitRouterVpcAttachment** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVpcAttachments** to query the status of a VPC connection.   
+          * - If a VPC is in the **Detaching** state, the VPC connection is being deleted. You can query the VPC connection but cannot perform other operations.
+          * - If a VPC connection cannot be found, it is deleted.
+          * ## Prerequisites
+          * Before you delete a VPC connection, make sure that the following requirements are met: 
+          * - No associated forwarding correlation is established between the VPC connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/dissociatetransitrouterattachmentfromroutetable).
+          * - No route learning correlation is established between the VPC connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/disabletransitrouterroutetablepropagation).
+          * - The route table of the VPC does not contain routes that point to the VPC connection. For more information about how to delete routes from a VPC route table, see [DeleteRouteEntry](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/deleterouteentry).
+          * - The route tables of the Enterprise Edition transit router do not contain a custom route entry whose next hop is the network instance connection. For more information about how to delete custom routes from the route tables of an Enterprise Edition transit router, see [DeleteTransitRouterRouteEntry](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterrouteentry).
+          * - The route tables of the Enterprise Edition transit router do not contain a route that is generated from a prefix list and the next hop is the VPC connection. You can delete routes from a route table by disassociating the route table from the prefix list. For more information, see [DeleteTransitRouterPrefixListAssociation](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterprefixlistassociation).
+          *
+          * @param request DeleteTransitRouterVpcAttachmentRequest
+          * @return DeleteTransitRouterVpcAttachmentResponse
+         */
         public async Task<DeleteTransitRouterVpcAttachmentResponse> DeleteTransitRouterVpcAttachmentAsync(DeleteTransitRouterVpcAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTransitRouterVpcAttachmentWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage note
+          * Before you delete a VPN connection, make sure that the following requirements are met:
+          * *   No associated forwarding correlation is established between the VPN connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](~~260944~~).
+          * *   No route learning correlation is established between the VPN connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](~~260945~~).
+          * *   No route in the route table of the Enterprise Edition transit router points to the VPN connection. For more information, see [DeleteTransitRouterRouteEntry](~~261240~~).
+          *
+          * @param request DeleteTransitRouterVpnAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterVpnAttachmentResponse
+         */
         public DeleteTransitRouterVpnAttachmentResponse DeleteTransitRouterVpnAttachmentWithOptions(DeleteTransitRouterVpnAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6726,6 +9089,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterVpnAttachmentResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage note
+          * Before you delete a VPN connection, make sure that the following requirements are met:
+          * *   No associated forwarding correlation is established between the VPN connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](~~260944~~).
+          * *   No route learning correlation is established between the VPN connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](~~260945~~).
+          * *   No route in the route table of the Enterprise Edition transit router points to the VPN connection. For more information, see [DeleteTransitRouterRouteEntry](~~261240~~).
+          *
+          * @param request DeleteTransitRouterVpnAttachmentRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTransitRouterVpnAttachmentResponse
+         */
         public async Task<DeleteTransitRouterVpnAttachmentResponse> DeleteTransitRouterVpnAttachmentWithOptionsAsync(DeleteTransitRouterVpnAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6781,18 +9155,48 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteTransitRouterVpnAttachmentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage note
+          * Before you delete a VPN connection, make sure that the following requirements are met:
+          * *   No associated forwarding correlation is established between the VPN connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](~~260944~~).
+          * *   No route learning correlation is established between the VPN connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](~~260945~~).
+          * *   No route in the route table of the Enterprise Edition transit router points to the VPN connection. For more information, see [DeleteTransitRouterRouteEntry](~~261240~~).
+          *
+          * @param request DeleteTransitRouterVpnAttachmentRequest
+          * @return DeleteTransitRouterVpnAttachmentResponse
+         */
         public DeleteTransitRouterVpnAttachmentResponse DeleteTransitRouterVpnAttachment(DeleteTransitRouterVpnAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTransitRouterVpnAttachmentWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage note
+          * Before you delete a VPN connection, make sure that the following requirements are met:
+          * *   No associated forwarding correlation is established between the VPN connection and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](~~260944~~).
+          * *   No route learning correlation is established between the VPN connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](~~260945~~).
+          * *   No route in the route table of the Enterprise Edition transit router points to the VPN connection. For more information, see [DeleteTransitRouterRouteEntry](~~261240~~).
+          *
+          * @param request DeleteTransitRouterVpnAttachmentRequest
+          * @return DeleteTransitRouterVpnAttachmentResponse
+         */
         public async Task<DeleteTransitRouterVpnAttachmentResponse> DeleteTransitRouterVpnAttachmentAsync(DeleteTransitRouterVpnAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTransitRouterVpnAttachmentWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `RegisterTransitRouterMulticastGroupMembers` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast member.
+          * *   If a multicast member is in the **Deregistering** state, the multicast member is being removed. In this case, you can query the multicast member but cannot perform other operations.
+          * *   If a multicast member cannot be found, the multicast member is removed from the multicast group.
+          *
+          * @param request DeregisterTransitRouterMulticastGroupMembersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeregisterTransitRouterMulticastGroupMembersResponse
+         */
         public DeregisterTransitRouterMulticastGroupMembersResponse DeregisterTransitRouterMulticastGroupMembersWithOptions(DeregisterTransitRouterMulticastGroupMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6856,6 +9260,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeregisterTransitRouterMulticastGroupMembersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `RegisterTransitRouterMulticastGroupMembers` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast member.
+          * *   If a multicast member is in the **Deregistering** state, the multicast member is being removed. In this case, you can query the multicast member but cannot perform other operations.
+          * *   If a multicast member cannot be found, the multicast member is removed from the multicast group.
+          *
+          * @param request DeregisterTransitRouterMulticastGroupMembersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeregisterTransitRouterMulticastGroupMembersResponse
+         */
         public async Task<DeregisterTransitRouterMulticastGroupMembersResponse> DeregisterTransitRouterMulticastGroupMembersWithOptionsAsync(DeregisterTransitRouterMulticastGroupMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6919,18 +9333,46 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeregisterTransitRouterMulticastGroupMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `RegisterTransitRouterMulticastGroupMembers` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast member.
+          * *   If a multicast member is in the **Deregistering** state, the multicast member is being removed. In this case, you can query the multicast member but cannot perform other operations.
+          * *   If a multicast member cannot be found, the multicast member is removed from the multicast group.
+          *
+          * @param request DeregisterTransitRouterMulticastGroupMembersRequest
+          * @return DeregisterTransitRouterMulticastGroupMembersResponse
+         */
         public DeregisterTransitRouterMulticastGroupMembersResponse DeregisterTransitRouterMulticastGroupMembers(DeregisterTransitRouterMulticastGroupMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeregisterTransitRouterMulticastGroupMembersWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `RegisterTransitRouterMulticastGroupMembers` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast member.
+          * *   If a multicast member is in the **Deregistering** state, the multicast member is being removed. In this case, you can query the multicast member but cannot perform other operations.
+          * *   If a multicast member cannot be found, the multicast member is removed from the multicast group.
+          *
+          * @param request DeregisterTransitRouterMulticastGroupMembersRequest
+          * @return DeregisterTransitRouterMulticastGroupMembersResponse
+         */
         public async Task<DeregisterTransitRouterMulticastGroupMembersResponse> DeregisterTransitRouterMulticastGroupMembersAsync(DeregisterTransitRouterMulticastGroupMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeregisterTransitRouterMulticastGroupMembersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `DeregisterTransitRouterMulticastGroupSources` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.
+          * *   If a multicast source is in the **Deregistering** state, the multicast source is being deleted. You can query the multicast source but cannot perform other operations.
+          * *   If a multicast source cannot be found, the multicast source is deleted.
+          *
+          * @param request DeregisterTransitRouterMulticastGroupSourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeregisterTransitRouterMulticastGroupSourcesResponse
+         */
         public DeregisterTransitRouterMulticastGroupSourcesResponse DeregisterTransitRouterMulticastGroupSourcesWithOptions(DeregisterTransitRouterMulticastGroupSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6990,6 +9432,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeregisterTransitRouterMulticastGroupSourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `DeregisterTransitRouterMulticastGroupSources` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.
+          * *   If a multicast source is in the **Deregistering** state, the multicast source is being deleted. You can query the multicast source but cannot perform other operations.
+          * *   If a multicast source cannot be found, the multicast source is deleted.
+          *
+          * @param request DeregisterTransitRouterMulticastGroupSourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeregisterTransitRouterMulticastGroupSourcesResponse
+         */
         public async Task<DeregisterTransitRouterMulticastGroupSourcesResponse> DeregisterTransitRouterMulticastGroupSourcesWithOptionsAsync(DeregisterTransitRouterMulticastGroupSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7049,12 +9501,30 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeregisterTransitRouterMulticastGroupSourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `DeregisterTransitRouterMulticastGroupSources` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.
+          * *   If a multicast source is in the **Deregistering** state, the multicast source is being deleted. You can query the multicast source but cannot perform other operations.
+          * *   If a multicast source cannot be found, the multicast source is deleted.
+          *
+          * @param request DeregisterTransitRouterMulticastGroupSourcesRequest
+          * @return DeregisterTransitRouterMulticastGroupSourcesResponse
+         */
         public DeregisterTransitRouterMulticastGroupSourcesResponse DeregisterTransitRouterMulticastGroupSources(DeregisterTransitRouterMulticastGroupSourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeregisterTransitRouterMulticastGroupSourcesWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `DeregisterTransitRouterMulticastGroupSources` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.
+          * *   If a multicast source is in the **Deregistering** state, the multicast source is being deleted. You can query the multicast source but cannot perform other operations.
+          * *   If a multicast source cannot be found, the multicast source is deleted.
+          *
+          * @param request DeregisterTransitRouterMulticastGroupSourcesRequest
+          * @return DeregisterTransitRouterMulticastGroupSourcesResponse
+         */
         public async Task<DeregisterTransitRouterMulticastGroupSourcesResponse> DeregisterTransitRouterMulticastGroupSourcesAsync(DeregisterTransitRouterMulticastGroupSourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7183,6 +9653,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await DescribeCenAttachedChildInstanceAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Description
+          * You can use one of the following methods to query the information about the network instances that are attached to a CEN instance:
+          * *   You can query all the network instances that are attached to a CEN instance by setting the `CenId` parameter.
+          * *   You can query the network instances that are attached to a CEN instance in a specified region by setting the `CenId` and `ChildInstanceRegionId` parameters.
+          * *   You can query a specified type of network instances that are attached to a CEN instance by setting the `CenId` and `ChildInstanceType` parameters.
+          *
+          * @param request DescribeCenAttachedChildInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCenAttachedChildInstancesResponse
+         */
         public DescribeCenAttachedChildInstancesResponse DescribeCenAttachedChildInstancesWithOptions(DescribeCenAttachedChildInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7242,6 +9723,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DescribeCenAttachedChildInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * You can use one of the following methods to query the information about the network instances that are attached to a CEN instance:
+          * *   You can query all the network instances that are attached to a CEN instance by setting the `CenId` parameter.
+          * *   You can query the network instances that are attached to a CEN instance in a specified region by setting the `CenId` and `ChildInstanceRegionId` parameters.
+          * *   You can query a specified type of network instances that are attached to a CEN instance by setting the `CenId` and `ChildInstanceType` parameters.
+          *
+          * @param request DescribeCenAttachedChildInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCenAttachedChildInstancesResponse
+         */
         public async Task<DescribeCenAttachedChildInstancesResponse> DescribeCenAttachedChildInstancesWithOptionsAsync(DescribeCenAttachedChildInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7301,12 +9793,32 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DescribeCenAttachedChildInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * You can use one of the following methods to query the information about the network instances that are attached to a CEN instance:
+          * *   You can query all the network instances that are attached to a CEN instance by setting the `CenId` parameter.
+          * *   You can query the network instances that are attached to a CEN instance in a specified region by setting the `CenId` and `ChildInstanceRegionId` parameters.
+          * *   You can query a specified type of network instances that are attached to a CEN instance by setting the `CenId` and `ChildInstanceType` parameters.
+          *
+          * @param request DescribeCenAttachedChildInstancesRequest
+          * @return DescribeCenAttachedChildInstancesResponse
+         */
         public DescribeCenAttachedChildInstancesResponse DescribeCenAttachedChildInstances(DescribeCenAttachedChildInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCenAttachedChildInstancesWithOptions(request, runtime);
         }
 
+        /**
+          * ## Description
+          * You can use one of the following methods to query the information about the network instances that are attached to a CEN instance:
+          * *   You can query all the network instances that are attached to a CEN instance by setting the `CenId` parameter.
+          * *   You can query the network instances that are attached to a CEN instance in a specified region by setting the `CenId` and `ChildInstanceRegionId` parameters.
+          * *   You can query a specified type of network instances that are attached to a CEN instance by setting the `CenId` and `ChildInstanceType` parameters.
+          *
+          * @param request DescribeCenAttachedChildInstancesRequest
+          * @return DescribeCenAttachedChildInstancesResponse
+         */
         public async Task<DescribeCenAttachedChildInstancesResponse> DescribeCenAttachedChildInstancesAsync(DescribeCenAttachedChildInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8597,6 +11109,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await DescribeCensWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Description
+          * The regions that support CEN vary based on the network instance type. To query the regions where you can attach a specified type of network instances to CEN, set the `ProductType` parameter. If you do not set the `ProductType` parameter, the system queries all regions where you can attach network instances to CEN, regardless of the network instance type.
+          *
+          * @param request DescribeChildInstanceRegionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeChildInstanceRegionsResponse
+         */
         public DescribeChildInstanceRegionsResponse DescribeChildInstanceRegionsWithOptions(DescribeChildInstanceRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8640,6 +11160,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DescribeChildInstanceRegionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * The regions that support CEN vary based on the network instance type. To query the regions where you can attach a specified type of network instances to CEN, set the `ProductType` parameter. If you do not set the `ProductType` parameter, the system queries all regions where you can attach network instances to CEN, regardless of the network instance type.
+          *
+          * @param request DescribeChildInstanceRegionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeChildInstanceRegionsResponse
+         */
         public async Task<DescribeChildInstanceRegionsResponse> DescribeChildInstanceRegionsWithOptionsAsync(DescribeChildInstanceRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8683,12 +11211,26 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DescribeChildInstanceRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * The regions that support CEN vary based on the network instance type. To query the regions where you can attach a specified type of network instances to CEN, set the `ProductType` parameter. If you do not set the `ProductType` parameter, the system queries all regions where you can attach network instances to CEN, regardless of the network instance type.
+          *
+          * @param request DescribeChildInstanceRegionsRequest
+          * @return DescribeChildInstanceRegionsResponse
+         */
         public DescribeChildInstanceRegionsResponse DescribeChildInstanceRegions(DescribeChildInstanceRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeChildInstanceRegionsWithOptions(request, runtime);
         }
 
+        /**
+          * ## Description
+          * The regions that support CEN vary based on the network instance type. To query the regions where you can attach a specified type of network instances to CEN, set the `ProductType` parameter. If you do not set the `ProductType` parameter, the system queries all regions where you can attach network instances to CEN, regardless of the network instance type.
+          *
+          * @param request DescribeChildInstanceRegionsRequest
+          * @return DescribeChildInstanceRegionsResponse
+         */
         public async Task<DescribeChildInstanceRegionsResponse> DescribeChildInstanceRegionsAsync(DescribeChildInstanceRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9693,6 +12235,250 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await DescribeRouteServicesInCenWithOptionsAsync(request, runtime);
         }
 
+        public DescribeTransitRouteTableAggregationResponse DescribeTransitRouteTableAggregationWithOptions(DescribeTransitRouteTableAggregationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationCidr))
+            {
+                query["TransitRouteTableAggregationCidr"] = request.TransitRouteTableAggregationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableId))
+            {
+                query["TransitRouteTableId"] = request.TransitRouteTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTransitRouteTableAggregation",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTransitRouteTableAggregationResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeTransitRouteTableAggregationResponse> DescribeTransitRouteTableAggregationWithOptionsAsync(DescribeTransitRouteTableAggregationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationCidr))
+            {
+                query["TransitRouteTableAggregationCidr"] = request.TransitRouteTableAggregationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableId))
+            {
+                query["TransitRouteTableId"] = request.TransitRouteTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTransitRouteTableAggregation",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTransitRouteTableAggregationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeTransitRouteTableAggregationResponse DescribeTransitRouteTableAggregation(DescribeTransitRouteTableAggregationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTransitRouteTableAggregationWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeTransitRouteTableAggregationResponse> DescribeTransitRouteTableAggregationAsync(DescribeTransitRouteTableAggregationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTransitRouteTableAggregationWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeTransitRouteTableAggregationDetailResponse DescribeTransitRouteTableAggregationDetailWithOptions(DescribeTransitRouteTableAggregationDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationCidr))
+            {
+                query["TransitRouteTableAggregationCidr"] = request.TransitRouteTableAggregationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableId))
+            {
+                query["TransitRouteTableId"] = request.TransitRouteTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTransitRouteTableAggregationDetail",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTransitRouteTableAggregationDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeTransitRouteTableAggregationDetailResponse> DescribeTransitRouteTableAggregationDetailWithOptionsAsync(DescribeTransitRouteTableAggregationDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationCidr))
+            {
+                query["TransitRouteTableAggregationCidr"] = request.TransitRouteTableAggregationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableId))
+            {
+                query["TransitRouteTableId"] = request.TransitRouteTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTransitRouteTableAggregationDetail",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTransitRouteTableAggregationDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeTransitRouteTableAggregationDetailResponse DescribeTransitRouteTableAggregationDetail(DescribeTransitRouteTableAggregationDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTransitRouteTableAggregationDetailWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeTransitRouteTableAggregationDetailResponse> DescribeTransitRouteTableAggregationDetailAsync(DescribeTransitRouteTableAggregationDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTransitRouteTableAggregationDetailWithOptionsAsync(request, runtime);
+        }
+
         public DetachCenChildInstanceResponse DetachCenChildInstanceWithOptions(DetachCenChildInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9831,6 +12617,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await DetachCenChildInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **DisableCenVbrHealthCheck** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenVbrHealthCheck** to query the status of health check configurations. If the health check configurations cannot be found, the health check configurations are deleted.
+          *
+          * @param request DisableCenVbrHealthCheckRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DisableCenVbrHealthCheckResponse
+         */
         public DisableCenVbrHealthCheckResponse DisableCenVbrHealthCheckWithOptions(DisableCenVbrHealthCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9886,6 +12680,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DisableCenVbrHealthCheckResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **DisableCenVbrHealthCheck** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenVbrHealthCheck** to query the status of health check configurations. If the health check configurations cannot be found, the health check configurations are deleted.
+          *
+          * @param request DisableCenVbrHealthCheckRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DisableCenVbrHealthCheckResponse
+         */
         public async Task<DisableCenVbrHealthCheckResponse> DisableCenVbrHealthCheckWithOptionsAsync(DisableCenVbrHealthCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9941,18 +12743,42 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DisableCenVbrHealthCheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **DisableCenVbrHealthCheck** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenVbrHealthCheck** to query the status of health check configurations. If the health check configurations cannot be found, the health check configurations are deleted.
+          *
+          * @param request DisableCenVbrHealthCheckRequest
+          * @return DisableCenVbrHealthCheckResponse
+         */
         public DisableCenVbrHealthCheckResponse DisableCenVbrHealthCheck(DisableCenVbrHealthCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableCenVbrHealthCheckWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **DisableCenVbrHealthCheck** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenVbrHealthCheck** to query the status of health check configurations. If the health check configurations cannot be found, the health check configurations are deleted.
+          *
+          * @param request DisableCenVbrHealthCheckRequest
+          * @return DisableCenVbrHealthCheckResponse
+         */
         public async Task<DisableCenVbrHealthCheckResponse> DisableCenVbrHealthCheckAsync(DisableCenVbrHealthCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableCenVbrHealthCheckWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **DisableTransitRouterRouteTablePropagation** is an synchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTablePropagations** to query the status of a route learning correlation.
+          * *   If a route learning correlation is in the **Disabling** state, the route learning correlation is being deleted. You can query the route learning correlation but cannot perform other operations.
+          * *   If a route learning correlation cannot be found, the route learning correlation is deleted.
+          *
+          * @param request DisableTransitRouterRouteTablePropagationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DisableTransitRouterRouteTablePropagationResponse
+         */
         public DisableTransitRouterRouteTablePropagationResponse DisableTransitRouterRouteTablePropagationWithOptions(DisableTransitRouterRouteTablePropagationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10008,6 +12834,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DisableTransitRouterRouteTablePropagationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **DisableTransitRouterRouteTablePropagation** is an synchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTablePropagations** to query the status of a route learning correlation.
+          * *   If a route learning correlation is in the **Disabling** state, the route learning correlation is being deleted. You can query the route learning correlation but cannot perform other operations.
+          * *   If a route learning correlation cannot be found, the route learning correlation is deleted.
+          *
+          * @param request DisableTransitRouterRouteTablePropagationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DisableTransitRouterRouteTablePropagationResponse
+         */
         public async Task<DisableTransitRouterRouteTablePropagationResponse> DisableTransitRouterRouteTablePropagationWithOptionsAsync(DisableTransitRouterRouteTablePropagationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10063,18 +12899,47 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DisableTransitRouterRouteTablePropagationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **DisableTransitRouterRouteTablePropagation** is an synchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTablePropagations** to query the status of a route learning correlation.
+          * *   If a route learning correlation is in the **Disabling** state, the route learning correlation is being deleted. You can query the route learning correlation but cannot perform other operations.
+          * *   If a route learning correlation cannot be found, the route learning correlation is deleted.
+          *
+          * @param request DisableTransitRouterRouteTablePropagationRequest
+          * @return DisableTransitRouterRouteTablePropagationResponse
+         */
         public DisableTransitRouterRouteTablePropagationResponse DisableTransitRouterRouteTablePropagation(DisableTransitRouterRouteTablePropagationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableTransitRouterRouteTablePropagationWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **DisableTransitRouterRouteTablePropagation** is an synchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTablePropagations** to query the status of a route learning correlation.
+          * *   If a route learning correlation is in the **Disabling** state, the route learning correlation is being deleted. You can query the route learning correlation but cannot perform other operations.
+          * *   If a route learning correlation cannot be found, the route learning correlation is deleted.
+          *
+          * @param request DisableTransitRouterRouteTablePropagationRequest
+          * @return DisableTransitRouterRouteTablePropagationResponse
+         */
         public async Task<DisableTransitRouterRouteTablePropagationResponse> DisableTransitRouterRouteTablePropagationAsync(DisableTransitRouterRouteTablePropagationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableTransitRouterRouteTablePropagationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   After a vSwitch is disassociated from a multicast domain, the multicast sources and members on the vSwitch are also removed from the multicast domain.
+          * *   **DisassociateTransitRouterMulticastDomain** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterMulticastDomainAssociations** to query the status between a vSwitch and a multicast domain.
+          *     *   The **Dissociating** indicates that the vSwitch is being disassociated from the multicast domain. You can query the vSwitch but you cannot perform other operations.
+          *     *   If the vSwitch cannot be found, the vSwitch is disassociated from the multicast domain.
+          *
+          * @param request DisassociateTransitRouterMulticastDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DisassociateTransitRouterMulticastDomainResponse
+         */
         public DisassociateTransitRouterMulticastDomainResponse DisassociateTransitRouterMulticastDomainWithOptions(DisassociateTransitRouterMulticastDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10134,6 +12999,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DisassociateTransitRouterMulticastDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   After a vSwitch is disassociated from a multicast domain, the multicast sources and members on the vSwitch are also removed from the multicast domain.
+          * *   **DisassociateTransitRouterMulticastDomain** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterMulticastDomainAssociations** to query the status between a vSwitch and a multicast domain.
+          *     *   The **Dissociating** indicates that the vSwitch is being disassociated from the multicast domain. You can query the vSwitch but you cannot perform other operations.
+          *     *   If the vSwitch cannot be found, the vSwitch is disassociated from the multicast domain.
+          *
+          * @param request DisassociateTransitRouterMulticastDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DisassociateTransitRouterMulticastDomainResponse
+         */
         public async Task<DisassociateTransitRouterMulticastDomainResponse> DisassociateTransitRouterMulticastDomainWithOptionsAsync(DisassociateTransitRouterMulticastDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10193,18 +13069,48 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DisassociateTransitRouterMulticastDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   After a vSwitch is disassociated from a multicast domain, the multicast sources and members on the vSwitch are also removed from the multicast domain.
+          * *   **DisassociateTransitRouterMulticastDomain** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterMulticastDomainAssociations** to query the status between a vSwitch and a multicast domain.
+          *     *   The **Dissociating** indicates that the vSwitch is being disassociated from the multicast domain. You can query the vSwitch but you cannot perform other operations.
+          *     *   If the vSwitch cannot be found, the vSwitch is disassociated from the multicast domain.
+          *
+          * @param request DisassociateTransitRouterMulticastDomainRequest
+          * @return DisassociateTransitRouterMulticastDomainResponse
+         */
         public DisassociateTransitRouterMulticastDomainResponse DisassociateTransitRouterMulticastDomain(DisassociateTransitRouterMulticastDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisassociateTransitRouterMulticastDomainWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   After a vSwitch is disassociated from a multicast domain, the multicast sources and members on the vSwitch are also removed from the multicast domain.
+          * *   **DisassociateTransitRouterMulticastDomain** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterMulticastDomainAssociations** to query the status between a vSwitch and a multicast domain.
+          *     *   The **Dissociating** indicates that the vSwitch is being disassociated from the multicast domain. You can query the vSwitch but you cannot perform other operations.
+          *     *   If the vSwitch cannot be found, the vSwitch is disassociated from the multicast domain.
+          *
+          * @param request DisassociateTransitRouterMulticastDomainRequest
+          * @return DisassociateTransitRouterMulticastDomainResponse
+         */
         public async Task<DisassociateTransitRouterMulticastDomainResponse> DisassociateTransitRouterMulticastDomainAsync(DisassociateTransitRouterMulticastDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisassociateTransitRouterMulticastDomainWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **DissociateTransitRouterAttachmentFromRouteTable** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTableAssociations** to query an associated forwarding correlation between a network instance connection and a route table.
+          * *   If an associated forwarding correlation is in the **Dissociating** state, the associated forwarding correlation is being deleted. You can query the associated forwarding correlation but cannot perform other operations.
+          * *   If an associated forwarding correlation cannot be found, the associated forwarding correlation is deleted.
+          *
+          * @param request DissociateTransitRouterAttachmentFromRouteTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DissociateTransitRouterAttachmentFromRouteTableResponse
+         */
         public DissociateTransitRouterAttachmentFromRouteTableResponse DissociateTransitRouterAttachmentFromRouteTableWithOptions(DissociateTransitRouterAttachmentFromRouteTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10260,6 +13166,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DissociateTransitRouterAttachmentFromRouteTableResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **DissociateTransitRouterAttachmentFromRouteTable** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTableAssociations** to query an associated forwarding correlation between a network instance connection and a route table.
+          * *   If an associated forwarding correlation is in the **Dissociating** state, the associated forwarding correlation is being deleted. You can query the associated forwarding correlation but cannot perform other operations.
+          * *   If an associated forwarding correlation cannot be found, the associated forwarding correlation is deleted.
+          *
+          * @param request DissociateTransitRouterAttachmentFromRouteTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DissociateTransitRouterAttachmentFromRouteTableResponse
+         */
         public async Task<DissociateTransitRouterAttachmentFromRouteTableResponse> DissociateTransitRouterAttachmentFromRouteTableWithOptionsAsync(DissociateTransitRouterAttachmentFromRouteTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10315,18 +13231,49 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DissociateTransitRouterAttachmentFromRouteTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **DissociateTransitRouterAttachmentFromRouteTable** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTableAssociations** to query an associated forwarding correlation between a network instance connection and a route table.
+          * *   If an associated forwarding correlation is in the **Dissociating** state, the associated forwarding correlation is being deleted. You can query the associated forwarding correlation but cannot perform other operations.
+          * *   If an associated forwarding correlation cannot be found, the associated forwarding correlation is deleted.
+          *
+          * @param request DissociateTransitRouterAttachmentFromRouteTableRequest
+          * @return DissociateTransitRouterAttachmentFromRouteTableResponse
+         */
         public DissociateTransitRouterAttachmentFromRouteTableResponse DissociateTransitRouterAttachmentFromRouteTable(DissociateTransitRouterAttachmentFromRouteTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DissociateTransitRouterAttachmentFromRouteTableWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **DissociateTransitRouterAttachmentFromRouteTable** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTableAssociations** to query an associated forwarding correlation between a network instance connection and a route table.
+          * *   If an associated forwarding correlation is in the **Dissociating** state, the associated forwarding correlation is being deleted. You can query the associated forwarding correlation but cannot perform other operations.
+          * *   If an associated forwarding correlation cannot be found, the associated forwarding correlation is deleted.
+          *
+          * @param request DissociateTransitRouterAttachmentFromRouteTableRequest
+          * @return DissociateTransitRouterAttachmentFromRouteTableResponse
+         */
         public async Task<DissociateTransitRouterAttachmentFromRouteTableResponse> DissociateTransitRouterAttachmentFromRouteTableAsync(DissociateTransitRouterAttachmentFromRouteTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DissociateTransitRouterAttachmentFromRouteTableWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * You can configure the health check feature for a VBR to monitor the Express Connect circuit between your data center and Alibaba Cloud. This helps you detect connection issues in a timely manner.
+          * Before you use the health check feature, take note of the following information:
+          * *   If your VBR uses static routing, you must add a static route for the data center that is connected to the VBR after you configure the health check feature.
+          *     Set the destination CIDR block to the source IP address of health checks, set the mask length to 32, and set the next hop to the IP address of the VBR on the Alibaba Cloud side.
+          * *   If your VBR uses dynamic Border Gateway Protocol (BGP) routing, you do not need to add routes for the data center.
+          * *   **EnableCenVbrHealthCheck** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenVbrHealthCheck** to query the status of health check configurations. If health check configurations can be found, health check is configured or modified.
+          *
+          * @param request EnableCenVbrHealthCheckRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableCenVbrHealthCheckResponse
+         */
         public EnableCenVbrHealthCheckResponse EnableCenVbrHealthCheckWithOptions(EnableCenVbrHealthCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10402,6 +13349,19 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<EnableCenVbrHealthCheckResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * You can configure the health check feature for a VBR to monitor the Express Connect circuit between your data center and Alibaba Cloud. This helps you detect connection issues in a timely manner.
+          * Before you use the health check feature, take note of the following information:
+          * *   If your VBR uses static routing, you must add a static route for the data center that is connected to the VBR after you configure the health check feature.
+          *     Set the destination CIDR block to the source IP address of health checks, set the mask length to 32, and set the next hop to the IP address of the VBR on the Alibaba Cloud side.
+          * *   If your VBR uses dynamic Border Gateway Protocol (BGP) routing, you do not need to add routes for the data center.
+          * *   **EnableCenVbrHealthCheck** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenVbrHealthCheck** to query the status of health check configurations. If health check configurations can be found, health check is configured or modified.
+          *
+          * @param request EnableCenVbrHealthCheckRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableCenVbrHealthCheckResponse
+         */
         public async Task<EnableCenVbrHealthCheckResponse> EnableCenVbrHealthCheckWithOptionsAsync(EnableCenVbrHealthCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10477,18 +13437,54 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<EnableCenVbrHealthCheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * You can configure the health check feature for a VBR to monitor the Express Connect circuit between your data center and Alibaba Cloud. This helps you detect connection issues in a timely manner.
+          * Before you use the health check feature, take note of the following information:
+          * *   If your VBR uses static routing, you must add a static route for the data center that is connected to the VBR after you configure the health check feature.
+          *     Set the destination CIDR block to the source IP address of health checks, set the mask length to 32, and set the next hop to the IP address of the VBR on the Alibaba Cloud side.
+          * *   If your VBR uses dynamic Border Gateway Protocol (BGP) routing, you do not need to add routes for the data center.
+          * *   **EnableCenVbrHealthCheck** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenVbrHealthCheck** to query the status of health check configurations. If health check configurations can be found, health check is configured or modified.
+          *
+          * @param request EnableCenVbrHealthCheckRequest
+          * @return EnableCenVbrHealthCheckResponse
+         */
         public EnableCenVbrHealthCheckResponse EnableCenVbrHealthCheck(EnableCenVbrHealthCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableCenVbrHealthCheckWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * You can configure the health check feature for a VBR to monitor the Express Connect circuit between your data center and Alibaba Cloud. This helps you detect connection issues in a timely manner.
+          * Before you use the health check feature, take note of the following information:
+          * *   If your VBR uses static routing, you must add a static route for the data center that is connected to the VBR after you configure the health check feature.
+          *     Set the destination CIDR block to the source IP address of health checks, set the mask length to 32, and set the next hop to the IP address of the VBR on the Alibaba Cloud side.
+          * *   If your VBR uses dynamic Border Gateway Protocol (BGP) routing, you do not need to add routes for the data center.
+          * *   **EnableCenVbrHealthCheck** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenVbrHealthCheck** to query the status of health check configurations. If health check configurations can be found, health check is configured or modified.
+          *
+          * @param request EnableCenVbrHealthCheckRequest
+          * @return EnableCenVbrHealthCheckResponse
+         */
         public async Task<EnableCenVbrHealthCheckResponse> EnableCenVbrHealthCheckAsync(EnableCenVbrHealthCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableCenVbrHealthCheckWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * After you establish a network instance connection on a transit router, you can create a route learning correlation for the network instance connection. Then, the routes of the connected network instance are automatically advertised to the route table of the transit router. Before you begin, we recommend that you read and understand the following rules:
+          * *   You can create route learning correlations only on Enterprise Edition transit routers. For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **EnableTransitRouterRouteTablePropagation** is an asynchronous operation. After you send a request, the system returns a **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTablePropagations** to query the route learning status between a network instance connection and a route table.
+          *     *   **Enabling** indicates that a route learning correlation is being created between the network instance connection and route table. You can query the route learning correlation but cannot perform other operations.
+          *     *   **Active** indicates that the route learning correlation is created between the network instance connection and route table.
+          *
+          * @param request EnableTransitRouterRouteTablePropagationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableTransitRouterRouteTablePropagationResponse
+         */
         public EnableTransitRouterRouteTablePropagationResponse EnableTransitRouterRouteTablePropagationWithOptions(EnableTransitRouterRouteTablePropagationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10544,6 +13540,18 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<EnableTransitRouterRouteTablePropagationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * After you establish a network instance connection on a transit router, you can create a route learning correlation for the network instance connection. Then, the routes of the connected network instance are automatically advertised to the route table of the transit router. Before you begin, we recommend that you read and understand the following rules:
+          * *   You can create route learning correlations only on Enterprise Edition transit routers. For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **EnableTransitRouterRouteTablePropagation** is an asynchronous operation. After you send a request, the system returns a **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTablePropagations** to query the route learning status between a network instance connection and a route table.
+          *     *   **Enabling** indicates that a route learning correlation is being created between the network instance connection and route table. You can query the route learning correlation but cannot perform other operations.
+          *     *   **Active** indicates that the route learning correlation is created between the network instance connection and route table.
+          *
+          * @param request EnableTransitRouterRouteTablePropagationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableTransitRouterRouteTablePropagationResponse
+         */
         public async Task<EnableTransitRouterRouteTablePropagationResponse> EnableTransitRouterRouteTablePropagationWithOptionsAsync(EnableTransitRouterRouteTablePropagationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10599,18 +13607,50 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<EnableTransitRouterRouteTablePropagationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * After you establish a network instance connection on a transit router, you can create a route learning correlation for the network instance connection. Then, the routes of the connected network instance are automatically advertised to the route table of the transit router. Before you begin, we recommend that you read and understand the following rules:
+          * *   You can create route learning correlations only on Enterprise Edition transit routers. For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **EnableTransitRouterRouteTablePropagation** is an asynchronous operation. After you send a request, the system returns a **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTablePropagations** to query the route learning status between a network instance connection and a route table.
+          *     *   **Enabling** indicates that a route learning correlation is being created between the network instance connection and route table. You can query the route learning correlation but cannot perform other operations.
+          *     *   **Active** indicates that the route learning correlation is created between the network instance connection and route table.
+          *
+          * @param request EnableTransitRouterRouteTablePropagationRequest
+          * @return EnableTransitRouterRouteTablePropagationResponse
+         */
         public EnableTransitRouterRouteTablePropagationResponse EnableTransitRouterRouteTablePropagation(EnableTransitRouterRouteTablePropagationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableTransitRouterRouteTablePropagationWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * After you establish a network instance connection on a transit router, you can create a route learning correlation for the network instance connection. Then, the routes of the connected network instance are automatically advertised to the route table of the transit router. Before you begin, we recommend that you read and understand the following rules:
+          * *   You can create route learning correlations only on Enterprise Edition transit routers. For more information about the regions and zones that support Enterprise Edition transit routers, see [What is CEN?](~~181681~~)
+          * *   **EnableTransitRouterRouteTablePropagation** is an asynchronous operation. After you send a request, the system returns a **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTablePropagations** to query the route learning status between a network instance connection and a route table.
+          *     *   **Enabling** indicates that a route learning correlation is being created between the network instance connection and route table. You can query the route learning correlation but cannot perform other operations.
+          *     *   **Active** indicates that the route learning correlation is created between the network instance connection and route table.
+          *
+          * @param request EnableTransitRouterRouteTablePropagationRequest
+          * @return EnableTransitRouterRouteTablePropagationResponse
+         */
         public async Task<EnableTransitRouterRouteTablePropagationResponse> EnableTransitRouterRouteTablePropagationAsync(EnableTransitRouterRouteTablePropagationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableTransitRouterRouteTablePropagationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Description
+          * *   `GrantInstanceToTransitRouter` grants transit routes permissions to connect only to virtual private clouds (VPCs), virtual border routers (VBRs), and IPsec-VPN connections that belong to another Alibaba Cloud account.
+          *     If you want to grant transit routers permissions to connect to Cloud Connect Network (CCN) instances, call the [GrantInstanceToCbn](~~126141~~) operation.
+          * *   Before you call `GrantInstanceToTransitRouter`, take note of the billing rules, permission limits, and prerequisites on permission management of transit routers. For more information, see [Acquire permissions to connect to a network instance that belongs to another account](~~181553~~).
+          *
+          * @param request GrantInstanceToTransitRouterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GrantInstanceToTransitRouterResponse
+         */
         public GrantInstanceToTransitRouterResponse GrantInstanceToTransitRouterWithOptions(GrantInstanceToTransitRouterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10674,6 +13714,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<GrantInstanceToTransitRouterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * *   `GrantInstanceToTransitRouter` grants transit routes permissions to connect only to virtual private clouds (VPCs), virtual border routers (VBRs), and IPsec-VPN connections that belong to another Alibaba Cloud account.
+          *     If you want to grant transit routers permissions to connect to Cloud Connect Network (CCN) instances, call the [GrantInstanceToCbn](~~126141~~) operation.
+          * *   Before you call `GrantInstanceToTransitRouter`, take note of the billing rules, permission limits, and prerequisites on permission management of transit routers. For more information, see [Acquire permissions to connect to a network instance that belongs to another account](~~181553~~).
+          *
+          * @param request GrantInstanceToTransitRouterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GrantInstanceToTransitRouterResponse
+         */
         public async Task<GrantInstanceToTransitRouterResponse> GrantInstanceToTransitRouterWithOptionsAsync(GrantInstanceToTransitRouterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10737,18 +13787,47 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<GrantInstanceToTransitRouterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * *   `GrantInstanceToTransitRouter` grants transit routes permissions to connect only to virtual private clouds (VPCs), virtual border routers (VBRs), and IPsec-VPN connections that belong to another Alibaba Cloud account.
+          *     If you want to grant transit routers permissions to connect to Cloud Connect Network (CCN) instances, call the [GrantInstanceToCbn](~~126141~~) operation.
+          * *   Before you call `GrantInstanceToTransitRouter`, take note of the billing rules, permission limits, and prerequisites on permission management of transit routers. For more information, see [Acquire permissions to connect to a network instance that belongs to another account](~~181553~~).
+          *
+          * @param request GrantInstanceToTransitRouterRequest
+          * @return GrantInstanceToTransitRouterResponse
+         */
         public GrantInstanceToTransitRouterResponse GrantInstanceToTransitRouter(GrantInstanceToTransitRouterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GrantInstanceToTransitRouterWithOptions(request, runtime);
         }
 
+        /**
+          * ## Description
+          * *   `GrantInstanceToTransitRouter` grants transit routes permissions to connect only to virtual private clouds (VPCs), virtual border routers (VBRs), and IPsec-VPN connections that belong to another Alibaba Cloud account.
+          *     If you want to grant transit routers permissions to connect to Cloud Connect Network (CCN) instances, call the [GrantInstanceToCbn](~~126141~~) operation.
+          * *   Before you call `GrantInstanceToTransitRouter`, take note of the billing rules, permission limits, and prerequisites on permission management of transit routers. For more information, see [Acquire permissions to connect to a network instance that belongs to another account](~~181553~~).
+          *
+          * @param request GrantInstanceToTransitRouterRequest
+          * @return GrantInstanceToTransitRouterResponse
+         */
         public async Task<GrantInstanceToTransitRouterResponse> GrantInstanceToTransitRouterAsync(GrantInstanceToTransitRouterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GrantInstanceToTransitRouterWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * When you call the **ListCenInterRegionTrafficQosPolicies** operation, take note of the following information: 
+          * - If you do not set the **TrafficQosPolicyId** parameter, the system returns information about QoS policies based on the values of the **TransitRouterId**, **TransitRouterAttachmentId**, **TrafficQosPolicyName**, and **TrafficQosPolicyDescription** parameters, but does not return information about the queues in the QoS policies. The **TrafficQosQueues** parameter is not included in the response.
+          * - If you specify a QoS policy ID in the **TrafficMarkingPolicyId** parameter, the system returns the information about the QoS policy and the queues. The **TrafficQosQueues** parameter is included in the response.  
+          * If the **TrafficQosQueues** parameter contains an empty array, it indicates that the QoS policy contains only the default queue.
+          *
+          * @param request ListCenInterRegionTrafficQosPoliciesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListCenInterRegionTrafficQosPoliciesResponse
+         */
         public ListCenInterRegionTrafficQosPoliciesResponse ListCenInterRegionTrafficQosPoliciesWithOptions(ListCenInterRegionTrafficQosPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10816,6 +13895,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListCenInterRegionTrafficQosPoliciesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * When you call the **ListCenInterRegionTrafficQosPolicies** operation, take note of the following information: 
+          * - If you do not set the **TrafficQosPolicyId** parameter, the system returns information about QoS policies based on the values of the **TransitRouterId**, **TransitRouterAttachmentId**, **TrafficQosPolicyName**, and **TrafficQosPolicyDescription** parameters, but does not return information about the queues in the QoS policies. The **TrafficQosQueues** parameter is not included in the response.
+          * - If you specify a QoS policy ID in the **TrafficMarkingPolicyId** parameter, the system returns the information about the QoS policy and the queues. The **TrafficQosQueues** parameter is included in the response.  
+          * If the **TrafficQosQueues** parameter contains an empty array, it indicates that the QoS policy contains only the default queue.
+          *
+          * @param request ListCenInterRegionTrafficQosPoliciesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListCenInterRegionTrafficQosPoliciesResponse
+         */
         public async Task<ListCenInterRegionTrafficQosPoliciesResponse> ListCenInterRegionTrafficQosPoliciesWithOptionsAsync(ListCenInterRegionTrafficQosPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10883,18 +13973,200 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListCenInterRegionTrafficQosPoliciesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * When you call the **ListCenInterRegionTrafficQosPolicies** operation, take note of the following information: 
+          * - If you do not set the **TrafficQosPolicyId** parameter, the system returns information about QoS policies based on the values of the **TransitRouterId**, **TransitRouterAttachmentId**, **TrafficQosPolicyName**, and **TrafficQosPolicyDescription** parameters, but does not return information about the queues in the QoS policies. The **TrafficQosQueues** parameter is not included in the response.
+          * - If you specify a QoS policy ID in the **TrafficMarkingPolicyId** parameter, the system returns the information about the QoS policy and the queues. The **TrafficQosQueues** parameter is included in the response.  
+          * If the **TrafficQosQueues** parameter contains an empty array, it indicates that the QoS policy contains only the default queue.
+          *
+          * @param request ListCenInterRegionTrafficQosPoliciesRequest
+          * @return ListCenInterRegionTrafficQosPoliciesResponse
+         */
         public ListCenInterRegionTrafficQosPoliciesResponse ListCenInterRegionTrafficQosPolicies(ListCenInterRegionTrafficQosPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListCenInterRegionTrafficQosPoliciesWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * When you call the **ListCenInterRegionTrafficQosPolicies** operation, take note of the following information: 
+          * - If you do not set the **TrafficQosPolicyId** parameter, the system returns information about QoS policies based on the values of the **TransitRouterId**, **TransitRouterAttachmentId**, **TrafficQosPolicyName**, and **TrafficQosPolicyDescription** parameters, but does not return information about the queues in the QoS policies. The **TrafficQosQueues** parameter is not included in the response.
+          * - If you specify a QoS policy ID in the **TrafficMarkingPolicyId** parameter, the system returns the information about the QoS policy and the queues. The **TrafficQosQueues** parameter is included in the response.  
+          * If the **TrafficQosQueues** parameter contains an empty array, it indicates that the QoS policy contains only the default queue.
+          *
+          * @param request ListCenInterRegionTrafficQosPoliciesRequest
+          * @return ListCenInterRegionTrafficQosPoliciesResponse
+         */
         public async Task<ListCenInterRegionTrafficQosPoliciesResponse> ListCenInterRegionTrafficQosPoliciesAsync(ListCenInterRegionTrafficQosPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListCenInterRegionTrafficQosPoliciesWithOptionsAsync(request, runtime);
         }
 
+        public ListCenInterRegionTrafficQosQueuesResponse ListCenInterRegionTrafficQosQueuesWithOptions(ListCenInterRegionTrafficQosQueuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficQosPolicyId))
+            {
+                query["TrafficQosPolicyId"] = request.TrafficQosPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficQosQueueDescription))
+            {
+                query["TrafficQosQueueDescription"] = request.TrafficQosQueueDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficQosQueueId))
+            {
+                query["TrafficQosQueueId"] = request.TrafficQosQueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficQosQueueName))
+            {
+                query["TrafficQosQueueName"] = request.TrafficQosQueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentId))
+            {
+                query["TransitRouterAttachmentId"] = request.TransitRouterAttachmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
+            {
+                query["TransitRouterId"] = request.TransitRouterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCenInterRegionTrafficQosQueues",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCenInterRegionTrafficQosQueuesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListCenInterRegionTrafficQosQueuesResponse> ListCenInterRegionTrafficQosQueuesWithOptionsAsync(ListCenInterRegionTrafficQosQueuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficQosPolicyId))
+            {
+                query["TrafficQosPolicyId"] = request.TrafficQosPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficQosQueueDescription))
+            {
+                query["TrafficQosQueueDescription"] = request.TrafficQosQueueDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficQosQueueId))
+            {
+                query["TrafficQosQueueId"] = request.TrafficQosQueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficQosQueueName))
+            {
+                query["TrafficQosQueueName"] = request.TrafficQosQueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentId))
+            {
+                query["TransitRouterAttachmentId"] = request.TransitRouterAttachmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
+            {
+                query["TransitRouterId"] = request.TransitRouterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCenInterRegionTrafficQosQueues",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCenInterRegionTrafficQosQueuesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListCenInterRegionTrafficQosQueuesResponse ListCenInterRegionTrafficQosQueues(ListCenInterRegionTrafficQosQueuesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCenInterRegionTrafficQosQueuesWithOptions(request, runtime);
+        }
+
+        public async Task<ListCenInterRegionTrafficQosQueuesResponse> ListCenInterRegionTrafficQosQueuesAsync(ListCenInterRegionTrafficQosQueuesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCenInterRegionTrafficQosQueuesWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * ## Usage notes
+          * Before you call `ListGrantVSwitchEnis`, make sure that the VPC is attached to a Cloud Enterprise Network (CEN) instance. For more information, see [CreateTransitRouterVpcAttachment](~~261358~~).
+          *
+          * @param request ListGrantVSwitchEnisRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListGrantVSwitchEnisResponse
+         */
         public ListGrantVSwitchEnisResponse ListGrantVSwitchEnisWithOptions(ListGrantVSwitchEnisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10946,6 +14218,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListGrantVSwitchEnisResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you call `ListGrantVSwitchEnis`, make sure that the VPC is attached to a Cloud Enterprise Network (CEN) instance. For more information, see [CreateTransitRouterVpcAttachment](~~261358~~).
+          *
+          * @param request ListGrantVSwitchEnisRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListGrantVSwitchEnisResponse
+         */
         public async Task<ListGrantVSwitchEnisResponse> ListGrantVSwitchEnisWithOptionsAsync(ListGrantVSwitchEnisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10997,18 +14277,44 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListGrantVSwitchEnisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you call `ListGrantVSwitchEnis`, make sure that the VPC is attached to a Cloud Enterprise Network (CEN) instance. For more information, see [CreateTransitRouterVpcAttachment](~~261358~~).
+          *
+          * @param request ListGrantVSwitchEnisRequest
+          * @return ListGrantVSwitchEnisResponse
+         */
         public ListGrantVSwitchEnisResponse ListGrantVSwitchEnis(ListGrantVSwitchEnisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListGrantVSwitchEnisWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you call `ListGrantVSwitchEnis`, make sure that the VPC is attached to a Cloud Enterprise Network (CEN) instance. For more information, see [CreateTransitRouterVpcAttachment](~~261358~~).
+          *
+          * @param request ListGrantVSwitchEnisRequest
+          * @return ListGrantVSwitchEnisResponse
+         */
         public async Task<ListGrantVSwitchEnisResponse> ListGrantVSwitchEnisAsync(ListGrantVSwitchEnisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListGrantVSwitchEnisWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you call the `ListGrantVSwitchesToCen` operation, make sure that the following requirements are met:
+          * *   The permissions on the VPC are granted to the CEN instance. For more information, see [GrantInstanceToCen](~~126224~~).
+          * *   The VPC is attached to the CEN instance.
+          *     *   For more information about how to connect an Enterprise Edition transit router to a VPC, see [CreateTransitRouterVpcAttachment](~~261358~~).
+          *     *   For more information about how to connect a Basic Edition transit router to a VPC, see [AttachCenChildInstance](~~65902~~).
+          *
+          * @param request ListGrantVSwitchesToCenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListGrantVSwitchesToCenResponse
+         */
         public ListGrantVSwitchesToCenResponse ListGrantVSwitchesToCenWithOptions(ListGrantVSwitchesToCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11072,6 +14378,18 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListGrantVSwitchesToCenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you call the `ListGrantVSwitchesToCen` operation, make sure that the following requirements are met:
+          * *   The permissions on the VPC are granted to the CEN instance. For more information, see [GrantInstanceToCen](~~126224~~).
+          * *   The VPC is attached to the CEN instance.
+          *     *   For more information about how to connect an Enterprise Edition transit router to a VPC, see [CreateTransitRouterVpcAttachment](~~261358~~).
+          *     *   For more information about how to connect a Basic Edition transit router to a VPC, see [AttachCenChildInstance](~~65902~~).
+          *
+          * @param request ListGrantVSwitchesToCenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListGrantVSwitchesToCenResponse
+         */
         public async Task<ListGrantVSwitchesToCenResponse> ListGrantVSwitchesToCenWithOptionsAsync(ListGrantVSwitchesToCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11135,18 +14453,52 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListGrantVSwitchesToCenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you call the `ListGrantVSwitchesToCen` operation, make sure that the following requirements are met:
+          * *   The permissions on the VPC are granted to the CEN instance. For more information, see [GrantInstanceToCen](~~126224~~).
+          * *   The VPC is attached to the CEN instance.
+          *     *   For more information about how to connect an Enterprise Edition transit router to a VPC, see [CreateTransitRouterVpcAttachment](~~261358~~).
+          *     *   For more information about how to connect a Basic Edition transit router to a VPC, see [AttachCenChildInstance](~~65902~~).
+          *
+          * @param request ListGrantVSwitchesToCenRequest
+          * @return ListGrantVSwitchesToCenResponse
+         */
         public ListGrantVSwitchesToCenResponse ListGrantVSwitchesToCen(ListGrantVSwitchesToCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListGrantVSwitchesToCenWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you call the `ListGrantVSwitchesToCen` operation, make sure that the following requirements are met:
+          * *   The permissions on the VPC are granted to the CEN instance. For more information, see [GrantInstanceToCen](~~126224~~).
+          * *   The VPC is attached to the CEN instance.
+          *     *   For more information about how to connect an Enterprise Edition transit router to a VPC, see [CreateTransitRouterVpcAttachment](~~261358~~).
+          *     *   For more information about how to connect a Basic Edition transit router to a VPC, see [AttachCenChildInstance](~~65902~~).
+          *
+          * @param request ListGrantVSwitchesToCenRequest
+          * @return ListGrantVSwitchesToCenResponse
+         */
         public async Task<ListGrantVSwitchesToCenResponse> ListGrantVSwitchesToCenAsync(ListGrantVSwitchesToCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListGrantVSwitchesToCenWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To call this operation, you must set at least one of **ResourceId** and **Tag.N.Key**.
+          * *   If you set only **ResourceId**, the tags that are added to the specified CEN instances are returned.
+          * *   If you set only **Tag.N.Key**, the CEN instances that have the specified tags are returned.
+          * *   If you set both **ResourceId** and **Tag.N.Key**, the specified tags that are added to the specified CEN instances are returned.
+          *     *   Make sure that the CEN instance specified by **ResourceId** has the tag specified by **Tag.N.Key**. Otherwise, the response returns null.
+          *     *   If multiple tag keys are specified, the logical operator among these tag keys is **AND**.
+          *
+          * @param request ListTagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11210,6 +14562,18 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To call this operation, you must set at least one of **ResourceId** and **Tag.N.Key**.
+          * *   If you set only **ResourceId**, the tags that are added to the specified CEN instances are returned.
+          * *   If you set only **Tag.N.Key**, the CEN instances that have the specified tags are returned.
+          * *   If you set both **ResourceId** and **Tag.N.Key**, the specified tags that are added to the specified CEN instances are returned.
+          *     *   Make sure that the CEN instance specified by **ResourceId** has the tag specified by **Tag.N.Key**. Otherwise, the response returns null.
+          *     *   If multiple tag keys are specified, the logical operator among these tag keys is **AND**.
+          *
+          * @param request ListTagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11273,18 +14637,51 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To call this operation, you must set at least one of **ResourceId** and **Tag.N.Key**.
+          * *   If you set only **ResourceId**, the tags that are added to the specified CEN instances are returned.
+          * *   If you set only **Tag.N.Key**, the CEN instances that have the specified tags are returned.
+          * *   If you set both **ResourceId** and **Tag.N.Key**, the specified tags that are added to the specified CEN instances are returned.
+          *     *   Make sure that the CEN instance specified by **ResourceId** has the tag specified by **Tag.N.Key**. Otherwise, the response returns null.
+          *     *   If multiple tag keys are specified, the logical operator among these tag keys is **AND**.
+          *
+          * @param request ListTagResourcesRequest
+          * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
+        /**
+          * To call this operation, you must set at least one of **ResourceId** and **Tag.N.Key**.
+          * *   If you set only **ResourceId**, the tags that are added to the specified CEN instances are returned.
+          * *   If you set only **Tag.N.Key**, the CEN instances that have the specified tags are returned.
+          * *   If you set both **ResourceId** and **Tag.N.Key**, the specified tags that are added to the specified CEN instances are returned.
+          *     *   Make sure that the CEN instance specified by **ResourceId** has the tag specified by **Tag.N.Key**. Otherwise, the response returns null.
+          *     *   If multiple tag keys are specified, the logical operator among these tag keys is **AND**.
+          *
+          * @param request ListTagResourcesRequest
+          * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Take note of the following rules when you call the **ListTrafficMarkingPolicies** operation: 
+          * - If you do not specify a traffic marking policy ID in the **TrafficMarkingPolicyId** parameter, the system returns the information about the traffic marking policy based on the **TransitRouterId**, **TrafficMarkingPolicyName**, and **TrafficMarkingPolicyDescription** parameters. The information about the traffic classification rules in the policy is not returned. The **TrafficMatchRules** parameter is not included in the response.
+          * - If you specify a traffic marking policy ID in the **TrafficMarkingPolicyId** parameter, this operation returns the information about the traffic marking policy and the traffic classification rules. The **TrafficMatchRules** parameter is included in the response.  
+          * If the **TrafficMatchRules** parameter contains an empty array, it indicates that the traffic marking policy does not contain a traffic classification rule.
+          *
+          * @param request ListTrafficMarkingPoliciesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTrafficMarkingPoliciesResponse
+         */
         public ListTrafficMarkingPoliciesResponse ListTrafficMarkingPoliciesWithOptions(ListTrafficMarkingPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11348,6 +14745,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTrafficMarkingPoliciesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Take note of the following rules when you call the **ListTrafficMarkingPolicies** operation: 
+          * - If you do not specify a traffic marking policy ID in the **TrafficMarkingPolicyId** parameter, the system returns the information about the traffic marking policy based on the **TransitRouterId**, **TrafficMarkingPolicyName**, and **TrafficMarkingPolicyDescription** parameters. The information about the traffic classification rules in the policy is not returned. The **TrafficMatchRules** parameter is not included in the response.
+          * - If you specify a traffic marking policy ID in the **TrafficMarkingPolicyId** parameter, this operation returns the information about the traffic marking policy and the traffic classification rules. The **TrafficMatchRules** parameter is included in the response.  
+          * If the **TrafficMatchRules** parameter contains an empty array, it indicates that the traffic marking policy does not contain a traffic classification rule.
+          *
+          * @param request ListTrafficMarkingPoliciesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTrafficMarkingPoliciesResponse
+         */
         public async Task<ListTrafficMarkingPoliciesResponse> ListTrafficMarkingPoliciesWithOptionsAsync(ListTrafficMarkingPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11411,18 +14819,51 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTrafficMarkingPoliciesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Take note of the following rules when you call the **ListTrafficMarkingPolicies** operation: 
+          * - If you do not specify a traffic marking policy ID in the **TrafficMarkingPolicyId** parameter, the system returns the information about the traffic marking policy based on the **TransitRouterId**, **TrafficMarkingPolicyName**, and **TrafficMarkingPolicyDescription** parameters. The information about the traffic classification rules in the policy is not returned. The **TrafficMatchRules** parameter is not included in the response.
+          * - If you specify a traffic marking policy ID in the **TrafficMarkingPolicyId** parameter, this operation returns the information about the traffic marking policy and the traffic classification rules. The **TrafficMatchRules** parameter is included in the response.  
+          * If the **TrafficMatchRules** parameter contains an empty array, it indicates that the traffic marking policy does not contain a traffic classification rule.
+          *
+          * @param request ListTrafficMarkingPoliciesRequest
+          * @return ListTrafficMarkingPoliciesResponse
+         */
         public ListTrafficMarkingPoliciesResponse ListTrafficMarkingPolicies(ListTrafficMarkingPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTrafficMarkingPoliciesWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Take note of the following rules when you call the **ListTrafficMarkingPolicies** operation: 
+          * - If you do not specify a traffic marking policy ID in the **TrafficMarkingPolicyId** parameter, the system returns the information about the traffic marking policy based on the **TransitRouterId**, **TrafficMarkingPolicyName**, and **TrafficMarkingPolicyDescription** parameters. The information about the traffic classification rules in the policy is not returned. The **TrafficMatchRules** parameter is not included in the response.
+          * - If you specify a traffic marking policy ID in the **TrafficMarkingPolicyId** parameter, this operation returns the information about the traffic marking policy and the traffic classification rules. The **TrafficMatchRules** parameter is included in the response.  
+          * If the **TrafficMatchRules** parameter contains an empty array, it indicates that the traffic marking policy does not contain a traffic classification rule.
+          *
+          * @param request ListTrafficMarkingPoliciesRequest
+          * @return ListTrafficMarkingPoliciesResponse
+         */
         public async Task<ListTrafficMarkingPoliciesResponse> ListTrafficMarkingPoliciesAsync(ListTrafficMarkingPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTrafficMarkingPoliciesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You can call **ListTransitRouterAvailableResource** to query the zones that support Enterprise Edition transit routers in a specified region.
+          *     *   If you do not set **SupportMulticast** to **true**, general-purpose zones that support Enterprise Edition transit routers are queried.
+          *     *   If you set **SupportMulticast** to **true**, zones in which Enterprise Edition transit routers support multicast are queried.
+          * *   On May 31, 2022, VPC-connected Enterprise Edition transit routers were optimized. Optimized Enterprise Edition transit routers do not require you to specify the primary and secondary zones when you connect VPCs to the Enterprise Edition transit routers. You can specify one or more zones.
+          *     *   If your Enterprise Edition transit router has not been optimized, you must specify the primary and secondary zones when you connect a VPC to your Enterprise Edition transit router. After you call **ListTransitRouterAvailableResource**, you can call **MasterZones** and **SlaveZones** to query the primary and secondary zones.
+          *     *   If your Enterprise Edition transit router has been optimized, you can specify a zone as needed when you connect a VPC to your Enterprise Edition transit router. After you call **ListTransitRouterAvailableResource**, you can call **AvailableZones** to query the zones.
+          *         For more information about the optimization, see [Announcement: Optimization on VPC-connected Enterprise Edition transit routers](~~434191~~).
+          *
+          * @param request ListTransitRouterAvailableResourceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterAvailableResourceResponse
+         */
         public ListTransitRouterAvailableResourceResponse ListTransitRouterAvailableResourceWithOptions(ListTransitRouterAvailableResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11470,6 +14911,19 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterAvailableResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can call **ListTransitRouterAvailableResource** to query the zones that support Enterprise Edition transit routers in a specified region.
+          *     *   If you do not set **SupportMulticast** to **true**, general-purpose zones that support Enterprise Edition transit routers are queried.
+          *     *   If you set **SupportMulticast** to **true**, zones in which Enterprise Edition transit routers support multicast are queried.
+          * *   On May 31, 2022, VPC-connected Enterprise Edition transit routers were optimized. Optimized Enterprise Edition transit routers do not require you to specify the primary and secondary zones when you connect VPCs to the Enterprise Edition transit routers. You can specify one or more zones.
+          *     *   If your Enterprise Edition transit router has not been optimized, you must specify the primary and secondary zones when you connect a VPC to your Enterprise Edition transit router. After you call **ListTransitRouterAvailableResource**, you can call **MasterZones** and **SlaveZones** to query the primary and secondary zones.
+          *     *   If your Enterprise Edition transit router has been optimized, you can specify a zone as needed when you connect a VPC to your Enterprise Edition transit router. After you call **ListTransitRouterAvailableResource**, you can call **AvailableZones** to query the zones.
+          *         For more information about the optimization, see [Announcement: Optimization on VPC-connected Enterprise Edition transit routers](~~434191~~).
+          *
+          * @param request ListTransitRouterAvailableResourceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterAvailableResourceResponse
+         */
         public async Task<ListTransitRouterAvailableResourceResponse> ListTransitRouterAvailableResourceWithOptionsAsync(ListTransitRouterAvailableResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11517,12 +14971,36 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterAvailableResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can call **ListTransitRouterAvailableResource** to query the zones that support Enterprise Edition transit routers in a specified region.
+          *     *   If you do not set **SupportMulticast** to **true**, general-purpose zones that support Enterprise Edition transit routers are queried.
+          *     *   If you set **SupportMulticast** to **true**, zones in which Enterprise Edition transit routers support multicast are queried.
+          * *   On May 31, 2022, VPC-connected Enterprise Edition transit routers were optimized. Optimized Enterprise Edition transit routers do not require you to specify the primary and secondary zones when you connect VPCs to the Enterprise Edition transit routers. You can specify one or more zones.
+          *     *   If your Enterprise Edition transit router has not been optimized, you must specify the primary and secondary zones when you connect a VPC to your Enterprise Edition transit router. After you call **ListTransitRouterAvailableResource**, you can call **MasterZones** and **SlaveZones** to query the primary and secondary zones.
+          *     *   If your Enterprise Edition transit router has been optimized, you can specify a zone as needed when you connect a VPC to your Enterprise Edition transit router. After you call **ListTransitRouterAvailableResource**, you can call **AvailableZones** to query the zones.
+          *         For more information about the optimization, see [Announcement: Optimization on VPC-connected Enterprise Edition transit routers](~~434191~~).
+          *
+          * @param request ListTransitRouterAvailableResourceRequest
+          * @return ListTransitRouterAvailableResourceResponse
+         */
         public ListTransitRouterAvailableResourceResponse ListTransitRouterAvailableResource(ListTransitRouterAvailableResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTransitRouterAvailableResourceWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can call **ListTransitRouterAvailableResource** to query the zones that support Enterprise Edition transit routers in a specified region.
+          *     *   If you do not set **SupportMulticast** to **true**, general-purpose zones that support Enterprise Edition transit routers are queried.
+          *     *   If you set **SupportMulticast** to **true**, zones in which Enterprise Edition transit routers support multicast are queried.
+          * *   On May 31, 2022, VPC-connected Enterprise Edition transit routers were optimized. Optimized Enterprise Edition transit routers do not require you to specify the primary and secondary zones when you connect VPCs to the Enterprise Edition transit routers. You can specify one or more zones.
+          *     *   If your Enterprise Edition transit router has not been optimized, you must specify the primary and secondary zones when you connect a VPC to your Enterprise Edition transit router. After you call **ListTransitRouterAvailableResource**, you can call **MasterZones** and **SlaveZones** to query the primary and secondary zones.
+          *     *   If your Enterprise Edition transit router has been optimized, you can specify a zone as needed when you connect a VPC to your Enterprise Edition transit router. After you call **ListTransitRouterAvailableResource**, you can call **AvailableZones** to query the zones.
+          *         For more information about the optimization, see [Announcement: Optimization on VPC-connected Enterprise Edition transit routers](~~434191~~).
+          *
+          * @param request ListTransitRouterAvailableResourceRequest
+          * @return ListTransitRouterAvailableResourceResponse
+         */
         public async Task<ListTransitRouterAvailableResourceResponse> ListTransitRouterAvailableResourceAsync(ListTransitRouterAvailableResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11845,6 +15323,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await ListTransitRouterCidrAllocationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Multicast domains can be associated only with vSwitches that are in VPCs. You can call **ListTransitRouterMulticastDomainAssociations** to query whether vSwitches in VPCs are associated with a specified multicast domain.
+          *
+          * @param request ListTransitRouterMulticastDomainAssociationsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterMulticastDomainAssociationsResponse
+         */
         public ListTransitRouterMulticastDomainAssociationsResponse ListTransitRouterMulticastDomainAssociationsWithOptions(ListTransitRouterMulticastDomainAssociationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11916,6 +15402,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterMulticastDomainAssociationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Multicast domains can be associated only with vSwitches that are in VPCs. You can call **ListTransitRouterMulticastDomainAssociations** to query whether vSwitches in VPCs are associated with a specified multicast domain.
+          *
+          * @param request ListTransitRouterMulticastDomainAssociationsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterMulticastDomainAssociationsResponse
+         */
         public async Task<ListTransitRouterMulticastDomainAssociationsResponse> ListTransitRouterMulticastDomainAssociationsWithOptionsAsync(ListTransitRouterMulticastDomainAssociationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11987,18 +15481,40 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterMulticastDomainAssociationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Multicast domains can be associated only with vSwitches that are in VPCs. You can call **ListTransitRouterMulticastDomainAssociations** to query whether vSwitches in VPCs are associated with a specified multicast domain.
+          *
+          * @param request ListTransitRouterMulticastDomainAssociationsRequest
+          * @return ListTransitRouterMulticastDomainAssociationsResponse
+         */
         public ListTransitRouterMulticastDomainAssociationsResponse ListTransitRouterMulticastDomainAssociations(ListTransitRouterMulticastDomainAssociationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTransitRouterMulticastDomainAssociationsWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Multicast domains can be associated only with vSwitches that are in VPCs. You can call **ListTransitRouterMulticastDomainAssociations** to query whether vSwitches in VPCs are associated with a specified multicast domain.
+          *
+          * @param request ListTransitRouterMulticastDomainAssociationsRequest
+          * @return ListTransitRouterMulticastDomainAssociationsResponse
+         */
         public async Task<ListTransitRouterMulticastDomainAssociationsResponse> ListTransitRouterMulticastDomainAssociationsAsync(ListTransitRouterMulticastDomainAssociationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTransitRouterMulticastDomainAssociationsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * You can query vSwitches only in VPCs that are connected to Enterprise Edition transit routers.
+          *
+          * @param request ListTransitRouterMulticastDomainVSwitchesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterMulticastDomainVSwitchesResponse
+         */
         public ListTransitRouterMulticastDomainVSwitchesResponse ListTransitRouterMulticastDomainVSwitchesWithOptions(ListTransitRouterMulticastDomainVSwitchesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12058,6 +15574,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterMulticastDomainVSwitchesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * You can query vSwitches only in VPCs that are connected to Enterprise Edition transit routers.
+          *
+          * @param request ListTransitRouterMulticastDomainVSwitchesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterMulticastDomainVSwitchesResponse
+         */
         public async Task<ListTransitRouterMulticastDomainVSwitchesResponse> ListTransitRouterMulticastDomainVSwitchesWithOptionsAsync(ListTransitRouterMulticastDomainVSwitchesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12117,12 +15641,26 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterMulticastDomainVSwitchesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * You can query vSwitches only in VPCs that are connected to Enterprise Edition transit routers.
+          *
+          * @param request ListTransitRouterMulticastDomainVSwitchesRequest
+          * @return ListTransitRouterMulticastDomainVSwitchesResponse
+         */
         public ListTransitRouterMulticastDomainVSwitchesResponse ListTransitRouterMulticastDomainVSwitches(ListTransitRouterMulticastDomainVSwitchesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTransitRouterMulticastDomainVSwitchesWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * You can query vSwitches only in VPCs that are connected to Enterprise Edition transit routers.
+          *
+          * @param request ListTransitRouterMulticastDomainVSwitchesRequest
+          * @return ListTransitRouterMulticastDomainVSwitchesResponse
+         */
         public async Task<ListTransitRouterMulticastDomainVSwitchesResponse> ListTransitRouterMulticastDomainVSwitchesAsync(ListTransitRouterMulticastDomainVSwitchesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12283,6 +15821,19 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await ListTransitRouterMulticastDomainsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call `ListTransitRouterMulticastGroups` to query the multicast sources and members in a multicast domain. Multicast sources and members are also known as multicast resources.
+          * *   If you set **GroupIpAddress**, the system queries multicast resources in the multicast domain by multicast group.
+          * *   If you set **VSwitchIds**, the system queries multicast resources in the multicast domain by vSwitch.
+          * *   If you set **PeerTransitRouterMulticastDomains**, the system queries multicast resources that are also deployed in a different region.
+          * *   If you set **ResourceType**, the system queries the multicast resources of the specified type in the multicast domain.
+          * *   If you set **ResourceId**, the system queries multicast resources by resource.
+          * *   If you set only **TransitRouterMulticastDomainId**, the system queries all the multicast resources in the multicast domain.
+          *
+          * @param request ListTransitRouterMulticastGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterMulticastGroupsResponse
+         */
         public ListTransitRouterMulticastGroupsResponse ListTransitRouterMulticastGroupsWithOptions(ListTransitRouterMulticastGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12374,6 +15925,19 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterMulticastGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call `ListTransitRouterMulticastGroups` to query the multicast sources and members in a multicast domain. Multicast sources and members are also known as multicast resources.
+          * *   If you set **GroupIpAddress**, the system queries multicast resources in the multicast domain by multicast group.
+          * *   If you set **VSwitchIds**, the system queries multicast resources in the multicast domain by vSwitch.
+          * *   If you set **PeerTransitRouterMulticastDomains**, the system queries multicast resources that are also deployed in a different region.
+          * *   If you set **ResourceType**, the system queries the multicast resources of the specified type in the multicast domain.
+          * *   If you set **ResourceId**, the system queries multicast resources by resource.
+          * *   If you set only **TransitRouterMulticastDomainId**, the system queries all the multicast resources in the multicast domain.
+          *
+          * @param request ListTransitRouterMulticastGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterMulticastGroupsResponse
+         */
         public async Task<ListTransitRouterMulticastGroupsResponse> ListTransitRouterMulticastGroupsWithOptionsAsync(ListTransitRouterMulticastGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12465,18 +16029,52 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterMulticastGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call `ListTransitRouterMulticastGroups` to query the multicast sources and members in a multicast domain. Multicast sources and members are also known as multicast resources.
+          * *   If you set **GroupIpAddress**, the system queries multicast resources in the multicast domain by multicast group.
+          * *   If you set **VSwitchIds**, the system queries multicast resources in the multicast domain by vSwitch.
+          * *   If you set **PeerTransitRouterMulticastDomains**, the system queries multicast resources that are also deployed in a different region.
+          * *   If you set **ResourceType**, the system queries the multicast resources of the specified type in the multicast domain.
+          * *   If you set **ResourceId**, the system queries multicast resources by resource.
+          * *   If you set only **TransitRouterMulticastDomainId**, the system queries all the multicast resources in the multicast domain.
+          *
+          * @param request ListTransitRouterMulticastGroupsRequest
+          * @return ListTransitRouterMulticastGroupsResponse
+         */
         public ListTransitRouterMulticastGroupsResponse ListTransitRouterMulticastGroups(ListTransitRouterMulticastGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTransitRouterMulticastGroupsWithOptions(request, runtime);
         }
 
+        /**
+          * You can call `ListTransitRouterMulticastGroups` to query the multicast sources and members in a multicast domain. Multicast sources and members are also known as multicast resources.
+          * *   If you set **GroupIpAddress**, the system queries multicast resources in the multicast domain by multicast group.
+          * *   If you set **VSwitchIds**, the system queries multicast resources in the multicast domain by vSwitch.
+          * *   If you set **PeerTransitRouterMulticastDomains**, the system queries multicast resources that are also deployed in a different region.
+          * *   If you set **ResourceType**, the system queries the multicast resources of the specified type in the multicast domain.
+          * *   If you set **ResourceId**, the system queries multicast resources by resource.
+          * *   If you set only **TransitRouterMulticastDomainId**, the system queries all the multicast resources in the multicast domain.
+          *
+          * @param request ListTransitRouterMulticastGroupsRequest
+          * @return ListTransitRouterMulticastGroupsResponse
+         */
         public async Task<ListTransitRouterMulticastGroupsResponse> ListTransitRouterMulticastGroupsAsync(ListTransitRouterMulticastGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTransitRouterMulticastGroupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Description
+          * You can use the following methods to query the cross-region connections on an Enterprise Edition transit router:
+          * *   Query all cross-region connections on an Enterprise Edition transit router by specifying the ID of the Enterprise Edition transit router.
+          * *   Query all cross-region connections on an Enterprise Edition transit router by specifying the ID of the Cloud Enterprise Network (CEN) instance and the ID of the region where the transit router is deployed.
+          *
+          * @param request ListTransitRouterPeerAttachmentsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterPeerAttachmentsResponse
+         */
         public ListTransitRouterPeerAttachmentsResponse ListTransitRouterPeerAttachmentsWithOptions(ListTransitRouterPeerAttachmentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12544,6 +16142,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterPeerAttachmentsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * You can use the following methods to query the cross-region connections on an Enterprise Edition transit router:
+          * *   Query all cross-region connections on an Enterprise Edition transit router by specifying the ID of the Enterprise Edition transit router.
+          * *   Query all cross-region connections on an Enterprise Edition transit router by specifying the ID of the Cloud Enterprise Network (CEN) instance and the ID of the region where the transit router is deployed.
+          *
+          * @param request ListTransitRouterPeerAttachmentsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterPeerAttachmentsResponse
+         */
         public async Task<ListTransitRouterPeerAttachmentsResponse> ListTransitRouterPeerAttachmentsWithOptionsAsync(ListTransitRouterPeerAttachmentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12611,12 +16219,30 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterPeerAttachmentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * You can use the following methods to query the cross-region connections on an Enterprise Edition transit router:
+          * *   Query all cross-region connections on an Enterprise Edition transit router by specifying the ID of the Enterprise Edition transit router.
+          * *   Query all cross-region connections on an Enterprise Edition transit router by specifying the ID of the Cloud Enterprise Network (CEN) instance and the ID of the region where the transit router is deployed.
+          *
+          * @param request ListTransitRouterPeerAttachmentsRequest
+          * @return ListTransitRouterPeerAttachmentsResponse
+         */
         public ListTransitRouterPeerAttachmentsResponse ListTransitRouterPeerAttachments(ListTransitRouterPeerAttachmentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTransitRouterPeerAttachmentsWithOptions(request, runtime);
         }
 
+        /**
+          * ## Description
+          * You can use the following methods to query the cross-region connections on an Enterprise Edition transit router:
+          * *   Query all cross-region connections on an Enterprise Edition transit router by specifying the ID of the Enterprise Edition transit router.
+          * *   Query all cross-region connections on an Enterprise Edition transit router by specifying the ID of the Cloud Enterprise Network (CEN) instance and the ID of the region where the transit router is deployed.
+          *
+          * @param request ListTransitRouterPeerAttachmentsRequest
+          * @return ListTransitRouterPeerAttachmentsResponse
+         */
         public async Task<ListTransitRouterPeerAttachmentsResponse> ListTransitRouterPeerAttachmentsAsync(ListTransitRouterPeerAttachmentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12931,6 +16557,18 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await ListTransitRouterRouteEntriesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * When calling the **ListTransitRouterRouteTableAssociations** interface, at least one of the request parameters **TransitRouterRouteTableId** and **TransitRouterAttachmentId** must be entered:
+          * - If only the value of the **TransitRouterRouteTableId** parameter is specified, it means that you want to query the connection information of the network instance associated with the routing table of the enterprise edition forwarding router.
+          * - If only the value of the **TransitRouterAttachmentId** parameter is specified, it means that you want to query the routing table information of the enterprise edition forwarding router that is connected to the network instance to create an associated forwarding relationship.
+          * - If the values of **TransitRouterRouteTableId** and **TransitRouterAttachmentId** are specified at the same time, it means that you want to query the associated forwarding relationship between the network instance connection and the routing table of the forwarding router of the enterprise version.
+          *      - If there is an associated forwarding relationship between the network instance connection and the routing table of the forwarding router of the enterprise edition, the system will normally return information about the associated forwarding relationship.
+          *      - If there is no associated forwarding relationship between the network instance connection and the enterprise edition forwarding router routing table, the **TransitRouterAssociations** array returns an empty value.
+          *
+          * @param request ListTransitRouterRouteTableAssociationsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterRouteTableAssociationsResponse
+         */
         public ListTransitRouterRouteTableAssociationsResponse ListTransitRouterRouteTableAssociationsWithOptions(ListTransitRouterRouteTableAssociationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12959,9 +16597,21 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentId))
             {
                 query["TransitRouterAttachmentId"] = request.TransitRouterAttachmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentResourceId))
+            {
+                query["TransitRouterAttachmentResourceId"] = request.TransitRouterAttachmentResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentResourceType))
+            {
+                query["TransitRouterAttachmentResourceType"] = request.TransitRouterAttachmentResourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterRouteTableId))
             {
@@ -12986,6 +16636,18 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterRouteTableAssociationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * When calling the **ListTransitRouterRouteTableAssociations** interface, at least one of the request parameters **TransitRouterRouteTableId** and **TransitRouterAttachmentId** must be entered:
+          * - If only the value of the **TransitRouterRouteTableId** parameter is specified, it means that you want to query the connection information of the network instance associated with the routing table of the enterprise edition forwarding router.
+          * - If only the value of the **TransitRouterAttachmentId** parameter is specified, it means that you want to query the routing table information of the enterprise edition forwarding router that is connected to the network instance to create an associated forwarding relationship.
+          * - If the values of **TransitRouterRouteTableId** and **TransitRouterAttachmentId** are specified at the same time, it means that you want to query the associated forwarding relationship between the network instance connection and the routing table of the forwarding router of the enterprise version.
+          *      - If there is an associated forwarding relationship between the network instance connection and the routing table of the forwarding router of the enterprise edition, the system will normally return information about the associated forwarding relationship.
+          *      - If there is no associated forwarding relationship between the network instance connection and the enterprise edition forwarding router routing table, the **TransitRouterAssociations** array returns an empty value.
+          *
+          * @param request ListTransitRouterRouteTableAssociationsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterRouteTableAssociationsResponse
+         */
         public async Task<ListTransitRouterRouteTableAssociationsResponse> ListTransitRouterRouteTableAssociationsWithOptionsAsync(ListTransitRouterRouteTableAssociationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13014,9 +16676,21 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentId))
             {
                 query["TransitRouterAttachmentId"] = request.TransitRouterAttachmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentResourceId))
+            {
+                query["TransitRouterAttachmentResourceId"] = request.TransitRouterAttachmentResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentResourceType))
+            {
+                query["TransitRouterAttachmentResourceType"] = request.TransitRouterAttachmentResourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterRouteTableId))
             {
@@ -13041,12 +16715,34 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterRouteTableAssociationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * When calling the **ListTransitRouterRouteTableAssociations** interface, at least one of the request parameters **TransitRouterRouteTableId** and **TransitRouterAttachmentId** must be entered:
+          * - If only the value of the **TransitRouterRouteTableId** parameter is specified, it means that you want to query the connection information of the network instance associated with the routing table of the enterprise edition forwarding router.
+          * - If only the value of the **TransitRouterAttachmentId** parameter is specified, it means that you want to query the routing table information of the enterprise edition forwarding router that is connected to the network instance to create an associated forwarding relationship.
+          * - If the values of **TransitRouterRouteTableId** and **TransitRouterAttachmentId** are specified at the same time, it means that you want to query the associated forwarding relationship between the network instance connection and the routing table of the forwarding router of the enterprise version.
+          *      - If there is an associated forwarding relationship between the network instance connection and the routing table of the forwarding router of the enterprise edition, the system will normally return information about the associated forwarding relationship.
+          *      - If there is no associated forwarding relationship between the network instance connection and the enterprise edition forwarding router routing table, the **TransitRouterAssociations** array returns an empty value.
+          *
+          * @param request ListTransitRouterRouteTableAssociationsRequest
+          * @return ListTransitRouterRouteTableAssociationsResponse
+         */
         public ListTransitRouterRouteTableAssociationsResponse ListTransitRouterRouteTableAssociations(ListTransitRouterRouteTableAssociationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTransitRouterRouteTableAssociationsWithOptions(request, runtime);
         }
 
+        /**
+          * When calling the **ListTransitRouterRouteTableAssociations** interface, at least one of the request parameters **TransitRouterRouteTableId** and **TransitRouterAttachmentId** must be entered:
+          * - If only the value of the **TransitRouterRouteTableId** parameter is specified, it means that you want to query the connection information of the network instance associated with the routing table of the enterprise edition forwarding router.
+          * - If only the value of the **TransitRouterAttachmentId** parameter is specified, it means that you want to query the routing table information of the enterprise edition forwarding router that is connected to the network instance to create an associated forwarding relationship.
+          * - If the values of **TransitRouterRouteTableId** and **TransitRouterAttachmentId** are specified at the same time, it means that you want to query the associated forwarding relationship between the network instance connection and the routing table of the forwarding router of the enterprise version.
+          *      - If there is an associated forwarding relationship between the network instance connection and the routing table of the forwarding router of the enterprise edition, the system will normally return information about the associated forwarding relationship.
+          *      - If there is no associated forwarding relationship between the network instance connection and the enterprise edition forwarding router routing table, the **TransitRouterAssociations** array returns an empty value.
+          *
+          * @param request ListTransitRouterRouteTableAssociationsRequest
+          * @return ListTransitRouterRouteTableAssociationsResponse
+         */
         public async Task<ListTransitRouterRouteTableAssociationsResponse> ListTransitRouterRouteTableAssociationsAsync(ListTransitRouterRouteTableAssociationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13081,9 +16777,21 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentId))
             {
                 query["TransitRouterAttachmentId"] = request.TransitRouterAttachmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentResourceId))
+            {
+                query["TransitRouterAttachmentResourceId"] = request.TransitRouterAttachmentResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentResourceType))
+            {
+                query["TransitRouterAttachmentResourceType"] = request.TransitRouterAttachmentResourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterRouteTableId))
             {
@@ -13136,9 +16844,21 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentId))
             {
                 query["TransitRouterAttachmentId"] = request.TransitRouterAttachmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentResourceId))
+            {
+                query["TransitRouterAttachmentResourceId"] = request.TransitRouterAttachmentResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterAttachmentResourceType))
+            {
+                query["TransitRouterAttachmentResourceType"] = request.TransitRouterAttachmentResourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterRouteTableId))
             {
@@ -13202,6 +16922,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTableOptions))
+            {
+                query["RouteTableOptions"] = request.RouteTableOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -13274,6 +16998,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTableOptions))
+            {
+                query["RouteTableOptions"] = request.RouteTableOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -13329,6 +17057,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await ListTransitRouterRouteTablesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Description
+          * You can use the following methods to query VBR connections on an Enterprise Edition transit router:
+          * *   Specify the ID of the Enterprise Edition transit router.
+          * *   Specify the ID of the relevant Cloud Enterprise Network (CEN) instance and the region ID of the Enterprise Edition transit router.
+          *
+          * @param request ListTransitRouterVbrAttachmentsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterVbrAttachmentsResponse
+         */
         public ListTransitRouterVbrAttachmentsResponse ListTransitRouterVbrAttachmentsWithOptions(ListTransitRouterVbrAttachmentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13396,6 +17134,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterVbrAttachmentsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * You can use the following methods to query VBR connections on an Enterprise Edition transit router:
+          * *   Specify the ID of the Enterprise Edition transit router.
+          * *   Specify the ID of the relevant Cloud Enterprise Network (CEN) instance and the region ID of the Enterprise Edition transit router.
+          *
+          * @param request ListTransitRouterVbrAttachmentsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterVbrAttachmentsResponse
+         */
         public async Task<ListTransitRouterVbrAttachmentsResponse> ListTransitRouterVbrAttachmentsWithOptionsAsync(ListTransitRouterVbrAttachmentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13463,18 +17211,45 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterVbrAttachmentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * You can use the following methods to query VBR connections on an Enterprise Edition transit router:
+          * *   Specify the ID of the Enterprise Edition transit router.
+          * *   Specify the ID of the relevant Cloud Enterprise Network (CEN) instance and the region ID of the Enterprise Edition transit router.
+          *
+          * @param request ListTransitRouterVbrAttachmentsRequest
+          * @return ListTransitRouterVbrAttachmentsResponse
+         */
         public ListTransitRouterVbrAttachmentsResponse ListTransitRouterVbrAttachments(ListTransitRouterVbrAttachmentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTransitRouterVbrAttachmentsWithOptions(request, runtime);
         }
 
+        /**
+          * ## Description
+          * You can use the following methods to query VBR connections on an Enterprise Edition transit router:
+          * *   Specify the ID of the Enterprise Edition transit router.
+          * *   Specify the ID of the relevant Cloud Enterprise Network (CEN) instance and the region ID of the Enterprise Edition transit router.
+          *
+          * @param request ListTransitRouterVbrAttachmentsRequest
+          * @return ListTransitRouterVbrAttachmentsResponse
+         */
         public async Task<ListTransitRouterVbrAttachmentsResponse> ListTransitRouterVbrAttachmentsAsync(ListTransitRouterVbrAttachmentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTransitRouterVbrAttachmentsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can use the following methods to query VPC connections on an Enterprise Edition transit router:
+          * *   Specify the ID of the Enterprise Edition transit router.
+          * *   Specify the ID of the relevant Cloud Enterprise Network (CEN) instance and the region ID of the Enterprise Edition transit router.
+          *
+          * @param request ListTransitRouterVpcAttachmentsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterVpcAttachmentsResponse
+         */
         public ListTransitRouterVpcAttachmentsResponse ListTransitRouterVpcAttachmentsWithOptions(ListTransitRouterVpcAttachmentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13490,6 +17265,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -13510,6 +17289,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -13546,6 +17329,15 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterVpcAttachmentsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can use the following methods to query VPC connections on an Enterprise Edition transit router:
+          * *   Specify the ID of the Enterprise Edition transit router.
+          * *   Specify the ID of the relevant Cloud Enterprise Network (CEN) instance and the region ID of the Enterprise Edition transit router.
+          *
+          * @param request ListTransitRouterVpcAttachmentsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterVpcAttachmentsResponse
+         */
         public async Task<ListTransitRouterVpcAttachmentsResponse> ListTransitRouterVpcAttachmentsWithOptionsAsync(ListTransitRouterVpcAttachmentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13561,6 +17353,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -13581,6 +17377,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -13617,18 +17417,45 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterVpcAttachmentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can use the following methods to query VPC connections on an Enterprise Edition transit router:
+          * *   Specify the ID of the Enterprise Edition transit router.
+          * *   Specify the ID of the relevant Cloud Enterprise Network (CEN) instance and the region ID of the Enterprise Edition transit router.
+          *
+          * @param request ListTransitRouterVpcAttachmentsRequest
+          * @return ListTransitRouterVpcAttachmentsResponse
+         */
         public ListTransitRouterVpcAttachmentsResponse ListTransitRouterVpcAttachments(ListTransitRouterVpcAttachmentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTransitRouterVpcAttachmentsWithOptions(request, runtime);
         }
 
+        /**
+          * You can use the following methods to query VPC connections on an Enterprise Edition transit router:
+          * *   Specify the ID of the Enterprise Edition transit router.
+          * *   Specify the ID of the relevant Cloud Enterprise Network (CEN) instance and the region ID of the Enterprise Edition transit router.
+          *
+          * @param request ListTransitRouterVpcAttachmentsRequest
+          * @return ListTransitRouterVpcAttachmentsResponse
+         */
         public async Task<ListTransitRouterVpcAttachmentsResponse> ListTransitRouterVpcAttachmentsAsync(ListTransitRouterVpcAttachmentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTransitRouterVpcAttachmentsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage note
+          * When you call the **ListTransitRouterVpnAttachments** operation, take note of the following items: 
+          * - If you set only **CenId** and **RegionId**, the VPN attachments in the current region are queried.
+          * - If you set **CenId**, **RegionId**, and **TransitRouterAttachmentId**, only the specified VPN attachment is queried.
+          * - If you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId**, you do not need to set **CenId** or **RegionId**.
+          *
+          * @param request ListTransitRouterVpnAttachmentsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterVpnAttachmentsResponse
+         */
         public ListTransitRouterVpnAttachmentsResponse ListTransitRouterVpnAttachmentsWithOptions(ListTransitRouterVpnAttachmentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13696,6 +17523,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterVpnAttachmentsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage note
+          * When you call the **ListTransitRouterVpnAttachments** operation, take note of the following items: 
+          * - If you set only **CenId** and **RegionId**, the VPN attachments in the current region are queried.
+          * - If you set **CenId**, **RegionId**, and **TransitRouterAttachmentId**, only the specified VPN attachment is queried.
+          * - If you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId**, you do not need to set **CenId** or **RegionId**.
+          *
+          * @param request ListTransitRouterVpnAttachmentsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRouterVpnAttachmentsResponse
+         */
         public async Task<ListTransitRouterVpnAttachmentsResponse> ListTransitRouterVpnAttachmentsWithOptionsAsync(ListTransitRouterVpnAttachmentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13763,18 +17601,50 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterVpnAttachmentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage note
+          * When you call the **ListTransitRouterVpnAttachments** operation, take note of the following items: 
+          * - If you set only **CenId** and **RegionId**, the VPN attachments in the current region are queried.
+          * - If you set **CenId**, **RegionId**, and **TransitRouterAttachmentId**, only the specified VPN attachment is queried.
+          * - If you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId**, you do not need to set **CenId** or **RegionId**.
+          *
+          * @param request ListTransitRouterVpnAttachmentsRequest
+          * @return ListTransitRouterVpnAttachmentsResponse
+         */
         public ListTransitRouterVpnAttachmentsResponse ListTransitRouterVpnAttachments(ListTransitRouterVpnAttachmentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTransitRouterVpnAttachmentsWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage note
+          * When you call the **ListTransitRouterVpnAttachments** operation, take note of the following items: 
+          * - If you set only **CenId** and **RegionId**, the VPN attachments in the current region are queried.
+          * - If you set **CenId**, **RegionId**, and **TransitRouterAttachmentId**, only the specified VPN attachment is queried.
+          * - If you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId**, you do not need to set **CenId** or **RegionId**.
+          *
+          * @param request ListTransitRouterVpnAttachmentsRequest
+          * @return ListTransitRouterVpnAttachmentsResponse
+         */
         public async Task<ListTransitRouterVpnAttachmentsResponse> ListTransitRouterVpnAttachmentsAsync(ListTransitRouterVpnAttachmentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTransitRouterVpnAttachmentsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * You can set the **RegionId** and **TransitRouterId** parameters based on your requirements.
+          * *   If you do not set **RegionId** or **TransitRouterId**, the system queries all transit routers connected to the specified CEN instance.
+          * *   If you set only **RegionId**, the system queries transit routers that are deployed in the specified region.
+          * *   If you set only **TransitRouterId**, the system queries the specified transit router.
+          * *   If you set both **RegionId** and **TransitRouterId**, the system queries the specified transit router in the specified region.
+          *
+          * @param request ListTransitRoutersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRoutersResponse
+         */
         public ListTransitRoutersResponse ListTransitRoutersWithOptions(ListTransitRoutersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13782,6 +17652,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
             {
                 query["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureFilter))
+            {
+                query["FeatureFilter"] = request.FeatureFilter;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -13811,6 +17685,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -13818,6 +17696,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
             {
                 query["TransitRouterId"] = request.TransitRouterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterName))
+            {
+                query["TransitRouterName"] = request.TransitRouterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -13838,6 +17724,18 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRoutersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * You can set the **RegionId** and **TransitRouterId** parameters based on your requirements.
+          * *   If you do not set **RegionId** or **TransitRouterId**, the system queries all transit routers connected to the specified CEN instance.
+          * *   If you set only **RegionId**, the system queries transit routers that are deployed in the specified region.
+          * *   If you set only **TransitRouterId**, the system queries the specified transit router.
+          * *   If you set both **RegionId** and **TransitRouterId**, the system queries the specified transit router in the specified region.
+          *
+          * @param request ListTransitRoutersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTransitRoutersResponse
+         */
         public async Task<ListTransitRoutersResponse> ListTransitRoutersWithOptionsAsync(ListTransitRoutersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13845,6 +17743,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
             {
                 query["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureFilter))
+            {
+                query["FeatureFilter"] = request.FeatureFilter;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -13874,6 +17776,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -13881,6 +17787,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
             {
                 query["TransitRouterId"] = request.TransitRouterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterName))
+            {
+                query["TransitRouterName"] = request.TransitRouterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -13901,18 +17815,49 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRoutersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * You can set the **RegionId** and **TransitRouterId** parameters based on your requirements.
+          * *   If you do not set **RegionId** or **TransitRouterId**, the system queries all transit routers connected to the specified CEN instance.
+          * *   If you set only **RegionId**, the system queries transit routers that are deployed in the specified region.
+          * *   If you set only **TransitRouterId**, the system queries the specified transit router.
+          * *   If you set both **RegionId** and **TransitRouterId**, the system queries the specified transit router in the specified region.
+          *
+          * @param request ListTransitRoutersRequest
+          * @return ListTransitRoutersResponse
+         */
         public ListTransitRoutersResponse ListTransitRouters(ListTransitRoutersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTransitRoutersWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * You can set the **RegionId** and **TransitRouterId** parameters based on your requirements.
+          * *   If you do not set **RegionId** or **TransitRouterId**, the system queries all transit routers connected to the specified CEN instance.
+          * *   If you set only **RegionId**, the system queries transit routers that are deployed in the specified region.
+          * *   If you set only **TransitRouterId**, the system queries the specified transit router.
+          * *   If you set both **RegionId** and **TransitRouterId**, the system queries the specified transit router in the specified region.
+          *
+          * @param request ListTransitRoutersRequest
+          * @return ListTransitRoutersResponse
+         */
         public async Task<ListTransitRoutersResponse> ListTransitRoutersAsync(ListTransitRoutersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTransitRoutersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * **ModifyCenAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.
+          * *   If a CEN instance is in the **Modifying** state, the CEN instance is being modified. You can query the CEN instance but cannot perform other operations.
+          * *   If a CEN instance is in the **Active** state, the CEN instance is modified.
+          *
+          * @param request ModifyCenAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyCenAttributeResponse
+         */
         public ModifyCenAttributeResponse ModifyCenAttributeWithOptions(ModifyCenAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13968,6 +17913,15 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ModifyCenAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * **ModifyCenAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.
+          * *   If a CEN instance is in the **Modifying** state, the CEN instance is being modified. You can query the CEN instance but cannot perform other operations.
+          * *   If a CEN instance is in the **Active** state, the CEN instance is modified.
+          *
+          * @param request ModifyCenAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyCenAttributeResponse
+         */
         public async Task<ModifyCenAttributeResponse> ModifyCenAttributeWithOptionsAsync(ModifyCenAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14023,12 +17977,28 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ModifyCenAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * **ModifyCenAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.
+          * *   If a CEN instance is in the **Modifying** state, the CEN instance is being modified. You can query the CEN instance but cannot perform other operations.
+          * *   If a CEN instance is in the **Active** state, the CEN instance is modified.
+          *
+          * @param request ModifyCenAttributeRequest
+          * @return ModifyCenAttributeResponse
+         */
         public ModifyCenAttributeResponse ModifyCenAttribute(ModifyCenAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyCenAttributeWithOptions(request, runtime);
         }
 
+        /**
+          * **ModifyCenAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.
+          * *   If a CEN instance is in the **Modifying** state, the CEN instance is being modified. You can query the CEN instance but cannot perform other operations.
+          * *   If a CEN instance is in the **Active** state, the CEN instance is modified.
+          *
+          * @param request ModifyCenAttributeRequest
+          * @return ModifyCenAttributeResponse
+         */
         public async Task<ModifyCenAttributeResponse> ModifyCenAttributeAsync(ModifyCenAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14255,6 +18225,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await ModifyCenBandwidthPackageSpecWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `ModifyCenRouteMap` is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call `DescribeCenRouteMaps` to query the status of a routing policy.
+          * *   **Modifying**: indicates that the system is modifying the routing policy. You can only query the routing policy, but cannot perform other operations.
+          * *   **Active**: indicates that the routing policy is modified.
+          *
+          * @param request ModifyCenRouteMapRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyCenRouteMapResponse
+         */
         public ModifyCenRouteMapResponse ModifyCenRouteMapWithOptions(ModifyCenRouteMapRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14406,6 +18386,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ModifyCenRouteMapResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `ModifyCenRouteMap` is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call `DescribeCenRouteMaps` to query the status of a routing policy.
+          * *   **Modifying**: indicates that the system is modifying the routing policy. You can only query the routing policy, but cannot perform other operations.
+          * *   **Active**: indicates that the routing policy is modified.
+          *
+          * @param request ModifyCenRouteMapRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyCenRouteMapResponse
+         */
         public async Task<ModifyCenRouteMapResponse> ModifyCenRouteMapWithOptionsAsync(ModifyCenRouteMapRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14557,18 +18547,46 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ModifyCenRouteMapResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `ModifyCenRouteMap` is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call `DescribeCenRouteMaps` to query the status of a routing policy.
+          * *   **Modifying**: indicates that the system is modifying the routing policy. You can only query the routing policy, but cannot perform other operations.
+          * *   **Active**: indicates that the routing policy is modified.
+          *
+          * @param request ModifyCenRouteMapRequest
+          * @return ModifyCenRouteMapResponse
+         */
         public ModifyCenRouteMapResponse ModifyCenRouteMap(ModifyCenRouteMapRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyCenRouteMapWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `ModifyCenRouteMap` is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call `DescribeCenRouteMaps` to query the status of a routing policy.
+          * *   **Modifying**: indicates that the system is modifying the routing policy. You can only query the routing policy, but cannot perform other operations.
+          * *   **Active**: indicates that the routing policy is modified.
+          *
+          * @param request ModifyCenRouteMapRequest
+          * @return ModifyCenRouteMapResponse
+         */
         public async Task<ModifyCenRouteMapResponse> ModifyCenRouteMapAsync(ModifyCenRouteMapRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyCenRouteMapWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `ModifyFlowLogAttribute` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          * *   If a flow log is in the **Modifying** state, the flow log is being modified. In this case, you can query the flow log but cannot perform other operations.
+          * *   If a flow log is in the **Active** state, the flow log is modified.
+          *
+          * @param request ModifyFlowLogAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyFlowLogAttributeResponse
+         */
         public ModifyFlowLogAttributeResponse ModifyFlowLogAttributeWithOptions(ModifyFlowLogAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14632,6 +18650,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ModifyFlowLogAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `ModifyFlowLogAttribute` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          * *   If a flow log is in the **Modifying** state, the flow log is being modified. In this case, you can query the flow log but cannot perform other operations.
+          * *   If a flow log is in the **Active** state, the flow log is modified.
+          *
+          * @param request ModifyFlowLogAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyFlowLogAttributeResponse
+         */
         public async Task<ModifyFlowLogAttributeResponse> ModifyFlowLogAttributeWithOptionsAsync(ModifyFlowLogAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14695,18 +18723,49 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ModifyFlowLogAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `ModifyFlowLogAttribute` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          * *   If a flow log is in the **Modifying** state, the flow log is being modified. In this case, you can query the flow log but cannot perform other operations.
+          * *   If a flow log is in the **Active** state, the flow log is modified.
+          *
+          * @param request ModifyFlowLogAttributeRequest
+          * @return ModifyFlowLogAttributeResponse
+         */
         public ModifyFlowLogAttributeResponse ModifyFlowLogAttribute(ModifyFlowLogAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyFlowLogAttributeWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `ModifyFlowLogAttribute` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `DescribeFlowlogs` to query the status of a flow log.
+          * *   If a flow log is in the **Modifying** state, the flow log is being modified. In this case, you can query the flow log but cannot perform other operations.
+          * *   If a flow log is in the **Active** state, the flow log is modified.
+          *
+          * @param request ModifyFlowLogAttributeRequest
+          * @return ModifyFlowLogAttributeResponse
+         */
         public async Task<ModifyFlowLogAttributeResponse> ModifyFlowLogAttributeAsync(ModifyFlowLogAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyFlowLogAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   Before you modify the CIDR block of a transit router, we recommend that you read the [limits on transit router CIDR blocks](~~462635~~).
+          * *   If IP addresses within the CIDR block have been allocated to network instances, you cannot modify the CIDR block.
+          * *   When you call **ModifyTransitRouterCidr**, if no parameter of the **PublishCidrRoute** operation is modified, ModifyTransitRouterCidr is a synchronous operation. After you call the operation, the new settings are immediately applied.
+          * *   If a parameter of the **PublishCidrRoute** operation is modified, **ModifyTransitRouterCidr** is an asynchronous operation. After you call the operation, the request ID (**RequestId**) is returned but the operation is still being performed in the system background. You can call **ListTransitRouterCidr** to query the status of the CIDR block of the transit router.
+          *     *   If the CIDR block of the transit router remains unchanged, the CIDR block is still being modified.
+          *     *   If the CIDR block of the transit router is changed to the one that you specify in the request, the CIDR block has been modified.
+          *
+          * @param request ModifyTransitRouterCidrRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyTransitRouterCidrResponse
+         */
         public ModifyTransitRouterCidrResponse ModifyTransitRouterCidrWithOptions(ModifyTransitRouterCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14782,6 +18841,19 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ModifyTransitRouterCidrResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   Before you modify the CIDR block of a transit router, we recommend that you read the [limits on transit router CIDR blocks](~~462635~~).
+          * *   If IP addresses within the CIDR block have been allocated to network instances, you cannot modify the CIDR block.
+          * *   When you call **ModifyTransitRouterCidr**, if no parameter of the **PublishCidrRoute** operation is modified, ModifyTransitRouterCidr is a synchronous operation. After you call the operation, the new settings are immediately applied.
+          * *   If a parameter of the **PublishCidrRoute** operation is modified, **ModifyTransitRouterCidr** is an asynchronous operation. After you call the operation, the request ID (**RequestId**) is returned but the operation is still being performed in the system background. You can call **ListTransitRouterCidr** to query the status of the CIDR block of the transit router.
+          *     *   If the CIDR block of the transit router remains unchanged, the CIDR block is still being modified.
+          *     *   If the CIDR block of the transit router is changed to the one that you specify in the request, the CIDR block has been modified.
+          *
+          * @param request ModifyTransitRouterCidrRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyTransitRouterCidrResponse
+         */
         public async Task<ModifyTransitRouterCidrResponse> ModifyTransitRouterCidrWithOptionsAsync(ModifyTransitRouterCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14857,12 +18929,36 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ModifyTransitRouterCidrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   Before you modify the CIDR block of a transit router, we recommend that you read the [limits on transit router CIDR blocks](~~462635~~).
+          * *   If IP addresses within the CIDR block have been allocated to network instances, you cannot modify the CIDR block.
+          * *   When you call **ModifyTransitRouterCidr**, if no parameter of the **PublishCidrRoute** operation is modified, ModifyTransitRouterCidr is a synchronous operation. After you call the operation, the new settings are immediately applied.
+          * *   If a parameter of the **PublishCidrRoute** operation is modified, **ModifyTransitRouterCidr** is an asynchronous operation. After you call the operation, the request ID (**RequestId**) is returned but the operation is still being performed in the system background. You can call **ListTransitRouterCidr** to query the status of the CIDR block of the transit router.
+          *     *   If the CIDR block of the transit router remains unchanged, the CIDR block is still being modified.
+          *     *   If the CIDR block of the transit router is changed to the one that you specify in the request, the CIDR block has been modified.
+          *
+          * @param request ModifyTransitRouterCidrRequest
+          * @return ModifyTransitRouterCidrResponse
+         */
         public ModifyTransitRouterCidrResponse ModifyTransitRouterCidr(ModifyTransitRouterCidrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyTransitRouterCidrWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   Before you modify the CIDR block of a transit router, we recommend that you read the [limits on transit router CIDR blocks](~~462635~~).
+          * *   If IP addresses within the CIDR block have been allocated to network instances, you cannot modify the CIDR block.
+          * *   When you call **ModifyTransitRouterCidr**, if no parameter of the **PublishCidrRoute** operation is modified, ModifyTransitRouterCidr is a synchronous operation. After you call the operation, the new settings are immediately applied.
+          * *   If a parameter of the **PublishCidrRoute** operation is modified, **ModifyTransitRouterCidr** is an asynchronous operation. After you call the operation, the request ID (**RequestId**) is returned but the operation is still being performed in the system background. You can call **ListTransitRouterCidr** to query the status of the CIDR block of the transit router.
+          *     *   If the CIDR block of the transit router remains unchanged, the CIDR block is still being modified.
+          *     *   If the CIDR block of the transit router is changed to the one that you specify in the request, the CIDR block has been modified.
+          *
+          * @param request ModifyTransitRouterCidrRequest
+          * @return ModifyTransitRouterCidrResponse
+         */
         public async Task<ModifyTransitRouterCidrResponse> ModifyTransitRouterCidrAsync(ModifyTransitRouterCidrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14999,6 +19095,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await ModifyTransitRouterMulticastDomainWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * By default, CEN instances and bandwidth plans are in the default resource group. You can call `MoveResourceGroup` to move CEN instances or bandwidth plans to another resource group.
+          *
+          * @param request MoveResourceGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return MoveResourceGroupResponse
+         */
         public MoveResourceGroupResponse MoveResourceGroupWithOptions(MoveResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15058,6 +19162,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<MoveResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * By default, CEN instances and bandwidth plans are in the default resource group. You can call `MoveResourceGroup` to move CEN instances or bandwidth plans to another resource group.
+          *
+          * @param request MoveResourceGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return MoveResourceGroupResponse
+         */
         public async Task<MoveResourceGroupResponse> MoveResourceGroupWithOptionsAsync(MoveResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15117,18 +19229,39 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<MoveResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * By default, CEN instances and bandwidth plans are in the default resource group. You can call `MoveResourceGroup` to move CEN instances or bandwidth plans to another resource group.
+          *
+          * @param request MoveResourceGroupRequest
+          * @return MoveResourceGroupResponse
+         */
         public MoveResourceGroupResponse MoveResourceGroup(MoveResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MoveResourceGroupWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * By default, CEN instances and bandwidth plans are in the default resource group. You can call `MoveResourceGroup` to move CEN instances or bandwidth plans to another resource group.
+          *
+          * @param request MoveResourceGroupRequest
+          * @return MoveResourceGroupResponse
+         */
         public async Task<MoveResourceGroupResponse> MoveResourceGroupAsync(MoveResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MoveResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call `OpenTransitRouterService` to activate the transit router feature free of charge. After the `OpenTransitRouterService` operation succeeds, an order is automatically generated. You can use the returned order ID to query the order information in [Alibaba Cloud User Center](https://usercenter2-intl.aliyun.com/order/list?pageIndex=1\\&pageSize=20).
+          *
+          * @param request OpenTransitRouterServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return OpenTransitRouterServiceResponse
+         */
         public OpenTransitRouterServiceResponse OpenTransitRouterServiceWithOptions(OpenTransitRouterServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15172,6 +19305,13 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<OpenTransitRouterServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call `OpenTransitRouterService` to activate the transit router feature free of charge. After the `OpenTransitRouterService` operation succeeds, an order is automatically generated. You can use the returned order ID to query the order information in [Alibaba Cloud User Center](https://usercenter2-intl.aliyun.com/order/list?pageIndex=1\\&pageSize=20).
+          *
+          * @param request OpenTransitRouterServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return OpenTransitRouterServiceResponse
+         */
         public async Task<OpenTransitRouterServiceResponse> OpenTransitRouterServiceWithOptionsAsync(OpenTransitRouterServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15215,18 +19355,46 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<OpenTransitRouterServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call `OpenTransitRouterService` to activate the transit router feature free of charge. After the `OpenTransitRouterService` operation succeeds, an order is automatically generated. You can use the returned order ID to query the order information in [Alibaba Cloud User Center](https://usercenter2-intl.aliyun.com/order/list?pageIndex=1\\&pageSize=20).
+          *
+          * @param request OpenTransitRouterServiceRequest
+          * @return OpenTransitRouterServiceResponse
+         */
         public OpenTransitRouterServiceResponse OpenTransitRouterService(OpenTransitRouterServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return OpenTransitRouterServiceWithOptions(request, runtime);
         }
 
+        /**
+          * You can call `OpenTransitRouterService` to activate the transit router feature free of charge. After the `OpenTransitRouterService` operation succeeds, an order is automatically generated. You can use the returned order ID to query the order information in [Alibaba Cloud User Center](https://usercenter2-intl.aliyun.com/order/list?pageIndex=1\\&pageSize=20).
+          *
+          * @param request OpenTransitRouterServiceRequest
+          * @return OpenTransitRouterServiceResponse
+         */
         public async Task<OpenTransitRouterServiceResponse> OpenTransitRouterServiceAsync(OpenTransitRouterServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await OpenTransitRouterServiceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Supported route entries 
+          * The following table lists the route entries that can be published to CEN: 
+          * | Route entry | Network | Published to CEN by default? |
+          * | ----------- | ------- | ---------------------------- |
+          * | A route entry pointing to an ECS instance | VPC | No |
+          * | A route entry pointing to a VPN Gateway | VPC | No |
+          * | A route entry pointing to a High-Availability Virtual IP Address (HaVip) | VPC | No |
+          * | A VPC system route entry | VPC | Yes |
+          * | A route entry pointing to an on-premises data center | VPC | Yes |
+          * | A BGP route entry | VPC | Yes |
+          *
+          * @param request PublishRouteEntriesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PublishRouteEntriesResponse
+         */
         public PublishRouteEntriesResponse PublishRouteEntriesWithOptions(PublishRouteEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15282,6 +19450,22 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<PublishRouteEntriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Supported route entries 
+          * The following table lists the route entries that can be published to CEN: 
+          * | Route entry | Network | Published to CEN by default? |
+          * | ----------- | ------- | ---------------------------- |
+          * | A route entry pointing to an ECS instance | VPC | No |
+          * | A route entry pointing to a VPN Gateway | VPC | No |
+          * | A route entry pointing to a High-Availability Virtual IP Address (HaVip) | VPC | No |
+          * | A VPC system route entry | VPC | Yes |
+          * | A route entry pointing to an on-premises data center | VPC | Yes |
+          * | A BGP route entry | VPC | Yes |
+          *
+          * @param request PublishRouteEntriesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PublishRouteEntriesResponse
+         */
         public async Task<PublishRouteEntriesResponse> PublishRouteEntriesWithOptionsAsync(PublishRouteEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15337,18 +19521,176 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<PublishRouteEntriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Supported route entries 
+          * The following table lists the route entries that can be published to CEN: 
+          * | Route entry | Network | Published to CEN by default? |
+          * | ----------- | ------- | ---------------------------- |
+          * | A route entry pointing to an ECS instance | VPC | No |
+          * | A route entry pointing to a VPN Gateway | VPC | No |
+          * | A route entry pointing to a High-Availability Virtual IP Address (HaVip) | VPC | No |
+          * | A VPC system route entry | VPC | Yes |
+          * | A route entry pointing to an on-premises data center | VPC | Yes |
+          * | A BGP route entry | VPC | Yes |
+          *
+          * @param request PublishRouteEntriesRequest
+          * @return PublishRouteEntriesResponse
+         */
         public PublishRouteEntriesResponse PublishRouteEntries(PublishRouteEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PublishRouteEntriesWithOptions(request, runtime);
         }
 
+        /**
+          * ## Supported route entries 
+          * The following table lists the route entries that can be published to CEN: 
+          * | Route entry | Network | Published to CEN by default? |
+          * | ----------- | ------- | ---------------------------- |
+          * | A route entry pointing to an ECS instance | VPC | No |
+          * | A route entry pointing to a VPN Gateway | VPC | No |
+          * | A route entry pointing to a High-Availability Virtual IP Address (HaVip) | VPC | No |
+          * | A VPC system route entry | VPC | Yes |
+          * | A route entry pointing to an on-premises data center | VPC | Yes |
+          * | A BGP route entry | VPC | Yes |
+          *
+          * @param request PublishRouteEntriesRequest
+          * @return PublishRouteEntriesResponse
+         */
         public async Task<PublishRouteEntriesResponse> PublishRouteEntriesAsync(PublishRouteEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PublishRouteEntriesWithOptionsAsync(request, runtime);
         }
 
+        public RefreshTransitRouteTableAggregationResponse RefreshTransitRouteTableAggregationWithOptions(RefreshTransitRouteTableAggregationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationCidr))
+            {
+                query["TransitRouteTableAggregationCidr"] = request.TransitRouteTableAggregationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableId))
+            {
+                query["TransitRouteTableId"] = request.TransitRouteTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshTransitRouteTableAggregation",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshTransitRouteTableAggregationResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RefreshTransitRouteTableAggregationResponse> RefreshTransitRouteTableAggregationWithOptionsAsync(RefreshTransitRouteTableAggregationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableAggregationCidr))
+            {
+                query["TransitRouteTableAggregationCidr"] = request.TransitRouteTableAggregationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouteTableId))
+            {
+                query["TransitRouteTableId"] = request.TransitRouteTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshTransitRouteTableAggregation",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshTransitRouteTableAggregationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RefreshTransitRouteTableAggregationResponse RefreshTransitRouteTableAggregation(RefreshTransitRouteTableAggregationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RefreshTransitRouteTableAggregationWithOptions(request, runtime);
+        }
+
+        public async Task<RefreshTransitRouteTableAggregationResponse> RefreshTransitRouteTableAggregationAsync(RefreshTransitRouteTableAggregationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RefreshTransitRouteTableAggregationWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * ## Usage notes
+          * Enterprise Edition transit routers allow you to specify elastic network interfaces (ENIs) as multicast members. You can call `RegisterTransitRouterMulticastGroupMembers` to add ENIs in the same region or in different regions to a multicast group as multicast members.
+          * *   If you set **NetworkInterfaceIds**, ENIs in the current region are specified as multicast members. Make sure that the vSwitches of the ENIs are associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](~~429778~~).
+          * *   If you set **PeerTransitRouterMulticastDomains**, multicast members in the multicast group that has the same IP address as the current multicast group but is in a different region are added to the current multicast group. Make sure that an inter-region connection is created. For more information, see [CreateTransitRouterPeerAttachment](~~261363~~).
+          *     For example, Alice created a multicast domain (Domain A) in the Australia (Sydney) region and a multicast domain (Domain B) in the UK (London) region. Domain A contains a multicast group (Group A), and Domain B contains a multicast group (Group B). Group A and Group B have the same multicast IP address. Group B in UK (London) contains a multicast member (Member B). If Alice sets **PeerTransitRouterMulticastDomains** to the ID of Domain B in UK (London) when Alice calls `RegisterTransitRouterMulticastGroupMembers` to add multicast members to Group A in Australia (Sydney), Member B is added to Group A in Australia (Sydney).
+          * *   `RegisterTransitRouterMulticastGroupMembers` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast member.
+          *     *   If a multicast member is in the **Registering** state, the multicast member is being added. You can query the multicast member but cannot perform other operations.
+          *     *   If a multicast member is in the **Registered** state, the multicast member is added.
+          *
+          * @param request RegisterTransitRouterMulticastGroupMembersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RegisterTransitRouterMulticastGroupMembersResponse
+         */
         public RegisterTransitRouterMulticastGroupMembersResponse RegisterTransitRouterMulticastGroupMembersWithOptions(RegisterTransitRouterMulticastGroupMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15416,6 +19758,20 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<RegisterTransitRouterMulticastGroupMembersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Enterprise Edition transit routers allow you to specify elastic network interfaces (ENIs) as multicast members. You can call `RegisterTransitRouterMulticastGroupMembers` to add ENIs in the same region or in different regions to a multicast group as multicast members.
+          * *   If you set **NetworkInterfaceIds**, ENIs in the current region are specified as multicast members. Make sure that the vSwitches of the ENIs are associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](~~429778~~).
+          * *   If you set **PeerTransitRouterMulticastDomains**, multicast members in the multicast group that has the same IP address as the current multicast group but is in a different region are added to the current multicast group. Make sure that an inter-region connection is created. For more information, see [CreateTransitRouterPeerAttachment](~~261363~~).
+          *     For example, Alice created a multicast domain (Domain A) in the Australia (Sydney) region and a multicast domain (Domain B) in the UK (London) region. Domain A contains a multicast group (Group A), and Domain B contains a multicast group (Group B). Group A and Group B have the same multicast IP address. Group B in UK (London) contains a multicast member (Member B). If Alice sets **PeerTransitRouterMulticastDomains** to the ID of Domain B in UK (London) when Alice calls `RegisterTransitRouterMulticastGroupMembers` to add multicast members to Group A in Australia (Sydney), Member B is added to Group A in Australia (Sydney).
+          * *   `RegisterTransitRouterMulticastGroupMembers` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast member.
+          *     *   If a multicast member is in the **Registering** state, the multicast member is being added. You can query the multicast member but cannot perform other operations.
+          *     *   If a multicast member is in the **Registered** state, the multicast member is added.
+          *
+          * @param request RegisterTransitRouterMulticastGroupMembersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RegisterTransitRouterMulticastGroupMembersResponse
+         */
         public async Task<RegisterTransitRouterMulticastGroupMembersResponse> RegisterTransitRouterMulticastGroupMembersWithOptionsAsync(RegisterTransitRouterMulticastGroupMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15483,18 +19839,56 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<RegisterTransitRouterMulticastGroupMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Enterprise Edition transit routers allow you to specify elastic network interfaces (ENIs) as multicast members. You can call `RegisterTransitRouterMulticastGroupMembers` to add ENIs in the same region or in different regions to a multicast group as multicast members.
+          * *   If you set **NetworkInterfaceIds**, ENIs in the current region are specified as multicast members. Make sure that the vSwitches of the ENIs are associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](~~429778~~).
+          * *   If you set **PeerTransitRouterMulticastDomains**, multicast members in the multicast group that has the same IP address as the current multicast group but is in a different region are added to the current multicast group. Make sure that an inter-region connection is created. For more information, see [CreateTransitRouterPeerAttachment](~~261363~~).
+          *     For example, Alice created a multicast domain (Domain A) in the Australia (Sydney) region and a multicast domain (Domain B) in the UK (London) region. Domain A contains a multicast group (Group A), and Domain B contains a multicast group (Group B). Group A and Group B have the same multicast IP address. Group B in UK (London) contains a multicast member (Member B). If Alice sets **PeerTransitRouterMulticastDomains** to the ID of Domain B in UK (London) when Alice calls `RegisterTransitRouterMulticastGroupMembers` to add multicast members to Group A in Australia (Sydney), Member B is added to Group A in Australia (Sydney).
+          * *   `RegisterTransitRouterMulticastGroupMembers` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast member.
+          *     *   If a multicast member is in the **Registering** state, the multicast member is being added. You can query the multicast member but cannot perform other operations.
+          *     *   If a multicast member is in the **Registered** state, the multicast member is added.
+          *
+          * @param request RegisterTransitRouterMulticastGroupMembersRequest
+          * @return RegisterTransitRouterMulticastGroupMembersResponse
+         */
         public RegisterTransitRouterMulticastGroupMembersResponse RegisterTransitRouterMulticastGroupMembers(RegisterTransitRouterMulticastGroupMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RegisterTransitRouterMulticastGroupMembersWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Enterprise Edition transit routers allow you to specify elastic network interfaces (ENIs) as multicast members. You can call `RegisterTransitRouterMulticastGroupMembers` to add ENIs in the same region or in different regions to a multicast group as multicast members.
+          * *   If you set **NetworkInterfaceIds**, ENIs in the current region are specified as multicast members. Make sure that the vSwitches of the ENIs are associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](~~429778~~).
+          * *   If you set **PeerTransitRouterMulticastDomains**, multicast members in the multicast group that has the same IP address as the current multicast group but is in a different region are added to the current multicast group. Make sure that an inter-region connection is created. For more information, see [CreateTransitRouterPeerAttachment](~~261363~~).
+          *     For example, Alice created a multicast domain (Domain A) in the Australia (Sydney) region and a multicast domain (Domain B) in the UK (London) region. Domain A contains a multicast group (Group A), and Domain B contains a multicast group (Group B). Group A and Group B have the same multicast IP address. Group B in UK (London) contains a multicast member (Member B). If Alice sets **PeerTransitRouterMulticastDomains** to the ID of Domain B in UK (London) when Alice calls `RegisterTransitRouterMulticastGroupMembers` to add multicast members to Group A in Australia (Sydney), Member B is added to Group A in Australia (Sydney).
+          * *   `RegisterTransitRouterMulticastGroupMembers` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast member.
+          *     *   If a multicast member is in the **Registering** state, the multicast member is being added. You can query the multicast member but cannot perform other operations.
+          *     *   If a multicast member is in the **Registered** state, the multicast member is added.
+          *
+          * @param request RegisterTransitRouterMulticastGroupMembersRequest
+          * @return RegisterTransitRouterMulticastGroupMembersResponse
+         */
         public async Task<RegisterTransitRouterMulticastGroupMembersResponse> RegisterTransitRouterMulticastGroupMembersAsync(RegisterTransitRouterMulticastGroupMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RegisterTransitRouterMulticastGroupMembersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * - You can specify only elastic network interfaces (ENIs) as multicast sources.
+          * - `RegisterTransitRouterMulticastGroupSources` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.     - If a multicast source is in the **Registering** state, the multicast source is being created. You can query the multicast source but cannot perform other operations.
+          *   - If a multicast source is in the **Registered** state, the multicast source is created.
+          * ## Prerequisites
+          * Before you call `RegisterTransitRouterMulticastGroupSources`, make sure that the vSwitch on which the ENI is created is associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/associatetransitroutermulticastdomain).
+          *
+          * @param request RegisterTransitRouterMulticastGroupSourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RegisterTransitRouterMulticastGroupSourcesResponse
+         */
         public RegisterTransitRouterMulticastGroupSourcesResponse RegisterTransitRouterMulticastGroupSourcesWithOptions(RegisterTransitRouterMulticastGroupSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15558,6 +19952,18 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<RegisterTransitRouterMulticastGroupSourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * - You can specify only elastic network interfaces (ENIs) as multicast sources.
+          * - `RegisterTransitRouterMulticastGroupSources` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.     - If a multicast source is in the **Registering** state, the multicast source is being created. You can query the multicast source but cannot perform other operations.
+          *   - If a multicast source is in the **Registered** state, the multicast source is created.
+          * ## Prerequisites
+          * Before you call `RegisterTransitRouterMulticastGroupSources`, make sure that the vSwitch on which the ENI is created is associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/associatetransitroutermulticastdomain).
+          *
+          * @param request RegisterTransitRouterMulticastGroupSourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RegisterTransitRouterMulticastGroupSourcesResponse
+         */
         public async Task<RegisterTransitRouterMulticastGroupSourcesResponse> RegisterTransitRouterMulticastGroupSourcesWithOptionsAsync(RegisterTransitRouterMulticastGroupSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15621,18 +20027,54 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<RegisterTransitRouterMulticastGroupSourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * - You can specify only elastic network interfaces (ENIs) as multicast sources.
+          * - `RegisterTransitRouterMulticastGroupSources` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.     - If a multicast source is in the **Registering** state, the multicast source is being created. You can query the multicast source but cannot perform other operations.
+          *   - If a multicast source is in the **Registered** state, the multicast source is created.
+          * ## Prerequisites
+          * Before you call `RegisterTransitRouterMulticastGroupSources`, make sure that the vSwitch on which the ENI is created is associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/associatetransitroutermulticastdomain).
+          *
+          * @param request RegisterTransitRouterMulticastGroupSourcesRequest
+          * @return RegisterTransitRouterMulticastGroupSourcesResponse
+         */
         public RegisterTransitRouterMulticastGroupSourcesResponse RegisterTransitRouterMulticastGroupSources(RegisterTransitRouterMulticastGroupSourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RegisterTransitRouterMulticastGroupSourcesWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * - You can specify only elastic network interfaces (ENIs) as multicast sources.
+          * - `RegisterTransitRouterMulticastGroupSources` is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call `ListTransitRouterMulticastGroups` to query the status of a multicast source.     - If a multicast source is in the **Registering** state, the multicast source is being created. You can query the multicast source but cannot perform other operations.
+          *   - If a multicast source is in the **Registered** state, the multicast source is created.
+          * ## Prerequisites
+          * Before you call `RegisterTransitRouterMulticastGroupSources`, make sure that the vSwitch on which the ENI is created is associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/associatetransitroutermulticastdomain).
+          *
+          * @param request RegisterTransitRouterMulticastGroupSourcesRequest
+          * @return RegisterTransitRouterMulticastGroupSourcesResponse
+         */
         public async Task<RegisterTransitRouterMulticastGroupSourcesResponse> RegisterTransitRouterMulticastGroupSourcesAsync(RegisterTransitRouterMulticastGroupSourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RegisterTransitRouterMulticastGroupSourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage note
+          * *   When you call **RemoveTrafficMatchRuleFromTrafficMarkingPolicy**, take note of the following rules:
+          *     *   If you specify the ID of a traffic classification rule in the **TrafficMarkRuleIds** parameter, the specified traffic classification rule is deleted.
+          *     *   If you do not specify a traffic classification rule ID in the **TrafficMarkRuleIds** parameter, no operation is performed after you call this operation.
+          *         If you want to delete a traffic classification rule, you must specify the rule ID before you call this operation.
+          * *   **RemoveTrafficMatchRuleFromTrafficMarkingPolicy** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic classification rule.
+          *     *   If traffic classification rule is in the **Deleting** state, the traffic classification rule is being deleted. In this case, you can query the traffic classification rule but cannot perform other operations.
+          *     *   If a traffic classification rule cannot be found, the traffic classification rule is deleted.
+          *
+          * @param request RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse
+         */
         public RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse RemoveTrafficMatchRuleFromTrafficMarkingPolicyWithOptions(RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15688,6 +20130,20 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage note
+          * *   When you call **RemoveTrafficMatchRuleFromTrafficMarkingPolicy**, take note of the following rules:
+          *     *   If you specify the ID of a traffic classification rule in the **TrafficMarkRuleIds** parameter, the specified traffic classification rule is deleted.
+          *     *   If you do not specify a traffic classification rule ID in the **TrafficMarkRuleIds** parameter, no operation is performed after you call this operation.
+          *         If you want to delete a traffic classification rule, you must specify the rule ID before you call this operation.
+          * *   **RemoveTrafficMatchRuleFromTrafficMarkingPolicy** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic classification rule.
+          *     *   If traffic classification rule is in the **Deleting** state, the traffic classification rule is being deleted. In this case, you can query the traffic classification rule but cannot perform other operations.
+          *     *   If a traffic classification rule cannot be found, the traffic classification rule is deleted.
+          *
+          * @param request RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse
+         */
         public async Task<RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse> RemoveTrafficMatchRuleFromTrafficMarkingPolicyWithOptionsAsync(RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15743,18 +20199,54 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage note
+          * *   When you call **RemoveTrafficMatchRuleFromTrafficMarkingPolicy**, take note of the following rules:
+          *     *   If you specify the ID of a traffic classification rule in the **TrafficMarkRuleIds** parameter, the specified traffic classification rule is deleted.
+          *     *   If you do not specify a traffic classification rule ID in the **TrafficMarkRuleIds** parameter, no operation is performed after you call this operation.
+          *         If you want to delete a traffic classification rule, you must specify the rule ID before you call this operation.
+          * *   **RemoveTrafficMatchRuleFromTrafficMarkingPolicy** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic classification rule.
+          *     *   If traffic classification rule is in the **Deleting** state, the traffic classification rule is being deleted. In this case, you can query the traffic classification rule but cannot perform other operations.
+          *     *   If a traffic classification rule cannot be found, the traffic classification rule is deleted.
+          *
+          * @param request RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest
+          * @return RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse
+         */
         public RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse RemoveTrafficMatchRuleFromTrafficMarkingPolicy(RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveTrafficMatchRuleFromTrafficMarkingPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage note
+          * *   When you call **RemoveTrafficMatchRuleFromTrafficMarkingPolicy**, take note of the following rules:
+          *     *   If you specify the ID of a traffic classification rule in the **TrafficMarkRuleIds** parameter, the specified traffic classification rule is deleted.
+          *     *   If you do not specify a traffic classification rule ID in the **TrafficMarkRuleIds** parameter, no operation is performed after you call this operation.
+          *         If you want to delete a traffic classification rule, you must specify the rule ID before you call this operation.
+          * *   **RemoveTrafficMatchRuleFromTrafficMarkingPolicy** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **ListTrafficMarkingPolicies** to query the status of a traffic classification rule.
+          *     *   If traffic classification rule is in the **Deleting** state, the traffic classification rule is being deleted. In this case, you can query the traffic classification rule but cannot perform other operations.
+          *     *   If a traffic classification rule cannot be found, the traffic classification rule is deleted.
+          *
+          * @param request RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest
+          * @return RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse
+         */
         public async Task<RemoveTrafficMatchRuleFromTrafficMarkingPolicyResponse> RemoveTrafficMatchRuleFromTrafficMarkingPolicyAsync(RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveTrafficMatchRuleFromTrafficMarkingPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated : RemoveTraficMatchRuleFromTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::RemoveTrafficMatchRuleFromTrafficMarkingPolicy instead.
+          * ## Usage notes
+          * The **RemoveTraficMatchRuleFromTrafficMarkingPolicy** is deprecated and will be discontinued soon. If you need to delete traffic classification rules from a traffic marking policy, call the [RemoveTrafficMatchRuleFromTrafficMarkingPolicy](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/removetrafficmatchrulefromtrafficmarkingpolicy) operation.
+          *
+          * @param request RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse
+         */
+        // Deprecated
         public RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse RemoveTraficMatchRuleFromTrafficMarkingPolicyWithOptions(RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15810,6 +20302,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : RemoveTraficMatchRuleFromTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::RemoveTrafficMatchRuleFromTrafficMarkingPolicy instead.
+          * ## Usage notes
+          * The **RemoveTraficMatchRuleFromTrafficMarkingPolicy** is deprecated and will be discontinued soon. If you need to delete traffic classification rules from a traffic marking policy, call the [RemoveTrafficMatchRuleFromTrafficMarkingPolicy](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/removetrafficmatchrulefromtrafficmarkingpolicy) operation.
+          *
+          * @param request RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse
+         */
+        // Deprecated
         public async Task<RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse> RemoveTraficMatchRuleFromTrafficMarkingPolicyWithOptionsAsync(RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15865,18 +20367,47 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : RemoveTraficMatchRuleFromTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::RemoveTrafficMatchRuleFromTrafficMarkingPolicy instead.
+          * ## Usage notes
+          * The **RemoveTraficMatchRuleFromTrafficMarkingPolicy** is deprecated and will be discontinued soon. If you need to delete traffic classification rules from a traffic marking policy, call the [RemoveTrafficMatchRuleFromTrafficMarkingPolicy](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/removetrafficmatchrulefromtrafficmarkingpolicy) operation.
+          *
+          * @param request RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest
+          * @return RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse
+         */
+        // Deprecated
         public RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse RemoveTraficMatchRuleFromTrafficMarkingPolicy(RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveTraficMatchRuleFromTrafficMarkingPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : RemoveTraficMatchRuleFromTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::RemoveTrafficMatchRuleFromTrafficMarkingPolicy instead.
+          * ## Usage notes
+          * The **RemoveTraficMatchRuleFromTrafficMarkingPolicy** is deprecated and will be discontinued soon. If you need to delete traffic classification rules from a traffic marking policy, call the [RemoveTrafficMatchRuleFromTrafficMarkingPolicy](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/removetrafficmatchrulefromtrafficmarkingpolicy) operation.
+          *
+          * @param request RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest
+          * @return RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse
+         */
+        // Deprecated
         public async Task<RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse> RemoveTraficMatchRuleFromTrafficMarkingPolicyAsync(RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveTraficMatchRuleFromTrafficMarkingPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   The network instance connection that you want to associate with another route table must be created on an Enterprise Edition transit router.
+          * *   **ReplaceTransitRouterRouteTableAssociation** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTableAssociations** to query the associated forwarding status between a network instance connection and transit router route table.
+          *     *   The **Replacing** state indicates that the network instance connection is being associated with the specified transit router route table. You can query the associate forwarding correlation between the network instance connection and the transit router route table but cannot perform other operations.
+          *     *   The **Active** state indicates that the network instance connection is associated with the specified transit router route table.
+          *
+          * @param request ReplaceTransitRouterRouteTableAssociationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReplaceTransitRouterRouteTableAssociationResponse
+         */
         public ReplaceTransitRouterRouteTableAssociationResponse ReplaceTransitRouterRouteTableAssociationWithOptions(ReplaceTransitRouterRouteTableAssociationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15932,6 +20463,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ReplaceTransitRouterRouteTableAssociationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   The network instance connection that you want to associate with another route table must be created on an Enterprise Edition transit router.
+          * *   **ReplaceTransitRouterRouteTableAssociation** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTableAssociations** to query the associated forwarding status between a network instance connection and transit router route table.
+          *     *   The **Replacing** state indicates that the network instance connection is being associated with the specified transit router route table. You can query the associate forwarding correlation between the network instance connection and the transit router route table but cannot perform other operations.
+          *     *   The **Active** state indicates that the network instance connection is associated with the specified transit router route table.
+          *
+          * @param request ReplaceTransitRouterRouteTableAssociationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReplaceTransitRouterRouteTableAssociationResponse
+         */
         public async Task<ReplaceTransitRouterRouteTableAssociationResponse> ReplaceTransitRouterRouteTableAssociationWithOptionsAsync(ReplaceTransitRouterRouteTableAssociationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15987,18 +20529,56 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ReplaceTransitRouterRouteTableAssociationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   The network instance connection that you want to associate with another route table must be created on an Enterprise Edition transit router.
+          * *   **ReplaceTransitRouterRouteTableAssociation** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTableAssociations** to query the associated forwarding status between a network instance connection and transit router route table.
+          *     *   The **Replacing** state indicates that the network instance connection is being associated with the specified transit router route table. You can query the associate forwarding correlation between the network instance connection and the transit router route table but cannot perform other operations.
+          *     *   The **Active** state indicates that the network instance connection is associated with the specified transit router route table.
+          *
+          * @param request ReplaceTransitRouterRouteTableAssociationRequest
+          * @return ReplaceTransitRouterRouteTableAssociationResponse
+         */
         public ReplaceTransitRouterRouteTableAssociationResponse ReplaceTransitRouterRouteTableAssociation(ReplaceTransitRouterRouteTableAssociationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReplaceTransitRouterRouteTableAssociationWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   The network instance connection that you want to associate with another route table must be created on an Enterprise Edition transit router.
+          * *   **ReplaceTransitRouterRouteTableAssociation** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterRouteTableAssociations** to query the associated forwarding status between a network instance connection and transit router route table.
+          *     *   The **Replacing** state indicates that the network instance connection is being associated with the specified transit router route table. You can query the associate forwarding correlation between the network instance connection and the transit router route table but cannot perform other operations.
+          *     *   The **Active** state indicates that the network instance connection is associated with the specified transit router route table.
+          *
+          * @param request ReplaceTransitRouterRouteTableAssociationRequest
+          * @return ReplaceTransitRouterRouteTableAssociationResponse
+         */
         public async Task<ReplaceTransitRouterRouteTableAssociationResponse> ReplaceTransitRouterRouteTableAssociationAsync(ReplaceTransitRouterRouteTableAssociationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReplaceTransitRouterRouteTableAssociationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * Cloud services refer to the Alibaba Cloud services that use the 100.64.0.0/10 CIDR block to provide services. These cloud services include Object Storage Service (OSS), Log Service, and Data Transmission Service (DTS). If your on-premises network needs to access a cloud service, you must attach the virtual border router (VBR) or Cloud Connect Network (CCN) instance that is connected to your on-premises network to a Cloud Enterprise Network (CEN) instance. In addition, you must attach a virtual private cloud (VPC) that is deployed in the same region as the cloud service to the CEN instance. This way, your on-premises network can connect to the VPC that is deployed in the same region as the cloud service and access the cloud service through the VPC.  
+          * ## Usage notes
+          * - An on-premises network associated with a VBR can use CEN to access only a cloud service that is deployed in the same region.  
+          * For example, if cloud services are deployed in the China (Beijing) region, only on-premises networks connected to VBRs in the China (Beijing) region can access the cloud services.
+          * - **ResolveAndRouteServiceInCen** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeRouteServicesInCen** to query the status of a cloud service.     - If a cloud service is in the **Creating** state, the connection to the cloud service is being created. In this case, you can query the cloud service but cannot perform other operations.
+          *   - If a cloud service is in the **Active** state, the connection to the cloud service is created.
+          *   - If a cloud service is in the **Failed** state, the connection to the cloud service failed.
+          * ## Prerequisites
+          * Before you call this operation, make sure that the following conditions are met:
+          * - The VBR or CCN instance to which your on-premises network is connected is attached to a CEN instance.
+          * - A VPC that is deployed in the same region as the cloud service is also attached to the CEN instance. For more information, see [AttachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/attachcenchildinstance).
+          *
+          * @param request ResolveAndRouteServiceInCenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResolveAndRouteServiceInCenResponse
+         */
         public ResolveAndRouteServiceInCenResponse ResolveAndRouteServiceInCenWithOptions(ResolveAndRouteServiceInCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16066,6 +20646,24 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ResolveAndRouteServiceInCenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * Cloud services refer to the Alibaba Cloud services that use the 100.64.0.0/10 CIDR block to provide services. These cloud services include Object Storage Service (OSS), Log Service, and Data Transmission Service (DTS). If your on-premises network needs to access a cloud service, you must attach the virtual border router (VBR) or Cloud Connect Network (CCN) instance that is connected to your on-premises network to a Cloud Enterprise Network (CEN) instance. In addition, you must attach a virtual private cloud (VPC) that is deployed in the same region as the cloud service to the CEN instance. This way, your on-premises network can connect to the VPC that is deployed in the same region as the cloud service and access the cloud service through the VPC.  
+          * ## Usage notes
+          * - An on-premises network associated with a VBR can use CEN to access only a cloud service that is deployed in the same region.  
+          * For example, if cloud services are deployed in the China (Beijing) region, only on-premises networks connected to VBRs in the China (Beijing) region can access the cloud services.
+          * - **ResolveAndRouteServiceInCen** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeRouteServicesInCen** to query the status of a cloud service.     - If a cloud service is in the **Creating** state, the connection to the cloud service is being created. In this case, you can query the cloud service but cannot perform other operations.
+          *   - If a cloud service is in the **Active** state, the connection to the cloud service is created.
+          *   - If a cloud service is in the **Failed** state, the connection to the cloud service failed.
+          * ## Prerequisites
+          * Before you call this operation, make sure that the following conditions are met:
+          * - The VBR or CCN instance to which your on-premises network is connected is attached to a CEN instance.
+          * - A VPC that is deployed in the same region as the cloud service is also attached to the CEN instance. For more information, see [AttachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/attachcenchildinstance).
+          *
+          * @param request ResolveAndRouteServiceInCenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResolveAndRouteServiceInCenResponse
+         */
         public async Task<ResolveAndRouteServiceInCenResponse> ResolveAndRouteServiceInCenWithOptionsAsync(ResolveAndRouteServiceInCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16133,18 +20731,66 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ResolveAndRouteServiceInCenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * Cloud services refer to the Alibaba Cloud services that use the 100.64.0.0/10 CIDR block to provide services. These cloud services include Object Storage Service (OSS), Log Service, and Data Transmission Service (DTS). If your on-premises network needs to access a cloud service, you must attach the virtual border router (VBR) or Cloud Connect Network (CCN) instance that is connected to your on-premises network to a Cloud Enterprise Network (CEN) instance. In addition, you must attach a virtual private cloud (VPC) that is deployed in the same region as the cloud service to the CEN instance. This way, your on-premises network can connect to the VPC that is deployed in the same region as the cloud service and access the cloud service through the VPC.  
+          * ## Usage notes
+          * - An on-premises network associated with a VBR can use CEN to access only a cloud service that is deployed in the same region.  
+          * For example, if cloud services are deployed in the China (Beijing) region, only on-premises networks connected to VBRs in the China (Beijing) region can access the cloud services.
+          * - **ResolveAndRouteServiceInCen** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeRouteServicesInCen** to query the status of a cloud service.     - If a cloud service is in the **Creating** state, the connection to the cloud service is being created. In this case, you can query the cloud service but cannot perform other operations.
+          *   - If a cloud service is in the **Active** state, the connection to the cloud service is created.
+          *   - If a cloud service is in the **Failed** state, the connection to the cloud service failed.
+          * ## Prerequisites
+          * Before you call this operation, make sure that the following conditions are met:
+          * - The VBR or CCN instance to which your on-premises network is connected is attached to a CEN instance.
+          * - A VPC that is deployed in the same region as the cloud service is also attached to the CEN instance. For more information, see [AttachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/attachcenchildinstance).
+          *
+          * @param request ResolveAndRouteServiceInCenRequest
+          * @return ResolveAndRouteServiceInCenResponse
+         */
         public ResolveAndRouteServiceInCenResponse ResolveAndRouteServiceInCen(ResolveAndRouteServiceInCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResolveAndRouteServiceInCenWithOptions(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * Cloud services refer to the Alibaba Cloud services that use the 100.64.0.0/10 CIDR block to provide services. These cloud services include Object Storage Service (OSS), Log Service, and Data Transmission Service (DTS). If your on-premises network needs to access a cloud service, you must attach the virtual border router (VBR) or Cloud Connect Network (CCN) instance that is connected to your on-premises network to a Cloud Enterprise Network (CEN) instance. In addition, you must attach a virtual private cloud (VPC) that is deployed in the same region as the cloud service to the CEN instance. This way, your on-premises network can connect to the VPC that is deployed in the same region as the cloud service and access the cloud service through the VPC.  
+          * ## Usage notes
+          * - An on-premises network associated with a VBR can use CEN to access only a cloud service that is deployed in the same region.  
+          * For example, if cloud services are deployed in the China (Beijing) region, only on-premises networks connected to VBRs in the China (Beijing) region can access the cloud services.
+          * - **ResolveAndRouteServiceInCen** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeRouteServicesInCen** to query the status of a cloud service.     - If a cloud service is in the **Creating** state, the connection to the cloud service is being created. In this case, you can query the cloud service but cannot perform other operations.
+          *   - If a cloud service is in the **Active** state, the connection to the cloud service is created.
+          *   - If a cloud service is in the **Failed** state, the connection to the cloud service failed.
+          * ## Prerequisites
+          * Before you call this operation, make sure that the following conditions are met:
+          * - The VBR or CCN instance to which your on-premises network is connected is attached to a CEN instance.
+          * - A VPC that is deployed in the same region as the cloud service is also attached to the CEN instance. For more information, see [AttachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/attachcenchildinstance).
+          *
+          * @param request ResolveAndRouteServiceInCenRequest
+          * @return ResolveAndRouteServiceInCenResponse
+         */
         public async Task<ResolveAndRouteServiceInCenResponse> ResolveAndRouteServiceInCenAsync(ResolveAndRouteServiceInCenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResolveAndRouteServiceInCenWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `RevokeInstanceFromTransitRouter` disallows transit routers only from connecting to virtual private clouds (VPCs), virtual border routers (VBRs), and IPsec-VPN connections.  
+          * If you want to disallow transit routers from connecting to Cloud Connect Network (CCN) instances, call the [RevokeInstanceFromCbn](https://www.alibabacloud.com/help/en/smart-access-gateway/latest/revokeinstancefromcbn) operation.  
+          * ## Prerequisites
+          * Before you call `RevokeInstanceFromTransitRouter`, you must detach the network instances from the transit router.  
+          * - For more information about how to detach VPCs from an Enterprise Edition transit router, see [DeleteTransitRouterVpcAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpcattachment).
+          * - For more information about how to detach VBRs from an Enterprise Edition transit router, see [DeleteTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervbrattachment).
+          * - For more information about how to detach network instances from a Basic Edition transit router, see [DetachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/detachcenchildinstance).
+          *
+          * @param request RevokeInstanceFromTransitRouterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RevokeInstanceFromTransitRouterResponse
+         */
         public RevokeInstanceFromTransitRouterResponse RevokeInstanceFromTransitRouterWithOptions(RevokeInstanceFromTransitRouterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16204,6 +20850,20 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<RevokeInstanceFromTransitRouterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `RevokeInstanceFromTransitRouter` disallows transit routers only from connecting to virtual private clouds (VPCs), virtual border routers (VBRs), and IPsec-VPN connections.  
+          * If you want to disallow transit routers from connecting to Cloud Connect Network (CCN) instances, call the [RevokeInstanceFromCbn](https://www.alibabacloud.com/help/en/smart-access-gateway/latest/revokeinstancefromcbn) operation.  
+          * ## Prerequisites
+          * Before you call `RevokeInstanceFromTransitRouter`, you must detach the network instances from the transit router.  
+          * - For more information about how to detach VPCs from an Enterprise Edition transit router, see [DeleteTransitRouterVpcAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpcattachment).
+          * - For more information about how to detach VBRs from an Enterprise Edition transit router, see [DeleteTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervbrattachment).
+          * - For more information about how to detach network instances from a Basic Edition transit router, see [DetachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/detachcenchildinstance).
+          *
+          * @param request RevokeInstanceFromTransitRouterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RevokeInstanceFromTransitRouterResponse
+         */
         public async Task<RevokeInstanceFromTransitRouterResponse> RevokeInstanceFromTransitRouterWithOptionsAsync(RevokeInstanceFromTransitRouterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16263,18 +20923,63 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<RevokeInstanceFromTransitRouterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * `RevokeInstanceFromTransitRouter` disallows transit routers only from connecting to virtual private clouds (VPCs), virtual border routers (VBRs), and IPsec-VPN connections.  
+          * If you want to disallow transit routers from connecting to Cloud Connect Network (CCN) instances, call the [RevokeInstanceFromCbn](https://www.alibabacloud.com/help/en/smart-access-gateway/latest/revokeinstancefromcbn) operation.  
+          * ## Prerequisites
+          * Before you call `RevokeInstanceFromTransitRouter`, you must detach the network instances from the transit router.  
+          * - For more information about how to detach VPCs from an Enterprise Edition transit router, see [DeleteTransitRouterVpcAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpcattachment).
+          * - For more information about how to detach VBRs from an Enterprise Edition transit router, see [DeleteTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervbrattachment).
+          * - For more information about how to detach network instances from a Basic Edition transit router, see [DetachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/detachcenchildinstance).
+          *
+          * @param request RevokeInstanceFromTransitRouterRequest
+          * @return RevokeInstanceFromTransitRouterResponse
+         */
         public RevokeInstanceFromTransitRouterResponse RevokeInstanceFromTransitRouter(RevokeInstanceFromTransitRouterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RevokeInstanceFromTransitRouterWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * `RevokeInstanceFromTransitRouter` disallows transit routers only from connecting to virtual private clouds (VPCs), virtual border routers (VBRs), and IPsec-VPN connections.  
+          * If you want to disallow transit routers from connecting to Cloud Connect Network (CCN) instances, call the [RevokeInstanceFromCbn](https://www.alibabacloud.com/help/en/smart-access-gateway/latest/revokeinstancefromcbn) operation.  
+          * ## Prerequisites
+          * Before you call `RevokeInstanceFromTransitRouter`, you must detach the network instances from the transit router.  
+          * - For more information about how to detach VPCs from an Enterprise Edition transit router, see [DeleteTransitRouterVpcAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervpcattachment).
+          * - For more information about how to detach VBRs from an Enterprise Edition transit router, see [DeleteTransitRouterVbrAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitroutervbrattachment).
+          * - For more information about how to detach network instances from a Basic Edition transit router, see [DetachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/detachcenchildinstance).
+          *
+          * @param request RevokeInstanceFromTransitRouterRequest
+          * @return RevokeInstanceFromTransitRouterResponse
+         */
         public async Task<RevokeInstanceFromTransitRouterResponse> RevokeInstanceFromTransitRouterAsync(RevokeInstanceFromTransitRouterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RevokeInstanceFromTransitRouterWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * Alibaba Cloud DNS PrivateZone (PrivateZone) is an Alibaba Cloud private domain name resolution and management service based on Virtual Private Cloud (VPC). After you attach virtual border routers (VBRs) and Cloud Connect Network (CCN) instances to a Cloud Enterprise Network (CEN) instance, you can enable the on-premises networks connected to the VBRs and CCN instances to access PrivateZone through the CEN instance. 
+          * ## Usage notes
+          * - The on-premises networks connected to VBRs or CCN instances must be deployed in the same region as the PrivateZone service.  
+          * For example, if the PrivateZone service is deployed in the China (Beijing) region, only on-premises networks connected to VBRs or CCN instances in the China (Beijing) region can access the PrivateZone service.
+          * - **RoutePrivateZoneInCenToVpc** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenPrivateZoneRoutes** to query the status of PrivateZone.     - If PrivateZone is in the **Creating** state, access to PrivateZone is being configured. In this case, you can query PrivateZone configurations but cannot perform other operations.
+          *   - If PrivateZone is in the **Active** state, access to PrivateZone is enabled.
+          *   - If PrivateZone is in the **Failed** state, configurations of access to PrivateZone failed.
+          * ## Prerequisites
+          * Before you call **RoutePrivateZoneInCenToVpc**, make sure that the following conditions are met: 
+          * - PrivateZone is deployed. For more information, see [PrivateZone quick start](https://www.alibabacloud.com/help/en/privatezone/latest/subscribe-service).
+          * - The following network instances are attached to the same CEN instance: the VPC that is associated with the PrivateZone service, and the VBR and CCN instance that want to access the PrivateZone service. For more information, see [AttachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/attachcenchildinstance).
+          * - If your on-premises network uses a CCN instance to connect to Alibaba Cloud and the account that owns the CCN instance is different from the account that owns the VPC or CEN instance, you must grant the CCN instance required permissions. For more information, see [Grant permissions to CCN](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/215e75).
+          *
+          * @param request RoutePrivateZoneInCenToVpcRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RoutePrivateZoneInCenToVpcResponse
+         */
         public RoutePrivateZoneInCenToVpcResponse RoutePrivateZoneInCenToVpcWithOptions(RoutePrivateZoneInCenToVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16330,6 +21035,25 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<RoutePrivateZoneInCenToVpcResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * Alibaba Cloud DNS PrivateZone (PrivateZone) is an Alibaba Cloud private domain name resolution and management service based on Virtual Private Cloud (VPC). After you attach virtual border routers (VBRs) and Cloud Connect Network (CCN) instances to a Cloud Enterprise Network (CEN) instance, you can enable the on-premises networks connected to the VBRs and CCN instances to access PrivateZone through the CEN instance. 
+          * ## Usage notes
+          * - The on-premises networks connected to VBRs or CCN instances must be deployed in the same region as the PrivateZone service.  
+          * For example, if the PrivateZone service is deployed in the China (Beijing) region, only on-premises networks connected to VBRs or CCN instances in the China (Beijing) region can access the PrivateZone service.
+          * - **RoutePrivateZoneInCenToVpc** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenPrivateZoneRoutes** to query the status of PrivateZone.     - If PrivateZone is in the **Creating** state, access to PrivateZone is being configured. In this case, you can query PrivateZone configurations but cannot perform other operations.
+          *   - If PrivateZone is in the **Active** state, access to PrivateZone is enabled.
+          *   - If PrivateZone is in the **Failed** state, configurations of access to PrivateZone failed.
+          * ## Prerequisites
+          * Before you call **RoutePrivateZoneInCenToVpc**, make sure that the following conditions are met: 
+          * - PrivateZone is deployed. For more information, see [PrivateZone quick start](https://www.alibabacloud.com/help/en/privatezone/latest/subscribe-service).
+          * - The following network instances are attached to the same CEN instance: the VPC that is associated with the PrivateZone service, and the VBR and CCN instance that want to access the PrivateZone service. For more information, see [AttachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/attachcenchildinstance).
+          * - If your on-premises network uses a CCN instance to connect to Alibaba Cloud and the account that owns the CCN instance is different from the account that owns the VPC or CEN instance, you must grant the CCN instance required permissions. For more information, see [Grant permissions to CCN](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/215e75).
+          *
+          * @param request RoutePrivateZoneInCenToVpcRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RoutePrivateZoneInCenToVpcResponse
+         */
         public async Task<RoutePrivateZoneInCenToVpcResponse> RoutePrivateZoneInCenToVpcWithOptionsAsync(RoutePrivateZoneInCenToVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16385,18 +21109,72 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<RoutePrivateZoneInCenToVpcResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * Alibaba Cloud DNS PrivateZone (PrivateZone) is an Alibaba Cloud private domain name resolution and management service based on Virtual Private Cloud (VPC). After you attach virtual border routers (VBRs) and Cloud Connect Network (CCN) instances to a Cloud Enterprise Network (CEN) instance, you can enable the on-premises networks connected to the VBRs and CCN instances to access PrivateZone through the CEN instance. 
+          * ## Usage notes
+          * - The on-premises networks connected to VBRs or CCN instances must be deployed in the same region as the PrivateZone service.  
+          * For example, if the PrivateZone service is deployed in the China (Beijing) region, only on-premises networks connected to VBRs or CCN instances in the China (Beijing) region can access the PrivateZone service.
+          * - **RoutePrivateZoneInCenToVpc** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenPrivateZoneRoutes** to query the status of PrivateZone.     - If PrivateZone is in the **Creating** state, access to PrivateZone is being configured. In this case, you can query PrivateZone configurations but cannot perform other operations.
+          *   - If PrivateZone is in the **Active** state, access to PrivateZone is enabled.
+          *   - If PrivateZone is in the **Failed** state, configurations of access to PrivateZone failed.
+          * ## Prerequisites
+          * Before you call **RoutePrivateZoneInCenToVpc**, make sure that the following conditions are met: 
+          * - PrivateZone is deployed. For more information, see [PrivateZone quick start](https://www.alibabacloud.com/help/en/privatezone/latest/subscribe-service).
+          * - The following network instances are attached to the same CEN instance: the VPC that is associated with the PrivateZone service, and the VBR and CCN instance that want to access the PrivateZone service. For more information, see [AttachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/attachcenchildinstance).
+          * - If your on-premises network uses a CCN instance to connect to Alibaba Cloud and the account that owns the CCN instance is different from the account that owns the VPC or CEN instance, you must grant the CCN instance required permissions. For more information, see [Grant permissions to CCN](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/215e75).
+          *
+          * @param request RoutePrivateZoneInCenToVpcRequest
+          * @return RoutePrivateZoneInCenToVpcResponse
+         */
         public RoutePrivateZoneInCenToVpcResponse RoutePrivateZoneInCenToVpc(RoutePrivateZoneInCenToVpcRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RoutePrivateZoneInCenToVpcWithOptions(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * Alibaba Cloud DNS PrivateZone (PrivateZone) is an Alibaba Cloud private domain name resolution and management service based on Virtual Private Cloud (VPC). After you attach virtual border routers (VBRs) and Cloud Connect Network (CCN) instances to a Cloud Enterprise Network (CEN) instance, you can enable the on-premises networks connected to the VBRs and CCN instances to access PrivateZone through the CEN instance. 
+          * ## Usage notes
+          * - The on-premises networks connected to VBRs or CCN instances must be deployed in the same region as the PrivateZone service.  
+          * For example, if the PrivateZone service is deployed in the China (Beijing) region, only on-premises networks connected to VBRs or CCN instances in the China (Beijing) region can access the PrivateZone service.
+          * - **RoutePrivateZoneInCenToVpc** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenPrivateZoneRoutes** to query the status of PrivateZone.     - If PrivateZone is in the **Creating** state, access to PrivateZone is being configured. In this case, you can query PrivateZone configurations but cannot perform other operations.
+          *   - If PrivateZone is in the **Active** state, access to PrivateZone is enabled.
+          *   - If PrivateZone is in the **Failed** state, configurations of access to PrivateZone failed.
+          * ## Prerequisites
+          * Before you call **RoutePrivateZoneInCenToVpc**, make sure that the following conditions are met: 
+          * - PrivateZone is deployed. For more information, see [PrivateZone quick start](https://www.alibabacloud.com/help/en/privatezone/latest/subscribe-service).
+          * - The following network instances are attached to the same CEN instance: the VPC that is associated with the PrivateZone service, and the VBR and CCN instance that want to access the PrivateZone service. For more information, see [AttachCenChildInstance](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/attachcenchildinstance).
+          * - If your on-premises network uses a CCN instance to connect to Alibaba Cloud and the account that owns the CCN instance is different from the account that owns the VPC or CEN instance, you must grant the CCN instance required permissions. For more information, see [Grant permissions to CCN](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/215e75).
+          *
+          * @param request RoutePrivateZoneInCenToVpcRequest
+          * @return RoutePrivateZoneInCenToVpcResponse
+         */
         public async Task<RoutePrivateZoneInCenToVpcResponse> RoutePrivateZoneInCenToVpcAsync(RoutePrivateZoneInCenToVpcRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RoutePrivateZoneInCenToVpcWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * The Cloud Enterprise Network (CEN) instance is associated with a bandwidth plan. For more information, see the [CreateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createcenbandwidthpackage) and [AssociateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/associatecenbandwidthpackage) topics.  
+          * ## Usage notes
+          * You can call the **SetCenInterRegionBandwidthLimit** operation to configure, modify, or remove the maximum bandwidth value of an inter-region connection. 
+          * - If you set **BandwidthLimit** to a value other than 0, the maximum bandwidth value of the inter-region connection is set or changed to the specified value.
+          * - If you set **BandwidthLimit** to 0, no bandwidth resource is allocated to the inter-region connection.
+          * ## Limits
+          * - The maximum bandwidth value of an inter-region connection cannot exceed that of the associated bandwidth plan.
+          * - The sum of the maximum bandwidth values of all inter-region connections cannot exceed the maximum bandwidth value of the associated bandwidth plan.
+          * - If bandwidth multiplexing is enabled for an inter-region connection, you cannot change the maximum bandwidth value of the inter-region connection.
+          * - You can call **SetCenInterRegionBandwidthLimit** to configure, modify, and remove the maximum bandwidth values of inter-region connections only on Basic Edition transit routers.  
+          * For more information about how to configure, modify, and remove the maximum bandwidth values of inter-region connections on Enterprise Edition transit routers, see [CreateTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createtransitrouterpeerattachment), [UpdateTransitRouterPeerAttachmentAttribute](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/updatetransitrouterpeerattachmentattribute), and [DeleteTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterpeerattachment).
+          *
+          * @param request SetCenInterRegionBandwidthLimitRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetCenInterRegionBandwidthLimitResponse
+         */
         public SetCenInterRegionBandwidthLimitResponse SetCenInterRegionBandwidthLimitWithOptions(SetCenInterRegionBandwidthLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16452,6 +21230,24 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<SetCenInterRegionBandwidthLimitResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * The Cloud Enterprise Network (CEN) instance is associated with a bandwidth plan. For more information, see the [CreateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createcenbandwidthpackage) and [AssociateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/associatecenbandwidthpackage) topics.  
+          * ## Usage notes
+          * You can call the **SetCenInterRegionBandwidthLimit** operation to configure, modify, or remove the maximum bandwidth value of an inter-region connection. 
+          * - If you set **BandwidthLimit** to a value other than 0, the maximum bandwidth value of the inter-region connection is set or changed to the specified value.
+          * - If you set **BandwidthLimit** to 0, no bandwidth resource is allocated to the inter-region connection.
+          * ## Limits
+          * - The maximum bandwidth value of an inter-region connection cannot exceed that of the associated bandwidth plan.
+          * - The sum of the maximum bandwidth values of all inter-region connections cannot exceed the maximum bandwidth value of the associated bandwidth plan.
+          * - If bandwidth multiplexing is enabled for an inter-region connection, you cannot change the maximum bandwidth value of the inter-region connection.
+          * - You can call **SetCenInterRegionBandwidthLimit** to configure, modify, and remove the maximum bandwidth values of inter-region connections only on Basic Edition transit routers.  
+          * For more information about how to configure, modify, and remove the maximum bandwidth values of inter-region connections on Enterprise Edition transit routers, see [CreateTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createtransitrouterpeerattachment), [UpdateTransitRouterPeerAttachmentAttribute](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/updatetransitrouterpeerattachmentattribute), and [DeleteTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterpeerattachment).
+          *
+          * @param request SetCenInterRegionBandwidthLimitRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetCenInterRegionBandwidthLimitResponse
+         */
         public async Task<SetCenInterRegionBandwidthLimitResponse> SetCenInterRegionBandwidthLimitWithOptionsAsync(SetCenInterRegionBandwidthLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16507,18 +21303,62 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<SetCenInterRegionBandwidthLimitResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * The Cloud Enterprise Network (CEN) instance is associated with a bandwidth plan. For more information, see the [CreateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createcenbandwidthpackage) and [AssociateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/associatecenbandwidthpackage) topics.  
+          * ## Usage notes
+          * You can call the **SetCenInterRegionBandwidthLimit** operation to configure, modify, or remove the maximum bandwidth value of an inter-region connection. 
+          * - If you set **BandwidthLimit** to a value other than 0, the maximum bandwidth value of the inter-region connection is set or changed to the specified value.
+          * - If you set **BandwidthLimit** to 0, no bandwidth resource is allocated to the inter-region connection.
+          * ## Limits
+          * - The maximum bandwidth value of an inter-region connection cannot exceed that of the associated bandwidth plan.
+          * - The sum of the maximum bandwidth values of all inter-region connections cannot exceed the maximum bandwidth value of the associated bandwidth plan.
+          * - If bandwidth multiplexing is enabled for an inter-region connection, you cannot change the maximum bandwidth value of the inter-region connection.
+          * - You can call **SetCenInterRegionBandwidthLimit** to configure, modify, and remove the maximum bandwidth values of inter-region connections only on Basic Edition transit routers.  
+          * For more information about how to configure, modify, and remove the maximum bandwidth values of inter-region connections on Enterprise Edition transit routers, see [CreateTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createtransitrouterpeerattachment), [UpdateTransitRouterPeerAttachmentAttribute](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/updatetransitrouterpeerattachmentattribute), and [DeleteTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterpeerattachment).
+          *
+          * @param request SetCenInterRegionBandwidthLimitRequest
+          * @return SetCenInterRegionBandwidthLimitResponse
+         */
         public SetCenInterRegionBandwidthLimitResponse SetCenInterRegionBandwidthLimit(SetCenInterRegionBandwidthLimitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetCenInterRegionBandwidthLimitWithOptions(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * The Cloud Enterprise Network (CEN) instance is associated with a bandwidth plan. For more information, see the [CreateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createcenbandwidthpackage) and [AssociateCenBandwidthPackage](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/associatecenbandwidthpackage) topics.  
+          * ## Usage notes
+          * You can call the **SetCenInterRegionBandwidthLimit** operation to configure, modify, or remove the maximum bandwidth value of an inter-region connection. 
+          * - If you set **BandwidthLimit** to a value other than 0, the maximum bandwidth value of the inter-region connection is set or changed to the specified value.
+          * - If you set **BandwidthLimit** to 0, no bandwidth resource is allocated to the inter-region connection.
+          * ## Limits
+          * - The maximum bandwidth value of an inter-region connection cannot exceed that of the associated bandwidth plan.
+          * - The sum of the maximum bandwidth values of all inter-region connections cannot exceed the maximum bandwidth value of the associated bandwidth plan.
+          * - If bandwidth multiplexing is enabled for an inter-region connection, you cannot change the maximum bandwidth value of the inter-region connection.
+          * - You can call **SetCenInterRegionBandwidthLimit** to configure, modify, and remove the maximum bandwidth values of inter-region connections only on Basic Edition transit routers.  
+          * For more information about how to configure, modify, and remove the maximum bandwidth values of inter-region connections on Enterprise Edition transit routers, see [CreateTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/createtransitrouterpeerattachment), [UpdateTransitRouterPeerAttachmentAttribute](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/updatetransitrouterpeerattachmentattribute), and [DeleteTransitRouterPeerAttachment](https://www.alibabacloud.com/help/en/cloud-enterprise-network/latest/deletetransitrouterpeerattachment).
+          *
+          * @param request SetCenInterRegionBandwidthLimitRequest
+          * @return SetCenInterRegionBandwidthLimitResponse
+         */
         public async Task<SetCenInterRegionBandwidthLimitResponse> SetCenInterRegionBandwidthLimitAsync(SetCenInterRegionBandwidthLimitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetCenInterRegionBandwidthLimitWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Description
+          * *   Each tag consists of a tag key and a tag value. When you add a tag, you must specify the tag key and tag value.
+          * *   If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, each tag key must be unique.
+          * *   You can add at most 20 tags to a CEN instance.
+          *
+          * @param request TagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16574,6 +21414,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * *   Each tag consists of a tag key and a tag value. When you add a tag, you must specify the tag key and tag value.
+          * *   If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, each tag key must be unique.
+          * *   You can add at most 20 tags to a CEN instance.
+          *
+          * @param request TagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16629,18 +21479,46 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * *   Each tag consists of a tag key and a tag value. When you add a tag, you must specify the tag key and tag value.
+          * *   If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, each tag key must be unique.
+          * *   You can add at most 20 tags to a CEN instance.
+          *
+          * @param request TagResourcesRequest
+          * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
+        /**
+          * ## Description
+          * *   Each tag consists of a tag key and a tag value. When you add a tag, you must specify the tag key and tag value.
+          * *   If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, each tag key must be unique.
+          * *   You can add at most 20 tags to a CEN instance.
+          *
+          * @param request TagResourcesRequest
+          * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * Subscription bandwidth plans support temporary upgrades. This topic describes how to temporarily upgrade a subscription bandwidth plan. You can increase the bandwidth limit of a bandwidth plan within a specified time window. This way, you can manage your bandwidth to handle traffic spikes in a more efficient manner.
+          * The minimum time window for a temporary upgrade is 3 hours. The bandwidth plan is upgraded immediately after you complete the payment. The upgrade process does not interrupt workloads.
+          * >  After the specified time window ends, the bandwidth limit of the subscription bandwidth plan is restored to the original value. If the actual bandwidth exceeds the bandwidth limit, packets may be dropped due to network traffic throttling. We recommend that you set a proper time window for the temporary upgrade and make sure that the bandwidth limit meets your business requirements.
+          *
+          * @param request TempUpgradeCenBandwidthPackageSpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TempUpgradeCenBandwidthPackageSpecResponse
+         */
         public TempUpgradeCenBandwidthPackageSpecResponse TempUpgradeCenBandwidthPackageSpecWithOptions(TempUpgradeCenBandwidthPackageSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16692,6 +21570,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<TempUpgradeCenBandwidthPackageSpecResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * Subscription bandwidth plans support temporary upgrades. This topic describes how to temporarily upgrade a subscription bandwidth plan. You can increase the bandwidth limit of a bandwidth plan within a specified time window. This way, you can manage your bandwidth to handle traffic spikes in a more efficient manner.
+          * The minimum time window for a temporary upgrade is 3 hours. The bandwidth plan is upgraded immediately after you complete the payment. The upgrade process does not interrupt workloads.
+          * >  After the specified time window ends, the bandwidth limit of the subscription bandwidth plan is restored to the original value. If the actual bandwidth exceeds the bandwidth limit, packets may be dropped due to network traffic throttling. We recommend that you set a proper time window for the temporary upgrade and make sure that the bandwidth limit meets your business requirements.
+          *
+          * @param request TempUpgradeCenBandwidthPackageSpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TempUpgradeCenBandwidthPackageSpecResponse
+         */
         public async Task<TempUpgradeCenBandwidthPackageSpecResponse> TempUpgradeCenBandwidthPackageSpecWithOptionsAsync(TempUpgradeCenBandwidthPackageSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16743,18 +21631,44 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<TempUpgradeCenBandwidthPackageSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * Subscription bandwidth plans support temporary upgrades. This topic describes how to temporarily upgrade a subscription bandwidth plan. You can increase the bandwidth limit of a bandwidth plan within a specified time window. This way, you can manage your bandwidth to handle traffic spikes in a more efficient manner.
+          * The minimum time window for a temporary upgrade is 3 hours. The bandwidth plan is upgraded immediately after you complete the payment. The upgrade process does not interrupt workloads.
+          * >  After the specified time window ends, the bandwidth limit of the subscription bandwidth plan is restored to the original value. If the actual bandwidth exceeds the bandwidth limit, packets may be dropped due to network traffic throttling. We recommend that you set a proper time window for the temporary upgrade and make sure that the bandwidth limit meets your business requirements.
+          *
+          * @param request TempUpgradeCenBandwidthPackageSpecRequest
+          * @return TempUpgradeCenBandwidthPackageSpecResponse
+         */
         public TempUpgradeCenBandwidthPackageSpecResponse TempUpgradeCenBandwidthPackageSpec(TempUpgradeCenBandwidthPackageSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TempUpgradeCenBandwidthPackageSpecWithOptions(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * Subscription bandwidth plans support temporary upgrades. This topic describes how to temporarily upgrade a subscription bandwidth plan. You can increase the bandwidth limit of a bandwidth plan within a specified time window. This way, you can manage your bandwidth to handle traffic spikes in a more efficient manner.
+          * The minimum time window for a temporary upgrade is 3 hours. The bandwidth plan is upgraded immediately after you complete the payment. The upgrade process does not interrupt workloads.
+          * >  After the specified time window ends, the bandwidth limit of the subscription bandwidth plan is restored to the original value. If the actual bandwidth exceeds the bandwidth limit, packets may be dropped due to network traffic throttling. We recommend that you set a proper time window for the temporary upgrade and make sure that the bandwidth limit meets your business requirements.
+          *
+          * @param request TempUpgradeCenBandwidthPackageSpecRequest
+          * @return TempUpgradeCenBandwidthPackageSpecResponse
+         */
         public async Task<TempUpgradeCenBandwidthPackageSpecResponse> TempUpgradeCenBandwidthPackageSpecAsync(TempUpgradeCenBandwidthPackageSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TempUpgradeCenBandwidthPackageSpecWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * No cross-region connections are configured in the bandwidth plan. For more information about how to delete cross-region connections, see [SetCenInterRegionBandwidthLimit](~~65942~~).
+          *
+          * @param request UnassociateCenBandwidthPackageRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnassociateCenBandwidthPackageResponse
+         */
         public UnassociateCenBandwidthPackageResponse UnassociateCenBandwidthPackageWithOptions(UnassociateCenBandwidthPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16802,6 +21716,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UnassociateCenBandwidthPackageResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * No cross-region connections are configured in the bandwidth plan. For more information about how to delete cross-region connections, see [SetCenInterRegionBandwidthLimit](~~65942~~).
+          *
+          * @param request UnassociateCenBandwidthPackageRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnassociateCenBandwidthPackageResponse
+         */
         public async Task<UnassociateCenBandwidthPackageResponse> UnassociateCenBandwidthPackageWithOptionsAsync(UnassociateCenBandwidthPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16849,18 +21771,42 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UnassociateCenBandwidthPackageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * No cross-region connections are configured in the bandwidth plan. For more information about how to delete cross-region connections, see [SetCenInterRegionBandwidthLimit](~~65942~~).
+          *
+          * @param request UnassociateCenBandwidthPackageRequest
+          * @return UnassociateCenBandwidthPackageResponse
+         */
         public UnassociateCenBandwidthPackageResponse UnassociateCenBandwidthPackage(UnassociateCenBandwidthPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnassociateCenBandwidthPackageWithOptions(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * No cross-region connections are configured in the bandwidth plan. For more information about how to delete cross-region connections, see [SetCenInterRegionBandwidthLimit](~~65942~~).
+          *
+          * @param request UnassociateCenBandwidthPackageRequest
+          * @return UnassociateCenBandwidthPackageResponse
+         */
         public async Task<UnassociateCenBandwidthPackageResponse> UnassociateCenBandwidthPackageAsync(UnassociateCenBandwidthPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnassociateCenBandwidthPackageWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **UnroutePrivateZoneInCenToVpc** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenPrivateZoneRoutes** to query the status of PrivateZone.
+          * *   If PrivateZone is in the **Deleting** state, access to PrivateZone is being disabled. In this case, you can query PrivateZone configurations but cannot perform other operations.
+          * *   If configurations of access to PrivateZone cannot be found, access to PrivateZone is disabled.
+          *
+          * @param request UnroutePrivateZoneInCenToVpcRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnroutePrivateZoneInCenToVpcResponse
+         */
         public UnroutePrivateZoneInCenToVpcResponse UnroutePrivateZoneInCenToVpcWithOptions(UnroutePrivateZoneInCenToVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16908,6 +21854,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UnroutePrivateZoneInCenToVpcResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **UnroutePrivateZoneInCenToVpc** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenPrivateZoneRoutes** to query the status of PrivateZone.
+          * *   If PrivateZone is in the **Deleting** state, access to PrivateZone is being disabled. In this case, you can query PrivateZone configurations but cannot perform other operations.
+          * *   If configurations of access to PrivateZone cannot be found, access to PrivateZone is disabled.
+          *
+          * @param request UnroutePrivateZoneInCenToVpcRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnroutePrivateZoneInCenToVpcResponse
+         */
         public async Task<UnroutePrivateZoneInCenToVpcResponse> UnroutePrivateZoneInCenToVpcWithOptionsAsync(UnroutePrivateZoneInCenToVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16955,12 +21911,30 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UnroutePrivateZoneInCenToVpcResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **UnroutePrivateZoneInCenToVpc** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenPrivateZoneRoutes** to query the status of PrivateZone.
+          * *   If PrivateZone is in the **Deleting** state, access to PrivateZone is being disabled. In this case, you can query PrivateZone configurations but cannot perform other operations.
+          * *   If configurations of access to PrivateZone cannot be found, access to PrivateZone is disabled.
+          *
+          * @param request UnroutePrivateZoneInCenToVpcRequest
+          * @return UnroutePrivateZoneInCenToVpcResponse
+         */
         public UnroutePrivateZoneInCenToVpcResponse UnroutePrivateZoneInCenToVpc(UnroutePrivateZoneInCenToVpcRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnroutePrivateZoneInCenToVpcWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **UnroutePrivateZoneInCenToVpc** is an asynchronous operation. After you send a request, the **request ID** is returned but the operation is still being performed in the system background. You can call **DescribeCenPrivateZoneRoutes** to query the status of PrivateZone.
+          * *   If PrivateZone is in the **Deleting** state, access to PrivateZone is being disabled. In this case, you can query PrivateZone configurations but cannot perform other operations.
+          * *   If configurations of access to PrivateZone cannot be found, access to PrivateZone is disabled.
+          *
+          * @param request UnroutePrivateZoneInCenToVpcRequest
+          * @return UnroutePrivateZoneInCenToVpcResponse
+         */
         public async Task<UnroutePrivateZoneInCenToVpcResponse> UnroutePrivateZoneInCenToVpcAsync(UnroutePrivateZoneInCenToVpcRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17377,9 +22351,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddTrafficMatchRules))
+            {
+                query["AddTrafficMatchRules"] = request.AddTrafficMatchRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteTrafficMatchRules))
+            {
+                query["DeleteTrafficMatchRules"] = request.DeleteTrafficMatchRules;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
@@ -17436,9 +22418,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddTrafficMatchRules))
+            {
+                query["AddTrafficMatchRules"] = request.AddTrafficMatchRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteTrafficMatchRules))
+            {
+                query["DeleteTrafficMatchRules"] = request.DeleteTrafficMatchRules;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
@@ -17503,6 +22493,15 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await UpdateTrafficMarkingPolicyAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * **UpdateTransitRouter** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouters** to query the status of a transit router.
+          * *   If a transit router is in the **Modifying** state, the configuration of the transit router is being modified. You can query the transit router but cannot perform other operations.
+          * *   If a transit router is in the **Active** state, the configuration of the transit router is modified.
+          *
+          * @param request UpdateTransitRouterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTransitRouterResponse
+         */
         public UpdateTransitRouterResponse UpdateTransitRouterWithOptions(UpdateTransitRouterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17566,6 +22565,15 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UpdateTransitRouterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * **UpdateTransitRouter** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouters** to query the status of a transit router.
+          * *   If a transit router is in the **Modifying** state, the configuration of the transit router is being modified. You can query the transit router but cannot perform other operations.
+          * *   If a transit router is in the **Active** state, the configuration of the transit router is modified.
+          *
+          * @param request UpdateTransitRouterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTransitRouterResponse
+         */
         public async Task<UpdateTransitRouterResponse> UpdateTransitRouterWithOptionsAsync(UpdateTransitRouterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17629,18 +22637,44 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UpdateTransitRouterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * **UpdateTransitRouter** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouters** to query the status of a transit router.
+          * *   If a transit router is in the **Modifying** state, the configuration of the transit router is being modified. You can query the transit router but cannot perform other operations.
+          * *   If a transit router is in the **Active** state, the configuration of the transit router is modified.
+          *
+          * @param request UpdateTransitRouterRequest
+          * @return UpdateTransitRouterResponse
+         */
         public UpdateTransitRouterResponse UpdateTransitRouter(UpdateTransitRouterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTransitRouterWithOptions(request, runtime);
         }
 
+        /**
+          * **UpdateTransitRouter** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouters** to query the status of a transit router.
+          * *   If a transit router is in the **Modifying** state, the configuration of the transit router is being modified. You can query the transit router but cannot perform other operations.
+          * *   If a transit router is in the **Active** state, the configuration of the transit router is modified.
+          *
+          * @param request UpdateTransitRouterRequest
+          * @return UpdateTransitRouterResponse
+         */
         public async Task<UpdateTransitRouterResponse> UpdateTransitRouterAsync(UpdateTransitRouterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateTransitRouterWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **UpdateTransitRouterPeerAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterPeerAttachments** to query the status of an inter-region connection.
+          * *   If an inter-region connection is in the **Modifying** state, the inter-region connection is being modified. You can query the inter-region connection but cannot perform other operations.
+          * *   If an inter-region connection is in the **Attached** state, the inter-region connection is modified.
+          *
+          * @param request UpdateTransitRouterPeerAttachmentAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTransitRouterPeerAttachmentAttributeResponse
+         */
         public UpdateTransitRouterPeerAttachmentAttributeResponse UpdateTransitRouterPeerAttachmentAttributeWithOptions(UpdateTransitRouterPeerAttachmentAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17716,6 +22750,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UpdateTransitRouterPeerAttachmentAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **UpdateTransitRouterPeerAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterPeerAttachments** to query the status of an inter-region connection.
+          * *   If an inter-region connection is in the **Modifying** state, the inter-region connection is being modified. You can query the inter-region connection but cannot perform other operations.
+          * *   If an inter-region connection is in the **Attached** state, the inter-region connection is modified.
+          *
+          * @param request UpdateTransitRouterPeerAttachmentAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTransitRouterPeerAttachmentAttributeResponse
+         */
         public async Task<UpdateTransitRouterPeerAttachmentAttributeResponse> UpdateTransitRouterPeerAttachmentAttributeWithOptionsAsync(UpdateTransitRouterPeerAttachmentAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17791,12 +22835,30 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UpdateTransitRouterPeerAttachmentAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **UpdateTransitRouterPeerAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterPeerAttachments** to query the status of an inter-region connection.
+          * *   If an inter-region connection is in the **Modifying** state, the inter-region connection is being modified. You can query the inter-region connection but cannot perform other operations.
+          * *   If an inter-region connection is in the **Attached** state, the inter-region connection is modified.
+          *
+          * @param request UpdateTransitRouterPeerAttachmentAttributeRequest
+          * @return UpdateTransitRouterPeerAttachmentAttributeResponse
+         */
         public UpdateTransitRouterPeerAttachmentAttributeResponse UpdateTransitRouterPeerAttachmentAttribute(UpdateTransitRouterPeerAttachmentAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTransitRouterPeerAttachmentAttributeWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **UpdateTransitRouterPeerAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterPeerAttachments** to query the status of an inter-region connection.
+          * *   If an inter-region connection is in the **Modifying** state, the inter-region connection is being modified. You can query the inter-region connection but cannot perform other operations.
+          * *   If an inter-region connection is in the **Attached** state, the inter-region connection is modified.
+          *
+          * @param request UpdateTransitRouterPeerAttachmentAttributeRequest
+          * @return UpdateTransitRouterPeerAttachmentAttributeResponse
+         */
         public async Task<UpdateTransitRouterPeerAttachmentAttributeResponse> UpdateTransitRouterPeerAttachmentAttributeAsync(UpdateTransitRouterPeerAttachmentAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17961,6 +23023,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTableOptions))
+            {
+                query["RouteTableOptions"] = request.RouteTableOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterRouteTableDescription))
             {
                 query["TransitRouterRouteTableDescription"] = request.TransitRouterRouteTableDescription;
@@ -18020,6 +23086,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTableOptions))
+            {
+                query["RouteTableOptions"] = request.RouteTableOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterRouteTableDescription))
             {
                 query["TransitRouterRouteTableDescription"] = request.TransitRouterRouteTableDescription;
@@ -18063,6 +23133,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await UpdateTransitRouterRouteTableWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **UpdateTransitRouterVbrAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVbrAttachments** to query the status of a VBR connection.
+          * *   If a VBR connection is in the **Modifying** state, the VBR connection is being modified. You can query the VBR connection but cannot perform other operations.
+          * *   If the VBR connection is in the **Attached** state, the VBR connection is modified.
+          *
+          * @param request UpdateTransitRouterVbrAttachmentAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTransitRouterVbrAttachmentAttributeResponse
+         */
         public UpdateTransitRouterVbrAttachmentAttributeResponse UpdateTransitRouterVbrAttachmentAttributeWithOptions(UpdateTransitRouterVbrAttachmentAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18126,6 +23206,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UpdateTransitRouterVbrAttachmentAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **UpdateTransitRouterVbrAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVbrAttachments** to query the status of a VBR connection.
+          * *   If a VBR connection is in the **Modifying** state, the VBR connection is being modified. You can query the VBR connection but cannot perform other operations.
+          * *   If the VBR connection is in the **Attached** state, the VBR connection is modified.
+          *
+          * @param request UpdateTransitRouterVbrAttachmentAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTransitRouterVbrAttachmentAttributeResponse
+         */
         public async Task<UpdateTransitRouterVbrAttachmentAttributeResponse> UpdateTransitRouterVbrAttachmentAttributeWithOptionsAsync(UpdateTransitRouterVbrAttachmentAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18189,18 +23279,46 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UpdateTransitRouterVbrAttachmentAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **UpdateTransitRouterVbrAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVbrAttachments** to query the status of a VBR connection.
+          * *   If a VBR connection is in the **Modifying** state, the VBR connection is being modified. You can query the VBR connection but cannot perform other operations.
+          * *   If the VBR connection is in the **Attached** state, the VBR connection is modified.
+          *
+          * @param request UpdateTransitRouterVbrAttachmentAttributeRequest
+          * @return UpdateTransitRouterVbrAttachmentAttributeResponse
+         */
         public UpdateTransitRouterVbrAttachmentAttributeResponse UpdateTransitRouterVbrAttachmentAttribute(UpdateTransitRouterVbrAttachmentAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTransitRouterVbrAttachmentAttributeWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **UpdateTransitRouterVbrAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVbrAttachments** to query the status of a VBR connection.
+          * *   If a VBR connection is in the **Modifying** state, the VBR connection is being modified. You can query the VBR connection but cannot perform other operations.
+          * *   If the VBR connection is in the **Attached** state, the VBR connection is modified.
+          *
+          * @param request UpdateTransitRouterVbrAttachmentAttributeRequest
+          * @return UpdateTransitRouterVbrAttachmentAttributeResponse
+         */
         public async Task<UpdateTransitRouterVbrAttachmentAttributeResponse> UpdateTransitRouterVbrAttachmentAttributeAsync(UpdateTransitRouterVbrAttachmentAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateTransitRouterVbrAttachmentAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **UpdateTransitRouterVpcAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVpcAttachments** to query the status of a VPC connection.
+          * *   If a VPC connection is in the **Modifying** state, the VPC connection is being modified. You can query the VPC connection but cannot perform other operations.
+          * *   If a VPC connection is in the **Attached** state, the VPC connection is modified.
+          *
+          * @param request UpdateTransitRouterVpcAttachmentAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTransitRouterVpcAttachmentAttributeResponse
+         */
         public UpdateTransitRouterVpcAttachmentAttributeResponse UpdateTransitRouterVpcAttachmentAttributeWithOptions(UpdateTransitRouterVpcAttachmentAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18260,6 +23378,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UpdateTransitRouterVpcAttachmentAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **UpdateTransitRouterVpcAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVpcAttachments** to query the status of a VPC connection.
+          * *   If a VPC connection is in the **Modifying** state, the VPC connection is being modified. You can query the VPC connection but cannot perform other operations.
+          * *   If a VPC connection is in the **Attached** state, the VPC connection is modified.
+          *
+          * @param request UpdateTransitRouterVpcAttachmentAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTransitRouterVpcAttachmentAttributeResponse
+         */
         public async Task<UpdateTransitRouterVpcAttachmentAttributeResponse> UpdateTransitRouterVpcAttachmentAttributeWithOptionsAsync(UpdateTransitRouterVpcAttachmentAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18319,18 +23447,47 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UpdateTransitRouterVpcAttachmentAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * **UpdateTransitRouterVpcAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVpcAttachments** to query the status of a VPC connection.
+          * *   If a VPC connection is in the **Modifying** state, the VPC connection is being modified. You can query the VPC connection but cannot perform other operations.
+          * *   If a VPC connection is in the **Attached** state, the VPC connection is modified.
+          *
+          * @param request UpdateTransitRouterVpcAttachmentAttributeRequest
+          * @return UpdateTransitRouterVpcAttachmentAttributeResponse
+         */
         public UpdateTransitRouterVpcAttachmentAttributeResponse UpdateTransitRouterVpcAttachmentAttribute(UpdateTransitRouterVpcAttachmentAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTransitRouterVpcAttachmentAttributeWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * **UpdateTransitRouterVpcAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVpcAttachments** to query the status of a VPC connection.
+          * *   If a VPC connection is in the **Modifying** state, the VPC connection is being modified. You can query the VPC connection but cannot perform other operations.
+          * *   If a VPC connection is in the **Attached** state, the VPC connection is modified.
+          *
+          * @param request UpdateTransitRouterVpcAttachmentAttributeRequest
+          * @return UpdateTransitRouterVpcAttachmentAttributeResponse
+         */
         public async Task<UpdateTransitRouterVpcAttachmentAttributeResponse> UpdateTransitRouterVpcAttachmentAttributeAsync(UpdateTransitRouterVpcAttachmentAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateTransitRouterVpcAttachmentAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   When you add a zone and a vSwitch for a VPC connection, make sure that the vSwitch has at least one idle IP address. When you modify the zones and vSwitches of a VPC connection, the Enterprise Edition transit router creates an elastic network interface (ENI) in the vSwitch. The ENI occupies one IP address in the vSwitch. The ENI forwards traffic between the VPC and the Enterprise Edition transit router.
+          * *   The **UpdateTransitRouterVpcAttachmentZones** operation is asynchronous. After you send the request, the system returns a request ID (**RequestId**). However, the operation is still being performed in the system background. You can call the **ListTransitRouterVpcAttachments** operation to query the status of a VPC connection.
+          *     *   If a VPC connection is in the **Modifying** state, the VPC connection is being modified. You can query the VPC connection but cannot perform other operations.
+          *     *   If a VPC connection is in the **Attached** state, the VPC connection is modified.
+          *
+          * @param request UpdateTransitRouterVpcAttachmentZonesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTransitRouterVpcAttachmentZonesResponse
+         */
         public UpdateTransitRouterVpcAttachmentZonesResponse UpdateTransitRouterVpcAttachmentZonesWithOptions(UpdateTransitRouterVpcAttachmentZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18390,6 +23547,17 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UpdateTransitRouterVpcAttachmentZonesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   When you add a zone and a vSwitch for a VPC connection, make sure that the vSwitch has at least one idle IP address. When you modify the zones and vSwitches of a VPC connection, the Enterprise Edition transit router creates an elastic network interface (ENI) in the vSwitch. The ENI occupies one IP address in the vSwitch. The ENI forwards traffic between the VPC and the Enterprise Edition transit router.
+          * *   The **UpdateTransitRouterVpcAttachmentZones** operation is asynchronous. After you send the request, the system returns a request ID (**RequestId**). However, the operation is still being performed in the system background. You can call the **ListTransitRouterVpcAttachments** operation to query the status of a VPC connection.
+          *     *   If a VPC connection is in the **Modifying** state, the VPC connection is being modified. You can query the VPC connection but cannot perform other operations.
+          *     *   If a VPC connection is in the **Attached** state, the VPC connection is modified.
+          *
+          * @param request UpdateTransitRouterVpcAttachmentZonesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTransitRouterVpcAttachmentZonesResponse
+         */
         public async Task<UpdateTransitRouterVpcAttachmentZonesResponse> UpdateTransitRouterVpcAttachmentZonesWithOptionsAsync(UpdateTransitRouterVpcAttachmentZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18449,12 +23617,32 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UpdateTransitRouterVpcAttachmentZonesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * *   When you add a zone and a vSwitch for a VPC connection, make sure that the vSwitch has at least one idle IP address. When you modify the zones and vSwitches of a VPC connection, the Enterprise Edition transit router creates an elastic network interface (ENI) in the vSwitch. The ENI occupies one IP address in the vSwitch. The ENI forwards traffic between the VPC and the Enterprise Edition transit router.
+          * *   The **UpdateTransitRouterVpcAttachmentZones** operation is asynchronous. After you send the request, the system returns a request ID (**RequestId**). However, the operation is still being performed in the system background. You can call the **ListTransitRouterVpcAttachments** operation to query the status of a VPC connection.
+          *     *   If a VPC connection is in the **Modifying** state, the VPC connection is being modified. You can query the VPC connection but cannot perform other operations.
+          *     *   If a VPC connection is in the **Attached** state, the VPC connection is modified.
+          *
+          * @param request UpdateTransitRouterVpcAttachmentZonesRequest
+          * @return UpdateTransitRouterVpcAttachmentZonesResponse
+         */
         public UpdateTransitRouterVpcAttachmentZonesResponse UpdateTransitRouterVpcAttachmentZones(UpdateTransitRouterVpcAttachmentZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTransitRouterVpcAttachmentZonesWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * *   When you add a zone and a vSwitch for a VPC connection, make sure that the vSwitch has at least one idle IP address. When you modify the zones and vSwitches of a VPC connection, the Enterprise Edition transit router creates an elastic network interface (ENI) in the vSwitch. The ENI occupies one IP address in the vSwitch. The ENI forwards traffic between the VPC and the Enterprise Edition transit router.
+          * *   The **UpdateTransitRouterVpcAttachmentZones** operation is asynchronous. After you send the request, the system returns a request ID (**RequestId**). However, the operation is still being performed in the system background. You can call the **ListTransitRouterVpcAttachments** operation to query the status of a VPC connection.
+          *     *   If a VPC connection is in the **Modifying** state, the VPC connection is being modified. You can query the VPC connection but cannot perform other operations.
+          *     *   If a VPC connection is in the **Attached** state, the VPC connection is modified.
+          *
+          * @param request UpdateTransitRouterVpcAttachmentZonesRequest
+          * @return UpdateTransitRouterVpcAttachmentZonesResponse
+         */
         public async Task<UpdateTransitRouterVpcAttachmentZonesResponse> UpdateTransitRouterVpcAttachmentZonesAsync(UpdateTransitRouterVpcAttachmentZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

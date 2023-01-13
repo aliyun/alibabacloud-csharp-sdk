@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyCenBandwidthPackageSpecRequest : TeaModel {
+        /// <summary>
+        /// The new bandwidth limit of the bandwidth plan. Unit: Mbit/s.
+        /// 
+        /// Valid values: **2** to **10000**.
+        /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
+        /// <summary>
+        /// The ID of the bandwidth plan.
+        /// </summary>
         [NameInMap("CenBandwidthPackageId")]
         [Validation(Required=false)]
         public string CenBandwidthPackageId { get; set; }

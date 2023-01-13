@@ -9,10 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteTrafficMarkingPolicyRequest : TeaModel {
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// 
+        /// >  If you do not set this parameter, **RequestId** is set to the value of **ClientToken**. The value of **RequestId** may be different for each API request.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// Specifies whether only to check the request. Valid values:
+        /// 
+        /// *   **true**: prechecks the request but does not delete the traffic marking policy. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the DryRunOperation error code is returned.
+        /// *   **false**: sends the API request. After the request passes the precheck, the traffic marking policy is deleted. This is the default value.
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -33,6 +46,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the traffic marking policy.
+        /// </summary>
         [NameInMap("TrafficMarkingPolicyId")]
         [Validation(Required=false)]
         public string TrafficMarkingPolicyId { get; set; }

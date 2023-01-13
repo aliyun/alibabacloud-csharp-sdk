@@ -9,26 +9,63 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateFlowlogRequest : TeaModel {
+        /// <summary>
+        /// The ID of the Cloud Enterprise Network (CEN) instance.
+        /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// 
+        /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The description of the flow log.
+        /// 
+        /// The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// The name of the flow log.
+        /// 
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+        /// </summary>
         [NameInMap("FlowLogName")]
         [Validation(Required=false)]
         public string FlowLogName { get; set; }
 
+        /// <summary>
+        /// The time window for collecting log data. Unit: seconds. Valid values: **60** and **600**. Default value: **600**.
+        /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public long? Interval { get; set; }
 
+        /// <summary>
+        /// The Logstore where the flow log is stored.
+        /// 
+        /// *   If a Logstore is already created in the selected region, enter the name of the Logstore.
+        /// 
+        /// *   If no Logstores are created in the selected region, enter a name and the system automatically creates a Logstore.
+        /// 
+        ///     The name of the Logstore. The naming conventions are:
+        /// 
+        ///     *   The name must be unique in a project.
+        ///     *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).
+        ///     *   The name must start and end with a lowercase letter or a digit.
+        ///     *   The name must be 3 to 63 characters in length.
+        /// </summary>
         [NameInMap("LogStoreName")]
         [Validation(Required=false)]
         public string LogStoreName { get; set; }
@@ -41,10 +78,29 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The Log Service project where the flow log is stored.
+        /// 
+        /// *   If a project is already created in the selected region, enter the name of the project.
+        /// 
+        /// *   If no projects are created in the selected region, enter a name and the system automatically creates a project.
+        /// 
+        ///     The project name must be unique in a region. You cannot change the name after you create the project. The naming conventions are:
+        /// 
+        ///     *   The name must be globally unique.
+        ///     *   The name can contain only lowercase letters, digits, and hyphens (-).
+        ///     *   The name must start and end with a lowercase letter or a digit.
+        ///     *   The name must be 3 to 63 characters in length.
+        /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the flow log is deployed.
+        /// 
+        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -57,20 +113,38 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tags of the resource. You can enter most at 20 tags for the resource.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateFlowlogRequestTag> Tag { get; set; }
         public class CreateFlowlogRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key.
+            /// 
+            /// The key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value.
+            /// 
+            /// The value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
 
         }
 
+        /// <summary>
+        /// The ID of the inter-region connection or the VBR connection.
+        /// 
+        /// >  This parameter is required.
+        /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentId { get; set; }

@@ -9,6 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGeographicRegionMembershipRequest : TeaModel {
+        /// <summary>
+        /// The ID of the area that you want to query. Valid values:
+        /// 
+        /// *   **china**: the Chinese mainland
+        /// *   **asia-pacific**: Asia Pacific
+        /// *   **europe**: Europe
+        /// *   **australia**: Australia
+        /// *   **north-america**: North America
+        /// </summary>
         [NameInMap("GeographicRegionId")]
         [Validation(Required=false)]
         public string GeographicRegionId { get; set; }
@@ -21,10 +30,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The number of the page to return. Default value: **1**.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
