@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public TLSConfig TlsConfig { get; set; }
 
+        [NameInMap("wafConfig")]
+        [Validation(Required=false)]
+        public WAFConfig WafConfig { get; set; }
+
     }
 
 }

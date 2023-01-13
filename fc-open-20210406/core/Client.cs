@@ -429,6 +429,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             {
                 body["tlsConfig"] = request.TlsConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WafConfig))
+            {
+                body["wafConfig"] = request.WafConfig;
+            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -489,6 +493,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TlsConfig))
             {
                 body["tlsConfig"] = request.TlsConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WafConfig))
+            {
+                body["wafConfig"] = request.WafConfig;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -7687,6 +7695,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             {
                 body["tlsConfig"] = request.TlsConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WafConfig))
+            {
+                body["wafConfig"] = request.WafConfig;
+            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -7743,6 +7755,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TlsConfig))
             {
                 body["tlsConfig"] = request.TlsConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WafConfig))
+            {
+                body["wafConfig"] = request.WafConfig;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
