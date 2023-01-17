@@ -8541,10 +8541,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["Description"] = request.Description;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineConcurrency))
-            {
-                query["EngineConcurrency"] = request.EngineConcurrency;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectMaxDatasetCount))
             {
                 query["ProjectMaxDatasetCount"] = request.ProjectMaxDatasetCount;
@@ -8552,10 +8548,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 query["ProjectName"] = request.ProjectName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectQueriesPerSecond))
-            {
-                query["ProjectQueriesPerSecond"] = request.ProjectQueriesPerSecond;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRole))
             {
@@ -8612,10 +8604,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["Description"] = request.Description;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineConcurrency))
-            {
-                query["EngineConcurrency"] = request.EngineConcurrency;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectMaxDatasetCount))
             {
                 query["ProjectMaxDatasetCount"] = request.ProjectMaxDatasetCount;
@@ -8623,10 +8611,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 query["ProjectName"] = request.ProjectName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectQueriesPerSecond))
-            {
-                query["ProjectQueriesPerSecond"] = request.ProjectQueriesPerSecond;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRole))
             {

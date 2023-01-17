@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("EngineConcurrency")]
-        [Validation(Required=false)]
-        public long? EngineConcurrency { get; set; }
-
         [NameInMap("ProjectMaxDatasetCount")]
         [Validation(Required=false)]
         public long? ProjectMaxDatasetCount { get; set; }
@@ -44,10 +40,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
-
-        [NameInMap("ProjectQueriesPerSecond")]
-        [Validation(Required=false)]
-        public long? ProjectQueriesPerSecond { get; set; }
 
         [NameInMap("ServiceRole")]
         [Validation(Required=false)]
