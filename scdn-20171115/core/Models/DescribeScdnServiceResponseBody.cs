@@ -129,9 +129,13 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnServiceResponseBodyOperationLocksLockReason> LockReason { get; set; }
             public class DescribeScdnServiceResponseBodyOperationLocksLockReason : TeaModel {
+                [NameInMap("LockReason")]
+                [Validation(Required=false)]
                 public string LockReason { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PriceType")]
         [Validation(Required=false)]

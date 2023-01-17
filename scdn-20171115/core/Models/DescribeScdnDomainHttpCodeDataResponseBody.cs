@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeScdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModule : TeaModel {
+                [NameInMap("HttpCodeDataPerInterval")]
+                [Validation(Required=false)]
                 public DescribeScdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataPerInterval HttpCodeDataPerInterval { get; set; }
                 public class DescribeScdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataPerInterval : TeaModel {
                     [NameInMap("HttpCodeDataModule")]
@@ -42,9 +44,14 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
                     }
 
                 }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]

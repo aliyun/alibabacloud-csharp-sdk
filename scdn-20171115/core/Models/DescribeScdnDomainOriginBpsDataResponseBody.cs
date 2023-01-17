@@ -29,12 +29,25 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainOriginBpsDataResponseBodyOriginBpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeScdnDomainOriginBpsDataResponseBodyOriginBpsDataPerIntervalDataModule : TeaModel {
+                [NameInMap("HttpOriginBpsValue")]
+                [Validation(Required=false)]
                 public string HttpOriginBpsValue { get; set; }
+
+                [NameInMap("HttpsOriginBpsValue")]
+                [Validation(Required=false)]
                 public string HttpsOriginBpsValue { get; set; }
+
+                [NameInMap("OriginBpsValue")]
+                [Validation(Required=false)]
                 public string OriginBpsValue { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

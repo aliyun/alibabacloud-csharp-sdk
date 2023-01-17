@@ -17,7 +17,12 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainLogResponseBodyDomainLogDetailsDomainLogDetail> DomainLogDetail { get; set; }
             public class DescribeScdnDomainLogResponseBodyDomainLogDetailsDomainLogDetail : TeaModel {
+                [NameInMap("LogCount")]
+                [Validation(Required=false)]
                 public long? LogCount { get; set; }
+
+                [NameInMap("LogInfos")]
+                [Validation(Required=false)]
                 public DescribeScdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos LogInfos { get; set; }
                 public class DescribeScdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos : TeaModel {
                     [NameInMap("LogInfoDetail")]
@@ -47,6 +52,9 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
                     }
 
                 }
+
+                [NameInMap("PageInfos")]
+                [Validation(Required=false)]
                 public DescribeScdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos PageInfos { get; set; }
                 public class DescribeScdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos : TeaModel {
                     [NameInMap("PageNumber")]
@@ -62,8 +70,10 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
                     public long? Total { get; set; }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]

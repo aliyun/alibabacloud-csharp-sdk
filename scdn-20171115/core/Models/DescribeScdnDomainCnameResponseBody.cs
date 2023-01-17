@@ -17,11 +17,24 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainCnameResponseBodyCnameDatasData> Data { get; set; }
             public class DescribeScdnDomainCnameResponseBodyCnameDatasData : TeaModel {
+                /// <summary>
+                /// Cname
+                /// </summary>
+                [NameInMap("Cname")]
+                [Validation(Required=false)]
                 public string Cname { get; set; }
+
+                [NameInMap("Domain")]
+                [Validation(Required=false)]
                 public string Domain { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public int? Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

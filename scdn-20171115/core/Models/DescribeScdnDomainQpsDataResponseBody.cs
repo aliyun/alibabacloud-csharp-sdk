@@ -29,15 +29,43 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainQpsDataResponseBodyQpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeScdnDomainQpsDataResponseBodyQpsDataPerIntervalDataModule : TeaModel {
+                [NameInMap("AccValue")]
+                [Validation(Required=false)]
                 public string AccValue { get; set; }
+
+                [NameInMap("HttpAccValue")]
+                [Validation(Required=false)]
                 public string HttpAccValue { get; set; }
+
+                /// <summary>
+                /// http QPS。
+                /// </summary>
+                [NameInMap("HttpQpsValue")]
+                [Validation(Required=false)]
                 public string HttpQpsValue { get; set; }
+
+                [NameInMap("HttpsAccValue")]
+                [Validation(Required=false)]
                 public string HttpsAccValue { get; set; }
+
+                /// <summary>
+                /// https QPS。
+                /// </summary>
+                [NameInMap("HttpsQpsValue")]
+                [Validation(Required=false)]
                 public string HttpsQpsValue { get; set; }
+
+                [NameInMap("QpsValue")]
+                [Validation(Required=false)]
                 public string QpsValue { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

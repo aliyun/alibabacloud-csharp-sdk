@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainRealTimeBpsDataResponseBodyDataBpsModel> BpsModel { get; set; }
             public class DescribeScdnDomainRealTimeBpsDataResponseBodyDataBpsModel : TeaModel {
+                [NameInMap("Bps")]
+                [Validation(Required=false)]
                 public float? Bps { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

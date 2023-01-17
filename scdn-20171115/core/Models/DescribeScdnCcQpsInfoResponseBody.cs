@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [NameInMap("Attack")]
             [Validation(Required=false)]
             public List<string> Attack { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -30,10 +31,17 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnCcQpsInfoResponseBodyTimeScopesTimeScope> TimeScope { get; set; }
             public class DescribeScdnCcQpsInfoResponseBodyTimeScopesTimeScope : TeaModel {
+                [NameInMap("Interval")]
+                [Validation(Required=false)]
                 public string Interval { get; set; }
+
+                [NameInMap("Start")]
+                [Validation(Required=false)]
                 public string Start { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Totals")]
         [Validation(Required=false)]
@@ -42,7 +50,8 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [NameInMap("Total")]
             [Validation(Required=false)]
             public List<string> Total { get; set; }
-        };
+
+        }
 
     }
 

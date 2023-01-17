@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        [NameInMap("WithHeader")]
+        [Validation(Required=false)]
+        public string WithHeader { get; set; }
+
     }
 
 }

@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainRealTimeQpsDataResponseBodyDataQpsModel> QpsModel { get; set; }
             public class DescribeScdnDomainRealTimeQpsDataResponseBodyDataQpsModel : TeaModel {
+                [NameInMap("Qps")]
+                [Validation(Required=false)]
                 public float? Qps { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

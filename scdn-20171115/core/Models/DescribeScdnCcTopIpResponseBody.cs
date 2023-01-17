@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnCcTopIpResponseBodyAttackIpDataListAttackIpDatas> AttackIpDatas { get; set; }
             public class DescribeScdnCcTopIpResponseBodyAttackIpDataListAttackIpDatas : TeaModel {
+                [NameInMap("AttackCount")]
+                [Validation(Required=false)]
                 public string AttackCount { get; set; }
+
+                [NameInMap("Ip")]
+                [Validation(Required=false)]
                 public string Ip { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]

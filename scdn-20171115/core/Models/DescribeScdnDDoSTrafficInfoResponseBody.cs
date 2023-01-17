@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [NameInMap("BpsDrop")]
             [Validation(Required=false)]
             public List<string> BpsDrop { get; set; }
-        };
+
+        }
 
         [NameInMap("BpsTotals")]
         [Validation(Required=false)]
@@ -25,7 +26,8 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [NameInMap("BpsTotal")]
             [Validation(Required=false)]
             public List<string> BpsTotal { get; set; }
-        };
+
+        }
 
         [NameInMap("PpsDrops")]
         [Validation(Required=false)]
@@ -34,7 +36,8 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [NameInMap("PpsDrop")]
             [Validation(Required=false)]
             public List<string> PpsDrop { get; set; }
-        };
+
+        }
 
         [NameInMap("PpsTotals")]
         [Validation(Required=false)]
@@ -43,7 +46,8 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [NameInMap("PpsTotal")]
             [Validation(Required=false)]
             public List<string> PpsTotal { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -57,10 +61,17 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDDoSTrafficInfoResponseBodyTimeScopesTimeScope> TimeScope { get; set; }
             public class DescribeScdnDDoSTrafficInfoResponseBodyTimeScopesTimeScope : TeaModel {
+                [NameInMap("Interval")]
+                [Validation(Required=false)]
                 public string Interval { get; set; }
+
+                [NameInMap("Start")]
+                [Validation(Required=false)]
                 public string Start { get; set; }
+
             }
-        };
+
+        }
 
     }
 

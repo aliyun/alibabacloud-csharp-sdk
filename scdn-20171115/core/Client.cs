@@ -4342,6 +4342,10 @@ namespace AlibabaCloud.SDK.Scdn20171115
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithHeader))
+            {
+                query["WithHeader"] = request.WithHeader;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4384,6 +4388,10 @@ namespace AlibabaCloud.SDK.Scdn20171115
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithHeader))
+            {
+                query["WithHeader"] = request.WithHeader;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4980,88 +4988,6 @@ namespace AlibabaCloud.SDK.Scdn20171115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopScdnDomainWithOptionsAsync(request, runtime);
-        }
-
-        public TestAmpDescribeScdnDomainIspDataResponse TestAmpDescribeScdnDomainIspDataWithOptions(TestAmpDescribeScdnDomainIspDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
-            {
-                query["DomainName"] = request.DomainName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
-            {
-                query["EndTime"] = request.EndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["StartTime"] = request.StartTime;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "TestAmpDescribeScdnDomainIspData",
-                Version = "2017-11-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<TestAmpDescribeScdnDomainIspDataResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<TestAmpDescribeScdnDomainIspDataResponse> TestAmpDescribeScdnDomainIspDataWithOptionsAsync(TestAmpDescribeScdnDomainIspDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
-            {
-                query["DomainName"] = request.DomainName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
-            {
-                query["EndTime"] = request.EndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["StartTime"] = request.StartTime;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "TestAmpDescribeScdnDomainIspData",
-                Version = "2017-11-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<TestAmpDescribeScdnDomainIspDataResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public TestAmpDescribeScdnDomainIspDataResponse TestAmpDescribeScdnDomainIspData(TestAmpDescribeScdnDomainIspDataRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return TestAmpDescribeScdnDomainIspDataWithOptions(request, runtime);
-        }
-
-        public async Task<TestAmpDescribeScdnDomainIspDataResponse> TestAmpDescribeScdnDomainIspDataAsync(TestAmpDescribeScdnDomainIspDataRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await TestAmpDescribeScdnDomainIspDataWithOptionsAsync(request, runtime);
         }
 
         public UpdateScdnDomainResponse UpdateScdnDomainWithOptions(UpdateScdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

@@ -37,20 +37,57 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainIspDataResponseBodyValueISPProportionData> ISPProportionData { get; set; }
             public class DescribeScdnDomainIspDataResponseBodyValueISPProportionData : TeaModel {
+                [NameInMap("AvgObjectSize")]
+                [Validation(Required=false)]
                 public string AvgObjectSize { get; set; }
+
+                [NameInMap("AvgResponseRate")]
+                [Validation(Required=false)]
                 public string AvgResponseRate { get; set; }
+
+                [NameInMap("AvgResponseTime")]
+                [Validation(Required=false)]
                 public string AvgResponseTime { get; set; }
+
+                [NameInMap("Bps")]
+                [Validation(Required=false)]
                 public string Bps { get; set; }
+
+                [NameInMap("BytesProportion")]
+                [Validation(Required=false)]
                 public string BytesProportion { get; set; }
+
+                [NameInMap("ISP")]
+                [Validation(Required=false)]
                 public string ISP { get; set; }
+
+                [NameInMap("IspEname")]
+                [Validation(Required=false)]
                 public string IspEname { get; set; }
+
+                [NameInMap("Proportion")]
+                [Validation(Required=false)]
                 public string Proportion { get; set; }
+
+                [NameInMap("Qps")]
+                [Validation(Required=false)]
                 public string Qps { get; set; }
+
+                [NameInMap("ReqErrRate")]
+                [Validation(Required=false)]
                 public string ReqErrRate { get; set; }
+
+                [NameInMap("TotalBytes")]
+                [Validation(Required=false)]
                 public string TotalBytes { get; set; }
+
+                [NameInMap("TotalQuery")]
+                [Validation(Required=false)]
                 public string TotalQuery { get; set; }
+
             }
-        };
+
+        }
 
     }
 

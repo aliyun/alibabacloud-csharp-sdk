@@ -29,12 +29,25 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainOriginTrafficDataResponseBodyOriginTrafficDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeScdnDomainOriginTrafficDataResponseBodyOriginTrafficDataPerIntervalDataModule : TeaModel {
+                [NameInMap("HttpTrafficValue")]
+                [Validation(Required=false)]
                 public string HttpTrafficValue { get; set; }
+
+                [NameInMap("HttpsTrafficValue")]
+                [Validation(Required=false)]
                 public string HttpsTrafficValue { get; set; }
+
+                [NameInMap("TimeStamp")]
+                [Validation(Required=false)]
                 public string TimeStamp { get; set; }
+
+                [NameInMap("TrafficValue")]
+                [Validation(Required=false)]
                 public string TrafficValue { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

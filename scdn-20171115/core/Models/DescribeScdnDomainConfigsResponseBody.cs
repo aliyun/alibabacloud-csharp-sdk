@@ -17,7 +17,12 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainConfigsResponseBodyDomainConfigsDomainConfig> DomainConfig { get; set; }
             public class DescribeScdnDomainConfigsResponseBodyDomainConfigsDomainConfig : TeaModel {
+                [NameInMap("ConfigId")]
+                [Validation(Required=false)]
                 public string ConfigId { get; set; }
+
+                [NameInMap("FunctionArgs")]
+                [Validation(Required=false)]
                 public DescribeScdnDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs FunctionArgs { get; set; }
                 public class DescribeScdnDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs : TeaModel {
                     [NameInMap("FunctionArg")]
@@ -35,11 +40,22 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
                     }
 
                 }
+
+                [NameInMap("FunctionName")]
+                [Validation(Required=false)]
                 public string FunctionName { get; set; }
+
+                [NameInMap("ParentId")]
+                [Validation(Required=false)]
                 public string ParentId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
                 public string Status { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

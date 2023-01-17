@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnCcTopUrlResponseBodyAttackUrlDataListAttackUrlDatas> AttackUrlDatas { get; set; }
             public class DescribeScdnCcTopUrlResponseBodyAttackUrlDataListAttackUrlDatas : TeaModel {
+                [NameInMap("AttackCount")]
+                [Validation(Required=false)]
                 public string AttackCount { get; set; }
+
+                [NameInMap("Url")]
+                [Validation(Required=false)]
                 public string Url { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]

@@ -17,13 +17,29 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainTopUrlVisitResponseBodyAllUrlListUrlList> UrlList { get; set; }
             public class DescribeScdnDomainTopUrlVisitResponseBodyAllUrlListUrlList : TeaModel {
+                [NameInMap("Flow")]
+                [Validation(Required=false)]
                 public string Flow { get; set; }
+
+                [NameInMap("FlowProportion")]
+                [Validation(Required=false)]
                 public float? FlowProportion { get; set; }
+
+                [NameInMap("UrlDetail")]
+                [Validation(Required=false)]
                 public string UrlDetail { get; set; }
+
+                [NameInMap("VisitData")]
+                [Validation(Required=false)]
                 public string VisitData { get; set; }
+
+                [NameInMap("VisitProportion")]
+                [Validation(Required=false)]
                 public float? VisitProportion { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -45,13 +61,29 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainTopUrlVisitResponseBodyUrl200ListUrlList> UrlList { get; set; }
             public class DescribeScdnDomainTopUrlVisitResponseBodyUrl200ListUrlList : TeaModel {
+                [NameInMap("Flow")]
+                [Validation(Required=false)]
                 public string Flow { get; set; }
+
+                [NameInMap("FlowProportion")]
+                [Validation(Required=false)]
                 public float? FlowProportion { get; set; }
+
+                [NameInMap("UrlDetail")]
+                [Validation(Required=false)]
                 public string UrlDetail { get; set; }
+
+                [NameInMap("VisitData")]
+                [Validation(Required=false)]
                 public string VisitData { get; set; }
+
+                [NameInMap("VisitProportion")]
+                [Validation(Required=false)]
                 public float? VisitProportion { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Url300List")]
         [Validation(Required=false)]
@@ -61,13 +93,29 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainTopUrlVisitResponseBodyUrl300ListUrlList> UrlList { get; set; }
             public class DescribeScdnDomainTopUrlVisitResponseBodyUrl300ListUrlList : TeaModel {
+                [NameInMap("Flow")]
+                [Validation(Required=false)]
                 public string Flow { get; set; }
+
+                [NameInMap("FlowProportion")]
+                [Validation(Required=false)]
                 public float? FlowProportion { get; set; }
+
+                [NameInMap("UrlDetail")]
+                [Validation(Required=false)]
                 public string UrlDetail { get; set; }
+
+                [NameInMap("VisitData")]
+                [Validation(Required=false)]
                 public string VisitData { get; set; }
+
+                [NameInMap("VisitProportion")]
+                [Validation(Required=false)]
                 public float? VisitProportion { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Url400List")]
         [Validation(Required=false)]
@@ -77,13 +125,29 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainTopUrlVisitResponseBodyUrl400ListUrlList> UrlList { get; set; }
             public class DescribeScdnDomainTopUrlVisitResponseBodyUrl400ListUrlList : TeaModel {
+                [NameInMap("Flow")]
+                [Validation(Required=false)]
                 public string Flow { get; set; }
+
+                [NameInMap("FlowProportion")]
+                [Validation(Required=false)]
                 public float? FlowProportion { get; set; }
+
+                [NameInMap("UrlDetail")]
+                [Validation(Required=false)]
                 public string UrlDetail { get; set; }
+
+                [NameInMap("VisitData")]
+                [Validation(Required=false)]
                 public string VisitData { get; set; }
+
+                [NameInMap("VisitProportion")]
+                [Validation(Required=false)]
                 public float? VisitProportion { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Url500List")]
         [Validation(Required=false)]
@@ -93,13 +157,29 @@ namespace AlibabaCloud.SDK.Scdn20171115.Models
             [Validation(Required=false)]
             public List<DescribeScdnDomainTopUrlVisitResponseBodyUrl500ListUrlList> UrlList { get; set; }
             public class DescribeScdnDomainTopUrlVisitResponseBodyUrl500ListUrlList : TeaModel {
+                [NameInMap("Flow")]
+                [Validation(Required=false)]
                 public string Flow { get; set; }
+
+                [NameInMap("FlowProportion")]
+                [Validation(Required=false)]
                 public float? FlowProportion { get; set; }
+
+                [NameInMap("UrlDetail")]
+                [Validation(Required=false)]
                 public string UrlDetail { get; set; }
+
+                [NameInMap("VisitData")]
+                [Validation(Required=false)]
                 public string VisitData { get; set; }
+
+                [NameInMap("VisitProportion")]
+                [Validation(Required=false)]
                 public float? VisitProportion { get; set; }
+
             }
-        };
+
+        }
 
     }
 
