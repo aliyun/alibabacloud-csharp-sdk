@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ArrDate { get; set; }
 
+                [NameInMap("basic_cabin_price")]
+                [Validation(Required=false)]
+                public int? BasicCabinPrice { get; set; }
+
                 [NameInMap("build_price")]
                 [Validation(Required=false)]
                 public int? BuildPrice { get; set; }
