@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
                 [Validation(Required=false)]
                 public int? SnapshotCount { get; set; }
 
-                [NameInMap("totalSize")]
+                [NameInMap("TotalSize")]
                 [Validation(Required=false)]
                 public long? TotalSize { get; set; }
 

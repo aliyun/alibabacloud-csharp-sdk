@@ -8,11 +8,25 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
-    public class ListAutoSnapshotPolicyAppliedDbfsResponseBody : TeaModel {
-        [NameInMap("DbfsList")]
+    public class GetSnapshotLinkResponseBody : TeaModel {
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<ListAutoSnapshotPolicyAppliedDbfsResponseBodyDbfsList> DbfsList { get; set; }
-        public class ListAutoSnapshotPolicyAppliedDbfsResponseBodyDbfsList : TeaModel {
+        public GetSnapshotLinkResponseBodyData Data { get; set; }
+        public class GetSnapshotLinkResponseBodyData : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
+            [NameInMap("EcsList")]
+            [Validation(Required=false)]
+            public List<GetSnapshotLinkResponseBodyDataEcsList> EcsList { get; set; }
+            public class GetSnapshotLinkResponseBodyDataEcsList : TeaModel {
+                [NameInMap("EcsId")]
+                [Validation(Required=false)]
+                public string EcsId { get; set; }
+
+            }
+
             [NameInMap("FsId")]
             [Validation(Required=false)]
             public string FsId { get; set; }
@@ -21,17 +35,17 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
             [Validation(Required=false)]
             public string FsName { get; set; }
 
-            [NameInMap("RegionId")]
+            [NameInMap("LinkId")]
             [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-            [NameInMap("SizeG")]
-            [Validation(Required=false)]
-            public long? SizeG { get; set; }
+            public string LinkId { get; set; }
 
             [NameInMap("SnapshotCount")]
             [Validation(Required=false)]
             public int? SnapshotCount { get; set; }
+
+            [NameInMap("SourceSize")]
+            [Validation(Required=false)]
+            public int? SourceSize { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -43,21 +57,9 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
 
         }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
 
     }
 

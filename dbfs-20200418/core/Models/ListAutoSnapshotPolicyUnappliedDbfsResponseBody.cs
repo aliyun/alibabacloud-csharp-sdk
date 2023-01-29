@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
 
             [NameInMap("SnapshotCount")]
             [Validation(Required=false)]
-            public string SnapshotCount { get; set; }
+            public int? SnapshotCount { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]

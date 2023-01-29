@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
-    public class DeleteDbfsRequest : TeaModel {
-        [NameInMap("Force")]
+    public class GetSnapshotLinkRequest : TeaModel {
+        [NameInMap("LinkId")]
         [Validation(Required=false)]
-        public bool? Force { get; set; }
-
-        [NameInMap("FsId")]
-        [Validation(Required=false)]
-        public string FsId { get; set; }
+        public string LinkId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
