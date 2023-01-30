@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        [NameInMap("Network")]
+        [Validation(Required=false)]
+        public string NetworkShrink { get; set; }
+
         [NameInMap("NodePool")]
         [Validation(Required=false)]
         public string NodePoolShrink { get; set; }
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
+
+        [NameInMap("PreOpenAppId")]
+        [Validation(Required=false)]
+        public string PreOpenAppId { get; set; }
 
         [NameInMap("ProductType")]
         [Validation(Required=false)]

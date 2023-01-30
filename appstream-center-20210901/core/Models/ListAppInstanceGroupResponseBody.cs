@@ -191,6 +191,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("ResourceStatus")]
+            [Validation(Required=false)]
+            public string ResourceStatus { get; set; }
+
             [NameInMap("SessionTimeout")]
             [Validation(Required=false)]
             public string SessionTimeout { get; set; }

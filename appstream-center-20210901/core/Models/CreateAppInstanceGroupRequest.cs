@@ -37,6 +37,30 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        [NameInMap("Network")]
+        [Validation(Required=false)]
+        public CreateAppInstanceGroupRequestNetwork Network { get; set; }
+        public class CreateAppInstanceGroupRequestNetwork : TeaModel {
+            [NameInMap("Routes")]
+            [Validation(Required=false)]
+            public List<CreateAppInstanceGroupRequestNetworkRoutes> Routes { get; set; }
+            public class CreateAppInstanceGroupRequestNetworkRoutes : TeaModel {
+                [NameInMap("Destination")]
+                [Validation(Required=false)]
+                public string Destination { get; set; }
+
+                [NameInMap("Mode")]
+                [Validation(Required=false)]
+                public string Mode { get; set; }
+
+            }
+
+            [NameInMap("StrategyType")]
+            [Validation(Required=false)]
+            public string StrategyType { get; set; }
+
+        }
+
         [NameInMap("NodePool")]
         [Validation(Required=false)]
         public CreateAppInstanceGroupRequestNodePool NodePool { get; set; }
@@ -57,6 +81,38 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string NodeInstanceType { get; set; }
 
+            [NameInMap("RecurrenceSchedules")]
+            [Validation(Required=false)]
+            public List<CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules> RecurrenceSchedules { get; set; }
+            public class CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules : TeaModel {
+                [NameInMap("RecurrenceType")]
+                [Validation(Required=false)]
+                public string RecurrenceType { get; set; }
+
+                [NameInMap("RecurrenceValues")]
+                [Validation(Required=false)]
+                public List<int?> RecurrenceValues { get; set; }
+
+                [NameInMap("TimerPeriods")]
+                [Validation(Required=false)]
+                public List<CreateAppInstanceGroupRequestNodePoolRecurrenceSchedulesTimerPeriods> TimerPeriods { get; set; }
+                public class CreateAppInstanceGroupRequestNodePoolRecurrenceSchedulesTimerPeriods : TeaModel {
+                    [NameInMap("Amount")]
+                    [Validation(Required=false)]
+                    public int? Amount { get; set; }
+
+                    [NameInMap("EndTime")]
+                    [Validation(Required=false)]
+                    public string EndTime { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public string StartTime { get; set; }
+
+                }
+
+            }
+
             [NameInMap("ScalingDownAfterIdleMinutes")]
             [Validation(Required=false)]
             public int? ScalingDownAfterIdleMinutes { get; set; }
@@ -69,9 +125,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string ScalingUsageThreshold { get; set; }
 
+            [NameInMap("StrategyDisableDate")]
+            [Validation(Required=false)]
+            public string StrategyDisableDate { get; set; }
+
+            [NameInMap("StrategyEnableDate")]
+            [Validation(Required=false)]
+            public string StrategyEnableDate { get; set; }
+
             [NameInMap("StrategyType")]
             [Validation(Required=false)]
             public string StrategyType { get; set; }
+
+            [NameInMap("WarmUp")]
+            [Validation(Required=false)]
+            public bool? WarmUp { get; set; }
 
         }
 
@@ -82,6 +150,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
+
+        [NameInMap("PreOpenAppId")]
+        [Validation(Required=false)]
+        public string PreOpenAppId { get; set; }
 
         [NameInMap("ProductType")]
         [Validation(Required=false)]
