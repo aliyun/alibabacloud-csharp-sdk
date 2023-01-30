@@ -1,0 +1,58 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Imm20200930.Models
+{
+    public class UpdateTriggerRequest : TeaModel {
+        [NameInMap("Actions")]
+        [Validation(Required=false)]
+        public List<UpdateTriggerRequestActions> Actions { get; set; }
+        public class UpdateTriggerRequestActions : TeaModel {
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Parameters")]
+            [Validation(Required=false)]
+            public List<string> Parameters { get; set; }
+
+        }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
+        [NameInMap("Input")]
+        [Validation(Required=false)]
+        public Input Input { get; set; }
+
+        [NameInMap("Notification")]
+        [Validation(Required=false)]
+        public UpdateTriggerRequestNotification Notification { get; set; }
+        public class UpdateTriggerRequestNotification : TeaModel {
+            [NameInMap("Endpoint")]
+            [Validation(Required=false)]
+            public string Endpoint { get; set; }
+
+            [NameInMap("Topic")]
+            [Validation(Required=false)]
+            public string Topic { get; set; }
+
+        }
+
+        [NameInMap("ProjectName")]
+        [Validation(Required=false)]
+        public string ProjectName { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Tags { get; set; }
+
+    }
+
+}
