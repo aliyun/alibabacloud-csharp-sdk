@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class EnableInstanceAccessControlRequest : TeaModel {
+        /// <summary>
+        /// The ID of the access control policy.
+        /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
+        /// <summary>
+        /// The type of the access control policy. Valid values:
+        /// 
+        /// *   black: blacklist
+        /// *   white: whitelist
+        /// </summary>
         [NameInMap("AclType")]
         [Validation(Required=false)]
         public string AclType { get; set; }
@@ -21,6 +30,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string AddressIPVersion { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

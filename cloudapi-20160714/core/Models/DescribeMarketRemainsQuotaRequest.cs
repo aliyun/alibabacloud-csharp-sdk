@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeMarketRemainsQuotaRequest : TeaModel {
+        /// <summary>
+        /// The remaining quota.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

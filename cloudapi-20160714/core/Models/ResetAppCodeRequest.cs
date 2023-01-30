@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ResetAppCodeRequest : TeaModel {
+        /// <summary>
+        /// The new AppCode of the app.
+        /// </summary>
         [NameInMap("AppCode")]
         [Validation(Required=false)]
         public string AppCode { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("NewAppCode")]
         [Validation(Required=false)]
         public string NewAppCode { get; set; }

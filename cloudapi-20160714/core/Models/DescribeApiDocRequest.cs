@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiDocRequest : TeaModel {
+        /// <summary>
+        /// The ID of the API.
+        /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
+        /// <summary>
+        /// The ID of the API group.
+        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
@@ -21,6 +27,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// The name of the runtime environment. Valid values:
+        /// 
+        /// *   **RELEASE**
+        /// *   **TEST**
+        /// 
+        /// If this parameter is not specified, the default value is used, which is RELEASE.
+        /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]
         public string StageName { get; set; }

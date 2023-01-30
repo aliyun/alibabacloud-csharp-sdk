@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAccessControlListAttributeRequest : TeaModel {
+        /// <summary>
+        /// The ID of the access control policy.
+        /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }

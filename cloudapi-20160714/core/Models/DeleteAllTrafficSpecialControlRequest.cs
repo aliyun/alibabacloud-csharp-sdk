@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// The ID of the throttling policy.
+        /// </summary>
         [NameInMap("TrafficControlId")]
         [Validation(Required=false)]
         public string TrafficControlId { get; set; }

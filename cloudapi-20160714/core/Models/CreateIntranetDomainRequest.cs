@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateIntranetDomainRequest : TeaModel {
+        /// <summary>
+        /// The custom domain name.
+        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }

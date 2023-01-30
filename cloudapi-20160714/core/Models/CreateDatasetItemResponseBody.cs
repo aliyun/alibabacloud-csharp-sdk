@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateDatasetItemResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the data entry.
+        /// </summary>
         [NameInMap("DatasetItemId")]
         [Validation(Required=false)]
         public string DatasetItemId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

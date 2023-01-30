@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteIpControlRequest : TeaModel {
+        /// <summary>
+        /// The ID of the ACL. The ID is unique.
+        /// </summary>
         [NameInMap("IpControlId")]
         [Validation(Required=false)]
         public string IpControlId { get; set; }

@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyBackendRequest : TeaModel {
+        /// <summary>
+        /// The ID of the backend service.
+        /// </summary>
         [NameInMap("BackendId")]
         [Validation(Required=false)]
         public string BackendId { get; set; }
 
+        /// <summary>
+        /// The name of the backend service.
+        /// </summary>
         [NameInMap("BackendName")]
         [Validation(Required=false)]
         public string BackendName { get; set; }
 
+        /// <summary>
+        /// The type of the backend service.
+        /// </summary>
         [NameInMap("BackendType")]
         [Validation(Required=false)]
         public string BackendType { get; set; }
 
+        /// <summary>
+        /// The description of the backend service.
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }

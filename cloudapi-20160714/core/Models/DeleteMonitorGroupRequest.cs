@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteMonitorGroupRequest : TeaModel {
+        /// <summary>
+        /// The ID of the monitoring group.
+        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RawMonitorGroupId")]
         [Validation(Required=false)]
         public long? RawMonitorGroupId { get; set; }

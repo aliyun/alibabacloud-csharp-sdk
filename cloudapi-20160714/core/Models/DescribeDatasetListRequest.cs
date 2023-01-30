@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeDatasetListRequest : TeaModel {
+        /// <summary>
+        /// The ID of the dataset. You can enter multiple dataset IDs. Separate the IDs with commas (,).
+        /// </summary>
         [NameInMap("DatasetIds")]
         [Validation(Required=false)]
         public string DatasetIds { get; set; }
 
+        /// <summary>
+        /// The number of the page to return. Pages start from page 1. Default value: 1.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries to return on each page. Default value: 10.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }

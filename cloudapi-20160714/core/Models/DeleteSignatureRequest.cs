@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// The ID of the key to be deleted.
+        /// </summary>
         [NameInMap("SignatureId")]
         [Validation(Required=false)]
         public string SignatureId { get; set; }
