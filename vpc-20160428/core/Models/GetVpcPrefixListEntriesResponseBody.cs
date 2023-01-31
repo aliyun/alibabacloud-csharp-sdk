@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string PrefixListId { get; set; }
 
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
         }
 
         [NameInMap("RequestId")]

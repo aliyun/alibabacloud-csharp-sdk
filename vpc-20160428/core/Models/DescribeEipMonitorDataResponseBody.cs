@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 [NameInMap("EipFlow")]
                 [Validation(Required=false)]
-                public int? EipFlow { get; set; }
+                public long? EipFlow { get; set; }
 
                 [NameInMap("EipPackets")]
                 [Validation(Required=false)]

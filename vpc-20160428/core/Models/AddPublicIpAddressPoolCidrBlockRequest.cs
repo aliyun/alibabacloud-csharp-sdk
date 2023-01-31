@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string CidrBlock { get; set; }
 
+        [NameInMap("CidrMask")]
+        [Validation(Required=false)]
+        public int? CidrMask { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string Reason { get; set; }
 
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
+
+            [NameInMap("ResourceUid")]
+            [Validation(Required=false)]
+            public string ResourceUid { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]

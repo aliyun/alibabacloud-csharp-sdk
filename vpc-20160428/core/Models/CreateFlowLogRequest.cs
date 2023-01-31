@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        [NameInMap("TrafficPath")]
+        [Validation(Required=false)]
+        public List<string> TrafficPath { get; set; }
+
         [NameInMap("TrafficType")]
         [Validation(Required=false)]
         public string TrafficType { get; set; }

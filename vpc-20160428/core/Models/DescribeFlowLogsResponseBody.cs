@@ -61,9 +61,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
+                [NameInMap("ServiceType")]
+                [Validation(Required=false)]
+                public string ServiceType { get; set; }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("TrafficPath")]
+                [Validation(Required=false)]
+                public DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath TrafficPath { get; set; }
+                public class DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath : TeaModel {
+                    [NameInMap("trafficPathList")]
+                    [Validation(Required=false)]
+                    public List<string> TrafficPathList { get; set; }
+
+                }
 
                 [NameInMap("TrafficType")]
                 [Validation(Required=false)]

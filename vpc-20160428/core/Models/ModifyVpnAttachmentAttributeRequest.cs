@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("CustomerGatewayId")]
+        [Validation(Required=false)]
+        public string CustomerGatewayId { get; set; }
+
         [NameInMap("EffectImmediately")]
         [Validation(Required=false)]
         public bool? EffectImmediately { get; set; }

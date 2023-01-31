@@ -27,10 +27,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public GetDhcpOptionsSetResponseBodyDhcpOptions DhcpOptions { get; set; }
         public class GetDhcpOptionsSetResponseBodyDhcpOptions : TeaModel {
-            [NameInMap("BootFileName")]
-            [Validation(Required=false)]
-            public string BootFileName { get; set; }
-
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
@@ -46,10 +42,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("LeaseTime")]
             [Validation(Required=false)]
             public string LeaseTime { get; set; }
-
-            [NameInMap("TFTPServerName")]
-            [Validation(Required=false)]
-            public string TFTPServerName { get; set; }
 
         }
 

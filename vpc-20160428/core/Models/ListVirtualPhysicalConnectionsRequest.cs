@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListVirtualPhysicalConnectionsRequestTags> Tags { get; set; }

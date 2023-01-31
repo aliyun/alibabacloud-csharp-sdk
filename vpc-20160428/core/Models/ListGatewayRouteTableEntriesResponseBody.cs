@@ -33,6 +33,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string NextHopType { get; set; }
 
+            [NameInMap("NextHops")]
+            [Validation(Required=false)]
+            public List<ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops> NextHops { get; set; }
+            public class ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops : TeaModel {
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public string Enabled { get; set; }
+
+                [NameInMap("NextHopId")]
+                [Validation(Required=false)]
+                public string NextHopId { get; set; }
+
+                [NameInMap("NextHopType")]
+                [Validation(Required=false)]
+                public string NextHopType { get; set; }
+
+                [NameInMap("Weight")]
+                [Validation(Required=false)]
+                public string Weight { get; set; }
+
+            }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }

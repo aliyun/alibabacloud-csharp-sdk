@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("Spec")]
-        [Validation(Required=false)]
-        public string Spec { get; set; }
-
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

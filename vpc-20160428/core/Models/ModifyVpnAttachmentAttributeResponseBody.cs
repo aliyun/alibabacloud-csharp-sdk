@@ -149,6 +149,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public int? Interval { get; set; }
 
+            [NameInMap("Policy")]
+            [Validation(Required=false)]
+            public string Policy { get; set; }
+
             [NameInMap("Retry")]
             [Validation(Required=false)]
             public int? Retry { get; set; }

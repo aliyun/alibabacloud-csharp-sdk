@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRouteEntryListRequest : TeaModel {
+        [NameInMap("DestCidrBlockList")]
+        [Validation(Required=false)]
+        public List<string> DestCidrBlockList { get; set; }
+
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]
         public string DestinationCidrBlock { get; set; }
@@ -68,6 +72,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]
         public string RouteTableId { get; set; }
+
+        [NameInMap("ServiceType")]
+        [Validation(Required=false)]
+        public string ServiceType { get; set; }
 
     }
 

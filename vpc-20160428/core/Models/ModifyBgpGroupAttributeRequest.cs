@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string BgpGroupId { get; set; }
 
+        [NameInMap("ClearAuthKey")]
+        [Validation(Required=false)]
+        public bool? ClearAuthKey { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

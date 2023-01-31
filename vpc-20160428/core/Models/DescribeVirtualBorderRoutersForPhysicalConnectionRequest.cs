@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest : TeaModel {
+        /// <summary>
+        /// 25425
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> Filter { get; set; }

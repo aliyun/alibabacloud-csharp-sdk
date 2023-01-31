@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string RouteTableId { get; set; }
 
+                [NameInMap("ServiceType")]
+                [Validation(Required=false)]
+                public string ServiceType { get; set; }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

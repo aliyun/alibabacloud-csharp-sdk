@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("NetworkType")]
+        [Validation(Required=false)]
+        public string NetworkType { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -1,3 +1,8 @@
+2023-01-31 Version: 2.0.8
+- Supported set high definition monitor log status for eip.
+- Supported batch associate eip to cloud products.
+- Supported VpcDescribeVpcNatGatewayNetworkInterfaceQuota.
+
 2022-09-20 Version: 2.0.7
 - DescribeSnatTableEntries DescribeSnatTableEntries ListFullnatEntries support query --by natGatewayId.
 

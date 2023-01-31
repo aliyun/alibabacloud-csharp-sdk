@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("FastLinkMode")]
+        [Validation(Required=false)]
+        public bool? FastLinkMode { get; set; }
+
         [NameInMap("HealthCheckSourceIp")]
         [Validation(Required=false)]
         public string HealthCheckSourceIp { get; set; }

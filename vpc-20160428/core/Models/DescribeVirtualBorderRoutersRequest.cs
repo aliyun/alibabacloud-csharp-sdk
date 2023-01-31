@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        [NameInMap("IncludeCrossAccountVbr")]
+        [Validation(Required=false)]
+        public bool? IncludeCrossAccountVbr { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }

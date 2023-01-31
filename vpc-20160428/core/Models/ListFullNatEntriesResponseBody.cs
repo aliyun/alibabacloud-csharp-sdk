@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string FullNatEntryStatus { get; set; }
 
+            [NameInMap("FullNatTableId")]
+            [Validation(Required=false)]
+            public string FullNatTableId { get; set; }
+
             [NameInMap("IpProtocol")]
             [Validation(Required=false)]
             public string IpProtocol { get; set; }

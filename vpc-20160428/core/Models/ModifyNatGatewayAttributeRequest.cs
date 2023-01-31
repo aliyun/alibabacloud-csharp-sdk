@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("EipBindMode")]
+        [Validation(Required=false)]
+        public string EipBindMode { get; set; }
+
         [NameInMap("IcmpReplyEnabled")]
         [Validation(Required=false)]
         public bool? IcmpReplyEnabled { get; set; }

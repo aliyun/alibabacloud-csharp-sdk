@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
+                [NameInMap("InternetIp")]
+                [Validation(Required=false)]
+                public string InternetIp { get; set; }
+
                 [NameInMap("IpsecConfig")]
                 [Validation(Required=false)]
                 public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionIpsecConfig IpsecConfig { get; set; }

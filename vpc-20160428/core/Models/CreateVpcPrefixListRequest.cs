@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string PrefixListDescription { get; set; }
 
-        [NameInMap("PrefixListEntrys")]
+        [NameInMap("PrefixListEntries")]
         [Validation(Required=false)]
-        public List<CreateVpcPrefixListRequestPrefixListEntrys> PrefixListEntrys { get; set; }
-        public class CreateVpcPrefixListRequestPrefixListEntrys : TeaModel {
+        public List<CreateVpcPrefixListRequestPrefixListEntries> PrefixListEntries { get; set; }
+        public class CreateVpcPrefixListRequestPrefixListEntries : TeaModel {
             [NameInMap("Cidr")]
             [Validation(Required=false)]
             public string Cidr { get; set; }
@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

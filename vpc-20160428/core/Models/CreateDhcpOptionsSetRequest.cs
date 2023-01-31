@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateDhcpOptionsSetRequest : TeaModel {
-        [NameInMap("BootFileName")]
-        [Validation(Required=false)]
-        public string BootFileName { get; set; }
-
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -64,10 +60,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("TFTPServerName")]
-        [Validation(Required=false)]
-        public string TFTPServerName { get; set; }
 
     }
 

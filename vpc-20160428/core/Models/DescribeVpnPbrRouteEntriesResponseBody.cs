@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string NextHop { get; set; }
 
+                [NameInMap("Priority")]
+                [Validation(Required=false)]
+                public int? Priority { get; set; }
+
                 [NameInMap("RouteDest")]
                 [Validation(Required=false)]
                 public string RouteDest { get; set; }

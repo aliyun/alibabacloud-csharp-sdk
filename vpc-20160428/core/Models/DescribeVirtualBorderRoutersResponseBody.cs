@@ -137,6 +137,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
+                [NameInMap("Bandwidth")]
+                [Validation(Required=false)]
+                public int? Bandwidth { get; set; }
+
                 [NameInMap("CircuitCode")]
                 [Validation(Required=false)]
                 public string CircuitCode { get; set; }

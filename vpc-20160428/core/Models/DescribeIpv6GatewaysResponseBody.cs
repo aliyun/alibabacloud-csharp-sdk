@@ -49,10 +49,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                [NameInMap("Spec")]
-                [Validation(Required=false)]
-                public string Spec { get; set; }
-
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

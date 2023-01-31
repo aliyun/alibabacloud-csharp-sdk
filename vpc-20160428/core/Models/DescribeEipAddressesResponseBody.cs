@@ -25,16 +25,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string AllocationTime { get; set; }
 
-                [NameInMap("AvailableRegions")]
-                [Validation(Required=false)]
-                public DescribeEipAddressesResponseBodyEipAddressesEipAddressAvailableRegions AvailableRegions { get; set; }
-                public class DescribeEipAddressesResponseBodyEipAddressesEipAddressAvailableRegions : TeaModel {
-                    [NameInMap("AvailableRegion")]
-                    [Validation(Required=false)]
-                    public List<string> AvailableRegion { get; set; }
-
-                }
-
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
                 public string Bandwidth { get; set; }
@@ -204,6 +194,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     }
 
                 }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+                [NameInMap("Zone")]
+                [Validation(Required=false)]
+                public string Zone { get; set; }
 
             }
 
