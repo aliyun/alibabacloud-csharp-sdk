@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public int? HitNum { get; set; }
 
+            /// <summary>
+            /// id
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }

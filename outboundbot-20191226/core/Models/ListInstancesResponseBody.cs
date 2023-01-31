@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
+            [NameInMap("IsPreset")]
+            [Validation(Required=false)]
+            public bool? IsPreset { get; set; }
+
             [NameInMap("MaxConcurrentConversation")]
             [Validation(Required=false)]
             public int? MaxConcurrentConversation { get; set; }

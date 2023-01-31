@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
-    public class GetConcurrentConversationQuotaResponseBody : TeaModel {
+    public class UploadScriptRecordingResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -17,20 +17,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
-        /// <summary>
-        /// maxConcurrent
-        /// </summary>
-        [NameInMap("MaxConcurrent")]
-        [Validation(Required=false)]
-        public int? MaxConcurrent { get; set; }
-
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
-
-        [NameInMap("RemainingConcurrent")]
-        [Validation(Required=false)]
-        public int? RemainingConcurrent { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -39,6 +28,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
 
     }
 

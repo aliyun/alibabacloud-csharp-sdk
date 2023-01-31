@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public string DebugStatus { get; set; }
 
+            [NameInMap("EmotionEnable")]
+            [Validation(Required=false)]
+            public bool? EmotionEnable { get; set; }
+
             [NameInMap("Industry")]
             [Validation(Required=false)]
             public string Industry { get; set; }

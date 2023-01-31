@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string ChatbotId { get; set; }
 
+        [NameInMap("EmotionEnable")]
+        [Validation(Required=false)]
+        public bool? EmotionEnable { get; set; }
+
         [NameInMap("Industry")]
         [Validation(Required=false)]
         public string Industry { get; set; }
@@ -28,10 +32,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [NameInMap("LongWaitEnable")]
         [Validation(Required=false)]
         public bool? LongWaitEnable { get; set; }
-
-        [NameInMap("MiniPlaybackConfigListJsonString")]
-        [Validation(Required=false)]
-        public string MiniPlaybackConfigListJsonString { get; set; }
 
         [NameInMap("MiniPlaybackEnable")]
         [Validation(Required=false)]

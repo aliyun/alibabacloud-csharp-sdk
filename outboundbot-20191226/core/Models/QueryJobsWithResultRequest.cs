@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string QueryText { get; set; }
 
+        [NameInMap("TaskStatusFilter")]
+        [Validation(Required=false)]
+        public string TaskStatusFilter { get; set; }
+
     }
 
 }

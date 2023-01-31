@@ -8,29 +8,32 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
-    public class GetConcurrentConversationQuotaResponseBody : TeaModel {
+    public class DownloadScriptRecordingResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
+
+        [NameInMap("DownloadParams")]
+        [Validation(Required=false)]
+        public DownloadScriptRecordingResponseBodyDownloadParams DownloadParams { get; set; }
+        public class DownloadScriptRecordingResponseBodyDownloadParams : TeaModel {
+            [NameInMap("FileName")]
+            [Validation(Required=false)]
+            public string FileName { get; set; }
+
+            [NameInMap("SignatureUrl")]
+            [Validation(Required=false)]
+            public string SignatureUrl { get; set; }
+
+        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
-        /// <summary>
-        /// maxConcurrent
-        /// </summary>
-        [NameInMap("MaxConcurrent")]
-        [Validation(Required=false)]
-        public int? MaxConcurrent { get; set; }
-
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
-
-        [NameInMap("RemainingConcurrent")]
-        [Validation(Required=false)]
-        public int? RemainingConcurrent { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

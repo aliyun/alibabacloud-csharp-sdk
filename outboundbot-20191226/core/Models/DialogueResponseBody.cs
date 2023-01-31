@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public string Content { get; set; }
 
+            [NameInMap("ContentParams")]
+            [Validation(Required=false)]
+            public string ContentParams { get; set; }
+
             [NameInMap("Interruptible")]
             [Validation(Required=false)]
             public bool? Interruptible { get; set; }

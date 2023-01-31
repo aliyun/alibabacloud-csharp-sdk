@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public List<DescribeTagHitsSummaryResponseBodyTagGroups> TagGroups { get; set; }
         public class DescribeTagHitsSummaryResponseBodyTagGroups : TeaModel {
+            /// <summary>
+            /// ID
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
