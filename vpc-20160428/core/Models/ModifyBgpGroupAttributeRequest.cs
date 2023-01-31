@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? IsFakeAsn { get; set; }
 
+        [NameInMap("LocalAsn")]
+        [Validation(Required=false)]
+        public long? LocalAsn { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -60,6 +64,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("RouteQuota")]
+        [Validation(Required=false)]
+        public int? RouteQuota { get; set; }
 
     }
 

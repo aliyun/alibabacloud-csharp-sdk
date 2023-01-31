@@ -34674,6 +34674,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["IsFakeAsn"] = request.IsFakeAsn;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalAsn))
+            {
+                query["LocalAsn"] = request.LocalAsn;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -34701,6 +34705,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteQuota))
+            {
+                query["RouteQuota"] = request.RouteQuota;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -34749,6 +34757,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["IsFakeAsn"] = request.IsFakeAsn;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalAsn))
+            {
+                query["LocalAsn"] = request.LocalAsn;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -34776,6 +34788,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteQuota))
+            {
+                query["RouteQuota"] = request.RouteQuota;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
