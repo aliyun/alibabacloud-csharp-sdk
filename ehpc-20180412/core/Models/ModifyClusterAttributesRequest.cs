@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("RamNodeTypes")]
+        [Validation(Required=false)]
+        public List<string> RamNodeTypes { get; set; }
+
+        [NameInMap("RamRoleName")]
+        [Validation(Required=false)]
+        public string RamRoleName { get; set; }
+
     }
 
 }

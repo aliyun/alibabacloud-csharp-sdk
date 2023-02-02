@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public bool? ComputeEnableHt { get; set; }
 
+        [NameInMap("ComputeSpotDuration")]
+        [Validation(Required=false)]
+        public int? ComputeSpotDuration { get; set; }
+
+        [NameInMap("ComputeSpotInterruptionBehavior")]
+        [Validation(Required=false)]
+        public string ComputeSpotInterruptionBehavior { get; set; }
+
         [NameInMap("ComputeSpotPriceLimit")]
         [Validation(Required=false)]
         public string ComputeSpotPriceLimit { get; set; }

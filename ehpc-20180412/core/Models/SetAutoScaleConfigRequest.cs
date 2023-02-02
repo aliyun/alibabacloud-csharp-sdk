@@ -111,6 +111,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
+                [NameInMap("SpotDuration")]
+                [Validation(Required=false)]
+                public int? SpotDuration { get; set; }
+
+                [NameInMap("SpotInterruptionBehavior")]
+                [Validation(Required=false)]
+                public string SpotInterruptionBehavior { get; set; }
+
                 [NameInMap("SpotPriceLimit")]
                 [Validation(Required=false)]
                 public float? SpotPriceLimit { get; set; }

@@ -2381,6 +2381,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await DescribeNFSClientStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request DescribePriceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribePriceResponse
+         */
         public DescribePriceResponse DescribePriceWithOptions(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2404,6 +2411,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<DescribePriceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request DescribePriceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribePriceResponse
+         */
         public async Task<DescribePriceResponse> DescribePriceWithOptionsAsync(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2427,12 +2441,24 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<DescribePriceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request DescribePriceRequest
+          * @return DescribePriceResponse
+         */
         public DescribePriceResponse DescribePrice(DescribePriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePriceWithOptions(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request DescribePriceRequest
+          * @return DescribePriceResponse
+         */
         public async Task<DescribePriceResponse> DescribePriceAsync(DescribePriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
