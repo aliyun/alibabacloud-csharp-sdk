@@ -126,6 +126,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string ShardsInfo { get; set; }
 
+        [NameInMap("Storage")]
+        [Validation(Required=false)]
+        public string Storage { get; set; }
+
         /// <summary>
         /// The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
         /// </summary>

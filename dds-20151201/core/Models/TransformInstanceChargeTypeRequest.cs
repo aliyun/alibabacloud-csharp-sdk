@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// Specifies whether to enable automatic payment. Valid values:
         /// 
-        /// *   **true**: enables automatic payment.
-        /// *   **false**: disables automatic payment. For more information, see [Renew an ApsaraDB for MongoDB subscription instance](~~85052~~).
+        /// *   **true**
+        /// *   **false**
         /// 
-        /// >  Default value: **true**.
+        /// > The default value is **true**.
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **true**
         /// *   **false**
         /// 
-        /// >  Default value: **false**.
+        /// > The default value is **false**.
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
@@ -43,10 +43,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The billing method of the instance. Valid values:
         /// 
-        /// *   **PostPaid: pay-as-you-go.**
         /// *   **PrePaid**: subscription
-        /// 
-        /// >  If you specify this parameter to **PrePaid**, you must also specify the **Period** parameter.
+        /// *   **PostPaid**: pay-as-you-go
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -60,7 +58,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the instance
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -75,11 +73,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The subscription period of the instance. Unit: months.
-        /// 
-        /// Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.
-        /// 
-        /// >  If you set the ChargeType property to PrePaid, you must configure this property.
+        /// The subscription duration of the instance. Unit: months. Valid values: **1, 2, 3, 4, 5, 6, 7, 8, 9******, **12**, **24**, and **36**.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]

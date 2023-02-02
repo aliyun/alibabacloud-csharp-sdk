@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
+        [NameInMap("ExtraParam")]
+        [Validation(Required=false)]
+        public string ExtraParam { get; set; }
+
         /// <summary>
         /// The type of the modification. Valid values:
         /// 

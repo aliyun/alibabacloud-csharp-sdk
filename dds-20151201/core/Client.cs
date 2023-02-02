@@ -5141,192 +5141,6 @@ namespace AlibabaCloud.SDK.Dds20151201
             return await DescribeDBInstancesOverviewWithOptionsAsync(request, runtime);
         }
 
-        public DescribeDedicatedClusterInstanceListResponse DescribeDedicatedClusterInstanceListWithOptions(DescribeDedicatedClusterInstanceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedHostName))
-            {
-                query["DedicatedHostName"] = request.DedicatedHostName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
-            {
-                query["Engine"] = request.Engine;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
-            {
-                query["EngineVersion"] = request.EngineVersion;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceNetType))
-            {
-                query["InstanceNetType"] = request.InstanceNetType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceStatus))
-            {
-                query["InstanceStatus"] = request.InstanceStatus;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
-            {
-                query["OwnerAccount"] = request.OwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["PageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
-            {
-                query["SecurityToken"] = request.SecurityToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
-            {
-                query["ZoneId"] = request.ZoneId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeDedicatedClusterInstanceList",
-                Version = "2015-12-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeDedicatedClusterInstanceListResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeDedicatedClusterInstanceListResponse> DescribeDedicatedClusterInstanceListWithOptionsAsync(DescribeDedicatedClusterInstanceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedHostName))
-            {
-                query["DedicatedHostName"] = request.DedicatedHostName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
-            {
-                query["Engine"] = request.Engine;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
-            {
-                query["EngineVersion"] = request.EngineVersion;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceNetType))
-            {
-                query["InstanceNetType"] = request.InstanceNetType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceStatus))
-            {
-                query["InstanceStatus"] = request.InstanceStatus;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
-            {
-                query["OwnerAccount"] = request.OwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["PageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
-            {
-                query["SecurityToken"] = request.SecurityToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
-            {
-                query["ZoneId"] = request.ZoneId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeDedicatedClusterInstanceList",
-                Version = "2015-12-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeDedicatedClusterInstanceListResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeDedicatedClusterInstanceListResponse DescribeDedicatedClusterInstanceList(DescribeDedicatedClusterInstanceListRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeDedicatedClusterInstanceListWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeDedicatedClusterInstanceListResponse> DescribeDedicatedClusterInstanceListAsync(DescribeDedicatedClusterInstanceListRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeDedicatedClusterInstanceListWithOptionsAsync(request, runtime);
-        }
-
         /**
           * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
           * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
@@ -8307,6 +8121,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["ShardsInfo"] = request.ShardsInfo;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Storage))
+            {
+                query["Storage"] = request.Storage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
                 query["ZoneId"] = request.ZoneId;
@@ -8393,6 +8211,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardsInfo))
             {
                 query["ShardsInfo"] = request.ShardsInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Storage))
+            {
+                query["Storage"] = request.Storage;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
@@ -10559,6 +10381,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["EffectiveTime"] = request.EffectiveTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraParam))
+            {
+                query["ExtraParam"] = request.ExtraParam;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
             {
                 query["OrderType"] = request.OrderType;
@@ -10649,6 +10475,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
             {
                 query["EffectiveTime"] = request.EffectiveTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraParam))
+            {
+                query["ExtraParam"] = request.ExtraParam;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
             {
@@ -13480,12 +13310,12 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Please ensure that you have fully understood the charging method and [Price](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of MongoDB products before using this API.
-          * When calling this interface, the instance must meet the following conditions:
-          * - The instance status is Running.
-          * - The instance does not have a conversion payment type order that has not been paid.
-          * - The instance type cannot be a historical type (no longer sold). For the list of historical types, see [Instance Type Table](~~57141~~).
-          * > To convert the payment type of the historical type instance, first call the [ModifyDBInstanceSpec] (~~61816~~) or [ModifyNodeSpec] (~~61923~~) interface to change the instance type.
+          * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB.
+          * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * *   The instance is in the Running state.
+          * *   Your instance has no unpaid billing method change orders.
+          * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](~~57141~~).
+          * > To change the billing method of an instance whose instance type is no longer available to purchase, call the [ModifyDBInstanceSpec](~~61816~~) or [ModifyNodeSpec](~~61923~~) operation to first change the instance type.
           *
           * @param request TransformInstanceChargeTypeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13563,12 +13393,12 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Please ensure that you have fully understood the charging method and [Price](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of MongoDB products before using this API.
-          * When calling this interface, the instance must meet the following conditions:
-          * - The instance status is Running.
-          * - The instance does not have a conversion payment type order that has not been paid.
-          * - The instance type cannot be a historical type (no longer sold). For the list of historical types, see [Instance Type Table](~~57141~~).
-          * > To convert the payment type of the historical type instance, first call the [ModifyDBInstanceSpec] (~~61816~~) or [ModifyNodeSpec] (~~61923~~) interface to change the instance type.
+          * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB.
+          * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * *   The instance is in the Running state.
+          * *   Your instance has no unpaid billing method change orders.
+          * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](~~57141~~).
+          * > To change the billing method of an instance whose instance type is no longer available to purchase, call the [ModifyDBInstanceSpec](~~61816~~) or [ModifyNodeSpec](~~61923~~) operation to first change the instance type.
           *
           * @param request TransformInstanceChargeTypeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13646,12 +13476,12 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Please ensure that you have fully understood the charging method and [Price](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of MongoDB products before using this API.
-          * When calling this interface, the instance must meet the following conditions:
-          * - The instance status is Running.
-          * - The instance does not have a conversion payment type order that has not been paid.
-          * - The instance type cannot be a historical type (no longer sold). For the list of historical types, see [Instance Type Table](~~57141~~).
-          * > To convert the payment type of the historical type instance, first call the [ModifyDBInstanceSpec] (~~61816~~) or [ModifyNodeSpec] (~~61923~~) interface to change the instance type.
+          * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB.
+          * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * *   The instance is in the Running state.
+          * *   Your instance has no unpaid billing method change orders.
+          * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](~~57141~~).
+          * > To change the billing method of an instance whose instance type is no longer available to purchase, call the [ModifyDBInstanceSpec](~~61816~~) or [ModifyNodeSpec](~~61923~~) operation to first change the instance type.
           *
           * @param request TransformInstanceChargeTypeRequest
           * @return TransformInstanceChargeTypeResponse
@@ -13663,12 +13493,12 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Please ensure that you have fully understood the charging method and [Price](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of MongoDB products before using this API.
-          * When calling this interface, the instance must meet the following conditions:
-          * - The instance status is Running.
-          * - The instance does not have a conversion payment type order that has not been paid.
-          * - The instance type cannot be a historical type (no longer sold). For the list of historical types, see [Instance Type Table](~~57141~~).
-          * > To convert the payment type of the historical type instance, first call the [ModifyDBInstanceSpec] (~~61816~~) or [ModifyNodeSpec] (~~61923~~) interface to change the instance type.
+          * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB.
+          * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * *   The instance is in the Running state.
+          * *   Your instance has no unpaid billing method change orders.
+          * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](~~57141~~).
+          * > To change the billing method of an instance whose instance type is no longer available to purchase, call the [ModifyDBInstanceSpec](~~61816~~) or [ModifyNodeSpec](~~61923~~) operation to first change the instance type.
           *
           * @param request TransformInstanceChargeTypeRequest
           * @return TransformInstanceChargeTypeResponse
@@ -13880,8 +13710,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * > * You can unbind up to 20 tags at a time.
-          * > * When a tag is unbound from all instances, the tag is automatically deleted.
+          * - You can remove up to 20 tags at a time.
+          * - If you remove a tag from all instances, the tag is automatically deleted.
           *
           * @param request UntagResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13951,8 +13781,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * > * You can unbind up to 20 tags at a time.
-          * > * When a tag is unbound from all instances, the tag is automatically deleted.
+          * - You can remove up to 20 tags at a time.
+          * - If you remove a tag from all instances, the tag is automatically deleted.
           *
           * @param request UntagResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14022,8 +13852,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * > * You can unbind up to 20 tags at a time.
-          * > * When a tag is unbound from all instances, the tag is automatically deleted.
+          * - You can remove up to 20 tags at a time.
+          * - If you remove a tag from all instances, the tag is automatically deleted.
           *
           * @param request UntagResourcesRequest
           * @return UntagResourcesResponse
@@ -14035,8 +13865,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * > * You can unbind up to 20 tags at a time.
-          * > * When a tag is unbound from all instances, the tag is automatically deleted.
+          * - You can remove up to 20 tags at a time.
+          * - If you remove a tag from all instances, the tag is automatically deleted.
           *
           * @param request UntagResourcesRequest
           * @return UntagResourcesResponse

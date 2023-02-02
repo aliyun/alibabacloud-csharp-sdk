@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// The type of the task. Valid values:
             /// 
-            /// *   **rds_apsaradb_transfer**: instance migration
-            /// *   **rds_apsaradb_upgrade**: minor version update
+            /// *   **rds\_apsaradb\_transfer**: instance migration
+            /// *   **rds\_apsaradb\_upgrade**: minor version update
             /// </summary>
             [NameInMap("TaskType")]
             [Validation(Required=false)]

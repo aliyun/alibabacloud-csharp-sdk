@@ -187,6 +187,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string DBInstanceType { get; set; }
 
                 /// <summary>
+                /// The time when the instance data was destroyed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.  
+                /// 
+                /// > - Subscription instances are released 15 days after expiration. After an instance is released, its data is deleted and cannot be restored.
+                /// > - Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.
+                /// </summary>
+                [NameInMap("DestroyTime")]
+                [Validation(Required=false)]
+                public string DestroyTime { get; set; }
+
+                /// <summary>
                 /// The database engine of the instance.
                 /// </summary>
                 [NameInMap("Engine")]
@@ -677,6 +687,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 [NameInMap("StorageEngine")]
                 [Validation(Required=false)]
                 public string StorageEngine { get; set; }
+
+                /// <summary>
+                /// The storage type of the instance. Valid values:
+                /// 
+                /// *   **cloud_essd**: enhanced SSD (ESSD)
+                /// *   **local_ssd**: local SSD
+                /// </summary>
+                [NameInMap("StorageType")]
+                [Validation(Required=false)]
+                public string StorageType { get; set; }
 
                 /// <summary>
                 /// Details of the instance tags.
