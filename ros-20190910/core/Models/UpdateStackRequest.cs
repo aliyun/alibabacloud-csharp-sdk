@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public bool? DisableRollback { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         [NameInMap("Parallelism")]
         [Validation(Required=false)]
         public long? Parallelism { get; set; }

@@ -6987,6 +6987,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["DisableRollback"] = request.DisableRollback;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parallelism))
             {
                 query["Parallelism"] = request.Parallelism;
@@ -7089,6 +7093,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisableRollback))
             {
                 query["DisableRollback"] = request.DisableRollback;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parallelism))
             {

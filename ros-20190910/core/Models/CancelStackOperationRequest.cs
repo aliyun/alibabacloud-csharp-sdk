@@ -12,6 +12,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CancelStackOperationRequest : TeaModel {
+        /// <summary>
+        /// test
+        /// </summary>
         [NameInMap("AllowedStackOperations")]
         [Validation(Required=false)]
         public List<string> AllowedStackOperations { get; set; }

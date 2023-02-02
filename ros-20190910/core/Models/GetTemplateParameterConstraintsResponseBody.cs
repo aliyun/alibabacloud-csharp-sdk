@@ -55,6 +55,24 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string ParameterKey { get; set; }
 
+            [NameInMap("QueryErrors")]
+            [Validation(Required=false)]
+            public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> QueryErrors { get; set; }
+            public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors : TeaModel {
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("ResourceName")]
+                [Validation(Required=false)]
+                public string ResourceName { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+            }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }

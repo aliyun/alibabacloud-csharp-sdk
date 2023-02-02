@@ -37,6 +37,26 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        [NameInMap("TemplateParameterConstraints")]
+        [Validation(Required=false)]
+        public GetFeatureDetailsResponseBodyTemplateParameterConstraints TemplateParameterConstraints { get; set; }
+        public class GetFeatureDetailsResponseBodyTemplateParameterConstraints : TeaModel {
+            [NameInMap("SupportedResourceTypes")]
+            [Validation(Required=false)]
+            public List<GetFeatureDetailsResponseBodyTemplateParameterConstraintsSupportedResourceTypes> SupportedResourceTypes { get; set; }
+            public class GetFeatureDetailsResponseBodyTemplateParameterConstraintsSupportedResourceTypes : TeaModel {
+                [NameInMap("Properties")]
+                [Validation(Required=false)]
+                public List<string> Properties { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+            }
+
+        }
+
         [NameInMap("TemplateScratch")]
         [Validation(Required=false)]
         public GetFeatureDetailsResponseBodyTemplateScratch TemplateScratch { get; set; }
