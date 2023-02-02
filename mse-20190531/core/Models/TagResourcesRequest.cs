@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// 
         /// > This parameter specifies the instance ID that is passed. Examples:
         /// 

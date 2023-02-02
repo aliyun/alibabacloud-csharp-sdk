@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the cluster.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The format of the configuration. Supported formats include TEXT, JSON, XML, and HTML.
+        /// A reserved parameter.
         /// </summary>
         [NameInMap("ConfigType")]
         [Validation(Required=false)]
@@ -40,6 +40,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// Specifies whether runtime configurations are required.
+        /// </summary>
         [NameInMap("NeedRunningConf")]
         [Validation(Required=false)]
         public bool? NeedRunningConf { get; set; }

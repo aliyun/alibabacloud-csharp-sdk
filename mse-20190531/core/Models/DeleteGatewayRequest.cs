@@ -12,15 +12,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The language of the response. Valid values:
         /// 
-        /// - zh: Chinese
-        /// - en: English
+        /// *   zh: Chinese
+        /// *   en: English
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// Specifies whether to delete the Server Load Balancer (SLB) instance purchased for the gateway.
+        /// Specifies whether to delete the SLB instance purchased for the gateway when you delete the gateway.
         /// </summary>
         [NameInMap("DeleteSlb")]
         [Validation(Required=false)]

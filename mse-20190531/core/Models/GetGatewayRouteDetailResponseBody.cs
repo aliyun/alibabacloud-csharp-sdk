@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public List<string> DomainNameList { get; set; }
 
             /// <summary>
-            /// Indicates whether WAF is activated.
+            /// Indicates whether Web Application Firewall (WAF) is activated.
             /// </summary>
             [NameInMap("EnableWaf")]
             [Validation(Required=false)]
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Fallback { get; set; }
 
             /// <summary>
-            /// The information about the Fallback service.
+            /// The information of the Fallback service.
             /// </summary>
             [NameInMap("FallbackServices")]
             [Validation(Required=false)]
@@ -458,7 +458,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Attempts { get; set; }
 
                 /// <summary>
-                /// The HTTP status code returned.
+                /// The HTTP status codes.
                 /// </summary>
                 [NameInMap("HttpCodes")]
                 [Validation(Required=false)]
@@ -657,7 +657,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? ServicePort { get; set; }
 
                 /// <summary>
-                /// The source type of the service.
+                /// The source type.
                 /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
@@ -733,7 +733,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

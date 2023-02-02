@@ -62,7 +62,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string SlbId { get; set; }
 
         /// <summary>
-        /// The type.
+        /// The type of the service source. Valid values:
+        /// 
+        /// *   PUB_NET: public network
+        /// *   PRIVATE_NET: private network
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

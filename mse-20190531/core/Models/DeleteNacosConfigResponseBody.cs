@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code
         /// </summary>
         [NameInMap("HttpCode")]
         [Validation(Required=false)]

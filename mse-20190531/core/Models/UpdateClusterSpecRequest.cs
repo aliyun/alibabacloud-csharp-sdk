@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("MseVersion")]
+        [Validation(Required=false)]
+        public string MseVersion { get; set; }
+
     }
 
 }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListZkTrackResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// The error code returned.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// The trajectory data.
+        /// The track data.
         /// </summary>
         [NameInMap("Traces")]
         [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DataType { get; set; }
 
             /// <summary>
-            /// The type of the event. For trajectory of the notify type:
+            /// The type of the event. For tracks of the Notify type:
             /// 
             /// *   NodeCreated
             /// *   NodeDeleted
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Finished { get; set; }
 
             /// <summary>
-            /// The recorded time.
+            /// The logging time.
             /// </summary>
             [NameInMap("LogDate")]
             [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? MultiSize { get; set; }
 
             /// <summary>
-            /// The operation type. For trajectory of the push type:
+            /// The operation type. For tracks of the Push type:
             /// 
             /// *   Create
             /// *   Update
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// *   SetAcl
             /// *   Multi
             /// 
-            /// For trajectory of the pull type:
+            /// For tracks of the Pull type:
             /// 
             /// *   GetData
             /// *   GetChild
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// The returned message.
+            /// The result.
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Timestamp { get; set; }
 
             /// <summary>
-            /// The type of the trajectory. Valid values:
+            /// The type of the track. Valid values:
             /// 
             /// *   Push
             /// *   Pull
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Ttl { get; set; }
 
             /// <summary>
-            /// Indicates whether to enable the listener.
+            /// Indicates whether to enable the monitoring feature.
             /// </summary>
             [NameInMap("Watch")]
             [Validation(Required=false)]

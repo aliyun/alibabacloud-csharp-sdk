@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The modification time.
+            /// The update time.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
@@ -87,7 +87,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? RouteOrder { get; set; }
 
             /// <summary>
-            /// The status.
+            /// The status of the route. Valid values:
+            /// 
+            /// *   0: unpublished
+            /// *   2: publishing
+            /// *   3: published
+            /// *   4: editing (updated but not published)
+            /// *   5: unpublishing
+            /// *   6: unavailable
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -103,7 +110,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

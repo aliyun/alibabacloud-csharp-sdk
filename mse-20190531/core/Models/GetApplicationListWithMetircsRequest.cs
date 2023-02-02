@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// The service source. Valid values:
+        /// The service source.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateOrUpdateSwimmingLaneRequest : TeaModel {
         /// <summary>
-        /// The language that the value of the **LocalName** response parameter uses. Valid values:
+        /// The language of the response. Valid values:****
         /// 
-        /// *   **zh-cn**: Chinese
-        /// *   **en-us**: English.
+        /// *   **zh-CN**: Chinese
+        /// *   **en-US**: English.
         /// 
         /// > Default value: **zh-CN**.
         /// </summary>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Divisor { get; set; }
 
                 /// <summary>
-                /// The name of the rule. This parameter corresponds to the key of the type parameter.
+                /// The name of the rule. This parameter corresponds to the key of the Type parameter.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -209,14 +209,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// Optional. The time when the lane was created.
+        /// The creation time.
         /// </summary>
         [NameInMap("GmtCreate")]
         [Validation(Required=false)]
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// Optional. The time when the lane was last modified.
+        /// The update time.
         /// </summary>
         [NameInMap("GmtModified")]
         [Validation(Required=false)]
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

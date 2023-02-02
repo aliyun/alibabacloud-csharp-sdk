@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// The ID of the route.
+        /// The ID of the route entry.
         /// </summary>
         [NameInMap("RouteId")]
         [Validation(Required=false)]

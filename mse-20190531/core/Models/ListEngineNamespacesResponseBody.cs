@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string NamespaceShowName { get; set; }
 
             /// <summary>
-            /// The quota of configurations.
+            /// The quotas.
             /// </summary>
             [NameInMap("Quota")]
             [Validation(Required=false)]
@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("ServiceCount")]
             [Validation(Required=false)]
             public string ServiceCount { get; set; }
+
+            [NameInMap("SourceType")]
+            [Validation(Required=false)]
+            public string SourceType { get; set; }
 
             /// <summary>
             /// The type of the namespace. Valid values:
@@ -124,7 +128,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of instances.
+        /// The total number of returned instances.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

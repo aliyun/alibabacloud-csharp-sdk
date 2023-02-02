@@ -64,6 +64,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public long? FuncType { get; set; }
 
+        /// <summary>
+        /// Specifies whether to display online and offline processing details.
+        /// </summary>
         [NameInMap("LossLessDetail")]
         [Validation(Required=false)]
         public bool? LossLessDetail { get; set; }
@@ -72,19 +75,22 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable notification.
+        /// </summary>
         [NameInMap("Notice")]
         [Validation(Required=false)]
         public bool? Notice { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether to associate readiness probe with service prefetching.
+        /// Specifies whether to associate with service prefetching.
         /// </summary>
         [NameInMap("Related")]
         [Validation(Required=false)]
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? ShutdownWaitSeconds { get; set; }
 
         /// <summary>
-        /// The service source. Valid values:
+        /// The service source.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]

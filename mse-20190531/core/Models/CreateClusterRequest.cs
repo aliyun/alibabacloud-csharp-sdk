@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The engine version of the instance. Valid values:
         /// 
-        /// \[Professional Edition]
+        /// \[Professional version]
         /// 
         /// *   `NACOS_2_0_0`: Nacos 2.0.0
         /// *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ConnectionType { get; set; }
 
         /// <summary>
-        /// The disk type. Valid values:
+        /// The disk type of the MSE instance. Valid values:
         /// 
         /// *   alicloud-disk-ssd
         /// *   alicloud-disk-essd-pl1
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// Set this parameter unless otherwise specified. Valid values:
+        /// Configure this parameter unless otherwise specified. Valid values:
         /// 
         /// *   `mse_pro`: Professional Edition
         /// *   `mse_dev`: Developer Edition
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string MseVersion { get; set; }
 
         /// <summary>
-        /// The network type of the instance. Valid values:
+        /// The network type of the MSE instance. Valid values:
         /// 
         /// *   `privatenet`: VPC
         /// *   `pubnet`: Internet
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string PubSlbSpecification { get; set; }
 
         /// <summary>
-        /// The region where the MSE instance resides. Examples:
+        /// The region where the instance resides. Examples:
         /// 
         /// *   `cn-hangzhou`: China (Hangzhou)
         /// *   `cn-beijing`: China (Beijing)
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. For more information about resource groups, see the topic "View basic information of a resource group."
+        /// The ID of the resource group. For more information, see [View basic information of a resource group](~~457230~~).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

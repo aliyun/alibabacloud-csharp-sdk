@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddServiceSourceResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// The return value.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -47,8 +47,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   `true`: The request was successful.
-        /// *   `false`: The request failed.
+        /// *   true: The request was successful.
+        /// *   false: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The endpoint.
+        /// The address.
         /// </summary>
         [NameInMap("Address")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GroupListShrink { get; set; }
 
         /// <summary>
-        /// The Ingress configuration.
+        /// The configurations of Ingress resources.
         /// </summary>
         [NameInMap("IngressOptionsRequest")]
         [Validation(Required=false)]
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The name.
         /// 
-        /// > The parameter value varies based on the source type.
+        /// > The parameter definition varies based on the source type.
         /// 
-        /// *   If Type is set to K8S, this parameter specifies the name of the ACK cluster.
+        /// *   If Type is set to K8S, this parameter specifies the name of the Kubernetes cluster.
         /// *   If Type is set to NACOS, this parameter specifies the ID of the instance.
         /// </summary>
         [NameInMap("Name")]
@@ -68,9 +68,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string PathListShrink { get; set; }
 
         /// <summary>
-        /// The service source.
+        /// The service source. Valid values:
         /// 
-        /// *   K8S: ACK cluster
+        /// *   K8S: Kubernetes cluster
         /// *   MSE: Nacos instance
         /// </summary>
         [NameInMap("Source")]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The type of the service source. Valid values:
         /// 
-        /// *   K8S: ACK cluster
+        /// *   K8S: Kubernetes cluster
         /// *   NACOS: Nacos instance
         /// </summary>
         [NameInMap("Type")]

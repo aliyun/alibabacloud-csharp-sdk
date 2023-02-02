@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? EndTs { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// Specifies whether entries are sorted in reverse chronological order.
+        /// Specifies whether to enable reverse ordering.
         /// </summary>
         [NameInMap("Reverse")]
         [Validation(Required=false)]

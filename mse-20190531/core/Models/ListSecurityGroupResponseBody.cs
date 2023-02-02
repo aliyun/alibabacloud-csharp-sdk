@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// The type of the security group. Valid values:
             /// 
             /// *   normal: basic security group
-            /// *   enterprise: advanced security group For more information, see [Advanced security groups](~~120621~~).
+            /// *   enterprise: advanced security group. For more information, see [Advanced security groups](~~120621~~).
             /// </summary>
             [NameInMap("SecurityGroupType")]
             [Validation(Required=false)]

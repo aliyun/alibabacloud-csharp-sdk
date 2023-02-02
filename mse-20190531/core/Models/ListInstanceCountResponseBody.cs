@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// The error code returned if the request failed. If the request failed, the ErrorCode parameter is returned. For more information, see the "Error codes" section of this topic.
+        /// The error code returned if the request failed. If the request failed, the ErrorCode parameter is returned. For more information, see the [Error codes](~~456441~~) section of this topic.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

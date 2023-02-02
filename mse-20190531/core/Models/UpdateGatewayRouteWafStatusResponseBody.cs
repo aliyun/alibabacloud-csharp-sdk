@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Body { get; set; }
 
                 /// <summary>
-                /// The status code returned.
+                /// The return value.
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// The list of domain names.
+            /// The names of domains.
             /// </summary>
             [NameInMap("DomainNameList")]
             [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The modification time.
+            /// The update time.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
@@ -365,14 +365,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Attempts { get; set; }
 
                 /// <summary>
-                /// The HTTP status code returned.
+                /// The information about the HTTP status code.
                 /// </summary>
                 [NameInMap("HttpCodes")]
                 [Validation(Required=false)]
                 public List<string> HttpCodes { get; set; }
 
                 /// <summary>
-                /// The retry condition.
+                /// The information about the retry condition.
                 /// </summary>
                 [NameInMap("RetryOn")]
                 [Validation(Required=false)]
@@ -402,7 +402,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates RoutePredicates { get; set; }
             public class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicates : TeaModel {
                 /// <summary>
-                /// The rules for matching based on request headers.
+                /// The information about matching based on request headers.
                 /// </summary>
                 [NameInMap("HeaderPredicates")]
                 [Validation(Required=false)]
@@ -522,7 +522,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The namespace.
+                /// The namespace to which the service belongs.
                 /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]

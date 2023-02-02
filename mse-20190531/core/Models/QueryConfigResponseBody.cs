@@ -64,6 +64,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public bool? ConfigAuthSupported { get; set; }
 
+            /// <summary>
+            /// The maximum size of a configuration. Unit: KB.
+            /// </summary>
             [NameInMap("ConfigContentLimit")]
             [Validation(Required=false)]
             public long? ConfigContentLimit { get; set; }
@@ -88,6 +91,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public bool? ConfigSecretSupported { get; set; }
 
+            /// <summary>
+            /// Indicates whether the time to live (TTL) configuration is enabled. This parameter is valid for ZooKeeper instances.
+            /// </summary>
             [NameInMap("ExtendedTypesEnable")]
             [Validation(Required=false)]
             public bool? ExtendedTypesEnable { get; set; }
@@ -155,10 +161,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string MinSessionTimeout { get; set; }
 
+            /// <summary>
+            /// The runtime configuration of the Nacos instance.
+            /// </summary>
             [NameInMap("NacosRunningEnv")]
             [Validation(Required=false)]
             public QueryConfigResponseBodyDataNacosRunningEnv NacosRunningEnv { get; set; }
             public class QueryConfigResponseBodyDataNacosRunningEnv : TeaModel {
+                /// <summary>
+                /// Indicates whether empty list protection is enabled.
+                /// </summary>
                 [NameInMap("emptyProtect")]
                 [Validation(Required=false)]
                 public bool? EmptyProtect { get; set; }

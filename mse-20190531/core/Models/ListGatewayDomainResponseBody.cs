@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Http2 { get; set; }
 
             /// <summary>
-            /// ID
+            /// The domain ID.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

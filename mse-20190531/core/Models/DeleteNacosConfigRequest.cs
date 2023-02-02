@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// Specifies whether to perform a beta release. Valid values:
         /// 
-        /// *   `true`: performs a beta release.
-        /// *   `false`: not performs a beta release.
+        /// *   `true`: yes
+        /// *   `false`: no
         /// </summary>
         [NameInMap("Beta")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Group { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the instance
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
