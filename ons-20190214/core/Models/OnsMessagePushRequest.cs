@@ -9,25 +9,40 @@ using Tea;
 namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsMessagePushRequest : TeaModel {
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
+        /// <summary>
+        /// The ID of the consumer. You can call the [OnsConsumerGetConnection](~~29598~~) operation to query the ID of each consumer in a consumer group.
+        /// </summary>
         [NameInMap("ClientId")]
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
+        /// <summary>
+        /// The ID of the consumer group. For information about what a consumer group is, see [Terms](~~29533~~).
+        /// </summary>
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
+        /// <summary>
+        /// The ID of the Message Queue for Apache RocketMQ instance to which the specified consumer group belongs.
+        /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        /// <summary>
+        /// The ID of the message.
+        /// </summary>
         [NameInMap("MsgId")]
         [Validation(Required=false)]
         public string MsgId { get; set; }
 
+        /// <summary>
+        /// The topic to which the message is pushed.
+        /// </summary>
         [NameInMap("Topic")]
         [Validation(Required=false)]
         public string Topic { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
 
     }
 

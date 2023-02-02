@@ -9,14 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsTrendGroupOutputTpsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
+        /// <summary>
+        /// The data that is returned.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public OnsTrendGroupOutputTpsResponseBodyData Data { get; set; }
         public class OnsTrendGroupOutputTpsResponseBodyData : TeaModel {
+            /// <summary>
+            /// The data set that is returned based on sampling period.
+            /// </summary>
             [NameInMap("Records")]
             [Validation(Required=false)]
             public OnsTrendGroupOutputTpsResponseBodyDataRecords Records { get; set; }
@@ -25,27 +27,53 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 [Validation(Required=false)]
                 public List<OnsTrendGroupOutputTpsResponseBodyDataRecordsStatsDataDo> StatsDataDo { get; set; }
                 public class OnsTrendGroupOutputTpsResponseBodyDataRecordsStatsDataDo : TeaModel {
-                    [NameInMap("Y")]
-                    [Validation(Required=false)]
-                    public float? Y { get; set; }
-
+                    /// <summary>
+                    /// Indicates the timestamp. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+                    /// </summary>
                     [NameInMap("X")]
                     [Validation(Required=false)]
                     public long? X { get; set; }
 
+                    /// <summary>
+                    /// Indicates the TPS for message consumption or the number of messages that are consumed.
+                    /// </summary>
+                    [NameInMap("Y")]
+                    [Validation(Required=false)]
+                    public float? Y { get; set; }
+
                 }
 
             }
-            [NameInMap("XUnit")]
-            [Validation(Required=false)]
-            public string XUnit { get; set; }
-            [NameInMap("YUnit")]
-            [Validation(Required=false)]
-            public string YUnit { get; set; }
+
+            /// <summary>
+            /// The name of the table that stores the data.
+            /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
-        };
+
+            /// <summary>
+            /// The unit of the timestamp. Unit: milliseconds.
+            /// </summary>
+            [NameInMap("XUnit")]
+            [Validation(Required=false)]
+            public string XUnit { get; set; }
+
+            /// <summary>
+            /// The unit of the value of the Y parameter.
+            /// </summary>
+            [NameInMap("YUnit")]
+            [Validation(Required=false)]
+            public string YUnit { get; set; }
+
+        }
+
+        /// <summary>
+        /// The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

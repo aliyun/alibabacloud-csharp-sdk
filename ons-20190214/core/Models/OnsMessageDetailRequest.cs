@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ons20190214.Models
 {
-    public class OnsMessageGetByMsgIdRequest : TeaModel {
+    public class OnsMessageDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance where the message that you want to query resides.
+        /// The ID of the Message Queue for Apache RocketMQ Instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         public string MsgId { get; set; }
 
         /// <summary>
-        /// The topic that contains the message that you want to query.
+        /// The name of the topic in which the message you want to query is stored.
         /// </summary>
         [NameInMap("Topic")]
         [Validation(Required=false)]

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsInstanceBaseInfoRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance that you want to query.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

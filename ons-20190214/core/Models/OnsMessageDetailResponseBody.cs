@@ -8,20 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ons20190214.Models
 {
-    public class OnsDLQMessageGetByIdResponseBody : TeaModel {
+    public class OnsMessageDetailResponseBody : TeaModel {
         /// <summary>
-        /// The returned results.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public OnsDLQMessageGetByIdResponseBodyData Data { get; set; }
-        public class OnsDLQMessageGetByIdResponseBodyData : TeaModel {
+        public OnsMessageDetailResponseBodyData Data { get; set; }
+        public class OnsMessageDetailResponseBodyData : TeaModel {
+            /// <summary>
+            /// The body of the message.
+            /// </summary>
+            [NameInMap("Body")]
+            [Validation(Required=false)]
+            public string Body { get; set; }
+
             /// <summary>
             /// The cyclic redundancy check (CRC) value of the message body.
             /// </summary>
             [NameInMap("BodyCRC")]
             [Validation(Required=false)]
             public int? BodyCRC { get; set; }
+
+            /// <summary>
+            /// 消息体内容。
+            /// </summary>
+            [NameInMap("BodyStr")]
+            [Validation(Required=false)]
+            public string BodyStr { get; set; }
 
             /// <summary>
             /// The producer instance that generated the message.
@@ -31,21 +45,21 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             public string BornHost { get; set; }
 
             /// <summary>
-            /// The timestamp that indicates the point in time when the dead-letter message was generated. Unit: milliseconds.
+            /// The timestamp that indicates the point in time when the message was generated. Unit: milliseconds.
             /// </summary>
             [NameInMap("BornTimestamp")]
             [Validation(Required=false)]
             public long? BornTimestamp { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// The ID of the Message Queue for Apache RocketMQ Instance.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The ID of the dead-letter message.
+            /// The ID of the message.
             /// </summary>
             [NameInMap("MsgId")]
             [Validation(Required=false)]
@@ -56,34 +70,29 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             /// </summary>
             [NameInMap("PropertyList")]
             [Validation(Required=false)]
-            public OnsDLQMessageGetByIdResponseBodyDataPropertyList PropertyList { get; set; }
-            public class OnsDLQMessageGetByIdResponseBodyDataPropertyList : TeaModel {
-                [NameInMap("MessageProperty")]
+            public List<OnsMessageDetailResponseBodyDataPropertyList> PropertyList { get; set; }
+            public class OnsMessageDetailResponseBodyDataPropertyList : TeaModel {
+                /// <summary>
+                /// The name of the attribute. Valid values:
+                /// 
+                /// *   **BODY**: indicates the message body
+                /// *   **TRACE_ON**: indicates whether the trace of the message exists.
+                /// *   **KEYS**: indicates the key of the message.
+                /// *   **TAGS**: indicates the tag that is attached to the message.
+                /// *   **INSTANCE_ID**: indicates the ID of the instance that contains the message.
+                /// 
+                /// For more information about the terms that are used in Message Queue for Apache RocketMQ, see [Terms](~~29533~~).
+                /// </summary>
+                [NameInMap("Name")]
                 [Validation(Required=false)]
-                public List<OnsDLQMessageGetByIdResponseBodyDataPropertyListMessageProperty> MessageProperty { get; set; }
-                public class OnsDLQMessageGetByIdResponseBodyDataPropertyListMessageProperty : TeaModel {
-                    /// <summary>
-                    /// The name of the attribute. Valid values:
-                    /// 
-                    /// *   **TRACE_ON**: indicates whether a trace of the message exists.
-                    /// *   **KEYS**: indicates the message key of the message.
-                    /// *   **TAGS**: indicates the tag that is attached to the message.
-                    /// *   **INSTANCE_ID**: indicates the ID of the instance that contains the dead-letter message.
-                    /// 
-                    /// For more information about the terms that are used in Message Queue for Apache RocketMQ, see [Terms](~~29533~~).
-                    /// </summary>
-                    [NameInMap("Name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
+                public string Name { get; set; }
 
-                    /// <summary>
-                    /// The value of the attribute.
-                    /// </summary>
-                    [NameInMap("Value")]
-                    [Validation(Required=false)]
-                    public string Value { get; set; }
-
-                }
+                /// <summary>
+                /// The value of the attribute.
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
 
             }
 
@@ -109,7 +118,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             public int? StoreSize { get; set; }
 
             /// <summary>
-            /// The timestamp when the Message Queue for Apache RocketMQ broker stored the message. Unit: milliseconds.
+            /// The timestamp that indicates the point in time when the Message Queue for Apache RocketMQ broker stored the message. Unit: milliseconds.
             /// </summary>
             [NameInMap("StoreTimestamp")]
             [Validation(Required=false)]
@@ -125,7 +134,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         }
 
         /// <summary>
-        /// The ID of the request. This parameter is a common parameter. Each request has a unique ID.
+        /// The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

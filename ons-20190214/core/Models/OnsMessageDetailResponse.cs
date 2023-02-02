@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ons20190214.Models
 {
-    public class OnsTrendGroupOutputTpsResponse : TeaModel {
+    public class OnsMessageDetailResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public OnsTrendGroupOutputTpsResponseBody Body { get; set; }
+        public OnsMessageDetailResponseBody Body { get; set; }
 
     }
 
