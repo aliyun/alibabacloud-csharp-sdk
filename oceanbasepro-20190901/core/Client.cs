@@ -313,6 +313,13 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             return await CreateInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To call this operation, you must add the IP address of the OceanBase Migration Service (OMS) server to the whitelist of the Alibaba Cloud database instance, the security rules of the ECS instance, or the security settings of your self-managed database (usually the firewall of your self-managed database) to ensure that OMS can successfully access your database instance. To obtain the IP address of the OMS server, go to the OMS data source management page in the OMS console.
+          *
+          * @param request CreateOmsMysqlDataSourceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOmsMysqlDataSourceResponse
+         */
         public CreateOmsMysqlDataSourceResponse CreateOmsMysqlDataSourceWithOptions(CreateOmsMysqlDataSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -380,6 +387,13 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             return TeaModel.ToObject<CreateOmsMysqlDataSourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To call this operation, you must add the IP address of the OceanBase Migration Service (OMS) server to the whitelist of the Alibaba Cloud database instance, the security rules of the ECS instance, or the security settings of your self-managed database (usually the firewall of your self-managed database) to ensure that OMS can successfully access your database instance. To obtain the IP address of the OMS server, go to the OMS data source management page in the OMS console.
+          *
+          * @param request CreateOmsMysqlDataSourceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOmsMysqlDataSourceResponse
+         */
         public async Task<CreateOmsMysqlDataSourceResponse> CreateOmsMysqlDataSourceWithOptionsAsync(CreateOmsMysqlDataSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -447,12 +461,24 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             return TeaModel.ToObject<CreateOmsMysqlDataSourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To call this operation, you must add the IP address of the OceanBase Migration Service (OMS) server to the whitelist of the Alibaba Cloud database instance, the security rules of the ECS instance, or the security settings of your self-managed database (usually the firewall of your self-managed database) to ensure that OMS can successfully access your database instance. To obtain the IP address of the OMS server, go to the OMS data source management page in the OMS console.
+          *
+          * @param request CreateOmsMysqlDataSourceRequest
+          * @return CreateOmsMysqlDataSourceResponse
+         */
         public CreateOmsMysqlDataSourceResponse CreateOmsMysqlDataSource(CreateOmsMysqlDataSourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateOmsMysqlDataSourceWithOptions(request, runtime);
         }
 
+        /**
+          * To call this operation, you must add the IP address of the OceanBase Migration Service (OMS) server to the whitelist of the Alibaba Cloud database instance, the security rules of the ECS instance, or the security settings of your self-managed database (usually the firewall of your self-managed database) to ensure that OMS can successfully access your database instance. To obtain the IP address of the OMS server, go to the OMS data source management page in the OMS console.
+          *
+          * @param request CreateOmsMysqlDataSourceRequest
+          * @return CreateOmsMysqlDataSourceResponse
+         */
         public async Task<CreateOmsMysqlDataSourceResponse> CreateOmsMysqlDataSourceAsync(CreateOmsMysqlDataSourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1155,6 +1181,15 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             return await DeleteDatabasesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, ensure that the following requirements are met:
+          * - The cluster is in the Running state.
+          * - The cluster is a primary cluster and the billing method is pay-as-you-go.
+          *
+          * @param request DeleteInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteInstancesResponse
+         */
         public DeleteInstancesResponse DeleteInstancesWithOptions(DeleteInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1186,6 +1221,15 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             return TeaModel.ToObject<DeleteInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, ensure that the following requirements are met:
+          * - The cluster is in the Running state.
+          * - The cluster is a primary cluster and the billing method is pay-as-you-go.
+          *
+          * @param request DeleteInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteInstancesResponse
+         */
         public async Task<DeleteInstancesResponse> DeleteInstancesWithOptionsAsync(DeleteInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1217,12 +1261,28 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             return TeaModel.ToObject<DeleteInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, ensure that the following requirements are met:
+          * - The cluster is in the Running state.
+          * - The cluster is a primary cluster and the billing method is pay-as-you-go.
+          *
+          * @param request DeleteInstancesRequest
+          * @return DeleteInstancesResponse
+         */
         public DeleteInstancesResponse DeleteInstances(DeleteInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteInstancesWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, ensure that the following requirements are met:
+          * - The cluster is in the Running state.
+          * - The cluster is a primary cluster and the billing method is pay-as-you-go.
+          *
+          * @param request DeleteInstancesRequest
+          * @return DeleteInstancesResponse
+         */
         public async Task<DeleteInstancesResponse> DeleteInstancesAsync(DeleteInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeTenantUserRolesResponseBody : TeaModel {
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The list of roles of the user.   
+        /// Valid values: 
+        /// 
+        /// ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.
+        /// ReadOnly: a role that has only the read-only privilege SELECT.
+        /// DDL: a role that has DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.
+        /// DML: a role that has DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
+        /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public List<string> Role { get; set; }
