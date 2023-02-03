@@ -1,3 +1,8 @@
+2023-02-03 Version: 1.0.19
+- Fix docs error.
+- Fix error code.
+- Set input param must.
+
 2023-01-09 Version: 1.0.18
 - Delete numberType.
 
