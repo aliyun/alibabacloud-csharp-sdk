@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("MaxResults")]
+        [NameInMap("PageNo")]
         [Validation(Required=false)]
-        public long? MaxResults { get; set; }
+        public long? PageNo { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public long? PageSize { get; set; }
 
         [NameInMap("ProjectType")]
         [Validation(Required=false)]
