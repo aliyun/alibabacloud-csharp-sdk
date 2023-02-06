@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
-    public class ListServiceInstancesResponse : TeaModel {
+    public class DeleteArtifactResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListServiceInstancesResponseBody Body { get; set; }
+        public DeleteArtifactResponseBody Body { get; set; }
 
     }
 

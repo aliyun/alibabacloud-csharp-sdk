@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
-    public class GetServiceInstanceRequest : TeaModel {
-        [NameInMap("RegionId")]
+    public class GetArtifactRepositoryCredentialsRequest : TeaModel {
+        [NameInMap("ArtifactType")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ArtifactType { get; set; }
 
-        [NameInMap("ServiceInstanceId")]
+        [NameInMap("DeployRegionId")]
         [Validation(Required=false)]
-        public string ServiceInstanceId { get; set; }
+        public string DeployRegionId { get; set; }
 
     }
 
