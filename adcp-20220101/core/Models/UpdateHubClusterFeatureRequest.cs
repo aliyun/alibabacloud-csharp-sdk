@@ -16,6 +16,14 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public string ApiServerEipId { get; set; }
 
+        [NameInMap("ArgoCDEnabled")]
+        [Validation(Required=false)]
+        public bool? ArgoCDEnabled { get; set; }
+
+        [NameInMap("ArgoServerEnabled")]
+        [Validation(Required=false)]
+        public bool? ArgoServerEnabled { get; set; }
+
         /// <summary>
         /// Specifies whether to enable audit logs. Valid values: - true: enable audit logs. - false: disables audit logs.
         /// </summary>
@@ -38,25 +46,11 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// Whether to enable ArgoCD.
-        /// 
-        /// - true Enabled
-        /// - false Disabled
-        /// </summary>
-        [NameInMap("EnableArgoCD")]
-        [Validation(Required=false)]
-        public bool? EnableArgoCD { get; set; }
-
-        /// <summary>
         /// Specifies whether to enable Service Mesh (ASM). Valid values: true: enables ASM. false: disables ASM.
         /// </summary>
         [NameInMap("EnableMesh")]
         [Validation(Required=false)]
         public bool? EnableMesh { get; set; }
-
-        [NameInMap("Enabled")]
-        [Validation(Required=false)]
-        public bool? Enabled { get; set; }
 
         /// <summary>
         /// The name of the master instance. The name must be 1 to 63 characters in length, and can contain letters and digits. The name must start with a letter. The name can contain letters, digits, underscores (_), and hyphens (-).
@@ -76,41 +70,13 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public bool? PublicApiServerEnabled { get; set; }
 
-        [NameInMap("ScheduleMode")]
+        [NameInMap("VSwitches")]
         [Validation(Required=false)]
-        public string ScheduleMode { get; set; }
+        public List<string> VSwitches { get; set; }
 
-        [NameInMap("ServerEnabled")]
+        [NameInMap("WorkflowScheduleMode")]
         [Validation(Required=false)]
-        public bool? ServerEnabled { get; set; }
-
-        [NameInMap("Units")]
-        [Validation(Required=false)]
-        public List<UpdateHubClusterFeatureRequestUnits> Units { get; set; }
-        public class UpdateHubClusterFeatureRequestUnits : TeaModel {
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-            [NameInMap("VSwitches")]
-            [Validation(Required=false)]
-            public List<UpdateHubClusterFeatureRequestUnitsVSwitches> VSwitches { get; set; }
-            public class UpdateHubClusterFeatureRequestUnitsVSwitches : TeaModel {
-                [NameInMap("VswitchId")]
-                [Validation(Required=false)]
-                public string VswitchId { get; set; }
-
-                [NameInMap("ZoneId")]
-                [Validation(Required=false)]
-                public string ZoneId { get; set; }
-
-            }
-
-            [NameInMap("VpcId")]
-            [Validation(Required=false)]
-            public string VpcId { get; set; }
-
-        }
+        public string WorkflowScheduleMode { get; set; }
 
     }
 
