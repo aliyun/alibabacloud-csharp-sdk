@@ -13,6 +13,36 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public GetQualityRuleDetailResponseBodyData Data { get; set; }
+        public class GetQualityRuleDetailResponseBodyData : TeaModel {
+            [NameInMap("KeyWords")]
+            [Validation(Required=false)]
+            public List<string> KeyWords { get; set; }
+
+            [NameInMap("MatchType")]
+            [Validation(Required=false)]
+            public int? MatchType { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("RuleCreateTime")]
+            [Validation(Required=false)]
+            public string RuleCreateTime { get; set; }
+
+            [NameInMap("RuleId")]
+            [Validation(Required=false)]
+            public long? RuleId { get; set; }
+
+            [NameInMap("RuleTag")]
+            [Validation(Required=false)]
+            public int? RuleTag { get; set; }
+
+        }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,30 +54,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetQualityRuleDetailResponseBodyData Data { get; set; }
-        public class GetQualityRuleDetailResponseBodyData : TeaModel {
-            [NameInMap("RuleTag")]
-            [Validation(Required=false)]
-            public int? RuleTag { get; set; }
-            [NameInMap("MatchType")]
-            [Validation(Required=false)]
-            public int? MatchType { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-            [NameInMap("RuleCreateTime")]
-            [Validation(Required=false)]
-            public string RuleCreateTime { get; set; }
-            [NameInMap("RuleId")]
-            [Validation(Required=false)]
-            public long? RuleId { get; set; }
-            [NameInMap("KeyWords")]
-            [Validation(Required=false)]
-            public List<string> KeyWords { get; set; }
-        };
 
     }
 

@@ -13,6 +13,32 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<ListSkillGroupResponseBodyData> Data { get; set; }
+        public class ListSkillGroupResponseBodyData : TeaModel {
+            [NameInMap("ChannelType")]
+            [Validation(Required=false)]
+            public int? ChannelType { get; set; }
+
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("DisplayName")]
+            [Validation(Required=false)]
+            public string DisplayName { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("SkillGroupId")]
+            [Validation(Required=false)]
+            public long? SkillGroupId { get; set; }
+
+        }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,32 +50,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public List<ListSkillGroupResponseBodyData> Data { get; set; }
-        public class ListSkillGroupResponseBodyData : TeaModel {
-            [NameInMap("DisplayName")]
-            [Validation(Required=false)]
-            public string DisplayName { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("ChannelType")]
-            [Validation(Required=false)]
-            public int? ChannelType { get; set; }
-
-            [NameInMap("SkillGroupId")]
-            [Validation(Required=false)]
-            public long? SkillGroupId { get; set; }
-
-        }
 
     }
 

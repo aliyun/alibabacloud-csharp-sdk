@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class StartCallV2Request : TeaModel {
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
+
+        [NameInMap("Callee")]
+        [Validation(Required=false)]
+        public string Callee { get; set; }
 
         [NameInMap("Caller")]
         [Validation(Required=false)]
@@ -29,9 +25,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public int? CallerType { get; set; }
 
-        [NameInMap("Callee")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string Callee { get; set; }
+        public string ClientToken { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
     }
 

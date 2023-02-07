@@ -9,26 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class UpdateDepartmentRequest : TeaModel {
-        /// <summary>
-        /// 实例id
-        /// </summary>
-        [NameInMap("InstanceId")]
+        [NameInMap("DepartmentId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public long? DepartmentId { get; set; }
 
-        /// <summary>
-        /// 部门名称
-        /// </summary>
         [NameInMap("DepartmentName")]
         [Validation(Required=false)]
         public string DepartmentName { get; set; }
 
-        /// <summary>
-        /// 部门id
-        /// </summary>
-        [NameInMap("DepartmentId")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public long? DepartmentId { get; set; }
+        public string InstanceId { get; set; }
 
     }
 

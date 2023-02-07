@@ -13,6 +13,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<GetQualityRuleTagListResponseBodyData> Data { get; set; }
+        public class GetQualityRuleTagListResponseBodyData : TeaModel {
+            [NameInMap("RuleTagId")]
+            [Validation(Required=false)]
+            public long? RuleTagId { get; set; }
+
+            [NameInMap("RuleTagName")]
+            [Validation(Required=false)]
+            public string RuleTagName { get; set; }
+
+        }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,20 +38,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public List<GetQualityRuleTagListResponseBodyData> Data { get; set; }
-        public class GetQualityRuleTagListResponseBodyData : TeaModel {
-            [NameInMap("RuleTagName")]
-            [Validation(Required=false)]
-            public string RuleTagName { get; set; }
-
-            [NameInMap("RuleTagId")]
-            [Validation(Required=false)]
-            public long? RuleTagId { get; set; }
-
-        }
 
     }
 

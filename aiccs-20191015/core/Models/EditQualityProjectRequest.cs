@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class EditQualityProjectRequest : TeaModel {
+        [NameInMap("AnalysisIds")]
+        [Validation(Required=false)]
+        public List<long?> AnalysisIds { get; set; }
+
+        [NameInMap("ChannelTouchType")]
+        [Validation(Required=false)]
+        public List<int?> ChannelTouchType { get; set; }
+
+        [NameInMap("CheckFreqType")]
+        [Validation(Required=false)]
+        public int? CheckFreqType { get; set; }
+
+        [NameInMap("DepList")]
+        [Validation(Required=false)]
+        public List<long?> DepList { get; set; }
+
+        [NameInMap("GroupList")]
+        [Validation(Required=false)]
+        public List<long?> GroupList { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -21,10 +41,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
-        [NameInMap("CheckFreqType")]
-        [Validation(Required=false)]
-        public int? CheckFreqType { get; set; }
-
         [NameInMap("ProjectVersion")]
         [Validation(Required=false)]
         public int? ProjectVersion { get; set; }
@@ -33,33 +49,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public int? ScopeType { get; set; }
 
-        [NameInMap("TimeRangeStart")]
+        [NameInMap("ServicerList")]
         [Validation(Required=false)]
-        public string TimeRangeStart { get; set; }
+        public List<string> ServicerList { get; set; }
 
         [NameInMap("TimeRangeEnd")]
         [Validation(Required=false)]
         public string TimeRangeEnd { get; set; }
 
-        [NameInMap("AnalysisIds")]
+        [NameInMap("TimeRangeStart")]
         [Validation(Required=false)]
-        public List<int?> AnalysisIds { get; set; }
-
-        [NameInMap("DepList")]
-        [Validation(Required=false)]
-        public List<int?> DepList { get; set; }
-
-        [NameInMap("GroupList")]
-        [Validation(Required=false)]
-        public List<int?> GroupList { get; set; }
-
-        [NameInMap("ServicerList")]
-        [Validation(Required=false)]
-        public List<string> ServicerList { get; set; }
-
-        [NameInMap("ChannelTouchType")]
-        [Validation(Required=false)]
-        public List<int?> ChannelTouchType { get; set; }
+        public string TimeRangeStart { get; set; }
 
     }
 

@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public int? PageNo { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -21,17 +29,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("TaskName")]
+        [NameInMap("RobotName")]
         [Validation(Required=false)]
-        public string TaskName { get; set; }
-
-        [NameInMap("PageNo")]
-        [Validation(Required=false)]
-        public int? PageNo { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string RobotName { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -41,9 +41,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public long? TaskId { get; set; }
 
-        [NameInMap("RobotName")]
+        [NameInMap("TaskName")]
         [Validation(Required=false)]
-        public string RobotName { get; set; }
+        public string TaskName { get; set; }
 
     }
 

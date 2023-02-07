@@ -13,6 +13,42 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public GetAgentIndexRealTimeResponseBodyData Data { get; set; }
+        public class GetAgentIndexRealTimeResponseBodyData : TeaModel {
+            [NameInMap("Columns")]
+            [Validation(Required=false)]
+            public List<GetAgentIndexRealTimeResponseBodyDataColumns> Columns { get; set; }
+            public class GetAgentIndexRealTimeResponseBodyDataColumns : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Title")]
+                [Validation(Required=false)]
+                public string Title { get; set; }
+
+            }
+
+            [NameInMap("Page")]
+            [Validation(Required=false)]
+            public int? Page { get; set; }
+
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+
+            [NameInMap("Rows")]
+            [Validation(Required=false)]
+            public List<Dictionary<string, object>> Rows { get; set; }
+
+            [NameInMap("Total")]
+            [Validation(Required=false)]
+            public int? Total { get; set; }
+
+        }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,31 +60,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetAgentIndexRealTimeResponseBodyData Data { get; set; }
-        public class GetAgentIndexRealTimeResponseBodyData : TeaModel {
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("Total")]
-            [Validation(Required=false)]
-            public int? Total { get; set; }
-            [NameInMap("Page")]
-            [Validation(Required=false)]
-            public int? Page { get; set; }
-            [NameInMap("Columns")]
-            [Validation(Required=false)]
-            public List<GetAgentIndexRealTimeResponseBodyDataColumns> Columns { get; set; }
-            public class GetAgentIndexRealTimeResponseBodyDataColumns : TeaModel {
-                public string Key { get; set; }
-                public string Title { get; set; }
-            }
-            [NameInMap("Rows")]
-            [Validation(Required=false)]
-            public List<string> Rows { get; set; }
-        };
 
     }
 

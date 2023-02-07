@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetHotlineCallActionRequest : TeaModel {
-        [NameInMap("ClientToken")]
+        [NameInMap("Acc")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string Acc { get; set; }
 
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -25,17 +21,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public int? Act { get; set; }
 
-        [NameInMap("FromSource")]
-        [Validation(Required=false)]
-        public string FromSource { get; set; }
-
         [NameInMap("Biz")]
         [Validation(Required=false)]
         public string Biz { get; set; }
 
-        [NameInMap("Acc")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string Acc { get; set; }
+        public string ClientToken { get; set; }
+
+        [NameInMap("FromSource")]
+        [Validation(Required=false)]
+        public string FromSource { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
     }
 

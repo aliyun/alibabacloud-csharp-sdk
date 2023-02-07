@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class DeleteSkillGroupRequest : TeaModel {
-        [NameInMap("OuterGroupType")]
-        [Validation(Required=false)]
-        public string OuterGroupType { get; set; }
-
         [NameInMap("OuterGroupId")]
         [Validation(Required=false)]
         public string OuterGroupId { get; set; }
+
+        [NameInMap("OuterGroupType")]
+        [Validation(Required=false)]
+        public string OuterGroupType { get; set; }
 
     }
 

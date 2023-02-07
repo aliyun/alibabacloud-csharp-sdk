@@ -13,6 +13,32 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<GetQualityProjectLogResponseBodyData> Data { get; set; }
+        public class GetQualityProjectLogResponseBodyData : TeaModel {
+            [NameInMap("ActionData")]
+            [Validation(Required=false)]
+            public string ActionData { get; set; }
+
+            [NameInMap("ActionTime")]
+            [Validation(Required=false)]
+            public string ActionTime { get; set; }
+
+            [NameInMap("ActionType")]
+            [Validation(Required=false)]
+            public string ActionType { get; set; }
+
+            [NameInMap("ProjectCreateTime")]
+            [Validation(Required=false)]
+            public string ProjectCreateTime { get; set; }
+
+            [NameInMap("ProjectId")]
+            [Validation(Required=false)]
+            public long? ProjectId { get; set; }
+
+        }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,32 +50,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public List<GetQualityProjectLogResponseBodyData> Data { get; set; }
-        public class GetQualityProjectLogResponseBodyData : TeaModel {
-            [NameInMap("ProjectCreateTime")]
-            [Validation(Required=false)]
-            public string ProjectCreateTime { get; set; }
-
-            [NameInMap("ActionType")]
-            [Validation(Required=false)]
-            public string ActionType { get; set; }
-
-            [NameInMap("ActionTime")]
-            [Validation(Required=false)]
-            public string ActionTime { get; set; }
-
-            [NameInMap("ActionData")]
-            [Validation(Required=false)]
-            public string ActionData { get; set; }
-
-            [NameInMap("ProjectId")]
-            [Validation(Required=false)]
-            public long? ProjectId { get; set; }
-
-        }
 
     }
 

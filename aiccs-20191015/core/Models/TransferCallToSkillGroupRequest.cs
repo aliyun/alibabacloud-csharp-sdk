@@ -9,29 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class TransferCallToSkillGroupRequest : TeaModel {
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
-
-        [NameInMap("SkillGroupId")]
-        [Validation(Required=false)]
-        public long? SkillGroupId { get; set; }
 
         [NameInMap("CallId")]
         [Validation(Required=false)]
         public string CallId { get; set; }
 
-        [NameInMap("JobId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("ConnectionId")]
         [Validation(Required=false)]
@@ -41,13 +29,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string HoldConnectionId { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public int? Type { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("IsSingleTransfer")]
         [Validation(Required=false)]
         public bool? IsSingleTransfer { get; set; }
+
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
+        [NameInMap("SkillGroupId")]
+        [Validation(Required=false)]
+        public long? SkillGroupId { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public int? Type { get; set; }
 
     }
 

@@ -9,33 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class BatchCreateQualityProjectsRequest : TeaModel {
-        [NameInMap("ProjectName")]
+        [NameInMap("AnalysisIds")]
         [Validation(Required=false)]
-        public string ProjectName { get; set; }
+        public List<long?> AnalysisIds { get; set; }
+
+        [NameInMap("ChannelTouchType")]
+        [Validation(Required=false)]
+        public List<int?> ChannelTouchType { get; set; }
 
         [NameInMap("CheckFreqType")]
         [Validation(Required=false)]
         public int? CheckFreqType { get; set; }
 
-        [NameInMap("TimeRangeStart")]
+        [NameInMap("InstanceList")]
         [Validation(Required=false)]
-        public string TimeRangeStart { get; set; }
+        public List<string> InstanceList { get; set; }
+
+        [NameInMap("ProjectName")]
+        [Validation(Required=false)]
+        public string ProjectName { get; set; }
 
         [NameInMap("TimeRangeEnd")]
         [Validation(Required=false)]
         public string TimeRangeEnd { get; set; }
 
-        [NameInMap("AnalysisIds")]
+        [NameInMap("TimeRangeStart")]
         [Validation(Required=false)]
-        public List<int?> AnalysisIds { get; set; }
-
-        [NameInMap("InstanceList")]
-        [Validation(Required=false)]
-        public List<string> InstanceList { get; set; }
-
-        [NameInMap("ChannelTouchType")]
-        [Validation(Required=false)]
-        public List<int?> ChannelTouchType { get; set; }
+        public string TimeRangeStart { get; set; }
 
     }
 

@@ -13,6 +13,32 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<ListAgentBySkillGroupIdResponseBodyData> Data { get; set; }
+        public class ListAgentBySkillGroupIdResponseBodyData : TeaModel {
+            [NameInMap("AccountName")]
+            [Validation(Required=false)]
+            public string AccountName { get; set; }
+
+            [NameInMap("AgentId")]
+            [Validation(Required=false)]
+            public long? AgentId { get; set; }
+
+            [NameInMap("DisplayName")]
+            [Validation(Required=false)]
+            public string DisplayName { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
+
+            [NameInMap("TenantId")]
+            [Validation(Required=false)]
+            public long? TenantId { get; set; }
+
+        }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,32 +50,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public List<ListAgentBySkillGroupIdResponseBodyData> Data { get; set; }
-        public class ListAgentBySkillGroupIdResponseBodyData : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public int? Status { get; set; }
-
-            [NameInMap("DisplayName")]
-            [Validation(Required=false)]
-            public string DisplayName { get; set; }
-
-            [NameInMap("AgentId")]
-            [Validation(Required=false)]
-            public long? AgentId { get; set; }
-
-            [NameInMap("AccountName")]
-            [Validation(Required=false)]
-            public string AccountName { get; set; }
-
-            [NameInMap("TenantId")]
-            [Validation(Required=false)]
-            public long? TenantId { get; set; }
-
-        }
 
     }
 

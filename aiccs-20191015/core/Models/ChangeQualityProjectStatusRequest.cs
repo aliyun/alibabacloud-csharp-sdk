@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public int? Status { get; set; }
-
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
 
     }
 

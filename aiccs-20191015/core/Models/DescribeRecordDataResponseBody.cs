@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class DescribeRecordDataResponseBody : TeaModel {
-        [NameInMap("OssLink")]
+        [NameInMap("Acid")]
         [Validation(Required=false)]
-        public string OssLink { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Acid { get; set; }
 
         [NameInMap("AgentId")]
         [Validation(Required=false)]
         public string AgentId { get; set; }
-
-        [NameInMap("Acid")]
-        [Validation(Required=false)]
-        public string Acid { get; set; }
 
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -32,6 +24,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("OssLink")]
+        [Validation(Required=false)]
+        public string OssLink { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

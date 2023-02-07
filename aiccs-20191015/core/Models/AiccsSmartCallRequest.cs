@@ -9,81 +9,49 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class AiccsSmartCallRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("ActionCodeBreak")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public bool? ActionCodeBreak { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("ActionCodeTimeBreak")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("ProdCode")]
-        [Validation(Required=false)]
-        public string ProdCode { get; set; }
-
-        [NameInMap("CalledShowNumber")]
-        [Validation(Required=false)]
-        public string CalledShowNumber { get; set; }
-
-        [NameInMap("CalledNumber")]
-        [Validation(Required=false)]
-        public string CalledNumber { get; set; }
-
-        [NameInMap("VoiceCode")]
-        [Validation(Required=false)]
-        public string VoiceCode { get; set; }
-
-        [NameInMap("OutId")]
-        [Validation(Required=false)]
-        public string OutId { get; set; }
-
-        [NameInMap("PlayTimes")]
-        [Validation(Required=false)]
-        public int? PlayTimes { get; set; }
-
-        [NameInMap("Volume")]
-        [Validation(Required=false)]
-        public int? Volume { get; set; }
-
-        [NameInMap("Speed")]
-        [Validation(Required=false)]
-        public int? Speed { get; set; }
-
-        [NameInMap("AsrModelId")]
-        [Validation(Required=false)]
-        public string AsrModelId { get; set; }
-
-        [NameInMap("AsrBaseId")]
-        [Validation(Required=false)]
-        public string AsrBaseId { get; set; }
+        public int? ActionCodeTimeBreak { get; set; }
 
         [NameInMap("AsrAlsAmId")]
         [Validation(Required=false)]
         public string AsrAlsAmId { get; set; }
 
+        [NameInMap("AsrBaseId")]
+        [Validation(Required=false)]
+        public string AsrBaseId { get; set; }
+
+        [NameInMap("AsrModelId")]
+        [Validation(Required=false)]
+        public string AsrModelId { get; set; }
+
         [NameInMap("AsrVocabularyId")]
         [Validation(Required=false)]
         public string AsrVocabularyId { get; set; }
 
-        [NameInMap("RecordFlag")]
+        [NameInMap("BackgroundFileCode")]
         [Validation(Required=false)]
-        public bool? RecordFlag { get; set; }
+        public string BackgroundFileCode { get; set; }
 
-        [NameInMap("PauseTime")]
+        [NameInMap("BackgroundSpeed")]
         [Validation(Required=false)]
-        public int? PauseTime { get; set; }
+        public int? BackgroundSpeed { get; set; }
 
-        [NameInMap("MuteTime")]
+        [NameInMap("BackgroundVolume")]
         [Validation(Required=false)]
-        public int? MuteTime { get; set; }
+        public int? BackgroundVolume { get; set; }
 
-        [NameInMap("ActionCodeBreak")]
+        [NameInMap("CalledNumber")]
         [Validation(Required=false)]
-        public bool? ActionCodeBreak { get; set; }
+        public string CalledNumber { get; set; }
+
+        [NameInMap("CalledShowNumber")]
+        [Validation(Required=false)]
+        public string CalledShowNumber { get; set; }
 
         [NameInMap("DynamicId")]
         [Validation(Required=false)]
@@ -93,21 +61,61 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public bool? EarlyMediaAsr { get; set; }
 
-        [NameInMap("VoiceCodeParam")]
+        [NameInMap("EnableITN")]
         [Validation(Required=false)]
-        public string VoiceCodeParam { get; set; }
+        public bool? EnableITN { get; set; }
+
+        [NameInMap("MuteTime")]
+        [Validation(Required=false)]
+        public int? MuteTime { get; set; }
+
+        [NameInMap("OutId")]
+        [Validation(Required=false)]
+        public string OutId { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("PauseTime")]
+        [Validation(Required=false)]
+        public int? PauseTime { get; set; }
+
+        [NameInMap("PlayTimes")]
+        [Validation(Required=false)]
+        public int? PlayTimes { get; set; }
+
+        [NameInMap("ProdCode")]
+        [Validation(Required=false)]
+        public string ProdCode { get; set; }
+
+        [NameInMap("RecordFlag")]
+        [Validation(Required=false)]
+        public bool? RecordFlag { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("SessionTimeout")]
         [Validation(Required=false)]
         public int? SessionTimeout { get; set; }
 
-        [NameInMap("ActionCodeTimeBreak")]
+        [NameInMap("Speed")]
         [Validation(Required=false)]
-        public int? ActionCodeTimeBreak { get; set; }
+        public int? Speed { get; set; }
 
         [NameInMap("TtsConf")]
         [Validation(Required=false)]
         public bool? TtsConf { get; set; }
+
+        [NameInMap("TtsSpeed")]
+        [Validation(Required=false)]
+        public int? TtsSpeed { get; set; }
 
         [NameInMap("TtsStyle")]
         [Validation(Required=false)]
@@ -117,9 +125,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public int? TtsVolume { get; set; }
 
-        [NameInMap("TtsSpeed")]
+        [NameInMap("VoiceCode")]
         [Validation(Required=false)]
-        public int? TtsSpeed { get; set; }
+        public string VoiceCode { get; set; }
+
+        [NameInMap("VoiceCodeParam")]
+        [Validation(Required=false)]
+        public string VoiceCodeParam { get; set; }
+
+        [NameInMap("Volume")]
+        [Validation(Required=false)]
+        public int? Volume { get; set; }
 
     }
 

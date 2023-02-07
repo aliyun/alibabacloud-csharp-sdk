@@ -9,51 +9,51 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QuerySkillGroupsResponseBody : TeaModel {
-        [NameInMap("OnePageSize")]
-        [Validation(Required=false)]
-        public int? OnePageSize { get; set; }
-
-        [NameInMap("TotalPage")]
-        [Validation(Required=false)]
-        public int? TotalPage { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
-
-        [NameInMap("TotalResults")]
-        [Validation(Required=false)]
-        public int? TotalResults { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QuerySkillGroupsResponseBodyData> Data { get; set; }
         public class QuerySkillGroupsResponseBodyData : TeaModel {
-            [NameInMap("DisplayName")]
+            [NameInMap("ChannelType")]
             [Validation(Required=false)]
-            public string DisplayName { get; set; }
+            public int? ChannelType { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            [NameInMap("ChannelType")]
+            [NameInMap("DisplayName")]
             [Validation(Required=false)]
-            public int? ChannelType { get; set; }
-
-            [NameInMap("SkillGroupName")]
-            [Validation(Required=false)]
-            public string SkillGroupName { get; set; }
+            public string DisplayName { get; set; }
 
             [NameInMap("SkillGroupId")]
             [Validation(Required=false)]
             public long? SkillGroupId { get; set; }
 
+            [NameInMap("SkillGroupName")]
+            [Validation(Required=false)]
+            public string SkillGroupName { get; set; }
+
         }
+
+        [NameInMap("OnePageSize")]
+        [Validation(Required=false)]
+        public int? OnePageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalPage")]
+        [Validation(Required=false)]
+        public int? TotalPage { get; set; }
+
+        [NameInMap("TotalResults")]
+        [Validation(Required=false)]
+        public int? TotalResults { get; set; }
 
     }
 

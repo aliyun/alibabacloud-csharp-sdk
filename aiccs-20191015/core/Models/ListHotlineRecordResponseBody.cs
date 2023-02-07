@@ -13,22 +13,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListHotlineRecordResponseBodyData> Data { get; set; }
         public class ListHotlineRecordResponseBodyData : TeaModel {
+            [NameInMap("CallId")]
+            [Validation(Required=false)]
+            public string CallId { get; set; }
+
+            [NameInMap("ConnectionId")]
+            [Validation(Required=false)]
+            public string ConnectionId { get; set; }
+
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
@@ -41,15 +37,19 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             [Validation(Required=false)]
             public string Url { get; set; }
 
-            [NameInMap("ConnectionId")]
-            [Validation(Required=false)]
-            public string ConnectionId { get; set; }
-
-            [NameInMap("CallId")]
-            [Validation(Required=false)]
-            public string CallId { get; set; }
-
         }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

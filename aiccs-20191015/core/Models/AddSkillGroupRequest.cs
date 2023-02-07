@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class AddSkillGroupRequest : TeaModel {
+        [NameInMap("OuterDepartmentId")]
+        [Validation(Required=false)]
+        public string OuterDepartmentId { get; set; }
+
+        [NameInMap("OuterDepartmentType")]
+        [Validation(Required=false)]
+        public string OuterDepartmentType { get; set; }
+
         [NameInMap("OuterGroupId")]
         [Validation(Required=false)]
         public string OuterGroupId { get; set; }
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("OuterGroupType")]
         [Validation(Required=false)]
         public string OuterGroupType { get; set; }
-
-        [NameInMap("OuterDepartmentId")]
-        [Validation(Required=false)]
-        public string OuterDepartmentId { get; set; }
-
-        [NameInMap("OuterDepartmentType")]
-        [Validation(Required=false)]
-        public string OuterDepartmentType { get; set; }
 
     }
 

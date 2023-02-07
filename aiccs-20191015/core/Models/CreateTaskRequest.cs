@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class CreateTaskRequest : TeaModel {
+        [NameInMap("CallString")]
+        [Validation(Required=false)]
+        public string CallString { get; set; }
+
+        [NameInMap("CallStringType")]
+        [Validation(Required=false)]
+        public string CallStringType { get; set; }
+
+        [NameInMap("Caller")]
+        [Validation(Required=false)]
+        public string Caller { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,33 +33,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("TaskName")]
+        [NameInMap("RetryCount")]
         [Validation(Required=false)]
-        public string TaskName { get; set; }
-
-        [NameInMap("RobotId")]
-        [Validation(Required=false)]
-        public string RobotId { get; set; }
-
-        [NameInMap("Caller")]
-        [Validation(Required=false)]
-        public string Caller { get; set; }
-
-        [NameInMap("CallString")]
-        [Validation(Required=false)]
-        public string CallString { get; set; }
-
-        [NameInMap("CallStringType")]
-        [Validation(Required=false)]
-        public string CallStringType { get; set; }
+        public int? RetryCount { get; set; }
 
         [NameInMap("RetryFlag")]
         [Validation(Required=false)]
         public int? RetryFlag { get; set; }
-
-        [NameInMap("RetryCount")]
-        [Validation(Required=false)]
-        public int? RetryCount { get; set; }
 
         [NameInMap("RetryInterval")]
         [Validation(Required=false)]
@@ -57,21 +49,29 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string RetryStatusCode { get; set; }
 
+        [NameInMap("RobotId")]
+        [Validation(Required=false)]
+        public string RobotId { get; set; }
+
+        [NameInMap("SeatCount")]
+        [Validation(Required=false)]
+        public string SeatCount { get; set; }
+
         [NameInMap("StartNow")]
         [Validation(Required=false)]
         public bool? StartNow { get; set; }
 
-        [NameInMap("WorkTimeList")]
+        [NameInMap("TaskName")]
         [Validation(Required=false)]
-        public string WorkTimeList { get; set; }
+        public string TaskName { get; set; }
 
         [NameInMap("WorkDay")]
         [Validation(Required=false)]
         public string WorkDay { get; set; }
 
-        [NameInMap("SeatCount")]
+        [NameInMap("WorkTimeList")]
         [Validation(Required=false)]
-        public string SeatCount { get; set; }
+        public string WorkTimeList { get; set; }
 
     }
 

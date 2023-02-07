@@ -13,25 +13,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("KeyWords")]
         [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("RuleTag")]
-        [Validation(Required=false)]
-        public int? RuleTag { get; set; }
+        public List<string> KeyWords { get; set; }
 
         [NameInMap("MatchType")]
         [Validation(Required=false)]
         public int? MatchType { get; set; }
 
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("QualityRuleId")]
         [Validation(Required=false)]
         public long? QualityRuleId { get; set; }
 
-        [NameInMap("KeyWords")]
+        [NameInMap("RuleTag")]
         [Validation(Required=false)]
-        public List<string> KeyWords { get; set; }
+        public int? RuleTag { get; set; }
 
     }
 

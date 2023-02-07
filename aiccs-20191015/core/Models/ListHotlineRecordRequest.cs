@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListHotlineRecordRequest : TeaModel {
+        [NameInMap("CallId")]
+        [Validation(Required=false)]
+        public string CallId { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("CallId")]
-        [Validation(Required=false)]
-        public string CallId { get; set; }
 
     }
 

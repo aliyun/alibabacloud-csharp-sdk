@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("KeyWords")]
+        [Validation(Required=false)]
+        public List<string> KeyWords { get; set; }
+
+        [NameInMap("MatchType")]
+        [Validation(Required=false)]
+        public int? MatchType { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("RuleTag")]
         [Validation(Required=false)]
         public int? RuleTag { get; set; }
-
-        [NameInMap("MatchType")]
-        [Validation(Required=false)]
-        public int? MatchType { get; set; }
-
-        [NameInMap("KeyWords")]
-        [Validation(Required=false)]
-        public List<string> KeyWords { get; set; }
 
     }
 

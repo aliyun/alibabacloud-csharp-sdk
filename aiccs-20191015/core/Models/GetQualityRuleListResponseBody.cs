@@ -13,6 +13,54 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public GetQualityRuleListResponseBodyData Data { get; set; }
+        public class GetQualityRuleListResponseBodyData : TeaModel {
+            [NameInMap("PageNo")]
+            [Validation(Required=false)]
+            public int? PageNo { get; set; }
+
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+
+            [NameInMap("QualityRuleList")]
+            [Validation(Required=false)]
+            public List<GetQualityRuleListResponseBodyDataQualityRuleList> QualityRuleList { get; set; }
+            public class GetQualityRuleListResponseBodyDataQualityRuleList : TeaModel {
+                [NameInMap("KeyWords")]
+                [Validation(Required=false)]
+                public List<string> KeyWords { get; set; }
+
+                [NameInMap("MatchType")]
+                [Validation(Required=false)]
+                public int? MatchType { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("RuleCreateTime")]
+                [Validation(Required=false)]
+                public string RuleCreateTime { get; set; }
+
+                [NameInMap("RuleId")]
+                [Validation(Required=false)]
+                public long? RuleId { get; set; }
+
+                [NameInMap("RuleTag")]
+                [Validation(Required=false)]
+                public int? RuleTag { get; set; }
+
+            }
+
+            [NameInMap("Total")]
+            [Validation(Required=false)]
+            public long? Total { get; set; }
+
+        }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,32 +72,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetQualityRuleListResponseBodyData Data { get; set; }
-        public class GetQualityRuleListResponseBodyData : TeaModel {
-            [NameInMap("PageNo")]
-            [Validation(Required=false)]
-            public int? PageNo { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("Total")]
-            [Validation(Required=false)]
-            public long? Total { get; set; }
-            [NameInMap("QualityRuleList")]
-            [Validation(Required=false)]
-            public List<GetQualityRuleListResponseBodyDataQualityRuleList> QualityRuleList { get; set; }
-            public class GetQualityRuleListResponseBodyDataQualityRuleList : TeaModel {
-                public int? RuleTag { get; set; }
-                public int? MatchType { get; set; }
-                public string Name { get; set; }
-                public string RuleCreateTime { get; set; }
-                public long? RuleId { get; set; }
-                public List<string> KeyWords { get; set; }
-            }
-        };
 
     }
 

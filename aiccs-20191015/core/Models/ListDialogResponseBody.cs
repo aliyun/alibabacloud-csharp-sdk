@@ -9,21 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListDialogResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDialogResponseBodyData> Data { get; set; }
         public class ListDialogResponseBodyData : TeaModel {
-            [NameInMap("Role")]
-            [Validation(Required=false)]
-            public string Role { get; set; }
-
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
@@ -32,23 +25,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             [Validation(Required=false)]
             public string NodeType { get; set; }
 
-            [NameInMap("Time")]
+            [NameInMap("Role")]
             [Validation(Required=false)]
-            public string Time { get; set; }
+            public string Role { get; set; }
 
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
 
-        }
+            [NameInMap("Time")]
+            [Validation(Required=false)]
+            public string Time { get; set; }
 
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

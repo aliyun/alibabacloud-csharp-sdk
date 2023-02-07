@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class CreateSkillGroupRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("ChannelType")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public int? ChannelType { get; set; }
 
-        [NameInMap("SkillGroupName")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string SkillGroupName { get; set; }
+        public string ClientToken { get; set; }
+
+        [NameInMap("DepartmentId")]
+        [Validation(Required=false)]
+        public long? DepartmentId { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -25,20 +29,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
-        [NameInMap("ChannelType")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public int? ChannelType { get; set; }
+        public string InstanceId { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("SkillGroupName")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        /// <summary>
-        /// 部门ID
-        /// </summary>
-        [NameInMap("DepartmentId")]
-        [Validation(Required=false)]
-        public long? DepartmentId { get; set; }
+        public string SkillGroupName { get; set; }
 
     }
 

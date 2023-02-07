@@ -9,30 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetAllDepartmentResponseBody : TeaModel {
-        /// <summary>
-        /// message
-        /// </summary>
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public string Code { get; set; }
 
-        /// <summary>
-        /// requestId
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// httpStatusCode
-        /// </summary>
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        /// <summary>
-        /// data
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetAllDepartmentResponseBodyData> Data { get; set; }
@@ -47,16 +27,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
         }
 
-        /// <summary>
-        /// code
-        /// </summary>
-        [NameInMap("Code")]
+        [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public int? HttpStatusCode { get; set; }
 
-        /// <summary>
-        /// success
-        /// </summary>
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

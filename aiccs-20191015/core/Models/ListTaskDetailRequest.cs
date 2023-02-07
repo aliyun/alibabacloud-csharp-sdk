@@ -9,25 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListTaskDetailRequest : TeaModel {
+        [NameInMap("Called")]
+        [Validation(Required=false)]
+        public string Called { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public long? Id { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("StatusCode")]
-        [Validation(Required=false)]
-        public string StatusCode { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
 
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -37,17 +29,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Called")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public string Called { get; set; }
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("StatusCode")]
+        [Validation(Required=false)]
+        public string StatusCode { get; set; }
 
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public long? TaskId { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public long? Id { get; set; }
 
     }
 
