@@ -84,10 +84,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
+
             [NameInMap("NextToken")]
             [Validation(Required=false)]
             public string NextToken { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

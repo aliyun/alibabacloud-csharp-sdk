@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("HostId")]
             [Validation(Required=false)]
             public string HostId { get; set; }
+
             [NameInMap("Marker")]
             [Validation(Required=false)]
             public string Marker { get; set; }
+
             [NameInMap("OmsData")]
             [Validation(Required=false)]
-            public List<string> OmsData { get; set; }
-        };
+            public List<Dictionary<string, object>> OmsData { get; set; }
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

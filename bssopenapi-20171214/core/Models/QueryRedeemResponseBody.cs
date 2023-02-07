@@ -20,9 +20,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public long? PageNum { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
+
             [NameInMap("Redeem")]
             [Validation(Required=false)]
             public QueryRedeemResponseBodyDataRedeem Redeem { get; set; }
@@ -74,10 +76,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

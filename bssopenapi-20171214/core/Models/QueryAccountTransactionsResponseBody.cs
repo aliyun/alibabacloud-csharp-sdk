@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("AccountName")]
             [Validation(Required=false)]
             public string AccountName { get; set; }
+
             [NameInMap("AccountTransactionsList")]
             [Validation(Required=false)]
             public QueryAccountTransactionsResponseBodyDataAccountTransactionsList AccountTransactionsList { get; set; }
@@ -83,16 +84,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
+
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public int? PageNum { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

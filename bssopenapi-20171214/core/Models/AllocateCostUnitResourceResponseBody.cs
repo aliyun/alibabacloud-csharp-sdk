@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("IsSuccess")]
             [Validation(Required=false)]
             public bool? IsSuccess { get; set; }
+
             [NameInMap("ToUnitId")]
             [Validation(Required=false)]
             public long? ToUnitId { get; set; }
+
             [NameInMap("ToUnitUserId")]
             [Validation(Required=false)]
             public long? ToUnitUserId { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

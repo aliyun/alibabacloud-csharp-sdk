@@ -112,7 +112,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

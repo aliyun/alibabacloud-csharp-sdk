@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("InvoiceApplyId")]
             [Validation(Required=false)]
             public long? InvoiceApplyId { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

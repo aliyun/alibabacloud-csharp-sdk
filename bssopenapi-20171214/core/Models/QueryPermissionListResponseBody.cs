@@ -20,34 +20,54 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
+
             [NameInMap("MasterId")]
             [Validation(Required=false)]
             public long? MasterId { get; set; }
+
             [NameInMap("MemberId")]
             [Validation(Required=false)]
             public long? MemberId { get; set; }
+
             [NameInMap("PermissionList")]
             [Validation(Required=false)]
             public List<QueryPermissionListResponseBodyDataPermissionList> PermissionList { get; set; }
             public class QueryPermissionListResponseBodyDataPermissionList : TeaModel {
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
                 public string EndTime { get; set; }
+
+                [NameInMap("PermissionCode")]
+                [Validation(Required=false)]
                 public string PermissionCode { get; set; }
+
+                [NameInMap("PermissionName")]
+                [Validation(Required=false)]
                 public string PermissionName { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
                 public string StartTime { get; set; }
+
             }
+
             [NameInMap("RelationType")]
             [Validation(Required=false)]
             public string RelationType { get; set; }
+
             [NameInMap("SetupTime")]
             [Validation(Required=false)]
             public string SetupTime { get; set; }
+
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
+
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

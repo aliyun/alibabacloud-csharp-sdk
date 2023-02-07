@@ -20,19 +20,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("AvailableAmount")]
             [Validation(Required=false)]
             public string AvailableAmount { get; set; }
+
             [NameInMap("AvailableCashAmount")]
             [Validation(Required=false)]
             public string AvailableCashAmount { get; set; }
+
             [NameInMap("CreditAmount")]
             [Validation(Required=false)]
             public string CreditAmount { get; set; }
+
             [NameInMap("Currency")]
             [Validation(Required=false)]
             public string Currency { get; set; }
+
             [NameInMap("MybankCreditAmount")]
             [Validation(Required=false)]
             public string MybankCreditAmount { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

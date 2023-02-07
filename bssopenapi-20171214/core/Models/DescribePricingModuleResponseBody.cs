@@ -45,16 +45,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                         [Validation(Required=false)]
                         public List<DescribePricingModuleResponseBodyDataAttributeListAttributeValuesAttributeValue> AttributeValue { get; set; }
                         public class DescribePricingModuleResponseBodyDataAttributeListAttributeValuesAttributeValue : TeaModel {
+                            [NameInMap("Name")]
+                            [Validation(Required=false)]
                             public string Name { get; set; }
+
+                            [NameInMap("Remark")]
+                            [Validation(Required=false)]
                             public string Remark { get; set; }
+
+                            [NameInMap("Type")]
+                            [Validation(Required=false)]
                             public string Type { get; set; }
+
+                            [NameInMap("Value")]
+                            [Validation(Required=false)]
                             public string Value { get; set; }
+
                         }
-                    };
+
+                    }
 
                 }
 
             }
+
             [NameInMap("ModuleList")]
             [Validation(Required=false)]
             public DescribePricingModuleResponseBodyDataModuleList ModuleList { get; set; }
@@ -70,7 +84,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                         [NameInMap("ConfigList")]
                         [Validation(Required=false)]
                         public List<string> ConfigList { get; set; }
-                    };
+
+                    }
 
                     [NameInMap("Currency")]
                     [Validation(Required=false)]
@@ -91,7 +106,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

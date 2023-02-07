@@ -17,10 +17,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public ConfirmRelationResponseBodyData Data { get; set; }
         public class ConfirmRelationResponseBodyData : TeaModel {
+            /// <summary>
+            /// HostId
+            /// </summary>
             [NameInMap("HostId")]
             [Validation(Required=false)]
             public string HostId { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

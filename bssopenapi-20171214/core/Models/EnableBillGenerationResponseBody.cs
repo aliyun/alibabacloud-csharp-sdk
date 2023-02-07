@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("Boolean")]
             [Validation(Required=false)]
             public bool? Boolean { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

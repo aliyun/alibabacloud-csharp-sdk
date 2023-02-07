@@ -20,12 +20,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("AccountID")]
             [Validation(Required=false)]
             public string AccountID { get; set; }
+
             [NameInMap("AccountName")]
             [Validation(Required=false)]
             public string AccountName { get; set; }
+
             [NameInMap("BillingCycle")]
             [Validation(Required=false)]
             public string BillingCycle { get; set; }
+
             [NameInMap("Items")]
             [Validation(Required=false)]
             public QueryBillOverviewResponseBodyDataItems Items { get; set; }
@@ -149,7 +152,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

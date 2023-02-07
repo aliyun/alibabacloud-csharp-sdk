@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("HostName")]
             [Validation(Required=false)]
             public string HostName { get; set; }
+
             [NameInMap("OrderList")]
             [Validation(Required=false)]
             public GetOrderDetailResponseBodyDataOrderList OrderList { get; set; }
@@ -139,16 +140,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
+
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public int? PageNum { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

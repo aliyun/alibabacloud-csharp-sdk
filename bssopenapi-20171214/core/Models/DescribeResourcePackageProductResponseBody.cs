@@ -37,8 +37,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                         [Validation(Required=false)]
                         public List<DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageType> PackageType { get; set; }
                         public class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageType : TeaModel {
+                            [NameInMap("Code")]
+                            [Validation(Required=false)]
                             public string Code { get; set; }
+
+                            [NameInMap("Name")]
+                            [Validation(Required=false)]
                             public string Name { get; set; }
+
+                            [NameInMap("Properties")]
+                            [Validation(Required=false)]
                             public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeProperties Properties { get; set; }
                             public class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeProperties : TeaModel {
                                 [NameInMap("Property")]
@@ -56,6 +64,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                                 }
 
                             }
+
+                            [NameInMap("Specifications")]
+                            [Validation(Required=false)]
                             public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecifications Specifications { get; set; }
                             public class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecifications : TeaModel {
                                 [NameInMap("Specification")]
@@ -70,11 +81,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                                         [Validation(Required=false)]
                                         public List<DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration> AvailableDuration { get; set; }
                                         public class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration : TeaModel {
+                                            [NameInMap("Name")]
+                                            [Validation(Required=false)]
                                             public string Name { get; set; }
+
+                                            [NameInMap("Unit")]
+                                            [Validation(Required=false)]
                                             public string Unit { get; set; }
+
+                                            [NameInMap("Value")]
+                                            [Validation(Required=false)]
                                             public int? Value { get; set; }
+
                                         }
-                                    };
+
+                                    }
 
                                     [NameInMap("Name")]
                                     [Validation(Required=false)]
@@ -87,8 +108,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                                 }
 
                             }
+
                         }
-                    };
+
+                    }
 
                     [NameInMap("ProductCode")]
                     [Validation(Required=false)]
@@ -101,7 +124,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

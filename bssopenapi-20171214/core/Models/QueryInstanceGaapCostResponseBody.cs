@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("HostId")]
             [Validation(Required=false)]
             public string HostId { get; set; }
+
             [NameInMap("Modules")]
             [Validation(Required=false)]
             public QueryInstanceGaapCostResponseBodyDataModules Modules { get; set; }
@@ -239,16 +240,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
+
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public int? PageNum { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

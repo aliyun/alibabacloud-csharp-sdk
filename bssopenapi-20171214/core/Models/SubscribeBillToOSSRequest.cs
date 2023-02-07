@@ -17,9 +17,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public long? BucketOwnerId { get; set; }
 
-        /// <summary>
-        /// OSS Bucket存储路径
-        /// </summary>
         [NameInMap("BucketPath")]
         [Validation(Required=false)]
         public string BucketPath { get; set; }

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("StopMode")]
+        [Validation(Required=false)]
+        public string StopMode { get; set; }
+
     }
 
 }

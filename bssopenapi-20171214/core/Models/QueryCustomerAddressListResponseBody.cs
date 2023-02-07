@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     [Validation(Required=false)]
                     public string DeliveryAddress { get; set; }
 
+                    /// <summary>
+                    /// ID。
+                    /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
@@ -76,7 +79,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

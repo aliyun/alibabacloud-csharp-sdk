@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("Currency")]
             [Validation(Required=false)]
             public string Currency { get; set; }
+
             [NameInMap("ModuleDetails")]
             [Validation(Required=false)]
             public GetPayAsYouGoPriceResponseBodyDataModuleDetails ModuleDetails { get; set; }
@@ -51,6 +52,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
+
             [NameInMap("PromotionDetails")]
             [Validation(Required=false)]
             public GetPayAsYouGoPriceResponseBodyDataPromotionDetails PromotionDetails { get; set; }
@@ -74,7 +76,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

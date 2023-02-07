@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("OrderId")]
             [Validation(Required=false)]
             public string OrderId { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

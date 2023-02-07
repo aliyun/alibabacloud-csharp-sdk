@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("UidList")]
             [Validation(Required=false)]
             public List<string> UidList { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

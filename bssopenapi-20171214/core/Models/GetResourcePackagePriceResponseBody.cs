@@ -20,12 +20,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("Currency")]
             [Validation(Required=false)]
             public string Currency { get; set; }
+
             [NameInMap("DiscountPrice")]
             [Validation(Required=false)]
             public float? DiscountPrice { get; set; }
+
             [NameInMap("OriginalPrice")]
             [Validation(Required=false)]
             public float? OriginalPrice { get; set; }
+
             [NameInMap("Promotions")]
             [Validation(Required=false)]
             public GetResourcePackagePriceResponseBodyDataPromotions Promotions { get; set; }
@@ -45,10 +48,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
+
             [NameInMap("TradePrice")]
             [Validation(Required=false)]
             public float? TradePrice { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

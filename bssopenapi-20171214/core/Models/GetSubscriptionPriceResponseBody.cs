@@ -20,9 +20,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("Currency")]
             [Validation(Required=false)]
             public string Currency { get; set; }
+
             [NameInMap("DiscountPrice")]
             [Validation(Required=false)]
             public float? DiscountPrice { get; set; }
+
             [NameInMap("ModuleDetails")]
             [Validation(Required=false)]
             public GetSubscriptionPriceResponseBodyDataModuleDetails ModuleDetails { get; set; }
@@ -54,9 +56,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
+
             [NameInMap("OriginalPrice")]
             [Validation(Required=false)]
             public float? OriginalPrice { get; set; }
+
             [NameInMap("PromotionDetails")]
             [Validation(Required=false)]
             public GetSubscriptionPriceResponseBodyDataPromotionDetails PromotionDetails { get; set; }
@@ -80,13 +84,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
+
             [NameInMap("Quantity")]
             [Validation(Required=false)]
             public int? Quantity { get; set; }
+
             [NameInMap("TradePrice")]
             [Validation(Required=false)]
             public float? TradePrice { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

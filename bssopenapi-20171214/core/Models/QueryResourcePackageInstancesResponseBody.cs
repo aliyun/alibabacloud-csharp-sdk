@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("HostId")]
             [Validation(Required=false)]
             public string HostId { get; set; }
+
             [NameInMap("Instances")]
             [Validation(Required=false)]
             public QueryResourcePackageInstancesResponseBodyDataInstances Instances { get; set; }
@@ -35,7 +36,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                         [NameInMap("Product")]
                         [Validation(Required=false)]
                         public List<string> Product { get; set; }
-                    };
+
+                    }
+
+                    [NameInMap("CommodityCode")]
+                    [Validation(Required=false)]
+                    public string CommodityCode { get; set; }
 
                     [NameInMap("DeductType")]
                     [Validation(Required=false)]
@@ -88,16 +94,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
+
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public string PageNum { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public string PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public string TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

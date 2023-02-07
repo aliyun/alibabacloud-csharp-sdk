@@ -21,21 +21,37 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [Validation(Required=false)]
             public List<QueryCostUnitResponseBodyDataCostUnitDtoList> CostUnitDtoList { get; set; }
             public class QueryCostUnitResponseBodyDataCostUnitDtoList : TeaModel {
+                [NameInMap("OwnerUid")]
+                [Validation(Required=false)]
                 public long? OwnerUid { get; set; }
+
+                [NameInMap("ParentUnitId")]
+                [Validation(Required=false)]
                 public long? ParentUnitId { get; set; }
+
+                [NameInMap("UnitId")]
+                [Validation(Required=false)]
                 public long? UnitId { get; set; }
+
+                [NameInMap("UnitName")]
+                [Validation(Required=false)]
                 public string UnitName { get; set; }
+
             }
+
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public int? PageNum { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
