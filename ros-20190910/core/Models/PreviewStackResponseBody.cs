@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public string LogicalResourceId { get; set; }
 
+                [NameInMap("PhysicalResourceId")]
+                [Validation(Required=false)]
+                public string PhysicalResourceId { get; set; }
+
                 [NameInMap("Properties")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Properties { get; set; }
