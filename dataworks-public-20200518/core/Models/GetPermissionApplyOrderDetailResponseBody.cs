@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                             [Validation(Required=false)]
                             public string ColumnName { get; set; }
 
+                            [NameInMap("SecurityLevel")]
+                            [Validation(Required=false)]
+                            public string SecurityLevel { get; set; }
+
                         }
 
                         [NameInMap("ObjectName")]
