@@ -1,3 +1,6 @@
+2023-02-09 Version: 1.0.8
+- Release GenerateSuperResolutionImage.
+
 2023-02-03 Version: 1.0.7
 - Release GenerateImageWithText GenerateImageWithTextAndImage.
 
