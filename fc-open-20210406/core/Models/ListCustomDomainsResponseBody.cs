@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public List<ListCustomDomainsResponseBodyCustomDomains> CustomDomains { get; set; }
         public class ListCustomDomainsResponseBodyCustomDomains : TeaModel {
             /// <summary>
-            /// The ID of the account.
+            /// The ID of your Alibaba Cloud account.
             /// </summary>
             [NameInMap("accountId")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             public CertConfig CertConfig { get; set; }
 
             /// <summary>
-            /// The time when the domain name was added.
+            /// The time when the custom domain name was created.
             /// </summary>
             [NameInMap("createdTime")]
             [Validation(Required=false)]
@@ -59,11 +59,11 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             public string LastModifiedTime { get; set; }
 
             /// <summary>
-            /// The protocol types supported by the domain name. Valid values: 
+            /// The protocol type that is supported by the custom domain name.
             /// 
-            /// - **HTTP**: Only HTTP is supported. 
-            /// - **HTTPS**: Only HTTPS is supported. 
-            /// - **HTTP,HTTPS**: Both HTTP and HTTPS are supported.
+            /// *   **HTTP**: Only HTTP is supported.
+            /// *   **HTTPS**: Only HTTPS is supported.
+            /// *   **HTTP,HTTPS**: HTTP and HTTPS are supported.
             /// </summary>
             [NameInMap("protocol")]
             [Validation(Required=false)]
@@ -77,12 +77,15 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             public RouteConfig RouteConfig { get; set; }
 
             /// <summary>
-            /// The configurations of the TLS.
+            /// The Transport Layer Security (TLS) configuration.
             /// </summary>
             [NameInMap("tlsConfig")]
             [Validation(Required=false)]
             public TLSConfig TlsConfig { get; set; }
 
+            /// <summary>
+            /// The Web Application Firewall (WAF) configuration.
+            /// </summary>
             [NameInMap("wafConfig")]
             [Validation(Required=false)]
             public WAFConfig WafConfig { get; set; }
@@ -90,7 +93,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         }
 
         /// <summary>
-        /// The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
+        /// The pagination token to use to request the next page of results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]

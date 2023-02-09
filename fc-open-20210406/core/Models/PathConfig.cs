@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string Qualifier { get; set; }
 
+        [NameInMap("rewriteConfig")]
+        [Validation(Required=false)]
+        public RewriteConfig RewriteConfig { get; set; }
+
         [NameInMap("serviceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }

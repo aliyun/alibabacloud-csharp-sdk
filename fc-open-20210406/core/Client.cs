@@ -597,6 +597,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             {
                 body["functionName"] = request.FunctionName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuMemorySize))
+            {
+                body["gpuMemorySize"] = request.GpuMemorySize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Handler))
             {
                 body["handler"] = request.Handler;
@@ -729,6 +733,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionName))
             {
                 body["functionName"] = request.FunctionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuMemorySize))
+            {
+                body["gpuMemorySize"] = request.GpuMemorySize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Handler))
             {
@@ -7859,6 +7867,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             {
                 body["environmentVariables"] = request.EnvironmentVariables;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuMemorySize))
+            {
+                body["gpuMemorySize"] = request.GpuMemorySize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Handler))
             {
                 body["handler"] = request.Handler;
@@ -7991,6 +8003,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentVariables))
             {
                 body["environmentVariables"] = request.EnvironmentVariables;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuMemorySize))
+            {
+                body["gpuMemorySize"] = request.GpuMemorySize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Handler))
             {

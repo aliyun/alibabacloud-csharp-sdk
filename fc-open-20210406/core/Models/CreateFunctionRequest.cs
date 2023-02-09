@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string FunctionName { get; set; }
 
+        [NameInMap("gpuMemorySize")]
+        [Validation(Required=false)]
+        public int? GpuMemorySize { get; set; }
+
         /// <summary>
         /// The handler of the function. The format varies based on the programming language. For more information, see [Function handlers](~~157704~~).
         /// </summary>

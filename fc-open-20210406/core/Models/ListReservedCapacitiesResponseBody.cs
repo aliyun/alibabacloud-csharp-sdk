@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class ListReservedCapacitiesResponseBody : TeaModel {
         /// <summary>
-        /// The pagination token to request the next page of results.
+        /// The token used to obtain more results.
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]

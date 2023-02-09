@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class UpdateCustomDomainResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the account.
+        /// The ID of your Alibaba Cloud account.
         /// </summary>
         [NameInMap("accountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// The version number of the API.
+        /// The version of the API.
         /// </summary>
         [NameInMap("apiVersion")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public CertConfig CertConfig { get; set; }
 
         /// <summary>
-        /// The time when the domain name was added.
+        /// The time when the custom domain name was created.
         /// </summary>
         [NameInMap("createdTime")]
         [Validation(Required=false)]
@@ -52,11 +52,11 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string LastModifiedTime { get; set; }
 
         /// <summary>
-        /// The protocol types supported by the domain name. Valid values: 
+        /// The protocol type that is supported by the custom domain name.
         /// 
-        /// - **HTTP**: Only HTTP is supported.
-        /// - **HTTPS**: Only HTTPS is supported.
-        /// - **HTTP,HTTPS**: Both HTTP and HTTPS are supported.
+        /// *   **HTTP**: Only HTTP is supported.
+        /// *   **HTTPS**: Only HTTPS is supported.
+        /// *   **HTTP,HTTPS**: HTTP and HTTPS are supported.
         /// </summary>
         [NameInMap("protocol")]
         [Validation(Required=false)]
@@ -70,12 +70,15 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public RouteConfig RouteConfig { get; set; }
 
         /// <summary>
-        /// The configurations of the TLS.
+        /// The Transport Layer Security (TLS) configuration.
         /// </summary>
         [NameInMap("tlsConfig")]
         [Validation(Required=false)]
         public TLSConfig TlsConfig { get; set; }
 
+        /// <summary>
+        /// The Web Application Firewall (WAF) configuration.
+        /// </summary>
         [NameInMap("wafConfig")]
         [Validation(Required=false)]
         public WAFConfig WafConfig { get; set; }

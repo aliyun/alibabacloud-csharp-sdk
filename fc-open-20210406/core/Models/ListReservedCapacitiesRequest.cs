@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string Limit { get; set; }
 
         /// <summary>
-        /// The token that is required for pagination.
+        /// The token that determines the start point of the query.
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]

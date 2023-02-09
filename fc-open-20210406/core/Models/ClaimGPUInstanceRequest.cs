@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string SourceCidrIp { get; set; }
 
         /// <summary>
-        /// The range of TCP ports that are open to the security group of the GPU-rendered instance.
+        /// The range of TCP ports that are open to the security group of the GPU rendering instance.
         /// </summary>
         [NameInMap("tcpPortRange")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public List<string> UdpPortRange { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC).
+        /// The ID of the VPC in which the instance resides.
         /// </summary>
         [NameInMap("vpcId")]
         [Validation(Required=false)]
