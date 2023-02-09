@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallListRequest : TeaModel {
         /// <summary>
-        /// The sub type of connection. Valid values:
+        /// The sub-type of the connection. Valid values:
         /// 
-        /// - **vpc2vpc**: High-speed channel.
-        /// - **vppeer**: Peer connection.
+        /// *   **vpc2vpc**: Express Connect connection
+        /// *   **vpcpeer**: peer connection
         /// </summary>
         [NameInMap("ConnectSubType")]
         [Validation(Required=false)]
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   **opened**: The VPC firewall is enabled.
         /// *   **closed**: The VPC firewall is disabled.
-        /// *   **notconfigured**: The VPC firewall is not configured.
-        /// *   **configured**: The VPC firewall is configured.
+        /// *   **notconfigured**: The VPC firewall is not created.
+        /// *   **configured**: The VPC firewall is created.
         /// 
         /// >  If you do not specify this parameter, VPC firewalls in all states are queried.
         /// </summary>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallSwitchStatus { get; set; }
 
         /// <summary>
-        /// The natural language of the request and response. Valid values:
+        /// The language of the content within the request and response. Valid values:
         /// 
         /// *   **zh**: Chinese (default)
         /// *   **en**: English
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The cloud account UID of the peer VPC.
+        /// The UID of the Alibaba Cloud account to which the peer VPC belongs.
         /// </summary>
         [NameInMap("PeerUid")]
         [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The region ID of the VPC.
         /// 
-        /// >  For more information about regions in which Cloud Firewall is supported, see [Supported regions](~~195657~~).
+        /// >  For more information about the regions, see [Supported regions](~~195657~~).
         /// </summary>
         [NameInMap("RegionNo")]
         [Validation(Required=false)]

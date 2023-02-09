@@ -711,6 +711,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["NetworkInstanceId"] = request.NetworkInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcFirewallName))
             {
                 query["VpcFirewallName"] = request.VpcFirewallName;
@@ -771,6 +775,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["NetworkInstanceId"] = request.NetworkInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcFirewallName))
             {
                 query["VpcFirewallName"] = request.VpcFirewallName;
@@ -824,6 +832,178 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateVpcFirewallCenConfigureWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * You can call the CreateVpcFirewallConfigure operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see [Limits on VPC firewalls](https://www.alibabacloud.com/help/en/cloud-firewall/latest/vpc-firewall-limits).  
+          * ### Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request CreateVpcFirewallConfigureRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateVpcFirewallConfigureResponse
+         */
+        public CreateVpcFirewallConfigureResponse CreateVpcFirewallConfigureWithOptions(CreateVpcFirewallConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallSwitch))
+            {
+                query["FirewallSwitch"] = request.FirewallSwitch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalVpcCidrTableList))
+            {
+                query["LocalVpcCidrTableList"] = request.LocalVpcCidrTableList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalVpcId))
+            {
+                query["LocalVpcId"] = request.LocalVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalVpcRegion))
+            {
+                query["LocalVpcRegion"] = request.LocalVpcRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
+            {
+                query["MemberUid"] = request.MemberUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcCidrTableList))
+            {
+                query["PeerVpcCidrTableList"] = request.PeerVpcCidrTableList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcId))
+            {
+                query["PeerVpcId"] = request.PeerVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcRegion))
+            {
+                query["PeerVpcRegion"] = request.PeerVpcRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcFirewallName))
+            {
+                query["VpcFirewallName"] = request.VpcFirewallName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVpcFirewallConfigure",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVpcFirewallConfigureResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * You can call the CreateVpcFirewallConfigure operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see [Limits on VPC firewalls](https://www.alibabacloud.com/help/en/cloud-firewall/latest/vpc-firewall-limits).  
+          * ### Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request CreateVpcFirewallConfigureRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateVpcFirewallConfigureResponse
+         */
+        public async Task<CreateVpcFirewallConfigureResponse> CreateVpcFirewallConfigureWithOptionsAsync(CreateVpcFirewallConfigureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallSwitch))
+            {
+                query["FirewallSwitch"] = request.FirewallSwitch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalVpcCidrTableList))
+            {
+                query["LocalVpcCidrTableList"] = request.LocalVpcCidrTableList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalVpcId))
+            {
+                query["LocalVpcId"] = request.LocalVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalVpcRegion))
+            {
+                query["LocalVpcRegion"] = request.LocalVpcRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
+            {
+                query["MemberUid"] = request.MemberUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcCidrTableList))
+            {
+                query["PeerVpcCidrTableList"] = request.PeerVpcCidrTableList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcId))
+            {
+                query["PeerVpcId"] = request.PeerVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerVpcRegion))
+            {
+                query["PeerVpcRegion"] = request.PeerVpcRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcFirewallName))
+            {
+                query["VpcFirewallName"] = request.VpcFirewallName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVpcFirewallConfigure",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVpcFirewallConfigureResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * You can call the CreateVpcFirewallConfigure operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see [Limits on VPC firewalls](https://www.alibabacloud.com/help/en/cloud-firewall/latest/vpc-firewall-limits).  
+          * ### Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request CreateVpcFirewallConfigureRequest
+          * @return CreateVpcFirewallConfigureResponse
+         */
+        public CreateVpcFirewallConfigureResponse CreateVpcFirewallConfigure(CreateVpcFirewallConfigureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateVpcFirewallConfigureWithOptions(request, runtime);
+        }
+
+        /**
+          * You can call the CreateVpcFirewallConfigure operation to create a VPC firewall. The VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit. The VPC firewall does not control the mutual access traffic between VPCs that reside in different regions or belong to different Alibaba Cloud accounts. The firewall also does not control the mutual access traffic between VPCs and virtual border routers (VBRs). For more information, see [Limits on VPC firewalls](https://www.alibabacloud.com/help/en/cloud-firewall/latest/vpc-firewall-limits).  
+          * ### Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          *
+          * @param request CreateVpcFirewallConfigureRequest
+          * @return CreateVpcFirewallConfigureResponse
+         */
+        public async Task<CreateVpcFirewallConfigureResponse> CreateVpcFirewallConfigureAsync(CreateVpcFirewallConfigureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateVpcFirewallConfigureWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -4483,7 +4663,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -4563,7 +4743,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -4643,7 +4823,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -4657,7 +4837,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall controls traffic between two VPCs that are connected by using an Express Connect circuit.  
+          * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *

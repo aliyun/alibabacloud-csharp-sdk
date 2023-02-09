@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeOutgoingDestinationIPResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of destination IP addresses in outbound connections.
+        /// The destination IP addresses in outbound connections.
         /// </summary>
         [NameInMap("DstIPList")]
         [Validation(Required=false)]
@@ -36,21 +36,30 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// The state of the access control policy. Valid values:
             /// 
-            /// *   **normal**: healthy
-            /// *   **abnormal**: unhealthy
+            /// *   **Normal**: healthy
+            /// *   **Abnormal**: unhealthy
             /// </summary>
             [NameInMap("AclStatus")]
             [Validation(Required=false)]
             public string AclStatus { get; set; }
 
+            /// <summary>
+            /// The information about the address book.
+            /// </summary>
             [NameInMap("AddressGroupList")]
             [Validation(Required=false)]
             public List<DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList> AddressGroupList { get; set; }
             public class DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList : TeaModel {
+                /// <summary>
+                /// The name of the address book.
+                /// </summary>
                 [NameInMap("AddressGroupName")]
                 [Validation(Required=false)]
                 public string AddressGroupName { get; set; }
 
+                /// <summary>
+                /// The UUID of the address book.
+                /// </summary>
                 [NameInMap("AddressGroupUUID")]
                 [Validation(Required=false)]
                 public string AddressGroupUUID { get; set; }
@@ -65,7 +74,25 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public List<DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList> ApplicationPortList { get; set; }
             public class DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList : TeaModel {
                 /// <summary>
-                /// The type of the application.
+                /// The application type in the access control policy. Valid values:
+                /// 
+                /// *   **FTP**
+                /// *   **HTTP**
+                /// *   **HTTPS**
+                /// *   **Memcache**
+                /// *   **MongoDB**
+                /// *   **MQTT**
+                /// *   **MySQL**
+                /// *   **RDP**
+                /// *   **Redis**
+                /// *   **SMTP**
+                /// *   **SMTPS**
+                /// *   **SSH**
+                /// *   **SSL_No_Cert**
+                /// *   **SSL**
+                /// *   **VNC**
+                /// 
+                /// >  The value of this parameter depends on the value of Proto. If you set Proto to TCP, you can set ApplicationNameList to any valid value. If you specify both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.
                 /// </summary>
                 [NameInMap("ApplicationName")]
                 [Validation(Required=false)]
@@ -80,6 +107,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             }
 
+            /// <summary>
+            /// The type of the tag. Valid values:
+            /// 
+            /// *   **Suspicious**
+            /// *   **Malicious**
+            /// *   **Trusted**
+            /// </summary>
             [NameInMap("CategoryClassId")]
             [Validation(Required=false)]
             public string CategoryClassId { get; set; }
@@ -118,6 +152,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
+            /// <summary>
+            /// Indicates whether an access control policy is configured. Valid values:
+            /// 
+            /// *   **true**: yes
+            /// *   **false**: no
+            /// </summary>
             [NameInMap("HasAcl")]
             [Validation(Required=false)]
             public string HasAcl { get; set; }
@@ -140,7 +180,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? InBytes { get; set; }
 
             /// <summary>
-            /// Indicates whether the destination IP address is added to an allowlist. Valid values:
+            /// Indicates whether the destination IP address is added to a whitelist. Valid values:
             /// 
             /// *   **true**: added
             /// *   **false**: not added
@@ -170,6 +210,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
+            /// <summary>
+            /// The reason why the domain name is secure.
+            /// </summary>
             [NameInMap("SecurityReason")]
             [Validation(Required=false)]
             public string SecurityReason { get; set; }
@@ -193,12 +236,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SessionCount { get; set; }
 
             /// <summary>
-            /// An array that consists of tags.
+            /// The tags.
             /// </summary>
             [NameInMap("TagList")]
             [Validation(Required=false)]
             public List<DescribeOutgoingDestinationIPResponseBodyDstIPListTagList> TagList { get; set; }
             public class DescribeOutgoingDestinationIPResponseBodyDstIPListTagList : TeaModel {
+                /// <summary>
+                /// The type of the tag. Valid values:
+                /// 
+                /// *   **Suspicious**
+                /// *   **Malicious**
+                /// *   **Trusted**
+                /// </summary>
                 [NameInMap("ClassId")]
                 [Validation(Required=false)]
                 public string ClassId { get; set; }
@@ -237,6 +287,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             }
 
+            /// <summary>
+            /// The total volume of traffic. Unit: bytes.
+            /// </summary>
             [NameInMap("TotalBytes")]
             [Validation(Required=false)]
             public string TotalBytes { get; set; }

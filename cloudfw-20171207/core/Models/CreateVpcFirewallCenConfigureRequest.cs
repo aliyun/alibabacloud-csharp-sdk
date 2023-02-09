@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string NetworkInstanceId { get; set; }
 
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
+
         /// <summary>
         /// The instance name of the VPC firewall.
         /// </summary>

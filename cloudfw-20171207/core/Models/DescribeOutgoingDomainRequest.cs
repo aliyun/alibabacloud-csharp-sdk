@@ -99,45 +99,45 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// 情报标签ID。取值：
+        /// The ID of the tag. Valid values:
         /// 
-        /// - **AliYun**：Alibaba cloud products.
-        /// - **RiskDomain**：The risk domain.
-        /// - **RiskIP**: The risk IP.
-        /// - **TrustedDomain**：The trusted domain.
-        /// - **AliPay**：Alipay
-        /// - **DingDing**：Ding talk.
-        /// - **WeChat**：Wechat.
-        /// - **QQ**：Tencent QQ.
-        /// - **SecurityService**：The security service.
-        /// - **Microsoft**：The Microsoft.
-        /// - **Amazon**：Amazon.
-        /// - **Pan**：Pan.
-        /// - **Map**：Map.
-        /// - **Code**：Code hosting
-        /// - **SystemService**：System service.
-        /// - **Taobao**：Taobao.
-        /// - **Google**：Google.
-        /// - **ThirdPartyService**：The third party service.
-        /// - **FirstFlow**：首次
-        /// - **Downloader**：恶意下载
-        /// - **Alexa Top1M**：热门网站
-        /// - **Miner**：矿池
-        /// - **Intelligence**：威胁情报
-        /// - **DDoS**：DDoS木马
-        /// - **Ransomware**：勒索软件
-        /// - **Spyware**：间谍软件
-        /// - **Rogue**：流氓软件
-        /// - **Botnet**：僵尸网络
-        /// - **Suspicious**：可疑网站
-        /// - **C&C**：远控
-        /// - **Gang**：团伙
-        /// - **CVE**：漏洞CVE
-        /// - **Backdoor**：木马后门
-        /// - **Phishing**：钓鱼网站
-        /// - **APT**：APT攻击
-        /// - **Supply Chain Attack**：供应链攻击
-        /// - **Malicious software**：恶意软件
+        /// *   **AliYun**: Alibaba Cloud service
+        /// *   **RiskDomain**: risky domain name
+        /// *   **RiskIP**: risky IP address
+        /// *   **TrustedDomain**: trusted website
+        /// *   **AliPay**: Alipay
+        /// *   **DingDing**: DingTalk
+        /// *   **WeChat**: WeChat
+        /// *   **QQ**: Tencent QQ
+        /// *   **SecurityService**: security service
+        /// *   **Microsoft**: Microsoft
+        /// *   **Amazon**: Amazon Web Services (AWS)
+        /// *   **Pan**: cloud disk
+        /// *   **Map**: map
+        /// *   **Code**: code hosting
+        /// *   **SystemService**: system service
+        /// *   **Taobao**: Taobao
+        /// *   **Google**: Google
+        /// *   **ThirdPartyService**: third-party service
+        /// *   **FirstFlow**: the first time
+        /// *   **Downloader**: malicious download
+        /// *   **Alexa Top1M**: popular website
+        /// *   **Miner**: mining pool
+        /// *   **Intelligence**: threat intelligence
+        /// *   **DDoS**: DDoS trojan
+        /// *   **Ransomware**: ransomware
+        /// *   **Spyware**: spyware
+        /// *   **Rogue**: rogue software
+        /// *   **Botnet**: botnet
+        /// *   **Suspicious**: suspicious website
+        /// *   **C&C**: command and control (C&C)
+        /// *   **Gang**: gang
+        /// *   **CVE**: Common Vulnerabilities and Exposures (CVE)
+        /// *   **Backdoor**: webshell
+        /// *   **Phishing**: phishing website
+        /// *   **APT**: advanced persistent threat (APT) attack
+        /// *   **Supply Chain Attack**: supply chain attack
+        /// *   **Malicious software**: malware
         /// </summary>
         [NameInMap("TagIdNew")]
         [Validation(Required=false)]

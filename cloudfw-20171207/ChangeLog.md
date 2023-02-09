@@ -1,3 +1,12 @@
+2023-02-09 Version: 1.2.0
+- Add api.
+- Add multi account attribute.
+- Support vfw invade log download for cfw.
+- Fix bugs for flow log memberUid field.
+- DescribeIPSRules support DefaultAction as input.
+- Supported for Security Group prefixlist.
+- Support vswitch.
+
 2022-12-22 Version: 1.1.9
 - Hide SourceIP.
 - Hide MessageType.
