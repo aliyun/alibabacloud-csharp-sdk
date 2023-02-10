@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The type of the vulnerability. Valid values: 
-        /// - **cve**: Linux software vulnerability. 
-        /// - **sys**: Windows system vulnerability.
+        /// - **cve**: Linux software vulnerability 
+        /// - **sys**: Windows system vulnerability
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

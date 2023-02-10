@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyUsageNewestRequest : TeaModel {
-        /// <summary>
-        /// The type of the accounts.
-        /// 
-        /// Valid values:
-        /// 
-        /// *   user
-        /// *   system
-        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulExportInfoRequest : TeaModel {
-        /// <summary>
-        /// The ID of the vulnerability export task.
-        /// </summary>
         [NameInMap("ExportId")]
         [Validation(Required=false)]
         public long? ExportId { get; set; }

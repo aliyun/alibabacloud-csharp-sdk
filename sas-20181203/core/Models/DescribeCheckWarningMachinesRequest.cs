@@ -9,18 +9,43 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckWarningMachinesRequest : TeaModel {
+        /// <summary>
+        /// The ID of the check item.
+        /// 
+        /// > You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of check items.
+        /// </summary>
         [NameInMap("CheckId")]
         [Validation(Required=false)]
         public long? CheckId { get; set; }
 
+        /// <summary>
+        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// 
+        /// *   **zh**: Chinese
+        /// *   **en**: English
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The ID of the baseline.
+        /// 
+        /// > You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of baselines.
+        /// </summary>
         [NameInMap("RiskId")]
         [Validation(Required=false)]
         public long? RiskId { get; set; }
 
+        /// <summary>
+        /// The status of the check item.
+        /// 
+        /// > This parameter indicates the status of the check item. Valid values:
+        /// 
+        /// *   1: failed
+        /// 
+        /// *   3: passed
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }

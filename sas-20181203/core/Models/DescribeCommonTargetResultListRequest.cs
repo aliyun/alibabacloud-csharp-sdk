@@ -9,21 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCommonTargetResultListRequest : TeaModel {
-        /// <summary>
-        /// The source IP address of the request.
-        /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
-        /// <summary>
-        /// The type of the configuration item. Valid values:
-        /// 
-        /// *   **webshell_timescan**: webshell detection and removal
-        /// *   **aliscriptengine**: in-depth detection engine
-        /// *   **alidetect**: installation scope of local file detection
-        /// *   **alidetect-scan-enable**: detection scope of local file detection
-        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
