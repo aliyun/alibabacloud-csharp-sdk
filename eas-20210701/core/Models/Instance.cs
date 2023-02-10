@@ -45,9 +45,17 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Reason { get; set; }
 
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
         [NameInMap("RestartCount")]
         [Validation(Required=false)]
         public int? RestartCount { get; set; }
+
+        [NameInMap("Role")]
+        [Validation(Required=false)]
+        public string Role { get; set; }
 
         [NameInMap("StartAt")]
         [Validation(Required=false)]
@@ -56,6 +64,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("TenantHostIP")]
+        [Validation(Required=false)]
+        public string TenantHostIP { get; set; }
+
+        [NameInMap("TenantInstanceIP")]
+        [Validation(Required=false)]
+        public string TenantInstanceIP { get; set; }
 
         [NameInMap("TotalProcesses")]
         [Validation(Required=false)]

@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string InstanceStatus { get; set; }
 
+        [NameInMap("InstanceTenantIp")]
+        [Validation(Required=false)]
+        public string InstanceTenantIp { get; set; }
+
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
@@ -71,7 +75,11 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         [NameInMap("InstanceUsedGpu")]
         [Validation(Required=false)]
-        public int? InstanceUsedGpu { get; set; }
+        public float? InstanceUsedGpu { get; set; }
+
+        [NameInMap("InstanceUsedGpuMemory")]
+        [Validation(Required=false)]
+        public string InstanceUsedGpuMemory { get; set; }
 
         [NameInMap("InstanceUsedMemory")]
         [Validation(Required=false)]

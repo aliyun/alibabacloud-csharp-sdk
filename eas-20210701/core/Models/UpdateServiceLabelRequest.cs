@@ -8,18 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
-    public class CreateServiceRequest : TeaModel {
-        [NameInMap("Develop")]
-        [Validation(Required=false)]
-        public string Develop { get; set; }
-
+    public class UpdateServiceLabelRequest : TeaModel {
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public Dictionary<string, string> Labels { get; set; }
-
-        [NameInMap("body")]
-        [Validation(Required=false)]
-        public string Body { get; set; }
 
     }
 

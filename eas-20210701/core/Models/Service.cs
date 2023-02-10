@@ -49,6 +49,20 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string IntranetEndpoint { get; set; }
 
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public List<ServiceLabels> Labels { get; set; }
+        public class ServiceLabels : TeaModel {
+            [NameInMap("LabelKey")]
+            [Validation(Required=false)]
+            public string LabelKey { get; set; }
+
+            [NameInMap("LabelValue")]
+            [Validation(Required=false)]
+            public string LabelValue { get; set; }
+
+        }
+
         [NameInMap("LatestVersion")]
         [Validation(Required=false)]
         public int? LatestVersion { get; set; }

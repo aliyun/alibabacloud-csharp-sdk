@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
-    public class ListServicesRequest : TeaModel {
+    public class ListServicesShrinkRequest : TeaModel {
         /// <summary>
         /// 关键字搜索。
         /// </summary>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         [NameInMap("Label")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Label { get; set; }
+        public string LabelShrink { get; set; }
 
         /// <summary>
         /// 排序顺序，支持升序或将序。
