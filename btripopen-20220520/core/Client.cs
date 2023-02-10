@@ -925,6 +925,114 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ApplyApproveWithOptionsAsync(request, headers, runtime);
         }
 
+        public ApplyInvoiceTaskResponse ApplyInvoiceTaskWithOptions(ApplyInvoiceTaskRequest tmpReq, ApplyInvoiceTaskHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ApplyInvoiceTaskShrinkRequest request = new ApplyInvoiceTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InvoiceTaskList))
+            {
+                request.InvoiceTaskListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InvoiceTaskList, "invoice_task_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillDate))
+            {
+                body["bill_date"] = request.BillDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceTaskListShrink))
+            {
+                body["invoice_task_list"] = request.InvoiceTaskListShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyInvoiceTask",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/invoice/v1/apply-invoice-task",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyInvoiceTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ApplyInvoiceTaskResponse> ApplyInvoiceTaskWithOptionsAsync(ApplyInvoiceTaskRequest tmpReq, ApplyInvoiceTaskHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ApplyInvoiceTaskShrinkRequest request = new ApplyInvoiceTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InvoiceTaskList))
+            {
+                request.InvoiceTaskListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InvoiceTaskList, "invoice_task_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillDate))
+            {
+                body["bill_date"] = request.BillDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceTaskListShrink))
+            {
+                body["invoice_task_list"] = request.InvoiceTaskListShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyInvoiceTask",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/invoice/v1/apply-invoice-task",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyInvoiceTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ApplyInvoiceTaskResponse ApplyInvoiceTask(ApplyInvoiceTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ApplyInvoiceTaskHeaders headers = new ApplyInvoiceTaskHeaders();
+            return ApplyInvoiceTaskWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ApplyInvoiceTaskResponse> ApplyInvoiceTaskAsync(ApplyInvoiceTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ApplyInvoiceTaskHeaders headers = new ApplyInvoiceTaskHeaders();
+            return await ApplyInvoiceTaskWithOptionsAsync(request, headers, runtime);
+        }
+
         public ApplyListQueryResponse ApplyListQueryWithOptions(ApplyListQueryRequest request, ApplyListQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4567,6 +4675,126 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             FlightExceedApplyQueryHeaders headers = new FlightExceedApplyQueryHeaders();
             return await FlightExceedApplyQueryWithOptionsAsync(request, headers, runtime);
+        }
+
+        public FlightItineraryScanQueryResponse FlightItineraryScanQueryWithOptions(FlightItineraryScanQueryRequest request, FlightItineraryScanQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillDate))
+            {
+                query["bill_date"] = request.BillDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillId))
+            {
+                query["bill_id"] = request.BillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceSubTaskId))
+            {
+                query["invoice_sub_task_id"] = request.InvoiceSubTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FlightItineraryScanQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/scan/v1/flight-itinerary",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FlightItineraryScanQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<FlightItineraryScanQueryResponse> FlightItineraryScanQueryWithOptionsAsync(FlightItineraryScanQueryRequest request, FlightItineraryScanQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillDate))
+            {
+                query["bill_date"] = request.BillDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillId))
+            {
+                query["bill_id"] = request.BillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceSubTaskId))
+            {
+                query["invoice_sub_task_id"] = request.InvoiceSubTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FlightItineraryScanQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/scan/v1/flight-itinerary",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FlightItineraryScanQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public FlightItineraryScanQueryResponse FlightItineraryScanQuery(FlightItineraryScanQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            FlightItineraryScanQueryHeaders headers = new FlightItineraryScanQueryHeaders();
+            return FlightItineraryScanQueryWithOptions(request, headers, runtime);
+        }
+
+        public async Task<FlightItineraryScanQueryResponse> FlightItineraryScanQueryAsync(FlightItineraryScanQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            FlightItineraryScanQueryHeaders headers = new FlightItineraryScanQueryHeaders();
+            return await FlightItineraryScanQueryWithOptionsAsync(request, headers, runtime);
         }
 
         public FlightOrderDetailInfoResponse FlightOrderDetailInfoWithOptions(FlightOrderDetailInfoRequest request, FlightOrderDetailInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8757,6 +8985,102 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await TrainOrderQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        public TrainOrderQueryV2Response TrainOrderQueryV2WithOptions(TrainOrderQueryV2Request request, TrainOrderQueryV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["user_id"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TrainOrderQueryV2",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/train/v2/order",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TrainOrderQueryV2Response>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<TrainOrderQueryV2Response> TrainOrderQueryV2WithOptionsAsync(TrainOrderQueryV2Request request, TrainOrderQueryV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["user_id"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TrainOrderQueryV2",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/train/v2/order",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TrainOrderQueryV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public TrainOrderQueryV2Response TrainOrderQueryV2(TrainOrderQueryV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TrainOrderQueryV2Headers headers = new TrainOrderQueryV2Headers();
+            return TrainOrderQueryV2WithOptions(request, headers, runtime);
+        }
+
+        public async Task<TrainOrderQueryV2Response> TrainOrderQueryV2Async(TrainOrderQueryV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TrainOrderQueryV2Headers headers = new TrainOrderQueryV2Headers();
+            return await TrainOrderQueryV2WithOptionsAsync(request, headers, runtime);
+        }
+
         public TrainStationSearchResponse TrainStationSearchWithOptions(TrainStationSearchRequest request, TrainStationSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8843,6 +9167,126 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             TrainStationSearchHeaders headers = new TrainStationSearchHeaders();
             return await TrainStationSearchWithOptionsAsync(request, headers, runtime);
+        }
+
+        public TrainTicketScanQueryResponse TrainTicketScanQueryWithOptions(TrainTicketScanQueryRequest request, TrainTicketScanQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillDate))
+            {
+                query["bill_date"] = request.BillDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillId))
+            {
+                query["bill_id"] = request.BillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceSubTaskId))
+            {
+                query["invoice_sub_task_id"] = request.InvoiceSubTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TrainTicketScanQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/scan/v1/train-ticket",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TrainTicketScanQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<TrainTicketScanQueryResponse> TrainTicketScanQueryWithOptionsAsync(TrainTicketScanQueryRequest request, TrainTicketScanQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillDate))
+            {
+                query["bill_date"] = request.BillDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillId))
+            {
+                query["bill_id"] = request.BillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceSubTaskId))
+            {
+                query["invoice_sub_task_id"] = request.InvoiceSubTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TrainTicketScanQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/scan/v1/train-ticket",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TrainTicketScanQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public TrainTicketScanQueryResponse TrainTicketScanQuery(TrainTicketScanQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TrainTicketScanQueryHeaders headers = new TrainTicketScanQueryHeaders();
+            return TrainTicketScanQueryWithOptions(request, headers, runtime);
+        }
+
+        public async Task<TrainTicketScanQueryResponse> TrainTicketScanQueryAsync(TrainTicketScanQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TrainTicketScanQueryHeaders headers = new TrainTicketScanQueryHeaders();
+            return await TrainTicketScanQueryWithOptionsAsync(request, headers, runtime);
         }
 
         public UserQueryResponse UserQueryWithOptions(UserQueryRequest request, UserQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8955,6 +9399,214 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             UserQueryHeaders headers = new UserQueryHeaders();
             return await UserQueryWithOptionsAsync(request, headers, runtime);
+        }
+
+        public VatInvoiceScanQueryResponse VatInvoiceScanQueryWithOptions(VatInvoiceScanQueryRequest request, VatInvoiceScanQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillDate))
+            {
+                query["bill_date"] = request.BillDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillId))
+            {
+                query["bill_id"] = request.BillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceSubTaskId))
+            {
+                query["invoice_sub_task_id"] = request.InvoiceSubTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VatInvoiceScanQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/scan/v1/vat-invoice",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VatInvoiceScanQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<VatInvoiceScanQueryResponse> VatInvoiceScanQueryWithOptionsAsync(VatInvoiceScanQueryRequest request, VatInvoiceScanQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillDate))
+            {
+                query["bill_date"] = request.BillDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillId))
+            {
+                query["bill_id"] = request.BillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceSubTaskId))
+            {
+                query["invoice_sub_task_id"] = request.InvoiceSubTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VatInvoiceScanQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/scan/v1/vat-invoice",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VatInvoiceScanQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public VatInvoiceScanQueryResponse VatInvoiceScanQuery(VatInvoiceScanQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            VatInvoiceScanQueryHeaders headers = new VatInvoiceScanQueryHeaders();
+            return VatInvoiceScanQueryWithOptions(request, headers, runtime);
+        }
+
+        public async Task<VatInvoiceScanQueryResponse> VatInvoiceScanQueryAsync(VatInvoiceScanQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            VatInvoiceScanQueryHeaders headers = new VatInvoiceScanQueryHeaders();
+            return await VatInvoiceScanQueryWithOptionsAsync(request, headers, runtime);
+        }
+
+        public WaitApplyInvoiceTaskDetailQueryResponse WaitApplyInvoiceTaskDetailQueryWithOptions(WaitApplyInvoiceTaskDetailQueryRequest request, WaitApplyInvoiceTaskDetailQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillDate))
+            {
+                query["bill_date"] = request.BillDate;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WaitApplyInvoiceTaskDetailQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/invoice/v1/wait-apply-task",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WaitApplyInvoiceTaskDetailQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<WaitApplyInvoiceTaskDetailQueryResponse> WaitApplyInvoiceTaskDetailQueryWithOptionsAsync(WaitApplyInvoiceTaskDetailQueryRequest request, WaitApplyInvoiceTaskDetailQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillDate))
+            {
+                query["bill_date"] = request.BillDate;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WaitApplyInvoiceTaskDetailQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/invoice/v1/wait-apply-task",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WaitApplyInvoiceTaskDetailQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public WaitApplyInvoiceTaskDetailQueryResponse WaitApplyInvoiceTaskDetailQuery(WaitApplyInvoiceTaskDetailQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            WaitApplyInvoiceTaskDetailQueryHeaders headers = new WaitApplyInvoiceTaskDetailQueryHeaders();
+            return WaitApplyInvoiceTaskDetailQueryWithOptions(request, headers, runtime);
+        }
+
+        public async Task<WaitApplyInvoiceTaskDetailQueryResponse> WaitApplyInvoiceTaskDetailQueryAsync(WaitApplyInvoiceTaskDetailQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            WaitApplyInvoiceTaskDetailQueryHeaders headers = new WaitApplyInvoiceTaskDetailQueryHeaders();
+            return await WaitApplyInvoiceTaskDetailQueryWithOptionsAsync(request, headers, runtime);
         }
 
     }
