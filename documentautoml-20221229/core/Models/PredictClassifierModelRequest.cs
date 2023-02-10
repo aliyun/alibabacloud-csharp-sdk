@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.DocumentAutoml20221229.Models
 
         [NameInMap("ClassifierId")]
         [Validation(Required=false)]
-        public string ClassifierId { get; set; }
+        public long? ClassifierId { get; set; }
 
         [NameInMap("Content")]
         [Validation(Required=false)]

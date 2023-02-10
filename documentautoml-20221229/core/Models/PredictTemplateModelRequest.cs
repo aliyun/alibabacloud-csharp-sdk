@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.DocumentAutoml20221229.Models
         [Validation(Required=false)]
         public string Content { get; set; }
 
-        [NameInMap("ProjectId")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public long? ProjectId { get; set; }
+        public long? TaskId { get; set; }
 
     }
 
