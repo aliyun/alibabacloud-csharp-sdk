@@ -10,22 +10,21 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class SendChatappMassMessageShrinkRequest : TeaModel {
         /// <summary>
-        /// The type of the message channel. Valid values:
-        /// 
-        /// *   **whatsapp**
-        /// *   viber (under development)
-        /// *   line (under development)
+        /// The channel type. Valid values: whatsapp, viber, and line.
         /// </summary>
         [NameInMap("ChannelType")]
         [Validation(Required=false)]
         public string ChannelType { get; set; }
 
+        /// <summary>
+        /// The space ID of the user.
+        /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The unique identifier of the WhatsApp account that you register.
+        /// The ID of the WhatApp Business account of the ISV account.
         /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
@@ -33,62 +32,81 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustWabaId { get; set; }
 
         /// <summary>
-        /// Fallback message content.
+        /// The fallback content.
         /// </summary>
         [NameInMap("FallBackContent")]
         [Validation(Required=false)]
         public string FallBackContent { get; set; }
 
         /// <summary>
-        /// Fallback strategy id. Fallback Strategy can be created on the ChatApp console.
+        /// The ID of the fallback strategy.
         /// </summary>
         [NameInMap("FallBackId")]
         [Validation(Required=false)]
         public string FallBackId { get; set; }
 
         /// <summary>
-        /// The mobile phone number of the message sender.
-        /// 
-        /// <notice>You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatApp console.</notice>
+        /// The message sender.
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public string From { get; set; }
 
         /// <summary>
-        /// Assigned by ISV for RAM user authentication and authorization.
+        /// The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// The language that is used in the message template.
+        /// The message type when the ChannelType parameter is set to viber. Valid values: pormotion and transition.
+        /// </summary>
+        [NameInMap("Label")]
+        [Validation(Required=false)]
+        public string Label { get; set; }
+
+        /// <summary>
+        /// The language. For more information about language codes, see [Language codes](~~463420~~).
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
 
         /// <summary>
-        /// Target number and parameter list.
+        /// The list of phone numbers that receive the message.
         /// </summary>
         [NameInMap("SenderList")]
         [Validation(Required=false)]
         public string SenderListShrink { get; set; }
 
         /// <summary>
-        /// User-define ID to identify a single batch of messages.
+        /// The tag information when the ChannelType parameter is set to viber.
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string Tag { get; set; }
+
+        /// <summary>
+        /// The task ID.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// The code of the message template.
+        /// The encoding of the message template.
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
+
+        /// <summary>
+        /// The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600, in seconds.
+        /// </summary>
+        [NameInMap("Ttl")]
+        [Validation(Required=false)]
+        public long? Ttl { get; set; }
 
     }
 

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappEmbedSignUpRequest : TeaModel {
+        /// <summary>
+        /// The InputToken returned by the embedded signup.
+        /// </summary>
         [NameInMap("InputToken")]
         [Validation(Required=false)]
         public string InputToken { get; set; }
