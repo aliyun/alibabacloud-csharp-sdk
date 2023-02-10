@@ -89,6 +89,326 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public int? CabinDiscount { get; set; }
 
+                    [NameInMap("change_ota_item_rule_rq")]
+                    [Validation(Required=false)]
+                    public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRq ChangeOtaItemRuleRq { get; set; }
+                    public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRq : TeaModel {
+                        [NameInMap("baggage_details")]
+                        [Validation(Required=false)]
+                        public List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetails> BaggageDetails { get; set; }
+                        public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetails : TeaModel {
+                            [NameInMap("baggage_sub_items")]
+                            [Validation(Required=false)]
+                            public List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems> BaggageSubItems { get; set; }
+                            public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems : TeaModel {
+                                [NameInMap("attributes")]
+                                [Validation(Required=false)]
+                                public Dictionary<string, object> Attributes { get; set; }
+
+                                [NameInMap("baggage_sub_content_visualizes")]
+                                [Validation(Required=false)]
+                                public List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizes> BaggageSubContentVisualizes { get; set; }
+                                public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizes : TeaModel {
+                                    [NameInMap("baggage_desc")]
+                                    [Validation(Required=false)]
+                                    public List<string> BaggageDesc { get; set; }
+
+                                    [NameInMap("baggage_sub_content_type")]
+                                    [Validation(Required=false)]
+                                    public int? BaggageSubContentType { get; set; }
+
+                                    [NameInMap("description")]
+                                    [Validation(Required=false)]
+                                    public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesDescription Description { get; set; }
+                                    public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesDescription : TeaModel {
+                                        [NameInMap("desc")]
+                                        [Validation(Required=false)]
+                                        public string Desc { get; set; }
+
+                                        [NameInMap("icon")]
+                                        [Validation(Required=false)]
+                                        public string Icon { get; set; }
+
+                                        [NameInMap("image")]
+                                        [Validation(Required=false)]
+                                        public string Image { get; set; }
+
+                                        [NameInMap("title")]
+                                        [Validation(Required=false)]
+                                        public string Title { get; set; }
+
+                                    }
+
+                                    [NameInMap("imageDO")]
+                                    [Validation(Required=false)]
+                                    public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesImageDO ImageDO { get; set; }
+                                    public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesImageDO : TeaModel {
+                                        [NameInMap("image")]
+                                        [Validation(Required=false)]
+                                        public string Image { get; set; }
+
+                                        [NameInMap("largest")]
+                                        [Validation(Required=false)]
+                                        public string Largest { get; set; }
+
+                                        [NameInMap("middle")]
+                                        [Validation(Required=false)]
+                                        public string Middle { get; set; }
+
+                                        [NameInMap("smallest")]
+                                        [Validation(Required=false)]
+                                        public string Smallest { get; set; }
+
+                                    }
+
+                                    [NameInMap("is_highlight")]
+                                    [Validation(Required=false)]
+                                    public bool? IsHighlight { get; set; }
+
+                                    [NameInMap("subTitle")]
+                                    [Validation(Required=false)]
+                                    public string SubTitle { get; set; }
+
+                                }
+
+                                [NameInMap("baggage_sub_contents")]
+                                [Validation(Required=false)]
+                                public List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContents> BaggageSubContents { get; set; }
+                                public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContents : TeaModel {
+                                    [NameInMap("baggage_desc")]
+                                    [Validation(Required=false)]
+                                    public string BaggageDesc { get; set; }
+
+                                    [NameInMap("icon")]
+                                    [Validation(Required=false)]
+                                    public string Icon { get; set; }
+
+                                    [NameInMap("style")]
+                                    [Validation(Required=false)]
+                                    public int? Style { get; set; }
+
+                                    [NameInMap("sub_title")]
+                                    [Validation(Required=false)]
+                                    public string SubTitle { get; set; }
+
+                                }
+
+                                [NameInMap("content")]
+                                [Validation(Required=false)]
+                                public string Content { get; set; }
+
+                                [NameInMap("is_struct")]
+                                [Validation(Required=false)]
+                                public bool? IsStruct { get; set; }
+
+                                [NameInMap("ptc")]
+                                [Validation(Required=false)]
+                                public string Ptc { get; set; }
+
+                                [NameInMap("title")]
+                                [Validation(Required=false)]
+                                public string Title { get; set; }
+
+                            }
+
+                            [NameInMap("index")]
+                            [Validation(Required=false)]
+                            public int? Index { get; set; }
+
+                            [NameInMap("table_head")]
+                            [Validation(Required=false)]
+                            public string TableHead { get; set; }
+
+                            [NameInMap("tips")]
+                            [Validation(Required=false)]
+                            public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsTips Tips { get; set; }
+                            public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsTips : TeaModel {
+                                [NameInMap("logo")]
+                                [Validation(Required=false)]
+                                public string Logo { get; set; }
+
+                                [NameInMap("tips_desc")]
+                                [Validation(Required=false)]
+                                public string TipsDesc { get; set; }
+
+                                [NameInMap("tips_image")]
+                                [Validation(Required=false)]
+                                public string TipsImage { get; set; }
+
+                            }
+
+                            [NameInMap("title")]
+                            [Validation(Required=false)]
+                            public string Title { get; set; }
+
+                            [NameInMap("type")]
+                            [Validation(Required=false)]
+                            public int? Type { get; set; }
+
+                        }
+
+                        [NameInMap("change_details")]
+                        [Validation(Required=false)]
+                        public List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetails> ChangeDetails { get; set; }
+                        public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetails : TeaModel {
+                            [NameInMap("extra_contents")]
+                            [Validation(Required=false)]
+                            public List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsExtraContents> ExtraContents { get; set; }
+                            public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsExtraContents : TeaModel {
+                                [NameInMap("content")]
+                                [Validation(Required=false)]
+                                public string Content { get; set; }
+
+                                [NameInMap("icon")]
+                                [Validation(Required=false)]
+                                public string Icon { get; set; }
+
+                                [NameInMap("title")]
+                                [Validation(Required=false)]
+                                public string Title { get; set; }
+
+                            }
+
+                            [NameInMap("index")]
+                            [Validation(Required=false)]
+                            public int? Index { get; set; }
+
+                            [NameInMap("refund_sub_items")]
+                            [Validation(Required=false)]
+                            public List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItems> RefundSubItems { get; set; }
+                            public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItems : TeaModel {
+                                [NameInMap("content")]
+                                [Validation(Required=false)]
+                                public string Content { get; set; }
+
+                                [NameInMap("is_struct")]
+                                [Validation(Required=false)]
+                                public bool? IsStruct { get; set; }
+
+                                [NameInMap("ptc")]
+                                [Validation(Required=false)]
+                                public string Ptc { get; set; }
+
+                                [NameInMap("refund_sub_contents")]
+                                [Validation(Required=false)]
+                                public List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItemsRefundSubContents> RefundSubContents { get; set; }
+                                public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItemsRefundSubContents : TeaModel {
+                                    [NameInMap("fee_desc")]
+                                    [Validation(Required=false)]
+                                    public string FeeDesc { get; set; }
+
+                                    [NameInMap("fee_range")]
+                                    [Validation(Required=false)]
+                                    public string FeeRange { get; set; }
+
+                                    [NameInMap("style")]
+                                    [Validation(Required=false)]
+                                    public string Style { get; set; }
+
+                                }
+
+                                [NameInMap("title")]
+                                [Validation(Required=false)]
+                                public string Title { get; set; }
+
+                            }
+
+                            [NameInMap("table_head")]
+                            [Validation(Required=false)]
+                            public string TableHead { get; set; }
+
+                            [NameInMap("title")]
+                            [Validation(Required=false)]
+                            public string Title { get; set; }
+
+                            [NameInMap("type")]
+                            [Validation(Required=false)]
+                            public int? Type { get; set; }
+
+                        }
+
+                        [NameInMap("refund_details")]
+                        [Validation(Required=false)]
+                        public List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetails> RefundDetails { get; set; }
+                        public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetails : TeaModel {
+                            [NameInMap("extra_contents")]
+                            [Validation(Required=false)]
+                            public List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsExtraContents> ExtraContents { get; set; }
+                            public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsExtraContents : TeaModel {
+                                [NameInMap("content")]
+                                [Validation(Required=false)]
+                                public string Content { get; set; }
+
+                                [NameInMap("icon")]
+                                [Validation(Required=false)]
+                                public string Icon { get; set; }
+
+                                [NameInMap("title")]
+                                [Validation(Required=false)]
+                                public string Title { get; set; }
+
+                            }
+
+                            [NameInMap("index")]
+                            [Validation(Required=false)]
+                            public int? Index { get; set; }
+
+                            [NameInMap("refund_sub_items")]
+                            [Validation(Required=false)]
+                            public List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItems> RefundSubItems { get; set; }
+                            public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItems : TeaModel {
+                                [NameInMap("content")]
+                                [Validation(Required=false)]
+                                public string Content { get; set; }
+
+                                [NameInMap("is_struct")]
+                                [Validation(Required=false)]
+                                public bool? IsStruct { get; set; }
+
+                                [NameInMap("ptc")]
+                                [Validation(Required=false)]
+                                public string Ptc { get; set; }
+
+                                [NameInMap("refund_sub_contents")]
+                                [Validation(Required=false)]
+                                public List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItemsRefundSubContents> RefundSubContents { get; set; }
+                                public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItemsRefundSubContents : TeaModel {
+                                    [NameInMap("fee_desc")]
+                                    [Validation(Required=false)]
+                                    public string FeeDesc { get; set; }
+
+                                    [NameInMap("fee_range")]
+                                    [Validation(Required=false)]
+                                    public string FeeRange { get; set; }
+
+                                    [NameInMap("style")]
+                                    [Validation(Required=false)]
+                                    public string Style { get; set; }
+
+                                }
+
+                                [NameInMap("title")]
+                                [Validation(Required=false)]
+                                public string Title { get; set; }
+
+                            }
+
+                            [NameInMap("table_head")]
+                            [Validation(Required=false)]
+                            public string TableHead { get; set; }
+
+                            [NameInMap("title")]
+                            [Validation(Required=false)]
+                            public string Title { get; set; }
+
+                            [NameInMap("type")]
+                            [Validation(Required=false)]
+                            public int? Type { get; set; }
+
+                        }
+
+                    }
+
                     [NameInMap("child_cabin")]
                     [Validation(Required=false)]
                     public string ChildCabin { get; set; }
