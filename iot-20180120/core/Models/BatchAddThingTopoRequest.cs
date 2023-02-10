@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchAddThingTopoRequest : TeaModel {
         [NameInMap("GwDeviceName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string GwDeviceName { get; set; }
 
         [NameInMap("GwProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string GwProductKey { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("TopoAddItem")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<BatchAddThingTopoRequestTopoAddItem> TopoAddItem { get; set; }
         public class BatchAddThingTopoRequestTopoAddItem : TeaModel {
             [NameInMap("ClientId")]
@@ -30,19 +30,19 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             public string ClientId { get; set; }
 
             [NameInMap("DeviceName")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string DeviceName { get; set; }
 
             [NameInMap("ProductKey")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string ProductKey { get; set; }
 
             [NameInMap("Sign")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Sign { get; set; }
 
             [NameInMap("SignMethod")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string SignMethod { get; set; }
 
             [NameInMap("Timestamp")]

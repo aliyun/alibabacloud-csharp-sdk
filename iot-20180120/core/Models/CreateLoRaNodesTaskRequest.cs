@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateLoRaNodesTaskRequest : TeaModel {
         [NameInMap("DeviceInfo")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<CreateLoRaNodesTaskRequestDeviceInfo> DeviceInfo { get; set; }
         public class CreateLoRaNodesTaskRequestDeviceInfo : TeaModel {
             [NameInMap("DevEui")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
     }

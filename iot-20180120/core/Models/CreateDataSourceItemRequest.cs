@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateDataSourceItemRequest : TeaModel {
         [NameInMap("DataSourceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? DataSourceId { get; set; }
 
         [NameInMap("DeviceName")]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string ScopeType { get; set; }
 
         [NameInMap("Topic")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Topic { get; set; }
 
     }

@@ -9,53 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchGetEdgeInstanceDriverConfigsResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("DriverConfigList")]
-        [Validation(Required=true)]
-        public List<BatchGetEdgeInstanceDriverConfigsResponseDriverConfigList> DriverConfigList { get; set; }
-        public class BatchGetEdgeInstanceDriverConfigsResponseDriverConfigList : TeaModel {
-            [NameInMap("DriverId")]
-            [Validation(Required=true)]
-            public string DriverId { get; set; }
-
-            [NameInMap("ConfigList")]
-            [Validation(Required=true)]
-            public List<BatchGetEdgeInstanceDriverConfigsResponseDriverConfigListConfigList> ConfigList { get; set; }
-            public class BatchGetEdgeInstanceDriverConfigsResponseDriverConfigListConfigList : TeaModel {
-                [NameInMap("ConfigId")]
-                [Validation(Required=true)]
-                public string ConfigId { get; set; }
-
-                [NameInMap("Content")]
-                [Validation(Required=true)]
-                public string Content { get; set; }
-
-                [NameInMap("Format")]
-                [Validation(Required=true)]
-                public string Format { get; set; }
-
-                [NameInMap("Key")]
-                [Validation(Required=true)]
-                public string Key { get; set; }
-
-            }
-
-        }
+        public BatchGetEdgeInstanceDriverConfigsResponseBody Body { get; set; }
 
     }
 

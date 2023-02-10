@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class DeleteDestinationRequest : TeaModel {
         [NameInMap("DestinationId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? DestinationId { get; set; }
 
         [NameInMap("IotInstanceId")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetRuleActionRequest : TeaModel {
         [NameInMap("ActionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? ActionId { get; set; }
 
         [NameInMap("IotInstanceId")]

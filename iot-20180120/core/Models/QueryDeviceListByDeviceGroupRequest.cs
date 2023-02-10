@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? CurrentPage { get; set; }
 
         [NameInMap("GroupId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string GroupId { get; set; }
 
         [NameInMap("IotInstanceId")]

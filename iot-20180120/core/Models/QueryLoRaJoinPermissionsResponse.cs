@@ -9,61 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryLoRaJoinPermissionsResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("ProductKey")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string ProductKey { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("JoinPermissions")]
-        [Validation(Required=true)]
-        public QueryLoRaJoinPermissionsResponseJoinPermissions JoinPermissions { get; set; }
-        public class QueryLoRaJoinPermissionsResponseJoinPermissions : TeaModel {
-            [NameInMap("JoinPermission")]
-            [Validation(Required=true)]
-            public List<QueryLoRaJoinPermissionsResponseJoinPermissionsJoinPermission> JoinPermission { get; set; }
-            public class QueryLoRaJoinPermissionsResponseJoinPermissionsJoinPermission : TeaModel {
-                [NameInMap("ClassMode")]
-                [Validation(Required=true)]
-                public string ClassMode { get; set; }
-
-                [NameInMap("Enabled")]
-                [Validation(Required=true)]
-                public bool? Enabled { get; set; }
-
-                [NameInMap("JoinPermissionId")]
-                [Validation(Required=true)]
-                public string JoinPermissionId { get; set; }
-
-                [NameInMap("JoinPermissionName")]
-                [Validation(Required=true)]
-                public string JoinPermissionName { get; set; }
-
-                [NameInMap("JoinPermissionType")]
-                [Validation(Required=true)]
-                public string JoinPermissionType { get; set; }
-
-                [NameInMap("OwnerAliyunPk")]
-                [Validation(Required=true)]
-                public string OwnerAliyunPk { get; set; }
-
-            }
-
-        }
+        public QueryLoRaJoinPermissionsResponseBody Body { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class UpdateEdgeInstanceMessageRoutingRequest : TeaModel {
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string Name { get; set; }
 
         [NameInMap("RouteId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? RouteId { get; set; }
 
         [NameInMap("SourceData")]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string SourceData { get; set; }
 
         [NameInMap("SourceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SourceType { get; set; }
 
         [NameInMap("TargetData")]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? TargetIotHubQos { get; set; }
 
         [NameInMap("TargetType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TargetType { get; set; }
 
         [NameInMap("TopicFilter")]

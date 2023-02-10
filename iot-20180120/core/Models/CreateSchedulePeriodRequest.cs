@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateSchedulePeriodRequest : TeaModel {
         [NameInMap("Description")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Description { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EndTime { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -22,15 +22,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ScheduleCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ScheduleCode { get; set; }
 
         [NameInMap("SoundCodeContent")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SoundCodeContent { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StartTime { get; set; }
 
     }

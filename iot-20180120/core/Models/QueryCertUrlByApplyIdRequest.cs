@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryCertUrlByApplyIdRequest : TeaModel {
         [NameInMap("ApplyId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? ApplyId { get; set; }
 
         [NameInMap("IotInstanceId")]

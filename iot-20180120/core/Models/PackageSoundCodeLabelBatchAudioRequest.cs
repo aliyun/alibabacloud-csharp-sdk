@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class PackageSoundCodeLabelBatchAudioRequest : TeaModel {
         [NameInMap("BatchCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BatchCode { get; set; }
 
         [NameInMap("IotInstanceId")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceDistributeJobRequest : TeaModel {
         [NameInMap("JobId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string JobId { get; set; }
 
     }

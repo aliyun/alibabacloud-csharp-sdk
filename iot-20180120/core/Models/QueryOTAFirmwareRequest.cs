@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryOTAFirmwareRequest : TeaModel {
         [NameInMap("FirmwareId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FirmwareId { get; set; }
 
         [NameInMap("IotInstanceId")]

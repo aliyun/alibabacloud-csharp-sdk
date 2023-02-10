@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateConsumerGroupRequest : TeaModel {
         [NameInMap("GroupName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string GroupName { get; set; }
 
         [NameInMap("IotInstanceId")]

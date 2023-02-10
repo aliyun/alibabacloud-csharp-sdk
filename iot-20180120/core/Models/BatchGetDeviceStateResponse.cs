@@ -9,57 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchGetDeviceStateResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("DeviceStatusList")]
-        [Validation(Required=true)]
-        public BatchGetDeviceStateResponseDeviceStatusList DeviceStatusList { get; set; }
-        public class BatchGetDeviceStateResponseDeviceStatusList : TeaModel {
-            [NameInMap("DeviceStatus")]
-            [Validation(Required=true)]
-            public List<BatchGetDeviceStateResponseDeviceStatusListDeviceStatus> DeviceStatus { get; set; }
-            public class BatchGetDeviceStateResponseDeviceStatusListDeviceStatus : TeaModel {
-                [NameInMap("AsAddress")]
-                [Validation(Required=true)]
-                public string AsAddress { get; set; }
-
-                [NameInMap("DeviceId")]
-                [Validation(Required=true)]
-                public string DeviceId { get; set; }
-
-                [NameInMap("DeviceName")]
-                [Validation(Required=true)]
-                public string DeviceName { get; set; }
-
-                [NameInMap("IotId")]
-                [Validation(Required=true)]
-                public string IotId { get; set; }
-
-                [NameInMap("LastOnlineTime")]
-                [Validation(Required=true)]
-                public string LastOnlineTime { get; set; }
-
-                [NameInMap("Status")]
-                [Validation(Required=true)]
-                public string Status { get; set; }
-
-            }
-
-        }
+        public BatchGetDeviceStateResponseBody Body { get; set; }
 
     }
 

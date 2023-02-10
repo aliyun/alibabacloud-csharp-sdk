@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListOTAJobByDeviceRequest : TeaModel {
         [NameInMap("CurrentPage")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         [NameInMap("DeviceName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DeviceName { get; set; }
 
         [NameInMap("FirmwareId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FirmwareId { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
     }

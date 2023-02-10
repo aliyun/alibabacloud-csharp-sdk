@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class DeleteDeviceSpeechRequest : TeaModel {
         [NameInMap("DeviceSpeechList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<DeleteDeviceSpeechRequestDeviceSpeechList> DeviceSpeechList { get; set; }
         public class DeleteDeviceSpeechRequestDeviceSpeechList : TeaModel {
             [NameInMap("AudioFormat")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string AudioFormat { get; set; }
 
             [NameInMap("BizCode")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string BizCode { get; set; }
 
         }
 
         [NameInMap("IotId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string IotId { get; set; }
 
         [NameInMap("IotInstanceId")]

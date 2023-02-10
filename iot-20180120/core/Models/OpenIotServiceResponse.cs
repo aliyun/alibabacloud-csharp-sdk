@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class OpenIotServiceResponse : TeaModel {
-        [NameInMap("OrderId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string OrderId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=true)]
+        public OpenIotServiceResponseBody Body { get; set; }
 
     }
 

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ClearEdgeInstanceDriverConfigsRequest : TeaModel {
         [NameInMap("DriverId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DriverId { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("IotInstanceId")]

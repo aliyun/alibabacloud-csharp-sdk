@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetDataAPIServiceDetailRequest : TeaModel {
         [NameInMap("ApiSrn")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ApiSrn { get; set; }
 
         [NameInMap("IotInstanceId")]

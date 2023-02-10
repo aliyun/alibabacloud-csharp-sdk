@@ -9,67 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryShareTaskDeviceListResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public QueryShareTaskDeviceListResponseData Data { get; set; }
-        public class QueryShareTaskDeviceListResponseData : TeaModel {
-            [NameInMap("PageId")]
-            [Validation(Required=true)]
-            public int? PageId { get; set; }
-
-            [NameInMap("PageSize")]
-            [Validation(Required=true)]
-            public int? PageSize { get; set; }
-
-            [NameInMap("Total")]
-            [Validation(Required=true)]
-            public int? Total { get; set; }
-
-            [NameInMap("DeviceList")]
-            [Validation(Required=true)]
-            public QueryShareTaskDeviceListResponseDataDeviceList DeviceList { get; set; }
-            public class QueryShareTaskDeviceListResponseDataDeviceList : TeaModel {
-                [NameInMap("items")]
-                [Validation(Required=true)]
-                public List<QueryShareTaskDeviceListResponseDataDeviceListItems> Items { get; set; }
-                public class QueryShareTaskDeviceListResponseDataDeviceListItems : TeaModel {
-                    [NameInMap("DeviceName")]
-                    [Validation(Required=true)]
-                    public string DeviceName { get; set; }
-
-                    [NameInMap("GmtAdded")]
-                    [Validation(Required=true)]
-                    public long? GmtAdded { get; set; }
-
-                    [NameInMap("IotId")]
-                    [Validation(Required=true)]
-                    public string IotId { get; set; }
-
-                    [NameInMap("ProductKey")]
-                    [Validation(Required=true)]
-                    public string ProductKey { get; set; }
-
-                }
-
-            }
-
-        }
+        public QueryShareTaskDeviceListResponseBody Body { get; set; }
 
     }
 

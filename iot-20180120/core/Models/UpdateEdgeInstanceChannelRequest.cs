@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class UpdateEdgeInstanceChannelRequest : TeaModel {
         [NameInMap("ChannelId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ChannelId { get; set; }
 
         [NameInMap("ChannelName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ChannelName { get; set; }
 
         [NameInMap("Configs")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<UpdateEdgeInstanceChannelRequestConfigs> Configs { get; set; }
         public class UpdateEdgeInstanceChannelRequestConfigs : TeaModel {
             [NameInMap("Content")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Content { get; set; }
 
             [NameInMap("Format")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Format { get; set; }
 
             [NameInMap("Key")]
@@ -36,11 +36,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         }
 
         [NameInMap("DriverId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DriverId { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("IotInstanceId")]

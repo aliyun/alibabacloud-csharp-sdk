@@ -9,59 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceGroupInfoResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public QueryDeviceGroupInfoResponseData Data { get; set; }
-        public class QueryDeviceGroupInfoResponseData : TeaModel {
-            [NameInMap("DeviceActive")]
-            [Validation(Required=true)]
-            public int? DeviceActive { get; set; }
-
-            [NameInMap("DeviceCount")]
-            [Validation(Required=true)]
-            public int? DeviceCount { get; set; }
-
-            [NameInMap("DeviceOnline")]
-            [Validation(Required=true)]
-            public int? DeviceOnline { get; set; }
-
-            [NameInMap("DynamicGroupExpression")]
-            [Validation(Required=true)]
-            public string DynamicGroupExpression { get; set; }
-
-            [NameInMap("GroupDesc")]
-            [Validation(Required=true)]
-            public string GroupDesc { get; set; }
-
-            [NameInMap("GroupId")]
-            [Validation(Required=true)]
-            public string GroupId { get; set; }
-
-            [NameInMap("GroupName")]
-            [Validation(Required=true)]
-            public string GroupName { get; set; }
-
-            [NameInMap("UtcCreate")]
-            [Validation(Required=true)]
-            public string UtcCreate { get; set; }
-
-        }
+        public QueryDeviceGroupInfoResponseBody Body { get; set; }
 
     }
 

@@ -9,37 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchAddDeviceGroupRelationsResponse : TeaModel {
-        [NameInMap("AlreadyRelatedGroupDeviceCount")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public int? AlreadyRelatedGroupDeviceCount { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("ExceedTenGroupDeviceCount")]
-        [Validation(Required=true)]
-        public int? ExceedTenGroupDeviceCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("SuccessAddedDeviceCount")]
-        [Validation(Required=true)]
-        public int? SuccessAddedDeviceCount { get; set; }
-
-        [NameInMap("ValidDeviceCount")]
-        [Validation(Required=true)]
-        public int? ValidDeviceCount { get; set; }
+        public BatchAddDeviceGroupRelationsResponseBody Body { get; set; }
 
     }
 

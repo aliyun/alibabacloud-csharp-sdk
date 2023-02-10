@@ -9,55 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class RegisterDeviceResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public RegisterDeviceResponseData Data { get; set; }
-        public class RegisterDeviceResponseData : TeaModel {
-            [NameInMap("DevEui")]
-            [Validation(Required=true)]
-            public string DevEui { get; set; }
-
-            [NameInMap("DeviceName")]
-            [Validation(Required=true)]
-            public string DeviceName { get; set; }
-
-            [NameInMap("DeviceSecret")]
-            [Validation(Required=true)]
-            public string DeviceSecret { get; set; }
-
-            [NameInMap("IotId")]
-            [Validation(Required=true)]
-            public string IotId { get; set; }
-
-            [NameInMap("JoinEui")]
-            [Validation(Required=true)]
-            public string JoinEui { get; set; }
-
-            [NameInMap("Nickname")]
-            [Validation(Required=true)]
-            public string Nickname { get; set; }
-
-            [NameInMap("ProductKey")]
-            [Validation(Required=true)]
-            public string ProductKey { get; set; }
-
-        }
+        public RegisterDeviceResponseBody Body { get; set; }
 
     }
 

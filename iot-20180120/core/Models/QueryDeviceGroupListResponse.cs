@@ -9,69 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceGroupListResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public int? CurrentPage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("PageCount")]
-        [Validation(Required=true)]
-        public int? PageCount { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Total")]
-        [Validation(Required=true)]
-        public int? Total { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public QueryDeviceGroupListResponseData Data { get; set; }
-        public class QueryDeviceGroupListResponseData : TeaModel {
-            [NameInMap("GroupInfo")]
-            [Validation(Required=true)]
-            public List<QueryDeviceGroupListResponseDataGroupInfo> GroupInfo { get; set; }
-            public class QueryDeviceGroupListResponseDataGroupInfo : TeaModel {
-                [NameInMap("GroupDesc")]
-                [Validation(Required=true)]
-                public string GroupDesc { get; set; }
-
-                [NameInMap("GroupId")]
-                [Validation(Required=true)]
-                public string GroupId { get; set; }
-
-                [NameInMap("GroupName")]
-                [Validation(Required=true)]
-                public string GroupName { get; set; }
-
-                [NameInMap("GroupType")]
-                [Validation(Required=true)]
-                public string GroupType { get; set; }
-
-                [NameInMap("UtcCreate")]
-                [Validation(Required=true)]
-                public string UtcCreate { get; set; }
-
-            }
-
-        }
+        public QueryDeviceGroupListResponseBody Body { get; set; }
 
     }
 

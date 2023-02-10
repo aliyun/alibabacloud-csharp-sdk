@@ -9,91 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetRuleResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("RuleInfo")]
-        [Validation(Required=true)]
-        public GetRuleResponseRuleInfo RuleInfo { get; set; }
-        public class GetRuleResponseRuleInfo : TeaModel {
-            [NameInMap("CreateUserId")]
-            [Validation(Required=true)]
-            public long? CreateUserId { get; set; }
-
-            [NameInMap("Created")]
-            [Validation(Required=true)]
-            public string Created { get; set; }
-
-            [NameInMap("DataType")]
-            [Validation(Required=true)]
-            public string DataType { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=true)]
-            public long? Id { get; set; }
-
-            [NameInMap("Modified")]
-            [Validation(Required=true)]
-            public string Modified { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=true)]
-            public string Name { get; set; }
-
-            [NameInMap("ProductKey")]
-            [Validation(Required=true)]
-            public string ProductKey { get; set; }
-
-            [NameInMap("RuleDesc")]
-            [Validation(Required=true)]
-            public string RuleDesc { get; set; }
-
-            [NameInMap("Select")]
-            [Validation(Required=true)]
-            public string Select { get; set; }
-
-            [NameInMap("ShortTopic")]
-            [Validation(Required=true)]
-            public string ShortTopic { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=true)]
-            public string Status { get; set; }
-
-            [NameInMap("Topic")]
-            [Validation(Required=true)]
-            public string Topic { get; set; }
-
-            [NameInMap("TopicType")]
-            [Validation(Required=true)]
-            public int? TopicType { get; set; }
-
-            [NameInMap("UtcCreated")]
-            [Validation(Required=true)]
-            public string UtcCreated { get; set; }
-
-            [NameInMap("UtcModified")]
-            [Validation(Required=true)]
-            public string UtcModified { get; set; }
-
-            [NameInMap("Where")]
-            [Validation(Required=true)]
-            public string Where { get; set; }
-
-        }
+        public GetRuleResponseBody Body { get; set; }
 
     }
 

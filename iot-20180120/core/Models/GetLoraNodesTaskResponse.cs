@@ -9,47 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetLoraNodesTaskResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("SuccessCount")]
-        [Validation(Required=true)]
-        public long? SuccessCount { get; set; }
-
-        [NameInMap("TaskId")]
-        [Validation(Required=true)]
-        public string TaskId { get; set; }
-
-        [NameInMap("TaskState")]
-        [Validation(Required=true)]
-        public string TaskState { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=true)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("SuccessDevEuis")]
-        [Validation(Required=true)]
-        public GetLoraNodesTaskResponseSuccessDevEuis SuccessDevEuis { get; set; }
-        public class GetLoraNodesTaskResponseSuccessDevEuis : TeaModel {
-            [NameInMap("SuccessDevEui")]
-            [Validation(Required=true)]
-            public List<string> SuccessDevEui { get; set; }
-
-        }
+        public GetLoraNodesTaskResponseBody Body { get; set; }
 
     }
 

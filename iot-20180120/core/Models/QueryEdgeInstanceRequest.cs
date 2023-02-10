@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryEdgeInstanceRequest : TeaModel {
         [NameInMap("CurrentPage")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string Name { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
     }

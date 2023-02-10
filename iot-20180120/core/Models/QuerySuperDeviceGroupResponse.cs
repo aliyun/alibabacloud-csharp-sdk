@@ -9,45 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QuerySuperDeviceGroupResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public QuerySuperDeviceGroupResponseData Data { get; set; }
-        public class QuerySuperDeviceGroupResponseData : TeaModel {
-            [NameInMap("GroupInfo")]
-            [Validation(Required=true)]
-            public List<QuerySuperDeviceGroupResponseDataGroupInfo> GroupInfo { get; set; }
-            public class QuerySuperDeviceGroupResponseDataGroupInfo : TeaModel {
-                [NameInMap("GroupDesc")]
-                [Validation(Required=true)]
-                public string GroupDesc { get; set; }
-
-                [NameInMap("GroupId")]
-                [Validation(Required=true)]
-                public string GroupId { get; set; }
-
-                [NameInMap("GroupName")]
-                [Validation(Required=true)]
-                public string GroupName { get; set; }
-
-            }
-
-        }
+        public QuerySuperDeviceGroupResponseBody Body { get; set; }
 
     }
 

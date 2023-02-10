@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string Name { get; set; }
 
         [NameInMap("ParserId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? ParserId { get; set; }
 
     }

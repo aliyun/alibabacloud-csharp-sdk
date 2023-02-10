@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchGetDeviceBindStatusRequest : TeaModel {
         [NameInMap("IotIds")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> IotIds { get; set; }
 
         [NameInMap("IotInstanceId")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDevicesHotStorageDataStatusRequest : TeaModel {
         [NameInMap("Asc")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Asc { get; set; }
 
         [NameInMap("DeviceName")]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotId { get; set; }
 
         [NameInMap("IotInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("NextPageToken")]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string NextPageToken { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         [NameInMap("ProductKey")]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string ProductKey { get; set; }
 
         [NameInMap("UserTopic")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string UserTopic { get; set; }
 
     }

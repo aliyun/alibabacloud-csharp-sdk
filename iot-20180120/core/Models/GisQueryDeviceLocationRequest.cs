@@ -14,16 +14,16 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ThingList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<GisQueryDeviceLocationRequestThingList> ThingList { get; set; }
         public class GisQueryDeviceLocationRequestThingList : TeaModel {
-            [NameInMap("ProductKey")]
-            [Validation(Required=false)]
-            public string ProductKey { get; set; }
-
             [NameInMap("DeviceName")]
             [Validation(Required=false)]
             public string DeviceName { get; set; }
+
+            [NameInMap("ProductKey")]
+            [Validation(Required=false)]
+            public string ProductKey { get; set; }
 
         }
 

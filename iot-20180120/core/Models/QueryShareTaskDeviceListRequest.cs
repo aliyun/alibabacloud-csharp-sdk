@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? PageSize { get; set; }
 
         [NameInMap("ShareTaskId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ShareTaskId { get; set; }
 
     }

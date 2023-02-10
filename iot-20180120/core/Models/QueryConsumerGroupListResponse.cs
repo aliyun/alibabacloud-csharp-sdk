@@ -9,61 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryConsumerGroupListResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public int? CurrentPage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("PageCount")]
-        [Validation(Required=true)]
-        public int? PageCount { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Total")]
-        [Validation(Required=true)]
-        public int? Total { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public QueryConsumerGroupListResponseData Data { get; set; }
-        public class QueryConsumerGroupListResponseData : TeaModel {
-            [NameInMap("ConsumerGroupDTO")]
-            [Validation(Required=true)]
-            public List<QueryConsumerGroupListResponseDataConsumerGroupDTO> ConsumerGroupDTO { get; set; }
-            public class QueryConsumerGroupListResponseDataConsumerGroupDTO : TeaModel {
-                [NameInMap("CreateTime")]
-                [Validation(Required=true)]
-                public string CreateTime { get; set; }
-
-                [NameInMap("GroupId")]
-                [Validation(Required=true)]
-                public string GroupId { get; set; }
-
-                [NameInMap("GroupName")]
-                [Validation(Required=true)]
-                public string GroupName { get; set; }
-
-            }
-
-        }
+        public QueryConsumerGroupListResponseBody Body { get; set; }
 
     }
 

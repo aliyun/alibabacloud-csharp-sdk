@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string AudioFormat { get; set; }
 
         [NameInMap("CombinationList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> CombinationList { get; set; }
 
         [NameInMap("DeviceName")]

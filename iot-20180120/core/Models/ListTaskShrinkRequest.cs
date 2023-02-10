@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string JobId { get; set; }
 
         [NameInMap("Limit")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Limit { get; set; }
 
         [NameInMap("NextToken")]

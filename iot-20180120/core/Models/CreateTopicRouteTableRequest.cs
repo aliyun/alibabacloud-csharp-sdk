@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateTopicRouteTableRequest : TeaModel {
         [NameInMap("DstTopic")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> DstTopic { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("SrcTopic")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SrcTopic { get; set; }
 
     }

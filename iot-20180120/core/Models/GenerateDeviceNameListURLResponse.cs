@@ -9,59 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GenerateDeviceNameListURLResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public GenerateDeviceNameListURLResponseData Data { get; set; }
-        public class GenerateDeviceNameListURLResponseData : TeaModel {
-            [NameInMap("AccessKeyId")]
-            [Validation(Required=true)]
-            public string AccessKeyId { get; set; }
-
-            [NameInMap("FileUrl")]
-            [Validation(Required=true)]
-            public string FileUrl { get; set; }
-
-            [NameInMap("Host")]
-            [Validation(Required=true)]
-            public string Host { get; set; }
-
-            [NameInMap("Key")]
-            [Validation(Required=true)]
-            public string Key { get; set; }
-
-            [NameInMap("ObjectStorage")]
-            [Validation(Required=true)]
-            public string ObjectStorage { get; set; }
-
-            [NameInMap("Policy")]
-            [Validation(Required=true)]
-            public string Policy { get; set; }
-
-            [NameInMap("Signature")]
-            [Validation(Required=true)]
-            public string Signature { get; set; }
-
-            [NameInMap("UtcCreate")]
-            [Validation(Required=true)]
-            public string UtcCreate { get; set; }
-
-        }
+        public GenerateDeviceNameListURLResponseBody Body { get; set; }
 
     }
 

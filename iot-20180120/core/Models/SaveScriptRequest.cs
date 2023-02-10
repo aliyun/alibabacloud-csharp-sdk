@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ParserId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? ParserId { get; set; }
 
         [NameInMap("ScriptDraft")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ScriptDraft { get; set; }
 
     }

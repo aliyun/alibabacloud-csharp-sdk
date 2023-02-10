@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class SetEdgeInstanceDriverConfigsRequest : TeaModel {
         [NameInMap("Configs")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<SetEdgeInstanceDriverConfigsRequestConfigs> Configs { get; set; }
         public class SetEdgeInstanceDriverConfigsRequestConfigs : TeaModel {
             [NameInMap("Content")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Content { get; set; }
 
             [NameInMap("Format")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Format { get; set; }
 
             [NameInMap("Key")]
@@ -28,11 +28,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         }
 
         [NameInMap("DriverId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DriverId { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("IotInstanceId")]

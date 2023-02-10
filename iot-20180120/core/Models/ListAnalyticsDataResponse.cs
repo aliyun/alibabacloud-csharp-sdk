@@ -9,47 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListAnalyticsDataResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public ListAnalyticsDataResponseData Data { get; set; }
-        public class ListAnalyticsDataResponseData : TeaModel {
-            [NameInMap("Count")]
-            [Validation(Required=true)]
-            public long? Count { get; set; }
-
-            [NameInMap("HasNext")]
-            [Validation(Required=true)]
-            public bool? HasNext { get; set; }
-
-            [NameInMap("PageNum")]
-            [Validation(Required=true)]
-            public int? PageNum { get; set; }
-
-            [NameInMap("PageSize")]
-            [Validation(Required=true)]
-            public int? PageSize { get; set; }
-
-            [NameInMap("ResultJson")]
-            [Validation(Required=true)]
-            public string ResultJson { get; set; }
-
-        }
+        public ListAnalyticsDataResponseBody Body { get; set; }
 
     }
 

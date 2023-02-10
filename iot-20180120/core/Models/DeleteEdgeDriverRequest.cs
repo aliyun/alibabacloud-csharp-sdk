@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class DeleteEdgeDriverRequest : TeaModel {
         [NameInMap("DriverId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DriverId { get; set; }
 
         [NameInMap("IotInstanceId")]

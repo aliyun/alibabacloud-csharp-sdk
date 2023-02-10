@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GenerateFileUploadURLRequest : TeaModel {
         [NameInMap("BizCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BizCode { get; set; }
 
         [NameInMap("FileName")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string FileName { get; set; }
 
         [NameInMap("FileSuffix")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FileSuffix { get; set; }
 
         [NameInMap("IotInstanceId")]

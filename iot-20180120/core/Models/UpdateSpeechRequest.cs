@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProjectCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProjectCode { get; set; }
 
         [NameInMap("SoundCodeConfig")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public Dictionary<string, object> SoundCodeConfig { get; set; }
 
         [NameInMap("SpeechCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SpeechCode { get; set; }
 
         [NameInMap("SpeechRate")]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? SpeechRate { get; set; }
 
         [NameInMap("Voice")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Voice { get; set; }
 
         [NameInMap("Volume")]

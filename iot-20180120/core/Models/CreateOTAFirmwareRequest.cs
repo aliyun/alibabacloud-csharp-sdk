@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateOTAFirmwareRequest : TeaModel {
         [NameInMap("DestVersion")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DestVersion { get; set; }
 
         [NameInMap("FirmwareDesc")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string FirmwareDesc { get; set; }
 
         [NameInMap("FirmwareName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FirmwareName { get; set; }
 
         [NameInMap("FirmwareSign")]

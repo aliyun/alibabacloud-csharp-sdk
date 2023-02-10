@@ -9,65 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryImportedDeviceByApplyIdResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("PageNo")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? PageNo { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("ProductKey")]
-        [Validation(Required=true)]
-        public string ProductKey { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("TotalPage")]
-        [Validation(Required=true)]
-        public int? TotalPage { get; set; }
-
-        [NameInMap("DeviceList")]
-        [Validation(Required=true)]
-        public QueryImportedDeviceByApplyIdResponseDeviceList DeviceList { get; set; }
-        public class QueryImportedDeviceByApplyIdResponseDeviceList : TeaModel {
-            [NameInMap("device")]
-            [Validation(Required=true)]
-            public List<QueryImportedDeviceByApplyIdResponseDeviceListDevice> Device { get; set; }
-            public class QueryImportedDeviceByApplyIdResponseDeviceListDevice : TeaModel {
-                [NameInMap("DeviceName")]
-                [Validation(Required=true)]
-                public string DeviceName { get; set; }
-
-                [NameInMap("DeviceSecret")]
-                [Validation(Required=true)]
-                public string DeviceSecret { get; set; }
-
-                [NameInMap("ProductKey")]
-                [Validation(Required=true)]
-                public string ProductKey { get; set; }
-
-                [NameInMap("Sn")]
-                [Validation(Required=true)]
-                public string Sn { get; set; }
-
-            }
-
-        }
+        public QueryImportedDeviceByApplyIdResponseBody Body { get; set; }
 
     }
 

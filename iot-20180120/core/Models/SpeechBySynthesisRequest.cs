@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class SpeechBySynthesisRequest : TeaModel {
         [NameInMap("AudioFormat")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AudioFormat { get; set; }
 
         [NameInMap("DeviceName")]
@@ -38,11 +38,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? SpeechRate { get; set; }
 
         [NameInMap("Text")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Text { get; set; }
 
         [NameInMap("Voice")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Voice { get; set; }
 
         [NameInMap("Volume")]

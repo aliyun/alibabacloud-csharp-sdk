@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public bool? IsFailover { get; set; }
 
         [NameInMap("ParserId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? ParserId { get; set; }
 
     }

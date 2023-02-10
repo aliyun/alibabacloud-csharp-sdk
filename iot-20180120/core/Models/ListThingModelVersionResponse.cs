@@ -9,45 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListThingModelVersionResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public ListThingModelVersionResponseData Data { get; set; }
-        public class ListThingModelVersionResponseData : TeaModel {
-            [NameInMap("ModelVersions")]
-            [Validation(Required=true)]
-            public List<ListThingModelVersionResponseDataModelVersions> ModelVersions { get; set; }
-            public class ListThingModelVersionResponseDataModelVersions : TeaModel {
-                [NameInMap("Description")]
-                [Validation(Required=true)]
-                public string Description { get; set; }
-
-                [NameInMap("GmtCreate")]
-                [Validation(Required=true)]
-                public long? GmtCreate { get; set; }
-
-                [NameInMap("ModelVersion")]
-                [Validation(Required=true)]
-                public string ModelVersion { get; set; }
-
-            }
-
-        }
+        public ListThingModelVersionResponseBody Body { get; set; }
 
     }
 

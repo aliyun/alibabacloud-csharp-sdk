@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class DeleteDataSourceItemRequest : TeaModel {
         [NameInMap("DataSourceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? DataSourceId { get; set; }
 
         [NameInMap("DataSourceItemId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? DataSourceItemId { get; set; }
 
         [NameInMap("IotInstanceId")]

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? PageSize { get; set; }
 
         [NameInMap("ProjectCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProjectCode { get; set; }
 
     }

@@ -9,65 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryPageByApplyIdResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("Page")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? Page { get; set; }
-
-        [NameInMap("PageCount")]
-        [Validation(Required=true)]
-        public int? PageCount { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Total")]
-        [Validation(Required=true)]
-        public int? Total { get; set; }
-
-        [NameInMap("ApplyDeviceList")]
-        [Validation(Required=true)]
-        public QueryPageByApplyIdResponseApplyDeviceList ApplyDeviceList { get; set; }
-        public class QueryPageByApplyIdResponseApplyDeviceList : TeaModel {
-            [NameInMap("ApplyDeviceInfo")]
-            [Validation(Required=true)]
-            public List<QueryPageByApplyIdResponseApplyDeviceListApplyDeviceInfo> ApplyDeviceInfo { get; set; }
-            public class QueryPageByApplyIdResponseApplyDeviceListApplyDeviceInfo : TeaModel {
-                [NameInMap("DeviceId")]
-                [Validation(Required=true)]
-                public string DeviceId { get; set; }
-
-                [NameInMap("DeviceName")]
-                [Validation(Required=true)]
-                public string DeviceName { get; set; }
-
-                [NameInMap("DeviceSecret")]
-                [Validation(Required=true)]
-                public string DeviceSecret { get; set; }
-
-                [NameInMap("IotId")]
-                [Validation(Required=true)]
-                public string IotId { get; set; }
-
-            }
-
-        }
+        public QueryPageByApplyIdResponseBody Body { get; set; }
 
     }
 

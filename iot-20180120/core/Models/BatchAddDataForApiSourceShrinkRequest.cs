@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchAddDataForApiSourceShrinkRequest : TeaModel {
         [NameInMap("ApiId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ApiId { get; set; }
 
         [NameInMap("ContentList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ContentListShrink { get; set; }
 
         [NameInMap("IotInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
     }

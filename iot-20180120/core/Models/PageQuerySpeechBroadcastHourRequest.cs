@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string PageToken { get; set; }
 
         [NameInMap("QueryDateTimeHour")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string QueryDateTimeHour { get; set; }
 
         [NameInMap("ShareTaskCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ShareTaskCode { get; set; }
 
     }

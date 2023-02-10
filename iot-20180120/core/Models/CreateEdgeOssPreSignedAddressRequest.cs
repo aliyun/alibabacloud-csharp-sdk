@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateEdgeOssPreSignedAddressRequest : TeaModel {
         [NameInMap("FileName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FileName { get; set; }
 
         [NameInMap("InstanceId")]
@@ -22,15 +22,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ResourceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         [NameInMap("ResourceVersion")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceVersion { get; set; }
 
         [NameInMap("Type")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Type { get; set; }
 
     }

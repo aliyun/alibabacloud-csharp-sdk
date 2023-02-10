@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string RuleDescription { get; set; }
 
         [NameInMap("RuleName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RuleName { get; set; }
 
     }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class RecognizePictureGeneralRequest : TeaModel {
         [NameInMap("Url")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Url { get; set; }
 
     }

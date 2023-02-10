@@ -9,71 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QuerySchedulePeriodListResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public QuerySchedulePeriodListResponseData Data { get; set; }
-        public class QuerySchedulePeriodListResponseData : TeaModel {
-            [NameInMap("PageId")]
-            [Validation(Required=true)]
-            public int? PageId { get; set; }
-
-            [NameInMap("PageSize")]
-            [Validation(Required=true)]
-            public int? PageSize { get; set; }
-
-            [NameInMap("Total")]
-            [Validation(Required=true)]
-            public int? Total { get; set; }
-
-            [NameInMap("List")]
-            [Validation(Required=true)]
-            public QuerySchedulePeriodListResponseDataList List { get; set; }
-            public class QuerySchedulePeriodListResponseDataList : TeaModel {
-                [NameInMap("Items")]
-                [Validation(Required=true)]
-                public List<QuerySchedulePeriodListResponseDataListItems> Items { get; set; }
-                public class QuerySchedulePeriodListResponseDataListItems : TeaModel {
-                    [NameInMap("Description")]
-                    [Validation(Required=true)]
-                    public string Description { get; set; }
-
-                    [NameInMap("EndTime")]
-                    [Validation(Required=true)]
-                    public string EndTime { get; set; }
-
-                    [NameInMap("PeriodCode")]
-                    [Validation(Required=true)]
-                    public string PeriodCode { get; set; }
-
-                    [NameInMap("SoundCodeContent")]
-                    [Validation(Required=true)]
-                    public string SoundCodeContent { get; set; }
-
-                    [NameInMap("StartTime")]
-                    [Validation(Required=true)]
-                    public string StartTime { get; set; }
-
-                }
-
-            }
-
-        }
+        public QuerySchedulePeriodListResponseBody Body { get; set; }
 
     }
 

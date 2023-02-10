@@ -9,35 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class DeleteShareTaskDeviceResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public DeleteShareTaskDeviceResponseData Data { get; set; }
-        public class DeleteShareTaskDeviceResponseData : TeaModel {
-            [NameInMap("Progress")]
-            [Validation(Required=true)]
-            public int? Progress { get; set; }
-
-            [NameInMap("ProgressId")]
-            [Validation(Required=true)]
-            public string ProgressId { get; set; }
-
-        }
+        public DeleteShareTaskDeviceResponseBody Body { get; set; }
 
     }
 

@@ -9,71 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateProductResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("ProductKey")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string ProductKey { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public CreateProductResponseData Data { get; set; }
-        public class CreateProductResponseData : TeaModel {
-            [NameInMap("AliyunCommodityCode")]
-            [Validation(Required=true)]
-            public string AliyunCommodityCode { get; set; }
-
-            [NameInMap("AuthType")]
-            [Validation(Required=true)]
-            public string AuthType { get; set; }
-
-            [NameInMap("DataFormat")]
-            [Validation(Required=true)]
-            public int? DataFormat { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=true)]
-            public string Description { get; set; }
-
-            [NameInMap("Id2")]
-            [Validation(Required=true)]
-            public bool? Id2 { get; set; }
-
-            [NameInMap("NodeType")]
-            [Validation(Required=true)]
-            public int? NodeType { get; set; }
-
-            [NameInMap("ProductKey")]
-            [Validation(Required=true)]
-            public string ProductKey { get; set; }
-
-            [NameInMap("ProductName")]
-            [Validation(Required=true)]
-            public string ProductName { get; set; }
-
-            [NameInMap("ProductSecret")]
-            [Validation(Required=true)]
-            public string ProductSecret { get; set; }
-
-            [NameInMap("ProtocolType")]
-            [Validation(Required=true)]
-            public string ProtocolType { get; set; }
-
-        }
+        public CreateProductResponseBody Body { get; set; }
 
     }
 

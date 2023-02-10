@@ -14,21 +14,21 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("Items")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<ImportDTDataRequestItems> Items { get; set; }
         public class ImportDTDataRequestItems : TeaModel {
             [NameInMap("DeviceName")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string DeviceName { get; set; }
 
             [NameInMap("Params")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Params { get; set; }
 
         }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
     }

@@ -9,69 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListOTAModuleVersionsByDeviceResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public int? CurrentPage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("PageCount")]
-        [Validation(Required=true)]
-        public int? PageCount { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Total")]
-        [Validation(Required=true)]
-        public int? Total { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public ListOTAModuleVersionsByDeviceResponseData Data { get; set; }
-        public class ListOTAModuleVersionsByDeviceResponseData : TeaModel {
-            [NameInMap("SimpleOTAModuleInfo")]
-            [Validation(Required=true)]
-            public List<ListOTAModuleVersionsByDeviceResponseDataSimpleOTAModuleInfo> SimpleOTAModuleInfo { get; set; }
-            public class ListOTAModuleVersionsByDeviceResponseDataSimpleOTAModuleInfo : TeaModel {
-                [NameInMap("DeviceName")]
-                [Validation(Required=true)]
-                public string DeviceName { get; set; }
-
-                [NameInMap("IotId")]
-                [Validation(Required=true)]
-                public string IotId { get; set; }
-
-                [NameInMap("ModuleName")]
-                [Validation(Required=true)]
-                public string ModuleName { get; set; }
-
-                [NameInMap("ModuleVersion")]
-                [Validation(Required=true)]
-                public string ModuleVersion { get; set; }
-
-                [NameInMap("ProductKey")]
-                [Validation(Required=true)]
-                public string ProductKey { get; set; }
-
-            }
-
-        }
+        public ListOTAModuleVersionsByDeviceResponseBody Body { get; set; }
 
     }
 

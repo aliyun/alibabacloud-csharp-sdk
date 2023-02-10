@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetSpeechDeviceDetailRequest : TeaModel {
         [NameInMap("IotId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string IotId { get; set; }
 
         [NameInMap("IotInstanceId")]

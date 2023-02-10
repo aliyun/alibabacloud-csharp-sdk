@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchBindDevicesIntoProjectRequest : TeaModel {
         [NameInMap("Devices")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<BatchBindDevicesIntoProjectRequestDevices> Devices { get; set; }
         public class BatchBindDevicesIntoProjectRequestDevices : TeaModel {
             [NameInMap("DeviceName")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string DeviceName { get; set; }
 
             [NameInMap("ProductKey")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string ProductKey { get; set; }
 
         }
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProjectId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProjectId { get; set; }
 
     }

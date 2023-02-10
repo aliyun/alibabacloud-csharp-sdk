@@ -9,55 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class SyncSpeechByCombinationResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public SyncSpeechByCombinationResponseData Data { get; set; }
-        public class SyncSpeechByCombinationResponseData : TeaModel {
-            [NameInMap("Detail")]
-            [Validation(Required=true)]
-            public string Detail { get; set; }
-
-            [NameInMap("DeviceErrorCode")]
-            [Validation(Required=true)]
-            public string DeviceErrorCode { get; set; }
-
-            [NameInMap("DeviceErrorMessage")]
-            [Validation(Required=true)]
-            public string DeviceErrorMessage { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=true)]
-            public string Id { get; set; }
-
-            [NameInMap("MaxRetryCount")]
-            [Validation(Required=true)]
-            public int? MaxRetryCount { get; set; }
-
-            [NameInMap("RetryCount")]
-            [Validation(Required=true)]
-            public int? RetryCount { get; set; }
-
-            [NameInMap("Success")]
-            [Validation(Required=true)]
-            public bool? Success { get; set; }
-
-        }
+        public SyncSpeechByCombinationResponseBody Body { get; set; }
 
     }
 

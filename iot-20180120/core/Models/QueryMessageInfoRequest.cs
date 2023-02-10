@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("UniMsgId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string UniMsgId { get; set; }
 
     }

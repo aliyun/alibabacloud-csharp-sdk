@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchSetEdgeInstanceDeviceConfigRequest : TeaModel {
         [NameInMap("DeviceConfigs")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<BatchSetEdgeInstanceDeviceConfigRequestDeviceConfigs> DeviceConfigs { get; set; }
         public class BatchSetEdgeInstanceDeviceConfigRequestDeviceConfigs : TeaModel {
             [NameInMap("Content")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Content { get; set; }
 
             [NameInMap("IotId")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string IotId { get; set; }
 
         }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("IotInstanceId")]

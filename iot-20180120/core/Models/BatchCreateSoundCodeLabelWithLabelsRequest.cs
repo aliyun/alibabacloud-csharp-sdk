@@ -18,11 +18,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("Labels")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> Labels { get; set; }
 
         [NameInMap("ScheduleCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ScheduleCode { get; set; }
 
     }

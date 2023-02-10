@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string DownloadProtocol { get; set; }
 
         [NameInMap("FirmwareId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FirmwareId { get; set; }
 
         [NameInMap("GrayPercent")]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? OverwriteMode { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
         [NameInMap("RetryCount")]
@@ -86,11 +86,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public List<CreateOTAStaticUpgradeJobRequestTag> Tag { get; set; }
         public class CreateOTAStaticUpgradeJobRequestTag : TeaModel {
             [NameInMap("Key")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Key { get; set; }
 
             [NameInMap("Value")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Value { get; set; }
 
         }
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public List<string> TargetDeviceName { get; set; }
 
         [NameInMap("TargetSelection")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TargetSelection { get; set; }
 
         [NameInMap("TimeoutInMinutes")]

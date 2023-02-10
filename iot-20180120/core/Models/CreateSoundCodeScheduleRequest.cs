@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string Description { get; set; }
 
         [NameInMap("EndDate")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EndDate { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("Name")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Name { get; set; }
 
         [NameInMap("OpenType")]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string OpenType { get; set; }
 
         [NameInMap("StartDate")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StartDate { get; set; }
 
     }

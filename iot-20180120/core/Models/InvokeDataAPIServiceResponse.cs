@@ -9,69 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class InvokeDataAPIServiceResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public InvokeDataAPIServiceResponseData Data { get; set; }
-        public class InvokeDataAPIServiceResponseData : TeaModel {
-            [NameInMap("ApiSrn")]
-            [Validation(Required=true)]
-            public string ApiSrn { get; set; }
-
-            [NameInMap("PageNo")]
-            [Validation(Required=true)]
-            public int? PageNo { get; set; }
-
-            [NameInMap("PageSize")]
-            [Validation(Required=true)]
-            public int? PageSize { get; set; }
-
-            [NameInMap("TotalSize")]
-            [Validation(Required=true)]
-            public int? TotalSize { get; set; }
-
-            [NameInMap("FieldNameList")]
-            [Validation(Required=true)]
-            public InvokeDataAPIServiceResponseDataFieldNameList FieldNameList { get; set; }
-            public class InvokeDataAPIServiceResponseDataFieldNameList : TeaModel {
-                /// <summary>
-                /// FieldNameList
-                /// </summary>
-                [NameInMap("FieldNameList")]
-                [Validation(Required=true)]
-                public List<string> FieldNameList { get; set; }
-
-            }
-
-            [NameInMap("ResultList")]
-            [Validation(Required=true)]
-            public InvokeDataAPIServiceResponseDataResultList ResultList { get; set; }
-            public class InvokeDataAPIServiceResponseDataResultList : TeaModel {
-                /// <summary>
-                /// ResultList
-                /// </summary>
-                [NameInMap("ResultList")]
-                [Validation(Required=true)]
-                public List<Dictionary<string, object>> ResultList { get; set; }
-
-            }
-
-        }
+        public InvokeDataAPIServiceResponseBody Body { get; set; }
 
     }
 

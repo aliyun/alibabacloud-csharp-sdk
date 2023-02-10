@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string DownloadProtocol { get; set; }
 
         [NameInMap("FirmwareId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FirmwareId { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public bool? NeedPush { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
         [NameInMap("Tag")]
@@ -38,17 +38,17 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public List<CreateOTAVerifyJobRequestTag> Tag { get; set; }
         public class CreateOTAVerifyJobRequestTag : TeaModel {
             [NameInMap("Key")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Key { get; set; }
 
             [NameInMap("Value")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Value { get; set; }
 
         }
 
         [NameInMap("TargetDeviceName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> TargetDeviceName { get; set; }
 
         [NameInMap("TimeoutInMinutes")]

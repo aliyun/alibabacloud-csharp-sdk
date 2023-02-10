@@ -9,47 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BindLicenseDeviceResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public BindLicenseDeviceResponseData Data { get; set; }
-        public class BindLicenseDeviceResponseData : TeaModel {
-            [NameInMap("CheckProgressId")]
-            [Validation(Required=true)]
-            public string CheckProgressId { get; set; }
-
-            [NameInMap("FailSum")]
-            [Validation(Required=true)]
-            public long? FailSum { get; set; }
-
-            [NameInMap("Progress")]
-            [Validation(Required=true)]
-            public int? Progress { get; set; }
-
-            [NameInMap("ResultCsvFile")]
-            [Validation(Required=true)]
-            public string ResultCsvFile { get; set; }
-
-            [NameInMap("SuccessSum")]
-            [Validation(Required=true)]
-            public long? SuccessSum { get; set; }
-
-        }
+        public BindLicenseDeviceResponseBody Body { get; set; }
 
     }
 

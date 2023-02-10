@@ -9,55 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetSpeechDeviceDetailResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("statusCode")]
         [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public GetSpeechDeviceDetailResponseData Data { get; set; }
-        public class GetSpeechDeviceDetailResponseData : TeaModel {
-            [NameInMap("AvailableSpace")]
-            [Validation(Required=true)]
-            public float? AvailableSpace { get; set; }
-
-            [NameInMap("DeviceName")]
-            [Validation(Required=true)]
-            public string DeviceName { get; set; }
-
-            [NameInMap("IotId")]
-            [Validation(Required=true)]
-            public string IotId { get; set; }
-
-            [NameInMap("ProductKey")]
-            [Validation(Required=true)]
-            public string ProductKey { get; set; }
-
-            [NameInMap("SpeechListUpdateTime")]
-            [Validation(Required=true)]
-            public long? SpeechListUpdateTime { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=true)]
-            public string Status { get; set; }
-
-            [NameInMap("TotalSpace")]
-            [Validation(Required=true)]
-            public float? TotalSpace { get; set; }
-
-        }
+        public GetSpeechDeviceDetailResponseBody Body { get; set; }
 
     }
 
