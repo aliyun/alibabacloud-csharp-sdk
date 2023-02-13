@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class CreateRevokeClientCertificateResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
