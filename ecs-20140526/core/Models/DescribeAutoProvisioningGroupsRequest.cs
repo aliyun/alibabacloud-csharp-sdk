@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAutoProvisioningGroupsRequest : TeaModel {
+        /// <summary>
+        /// The IDs of auto provisioning groups. You can specify up to 20 auto provisioning group IDs.
+        /// </summary>
         [NameInMap("AutoProvisioningGroupId")]
         [Validation(Required=false)]
         public List<string> AutoProvisioningGroupId { get; set; }
 
+        /// <summary>
+        /// The name of the auto provisioning group.
+        /// </summary>
         [NameInMap("AutoProvisioningGroupName")]
         [Validation(Required=false)]
         public string AutoProvisioningGroupName { get; set; }
 
+        /// <summary>
+        /// The statuses of auto provisioning groups.
+        /// </summary>
         [NameInMap("AutoProvisioningGroupStatus")]
         [Validation(Required=false)]
         public List<string> AutoProvisioningGroupStatus { get; set; }
@@ -29,14 +38,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The number of the page to return.
+        /// 
+        /// Pages start from page 1.
+        /// 
+        /// Default value: 1.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries to return on each page.
+        /// 
+        /// Maximum value: 100.
+        /// 
+        /// Default value: 10.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The region ID of the auto provisioning group.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

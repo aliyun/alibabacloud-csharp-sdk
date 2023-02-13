@@ -9,29 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ReleasePublicIpAddressRequest : TeaModel {
+        /// <summary>
+        /// > This parameter is unavailable.
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
+        /// <summary>
+        /// The public IP address of the instance.
+        /// </summary>
         [NameInMap("PublicIpAddress")]
         [Validation(Required=false)]
         public string PublicIpAddress { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        /// <summary>
+        /// The region ID of the instance.
+        /// </summary>
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

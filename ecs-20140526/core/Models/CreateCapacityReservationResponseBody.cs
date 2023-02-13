@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateCapacityReservationResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the capacity reservation.
+        /// </summary>
         [NameInMap("PrivatePoolOptionsId")]
         [Validation(Required=false)]
         public string PrivatePoolOptionsId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

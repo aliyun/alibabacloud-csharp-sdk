@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
+        [NameInMap("SecurityGroupRuleId")]
+        [Validation(Required=false)]
+        public string SecurityGroupRuleId { get; set; }
+
         [NameInMap("SourceCidrIp")]
         [Validation(Required=false)]
         public string SourceCidrIp { get; set; }

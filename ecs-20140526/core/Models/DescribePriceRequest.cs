@@ -27,6 +27,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        [NameInMap("SchedulerOptions")]
+        [Validation(Required=false)]
+        public DescribePriceRequestSchedulerOptions SchedulerOptions { get; set; }
+        public class DescribePriceRequestSchedulerOptions : TeaModel {
+            [NameInMap("DedicatedHostId")]
+            [Validation(Required=false)]
+            public string DedicatedHostId { get; set; }
+
+        }
+
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
         public DescribePriceRequestSystemDisk SystemDisk { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceAttachmentAttributesResponseBody : TeaModel {
+        /// <summary>
+        /// Details about the private pools that the instances match.
+        /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public DescribeInstanceAttachmentAttributesResponseBodyInstances Instances { get; set; }
@@ -17,14 +20,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance : TeaModel {
+                /// <summary>
+                /// The ID of the instance.
+                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                /// <summary>
+                /// The ID of the private pool. When the value of `PrivatePoolOptionsMatchCriteria` is `Open`, the value of PrivatePoolOptionsId is the ID of a private pool that is automatically matched to the instance.
+                /// </summary>
                 [NameInMap("PrivatePoolOptionsId")]
                 [Validation(Required=false)]
                 public string PrivatePoolOptionsId { get; set; }
 
+                /// <summary>
+                /// The match mode of the private pool. Valid values:
+                /// 
+                /// *   Open: open private pool. Instances automatically match an open private pool.
+                /// *   Target: specified private pool. Instances match a specified private pool.
+                /// *   None: no private pool. Instances do not use private pools.
+                /// </summary>
                 [NameInMap("PrivatePoolOptionsMatchCriteria")]
                 [Validation(Required=false)]
                 public string PrivatePoolOptionsMatchCriteria { get; set; }
@@ -33,18 +49,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// The page number of the returned page.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries returned per page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of entries returned.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

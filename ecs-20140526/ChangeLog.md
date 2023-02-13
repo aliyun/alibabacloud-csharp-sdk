@@ -1,3 +1,9 @@
+2023-02-13 Version: 3.0.2
+- Support TagPolicy Verify NoTag.
+- Fixed bugs for DescribeDemands error code.
+- Add encrypted disk ErrorCode.
+- DescribeDedicatedHosts supports SocketDetails param to check socket capacities of specified dedicated hosts.
+
 2022-10-14 Version: 3.0.1
 - Add GPUMemorySize to DescribeInstanceTypes api.
 

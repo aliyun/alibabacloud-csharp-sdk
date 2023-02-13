@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> Ipv6Address { get; set; }
 
+        [NameInMap("Ipv6Prefix")]
+        [Validation(Required=false)]
+        public List<string> Ipv6Prefix { get; set; }
+
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
         public string NetworkInterfaceId { get; set; }

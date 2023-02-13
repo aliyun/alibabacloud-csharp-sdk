@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceMaintenanceAttributesResponseBody : TeaModel {
+        /// <summary>
+        /// Details about the maintenance attributes.
+        /// </summary>
         [NameInMap("MaintenanceAttributes")]
         [Validation(Required=false)]
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes MaintenanceAttributes { get; set; }
@@ -17,14 +20,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute> MaintenanceAttribute { get; set; }
             public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute : TeaModel {
+                /// <summary>
+                /// The attributes of the maintenance action of the instance.
+                /// </summary>
                 [NameInMap("ActionOnMaintenance")]
                 [Validation(Required=false)]
                 public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance ActionOnMaintenance { get; set; }
                 public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance : TeaModel {
+                    /// <summary>
+                    /// The default maintenance action.
+                    /// </summary>
                     [NameInMap("DefaultValue")]
                     [Validation(Required=false)]
                     public string DefaultValue { get; set; }
 
+                    /// <summary>
+                    /// The list of the supported maintenance actions.
+                    /// </summary>
                     [NameInMap("SupportedValues")]
                     [Validation(Required=false)]
                     public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues SupportedValues { get; set; }
@@ -35,16 +47,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                     }
 
+                    /// <summary>
+                    /// The current maintenance action. Valid values:
+                    /// 
+                    /// *   Stop: The instance goes down.
+                    /// *   AutoRecover: The instance is automatically recovered.
+                    /// *   AutoRedeploy: Failover is performed on the instance, which may damage the data disks.
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
 
                 }
 
+                /// <summary>
+                /// The ID of the instance.
+                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                /// <summary>
+                /// Details about the maintenance window.
+                /// </summary>
                 [NameInMap("MaintenanceWindows")]
                 [Validation(Required=false)]
                 public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows MaintenanceWindows { get; set; }
@@ -53,10 +78,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow> MaintenanceWindow { get; set; }
                     public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow : TeaModel {
+                        /// <summary>
+                        /// The end time of the maintenance window.
+                        /// </summary>
                         [NameInMap("EndTime")]
                         [Validation(Required=false)]
                         public string EndTime { get; set; }
 
+                        /// <summary>
+                        /// The start time of the maintenance window.
+                        /// </summary>
                         [NameInMap("StartTime")]
                         [Validation(Required=false)]
                         public string StartTime { get; set; }
@@ -65,6 +96,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
+                /// <summary>
+                /// Indicates whether an event notification was sent before instance shutdown.
+                /// </summary>
                 [NameInMap("NotifyOnMaintenance")]
                 [Validation(Required=false)]
                 public bool? NotifyOnMaintenance { get; set; }
@@ -73,18 +107,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// The page number of the returned page.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries returned per page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of queried maintenance attributes.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

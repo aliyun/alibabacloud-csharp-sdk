@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelinesResponseBody : TeaModel {
+        /// <summary>
+        /// Details of the image templates.
+        /// </summary>
         [NameInMap("ImagePipeline")]
         [Validation(Required=false)]
         public DescribeImagePipelinesResponseBodyImagePipeline ImagePipeline { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet> ImagePipelineSet { get; set; }
             public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet : TeaModel {
+                /// <summary>
+                /// The IDs of Alibaba Cloud accounts to which to share the created image.
+                /// </summary>
                 [NameInMap("AddAccounts")]
                 [Validation(Required=false)]
                 public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts AddAccounts { get; set; }
@@ -27,58 +33,106 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
+                /// <summary>
+                /// The source image.
+                /// 
+                /// *   When `BaseImageType` is set to IMAGE, the value of this parameter is the ID of a custom image.
+                /// *   When `BaseImageType` is set to IMAGE_FAMILY, the value of this parameter is the name of an image family.
+                /// </summary>
                 [NameInMap("BaseImage")]
                 [Validation(Required=false)]
                 public string BaseImage { get; set; }
 
+                /// <summary>
+                /// The type of the source image. Valid values:
+                /// 
+                /// *   IMAGE: custom image
+                /// *   IMAGE_FAMILY: image family
+                /// </summary>
                 [NameInMap("BaseImageType")]
                 [Validation(Required=false)]
                 public string BaseImageType { get; set; }
 
+                /// <summary>
+                /// The content of the image template.
+                /// </summary>
                 [NameInMap("BuildContent")]
                 [Validation(Required=false)]
                 public string BuildContent { get; set; }
 
+                /// <summary>
+                /// The time when the image template was created.
+                /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
+                /// <summary>
+                /// Indicates whether to release the intermediate instance when the image fails to be created.
+                /// </summary>
                 [NameInMap("DeleteInstanceOnFailure")]
                 [Validation(Required=false)]
                 public bool? DeleteInstanceOnFailure { get; set; }
 
+                /// <summary>
+                /// The description of the image template.
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// The name prefix of the created image.
+                /// </summary>
                 [NameInMap("ImageName")]
                 [Validation(Required=false)]
                 public string ImageName { get; set; }
 
+                /// <summary>
+                /// The ID of the image template.
+                /// </summary>
                 [NameInMap("ImagePipelineId")]
                 [Validation(Required=false)]
                 public string ImagePipelineId { get; set; }
 
+                /// <summary>
+                /// The instance type of the intermediate instance.
+                /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
+                /// <summary>
+                /// The size of the outbound public bandwidth for the intermediate instance. Unit: Mbit/s.
+                /// </summary>
                 [NameInMap("InternetMaxBandwidthOut")]
                 [Validation(Required=false)]
                 public int? InternetMaxBandwidthOut { get; set; }
 
+                /// <summary>
+                /// The name of the image template.
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// The ID of the resource group.
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                /// <summary>
+                /// The system disk size of the intermediate instance. Unit: GiB.
+                /// </summary>
                 [NameInMap("SystemDiskSize")]
                 [Validation(Required=false)]
                 public int? SystemDiskSize { get; set; }
 
+                /// <summary>
+                /// The tags of the image template.
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags Tags { get; set; }
@@ -87,10 +141,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag> Tag { get; set; }
                     public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag : TeaModel {
+                        /// <summary>
+                        /// The tag key of the image template.
+                        /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
+                        /// <summary>
+                        /// The tag value of the image template.
+                        /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         public string TagValue { get; set; }
@@ -99,6 +159,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
+                /// <summary>
+                /// The IDs of regions to which to distribute the created image.
+                /// </summary>
                 [NameInMap("ToRegionIds")]
                 [Validation(Required=false)]
                 public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetToRegionIds ToRegionIds { get; set; }
@@ -109,6 +172,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
+                /// <summary>
+                /// The ID of the vSwitch.
+                /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
@@ -117,18 +183,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// The maximum number of entries returned per page.
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// The query token returned in this call. For information about how to use this return value, see the "Description" section in this topic.
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of image templates returned.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

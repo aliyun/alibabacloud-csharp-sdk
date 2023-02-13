@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CancelImagePipelineExecutionRequest : TeaModel {
+        /// <summary>
+        /// The ID of the image build task.
+        /// </summary>
         [NameInMap("ExecutionId")]
         [Validation(Required=false)]
         public string ExecutionId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the image build task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -33,14 +39,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// > This parameter is deprecated.
+        /// </summary>
         [NameInMap("TemplateTag")]
         [Validation(Required=false)]
         public List<CancelImagePipelineExecutionRequestTemplateTag> TemplateTag { get; set; }
         public class CancelImagePipelineExecutionRequestTemplateTag : TeaModel {
+            /// <summary>
+            /// >  This parameter is deprecated.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// >  This parameter is deprecated.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AssignIpv6AddressesResponseBody : TeaModel {
+        /// <summary>
+        /// > 该参数正在邀测中，暂未开放使用。
+        /// </summary>
+        [NameInMap("Ipv6PrefixSets")]
+        [Validation(Required=false)]
+        public AssignIpv6AddressesResponseBodyIpv6PrefixSets Ipv6PrefixSets { get; set; }
+        public class AssignIpv6AddressesResponseBodyIpv6PrefixSets : TeaModel {
+            [NameInMap("Ipv6Prefix")]
+            [Validation(Required=false)]
+            public List<string> Ipv6Prefix { get; set; }
+
+        }
+
+        /// <summary>
+        /// The IPv6 addresses assigned to the ENI.
+        /// </summary>
         [NameInMap("Ipv6Sets")]
         [Validation(Required=false)]
         public AssignIpv6AddressesResponseBodyIpv6Sets Ipv6Sets { get; set; }
@@ -19,10 +35,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// The ID of the ENI.
+        /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
         public string NetworkInterfaceId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,10 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRegionsRequest : TeaModel {
+        /// <summary>
+        /// The natural language that is used to filter responses. For more information, visit [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:
+        /// 
+        /// *   zh-CN: Chinese
+        /// *   en-US: English
+        /// *   ja: Japanese
+        /// 
+        /// Default value: zh-CN.
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        /// <summary>
+        /// The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:
+        /// 
+        /// *   PrePaid: subscription. If this parameter is set to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.
+        /// *   PostPaid: pay-as-you-go.
+        /// 
+        /// Default value: PostPaid.
+        /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
@@ -33,6 +50,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The type of the resource. Valid values:
+        /// 
+        /// *   instance: Elastic Compute Service (ECS) instance
+        /// *   disk: disk
+        /// *   reservedinstance: reserved instance
+        /// *   scu: storage capacity unit (SCU)
+        /// 
+        /// Default value: instance.
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }

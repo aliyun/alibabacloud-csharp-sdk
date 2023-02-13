@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNetworkInterfaceAttributeRequest : TeaModel {
+        /// <summary>
+        /// The attribute of the ENI.
+        /// </summary>
         [NameInMap("Attribute")]
         [Validation(Required=false)]
         public string Attribute { get; set; }
 
+        /// <summary>
+        /// The ID of the ENI.
+        /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
         public string NetworkInterfaceId { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -37,14 +46,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// > This parameter is unavailable.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeNetworkInterfaceAttributeRequestTag> Tag { get; set; }
         public class DescribeNetworkInterfaceAttributeRequestTag : TeaModel {
+            /// <summary>
+            /// > This parameter is unavailable.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// > This parameter is unavailable.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

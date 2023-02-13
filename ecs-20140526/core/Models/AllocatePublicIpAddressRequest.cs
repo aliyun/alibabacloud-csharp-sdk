@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AllocatePublicIpAddressRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The public IP address. If you leave this parameter empty, the system randomly assigns a public IP address to the specified instance.
+        /// </summary>
         [NameInMap("IpAddress")]
         [Validation(Required=false)]
         public string IpAddress { get; set; }
@@ -33,6 +39,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The virtual LAN (VLAN) ID of the instance.
+        /// 
+        /// > This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+        /// </summary>
         [NameInMap("VlanId")]
         [Validation(Required=false)]
         public string VlanId { get; set; }
