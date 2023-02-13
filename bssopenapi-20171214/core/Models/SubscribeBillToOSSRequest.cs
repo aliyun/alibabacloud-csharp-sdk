@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string MultAccountRelSubscribe { get; set; }
 
+        [NameInMap("RowLimitPerFile")]
+        [Validation(Required=false)]
+        public int? RowLimitPerFile { get; set; }
+
         [NameInMap("SubscribeBucket")]
         [Validation(Required=false)]
         public string SubscribeBucket { get; set; }

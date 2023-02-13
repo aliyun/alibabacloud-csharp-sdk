@@ -9756,6 +9756,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             {
                 query["MultAccountRelSubscribe"] = request.MultAccountRelSubscribe;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RowLimitPerFile))
+            {
+                query["RowLimitPerFile"] = request.RowLimitPerFile;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscribeBucket))
             {
                 query["SubscribeBucket"] = request.SubscribeBucket;
@@ -9802,6 +9806,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultAccountRelSubscribe))
             {
                 query["MultAccountRelSubscribe"] = request.MultAccountRelSubscribe;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RowLimitPerFile))
+            {
+                query["RowLimitPerFile"] = request.RowLimitPerFile;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscribeBucket))
             {
