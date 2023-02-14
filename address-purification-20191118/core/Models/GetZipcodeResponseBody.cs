@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Address_purification20191118.Models
         [Validation(Required=false)]
         public string Data { get; set; }
 
+        /// <summary>
+        /// RequestId
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
