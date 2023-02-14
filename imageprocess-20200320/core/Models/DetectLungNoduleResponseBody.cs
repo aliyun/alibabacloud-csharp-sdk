@@ -53,9 +53,25 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                     [Validation(Required=false)]
                     public string Lung { get; set; }
 
+                    [NameInMap("MajorAxis")]
+                    [Validation(Required=false)]
+                    public List<float?> MajorAxis { get; set; }
+
                     [NameInMap("MeanValue")]
                     [Validation(Required=false)]
                     public float? MeanValue { get; set; }
+
+                    [NameInMap("MinorAxis")]
+                    [Validation(Required=false)]
+                    public List<float?> MinorAxis { get; set; }
+
+                    [NameInMap("RecistSOPInstanceUID")]
+                    [Validation(Required=false)]
+                    public string RecistSOPInstanceUID { get; set; }
+
+                    [NameInMap("Risk")]
+                    [Validation(Required=false)]
+                    public float? Risk { get; set; }
 
                     [NameInMap("SOPInstanceUID")]
                     [Validation(Required=false)]
