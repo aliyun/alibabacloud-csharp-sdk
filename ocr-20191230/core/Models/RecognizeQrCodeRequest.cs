@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeQrCodeRequest : TeaModel {
+        /// <summary>
+        /// 1
+        /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<RecognizeQrCodeRequestTasks> Tasks { get; set; }

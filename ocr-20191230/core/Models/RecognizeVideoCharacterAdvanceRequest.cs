@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
-    public class RecognizeIndonesiaIdentityCardRequest : TeaModel {
-        [NameInMap("ImageUrl")]
+    public class RecognizeVideoCharacterAdvanceRequest : TeaModel {
+        [NameInMap("VideoURL")]
         [Validation(Required=false)]
-        public string ImageUrl { get; set; }
+        public Stream VideoURLObject { get; set; }
 
     }
 

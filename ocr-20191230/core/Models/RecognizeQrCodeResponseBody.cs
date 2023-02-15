@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     [Validation(Required=false)]
                     public string Label { get; set; }
 
+                    /// <summary>
+                    /// 1
+                    /// </summary>
                     [NameInMap("QrCodesData")]
                     [Validation(Required=false)]
                     public List<string> QrCodesData { get; set; }

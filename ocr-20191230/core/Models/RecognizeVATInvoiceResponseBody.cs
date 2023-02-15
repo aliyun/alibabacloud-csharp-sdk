@@ -17,82 +17,142 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public RecognizeVATInvoiceResponseBodyDataBox Box { get; set; }
             public class RecognizeVATInvoiceResponseBodyDataBox : TeaModel {
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("Checkers")]
                 [Validation(Required=false)]
                 public List<float?> Checkers { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("Clerks")]
                 [Validation(Required=false)]
                 public List<float?> Clerks { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("InvoiceAmounts")]
                 [Validation(Required=false)]
                 public List<float?> InvoiceAmounts { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("InvoiceCodes")]
                 [Validation(Required=false)]
                 public List<float?> InvoiceCodes { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("InvoiceDates")]
                 [Validation(Required=false)]
                 public List<float?> InvoiceDates { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("InvoiceFakeCodes")]
                 [Validation(Required=false)]
                 public List<float?> InvoiceFakeCodes { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("InvoiceNoes")]
                 [Validation(Required=false)]
                 public List<float?> InvoiceNoes { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("ItemNames")]
                 [Validation(Required=false)]
                 public List<int?> ItemNames { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("PayeeAddresses")]
                 [Validation(Required=false)]
                 public List<float?> PayeeAddresses { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("PayeeBankNames")]
                 [Validation(Required=false)]
                 public List<float?> PayeeBankNames { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("PayeeNames")]
                 [Validation(Required=false)]
                 public List<float?> PayeeNames { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("PayeeRegisterNoes")]
                 [Validation(Required=false)]
                 public List<float?> PayeeRegisterNoes { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("Payees")]
                 [Validation(Required=false)]
                 public List<float?> Payees { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("PayerAddresses")]
                 [Validation(Required=false)]
                 public List<float?> PayerAddresses { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("PayerBankNames")]
                 [Validation(Required=false)]
                 public List<float?> PayerBankNames { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("PayerNames")]
                 [Validation(Required=false)]
                 public List<float?> PayerNames { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("PayerRegisterNoes")]
                 [Validation(Required=false)]
                 public List<float?> PayerRegisterNoes { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("SumAmounts")]
                 [Validation(Required=false)]
                 public List<float?> SumAmounts { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("TaxAmounts")]
                 [Validation(Required=false)]
                 public List<float?> TaxAmounts { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("WithoutTaxAmounts")]
                 [Validation(Required=false)]
                 public List<float?> WithoutTaxAmounts { get; set; }
@@ -131,6 +191,9 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [Validation(Required=false)]
                 public string InvoiceNo { get; set; }
 
+                /// <summary>
+                /// 1
+                /// </summary>
                 [NameInMap("ItemName")]
                 [Validation(Required=false)]
                 public List<string> ItemName { get; set; }

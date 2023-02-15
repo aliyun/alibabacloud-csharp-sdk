@@ -1,3 +1,6 @@
+2023-02-15 Version: 2.0.14
+- Update RecognizeVideoCharacter.
+
 2022-11-23 Version: 2.0.13
 - Release RecognizeVATInvoice.
 
