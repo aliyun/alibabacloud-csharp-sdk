@@ -58,6 +58,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string ServiceCount { get; set; }
 
+            /// <summary>
+            /// The source from which the namespace was created.
+            /// </summary>
             [NameInMap("SourceType")]
             [Validation(Required=false)]
             public string SourceType { get; set; }
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpCode")]
         [Validation(Required=false)]

@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DomainIdListJSON { get; set; }
 
         /// <summary>
-        /// Specifies whether to activate Web Application Firewall (WAF).
+        /// Specifies whether to enable Web Application Firewall (WAF).
         /// </summary>
         [NameInMap("EnableWaf")]
         [Validation(Required=false)]

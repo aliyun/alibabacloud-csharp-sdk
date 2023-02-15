@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DomainIdListJSON { get; set; }
 
         /// <summary>
-        /// Specifies whether to activate Web Application Firewall (WAF).
+        /// Specifies whether to enable Web Application Firewall (WAF).
         /// </summary>
         [NameInMap("EnableWaf")]
         [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// The name of the application.
+            /// The name.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? ServicePort { get; set; }
 
             /// <summary>
-            /// The type of the service source.
+            /// The source type.
             /// </summary>
             [NameInMap("SourceType")]
             [Validation(Required=false)]
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 /// 
                 /// *   PRE: prefix matching
                 /// *   EQUAL: exact matching
-                /// *   ERGULAR: regular expression matching
+                /// *   REGULAR: regular expression matching
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -506,7 +506,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? ServicePort { get; set; }
 
             /// <summary>
-            /// The type of the service source.
+            /// The source type.
             /// </summary>
             [NameInMap("SourceType")]
             [Validation(Required=false)]

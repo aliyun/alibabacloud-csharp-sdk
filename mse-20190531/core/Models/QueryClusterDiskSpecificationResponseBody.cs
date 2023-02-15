@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public QueryClusterDiskSpecificationResponseBodyData Data { get; set; }
         public class QueryClusterDiskSpecificationResponseBodyData : TeaModel {
             /// <summary>
-            /// The maximum capacity of the disk.
+            /// The maximum disk capacity. Unit: GB.
             /// </summary>
             [NameInMap("Max")]
             [Validation(Required=false)]
             public int? Max { get; set; }
 
             /// <summary>
-            /// The minimum capacity of the disk.
+            /// The minimum disk capacity. Unit: GB.
             /// </summary>
             [NameInMap("Min")]
             [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
         /// 
-        /// > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+        /// >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]

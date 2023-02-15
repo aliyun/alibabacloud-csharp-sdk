@@ -41,12 +41,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? InstanceCount { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the instance
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The MSE version.
+        /// </summary>
         [NameInMap("MseVersion")]
         [Validation(Required=false)]
         public string MseVersion { get; set; }

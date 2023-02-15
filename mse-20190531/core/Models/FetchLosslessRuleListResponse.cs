@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class ListUserInstancesResponse : TeaModel {
+    public class FetchLosslessRuleListResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListUserInstancesResponseBody Body { get; set; }
+        public FetchLosslessRuleListResponseBody Body { get; set; }
 
     }
 

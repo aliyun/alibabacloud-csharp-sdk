@@ -17,11 +17,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The response data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public long? Data { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
 
         /// <summary>
         /// The HTTP status code returned.

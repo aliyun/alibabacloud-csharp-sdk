@@ -8,18 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class ListVgroupsRequest : TeaModel {
+    public class ListExportZookeeperDataRequest : TeaModel {
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
-        [NameInMap("Region")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string Region { get; set; }
+        public string InstanceId { get; set; }
 
-        [NameInMap("UserId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string UserId { get; set; }
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
     }
 

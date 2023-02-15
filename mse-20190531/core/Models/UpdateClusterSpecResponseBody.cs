@@ -23,6 +23,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Data { get; set; }
 
+        /// <summary>
+        /// The error code returned if the request failed. Take note of the following rules:
+        /// 
+        /// *   The **ErrorCode** parameter is not returned if the request succeeds.
+        /// *   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section in this topic.
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
