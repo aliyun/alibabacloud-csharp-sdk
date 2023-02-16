@@ -9,22 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetJobInstanceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.
+        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        /// <summary>
+        /// The ID of the job.
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public long? JobId { get; set; }
 
+        /// <summary>
+        /// The ID of the job instance.
+        /// </summary>
         [NameInMap("JobInstanceId")]
         [Validation(Required=false)]
         public long? JobInstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
+        /// <summary>
+        /// The source of the namespace. This parameter is required only for a special third party.
+        /// </summary>
         [NameInMap("NamespaceSource")]
         [Validation(Required=false)]
         public string NamespaceSource { get; set; }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
         public UpdateJobResponseBody Body { get; set; }

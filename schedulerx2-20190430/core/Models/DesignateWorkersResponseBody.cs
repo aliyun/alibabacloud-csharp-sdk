@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class DesignateWorkersResponseBody : TeaModel {
         /// <summary>
-        /// 错误码
+        /// The HTTP status code that is returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// 错误信息
+        /// The error message that is returned if an error occurs.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 是否成功
+        /// Indicates whether the call is successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

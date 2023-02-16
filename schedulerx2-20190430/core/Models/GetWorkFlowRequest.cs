@@ -10,32 +10,35 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetWorkFlowRequest : TeaModel {
         /// <summary>
-        /// 应用分组ID
+        /// The ID of the application group.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// 命名空间uid
+        /// The ID of the namespace.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// 命名空间来源
+        /// The source of the namespcae.
         /// </summary>
         [NameInMap("NamespaceSource")]
         [Validation(Required=false)]
         public string NamespaceSource { get; set; }
 
+        /// <summary>
+        /// The region information.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// 工作流ID
+        /// The ID of the workflow.
         /// </summary>
         [NameInMap("WorkflowId")]
         [Validation(Required=false)]

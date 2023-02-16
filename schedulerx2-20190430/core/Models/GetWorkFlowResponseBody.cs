@@ -10,86 +10,93 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetWorkFlowResponseBody : TeaModel {
         /// <summary>
-        /// 错误码
+        /// The error code that is returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// 工作流的数据
+        /// The data of the workflow.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetWorkFlowResponseBodyData Data { get; set; }
         public class GetWorkFlowResponseBodyData : TeaModel {
+            /// <summary>
+            /// The basic information of the workflow.
+            /// </summary>
             [NameInMap("WorkFlowInfo")]
             [Validation(Required=false)]
             public GetWorkFlowResponseBodyDataWorkFlowInfo WorkFlowInfo { get; set; }
             public class GetWorkFlowResponseBodyDataWorkFlowInfo : TeaModel {
                 /// <summary>
-                /// 工作流描述
+                /// The description of the workflow.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// 工作流名称
+                /// The name of the workflow.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// 工作流状态
+                /// The status of the workflow.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// 工作流时间表达式
+                /// The time expression of the workflow.
                 /// </summary>
                 [NameInMap("TimeExpression")]
                 [Validation(Required=false)]
                 public string TimeExpression { get; set; }
 
                 /// <summary>
-                /// 工作流时间类型
+                /// The time type of the workflow.
                 /// </summary>
                 [NameInMap("TimeType")]
                 [Validation(Required=false)]
                 public string TimeType { get; set; }
 
                 /// <summary>
-                /// 工作流ID
+                /// The ID of the workflow.
                 /// </summary>
                 [NameInMap("WorkflowId")]
                 [Validation(Required=false)]
                 public long? WorkflowId { get; set; }
 
             }
+
+            /// <summary>
+            /// The node information of the workflow.
+            /// </summary>
             [NameInMap("WorkFlowNodeInfo")]
             [Validation(Required=false)]
             public GetWorkFlowResponseBodyDataWorkFlowNodeInfo WorkFlowNodeInfo { get; set; }
             public class GetWorkFlowResponseBodyDataWorkFlowNodeInfo : TeaModel {
                 /// <summary>
-                /// 工作流边列表
+                /// The workflow edges.
                 /// </summary>
                 [NameInMap("Edges")]
                 [Validation(Required=false)]
                 public List<GetWorkFlowResponseBodyDataWorkFlowNodeInfoEdges> Edges { get; set; }
                 public class GetWorkFlowResponseBodyDataWorkFlowNodeInfoEdges : TeaModel {
                     /// <summary>
-                    /// 起始任务ID
+                    /// The ID of the source job.
                     /// </summary>
                     [NameInMap("Source")]
                     [Validation(Required=false)]
                     public long? Source { get; set; }
 
                     /// <summary>
-                    /// 目的任务ID
+                    /// The ID of the target job.
                     /// </summary>
                     [NameInMap("Target")]
                     [Validation(Required=false)]
@@ -98,28 +105,28 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 }
 
                 /// <summary>
-                /// 工作流节点列表
+                /// The list of workflow nodes.
                 /// </summary>
                 [NameInMap("Nodes")]
                 [Validation(Required=false)]
                 public List<GetWorkFlowResponseBodyDataWorkFlowNodeInfoNodes> Nodes { get; set; }
                 public class GetWorkFlowResponseBodyDataWorkFlowNodeInfoNodes : TeaModel {
                     /// <summary>
-                    /// 任务ID
+                    /// The ID of the job.
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// 任务名称
+                    /// The name of the job.
                     /// </summary>
                     [NameInMap("Label")]
                     [Validation(Required=false)]
                     public string Label { get; set; }
 
                     /// <summary>
-                    /// 任务状态
+                    /// The status of the job.
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -128,24 +135,25 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 }
 
             }
-        };
+
+        }
 
         /// <summary>
-        /// 错误信息
+        /// The error message that is returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 会否成功
+        /// The result of the API call.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

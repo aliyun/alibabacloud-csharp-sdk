@@ -44,6 +44,20 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          * ```xml
+          * <dependency>
+          *     <groupId>com.aliyun</groupId>
+          *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *     <version>1.0.4</version>
+          * </dependency>
+          * ```
+          *
+          * @param request BatchDeleteJobsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchDeleteJobsResponse
+         */
         public BatchDeleteJobsResponse BatchDeleteJobsWithOptions(BatchDeleteJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -89,6 +103,20 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return TeaModel.ToObject<BatchDeleteJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          * ```xml
+          * <dependency>
+          *     <groupId>com.aliyun</groupId>
+          *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *     <version>1.0.4</version>
+          * </dependency>
+          * ```
+          *
+          * @param request BatchDeleteJobsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchDeleteJobsResponse
+         */
         public async Task<BatchDeleteJobsResponse> BatchDeleteJobsWithOptionsAsync(BatchDeleteJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -134,18 +162,58 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return TeaModel.ToObject<BatchDeleteJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          * ```xml
+          * <dependency>
+          *     <groupId>com.aliyun</groupId>
+          *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *     <version>1.0.4</version>
+          * </dependency>
+          * ```
+          *
+          * @param request BatchDeleteJobsRequest
+          * @return BatchDeleteJobsResponse
+         */
         public BatchDeleteJobsResponse BatchDeleteJobs(BatchDeleteJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchDeleteJobsWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          * ```xml
+          * <dependency>
+          *     <groupId>com.aliyun</groupId>
+          *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *     <version>1.0.4</version>
+          * </dependency>
+          * ```
+          *
+          * @param request BatchDeleteJobsRequest
+          * @return BatchDeleteJobsResponse
+         */
         public async Task<BatchDeleteJobsResponse> BatchDeleteJobsAsync(BatchDeleteJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchDeleteJobsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          * ```xml
+          * <dependency>
+          *     <groupId>com.aliyun</groupId>
+          *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *     <version>1.0.4</version>
+          * </dependency>
+          * ```
+          *
+          * @param request BatchDisableJobsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchDisableJobsResponse
+         */
         public BatchDisableJobsResponse BatchDisableJobsWithOptions(BatchDisableJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -191,6 +259,20 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return TeaModel.ToObject<BatchDisableJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          * ```xml
+          * <dependency>
+          *     <groupId>com.aliyun</groupId>
+          *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *     <version>1.0.4</version>
+          * </dependency>
+          * ```
+          *
+          * @param request BatchDisableJobsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchDisableJobsResponse
+         */
         public async Task<BatchDisableJobsResponse> BatchDisableJobsWithOptionsAsync(BatchDisableJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -236,18 +318,58 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return TeaModel.ToObject<BatchDisableJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          * ```xml
+          * <dependency>
+          *     <groupId>com.aliyun</groupId>
+          *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *     <version>1.0.4</version>
+          * </dependency>
+          * ```
+          *
+          * @param request BatchDisableJobsRequest
+          * @return BatchDisableJobsResponse
+         */
         public BatchDisableJobsResponse BatchDisableJobs(BatchDisableJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchDisableJobsWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          * ```xml
+          * <dependency>
+          *     <groupId>com.aliyun</groupId>
+          *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *     <version>1.0.4</version>
+          * </dependency>
+          * ```
+          *
+          * @param request BatchDisableJobsRequest
+          * @return BatchDisableJobsResponse
+         */
         public async Task<BatchDisableJobsResponse> BatchDisableJobsAsync(BatchDisableJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchDisableJobsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          * ```xml
+          * <dependency>
+          *     <groupId>com.aliyun</groupId>
+          *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *     <version>1.0.4</version>
+          * </dependency>
+          * ```
+          *
+          * @param request BatchEnableJobsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchEnableJobsResponse
+         */
         public BatchEnableJobsResponse BatchEnableJobsWithOptions(BatchEnableJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -293,6 +415,20 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return TeaModel.ToObject<BatchEnableJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          * ```xml
+          * <dependency>
+          *     <groupId>com.aliyun</groupId>
+          *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *     <version>1.0.4</version>
+          * </dependency>
+          * ```
+          *
+          * @param request BatchEnableJobsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchEnableJobsResponse
+         */
         public async Task<BatchEnableJobsResponse> BatchEnableJobsWithOptionsAsync(BatchEnableJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -338,12 +474,38 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return TeaModel.ToObject<BatchEnableJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          * ```xml
+          * <dependency>
+          *     <groupId>com.aliyun</groupId>
+          *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *     <version>1.0.4</version>
+          * </dependency>
+          * ```
+          *
+          * @param request BatchEnableJobsRequest
+          * @return BatchEnableJobsResponse
+         */
         public BatchEnableJobsResponse BatchEnableJobs(BatchEnableJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchEnableJobsWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          * ```xml
+          * <dependency>
+          *     <groupId>com.aliyun</groupId>
+          *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *     <version>1.0.4</version>
+          * </dependency>
+          * ```
+          *
+          * @param request BatchEnableJobsRequest
+          * @return BatchEnableJobsResponse
+         */
         public async Task<BatchEnableJobsResponse> BatchEnableJobsAsync(BatchEnableJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -461,13 +623,13 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             {
                 body["FailEnable"] = request.FailEnable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailTimes))
+            {
+                body["FailTimes"] = request.FailTimes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 body["GroupId"] = request.GroupId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JarUrl))
-            {
-                body["JarUrl"] = request.JarUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
             {
@@ -513,6 +675,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             {
                 body["SendChannel"] = request.SendChannel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SuccessNoticeEnable))
+            {
+                body["SuccessNoticeEnable"] = request.SuccessNoticeEnable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskAttemptInterval))
             {
                 body["TaskAttemptInterval"] = request.TaskAttemptInterval;
@@ -540,6 +710,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutKillEnable))
             {
                 body["TimeoutKillEnable"] = request.TimeoutKillEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XAttrs))
+            {
+                body["XAttrs"] = request.XAttrs;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -614,13 +788,13 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             {
                 body["FailEnable"] = request.FailEnable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailTimes))
+            {
+                body["FailTimes"] = request.FailTimes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 body["GroupId"] = request.GroupId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JarUrl))
-            {
-                body["JarUrl"] = request.JarUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
             {
@@ -666,6 +840,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             {
                 body["SendChannel"] = request.SendChannel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SuccessNoticeEnable))
+            {
+                body["SuccessNoticeEnable"] = request.SuccessNoticeEnable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskAttemptInterval))
             {
                 body["TaskAttemptInterval"] = request.TaskAttemptInterval;
@@ -693,6 +875,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutKillEnable))
             {
                 body["TimeoutKillEnable"] = request.TimeoutKillEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XAttrs))
+            {
+                body["XAttrs"] = request.XAttrs;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -814,6 +1000,144 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateNamespaceWithOptionsAsync(request, runtime);
+        }
+
+        public CreateWorkflowResponse CreateWorkflowWithOptions(CreateWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrency))
+            {
+                body["MaxConcurrency"] = request.MaxConcurrency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                body["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeExpression))
+            {
+                body["TimeExpression"] = request.TimeExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeType))
+            {
+                body["TimeType"] = request.TimeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["Timezone"] = request.Timezone;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkflow",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkflowResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateWorkflowResponse> CreateWorkflowWithOptionsAsync(CreateWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrency))
+            {
+                body["MaxConcurrency"] = request.MaxConcurrency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                body["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeExpression))
+            {
+                body["TimeExpression"] = request.TimeExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeType))
+            {
+                body["TimeType"] = request.TimeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["Timezone"] = request.Timezone;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkflow",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateWorkflowResponse CreateWorkflow(CreateWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateWorkflowWithOptions(request, runtime);
+        }
+
+        public async Task<CreateWorkflowResponse> CreateWorkflowAsync(CreateWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateWorkflowWithOptionsAsync(request, runtime);
         }
 
         public DeleteJobResponse DeleteJobWithOptions(DeleteJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1270,6 +1594,13 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return await EnableWorkflowWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > : The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
+          *
+          * @param request ExecuteJobRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExecuteJobResponse
+         */
         public ExecuteJobResponse ExecuteJobWithOptions(ExecuteJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1293,6 +1624,13 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return TeaModel.ToObject<ExecuteJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > : The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
+          *
+          * @param request ExecuteJobRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExecuteJobResponse
+         */
         public async Task<ExecuteJobResponse> ExecuteJobWithOptionsAsync(ExecuteJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1316,12 +1654,24 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return TeaModel.ToObject<ExecuteJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > : The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
+          *
+          * @param request ExecuteJobRequest
+          * @return ExecuteJobResponse
+         */
         public ExecuteJobResponse ExecuteJob(ExecuteJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExecuteJobWithOptions(request, runtime);
         }
 
+        /**
+          * > : The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
+          *
+          * @param request ExecuteJobRequest
+          * @return ExecuteJobResponse
+         */
         public async Task<ExecuteJobResponse> ExecuteJobAsync(ExecuteJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1560,6 +1910,64 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return await GetJobInstanceListWithOptionsAsync(request, runtime);
         }
 
+        public GetLogResponse GetLogWithOptions(GetLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLog",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLogResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetLogResponse> GetLogWithOptionsAsync(GetLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLog",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetLogResponse GetLog(GetLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetLogWithOptions(request, runtime);
+        }
+
+        public async Task<GetLogResponse> GetLogAsync(GetLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetLogWithOptionsAsync(request, runtime);
+        }
+
         public GetWorkFlowResponse GetWorkFlowWithOptions(GetWorkFlowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1676,6 +2084,64 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return await GetWorkerListWithOptionsAsync(request, runtime);
         }
 
+        public GetWorkflowInstanceResponse GetWorkflowInstanceWithOptions(GetWorkflowInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkflowInstance",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkflowInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetWorkflowInstanceResponse> GetWorkflowInstanceWithOptionsAsync(GetWorkflowInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkflowInstance",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkflowInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetWorkflowInstanceResponse GetWorkflowInstance(GetWorkflowInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetWorkflowInstanceWithOptions(request, runtime);
+        }
+
+        public async Task<GetWorkflowInstanceResponse> GetWorkflowInstanceAsync(GetWorkflowInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetWorkflowInstanceWithOptionsAsync(request, runtime);
+        }
+
         public GrantPermissionResponse GrantPermissionWithOptions(GrantPermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1790,6 +2256,16 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return await GrantPermissionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  Before you call this operation, you must add the following dependency to the pom.xml file:
+          *       <groupId>com.aliyun</groupId>
+          *       <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *       <version>1.0.5</version>
+          *
+          * @param request ListGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListGroupsResponse
+         */
         public ListGroupsResponse ListGroupsWithOptions(ListGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1813,6 +2289,16 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return TeaModel.ToObject<ListGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  Before you call this operation, you must add the following dependency to the pom.xml file:
+          *       <groupId>com.aliyun</groupId>
+          *       <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *       <version>1.0.5</version>
+          *
+          * @param request ListGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListGroupsResponse
+         */
         public async Task<ListGroupsResponse> ListGroupsWithOptionsAsync(ListGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1836,18 +2322,48 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return TeaModel.ToObject<ListGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  Before you call this operation, you must add the following dependency to the pom.xml file:
+          *       <groupId>com.aliyun</groupId>
+          *       <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *       <version>1.0.5</version>
+          *
+          * @param request ListGroupsRequest
+          * @return ListGroupsResponse
+         */
         public ListGroupsResponse ListGroups(ListGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListGroupsWithOptions(request, runtime);
         }
 
+        /**
+          * >  Before you call this operation, you must add the following dependency to the pom.xml file:
+          *       <groupId>com.aliyun</groupId>
+          *       <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *       <version>1.0.5</version>
+          *
+          * @param request ListGroupsRequest
+          * @return ListGroupsResponse
+         */
         public async Task<ListGroupsResponse> ListGroupsAsync(ListGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListGroupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          *     <dependency>
+          *           <groupId>com.aliyun</groupId>
+          *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *           <version>1.0.5</version>
+          *     </dependency>
+          *
+          * @param request ListJobsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListJobsResponse
+         */
         public ListJobsResponse ListJobsWithOptions(ListJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1871,6 +2387,18 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return TeaModel.ToObject<ListJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          *     <dependency>
+          *           <groupId>com.aliyun</groupId>
+          *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *           <version>1.0.5</version>
+          *     </dependency>
+          *
+          * @param request ListJobsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListJobsResponse
+         */
         public async Task<ListJobsResponse> ListJobsWithOptionsAsync(ListJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1894,18 +2422,52 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return TeaModel.ToObject<ListJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          *     <dependency>
+          *           <groupId>com.aliyun</groupId>
+          *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *           <version>1.0.5</version>
+          *     </dependency>
+          *
+          * @param request ListJobsRequest
+          * @return ListJobsResponse
+         */
         public ListJobsResponse ListJobs(ListJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListJobsWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          *     <dependency>
+          *           <groupId>com.aliyun</groupId>
+          *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *           <version>1.0.5</version>
+          *     </dependency>
+          *
+          * @param request ListJobsRequest
+          * @return ListJobsResponse
+         */
         public async Task<ListJobsResponse> ListJobsAsync(ListJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListJobsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          *     <dependency>
+          *         <groupId>com.aliyun</groupId>
+          *         <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *         <version>1.0.5</version>
+          *     </dependency>
+          *
+          * @param request ListNamespacesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListNamespacesResponse
+         */
         public ListNamespacesResponse ListNamespacesWithOptions(ListNamespacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1929,6 +2491,18 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return TeaModel.ToObject<ListNamespacesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          *     <dependency>
+          *         <groupId>com.aliyun</groupId>
+          *         <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *         <version>1.0.5</version>
+          *     </dependency>
+          *
+          * @param request ListNamespacesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListNamespacesResponse
+         */
         public async Task<ListNamespacesResponse> ListNamespacesWithOptionsAsync(ListNamespacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1952,16 +2526,324 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             return TeaModel.ToObject<ListNamespacesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          *     <dependency>
+          *         <groupId>com.aliyun</groupId>
+          *         <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *         <version>1.0.5</version>
+          *     </dependency>
+          *
+          * @param request ListNamespacesRequest
+          * @return ListNamespacesResponse
+         */
         public ListNamespacesResponse ListNamespaces(ListNamespacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListNamespacesWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, you must add the following dependency to the pom.xml file:
+          *     <dependency>
+          *         <groupId>com.aliyun</groupId>
+          *         <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+          *         <version>1.0.5</version>
+          *     </dependency>
+          *
+          * @param request ListNamespacesRequest
+          * @return ListNamespacesResponse
+         */
         public async Task<ListNamespacesResponse> ListNamespacesAsync(ListNamespacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListNamespacesWithOptionsAsync(request, runtime);
+        }
+
+        public ListWorkflowInstanceResponse ListWorkflowInstanceWithOptions(ListWorkflowInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkflowInstance",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkflowInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListWorkflowInstanceResponse> ListWorkflowInstanceWithOptionsAsync(ListWorkflowInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkflowInstance",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkflowInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListWorkflowInstanceResponse ListWorkflowInstance(ListWorkflowInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListWorkflowInstanceWithOptions(request, runtime);
+        }
+
+        public async Task<ListWorkflowInstanceResponse> ListWorkflowInstanceAsync(ListWorkflowInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListWorkflowInstanceWithOptionsAsync(request, runtime);
+        }
+
+        public RerunJobResponse RerunJobWithOptions(RerunJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataTime))
+            {
+                body["DataTime"] = request.DataTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                body["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RerunJob",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RerunJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RerunJobResponse> RerunJobWithOptionsAsync(RerunJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataTime))
+            {
+                body["DataTime"] = request.DataTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                body["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RerunJob",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RerunJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RerunJobResponse RerunJob(RerunJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RerunJobWithOptions(request, runtime);
+        }
+
+        public async Task<RerunJobResponse> RerunJobAsync(RerunJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RerunJobWithOptionsAsync(request, runtime);
+        }
+
+        public RetryJobInstanceResponse RetryJobInstanceWithOptions(RetryJobInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobInstanceId))
+            {
+                query["JobInstanceId"] = request.JobInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                query["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetryJobInstance",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetryJobInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RetryJobInstanceResponse> RetryJobInstanceWithOptionsAsync(RetryJobInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobInstanceId))
+            {
+                query["JobInstanceId"] = request.JobInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                query["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetryJobInstance",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetryJobInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RetryJobInstanceResponse RetryJobInstance(RetryJobInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RetryJobInstanceWithOptions(request, runtime);
+        }
+
+        public async Task<RetryJobInstanceResponse> RetryJobInstanceAsync(RetryJobInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RetryJobInstanceWithOptionsAsync(request, runtime);
         }
 
         public RevokePermissionResponse RevokePermissionWithOptions(RevokePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2060,6 +2942,218 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RevokePermissionWithOptionsAsync(request, runtime);
+        }
+
+        public SetJobInstanceSuccessResponse SetJobInstanceSuccessWithOptions(SetJobInstanceSuccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobInstanceId))
+            {
+                query["JobInstanceId"] = request.JobInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                query["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetJobInstanceSuccess",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetJobInstanceSuccessResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SetJobInstanceSuccessResponse> SetJobInstanceSuccessWithOptionsAsync(SetJobInstanceSuccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobInstanceId))
+            {
+                query["JobInstanceId"] = request.JobInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                query["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetJobInstanceSuccess",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetJobInstanceSuccessResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SetJobInstanceSuccessResponse SetJobInstanceSuccess(SetJobInstanceSuccessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetJobInstanceSuccessWithOptions(request, runtime);
+        }
+
+        public async Task<SetJobInstanceSuccessResponse> SetJobInstanceSuccessAsync(SetJobInstanceSuccessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetJobInstanceSuccessWithOptionsAsync(request, runtime);
+        }
+
+        public SetWfInstanceSuccessResponse SetWfInstanceSuccessWithOptions(SetWfInstanceSuccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                query["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WfInstanceId))
+            {
+                query["WfInstanceId"] = request.WfInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetWfInstanceSuccess",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetWfInstanceSuccessResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SetWfInstanceSuccessResponse> SetWfInstanceSuccessWithOptionsAsync(SetWfInstanceSuccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                query["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WfInstanceId))
+            {
+                query["WfInstanceId"] = request.WfInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetWfInstanceSuccess",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetWfInstanceSuccessResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SetWfInstanceSuccessResponse SetWfInstanceSuccess(SetWfInstanceSuccessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetWfInstanceSuccessWithOptions(request, runtime);
+        }
+
+        public async Task<SetWfInstanceSuccessResponse> SetWfInstanceSuccessAsync(SetWfInstanceSuccessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetWfInstanceSuccessWithOptionsAsync(request, runtime);
         }
 
         public StopInstanceResponse StopInstanceWithOptions(StopInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2173,13 +3267,13 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             {
                 body["FailEnable"] = request.FailEnable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailTimes))
+            {
+                body["FailTimes"] = request.FailTimes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 body["GroupId"] = request.GroupId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JarUrl))
-            {
-                body["JarUrl"] = request.JarUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
@@ -2224,6 +3318,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendChannel))
             {
                 body["SendChannel"] = request.SendChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SuccessNoticeEnable))
+            {
+                body["SuccessNoticeEnable"] = request.SuccessNoticeEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskAttemptInterval))
             {
@@ -2326,13 +3424,13 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             {
                 body["FailEnable"] = request.FailEnable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailTimes))
+            {
+                body["FailTimes"] = request.FailTimes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 body["GroupId"] = request.GroupId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JarUrl))
-            {
-                body["JarUrl"] = request.JarUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
@@ -2377,6 +3475,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendChannel))
             {
                 body["SendChannel"] = request.SendChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SuccessNoticeEnable))
+            {
+                body["SuccessNoticeEnable"] = request.SuccessNoticeEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskAttemptInterval))
             {
@@ -2436,6 +3538,250 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateJobWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateWorkflowResponse UpdateWorkflowWithOptions(UpdateWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                body["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeExpression))
+            {
+                body["TimeExpression"] = request.TimeExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeType))
+            {
+                body["TimeType"] = request.TimeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkflow",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkflowResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateWorkflowResponse> UpdateWorkflowWithOptionsAsync(UpdateWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                body["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeExpression))
+            {
+                body["TimeExpression"] = request.TimeExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeType))
+            {
+                body["TimeType"] = request.TimeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkflow",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateWorkflowResponse UpdateWorkflow(UpdateWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateWorkflowWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateWorkflowResponse> UpdateWorkflowAsync(UpdateWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateWorkflowWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateWorkflowDagResponse UpdateWorkflowDagWithOptions(UpdateWorkflowDagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagJson))
+            {
+                body["DagJson"] = request.DagJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                body["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkflowDag",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkflowDagResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateWorkflowDagResponse> UpdateWorkflowDagWithOptionsAsync(UpdateWorkflowDagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagJson))
+            {
+                body["DagJson"] = request.DagJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                body["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkflowDag",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkflowDagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateWorkflowDagResponse UpdateWorkflowDag(UpdateWorkflowDagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateWorkflowDagWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateWorkflowDagResponse> UpdateWorkflowDagAsync(UpdateWorkflowDagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateWorkflowDagWithOptionsAsync(request, runtime);
         }
 
     }
