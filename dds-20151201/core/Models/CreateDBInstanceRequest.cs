@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   **true**
         /// *   **false**
         /// 
-        /// >  If you set the **ChargeType** parameter to **PrePaid**, you must configure this optional parameter.
+        /// > If you set the **ChargeType** parameter to **PrePaid**, this parameter is valid and optional.
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The ID of the backup set. You can call the [DescribeBackups](~~62172~~) operation to query the backup set ID.
         /// 
-        /// >  This parameter is required only when you call this operation to clone an instance. If you specify this parameter, you must also specify the **SrcDBInstanceId** parameter.
+        /// > This parameter is required only when you call this operation to clone an instance. If you specify this parameter, you must also specify the **SrcDBInstanceId** parameter.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
@@ -51,22 +51,25 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The billing method of the instance. Valid values:
         /// 
-        /// *   **PostPaid**: pay-as-you-go
-        /// *   **PrePaid**: subscription
+        /// *   **PostPaid:** pay-as-you-go
+        /// *   **PrePaid:** subscription
         /// 
-        /// >  If you specify this parameter to **PrePaid**, you must also specify the **Period** parameter.
+        /// > If you set this parameter to **PrePaid**, you must also specify the **Period** parameter.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The ID of the dedicated cluster to which the instance belongs.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -90,7 +93,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// *   The name must start with a letter.
         /// *   The name can contain digits, letters, underscores (\_), and hyphens (-).
-        /// *   The name must be 2 to 256 characters in length.
+        /// *   It must be 2 to 256 characters in length.
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
@@ -99,7 +102,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The storage capacity of the instance. Unit: GB.
         /// 
-        /// The values that can be specified for this parameter are subject to the instance types. For more information, see [Replica set instance types](~~311410~~).
+        /// The values that can be specified for this parameter vary based on the instance types. For more information, see [Replica set instance types](~~311410~~).
         /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
@@ -108,34 +111,62 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The name of the database.
         /// 
-        /// >  When you call this operation to clone an instance, you can set the databases that are specified by this parameter for cloning. Otherwise, all databases of the instance are cloned.
+        /// > When you call this operation to clone an instance, you can set the databases that are specified by this parameter for cloning. Otherwise, all databases of the instance are cloned.
         /// </summary>
         [NameInMap("DatabaseNames")]
         [Validation(Required=false)]
         public string DatabaseNames { get; set; }
 
         /// <summary>
-        /// The engine of the instance. The value is set to **MongoDB**.
+        /// The database engine of the instance. Set the value to **MongoDB**.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The engine version of the instance. Valid values:
+        /// The version of the database engine. Valid values:
         /// 
-        /// * **5.0**
-        /// * **4.4**
-        /// * **4.2**
-        /// * **4.0**
-        /// * **3.4**
+        /// *   **6.0**
+        /// *   **5.0**
+        /// *   **4.4**
+        /// *   **4.2**
+        /// *   **4.0**
         /// 
-        /// > If you call this operation to clone an instance, set the value to the engine of the source instance.
+        /// > If you call this operation to clone an instance or restore an instance from the recycle bin, set the value to the engine of the source instance.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        /// <summary>
+        /// The zone where the hidden node is deployed for multi-zone deployment. Valid values:
+        /// 
+        /// *   **cn-hangzhou-g**: Hangzhou Zone G
+        /// *   **cn-hangzhou-h**: Hangzhou Zone H
+        /// *   **cn-hangzhou-i**: Hangzhou Zone I
+        /// *   **cn-hongkong-b**: Hongkong Zone B.
+        /// *   **cn-hongkong-c**: Hongkong Zone C
+        /// *   **cn-hongkong-d**: Hongkong Zone D
+        /// *   **cn-wulanchabu-a**: Ulanqab Zone A
+        /// *   **cn-wulanchabu-b**: Ulanqab Zone B
+        /// *   **cn-wulanchabu-c**: Ulanqab Zone C
+        /// *   **ap-southeast-1a**: Singapore Zone A
+        /// *   **ap-southeast-1b**: Singapore Zone B
+        /// *   **ap-southeast-1c**: Singapore Zone C
+        /// *   **ap-southeast-5a**: Jakarta Zone A
+        /// *   **ap-southeast-5b**: Jakarta Zone B
+        /// *   **ap-southeast-5c**: Jakarta Zone C
+        /// *   **eu-central-1a**: Frankfurt Zone A
+        /// *   **eu-central-1b**: Frankfurt Zone B
+        /// *   **eu-central-1c**: Frankfurt Zone C
+        /// 
+        /// > 
+        /// 
+        /// *   This parameter is available and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.
+        /// 
+        /// *   The value of this parameter cannot be the same as the value of the **ZoneId** or **SecondaryZoneId** parameter.
+        /// </summary>
         [NameInMap("HiddenZoneId")]
         [Validation(Required=false)]
         public string HiddenZoneId { get; set; }
@@ -162,7 +193,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.
         /// 
-        /// >  If you set the ChargeType property to PrePaid, you must configure this property.
+        /// > If you specify the **ChargeType** parameter to **PrePaid**, this parameter is valid and required.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -177,6 +208,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// 
+        /// > If you call this operation to clone an instance or restore an instance from the recycle bin, set the value to the engine of the source instance.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -194,7 +227,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ReplicationFactor { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The ID of the resource group to which the instances you want to query belong.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -211,12 +244,40 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The point in time to clone the instance, which must be within seven days. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
         /// 
-        /// >  This parameter is required only when you call this operation to clone an instance. If you specify this parameter, you must also specify the **SrcDBInstanceId** parameter.
+        /// > This parameter is required only when you call this operation to clone an instance. If you specify this parameter, you must also specify the **SrcDBInstanceId** parameter.
         /// </summary>
         [NameInMap("RestoreTime")]
         [Validation(Required=false)]
         public string RestoreTime { get; set; }
 
+        /// <summary>
+        /// The zone where the secondary node is deployed for multi-zone deployment. Valid values:
+        /// 
+        /// *   **cn-hangzhou-g**: Hangzhou Zone G
+        /// *   **cn-hangzhou-h**: Hangzhou Zone H
+        /// *   **cn-hangzhou-i**: Hangzhou Zone I
+        /// *   **cn-hongkong-b**: Hongkong Zone B.
+        /// *   **cn-hongkong-c**: Hongkong Zone C
+        /// *   **cn-hongkong-d**: Hongkong Zone D
+        /// *   **cn-wulanchabu-a**: Ulanqab Zone A
+        /// *   **cn-wulanchabu-b**: Ulanqab Zone B
+        /// *   **cn-wulanchabu-c**: Ulanqab Zone C
+        /// *   **ap-southeast-1a**: Singapore Zone A
+        /// *   **ap-southeast-1b**: Singapore Zone B
+        /// *   **ap-southeast-1c**: Singapore Zone C
+        /// *   **ap-southeast-5a**: Jakarta Zone A
+        /// *   **ap-southeast-5b**: Jakarta Zone B
+        /// *   **ap-southeast-5c**: Jakarta Zone C
+        /// *   **eu-central-1a**: Frankfurt Zone A
+        /// *   **eu-central-1b**: Frankfurt Zone B
+        /// *   **eu-central-1c**: Frankfurt Zone C
+        /// 
+        /// > 
+        /// 
+        /// *   This parameter is available and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.
+        /// 
+        /// *   The value of this parameter cannot be the same as the value of the **ZoneId** or **HiddenZoneId** parameter.
+        /// </summary>
         [NameInMap("SecondaryZoneId")]
         [Validation(Required=false)]
         public string SecondaryZoneId { get; set; }
@@ -224,12 +285,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). Each IP address in the IP address whitelist must be unique. The following types of IP addresses are supported:
         /// 
-        /// * 0.0.0.0/0
-        /// * IP addresses, such as 10.23.12.24.
-        /// * Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.0/24. In this case, /24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.
+        /// *   0.0.0.0/0
+        /// *   IP addresses, such as 10.23.12.24.
+        /// *   Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.0/24. In this case, /24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.
         /// 
-        /// > * A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.
-        /// > * If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance.
+        /// > 
+        /// 
+        /// *   A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.
+        /// 
+        /// *   If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance.
         /// </summary>
         [NameInMap("SecurityIPList")]
         [Validation(Required=false)]
@@ -242,21 +306,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The ID of the source instance.
         /// 
-        /// >  This parameter can only be specified when this operation is called to clone instances. You must also specify the **BackupId** parameter or **RestoreTime** parameter.
+        /// > This parameter can only be specified when this operation is called to clone instances. You must also specify the **BackupId** parameter or **RestoreTime** parameter. If you call this operation to restore an instance from the recycle bin, this parameter is required. The **BackupId** and **RestoreTime** parameters are not required.
         /// </summary>
         [NameInMap("SrcDBInstanceId")]
         [Validation(Required=false)]
         public string SrcDBInstanceId { get; set; }
 
         /// <summary>
-        /// The storage engine of the instance. Default value: WiredTiger. Valid values:
+        /// The storage engine used by the instance. Set the value to **WiredTiger**.
         /// 
-        /// * **WiredTiger**
-        /// * **RocksDB**
-        /// * **TerarkDB**
+        /// > 
         /// 
-        /// > * If you call this operation to clone an instance, set the value to the engine of the source instance.
-        /// > * For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
+        /// *   If you call this operation to clone an instance or restore an instance from the recycle bin, set the value to the engine of the source instance.
+        /// 
+        /// *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
         /// </summary>
         [NameInMap("StorageEngine")]
         [Validation(Required=false)]
@@ -265,7 +328,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The storage type of the instance. Valid values:
         /// 
-        /// *   **cloud_essd**: enhanced SSD (ESSD)
+        /// *   **cloud_essd1** :ESSD PL1
+        /// *   **cloud_essd2**: ESSD PL2
+        /// *   **cloud_essd3**: ESSD PL3
         /// *   **local_ssd**: local SSD
         /// </summary>
         [NameInMap("StorageType")]
@@ -280,7 +345,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The VPC ID of the instance.
+        /// The ID of the VPC.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The instance type.
         /// 
-        /// >  This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see [Instance types](~~57141~~).
+        /// > This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see [Instance types](~~57141~~).
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
@@ -33,13 +33,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance. Valid values:
+        /// The major engine version of the instance. Valid values:
         /// 
+        /// *   **6.0**
         /// *   **5.0**
         /// *   **4.4**
         /// *   **4.2**
         /// *   **4.0**
-        /// *   **3.4**
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -55,13 +55,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// The number of read-only nodes. Valid values: **1** to **5**.
+        /// 
+        /// > This parameter is not required for standalone or serverless instances.
         /// </summary>
         [NameInMap("ReadonlyReplicas")]
         [Validation(Required=false)]
         public string ReadonlyReplicas { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID of the instance.
+        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -72,6 +74,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// *   Valid values for standalone instances: **1**
         /// *   Valid values for replica set instances: **3**, **5**, and **7**
+        /// 
+        /// > This parameter is not required for serverless instances.
         /// </summary>
         [NameInMap("ReplicationFactor")]
         [Validation(Required=false)]
@@ -92,40 +96,45 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The node information. This parameter is required when you check whether resources are sufficient for creating or upgrading a sharded cluster instance.
         /// 
-        /// *   To check whether resources are sufficient for creating a sharded cluster instance, specify the specifications of each node in the instance. The value must be a JSON string. Example:
+        /// To check whether resources are sufficient for creating a sharded cluster instance, specify the specifications of each node in the instance. The value must be a JSON string. Example:
         /// 
-        ///         {
-        ///              "ConfigSvrs":
-        ///                  [{"Storage":20,"DBInstanceClass":"dds.cs.mid"}],
-        ///              "Mongos":
-        ///                  [{"DBInstanceClass":"dds.mongos.standard"},{"DBInstanceClass":"dds.mongos.standard"}],
-        ///              "Shards":
-        ///                  [{"Storage":50,"DBInstanceClass":"dds.shard.standard"},{"Storage":50,"DBInstanceClass":"dds.shard.standard"},   {"Storage":50,"DBInstanceClass":"dds.shard.standard"}]
-        ///          }
+        ///     {
+        ///          "ConfigSvrs":
+        ///              [{"Storage":20,"DBInstanceClass":"dds.cs.mid"}],
+        ///          "Mongos":
+        ///              [{"DBInstanceClass":"dds.mongos.standard"},{"DBInstanceClass":"dds.mongos.standard"}],
+        ///          "Shards":
+        ///              [{"Storage":50,"DBInstanceClass":"dds.shard.standard"},{"Storage":50,"DBInstanceClass":"dds.shard.standard"},   {"Storage":50,"DBInstanceClass":"dds.shard.standard"}]
+        ///      }
         /// 
-        ///     Parameters in the example:
+        /// Parameters in the example:
         /// 
-        ///     *   ConfigSvrs: the Configserver node.
-        ///     *   Mongos: the mongos node.
-        ///     *   Shards: the shard node.
-        ///     *   Storage: the storage space of the node.
-        ///     *   DBInstanceClass: the instance type of the node. For more information, see [Instance types](~~57141~~).
+        /// *   ConfigSvrs: the Configserver node.
+        /// *   Mongos: the mongos node.
+        /// *   Shards: the shard node.
+        /// *   Storage: the storage space of the node.
+        /// *   DBInstanceClass: the instance type of the node. For more information, see [Sharded cluster instance types](~~311414~~).
         /// 
-        /// *   To check whether resources are sufficient for upgrading a node of a sharded cluster instance, specify only the information of the node to be upgraded. The value must be a JSON string. Example:
+        /// To check whether resources are sufficient for upgrading a node of a sharded cluster instance, specify only the information of the node to be upgraded. The value must be a JSON string. Example:
         /// 
-        ///         {
-        ///              "NodeId": "d-bp147c4d9ca7****", "NodeClass": "dds.shard.standard"
-        ///         } 
+        ///     {
+        ///          "NodeId": "d-bp147c4d9ca7****", "NodeClass": "dds.shard.standard"
+        ///     } 
         /// 
-        ///     Parameters in the example:
+        /// Parameters in the example:
         /// 
-        ///     *   NodeId: the ID of the node. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the node ID.
-        ///     *   NodeClass: the instance type of the node. For more information, see [Instance types](~~57141~~).
+        /// *   NodeId: the ID of the node.
+        /// *   NodeClass: the instance type of the node. For more information, see [Sharded cluster instance types](~~311414~~).
         /// </summary>
         [NameInMap("ShardsInfo")]
         [Validation(Required=false)]
         public string ShardsInfo { get; set; }
 
+        /// <summary>
+        /// The storage capacity of the replica set instance. Unit: GB.
+        /// 
+        /// > This parameter is required for the instances that use cloud disks.
+        /// </summary>
         [NameInMap("Storage")]
         [Validation(Required=false)]
         public string Storage { get; set; }

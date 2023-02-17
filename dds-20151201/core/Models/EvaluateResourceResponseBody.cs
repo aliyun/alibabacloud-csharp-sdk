@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance.
+        /// The major engine version of the instance.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]

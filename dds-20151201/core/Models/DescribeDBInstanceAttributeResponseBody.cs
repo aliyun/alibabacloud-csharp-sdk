@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// Details of the instance.
+        /// Details about instances.
         /// </summary>
         [NameInMap("DBInstances")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance> DBInstance { get; set; }
             public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance : TeaModel {
                 /// <summary>
-                /// The I/O throughput consumed by the instance.
+                /// The read and write throughput consumed by the instance.
                 /// </summary>
                 [NameInMap("CapacityUnit")]
                 [Validation(Required=false)]
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string ChargeType { get; set; }
 
                 /// <summary>
-                /// Details of the Configserver nodes.
+                /// Details about Configserver nodes.
                 /// 
-                /// >  This parameter is returned if the instance is a sharded cluster instance.
+                /// > This parameter is returned if the instance is a sharded cluster instance.
                 /// </summary>
                 [NameInMap("ConfigserverList")]
                 [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         public int? MaxIOPS { get; set; }
 
                         /// <summary>
-                        /// The type of the Configserver node.
+                        /// The instance type of the Configserver node.
                         /// </summary>
                         [NameInMap("NodeClass")]
                         [Validation(Required=false)]
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
 
                 /// <summary>
-                /// The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the instance was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string CurrentKernelVersion { get; set; }
 
                 /// <summary>
-                /// The instance type.
+                /// The edition of the instance.
                 /// </summary>
                 [NameInMap("DBInstanceClass")]
                 [Validation(Required=false)]
@@ -152,11 +152,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
+                [NameInMap("DBInstanceOrderStatus")]
+                [Validation(Required=false)]
+                public string DBInstanceOrderStatus { get; set; }
+
                 /// <summary>
                 /// Indicates whether release protection is enabled for the instance. Valid values:
                 /// 
                 /// *   **true**: Release protection is enabled.
-                /// *   **false**: Release protection is disabled.
+                /// *   **false**: disabled
                 /// </summary>
                 [NameInMap("DBInstanceReleaseProtection")]
                 [Validation(Required=false)]
@@ -181,36 +185,34 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// 
                 /// *   **replicate**: replica set instance
                 /// *   **sharding**: sharded cluster instance
+                /// *   **serverless**: serverless instance
                 /// </summary>
                 [NameInMap("DBInstanceType")]
                 [Validation(Required=false)]
                 public string DBInstanceType { get; set; }
 
                 /// <summary>
-                /// The time when the instance data was destroyed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.  
-                /// 
-                /// > - Subscription instances are released 15 days after expiration. After an instance is released, its data is deleted and cannot be restored.
-                /// > - Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.
+                /// 实例数据销毁时间，格式为yyyy-MM-ddTHH:mm:ssZ（UTC时间）。
                 /// </summary>
                 [NameInMap("DestroyTime")]
                 [Validation(Required=false)]
                 public string DestroyTime { get; set; }
 
                 /// <summary>
-                /// The database engine of the instance.
+                /// The engine of the instance.
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The database engine version of the instance. Valid values:
+                /// The engine version of the instance.
                 /// 
+                /// *   **6.0**
                 /// *   **5.0**
                 /// *   **4.4**
                 /// *   **4.2**
                 /// *   **4.0**
-                /// *   **3.4**
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
@@ -219,7 +221,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The time when the subscription instance expires. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
                 /// 
-                /// >  This parameter is returned if the instance is a subscription instance.
+                /// > This parameter is returned if the instance is a subscription instance.
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
@@ -248,7 +250,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// *   **eu-central-1c**: Frankfurt Zone C
                 /// 
                 /// > 
+                /// 
                 /// *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+                /// 
                 /// *   This parameter is returned only if you use the Chine site (aliyun.com).
                 /// </summary>
                 [NameInMap("HiddenZoneId")]
@@ -289,7 +293,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string LockMode { get; set; }
 
                 /// <summary>
-                /// The end time of the maintenance window of the instance.
+                /// The end time of the maintenance window. The time is in the *HH:mm*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("MaintainEndTime")]
                 [Validation(Required=false)]
@@ -317,9 +321,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public int? MaxIOPS { get; set; }
 
                 /// <summary>
-                /// Details of the mongos nodes.
+                /// Details about mongos nodes.
                 /// 
-                /// >  This parameter is returned if the instance is a sharded cluster instance.
+                /// > This parameter is returned if the instance is a sharded cluster instance.
                 /// </summary>
                 [NameInMap("MongosList")]
                 [Validation(Required=false)]
@@ -351,7 +355,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         public int? MaxIOPS { get; set; }
 
                         /// <summary>
-                        /// The type of the mongos node.
+                        /// The instance type of the Mongos node.
                         /// </summary>
                         [NameInMap("NodeClass")]
                         [Validation(Required=false)]
@@ -386,18 +390,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         public string Status { get; set; }
 
                         /// <summary>
-                        /// The ID of the VPC.
+                        /// The VPC ID of the instance.
                         /// 
-                        /// >  This parameter is returned if the network type of the instance is VPC.
+                        /// > This parameter is returned if the network type of the instance is VPC.
                         /// </summary>
                         [NameInMap("VPCId")]
                         [Validation(Required=false)]
                         public string VPCId { get; set; }
 
                         /// <summary>
-                        /// The ID of the vSwitch.
+                        /// The vSwitch ID of the instance.
                         /// 
-                        /// >  This parameter is returned if the network type of the instance is VPC.
+                        /// > This parameter is returned if the network type of the instance is VPC.
                         /// </summary>
                         [NameInMap("VSwitchId")]
                         [Validation(Required=false)]
@@ -417,8 +421,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The network type of the instance. Valid values:
                 /// 
-                /// *   **Classic**: classic network
-                /// *   **VPC**: VPC
+                /// *   **Classic**
+                /// *   **VPC**
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
@@ -427,10 +431,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The access protocol type of the instance. Valid values:
                 /// 
-                /// - **mongodb**: the MongoDB protocol
-                /// - **dynamodb**: the DynamoDB protocol
+                /// *   **mongodb**: the MongoDB protocol
+                /// *   **dynamodb**: the DynamoDB protocol
                 /// 
-                /// >  This parameter is returned if the instance is a sharded cluster instance.
+                /// > This parameter is returned if the instance is a sharded cluster instance.
                 /// </summary>
                 [NameInMap("ProtocolType")]
                 [Validation(Required=false)]
@@ -451,9 +455,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The logical ID of the replica instance. 
+                /// The logical ID of the replica instance.
                 /// 
-                /// >  ApsaraDB for MongoDB does not support new instances of this type. This parameter applies only to previous-version replica instances.
+                /// > ApsaraDB for MongoDB does not support new instances of this type. This parameter applies only to previous-version replica instances.
                 /// </summary>
                 [NameInMap("ReplacateId")]
                 [Validation(Required=false)]
@@ -462,16 +466,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The name of the replica set instance.
                 /// 
-                /// >  This parameter is returned if the instance is a replica set instance.
+                /// > This parameter is returned if the instance is a replica set instance.
                 /// </summary>
                 [NameInMap("ReplicaSetName")]
                 [Validation(Required=false)]
                 public string ReplicaSetName { get; set; }
 
                 /// <summary>
-                /// Details of the replica set instance.
+                /// Details about replica set instances.
                 /// 
-                /// >  This parameter is returned if the instance is a replica set instance.
+                /// > This parameter is returned if the instance is a replica set instance.
                 /// </summary>
                 [NameInMap("ReplicaSets")]
                 [Validation(Required=false)]
@@ -498,8 +502,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         /// <summary>
                         /// The network type of the instance. Valid values:
                         /// 
-                        /// *   **Classic**: classic network
-                        /// *   **VPC**: VPC
+                        /// *   **Classic**
+                        /// *   **VPC**
                         /// </summary>
                         [NameInMap("NetworkType")]
                         [Validation(Required=false)]
@@ -518,25 +522,25 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         /// <summary>
                         /// The ID of the instance.
                         /// 
-                        /// >  This parameter is returned if the network type of the instance is VPC.
+                        /// > This parameter is returned if the network type of the instance is VPC.
                         /// </summary>
                         [NameInMap("VPCCloudInstanceId")]
                         [Validation(Required=false)]
                         public string VPCCloudInstanceId { get; set; }
 
                         /// <summary>
-                        /// The ID of the VPC.
+                        /// The VPC ID of the instance.
                         /// 
-                        /// >  This parameter is returned if the network type of the instance is VPC.
+                        /// > This parameter is returned if the network type of the instance is VPC.
                         /// </summary>
                         [NameInMap("VPCId")]
                         [Validation(Required=false)]
                         public string VPCId { get; set; }
 
                         /// <summary>
-                        /// The ID of the vSwitch.
+                        /// The vSwitch ID of the instance.
                         /// 
-                        /// >  This parameter is returned if the network type of the instance is Virtual Private Cloud (VPC).
+                        /// > This parameter is returned if the network type of the instance is VPC.
                         /// </summary>
                         [NameInMap("VSwitchId")]
                         [Validation(Required=false)]
@@ -549,16 +553,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The number of nodes in the instance.
                 /// 
-                /// >  This parameter is returned if the instance is a replica set instance.
+                /// > This parameter is returned if the instance is a replica set instance.
                 /// </summary>
                 [NameInMap("ReplicationFactor")]
                 [Validation(Required=false)]
                 public string ReplicationFactor { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group. 
+                /// The ID of the resource group.
                 /// 
-                /// >  This parameter is returned only if you use the Chine site (aliyun.com).
+                /// > This parameter is returned only if you use the China site (aliyun.com).
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -587,7 +591,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// *   **eu-central-1c**: Frankfurt Zone C
                 /// 
                 /// > 
+                /// 
                 /// *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+                /// 
                 /// *   This parameter is returned only if you use the Chine site (aliyun.com).
                 /// </summary>
                 [NameInMap("SecondaryZoneId")]
@@ -595,9 +601,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string SecondaryZoneId { get; set; }
 
                 /// <summary>
-                /// Details of the shard nodes.
+                /// Details about shard nodes.
                 /// 
-                /// >  This parameter is returned if the instance is a sharded cluster instance.
+                /// > This parameter is returned if the instance is a sharded cluster instance.
                 /// </summary>
                 [NameInMap("ShardList")]
                 [Validation(Required=false)]
@@ -629,7 +635,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         public int? MaxIOPS { get; set; }
 
                         /// <summary>
-                        /// The type of the shard node.
+                        /// The instance type of the shard node.
                         /// </summary>
                         [NameInMap("NodeClass")]
                         [Validation(Required=false)]
@@ -691,15 +697,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The storage type of the instance. Valid values:
                 /// 
-                /// *   **cloud_essd**: enhanced SSD (ESSD)
-                /// *   **local_ssd**: local SSD
+                /// **cloud_essd1** :ESSD PL1. **cloud_essd2**: ESSD of PL2. **cloud_essd3**: ESSD of PL3. **local_ssd**: local SSD.
                 /// </summary>
                 [NameInMap("StorageType")]
                 [Validation(Required=false)]
                 public string StorageType { get; set; }
 
                 /// <summary>
-                /// Details of the instance tags.
+                /// Details about instance tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -710,14 +715,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public List<DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTagsTag> Tag { get; set; }
                     public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the instance.
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value of the instance.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -730,25 +735,25 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The ID of the instance.
                 /// 
-                /// >  This parameter is returned if the network type of the instance is VPC.
+                /// > This parameter is returned if the network type of the instance is VPC.
                 /// </summary>
                 [NameInMap("VPCCloudInstanceIds")]
                 [Validation(Required=false)]
                 public string VPCCloudInstanceIds { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// The VPC ID of the instance.
                 /// 
-                /// >  This parameter is returned if the network type of the instance is VPC.
+                /// > This parameter is returned if the network type of the instance is VPC.
                 /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
                 public string VPCId { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// The vSwitch ID of the instance.
                 /// 
-                /// >  This parameter is returned if the network type of the instance is VPC.
+                /// > This parameter is returned if the network type of the instance is VPC.
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
@@ -757,9 +762,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// Indicates whether password-free access within the VPC is enabled. Valid values:
                 /// 
-                /// - **Open**: Password-free access is enabled.
-                /// - **Close**: Password-free access is disabled, and you must use a password for access.
-                /// - **NotSupport**: Password-free access is not supported.
+                /// *   **Open**: Password-free access is enabled.
+                /// *   **Close**: Password-free access is disabled, and you must use a password for access.
+                /// *   **NotSupport**: Password-free access is not supported.
                 /// </summary>
                 [NameInMap("VpcAuthMode")]
                 [Validation(Required=false)]

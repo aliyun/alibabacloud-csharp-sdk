@@ -17,11 +17,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The database engine of the instance. The value is set to **MongoDB**.
+        /// The engine of the instance. The value is set to **MongoDB**.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
+
+        [NameInMap("IsDelete")]
+        [Validation(Required=false)]
+        public bool? IsDelete { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -34,7 +38,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
         /// 
-        /// >  This parameter is available only if you use the China site (aliyun.com).
+        /// > This parameter is available only if you use the China site (aliyun.com).
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
