@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            [NameInMap("total_hotel_fee")]
+            [Validation(Required=false)]
+            public long? TotalHotelFee { get; set; }
+
             [NameInMap("traffic_fee")]
             [Validation(Required=false)]
             public EstimatedPriceQueryResponseBodyModuleTrafficFee TrafficFee { get; set; }
