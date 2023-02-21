@@ -1,0 +1,30 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Dt_oc_info20220829.Models
+{
+    public class GetQccSearchCertificationRequest : TeaModel {
+        [NameInMap("CertCategory")]
+        [Validation(Required=false)]
+        public string CertCategory { get; set; }
+
+        [NameInMap("EntName")]
+        [Validation(Required=false)]
+        public string EntName { get; set; }
+
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public int? PageNo { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+    }
+
+}
