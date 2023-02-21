@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
         [Validation(Required=false)]
         public DetectVideoShotResponseBodyData Data { get; set; }
         public class DetectVideoShotResponseBodyData : TeaModel {
+            /// <summary>
+            /// 1
+            /// </summary>
             [NameInMap("ShotFrameIds")]
             [Validation(Required=false)]
             public List<int?> ShotFrameIds { get; set; }

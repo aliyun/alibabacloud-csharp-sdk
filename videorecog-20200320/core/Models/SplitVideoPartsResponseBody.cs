@@ -31,6 +31,32 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
 
             }
 
+            [NameInMap("SplitVideoPartResults")]
+            [Validation(Required=false)]
+            public List<SplitVideoPartsResponseBodyDataSplitVideoPartResults> SplitVideoPartResults { get; set; }
+            public class SplitVideoPartsResponseBodyDataSplitVideoPartResults : TeaModel {
+                [NameInMap("BeginTime")]
+                [Validation(Required=false)]
+                public float? BeginTime { get; set; }
+
+                [NameInMap("By")]
+                [Validation(Required=false)]
+                public string By { get; set; }
+
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
+                public float? EndTime { get; set; }
+
+                [NameInMap("Theme")]
+                [Validation(Required=false)]
+                public string Theme { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
         }
 
         [NameInMap("Message")]

@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
         [Validation(Required=false)]
         public string ParamsShrink { get; set; }
 
-        [NameInMap("RegisterUrl")]
-        [Validation(Required=false)]
-        public string RegisterUrl { get; set; }
-
         [NameInMap("VideoUrl")]
         [Validation(Required=false)]
         public string VideoUrl { get; set; }

@@ -19,10 +19,6 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
 
         }
 
-        [NameInMap("RegisterUrl")]
-        [Validation(Required=false)]
-        public Stream RegisterUrlObject { get; set; }
-
         [NameInMap("VideoUrl")]
         [Validation(Required=false)]
         public Stream VideoUrlObject { get; set; }

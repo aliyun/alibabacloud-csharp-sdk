@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Videorecog20200320.Models
 {
     public class SplitVideoPartsAdvanceRequest : TeaModel {
+        [NameInMap("Template")]
+        [Validation(Required=false)]
+        public string Template { get; set; }
+
         [NameInMap("VideoUrl")]
         [Validation(Required=false)]
         public Stream VideoUrlObject { get; set; }
