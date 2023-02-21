@@ -7577,6 +7577,102 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ProjectModifyWithOptionsAsync(request, headers, runtime);
         }
 
+        public QueryReimbursementOrderResponse QueryReimbursementOrderWithOptions(QueryReimbursementOrderRequest request, QueryReimbursementOrderHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReimbOrderNo))
+            {
+                query["reimb_order_no"] = request.ReimbOrderNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpId))
+            {
+                query["sub_corp_id"] = request.SubCorpId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryReimbursementOrder",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/reimbursement/v1/order",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryReimbursementOrderResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QueryReimbursementOrderResponse> QueryReimbursementOrderWithOptionsAsync(QueryReimbursementOrderRequest request, QueryReimbursementOrderHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReimbOrderNo))
+            {
+                query["reimb_order_no"] = request.ReimbOrderNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpId))
+            {
+                query["sub_corp_id"] = request.SubCorpId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryReimbursementOrder",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/reimbursement/v1/order",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryReimbursementOrderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QueryReimbursementOrderResponse QueryReimbursementOrder(QueryReimbursementOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryReimbursementOrderHeaders headers = new QueryReimbursementOrderHeaders();
+            return QueryReimbursementOrderWithOptions(request, headers, runtime);
+        }
+
+        public async Task<QueryReimbursementOrderResponse> QueryReimbursementOrderAsync(QueryReimbursementOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryReimbursementOrderHeaders headers = new QueryReimbursementOrderHeaders();
+            return await QueryReimbursementOrderWithOptionsAsync(request, headers, runtime);
+        }
+
         public SyncSingleUserResponse SyncSingleUserWithOptions(SyncSingleUserRequest tmpReq, SyncSingleUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
