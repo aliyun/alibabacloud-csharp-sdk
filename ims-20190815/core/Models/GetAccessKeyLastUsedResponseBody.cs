@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public string LastUsedDate { get; set; }
 
+            [NameInMap("ServiceName")]
+            [Validation(Required=false)]
+            public string ServiceName { get; set; }
+
         }
 
         [NameInMap("RequestId")]
