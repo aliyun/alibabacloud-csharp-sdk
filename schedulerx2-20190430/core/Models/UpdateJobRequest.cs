@@ -237,6 +237,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [Validation(Required=false)]
         public int? TaskAttemptInterval { get; set; }
 
+        [NameInMap("TaskDispatchMode")]
+        [Validation(Required=false)]
+        public string TaskDispatchMode { get; set; }
+
         /// <summary>
         /// The number of retries that the system can perform when the subtask fails. This parameter is an advanced configuration item of the MapReduce job.
         /// </summary>

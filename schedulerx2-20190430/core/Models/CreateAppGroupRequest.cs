@@ -23,12 +23,20 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [Validation(Required=false)]
         public string AppName { get; set; }
 
+        [NameInMap("AppType")]
+        [Validation(Required=false)]
+        public int? AppType { get; set; }
+
         /// <summary>
         /// The description of the application.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("EnableLog")]
+        [Validation(Required=false)]
+        public bool? EnableLog { get; set; }
 
         /// <summary>
         /// The ID of the application. You can obtain the application ID on the Application Management page in Distributed Task Scheduling Platform.
