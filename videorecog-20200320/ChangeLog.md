@@ -1,3 +1,6 @@
+2023-02-22 Version: 2.0.5
+- Update EvaluateVideoQuality.
+
 2023-02-21 Version: 2.0.4
 - Update EvaluateVideoQuality.
 
