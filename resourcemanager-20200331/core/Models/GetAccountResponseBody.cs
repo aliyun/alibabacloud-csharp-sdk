@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
+            [NameInMap("EmailStatus")]
+            [Validation(Required=false)]
+            public string EmailStatus { get; set; }
+
             [NameInMap("FolderId")]
             [Validation(Required=false)]
             public string FolderId { get; set; }

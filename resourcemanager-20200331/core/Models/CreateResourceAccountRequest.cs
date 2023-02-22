@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public string PayerAccountId { get; set; }
 
+        [NameInMap("ResellAccountType")]
+        [Validation(Required=false)]
+        public string ResellAccountType { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateResourceAccountRequestTag> Tag { get; set; }

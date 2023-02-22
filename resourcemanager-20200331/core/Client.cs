@@ -383,6 +383,72 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await BindSecureMobilePhoneWithOptionsAsync(request, runtime);
         }
 
+        public CancelChangeAccountEmailResponse CancelChangeAccountEmailWithOptions(CancelChangeAccountEmailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelChangeAccountEmail",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelChangeAccountEmailResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CancelChangeAccountEmailResponse> CancelChangeAccountEmailWithOptionsAsync(CancelChangeAccountEmailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelChangeAccountEmail",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelChangeAccountEmailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CancelChangeAccountEmailResponse CancelChangeAccountEmail(CancelChangeAccountEmailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelChangeAccountEmailWithOptions(request, runtime);
+        }
+
+        public async Task<CancelChangeAccountEmailResponse> CancelChangeAccountEmailAsync(CancelChangeAccountEmailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelChangeAccountEmailWithOptionsAsync(request, runtime);
+        }
+
         public CancelCreateCloudAccountResponse CancelCreateCloudAccountWithOptions(CancelCreateCloudAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -579,6 +645,80 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelPromoteResourceAccountWithOptionsAsync(request, runtime);
+        }
+
+        public ChangeAccountEmailResponse ChangeAccountEmailWithOptions(ChangeAccountEmailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeAccountEmail",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeAccountEmailResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ChangeAccountEmailResponse> ChangeAccountEmailWithOptionsAsync(ChangeAccountEmailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeAccountEmail",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeAccountEmailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ChangeAccountEmailResponse ChangeAccountEmail(ChangeAccountEmailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ChangeAccountEmailWithOptions(request, runtime);
+        }
+
+        public async Task<ChangeAccountEmailResponse> ChangeAccountEmailAsync(ChangeAccountEmailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ChangeAccountEmailWithOptionsAsync(request, runtime);
         }
 
         public CheckAccountDeleteResponse CheckAccountDeleteWithOptions(CheckAccountDeleteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1085,6 +1225,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             {
                 query["PayerAccountId"] = request.PayerAccountId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResellAccountType))
+            {
+                query["ResellAccountType"] = request.ResellAccountType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -1127,6 +1271,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayerAccountId))
             {
                 query["PayerAccountId"] = request.PayerAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResellAccountType))
+            {
+                query["ResellAccountType"] = request.ResellAccountType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -6015,6 +6163,72 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResendPromoteResourceAccountEmailWithOptionsAsync(request, runtime);
+        }
+
+        public RetryChangeAccountEmailResponse RetryChangeAccountEmailWithOptions(RetryChangeAccountEmailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetryChangeAccountEmail",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetryChangeAccountEmailResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RetryChangeAccountEmailResponse> RetryChangeAccountEmailWithOptionsAsync(RetryChangeAccountEmailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetryChangeAccountEmail",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetryChangeAccountEmailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RetryChangeAccountEmailResponse RetryChangeAccountEmail(RetryChangeAccountEmailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RetryChangeAccountEmailWithOptions(request, runtime);
+        }
+
+        public async Task<RetryChangeAccountEmailResponse> RetryChangeAccountEmailAsync(RetryChangeAccountEmailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RetryChangeAccountEmailWithOptionsAsync(request, runtime);
         }
 
         public SendVerificationCodeForBindSecureMobilePhoneResponse SendVerificationCodeForBindSecureMobilePhoneWithOptions(SendVerificationCodeForBindSecureMobilePhoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
