@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
         [Validation(Required=false)]
         public string DeliveryAddress { get; set; }
 
+        [NameInMap("DistributionOutTradeId")]
+        [Validation(Required=false)]
+        public string DistributionOutTradeId { get; set; }
+
         [NameInMap("DistributionSupplierId")]
         [Validation(Required=false)]
         public string DistributionSupplierId { get; set; }

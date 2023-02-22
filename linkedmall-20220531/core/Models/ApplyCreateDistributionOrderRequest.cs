@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -16,6 +19,10 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
         [NameInMap("DeliveryAddress")]
         [Validation(Required=false)]
         public string DeliveryAddress { get; set; }
+
+        [NameInMap("DistributionOutTradeId")]
+        [Validation(Required=false)]
+        public string DistributionOutTradeId { get; set; }
 
         [NameInMap("DistributionSupplierId")]
         [Validation(Required=false)]

@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
+        /// <summary>
+        /// pageSize
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }

@@ -25,18 +25,6 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
         [Validation(Required=false)]
         public List<ListDistributionItemResponseBodyModel> Model { get; set; }
         public class ListDistributionItemResponseBodyModel : TeaModel {
-            [NameInMap("AuctionStatus")]
-            [Validation(Required=false)]
-            public int? AuctionStatus { get; set; }
-
-            [NameInMap("BizId")]
-            [Validation(Required=false)]
-            public string BizId { get; set; }
-
-            [NameInMap("BizTotalSaleNum")]
-            [Validation(Required=false)]
-            public long? BizTotalSaleNum { get; set; }
-
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
@@ -71,21 +59,9 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
             [Validation(Required=false)]
             public long? CategoryId { get; set; }
 
-            [NameInMap("CumulativeSaleNum")]
-            [Validation(Required=false)]
-            public long? CumulativeSaleNum { get; set; }
-
             [NameInMap("DescOption")]
             [Validation(Required=false)]
             public string DescOption { get; set; }
-
-            [NameInMap("DiscountRateScope")]
-            [Validation(Required=false)]
-            public string DiscountRateScope { get; set; }
-
-            [NameInMap("DisparityPriceScope")]
-            [Validation(Required=false)]
-            public string DisparityPriceScope { get; set; }
 
             [NameInMap("DistributionMallId")]
             [Validation(Required=false)]
@@ -99,17 +75,13 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
-            [NameInMap("IcQuantity")]
+            [NameInMap("HasQuantity")]
             [Validation(Required=false)]
-            public long? IcQuantity { get; set; }
+            public bool? HasQuantity { get; set; }
 
             [NameInMap("IsCanSell")]
             [Validation(Required=false)]
             public bool? IsCanSell { get; set; }
-
-            [NameInMap("IsInventoryZero")]
-            [Validation(Required=false)]
-            public bool? IsInventoryZero { get; set; }
 
             [NameInMap("ItemDesc")]
             [Validation(Required=false)]
@@ -135,9 +107,9 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
             [Validation(Required=false)]
             public string ItemTitle { get; set; }
 
-            [NameInMap("LinkRatio")]
+            [NameInMap("LmAttributeMap")]
             [Validation(Required=false)]
-            public string LinkRatio { get; set; }
+            public Dictionary<string, string> LmAttributeMap { get; set; }
 
             [NameInMap("LmAttributeModels")]
             [Validation(Required=false)]
@@ -181,41 +153,13 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
             [Validation(Required=false)]
             public string LmItemId { get; set; }
 
-            [NameInMap("LmShopId")]
-            [Validation(Required=false)]
-            public long? LmShopId { get; set; }
-
-            [NameInMap("MainBizStatus")]
-            [Validation(Required=false)]
-            public int? MainBizStatus { get; set; }
-
-            [NameInMap("MainBizTotalSaleNum")]
-            [Validation(Required=false)]
-            public long? MainBizTotalSaleNum { get; set; }
-
             [NameInMap("MainPicUrl")]
             [Validation(Required=false)]
             public string MainPicUrl { get; set; }
 
-            [NameInMap("MainPriceCentScope")]
-            [Validation(Required=false)]
-            public string MainPriceCentScope { get; set; }
-
-            [NameInMap("MaxAllowedCount")]
-            [Validation(Required=false)]
-            public int? MaxAllowedCount { get; set; }
-
-            [NameInMap("MonthSaleNum")]
-            [Validation(Required=false)]
-            public long? MonthSaleNum { get; set; }
-
             [NameInMap("PicUrl")]
             [Validation(Required=false)]
             public string PicUrl { get; set; }
-
-            [NameInMap("PremiumRateScope")]
-            [Validation(Required=false)]
-            public string PremiumRateScope { get; set; }
 
             [NameInMap("PriceCentScope")]
             [Validation(Required=false)]
@@ -237,53 +181,25 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
             [Validation(Required=false)]
             public string ReservedPriceScope { get; set; }
 
-            [NameInMap("SellerId")]
+            [NameInMap("SimpleQuantity")]
             [Validation(Required=false)]
-            public long? SellerId { get; set; }
+            public string SimpleQuantity { get; set; }
 
-            [NameInMap("SessionQuantity")]
+            [NameInMap("SimpleTotalSoldQuantity")]
             [Validation(Required=false)]
-            public long? SessionQuantity { get; set; }
-
-            [NameInMap("ShopId")]
-            [Validation(Required=false)]
-            public long? ShopId { get; set; }
+            public string SimpleTotalSoldQuantity { get; set; }
 
             [NameInMap("SkuList")]
             [Validation(Required=false)]
             public List<ListDistributionItemResponseBodyModelSkuList> SkuList { get; set; }
             public class ListDistributionItemResponseBodyModelSkuList : TeaModel {
-                [NameInMap("AdminStatus")]
-                [Validation(Required=false)]
-                public int? AdminStatus { get; set; }
-
-                [NameInMap("AliyunPriceCent")]
-                [Validation(Required=false)]
-                public long? AliyunPriceCent { get; set; }
-
-                [NameInMap("BenefitId")]
-                [Validation(Required=false)]
-                public string BenefitId { get; set; }
-
                 [NameInMap("CanSell")]
                 [Validation(Required=false)]
                 public bool? CanSell { get; set; }
 
-                [NameInMap("CustomerStatus")]
-                [Validation(Required=false)]
-                public int? CustomerStatus { get; set; }
-
                 [NameInMap("CustomizedAttributeMap")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> CustomizedAttributeMap { get; set; }
-
-                [NameInMap("DiscountRate")]
-                [Validation(Required=false)]
-                public double? DiscountRate { get; set; }
-
-                [NameInMap("DisparityPrice")]
-                [Validation(Required=false)]
-                public long? DisparityPrice { get; set; }
 
                 [NameInMap("ExtInfo")]
                 [Validation(Required=false)]
@@ -293,9 +209,9 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
-                [NameInMap("IcStatus")]
+                [NameInMap("HasQuantity")]
                 [Validation(Required=false)]
-                public int? IcStatus { get; set; }
+                public bool? HasQuantity { get; set; }
 
                 [NameInMap("ItemId")]
                 [Validation(Required=false)]
@@ -343,42 +259,6 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
                 [Validation(Required=false)]
                 public string LmItemId { get; set; }
 
-                [NameInMap("MainPriceCent")]
-                [Validation(Required=false)]
-                public long? MainPriceCent { get; set; }
-
-                [NameInMap("MaxAllowedCount")]
-                [Validation(Required=false)]
-                public int? MaxAllowedCount { get; set; }
-
-                [NameInMap("OriginalPriceCent")]
-                [Validation(Required=false)]
-                public long? OriginalPriceCent { get; set; }
-
-                [NameInMap("PointPrice")]
-                [Validation(Required=false)]
-                public long? PointPrice { get; set; }
-
-                [NameInMap("Points")]
-                [Validation(Required=false)]
-                public long? Points { get; set; }
-
-                [NameInMap("PointsAmount")]
-                [Validation(Required=false)]
-                public long? PointsAmount { get; set; }
-
-                [NameInMap("PointsInfo")]
-                [Validation(Required=false)]
-                public string PointsInfo { get; set; }
-
-                [NameInMap("PointsKey")]
-                [Validation(Required=false)]
-                public string PointsKey { get; set; }
-
-                [NameInMap("PremiumRate")]
-                [Validation(Required=false)]
-                public double? PremiumRate { get; set; }
-
                 [NameInMap("PriceCent")]
                 [Validation(Required=false)]
                 public long? PriceCent { get; set; }
@@ -387,9 +267,13 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
                 [Validation(Required=false)]
                 public long? Quantity { get; set; }
 
-                [NameInMap("ReservePrice")]
+                [NameInMap("ReservedPrice")]
                 [Validation(Required=false)]
-                public long? ReservePrice { get; set; }
+                public long? ReservedPrice { get; set; }
+
+                [NameInMap("SimpleQuantity")]
+                [Validation(Required=false)]
+                public string SimpleQuantity { get; set; }
 
                 [NameInMap("SkuDesc")]
                 [Validation(Required=false)]
@@ -419,61 +303,19 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
-                [NameInMap("StepPrices")]
-                [Validation(Required=false)]
-                public List<ListDistributionItemResponseBodyModelSkuListStepPrices> StepPrices { get; set; }
-                public class ListDistributionItemResponseBodyModelSkuListStepPrices : TeaModel {
-                    [NameInMap("Max")]
-                    [Validation(Required=false)]
-                    public int? Max { get; set; }
-
-                    [NameInMap("Min")]
-                    [Validation(Required=false)]
-                    public int? Min { get; set; }
-
-                    [NameInMap("PriceCent")]
-                    [Validation(Required=false)]
-                    public long? PriceCent { get; set; }
-
-                }
-
-                [NameInMap("SupplierStatus")]
-                [Validation(Required=false)]
-                public int? SupplierStatus { get; set; }
-
-                [NameInMap("SupplyPriceCent")]
-                [Validation(Required=false)]
-                public long? SupplyPriceCent { get; set; }
-
-                [NameInMap("TaoBaoCurrentPrice")]
-                [Validation(Required=false)]
-                public long? TaoBaoCurrentPrice { get; set; }
-
                 [NameInMap("Tips")]
                 [Validation(Required=false)]
                 public string Tips { get; set; }
 
-                [NameInMap("UserLabel")]
+                [NameInMap("lmSkuAttributeMap")]
                 [Validation(Required=false)]
-                public List<string> UserLabel { get; set; }
+                public Dictionary<string, string> LmSkuAttributeMap { get; set; }
 
             }
 
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
-
-            [NameInMap("SupplyPriceCentScope")]
-            [Validation(Required=false)]
-            public string SupplyPriceCentScope { get; set; }
-
-            [NameInMap("TaoBaoCurrentPriceScope")]
-            [Validation(Required=false)]
-            public string TaoBaoCurrentPriceScope { get; set; }
-
-            [NameInMap("TbShopName")]
-            [Validation(Required=false)]
-            public string TbShopName { get; set; }
 
             [NameInMap("Tips")]
             [Validation(Required=false)]
@@ -483,20 +325,15 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
             [Validation(Required=false)]
             public int? TotalSoldQuantity { get; set; }
 
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public int? Type { get; set; }
-
-            [NameInMap("UserCashPointsScope")]
-            [Validation(Required=false)]
-            public string UserCashPointsScope { get; set; }
-
         }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
+        /// <summary>
+        /// pageSize
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }

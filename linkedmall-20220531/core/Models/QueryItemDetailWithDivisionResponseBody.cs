@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Linkedmall20220531.Models
 {
-    public class QueryItemDetailResponseBody : TeaModel {
-        [NameInMap("BizViewData")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> BizViewData { get; set; }
-
+    public class QueryItemDetailWithDivisionResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -27,15 +23,19 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
 
         [NameInMap("Model")]
         [Validation(Required=false)]
-        public QueryItemDetailResponseBodyModel Model { get; set; }
-        public class QueryItemDetailResponseBodyModel : TeaModel {
+        public QueryItemDetailWithDivisionResponseBodyModel Model { get; set; }
+        public class QueryItemDetailWithDivisionResponseBodyModel : TeaModel {
             [NameInMap("CanNotBeSoldCode")]
             [Validation(Required=false)]
             public string CanNotBeSoldCode { get; set; }
 
-            [NameInMap("CanNotBeSoldMessage")]
+            [NameInMap("CanNotBeSoldMassage")]
             [Validation(Required=false)]
-            public string CanNotBeSoldMessage { get; set; }
+            public string CanNotBeSoldMassage { get; set; }
+
+            [NameInMap("CanSell")]
+            [Validation(Required=false)]
+            public bool? CanSell { get; set; }
 
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
@@ -89,14 +89,6 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
             [Validation(Required=false)]
             public int? InvoiceType { get; set; }
 
-            [NameInMap("IsCanSell")]
-            [Validation(Required=false)]
-            public bool? IsCanSell { get; set; }
-
-            [NameInMap("IsSellerPayPostfee")]
-            [Validation(Required=false)]
-            public bool? IsSellerPayPostfee { get; set; }
-
             [NameInMap("ItemId")]
             [Validation(Required=false)]
             public long? ItemId { get; set; }
@@ -149,9 +141,17 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
             [Validation(Required=false)]
             public int? Quantity { get; set; }
 
-            [NameInMap("ReservedPrice")]
+            [NameInMap("ReservePrice")]
             [Validation(Required=false)]
-            public long? ReservedPrice { get; set; }
+            public long? ReservePrice { get; set; }
+
+            [NameInMap("SecuredTransactions")]
+            [Validation(Required=false)]
+            public int? SecuredTransactions { get; set; }
+
+            [NameInMap("SellerPayPostfee")]
+            [Validation(Required=false)]
+            public bool? SellerPayPostfee { get; set; }
 
             [NameInMap("SimpleQuantity")]
             [Validation(Required=false)]
@@ -162,15 +162,15 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
             /// </summary>
             [NameInMap("SkuModels")]
             [Validation(Required=false)]
-            public List<QueryItemDetailResponseBodyModelSkuModels> SkuModels { get; set; }
-            public class QueryItemDetailResponseBodyModelSkuModels : TeaModel {
+            public List<QueryItemDetailWithDivisionResponseBodyModelSkuModels> SkuModels { get; set; }
+            public class QueryItemDetailWithDivisionResponseBodyModelSkuModels : TeaModel {
                 [NameInMap("CanNotBeSoldCode")]
                 [Validation(Required=false)]
                 public string CanNotBeSoldCode { get; set; }
 
-                [NameInMap("CanNotBeSoldMessage")]
+                [NameInMap("CanNotBeSoldMassage")]
                 [Validation(Required=false)]
-                public string CanNotBeSoldMessage { get; set; }
+                public string CanNotBeSoldMassage { get; set; }
 
                 [NameInMap("CustomizedAttributeMap")]
                 [Validation(Required=false)]
@@ -212,9 +212,9 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
                 [Validation(Required=false)]
                 public int? Quantity { get; set; }
 
-                [NameInMap("ReservedPrice")]
+                [NameInMap("ReservePrice")]
                 [Validation(Required=false)]
-                public long? ReservedPrice { get; set; }
+                public long? ReservePrice { get; set; }
 
                 [NameInMap("SimpleQuantity")]
                 [Validation(Required=false)]
@@ -240,12 +240,16 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
+                [NameInMap("SupplierPrice")]
+                [Validation(Required=false)]
+                public long? SupplierPrice { get; set; }
+
             }
 
             [NameInMap("SkuPropertys")]
             [Validation(Required=false)]
-            public List<QueryItemDetailResponseBodyModelSkuPropertys> SkuPropertys { get; set; }
-            public class QueryItemDetailResponseBodyModelSkuPropertys : TeaModel {
+            public List<QueryItemDetailWithDivisionResponseBodyModelSkuPropertys> SkuPropertys { get; set; }
+            public class QueryItemDetailWithDivisionResponseBodyModelSkuPropertys : TeaModel {
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
@@ -256,8 +260,8 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
 
                 [NameInMap("Values")]
                 [Validation(Required=false)]
-                public List<QueryItemDetailResponseBodyModelSkuPropertysValues> Values { get; set; }
-                public class QueryItemDetailResponseBodyModelSkuPropertysValues : TeaModel {
+                public List<QueryItemDetailWithDivisionResponseBodyModelSkuPropertysValues> Values { get; set; }
+                public class QueryItemDetailWithDivisionResponseBodyModelSkuPropertysValues : TeaModel {
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
@@ -277,6 +281,10 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
             [NameInMap("ThirdPartyName")]
             [Validation(Required=false)]
             public string ThirdPartyName { get; set; }
+
+            [NameInMap("UserType")]
+            [Validation(Required=false)]
+            public int? UserType { get; set; }
 
             [NameInMap("VideoPicUrl")]
             [Validation(Required=false)]

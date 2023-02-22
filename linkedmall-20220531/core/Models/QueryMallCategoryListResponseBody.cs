@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Linkedmall20220531.Models
 {
-    public class SubmitReturnGoodLogistics4DistributionResponseBody : TeaModel {
+    public class QueryMallCategoryListResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -21,16 +21,27 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("Model")]
         [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public List<QueryMallCategoryListResponseBodyModel> Model { get; set; }
+        public class QueryMallCategoryListResponseBodyModel : TeaModel {
+            [NameInMap("CategoryId")]
+            [Validation(Required=false)]
+            public long? CategoryId { get; set; }
 
-        /// <summary>
-        /// pageSize
-        /// </summary>
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
+            [NameInMap("Leaf")]
+            [Validation(Required=false)]
+            public bool? Leaf { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("ParentId")]
+            [Validation(Required=false)]
+            public long? ParentId { get; set; }
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -47,10 +58,6 @@ namespace AlibabaCloud.SDK.Linkedmall20220531.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
 
     }
 
