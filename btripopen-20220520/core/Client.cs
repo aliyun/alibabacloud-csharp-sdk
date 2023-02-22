@@ -1685,6 +1685,134 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await ApplyQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        public BtripBillInfoAdjustResponse BtripBillInfoAdjustWithOptions(BtripBillInfoAdjustRequest request, BtripBillInfoAdjustHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryId))
+            {
+                body["primary_id"] = request.PrimaryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartCostCenterId))
+            {
+                body["third_part_cost_center_id"] = request.ThirdPartCostCenterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartDepartmentId))
+            {
+                body["third_part_department_id"] = request.ThirdPartDepartmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartInvoiceId))
+            {
+                body["third_part_invoice_id"] = request.ThirdPartInvoiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartProjectId))
+            {
+                body["third_part_project_id"] = request.ThirdPartProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BtripBillInfoAdjust",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/bill/v1/info/action/adjust",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BtripBillInfoAdjustResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<BtripBillInfoAdjustResponse> BtripBillInfoAdjustWithOptionsAsync(BtripBillInfoAdjustRequest request, BtripBillInfoAdjustHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryId))
+            {
+                body["primary_id"] = request.PrimaryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartCostCenterId))
+            {
+                body["third_part_cost_center_id"] = request.ThirdPartCostCenterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartDepartmentId))
+            {
+                body["third_part_department_id"] = request.ThirdPartDepartmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartInvoiceId))
+            {
+                body["third_part_invoice_id"] = request.ThirdPartInvoiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdPartProjectId))
+            {
+                body["third_part_project_id"] = request.ThirdPartProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BtripBillInfoAdjust",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/bill/v1/info/action/adjust",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BtripBillInfoAdjustResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public BtripBillInfoAdjustResponse BtripBillInfoAdjust(BtripBillInfoAdjustRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            BtripBillInfoAdjustHeaders headers = new BtripBillInfoAdjustHeaders();
+            return BtripBillInfoAdjustWithOptions(request, headers, runtime);
+        }
+
+        public async Task<BtripBillInfoAdjustResponse> BtripBillInfoAdjustAsync(BtripBillInfoAdjustRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            BtripBillInfoAdjustHeaders headers = new BtripBillInfoAdjustHeaders();
+            return await BtripBillInfoAdjustWithOptionsAsync(request, headers, runtime);
+        }
+
         public CarApplyAddResponse CarApplyAddWithOptions(CarApplyAddRequest request, CarApplyAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7159,6 +7287,102 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             IsvUserSaveHeaders headers = new IsvUserSaveHeaders();
             return await IsvUserSaveWithOptionsAsync(request, headers, runtime);
+        }
+
+        public MonthBillConfirmResponse MonthBillConfirmWithOptions(MonthBillConfirmRequest request, MonthBillConfirmHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailBillDate))
+            {
+                body["mail_bill_date"] = request.MailBillDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MonthBillConfirm",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/bill/v1/status/action/confirm",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MonthBillConfirmResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<MonthBillConfirmResponse> MonthBillConfirmWithOptionsAsync(MonthBillConfirmRequest request, MonthBillConfirmHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailBillDate))
+            {
+                body["mail_bill_date"] = request.MailBillDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MonthBillConfirm",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/bill/v1/status/action/confirm",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MonthBillConfirmResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public MonthBillConfirmResponse MonthBillConfirm(MonthBillConfirmRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            MonthBillConfirmHeaders headers = new MonthBillConfirmHeaders();
+            return MonthBillConfirmWithOptions(request, headers, runtime);
+        }
+
+        public async Task<MonthBillConfirmResponse> MonthBillConfirmAsync(MonthBillConfirmRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            MonthBillConfirmHeaders headers = new MonthBillConfirmHeaders();
+            return await MonthBillConfirmWithOptionsAsync(request, headers, runtime);
         }
 
         public MonthBillGetResponse MonthBillGetWithOptions(MonthBillGetRequest request, MonthBillGetHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
