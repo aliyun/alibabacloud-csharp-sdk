@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
+        [NameInMap("sub_corp_id")]
+        [Validation(Required=false)]
+        public string SubCorpId { get; set; }
+
         [NameInMap("user_id")]
         [Validation(Required=false)]
         public string UserId { get; set; }
