@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// Indicates whether an access control policy is configured. Valid values:
             /// 
-            /// *   **Uncovered**: No access control policies are configured.
-            /// *   **FullCoverage**: An access control policy is configured.
+            /// *   **Uncovered**: no
+            /// *   **FullCoverage**: yes
             /// </summary>
             [NameInMap("AclCoverage")]
             [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CategoryClassId { get; set; }
 
             /// <summary>
-            /// The ID of the service to which the destination IP address belongs. Valid values:
+            /// The type ID of the service to which the domain name belongs. Valid values:
             /// 
             /// *   **Aliyun**: Alibaba Cloud services
             /// *   **NotAliyun**: third-party services
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// The type of the service to which the domain name belongs. Valid values:
             /// 
             /// *   **Alibaba Cloud services**
-            /// *   **third-party services**
+            /// *   **Third-party services**
             /// </summary>
             [NameInMap("CategoryName")]
             [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public bool? HasAclRecommend { get; set; }
 
             /// <summary>
-            /// The inbound traffic.
+            /// The volume of inbound traffic.
             /// </summary>
             [NameInMap("InBytes")]
             [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Organization { get; set; }
 
             /// <summary>
-            /// The outbound traffic.
+            /// The volume of outbound traffic.
             /// </summary>
             [NameInMap("OutBytes")]
             [Validation(Required=false)]

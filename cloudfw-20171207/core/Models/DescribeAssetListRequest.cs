@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public long? MemberUid { get; set; }
 
+        [NameInMap("NewResourceTag")]
+        [Validation(Required=false)]
+        public string NewResourceTag { get; set; }
+
         /// <summary>
         /// The number of entries to return on each page.
         /// </summary>

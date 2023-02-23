@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The instance ID of the VPC firewall.
         /// 
-        /// >  You can call the [DescribeVpcFirewallCenList](~~345777~~) operation to query the instance IDs of VPC firewalls.
+        /// > You can call the [DescribeVpcFirewallCenList](~~345777~~) operation to query the instance IDs of VPC firewalls.
         /// </summary>
         [NameInMap("VpcFirewallId")]
         [Validation(Required=false)]

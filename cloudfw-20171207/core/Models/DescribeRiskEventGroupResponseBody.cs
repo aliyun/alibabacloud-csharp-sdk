@@ -26,19 +26,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// The attack type of the intrusion event. Valid values:
             /// 
-            /// * **1**: suspicious connection
-            /// * **2**: command execution
-            /// * **3**: brute-force attack
-            /// * **4**: scanning
-            /// * **5**: others
-            /// * **6**: information leak
-            /// * **7**: DoS attack
-            /// * **8**: buffer overflow attack
-            /// * **9**: web attack
-            /// * **10**: trojan backdoor
-            /// * **11**: computer worm
-            /// * **12**: mining
-            /// * **13**: reverse shell
+            /// *   **1**: suspicious connection
+            /// *   **2**: command execution
+            /// *   **3**: brute-force attack
+            /// *   **4**: scanning
+            /// *   **5**: others
+            /// *   **6**: information leak
+            /// *   **7**: DoS attack
+            /// *   **8**: buffer overflow attack
+            /// *   **9**: web attack
+            /// *   **10**: trojan backdoor
+            /// *   **11**: computer worm
+            /// *   **12**: mining
+            /// *   **13**: reverse shell
             /// </summary>
             [NameInMap("AttackType")]
             [Validation(Required=false)]
@@ -97,7 +97,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? FirstEventTime { get; set; }
 
             /// <summary>
-            /// The information about the geographical location of the IP address. The value is a struct that contains the following parameters: **CityId**, **CityName**, **CountryId**, and **CountryName**.
+            /// The information about the geographical location of the IP address. The value is a struct that contains the following parameters: **CityId**, **CityName**, **CountryId**, and **CountryName**.\
+            /// ****************
             /// </summary>
             [NameInMap("IPLocationInfo")]
             [Validation(Required=false)]
@@ -141,7 +142,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? LastEventTime { get; set; }
 
             /// <summary>
-            /// The information about the private IP address of the intrusion event. The value is an array that contains the following parameters: **RegionNo**, **ResourceInstanceId**, **ResourceInstanceName**, and **ResourcePrivateIP**.
+            /// The information about the private IP address of the intrusion event. The value is an array that contains the following parameters: **RegionNo**, **ResourceInstanceId**, **ResourceInstanceName**, and **ResourcePrivateIP**.\
+            /// ****************
             /// </summary>
             [NameInMap("ResourcePrivateIPList")]
             [Validation(Required=false)]
@@ -226,7 +228,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SrcIP { get; set; }
 
             /// <summary>
-            /// The source IP tag. It is used to identify whether it is the cloud product back to the source IP.
+            /// The tag added to the source IP address. The tag helps identify whether the source IP address is a back-to-origin IP address for a cloud service.
             /// </summary>
             [NameInMap("SrcIPTag")]
             [Validation(Required=false)]
@@ -234,8 +236,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// The source private IP addresses of the intrusion event.
-            /// 
-            /// >  The value of this parameter is returned only when you set Direction to out.
             /// </summary>
             [NameInMap("SrcPrivateIPList")]
             [Validation(Required=false)]
@@ -249,7 +249,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Tag { get; set; }
 
             /// <summary>
-            /// The information about the destination VPC of the intrusion event. The value is a struct that contains the following parameters: **EcsInstanceId**, **EcsInstanceName**, **NetworkInstanceId**, **NetworkInstanceName**, and **RegionNo**.
+            /// The information about the destination VPC of the intrusion event. The value is a struct that contains the following parameters: **EcsInstanceId**, **EcsInstanceName**, **NetworkInstanceId**, **NetworkInstanceName**, and **RegionNo**.\
+            /// ********************
             /// </summary>
             [NameInMap("VpcDstInfo")]
             [Validation(Required=false)]
@@ -293,7 +294,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// The information about the source VPC of the intrusion event. The value is a struct that contains the following parameters: **EcsInstanceId**, **EcsInstanceName**, **NetworkInstanceId**, **NetworkInstanceName**, and **RegionNo**.
+            /// The information about the source VPC of the intrusion event. The value is a struct that contains the following parameters: **EcsInstanceId**, **EcsInstanceName**, **NetworkInstanceId**, **NetworkInstanceName**, and **RegionNo**.\
+            /// ********************
             /// </summary>
             [NameInMap("VpcSrcInfo")]
             [Validation(Required=false)]
@@ -357,7 +359,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of risk events.
+        /// The total number of intrusion events.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

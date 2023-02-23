@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeRiskEventGroupRequest : TeaModel {
         /// <summary>
-        /// The name list of the attacked application.
+        /// The names of attacked applications. Set the value in the `["AttackApp1","AttackApp2"]` format.
         /// </summary>
         [NameInMap("AttackApp")]
         [Validation(Required=false)]
@@ -19,19 +19,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The attack type of the intrusion events. Valid values:
         /// 
-        /// * **1**: suspicious connection
-        /// * **2**: command execution
-        /// * **3**: brute-force attack
-        /// * **4**: scanning
-        /// * **5**: others
-        /// * **6**: information leak
-        /// * **7**: DoS attack
-        /// * **8**: buffer overflow attack
-        /// * **9**: web attack
-        /// * **10**: trojan backdoor
-        /// * **11**: computer worm
-        /// * **12**: mining
-        /// * **13**: reverse shell
+        /// *   **1**: suspicious connection
+        /// *   **2**: command execution
+        /// *   **3**: brute-force attack
+        /// *   **4**: scanning
+        /// *   **5**: others
+        /// *   **6**: information leak
+        /// *   **7**: DoS attack
+        /// *   **8**: buffer overflow attack
+        /// *   **9**: web attack
+        /// *   **10**: trojan backdoor
+        /// *   **11**: computer worm
+        /// *   **12**: mining
+        /// *   **13**: reverse shell
         /// 
         /// > If you do not specify this parameter, the intrusion events of all attack types are queried.
         /// </summary>
@@ -42,27 +42,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The edition of Cloud Firewall that you purchase. Valid values:
         /// 
-        /// * **2**: Premium Edition
-        /// * **3**: Enterprise Edition
-        /// * **4**: Ultimate Edition
-        /// * **10**: pay-as-you-go edition
+        /// *   **2**: Premium Edition
+        /// *   **3**: Enterprise Edition
+        /// *   **4**: Ultimate Edition
+        /// *   **10**: Cloud Firewall that uses the pay-as-you-go billing method
         /// </summary>
         [NameInMap("BuyVersion")]
         [Validation(Required=false)]
         public long? BuyVersion { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
-        /// 
-        /// Default value: **1**.
+        /// The number of the page to return. Default value: **1**.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// The type of the risk events.
-        /// 
+        /// The type of the risk events.\
         /// Set the value to **session**, which indicates intrusion events.
         /// </summary>
         [NameInMap("DataType")]
@@ -72,10 +69,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The direction of the traffic for the intrusion events. Valid values:
         /// 
-        /// * **in**: inbound
-        /// * **out**: outbound
+        /// *   **in**: inbound
+        /// *   **out**: outbound
         /// 
-        /// >  If you do not specify this parameter, the intrusion events in both inbound and outbound directions are queried.
+        /// > If you do not specify this parameter, the intrusion events in both inbound and outbound directions are queried.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
@@ -91,7 +88,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The ID of the destination VPC.
         /// 
-        /// >  You must specify this parameter when the FirewallType parameter is set to VpcFirewall.
+        /// > If the FirewallType parameter is set to VpcFirewall, you must specify this parameter.
         /// </summary>
         [NameInMap("DstNetworkInstanceId")]
         [Validation(Required=false)]
@@ -107,18 +104,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The type of the firewall. Valid values:
         /// 
-        /// * **VpcFirewall**: virtual private cloud (VPC) firewall
-        /// * **InternetFirewall**: Internet firewall (default)
+        /// *   **VpcFirewall**: virtual private cloud (VPC) firewall
+        /// *   **InternetFirewall**: Internet firewall (default)
         /// </summary>
         [NameInMap("FirewallType")]
         [Validation(Required=false)]
         public string FirewallType { get; set; }
 
         /// <summary>
-        /// The language of the content within the request and the response. Valid values:
+        /// The language of the content within the request and response. Valid values:
         /// 
-        /// * **zh**: Chinese (default)
-        /// * **en**: English
+        /// *   **zh**: Chinese (default)
+        /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -127,17 +124,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// Specifies whether to query the information about the geographical locations of IP addresses.
         /// 
-        /// * **true**: does not query the information about the geographical locations of IP addresses.
-        /// * **false**: queries the information about the geographical locations of IP addresses. This is the default value.
+        /// *   **true**: does not query the information about the geographical locations of IP addresses.
+        /// *   **false**: queries the information about the geographical locations of IP addresses. This is the default value.
         /// </summary>
         [NameInMap("NoLocation")]
         [Validation(Required=false)]
         public string NoLocation { get; set; }
 
         /// <summary>
-        /// The method that is used to sort the results. Valid values:
+        /// The order in which you want to sort the query results. Valid values:
         /// 
-        /// *   **asc**: the ascending order
+        /// *   **asc**: the ascending order.
         /// *   **desc**: the descending order. This is the default value.
         /// </summary>
         [NameInMap("Order")]
@@ -156,10 +153,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The status of the firewall. Valid values:
         /// 
-        /// * **1**: alerting
-        /// * **2**: blocking
+        /// *   **1**: alerting
+        /// *   **2**: blocking
         /// 
-        /// > If you do not specify this parameter, the intrusion events that are detected by all firewalls are queried.
+        /// > If you do not specify this parameter, the intrusion events that are detected by firewalls in both states are queried.
         /// </summary>
         [NameInMap("RuleResult")]
         [Validation(Required=false)]
@@ -168,9 +165,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The module of the rule that is used to detect the intrusion events. Valid values:
         /// 
-        /// * **1**: basic protection
-        /// * **2**: virtual patching
-        /// * **4**: threat intelligence
+        /// *   **1**: basic protection
+        /// *   **2**: virtual patching
+        /// *   **4**: threat intelligence
         /// 
         /// > If you do not specify this parameter, the intrusion events that are detected by using all rules are queried.
         /// </summary>
@@ -189,7 +186,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// The source IP address to query. If you specify this parameter, all intrusion events from the specified source IP address are queried.
+        /// The source IP address to query. If you specify this parameter, all intrusion events with the specified source IP address are queried.
         /// </summary>
         [NameInMap("SrcIP")]
         [Validation(Required=false)]
@@ -198,7 +195,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The ID of the source VPC.
         /// 
-        /// >  You must specify this parameter when the FirewallType parameter is set to VpcFirewall.
+        /// > If the FirewallType parameter is set to VpcFirewall, you must specify this parameter.
         /// </summary>
         [NameInMap("SrcNetworkInstanceId")]
         [Validation(Required=false)]
@@ -214,9 +211,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The risk level of the intrusion events. Valid values:
         /// 
-        /// * **1**: low
-        /// * **2**: medium
-        /// * **3**: high
+        /// *   **1**: low
+        /// *   **2**: medium
+        /// *   **3**: high
         /// 
         /// > If you do not specify this parameter, the intrusion events that are at all risk levels are queried.
         /// </summary>

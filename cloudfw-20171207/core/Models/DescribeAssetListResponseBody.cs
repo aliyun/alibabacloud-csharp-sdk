@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string BindInstanceName { get; set; }
 
+            [NameInMap("CreateTimeStamp")]
+            [Validation(Required=false)]
+            public string CreateTimeStamp { get; set; }
+
             /// <summary>
             /// The public IP address of the server.
             /// </summary>
@@ -78,6 +82,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("NewResourceTag")]
+            [Validation(Required=false)]
+            public string NewResourceTag { get; set; }
 
             /// <summary>
             /// The remarks of the asset. Valid values:
