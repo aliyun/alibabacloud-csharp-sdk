@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("owners")]
+            [Validation(Required=false)]
+            public List<string> Owners { get; set; }
+
             [NameInMap("scope")]
             [Validation(Required=false)]
             public string Scope { get; set; }

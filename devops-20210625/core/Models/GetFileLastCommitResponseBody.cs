@@ -76,11 +76,11 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public GetFileLastCommitResponseBodyResultSignature Signature { get; set; }
             public class GetFileLastCommitResponseBodyResultSignature : TeaModel {
-                [NameInMap("GpgKeyId")]
+                [NameInMap("gpgKeyId")]
                 [Validation(Required=false)]
                 public string GpgKeyId { get; set; }
 
-                [NameInMap("VerificationStatus")]
+                [NameInMap("verificationStatus")]
                 [Validation(Required=false)]
                 public string VerificationStatus { get; set; }
 
