@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("RouteName")]
+        [Validation(Required=false)]
+        public string RouteName { get; set; }
+
     }
 
 }
