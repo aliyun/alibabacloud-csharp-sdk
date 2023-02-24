@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class RestoreSecretRequest : TeaModel {
+        /// <summary>
+        /// The name of the secret you want to restore.
+        /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]
         public string SecretName { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DescribeCertificateRequest : TeaModel {
+        /// <summary>
+        /// The ID of the certificate. The ID must be globally unique in Certificates Manager.
+        /// </summary>
         [NameInMap("CertificateId")]
         [Validation(Required=false)]
         public string CertificateId { get; set; }

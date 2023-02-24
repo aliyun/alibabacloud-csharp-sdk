@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class EnableKeyRequest : TeaModel {
+        /// <summary>
+        /// The globally unique ID of the CMK.
+        /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]
         public string KeyId { get; set; }

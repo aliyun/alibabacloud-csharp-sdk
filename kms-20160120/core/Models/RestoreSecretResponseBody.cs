@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class RestoreSecretResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The name of the secret.
+        /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]
         public string SecretName { get; set; }
