@@ -38,13 +38,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string TownName { get; set; }
 
             }
+
             [NameInMap("Mobile")]
             [Validation(Required=false)]
             public string Mobile { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
-        };
+
+        }
 
         [NameInMap("CpCode")]
         [Validation(Required=false)]
@@ -91,13 +94,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string TownName { get; set; }
 
             }
+
             [NameInMap("Mobile")]
             [Validation(Required=false)]
             public string Mobile { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
-        };
+
+        }
 
     }
 

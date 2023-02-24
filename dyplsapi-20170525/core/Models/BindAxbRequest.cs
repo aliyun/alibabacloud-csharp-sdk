@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public int? CallTimeout { get; set; }
 
+        [NameInMap("DtmfConfig")]
+        [Validation(Required=false)]
+        public string DtmfConfig { get; set; }
+
         [NameInMap("ExpectCity")]
         [Validation(Required=false)]
         public string ExpectCity { get; set; }

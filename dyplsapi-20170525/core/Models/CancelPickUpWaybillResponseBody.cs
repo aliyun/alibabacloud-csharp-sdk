@@ -20,16 +20,20 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
             public string ErrorCode { get; set; }
+
             [NameInMap("ErrorMsg")]
             [Validation(Required=false)]
             public string ErrorMsg { get; set; }
+
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+
             [NameInMap("Success")]
             [Validation(Required=false)]
             public bool? Success { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

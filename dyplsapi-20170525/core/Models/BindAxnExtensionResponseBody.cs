@@ -28,13 +28,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [NameInMap("Extension")]
             [Validation(Required=false)]
             public string Extension { get; set; }
+
             [NameInMap("SecretNo")]
             [Validation(Required=false)]
             public string SecretNo { get; set; }
+
             [NameInMap("SubsId")]
             [Validation(Required=false)]
             public string SubsId { get; set; }
-        };
+
+        }
 
     }
 

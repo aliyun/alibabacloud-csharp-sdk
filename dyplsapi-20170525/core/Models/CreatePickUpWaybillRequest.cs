@@ -28,19 +28,24 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [NameInMap("AddressDetail")]
             [Validation(Required=false)]
             public string AddressDetail { get; set; }
+
             [NameInMap("AreaName")]
             [Validation(Required=false)]
             public string AreaName { get; set; }
+
             [NameInMap("CityName")]
             [Validation(Required=false)]
             public string CityName { get; set; }
+
             [NameInMap("ProvinceName")]
             [Validation(Required=false)]
             public string ProvinceName { get; set; }
+
             [NameInMap("TownName")]
             [Validation(Required=false)]
             public string TownName { get; set; }
-        };
+
+        }
 
         [NameInMap("ConsigneeMobile")]
         [Validation(Required=false)]
@@ -95,19 +100,24 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [NameInMap("AddressDetail")]
             [Validation(Required=false)]
             public string AddressDetail { get; set; }
+
             [NameInMap("AreaName")]
             [Validation(Required=false)]
             public string AreaName { get; set; }
+
             [NameInMap("CityName")]
             [Validation(Required=false)]
             public string CityName { get; set; }
+
             [NameInMap("ProvinceName")]
             [Validation(Required=false)]
             public string ProvinceName { get; set; }
+
             [NameInMap("TownName")]
             [Validation(Required=false)]
             public string TownName { get; set; }
-        };
+
+        }
 
         [NameInMap("SendMobile")]
         [Validation(Required=false)]

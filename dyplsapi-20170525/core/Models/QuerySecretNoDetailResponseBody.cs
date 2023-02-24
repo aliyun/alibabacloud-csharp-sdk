@@ -28,22 +28,28 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [NameInMap("CertifyStatus")]
             [Validation(Required=false)]
             public int? CertifyStatus { get; set; }
+
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
+
             [NameInMap("Province")]
             [Validation(Required=false)]
             public string Province { get; set; }
+
             [NameInMap("PurchaseTime")]
             [Validation(Required=false)]
             public string PurchaseTime { get; set; }
+
             [NameInMap("SecretStatus")]
             [Validation(Required=false)]
             public long? SecretStatus { get; set; }
+
             [NameInMap("Vendor")]
             [Validation(Required=false)]
             public long? Vendor { get; set; }
-        };
+
+        }
 
     }
 

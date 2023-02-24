@@ -28,7 +28,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [NameInMap("SecretNo")]
             [Validation(Required=false)]
             public string SecretNo { get; set; }
-        };
+
+        }
 
     }
 

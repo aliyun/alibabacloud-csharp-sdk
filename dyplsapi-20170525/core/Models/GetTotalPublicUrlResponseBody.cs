@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [NameInMap("PhonePublicUrl")]
             [Validation(Required=false)]
             public string PhonePublicUrl { get; set; }
+
             [NameInMap("RingPublicUrl")]
             [Validation(Required=false)]
             public string RingPublicUrl { get; set; }
-        };
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

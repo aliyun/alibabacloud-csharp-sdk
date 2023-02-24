@@ -28,9 +28,11 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [NameInMap("Amount")]
             [Validation(Required=false)]
             public long? Amount { get; set; }
+
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
+
             [NameInMap("RemainDTOList")]
             [Validation(Required=false)]
             public QuerySecretNoRemainResponseBodySecretRemainDTORemainDTOList RemainDTOList { get; set; }
@@ -50,7 +52,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 }
 
             }
-        };
+
+        }
 
     }
 
