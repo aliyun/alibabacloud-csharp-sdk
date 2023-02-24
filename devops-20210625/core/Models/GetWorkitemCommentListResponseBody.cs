@@ -53,6 +53,32 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public long? TopTime { get; set; }
 
+            [NameInMap("user")]
+            [Validation(Required=false)]
+            public GetWorkitemCommentListResponseBodyCommentListUser User { get; set; }
+            public class GetWorkitemCommentListResponseBodyCommentListUser : TeaModel {
+                [NameInMap("account")]
+                [Validation(Required=false)]
+                public string Account { get; set; }
+
+                [NameInMap("avatar")]
+                [Validation(Required=false)]
+                public string Avatar { get; set; }
+
+                [NameInMap("identifier")]
+                [Validation(Required=false)]
+                public string Identifier { get; set; }
+
+                [NameInMap("nickName")]
+                [Validation(Required=false)]
+                public string NickName { get; set; }
+
+                [NameInMap("realName")]
+                [Validation(Required=false)]
+                public string RealName { get; set; }
+
+            }
+
         }
 
         [NameInMap("errorCode")]
