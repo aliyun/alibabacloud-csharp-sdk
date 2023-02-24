@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imgsearch20200320.Models
 {
     public class ListImageDbsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListImageDbsResponseBodyData Data { get; set; }
@@ -21,9 +17,17 @@ namespace AlibabaCloud.SDK.Imgsearch20200320.Models
             [Validation(Required=false)]
             public List<ListImageDbsResponseBodyDataDbList> DbList { get; set; }
             public class ListImageDbsResponseBodyDataDbList : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

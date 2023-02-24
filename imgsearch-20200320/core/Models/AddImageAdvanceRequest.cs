@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Imgsearch20200320.Models
 {
     public class AddImageAdvanceRequest : TeaModel {
-        [NameInMap("ImageUrlObject")]
-        [Validation(Required=true)]
-        public Stream ImageUrlObject { get; set; }
-
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
+
+        [NameInMap("EntityId")]
+        [Validation(Required=false)]
+        public string EntityId { get; set; }
 
         [NameInMap("ExtraData")]
         [Validation(Required=false)]
         public string ExtraData { get; set; }
 
-        [NameInMap("EntityId")]
+        [NameInMap("ImageUrl")]
         [Validation(Required=false)]
-        public string EntityId { get; set; }
+        public Stream ImageUrlObject { get; set; }
 
     }
 

@@ -13,25 +13,25 @@ namespace AlibabaCloud.SDK.Imgsearch20200320.Models
         [Validation(Required=false)]
         public string DbName { get; set; }
 
-        [NameInMap("Token")]
+        [NameInMap("EntityIdPrefix")]
         [Validation(Required=false)]
-        public string Token { get; set; }
-
-        [NameInMap("Offset")]
-        [Validation(Required=false)]
-        public int? Offset { get; set; }
+        public string EntityIdPrefix { get; set; }
 
         [NameInMap("Limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
+        [NameInMap("Offset")]
+        [Validation(Required=false)]
+        public int? Offset { get; set; }
+
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
 
-        [NameInMap("EntityIdPrefix")]
+        [NameInMap("Token")]
         [Validation(Required=false)]
-        public string EntityIdPrefix { get; set; }
+        public string Token { get; set; }
 
     }
 

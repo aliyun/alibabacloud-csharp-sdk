@@ -16,17 +16,17 @@ namespace AlibabaCloud.SDK.Imgsearch20200320.Models
         [Validation(Required=false)]
         public string DbName { get; set; }
 
-        [NameInMap("ImageUrl")]
+        [NameInMap("EntityId")]
         [Validation(Required=false)]
-        public string ImageUrl { get; set; }
+        public string EntityId { get; set; }
 
         [NameInMap("ExtraData")]
         [Validation(Required=false)]
         public string ExtraData { get; set; }
 
-        [NameInMap("EntityId")]
+        [NameInMap("ImageUrl")]
         [Validation(Required=false)]
-        public string EntityId { get; set; }
+        public string ImageUrl { get; set; }
 
     }
 

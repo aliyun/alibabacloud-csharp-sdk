@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imgsearch20200320.Models
 {
     public class SearchImageResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SearchImageResponseBodyData Data { get; set; }
@@ -21,13 +17,33 @@ namespace AlibabaCloud.SDK.Imgsearch20200320.Models
             [Validation(Required=false)]
             public List<SearchImageResponseBodyDataMatchList> MatchList { get; set; }
             public class SearchImageResponseBodyDataMatchList : TeaModel {
-                public string ImageUrl { get; set; }
-                public string EntityId { get; set; }
-                public float? Score { get; set; }
+                [NameInMap("DataId")]
+                [Validation(Required=false)]
                 public string DataId { get; set; }
+
+                [NameInMap("EntityId")]
+                [Validation(Required=false)]
+                public string EntityId { get; set; }
+
+                [NameInMap("ExtraData")]
+                [Validation(Required=false)]
                 public string ExtraData { get; set; }
+
+                [NameInMap("ImageUrl")]
+                [Validation(Required=false)]
+                public string ImageUrl { get; set; }
+
+                [NameInMap("Score")]
+                [Validation(Required=false)]
+                public float? Score { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
