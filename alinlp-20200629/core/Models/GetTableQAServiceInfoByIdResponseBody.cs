@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alinlp20200629.Models
 {
-    public class UpdateCustomResponseBody : TeaModel {
+    public class GetTableQAServiceInfoByIdResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }

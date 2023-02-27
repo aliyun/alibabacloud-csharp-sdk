@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alinlp20200629.Models
 {
-    public class UpdateCustomResponse : TeaModel {
+    public class ADMiniCogResultResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Alinlp20200629.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public UpdateCustomResponseBody Body { get; set; }
+        public ADMiniCogResultResponseBody Body { get; set; }
 
     }
 
