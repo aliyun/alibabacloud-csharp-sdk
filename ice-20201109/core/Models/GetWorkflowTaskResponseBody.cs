@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public GetWorkflowTaskResponseBodyWorkflowTask WorkflowTask { get; set; }
         public class GetWorkflowTaskResponseBodyWorkflowTask : TeaModel {
+            [NameInMap("ActivityResults")]
+            [Validation(Required=false)]
+            public string ActivityResults { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -39,6 +43,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("TaskInput")]
             [Validation(Required=false)]
             public string TaskInput { get; set; }
+
+            [NameInMap("UserData")]
+            [Validation(Required=false)]
+            public string UserData { get; set; }
 
             [NameInMap("Workflow")]
             [Validation(Required=false)]

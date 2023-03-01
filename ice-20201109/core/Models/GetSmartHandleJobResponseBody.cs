@@ -13,6 +13,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        [NameInMap("JobResult")]
+        [Validation(Required=false)]
+        public GetSmartHandleJobResponseBodyJobResult JobResult { get; set; }
+        public class GetSmartHandleJobResponseBodyJobResult : TeaModel {
+            [NameInMap("AiResult")]
+            [Validation(Required=false)]
+            public string AiResult { get; set; }
+
+            [NameInMap("MediaId")]
+            [Validation(Required=false)]
+            public string MediaId { get; set; }
+
+        }
+
         [NameInMap("Output")]
         [Validation(Required=false)]
         public string Output { get; set; }
