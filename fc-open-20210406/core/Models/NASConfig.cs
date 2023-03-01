@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public List<NASConfigMountPoints> MountPoints { get; set; }
         public class NASConfigMountPoints : TeaModel {
+            [NameInMap("enableTLS")]
+            [Validation(Required=false)]
+            public bool? EnableTLS { get; set; }
+
             [NameInMap("mountDir")]
             [Validation(Required=false)]
             public string MountDir { get; set; }

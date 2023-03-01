@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         /// 
         /// *   **HTTP**: Only HTTP is supported.
         /// *   **HTTPS**: Only HTTPS is supported.
-        /// *   **HTTP,HTTPS**: Both HTTP and HTTPS are supported.
+        /// *   **HTTP,HTTPS**: HTTP and HTTPS are supported.
         /// </summary>
         [NameInMap("protocol")]
         [Validation(Required=false)]

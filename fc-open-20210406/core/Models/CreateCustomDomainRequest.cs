@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 
         /// <summary>
         /// The domain name.
+        /// Enter a custom domain name that has obtained an ICP filing in the Alibaba Cloud ICP Filing system, or a custom domain name whose ICP filing information includes Alibaba Cloud as a service provider.
         /// </summary>
         [NameInMap("domainName")]
         [Validation(Required=false)]

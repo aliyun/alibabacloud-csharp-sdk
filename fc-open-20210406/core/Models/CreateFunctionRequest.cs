@@ -86,6 +86,9 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string FunctionName { get; set; }
 
+        /// <summary>
+        /// GPU instance memory specifications of the function. Unit: MB. The value is a multiple of 1024.
+        /// </summary>
         [NameInMap("gpuMemorySize")]
         [Validation(Required=false)]
         public int? GpuMemorySize { get; set; }
