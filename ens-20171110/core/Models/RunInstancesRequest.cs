@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        [NameInMap("PasswordInherit")]
+        [Validation(Required=false)]
+        public bool? PasswordInherit { get; set; }
+
         [NameInMap("Period")]
         [Validation(Required=false)]
         public long? Period { get; set; }

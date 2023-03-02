@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EipAddress { get; set; }
 
+        [NameInMap("EipName")]
+        [Validation(Required=false)]
+        public string EipName { get; set; }
+
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }

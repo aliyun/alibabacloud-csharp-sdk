@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeImageInfosResponseBodyImagesImage> Image { get; set; }
             public class DescribeImageInfosResponseBodyImagesImage : TeaModel {
+                [NameInMap("ComputeType")]
+                [Validation(Required=false)]
+                public string ComputeType { get; set; }
+
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }

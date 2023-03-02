@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class PreCreateEnsServiceResponse : TeaModel {
+    public class ReleaseAICInstanceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public PreCreateEnsServiceResponseBody Body { get; set; }
+        public ReleaseAICInstanceResponseBody Body { get; set; }
 
     }
 

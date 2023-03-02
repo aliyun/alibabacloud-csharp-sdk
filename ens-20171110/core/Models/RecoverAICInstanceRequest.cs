@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DescribeImageInfosRequest : TeaModel {
-        [NameInMap("OsType")]
+    public class RecoverAICInstanceRequest : TeaModel {
+        [NameInMap("ServerId")]
         [Validation(Required=false)]
-        public string OsType { get; set; }
+        public string ServerId { get; set; }
 
     }
 

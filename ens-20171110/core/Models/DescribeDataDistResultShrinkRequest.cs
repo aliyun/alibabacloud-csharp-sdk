@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DescribeDataDistResultRequest : TeaModel {
+    public class DescribeDataDistResultShrinkRequest : TeaModel {
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
-        public List<string> EnsRegionIds { get; set; }
+        public string EnsRegionIdsShrink { get; set; }
 
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

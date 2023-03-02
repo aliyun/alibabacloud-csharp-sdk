@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DescribeAvailableResourceInfoRequest : TeaModel {
-        [NameInMap("Version")]
+    public class RecoverAICInstanceResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string RequestId { get; set; }
 
     }
 

@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string Architecture { get; set; }
 
+                [NameInMap("ComputeType")]
+                [Validation(Required=false)]
+                public string ComputeType { get; set; }
+
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
@@ -56,6 +60,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [NameInMap("Platform")]
                 [Validation(Required=false)]
                 public string Platform { get; set; }
+
+                [NameInMap("SnapshotId")]
+                [Validation(Required=false)]
+                public string SnapshotId { get; set; }
 
                 [NameInMap("Status")]
                 [Validation(Required=false)]

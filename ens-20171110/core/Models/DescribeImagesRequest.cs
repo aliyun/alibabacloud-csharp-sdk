@@ -29,17 +29,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
+        [NameInMap("SnapshotId")]
+        [Validation(Required=false)]
+        public string SnapshotId { get; set; }
+
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
-
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
-
-        [NameInMap("product")]
-        [Validation(Required=false)]
-        public string Product { get; set; }
 
     }
 

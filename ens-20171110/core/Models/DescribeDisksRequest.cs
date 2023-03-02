@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionIds { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         [NameInMap("OrderByParams")]
         [Validation(Required=false)]
         public string OrderByParams { get; set; }
@@ -52,6 +56,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
+
+        [NameInMap("SnapshotId")]
+        [Validation(Required=false)]
+        public string SnapshotId { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

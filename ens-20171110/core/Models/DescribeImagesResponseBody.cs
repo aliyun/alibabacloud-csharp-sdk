@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string Platform { get; set; }
 
+                [NameInMap("SnapshotId")]
+                [Validation(Required=false)]
+                public string SnapshotId { get; set; }
+
             }
 
         }
