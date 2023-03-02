@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string Field { get; set; }
 
+        [NameInMap("Interval")]
+        [Validation(Required=false)]
+        public string Interval { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }

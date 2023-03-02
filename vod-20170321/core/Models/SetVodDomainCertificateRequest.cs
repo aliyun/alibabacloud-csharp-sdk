@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string CertName { get; set; }
 
         /// <summary>
-        /// The domain name that is secured by the certificate. The domain name uses HTTPS acceleration.
+        /// The domain name that is secured by the certificate. The domain name must use HTTPS acceleration.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// Specifies whether to enable the SSL certificate. Valid values:
         /// 
-        /// *   **on**: enables the SSL certificate.
-        /// *   **off**: disables the SSL certificate. Default value: off.
+        /// *   **on**
+        /// *   **off**
         /// </summary>
         [NameInMap("SSLProtocol")]
         [Validation(Required=false)]

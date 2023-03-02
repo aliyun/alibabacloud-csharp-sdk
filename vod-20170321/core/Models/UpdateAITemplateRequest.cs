@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string TemplateConfig { get; set; }
 
         /// <summary>
-        /// The ID of the AI template. You can use one of the following methods to obtain the ID of the AI template:
+        /// The ID of the AI template. You can use one of the following methods to obtain the ID:
         /// 
-        /// *   Call the [AddAITemplate](~~102930~~) operation to add an AI template if no AI template exists. The value of TemplateId from the response is the ID of the AI template.
-        /// *   Call the [ListAITemplate](~~102936~~) operation if the template already exists. The value of TemplateId from the response is the ID of the AI template.
+        /// *   Call the [AddAITemplate](~~102930~~) operation to add an AI template if no AI template exists. The value of TemplateId in the response is the ID of the AI template.
+        /// *   Call the [ListAITemplate](~~102936~~) operation if the template already exists. The value of TemplateId in the response is the ID of the AI template.
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

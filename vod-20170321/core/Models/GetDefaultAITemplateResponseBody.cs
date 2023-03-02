@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// Indicates whether the template is the default template. Valid values:
+            /// Indicates whether the template is the default AI template. Valid values:
             /// 
             /// *   **Default**
             /// *   **NotDefault**
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// The type of the AI template. The value is **AIMediaAudit**, which indicates intelligent review.
+            /// The type of the AI template. The value is **AIMediaAudit**, which indicates automated review.
             /// </summary>
             [NameInMap("TemplateType")]
             [Validation(Required=false)]

@@ -58,7 +58,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// The detailed configurations of the AI template. The value is a JSON string.
+            /// The detailed configurations of the AI template. The value is a JSON string. 
+            /// <props="china">For more information, see [AITemplateConfig](~~89863~~#title-vd3-499-o36).</props>
             /// </summary>
             [NameInMap("TemplateConfig")]
             [Validation(Required=false)]
