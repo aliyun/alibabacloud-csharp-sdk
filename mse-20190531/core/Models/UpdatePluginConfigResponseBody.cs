@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdatePluginConfigResponseBody : TeaModel {
         /// <summary>
-        /// Code.
+        /// The status code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// Indicates whether the request is successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

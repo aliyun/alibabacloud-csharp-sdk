@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryClusterDiskSpecificationResponseBody : TeaModel {
         /// <summary>
-        /// The return value.
+        /// The status code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]

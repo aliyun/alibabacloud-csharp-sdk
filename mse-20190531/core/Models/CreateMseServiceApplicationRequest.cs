@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string MseVersion { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Microservices Engine (MSE) instance resides. Examples:
+        /// The ID of the region where the instance resides. Examples:
         /// 
         /// *   cn-hangzhou: China (Hangzhou)
         /// *   cn-beijing: China (Beijing)
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string SentinelEnable { get; set; }
 
         /// <summary>
-        /// The service source.
+        /// The source.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]

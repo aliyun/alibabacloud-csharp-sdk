@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// The source instance node address.
+            /// The address of the source instance node.
             /// </summary>
             [NameInMap("OriginInstanceAddress")]
             [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string OriginInstanceName { get; set; }
 
             /// <summary>
-            /// The list of namespaces. This parameter is optional if the source instance is a Nacos instance.
+            /// The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.
             /// </summary>
             [NameInMap("OriginInstanceNamespace")]
             [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

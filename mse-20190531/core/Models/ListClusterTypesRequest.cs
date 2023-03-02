@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string MseVersion { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the instance resides. The region is supported by MSE.
+        /// The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

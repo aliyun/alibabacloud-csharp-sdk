@@ -5590,6 +5590,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await ExportNacosConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Only one task can run at a time.
+          *
+          * @param request ExportZookeeperDataRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExportZookeeperDataResponse
+         */
         public ExportZookeeperDataResponse ExportZookeeperDataWithOptions(ExportZookeeperDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5633,6 +5640,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ExportZookeeperDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Only one task can run at a time.
+          *
+          * @param request ExportZookeeperDataRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExportZookeeperDataResponse
+         */
         public async Task<ExportZookeeperDataResponse> ExportZookeeperDataWithOptionsAsync(ExportZookeeperDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5676,12 +5690,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ExportZookeeperDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Only one task can run at a time.
+          *
+          * @param request ExportZookeeperDataRequest
+          * @return ExportZookeeperDataResponse
+         */
         public ExportZookeeperDataResponse ExportZookeeperData(ExportZookeeperDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExportZookeeperDataWithOptions(request, runtime);
         }
 
+        /**
+          * Only one task can run at a time.
+          *
+          * @param request ExportZookeeperDataRequest
+          * @return ExportZookeeperDataResponse
+         */
         public async Task<ExportZookeeperDataResponse> ExportZookeeperDataAsync(ExportZookeeperDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8364,6 +8390,14 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await ImportServicesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * **
+          * **Danger** This operation clears existing data. Exercise caution when you call this API operation.
+          *
+          * @param request ImportZookeeperDataRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ImportZookeeperDataResponse
+         */
         public ImportZookeeperDataResponse ImportZookeeperDataWithOptions(ImportZookeeperDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8411,6 +8445,14 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ImportZookeeperDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * **
+          * **Danger** This operation clears existing data. Exercise caution when you call this API operation.
+          *
+          * @param request ImportZookeeperDataRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ImportZookeeperDataResponse
+         */
         public async Task<ImportZookeeperDataResponse> ImportZookeeperDataWithOptionsAsync(ImportZookeeperDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8458,12 +8500,26 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<ImportZookeeperDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * **
+          * **Danger** This operation clears existing data. Exercise caution when you call this API operation.
+          *
+          * @param request ImportZookeeperDataRequest
+          * @return ImportZookeeperDataResponse
+         */
         public ImportZookeeperDataResponse ImportZookeeperData(ImportZookeeperDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ImportZookeeperDataWithOptions(request, runtime);
         }
 
+        /**
+          * **
+          * **Danger** This operation clears existing data. Exercise caution when you call this API operation.
+          *
+          * @param request ImportZookeeperDataRequest
+          * @return ImportZookeeperDataResponse
+         */
         public async Task<ImportZookeeperDataResponse> ImportZookeeperDataAsync(ImportZookeeperDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14164,6 +14220,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["ConfigType"] = request.ConfigType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EurekaSupported))
+            {
+                query["EurekaSupported"] = request.EurekaSupported;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendedTypesEnable))
             {
                 query["ExtendedTypesEnable"] = request.ExtendedTypesEnable;
@@ -14280,6 +14340,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
             {
                 query["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EurekaSupported))
+            {
+                query["EurekaSupported"] = request.EurekaSupported;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendedTypesEnable))
             {

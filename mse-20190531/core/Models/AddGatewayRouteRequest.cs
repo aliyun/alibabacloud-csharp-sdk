@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<AddGatewayRouteRequestFallbackServices> FallbackServices { get; set; }
         public class AddGatewayRouteRequestFallbackServices : TeaModel {
             /// <summary>
-            /// The type of the protocol.
+            /// The type of the protocol. Valid values:
             /// </summary>
             [NameInMap("AgreementType")]
             [Validation(Required=false)]
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public AddGatewayRouteRequestRedirectJSON RedirectJSON { get; set; }
         public class AddGatewayRouteRequestRedirectJSON : TeaModel {
             /// <summary>
-            /// The status code returned.
+            /// The HTTP status code.
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<AddGatewayRouteRequestServices> Services { get; set; }
         public class AddGatewayRouteRequestServices : TeaModel {
             /// <summary>
-            /// The type of the protocol.
+            /// The type of the protocol. Valid values:
             /// </summary>
             [NameInMap("AgreementType")]
             [Validation(Required=false)]

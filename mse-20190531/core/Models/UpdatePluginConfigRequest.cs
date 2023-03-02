@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// The application scope of the plug-in.
         /// 
         /// *   0: global
-        /// *   1: domain names
-        /// *   2: routes
+        /// *   1: route
+        /// *   2: domain name
         /// </summary>
         [NameInMap("ConfigLevel")]
         [Validation(Required=false)]

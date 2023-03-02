@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<PullServicesResponseBodyData> Data { get; set; }
         public class PullServicesResponseBodyData : TeaModel {
             /// <summary>
-            /// The group.
+            /// The name of the group.
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public List<PullServicesResponseBodyDataServices> Services { get; set; }
             public class PullServicesResponseBodyDataServices : TeaModel {
                 /// <summary>
-                /// The group.
+                /// The name of the group.
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The HTTP status code.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

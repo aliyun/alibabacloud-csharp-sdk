@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Address { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// The ID of cluster.
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]

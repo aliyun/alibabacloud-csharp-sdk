@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The type of the instance.
+        /// The type of the instance. Valid values:
         /// 
         /// *   Nacos-Ans
         /// *   ZooKeeper
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// The source instance node address.
+        /// The address of the source instance node.
         /// </summary>
         [NameInMap("OriginInstanceAddress")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string OriginInstanceName { get; set; }
 
         /// <summary>
-        /// The list of namespaces. This parameter is optional if the source instance is a Nacos instance.
+        /// The list of namespaces. This parameter is optional if you want to migrate applications from a Nacos instance.
         /// </summary>
         [NameInMap("OriginInstanceNamespace")]
         [Validation(Required=false)]

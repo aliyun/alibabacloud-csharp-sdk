@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The ID of the application.
+        /// The ID of an application.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The name of the application.
+        /// The name of an application.
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
@@ -40,6 +40,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Language { get; set; }
 
+        /// <summary>
+        /// The microservice namespace to which the application belongs.
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]

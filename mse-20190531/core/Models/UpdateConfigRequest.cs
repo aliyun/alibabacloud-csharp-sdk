@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ConfigType { get; set; }
 
+        [NameInMap("EurekaSupported")]
+        [Validation(Required=false)]
+        public bool? EurekaSupported { get; set; }
+
         /// <summary>
         /// Specifies whether to enable the time to live (TTL) configuration.
         /// </summary>

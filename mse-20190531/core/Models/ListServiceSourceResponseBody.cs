@@ -80,21 +80,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// Support for Ingresses of applications.
+            /// Indicates whether Ingress is supported for applications.
             /// </summary>
             [NameInMap("IngressOptions")]
             [Validation(Required=false)]
             public ListServiceSourceResponseBodyDataIngressOptions IngressOptions { get; set; }
             public class ListServiceSourceResponseBodyDataIngressOptions : TeaModel {
                 /// <summary>
-                /// Indicates whether Ingresses are enabled.
+                /// Indicates whether Ingress is enabled.
                 /// </summary>
                 [NameInMap("EnableIngress")]
                 [Validation(Required=false)]
                 public bool? EnableIngress { get; set; }
 
                 /// <summary>
-                /// Indicates whether the Ingress gateway status is updated.
+                /// Indicates whether the Ingress status is updated.
                 /// </summary>
                 [NameInMap("EnableStatus")]
                 [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string IngressClass { get; set; }
 
                 /// <summary>
-                /// The namespace whose resources you want to monitor.
+                /// The namespace that you want to monitor.
                 /// </summary>
                 [NameInMap("WatchNamespace")]
                 [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

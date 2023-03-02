@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// The type of the instance.
+            /// The version of the instance.
             /// </summary>
             [NameInMap("ShowName")]
             [Validation(Required=false)]

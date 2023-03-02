@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? ServicePort { get; set; }
 
             /// <summary>
-            /// The type of the service source.
+            /// The source type.
             /// </summary>
             [NameInMap("SourceType")]
             [Validation(Required=false)]
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public UpdateGatewayRouteRequestRedirectJSON RedirectJSON { get; set; }
         public class UpdateGatewayRouteRequestRedirectJSON : TeaModel {
             /// <summary>
-            /// The status code.
+            /// The status code returned.
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
@@ -504,7 +504,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? ServicePort { get; set; }
 
             /// <summary>
-            /// The type of the service source.
+            /// The source type.
             /// </summary>
             [NameInMap("SourceType")]
             [Validation(Required=false)]

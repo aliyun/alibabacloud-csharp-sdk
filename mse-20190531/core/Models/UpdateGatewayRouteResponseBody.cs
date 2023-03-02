@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateGatewayRouteResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// The HTTP status code that is returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public long? Data { get; set; }
 
+        /// <summary>
+        /// The error code returned if the request failed.
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }

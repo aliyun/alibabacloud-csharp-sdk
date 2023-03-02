@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListGatewayRouteResponseBody : TeaModel {
         /// <summary>
-        /// The code returned.
+        /// The status code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -126,35 +126,35 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// The list of domain names.
+                /// The names of domains.
                 /// </summary>
                 [NameInMap("DomainNameList")]
                 [Validation(Required=false)]
                 public List<string> DomainNameList { get; set; }
 
                 /// <summary>
-                /// Specifies whether to activate Web Application Firewall (WAF).
+                /// Indicates whether Web Application Firewall (WAF) is activated.
                 /// </summary>
                 [NameInMap("EnableWaf")]
                 [Validation(Required=false)]
                 public string EnableWaf { get; set; }
 
                 /// <summary>
-                /// Specifies whether to enable the Fallback service.
+                /// Indicates whether the Fallback service is enabled.
                 /// </summary>
                 [NameInMap("Fallback")]
                 [Validation(Required=false)]
                 public bool? Fallback { get; set; }
 
                 /// <summary>
-                /// The information about the Fallback service.
+                /// The information of the Fallback service.
                 /// </summary>
                 [NameInMap("FallbackServices")]
                 [Validation(Required=false)]
                 public List<ListGatewayRouteResponseBodyDataResultFallbackServices> FallbackServices { get; set; }
                 public class ListGatewayRouteResponseBodyDataResultFallbackServices : TeaModel {
                     /// <summary>
-                    /// The type of the protocol.
+                    /// The protocol.
                     /// </summary>
                     [NameInMap("AgreementType")]
                     [Validation(Required=false)]
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public long? ServiceId { get; set; }
 
                     /// <summary>
-                    /// The name of the service.
+                    /// The name of a service.
                     /// </summary>
                     [NameInMap("ServiceName")]
                     [Validation(Required=false)]
@@ -210,14 +210,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? ServicePort { get; set; }
 
                     /// <summary>
-                    /// The source type.
+                    /// The type of the service source.
                     /// </summary>
                     [NameInMap("SourceType")]
                     [Validation(Required=false)]
                     public string SourceType { get; set; }
 
                     /// <summary>
-                    /// The version of the service.
+                    /// The version of a service.
                     /// </summary>
                     [NameInMap("Version")]
                     [Validation(Required=false)]
@@ -418,14 +418,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
 
                 /// <summary>
-                /// The information about services.
+                /// The services.
                 /// </summary>
                 [NameInMap("RouteServices")]
                 [Validation(Required=false)]
                 public List<ListGatewayRouteResponseBodyDataResultRouteServices> RouteServices { get; set; }
                 public class ListGatewayRouteResponseBodyDataResultRouteServices : TeaModel {
                     /// <summary>
-                    /// The type of the protocol.
+                    /// The protocol.
                     /// </summary>
                     [NameInMap("AgreementType")]
                     [Validation(Required=false)]
@@ -670,7 +670,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

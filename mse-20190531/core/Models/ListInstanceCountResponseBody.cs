@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// Indicates whether the call was successful. Valid values:
         /// 
         /// *   `true`: The request was successful.
         /// *   `false`: The request failed.

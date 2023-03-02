@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// The region ID of the instance.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]

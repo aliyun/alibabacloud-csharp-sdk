@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// The names of the applications.
+        /// The name of the application.
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]

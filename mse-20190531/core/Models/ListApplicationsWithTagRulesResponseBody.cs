@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListApplicationsWithTagRulesResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// The HTTP status code that is returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public List<ListApplicationsWithTagRulesResponseBodyDataResult> Result { get; set; }
             public class ListApplicationsWithTagRulesResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// The ID of the application.
+                /// The application ID.
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// An array that consists of the rules.
+                /// The information about the rules.
                 /// </summary>
                 [NameInMap("RouteRules")]
                 [Validation(Required=false)]
@@ -73,10 +73,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public bool? CarryData { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the alert rule is enabled. Valid values:
+                    /// Indicates whether the alert rule is enabled. Valid value:
                     /// 
-                    /// *   `true`: enabled
-                    /// *   `false`: disabled
+                    /// *   `true`: enabled.
+                    /// *   `false`: disabled.
                     /// </summary>
                     [NameInMap("Enable")]
                     [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The message returned.
+        /// The returned message.
         /// 
         /// *   If the request is successful, a success message is returned.
         /// *   If the request fails, an error message is returned.
@@ -190,7 +190,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values: -\[unk]true\[unk]: The request is successful. -\[unk]false\[unk]: The request fails.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   `true`: The request was successful.
+        /// *   `false`: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

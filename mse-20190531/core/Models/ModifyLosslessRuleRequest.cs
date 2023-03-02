@@ -71,6 +71,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? LossLessDetail { get; set; }
 
+        /// <summary>
+        /// The microservice namespace to which the rule applies.
+        /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The type of the file.
+        /// The file type.
         /// </summary>
         [NameInMap("ContentType")]
         [Validation(Required=false)]

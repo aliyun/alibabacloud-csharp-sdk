@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// The ID of the configuration.
+        /// The ID of the configuration file.
         /// </summary>
         [NameInMap("DataId")]
         [Validation(Required=false)]

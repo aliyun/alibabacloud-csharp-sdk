@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateMseServiceApplicationResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// The return value.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public CreateMseServiceApplicationResponseBodyData Data { get; set; }
         public class CreateMseServiceApplicationResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the application.
+            /// The application ID.
             /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string LicenseKey { get; set; }
 
             /// <summary>
-            /// The region ID.
+            /// The ID of the region.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// The status.
+            /// The status. Valid values: 1: available; 2: deleted
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

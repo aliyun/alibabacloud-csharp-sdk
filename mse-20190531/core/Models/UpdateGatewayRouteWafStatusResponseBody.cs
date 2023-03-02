@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Body { get; set; }
 
                 /// <summary>
-                /// The return value.
+                /// The status code returned.
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
@@ -365,14 +365,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Attempts { get; set; }
 
                 /// <summary>
-                /// The information about the HTTP status code.
+                /// The HTTP status codes.
                 /// </summary>
                 [NameInMap("HttpCodes")]
                 [Validation(Required=false)]
                 public List<string> HttpCodes { get; set; }
 
                 /// <summary>
-                /// The information about the retry condition.
+                /// The retry condition.
                 /// </summary>
                 [NameInMap("RetryOn")]
                 [Validation(Required=false)]
@@ -522,7 +522,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The namespace to which the service belongs.
+                /// The namespace.
                 /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
@@ -550,7 +550,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// The source type of the service.
+                /// The source type.
                 /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]

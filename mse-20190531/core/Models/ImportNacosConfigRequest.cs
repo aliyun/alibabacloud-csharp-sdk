@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The download URL of the configuration file.
+        /// The URL that is used to download the configuration file.
         /// </summary>
         [NameInMap("FileUrl")]
         [Validation(Required=false)]

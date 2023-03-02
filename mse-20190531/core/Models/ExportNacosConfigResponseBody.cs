@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public ExportNacosConfigResponseBodyData Data { get; set; }
         public class ExportNacosConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// The URL used to download the exported configurations.
+            /// The URL that is used to download the exported configurations.
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+        /// The dynamic part in the error message. This parameter is used to replace **%s** in the **ErrMessage** parameter.
         /// 
         /// > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
         /// </summary>
