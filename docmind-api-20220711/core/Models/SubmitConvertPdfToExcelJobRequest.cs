@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public string FileUrl { get; set; }
 
+        [NameInMap("ForceMergeExcel")]
+        [Validation(Required=false)]
+        public bool? ForceMergeExcel { get; set; }
+
     }
 
 }

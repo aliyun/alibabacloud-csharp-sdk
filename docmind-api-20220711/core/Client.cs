@@ -440,6 +440,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 request.ImageUrlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageUrls, "ImageUrls", "simple");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceMergeExcel))
+            {
+                query["ForceMergeExcel"] = request.ForceMergeExcel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageNameExtension))
             {
                 query["ImageNameExtension"] = request.ImageNameExtension;
@@ -485,6 +489,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
                 request.ImageUrlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageUrls, "ImageUrls", "simple");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceMergeExcel))
+            {
+                query["ForceMergeExcel"] = request.ForceMergeExcel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageNameExtension))
             {
                 query["ImageNameExtension"] = request.ImageNameExtension;
@@ -744,6 +752,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             {
                 query["FileUrl"] = request.FileUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceMergeExcel))
+            {
+                query["ForceMergeExcel"] = request.ForceMergeExcel;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -774,6 +786,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
             {
                 query["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceMergeExcel))
+            {
+                query["ForceMergeExcel"] = request.ForceMergeExcel;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

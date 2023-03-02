@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 {
     public class SubmitConvertImageToExcelJobShrinkRequest : TeaModel {
+        [NameInMap("ForceMergeExcel")]
+        [Validation(Required=false)]
+        public bool? ForceMergeExcel { get; set; }
+
         [NameInMap("ImageNameExtension")]
         [Validation(Required=false)]
         public string ImageNameExtension { get; set; }
