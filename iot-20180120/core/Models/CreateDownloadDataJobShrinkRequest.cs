@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateDownloadDataJobShrinkRequest : TeaModel {
-        [NameInMap("Context")]
-        [Validation(Required=false)]
-        public string ContextShrink { get; set; }
-
         [NameInMap("DownloadDataType")]
         [Validation(Required=false)]
         public string DownloadDataType { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
-    public class StartCpuResponse : TeaModel {
+    public class QueryDeviceProvisioningResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public StartCpuResponseBody Body { get; set; }
+        public QueryDeviceProvisioningResponseBody Body { get; set; }
 
     }
 

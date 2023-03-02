@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateDownloadDataJobRequest : TeaModel {
-        [NameInMap("Context")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Context { get; set; }
-
         [NameInMap("DownloadDataType")]
         [Validation(Required=false)]
         public string DownloadDataType { get; set; }
