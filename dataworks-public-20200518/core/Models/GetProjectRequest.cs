@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetProjectRequest : TeaModel {
+        /// <summary>
+        /// The ID of the DataWorks workspace. You can call the [ListProjects](~~178393~~) operation to obtain the ID.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }

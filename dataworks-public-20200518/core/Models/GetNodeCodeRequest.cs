@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetNodeCodeRequest : TeaModel {
+        /// <summary>
+        /// The ID of the node.
+        /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public long? NodeId { get; set; }
 
+        /// <summary>
+        /// The environment of the workspace. Valid values: PROD and DEV.
+        /// </summary>
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]
         public string ProjectEnv { get; set; }

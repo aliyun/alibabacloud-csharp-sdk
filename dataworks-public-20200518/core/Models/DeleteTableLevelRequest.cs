@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteTableLevelRequest : TeaModel {
+        /// <summary>
+        /// The ID of the table level to be deleted. You can call the ListTableLevel operation to obtain the ID.
+        /// </summary>
         [NameInMap("LevelId")]
         [Validation(Required=false)]
         public long? LevelId { get; set; }
 
+        /// <summary>
+        /// The ID of the DataWorks workspace.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }

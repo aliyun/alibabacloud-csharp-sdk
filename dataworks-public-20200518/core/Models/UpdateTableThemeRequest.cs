@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateTableThemeRequest : TeaModel {
+        /// <summary>
+        /// The name of the table folder.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The ID of the DataWorks workspace.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        /// <summary>
+        /// The ID of the table folder.
+        /// </summary>
         [NameInMap("ThemeId")]
         [Validation(Required=false)]
         public long? ThemeId { get; set; }

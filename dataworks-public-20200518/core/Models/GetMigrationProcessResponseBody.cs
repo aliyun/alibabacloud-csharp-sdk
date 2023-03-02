@@ -9,36 +9,65 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMigrationProcessResponseBody : TeaModel {
+        /// <summary>
+        /// The progress information of the migration task, including the names of all steps in and status of the migration task.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetMigrationProcessResponseBodyData> Data { get; set; }
         public class GetMigrationProcessResponseBodyData : TeaModel {
+            /// <summary>
+            /// The name of the step in the migration task.
+            /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
             public string TaskName { get; set; }
 
+            /// <summary>
+            /// The running status of the step in the migration task. Valid values:
+            /// 
+            /// *   INT
+            /// *   RUNNING
+            /// *   FAILURE
+            /// *   SUCCESS
+            /// </summary>
             [NameInMap("TaskStatus")]
             [Validation(Required=false)]
             public string TaskStatus { get; set; }
 
         }
 
+        /// <summary>
+        /// The error code returned.
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// The error message returned.
+        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// The HTTP status code returned.
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request is successful.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetTopicInfluenceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the event.
+        /// </summary>
         [NameInMap("TopicId")]
         [Validation(Required=false)]
         public long? TopicId { get; set; }

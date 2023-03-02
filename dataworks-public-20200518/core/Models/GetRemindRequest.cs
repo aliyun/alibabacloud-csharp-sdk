@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetRemindRequest : TeaModel {
+        /// <summary>
+        /// The ID of the custom alert rule.
+        /// </summary>
         [NameInMap("RemindId")]
         [Validation(Required=false)]
         public long? RemindId { get; set; }

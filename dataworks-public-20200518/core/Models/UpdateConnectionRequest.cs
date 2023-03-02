@@ -9,22 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateConnectionRequest : TeaModel {
+        /// <summary>
+        /// The ID of the data source.
+        /// </summary>
         [NameInMap("ConnectionId")]
         [Validation(Required=false)]
         public long? ConnectionId { get; set; }
 
+        /// <summary>
+        /// Details of the data source.
+        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
+        /// <summary>
+        /// Describes the data source.
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// Environment of the data source.
+        /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public int? EnvType { get; set; }
 
+        /// <summary>
+        /// The status of the data source.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

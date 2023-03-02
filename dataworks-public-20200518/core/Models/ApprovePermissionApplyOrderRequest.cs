@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ApprovePermissionApplyOrderRequest : TeaModel {
+        /// <summary>
+        /// The approval action. Valid values:
+        /// 
+        /// *   1: Approve the permission request order.
+        /// *   2: Reject the permission request order.
+        /// </summary>
         [NameInMap("ApproveAction")]
         [Validation(Required=false)]
         public int? ApproveAction { get; set; }
 
+        /// <summary>
+        /// The comment on the approval.
+        /// </summary>
         [NameInMap("ApproveComment")]
         [Validation(Required=false)]
         public string ApproveComment { get; set; }
 
+        /// <summary>
+        /// The ID of the permission request order. You can call the ListPermissionApplyOrders operation to obtain the order ID.
+        /// </summary>
         [NameInMap("FlowId")]
         [Validation(Required=false)]
         public string FlowId { get; set; }

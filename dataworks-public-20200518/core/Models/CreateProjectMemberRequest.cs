@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateProjectMemberRequest : TeaModel {
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request. We recommend that you set this parameter to a UUID.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The ID of the DataWorks workspace.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        /// <summary>
+        /// The code of the role. This parameter is optional. If you specify the RoleCode parameter, the user is assigned the role.
+        /// </summary>
         [NameInMap("RoleCode")]
         [Validation(Required=false)]
         public string RoleCode { get; set; }
 
+        /// <summary>
+        /// The ID of the user to be added.
+        /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }

@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? RequestMethod { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public long? ResourceGroupId { get; set; }
+
         [NameInMap("ResponseContentType")]
         [Validation(Required=false)]
         public int? ResponseContentType { get; set; }

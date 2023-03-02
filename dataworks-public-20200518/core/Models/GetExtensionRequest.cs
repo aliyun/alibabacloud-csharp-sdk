@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetExtensionRequest : TeaModel {
+        /// <summary>
+        /// The unique code of the extension.
+        /// </summary>
         [NameInMap("ExtensionCode")]
         [Validation(Required=false)]
         public string ExtensionCode { get; set; }

@@ -9,54 +9,90 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListFoldersResponseBody : TeaModel {
+        /// <summary>
+        /// The folders returned.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListFoldersResponseBodyData Data { get; set; }
         public class ListFoldersResponseBodyData : TeaModel {
+            /// <summary>
+            /// The details of the folder.
+            /// </summary>
             [NameInMap("Folders")]
             [Validation(Required=false)]
             public List<ListFoldersResponseBodyDataFolders> Folders { get; set; }
             public class ListFoldersResponseBodyDataFolders : TeaModel {
+                /// <summary>
+                /// The ID of the folder.
+                /// </summary>
                 [NameInMap("FolderId")]
                 [Validation(Required=false)]
                 public string FolderId { get; set; }
 
+                /// <summary>
+                /// The path of the folder.
+                /// </summary>
                 [NameInMap("FolderPath")]
                 [Validation(Required=false)]
                 public string FolderPath { get; set; }
 
             }
 
+            /// <summary>
+            /// The page number of the returned page.
+            /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
+            /// <summary>
+            /// The number of entries on the returned page.
+            /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
+            /// <summary>
+            /// The total number of entries returned.
+            /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
 
         }
 
+        /// <summary>
+        /// The error code returned.
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// The error message returned.
+        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// The HTTP status code returned.
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// The ID of the request. You can use the ID to troubleshoot issues.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request is successful.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

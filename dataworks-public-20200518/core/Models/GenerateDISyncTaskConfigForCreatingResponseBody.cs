@@ -9,28 +9,54 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GenerateDISyncTaskConfigForCreatingResponseBody : TeaModel {
+        /// <summary>
+        /// The information returned for the ID of the asynchronous thread.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GenerateDISyncTaskConfigForCreatingResponseBodyData Data { get; set; }
         public class GenerateDISyncTaskConfigForCreatingResponseBodyData : TeaModel {
+            /// <summary>
+            /// The reason why the ID of the asynchronous thread fails to be generated.
+            /// 
+            /// If the ID is successfully generated, the value null is returned.
+            /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
+            /// <summary>
+            /// The ID of the asynchronous thread. You can call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. The parameters are used to create a real-time synchronization node or a synchronization solution in Data Integration.
+            /// </summary>
             [NameInMap("ProcessId")]
             [Validation(Required=false)]
             public long? ProcessId { get; set; }
 
+            /// <summary>
+            /// Indicates whether the ID of the asynchronous thread is generated. Valid values:
+            /// 
+            /// *   success: indicates that the ID of the asynchronous thread is generated.
+            /// *   fail: indicates that the ID of the asynchronous thread fails to be generated. You can view the reason for the failure and troubleshoot the issue based on the reason.
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
         }
 
+        /// <summary>
+        /// The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request is successful. Valid values:
+        /// 
+        /// *   true: The request is successful.
+        /// *   false: The request fails.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

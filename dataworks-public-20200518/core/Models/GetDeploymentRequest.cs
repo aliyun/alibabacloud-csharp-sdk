@@ -9,14 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDeploymentRequest : TeaModel {
+        /// <summary>
+        /// The ID of the deployment task. A deployment task ID is generated when you call the [SubmitFile](~~173944~~) or [DeployFile](~~173956~~) operation.
+        /// </summary>
         [NameInMap("DeploymentId")]
         [Validation(Required=false)]
         public long? DeploymentId { get; set; }
 
+        /// <summary>
+        /// The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        /// <summary>
+        /// The GUID of the DataWorks workspace. You can view the GUID in the upper part of the DataStudio page. You can also select another GUID to switch to another workspace.
+        /// 
+        /// You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.
+        /// </summary>
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]
         public string ProjectIdentifier { get; set; }

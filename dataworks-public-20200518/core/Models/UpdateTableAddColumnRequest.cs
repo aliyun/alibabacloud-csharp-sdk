@@ -13,24 +13,39 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public List<UpdateTableAddColumnRequestColumn> Column { get; set; }
         public class UpdateTableAddColumnRequestColumn : TeaModel {
+            /// <summary>
+            /// The name of the field.
+            /// </summary>
             [NameInMap("ColumnName")]
             [Validation(Required=false)]
             public string ColumnName { get; set; }
 
+            /// <summary>
+            /// The display name of the field.
+            /// </summary>
             [NameInMap("ColumnNameCn")]
             [Validation(Required=false)]
             public string ColumnNameCn { get; set; }
 
+            /// <summary>
+            /// The type of the field. For more information, see MaxCompute field types.
+            /// </summary>
             [NameInMap("ColumnType")]
             [Validation(Required=false)]
             public string ColumnType { get; set; }
 
+            /// <summary>
+            /// The comment of the field.
+            /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
         }
 
+        /// <summary>
+        /// The globally unique identifier (GUID) of the MaxCompute table. Specify the GUID in the odps.projectName.tableName format.
+        /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]
         public string TableGuid { get; set; }
