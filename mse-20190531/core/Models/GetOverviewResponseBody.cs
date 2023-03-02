@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetOverviewResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// The response code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]

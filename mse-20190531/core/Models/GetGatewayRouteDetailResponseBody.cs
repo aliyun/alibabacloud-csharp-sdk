@@ -406,6 +406,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("Policies")]
+            [Validation(Required=false)]
+            public string Policies { get; set; }
+
             /// <summary>
             /// The matching conditions.
             /// </summary>

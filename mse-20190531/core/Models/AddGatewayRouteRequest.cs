@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? DomainId { get; set; }
 
         /// <summary>
-        /// The list of domain names.
+        /// The IDs of domains.
         /// </summary>
         [NameInMap("DomainIdListJSON")]
         [Validation(Required=false)]
         public string DomainIdListJSON { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Web Application Firewall (WAF).
+        /// Specifies whether to activate Web Application Firewall (WAF).
         /// </summary>
         [NameInMap("EnableWaf")]
         [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<AddGatewayRouteRequestFallbackServices> FallbackServices { get; set; }
         public class AddGatewayRouteRequestFallbackServices : TeaModel {
             /// <summary>
-            /// The type of the protocol. Valid values:
+            /// The type of the protocol.
             /// </summary>
             [NameInMap("AgreementType")]
             [Validation(Required=false)]
@@ -170,6 +170,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("Policies")]
+        [Validation(Required=false)]
+        public string Policies { get; set; }
+
         /// <summary>
         /// The matching rule.
         /// </summary>
@@ -222,7 +226,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public AddGatewayRouteRequestPredicatesPathPredicates PathPredicates { get; set; }
             public class AddGatewayRouteRequestPredicatesPathPredicates : TeaModel {
                 /// <summary>
-                /// Specifies whether to perform case-insensitive matching.
+                /// Specifies whether to ignore case sensitivity.
                 /// </summary>
                 [NameInMap("IgnoreCase")]
                 [Validation(Required=false)]
@@ -288,7 +292,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public AddGatewayRouteRequestRedirectJSON RedirectJSON { get; set; }
         public class AddGatewayRouteRequestRedirectJSON : TeaModel {
             /// <summary>
-            /// The HTTP status code.
+            /// The status code returned.
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
@@ -317,6 +321,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public int? RouteOrder { get; set; }
 
+        [NameInMap("RouteType")]
+        [Validation(Required=false)]
+        public string RouteType { get; set; }
+
         /// <summary>
         /// The information about services.
         /// </summary>
@@ -325,7 +333,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<AddGatewayRouteRequestServices> Services { get; set; }
         public class AddGatewayRouteRequestServices : TeaModel {
             /// <summary>
-            /// The type of the protocol. Valid values:
+            /// The type of the protocol.
             /// </summary>
             [NameInMap("AgreementType")]
             [Validation(Required=false)]
@@ -346,7 +354,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public AddGatewayRouteRequestServicesHttpDubboTranscoder HttpDubboTranscoder { get; set; }
             public class AddGatewayRouteRequestServicesHttpDubboTranscoder : TeaModel {
                 /// <summary>
-                /// The service group.
+                /// The name of the service group.
                 /// </summary>
                 [NameInMap("DubboServiceGroup")]
                 [Validation(Required=false)]

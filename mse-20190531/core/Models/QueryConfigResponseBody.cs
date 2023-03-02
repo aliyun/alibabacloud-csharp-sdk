@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public bool? ConfigSecretSupported { get; set; }
 
+            [NameInMap("EurekaSupported")]
+            [Validation(Required=false)]
+            public bool? EurekaSupported { get; set; }
+
             /// <summary>
             /// Indicates whether the time to live (TTL) configuration is enabled. This parameter is valid for ZooKeeper instances.
             /// </summary>

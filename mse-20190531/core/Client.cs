@@ -704,6 +704,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Policies))
+            {
+                query["Policies"] = request.Policies;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PredicatesShrink))
             {
                 query["Predicates"] = request.PredicatesShrink;
@@ -715,6 +719,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteOrder))
             {
                 query["RouteOrder"] = request.RouteOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteType))
+            {
+                query["RouteType"] = request.RouteType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServicesShrink))
             {
@@ -809,6 +817,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Policies))
+            {
+                query["Policies"] = request.Policies;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PredicatesShrink))
             {
                 query["Predicates"] = request.PredicatesShrink;
@@ -820,6 +832,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteOrder))
             {
                 query["RouteOrder"] = request.RouteOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteType))
+            {
+                query["RouteType"] = request.RouteType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServicesShrink))
             {
@@ -5714,6 +5730,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await ExportZookeeperDataWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to query the rules for graceful start and shutdown.
+          *
+          * @param request FetchLosslessRuleListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return FetchLosslessRuleListResponse
+         */
         public FetchLosslessRuleListResponse FetchLosslessRuleListWithOptions(FetchLosslessRuleListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5737,6 +5760,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<FetchLosslessRuleListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to query the rules for graceful start and shutdown.
+          *
+          * @param request FetchLosslessRuleListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return FetchLosslessRuleListResponse
+         */
         public async Task<FetchLosslessRuleListResponse> FetchLosslessRuleListWithOptionsAsync(FetchLosslessRuleListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5760,12 +5790,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<FetchLosslessRuleListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to query the rules for graceful start and shutdown.
+          *
+          * @param request FetchLosslessRuleListRequest
+          * @return FetchLosslessRuleListResponse
+         */
         public FetchLosslessRuleListResponse FetchLosslessRuleList(FetchLosslessRuleListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return FetchLosslessRuleListWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to query the rules for graceful start and shutdown.
+          *
+          * @param request FetchLosslessRuleListRequest
+          * @return FetchLosslessRuleListResponse
+         */
         public async Task<FetchLosslessRuleListResponse> FetchLosslessRuleListAsync(FetchLosslessRuleListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7478,6 +7520,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await GetNacosHistoryConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the GetOverview operation to query overview information about service governance.
+          *
+          * @param request GetOverviewRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetOverviewResponse
+         */
         public GetOverviewResponse GetOverviewWithOptions(GetOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7513,6 +7562,13 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<GetOverviewResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the GetOverview operation to query overview information about service governance.
+          *
+          * @param request GetOverviewRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetOverviewResponse
+         */
         public async Task<GetOverviewResponse> GetOverviewWithOptionsAsync(GetOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7548,12 +7604,24 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<GetOverviewResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the GetOverview operation to query overview information about service governance.
+          *
+          * @param request GetOverviewRequest
+          * @return GetOverviewResponse
+         */
         public GetOverviewResponse GetOverview(GetOverviewRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetOverviewWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the GetOverview operation to query overview information about service governance.
+          *
+          * @param request GetOverviewRequest
+          * @return GetOverviewResponse
+         */
         public async Task<GetOverviewResponse> GetOverviewAsync(GetOverviewRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

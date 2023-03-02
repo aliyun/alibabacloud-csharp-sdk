@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? DomainId { get; set; }
 
         /// <summary>
-        /// The list of domain names.
+        /// The IDs of domains.
         /// </summary>
         [NameInMap("DomainIdListJSON")]
         [Validation(Required=false)]
         public string DomainIdListJSON { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Web Application Firewall (WAF).
+        /// Specifies whether to activate Web Application Firewall (WAF).
         /// </summary>
         [NameInMap("EnableWaf")]
         [Validation(Required=false)]
@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("Policies")]
+        [Validation(Required=false)]
+        public string Policies { get; set; }
+
         /// <summary>
         /// The matching rule.
         /// </summary>
@@ -109,6 +113,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("RouteOrder")]
         [Validation(Required=false)]
         public int? RouteOrder { get; set; }
+
+        [NameInMap("RouteType")]
+        [Validation(Required=false)]
+        public string RouteType { get; set; }
 
         /// <summary>
         /// The information about services.

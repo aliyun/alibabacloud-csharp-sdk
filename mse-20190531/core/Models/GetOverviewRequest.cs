@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The subscription period of the instance. Unit: months. Valid values: 1, 2, 3, 6, and 12.
+        /// The time range for the query. Unit: days. For example, if you set this parameter to 30, the governance rules within the last 30 days are queried.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
