@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Phone { get; set; }
 
+        [NameInMap("sub_corp_id")]
+        [Validation(Required=false)]
+        public string SubCorpId { get; set; }
+
         [NameInMap("type")]
         [Validation(Required=false)]
         public int? Type { get; set; }
