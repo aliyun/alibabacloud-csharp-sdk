@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public string IncidentNumber { get; set; }
 
+            [NameInMap("isRuleTrigger")]
+            [Validation(Required=false)]
+            public bool? IsRuleTrigger { get; set; }
+
             [NameInMap("mainHandler")]
             [Validation(Required=false)]
             public long? MainHandler { get; set; }

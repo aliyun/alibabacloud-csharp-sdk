@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public List<CreateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers> SchedulingUsers { get; set; }
             public class CreateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers : TeaModel {
+                [NameInMap("schedulingObjectType")]
+                [Validation(Required=false)]
+                public string SchedulingObjectType { get; set; }
+
                 [NameInMap("schedulingOrder")]
                 [Validation(Required=false)]
                 public long? SchedulingOrder { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                 [NameInMap("schedulingUserId")]
                 [Validation(Required=false)]
                 public long? SchedulingUserId { get; set; }
+
+                [NameInMap("schedulingUserIdList")]
+                [Validation(Required=false)]
+                public List<long?> SchedulingUserIdList { get; set; }
 
             }
 
@@ -69,6 +77,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                 [Validation(Required=false)]
                 public string SchedulingEndTime { get; set; }
 
+                [NameInMap("schedulingObjectType")]
+                [Validation(Required=false)]
+                public string SchedulingObjectType { get; set; }
+
                 [NameInMap("schedulingOrder")]
                 [Validation(Required=false)]
                 public int? SchedulingOrder { get; set; }
@@ -80,6 +92,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                 [NameInMap("schedulingUserId")]
                 [Validation(Required=false)]
                 public long? SchedulingUserId { get; set; }
+
+                [NameInMap("schedulingUserIdList")]
+                [Validation(Required=false)]
+                public List<long?> SchedulingUserIdList { get; set; }
 
                 [NameInMap("shiftName")]
                 [Validation(Required=false)]
@@ -99,6 +115,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                 [Validation(Required=false)]
                 public string SchedulingEndTime { get; set; }
 
+                [NameInMap("schedulingObjectType")]
+                [Validation(Required=false)]
+                public string SchedulingObjectType { get; set; }
+
                 [NameInMap("schedulingOrder")]
                 [Validation(Required=false)]
                 public long? SchedulingOrder { get; set; }
@@ -110,6 +130,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                 [NameInMap("schedulingUserId")]
                 [Validation(Required=false)]
                 public long? SchedulingUserId { get; set; }
+
+                [NameInMap("schedulingUserIdList")]
+                [Validation(Required=false)]
+                public List<long?> SchedulingUserIdList { get; set; }
 
                 [NameInMap("schedulingUserName")]
                 [Validation(Required=false)]

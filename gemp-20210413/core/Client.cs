@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.GEMP20210413
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._signatureAlgorithm = "v2";
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("gemp", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1659,6 +1660,14 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["clientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConvergenceFields))
+            {
+                body["convergenceFields"] = request.ConvergenceFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConvergenceType))
+            {
+                body["convergenceType"] = request.ConvergenceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoverageProblemLevels))
             {
                 body["coverageProblemLevels"] = request.CoverageProblemLevels;
@@ -1754,6 +1763,14 @@ namespace AlibabaCloud.SDK.GEMP20210413
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConvergenceFields))
+            {
+                body["convergenceFields"] = request.ConvergenceFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConvergenceType))
+            {
+                body["convergenceType"] = request.ConvergenceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoverageProblemLevels))
             {
@@ -5267,6 +5284,84 @@ namespace AlibabaCloud.SDK.GEMP20210413
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetIncidentWithOptionsAsync(request, headers, runtime);
+        }
+
+        public GetIncidentListByIdListResponse GetIncidentListByIdListWithOptions(GetIncidentListByIdListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentIdList))
+            {
+                body["incidentIdList"] = request.IncidentIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIncidentListByIdList",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/getIncidentListByIdList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIncidentListByIdListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetIncidentListByIdListResponse> GetIncidentListByIdListWithOptionsAsync(GetIncidentListByIdListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentIdList))
+            {
+                body["incidentIdList"] = request.IncidentIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIncidentListByIdList",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/getIncidentListByIdList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIncidentListByIdListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetIncidentListByIdListResponse GetIncidentListByIdList(GetIncidentListByIdListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetIncidentListByIdListWithOptions(request, headers, runtime);
+        }
+
+        public async Task<GetIncidentListByIdListResponse> GetIncidentListByIdListAsync(GetIncidentListByIdListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetIncidentListByIdListWithOptionsAsync(request, headers, runtime);
         }
 
         public GetIncidentStatisticsResponse GetIncidentStatisticsWithOptions(GetIncidentStatisticsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -10665,6 +10760,66 @@ namespace AlibabaCloud.SDK.GEMP20210413
             return await ListUsersWithOptionsAsync(request, headers, runtime);
         }
 
+        public PushMonitorResponse PushMonitorWithOptions(string apiKey, PushMonitorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PushMonitor",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/monitor/push/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(apiKey),
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PushMonitorResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<PushMonitorResponse> PushMonitorWithOptionsAsync(string apiKey, PushMonitorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PushMonitor",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/monitor/push/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(apiKey),
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PushMonitorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public PushMonitorResponse PushMonitor(string apiKey, PushMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PushMonitorWithOptions(apiKey, request, headers, runtime);
+        }
+
+        public async Task<PushMonitorResponse> PushMonitorAsync(string apiKey, PushMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PushMonitorWithOptionsAsync(apiKey, request, headers, runtime);
+        }
+
         public RecoverProblemResponse RecoverProblemWithOptions(RecoverProblemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12507,6 +12662,14 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["clientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConvergenceFields))
+            {
+                body["convergenceFields"] = request.ConvergenceFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConvergenceType))
+            {
+                body["convergenceType"] = request.ConvergenceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoverageProblemLevels))
             {
                 body["coverageProblemLevels"] = request.CoverageProblemLevels;
@@ -12602,6 +12765,14 @@ namespace AlibabaCloud.SDK.GEMP20210413
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConvergenceFields))
+            {
+                body["convergenceFields"] = request.ConvergenceFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConvergenceType))
+            {
+                body["convergenceType"] = request.ConvergenceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoverageProblemLevels))
             {

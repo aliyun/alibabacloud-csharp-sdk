@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("convergenceFields")]
+        [Validation(Required=false)]
+        public List<string> ConvergenceFields { get; set; }
+
+        [NameInMap("convergenceType")]
+        [Validation(Required=false)]
+        public int? ConvergenceType { get; set; }
+
         [NameInMap("coverageProblemLevels")]
         [Validation(Required=false)]
         public List<string> CoverageProblemLevels { get; set; }
