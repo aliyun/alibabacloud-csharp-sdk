@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public List<DescribeInstanceTopologyResponseBodyInstanceTopologyTenants> Tenants { get; set; }
             public class DescribeInstanceTopologyResponseBodyInstanceTopologyTenants : TeaModel {
                 /// <summary>
-                /// The primary zone deployment mode.
+                /// The deployment type of the primary zone.
                 /// </summary>
                 [NameInMap("PrimaryZoneDeployType")]
                 [Validation(Required=false)]

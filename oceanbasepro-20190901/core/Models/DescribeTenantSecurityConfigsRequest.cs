@@ -8,20 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
-    public class ModifyInstanceTagsRequest : TeaModel {
-        /// <summary>
-        /// The ID of the OceanBase cluster.
-        /// </summary>
+    public class DescribeTenantSecurityConfigsRequest : TeaModel {
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// The tags.
-        /// </summary>
-        [NameInMap("Tags")]
+        [NameInMap("TenantId")]
         [Validation(Required=false)]
-        public string Tags { get; set; }
+        public string TenantId { get; set; }
 
     }
 

@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The availability zone where the primary node is located.
+        /// </summary>
         [NameInMap("MasterIntranetAddressZone")]
         [Validation(Required=false)]
         public string MasterIntranetAddressZone { get; set; }
@@ -35,6 +38,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string PrimaryZone { get; set; }
 
+        /// <summary>
+        /// The deployment type of the primary zone.
+        /// </summary>
         [NameInMap("PrimaryZoneDeployType")]
         [Validation(Required=false)]
         public string PrimaryZoneDeployType { get; set; }

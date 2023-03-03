@@ -23,23 +23,32 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public DescribeTenantResponseBodyTenant Tenant { get; set; }
         public class DescribeTenantResponseBodyTenant : TeaModel {
+            /// <summary>
+            /// The list of zones.
+            /// </summary>
             [NameInMap("AvailableZones")]
             [Validation(Required=false)]
             public List<string> AvailableZones { get; set; }
 
+            /// <summary>
+            /// The character set.
+            /// </summary>
             [NameInMap("Charset")]
             [Validation(Required=false)]
             public string Charset { get; set; }
 
             /// <summary>
-            /// The enabling status of the Clog service.  
-            /// CLOSED: The Clog service is disabled.   
-            /// - ONLINE: The Clog service is running.
+            /// The enabling status of the clog service.  
+            /// - CLOSED: The clog service is disabled.  
+            /// - ONLINE: The clog service is running.
             /// </summary>
             [NameInMap("ClogServiceStatus")]
             [Validation(Required=false)]
             public string ClogServiceStatus { get; set; }
 
+            /// <summary>
+            /// The collation.
+            /// </summary>
             [NameInMap("Collation")]
             [Validation(Required=false)]
             public string Collation { get; set; }
@@ -80,12 +89,15 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// The type of the disk.
+            /// </summary>
             [NameInMap("DiskType")]
             [Validation(Required=false)]
             public string DiskType { get; set; }
 
             /// <summary>
-            /// Indicates whether the Clog service is available. To enable the Clog service, submit a ticket.
+            /// Indicates whether the clog service is available. To enable the clog service, submit a ticket.
             /// </summary>
             [NameInMap("EnableClogService")]
             [Validation(Required=false)]
@@ -98,18 +110,30 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public bool? EnableInternetAddressService { get; set; }
 
+            /// <summary>
+            /// Indicates whether to enable read/write splitting endpoint.
+            /// </summary>
             [NameInMap("EnableReadWriteSplit")]
             [Validation(Required=false)]
             public bool? EnableReadWriteSplit { get; set; }
 
+            /// <summary>
+            /// The type of the instance.
+            /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
+            /// <summary>
+            /// The zone where the primary node is located.
+            /// </summary>
             [NameInMap("MasterIntranetAddressZone")]
             [Validation(Required=false)]
             public string MasterIntranetAddressZone { get; set; }
 
+            /// <summary>
+            /// The type of the payment.
+            /// </summary>
             [NameInMap("PayType")]
             [Validation(Required=false)]
             public string PayType { get; set; }
@@ -121,10 +145,16 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string PrimaryZone { get; set; }
 
+            /// <summary>
+            /// The deployment type of the primary zone.
+            /// </summary>
             [NameInMap("PrimaryZoneDeployType")]
             [Validation(Required=false)]
             public string PrimaryZoneDeployType { get; set; }
 
+            /// <summary>
+            /// The series of the instance.
+            /// </summary>
             [NameInMap("Series")]
             [Validation(Required=false)]
             public string Series { get; set; }
@@ -146,21 +176,24 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The connection access information of the tenant.
+            /// The connection information of the tenant.
             /// </summary>
             [NameInMap("TenantConnections")]
             [Validation(Required=false)]
             public List<DescribeTenantResponseBodyTenantTenantConnections> TenantConnections { get; set; }
             public class DescribeTenantResponseBodyTenantTenantConnections : TeaModel {
+                /// <summary>
+                /// The type of the address.
+                /// </summary>
                 [NameInMap("AddressType")]
                 [Validation(Required=false)]
                 public string AddressType { get; set; }
 
                 /// <summary>
                 /// The service mode of the connection address. Valid values:  
-                /// ReadWrite: provides strong-consistency read and write services.   
-                /// ReadOnly: provides the read-only service to ensure ultimate consistency of data.   
-                /// Clog: provides transaction log services.
+                /// - ReadWrite: provides strong-consistency read and write services.   
+                /// - ReadOnly: provides the read-only service to ensure ultimate consistency of data.   
+                /// - Clog: provides transaction log services.
                 /// </summary>
                 [NameInMap("ConnectionRole")]
                 [Validation(Required=false)]
@@ -182,7 +215,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
                 /// <summary>
                 /// The status of the Internet address for accessing the tenant. Valid values:   
-                /// Closed: The address is disabled.   
+                /// - CLOSED: The address is disabled.   
                 /// - ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   
                 /// - PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   
                 /// - ONLINE: The address is in service.
@@ -234,6 +267,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public int? IntranetPort { get; set; }
 
+                /// <summary>
+                /// Indicates whether to enable transaction splitting.
+                /// </summary>
                 [NameInMap("TransactionSplit")]
                 [Validation(Required=false)]
                 public bool? TransactionSplit { get; set; }
@@ -263,9 +299,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
             /// <summary>
             /// The tenant mode.   
-            /// Valid values: 
-            /// Oracle   
-            /// MySQL
+            /// Valid values:
+            /// - Oracle   
+            /// - MySQL
             /// </summary>
             [NameInMap("TenantMode")]
             [Validation(Required=false)]

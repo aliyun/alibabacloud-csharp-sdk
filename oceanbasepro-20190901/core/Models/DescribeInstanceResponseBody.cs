@@ -123,6 +123,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
+            [NameInMap("InstanceRole")]
+            [Validation(Required=false)]
+            public string InstanceRole { get; set; }
+
             /// <summary>
             /// Indicates whether the OBServer version is the latest.
             /// </summary>
@@ -143,6 +147,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("MaintainTime")]
             [Validation(Required=false)]
             public string MaintainTime { get; set; }
+
+            [NameInMap("NodeNum")]
+            [Validation(Required=false)]
+            public string NodeNum { get; set; }
 
             /// <summary>
             /// The detailed information of the OBServer version.
@@ -347,6 +355,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
+
+            [NameInMap("Zones")]
+            [Validation(Required=false)]
+            public List<string> Zones { get; set; }
 
         }
 

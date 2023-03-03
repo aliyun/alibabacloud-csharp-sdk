@@ -133,6 +133,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string InstanceRole { get; set; }
 
+            /// <summary>
+            /// The instance type.
+            /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
