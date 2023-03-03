@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                 [Validation(Required=false)]
                 public bool? EnableWebhook { get; set; }
 
+                [NameInMap("escalationPlanType")]
+                [Validation(Required=false)]
+                public string EscalationPlanType { get; set; }
+
                 [NameInMap("noticeChannels")]
                 [Validation(Required=false)]
                 public List<string> NoticeChannels { get; set; }
