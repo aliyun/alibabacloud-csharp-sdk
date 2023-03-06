@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public AddShareTaskDeviceResponseBodyData Data { get; set; }
         public class AddShareTaskDeviceResponseBodyData : TeaModel {
+            [NameInMap("FailSum")]
+            [Validation(Required=false)]
+            public int? FailSum { get; set; }
+
+            [NameInMap("FailedResultCsvFile")]
+            [Validation(Required=false)]
+            public string FailedResultCsvFile { get; set; }
+
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public int? Progress { get; set; }
@@ -24,6 +32,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("ProgressId")]
             [Validation(Required=false)]
             public string ProgressId { get; set; }
+
+            [NameInMap("SuccessSum")]
+            [Validation(Required=false)]
+            public int? SuccessSum { get; set; }
 
         }
 

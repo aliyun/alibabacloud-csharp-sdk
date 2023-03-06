@@ -15467,6 +15467,88 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await GetSceneRuleWithOptionsAsync(request, runtime);
         }
 
+        public GetShareSpeechModelAudioResponse GetShareSpeechModelAudioWithOptions(GetShareSpeechModelAudioRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTaskId))
+            {
+                body["ShareTaskId"] = request.ShareTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechModelCodeList))
+            {
+                body["SpeechModelCodeList"] = request.SpeechModelCodeList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetShareSpeechModelAudio",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetShareSpeechModelAudioResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetShareSpeechModelAudioResponse> GetShareSpeechModelAudioWithOptionsAsync(GetShareSpeechModelAudioRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTaskId))
+            {
+                body["ShareTaskId"] = request.ShareTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechModelCodeList))
+            {
+                body["SpeechModelCodeList"] = request.SpeechModelCodeList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetShareSpeechModelAudio",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetShareSpeechModelAudioResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetShareSpeechModelAudioResponse GetShareSpeechModelAudio(GetShareSpeechModelAudioRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetShareSpeechModelAudioWithOptions(request, runtime);
+        }
+
+        public async Task<GetShareSpeechModelAudioResponse> GetShareSpeechModelAudioAsync(GetShareSpeechModelAudioRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetShareSpeechModelAudioWithOptionsAsync(request, runtime);
+        }
+
         public GetShareTaskByDeviceOpenResponse GetShareTaskByDeviceOpenWithOptions(GetShareTaskByDeviceOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28061,6 +28143,72 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QuerySpeechDeviceWithOptionsAsync(request, runtime);
+        }
+
+        public QuerySpeechLicenseAvailableQuotaResponse QuerySpeechLicenseAvailableQuotaWithOptions(QuerySpeechLicenseAvailableQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySpeechLicenseAvailableQuota",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySpeechLicenseAvailableQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QuerySpeechLicenseAvailableQuotaResponse> QuerySpeechLicenseAvailableQuotaWithOptionsAsync(QuerySpeechLicenseAvailableQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySpeechLicenseAvailableQuota",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySpeechLicenseAvailableQuotaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QuerySpeechLicenseAvailableQuotaResponse QuerySpeechLicenseAvailableQuota(QuerySpeechLicenseAvailableQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QuerySpeechLicenseAvailableQuotaWithOptions(request, runtime);
+        }
+
+        public async Task<QuerySpeechLicenseAvailableQuotaResponse> QuerySpeechLicenseAvailableQuotaAsync(QuerySpeechLicenseAvailableQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QuerySpeechLicenseAvailableQuotaWithOptionsAsync(request, runtime);
         }
 
         public QuerySpeechLicenseDeviceListResponse QuerySpeechLicenseDeviceListWithOptions(QuerySpeechLicenseDeviceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
