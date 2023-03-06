@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CountryCode { get; set; }
 
         /// <summary>
-        /// The space ID of the ISV user to which the phone number is migrated.
+        /// The space ID of the user under the ISV account.
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]

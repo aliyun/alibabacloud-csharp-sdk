@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ModifyChatappTemplateRequest : TeaModel {
+        [NameInMap("Category")]
+        [Validation(Required=false)]
+        public string Category { get; set; }
+
         /// <summary>
-        /// The list of components of the message template.
+        /// The components of the message template.
         /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
@@ -31,7 +35,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string PhoneNumber { get; set; }
 
                 /// <summary>
-                /// The text of the message to be sent.
+                /// The text of the message that is sent.
                 /// </summary>
                 [NameInMap("Text")]
                 [Validation(Required=false)]
@@ -49,7 +53,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The URL to be visited after clicking the button.
+                /// The URL to be visited after users click the button.
                 /// </summary>
                 [NameInMap("Url")]
                 [Validation(Required=false)]
@@ -76,8 +80,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string Caption { get; set; }
 
+            [NameInMap("Duration")]
+            [Validation(Required=false)]
+            public int? Duration { get; set; }
+
             /// <summary>
-            /// The name of the file.
+            /// The name of the file
             /// 
             /// > : When the Type parameter is set to **HEADER** and the Format parameter is set to **DOCUMENT**, you can specify a name of the file.
             /// </summary>
@@ -85,8 +93,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string FileName { get; set; }
 
+            [NameInMap("FileType")]
+            [Validation(Required=false)]
+            public string FileType { get; set; }
+
             /// <summary>
-            /// The type of the media resource.
+            /// The type of the media resources that are included in the message.
             /// 
             /// *   **TEXT**: text
             /// *   **IMAGE**: image
@@ -98,11 +110,15 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Format { get; set; }
 
             /// <summary>
-            /// The text of the message to be sent.
+            /// The text of the message that is sent.
             /// </summary>
             [NameInMap("Text")]
             [Validation(Required=false)]
             public string Text { get; set; }
+
+            [NameInMap("ThumbUrl")]
+            [Validation(Required=false)]
+            public string ThumbUrl { get; set; }
 
             /// <summary>
             /// The type of the component.
@@ -126,14 +142,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// Isv customer space id
+        /// The space ID of the user under the ISV account.
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The ID of the WhatApp Business account of the ISV customer.
+        /// The ID of the WhatsApp Business account under the ISV account.
         /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
@@ -148,14 +164,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public Dictionary<string, string> Example { get; set; }
 
         /// <summary>
-        /// ISV verification code, which is used to verify whether the sub-account is authorized by ISV.
+        /// The ISV verification code, which is used to verify whether the user is authorized by ISV.
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// The language.
+        /// The language that is used in the message template. For more information, see [Language codes](~~463420~~).
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
@@ -167,6 +183,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
+
+        [NameInMap("TemplateType")]
+        [Validation(Required=false)]
+        public string TemplateType { get; set; }
 
     }
 

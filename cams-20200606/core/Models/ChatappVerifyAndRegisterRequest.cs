@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappVerifyAndRegisterRequest : TeaModel {
         /// <summary>
-        /// The space ID of the ISV user with which the phone number is associated.
+        /// The space ID of the user under the ISV account.
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The phone number that you want to use to send WhatsApp business messages to your customers.
+        /// The phone number.
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]

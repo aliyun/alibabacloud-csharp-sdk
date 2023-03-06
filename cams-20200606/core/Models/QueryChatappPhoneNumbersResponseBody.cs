@@ -34,28 +34,28 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public List<QueryChatappPhoneNumbersResponseBodyPhoneNumbers> PhoneNumbers { get; set; }
         public class QueryChatappPhoneNumbersResponseBodyPhoneNumbers : TeaModel {
             /// <summary>
-            /// 号码校验状态。
+            /// The verification status of the phone number.
             /// </summary>
             [NameInMap("CodeVerificationStatus")]
             [Validation(Required=false)]
             public string CodeVerificationStatus { get; set; }
 
             /// <summary>
-            /// 号码发送量。
+            /// The maximum number of messages that can be sent to users by using the phone number.
             /// </summary>
             [NameInMap("MessagingLimitTier")]
             [Validation(Required=false)]
             public string MessagingLimitTier { get; set; }
 
             /// <summary>
-            /// 名称状态。
+            /// The status of the business name.
             /// </summary>
             [NameInMap("NameStatus")]
             [Validation(Required=false)]
             public string NameStatus { get; set; }
 
             /// <summary>
-            /// 新名称审核状态。
+            /// The review status of the new business name.
             /// </summary>
             [NameInMap("NewNameStatus")]
             [Validation(Required=false)]
@@ -69,21 +69,38 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string PhoneNumber { get; set; }
 
             /// <summary>
-            /// The quality rating of the phone number. Valid values: GREEN, YELLOW, RED, and UNKNOWN.
+            /// The quality rating of the phone number. Valid values:
+            /// 
+            /// *   **GREEN**
+            /// *   **YELLOW**
+            /// *   **RED**
+            /// *   **UNKNOWN**
             /// </summary>
             [NameInMap("QualityRating")]
             [Validation(Required=false)]
             public string QualityRating { get; set; }
 
             /// <summary>
-            /// The status of the phone number. Valid values: PENDING, DELETED, MIGRATED, BANNED, RESTRICTED, RATE_LIMITED, FLAGGED, CONNECTED, DISCONNECTED, UNKNOWN, and UNVERIFIED.
+            /// The status of the phone number.
+            /// 
+            /// *   PENDING
+            /// *   DELETED
+            /// *   MIGRATED
+            /// *   BANNED
+            /// *   RESTRICTED
+            /// *   RATE_LIMITED
+            /// *   FLAGGED
+            /// *   CONNECTED
+            /// *   DISCONNECTED
+            /// *   UNKNOWN
+            /// *   UNVERIFIED
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The status report notification URL.
+            /// The callback URL to which status reports are sent by using HTTP callbacks.
             /// </summary>
             [NameInMap("StatusCallbackUrl")]
             [Validation(Required=false)]
@@ -97,7 +114,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string StatusQueue { get; set; }
 
             /// <summary>
-            /// The MO message notification URL.
+            /// The callback URL to which MO messages are sent by using HTTP callbacks.
             /// </summary>
             [NameInMap("UpCallbackUrl")]
             [Validation(Required=false)]
@@ -111,7 +128,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string UpQueue { get; set; }
 
             /// <summary>
-            /// The name of the company to which the phone number is associated with.
+            /// The name of the company with which the phone number is associated.
             /// </summary>
             [NameInMap("VerifiedName")]
             [Validation(Required=false)]

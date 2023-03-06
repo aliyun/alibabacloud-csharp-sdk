@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public List<ChatappEmbedSignUpResponseBodyWabas> Wabas { get; set; }
         public class ChatappEmbedSignUpResponseBodyWabas : TeaModel {
             /// <summary>
-            /// The audit status of the WhatsApp Business account.
+            /// The review status of the WhatsApp Business account.
             /// </summary>
             [NameInMap("AccountReviewStatus")]
             [Validation(Required=false)]

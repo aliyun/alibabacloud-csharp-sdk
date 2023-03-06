@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
-    public class ListChatappTemplateResponse : TeaModel {
+    public class GetChatappUploadAuthorizationResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListChatappTemplateResponseBody Body { get; set; }
+        public GetChatappUploadAuthorizationResponseBody Body { get; set; }
 
     }
 

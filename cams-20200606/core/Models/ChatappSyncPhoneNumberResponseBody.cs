@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CodeVerificationStatus { get; set; }
 
             /// <summary>
-            /// The quantity of phone numbers to which messages can be sent in a day.
+            /// The maximum number of messages that can be sent to users by using the phone number.
             /// </summary>
             [NameInMap("MessagingLimitTier")]
             [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string PhoneNumber { get; set; }
 
             /// <summary>
-            /// The quality of the phone number. Valid values: GREEN, YELLOW, and RED.
+            /// The quality rating of the phone number. Valid values: GREEN, YELLOW, and RED.
             /// </summary>
             [NameInMap("QualityRating")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The callback URL to which status reports are sent via HTTP callbacks.
+            /// The callback URL to which status reports are sent by using HTTP callbacks.
             /// </summary>
             [NameInMap("StatusCallbackUrl")]
             [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string StatusQueue { get; set; }
 
             /// <summary>
-            /// The callback URL to which MO messages are sent via HTTP callbacks.
+            /// The callback URL to which MO messages are sent by using HTTP callbacks.
             /// </summary>
             [NameInMap("UpCallbackUrl")]
             [Validation(Required=false)]

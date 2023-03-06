@@ -13,8 +13,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// The type of the message channel. Valid values:
         /// 
         /// *   **whatsapp**
-        /// *   viber, which is under development
-        /// *   line, which is under development
+        /// *   **viber**. This message channel is supported only when you set the Type parameter to message.
+        /// *   line. The feature ChatApp sends messages by using Line is under development.
         /// </summary>
         [NameInMap("ChannelType")]
         [Validation(Required=false)]
@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// The content of the message.
+        /// 
+        /// **Usage notes when you set the ChannelType parameter to whatsapp**
         /// 
         /// *   When you set the **MessageType** parameter to **text**, the **text** parameter is required and the **caption** parameter cannot be specified.
         /// *   When you set the **MessageType** parameter to **image**, the **link** parameter is required.
@@ -33,6 +35,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// *   When you set the **MessageType** parameter to **location**, the **longitude** and **latitude** parameters are required.
         /// *   When you set the **MessageType** parameter to **sticker**, the **link** parameter is required, and the **caption** and **fileName** parameters are invalid.
         /// *   When you set the **MessageType** parameter to **reaction**, the **messageId** and **emoji** parameters are required.
+        /// 
+        /// **Usage notes when you set the ChannelType parameter to viber**
+        /// 
+        /// *   When you set the **MessageType** parameter to **text**, the **text** parameter is required.
+        /// *   When you set the **MessageType** parameter to **image**, the **link** parameter is required.
+        /// *   When you set the **MessageType** parameter to **video**, the **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.
+        /// *   When you set the **MessageType** parameter to **document**, the **link**, **fileName**, and **fileType** parameters are required.
+        /// *   When you set the **MessageType** parameter to **text_button**, the **text**, **caption**, and **action** parameters are required.
+        /// *   When you set the **MessageType** parameter to **text_image_button**, the **text**, **link**, **caption**, and **action** parameters are required.
+        /// *   When you set the **MessageType** parameter to **text_video**, the **text**, **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.
+        /// *   When you set the **MessageType** parameter to **text_video_button**, the **text**, **link**, **thumbnail**, **fileSize**, **duration**, and **caption** parameters are required, and the **action** parameter is invalid.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -68,7 +81,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FallBackContent { get; set; }
 
         /// <summary>
-        /// The ID of the fallback policy. You can create a fallback policy and view information about the policy in the console.
+        /// The ID of the fallback strategy. You can create a fallback strategy and view the information in the console.
         /// </summary>
         [NameInMap("FallBackId")]
         [Validation(Required=false)]
@@ -91,7 +104,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// The message type when the ChannelType parameter is set to viber. Valid values: pormotion and transition.
+        /// The message type when the ChannelType parameter is set to viber. Valid values: promotion and transaction.
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
@@ -107,6 +120,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// The type of the message. This parameter is required only if you set the Type parameter to **message**. Valid values:
         /// 
+        /// **When you set the ChannelType parameter to whatsapp**
+        /// 
         /// *   **text**: the text message.
         /// *   **image**: the image message.
         /// *   **video**: the video message.
@@ -118,7 +133,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// *   **sticker**: the sticker message.
         /// *   **reaction**: the reaction message.
         /// 
-        /// >  For more information about parameters of location, contacts, interactive, and media, see [Parameters of a message template](~~454530~~).
+        /// **When you set the ChannelType parameter to viber**
+        /// 
+        /// *   **text**: the text message.
+        /// *   **image**: the image message.
+        /// *   **video**: the video message.
+        /// *   **document**: the document message.
+        /// *   **text_button**: messages that contain the text and button media objects.
+        /// *   **text_image_button**: messages that contain multiple media objects, including the text, image, and button.
+        /// *   **text_video**: messages that contain the text and video media objects.
+        /// *   **text_video_button**: messages that contain multiple media objects, including text, video, and button.
+        /// 
+        /// >  For more information, see [Parameters of a message template](~~454530~~).
         /// </summary>
         [NameInMap("MessageType")]
         [Validation(Required=false)]
@@ -137,6 +163,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string Tag { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
         /// <summary>
         /// The code of the message template. This parameter is required only if you set the Type parameter to **template**.
@@ -160,14 +190,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string To { get; set; }
 
         /// <summary>
-        /// The tracking data when the ChannelType parameter is set to viber.
+        /// The tracking ID when the ChannelType parameter is set to viber.
         /// </summary>
         [NameInMap("TrackingData")]
         [Validation(Required=false)]
         public string TrackingData { get; set; }
 
         /// <summary>
-        /// The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600, in seconds.
+        /// The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600. Unit: seconds.
         /// </summary>
         [NameInMap("Ttl")]
         [Validation(Required=false)]

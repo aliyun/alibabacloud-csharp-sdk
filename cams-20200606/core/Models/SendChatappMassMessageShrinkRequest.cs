@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// The message type when the ChannelType parameter is set to viber. Valid values: pormotion and transition.
+        /// Viber消息类型，取值：pormotion或transation。
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
@@ -81,28 +81,28 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string SenderListShrink { get; set; }
 
         /// <summary>
-        /// The tag information when the ChannelType parameter is set to viber.
+        /// Viber消息发送时tag信息。
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string Tag { get; set; }
 
         /// <summary>
-        /// The task ID.
+        /// The ID of the task.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// The encoding of the message template.
+        /// The code of the message template.
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600, in seconds.
+        /// Viber消息发送超时时间，单位：秒，取值范围 30~1209600。
         /// </summary>
         [NameInMap("Ttl")]
         [Validation(Required=false)]

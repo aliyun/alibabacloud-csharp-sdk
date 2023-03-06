@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ModifyChatappTemplateResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// The HTTP status code returned.
         /// 
-        /// *   If OK is returned, the request is successful.
-        /// *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
+        /// *   A value of OK indicates that the call is successful.
+        /// *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string TemplateCode { get; set; }
 
             /// <summary>
-            /// The name of the template.
+            /// The name of the message template.
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

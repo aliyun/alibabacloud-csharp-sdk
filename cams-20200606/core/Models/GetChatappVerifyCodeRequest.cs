@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Locale { get; set; }
 
         /// <summary>
-        /// The type of the verification code. Valid values: SMS and VOICE.
+        /// The method to obtain the verification code. Valid values: SMS and VOICE.
         /// </summary>
         [NameInMap("Method")]
         [Validation(Required=false)]

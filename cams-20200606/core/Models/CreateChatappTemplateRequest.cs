@@ -96,12 +96,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string Caption { get; set; }
 
+            [NameInMap("Duration")]
+            [Validation(Required=false)]
+            public int? Duration { get; set; }
+
             /// <summary>
             /// The name of the file.
             /// </summary>
             [NameInMap("FileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
+
+            [NameInMap("FileType")]
+            [Validation(Required=false)]
+            public string FileType { get; set; }
 
             /// <summary>
             /// The format of the message.
@@ -121,6 +129,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [NameInMap("Text")]
             [Validation(Required=false)]
             public string Text { get; set; }
+
+            [NameInMap("ThumbUrl")]
+            [Validation(Required=false)]
+            public string ThumbUrl { get; set; }
 
             /// <summary>
             /// The type of the component. Valid values:

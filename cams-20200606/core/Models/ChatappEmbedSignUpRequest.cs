@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappEmbedSignUpRequest : TeaModel {
         /// <summary>
-        /// The InputToken returned by the embedded signup.
+        /// The InputToken returned after the embedded signup flow is complete.
         /// </summary>
         [NameInMap("InputToken")]
         [Validation(Required=false)]
