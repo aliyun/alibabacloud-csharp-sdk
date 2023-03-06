@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string DepartName { get; set; }
 
+            [NameInMap("extend_field")]
+            [Validation(Required=false)]
+            public string ExtendField { get; set; }
+
             [NameInMap("external_traveler_list")]
             [Validation(Required=false)]
             public List<ApplyQueryResponseBodyModuleExternalTravelerList> ExternalTravelerList { get; set; }
