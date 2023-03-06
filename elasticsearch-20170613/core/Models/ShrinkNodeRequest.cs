@@ -35,18 +35,30 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
         }
 
+        /// <summary>
+        /// 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+        /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// 2
+        /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
+        /// <summary>
+        /// false
+        /// </summary>
         [NameInMap("ignoreStatus")]
         [Validation(Required=false)]
         public bool? IgnoreStatus { get; set; }
 
+        /// <summary>
+        /// WORKER
+        /// </summary>
         [NameInMap("nodeType")]
         [Validation(Required=false)]
         public string NodeType { get; set; }

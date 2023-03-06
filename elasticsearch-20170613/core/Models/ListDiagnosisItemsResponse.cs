@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
-    public class CreateInstanceResponse : TeaModel {
+    public class ListDiagnosisItemsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [NameInMap("statusCode")]
         [Validation(Required=true)]
         public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=true)]
+        public ListDiagnosisItemsResponseBody Body { get; set; }
 
     }
 

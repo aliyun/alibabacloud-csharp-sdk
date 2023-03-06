@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CreateDataTasksRequest : TeaModel {
+        /// <summary>
+        /// 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

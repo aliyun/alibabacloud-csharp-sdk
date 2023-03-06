@@ -9,30 +9,51 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListLogstashLogResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The returned data.
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListLogstashLogResponseBodyResult> Result { get; set; }
         public class ListLogstashLogResponseBodyResult : TeaModel {
+            /// <summary>
+            /// The details of the log.
+            /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
+            /// <summary>
+            /// The IP address of the node that generates the log.
+            /// </summary>
             [NameInMap("host")]
             [Validation(Required=false)]
             public string Host { get; set; }
 
+            /// <summary>
+            /// The ID of the instance.
+            /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// The severity level of the log entry. Including trace, debug, info, warn, error, etc. (GC logs have no level).
+            /// </summary>
             [NameInMap("level")]
             [Validation(Required=false)]
             public string Level { get; set; }
 
+            /// <summary>
+            /// The timestamp of log generation. Unit: ms.
+            /// </summary>
             [NameInMap("timestamp")]
             [Validation(Required=false)]
             public long? Timestamp { get; set; }

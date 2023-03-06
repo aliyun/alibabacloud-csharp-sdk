@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CreateVpcEndpointRequest : TeaModel {
+        /// <summary>
+        /// 5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\*\*\*
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string ZoneId { get; set; }
 
+        /// <summary>
+        /// false
+        /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }

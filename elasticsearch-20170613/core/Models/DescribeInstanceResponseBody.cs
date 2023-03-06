@@ -201,6 +201,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
             }
 
+            [NameInMap("instanceCategory")]
+            [Validation(Required=false)]
+            public string InstanceCategory { get; set; }
+
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }

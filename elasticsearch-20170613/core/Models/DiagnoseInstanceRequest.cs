@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DiagnoseInstanceRequest : TeaModel {
+        /// <summary>
+        /// 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        /// <summary>
+        /// en
+        /// </summary>
         [NameInMap("lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

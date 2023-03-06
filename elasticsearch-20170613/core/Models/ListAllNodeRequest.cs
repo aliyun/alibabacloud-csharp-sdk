@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListAllNodeRequest : TeaModel {
+        /// <summary>
+        /// false
+        /// </summary>
         [NameInMap("extended")]
         [Validation(Required=false)]
         public bool? Extended { get; set; }

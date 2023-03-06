@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateLogstashDescriptionRequest : TeaModel {
-        [NameInMap("body")]
+        [NameInMap("description")]
         [Validation(Required=false)]
-        public string Body { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("clientToken")]
         [Validation(Required=false)]

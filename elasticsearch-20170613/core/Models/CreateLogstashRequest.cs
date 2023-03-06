@@ -83,10 +83,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string PaymentType { get; set; }
 
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("version")]
         [Validation(Required=false)]
         public string Version { get; set; }
 
+        /// <summary>
+        /// 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+        /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

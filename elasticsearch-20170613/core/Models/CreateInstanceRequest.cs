@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public ClientNodeConfiguration ClientNodeConfiguration { get; set; }
 
+        [NameInMap("description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("elasticDataNodeConfiguration")]
         [Validation(Required=false)]
         public ElasticDataNodeConfiguration ElasticDataNodeConfiguration { get; set; }
@@ -56,6 +60,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [NameInMap("paymentType")]
         [Validation(Required=false)]
         public string PaymentType { get; set; }
+
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("warmNodeConfiguration")]
         [Validation(Required=false)]

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DescribeDiagnosisSettingsRequest : TeaModel {
+        /// <summary>
+        /// The language of the returned result. Default value: en.
+        /// </summary>
         [NameInMap("lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

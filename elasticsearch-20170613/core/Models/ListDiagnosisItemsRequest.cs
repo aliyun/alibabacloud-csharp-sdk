@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
-    public class DeleteILMPolicyRequest : TeaModel {
-        [NameInMap("body")]
+    public class ListDiagnosisItemsRequest : TeaModel {
+        [NameInMap("lang")]
         [Validation(Required=false)]
-        public string Body { get; set; }
+        public string Lang { get; set; }
 
     }
 

@@ -9,26 +9,44 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListSearchLogRequest : TeaModel {
+        /// <summary>
+        /// 1531910852074
+        /// </summary>
         [NameInMap("beginTime")]
         [Validation(Required=false)]
         public long? BeginTime { get; set; }
 
+        /// <summary>
+        /// 1531910852074
+        /// </summary>
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// 1
+        /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
+        /// <summary>
+        /// host:172.16.\*\*.\*\* AND content:netty
+        /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]
         public string Query { get; set; }
 
+        /// <summary>
+        /// 20
+        /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
 
+        /// <summary>
+        /// INSTANCELOG
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
