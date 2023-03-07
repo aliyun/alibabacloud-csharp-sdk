@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class SetResellerUserStatusRequest : TeaModel {
+        /// <summary>
+        /// The type of the business. Valid values: FREEZE: the frozen business of the account. TRUSTEESHIP: the hosted business of the account.
+        /// </summary>
         [NameInMap("BusinessType")]
         [Validation(Required=false)]
         public string BusinessType { get; set; }
@@ -17,10 +20,19 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string OwnerId { get; set; }
 
+        /// <summary>
+        /// The account status that you want to set. Valid values: Freeze: The account is frozen. Thaw: The account is unfrozen. Trusteeship: The account is hosted. TrusteeshipCancel: The account is not hosted.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// 停机模式
+        /// 取值：
+        ///     0：普通停机
+        ///     1：立即停机
+        /// </summary>
         [NameInMap("StopMode")]
         [Validation(Required=false)]
         public string StopMode { get; set; }

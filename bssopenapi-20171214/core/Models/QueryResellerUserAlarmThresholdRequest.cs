@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
-    public class QueryResellerAvailableQuotaRequest : TeaModel {
-        /// <summary>
-        /// You do not need to specify the parameter.
-        /// </summary>
-        [NameInMap("ItemCodes")]
+    public class QueryResellerUserAlarmThresholdRequest : TeaModel {
+        [NameInMap("AlarmType")]
         [Validation(Required=false)]
-        public string ItemCodes { get; set; }
+        public string AlarmType { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]

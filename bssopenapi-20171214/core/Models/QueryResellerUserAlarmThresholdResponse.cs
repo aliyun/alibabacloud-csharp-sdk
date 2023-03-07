@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
-    public class QuerySettlementBillResponse : TeaModel {
+    public class QueryResellerUserAlarmThresholdResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public QuerySettlementBillResponseBody Body { get; set; }
+        public QueryResellerUserAlarmThresholdResponseBody Body { get; set; }
 
     }
 

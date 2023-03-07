@@ -54,6 +54,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<QuerySavingsPlansInstanceRequestTag> Tag { get; set; }
