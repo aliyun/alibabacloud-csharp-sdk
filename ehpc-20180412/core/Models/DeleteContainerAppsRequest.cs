@@ -13,6 +13,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public List<DeleteContainerAppsRequestContainerApp> ContainerApp { get; set; }
         public class DeleteContainerAppsRequestContainerApp : TeaModel {
+            /// <summary>
+            /// The ID of the containerized application that you want to delete. Valid values of N: 1 to 100.
+            /// 
+            /// You can call the [ListContainerApps](~~87333~~) operation to query the ID of the containerized application.
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }

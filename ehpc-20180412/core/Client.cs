@@ -37,6 +37,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          * If you select an image for a new containerized application, the image is pulled from Docker Hub by default. However, the version of the image may not be up to date. You can call the [PullImage](~~159052~~) operation to pull the latest image.
+          *
+          * @param request AddContainerAppRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddContainerAppResponse
+         */
         public AddContainerAppResponse AddContainerAppWithOptions(AddContainerAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -60,6 +67,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<AddContainerAppResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you select an image for a new containerized application, the image is pulled from Docker Hub by default. However, the version of the image may not be up to date. You can call the [PullImage](~~159052~~) operation to pull the latest image.
+          *
+          * @param request AddContainerAppRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddContainerAppResponse
+         */
         public async Task<AddContainerAppResponse> AddContainerAppWithOptionsAsync(AddContainerAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -83,18 +97,39 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<AddContainerAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you select an image for a new containerized application, the image is pulled from Docker Hub by default. However, the version of the image may not be up to date. You can call the [PullImage](~~159052~~) operation to pull the latest image.
+          *
+          * @param request AddContainerAppRequest
+          * @return AddContainerAppResponse
+         */
         public AddContainerAppResponse AddContainerApp(AddContainerAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddContainerAppWithOptions(request, runtime);
         }
 
+        /**
+          * If you select an image for a new containerized application, the image is pulled from Docker Hub by default. However, the version of the image may not be up to date. You can call the [PullImage](~~159052~~) operation to pull the latest image.
+          *
+          * @param request AddContainerAppRequest
+          * @return AddContainerAppResponse
+         */
         public async Task<AddContainerAppResponse> AddContainerAppAsync(AddContainerAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddContainerAppWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   The compute nodes to be added are in the Stopped state.
+          * *   After the compute nodes are added to the cluster, the operating systems of the nodes are replaced with the operating system specified by the ImageId parameter.
+          * *   The hosts of the compute nodes must be different from those of the existing compute nodes in the cluster. Otherwise, the add operation fails.
+          *
+          * @param request AddExistedNodesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddExistedNodesResponse
+         */
         public AddExistedNodesResponse AddExistedNodesWithOptions(AddExistedNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -118,6 +153,15 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<AddExistedNodesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   The compute nodes to be added are in the Stopped state.
+          * *   After the compute nodes are added to the cluster, the operating systems of the nodes are replaced with the operating system specified by the ImageId parameter.
+          * *   The hosts of the compute nodes must be different from those of the existing compute nodes in the cluster. Otherwise, the add operation fails.
+          *
+          * @param request AddExistedNodesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddExistedNodesResponse
+         */
         public async Task<AddExistedNodesResponse> AddExistedNodesWithOptionsAsync(AddExistedNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -141,12 +185,28 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<AddExistedNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   The compute nodes to be added are in the Stopped state.
+          * *   After the compute nodes are added to the cluster, the operating systems of the nodes are replaced with the operating system specified by the ImageId parameter.
+          * *   The hosts of the compute nodes must be different from those of the existing compute nodes in the cluster. Otherwise, the add operation fails.
+          *
+          * @param request AddExistedNodesRequest
+          * @return AddExistedNodesResponse
+         */
         public AddExistedNodesResponse AddExistedNodes(AddExistedNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddExistedNodesWithOptions(request, runtime);
         }
 
+        /**
+          * *   The compute nodes to be added are in the Stopped state.
+          * *   After the compute nodes are added to the cluster, the operating systems of the nodes are replaced with the operating system specified by the ImageId parameter.
+          * *   The hosts of the compute nodes must be different from those of the existing compute nodes in the cluster. Otherwise, the add operation fails.
+          *
+          * @param request AddExistedNodesRequest
+          * @return AddExistedNodesResponse
+         */
         public async Task<AddExistedNodesResponse> AddExistedNodesAsync(AddExistedNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -443,6 +503,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await AddUsersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the ApplyNodes operation to specify the number of compute nodes, the number of vCPUs, and the memory size when you add nodes to a cluster.
+          *
+          * @param request ApplyNodesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ApplyNodesResponse
+         */
         public ApplyNodesResponse ApplyNodesWithOptions(ApplyNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -466,6 +533,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<ApplyNodesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the ApplyNodes operation to specify the number of compute nodes, the number of vCPUs, and the memory size when you add nodes to a cluster.
+          *
+          * @param request ApplyNodesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ApplyNodesResponse
+         */
         public async Task<ApplyNodesResponse> ApplyNodesWithOptionsAsync(ApplyNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -489,18 +563,37 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<ApplyNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the ApplyNodes operation to specify the number of compute nodes, the number of vCPUs, and the memory size when you add nodes to a cluster.
+          *
+          * @param request ApplyNodesRequest
+          * @return ApplyNodesResponse
+         */
         public ApplyNodesResponse ApplyNodes(ApplyNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ApplyNodesWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the ApplyNodes operation to specify the number of compute nodes, the number of vCPUs, and the memory size when you add nodes to a cluster.
+          *
+          * @param request ApplyNodesRequest
+          * @return ApplyNodesResponse
+         */
         public async Task<ApplyNodesResponse> ApplyNodesAsync(ApplyNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ApplyNodesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see [Billing overview](~~57844~~).
+          *
+          * @param request CreateClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateClusterResponse
+         */
         public CreateClusterResponse CreateClusterWithOptions(CreateClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -524,6 +617,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<CreateClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see [Billing overview](~~57844~~).
+          *
+          * @param request CreateClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateClusterResponse
+         */
         public async Task<CreateClusterResponse> CreateClusterWithOptionsAsync(CreateClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -547,12 +647,24 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<CreateClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see [Billing overview](~~57844~~).
+          *
+          * @param request CreateClusterRequest
+          * @return CreateClusterResponse
+         */
         public CreateClusterResponse CreateCluster(CreateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateClusterWithOptions(request, runtime);
         }
 
+        /**
+          * After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see [Billing overview](~~57844~~).
+          *
+          * @param request CreateClusterRequest
+          * @return CreateClusterResponse
+         */
         public async Task<CreateClusterResponse> CreateClusterAsync(CreateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -907,6 +1019,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await CreateJobTemplateWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After a cluster is released, the pay-as-you-go nodes and the subscription nodes that have expired are automatically released. The subscription nodes that have not expired are retained. If you need to release the subscription nodes that have not expired, change their billing method to pay-as-you-go. Before you release a cluster, make sure that you will no longer use the cluster.
+          *
+          * @param request DeleteClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteClusterResponse
+         */
         public DeleteClusterResponse DeleteClusterWithOptions(DeleteClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -930,6 +1049,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<DeleteClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After a cluster is released, the pay-as-you-go nodes and the subscription nodes that have expired are automatically released. The subscription nodes that have not expired are retained. If you need to release the subscription nodes that have not expired, change their billing method to pay-as-you-go. Before you release a cluster, make sure that you will no longer use the cluster.
+          *
+          * @param request DeleteClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteClusterResponse
+         */
         public async Task<DeleteClusterResponse> DeleteClusterWithOptionsAsync(DeleteClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -953,12 +1079,24 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<DeleteClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After a cluster is released, the pay-as-you-go nodes and the subscription nodes that have expired are automatically released. The subscription nodes that have not expired are retained. If you need to release the subscription nodes that have not expired, change their billing method to pay-as-you-go. Before you release a cluster, make sure that you will no longer use the cluster.
+          *
+          * @param request DeleteClusterRequest
+          * @return DeleteClusterResponse
+         */
         public DeleteClusterResponse DeleteCluster(DeleteClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteClusterWithOptions(request, runtime);
         }
 
+        /**
+          * After a cluster is released, the pay-as-you-go nodes and the subscription nodes that have expired are automatically released. The subscription nodes that have not expired are retained. If you need to release the subscription nodes that have not expired, change their billing method to pay-as-you-go. Before you release a cluster, make sure that you will no longer use the cluster.
+          *
+          * @param request DeleteClusterRequest
+          * @return DeleteClusterResponse
+         */
         public async Task<DeleteClusterResponse> DeleteClusterAsync(DeleteClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1371,6 +1509,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await DeleteLocalImageWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
+          *
+          * @param request DeleteNodesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNodesResponse
+         */
         public DeleteNodesResponse DeleteNodesWithOptions(DeleteNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1394,6 +1539,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<DeleteNodesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
+          *
+          * @param request DeleteNodesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteNodesResponse
+         */
         public async Task<DeleteNodesResponse> DeleteNodesWithOptionsAsync(DeleteNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1417,12 +1569,24 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<DeleteNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
+          *
+          * @param request DeleteNodesRequest
+          * @return DeleteNodesResponse
+         */
         public DeleteNodesResponse DeleteNodes(DeleteNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteNodesWithOptions(request, runtime);
         }
 
+        /**
+          * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
+          *
+          * @param request DeleteNodesRequest
+          * @return DeleteNodesResponse
+         */
         public async Task<DeleteNodesResponse> DeleteNodesAsync(DeleteNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1545,6 +1709,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await DeleteSecurityGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are still retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data that was retained for the deleted user is not reused.
+          *
+          * @param request DeleteUsersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteUsersResponse
+         */
         public DeleteUsersResponse DeleteUsersWithOptions(DeleteUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1568,6 +1739,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<DeleteUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are still retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data that was retained for the deleted user is not reused.
+          *
+          * @param request DeleteUsersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteUsersResponse
+         */
         public async Task<DeleteUsersResponse> DeleteUsersWithOptionsAsync(DeleteUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1591,12 +1769,24 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<DeleteUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are still retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data that was retained for the deleted user is not reused.
+          *
+          * @param request DeleteUsersRequest
+          * @return DeleteUsersResponse
+         */
         public DeleteUsersResponse DeleteUsers(DeleteUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUsersWithOptions(request, runtime);
         }
 
+        /**
+          * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are still retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data that was retained for the deleted user is not reused.
+          *
+          * @param request DeleteUsersRequest
+          * @return DeleteUsersResponse
+         */
         public async Task<DeleteUsersResponse> DeleteUsersAsync(DeleteUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5269,6 +5459,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you succeed in calling an asynchronous API operation, a response is generated before a resulting task is completed. Therefore, to query the result of the task, you can use the TaskId parameter returned by the API operation.
+          *
+          * @param request ListTasksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTasksResponse
+         */
         public ListTasksResponse ListTasksWithOptions(ListTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5292,6 +5489,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<ListTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you succeed in calling an asynchronous API operation, a response is generated before a resulting task is completed. Therefore, to query the result of the task, you can use the TaskId parameter returned by the API operation.
+          *
+          * @param request ListTasksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTasksResponse
+         */
         public async Task<ListTasksResponse> ListTasksWithOptionsAsync(ListTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5315,12 +5519,24 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<ListTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you succeed in calling an asynchronous API operation, a response is generated before a resulting task is completed. Therefore, to query the result of the task, you can use the TaskId parameter returned by the API operation.
+          *
+          * @param request ListTasksRequest
+          * @return ListTasksResponse
+         */
         public ListTasksResponse ListTasks(ListTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTasksWithOptions(request, runtime);
         }
 
+        /**
+          * If you succeed in calling an asynchronous API operation, a response is generated before a resulting task is completed. Therefore, to query the result of the task, you can use the TaskId parameter returned by the API operation.
+          *
+          * @param request ListTasksRequest
+          * @return ListTasksResponse
+         */
         public async Task<ListTasksResponse> ListTasksAsync(ListTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5559,6 +5775,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await ListVolumesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you modify the basic information of a cluster, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
+          *
+          * @param request ModifyClusterAttributesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyClusterAttributesResponse
+         */
         public ModifyClusterAttributesResponse ModifyClusterAttributesWithOptions(ModifyClusterAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5582,6 +5805,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<ModifyClusterAttributesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you modify the basic information of a cluster, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
+          *
+          * @param request ModifyClusterAttributesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyClusterAttributesResponse
+         */
         public async Task<ModifyClusterAttributesResponse> ModifyClusterAttributesWithOptionsAsync(ModifyClusterAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5605,12 +5835,24 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<ModifyClusterAttributesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you modify the basic information of a cluster, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
+          *
+          * @param request ModifyClusterAttributesRequest
+          * @return ModifyClusterAttributesResponse
+         */
         public ModifyClusterAttributesResponse ModifyClusterAttributes(ModifyClusterAttributesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyClusterAttributesWithOptions(request, runtime);
         }
 
+        /**
+          * Before you modify the basic information of a cluster, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
+          *
+          * @param request ModifyClusterAttributesRequest
+          * @return ModifyClusterAttributesResponse
+         */
         public async Task<ModifyClusterAttributesResponse> ModifyClusterAttributesAsync(ModifyClusterAttributesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6071,6 +6313,17 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await QueryServicePackAndPriceWithOptionsAsync(runtime);
         }
 
+        /**
+          * You can call the operation to reset and restore a cluster only when the cluster is in the Exception state. You can call the [ListClusters](~~87116~~) operation to query the ID and status of a cluster.
+          * We recommend that you export all job data before you restore a cluster. When you reset and restore a cluster, take note of the following impacts:
+          * *   The system disks of all nodes are changed. By default, new system disks are configured based on the settings that you specified when the cluster was created.
+          * *   The data on the system disks and data disks of all cluster nodes is lost. The data includes user information, job information, scheduler queue information, and configuration data of auto-scaling queues. However, the data on Apsara File Storage NAS file systems is retained.
+          * *   The self-managed queues in the cluster are deleted. All nodes are retained and migrated to the default queue of the cluster.
+          *
+          * @param request RecoverClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RecoverClusterResponse
+         */
         public RecoverClusterResponse RecoverClusterWithOptions(RecoverClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6094,6 +6347,17 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<RecoverClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the operation to reset and restore a cluster only when the cluster is in the Exception state. You can call the [ListClusters](~~87116~~) operation to query the ID and status of a cluster.
+          * We recommend that you export all job data before you restore a cluster. When you reset and restore a cluster, take note of the following impacts:
+          * *   The system disks of all nodes are changed. By default, new system disks are configured based on the settings that you specified when the cluster was created.
+          * *   The data on the system disks and data disks of all cluster nodes is lost. The data includes user information, job information, scheduler queue information, and configuration data of auto-scaling queues. However, the data on Apsara File Storage NAS file systems is retained.
+          * *   The self-managed queues in the cluster are deleted. All nodes are retained and migrated to the default queue of the cluster.
+          *
+          * @param request RecoverClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RecoverClusterResponse
+         */
         public async Task<RecoverClusterResponse> RecoverClusterWithOptionsAsync(RecoverClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6117,12 +6381,32 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<RecoverClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the operation to reset and restore a cluster only when the cluster is in the Exception state. You can call the [ListClusters](~~87116~~) operation to query the ID and status of a cluster.
+          * We recommend that you export all job data before you restore a cluster. When you reset and restore a cluster, take note of the following impacts:
+          * *   The system disks of all nodes are changed. By default, new system disks are configured based on the settings that you specified when the cluster was created.
+          * *   The data on the system disks and data disks of all cluster nodes is lost. The data includes user information, job information, scheduler queue information, and configuration data of auto-scaling queues. However, the data on Apsara File Storage NAS file systems is retained.
+          * *   The self-managed queues in the cluster are deleted. All nodes are retained and migrated to the default queue of the cluster.
+          *
+          * @param request RecoverClusterRequest
+          * @return RecoverClusterResponse
+         */
         public RecoverClusterResponse RecoverCluster(RecoverClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecoverClusterWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the operation to reset and restore a cluster only when the cluster is in the Exception state. You can call the [ListClusters](~~87116~~) operation to query the ID and status of a cluster.
+          * We recommend that you export all job data before you restore a cluster. When you reset and restore a cluster, take note of the following impacts:
+          * *   The system disks of all nodes are changed. By default, new system disks are configured based on the settings that you specified when the cluster was created.
+          * *   The data on the system disks and data disks of all cluster nodes is lost. The data includes user information, job information, scheduler queue information, and configuration data of auto-scaling queues. However, the data on Apsara File Storage NAS file systems is retained.
+          * *   The self-managed queues in the cluster are deleted. All nodes are retained and migrated to the default queue of the cluster.
+          *
+          * @param request RecoverClusterRequest
+          * @return RecoverClusterResponse
+         */
         public async Task<RecoverClusterResponse> RecoverClusterAsync(RecoverClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6187,6 +6471,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await RerunJobsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After a node is reset, the operating system and software return to their initial states. To ensure that jobs run as expected, we recommend that you do not reset running nodes unless you need to perform crash recovery.
+          *
+          * @param request ResetNodesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResetNodesResponse
+         */
         public ResetNodesResponse ResetNodesWithOptions(ResetNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6210,6 +6501,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<ResetNodesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After a node is reset, the operating system and software return to their initial states. To ensure that jobs run as expected, we recommend that you do not reset running nodes unless you need to perform crash recovery.
+          *
+          * @param request ResetNodesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResetNodesResponse
+         */
         public async Task<ResetNodesResponse> ResetNodesWithOptionsAsync(ResetNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6233,12 +6531,24 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<ResetNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After a node is reset, the operating system and software return to their initial states. To ensure that jobs run as expected, we recommend that you do not reset running nodes unless you need to perform crash recovery.
+          *
+          * @param request ResetNodesRequest
+          * @return ResetNodesResponse
+         */
         public ResetNodesResponse ResetNodes(ResetNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetNodesWithOptions(request, runtime);
         }
 
+        /**
+          * After a node is reset, the operating system and software return to their initial states. To ensure that jobs run as expected, we recommend that you do not reset running nodes unless you need to perform crash recovery.
+          *
+          * @param request ResetNodesRequest
+          * @return ResetNodesResponse
+         */
         public async Task<ResetNodesResponse> ResetNodesAsync(ResetNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6303,6 +6613,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await RunCloudMetricProfilingWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you specify different auto scaling settings in the Queue Configuration section and Global Configurations section on the Auto Scale page, the settings in the Queue Configuration section prevail.
+          *
+          * @param request SetAutoScaleConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetAutoScaleConfigResponse
+         */
         public SetAutoScaleConfigResponse SetAutoScaleConfigWithOptions(SetAutoScaleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6326,6 +6643,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<SetAutoScaleConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you specify different auto scaling settings in the Queue Configuration section and Global Configurations section on the Auto Scale page, the settings in the Queue Configuration section prevail.
+          *
+          * @param request SetAutoScaleConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetAutoScaleConfigResponse
+         */
         public async Task<SetAutoScaleConfigResponse> SetAutoScaleConfigWithOptionsAsync(SetAutoScaleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6349,12 +6673,24 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<SetAutoScaleConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you specify different auto scaling settings in the Queue Configuration section and Global Configurations section on the Auto Scale page, the settings in the Queue Configuration section prevail.
+          *
+          * @param request SetAutoScaleConfigRequest
+          * @return SetAutoScaleConfigResponse
+         */
         public SetAutoScaleConfigResponse SetAutoScaleConfig(SetAutoScaleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetAutoScaleConfigWithOptions(request, runtime);
         }
 
+        /**
+          * If you specify different auto scaling settings in the Queue Configuration section and Global Configurations section on the Auto Scale page, the settings in the Queue Configuration section prevail.
+          *
+          * @param request SetAutoScaleConfigRequest
+          * @return SetAutoScaleConfigResponse
+         */
         public async Task<SetAutoScaleConfigResponse> SetAutoScaleConfigAsync(SetAutoScaleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6997,6 +7333,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await StartVisualServiceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you stop a subscription compute node, its billing is not affected. If you stop a pay-as-you-go compute node for which you have enabled the *economical mode*, you are no longer charged for its computing resources. For more information, see [Economical mode](~~63353~~).
+          *
+          * @param request StopClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StopClusterResponse
+         */
         public StopClusterResponse StopClusterWithOptions(StopClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7020,6 +7363,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<StopClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you stop a subscription compute node, its billing is not affected. If you stop a pay-as-you-go compute node for which you have enabled the *economical mode*, you are no longer charged for its computing resources. For more information, see [Economical mode](~~63353~~).
+          *
+          * @param request StopClusterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StopClusterResponse
+         */
         public async Task<StopClusterResponse> StopClusterWithOptionsAsync(StopClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7043,12 +7393,24 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<StopClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you stop a subscription compute node, its billing is not affected. If you stop a pay-as-you-go compute node for which you have enabled the *economical mode*, you are no longer charged for its computing resources. For more information, see [Economical mode](~~63353~~).
+          *
+          * @param request StopClusterRequest
+          * @return StopClusterResponse
+         */
         public StopClusterResponse StopCluster(StopClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopClusterWithOptions(request, runtime);
         }
 
+        /**
+          * If you stop a subscription compute node, its billing is not affected. If you stop a pay-as-you-go compute node for which you have enabled the *economical mode*, you are no longer charged for its computing resources. For more information, see [Economical mode](~~63353~~).
+          *
+          * @param request StopClusterRequest
+          * @return StopClusterResponse
+         */
         public async Task<StopClusterResponse> StopClusterAsync(StopClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7287,6 +7649,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await StopVisualServiceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you submit a job in a cluster, you must upload a job file to the cluster, for example, job.sh. For more information, see [CreateJobFile](~~159049~~).
+          *
+          * @param request SubmitJobRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SubmitJobResponse
+         */
         public SubmitJobResponse SubmitJobWithOptions(SubmitJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7310,6 +7679,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<SubmitJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you submit a job in a cluster, you must upload a job file to the cluster, for example, job.sh. For more information, see [CreateJobFile](~~159049~~).
+          *
+          * @param request SubmitJobRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SubmitJobResponse
+         */
         public async Task<SubmitJobResponse> SubmitJobWithOptionsAsync(SubmitJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7333,12 +7709,24 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<SubmitJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you submit a job in a cluster, you must upload a job file to the cluster, for example, job.sh. For more information, see [CreateJobFile](~~159049~~).
+          *
+          * @param request SubmitJobRequest
+          * @return SubmitJobResponse
+         */
         public SubmitJobResponse SubmitJob(SubmitJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitJobWithOptions(request, runtime);
         }
 
+        /**
+          * Before you submit a job in a cluster, you must upload a job file to the cluster, for example, job.sh. For more information, see [CreateJobFile](~~159049~~).
+          *
+          * @param request SubmitJobRequest
+          * @return SubmitJobResponse
+         */
         public async Task<SubmitJobResponse> SubmitJobAsync(SubmitJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7823,6 +8211,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return await UpdateClusterVolumesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After you update the instance types of a resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
+          *
+          * @param request UpdateQueueConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateQueueConfigResponse
+         */
         public UpdateQueueConfigResponse UpdateQueueConfigWithOptions(UpdateQueueConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7846,6 +8241,13 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<UpdateQueueConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After you update the instance types of a resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
+          *
+          * @param request UpdateQueueConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateQueueConfigResponse
+         */
         public async Task<UpdateQueueConfigResponse> UpdateQueueConfigWithOptionsAsync(UpdateQueueConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7869,12 +8271,24 @@ namespace AlibabaCloud.SDK.EHPC20180412
             return TeaModel.ToObject<UpdateQueueConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After you update the instance types of a resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
+          *
+          * @param request UpdateQueueConfigRequest
+          * @return UpdateQueueConfigResponse
+         */
         public UpdateQueueConfigResponse UpdateQueueConfig(UpdateQueueConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateQueueConfigWithOptions(request, runtime);
         }
 
+        /**
+          * After you update the instance types of a resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
+          *
+          * @param request UpdateQueueConfigRequest
+          * @return UpdateQueueConfigResponse
+         */
         public async Task<UpdateQueueConfigResponse> UpdateQueueConfigAsync(UpdateQueueConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

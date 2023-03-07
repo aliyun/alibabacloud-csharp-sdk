@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class SyncUsersRequest : TeaModel {
+        /// <summary>
+        /// The ID of the cluster.
+        /// 
+        /// You can call the [ListClusters](~~87116~~) operation to query the list of E-HPC clusters.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the cluster resides.
+        /// 
+        /// You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is available.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

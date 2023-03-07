@@ -13,6 +13,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public bool? Async { get; set; }
 
+        /// <summary>
+        /// The ID of the E-HPC cluster.
+        /// 
+        /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -21,10 +26,27 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public List<ModifyUserPasswordsRequestUser> User { get; set; }
         public class ModifyUserPasswordsRequestUser : TeaModel {
+            /// <summary>
+            /// The name of the Nth user whose password you want to modify. Valid values of N: 1 to 100.
+            /// 
+            /// You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// The password of the Nth user. The password must be 8 to 30 characters in length and contain three of the following items:
+            /// 
+            /// *   Uppercase letter
+            /// *   Lowercase letter
+            /// *   Digit
+            /// *   Special character: `()~!@#$%^&*-_+=|{}[]:;\"/<>,.?/`
+            /// 
+            /// Valid values of N: 1 to 100
+            /// 
+            /// >  We recommend that you use HTTPS to call the AddUsers operation to ensure that the password remains confidential.
+            /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
             public string Password { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListCurrentClientVersionResponseBody : TeaModel {
+        /// <summary>
+        /// The latest version number of the E-HPC client.
+        /// </summary>
         [NameInMap("ClientVersion")]
         [Validation(Required=false)]
         public string ClientVersion { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class UpgradeClientRequest : TeaModel {
+        /// <summary>
+        /// The version to which the client will be upgraded. By default, the client is upgraded to the latest version. You can call the [ListCurrentClientVersion](~~87223~~) operation to query the latest version number of the Elastic High Performance Computing (E-HPC) client.
+        /// </summary>
         [NameInMap("ClientVersion")]
         [Validation(Required=false)]
         public string ClientVersion { get; set; }
 
+        /// <summary>
+        /// The ID of the cluster.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }

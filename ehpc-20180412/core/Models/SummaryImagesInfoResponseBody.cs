@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class SummaryImagesInfoResponseBody : TeaModel {
+        /// <summary>
+        /// The detailed information about the image.
+        /// </summary>
         [NameInMap("ImagesInfo")]
         [Validation(Required=false)]
         public string ImagesInfo { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

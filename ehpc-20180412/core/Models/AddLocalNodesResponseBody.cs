@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class AddLocalNodesResponseBody : TeaModel {
+        /// <summary>
+        /// The local nodes in the cluster.
+        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public AddLocalNodesResponseBodyInstanceIds InstanceIds { get; set; }
@@ -19,6 +22,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

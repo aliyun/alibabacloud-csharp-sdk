@@ -13,10 +13,20 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public bool? Async { get; set; }
 
+        /// <summary>
+        /// The ID of the cluster.
+        /// 
+        /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// The ID of the job.
+        /// 
+        /// You can call the [ListJobs](~~87251~~) operation to query the job ID.
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }

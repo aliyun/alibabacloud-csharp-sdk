@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class StopVisualServiceResponseBody : TeaModel {
+        /// <summary>
+        /// The status of the VNC Remote Service. Valid values:
+        /// 
+        /// *   Service started
+        /// *   Service stopped
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

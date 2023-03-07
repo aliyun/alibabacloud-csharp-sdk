@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class GetIfEcsTypeSupportHtConfigRequest : TeaModel {
+        /// <summary>
+        /// The instance type of the ECS instance.
+        /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
