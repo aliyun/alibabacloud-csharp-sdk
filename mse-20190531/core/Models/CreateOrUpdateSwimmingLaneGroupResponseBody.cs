@@ -21,7 +21,65 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public object Data { get; set; }
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData Data { get; set; }
+        public class CreateOrUpdateSwimmingLaneGroupResponseBodyData : TeaModel {
+            [NameInMap("AppIds")]
+            [Validation(Required=false)]
+            public string AppIds { get; set; }
+
+            [NameInMap("DbGrayEnable")]
+            [Validation(Required=false)]
+            public string DbGrayEnable { get; set; }
+
+            [NameInMap("Enable")]
+            [Validation(Required=false)]
+            public string Enable { get; set; }
+
+            [NameInMap("EntryApp")]
+            [Validation(Required=false)]
+            public string EntryApp { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
+
+            [NameInMap("MessageQueueFilterSide")]
+            [Validation(Required=false)]
+            public string MessageQueueFilterSide { get; set; }
+
+            [NameInMap("MessageQueueGrayEnable")]
+            [Validation(Required=false)]
+            public bool? MessageQueueGrayEnable { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
+
+            [NameInMap("RecordCanaryDetail")]
+            [Validation(Required=false)]
+            public bool? RecordCanaryDetail { get; set; }
+
+            [NameInMap("Region")]
+            [Validation(Required=false)]
+            public string Region { get; set; }
+
+            [NameInMap("Source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
+
+            [NameInMap("UserId")]
+            [Validation(Required=false)]
+            public string UserId { get; set; }
+
+        }
 
         /// <summary>
         /// The dynamic part in the error message.

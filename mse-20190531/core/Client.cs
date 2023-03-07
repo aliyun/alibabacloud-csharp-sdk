@@ -3464,6 +3464,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["Namespace"] = request.Namespace;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordCanaryDetail))
+            {
+                query["RecordCanaryDetail"] = request.RecordCanaryDetail;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["Region"] = request.Region;
@@ -3554,6 +3558,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordCanaryDetail))
+            {
+                query["RecordCanaryDetail"] = request.RecordCanaryDetail;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
@@ -5314,6 +5322,18 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["GroupId"] = request.GroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5344,6 +5364,18 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

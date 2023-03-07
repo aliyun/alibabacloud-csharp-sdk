@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
+        [NameInMap("RecordCanaryDetail")]
+        [Validation(Required=false)]
+        public bool? RecordCanaryDetail { get; set; }
+
         /// <summary>
         /// The region ID.
         /// </summary>
