@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The details about the VPC firewall.
+        /// An array that consists of the details about the VPC firewall.
         /// </summary>
         [NameInMap("VpcFirewalls")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// 
             /// *   **opened**: The VPC firewall is enabled.
             /// *   **closed**: The VPC firewall is disabled.
-            /// *   **notconfigured**: The VPC firewall is not created.
+            /// *   **notconfigured**: The VPC firewall is not configured.
             /// </summary>
             [NameInMap("FirewallSwitchStatus")]
             [Validation(Required=false)]
@@ -72,8 +72,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 /// <summary>
                 /// Indicates whether basic protection is enabled. Valid values:
                 /// 
-                /// - **1**: yes
-                /// - **0**: no
+                /// *   **1**: yes
+                /// *   **0**: no
                 /// </summary>
                 [NameInMap("BasicRules")]
                 [Validation(Required=false)]
@@ -82,8 +82,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 /// <summary>
                 /// Indicates whether virtual patching is enabled. Valid values:
                 /// 
-                /// - **1**: yes
-                /// - **0**: no
+                /// *   **1**: yes
+                /// *   **0**: no
                 /// </summary>
                 [NameInMap("EnableAllPatch")]
                 [Validation(Required=false)]
@@ -92,8 +92,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 /// <summary>
                 /// The mode of the IPS. Valid values:
                 /// 
-                /// - **1**: block mode
-                /// - **0**: monitor mode
+                /// *   **1**: block mode
+                /// *   **0**: monitor mode
                 /// </summary>
                 [NameInMap("RunMode")]
                 [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string AuthorizationStatus { get; set; }
 
                 /// <summary>
-                /// The CIDR blocks that are protected by the VPC firewall.
+                /// An array consisting of the CIDR blocks that are protected by the VPC firewall.
                 /// </summary>
                 [NameInMap("DefendCidrList")]
                 [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string SupportManualMode { get; set; }
 
                 /// <summary>
-                /// The type of the CEN transit router. Valid values:
+                /// The edition of the CEN transit router. Valid values:
                 /// 
                 /// *   **Basic**: Basic Edition transit router
                 /// *   **Enterprise**: Enterprise Edition transit router
@@ -199,14 +199,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string TransitRouterType { get; set; }
 
                 /// <summary>
-                /// The CIDR block of the VPC.
+                /// An array that consists of the CIDR blocks of the VPC.
                 /// </summary>
                 [NameInMap("VpcCidrTableList")]
                 [Validation(Required=false)]
                 public List<DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList> VpcCidrTableList { get; set; }
                 public class DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList : TeaModel {
                     /// <summary>
-                    /// The route entries for the VPC.
+                    /// An array that consists of the route entries for the VPC.
                     /// </summary>
                     [NameInMap("RouteEntryList")]
                     [Validation(Required=false)]
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                         public string DestinationCidr { get; set; }
 
                         /// <summary>
-                        /// The instance ID for the next hop of the VPC.
+                        /// The instance ID of the next hop for the VPC.
                         /// </summary>
                         [NameInMap("NextHopInstanceId")]
                         [Validation(Required=false)]
@@ -261,18 +261,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string MemberUid { get; set; }
 
             /// <summary>
-            /// Indicates whether the VPC firewall can be automatically enabled to protect VPC traffic based on route learning. Valid values: 
+            /// Indicates whether the VPC firewall can be automatically enabled to protect VPC traffic based on route learning. Valid values:
             /// 
-            /// - **passed**: The VPC firewall can be automatically enabled.
-            /// - **failed**: The VPC firewall cannot be automatically enabled.
-            /// - **unknown**: The VPC firewall is in an unknown state.
+            /// *   **passed**: The VPC firewall can be automatically enabled.
+            /// *   **failed**: The VPC firewall cannot be automatically enabled.
+            /// *   **unknown**: The VPC firewall is in an unknown state.
             /// </summary>
             [NameInMap("PrecheckStatus")]
             [Validation(Required=false)]
             public string PrecheckStatus { get; set; }
 
             /// <summary>
-            /// Indicates whether you can create a VPC firewall in a region. Valid values:
+            /// Indicates whether you can create a VPC firewall in a specified region. Valid values:
             /// 
             /// *   **enable**: yes
             /// *   **disable**: no
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// The result code of the operation that creates the VPC firewall. Valid values:
             /// 
             /// *   **Unauthorized**: Cloud Firewall is not authorized to access the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.
-            /// *   **RegionDisable**: .VPC Firewall is not supported in the region of the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.
+            /// *   **RegionDisable**: VPC Firewall is not supported in the region of the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.
             /// *   **OpsDisable**: You are not allowed to create the VPC firewall.
             /// *   **VbrNotSupport**: The VPC firewall cannot be created for a VBR that is attached to the CEN instance.
             /// *   Empty string: You can create a VPC firewall for the network instance.

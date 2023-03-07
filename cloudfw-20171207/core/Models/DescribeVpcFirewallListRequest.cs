@@ -33,10 +33,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   **opened**: The VPC firewall is enabled.
         /// *   **closed**: The VPC firewall is disabled.
-        /// *   **notconfigured**: The VPC firewall is not created.
-        /// *   **configured**: The VPC firewall is created.
+        /// *   **notconfigured**: The VPC firewall is not configured.
+        /// *   **configured**: The VPC firewall is configured.
         /// 
-        /// >  If you do not specify this parameter, VPC firewalls in all states are queried.
+        /// > If you do not specify this parameter, VPC firewalls in all states are queried.
         /// </summary>
         [NameInMap("FirewallSwitchStatus")]
         [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The region ID of the VPC.
         /// 
-        /// >  For more information about the regions, see [Supported regions](~~195657~~).
+        /// > For more information about the regions, see [Supported regions](~~195657~~).
         /// </summary>
         [NameInMap("RegionNo")]
         [Validation(Required=false)]

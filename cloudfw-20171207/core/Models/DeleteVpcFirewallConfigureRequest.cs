@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteVpcFirewallConfigureRequest : TeaModel {
         /// <summary>
-        /// The natural language of the request and response. Valid values:
+        /// The language of the content within the request and response. Valid values:
         /// 
         /// *   **zh**: Chinese (default)
         /// *   **en**: English
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// The list of the VPC firewall IDs.
+        /// The instance IDs of VPC firewalls.
         /// </summary>
         [NameInMap("VpcFirewallIdList")]
         [Validation(Required=false)]

@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **in**: inbound
         /// *   **out**: outbound
         /// 
-        /// > If you do not specify this parameter, the intrusion events in both inbound and outbound directions are queried.
+        /// > If you do not specify this parameter, the intrusion events that are recorded for both inbound and outbound traffic are queried.
         /// </summary>
         [NameInMap("Direction")]
         [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NoLocation { get; set; }
 
         /// <summary>
-        /// The order in which you want to sort the query results. Valid values:
+        /// The order in which you want to sort the results. Valid values:
         /// 
         /// *   **asc**: the ascending order.
         /// *   **desc**: the descending order. This is the default value.
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **1**: alerting
         /// *   **2**: blocking
         /// 
-        /// > If you do not specify this parameter, the intrusion events that are detected by firewalls in both states are queried.
+        /// > If you do not specify this parameter, all intrusion events that are detected by the firewall are queried, regardless of the firewall status.
         /// </summary>
         [NameInMap("RuleResult")]
         [Validation(Required=false)]
@@ -169,14 +169,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **2**: virtual patching
         /// *   **4**: threat intelligence
         /// 
-        /// > If you do not specify this parameter, the intrusion events that are detected by using all rules are queried.
+        /// > If you do not specify this parameter, the intrusion events that are detected by all rules are queried.
         /// </summary>
         [NameInMap("RuleSource")]
         [Validation(Required=false)]
         public string RuleSource { get; set; }
 
         /// <summary>
-        /// The field based on which the results are sorted. Valid values:
+        /// The field based on which you want to sort the results. Valid values:
         /// 
         /// *   **VulLevel**: The results are sorted based on the risk level field. This is the default value.
         /// *   **LastTime**: The results are sorted based on the most recent occurrence time.

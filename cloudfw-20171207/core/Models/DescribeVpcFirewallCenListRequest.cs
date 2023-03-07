@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// 
         /// *   **opened**: The VPC firewall is enabled.
         /// *   **closed**: The VPC firewall is disabled.
-        /// *   **notconfigured**: The VPC firewall is not created.
-        /// *   **configured**: The VPC firewall is created but is not enabled.
+        /// *   **notconfigured**: The VPC firewall is not configured.
+        /// *   **configured**: The VPC firewall is configured but is not enabled.
         /// 
-        /// >  If you do not specify this parameter, VPC firewalls in all states are queried.
+        /// > If you do not specify this parameter, VPC firewalls in all states are queried.
         /// </summary>
         [NameInMap("FirewallSwitchStatus")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The UID of the member that is manged by your Alibaba Cloud account. The member is also an Alibaba Cloud account.
+        /// The UID of the member that is managed by your Alibaba Cloud account. The member is also an Alibaba Cloud account.
         /// </summary>
         [NameInMap("MemberUid")]
         [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The region ID of the VPC.
         /// 
-        /// >  For more information about the regions, see [Supported regions](~~195657~~).
+        /// > For more information about the regions, see [Supported regions](~~195657~~).
         /// </summary>
         [NameInMap("RegionNo")]
         [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **auto**: automatic mode
         /// *   **manual**: manual mode
         /// 
-        /// >  If you do not specify this parameter, VPC firewalls in all routing modes are queried.
+        /// > If you do not specify this parameter, VPC firewalls in all routing modes are queried.
         /// </summary>
         [NameInMap("RouteMode")]
         [Validation(Required=false)]

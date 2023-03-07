@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The ID of the region to which the VPC belongs.
         /// 
-        /// >  For more information about the regions, see [Supported regions](~~195657~~).
+        /// > For more information about the regions, see [Supported regions](~~195657~~).
         /// </summary>
         [NameInMap("VpcRegion")]
         [Validation(Required=false)]

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// The list of VPC firewall IDs.
+        /// The instance IDs of VPC firewalls.
         /// </summary>
         [NameInMap("VpcFirewallIdList")]
         [Validation(Required=false)]

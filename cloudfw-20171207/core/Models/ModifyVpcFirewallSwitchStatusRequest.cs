@@ -12,15 +12,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// Specifies whether to enable the VPC firewall. Valid values:
         /// 
-        /// *   **open**: enables the VPC firewall.
-        /// *   **close**: disables the VPC firewall.
+        /// *   **open**: yes
+        /// *   **close**: no
         /// </summary>
         [NameInMap("FirewallSwitch")]
         [Validation(Required=false)]
         public string FirewallSwitch { get; set; }
 
         /// <summary>
-        /// The natural language of the request and response. Valid values:
+        /// The language of the content within the request and response. Valid values:
         /// 
         /// *   **zh**: Chinese (default)
         /// *   **en**: English
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The instance ID of the VPC firewall.
         /// 
-        /// >  You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.
+        /// > You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.
         /// </summary>
         [NameInMap("VpcFirewallId")]
         [Validation(Required=false)]

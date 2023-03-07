@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The details about the VPC firewalls.
+        /// An array that consists of the details about the VPC firewalls.
         /// </summary>
         [NameInMap("VpcFirewalls")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// 
             /// *   **opened**: The VPC firewall is enabled.
             /// *   **closed**: The VPC firewall is disabled.
-            /// *   **notconfigured**: The VPC firewall is not created.
+            /// *   **notconfigured**: The VPC firewall is not configured.
             /// </summary>
             [NameInMap("FirewallSwitchStatus")]
             [Validation(Required=false)]
@@ -133,14 +133,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string RegionNo { get; set; }
 
                 /// <summary>
-                /// The CIDR blocks of the local VPC.
+                /// An array that consists of the CIDR blocks of the local VPC.
                 /// </summary>
                 [NameInMap("VpcCidrTableList")]
                 [Validation(Required=false)]
                 public List<DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList> VpcCidrTableList { get; set; }
                 public class DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList : TeaModel {
                     /// <summary>
-                    /// The route entries of the local VPC.
+                    /// An array that consists of the route entries of the local VPC.
                     /// </summary>
                     [NameInMap("RouteEntryList")]
                     [Validation(Required=false)]
@@ -223,14 +223,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string RegionNo { get; set; }
 
                 /// <summary>
-                /// The CIDR blocks of the peer VPC.
+                /// An array that consists of the CIDR blocks of the peer VPC.
                 /// </summary>
                 [NameInMap("VpcCidrTableList")]
                 [Validation(Required=false)]
                 public List<DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableList> VpcCidrTableList { get; set; }
                 public class DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableList : TeaModel {
                     /// <summary>
-                    /// The route entries of the peer VPC.
+                    /// An array that consists of the route entries of the peer VPC.
                     /// </summary>
                     [NameInMap("RouteEntryList")]
                     [Validation(Required=false)]

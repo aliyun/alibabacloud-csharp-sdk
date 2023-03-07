@@ -17,26 +17,27 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeVpcFirewallAclGroupListResponseBodyAclGroupList> AclGroupList { get; set; }
         public class DescribeVpcFirewallAclGroupListResponseBodyAclGroupList : TeaModel {
             /// <summary>
-            /// The ID of the policy group. 
+            /// The ID of the policy group.
             /// 
             /// Valid values:
             /// 
-            /// - If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.  
+            /// *   If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.
             /// 
-            /// Example: cen-ervw0g12b5jbw****
-            /// - If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall instance.  
+            ///     Example: cen-ervw0g12b5jbw\*\*\*\*
             /// 
-            /// Example: vfw-a42bbb7b887148c9****
+            /// *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall instance.
+            /// 
+            ///     Example: vfw-a42bbb7b887148c9\*\*\*\*
             /// </summary>
             [NameInMap("AclGroupId")]
             [Validation(Required=false)]
             public string AclGroupId { get; set; }
 
             /// <summary>
-            /// The name of the policy group. Valid values: 
+            /// The name of the policy group. Valid values:
             /// 
-            /// - If the VPC firewall is used to protect a CEN instance, the value of this parameter is the name of the CEN instance.
-            /// - If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the name of the VPC firewall instance.
+            /// *   If the VPC firewall is used to protect a CEN instance, the value of this parameter is the name of the CEN instance.
+            /// *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the name of the VPC firewall instance.
             /// </summary>
             [NameInMap("AclGroupName")]
             [Validation(Required=false)]

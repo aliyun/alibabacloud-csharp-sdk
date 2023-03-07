@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The direction of the traffic for the intrusion events. Valid values:
+            /// The direction of the traffic for the intrusion event. Valid values:
             /// 
             /// *   **in**: inbound
             /// *   **out**: outbound
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? FirstEventTime { get; set; }
 
             /// <summary>
-            /// The information about the geographical location of the IP address. The value is a struct that contains the following parameters: **CityId**, **CityName**, **CountryId**, and **CountryName**.\
+            /// The geographical information about the IP address. The value is a struct that contains the following parameters: **CityId**, **CityName**, **CountryId**, and **CountryName**.\
             /// ****************
             /// </summary>
             [NameInMap("IPLocationInfo")]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? LastEventTime { get; set; }
 
             /// <summary>
-            /// The information about the private IP address of the intrusion event. The value is an array that contains the following parameters: **RegionNo**, **ResourceInstanceId**, **ResourceInstanceName**, and **ResourcePrivateIP**.\
+            /// The information about the private IP address in the intrusion event. The value is an array that contains the following parameters: **RegionNo**, **ResourceInstanceId**, **ResourceInstanceName**, and **ResourcePrivateIP**.\
             /// ****************
             /// </summary>
             [NameInMap("ResourcePrivateIPList")]
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SrcIPTag { get; set; }
 
             /// <summary>
-            /// The source private IP addresses of the intrusion event.
+            /// An array that consists of the source private IP addresses in the intrusion event.
             /// </summary>
             [NameInMap("SrcPrivateIPList")]
             [Validation(Required=false)]
@@ -359,7 +359,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of intrusion events.
+        /// The total number of risk events.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AttachmentName { get; set; }
 
             /// <summary>
-            /// The CIDR blocks that are protected by the VPC firewall.
+            /// An array consisting of the CIDR blocks that are protected by the VPC firewall.
             /// </summary>
             [NameInMap("DefendCidrList")]
             [Validation(Required=false)]
             public List<string> DefendCidrList { get; set; }
 
             /// <summary>
-            /// The Elastic Network Interfaces (ENIs).
+            /// An array that consists of the elastic network interfaces (ENIs).
             /// </summary>
             [NameInMap("EniList")]
             [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// The ID of the vSwitch. The value of this parameter is returned only when the RouteMode parameter is set to manual.
+            /// The ID of the specified vSwitch when the routing mode is manual.
             /// </summary>
             [NameInMap("ManualVSwitchId")]
             [Validation(Required=false)]
@@ -123,15 +123,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// The routing mode. Valid values:
             /// 
-            /// *   auto
-            /// *   manual
+            /// *   auto: automatic mode
+            /// *   manual: manual mode
             /// </summary>
             [NameInMap("RouteMode")]
             [Validation(Required=false)]
             public string RouteMode { get; set; }
 
             /// <summary>
-            /// Indicates whether the routing mode can be set to manual. Valid values:
+            /// Indicates whether the manual routing mode is supported. Valid values:
             /// 
             /// *   **1**: yes
             /// *   **0**: no
@@ -158,14 +158,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TransitRouterType { get; set; }
 
             /// <summary>
-            /// The CIDR blocks of the VPC.
+            /// An array that consists of the CIDR blocks of the VPC.
             /// </summary>
             [NameInMap("VpcCidrTableList")]
             [Validation(Required=false)]
             public List<DescribeVpcFirewallCenDetailResponseBodyLocalVpcVpcCidrTableList> VpcCidrTableList { get; set; }
             public class DescribeVpcFirewallCenDetailResponseBodyLocalVpcVpcCidrTableList : TeaModel {
                 /// <summary>
-                /// The route entries of the VPC.
+                /// An array that consists of the route entries for the VPC.
                 /// </summary>
                 [NameInMap("RouteEntryList")]
                 [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 }
 
                 /// <summary>
-                /// The ID of the route table for the VPC.
+                /// The route table ID of the VPC.
                 /// </summary>
                 [NameInMap("RouteTableId")]
                 [Validation(Required=false)]
