@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        [NameInMap("FcServiceName")]
+        [Validation(Required=false)]
+        public string FcServiceName { get; set; }
+
+        [NameInMap("FcVersion")]
+        [Validation(Required=false)]
+        public string FcVersion { get; set; }
+
         /// <summary>
         /// The unique ID of the gateway.
         /// </summary>
