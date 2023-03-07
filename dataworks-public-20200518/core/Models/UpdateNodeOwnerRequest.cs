@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateNodeOwnerRequest : TeaModel {
+        /// <summary>
+        /// The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID.
+        /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public long? NodeId { get; set; }
 
+        /// <summary>
+        /// The environment where the node runs. Valid values: DEV and PROD. The value DEV indicates the development environment. The value PROD indicates the production environment.
+        /// </summary>
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]
         public string ProjectEnv { get; set; }
 
+        /// <summary>
+        /// The Alibaba Cloud account ID of the node owner. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.
+        /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }

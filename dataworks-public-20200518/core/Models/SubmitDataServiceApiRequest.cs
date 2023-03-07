@@ -8,13 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class TopTenErrorTimesInstanceRequest : TeaModel {
-        /// <summary>
-        /// The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.
-        /// </summary>
+    public class SubmitDataServiceApiRequest : TeaModel {
+        [NameInMap("ApiId")]
+        [Validation(Required=false)]
+        public long? ApiId { get; set; }
+
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
+
+        [NameInMap("TenantId")]
+        [Validation(Required=false)]
+        public long? TenantId { get; set; }
 
     }
 

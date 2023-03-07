@@ -21328,6 +21328,88 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await StopInstanceWithOptionsAsync(request, runtime);
         }
 
+        public SubmitDataServiceApiResponse SubmitDataServiceApiWithOptions(SubmitDataServiceApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                body["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitDataServiceApi",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitDataServiceApiResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SubmitDataServiceApiResponse> SubmitDataServiceApiWithOptionsAsync(SubmitDataServiceApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                body["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitDataServiceApi",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitDataServiceApiResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SubmitDataServiceApiResponse SubmitDataServiceApi(SubmitDataServiceApiRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitDataServiceApiWithOptions(request, runtime);
+        }
+
+        public async Task<SubmitDataServiceApiResponse> SubmitDataServiceApiAsync(SubmitDataServiceApiRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitDataServiceApiWithOptionsAsync(request, runtime);
+        }
+
         public SubmitFileResponse SubmitFileWithOptions(SubmitFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
