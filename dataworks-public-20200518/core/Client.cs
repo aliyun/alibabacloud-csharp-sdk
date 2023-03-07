@@ -20496,6 +20496,104 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await RunTriggerNodeWithOptionsAsync(request, runtime);
         }
 
+        public SaveDataServiceApiTestResultResponse SaveDataServiceApiTestResultWithOptions(SaveDataServiceApiTestResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                body["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoGenerate))
+            {
+                body["AutoGenerate"] = request.AutoGenerate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailResultSample))
+            {
+                body["FailResultSample"] = request.FailResultSample;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultSample))
+            {
+                body["ResultSample"] = request.ResultSample;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveDataServiceApiTestResult",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveDataServiceApiTestResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SaveDataServiceApiTestResultResponse> SaveDataServiceApiTestResultWithOptionsAsync(SaveDataServiceApiTestResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                body["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoGenerate))
+            {
+                body["AutoGenerate"] = request.AutoGenerate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailResultSample))
+            {
+                body["FailResultSample"] = request.FailResultSample;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultSample))
+            {
+                body["ResultSample"] = request.ResultSample;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveDataServiceApiTestResult",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveDataServiceApiTestResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SaveDataServiceApiTestResultResponse SaveDataServiceApiTestResult(SaveDataServiceApiTestResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SaveDataServiceApiTestResultWithOptions(request, runtime);
+        }
+
+        public async Task<SaveDataServiceApiTestResultResponse> SaveDataServiceApiTestResultAsync(SaveDataServiceApiTestResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SaveDataServiceApiTestResultWithOptionsAsync(request, runtime);
+        }
+
         public ScanSensitiveDataResponse ScanSensitiveDataWithOptions(ScanSensitiveDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
