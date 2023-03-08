@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
                 [Validation(Required=false)]
                 public string VideoUrl { get; set; }
 
+                [NameInMap("WordSubtitlesUrl")]
+                [Validation(Required=false)]
+                public string WordSubtitlesUrl { get; set; }
+
             }
 
             [NameInMap("TaskUuid")]
