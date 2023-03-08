@@ -17,20 +17,6 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         [Validation(Required=false)]
         public List<ListResourceTypesResponseBodyResourceTypes> ResourceTypes { get; set; }
         public class ListResourceTypesResponseBodyResourceTypes : TeaModel {
-            [NameInMap("CodeMapping")]
-            [Validation(Required=false)]
-            public ListResourceTypesResponseBodyResourceTypesCodeMapping CodeMapping { get; set; }
-            public class ListResourceTypesResponseBodyResourceTypesCodeMapping : TeaModel {
-                [NameInMap("ResourceGroup")]
-                [Validation(Required=false)]
-                public string ResourceGroup { get; set; }
-
-                [NameInMap("Tag")]
-                [Validation(Required=false)]
-                public string Tag { get; set; }
-
-            }
-
             [NameInMap("FilterKeys")]
             [Validation(Required=false)]
             public List<string> FilterKeys { get; set; }
