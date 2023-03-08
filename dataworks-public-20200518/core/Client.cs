@@ -3708,6 +3708,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["MatchExpression"] = request.MatchExpression;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 body["ProjectName"] = request.ProjectName;
@@ -3750,6 +3754,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchExpression))
             {
                 body["MatchExpression"] = request.MatchExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
@@ -3806,6 +3814,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["Follower"] = request.Follower;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 body["ProjectName"] = request.ProjectName;
@@ -3844,6 +3856,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Follower))
             {
                 body["Follower"] = request.Follower;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
@@ -4042,6 +4058,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["PredictType"] = request.PredictType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 body["ProjectName"] = request.ProjectName;
@@ -4136,6 +4156,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PredictType))
             {
                 body["PredictType"] = request.PredictType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
@@ -6040,6 +6064,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["EnvType"] = request.EnvType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 body["ProjectName"] = request.ProjectName;
@@ -6074,6 +6102,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
             {
                 body["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
@@ -6125,6 +6157,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["FollowerId"] = request.FollowerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 body["ProjectName"] = request.ProjectName;
@@ -6162,6 +6198,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FollowerId))
             {
                 body["FollowerId"] = request.FollowerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
@@ -6336,6 +6376,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 body["ProjectName"] = request.ProjectName;
@@ -6367,6 +6411,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 body["ProjectName"] = request.ProjectName;
@@ -12620,6 +12668,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["MatchExpression"] = request.MatchExpression;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 body["ProjectName"] = request.ProjectName;
@@ -12658,6 +12710,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchExpression))
             {
                 body["MatchExpression"] = request.MatchExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
@@ -12706,6 +12762,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["EntityId"] = request.EntityId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 body["ProjectName"] = request.ProjectName;
@@ -12736,6 +12796,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
             {
                 body["EntityId"] = request.EntityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
@@ -12776,6 +12840,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 body["ProjectName"] = request.ProjectName;
@@ -12807,6 +12875,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 body["ProjectName"] = request.ProjectName;
@@ -17963,6 +18035,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 body["ProjectName"] = request.ProjectName;
@@ -18016,6 +18092,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
@@ -18084,6 +18164,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 body["ProjectName"] = request.ProjectName;
@@ -18130,6 +18214,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
@@ -18190,6 +18278,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 body["ProjectName"] = request.ProjectName;
@@ -18228,6 +18320,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
@@ -22592,13 +22688,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await UpdateConnectionWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
-          *
-          * @param request UpdateDIProjectConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateDIProjectConfigResponse
-         */
         public UpdateDIProjectConfigResponse UpdateDIProjectConfigWithOptions(UpdateDIProjectConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22638,13 +22727,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<UpdateDIProjectConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
-          *
-          * @param request UpdateDIProjectConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateDIProjectConfigResponse
-         */
         public async Task<UpdateDIProjectConfigResponse> UpdateDIProjectConfigWithOptionsAsync(UpdateDIProjectConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22684,24 +22766,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<UpdateDIProjectConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
-          *
-          * @param request UpdateDIProjectConfigRequest
-          * @return UpdateDIProjectConfigResponse
-         */
         public UpdateDIProjectConfigResponse UpdateDIProjectConfig(UpdateDIProjectConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateDIProjectConfigWithOptions(request, runtime);
         }
 
-        /**
-          * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
-          *
-          * @param request UpdateDIProjectConfigRequest
-          * @return UpdateDIProjectConfigResponse
-         */
         public async Task<UpdateDIProjectConfigResponse> UpdateDIProjectConfigAsync(UpdateDIProjectConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -24168,6 +24238,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["FollowerId"] = request.FollowerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 body["ProjectName"] = request.ProjectName;
@@ -24206,6 +24280,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FollowerId))
             {
                 body["FollowerId"] = request.FollowerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
@@ -24289,6 +24367,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PredictType))
             {
                 body["PredictType"] = request.PredictType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
@@ -24392,6 +24474,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PredictType))
             {
                 body["PredictType"] = request.PredictType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {

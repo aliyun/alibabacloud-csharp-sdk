@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
         /// <summary>
         /// The name of the compute engine instance or data source for which data quality is monitored.
         /// </summary>

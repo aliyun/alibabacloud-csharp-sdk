@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string Follower { get; set; }
 
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
         /// <summary>
         /// The name of the computing engine instance or data source.
         /// </summary>
