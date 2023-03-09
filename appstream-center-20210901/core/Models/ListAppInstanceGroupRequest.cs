@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
+        [NameInMap("NodeInstanceType")]
+        [Validation(Required=false)]
+        public string NodeInstanceType { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }

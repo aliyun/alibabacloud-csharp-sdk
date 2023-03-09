@@ -1,0 +1,46 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Appstream_center20210901.Models
+{
+    public class GetConnectionTicketResponseBody : TeaModel {
+        [NameInMap("AppInstanceGroupId")]
+        [Validation(Required=false)]
+        public string AppInstanceGroupId { get; set; }
+
+        [NameInMap("AppInstanceId")]
+        [Validation(Required=false)]
+        public string AppInstanceId { get; set; }
+
+        [NameInMap("BizRegionId")]
+        [Validation(Required=false)]
+        public string BizRegionId { get; set; }
+
+        [NameInMap("OsType")]
+        [Validation(Required=false)]
+        public string OsType { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
+
+        [NameInMap("TaskStatus")]
+        [Validation(Required=false)]
+        public string TaskStatus { get; set; }
+
+        [NameInMap("Ticket")]
+        [Validation(Required=false)]
+        public string Ticket { get; set; }
+
+    }
+
+}

@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
-    public class UpdateAppInstanceGroupImageRequest : TeaModel {
-        [NameInMap("AppCenterImageId")]
-        [Validation(Required=false)]
-        public string AppCenterImageId { get; set; }
-
+    public class DeleteAppInstancesRequest : TeaModel {
         [NameInMap("AppInstanceGroupId")]
         [Validation(Required=false)]
         public string AppInstanceGroupId { get; set; }
 
-        [NameInMap("BizRegionId")]
+        [NameInMap("AppInstanceIds")]
         [Validation(Required=false)]
-        public string BizRegionId { get; set; }
+        public List<string> AppInstanceIds { get; set; }
 
         [NameInMap("ProductType")]
         [Validation(Required=false)]

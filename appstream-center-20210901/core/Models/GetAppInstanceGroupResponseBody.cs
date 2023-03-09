@@ -8,11 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
-    public class ListAppInstanceGroupResponseBody : TeaModel {
+    public class GetAppInstanceGroupResponseBody : TeaModel {
+        /// <summary>
+        /// AppInstanceGroupModels
+        /// </summary>
         [NameInMap("AppInstanceGroupModels")]
         [Validation(Required=false)]
-        public List<ListAppInstanceGroupResponseBodyAppInstanceGroupModels> AppInstanceGroupModels { get; set; }
-        public class ListAppInstanceGroupResponseBodyAppInstanceGroupModels : TeaModel {
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels AppInstanceGroupModels { get; set; }
+        public class GetAppInstanceGroupResponseBodyAppInstanceGroupModels : TeaModel {
             [NameInMap("Amount")]
             [Validation(Required=false)]
             public int? Amount { get; set; }
@@ -20,6 +23,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("AppCenterImageId")]
             [Validation(Required=false)]
             public string AppCenterImageId { get; set; }
+
+            [NameInMap("AppCenterImageName")]
+            [Validation(Required=false)]
+            public string AppCenterImageName { get; set; }
 
             [NameInMap("AppInstanceGroupId")]
             [Validation(Required=false)]
@@ -33,18 +40,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string AppInstanceType { get; set; }
 
-            [NameInMap("AppPolicyId")]
-            [Validation(Required=false)]
-            public string AppPolicyId { get; set; }
-
             [NameInMap("Apps")]
             [Validation(Required=false)]
-            public List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> Apps { get; set; }
-            public class ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps : TeaModel {
-                [NameInMap("AppIcon")]
-                [Validation(Required=false)]
-                public string AppIcon { get; set; }
-
+            public List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> Apps { get; set; }
+            public class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps : TeaModel {
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
@@ -53,19 +52,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
-                [NameInMap("AppVersion")]
-                [Validation(Required=false)]
-                public string AppVersion { get; set; }
-
-                [NameInMap("AppVersionName")]
-                [Validation(Required=false)]
-                public string AppVersionName { get; set; }
-
             }
-
-            [NameInMap("ChargeResourceMode")]
-            [Validation(Required=false)]
-            public string ChargeResourceMode { get; set; }
 
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
@@ -81,8 +68,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             [NameInMap("NodePool")]
             [Validation(Required=false)]
-            public List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool> NodePool { get; set; }
-            public class ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool : TeaModel {
+            public List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool> NodePool { get; set; }
+            public class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool : TeaModel {
                 [NameInMap("Amount")]
                 [Validation(Required=false)]
                 public int? Amount { get; set; }
@@ -117,8 +104,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                 [NameInMap("RecurrenceSchedules")]
                 [Validation(Required=false)]
-                public List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedules> RecurrenceSchedules { get; set; }
-                public class ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedules : TeaModel {
+                public List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedules> RecurrenceSchedules { get; set; }
+                public class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedules : TeaModel {
                     [NameInMap("RecurrenceType")]
                     [Validation(Required=false)]
                     public string RecurrenceType { get; set; }
@@ -129,8 +116,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                     [NameInMap("TimerPeriods")]
                     [Validation(Required=false)]
-                    public List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedulesTimerPeriods> TimerPeriods { get; set; }
-                    public class ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedulesTimerPeriods : TeaModel {
+                    public List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedulesTimerPeriods> TimerPeriods { get; set; }
+                    public class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedulesTimerPeriods : TeaModel {
                         [NameInMap("Amount")]
                         [Validation(Required=false)]
                         public int? Amount { get; set; }
@@ -191,8 +178,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             [NameInMap("OtaInfo")]
             [Validation(Required=false)]
-            public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsOtaInfo OtaInfo { get; set; }
-            public class ListAppInstanceGroupResponseBodyAppInstanceGroupModelsOtaInfo : TeaModel {
+            public GetAppInstanceGroupResponseBodyAppInstanceGroupModelsOtaInfo OtaInfo { get; set; }
+            public class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsOtaInfo : TeaModel {
                 [NameInMap("NewOtaVersion")]
                 [Validation(Required=false)]
                 public string NewOtaVersion { get; set; }
@@ -233,21 +220,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
 
     }
 
