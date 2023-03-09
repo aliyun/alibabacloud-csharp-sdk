@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("product")]
+        [NameInMap("SnapshotId")]
         [Validation(Required=false)]
-        public string Product { get; set; }
+        public string SnapshotId { get; set; }
 
     }
 
