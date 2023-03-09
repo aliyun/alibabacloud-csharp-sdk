@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class ResumeBindingRequest : TeaModel {
-        [NameInMap("DatasetName")]
+    public class RocketMQ : TeaModel {
+        [NameInMap("Endpoint")]
         [Validation(Required=false)]
-        public string DatasetName { get; set; }
+        public string Endpoint { get; set; }
 
-        [NameInMap("ProjectName")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string ProjectName { get; set; }
+        public string InstanceId { get; set; }
 
-        [NameInMap("URI")]
+        [NameInMap("TopicName")]
         [Validation(Required=false)]
-        public string URI { get; set; }
+        public string TopicName { get; set; }
 
     }
 

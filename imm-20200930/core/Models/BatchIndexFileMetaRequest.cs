@@ -15,7 +15,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         [NameInMap("Files")]
         [Validation(Required=false)]
-        public List<FileForReq> Files { get; set; }
+        public List<InputFile> Files { get; set; }
+
+        [NameInMap("Notification")]
+        [Validation(Required=false)]
+        public Notification Notification { get; set; }
 
         [NameInMap("NotifyTopicName")]
         [Validation(Required=false)]

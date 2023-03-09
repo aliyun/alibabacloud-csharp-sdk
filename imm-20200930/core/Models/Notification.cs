@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class StopBindingResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+    public class Notification : TeaModel {
+        [NameInMap("MNS")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public MNS MNS { get; set; }
+
+        [NameInMap("RocketMQ")]
+        [Validation(Required=false)]
+        public RocketMQ RocketMQ { get; set; }
 
     }
 

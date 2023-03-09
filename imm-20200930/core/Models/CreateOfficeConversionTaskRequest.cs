@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public long? MaxSheetRow { get; set; }
 
+        [NameInMap("Notification")]
+        [Validation(Required=false)]
+        public Notification Notification { get; set; }
+
         [NameInMap("NotifyTopicName")]
         [Validation(Required=false)]
         public string NotifyTopicName { get; set; }

@@ -548,6 +548,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.FilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Files, "Files", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
@@ -556,6 +560,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilesShrink))
             {
                 query["Files"] = request.FilesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -593,6 +601,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.FilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Files, "Files", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
@@ -601,6 +613,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilesShrink))
             {
                 query["Files"] = request.FilesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -846,10 +862,18 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -903,10 +927,18 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -1200,6 +1232,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.KdtreeOptionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KdtreeOption, "KdtreeOption", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OctreeOption))
             {
                 request.OctreeOptionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OctreeOption, "OctreeOption", "json");
@@ -1224,6 +1260,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KdtreeOptionShrink))
             {
                 query["KdtreeOption"] = request.KdtreeOptionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -1293,6 +1333,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.KdtreeOptionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KdtreeOption, "KdtreeOption", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OctreeOption))
             {
                 request.OctreeOptionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OctreeOption, "OctreeOption", "json");
@@ -1317,6 +1361,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KdtreeOptionShrink))
             {
                 query["KdtreeOption"] = request.KdtreeOptionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -1670,6 +1718,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateFacesSearchingTaskShrinkRequest request = new CreateFacesSearchingTaskShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
             {
                 request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
@@ -1682,6 +1734,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResult))
             {
                 query["MaxResult"] = request.MaxResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -1727,6 +1783,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateFacesSearchingTaskShrinkRequest request = new CreateFacesSearchingTaskShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
             {
                 request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
@@ -1739,6 +1799,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResult))
             {
                 query["MaxResult"] = request.MaxResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -1796,6 +1860,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateFigureClusteringTaskShrinkRequest request = new CreateFigureClusteringTaskShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -1804,6 +1872,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
                 query["DatasetName"] = request.DatasetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -1845,6 +1917,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateFigureClusteringTaskShrinkRequest request = new CreateFigureClusteringTaskShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -1853,6 +1929,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
                 query["DatasetName"] = request.DatasetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -1906,6 +1986,14 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateFigureClustersMergingTaskShrinkRequest request = new CreateFigureClustersMergingTaskShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Froms))
+            {
+                request.FromsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Froms, "Froms", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -1918,6 +2006,14 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 query["From"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromsShrink))
+            {
+                query["Froms"] = request.FromsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -1963,6 +2059,14 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateFigureClustersMergingTaskShrinkRequest request = new CreateFigureClustersMergingTaskShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Froms))
+            {
+                request.FromsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Froms, "Froms", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -1975,6 +2079,14 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 query["From"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromsShrink))
+            {
+                query["Froms"] = request.FromsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -2036,6 +2148,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
             {
                 request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
@@ -2048,6 +2164,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -2105,6 +2225,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
             {
                 request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
@@ -2117,6 +2241,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -2186,6 +2314,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedFiles))
             {
                 request.SelectedFilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedFiles, "SelectedFiles", "json");
@@ -2198,6 +2330,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -2255,6 +2391,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedFiles))
             {
                 request.SelectedFilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedFiles, "SelectedFiles", "json");
@@ -2267,6 +2407,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -2336,6 +2480,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scenes))
             {
                 request.ScenesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scenes, "Scenes", "json");
@@ -2356,6 +2504,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxFrames))
             {
                 query["MaxFrames"] = request.MaxFrames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -2413,6 +2565,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scenes))
             {
                 request.ScenesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scenes, "Scenes", "json");
@@ -2433,6 +2589,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxFrames))
             {
                 query["MaxFrames"] = request.MaxFrames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -2502,6 +2662,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
             {
                 request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
@@ -2534,6 +2698,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Margin))
             {
                 query["Margin"] = request.Margin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -2599,6 +2767,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
             {
                 request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
@@ -2631,6 +2803,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Margin))
             {
                 query["Margin"] = request.Margin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -2708,6 +2884,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
             {
                 request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
@@ -2720,6 +2900,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -2773,6 +2957,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
             {
                 request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
@@ -2785,6 +2973,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -2854,6 +3046,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.LocationOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LocationOptions, "LocationOptions", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -2870,6 +3066,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationOptionsShrink))
             {
                 query["LocationOptions"] = request.LocationOptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -2919,6 +3119,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.LocationOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LocationOptions, "LocationOptions", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -2935,6 +3139,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationOptionsShrink))
             {
                 query["LocationOptions"] = request.LocationOptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -2992,6 +3200,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
             {
                 request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
@@ -3008,6 +3220,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -3061,6 +3277,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
             {
                 request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
@@ -3077,6 +3297,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -3142,6 +3366,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -3194,6 +3422,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSheetRow))
             {
                 query["MaxSheetRow"] = request.MaxSheetRow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -3303,6 +3535,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -3355,6 +3591,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSheetRow))
             {
                 query["MaxSheetRow"] = request.MaxSheetRow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -3618,11 +3858,19 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CustomLabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CustomLabels, "CustomLabels", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
                 query["Tags"] = request.TagsShrink;
@@ -3721,11 +3969,19 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CustomLabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CustomLabels, "CustomLabels", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
                 query["Tags"] = request.TagsShrink;
@@ -3974,6 +4230,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -3982,6 +4242,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -4031,6 +4295,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -4039,6 +4307,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -4100,6 +4372,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scenes))
             {
                 request.ScenesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scenes, "Scenes", "json");
@@ -4120,6 +4396,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxFrames))
             {
                 query["MaxFrames"] = request.MaxFrames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -4177,6 +4457,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scenes))
             {
                 request.ScenesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scenes, "Scenes", "json");
@@ -4197,6 +4481,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxFrames))
             {
                 query["MaxFrames"] = request.MaxFrames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -5830,6 +6118,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Permission))
             {
                 request.PermissionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Permission, "Permission", "json");
@@ -5862,6 +6154,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hidecmb))
             {
                 query["Hidecmb"] = request.Hidecmb;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -5931,6 +6227,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Permission))
             {
                 request.PermissionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Permission, "Permission", "json");
@@ -5963,6 +6263,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hidecmb))
             {
                 query["Hidecmb"] = request.Hidecmb;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -6906,6 +7210,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.FileShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.File, "File", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
@@ -6914,6 +7222,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileShrink))
             {
                 query["File"] = request.FileShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
@@ -6951,6 +7263,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.FileShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.File, "File", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
@@ -6959,6 +7275,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileShrink))
             {
                 query["File"] = request.FileShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyTopicName))
             {
