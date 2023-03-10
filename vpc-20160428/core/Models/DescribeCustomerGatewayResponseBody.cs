@@ -41,6 +41,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public DescribeCustomerGatewayResponseBodyTags Tags { get; set; }
+        public class DescribeCustomerGatewayResponseBodyTags : TeaModel {
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public List<DescribeCustomerGatewayResponseBodyTagsTag> Tag { get; set; }
+            public class DescribeCustomerGatewayResponseBodyTagsTag : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+        }
+
     }
 
 }

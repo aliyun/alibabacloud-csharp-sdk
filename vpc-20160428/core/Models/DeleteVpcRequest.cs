@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteVpcRequest : TeaModel {
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        [NameInMap("ForceDelete")]
+        [Validation(Required=false)]
+        public bool? ForceDelete { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

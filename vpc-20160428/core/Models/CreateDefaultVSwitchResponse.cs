@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
-    public class UpdateCrossBoarderStatusResponse : TeaModel {
+    public class CreateDefaultVSwitchResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public UpdateCrossBoarderStatusResponseBody Body { get; set; }
+        public CreateDefaultVSwitchResponseBody Body { get; set; }
 
     }
 

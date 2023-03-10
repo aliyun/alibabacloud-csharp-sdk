@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
-    public class CreateFlowLogResponseBody : TeaModel {
-        [NameInMap("FlowLogId")]
-        [Validation(Required=false)]
-        public string FlowLogId { get; set; }
-
+    public class CreateDefaultVpcResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("RouteTableId")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string RouteTableId { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("VRouterId")]
         [Validation(Required=false)]
-        public string Success { get; set; }
+        public string VRouterId { get; set; }
+
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
 
     }
 

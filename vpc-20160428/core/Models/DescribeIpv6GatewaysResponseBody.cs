@@ -49,9 +49,33 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
+                public string ResourceGroupId { get; set; }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTags Tags { get; set; }
+                public class DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag> Tag { get; set; }
+                    public class DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
 
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]

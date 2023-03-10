@@ -149,6 +149,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTags Tags { get; set; }
+                public class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTagsTag> Tag { get; set; }
+                    public class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTagsTag : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
+
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }

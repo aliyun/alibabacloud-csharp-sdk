@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
+            [NameInMap("GrantType")]
+            [Validation(Required=false)]
+            public string GrantType { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }

@@ -53,6 +53,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<DescribeNetworkAclsRequestTags> Tags { get; set; }
+        public class DescribeNetworkAclsRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

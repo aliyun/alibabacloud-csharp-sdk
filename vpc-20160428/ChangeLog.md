@@ -1,3 +1,6 @@
+2023-03-10 Version: 2.0.10
+- Support create default VPC and create default vSwitch .
+
 2023-01-31 Version: 2.0.9
 - Supported set high definition monitor log status for eip.
 - Supported batch associate eip to cloud products.

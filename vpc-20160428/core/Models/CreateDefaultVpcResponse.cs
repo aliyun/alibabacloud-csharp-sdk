@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
-    public class ModifyCommonBandwidthPackagePayTypeResponse : TeaModel {
+    public class CreateDefaultVpcResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ModifyCommonBandwidthPackagePayTypeResponseBody Body { get; set; }
+        public CreateDefaultVpcResponseBody Body { get; set; }
 
     }
 

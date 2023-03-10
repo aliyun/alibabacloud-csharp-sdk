@@ -8,34 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
-    public class DescribeInstanceAutoRenewAttributeRequest : TeaModel {
-        [NameInMap("InstanceId")]
+    public class CreateDefaultVpcRequest : TeaModel {
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string ClientToken { get; set; }
 
-        [NameInMap("InstanceType")]
+        [NameInMap("EnableIpv6")]
         [Validation(Required=false)]
-        public string InstanceType { get; set; }
+        public bool? EnableIpv6 { get; set; }
+
+        [NameInMap("Ipv6CidrBlock")]
+        [Validation(Required=false)]
+        public string Ipv6CidrBlock { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("RenewalStatus")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public string RenewalStatus { get; set; }
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

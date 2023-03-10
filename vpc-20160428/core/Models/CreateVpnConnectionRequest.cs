@@ -85,6 +85,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateVpnConnectionRequestTags> Tags { get; set; }
+        public class CreateVpnConnectionRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("VpnGatewayId")]
         [Validation(Required=false)]
         public string VpnGatewayId { get; set; }

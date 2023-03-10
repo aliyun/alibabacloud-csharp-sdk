@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
-    public class ListPhysicalConnectionFeaturesRequest : TeaModel {
+    public class CreateDefaultVSwitchRequest : TeaModel {
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("Ipv6CidrBlock")]
+        [Validation(Required=false)]
+        public int? Ipv6CidrBlock { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("PhysicalConnectionId")]
-        [Validation(Required=false)]
-        public string PhysicalConnectionId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

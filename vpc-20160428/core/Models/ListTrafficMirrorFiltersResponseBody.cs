@@ -125,6 +125,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags> Tags { get; set; }
+            public class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             [NameInMap("TrafficMirrorFilterDescription")]
             [Validation(Required=false)]
             public string TrafficMirrorFilterDescription { get; set; }
