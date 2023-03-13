@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterMulticastDomainVSwitchesResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries returned on each page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The IDs of the vSwitches.
+        /// The vSwitch IDs.
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]

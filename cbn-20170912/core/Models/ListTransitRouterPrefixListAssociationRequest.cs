@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string NextHop { get; set; }
 
+        [NameInMap("NextHopInstanceId")]
+        [Validation(Required=false)]
+        public string NextHopInstanceId { get; set; }
+
         /// <summary>
         /// The type of the next hop. Valid values:
         /// 
@@ -82,6 +86,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
         /// <summary>
         /// The ID of the transit router.

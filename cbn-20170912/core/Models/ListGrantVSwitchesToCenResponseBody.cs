@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The list of vSwitches.
+        /// A list of vSwitches.
         /// </summary>
         [NameInMap("VSwitches")]
         [Validation(Required=false)]
@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
+            [NameInMap("VSwitchName")]
+            [Validation(Required=false)]
+            public string VSwitchName { get; set; }
+
             /// <summary>
             /// The ID of the VPC to which the vSwitch belongs.
             /// </summary>
@@ -59,7 +63,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// The ID of the zone to which the vSwitch belongs.
+            /// The ID of the zone where the vSwitch is deployed.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

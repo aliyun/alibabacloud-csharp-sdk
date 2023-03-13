@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// The ID of the network instance attached to the CEN instance.
+        /// The ID of the network instance.
         /// </summary>
         [NameInMap("ChildInstanceId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceRegionId { get; set; }
 
         /// <summary>
-        /// The ID of the route table configured on the network instance.
+        /// The ID of the route table of the network instance.
         /// </summary>
         [NameInMap("ChildInstanceRouteTableId")]
         [Validation(Required=false)]
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The type of the network instance. Valid values:
         /// 
-        /// *   **VPC**
-        /// *   **VBR**
-        /// *   **CCN**
+        /// *   **VPC**: VPC
+        /// *   **VBR**: VBR
+        /// *   **CCN**: Cloud Connect Network (CCN) instance
         /// </summary>
         [NameInMap("ChildInstanceType")]
         [Validation(Required=false)]

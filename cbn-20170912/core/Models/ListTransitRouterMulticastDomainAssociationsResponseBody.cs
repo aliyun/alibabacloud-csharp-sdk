@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The token that determines the start point of the query. Valid values:
         /// 
-        /// - If **NextToken** was not returned in the previous query, it indicates that no additional results exist.
-        /// - If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+        /// *   If **NextToken** is empty, it indicates that no subsequent query is to be sent.
+        /// *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
@@ -71,11 +71,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The status of the associated resource. Valid values: 
+            /// The association status. Valid values:
             /// 
-            /// - **Associated**: The resource is associated with the multicast domain.
-            /// - **Associating**: The resource is being associated with the multicast domain.
-            /// - **Dissociating**: The resource is being disassociated from the multicast domain.
+            /// *   **Associated**: The resource is associated with the multicast domain.
+            /// *   **Associating**: The resource is being associated with the multicast domain.
+            /// *   **Dissociating**: The resource is being disassociated from the multicast domain.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterMulticastDomainId { get; set; }
 
             /// <summary>
-            /// The IDs of the vSwitches.
+            /// The ID of the vSwitch.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]

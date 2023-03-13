@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeFlowlogsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the flow log.
+        /// A list of flow logs.
         /// </summary>
         [NameInMap("FlowLogs")]
         [Validation(Required=false)]
@@ -57,6 +57,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 [Validation(Required=false)]
                 public string FlowLogName { get; set; }
 
+                /// <summary>
+                /// The time window for collecting log data. Unit: seconds. Valid values: **60** and **600**. Default value: **600**.
+                /// </summary>
                 [NameInMap("Interval")]
                 [Validation(Required=false)]
                 public long? Interval { get; set; }
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The status of the flow log.
+                /// The status of the flow log. Valid values:
                 /// 
                 /// *   **Active**: The flow log is enabled.
                 /// *   **Inactive**: The flow log is disabled.
@@ -93,7 +96,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tags.
+                /// A list of tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -104,14 +107,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     public List<DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag> Tag { get; set; }
                     public class DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -121,6 +124,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
                 }
 
+                /// <summary>
+                /// The ID of the network instance connection.
+                /// </summary>
                 [NameInMap("TransitRouterAttachmentId")]
                 [Validation(Required=false)]
                 public string TransitRouterAttachmentId { get; set; }
@@ -130,7 +136,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The number of the returned page.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -151,7 +157,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful.
+        /// Indicates whether the call is successful. Valid values:
         /// 
         /// *   **true**: yes
         /// *   **false**: no
@@ -161,7 +167,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

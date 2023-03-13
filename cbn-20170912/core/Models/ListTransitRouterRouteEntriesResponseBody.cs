@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public bool? OperationalMode { get; set; }
 
+            [NameInMap("PrefixListId")]
+            [Validation(Required=false)]
+            public string PrefixListId { get; set; }
+
             /// <summary>
             /// The tag of the route. 
             /// 
@@ -120,6 +124,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string TransitRouterRouteEntryNextHopId { get; set; }
 
+            [NameInMap("TransitRouterRouteEntryNextHopResourceId")]
+            [Validation(Required=false)]
+            public string TransitRouterRouteEntryNextHopResourceId { get; set; }
+
+            [NameInMap("TransitRouterRouteEntryNextHopResourceType")]
+            [Validation(Required=false)]
+            public string TransitRouterRouteEntryNextHopResourceType { get; set; }
+
             /// <summary>
             /// The type of next hop. Valid values:
             /// 
@@ -129,6 +141,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [NameInMap("TransitRouterRouteEntryNextHopType")]
             [Validation(Required=false)]
             public string TransitRouterRouteEntryNextHopType { get; set; }
+
+            [NameInMap("TransitRouterRouteEntryOriginResourceId")]
+            [Validation(Required=false)]
+            public string TransitRouterRouteEntryOriginResourceId { get; set; }
+
+            [NameInMap("TransitRouterRouteEntryOriginResourceType")]
+            [Validation(Required=false)]
+            public string TransitRouterRouteEntryOriginResourceType { get; set; }
 
             /// <summary>
             /// The status of the route. Valid values: 

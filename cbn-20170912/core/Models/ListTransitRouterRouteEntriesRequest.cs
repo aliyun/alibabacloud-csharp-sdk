@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("PrefixListId")]
+        [Validation(Required=false)]
+        public string PrefixListId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -42,11 +46,26 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("RouteFilter")]
+        [Validation(Required=false)]
+        public List<ListTransitRouterRouteEntriesRequestRouteFilter> RouteFilter { get; set; }
+        public class ListTransitRouterRouteEntriesRequestRouteFilter : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public List<string> Value { get; set; }
+
+        }
+
         /// <summary>
         /// The destination CIDR block of the route.
         /// </summary>
         [NameInMap("TransitRouterRouteEntryDestinationCidrBlock")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TransitRouterRouteEntryDestinationCidrBlock { get; set; }
 
         /// <summary>
@@ -73,6 +92,30 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<string> TransitRouterRouteEntryNames { get; set; }
 
+        [NameInMap("TransitRouterRouteEntryNextHopId")]
+        [Validation(Required=false)]
+        public string TransitRouterRouteEntryNextHopId { get; set; }
+
+        [NameInMap("TransitRouterRouteEntryNextHopResourceId")]
+        [Validation(Required=false)]
+        public string TransitRouterRouteEntryNextHopResourceId { get; set; }
+
+        [NameInMap("TransitRouterRouteEntryNextHopResourceType")]
+        [Validation(Required=false)]
+        public string TransitRouterRouteEntryNextHopResourceType { get; set; }
+
+        [NameInMap("TransitRouterRouteEntryNextHopType")]
+        [Validation(Required=false)]
+        public string TransitRouterRouteEntryNextHopType { get; set; }
+
+        [NameInMap("TransitRouterRouteEntryOriginResourceId")]
+        [Validation(Required=false)]
+        public string TransitRouterRouteEntryOriginResourceId { get; set; }
+
+        [NameInMap("TransitRouterRouteEntryOriginResourceType")]
+        [Validation(Required=false)]
+        public string TransitRouterRouteEntryOriginResourceType { get; set; }
+
         /// <summary>
         /// The status of the route. Valid values: Valid values:
         /// 
@@ -83,6 +126,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("TransitRouterRouteEntryStatus")]
         [Validation(Required=false)]
         public string TransitRouterRouteEntryStatus { get; set; }
+
+        [NameInMap("TransitRouterRouteEntryType")]
+        [Validation(Required=false)]
+        public string TransitRouterRouteEntryType { get; set; }
 
         /// <summary>
         /// The ID of the route table of the Enterprise Edition transit router.

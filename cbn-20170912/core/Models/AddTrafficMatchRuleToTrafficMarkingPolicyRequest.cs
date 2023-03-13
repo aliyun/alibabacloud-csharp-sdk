@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must ensure that it is unique among all requests. The token can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
         /// 
         /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
         /// </summary>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether only to precheck the API request. Valid values:
+        /// Specifies whether to perform a dry run. Valid values:
         /// 
-        /// *   **true**: prechecks the request but does not add the traffic classification rule. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): sends the request. If the request passes the precheck, the traffic classification rule is added.
+        /// *   **true**: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   **false** (default): performs a dry run and sends the request.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficMarkingPolicyId { get; set; }
 
         /// <summary>
-        /// The information about the traffic classification rule.
+        /// The traffic classification rules.
         /// 
         /// You can specify at most 50 traffic classification rules.
         /// </summary>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public int? MatchDscp { get; set; }
 
             /// <summary>
-            /// The protocol used to match data packets.
+            /// The protocol that is used to match packets.
             /// 
             /// Valid values: **HTTP**, **HTTPS**, **TCP**, **UDP**, **SSH**, and **Telnet**. For more information, log on to the [Cloud Enterprise Network (CEN) console](https://cen.console.aliyun.com/cen/list).
             /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteCenChildInstanceRouteEntryToCenRequest : TeaModel {
         /// <summary>
-        /// The ID of the CEN instance.
+        /// The ID of the Cloud Enterprise Network (CEN) instance.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the Alibaba Cloud account to which the network instance belongs.
         /// 
-        /// >  If the network instance belongs to another Alibaba Cloud account, this parameter is required.
+        /// > If the network instance belongs to another Alibaba Cloud account, this parameter is required.
         /// </summary>
         [NameInMap("ChildInstanceAliUid")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceRegionId { get; set; }
 
         /// <summary>
-        /// The type of the attached network instance. Valid values:
+        /// The type of the network instance. Valid values:
         /// 
         /// *   **VPC**: a virtual private cloud (VPC)
         /// *   **VBR**: a virtual border router (VBR)
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the route table of the network instance.
+        /// The ID of the route table configured on the network instance.
         /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]

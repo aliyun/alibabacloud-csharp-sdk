@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ResolveAndRouteServiceInCenRequest : TeaModel {
         /// <summary>
-        /// The IDs of the regions in which the network instance of the cloud service that you want to access is deployed.
+        /// The ID of the region in which the cloud service that you want to access is deployed.
         /// 
         /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
         /// </summary>
@@ -28,9 +28,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must ensure that it is unique among all requests. The client token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The IP addresses or CIDR blocks of the cloud service.
         /// 
-        /// >  In most cases, multiple IP addresses or CIDR blocks are attached to the cloud service. We recommend that you call this operation multiple times to add all IP addresses and CIDR blocks of the cloud service.
+        /// > In most cases, multiple IP addresses or CIDR blocks are assigned to a cloud service. We recommend that you call this operation multiple times to add all IP addresses and CIDR blocks of the cloud service.
         /// </summary>
         [NameInMap("Host")]
         [Validation(Required=false)]

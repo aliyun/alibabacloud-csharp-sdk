@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListCenInterRegionTrafficQosPoliciesRequest : TeaModel {
         /// <summary>
-        /// The number of entries o return on each page. Valid values: **1** to **100**. Default value: **20**.
+        /// The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The token that determines the start point of the query. Valid values:
         /// 
-        /// - If this is your first query or no subsequent query is to be sent, ignore this parameter.
-        /// - If a subsequent query is to be sent, set the value to the value of **NextToken** that was returned from the last call.
+        /// *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
+        /// *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The description of the QoS policy. 
+        /// The description of the QoS policy.
         /// 
         /// The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
         /// </summary>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficQosPolicyId { get; set; }
 
         /// <summary>
-        /// The name of the QoS policy. 
+        /// The name of the QoS policy.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
         /// </summary>
         [NameInMap("TrafficQosPolicyName")]
         [Validation(Required=false)]

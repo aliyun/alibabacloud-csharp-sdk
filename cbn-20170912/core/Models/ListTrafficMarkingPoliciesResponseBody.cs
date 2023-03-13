@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTrafficMarkingPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries returned on each page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. 
+        /// The token that determines the start point of the query.
         /// 
-        /// - If **NextToken** was not returned in the previous query, it indicates that no additional results exist.
-        /// - If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+        /// *   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.
+        /// *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The information about the traffic marking policy.
+        /// The list of traffic marking policies.
         /// </summary>
         [NameInMap("TrafficMarkingPolicies")]
         [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// 
             /// *   **Creating**: The policy is being created.
             /// *   **Active**: The policy is available.
-            /// *   **Modifying**: The policy is being modified.
+            /// *   **Modifying**: The policy is being modified
             /// *   **Deleting**: The policy is being deleted.
             /// *   **Deleted**: The policy is deleted.
             /// </summary>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TrafficMarkingPolicyStatus { get; set; }
 
             /// <summary>
-            /// The information about the traffic classification rule.
+            /// The list of traffic classification rules.
             /// </summary>
             [NameInMap("TrafficMatchRules")]
             [Validation(Required=false)]
@@ -113,14 +113,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
                 /// <summary>
                 /// The destination port range used to match data packets.
-                /// 
-                /// Two destination port numbers are returned.
-                /// 
-                /// *   If the destination ports are the same, for example, port 80, the traffic classification rule matches data packets that are sent to port 80.
-                /// 
-                ///     If the destination ports are both -1, the traffic classification rule matches all data packets.
-                /// 
-                /// *   If the destination ports are different, for example, port 1 and port 200, the traffic classification rule matches data packets whose destination port ranges from port 1 to port 200.
                 /// </summary>
                 [NameInMap("DstPortRange")]
                 [Validation(Required=false)]
@@ -136,7 +128,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 /// <summary>
                 /// The protocol used to match data packets.
                 /// 
-                /// >  Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.
+                /// > Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.
                 /// </summary>
                 [NameInMap("Protocol")]
                 [Validation(Required=false)]
@@ -151,14 +143,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
                 /// <summary>
                 /// The source port range used to match data packets.
-                /// 
-                /// Two source port numbers are returned.
-                /// 
-                /// *   If the source ports are the same, for example, port 80, the traffic classification rule matches data packets that are sent from port 80.
-                /// 
-                ///     If the source ports are both -1, the traffic classification rule matches all data packets.
-                /// 
-                /// *   If the source ports are different, for example, port 1 and port 200, the traffic classification rule matches data packets whose source port ranges from port 1 to port 200.
                 /// </summary>
                 [NameInMap("SrcPortRange")]
                 [Validation(Required=false)]

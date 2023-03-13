@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ChildInstanceOwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the network instance.
+        /// The ID of the region where the network instance is deployed.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>

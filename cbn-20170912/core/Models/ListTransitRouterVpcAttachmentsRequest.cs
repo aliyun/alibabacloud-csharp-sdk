@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// The number of entries to return per page. Default value: **20**.
+        /// The number of entries to return on each page. Default value: **20**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -26,13 +26,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The token that determines the start point of the query. Valid values:
         /// 
-        /// *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
-        /// *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+        /// *   If this is your first query and no next queries are to be sent, ignore this parameter.
+        /// *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// The entity that pays the fees of the network instance. Valid values:
+        /// 
+        /// *   **PayByCenOwner**: the Alibaba Cloud account that owns the CEN instance.
+        /// *   **PayByResourceOwner**: the Alibaba Cloud account that owns the network instance.
+        /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
@@ -46,9 +52,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Enterprise Edition transit router is deployed.
+        /// The region ID of the Enterprise Edition transit router.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -62,21 +68,30 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// Specifies whether the network instance is attached to the CEN instance. Valid values:
+        /// 
+        /// *   **Attaching**: being attached to the transit router.
+        /// *   **Attached**: attached to the transit router.
+        /// *   **Detaching**: being detached from the transit router.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The tags of the resources.
+        /// The information about the tags.
+        /// 
+        /// You can specify at most 20 tags in each call.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTransitRouterVpcAttachmentsRequestTag> Tag { get; set; }
         public class ListTransitRouterVpcAttachmentsRequestTag : TeaModel {
             /// <summary>
-            /// The tag keys of the resources. 
+            /// The key of the tag that you want to add to the Auto Scaling resource.
             /// 
-            /// The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  
+            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// 
             /// You can specify at most 20 tag keys.
             /// </summary>
@@ -85,11 +100,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag values of the resources. 
+            /// The tag value.
             /// 
-            /// The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  
+            /// The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
             /// 
-            /// Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+            /// Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

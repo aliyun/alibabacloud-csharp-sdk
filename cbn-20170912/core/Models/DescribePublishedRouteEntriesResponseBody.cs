@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The array of routes.
+        /// A list of routes.
         /// </summary>
         [NameInMap("PublishedRouteEntries")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string ChildInstanceRouteTableId { get; set; }
 
                 /// <summary>
-                /// The array of conflicting routes.
+                /// A list of conflicting routes.
                 /// </summary>
                 [NameInMap("Conflicts")]
                 [Validation(Required=false)]
@@ -67,27 +67,27 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                         public string InstanceId { get; set; }
 
                         /// <summary>
-                        /// The type of the peer network instance on which conflicting routes are found. Valid values:
+                        /// The type of the peer network instance on which the conflicting routes are found. Valid values:
                         /// 
-                        /// *   **VPC**
-                        /// *   **VBR**
-                        /// *   **CCN**
+                        /// *   **VPC**: VPC
+                        /// *   **VBR**: VBR
+                        /// *   **CCN**: CCN instance
                         /// </summary>
                         [NameInMap("InstanceType")]
                         [Validation(Required=false)]
                         public string InstanceType { get; set; }
 
                         /// <summary>
-                        /// The region ID of the peer network instance on which conflicting routes are found is deployed.
+                        /// The ID of the region where the peer network instance on which the conflicting routes are found is deployed.
                         /// </summary>
                         [NameInMap("RegionId")]
                         [Validation(Required=false)]
                         public string RegionId { get; set; }
 
                         /// <summary>
-                        /// The cause of the route error. Valid values:
+                        /// The cause of the route confliction. Valid values:
                         /// 
-                        /// *   **conflict**: Routes have the same destination CIDR block.
+                        /// *   **conflict**: The routes have the same destination CIDR block.
                         /// *   **overflow**: The number of routes in the route table configured on another network instance has reached the upper limit.
                         /// </summary>
                         [NameInMap("Status")]
@@ -116,26 +116,26 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 /// The type of the instance specified as the next hop in the route.
                 /// 
                 /// *   **Instance**: ECS instance
-                /// *   **HaVip**: HAVIP
-                /// *   **RouterInterface**: router interface
-                /// *   **NetworkInterface**: ENI
-                /// *   **VpnGateway**: VPN gateway
-                /// *   **IPv6Gateway**: IPv6 gateway
-                /// *   **NatGateway**: NAT gateway
+                /// *   **HaVip**: high-availability virtual IP address (HAVIP).
+                /// *   **RouterInterface**: router interface.
+                /// *   **NetworkInterface**: elastic network interface (ENI).
+                /// *   **VpnGateway**: VPN gateway.
+                /// *   **IPv6Gateway**: IPv6 gateway.
+                /// *   **NatGateway**: NAT gateway.
                 /// *   **Attachment**: network instance connection
                 /// *   **service**: cloud service
-                /// *   **VBR**: virtual border router
+                /// *   **VBR**: VBR
                 /// *   **CCN**: CCN instance
-                /// *   **VPC**: virtual private cloud
+                /// *   **VPC**: VPC
                 /// *   **local**: system route. No next hop is specified.
                 /// *   **TR**: transit router
-                /// *   **BlackHole**: blackhole route. No next hop is specified.
-                /// *   **EcRouterInterface**: router interface for Express Connect
+                /// *   \*\*BlackHole\*\*: blackhole route. No next hop is specified.
+                /// *   \*\*EcRouterInterface\*\*: router interface for Express Connect
                 /// *   **HealthCheck**: health check
                 /// *   **AS**: access gateway for CCN
-                /// *   **classic**: classic network-type instance
+                /// *   **classicLink**: classic network-type instance
                 /// *   **GatewayEndpoint**: gateway endpoint
-                /// *   **CPE**: data center connected by VBRs
+                /// *   **CPE**: data center connected to the VBR
                 /// </summary>
                 [NameInMap("NextHopType")]
                 [Validation(Required=false)]

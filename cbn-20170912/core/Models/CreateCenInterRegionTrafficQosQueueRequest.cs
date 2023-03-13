@@ -12,19 +12,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must ensure that it is unique among all requests. The token can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+        /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether only to precheck the request. Valid values:
+        /// Specifies whether to perform a dry run. Valid values:
         /// 
-        /// *   **true**: prechecks the request but does not create the resource. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): sends the request. After the request passes the precheck, the queue is created.
+        /// *   **true**: performs a dry run. The system checks the required parameters, the request format, and the service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   **false** (default): performs a dry run and sends the request.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string QosQueueDescription { get; set; }
 
         /// <summary>
-        /// Enter a name for the queue.
+        /// The name of the queue.
         /// 
         /// The name must be 2 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). It must start with a letter.
         /// </summary>

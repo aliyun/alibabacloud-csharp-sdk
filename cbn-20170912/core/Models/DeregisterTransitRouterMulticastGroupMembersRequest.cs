@@ -12,17 +12,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether only to precheck the request. Valid values:
+        /// Specifies whether to perform a dry run. Valid values:
         /// 
-        /// *   **true**: only prechecks the request but does not remove the multicast members. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): sends the API request. After the request passes the precheck, the multicast members are removed.
+        /// *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   **false** (default): preforms a dry run and sends the request.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -36,9 +36,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string GroupIpAddress { get; set; }
 
         /// <summary>
-        /// The IDs of the elastic network interfaces (ENI).
-        /// 
-        /// You can specify multiple ENIs. Make sure that the total number of specified ENIs and multicast domains does not exceed five.
+        /// The IDs of elastic network interfaces (ENIs).
         /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]
@@ -53,9 +51,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The IDs of the multicast domains that is in a different region.
-        /// 
-        /// You can specify multiple multicast domains. Make sure that the total number of specified ENIs and multicast domains does not exceed five.
+        /// The ID of the multicast domain that is in a different region.
         /// </summary>
         [NameInMap("PeerTransitRouterMulticastDomains")]
         [Validation(Required=false)]

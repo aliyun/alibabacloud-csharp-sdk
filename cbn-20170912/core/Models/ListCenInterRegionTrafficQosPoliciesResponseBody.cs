@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. 
+        /// The token that determines the start point of the query.
         /// 
-        /// - If **NextToken** was not returned in the previous query, it indicates that no additional results exist.
-        /// - If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+        /// *   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.
+        /// *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
@@ -69,13 +69,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TrafficQosPolicyName { get; set; }
 
             /// <summary>
-            /// The status of the QoS policy. 
+            /// The status of the QoS policy. Valid values:
             /// 
-            /// - **Creating**: The QoS policy is being created.
-            /// - **Active**: The QoS policy is available.
-            /// - **Modifying**: The QoS policy is being modified
-            /// - **Deleting**: The QoS policy is being deleted.
-            /// - **Deleted**: The QoS policy is deleted.
+            /// *   **Creating**: The QoS policy is being created.
+            /// *   **Active**: The QoS policy is available.
+            /// *   **Modifying**: The QoS policy is being modified
+            /// *   **Deleting**: The QoS policy is being deleted.
+            /// *   **Deleted**: The QoS policy is deleted.
             /// </summary>
             [NameInMap("TrafficQosPolicyStatus")]
             [Validation(Required=false)]

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 /// <summary>
                 /// The time when the network instance was attached to the CEN instance.
                 /// 
-                /// The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
+                /// The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ChildInstanceAttachTime")]
                 [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public long? ChildInstanceOwnerId { get; set; }
 
                 /// <summary>
-                /// The region ID of the network instance.
+                /// The ID of the region where the network instance is deployed.
                 /// </summary>
                 [NameInMap("ChildInstanceRegionId")]
                 [Validation(Required=false)]
@@ -71,9 +71,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 /// <summary>
                 /// The status of the network instance. Valid values:
                 /// 
-                /// *   **Attaching**: The network instance is being attached to the CEN instance.
-                /// *   **Attached**: The network instance is attached to the CEN instance.
-                /// *   **Detaching**: The network instance is being detached from the CEN instance.
+                /// *   **Attaching**: The network instance is being created on the transit router.
+                /// *   **Attached**: The network instance has been created on the transit router.
+                /// *   **Detaching**: The network instance is being deleted from the transit router.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The number of the returned page.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string CenBandwidthPackageId { get; set; }
 
+            [NameInMap("CenId")]
+            [Validation(Required=false)]
+            public string CenId { get; set; }
+
             /// <summary>
             /// The time when the cross-region connection was created.
             /// 

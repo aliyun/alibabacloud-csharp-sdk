@@ -16,14 +16,28 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string CenId { get; set; }
 
+        /// <summary>
+        /// The field that is used to enable or disable a feature of the transit router.
+        /// </summary>
         [NameInMap("FeatureFilter")]
         [Validation(Required=false)]
         public List<ListTransitRoutersRequestFeatureFilter> FeatureFilter { get; set; }
         public class ListTransitRoutersRequestFeatureFilter : TeaModel {
+            /// <summary>
+            /// The value of the field that is used to enable or disable a feature of the transit router. Supported fields:
+            /// 
+            /// *   **Multicast**: the multicast feature.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The fields that are used to enable or disable the features of the transit router. The **Multicast** field supports only one value. Valid values:
+            /// 
+            /// *   **Enabled**: enables multicast.
+            /// *   **Disabled**: disables multicast.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public List<string> Value { get; set; }
@@ -39,7 +53,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number of the page to return. Default value: **1**.
+        /// The number of the page to return. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -69,21 +83,32 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The status of the transit router. Valid values:
+        /// 
+        /// *   **Creating**: The transit router is being created.
+        /// *   **Active**: The transit router is available.
+        /// *   **Modifying**: The transit router is being modified
+        /// *   **Deleting**: The transit router is being deleted.
+        /// *   **Upgrading**: The transit router is being upgraded.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The information about the tags.
+        /// 
+        /// You can specify at most 20 tags in each call.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTransitRoutersRequestTag> Tag { get; set; }
         public class ListTransitRoutersRequestTag : TeaModel {
             /// <summary>
-            /// The tag keys of the resources. 
+            /// The tag key.
             /// 
-            /// The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  
+            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// 
             /// You can specify at most 20 tag keys.
             /// </summary>
@@ -92,11 +117,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag values of the resources. 
+            /// The tag value.
             /// 
-            /// The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  
+            /// The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
             /// 
-            /// Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+            /// Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -111,10 +136,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string TransitRouterId { get; set; }
 
+        /// <summary>
+        /// The name of the Enterprise Edition transit router.
+        /// 
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+        /// </summary>
         [NameInMap("TransitRouterName")]
         [Validation(Required=false)]
         public string TransitRouterName { get; set; }
 
+        /// <summary>
+        /// The edition of the transit router. Valid values:
+        /// 
+        /// *   **Enterprise**: Enhance Edition
+        /// *   **Basic**: Basic Edition
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

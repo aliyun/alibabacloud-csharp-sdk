@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceId { get; set; }
 
         /// <summary>
-        /// The region ID of the network instance.
+        /// The ID of the region where the network instance is deployed.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The type of the network instance. Valid values:
         /// 
-        /// *   **VPC**: virtual private cloud (VPC)
-        /// *   **VBR**: virtual border router (VBR)
-        /// *   **CCN**: Cloud Connect Network (CCN) instance
+        /// *   **VPC**: VPC
+        /// *   **VBR**: VBR
+        /// *   **CCN**: CCN instance
         /// </summary>
         [NameInMap("ChildInstanceType")]
         [Validation(Required=false)]

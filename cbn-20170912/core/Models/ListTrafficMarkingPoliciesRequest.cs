@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The token that determines the start point of the query. Valid values:
         /// 
-        /// - If this is your first query or no subsequent query is to be sent, ignore this parameter.
-        /// - If a subsequent query is to be sent, set the value to the value of **NextToken** that was returned from the last call.
+        /// *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
+        /// *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -28,28 +28,32 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string GroupIpAddress { get; set; }
 
         /// <summary>
-        /// Whether to query multicast members.
+        /// Specified whether to query the multicast members. Valid values:
         /// 
-        /// - **false**: No.
-        /// - **true**: Yes.
+        /// *   **false**: no
+        /// *   **true**: yes
         /// 
-        /// > Used in conjunction with IsGroupMember.
-        /// > - If neither is configured, the multicast source and members will be queried by default.
-        /// > - If only one or both are configured, the configuration parameters shall prevail.
+        /// > This parameter can be set together with the IsGroupMember parameter.
+        /// 
+        /// *   If you do not set IsGroupMember or IsGroupSource, both the multicast sources and members are queried.
+        /// 
+        /// *   If you set only one of them or both of them, the specified values prevail.
         /// </summary>
         [NameInMap("IsGroupMember")]
         [Validation(Required=false)]
         public bool? IsGroupMember { get; set; }
 
         /// <summary>
-        /// Whether to query the multicast source.
+        /// Specifies whether to query the multicast sources. Valid values:
         /// 
-        /// - **false**: No.
-        /// - **true**: Yes.
+        /// *   **false**: no
+        /// *   **true**: yes
         /// 
-        /// > Used in conjunction with IsGroupMember.
-        /// > - If neither is configured, the multicast source and members will be queried by default.
-        /// > - If only one or both are configured, the configuration parameters shall prevail.
+        /// > This parameter can be set together with the IsGroupMember parameter.
+        /// 
+        /// *   If you do not set IsGroupSource or IsGroupMember, both the multicast sources and members are queried.
+        /// 
+        /// *   If you set only one of them or both of them, the specified values prevail.
         /// </summary>
         [NameInMap("IsGroupSource")]
         [Validation(Required=false)]
@@ -63,21 +67,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// The IDs of the ENIs.
-        /// 
-        /// You can create only one multicast source in a multicast group.
-        /// 
-        /// >  This parameter is required.
+        /// The IDs of ENIs.
         /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]
         public List<string> NetworkInterfaceIds { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// The token that determines the start point of the query. Valid values:
         /// 
-        /// *   If this is your first query or no next query is to be sent, ignore this parameter.
-        /// *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+        /// *   If this is your first query and no next queries are to be sent, ignore this parameter.
+        /// *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -92,9 +92,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The IDs of the inter-region multicast domains.
-        /// 
-        /// You can specify at most 20 inter-region multicast domain IDs.
+        /// The ID of the inter-region multicast domain.
         /// </summary>
         [NameInMap("PeerTransitRouterMulticastDomains")]
         [Validation(Required=false)]
@@ -140,9 +138,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterMulticastDomainId { get; set; }
 
         /// <summary>
-        /// The IDs of the vSwitches.
-        /// 
-        /// You can specify at most 20 IDs.
+        /// The vSwitch IDs.
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]

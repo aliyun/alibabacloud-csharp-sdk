@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterVpcAttachmentsResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned on each page.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -41,16 +41,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The information about the VPC connection.
+        /// A list of VPC connections.
         /// </summary>
         [NameInMap("TransitRouterAttachments")]
         [Validation(Required=false)]
         public List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments> TransitRouterAttachments { get; set; }
         public class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments : TeaModel {
+            [NameInMap("CenId")]
+            [Validation(Required=false)]
+            public string CenId { get; set; }
+
             /// <summary>
             /// The billing method of the VPC connection.
             /// 
-            /// Valid value: **POSTPAY**, which is the default value and specifies the pay-as-you-go billing method.
+            /// The value is **POSTPAY**, which is the default value and specifies the pay-as-you-go billing method.
             /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
@@ -65,6 +69,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            /// <summary>
+            /// The entity that pays the fees of the network instance. Valid values:
+            /// 
+            /// *   **PayByCenOwner**: the Alibaba Cloud account that owns the CEN instance.
+            /// *   **PayByResourceOwner**: the Alibaba Cloud account that owns the network instance.
+            /// </summary>
             [NameInMap("OrderType")]
             [Validation(Required=false)]
             public string OrderType { get; set; }
@@ -79,33 +89,33 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The status of the VPC connection.
+            /// The status of the VPC connection. Valid values:
             /// 
-            /// *   **Attached**: The VPC connection is created on the transit router.
-            /// *   **Attaching**: The VPC connection is being created on the transit router.
-            /// *   **Detaching**: The VPC connection is being deleted from the transit router.
-            /// *   **Detached**: The VPC connection is deleted from the transit router.
+            /// *   **Attached**: attached to the transit router.
+            /// *   **Attaching**: being attached to the transit router.
+            /// *   **Detaching**: being detached from the transit router.
+            /// *   **Detached**: detached from the transit router.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The tags.
+            /// The tag key.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsTags> Tags { get; set; }
             public class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsTags : TeaModel {
                 /// <summary>
-                /// The key of tag.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of tag.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -156,7 +166,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public long? VpcOwnerId { get; set; }
 
             /// <summary>
-            /// The region ID of the VPC.
+            /// The ID of the region where the VPC is deployed.
             /// </summary>
             [NameInMap("VpcRegionId")]
             [Validation(Required=false)]
@@ -184,7 +194,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the zone.
+                /// The ID of the zone in which the instance is located.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

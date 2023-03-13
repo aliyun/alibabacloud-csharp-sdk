@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// *   **true**: yes
         /// *   **false** (default): no
         /// 
-        /// >  This parameter takes effect only when the **TagKey.N** parameter is not specified.
+        /// > This parameter is valid only when the **TagKey.N** parameter is empty.
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -30,14 +30,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the resource.
+        /// The ID of the region where the resource is deployed.
+        /// 
+        /// You can ignore this parameter if ResourceType is set to Cen or BandwidthPackage.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the resources. You can specify at most 50 resource IDs.
+        /// The ID of the resource. Valid values of **N**: **1** to **50**.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -52,16 +54,38 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Set the value to **cen**.
+        /// The resource type. Valid value:
+        /// 
+        /// **Cen**: Cloud Enterprise Network (CEN) instance
+        /// 
+        /// **BandwidthPackage**: bandwidth plan
+        /// 
+        /// **TransitRouter**: transit router
+        /// 
+        /// **TransitRouterVpcAttachment**: virtual private cloud (VPC) connection
+        /// 
+        /// **TransitRouterVbrAttachment**: virtual border router (VBR) connection
+        /// 
+        /// **TransitRouterPeerAttachment**: inter-region connection
+        /// 
+        /// **TransitRouterVpnAttachment**: VPN connection
+        /// 
+        /// **TransitRouterRouteTable**: route table
+        /// 
+        /// **Flowlog**: flow log
+        /// 
+        /// **TransitRouterMulticastDomain**: multicast domain
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The keys of the tags. You can specify at most 20 tag keys.
+        /// The tag key.
         /// 
-        /// If multiple tag keys are specified, the logical relation among these tag keys is **AND**.
+        /// The tag key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+        /// 
+        /// If multiple tag keys are specified, the logical relation among these tag keys is **AND**. Valid values of **N**: **1** to **20**.
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

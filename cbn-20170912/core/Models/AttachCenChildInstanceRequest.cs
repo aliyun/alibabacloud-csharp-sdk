@@ -26,14 +26,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the Alibaba Cloud account to which the network instance belongs.
         /// 
-        /// >  This parameter is required if you want to attach a network instance that belongs to another Alibaba Cloud account.
+        /// > If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.
         /// </summary>
         [NameInMap("ChildInstanceOwnerId")]
         [Validation(Required=false)]
         public long? ChildInstanceOwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the network instance.
+        /// The ID of the region where the network instance is deployed.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The type of the network instance. Valid values:
         /// 
-        /// *   **VPC**: VPC
-        /// *   **VBR**: VBR
+        /// *   **VPC**: virtual private cloud (VPC)
+        /// *   **VBR**: virtual border router (VBR)
         /// *   **CCN**: CCN instance
         /// </summary>
         [NameInMap("ChildInstanceType")]

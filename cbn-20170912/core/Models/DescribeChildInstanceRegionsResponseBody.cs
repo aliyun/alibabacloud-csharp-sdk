@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeChildInstanceRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The list of regions.
+        /// A list of regions.
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]

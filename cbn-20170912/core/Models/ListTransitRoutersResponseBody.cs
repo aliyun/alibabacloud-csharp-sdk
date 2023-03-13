@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The time when the transit router was created.
             /// 
-            /// The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+            /// The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// The information about the CIDR block of the transit router.
+            /// The CIDR blocks of the transit router.
             /// </summary>
             [NameInMap("TransitRouterCidrList")]
             [Validation(Required=false)]
@@ -149,16 +149,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// Indicates whether to allow the system to automatically add the CIDR block to the route table of the transit router.  
+                /// Indicates whether the system is allowed to automatically add a route to the route table of the transit router. Valid values:
                 /// 
-                /// - **true**: yes  
+                /// *   **true**: yes
                 /// 
-                /// A value of **true** indicates that after you create a private VPN connection and enable route learning for the VPN connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached. 
+                ///         A value of **true** indicates that after you create a private VPN connection and create a route learning correlation for the private VPC connection, the system automatically adds the following route to the route table of the transit router that is in route learning correlation with the private VPN connection:
+                ///           A blackhole route whose destination CIDR block is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. 
+                ///           The blackhole route is advertised only to the route tables of virtual border routers (VBRs) that are connected to the transit router. 
                 /// 
-                /// The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections.  
-                /// 
-                /// The blackhole route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.
-                /// - **false**: no
+                /// *   **false**: no
                 /// </summary>
                 [NameInMap("PublishCidrRoute")]
                 [Validation(Required=false)]

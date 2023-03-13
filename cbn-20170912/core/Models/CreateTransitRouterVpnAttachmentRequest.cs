@@ -12,15 +12,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN connection. Valid values:
         /// 
-        /// *   **true** (default): yes.
-        /// *   **false**: no.
+        /// *   **true** (default): yes
+        /// *   **false**: no
         /// </summary>
         [NameInMap("AutoPublishRouteEnabled")]
         [Validation(Required=false)]
         public bool? AutoPublishRouteEnabled { get; set; }
 
         /// <summary>
-        /// The ID of the Cloud Enterprise Network (CEN) instance.
+        /// The ID of the CEN instance.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The billing method.
         /// 
-        /// Valid value: **POSTPAY**, which is the default value and specifies the pay-as-you-go billing method.
+        /// Set the value to **POSTPAY**, which is the default value and specifies the pay-as-you-go billing method.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must ensure that it is unique among all requests. The token can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. The ClientToken value contain only ASCII characters.
         /// 
         /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
         /// </summary>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether only to precheck the API request. Valid values:
+        /// Specifies whether to perform a dry run. Valid values:
         /// 
-        /// *   **true**: prechecks the request but does not connect the transit router to the IPsec-VPN connection. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, the corresponding error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): sends the request. If the request passes the precheck, the transit router is connected to the IPsec-VPN connection.
+        /// *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   **false** (default): performs a dry run and sends the request.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// A list of tags.
+        /// The information about the tags.
         /// 
         /// You can specify at most 20 tags in each call.
         /// </summary>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The tag key.
             /// 
-            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// 
             /// You can specify at most 20 tag keys.
             /// </summary>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The description of the connection between the transit router and the IPsec-VPN connection.
+        /// The description of the VPN attachment.
         /// 
         /// The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
         /// </summary>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentDescription { get; set; }
 
         /// <summary>
-        /// The name of the connection between the transit router and the IPsec-VPN connection.
+        /// The name of the VPN attachment.
         /// 
         /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
         /// </summary>

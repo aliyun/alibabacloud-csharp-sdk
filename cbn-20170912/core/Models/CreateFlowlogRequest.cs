@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateFlowlogRequest : TeaModel {
         /// <summary>
-        /// The ID of the Cloud Enterprise Network (CEN) instance.
+        /// The ID of the CEN instance.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
         /// 
         /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
         /// </summary>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The name of the flow log.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+        /// The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("FlowLogName")]
         [Validation(Required=false)]
@@ -57,9 +57,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// 
         /// *   If a Logstore is already created in the selected region, enter the name of the Logstore.
         /// 
-        /// *   If no Logstores are created in the selected region, enter a name and the system automatically creates a Logstore.
-        /// 
-        ///     The name of the Logstore. The naming conventions are:
+        /// *   If no Logstores are created in the selected region, enter a name and the system automatically creates a Logstore. The name of the Logstore. The name must meet the following requirements:
         /// 
         ///     *   The name must be unique in a project.
         ///     *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).
@@ -114,7 +112,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags of the resource. You can enter most at 20 tags for the resource.
+        /// The information about the tags.
+        /// 
+        /// You can specify at most 20 tags in each call.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -123,7 +123,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The tag key.
             /// 
-            /// The key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// 
+            /// You can specify at most 20 tag keys.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -132,7 +134,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The tag value.
             /// 
-            /// The value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// 
+            /// Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -143,7 +147,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the inter-region connection or the VBR connection.
         /// 
-        /// >  This parameter is required.
+        /// > This parameter is required.
         /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]

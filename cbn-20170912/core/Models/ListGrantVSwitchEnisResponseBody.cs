@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListGrantVSwitchEnisResponseBody : TeaModel {
         /// <summary>
-        /// The information about the ENI.
+        /// The list of ENIs.
         /// </summary>
         [NameInMap("GrantVSwitchEnis")]
         [Validation(Required=false)]

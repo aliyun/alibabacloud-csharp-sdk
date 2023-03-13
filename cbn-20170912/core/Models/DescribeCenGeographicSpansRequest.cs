@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenGeographicSpansRequest : TeaModel {
         /// <summary>
-        /// The ID of the area combination.
+        /// The ID of the areas that are connected by the CEN instance.
         /// 
-        /// >  If you do not set this parameter, the system queries the information about all area combinations supported by CEN.
+        /// > If you do not set this parameter, the system queries the information about all areas supported by CEN.
         /// </summary>
         [NameInMap("GeographicSpanId")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.
+        /// The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

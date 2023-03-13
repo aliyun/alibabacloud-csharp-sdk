@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<string> SlaveZones { get; set; }
 
+        [NameInMap("SupportMulticast")]
+        [Validation(Required=false)]
+        public bool? SupportMulticast { get; set; }
+
     }
 
 }

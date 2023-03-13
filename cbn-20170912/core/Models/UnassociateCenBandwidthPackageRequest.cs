@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenBandwidthPackageId { get; set; }
 
         /// <summary>
-        /// The ID of the Cloud Enterprise Network (CEN) instance.
+        /// The ID of the CEN instance.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]

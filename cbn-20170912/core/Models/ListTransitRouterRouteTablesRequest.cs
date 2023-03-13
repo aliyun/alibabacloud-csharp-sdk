@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// The token that determines the start point of the next query. Valid values:
         /// 
         /// *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
         /// *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
@@ -42,10 +42,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The features of the route table.
+        /// </summary>
         [NameInMap("RouteTableOptions")]
         [Validation(Required=false)]
         public ListTransitRouterRouteTablesRequestRouteTableOptions RouteTableOptions { get; set; }
         public class ListTransitRouterRouteTablesRequestRouteTableOptions : TeaModel {
+            /// <summary>
+            /// Specifies whether to enable equal-cost multi-path (ECMP) routing. Valid values:
+            /// 
+            /// *   **disable**: no If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit route with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+            /// *   **enable**: yes If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+            /// </summary>
             [NameInMap("MultiRegionECMP")]
             [Validation(Required=false)]
             public string MultiRegionECMP { get; set; }
@@ -53,18 +62,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The tags.
+        /// The information about the tags.
         /// 
-        /// You can specify at most 20 tags.
+        /// You can specify at most 20 tags in each call.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTransitRouterRouteTablesRequestTag> Tag { get; set; }
         public class ListTransitRouterRouteTablesRequestTag : TeaModel {
             /// <summary>
-            /// The tag keys of the resources. 
+            /// The tag key.
             /// 
-            /// The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  
+            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// 
             /// You can specify at most 20 tag keys.
             /// </summary>
@@ -73,11 +82,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag values of the resources.
+            /// The tag value.
             /// 
-            /// The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
             /// 
-            /// Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+            /// Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -93,20 +102,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterId { get; set; }
 
         /// <summary>
-        /// The IDs of the route tables.
+        /// The ID of the route table.
         /// 
-        /// You can query at most 20 route tables in each call.
+        /// You can query multiple route tables in each call. Maximum value of **N**: **20**.
         /// </summary>
         [NameInMap("TransitRouterRouteTableIds")]
         [Validation(Required=false)]
         public List<string> TransitRouterRouteTableIds { get; set; }
 
         /// <summary>
-        /// The names of the route tables.
+        /// The name of the route table.
         /// 
         /// You can query multiple route tables in each call. Maximum value of **N**: **20**.
         /// 
-        /// >  If you specify set both **TransitRouterRouteTableNames.N** and **TransitRouterRouteTableIds.N**, make sure that the specified name and ID belong to the same route table.
+        /// > If you set both **TransitRouterRouteTableNames.N** and **TransitRouterRouteTableIds.N**, make sure that the specified name and ID belong to the same route table.
         /// </summary>
         [NameInMap("TransitRouterRouteTableNames")]
         [Validation(Required=false)]
@@ -127,7 +136,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// The type of the route table. Valid values:
         /// 
         /// *   **Custom**: a custom route table
-        /// *   **System**: the default route table
+        /// *   **System**: the default system route table
         /// </summary>
         [NameInMap("TransitRouterRouteTableType")]
         [Validation(Required=false)]

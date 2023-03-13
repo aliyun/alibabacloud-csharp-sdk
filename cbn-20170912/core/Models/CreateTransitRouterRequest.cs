@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterRequest : TeaModel {
         /// <summary>
-        /// The ID of the Cloud Enterprise Network (CEN) instance.
+        /// The ID of the CEN instance.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -19,19 +19,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** of each API request may be different.
+        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to precheck the request. Check items include permissions and the status of the specified cloud resources. Valid values:
+        /// Specifies whether to perform a dry run. Valid values:
         /// 
-        /// *   **false** (default): sends the request. If the request passes the precheck, an Enterprise Edition transit router is created.
-        /// *   **true**: prechecks the request but does not create the Enterprise Edition transit router. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+        /// *   **false** (default): performs a dry run and sends the request.
+        /// *   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -65,26 +65,28 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// Specifies whether to enable the multicast feature for the Enterprise Edition transit router. Valid values:
         /// 
-        /// *   **false** (default): no
-        /// *   **true**: yes
+        /// *   **false** (default): disables multicast
+        /// *   **true**: enables multicast
         /// 
-        /// The multicast feature is supported only in specific regions. You can call [ListTransitRouterAvailableResource](~~261356~~) to query the regions that support multicast.
+        /// The multicast feature is supported only in specific regions. You can call the [ListTransitRouterAvailableResource](~~261356~~) operation to query the regions that support multicast.
         /// </summary>
         [NameInMap("SupportMulticast")]
         [Validation(Required=false)]
         public bool? SupportMulticast { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The information about the tags.
+        /// 
+        /// You can specify at most 20 tags in each call.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateTransitRouterRequestTag> Tag { get; set; }
         public class CreateTransitRouterRequestTag : TeaModel {
             /// <summary>
-            /// The tag keys of the resources. 
+            /// The tag key.
             /// 
-            /// The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  
+            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// 
             /// You can specify at most 20 tag keys.
             /// </summary>
@@ -93,11 +95,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag values of the resources. 
+            /// The tag value.
             /// 
-            /// The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  
+            /// The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
             /// 
-            /// Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+            /// Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -106,7 +108,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The CIDR block list of the transit router.
+        /// The CIDR blocks of the transit router.
+        /// 
+        /// You can add up to five CIDR blocks in each call. For more information about CIDR blocks of transit routers, see [CIDR blocks of transit routers](~~462635~~).
+        /// 
+        /// > Only Enterprise Edition transit routers support CIDR blocks.
         /// </summary>
         [NameInMap("TransitRouterCidrList")]
         [Validation(Required=false)]
@@ -122,7 +128,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The description of the CIDR block.
             /// 
-            /// The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+            /// The description must be 1 to 256 characters in length.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -131,7 +137,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The name of the CIDR block.
             /// 
-            /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+            /// The name must be 1 to 128 characters in length.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -142,7 +148,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// 
             /// *   **true** (default): yes
             /// 
-            ///     A value of true specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached. The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. The blackhole route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.
+            ///         A value of true specifies that after you create a private VPN connection and add a route learning correlation for the private VPN connection, the system automatically adds the following route to the route table of the transit router that is in route learning correlation with the private VPN connection:
+            /// 
+            ///           A blackhole route whose destination CIDR block is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. 
+            /// 
+            ///           The blackhole route is advertised only to the route tables of the virtual border routers (VBRs) that are connected to the transit router. 
             /// 
             /// *   **false**: no
             /// </summary>
@@ -153,7 +163,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The description of the Enterprise Edition transit router instance.
+        /// The description of the Enterprise Edition transit router.
         /// 
         /// The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
         /// </summary>

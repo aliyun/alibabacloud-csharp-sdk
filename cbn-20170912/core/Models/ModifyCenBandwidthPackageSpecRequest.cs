@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyCenBandwidthPackageSpecRequest : TeaModel {
         /// <summary>
-        /// The new bandwidth limit of the bandwidth plan. Unit: Mbit/s.
+        /// The new maximum bandwidth value of the bandwidth plan. Unit: Mbit/s.
         /// 
         /// Valid values: **2** to **10000**.
         /// </summary>

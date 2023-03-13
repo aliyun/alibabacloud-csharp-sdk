@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenGeographicSpansResponseBody : TeaModel {
         /// <summary>
-        /// The information about area combinations.
+        /// A list of areas.
         /// </summary>
         [NameInMap("GeographicSpanModels")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel> GeographicSpanModel { get; set; }
             public class DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel : TeaModel {
                 /// <summary>
-                /// The ID of the area combination.
+                /// The ID of the pair of connected areas.
                 /// </summary>
                 [NameInMap("GeographicSpanId")]
                 [Validation(Required=false)]

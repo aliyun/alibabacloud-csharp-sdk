@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number of the page to return. Default value: **1**.
+        /// The number of the page to return. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the VPC.
+        /// The ID of the region where the VPC is deployed.
         /// 
         /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
         /// </summary>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The ID of the zone.
+        /// The ID of the zone where the instance resides.
         /// 
         /// *   If you specify a zone ID, the system queries the information about the vSwitches in the specified zone.
         /// *   If you do not specify a zone ID, the system queries the information about the vSwitches in all zones.

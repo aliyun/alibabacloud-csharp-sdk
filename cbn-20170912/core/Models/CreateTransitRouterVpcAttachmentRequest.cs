@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// The billing method. Default value: **POSTPAY**, which specifies the pay-as-you-go billing method.
+        /// The billing method. The default value is **POSTPAY**, which specifies the pay-as-you-go billing method.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
         /// 
         /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
         /// </summary>
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a precheck to check information such as the permissions and instance status. Valid values:
+        /// Specifies whether to perform a dry run. Default values:
         /// 
-        /// *   **false** (default): sends the request. If the request passes the precheck, the VPC connection is created.
-        /// *   **true**: sends a precheck request but does not create the VPC connection. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+        /// *   **false** (default): performs a dry run and sends the request.
+        /// *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -70,16 +70,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The information about the tags.
+        /// 
+        /// You can specify at most 20 tags in each call.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateTransitRouterVpcAttachmentRequestTag> Tag { get; set; }
         public class CreateTransitRouterVpcAttachmentRequestTag : TeaModel {
             /// <summary>
-            /// The tag keys of the resources. 
+            /// The tag key.
             /// 
-            /// The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  
+            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// 
             /// You can specify at most 20 tag keys.
             /// </summary>
@@ -88,11 +90,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag values of the resources. 
+            /// The tag value.
             /// 
-            /// The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  
+            /// The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
             /// 
-            /// Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+            /// Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -135,21 +137,23 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the Alibaba Cloud account to which the VPC belongs. The default value is the ID of the current Alibaba Cloud account.
         /// 
-        /// >  If you want to connect to a network instance that belongs to another account, this parameter is required.
+        /// > If the network instance and CEN instance belong to different Alibaba Cloud accounts, this parameter is required.
         /// </summary>
         [NameInMap("VpcOwnerId")]
         [Validation(Required=false)]
         public long? VpcOwnerId { get; set; }
 
         /// <summary>
-        /// The mappings of zones.
+        /// A zone that supports Enterprise Edition transit routers.
+        /// 
+        /// You can specify at most 10 zones.
         /// </summary>
         [NameInMap("ZoneMappings")]
         [Validation(Required=false)]
         public List<CreateTransitRouterVpcAttachmentRequestZoneMappings> ZoneMappings { get; set; }
         public class CreateTransitRouterVpcAttachmentRequestZoneMappings : TeaModel {
             /// <summary>
-            /// Select a vSwitch that is deployed in a zone supported by Enterprise Edition transit routers.
+            /// A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.
             /// 
             /// You can specify vSwitches for at most 10 zones in each call.
             /// </summary>
@@ -158,9 +162,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The ID of the zone supported by Enterprise Edition transit routers.
+            /// The ID of the zone that supports Enterprise Edition transit routers.
             /// 
-            /// You can call the [DescribeZones](~~36064~~) operation to query zone IDs.
+            /// You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
             /// 
             /// You can specify at most 10 zones in each call.
             /// </summary>

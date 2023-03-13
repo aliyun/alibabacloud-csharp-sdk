@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterMulticastDomainAssociationsRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. 
+        /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must ensure that it is unique among all requests. The token can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can only contain ASCII characters.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -28,8 +28,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The token that determines the start point of the query. Valid values:
         /// 
-        /// - If this is your first query or no subsequent query is to be sent, ignore this parameter.
-        /// - If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+        /// *   If this is your first query and no next queries are to be sent, ignore this parameter.
+        /// *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterMulticastDomainId { get; set; }
 
         /// <summary>
-        /// The IDs of the vSwitches.
+        /// The vSwitch IDs.
         /// 
         /// You can specify at most 20 IDs.
         /// </summary>

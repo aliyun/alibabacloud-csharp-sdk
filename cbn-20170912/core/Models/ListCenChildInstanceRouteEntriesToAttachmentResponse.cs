@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
-    public class DisableCenVpcFlowStatisticResponse : TeaModel {
+    public class ListCenChildInstanceRouteEntriesToAttachmentResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DisableCenVpcFlowStatisticResponseBody Body { get; set; }
+        public ListCenChildInstanceRouteEntriesToAttachmentResponseBody Body { get; set; }
 
     }
 

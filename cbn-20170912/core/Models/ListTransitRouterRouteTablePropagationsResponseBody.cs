@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token for returning the next page when the data is returned in more than one page.
+        /// The token that determines the start point of the query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The list of route learning correlations.
+        /// A list of route learning correlations.
         /// </summary>
         [NameInMap("TransitRouterPropagations")]
         [Validation(Required=false)]
@@ -54,22 +54,22 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The type of next hop. Valid values:
             /// 
-            /// *   **VPC**: a virtual private cloud (VPC)
-            /// *   **CCN**: a Cloud Connect Network (CCN) instance
-            /// *   **VBR**: a VBR
-            /// *   **TR**: a transit router
+            /// *   **VPC**: VPC
+            /// *   **VBR**: VBR
+            /// *   **TR**: transit router
+            /// *   **VPN**: VPN connection
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The state of the route learning correlation. Valid values:
+            /// The status of the route learning correlation. Valid values:
             /// 
-            /// *   **Enabling**
-            /// *   **Disabling**
-            /// *   **Active**
-            /// *   **Deleted**
+            /// *   **Enabling**: being enabled
+            /// *   **Disabling**: being disabled
+            /// *   **Active**: available
+            /// *   **Deleted**: deleted
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

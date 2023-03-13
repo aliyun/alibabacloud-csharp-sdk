@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterVbrAttachmentsResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries returned on each page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token for returning the next page when the data is returned in more than one page.
+        /// The token that determines the start point of the query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The list of VBR connections.
+        /// A list of VBR connections.
         /// </summary>
         [NameInMap("TransitRouterAttachments")]
         [Validation(Required=false)]
@@ -54,10 +54,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public bool? AutoPublishRouteEnabled { get; set; }
 
+            [NameInMap("CenId")]
+            [Validation(Required=false)]
+            public string CenId { get; set; }
+
             /// <summary>
             /// The time when the VBR connection was established.
             /// 
-            /// The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+            /// The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -66,10 +70,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The type of resource to which the transit router is connected. Valid values:
             /// 
-            /// *   **VPC**: a virtual private cloud (VPC)
-            /// *   **CCN**: a Cloud Connect Network (CCN) instance
-            /// *   **VBR**: a virtual border router (VBR)
-            /// *   **TR**: a transit router
+            /// *   **VPC**: virtual private cloud (VPC)
+            /// *   **CCN**: CCN instance
+            /// *   **VBR**: VBR
+            /// *   **TR**: transit router
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
@@ -78,10 +82,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The status of the VBR connection. Valid values:
             /// 
-            /// *   **Attached**: The transit router is connected to the VBR.
-            /// *   **Attaching**: The transit router is connecting to the VBR.
-            /// *   **Detaching**: The transit router is disconnecting from the VBR.
-            /// *   **Detached**: The transit router is disconnected from the VBR.
+            /// *   **Attached**: The VBR connection is created on the transit router.
+            /// *   **Attaching**: The VBR connection is being created on the transit router.
+            /// *   **Detaching**: The VBR connection is being deleted from the transit router.
+            /// *   **Detached**: The VBR connection is deleted from the transit router.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -95,14 +99,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachmentsTags> Tags { get; set; }
             public class ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachmentsTags : TeaModel {
                 /// <summary>
-                /// The key of the tag.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the tag.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -153,7 +157,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public long? VbrOwnerId { get; set; }
 
             /// <summary>
-            /// The region ID of the VBR.
+            /// The ID of the region where the VBR is deployed.
             /// </summary>
             [NameInMap("VbrRegionId")]
             [Validation(Required=false)]

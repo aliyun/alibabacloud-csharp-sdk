@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterRouteTablesResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries returned on each page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// The token that determines the start point of the next query. Valid values:
         /// 
-        /// *   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.
+        /// *   If **NextToken** was not returned, it indicates that no additional results exist.
         /// *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
         /// </summary>
         [NameInMap("NextToken")]
@@ -56,14 +56,26 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// The ID of the region where the Enterprise Edition transit router is deployed.
+            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// The features of the route table.
+            /// </summary>
             [NameInMap("RouteTableOptions")]
             [Validation(Required=false)]
             public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions RouteTableOptions { get; set; }
             public class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions : TeaModel {
+                /// <summary>
+                /// Indicates whether ECMP routing is enabled. Valid values:
+                /// 
+                /// *   **disable**: disabled If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit route with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+                /// *   **enable**: enables ECMP routing. If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+                /// </summary>
                 [NameInMap("MultiRegionECMP")]
                 [Validation(Required=false)]
                 public string MultiRegionECMP { get; set; }
@@ -71,27 +83,31 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// The tags of the resource.
+            /// The tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags> Tags { get; set; }
             public class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags : TeaModel {
                 /// <summary>
-                /// The key of the tag.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the tag.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
             }
+
+            [NameInMap("TransitRouterId")]
+            [Validation(Required=false)]
+            public string TransitRouterId { get; set; }
 
             /// <summary>
             /// The description of the route table.
@@ -115,7 +131,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterRouteTableName { get; set; }
 
             /// <summary>
-            /// The status of the route table.
+            /// The status of the route table. Valid values:
             /// 
             /// *   **Creating**: being created
             /// *   **Deleting**: being deleted
@@ -126,10 +142,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterRouteTableStatus { get; set; }
 
             /// <summary>
-            /// The type of the route table.
+            /// The type of the route table. Valid value:
             /// 
             /// *   **Custom**: a custom route table
-            /// *   **System**: the default route table
+            /// *   **System**: the default system route table
             /// </summary>
             [NameInMap("TransitRouterRouteTableType")]
             [Validation(Required=false)]

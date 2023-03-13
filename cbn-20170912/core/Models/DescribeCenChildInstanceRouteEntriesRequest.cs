@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string ChildInstanceRegionId { get; set; }
 
+        [NameInMap("ChildInstanceRouteTableId")]
+        [Validation(Required=false)]
+        public string ChildInstanceRouteTableId { get; set; }
+
         /// <summary>
         /// The type of the network instance. Valid values:
         /// 

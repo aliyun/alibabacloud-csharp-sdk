@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string PrivateZoneDnsServers { get; set; }
 
         /// <summary>
-        /// The detailed configuration of PrivateZone.
+        /// The configuration details of PrivateZone.
         /// </summary>
         [NameInMap("PrivateZoneInfos")]
         [Validation(Required=false)]
@@ -72,9 +72,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 /// <summary>
                 /// The status of PrivateZone. Valid values:
                 /// 
-                /// *   **Creating**
-                /// *   **Active**
-                /// *   **Deleting**
+                /// *   **Creating**: being created
+                /// *   **Active**: available
+                /// *   **Deleting**: being deleted
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]

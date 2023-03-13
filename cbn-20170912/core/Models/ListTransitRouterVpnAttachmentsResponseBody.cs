@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public bool? AutoPublishRouteEnabled { get; set; }
 
+            [NameInMap("CenId")]
+            [Validation(Required=false)]
+            public string CenId { get; set; }
+
             /// <summary>
             /// The billing method of the VPC connection.
             /// 

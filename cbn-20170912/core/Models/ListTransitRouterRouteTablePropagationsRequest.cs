@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token for returning the next page when the data is returned in more than one page.
+        /// The token that determines the start point of the query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -39,6 +39,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The status of the route learning correlation. Valid values:
+        /// 
+        /// *   **Active**: available
+        /// *   **Enabling**: being enabled
+        /// *   **Disabling**: being disabled
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
@@ -50,10 +57,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string TransitRouterAttachmentId { get; set; }
 
+        /// <summary>
+        /// The ID of the next hop.
+        /// </summary>
         [NameInMap("TransitRouterAttachmentResourceId")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentResourceId { get; set; }
 
+        /// <summary>
+        /// The type of next hop. Valid values:
+        /// 
+        /// *   **VPC**: virtual private cloud (VPC)
+        /// *   **VBR**: virtual border router (VBR)
+        /// *   **TR**: transit router
+        /// *   **VPN**: VPN connection
+        /// </summary>
         [NameInMap("TransitRouterAttachmentResourceType")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentResourceType { get; set; }

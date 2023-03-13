@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// The ID of one of the connected areas of the bandwidth plan. Valid values:
+        /// The ID of one of the areas connected by the bandwidth plan. Valid values:
         /// 
-        /// *   **China**: the Chinese mainland
+        /// *   **China**: Chinese mainland
         /// *   **North-America**: North America
         /// *   **Asia-Pacific**: Asia Pacific
         /// *   **Europe**: Europe
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string GeographicRegionAId { get; set; }
 
         /// <summary>
-        /// The ID of the other connected area of the bandwidth plan. Valid values:
+        /// The ID of the other area connected by the bandwidth plan. Valid values:
         /// 
-        /// *   **China**: the Chinese mainland
+        /// *   **China**: Chinese mainland
         /// *   **North-America**: North America
         /// *   **Asia-Pacific**: Asia Pacific
         /// *   **Europe**: Europe
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.
+        /// The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

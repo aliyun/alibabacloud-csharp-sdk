@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the Alibaba Cloud account to which the VBR belongs.
         /// 
-        /// >  The parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.
+        /// > This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.
         /// </summary>
         [NameInMap("VbrInstanceOwnerId")]
         [Validation(Required=false)]

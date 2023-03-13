@@ -17,7 +17,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token for returning the next page when the data is returned in more than one page.
+        /// The token that determines the start point of the query. Valid values:
+        /// 
+        /// *   If **NextToken** was not returned, it indicates that no additional results exist.
+        /// *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The list of associated forwarding correlations.
+        /// A list of associated forwarding correlations.
         /// </summary>
         [NameInMap("TransitRouterAssociations")]
         [Validation(Required=false)]
@@ -54,22 +57,22 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The type of next hop. Valid values:
             /// 
-            /// *   **VPC**: a virtual private cloud (VPC)
-            /// *   **CCN**: a Cloud Connect Network (CCN) instance
-            /// *   **VBR**: a virtual border router (VBR)
-            /// *   **TR**: a transit router
+            /// *   **VPC**: VPC
+            /// *   **VBR**: VBR
+            /// *   **TR**: transit router
+            /// *   **VPN** :VPN attachment
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The state of the associated forwarding correlation. Valid values:
+            /// The status of the associated forwarding correlation. Valid values:
             /// 
-            /// *   **Active**: The route table is associated with the network instance connection.
-            /// *   **Associating**: The route table is being associated with the network instance connection.
-            /// *   **Dissociating**: The route table is being disassociated from the network instance connection.
-            /// *   **Deleted**: The route table is disassociated from the network instance connection.
+            /// *   **Active**: The associated forwarding correlation is available.
+            /// *   **Associating**: The associated forwarding correlation is being created.
+            /// *   **Dissociating**: The associated forwarding correlation is being deleted.
+            /// *   **Deleted**: The associated forwarding correlation is deleted.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

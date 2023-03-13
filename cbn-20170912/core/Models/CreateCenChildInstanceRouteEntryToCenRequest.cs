@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the Alibaba Cloud account to which the network instance belongs.
         /// 
-        /// >  If the network instance belongs to another Alibaba Cloud account, this parameter is required.
+        /// > If the network instance belongs to another Alibaba Cloud account, this parameter is required.
         /// </summary>
         [NameInMap("ChildInstanceAliUid")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceRegionId { get; set; }
 
         /// <summary>
-        /// The type of the attached network instance. Valid values:
+        /// The type of the network instance. Valid values:
         /// 
         /// *   **VPC**: a virtual private cloud (VPC)
         /// *   **VBR**: a virtual border router (VBR)
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceType { get; set; }
 
         /// <summary>
-        /// The destination CIDR block of the route entry.
+        /// The destination CIDR block of the route.
         /// 
         /// Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.
         /// </summary>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the route table of the network instance.
+        /// The ID of the route table configured on the network instance.
         /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]
