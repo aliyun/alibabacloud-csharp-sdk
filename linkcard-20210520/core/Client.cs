@@ -466,6 +466,92 @@ namespace AlibabaCloud.SDK.Linkcard20210520
             return await AddDirectionalGroupWithOptionsAsync(request, runtime);
         }
 
+        public AddTagsToCardResponse AddTagsToCardWithOptions(AddTagsToCardRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddTagsToCardShrinkRequest request = new AddTagsToCardShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagNameList))
+            {
+                request.TagNameListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagNameList, "TagNameList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iccid))
+            {
+                query["Iccid"] = request.Iccid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagNameListShrink))
+            {
+                query["TagNameList"] = request.TagNameListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddTagsToCard",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddTagsToCardResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AddTagsToCardResponse> AddTagsToCardWithOptionsAsync(AddTagsToCardRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddTagsToCardShrinkRequest request = new AddTagsToCardShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagNameList))
+            {
+                request.TagNameListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagNameList, "TagNameList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iccid))
+            {
+                query["Iccid"] = request.Iccid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagNameListShrink))
+            {
+                query["TagNameList"] = request.TagNameListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddTagsToCard",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddTagsToCardResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AddTagsToCardResponse AddTagsToCard(AddTagsToCardRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddTagsToCardWithOptions(request, runtime);
+        }
+
+        public async Task<AddTagsToCardResponse> AddTagsToCardAsync(AddTagsToCardRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddTagsToCardWithOptionsAsync(request, runtime);
+        }
+
         public BatchAddDirectionalAddressResponse BatchAddDirectionalAddressWithOptions(BatchAddDirectionalAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1014,6 +1100,100 @@ namespace AlibabaCloud.SDK.Linkcard20210520
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetCardLatestFlowWithOptionsAsync(request, runtime);
+        }
+
+        public GetCardRealStatusResponse GetCardRealStatusWithOptions(GetCardRealStatusRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetCardRealStatusShrinkRequest request = new GetCardRealStatusShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SerialNo))
+            {
+                request.SerialNoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SerialNo, "SerialNo", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iccid))
+            {
+                query["Iccid"] = request.Iccid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Msisdn))
+            {
+                query["Msisdn"] = request.Msisdn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNoShrink))
+            {
+                query["SerialNo"] = request.SerialNoShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCardRealStatus",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCardRealStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetCardRealStatusResponse> GetCardRealStatusWithOptionsAsync(GetCardRealStatusRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetCardRealStatusShrinkRequest request = new GetCardRealStatusShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SerialNo))
+            {
+                request.SerialNoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SerialNo, "SerialNo", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iccid))
+            {
+                query["Iccid"] = request.Iccid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Msisdn))
+            {
+                query["Msisdn"] = request.Msisdn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNoShrink))
+            {
+                query["SerialNo"] = request.SerialNoShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCardRealStatus",
+                Version = "2021-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCardRealStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetCardRealStatusResponse GetCardRealStatus(GetCardRealStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCardRealStatusWithOptions(request, runtime);
+        }
+
+        public async Task<GetCardRealStatusResponse> GetCardRealStatusAsync(GetCardRealStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCardRealStatusWithOptionsAsync(request, runtime);
         }
 
         public GetCardStatusStatisticsResponse GetCardStatusStatisticsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
