@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Videorecog20200320.Models
 {
     public class SplitVideoPartsRequest : TeaModel {
+        [NameInMap("MaxTime")]
+        [Validation(Required=false)]
+        public int? MaxTime { get; set; }
+
+        [NameInMap("MinTime")]
+        [Validation(Required=false)]
+        public int? MinTime { get; set; }
+
         [NameInMap("Template")]
         [Validation(Required=false)]
         public string Template { get; set; }

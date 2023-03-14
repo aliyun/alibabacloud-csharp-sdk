@@ -1055,6 +1055,14 @@ namespace AlibabaCloud.SDK.Videorecog20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTime))
+            {
+                body["MaxTime"] = request.MaxTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinTime))
+            {
+                body["MinTime"] = request.MinTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Template))
             {
                 body["Template"] = request.Template;
@@ -1086,6 +1094,14 @@ namespace AlibabaCloud.SDK.Videorecog20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTime))
+            {
+                body["MaxTime"] = request.MaxTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinTime))
+            {
+                body["MinTime"] = request.MinTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Template))
             {
                 body["Template"] = request.Template;
