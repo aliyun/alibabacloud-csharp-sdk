@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        [NameInMap("TemplateType")]
+        [Validation(Required=false)]
+        public string TemplateType { get; set; }
+
         [NameInMap("Timeline")]
         [Validation(Required=false)]
         public string Timeline { get; set; }

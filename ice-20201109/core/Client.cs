@@ -1063,6 +1063,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["TemplateId"] = request.TemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeline))
             {
                 query["Timeline"] = request.Timeline;
@@ -1121,6 +1125,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeline))
             {
