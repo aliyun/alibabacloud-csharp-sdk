@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateHostShareKeyResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the shared key.
+        /// </summary>
         [NameInMap("HostShareKeyId")]
         [Validation(Required=false)]
         public long? HostShareKeyId { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// The ID of the request, which is used to locate and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateUserGroupRequest : TeaModel {
+        /// <summary>
+        /// The remarks of the user group. The remarks can be up to 500 characters in length.
+        /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
+        /// <summary>
+        /// The ID of the bastion host for which you want to create a user group.
+        /// 
+        /// >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The region ID of the bastion host for which you want to create a user group.
+        /// 
+        /// >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The name of the user group that you want to create. This name can be a up to 128 characters in length.
+        /// </summary>
         [NameInMap("UserGroupName")]
         [Validation(Required=false)]
         public string UserGroupName { get; set; }

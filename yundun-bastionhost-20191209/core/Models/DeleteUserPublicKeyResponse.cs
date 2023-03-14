@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
-    public class ModifyInstanceUpgradePeriodResponse : TeaModel {
+    public class DeleteUserPublicKeyResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ModifyInstanceUpgradePeriodResponseBody Body { get; set; }
+        public DeleteUserPublicKeyResponseBody Body { get; set; }
 
     }
 

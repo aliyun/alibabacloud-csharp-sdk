@@ -8,9 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
-    public class VerifyInstanceADAuthServerResponseBody : TeaModel {
+    public class CreateUserPublicKeyResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// The ID of the public key.
+        /// </summary>
+        [NameInMap("PublicKeyId")]
+        [Validation(Required=false)]
+        public string PublicKeyId { get; set; }
+
+        /// <summary>
+        /// The ID of the request, which is used to locate and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
