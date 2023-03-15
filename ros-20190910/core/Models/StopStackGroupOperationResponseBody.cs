@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class StopStackGroupOperationResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

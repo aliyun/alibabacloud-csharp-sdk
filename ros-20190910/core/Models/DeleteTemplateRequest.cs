@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DeleteTemplateRequest : TeaModel {
+        /// <summary>
+        /// The ID of the template. This parameter applies to only private templates.
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }

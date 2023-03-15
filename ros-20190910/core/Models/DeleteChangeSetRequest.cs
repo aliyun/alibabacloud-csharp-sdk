@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DeleteChangeSetRequest : TeaModel {
+        /// <summary>
+        /// The ID of the change set.
+        /// </summary>
         [NameInMap("ChangeSetId")]
         [Validation(Required=false)]
         public string ChangeSetId { get; set; }
 
+        /// <summary>
+        /// The region ID of the change set. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

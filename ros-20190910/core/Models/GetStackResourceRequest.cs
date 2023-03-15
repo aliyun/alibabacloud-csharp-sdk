@@ -9,14 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetStackResourceRequest : TeaModel {
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.
+        /// 
+        /// The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
+        /// 
+        /// For more information, see [Ensure idempotence](~~134212~~).
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The logical ID of the resource defined in the template.
+        /// </summary>
         [NameInMap("LogicalResourceId")]
         [Validation(Required=false)]
         public string LogicalResourceId { get; set; }
 
+        /// <summary>
+        /// The ID of the region to which the stack belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -25,10 +38,19 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public List<string> ResourceAttributes { get; set; }
 
+        /// <summary>
+        /// Specifies whether to query the resource properties. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// </summary>
         [NameInMap("ShowResourceAttributes")]
         [Validation(Required=false)]
         public bool? ShowResourceAttributes { get; set; }
 
+        /// <summary>
+        /// The ID of the stack.
+        /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]
         public string StackId { get; set; }

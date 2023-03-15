@@ -9,18 +9,40 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStackGroupOperationsRequest : TeaModel {
+        /// <summary>
+        /// The number of the page to return.
+        /// 
+        /// Pages start from page 1.
+        /// 
+        /// Default value: 1.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries to return on each page.
+        /// 
+        /// Valid values: 1 to 50.
+        /// 
+        /// Default value: 10.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The name of the stack group. The name must be unique within a region.
+        /// 
+        /// The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.
+        /// </summary>
         [NameInMap("StackGroupName")]
         [Validation(Required=false)]
         public string StackGroupName { get; set; }
