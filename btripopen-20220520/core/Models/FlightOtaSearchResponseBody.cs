@@ -219,6 +219,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                                 [Validation(Required=false)]
                                 public bool? IsStruct { get; set; }
 
+                                /// <summary>
+                                /// PTC
+                                /// </summary>
                                 [NameInMap("ptc")]
                                 [Validation(Required=false)]
                                 public string Ptc { get; set; }
@@ -335,6 +338,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                                 [Validation(Required=false)]
                                 public bool? IsStruct { get; set; }
 
+                                /// <summary>
+                                /// PTC
+                                /// </summary>
                                 [NameInMap("ptc")]
                                 [Validation(Required=false)]
                                 public string Ptc { get; set; }
@@ -455,6 +461,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                                 [Validation(Required=false)]
                                 public bool? IsStruct { get; set; }
 
+                                /// <summary>
+                                /// PTC
+                                /// </summary>
                                 [NameInMap("ptc")]
                                 [Validation(Required=false)]
                                 public string Ptc { get; set; }
@@ -781,6 +790,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                             [Validation(Required=false)]
                             public bool? IsStruct { get; set; }
 
+                            /// <summary>
+                            /// PTC
+                            /// </summary>
                             [NameInMap("ptc")]
                             [Validation(Required=false)]
                             public string Ptc { get; set; }
@@ -893,10 +905,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         [Validation(Required=false)]
                         public List<FlightOtaSearchResponseBodyModuleFlightListFlightRuleListChangeRuleItemRefundSubItems> RefundSubItems { get; set; }
                         public class FlightOtaSearchResponseBodyModuleFlightListFlightRuleListChangeRuleItemRefundSubItems : TeaModel {
+                            /// <summary>
+                            /// isStruct : true
+                            /// </summary>
                             [NameInMap("is_struct")]
                             [Validation(Required=false)]
                             public bool? IsStruct { get; set; }
 
+                            /// <summary>
+                            /// PTC
+                            /// </summary>
                             [NameInMap("ptc")]
                             [Validation(Required=false)]
                             public string Ptc { get; set; }
@@ -1017,6 +1035,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                             [Validation(Required=false)]
                             public bool? IsStruct { get; set; }
 
+                            /// <summary>
+                            /// PTC
+                            /// </summary>
                             [NameInMap("ptc")]
                             [Validation(Required=false)]
                             public string Ptc { get; set; }

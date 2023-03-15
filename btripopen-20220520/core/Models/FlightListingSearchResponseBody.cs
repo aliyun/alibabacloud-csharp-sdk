@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// module
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public FlightListingSearchResponseBodyModule Module { get; set; }
@@ -229,6 +232,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                             [Validation(Required=false)]
                             public bool? IsStruct { get; set; }
 
+                            /// <summary>
+                            /// PTC
+                            /// </summary>
                             [NameInMap("ptc")]
                             [Validation(Required=false)]
                             public string Ptc { get; set; }
@@ -341,10 +347,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         [Validation(Required=false)]
                         public List<FlightListingSearchResponseBodyModuleFlightListFlightRuleListChangeRuleItemRefundSubItems> RefundSubItems { get; set; }
                         public class FlightListingSearchResponseBodyModuleFlightListFlightRuleListChangeRuleItemRefundSubItems : TeaModel {
+                            /// <summary>
+                            /// isStruct : true
+                            /// </summary>
                             [NameInMap("is_struct")]
                             [Validation(Required=false)]
                             public bool? IsStruct { get; set; }
 
+                            /// <summary>
+                            /// PTC
+                            /// </summary>
                             [NameInMap("ptc")]
                             [Validation(Required=false)]
                             public string Ptc { get; set; }
@@ -465,6 +477,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                             [Validation(Required=false)]
                             public bool? IsStruct { get; set; }
 
+                            /// <summary>
+                            /// PTC
+                            /// </summary>
                             [NameInMap("ptc")]
                             [Validation(Required=false)]
                             public string Ptc { get; set; }
