@@ -11,12 +11,20 @@ namespace AlibabaCloud.SDK.Green20220302.Models
     public class TextModerationResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public TextModerationResponseBodyData Data { get; set; }
         public class TextModerationResponseBodyData : TeaModel {
+            [NameInMap("accountId")]
+            [Validation(Required=false)]
+            public string AccountId { get; set; }
+
+            [NameInMap("deviceId")]
+            [Validation(Required=false)]
+            public string DeviceId { get; set; }
+
             [NameInMap("labels")]
             [Validation(Required=false)]
             public string Labels { get; set; }

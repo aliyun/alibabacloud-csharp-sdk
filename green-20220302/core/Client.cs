@@ -206,5 +206,227 @@ namespace AlibabaCloud.SDK.Green20220302
             return await TextModerationWithOptionsAsync(request, runtime);
         }
 
+        public VoiceModerationResponse VoiceModerationWithOptions(VoiceModerationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                body["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                body["ServiceParameters"] = request.ServiceParameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VoiceModeration",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VoiceModerationResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<VoiceModerationResponse> VoiceModerationWithOptionsAsync(VoiceModerationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                body["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                body["ServiceParameters"] = request.ServiceParameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VoiceModeration",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VoiceModerationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public VoiceModerationResponse VoiceModeration(VoiceModerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VoiceModerationWithOptions(request, runtime);
+        }
+
+        public async Task<VoiceModerationResponse> VoiceModerationAsync(VoiceModerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VoiceModerationWithOptionsAsync(request, runtime);
+        }
+
+        public VoiceModerationCancelResponse VoiceModerationCancelWithOptions(VoiceModerationCancelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                body["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                body["ServiceParameters"] = request.ServiceParameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VoiceModerationCancel",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VoiceModerationCancelResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<VoiceModerationCancelResponse> VoiceModerationCancelWithOptionsAsync(VoiceModerationCancelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                body["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                body["ServiceParameters"] = request.ServiceParameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VoiceModerationCancel",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VoiceModerationCancelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public VoiceModerationCancelResponse VoiceModerationCancel(VoiceModerationCancelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VoiceModerationCancelWithOptions(request, runtime);
+        }
+
+        public async Task<VoiceModerationCancelResponse> VoiceModerationCancelAsync(VoiceModerationCancelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VoiceModerationCancelWithOptionsAsync(request, runtime);
+        }
+
+        public VoiceModerationResultResponse VoiceModerationResultWithOptions(VoiceModerationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                body["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                body["ServiceParameters"] = request.ServiceParameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VoiceModerationResult",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VoiceModerationResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<VoiceModerationResultResponse> VoiceModerationResultWithOptionsAsync(VoiceModerationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                body["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                body["ServiceParameters"] = request.ServiceParameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VoiceModerationResult",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VoiceModerationResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public VoiceModerationResultResponse VoiceModerationResult(VoiceModerationResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VoiceModerationResultWithOptions(request, runtime);
+        }
+
+        public async Task<VoiceModerationResultResponse> VoiceModerationResultAsync(VoiceModerationResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VoiceModerationResultWithOptionsAsync(request, runtime);
+        }
+
     }
 }
