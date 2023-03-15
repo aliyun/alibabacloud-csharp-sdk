@@ -488,6 +488,14 @@ namespace AlibabaCloud.SDK.Push20160801
             return await CheckCertificateWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CheckDeviceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CheckDeviceResponse
+         */
+        // Deprecated
         public CheckDeviceResponse CheckDeviceWithOptions(CheckDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -519,6 +527,14 @@ namespace AlibabaCloud.SDK.Push20160801
             return TeaModel.ToObject<CheckDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CheckDeviceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CheckDeviceResponse
+         */
+        // Deprecated
         public async Task<CheckDeviceResponse> CheckDeviceWithOptionsAsync(CheckDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -550,12 +566,26 @@ namespace AlibabaCloud.SDK.Push20160801
             return TeaModel.ToObject<CheckDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CheckDeviceRequest
+          * @return CheckDeviceResponse
+         */
+        // Deprecated
         public CheckDeviceResponse CheckDevice(CheckDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckDeviceWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request CheckDeviceRequest
+          * @return CheckDeviceResponse
+         */
+        // Deprecated
         public async Task<CheckDeviceResponse> CheckDeviceAsync(CheckDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -800,6 +830,14 @@ namespace AlibabaCloud.SDK.Push20160801
             return await ContinuouslyPushWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListSummaryAppsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListSummaryAppsResponse
+         */
+        // Deprecated
         public ListSummaryAppsResponse ListSummaryAppsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -818,6 +856,14 @@ namespace AlibabaCloud.SDK.Push20160801
             return TeaModel.ToObject<ListSummaryAppsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request ListSummaryAppsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListSummaryAppsResponse
+         */
+        // Deprecated
         public async Task<ListSummaryAppsResponse> ListSummaryAppsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -836,12 +882,24 @@ namespace AlibabaCloud.SDK.Push20160801
             return TeaModel.ToObject<ListSummaryAppsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @return ListSummaryAppsResponse
+         */
+        // Deprecated
         public ListSummaryAppsResponse ListSummaryApps()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSummaryAppsWithOptions(runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @return ListSummaryAppsResponse
+         */
+        // Deprecated
         public async Task<ListSummaryAppsResponse> ListSummaryAppsAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1016,6 +1074,14 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidExtParameters"] = request.AndroidExtParameters;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHuaweiReceiptId))
+            {
+                query["AndroidHuaweiReceiptId"] = request.AndroidHuaweiReceiptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHuaweiTargetUserType))
+            {
+                query["AndroidHuaweiTargetUserType"] = request.AndroidHuaweiTargetUserType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidImageUrl))
             {
                 query["AndroidImageUrl"] = request.AndroidImageUrl;
@@ -1031,6 +1097,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidMessageHuaweiUrgency))
             {
                 query["AndroidMessageHuaweiUrgency"] = request.AndroidMessageHuaweiUrgency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidMessageVivoCategory))
+            {
+                query["AndroidMessageVivoCategory"] = request.AndroidMessageVivoCategory;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidMusic))
             {
@@ -1307,6 +1377,14 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidExtParameters"] = request.AndroidExtParameters;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHuaweiReceiptId))
+            {
+                query["AndroidHuaweiReceiptId"] = request.AndroidHuaweiReceiptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHuaweiTargetUserType))
+            {
+                query["AndroidHuaweiTargetUserType"] = request.AndroidHuaweiTargetUserType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidImageUrl))
             {
                 query["AndroidImageUrl"] = request.AndroidImageUrl;
@@ -1322,6 +1400,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidMessageHuaweiUrgency))
             {
                 query["AndroidMessageHuaweiUrgency"] = request.AndroidMessageHuaweiUrgency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidMessageVivoCategory))
+            {
+                query["AndroidMessageVivoCategory"] = request.AndroidMessageVivoCategory;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidMusic))
             {

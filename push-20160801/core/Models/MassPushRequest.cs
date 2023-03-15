@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string AndroidExtParameters { get; set; }
 
+            [NameInMap("AndroidHuaweiReceiptId")]
+            [Validation(Required=false)]
+            public string AndroidHuaweiReceiptId { get; set; }
+
+            [NameInMap("AndroidHuaweiTargetUserType")]
+            [Validation(Required=false)]
+            public int? AndroidHuaweiTargetUserType { get; set; }
+
             [NameInMap("AndroidImageUrl")]
             [Validation(Required=false)]
             public string AndroidImageUrl { get; set; }
@@ -52,6 +60,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [NameInMap("AndroidMessageHuaweiUrgency")]
             [Validation(Required=false)]
             public string AndroidMessageHuaweiUrgency { get; set; }
+
+            [NameInMap("AndroidMessageVivoCategory")]
+            [Validation(Required=false)]
+            public string AndroidMessageVivoCategory { get; set; }
 
             [NameInMap("AndroidMusic")]
             [Validation(Required=false)]
@@ -131,14 +143,17 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 
             [NameInMap("AndroidXiaoMiActivity")]
             [Validation(Required=false)]
+            [Obsolete]
             public string AndroidXiaoMiActivity { get; set; }
 
             [NameInMap("AndroidXiaoMiNotifyBody")]
             [Validation(Required=false)]
+            [Obsolete]
             public string AndroidXiaoMiNotifyBody { get; set; }
 
             [NameInMap("AndroidXiaoMiNotifyTitle")]
             [Validation(Required=false)]
+            [Obsolete]
             public string AndroidXiaoMiNotifyTitle { get; set; }
 
             [NameInMap("AndroidXiaomiBigPictureUrl")]
@@ -179,6 +194,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 
             [NameInMap("SendSpeed")]
             [Validation(Required=false)]
+            [Obsolete]
             public int? SendSpeed { get; set; }
 
             [NameInMap("StoreOffline")]
