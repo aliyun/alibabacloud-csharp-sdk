@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public CreateHybridClusterRequestEcsOrder EcsOrder { get; set; }
         public class CreateHybridClusterRequestEcsOrder : TeaModel {
             [NameInMap("Compute")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public CreateHybridClusterRequestEcsOrderCompute Compute { get; set; }
             public class CreateHybridClusterRequestEcsOrderCompute : TeaModel {
                 /// <summary>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             }
 
             [NameInMap("Manager")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public CreateHybridClusterRequestEcsOrderManager Manager { get; set; }
             public class CreateHybridClusterRequestEcsOrderManager : TeaModel {
                 /// <summary>

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class CreateGWSImageRequest : TeaModel {
+        /// <summary>
+        /// The ID of the visualization instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The image name of the visualization instance.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

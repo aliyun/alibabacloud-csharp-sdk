@@ -7650,6 +7650,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
+          * ## Description
           * Before you submit a job in a cluster, you must upload a job file to the cluster, for example, job.sh. For more information, see [CreateJobFile](~~159049~~).
           *
           * @param request SubmitJobRequest
@@ -7680,6 +7681,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
+          * ## Description
           * Before you submit a job in a cluster, you must upload a job file to the cluster, for example, job.sh. For more information, see [CreateJobFile](~~159049~~).
           *
           * @param request SubmitJobRequest
@@ -7710,6 +7712,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
+          * ## Description
           * Before you submit a job in a cluster, you must upload a job file to the cluster, for example, job.sh. For more information, see [CreateJobFile](~~159049~~).
           *
           * @param request SubmitJobRequest
@@ -7722,6 +7725,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
         }
 
         /**
+          * ## Description
           * Before you submit a job in a cluster, you must upload a job file to the cluster, for example, job.sh. For more information, see [CreateJobFile](~~159049~~).
           *
           * @param request SubmitJobRequest

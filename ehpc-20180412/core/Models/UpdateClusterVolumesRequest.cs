@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public string VolumeId { get; set; }
 
+            [NameInMap("VolumeMountOption")]
+            [Validation(Required=false)]
+            public string VolumeMountOption { get; set; }
+
             /// <summary>
             /// The domain name of the mount target for the nth additional mounted file system.
             /// </summary>

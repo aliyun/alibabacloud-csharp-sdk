@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class MountNFSResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the execution.
+        /// </summary>
         [NameInMap("InvokeId")]
         [Validation(Required=false)]
         public string InvokeId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class StartGWSInstanceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the visualization instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

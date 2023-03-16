@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("ComputeEnableHt")]
+        [Validation(Required=false)]
+        public bool? ComputeEnableHt { get; set; }
+
         /// <summary>
         /// Specifies whether to enable auto scale-out. Valid values:
         /// 

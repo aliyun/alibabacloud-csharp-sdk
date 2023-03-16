@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// Specifies whether to use an asynchronous link to submit the job.
         /// 
-        /// Default value: false
+        /// Default value: false.
         /// </summary>
         [NameInMap("Async")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string ClockTime { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The cluster ID.
         /// 
         /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
         /// </summary>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public int? Gpu { get; set; }
 
         /// <summary>
-        /// The URL of the job files that are uploaded to an Object Storage Service (OSS) bucket.
+        /// The URL of the job file that is uploaded to an Object Storage Service (OSS) bucket.
         /// </summary>
         [NameInMap("InputFileUrl")]
         [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         /// <summary>
         /// The number of compute nodes required to run the job.
         /// 
-        /// >  If the parameter is not specified, the Task, Thread, Mem, and Gpu parameters become invalid.
+        /// > If the parameter is not specified, the Cpu, Task, Thread, Mem, and Gpu parameters become invalid.
         /// </summary>
         [NameInMap("Node")]
         [Validation(Required=false)]
@@ -153,9 +153,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string PostCmdLine { get; set; }
 
         /// <summary>
-        /// The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.
+        /// The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.
         /// 
-        /// Default value: 0
+        /// Default value: 0.
         /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         public string RunasUser { get; set; }
 
         /// <summary>
-        /// The user password.
+        /// The password that corresponds to the username.
         /// </summary>
         [NameInMap("RunasUserPassword")]
         [Validation(Required=false)]
