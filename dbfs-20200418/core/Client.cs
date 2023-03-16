@@ -2529,6 +2529,14 @@ namespace AlibabaCloud.SDK.DBFS20200418
             {
                 query["FilterValue"] = request.FilterValue;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FsIds))
+            {
+                query["FsIds"] = request.FsIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinkIds))
+            {
+                query["LinkIds"] = request.LinkIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -2571,6 +2579,14 @@ namespace AlibabaCloud.SDK.DBFS20200418
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterValue))
             {
                 query["FilterValue"] = request.FilterValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FsIds))
+            {
+                query["FsIds"] = request.FsIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinkIds))
+            {
+                query["LinkIds"] = request.LinkIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {

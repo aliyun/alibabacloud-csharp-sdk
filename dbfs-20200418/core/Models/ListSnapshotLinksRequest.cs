@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
         [Validation(Required=false)]
         public string FilterValue { get; set; }
 
+        [NameInMap("FsIds")]
+        [Validation(Required=false)]
+        public string FsIds { get; set; }
+
+        [NameInMap("LinkIds")]
+        [Validation(Required=false)]
+        public string LinkIds { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
