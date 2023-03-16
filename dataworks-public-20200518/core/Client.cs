@@ -22688,6 +22688,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await UpdateConnectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
+          *
+          * @param request UpdateDIProjectConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateDIProjectConfigResponse
+         */
         public UpdateDIProjectConfigResponse UpdateDIProjectConfigWithOptions(UpdateDIProjectConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22727,6 +22734,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<UpdateDIProjectConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
+          *
+          * @param request UpdateDIProjectConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateDIProjectConfigResponse
+         */
         public async Task<UpdateDIProjectConfigResponse> UpdateDIProjectConfigWithOptionsAsync(UpdateDIProjectConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22766,12 +22780,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<UpdateDIProjectConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
+          *
+          * @param request UpdateDIProjectConfigRequest
+          * @return UpdateDIProjectConfigResponse
+         */
         public UpdateDIProjectConfigResponse UpdateDIProjectConfig(UpdateDIProjectConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateDIProjectConfigWithOptions(request, runtime);
         }
 
+        /**
+          * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
+          *
+          * @param request UpdateDIProjectConfigRequest
+          * @return UpdateDIProjectConfigResponse
+         */
         public async Task<UpdateDIProjectConfigResponse> UpdateDIProjectConfigAsync(UpdateDIProjectConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
