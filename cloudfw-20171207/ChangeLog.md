@@ -1,3 +1,6 @@
+2023-03-16 Version: 1.2.3
+- Support search risk event group name.
+
 2023-03-07 Version: 1.2.2
 - Auto release new SDK.
 

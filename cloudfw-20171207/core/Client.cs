@@ -3501,6 +3501,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
+            {
+                query["EventName"] = request.EventName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallType))
             {
                 query["FirewallType"] = request.FirewallType;
@@ -3620,6 +3624,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
+            {
+                query["EventName"] = request.EventName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallType))
             {

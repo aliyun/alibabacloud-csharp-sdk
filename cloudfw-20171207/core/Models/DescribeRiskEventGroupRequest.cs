@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("EventName")]
+        [Validation(Required=false)]
+        public string EventName { get; set; }
+
         /// <summary>
         /// The type of the firewall. Valid values:
         /// 
