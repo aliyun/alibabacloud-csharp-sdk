@@ -938,13 +938,19 @@ namespace AlibabaCloud.SDK.Adcp20220101
             return await DetachClusterFromHubWithOptionsAsync(request, runtime);
         }
 
-        public GrantUserPermissionsResponse GrantUserPermissionsWithOptions(GrantUserPermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GrantUserPermissionsResponse GrantUserPermissionsWithOptions(GrantUserPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Permissions))
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GrantUserPermissionsShrinkRequest request = new GrantUserPermissionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Permissions))
             {
-                query["Permissions"] = request.Permissions;
+                request.PermissionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Permissions, "Permissions", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionsShrink))
+            {
+                query["Permissions"] = request.PermissionsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
@@ -969,13 +975,19 @@ namespace AlibabaCloud.SDK.Adcp20220101
             return TeaModel.ToObject<GrantUserPermissionsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GrantUserPermissionsResponse> GrantUserPermissionsWithOptionsAsync(GrantUserPermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GrantUserPermissionsResponse> GrantUserPermissionsWithOptionsAsync(GrantUserPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Permissions))
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GrantUserPermissionsShrinkRequest request = new GrantUserPermissionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Permissions))
             {
-                query["Permissions"] = request.Permissions;
+                request.PermissionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Permissions, "Permissions", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionsShrink))
+            {
+                query["Permissions"] = request.PermissionsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {

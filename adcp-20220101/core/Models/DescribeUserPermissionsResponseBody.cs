@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public List<DescribeUserPermissionsResponseBodyPermissions> Permissions { get; set; }
         public class DescribeUserPermissionsResponseBodyPermissions : TeaModel {
-            [NameInMap("OwnerId")]
-            [Validation(Required=false)]
-            public string OwnerId { get; set; }
-
-            [NameInMap("ParentId")]
-            [Validation(Required=false)]
-            public string ParentId { get; set; }
-
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
