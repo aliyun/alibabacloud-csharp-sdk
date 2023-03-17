@@ -12,15 +12,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN connection. Valid values:
         /// 
-        /// *   **true** (default): yes
-        /// *   **false**: no
+        /// *   **true** (default): yes.
+        /// *   **false**: no.
         /// </summary>
         [NameInMap("AutoPublishRouteEnabled")]
         [Validation(Required=false)]
         public bool? AutoPublishRouteEnabled { get; set; }
 
         /// <summary>
-        /// The ID of the CEN instance.
+        /// The ID of the Cloud Enterprise Network (CEN) instance.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. The ClientToken value contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
         /// 
         /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
         /// </summary>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The information about the tags.
+        /// A list of tags.
         /// 
         /// You can specify at most 20 tags in each call.
         /// </summary>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The tag key.
             /// 
-            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// 
             /// You can specify at most 20 tag keys.
             /// </summary>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? VpnOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the zone in the current region.
+        /// The ID of a zone in the current region.
         /// 
         /// Resources are deployed in the specified zone.
         /// </summary>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<CreateTransitRouterVpnAttachmentRequestZone> Zone { get; set; }
         public class CreateTransitRouterVpnAttachmentRequestZone : TeaModel {
             /// <summary>
-            /// The ID of the zone.
+            /// The ID of the zone in which you want to create the instance.
             /// 
             /// You can call the [ListTransitRouterAvailableResource](~~261356~~) operation to query the most recent zone list.
             /// </summary>

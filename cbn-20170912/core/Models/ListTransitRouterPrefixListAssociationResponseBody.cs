@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The information about the prefix list.
+        /// A list of prefix lists.
         /// </summary>
         [NameInMap("PrefixLists")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The ID of the next hop.
             /// 
-            /// >  If the value is **BlackHole**, all the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.
+            /// > A value of **BlackHole** indicates that all the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.
             /// </summary>
             [NameInMap("NextHop")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string NextHopInstanceId { get; set; }
 
             /// <summary>
-            /// The type of the next hop.
+            /// The type of the next hop. Valid values:
             /// 
             /// *   **BlackHole**: All the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.
             /// *   **VPC**: The next hop of the CIDR blocks in the prefix list is a VPC connection.
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

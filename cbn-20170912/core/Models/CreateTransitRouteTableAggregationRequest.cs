@@ -12,19 +12,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may different for each request.
+        /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to precheck the request. Check items include permissions and the status of the specified cloud resources. Valid values:
+        /// Specifies whether to perform a dry run. Valid values:
         /// 
-        /// *   **false** (default): sends the request. If the request passes the precheck, the aggregate route is added.
-        /// *   **true**: prechecks the request but does not create the aggregate route. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+        /// *   **false** (default): performs a dry run and sends the request.
+        /// *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -70,20 +70,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The name of the aggregate route.
         /// 
-        /// The name must be 0 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.
+        /// The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the name empty.
         /// </summary>
         [NameInMap("TransitRouteTableAggregationName")]
         [Validation(Required=false)]
         public string TransitRouteTableAggregationName { get; set; }
 
-        /// <summary>
-        /// The scope of networks that you want to advertise the aggregate route.
-        /// 
-        /// Set the value to **VPC**, which specified that the aggregate route is advertised to VPCs that are in associated forwarding relationship with a route table of the Enterprise Edition transit router and have route synchronization enabled.
-        /// </summary>
-        [NameInMap("TransitRouteTableAggregationScop")]
+        [NameInMap("TransitRouteTableAggregationScope")]
         [Validation(Required=false)]
-        public string TransitRouteTableAggregationScop { get; set; }
+        public string TransitRouteTableAggregationScope { get; set; }
 
         /// <summary>
         /// The ID of the route table of the Enterprise Edition transit router.

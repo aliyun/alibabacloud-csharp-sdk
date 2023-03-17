@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterRouteTablesResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned on each page.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The token that determines the start point of the next query. Valid values:
         /// 
-        /// *   If **NextToken** was not returned, it indicates that no additional results exist.
         /// *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+        /// *   If a value of **NextToken** is not returned, it indicates that no additional results exist.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 /// <summary>
                 /// Indicates whether ECMP routing is enabled. Valid values:
                 /// 
-                /// *   **disable**: disabled If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit route with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
-                /// *   **enable**: enables ECMP routing. If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+                /// *   **disable**: ECMP routing is disabled. If ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+                /// *   **enable**: ECMP routing is enabled. If ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
                 /// </summary>
                 [NameInMap("MultiRegionECMP")]
                 [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// The tags.
+            /// A list of tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -133,9 +133,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The status of the route table. Valid values:
             /// 
-            /// *   **Creating**: being created
-            /// *   **Deleting**: being deleted
-            /// *   **Active**: available
+            /// *   **Creating**: The route table is being created.
+            /// *   **Deleting**: The route table is being deleted.
+            /// *   **Active**: The route table is available.
             /// </summary>
             [NameInMap("TransitRouterRouteTableStatus")]
             [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// The type of the route table. Valid value:
             /// 
             /// *   **Custom**: a custom route table
-            /// *   **System**: the default system route table
+            /// *   **System**: the default route table
             /// </summary>
             [NameInMap("TransitRouterRouteTableType")]
             [Validation(Required=false)]

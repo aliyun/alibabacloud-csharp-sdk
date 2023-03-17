@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the next hop.
         /// 
-        /// >  Enter **BlackHole** if you want to query the prefix list that generates blackhole routes.
+        /// > Set the value to **BlackHole** if you want to query the prefix list that generates blackhole routes.
         /// </summary>
         [NameInMap("NextHop")]
         [Validation(Required=false)]

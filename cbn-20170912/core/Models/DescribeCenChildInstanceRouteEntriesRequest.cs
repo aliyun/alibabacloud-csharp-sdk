@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string ChildInstanceRegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the route table of the network instance.
+        /// </summary>
         [NameInMap("ChildInstanceRouteTableId")]
         [Validation(Required=false)]
         public string ChildInstanceRouteTableId { get; set; }
@@ -39,9 +42,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The type of the network instance. Valid values:
         /// 
-        /// *   **VPC**
-        /// *   **VBR**
-        /// *   **CCN**
+        /// *   **VPC**: virtual private cloud (VPC)
+        /// *   **VBR**: virtual border router (VBR)
+        /// *   **CCN**: Cloud Connect Network (CCN) instance
         /// </summary>
         [NameInMap("ChildInstanceType")]
         [Validation(Required=false)]
@@ -78,13 +81,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The status of the routes that you want to query. Valid values:
+        /// The status of the route. Valid values:
         /// 
-        /// *   **Active**: active routes
-        /// *   **Candidate**: standby routes
-        /// *   **Rejected**: rejected routes
-        /// *   **Prohibited**: prohibited routes
-        /// *   **All** (default value): all routes
+        /// *   **Active**: available
+        /// *   **Candidate**: standby
+        /// *   **Rejected**: rejected
+        /// *   **Prohibited**: prohibited
+        /// *   **All** (default): all routes
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

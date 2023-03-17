@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenChildInstanceRouteEntriesResponseBody : TeaModel {
         /// <summary>
-        /// The array of routes.
+        /// The information about the routes.
         /// </summary>
         [NameInMap("CenRouteEntries")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry> CenRouteEntry { get; set; }
             public class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry : TeaModel {
                 /// <summary>
-                /// The AS paths of the routes.
+                /// The autonomous system (AS) paths of the routes.
                 /// </summary>
                 [NameInMap("AsPaths")]
                 [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The route maps that the routes match.
+                /// The routing policy that the routes match.
                 /// </summary>
                 [NameInMap("CenRouteMapRecords")]
                 [Validation(Required=false)]
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     public List<DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord> CenRouteMapRecord { get; set; }
                     public class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord : TeaModel {
                         /// <summary>
-                        /// The ID of the region where the route map is applied.
+                        /// The ID of the region in which the routing policy is applied.
                         /// </summary>
                         [NameInMap("RegionId")]
                         [Validation(Required=false)]
                         public string RegionId { get; set; }
 
                         /// <summary>
-                        /// The ID of the route map.
+                        /// The ID of the routing policy.
                         /// </summary>
                         [NameInMap("RouteMapId")]
                         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The community attributes of the routes.
+                /// The community attributes of the route entry.
                 /// </summary>
                 [NameInMap("Communities")]
                 [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 }
 
                 /// <summary>
-                /// The array of conflicting routes.
+                /// A list of overlapping routes.
                 /// </summary>
                 [NameInMap("Conflicts")]
                 [Validation(Required=false)]
@@ -87,42 +87,42 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     public List<DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflictsConflict> Conflict { get; set; }
                     public class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryConflictsConflict : TeaModel {
                         /// <summary>
-                        /// The destination CIDR block of the conflicting route.
+                        /// The destination CIDR block of the overlapping route.
                         /// </summary>
                         [NameInMap("DestinationCidrBlock")]
                         [Validation(Required=false)]
                         public string DestinationCidrBlock { get; set; }
 
                         /// <summary>
-                        /// The ID of the peer network instance on which conflicting routes are found.
+                        /// The ID of the peer network instance on which the overlapping routes are found.
                         /// </summary>
                         [NameInMap("InstanceId")]
                         [Validation(Required=false)]
                         public string InstanceId { get; set; }
 
                         /// <summary>
-                        /// The type of the peer network instance on which conflicting routes are found. 
+                        /// The type of the peer network instance on which the overlapping routes are found. Valid values: Valid values:
                         /// 
-                        /// - **VPC**
-                        /// - **VBR**
-                        /// - **CCN**
+                        /// *   **VPC**: VPC
+                        /// *   **VBR**: VBR
+                        /// *   **CCN**: CCN instance
                         /// </summary>
                         [NameInMap("InstanceType")]
                         [Validation(Required=false)]
                         public string InstanceType { get; set; }
 
                         /// <summary>
-                        /// The ID of the region where the peer network instance on which conflicting routes are found is deployed.
+                        /// The ID of the region where the peer network instance on which the overlapping routes are found is deployed.
                         /// </summary>
                         [NameInMap("RegionId")]
                         [Validation(Required=false)]
                         public string RegionId { get; set; }
 
                         /// <summary>
-                        /// The cause of the route error. Valid values: 
+                        /// The cause of the route error. Valid values:
                         /// 
-                        /// - **conflict**: Two routes have the same destination CIDR block.
-                        /// - **overflow**: The number of routes in the route table configured on another network instance reached the upper limit.
+                        /// *   **conflict**: The routes have the same destination CIDR block.
+                        /// *   **overflow**: The number of routes in the route table configured on another network instance has reached the upper limit.
                         /// </summary>
                         [NameInMap("Status")]
                         [Validation(Required=false)]
@@ -154,49 +154,49 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string NextHopRegionId { get; set; }
 
                 /// <summary>
-                /// The type of the instance specified as the next hop in the route. 
+                /// The type of the instance specified as the next hop in the route. Valid values:
                 /// 
-                /// - **Instance**: ECS instance
-                /// - **HaVip**: HAVIP
-                /// - **RouterInterface**: router interface
-                /// - **NetworkInterface**: ENI
-                /// - **VpnGateway**: VPN gateway
-                /// - **IPv6Gateway**: IPv6 gateway
-                /// - **NatGateway**: NAT gateway
-                /// - **Attachment**: network instance connection
-                /// - **service**: cloud service
-                /// - **VBR**: virtual border router
-                /// - **CCN**: CCN instance
-                /// - **VPC**: virtual private cloud
-                /// - **local**: system route. No next hop is specified.
-                /// - **TR**: transit router
-                /// - **BlackHole**: blackhole route. No next hop is specified.
-                /// - **EcRouterInterface**: router interface for Express Connect
-                /// - **HealthCheck**: health check
-                /// - **AS**: access gateway for CCN
-                /// - **classic**: classic network-type instance
-                /// - **GatewayEndpoint**: gateway endpoint
-                /// - **CPE**: data center connected by VBRs
+                /// *   **Instance**: Elastic Compute Service (ECS) instance.
+                /// *   **HaVip**: high-availability virtual IP address (HAVIP).
+                /// *   **RouterInterface**: router interface.
+                /// *   **NetworkInterface**: elastic network interface (ENI).
+                /// *   **VpnGateway**: VPN gateway.
+                /// *   **IPv6Gateway**: IPv6 gateway.
+                /// *   **NatGateway**: NAT gateway.
+                /// *   **Attachment**: network instance connection.
+                /// *   **service**: cloud service.
+                /// *   **VBR**: VBR.
+                /// *   **CCN**: CCN instance.
+                /// *   **VPC**: VPC.
+                /// *   **local**: system route. No next hop is specified.
+                /// *   **TR**: transit router.
+                /// *   \*\*BlackHole\*\*: blackhole route. No next hop is specified.
+                /// *   \*\*EcRouterInterface\*\*: router interface for Express Connect
+                /// *   **HealthCheck**: health check.
+                /// *   **AS**: access gateway for CCN.
+                /// *   **classicLink**: classic network-type instance.
+                /// *   **GatewayEndpoint**: gateway endpoint.
+                /// *   **CPE**: data center connected to the VBR.
                 /// </summary>
                 [NameInMap("NextHopType")]
                 [Validation(Required=false)]
                 public string NextHopType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the route is allowed to be advertised to or withdrawn from the CEN instance. Valid values:  
+                /// Indicates whether the route is allowed to be advertised to or withdrawn from the CEN instance. Valid values:
                 /// 
-                /// - **true**: The route is allowed to be advertised to or withdrawn from the CEN instance.
-                /// - **false**: The route is not allowed to be advertised to or withdrawn from the CEN instance.
+                /// *   **true**: The route is allowed to be advertised to or withdrawn from the CEN instance.
+                /// *   **false**: The route is not allowed to be advertised to or withdrawn from the CEN instance.
                 /// </summary>
                 [NameInMap("OperationalMode")]
                 [Validation(Required=false)]
                 public bool? OperationalMode { get; set; }
 
                 /// <summary>
-                /// Indicates whether the route is advertised to the CEN instance. Valid values: 
+                /// Indicates whether the route is advertised to the CEN instance. Valid values: Valid values:
                 /// 
-                /// - **Published**: The route is advertised to the CEN instance.
-                /// - **NonPublished**: The route is not advertised to the CEN instance.
+                /// *   **Published**: The route is advertised to the CEN instance.
+                /// *   **NonPublished**: The route is not advertised to the CEN instance.
                 /// </summary>
                 [NameInMap("PublishStatus")]
                 [Validation(Required=false)]
@@ -210,23 +210,23 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string RouteTableId { get; set; }
 
                 /// <summary>
-                /// The status of the route. Valid values: 
+                /// The status of the route. Valid values:
                 /// 
-                /// - **Active**: The route is active.
-                /// - **Candidate**: The route is a standby route.
-                /// - **Rejected**: The route is rejected.
-                /// - **Prohibited**: The route is prohibited.
+                /// *   **Active**: available
+                /// *   **Candidate**: standby
+                /// *   **Rejected**: rejected
+                /// *   **Prohibited**: prohibited
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The type of the route. Valid values: 
+                /// The type of the route. Valid values: Valid values:
                 /// 
-                /// - **CEN**: route that is advertised through CEN
-                /// - **System**: system route
-                /// - **Custom**: custom route
+                /// *   **CEN**: advertised by CEN
+                /// *   **System**: system route
+                /// *   **Custom**: custom route
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

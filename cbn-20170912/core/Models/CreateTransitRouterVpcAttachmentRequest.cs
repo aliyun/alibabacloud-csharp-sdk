@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// The billing method. The default value is **POSTPAY**, which specifies the pay-as-you-go billing method.
+        /// The billing method. Valid values: The default value is **POSTPAY**, which specifies the pay-as-you-go billing method.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
         /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
         /// </summary>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Default values:
+        /// Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:
         /// 
         /// *   **false** (default): performs a dry run and sends the request.
         /// *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The name of the VPC connection.
         /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+        /// The name must be 2 to 128 characters in length, and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.
         /// </summary>
         [NameInMap("TransitRouterAttachmentName")]
         [Validation(Required=false)]
@@ -144,16 +144,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? VpcOwnerId { get; set; }
 
         /// <summary>
-        /// A zone that supports Enterprise Edition transit routers.
+        /// A vSwitch in a zone of the Enterprise Edition transit router.
         /// 
-        /// You can specify at most 10 zones.
+        /// You can specify at most 10 vSwitches in each call.
         /// </summary>
         [NameInMap("ZoneMappings")]
         [Validation(Required=false)]
         public List<CreateTransitRouterVpcAttachmentRequestZoneMappings> ZoneMappings { get; set; }
         public class CreateTransitRouterVpcAttachmentRequestZoneMappings : TeaModel {
             /// <summary>
-            /// A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.
+            /// A vSwitch in a zone of the Enterprise Edition transit router.
             /// 
             /// You can specify vSwitches for at most 10 zones in each call.
             /// </summary>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The ID of the zone that supports Enterprise Edition transit routers.
+            /// The ID of the zone supported by Enterprise Edition transit routers.
             /// 
             /// You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
             /// 

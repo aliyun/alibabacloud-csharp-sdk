@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
         /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
         /// </summary>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Default values:
+        /// Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:
         /// 
         /// *   **false** (default): performs a dry run and sends the request.
         /// *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
@@ -56,9 +56,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the VBR.
+        /// The ID of the region where the VBR is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the Alibaba Cloud account to which the VBR belongs. The default value is the ID of the current Alibaba Cloud account.
         /// 
-        /// > If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.
+        /// > If the network instance and CEN instance belong to different Alibaba Cloud accounts, this parameter is required.
         /// </summary>
         [NameInMap("VbrOwnerId")]
         [Validation(Required=false)]

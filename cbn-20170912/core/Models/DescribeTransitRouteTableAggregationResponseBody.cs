@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string RouteType { get; set; }
 
-            [NameInMap("Scop")]
+            [NameInMap("Scope")]
             [Validation(Required=false)]
-            public string Scop { get; set; }
+            public string Scope { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]
