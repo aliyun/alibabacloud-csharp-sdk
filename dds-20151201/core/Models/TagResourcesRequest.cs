@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The resource IDs.
+        /// The list of resource IDs.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The list of tags that you want to associate with the resources. You can specify up to 20 tags.
+        /// The tags that are attached to the resources.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -63,9 +63,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// The key of tag.
             /// 
-            /// * The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
-            /// * It can be up to 64 characters in length.
-            /// * The key cannot be an empty string.
+            /// N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:
+            /// 
+            /// - **Tag.1.Key** specifies the key of the first tag.
+            /// - **Tag.2.Key** specifies the key of the second tag.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -74,9 +75,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// The value of tag.
             /// 
-            /// - The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
-            /// - It can be up to 128 characters in length.
-            /// - The value can be an empty string.
+            /// N specifies the serial number of the tag. The following example shows how to calculate consumption intervals: 
+            /// 
+            /// - **Tag.1.Value** specifies the value of the first tag.
+            /// - **Tag.2.Value** specifies the value of the second tag.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

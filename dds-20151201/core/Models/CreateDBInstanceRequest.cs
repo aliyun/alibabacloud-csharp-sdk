@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
         /// *   These special characters include ! # $ % ^ & \* ( ) \_ + - =
-        /// *   The password must be 8 to 32 characters in length.
+        /// *   The password is 8 to 32 characters in length.
         /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The billing method of the instance. Valid values:
         /// 
-        /// *   **PostPaid:** pay-as-you-go
-        /// *   **PrePaid:** subscription
+        /// *   **PostPaid**: pay-as-you-go
+        /// *   **PrePaid**: subscription
         /// 
-        /// > If you set this parameter to **PrePaid**, you must also specify the **Period** parameter.
+        /// > If you specify this parameter to **PrePaid**, you must also specify the **Period** parameter.
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// *   The name must start with a letter.
         /// *   The name can contain digits, letters, underscores (\_), and hyphens (-).
-        /// *   It must be 2 to 256 characters in length.
+        /// *   The name must be 2 to 256 characters in length.
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The storage capacity of the instance. Unit: GB.
         /// 
-        /// The values that can be specified for this parameter vary based on the instance types. For more information, see [Replica set instance types](~~311410~~).
+        /// The values that can be specified for this parameter are subject to the instance types. For more information, see [Replica set instance types](~~311410~~).
         /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// The version of the database engine. Valid values:
+        /// The database engine version of the instance.
         /// 
         /// *   **6.0**
         /// *   **5.0**
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// > 
         /// 
-        /// *   This parameter is available and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.
+        /// *   This parameter is valid and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.
         /// 
         /// *   The value of this parameter cannot be the same as the value of the **ZoneId** or **SecondaryZoneId** parameter.
         /// </summary>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// 
         /// > 
         /// 
-        /// *   This parameter is available and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.
+        /// *   This parameter is valid and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.
         /// 
         /// *   The value of this parameter cannot be the same as the value of the **ZoneId** or **HiddenZoneId** parameter.
         /// </summary>
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The ID of the source instance.
         /// 
-        /// > This parameter can only be specified when this operation is called to clone instances. You must also specify the **BackupId** parameter or **RestoreTime** parameter. If you call this operation to restore an instance from the recycle bin, this parameter is required. The **BackupId** and **RestoreTime** parameters are not required.
+        /// > This parameter can only be specified when this operation is called to clone instances. You must also specify the **BackupId** parameter or **RestoreTime** parameter. If you call this operation to restore an instance from the recycle bin, only this parameter is required. The **BackupId** and **RestoreTime** parameters are not required.
         /// </summary>
         [NameInMap("SrcDBInstanceId")]
         [Validation(Required=false)]
@@ -328,9 +328,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The storage type of the instance. Valid values:
         /// 
-        /// *   **cloud_essd1** :ESSD PL1
-        /// *   **cloud_essd2**: ESSD PL2
-        /// *   **cloud_essd3**: ESSD PL3
+        /// *   **cloud_essd1** :ESSD PL1.
+        /// *   **cloud_essd2**: ESSD PL2.
+        /// *   **cloud_essd3**: ESSD PL3.
         /// *   **local_ssd**: local SSD
         /// </summary>
         [NameInMap("StorageType")]
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC.
+        /// The VPC ID of the instance.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

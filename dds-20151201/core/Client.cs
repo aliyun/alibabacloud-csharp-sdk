@@ -321,7 +321,6 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you enable Transparent Data Encryption (TDE) by calling the [ModifyDBInstanceTDE](~~131267~~) operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.
-          * >  TDE cannot be enabled if KMS keys are not authorized to ApsaraDB for MongoDB instances. You can [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm#/ticket/createIndex) to modify the authorization information.
           *
           * @param request CheckCloudResourceAuthorizedRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -380,7 +379,6 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you enable Transparent Data Encryption (TDE) by calling the [ModifyDBInstanceTDE](~~131267~~) operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.
-          * >  TDE cannot be enabled if KMS keys are not authorized to ApsaraDB for MongoDB instances. You can [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm#/ticket/createIndex) to modify the authorization information.
           *
           * @param request CheckCloudResourceAuthorizedRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -439,7 +437,6 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you enable Transparent Data Encryption (TDE) by calling the [ModifyDBInstanceTDE](~~131267~~) operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.
-          * >  TDE cannot be enabled if KMS keys are not authorized to ApsaraDB for MongoDB instances. You can [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm#/ticket/createIndex) to modify the authorization information.
           *
           * @param request CheckCloudResourceAuthorizedRequest
           * @return CheckCloudResourceAuthorizedResponse
@@ -452,7 +449,6 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you enable Transparent Data Encryption (TDE) by calling the [ModifyDBInstanceTDE](~~131267~~) operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.
-          * >  TDE cannot be enabled if KMS keys are not authorized to ApsaraDB for MongoDB instances. You can [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm#/ticket/createIndex) to modify the authorization information.
           *
           * @param request CheckCloudResourceAuthorizedRequest
           * @return CheckCloudResourceAuthorizedResponse
@@ -776,7 +772,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
+          * Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
           * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
           * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~61884~~) operation.
           *
@@ -948,7 +944,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
+          * Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
           * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
           * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~61884~~) operation.
           *
@@ -1120,7 +1116,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
+          * Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
           * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
           * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~61884~~) operation.
           *
@@ -1134,7 +1130,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
+          * Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
           * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
           * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~61884~~) operation.
           *
@@ -4335,9 +4331,9 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you call this operation, make sure that the following requirements are met:
-          * *   The instance is in the running state.
+          * *   The instance is in the Running state.
           * *   The instance is a replica set instance.
-          * *   The database version of the instance is 3.4 or 4.0.
+          * *   The instance runs MongoDB 3.4 or later.
           *
           * @param request DescribeDBInstanceSSLRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4392,9 +4388,9 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you call this operation, make sure that the following requirements are met:
-          * *   The instance is in the running state.
+          * *   The instance is in the Running state.
           * *   The instance is a replica set instance.
-          * *   The database version of the instance is 3.4 or 4.0.
+          * *   The instance runs MongoDB 3.4 or later.
           *
           * @param request DescribeDBInstanceSSLRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4449,9 +4445,9 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you call this operation, make sure that the following requirements are met:
-          * *   The instance is in the running state.
+          * *   The instance is in the Running state.
           * *   The instance is a replica set instance.
-          * *   The database version of the instance is 3.4 or 4.0.
+          * *   The instance runs MongoDB 3.4 or later.
           *
           * @param request DescribeDBInstanceSSLRequest
           * @return DescribeDBInstanceSSLResponse
@@ -4464,9 +4460,9 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you call this operation, make sure that the following requirements are met:
-          * *   The instance is in the running state.
+          * *   The instance is in the Running state.
           * *   The instance is a replica set instance.
-          * *   The database version of the instance is 3.4 or 4.0.
+          * *   The instance runs MongoDB 3.4 or later.
           *
           * @param request DescribeDBInstanceSSLRequest
           * @return DescribeDBInstanceSSLResponse
@@ -6035,6 +6031,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraParam))
+            {
+                query["ExtraParam"] = request.ExtraParam;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
             {
                 query["NodeId"] = request.NodeId;
@@ -6089,6 +6089,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraParam))
+            {
+                query["ExtraParam"] = request.ExtraParam;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
             {
@@ -10351,7 +10355,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-          * This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the [ModifyNodeSpec](~~61923~~), [CreateNode](~~61911~~), [DeleteNode](~~61922~~), or [ModifyNodeSpecBatch](~~61816~~) operation.
+          * This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the [ModifyNodeSpec](~~61911~~), [CreateNode](~~61922~~), [DeleteNode](~~61816~~), or [ModifyNodeSpecBatch](~~61923~~) operation.
           *
           * @param request ModifyDBInstanceSpecRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10446,7 +10450,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-          * This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the [ModifyNodeSpec](~~61923~~), [CreateNode](~~61911~~), [DeleteNode](~~61922~~), or [ModifyNodeSpecBatch](~~61816~~) operation.
+          * This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the [ModifyNodeSpec](~~61911~~), [CreateNode](~~61922~~), [DeleteNode](~~61816~~), or [ModifyNodeSpecBatch](~~61923~~) operation.
           *
           * @param request ModifyDBInstanceSpecRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10541,7 +10545,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-          * This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the [ModifyNodeSpec](~~61923~~), [CreateNode](~~61911~~), [DeleteNode](~~61922~~), or [ModifyNodeSpecBatch](~~61816~~) operation.
+          * This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the [ModifyNodeSpec](~~61911~~), [CreateNode](~~61922~~), [DeleteNode](~~61816~~), or [ModifyNodeSpecBatch](~~61923~~) operation.
           *
           * @param request ModifyDBInstanceSpecRequest
           * @return ModifyDBInstanceSpecResponse
@@ -10554,7 +10558,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-          * This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the [ModifyNodeSpec](~~61923~~), [CreateNode](~~61911~~), [DeleteNode](~~61922~~), or [ModifyNodeSpecBatch](~~61816~~) operation.
+          * This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the [ModifyNodeSpec](~~61911~~), [CreateNode](~~61922~~), [DeleteNode](~~61816~~), or [ModifyNodeSpecBatch](~~61923~~) operation.
           *
           * @param request ModifyDBInstanceSpecRequest
           * @return ModifyDBInstanceSpecResponse
@@ -11075,7 +11079,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-          * >  This operation applies only to sharded cluster instances.
+          * > This operation is applicable only to sharded cluster instances.
           *
           * @param request ModifyNodeSpecRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11178,7 +11182,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-          * >  This operation applies only to sharded cluster instances.
+          * > This operation is applicable only to sharded cluster instances.
           *
           * @param request ModifyNodeSpecRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11281,7 +11285,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-          * >  This operation applies only to sharded cluster instances.
+          * > This operation is applicable only to sharded cluster instances.
           *
           * @param request ModifyNodeSpecRequest
           * @return ModifyNodeSpecResponse
@@ -11294,7 +11298,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-          * >  This operation applies only to sharded cluster instances.
+          * > This operation is applicable only to sharded cluster instances.
           *
           * @param request ModifyNodeSpecRequest
           * @return ModifyNodeSpecResponse

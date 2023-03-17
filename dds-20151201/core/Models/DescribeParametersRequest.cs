@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("ExtraParam")]
+        [Validation(Required=false)]
+        public string ExtraParam { get; set; }
+
         /// <summary>
         /// The ID of the mongos or shard in the specified sharded cluster instance.
         /// 

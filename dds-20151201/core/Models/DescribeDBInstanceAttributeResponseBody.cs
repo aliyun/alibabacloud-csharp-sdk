@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string CurrentKernelVersion { get; set; }
 
                 /// <summary>
-                /// The edition of the instance.
+                /// The instance type.
                 /// </summary>
                 [NameInMap("DBInstanceClass")]
                 [Validation(Required=false)]
@@ -152,6 +152,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
+                /// <summary>
+                /// The status of the orders generated for the instance. Valid values:
+                /// 
+                /// *   **all_completed**: All orders are being produced or complete.
+                /// *   **order_unpaid**: The instance has unpaid orders.
+                /// *   **order_wait_for_produce**: The order is being delivered for production.
+                /// 
+                /// >  The order production process includes placing an order, paying for an order, delivering an order for production, producing an order, and complete.
+                /// 
+                /// *   If an order is in the **order_wait_for_produce** state for a long time, an error occurs when the order is being delivered for production. The system will automatically retry.
+                /// *   The instance status changes only when the order is in the producing and complete state, such as changing configurations and running.
+                /// </summary>
                 [NameInMap("DBInstanceOrderStatus")]
                 [Validation(Required=false)]
                 public string DBInstanceOrderStatus { get; set; }
@@ -159,7 +171,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// Indicates whether release protection is enabled for the instance. Valid values:
                 /// 
-                /// *   **true**: Release protection is enabled.
+                /// *   **true**: enabled
                 /// *   **false**: disabled
                 /// </summary>
                 [NameInMap("DBInstanceReleaseProtection")]
@@ -185,28 +197,27 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// 
                 /// *   **replicate**: replica set instance
                 /// *   **sharding**: sharded cluster instance
-                /// *   **serverless**: serverless instance
                 /// </summary>
                 [NameInMap("DBInstanceType")]
                 [Validation(Required=false)]
                 public string DBInstanceType { get; set; }
 
                 /// <summary>
-                /// 实例数据销毁时间，格式为yyyy-MM-ddTHH:mm:ssZ（UTC时间）。
+                /// The time when the instance data was destroyed. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("DestroyTime")]
                 [Validation(Required=false)]
                 public string DestroyTime { get; set; }
 
                 /// <summary>
-                /// The engine of the instance.
+                /// The database engine of the instance.
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The engine version of the instance.
+                /// The database engine version of the instance.
                 /// 
                 /// *   **6.0**
                 /// *   **5.0**
@@ -355,7 +366,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         public int? MaxIOPS { get; set; }
 
                         /// <summary>
-                        /// The instance type of the Mongos node.
+                        /// The instance type of the mongos node.
                         /// </summary>
                         [NameInMap("NodeClass")]
                         [Validation(Required=false)]
@@ -390,7 +401,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         public string Status { get; set; }
 
                         /// <summary>
-                        /// The VPC ID of the instance.
+                        /// The VPC ID of the node.
                         /// 
                         /// > This parameter is returned if the network type of the instance is VPC.
                         /// </summary>
@@ -399,7 +410,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         public string VPCId { get; set; }
 
                         /// <summary>
-                        /// The vSwitch ID of the instance.
+                        /// The vSwitch ID of the node.
                         /// 
                         /// > This parameter is returned if the network type of the instance is VPC.
                         /// </summary>
@@ -697,7 +708,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The storage type of the instance. Valid values:
                 /// 
-                /// **cloud_essd1** :ESSD PL1. **cloud_essd2**: ESSD of PL2. **cloud_essd3**: ESSD of PL3. **local_ssd**: local SSD.
+                /// **cloud_essd1** :ESSD PL1 **cloud_essd2**: ESSD of PL2. **cloud_essd3**: ESSD of PL3. **local_ssd**: local SSD.
                 /// </summary>
                 [NameInMap("StorageType")]
                 [Validation(Required=false)]
@@ -715,14 +726,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public List<DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTagsTag> Tag { get; set; }
                     public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// The key of the tag.
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// The value of the tag.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]

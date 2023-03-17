@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// Specifies whether to enable automatic payment. Default value: true. Valid values:
         /// 
         /// *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
-        /// *   **false**: disables automatic payment. In this case, you must manually pay for the instance.
+        /// *   **false**: disables automatic payment.
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The time when the changed configurations take effect. Default value: Immediately. Valid values:
         /// 
-        /// *   **Immediately**: The new configurations immediately take effect
+        /// *   **Immediately**: The new configurations immediately take effect.
         /// *   **MaintainTime**: The new configurations take effect during the maintenance window of the instance.
         /// </summary>
         [NameInMap("EffectiveTime")]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string FromApp { get; set; }
 
         /// <summary>
-        /// The instance type of the shard or mongos node. For more information, see [Instance types](~~57141~~).
+        /// The specifications of the shard or mongos node. For more information, see [Instance types](~~57141~~).
         /// </summary>
         [NameInMap("NodeClass")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The ID of the shard or mongos node in the sharded cluster instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the node ID.
         /// 
-        /// >  If you set this parameter to the ID of a shard node, you must also specify the **NodeStorage** parameter.
+        /// > If you set this parameter to the ID of the shard node, you must also specify the **NodeStorage** parameter.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   Valid values are **10** to **2000** if the instance uses local SSDs.
         /// *   Valid values are **20** to **16000** if the instance uses enhanced SSDs (ESSDs) at PL1.
         /// 
-        /// >  The value must be a multiple of 10.
+        /// > The value must be a multiple of 10.
         /// </summary>
         [NameInMap("NodeStorage")]
         [Validation(Required=false)]
