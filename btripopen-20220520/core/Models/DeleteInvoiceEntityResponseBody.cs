@@ -8,24 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class CorpTokenResponseBody : TeaModel {
+    public class DeleteInvoiceEntityResponseBody : TeaModel {
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("data")]
-        [Validation(Required=false)]
-        public CorpTokenResponseBodyData Data { get; set; }
-        public class CorpTokenResponseBodyData : TeaModel {
-            [NameInMap("expire")]
-            [Validation(Required=false)]
-            public long? Expire { get; set; }
-
-            [NameInMap("token")]
-            [Validation(Required=false)]
-            public string Token { get; set; }
-
-        }
 
         [NameInMap("message")]
         [Validation(Required=false)]
@@ -33,19 +19,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         [NameInMap("module")]
         [Validation(Required=false)]
-        public CorpTokenResponseBodyModule Module { get; set; }
-        public class CorpTokenResponseBodyModule : TeaModel {
-            [NameInMap("expire")]
+        public DeleteInvoiceEntityResponseBodyModule Module { get; set; }
+        public class DeleteInvoiceEntityResponseBodyModule : TeaModel {
+            [NameInMap("remove_num")]
             [Validation(Required=false)]
-            public long? Expire { get; set; }
+            public int? RemoveNum { get; set; }
 
-            [NameInMap("start")]
+            [NameInMap("selected_user_num")]
             [Validation(Required=false)]
-            public long? Start { get; set; }
-
-            [NameInMap("token")]
-            [Validation(Required=false)]
-            public string Token { get; set; }
+            public int? SelectedUserNum { get; set; }
 
         }
 
