@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.DocumentAutoml20221229.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public Dictionary<string, object> Data { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
