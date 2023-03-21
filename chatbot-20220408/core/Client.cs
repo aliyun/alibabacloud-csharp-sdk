@@ -3991,6 +3991,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GoodsCodes))
+            {
+                query["GoodsCodes"] = request.GoodsCodes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -4022,6 +4030,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GoodsCodes))
+            {
+                query["GoodsCodes"] = request.GoodsCodes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
