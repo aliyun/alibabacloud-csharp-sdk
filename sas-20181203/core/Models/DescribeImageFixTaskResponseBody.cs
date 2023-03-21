@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string TaskType { get; set; }
 
+            [NameInMap("VulAlias")]
+            [Validation(Required=false)]
+            public string VulAlias { get; set; }
+
         }
 
         [NameInMap("PageInfo")]

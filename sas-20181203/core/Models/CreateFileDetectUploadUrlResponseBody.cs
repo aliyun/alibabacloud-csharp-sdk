@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string OssKey { get; set; }
 
                 /// <summary>
-                /// The policy that poses limits on file upload. For example, the policy limits the size of the file.
+                /// The policy that poses limits on file upload. For example, the policy can limit the size of the file.
                 /// </summary>
                 [NameInMap("Policy")]
                 [Validation(Required=false)]

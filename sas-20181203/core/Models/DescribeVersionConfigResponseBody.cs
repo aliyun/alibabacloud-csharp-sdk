@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public bool? IsNewContainerVersion { get; set; }
 
+        [NameInMap("IsNewMultiVersion")]
+        [Validation(Required=false)]
+        public bool? IsNewMultiVersion { get; set; }
+
         [NameInMap("IsOverBalance")]
         [Validation(Required=false)]
         public bool? IsOverBalance { get; set; }

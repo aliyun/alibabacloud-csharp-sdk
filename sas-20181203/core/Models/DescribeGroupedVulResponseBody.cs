@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? NntfCount { get; set; }
 
+            [NameInMap("RaspDefend")]
+            [Validation(Required=false)]
+            public int? RaspDefend { get; set; }
+
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public string Tags { get; set; }

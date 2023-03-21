@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? ClusterCount { get; set; }
 
+            [NameInMap("InterceptionCountInDays")]
+            [Validation(Required=false)]
+            public int? InterceptionCountInDays { get; set; }
+
             [NameInMap("OpenClusterCount")]
             [Validation(Required=false)]
             public int? OpenClusterCount { get; set; }

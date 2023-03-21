@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBruteForceRecordsRequest : TeaModel {
         /// <summary>
-        /// The IP address that is blocked by the defense rule.
+        /// The IP address that is blocked.
         /// </summary>
         [NameInMap("BlockIp")]
         [Validation(Required=false)]

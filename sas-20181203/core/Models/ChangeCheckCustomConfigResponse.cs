@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class DescribeAlarmEventListResponse : TeaModel {
+    public class ChangeCheckCustomConfigResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeAlarmEventListResponseBody Body { get; set; }
+        public ChangeCheckCustomConfigResponseBody Body { get; set; }
 
     }
 

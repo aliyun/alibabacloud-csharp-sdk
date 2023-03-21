@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class DescribeImageResponseBody : TeaModel {
-        [NameInMap("Data")]
+    public class ChangeCheckCustomConfigResponseBody : TeaModel {
+        [NameInMap("IllegalCustomConfigs")]
         [Validation(Required=false)]
-        public DescribeImageResponseBodyData Data { get; set; }
-        public class DescribeImageResponseBodyData : TeaModel {
-            [NameInMap("Digest")]
+        public List<ChangeCheckCustomConfigResponseBodyIllegalCustomConfigs> IllegalCustomConfigs { get; set; }
+        public class ChangeCheckCustomConfigResponseBodyIllegalCustomConfigs : TeaModel {
+            [NameInMap("Name")]
             [Validation(Required=false)]
-            public string Digest { get; set; }
+            public string Name { get; set; }
 
         }
 

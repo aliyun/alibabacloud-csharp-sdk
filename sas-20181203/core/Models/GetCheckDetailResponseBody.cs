@@ -27,6 +27,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        [NameInMap("CustomConfigs")]
+        [Validation(Required=false)]
+        public List<GetCheckDetailResponseBodyCustomConfigs> CustomConfigs { get; set; }
+        public class GetCheckDetailResponseBodyCustomConfigs : TeaModel {
+            [NameInMap("DefaultValue")]
+            [Validation(Required=false)]
+            public string DefaultValue { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("ShowName")]
+            [Validation(Required=false)]
+            public string ShowName { get; set; }
+
+            [NameInMap("TypeDefine")]
+            [Validation(Required=false)]
+            public string TypeDefine { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public GetCheckDetailResponseBodyDescription Description { get; set; }

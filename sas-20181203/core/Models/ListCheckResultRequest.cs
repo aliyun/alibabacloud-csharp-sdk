@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("RequirementIds")]
         [Validation(Required=false)]
         public List<long?> RequirementIds { get; set; }
@@ -52,6 +56,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Statuses")]
         [Validation(Required=false)]
         public List<string> Statuses { get; set; }
+
+        [NameInMap("Types")]
+        [Validation(Required=false)]
+        public List<string> Types { get; set; }
 
         [NameInMap("Vendors")]
         [Validation(Required=false)]

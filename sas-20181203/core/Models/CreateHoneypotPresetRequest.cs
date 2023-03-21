@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string HoneypotImageName { get; set; }
 
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
         /// <summary>
         /// The custom configurations of the honeypot template. The value is a JSON string that contains the following fields:
         /// 

@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// The type of the query condition. Valid values:
         /// 
         /// *   **containerId**: the ID of the container
-        /// *   **uuid**: the ID of the asset
+        /// *   **uuid**: the UUID of the asset
         /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]

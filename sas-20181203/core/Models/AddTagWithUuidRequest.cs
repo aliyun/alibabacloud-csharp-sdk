@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddTagWithUuidRequest : TeaModel {
+        /// <summary>
+        /// The name of the tag.
+        /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]
         public string TagName { get; set; }
 
+        /// <summary>
+        /// The UUIDs of the servers. Separate multiple UUIDs with commas (,).
+        /// 
+        /// > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+        /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]
         public string UuidList { get; set; }

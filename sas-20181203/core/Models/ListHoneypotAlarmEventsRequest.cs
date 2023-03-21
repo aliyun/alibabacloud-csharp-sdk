@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("RiskLevelList")]
         [Validation(Required=false)]
         public List<string> RiskLevelList { get; set; }

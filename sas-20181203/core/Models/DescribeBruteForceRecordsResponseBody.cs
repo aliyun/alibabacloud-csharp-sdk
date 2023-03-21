@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? BlockExpireDate { get; set; }
 
             /// <summary>
-            /// The IP address that is blocked.
+            /// The blocked IP address.
             /// </summary>
             [NameInMap("BlockIp")]
             [Validation(Required=false)]
             public string BlockIp { get; set; }
 
             /// <summary>
-            /// The error code returned when the defense rule fails to block an IP address.
+            /// The error code returned when the defense rule fails to block the IP address.
             /// </summary>
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// The primary key ID of the database.
+            /// The ID of the primary key in the table of records on the blocked IP address.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]

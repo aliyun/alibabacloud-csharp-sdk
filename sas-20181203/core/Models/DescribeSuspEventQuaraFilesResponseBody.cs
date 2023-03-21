@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
+            [NameInMap("IntranetIp")]
+            [Validation(Required=false)]
+            public string IntranetIp { get; set; }
+
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }

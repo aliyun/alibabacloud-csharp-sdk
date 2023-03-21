@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The statistics of alerts events by risk level.
+        /// The statistics of alerts by risk level.
         /// </summary>
         [NameInMap("EventLevels")]
         [Validation(Required=false)]

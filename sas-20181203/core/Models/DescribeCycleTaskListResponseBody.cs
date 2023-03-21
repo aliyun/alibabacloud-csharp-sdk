@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Enable { get; set; }
 
             /// <summary>
-            /// The time when the task first run.
+            /// The first time when the task starts.
             /// </summary>
             [NameInMap("FirstDateStr")]
             [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? IntervalPeriod { get; set; }
 
             /// <summary>
-            /// The ID of the task when the task last run.
+            /// The ID of the task when the task last runs.
             /// </summary>
             [NameInMap("LastTaskId")]
             [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TargetEndTime { get; set; }
 
             /// <summary>
-            /// The period of time before the next task starts. Unit: hours.
+            /// The period of time before the task starts for the next time. Unit: hours.
             /// </summary>
             [NameInMap("TargetStartTime")]
             [Validation(Required=false)]

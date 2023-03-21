@@ -227,6 +227,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? PrimaryId { get; set; }
 
+            [NameInMap("RaspDefend")]
+            [Validation(Required=false)]
+            public int? RaspDefend { get; set; }
+
+            [NameInMap("RaspStatus")]
+            [Validation(Required=false)]
+            public int? RaspStatus { get; set; }
+
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }

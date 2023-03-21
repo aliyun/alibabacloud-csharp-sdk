@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// Indicates whether the alert events are generated on the server. Valid values:
         /// 
-        /// *   **true**: yes
+        /// *   **true**
         /// *   **false**: no
         /// </summary>
         [NameInMap("Data")]

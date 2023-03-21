@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class DescribeCheckEcsWarningsRequest : TeaModel {
-        [NameInMap("SourceIp")]
+    public class ListPrivateRegistryTypeRequest : TeaModel {
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string Lang { get; set; }
 
     }
 

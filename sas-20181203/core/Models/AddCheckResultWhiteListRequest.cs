@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddCheckResultWhiteListRequest : TeaModel {
+        /// <summary>
+        /// The IDs of the check items.
+        /// </summary>
         [NameInMap("CheckIds")]
         [Validation(Required=false)]
         public List<long?> CheckIds { get; set; }

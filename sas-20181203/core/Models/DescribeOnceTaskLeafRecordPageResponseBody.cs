@@ -65,6 +65,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public DescribeOnceTaskLeafRecordPageResponseBodyOnceTasksTaskImageInfo TaskImageInfo { get; set; }
             public class DescribeOnceTaskLeafRecordPageResponseBodyOnceTasksTaskImageInfo : TeaModel {
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
+                public string AppName { get; set; }
+
+                [NameInMap("ClusterId")]
+                [Validation(Required=false)]
+                public string ClusterId { get; set; }
+
+                [NameInMap("ClusterName")]
+                [Validation(Required=false)]
+                public string ClusterName { get; set; }
+
                 [NameInMap("Digest")]
                 [Validation(Required=false)]
                 public string Digest { get; set; }
@@ -72,6 +84,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [NameInMap("Image")]
                 [Validation(Required=false)]
                 public string Image { get; set; }
+
+                [NameInMap("NodeInstanceId")]
+                [Validation(Required=false)]
+                public string NodeInstanceId { get; set; }
+
+                [NameInMap("NodeIp")]
+                [Validation(Required=false)]
+                public string NodeIp { get; set; }
+
+                [NameInMap("NodeName")]
+                [Validation(Required=false)]
+                public string NodeName { get; set; }
 
                 [NameInMap("Pod")]
                 [Validation(Required=false)]

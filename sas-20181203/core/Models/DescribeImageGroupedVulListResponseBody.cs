@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? AsapCount { get; set; }
 
+            [NameInMap("CanFix")]
+            [Validation(Required=false)]
+            public string CanFix { get; set; }
+
             [NameInMap("GmtLast")]
             [Validation(Required=false)]
             public long? GmtLast { get; set; }
