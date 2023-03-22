@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DocumentAutoml20221229.Models
 {
     public class PredictTemplateModelRequest : TeaModel {
+        [NameInMap("BinaryToText")]
+        [Validation(Required=false)]
+        public bool? BinaryToText { get; set; }
+
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }

@@ -213,6 +213,10 @@ namespace AlibabaCloud.SDK.DocumentAutoml20221229
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BinaryToText))
+            {
+                query["BinaryToText"] = request.BinaryToText;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 query["Content"] = request.Content;
@@ -244,6 +248,10 @@ namespace AlibabaCloud.SDK.DocumentAutoml20221229
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BinaryToText))
+            {
+                query["BinaryToText"] = request.BinaryToText;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 query["Content"] = request.Content;
