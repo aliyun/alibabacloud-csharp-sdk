@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizeTableOcrRequest : TeaModel {
+        [NameInMap("IsHandWriting")]
+        [Validation(Required=false)]
+        public string IsHandWriting { get; set; }
+
         [NameInMap("LineLess")]
         [Validation(Required=false)]
         public bool? LineLess { get; set; }

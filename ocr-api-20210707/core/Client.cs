@@ -4577,6 +4577,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsHandWriting))
+            {
+                query["IsHandWriting"] = request.IsHandWriting;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineLess))
             {
                 query["LineLess"] = request.LineLess;
@@ -4618,6 +4622,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsHandWriting))
+            {
+                query["IsHandWriting"] = request.IsHandWriting;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineLess))
             {
                 query["LineLess"] = request.LineLess;
@@ -5109,76 +5117,6 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RecognizeTrainInvoiceWithOptionsAsync(request, runtime);
-        }
-
-        public RecognizeTravelCardResponse RecognizeTravelCardWithOptions(RecognizeTravelCardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
-            {
-                query["Url"] = request.Url;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
-                Stream = request.Body,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RecognizeTravelCard",
-                Version = "2021-07-07",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<RecognizeTravelCardResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<RecognizeTravelCardResponse> RecognizeTravelCardWithOptionsAsync(RecognizeTravelCardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
-            {
-                query["Url"] = request.Url;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
-                Stream = request.Body,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RecognizeTravelCard",
-                Version = "2021-07-07",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<RecognizeTravelCardResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public RecognizeTravelCardResponse RecognizeTravelCard(RecognizeTravelCardRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return RecognizeTravelCardWithOptions(request, runtime);
-        }
-
-        public async Task<RecognizeTravelCardResponse> RecognizeTravelCardAsync(RecognizeTravelCardRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await RecognizeTravelCardWithOptionsAsync(request, runtime);
         }
 
         public RecognizeUsedCarInvoiceResponse RecognizeUsedCarInvoiceWithOptions(RecognizeUsedCarInvoiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
