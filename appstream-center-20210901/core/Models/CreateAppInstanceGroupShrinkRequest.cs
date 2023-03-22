@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
+        [NameInMap("RuntimePolicy")]
+        [Validation(Required=false)]
+        public string RuntimePolicyShrink { get; set; }
+
         [NameInMap("SessionTimeout")]
         [Validation(Required=false)]
         public int? SessionTimeout { get; set; }

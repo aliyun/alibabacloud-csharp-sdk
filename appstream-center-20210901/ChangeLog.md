@@ -1,3 +1,6 @@
+2023-03-22 Version: 1.0.4
+- Add ListAppInstances Open API.
+
 2023-03-10 Version: 1.0.3
 - Add Unbind Open API.
 
