@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class JobSettings : TeaModel {
+        [NameInMap("AdvancedSettings")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> AdvancedSettings { get; set; }
+
         [NameInMap("BusinessUserId")]
         [Validation(Required=false)]
         public string BusinessUserId { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("ErrorMonitoringArgs")]
         [Validation(Required=false)]
         public string ErrorMonitoringArgs { get; set; }
+
+        [NameInMap("OversoldType")]
+        [Validation(Required=false)]
+        public string OversoldType { get; set; }
 
         [NameInMap("PipelineId")]
         [Validation(Required=false)]

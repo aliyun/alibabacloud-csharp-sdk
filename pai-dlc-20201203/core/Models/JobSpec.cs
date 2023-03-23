@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Image { get; set; }
 
+        [NameInMap("ImageConfig")]
+        [Validation(Required=false)]
+        public ImageConfig ImageConfig { get; set; }
+
         [NameInMap("PodCount")]
         [Validation(Required=false)]
         public long? PodCount { get; set; }

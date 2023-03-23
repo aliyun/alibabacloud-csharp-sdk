@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class CreateTensorboardRequest : TeaModel {
+        [NameInMap("Cpu")]
+        [Validation(Required=false)]
+        public long? Cpu { get; set; }
+
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("MaxRunningTimeMinutes")]
         [Validation(Required=false)]
         public long? MaxRunningTimeMinutes { get; set; }
+
+        [NameInMap("Memory")]
+        [Validation(Required=false)]
+        public long? Memory { get; set; }
 
         [NameInMap("Options")]
         [Validation(Required=false)]

@@ -162,9 +162,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 [Validation(Required=false)]
                 public string PodUid { get; set; }
 
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("SubStatus")]
+                [Validation(Required=false)]
+                public string SubStatus { get; set; }
 
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -187,9 +195,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [Validation(Required=false)]
             public string PodUid { get; set; }
 
+            [NameInMap("ResourceType")]
+            [Validation(Required=false)]
+            public string ResourceType { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("SubStatus")]
+            [Validation(Required=false)]
+            public string SubStatus { get; set; }
 
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -221,6 +237,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string ResourceLevel { get; set; }
 
+        [NameInMap("RestartTimes")]
+        [Validation(Required=false)]
+        public string RestartTimes { get; set; }
+
         [NameInMap("Settings")]
         [Validation(Required=false)]
         public JobSettings Settings { get; set; }
@@ -228,6 +248,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("SubStatus")]
+        [Validation(Required=false)]
+        public string SubStatus { get; set; }
 
         [NameInMap("ThirdpartyLibDir")]
         [Validation(Required=false)]

@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? RequestId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

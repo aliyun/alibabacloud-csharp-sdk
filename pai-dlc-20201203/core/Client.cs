@@ -308,6 +308,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                body["Cpu"] = request.Cpu;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
             {
                 body["DataSourceId"] = request.DataSourceId;
@@ -331,6 +335,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxRunningTimeMinutes))
             {
                 body["MaxRunningTimeMinutes"] = request.MaxRunningTimeMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
+            {
+                body["Memory"] = request.Memory;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
             {
@@ -384,6 +392,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                body["Cpu"] = request.Cpu;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
             {
                 body["DataSourceId"] = request.DataSourceId;
@@ -407,6 +419,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxRunningTimeMinutes))
             {
                 body["MaxRunningTimeMinutes"] = request.MaxRunningTimeMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
+            {
+                body["Memory"] = request.Memory;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
             {

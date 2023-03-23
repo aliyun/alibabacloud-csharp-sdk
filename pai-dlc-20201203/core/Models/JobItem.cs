@@ -133,6 +133,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("SubStatus")]
+        [Validation(Required=false)]
+        public string SubStatus { get; set; }
+
         [NameInMap("ThirdpartyLibDir")]
         [Validation(Required=false)]
         public string ThirdpartyLibDir { get; set; }
