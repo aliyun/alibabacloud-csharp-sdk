@@ -224,8 +224,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// *   **REGISTER**: registered APIs
         /// *   **UNREGISTER**: unregistered APIs
         /// *   **NOTIFY**: downstream notification APIs
-        /// 
-        /// For more information, see [Two-way communication](~~66031~~).
         /// </summary>
         [NameInMap("WebSocketApiType")]
         [Validation(Required=false)]

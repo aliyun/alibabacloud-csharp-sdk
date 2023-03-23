@@ -17,22 +17,30 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string ApiId { get; set; }
 
         /// <summary>
-        /// The ID of the group to which the API to be queried belongs.
+        /// The ID of the group to which the API belongs.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The runtime environment of the API. Valid values:
+        /// The environment in which the API is running. Valid values:
         /// 
-        /// *   **RELEASE**
-        /// *   **PRE: the pre-release environment**
-        /// *   **TEST**
+        /// *   **RELEASE**: production
+        /// *   **PRE**: staging
+        /// *   **TEST**: test
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

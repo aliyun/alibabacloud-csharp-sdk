@@ -8,20 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
-    public class ResetAppCodeRequest : TeaModel {
-        /// <summary>
-        /// The current AppCode of the application.
-        /// </summary>
-        [NameInMap("AppCode")]
+    public class SetGroupAuthAppCodeRequest : TeaModel {
+        [NameInMap("AuthAppCode")]
         [Validation(Required=false)]
-        public string AppCode { get; set; }
+        public string AuthAppCode { get; set; }
 
-        /// <summary>
-        /// The new AppCode of the application.
-        /// </summary>
-        [NameInMap("NewAppCode")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string NewAppCode { get; set; }
+        public string GroupId { get; set; }
 
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]

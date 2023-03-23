@@ -61,12 +61,20 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string ClassicEgressAddress { get; set; }
 
+                [NameInMap("ConnectVpcId")]
+                [Validation(Required=false)]
+                public string ConnectVpcId { get; set; }
+
                 /// <summary>
                 /// The time when the instance was created.
                 /// </summary>
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
                 public string CreatedTime { get; set; }
+
+                [NameInMap("DedicatedInstanceType")]
+                [Validation(Required=false)]
+                public string DedicatedInstanceType { get; set; }
 
                 /// <summary>
                 /// Indicates whether outbound IPv6 is supported.
@@ -114,6 +122,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [NameInMap("InstanceChargeType")]
                 [Validation(Required=false)]
                 public string InstanceChargeType { get; set; }
+
+                [NameInMap("InstanceCidrBlock")]
+                [Validation(Required=false)]
+                public string InstanceCidrBlock { get; set; }
 
                 /// <summary>
                 /// The ID of the instance.
@@ -192,6 +204,38 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [NameInMap("IntranetSegments")]
                 [Validation(Required=false)]
                 public string IntranetSegments { get; set; }
+
+                [NameInMap("NetworkInterfaceAttributes")]
+                [Validation(Required=false)]
+                public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes NetworkInterfaceAttributes { get; set; }
+                public class DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes : TeaModel {
+                    [NameInMap("NetworkInterfaceAttribute")]
+                    [Validation(Required=false)]
+                    public List<DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute> NetworkInterfaceAttribute { get; set; }
+                    public class DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute : TeaModel {
+                        [NameInMap("CidrBlock")]
+                        [Validation(Required=false)]
+                        public string CidrBlock { get; set; }
+
+                        [NameInMap("NetworkInterfaceId")]
+                        [Validation(Required=false)]
+                        public string NetworkInterfaceId { get; set; }
+
+                        [NameInMap("SecurityGroupId")]
+                        [Validation(Required=false)]
+                        public string SecurityGroupId { get; set; }
+
+                        [NameInMap("VswitchId")]
+                        [Validation(Required=false)]
+                        public string VswitchId { get; set; }
+
+                        [NameInMap("ZoneId")]
+                        [Validation(Required=false)]
+                        public string ZoneId { get; set; }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// The region where the instance is located.

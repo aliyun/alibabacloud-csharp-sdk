@@ -49,13 +49,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The creation mode. An app can be created by using the console or calling the API operation.
-        /// </summary>
-        [NameInMap("Source")]
-        [Validation(Required=false)]
-        public string Source { get; set; }
-
-        /// <summary>
         /// The tag of objects that match the rule. You can specify multiple tags.
         /// </summary>
         [NameInMap("Tag")]

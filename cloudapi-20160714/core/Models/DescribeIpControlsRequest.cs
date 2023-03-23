@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// <summary>
         /// The type of the ACL. Valid values:
         /// 
-        /// *   **ALLOW**: an IP address whitelist
-        /// *   **REFUSE**: an IP address blacklist
+        /// *   **ALLOW**: a whitelist
+        /// *   **REFUSE**: a blacklist
         /// </summary>
         [NameInMap("IpControlType")]
         [Validation(Required=false)]

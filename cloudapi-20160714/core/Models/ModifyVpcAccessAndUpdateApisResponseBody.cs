@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyVpcAccessAndUpdateApisResponseBody : TeaModel {
         /// <summary>
-        /// The task ID.
+        /// The ID of the asynchronous task.
+        /// 
+        /// > 
+        /// 
+        /// *   If the associated API is updated, you can use the task ID in the **DescribeUpdateVpcInfoTask** operation to query the update result.
         /// </summary>
         [NameInMap("OperationId")]
         [Validation(Required=false)]

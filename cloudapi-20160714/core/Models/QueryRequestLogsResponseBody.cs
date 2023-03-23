@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about request logs returned.
+        /// The list of request logs.
         /// </summary>
         [NameInMap("RequestLogs")]
         [Validation(Required=false)]
@@ -35,14 +35,34 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ApiId { get; set; }
 
                 /// <summary>
-                /// The name of the API.
+                /// The name of the API
                 /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
                 public string ApiName { get; set; }
 
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
+                public string AppName { get; set; }
+
+                [NameInMap("BackendRequestEnd")]
+                [Validation(Required=false)]
+                public long? BackendRequestEnd { get; set; }
+
+                [NameInMap("BackendRequestStart")]
+                [Validation(Required=false)]
+                public long? BackendRequestStart { get; set; }
+
+                [NameInMap("BackendResponseEnd")]
+                [Validation(Required=false)]
+                public long? BackendResponseEnd { get; set; }
+
+                [NameInMap("BackendResponseStart")]
+                [Validation(Required=false)]
+                public long? BackendResponseStart { get; set; }
+
                 /// <summary>
-                /// The IP address of the client that sent the request.
+                /// The IP address of the client that sends the request.
                 /// </summary>
                 [NameInMap("ClientIp")]
                 [Validation(Required=false)]
@@ -77,14 +97,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string CustomTraceId { get; set; }
 
                 /// <summary>
-                /// The requested domain name.
+                /// The domain name of the request.
                 /// </summary>
                 [NameInMap("Domain")]
                 [Validation(Required=false)]
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// The error code.
+                /// The error code returned if the request failed.
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
@@ -98,21 +118,37 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// The specific error message that was returned by the backend service.
+                /// The specific error message returned by the backend service.
                 /// </summary>
                 [NameInMap("Exception")]
                 [Validation(Required=false)]
                 public string Exception { get; set; }
 
+                [NameInMap("FrontRequestEnd")]
+                [Validation(Required=false)]
+                public long? FrontRequestEnd { get; set; }
+
+                [NameInMap("FrontRequestStart")]
+                [Validation(Required=false)]
+                public long? FrontRequestStart { get; set; }
+
+                [NameInMap("FrontResponseEnd")]
+                [Validation(Required=false)]
+                public long? FrontResponseEnd { get; set; }
+
+                [NameInMap("FrontResponseStart")]
+                [Validation(Required=false)]
+                public long? FrontResponseStart { get; set; }
+
                 /// <summary>
-                /// The ID of the group to which the API belongs.
+                /// The ID of the API group to which the API belongs.
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// The name of the API group.
+                /// The name of the API group to which the API belongs.
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
@@ -133,14 +169,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string HttpPath { get; set; }
 
                 /// <summary>
-                /// The initial request ID when API Gateway calls an API. For example, if API-1 calls API-2, initialRequestId in the log of API-2 represents the ID of the request from API-1.
+                /// The initial request ID when API Gateway calls an API. For example, if API-1 calls API-2, the initialRequestId parameter in the log of API-2 indicates the ID of the request from API-1.
                 /// </summary>
                 [NameInMap("InitialRequestId")]
                 [Validation(Required=false)]
                 public string InitialRequestId { get; set; }
 
                 /// <summary>
-                /// The ID of the gateway instance to which the API belongs.
+                /// The ID of the API Gateway instance to which the API belongs.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -161,7 +197,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// The request body. The maximum size of the request body is 1,024 bytes.
+                /// The request body. A request body cannot exceed 1,024 bytes in size.
                 /// </summary>
                 [NameInMap("RequestBody")]
                 [Validation(Required=false)]
@@ -203,21 +239,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string RequestSize { get; set; }
 
                 /// <summary>
-                /// The request time. The time is displayed in UTC.
+                /// The request time, in UTC.
                 /// </summary>
                 [NameInMap("RequestTime")]
                 [Validation(Required=false)]
                 public string RequestTime { get; set; }
 
                 /// <summary>
-                /// The response body. The maximum size of the response body is 1,024 bytes.
+                /// The response body. A response body cannot exceed 1,024 bytes in size.
                 /// </summary>
                 [NameInMap("ResponseBody")]
                 [Validation(Required=false)]
                 public string ResponseBody { get; set; }
 
                 /// <summary>
-                /// The response headers.
+                /// The headers in the API response.
                 /// </summary>
                 [NameInMap("ResponseHeaders")]
                 [Validation(Required=false)]
@@ -231,7 +267,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ResponseSize { get; set; }
 
                 /// <summary>
-                /// The total time that was consumed to access backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.
+                /// The total time consumed to access backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("ServiceLatency")]
                 [Validation(Required=false)]
@@ -259,7 +295,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string StatusCode { get; set; }
 
                 /// <summary>
-                /// The total period of time that the request consumed. Unit: milliseconds.
+                /// The total time consumed by the request. Unit: milliseconds.
                 /// </summary>
                 [NameInMap("TotalLatency")]
                 [Validation(Required=false)]

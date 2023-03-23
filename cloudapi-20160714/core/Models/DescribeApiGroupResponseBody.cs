@@ -187,6 +187,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string CustomerConfigs { get; set; }
 
+        [NameInMap("DedicatedInstanceType")]
+        [Validation(Required=false)]
+        public string DedicatedInstanceType { get; set; }
+
         /// <summary>
         /// The default domain name.
         /// </summary>

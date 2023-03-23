@@ -108,6 +108,26 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                [NameInMap("TagList")]
+                [Validation(Required=false)]
+                public DescribeApisResponseBodyApiSummarysApiSummaryTagList TagList { get; set; }
+                public class DescribeApisResponseBodyApiSummarysApiSummaryTagList : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeApisResponseBodyApiSummarysApiSummaryTagListTag> Tag { get; set; }
+                    public class DescribeApisResponseBodyApiSummarysApiSummaryTagListTag : TeaModel {
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
+
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// Indicates whether the API is public. Valid values:
                 /// 

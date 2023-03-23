@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeIpControlsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the ACL. The information is an array of IpControlInfo data. The information does not include specific policies.
+        /// The information about the ACL. The information is an array that consists of IpControlInfo data. The information does not include specific policies.
         /// </summary>
         [NameInMap("IpControlInfos")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// Description
+                /// The description of the ACL.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ModifiedTime { get; set; }
 
                 /// <summary>
-                /// The region in which the API is located.
+                /// The ID of the region in which the ACL is deployed.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]

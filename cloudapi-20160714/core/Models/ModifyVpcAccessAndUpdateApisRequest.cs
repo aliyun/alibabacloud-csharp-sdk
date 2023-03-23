@@ -17,7 +17,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The unique custom name for the authorization.
+        /// The name of the VPC authorization.
+        /// 
+        /// > 
+        /// 
+        /// *   The name of a VPC authorization cannot be changed. You cannot use this parameter to change the name of a VPC authorization.
+        /// 
+        /// *   You must set this parameter to the name of the current VPC authorization.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -25,20 +31,28 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// Specifies whether to update the associated API.
+        /// 
+        /// **
+        /// 
+        /// **Warning:** If you want to update the VPC authorization of a published API, you must set this parameter to true. Otherwise, the update will not be synchronized to the backend service of the API.
         /// </summary>
         [NameInMap("NeedBatchWork")]
         [Validation(Required=false)]
         public bool? NeedBatchWork { get; set; }
 
         /// <summary>
-        /// The port number to be modified.
+        /// The new port number.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public int? Port { get; set; }
 
         /// <summary>
-        /// Specifies whether to refresh the VPC authorization.
+        /// Specifies whether to update the VPC authorization.
+        /// 
+        /// > 
+        /// 
+        /// *   If the ID of the instance in your VPC is changed but the IP address of the instance remains unchanged, you can set this parameter to true to update the VPC authorization.
         /// </summary>
         [NameInMap("Refresh")]
         [Validation(Required=false)]
@@ -49,7 +63,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The password.
+        /// The token of the request.
         /// </summary>
         [NameInMap("Token")]
         [Validation(Required=false)]
@@ -63,7 +77,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The authorized backend host.
+        /// The hostname of the backend service.
         /// </summary>
         [NameInMap("VpcTargetHostName")]
         [Validation(Required=false)]

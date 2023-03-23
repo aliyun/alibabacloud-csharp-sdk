@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string AclId { get; set; }
 
+        /// <summary>
+        /// The IP version. Valid values: **ipv4** and **ipv6**.
+        /// </summary>
         [NameInMap("AddressIPVersion")]
         [Validation(Required=false)]
         public string AddressIPVersion { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
-    public class ModifyApiGroupNetworkPolicyResponseBody : TeaModel {
+    public class SetGroupAuthAppCodeResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

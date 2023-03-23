@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The returned plug-in information. It is an array consisting of PluginAttribute data.
+        /// The plug-in information. The information is an array that consists of PluginAttribute data.
         /// </summary>
         [NameInMap("Plugins")]
         [Validation(Required=false)]
@@ -35,21 +35,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribePluginsByApiResponseBodyPluginsPluginAttribute> PluginAttribute { get; set; }
             public class DescribePluginsByApiResponseBodyPluginsPluginAttribute : TeaModel {
                 /// <summary>
-                /// The creation time (UTC) of the plug-in.
+                /// The time when the plug-in was created. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
                 public string CreatedTime { get; set; }
 
                 /// <summary>
-                /// The plug-in description.
+                /// The description of the plug-in.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The last modification time (UTC) of the plug-in.
+                /// The time when the plug-in was last modified. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string PluginType { get; set; }
 
                 /// <summary>
-                /// The region where the plug-in is located.
+                /// The region where the plug-in resides.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]

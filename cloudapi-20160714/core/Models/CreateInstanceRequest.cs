@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string HttpsPolicy { get; set; }
 
+        [NameInMap("InstanceCidr")]
+        [Validation(Required=false)]
+        public string InstanceCidr { get; set; }
+
         /// <summary>
         /// The name of the instance.
         /// </summary>
@@ -52,6 +56,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("InstanceSpec")]
         [Validation(Required=false)]
         public string InstanceSpec { get; set; }
+
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
 
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
@@ -78,12 +86,38 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string Token { get; set; }
 
+        [NameInMap("UserVpcId")]
+        [Validation(Required=false)]
+        public string UserVpcId { get; set; }
+
         /// <summary>
         /// The zone.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
+
+        [NameInMap("ZoneVSwitchSecurityGroup")]
+        [Validation(Required=false)]
+        public List<CreateInstanceRequestZoneVSwitchSecurityGroup> ZoneVSwitchSecurityGroup { get; set; }
+        public class CreateInstanceRequestZoneVSwitchSecurityGroup : TeaModel {
+            [NameInMap("CidrBlock")]
+            [Validation(Required=false)]
+            public string CidrBlock { get; set; }
+
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public string SecurityGroupId { get; set; }
+
+            [NameInMap("VSwitchId")]
+            [Validation(Required=false)]
+            public string VSwitchId { get; set; }
+
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
+        }
 
     }
 

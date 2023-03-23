@@ -40,6 +40,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string CertificatePrivateKey { get; set; }
 
+        [NameInMap("CertificateValidEnd")]
+        [Validation(Required=false)]
+        public long? CertificateValidEnd { get; set; }
+
+        [NameInMap("CertificateValidStart")]
+        [Validation(Required=false)]
+        public long? CertificateValidStart { get; set; }
+
         /// <summary>
         /// Remarks about the domain name, such as the cause of an exception.
         /// </summary>
