@@ -30,6 +30,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The serial number of the server certificate.
+        /// </summary>
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]
         public string SerialNumber { get; set; }

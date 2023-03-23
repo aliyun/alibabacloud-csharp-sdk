@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200630.Models
 {
-    public class CreateCertificateWithExtensionResponseBody : TeaModel {
+    public class CreateCustomCertificateResponseBody : TeaModel {
         [NameInMap("Certificate")]
         [Validation(Required=false)]
         public string Certificate { get; set; }
@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("SerialNumber")]
+        [Validation(Required=false)]
+        public string SerialNumber { get; set; }
 
     }
 

@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string CountryCode { get; set; }
 
+        [NameInMap("ExtendedKeyUsages")]
+        [Validation(Required=false)]
+        public List<string> ExtendedKeyUsages { get; set; }
+
         /// <summary>
         /// The name of the city in which the organization is located. The value can contain letters.
         /// </summary>
@@ -71,6 +75,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [NameInMap("ParentIdentifier")]
         [Validation(Required=false)]
         public string ParentIdentifier { get; set; }
+
+        [NameInMap("PathLenConstraint")]
+        [Validation(Required=false)]
+        public int? PathLenConstraint { get; set; }
 
         /// <summary>
         /// The name of the province, municipality, or autonomous region in which the organization is located. The value can contain letters.

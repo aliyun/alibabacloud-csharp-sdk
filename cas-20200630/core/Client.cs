@@ -553,6 +553,104 @@ namespace AlibabaCloud.SDK.Cas20200630
             return await CreateClientCertificateWithCsrWithOptionsAsync(request, runtime);
         }
 
+        public CreateCustomCertificateResponse CreateCustomCertificateWithOptions(CreateCustomCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiPassthrough))
+            {
+                query["ApiPassthrough"] = request.ApiPassthrough;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Csr))
+            {
+                query["Csr"] = request.Csr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Immediately))
+            {
+                query["Immediately"] = request.Immediately;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentIdentifier))
+            {
+                query["ParentIdentifier"] = request.ParentIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Validity))
+            {
+                query["Validity"] = request.Validity;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCustomCertificate",
+                Version = "2020-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCustomCertificateResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateCustomCertificateResponse> CreateCustomCertificateWithOptionsAsync(CreateCustomCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiPassthrough))
+            {
+                query["ApiPassthrough"] = request.ApiPassthrough;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Csr))
+            {
+                query["Csr"] = request.Csr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Immediately))
+            {
+                query["Immediately"] = request.Immediately;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentIdentifier))
+            {
+                query["ParentIdentifier"] = request.ParentIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Validity))
+            {
+                query["Validity"] = request.Validity;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCustomCertificate",
+                Version = "2020-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCustomCertificateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateCustomCertificateResponse CreateCustomCertificate(CreateCustomCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCustomCertificateWithOptions(request, runtime);
+        }
+
+        public async Task<CreateCustomCertificateResponse> CreateCustomCertificateAsync(CreateCustomCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCustomCertificateWithOptionsAsync(request, runtime);
+        }
+
         /**
           * After a client certificate or a server certificate is revoked, the client or the server on which the certificate is installed cannot establish HTTPS connections with other devices.
           * After a client certificate or a server certificate is revoked, you can call the [DeleteClientCertificate](~~330880~~) operation to permanently delete the certificate.
@@ -1291,6 +1389,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             {
                 query["CountryCode"] = request.CountryCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendedKeyUsages))
+            {
+                query["ExtendedKeyUsages"] = request.ExtendedKeyUsages;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locality))
             {
                 query["Locality"] = request.Locality;
@@ -1306,6 +1408,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentIdentifier))
             {
                 query["ParentIdentifier"] = request.ParentIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PathLenConstraint))
+            {
+                query["PathLenConstraint"] = request.PathLenConstraint;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
             {
@@ -1360,6 +1466,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             {
                 query["CountryCode"] = request.CountryCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendedKeyUsages))
+            {
+                query["ExtendedKeyUsages"] = request.ExtendedKeyUsages;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locality))
             {
                 query["Locality"] = request.Locality;
@@ -1375,6 +1485,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentIdentifier))
             {
                 query["ParentIdentifier"] = request.ParentIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PathLenConstraint))
+            {
+                query["PathLenConstraint"] = request.PathLenConstraint;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
             {

@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200630.Models
 {
-    public class DescribeClientCertificateForSerialNumberResponse : TeaModel {
+    public class CreateCustomCertificateResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeClientCertificateForSerialNumberResponseBody Body { get; set; }
+        public CreateCustomCertificateResponseBody Body { get; set; }
 
     }
 
