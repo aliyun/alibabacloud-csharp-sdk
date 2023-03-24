@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetAccessKeyLastUsedResponseBody : TeaModel {
+        /// <summary>
+        /// The details of the time when the AccessKey pair was used for the last time.
+        /// </summary>
         [NameInMap("AccessKeyLastUsed")]
         [Validation(Required=false)]
         public GetAccessKeyLastUsedResponseBodyAccessKeyLastUsed AccessKeyLastUsed { get; set; }
         public class GetAccessKeyLastUsedResponseBodyAccessKeyLastUsed : TeaModel {
+            /// <summary>
+            /// The time when the AccessKey pair was used for the last time.
+            /// </summary>
             [NameInMap("LastUsedDate")]
             [Validation(Required=false)]
             public string LastUsedDate { get; set; }
@@ -23,6 +29,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

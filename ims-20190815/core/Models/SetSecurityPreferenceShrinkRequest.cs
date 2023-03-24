@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
-    public class SetSecurityPreferenceRequest : TeaModel {
+    public class SetSecurityPreferenceShrinkRequest : TeaModel {
         /// <summary>
         /// Specifies whether RAM users can change their passwords. Valid values:
         /// 
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
         [NameInMap("VerificationTypes")]
         [Validation(Required=false)]
-        public List<string> VerificationTypes { get; set; }
+        public string VerificationTypesShrink { get; set; }
 
     }
 

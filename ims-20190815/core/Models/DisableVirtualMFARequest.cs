@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class DisableVirtualMFARequest : TeaModel {
+        /// <summary>
+        /// The logon name of the RAM user.
+        /// </summary>
         [NameInMap("UserPrincipalName")]
         [Validation(Required=false)]
         public string UserPrincipalName { get; set; }

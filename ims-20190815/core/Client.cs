@@ -37,6 +37,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request AddClientIdToOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddClientIdToOIDCProviderResponse
+         */
         public AddClientIdToOIDCProviderResponse AddClientIdToOIDCProviderWithOptions(AddClientIdToOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -68,6 +75,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<AddClientIdToOIDCProviderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request AddClientIdToOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddClientIdToOIDCProviderResponse
+         */
         public async Task<AddClientIdToOIDCProviderResponse> AddClientIdToOIDCProviderWithOptionsAsync(AddClientIdToOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -99,18 +113,37 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<AddClientIdToOIDCProviderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request AddClientIdToOIDCProviderRequest
+          * @return AddClientIdToOIDCProviderResponse
+         */
         public AddClientIdToOIDCProviderResponse AddClientIdToOIDCProvider(AddClientIdToOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddClientIdToOIDCProviderWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request AddClientIdToOIDCProviderRequest
+          * @return AddClientIdToOIDCProviderResponse
+         */
         public async Task<AddClientIdToOIDCProviderResponse> AddClientIdToOIDCProviderAsync(AddClientIdToOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddClientIdToOIDCProviderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to add the fingerprint `902ef2deeb3c5b13ea4c3d5193629309e231****` to the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request AddFingerprintToOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddFingerprintToOIDCProviderResponse
+         */
         public AddFingerprintToOIDCProviderResponse AddFingerprintToOIDCProviderWithOptions(AddFingerprintToOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -142,6 +175,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<AddFingerprintToOIDCProviderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to add the fingerprint `902ef2deeb3c5b13ea4c3d5193629309e231****` to the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request AddFingerprintToOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddFingerprintToOIDCProviderResponse
+         */
         public async Task<AddFingerprintToOIDCProviderResponse> AddFingerprintToOIDCProviderWithOptionsAsync(AddFingerprintToOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -173,12 +213,24 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<AddFingerprintToOIDCProviderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to add the fingerprint `902ef2deeb3c5b13ea4c3d5193629309e231****` to the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request AddFingerprintToOIDCProviderRequest
+          * @return AddFingerprintToOIDCProviderResponse
+         */
         public AddFingerprintToOIDCProviderResponse AddFingerprintToOIDCProvider(AddFingerprintToOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddFingerprintToOIDCProviderWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to add the fingerprint `902ef2deeb3c5b13ea4c3d5193629309e231****` to the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request AddFingerprintToOIDCProviderRequest
+          * @return AddFingerprintToOIDCProviderResponse
+         */
         public async Task<AddFingerprintToOIDCProviderResponse> AddFingerprintToOIDCProviderAsync(AddFingerprintToOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -349,6 +401,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await BindMFADeviceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  This operation is available only for RAM users. Before you call this operation, make sure that `AllowUserToChangePassword` in [SetSecurityPreference](~~43765~~) is set to `True`. The value True indicates that RAM users can change their passwords.
+          *
+          * @param request ChangePasswordRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ChangePasswordResponse
+         */
         public ChangePasswordResponse ChangePasswordWithOptions(ChangePasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -380,6 +439,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<ChangePasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is available only for RAM users. Before you call this operation, make sure that `AllowUserToChangePassword` in [SetSecurityPreference](~~43765~~) is set to `True`. The value True indicates that RAM users can change their passwords.
+          *
+          * @param request ChangePasswordRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ChangePasswordResponse
+         */
         public async Task<ChangePasswordResponse> ChangePasswordWithOptionsAsync(ChangePasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -411,12 +477,24 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<ChangePasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is available only for RAM users. Before you call this operation, make sure that `AllowUserToChangePassword` in [SetSecurityPreference](~~43765~~) is set to `True`. The value True indicates that RAM users can change their passwords.
+          *
+          * @param request ChangePasswordRequest
+          * @return ChangePasswordResponse
+         */
         public ChangePasswordResponse ChangePassword(ChangePasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChangePasswordWithOptions(request, runtime);
         }
 
+        /**
+          * >  This operation is available only for RAM users. Before you call this operation, make sure that `AllowUserToChangePassword` in [SetSecurityPreference](~~43765~~) is set to `True`. The value True indicates that RAM users can change their passwords.
+          *
+          * @param request ChangePasswordRequest
+          * @return ChangePasswordResponse
+         */
         public async Task<ChangePasswordResponse> ChangePasswordAsync(ChangePasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -865,6 +943,19 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await CreateLoginProfileWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP Okta and Alibaba Cloud.
+          * ## Prerequisites
+          * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
+          * ## Limits
+          * - You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
+          * - You can add a maximum of 20 client IDs to an OIDC IdP.
+          * - You can add a maximum of five fingerprints to an OIDC IdP.
+          *
+          * @param request CreateOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOIDCProviderResponse
+         */
         public CreateOIDCProviderResponse CreateOIDCProviderWithOptions(CreateOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -908,6 +999,19 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<CreateOIDCProviderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP Okta and Alibaba Cloud.
+          * ## Prerequisites
+          * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
+          * ## Limits
+          * - You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
+          * - You can add a maximum of 20 client IDs to an OIDC IdP.
+          * - You can add a maximum of five fingerprints to an OIDC IdP.
+          *
+          * @param request CreateOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOIDCProviderResponse
+         */
         public async Task<CreateOIDCProviderResponse> CreateOIDCProviderWithOptionsAsync(CreateOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -951,12 +1055,36 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<CreateOIDCProviderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP Okta and Alibaba Cloud.
+          * ## Prerequisites
+          * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
+          * ## Limits
+          * - You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
+          * - You can add a maximum of 20 client IDs to an OIDC IdP.
+          * - You can add a maximum of five fingerprints to an OIDC IdP.
+          *
+          * @param request CreateOIDCProviderRequest
+          * @return CreateOIDCProviderResponse
+         */
         public CreateOIDCProviderResponse CreateOIDCProvider(CreateOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateOIDCProviderWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP Okta and Alibaba Cloud.
+          * ## Prerequisites
+          * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
+          * ## Limits
+          * - You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
+          * - You can add a maximum of 20 client IDs to an OIDC IdP.
+          * - You can add a maximum of five fingerprints to an OIDC IdP.
+          *
+          * @param request CreateOIDCProviderRequest
+          * @return CreateOIDCProviderResponse
+         */
         public async Task<CreateOIDCProviderResponse> CreateOIDCProviderAsync(CreateOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1045,6 +1173,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await CreateSAMLProviderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to create a RAM user named `test`.
+          *
+          * @param request CreateUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateUserResponse
+         */
         public CreateUserResponse CreateUserWithOptions(CreateUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1092,6 +1227,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<CreateUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to create a RAM user named `test`.
+          *
+          * @param request CreateUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateUserResponse
+         */
         public async Task<CreateUserResponse> CreateUserWithOptionsAsync(CreateUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1139,12 +1281,24 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<CreateUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to create a RAM user named `test`.
+          *
+          * @param request CreateUserRequest
+          * @return CreateUserResponse
+         */
         public CreateUserResponse CreateUser(CreateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateUserWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to create a RAM user named `test`.
+          *
+          * @param request CreateUserRequest
+          * @return CreateUserResponse
+         */
         public async Task<CreateUserResponse> CreateUserAsync(CreateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1431,6 +1585,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await DeleteApplicationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.
+          *
+          * @param request DeleteGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteGroupResponse
+         */
         public DeleteGroupResponse DeleteGroupWithOptions(DeleteGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1458,6 +1619,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<DeleteGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.
+          *
+          * @param request DeleteGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteGroupResponse
+         */
         public async Task<DeleteGroupResponse> DeleteGroupWithOptionsAsync(DeleteGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1485,12 +1653,24 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<DeleteGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.
+          *
+          * @param request DeleteGroupRequest
+          * @return DeleteGroupResponse
+         */
         public DeleteGroupResponse DeleteGroup(DeleteGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteGroupWithOptions(request, runtime);
         }
 
+        /**
+          * Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.
+          *
+          * @param request DeleteGroupRequest
+          * @return DeleteGroupResponse
+         */
         public async Task<DeleteGroupResponse> DeleteGroupAsync(DeleteGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1563,6 +1743,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await DeleteLoginProfileWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to remove the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request DeleteOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteOIDCProviderResponse
+         */
         public DeleteOIDCProviderResponse DeleteOIDCProviderWithOptions(DeleteOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1590,6 +1777,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<DeleteOIDCProviderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to remove the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request DeleteOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteOIDCProviderResponse
+         */
         public async Task<DeleteOIDCProviderResponse> DeleteOIDCProviderWithOptionsAsync(DeleteOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1617,12 +1811,24 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<DeleteOIDCProviderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to remove the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request DeleteOIDCProviderRequest
+          * @return DeleteOIDCProviderResponse
+         */
         public DeleteOIDCProviderResponse DeleteOIDCProvider(DeleteOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteOIDCProviderWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to remove the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request DeleteOIDCProviderRequest
+          * @return DeleteOIDCProviderResponse
+         */
         public async Task<DeleteOIDCProviderResponse> DeleteOIDCProviderAsync(DeleteOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2535,6 +2741,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await GetLoginProfileWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the information about an OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request GetOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetOIDCProviderResponse
+         */
         public GetOIDCProviderResponse GetOIDCProviderWithOptions(GetOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2562,6 +2775,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<GetOIDCProviderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the information about an OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request GetOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetOIDCProviderResponse
+         */
         public async Task<GetOIDCProviderResponse> GetOIDCProviderWithOptionsAsync(GetOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2589,12 +2809,24 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<GetOIDCProviderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query the information about an OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request GetOIDCProviderRequest
+          * @return GetOIDCProviderResponse
+         */
         public GetOIDCProviderResponse GetOIDCProvider(GetOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetOIDCProviderWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query the information about an OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request GetOIDCProviderRequest
+          * @return GetOIDCProviderResponse
+         */
         public async Task<GetOIDCProviderResponse> GetOIDCProviderAsync(GetOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2763,6 +2995,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await GetSecurityPreferenceWithOptionsAsync(runtime);
         }
 
+        /**
+          * This topic provides an example to show how to query the information about a RAM user named `test@example.onaliyun.com`.
+          *
+          * @param request GetUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetUserResponse
+         */
         public GetUserResponse GetUserWithOptions(GetUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2798,6 +3037,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<GetUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example to show how to query the information about a RAM user named `test@example.onaliyun.com`.
+          *
+          * @param request GetUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetUserResponse
+         */
         public async Task<GetUserResponse> GetUserWithOptionsAsync(GetUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2833,12 +3079,24 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<GetUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example to show how to query the information about a RAM user named `test@example.onaliyun.com`.
+          *
+          * @param request GetUserRequest
+          * @return GetUserResponse
+         */
         public GetUserResponse GetUser(GetUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetUserWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example to show how to query the information about a RAM user named `test@example.onaliyun.com`.
+          *
+          * @param request GetUserRequest
+          * @return GetUserResponse
+         */
         public async Task<GetUserResponse> GetUserAsync(GetUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3279,6 +3537,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await ListGroupsForUserWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query all OIDC IdPs within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request ListOIDCProvidersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListOIDCProvidersResponse
+         */
         public ListOIDCProvidersResponse ListOIDCProvidersWithOptions(ListOIDCProvidersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3310,6 +3575,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<ListOIDCProvidersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query all OIDC IdPs within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request ListOIDCProvidersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListOIDCProvidersResponse
+         */
         public async Task<ListOIDCProvidersResponse> ListOIDCProvidersWithOptionsAsync(ListOIDCProvidersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3341,12 +3613,24 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<ListOIDCProvidersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to query all OIDC IdPs within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request ListOIDCProvidersRequest
+          * @return ListOIDCProvidersResponse
+         */
         public ListOIDCProvidersResponse ListOIDCProviders(ListOIDCProvidersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListOIDCProvidersWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to query all OIDC IdPs within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request ListOIDCProvidersRequest
+          * @return ListOIDCProvidersResponse
+         */
         public async Task<ListOIDCProvidersResponse> ListOIDCProvidersAsync(ListOIDCProvidersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3493,6 +3777,16 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await ListSAMLProvidersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+          * *   `ResourceId.N`
+          * *   `Tag.N.Key`
+          * *   `Tag.N.Key` and `Tag.N.Value`
+          *
+          * @param request ListTagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3540,6 +3834,16 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+          * *   `ResourceId.N`
+          * *   `Tag.N.Key`
+          * *   `Tag.N.Key` and `Tag.N.Value`
+          *
+          * @param request ListTagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3587,18 +3891,45 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+          * *   `ResourceId.N`
+          * *   `Tag.N.Key`
+          * *   `Tag.N.Key` and `Tag.N.Value`
+          *
+          * @param request ListTagResourcesRequest
+          * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
+        /**
+          * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+          * *   `ResourceId.N`
+          * *   `Tag.N.Key`
+          * *   `Tag.N.Key` and `Tag.N.Value`
+          *
+          * @param request ListTagResourcesRequest
+          * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the following API operations to query the information about all RAM users:
+          * *   ListUsers: queries the details of all RAM users.
+          * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
+          *
+          * @param request ListUserBasicInfosRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListUserBasicInfosResponse
+         */
         public ListUserBasicInfosResponse ListUserBasicInfosWithOptions(ListUserBasicInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3634,6 +3965,15 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<ListUserBasicInfosResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the following API operations to query the information about all RAM users:
+          * *   ListUsers: queries the details of all RAM users.
+          * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
+          *
+          * @param request ListUserBasicInfosRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListUserBasicInfosResponse
+         */
         public async Task<ListUserBasicInfosResponse> ListUserBasicInfosWithOptionsAsync(ListUserBasicInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3669,18 +4009,43 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<ListUserBasicInfosResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the following API operations to query the information about all RAM users:
+          * *   ListUsers: queries the details of all RAM users.
+          * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
+          *
+          * @param request ListUserBasicInfosRequest
+          * @return ListUserBasicInfosResponse
+         */
         public ListUserBasicInfosResponse ListUserBasicInfos(ListUserBasicInfosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListUserBasicInfosWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the following API operations to query the information about all RAM users:
+          * *   ListUsers: queries the details of all RAM users.
+          * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
+          *
+          * @param request ListUserBasicInfosRequest
+          * @return ListUserBasicInfosResponse
+         */
         public async Task<ListUserBasicInfosResponse> ListUserBasicInfosAsync(ListUserBasicInfosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListUserBasicInfosWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call the following API operations to query the information about all RAM users:
+          * *   ListUsers: queries the details of all RAM users.
+          * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
+          *
+          * @param request ListUsersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListUsersResponse
+         */
         public ListUsersResponse ListUsersWithOptions(ListUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3716,6 +4081,15 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<ListUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the following API operations to query the information about all RAM users:
+          * *   ListUsers: queries the details of all RAM users.
+          * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
+          *
+          * @param request ListUsersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListUsersResponse
+         */
         public async Task<ListUsersResponse> ListUsersWithOptionsAsync(ListUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3751,12 +4125,28 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<ListUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call the following API operations to query the information about all RAM users:
+          * *   ListUsers: queries the details of all RAM users.
+          * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
+          *
+          * @param request ListUsersRequest
+          * @return ListUsersResponse
+         */
         public ListUsersResponse ListUsers(ListUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListUsersWithOptions(request, runtime);
         }
 
+        /**
+          * You can call the following API operations to query the information about all RAM users:
+          * *   ListUsers: queries the details of all RAM users.
+          * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
+          *
+          * @param request ListUsersRequest
+          * @return ListUsersResponse
+         */
         public async Task<ListUsersResponse> ListUsersAsync(ListUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3919,6 +4309,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await ListVirtualMFADevicesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to remove the client ID `498469743454717****` from the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request RemoveClientIdFromOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveClientIdFromOIDCProviderResponse
+         */
         public RemoveClientIdFromOIDCProviderResponse RemoveClientIdFromOIDCProviderWithOptions(RemoveClientIdFromOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3950,6 +4347,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<RemoveClientIdFromOIDCProviderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to remove the client ID `498469743454717****` from the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request RemoveClientIdFromOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveClientIdFromOIDCProviderResponse
+         */
         public async Task<RemoveClientIdFromOIDCProviderResponse> RemoveClientIdFromOIDCProviderWithOptionsAsync(RemoveClientIdFromOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3981,18 +4385,37 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<RemoveClientIdFromOIDCProviderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to remove the client ID `498469743454717****` from the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request RemoveClientIdFromOIDCProviderRequest
+          * @return RemoveClientIdFromOIDCProviderResponse
+         */
         public RemoveClientIdFromOIDCProviderResponse RemoveClientIdFromOIDCProvider(RemoveClientIdFromOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveClientIdFromOIDCProviderWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to remove the client ID `498469743454717****` from the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request RemoveClientIdFromOIDCProviderRequest
+          * @return RemoveClientIdFromOIDCProviderResponse
+         */
         public async Task<RemoveClientIdFromOIDCProviderResponse> RemoveClientIdFromOIDCProviderAsync(RemoveClientIdFromOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveClientIdFromOIDCProviderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to remove the fingerprint `6938fd4d98bab03faadb97b34396831e3780****` from the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request RemoveFingerprintFromOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveFingerprintFromOIDCProviderResponse
+         */
         public RemoveFingerprintFromOIDCProviderResponse RemoveFingerprintFromOIDCProviderWithOptions(RemoveFingerprintFromOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4024,6 +4447,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<RemoveFingerprintFromOIDCProviderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to remove the fingerprint `6938fd4d98bab03faadb97b34396831e3780****` from the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request RemoveFingerprintFromOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveFingerprintFromOIDCProviderResponse
+         */
         public async Task<RemoveFingerprintFromOIDCProviderResponse> RemoveFingerprintFromOIDCProviderWithOptionsAsync(RemoveFingerprintFromOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4055,12 +4485,24 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<RemoveFingerprintFromOIDCProviderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to remove the fingerprint `6938fd4d98bab03faadb97b34396831e3780****` from the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request RemoveFingerprintFromOIDCProviderRequest
+          * @return RemoveFingerprintFromOIDCProviderResponse
+         */
         public RemoveFingerprintFromOIDCProviderResponse RemoveFingerprintFromOIDCProvider(RemoveFingerprintFromOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveFingerprintFromOIDCProviderWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to remove the fingerprint `6938fd4d98bab03faadb97b34396831e3780****` from the OIDC IdP named `TestOIDCProvider`.
+          *
+          * @param request RemoveFingerprintFromOIDCProviderRequest
+          * @return RemoveFingerprintFromOIDCProviderResponse
+         */
         public async Task<RemoveFingerprintFromOIDCProviderResponse> RemoveFingerprintFromOIDCProviderAsync(RemoveFingerprintFromOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4353,9 +4795,22 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await SetPasswordPolicyWithOptionsAsync(request, runtime);
         }
 
-        public SetSecurityPreferenceResponse SetSecurityPreferenceWithOptions(SetSecurityPreferenceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.
+          *
+          * @param tmpReq SetSecurityPreferenceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetSecurityPreferenceResponse
+         */
+        public SetSecurityPreferenceResponse SetSecurityPreferenceWithOptions(SetSecurityPreferenceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SetSecurityPreferenceShrinkRequest request = new SetSecurityPreferenceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VerificationTypes))
+            {
+                request.VerificationTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VerificationTypes, "VerificationTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUserToChangePassword))
             {
@@ -4392,6 +4847,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationForRiskLogin))
             {
                 query["OperationForRiskLogin"] = request.OperationForRiskLogin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerificationTypesShrink))
+            {
+                query["VerificationTypes"] = request.VerificationTypesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4412,9 +4871,22 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<SetSecurityPreferenceResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<SetSecurityPreferenceResponse> SetSecurityPreferenceWithOptionsAsync(SetSecurityPreferenceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.
+          *
+          * @param tmpReq SetSecurityPreferenceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetSecurityPreferenceResponse
+         */
+        public async Task<SetSecurityPreferenceResponse> SetSecurityPreferenceWithOptionsAsync(SetSecurityPreferenceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SetSecurityPreferenceShrinkRequest request = new SetSecurityPreferenceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VerificationTypes))
+            {
+                request.VerificationTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VerificationTypes, "VerificationTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUserToChangePassword))
             {
@@ -4452,6 +4924,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             {
                 query["OperationForRiskLogin"] = request.OperationForRiskLogin;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerificationTypesShrink))
+            {
+                query["VerificationTypes"] = request.VerificationTypesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4471,12 +4947,24 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<SetSecurityPreferenceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.
+          *
+          * @param request SetSecurityPreferenceRequest
+          * @return SetSecurityPreferenceResponse
+         */
         public SetSecurityPreferenceResponse SetSecurityPreference(SetSecurityPreferenceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetSecurityPreferenceWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.
+          *
+          * @param request SetSecurityPreferenceRequest
+          * @return SetSecurityPreferenceResponse
+         */
         public async Task<SetSecurityPreferenceResponse> SetSecurityPreferenceAsync(SetSecurityPreferenceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5211,6 +5699,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await UpdateLoginProfileWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to change the description of the OIDC IdP named `TestOIDCProvider` to `This is a new OIDC Provider.`
+          *
+          * @param request UpdateOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateOIDCProviderResponse
+         */
         public UpdateOIDCProviderResponse UpdateOIDCProviderWithOptions(UpdateOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5246,6 +5741,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<UpdateOIDCProviderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to change the description of the OIDC IdP named `TestOIDCProvider` to `This is a new OIDC Provider.`
+          *
+          * @param request UpdateOIDCProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateOIDCProviderResponse
+         */
         public async Task<UpdateOIDCProviderResponse> UpdateOIDCProviderWithOptionsAsync(UpdateOIDCProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5281,18 +5783,37 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<UpdateOIDCProviderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to change the description of the OIDC IdP named `TestOIDCProvider` to `This is a new OIDC Provider.`
+          *
+          * @param request UpdateOIDCProviderRequest
+          * @return UpdateOIDCProviderResponse
+         */
         public UpdateOIDCProviderResponse UpdateOIDCProvider(UpdateOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateOIDCProviderWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to change the description of the OIDC IdP named `TestOIDCProvider` to `This is a new OIDC Provider.`
+          *
+          * @param request UpdateOIDCProviderRequest
+          * @return UpdateOIDCProviderResponse
+         */
         public async Task<UpdateOIDCProviderResponse> UpdateOIDCProviderAsync(UpdateOIDCProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateOIDCProviderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to change the description of an IdP named `test-provider` to `This is a new provider.`
+          *
+          * @param request UpdateSAMLProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateSAMLProviderResponse
+         */
         public UpdateSAMLProviderResponse UpdateSAMLProviderWithOptions(UpdateSAMLProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5328,6 +5849,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<UpdateSAMLProviderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to change the description of an IdP named `test-provider` to `This is a new provider.`
+          *
+          * @param request UpdateSAMLProviderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateSAMLProviderResponse
+         */
         public async Task<UpdateSAMLProviderResponse> UpdateSAMLProviderWithOptionsAsync(UpdateSAMLProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5363,18 +5891,37 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<UpdateSAMLProviderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example on how to change the description of an IdP named `test-provider` to `This is a new provider.`
+          *
+          * @param request UpdateSAMLProviderRequest
+          * @return UpdateSAMLProviderResponse
+         */
         public UpdateSAMLProviderResponse UpdateSAMLProvider(UpdateSAMLProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSAMLProviderWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example on how to change the description of an IdP named `test-provider` to `This is a new provider.`
+          *
+          * @param request UpdateSAMLProviderRequest
+          * @return UpdateSAMLProviderResponse
+         */
         public async Task<UpdateSAMLProviderResponse> UpdateSAMLProviderAsync(UpdateSAMLProviderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSAMLProviderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This topic provides an example to show how to modify the name of a RAM user from `test@example.onaliyun.com` to `new@example.onaliyun.com`.
+          *
+          * @param request UpdateUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateUserResponse
+         */
         public UpdateUserResponse UpdateUserWithOptions(UpdateUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5426,6 +5973,13 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<UpdateUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example to show how to modify the name of a RAM user from `test@example.onaliyun.com` to `new@example.onaliyun.com`.
+          *
+          * @param request UpdateUserRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateUserResponse
+         */
         public async Task<UpdateUserResponse> UpdateUserWithOptionsAsync(UpdateUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5477,12 +6031,24 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<UpdateUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This topic provides an example to show how to modify the name of a RAM user from `test@example.onaliyun.com` to `new@example.onaliyun.com`.
+          *
+          * @param request UpdateUserRequest
+          * @return UpdateUserResponse
+         */
         public UpdateUserResponse UpdateUser(UpdateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateUserWithOptions(request, runtime);
         }
 
+        /**
+          * This topic provides an example to show how to modify the name of a RAM user from `test@example.onaliyun.com` to `new@example.onaliyun.com`.
+          *
+          * @param request UpdateUserRequest
+          * @return UpdateUserResponse
+         */
         public async Task<UpdateUserResponse> UpdateUserAsync(UpdateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

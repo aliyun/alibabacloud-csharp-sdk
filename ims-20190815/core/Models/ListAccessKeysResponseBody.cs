@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListAccessKeysResponseBody : TeaModel {
+        /// <summary>
+        /// The list of AccessKey pairs.
+        /// </summary>
         [NameInMap("AccessKeys")]
         [Validation(Required=false)]
         public ListAccessKeysResponseBodyAccessKeys AccessKeys { get; set; }
@@ -17,18 +20,33 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public List<ListAccessKeysResponseBodyAccessKeysAccessKey> AccessKey { get; set; }
             public class ListAccessKeysResponseBodyAccessKeysAccessKey : TeaModel {
+                /// <summary>
+                /// The AccessKey ID.
+                /// </summary>
                 [NameInMap("AccessKeyId")]
                 [Validation(Required=false)]
                 public string AccessKeyId { get; set; }
 
+                /// <summary>
+                /// The time when the AccessKey pair was created.
+                /// </summary>
                 [NameInMap("CreateDate")]
                 [Validation(Required=false)]
                 public string CreateDate { get; set; }
 
+                /// <summary>
+                /// The status of the AccessKey pair. Valid values:
+                /// 
+                /// *   Active
+                /// *   Inactive
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// The time when the AccessKey pair was updated.
+                /// </summary>
                 [NameInMap("UpdateDate")]
                 [Validation(Required=false)]
                 public string UpdateDate { get; set; }
@@ -37,6 +55,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
