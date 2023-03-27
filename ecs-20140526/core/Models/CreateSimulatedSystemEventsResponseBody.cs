@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateSimulatedSystemEventsResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of the simulated events.
+        /// The IDs of the simulated system events.
         /// </summary>
         [NameInMap("EventIdSet")]
         [Validation(Required=false)]

@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public DescribeInstancesFullStatusRequestEventPublishTime EventPublishTime { get; set; }
         public class DescribeInstancesFullStatusRequestEventPublishTime : TeaModel {
+            /// <summary>
+            /// The end of the period during which system events are published. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// </summary>
             [NameInMap("End")]
             [Validation(Required=false)]
             public string End { get; set; }
 
+            /// <summary>
+            /// The beginning of the period during which system events are published. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// </summary>
             [NameInMap("Start")]
             [Validation(Required=false)]
             public string Start { get; set; }
@@ -27,32 +33,70 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public DescribeInstancesFullStatusRequestNotBefore NotBefore { get; set; }
         public class DescribeInstancesFullStatusRequestNotBefore : TeaModel {
+            /// <summary>
+            /// The end of the period during which O\&M tasks related to scheduled system events are executed. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// </summary>
             [NameInMap("End")]
             [Validation(Required=false)]
             public string End { get; set; }
 
+            /// <summary>
+            /// The beginning of the period during which O\&M tasks related to scheduled system events are executed. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// </summary>
             [NameInMap("Start")]
             [Validation(Required=false)]
             public string Start { get; set; }
 
         }
 
+        /// <summary>
+        /// The IDs of the event. You can specify up to 100 event IDs in a single request.
+        /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
         public List<string> EventId { get; set; }
 
+        /// <summary>
+        /// The type of the system event. This parameter is valid only when the InstanceEventType.N parameter is not specified. Valid values:
+        /// 
+        /// *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
+        /// *   SystemFailure.Reboot: The instance is restarted due to a system failure.
+        /// *   InstanceFailure.Reboot: The instance is restarted due to an instance failure.
+        /// *   InstanceExpiration.Stop: The subscription instance is stopped due to expiration.
+        /// *   InstanceExpiration.Delete: The subscription instance is released due to expiration.
+        /// *   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.
+        /// *   AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.
+        /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
 
+        /// <summary>
+        /// The health state of the instance. Valid values:
+        /// 
+        /// *   Impaired: The instance is impaired.
+        /// *   Warning: The performance of the instance is degraded.
+        /// *   Maintaining: The instance is being maintained.
+        /// *   Initializing: The instance is being initialized.
+        /// *   InsufficientData: The state cannot be determined due to insufficient data.
+        /// *   NotApplicable: The state is not applicable.
+        /// 
+        /// All these values are case-sensitive.
+        /// </summary>
         [NameInMap("HealthStatus")]
         [Validation(Required=false)]
         public string HealthStatus { get; set; }
 
+        /// <summary>
+        /// The types of system events. You can specify up to 30 event types in a single request.
+        /// </summary>
         [NameInMap("InstanceEventType")]
         [Validation(Required=false)]
         public List<string> InstanceEventType { get; set; }
 
+        /// <summary>
+        /// The IDs of the instances. You can specify up to 100 instance IDs in a single request.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
@@ -65,14 +109,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The number of the page to return. The value must be a positive integer.
+        /// 
+        /// Default value: 1.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries to return on each page. Valid values: 1 to 100.
+        /// 
+        /// Default value: 10.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -85,6 +142,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The lifecycle state of the instance. Valid values:
+        /// 
+        /// *   Starting: The instance is being started.
+        /// *   Running: The instance is running.
+        /// *   Stopped: The instance is stopped.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

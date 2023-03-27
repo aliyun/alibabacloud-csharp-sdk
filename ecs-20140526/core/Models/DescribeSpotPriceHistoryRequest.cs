@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSpotPriceHistoryRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC`.
+        /// The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
         /// 
         /// This parameter is empty by default. If this parameter is empty, the current time is used.
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The instance type of the instance.
+        /// The instance type of the preemptible instance.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   optimized: The instance is I/O optimized.
         /// *   none: The instance is not I/O optimized.
         /// 
-        /// For generation I instance families, the default value is none.
+        /// For instances of generation I instance families, the default value is none.
         /// 
-        /// For other instance families, the default value is optimized.
+        /// For instances of other instance families, the default value is optimized.
         /// </summary>
         [NameInMap("IoOptimized")]
         [Validation(Required=false)]
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The network type of the preemptible instance. Valid values:
         /// 
-        /// *   classic
-        /// *   vpc
+        /// *   classic: classic network
+        /// *   vpc: Virtual Private Cloud (VPC)
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the preemptible instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
         /// 
-        /// *   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.
+        /// *   The following protection periods are available in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.
         /// *   If this parameter is set to 0, no protection period is configured for the preemptible instance.
         /// 
         /// Default value: 1.
@@ -104,16 +104,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? SpotDuration { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC`.
+        /// The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. The specified time can be up to 30 days earlier than the specified EndTime value.
         /// 
-        /// This parameter is empty by default. If this parameter is empty, it indicates 3 hours earlier than the specified EndTime value. You can specify a StartTime value of up to 30 days earlier than the specified EndTime value.
+        /// This parameter is empty by default. If this parameter is empty, the time that is 3 hours earlier than the specified EndTime value is used.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The zone ID of the instance.
+        /// The zone ID of the preemptible instance.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

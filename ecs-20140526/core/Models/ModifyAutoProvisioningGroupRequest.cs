@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoProvisioningGroupId { get; set; }
 
         /// <summary>
-        /// The name of the auto provisioning group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The name of the auto provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (`:`), underscores (`_`), and hyphens (`-`).
         /// </summary>
         [NameInMap("AutoProvisioningGroupName")]
         [Validation(Required=false)]
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The type of supplemental instances. When the sum of the PayAsYouGoTargetCapacity and SpotTargetCapacity values is smaller than the TotalTargetCapacity value, the auto provisioning group creates instances of the specified billing method to meet the target capacity. Valid values:
         /// 
-        /// *   PayAsYouGo: pay-as-you-go instances
-        /// *   Spot: preemptible instances
+        /// *   PayAsYouGo: pay-as-you-go instances.
+        /// *   Spot: preemptible instances.
         /// </summary>
         [NameInMap("DefaultTargetCapacityType")]
         [Validation(Required=false)]
@@ -44,42 +44,42 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ExcessCapacityTerminationPolicy { get; set; }
 
         /// <summary>
-        /// The extended configurations of the launch template.
+        /// The extended configurations.
         /// </summary>
         [NameInMap("LaunchTemplateConfig")]
         [Validation(Required=false)]
         public List<ModifyAutoProvisioningGroupRequestLaunchTemplateConfig> LaunchTemplateConfig { get; set; }
         public class ModifyAutoProvisioningGroupRequestLaunchTemplateConfig : TeaModel {
             /// <summary>
-            /// The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](~~25378~~).
+            /// The instance type in the extended configuration. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](~~25378~~).
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// The maximum price of preemptible instances in extended configuration N.
+            /// The highest price of preemptible instances that is specified in the extended configuration.
             /// </summary>
             [NameInMap("MaxPrice")]
             [Validation(Required=false)]
             public double? MaxPrice { get; set; }
 
             /// <summary>
-            /// The priority of extended configuration N. A value of 0 indicates the highest priority. The value must be greater than 0.
+            /// The priority of the extended configuration. A value of 0 indicates the highest priority. The value must be greater than 0.
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
             /// <summary>
-            /// The ID of the vSwitch in extended configuration N. The zone of the ECS instances created from the extended configuration is determined by the vSwitch.
+            /// The ID of the vSwitch in extended configuration. The zone of the instances created from the extended configuration is determined by the vSwitch.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The weight of the instance type specified in extended configuration N. A greater weight indicates that a single instance has more computing power and that fewer instances are required. The value must be greater than 0.
+            /// The weight of the instance type in the extended configuration. A greater weight indicates that a single instance has more computing power and that fewer instances are required. The value must be greater than 0.
             /// 
             /// The weight is calculated based on the computing power of the instance type and the minimum computing power of a single instance in the cluster to be created by the auto provisioning group. For example, assume that the minimum computing power of a single instance is 8 vCPUs and 60 GiB of memory.
             /// 
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The maximum price of preemptible instances in the auto provisioning group.
         /// 
-        /// > When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used. The LaunchTemplateConfig.N.MaxPrice parameter is specified when the auto provisioning group is created, and cannot be modified.
+        /// > When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used. The LaunchTemplateConfig.N.MaxPrice parameter is set when the auto provisioning group is created, and cannot be modified.
         /// </summary>
         [NameInMap("MaxSpotPrice")]
         [Validation(Required=false)]
@@ -110,14 +110,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The target capacity of pay-as-you-go instances in the auto provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.
+        /// The target capacity of pay-as-you-go instances in the auto provisioning group. The value must be smaller than the TotalTargetCapacity value.
         /// </summary>
         [NameInMap("PayAsYouGoTargetCapacity")]
         [Validation(Required=false)]
         public string PayAsYouGoTargetCapacity { get; set; }
 
         /// <summary>
-        /// The region ID of the auto provisioning group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the auto provisioning group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The target capacity of preemptible instances in the auto provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.
+        /// The target capacity of preemptible instances in the auto provisioning group. The value must be smaller than the TotalTargetCapacity value.
         /// </summary>
         [NameInMap("SpotTargetCapacity")]
         [Validation(Required=false)]

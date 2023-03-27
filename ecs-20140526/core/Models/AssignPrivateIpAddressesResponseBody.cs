@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet AssignedPrivateIpAddressesSet { get; set; }
         public class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet : TeaModel {
             /// <summary>
-            /// > This parameter is in invitational preview and is unavailable to general users.
+            /// > This parameter is in invitational preview and is unavailable for general users.
             /// </summary>
             [NameInMap("Ipv4PrefixSet")]
             [Validation(Required=false)]

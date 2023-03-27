@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSecurityGroupsRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to check the validity of the request without actually making the request. Valid values:
+        /// Specifies whether to perform a dry run. Valid values:
         /// 
-        /// *   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.
-        /// *   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned, and the request is made.
+        /// *   true: performs a dry run. The system checks the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
+        /// *   false: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
         /// 
         /// Default value: false.
         /// </summary>
@@ -22,21 +22,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// > This parameter is deprecated.
+        /// > This parameter is no longer used.
         /// </summary>
         [NameInMap("FuzzyQuery")]
         [Validation(Required=false)]
         public bool? FuzzyQuery { get; set; }
 
         /// <summary>
-        /// > This parameter is deprecated.
+        /// > This parameter is no longer used.
         /// </summary>
         [NameInMap("IsQueryEcsCount")]
         [Validation(Required=false)]
         public bool? IsQueryEcsCount { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page. If you specify the MaxResults parameter, both the `MaxResults` and `NextToken` parameters are used for a paged query.
+        /// The maximum number of entries to return on each page. If you specify the MaxResults parameter, the `MaxResults` and `NextToken` parameters are used for a paged query.
         /// 
         /// Maximum value: 100.
         /// 
@@ -49,15 +49,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The network type of the security group. Valid values:
         /// 
-        /// *   vpc
-        /// *   classic
+        /// *   vpc: virtual private cloud (VPC)
+        /// *   classic: classic network
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// The query token. Set the value to the NextToken value returned in the previous call to the DescribeSecurityGroups operation. Leave this parameter empty the first time you call this operation.
+        /// The pagination token that is used in the next request to retrieve a new page of results. Set this parameter to the NextToken value that is returned when you called the DescribeInstanceTypes operation last time. You do not need to specify this parameter for the first request.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -98,16 +98,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the security groups. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the security group belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.
+        /// The ID of the resource group to which the security groups belong. When you use this parameter to filter resources, the number of resources in the specified resource group cannot exceed 1,000. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.
         /// 
-        /// > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+        /// > Resources in the default resource group are displayed in the response regardless of how you specify this parameter.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// The IDs of security groups. The value is a JSON array that consists of up to 100 security group IDs. Separate the security group IDs with commas (,).
+        /// The IDs of security groups. The value is a JSON array that consists of up to 100 security group IDs. Separate the IDs with commas (,).
         /// </summary>
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   normal: basic security group
         /// *   enterprise: advanced security group
         /// 
-        /// > If you do not specify this parameter, both basic and advanced security groups are queried.
+        /// > If you do not specify this parameter, basic and advanced security groups are queried.
         /// </summary>
         [NameInMap("SecurityGroupType")]
         [Validation(Required=false)]
@@ -162,16 +162,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeSecurityGroupsRequestTag> Tag { get; set; }
         public class DescribeSecurityGroupsRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N of the security group. Valid values of N: 1 to 20.
+            /// The tag keys of the security group. You can specify up to 20 tag keys for the security group.
             /// 
-            /// If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+            /// Up to 1,000 resources that have the specified tags can be returned in the response. To query more than 1,000 resources that have the specified tags, call the [ListTagResources](~~110425~~) operation.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N of the security group. Valid values of N: 1 to 20.
+            /// The tag values of the security group. You can specify up to 20 tag values for the security group.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) to which the security group belongs.
+        /// The ID of the virtual private cloud (VPC) to which the security groups belong.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

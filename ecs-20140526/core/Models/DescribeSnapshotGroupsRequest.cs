@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotGroupsRequest : TeaModel {
+        /// <summary>
+        /// This parameter is unavailable.
+        /// </summary>
         [NameInMap("AdditionalAttributes")]
         [Validation(Required=false)]
         public List<string> AdditionalAttributes { get; set; }
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The query token. Set the value to the NextToken value that is returned in the last call to the DescribeSnapshotGroups operation.
+        /// The token that determines the start point of the next query. Set the value to the NextToken value that is returned from the last call.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -75,14 +78,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of snapshot-consistent group N. Valid values of N: 1 to 10.
+        /// </summary>
         [NameInMap("SnapshotGroupId")]
         [Validation(Required=false)]
         public List<string> SnapshotGroupId { get; set; }
 
+        /// <summary>
+        /// The state of snapshot-consistent group N. Valid values of the second N: 1, 2, and 3. Valid values:
+        /// 
+        /// *   progressing: The snapshot-consistent group is being created.
+        /// *   accomplished: The snapshot-consistent group is created.
+        /// *   failed: The snapshot-consistent group fails to be created.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public List<string> Status { get; set; }
 
+        /// <summary>
+        /// The tags of the snapshot-consistent group.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeSnapshotGroupsRequestTag> Tag { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNetworkInterfacePermissionsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the permissions on ENIs.
+        /// Details about the ENI permissions.
         /// </summary>
         [NameInMap("NetworkInterfacePermissions")]
         [Validation(Required=false)]
@@ -35,26 +35,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string NetworkInterfaceId { get; set; }
 
                 /// <summary>
-                /// The ID of the permission on the ENI.
+                /// The ID of the ENI permission.
                 /// </summary>
                 [NameInMap("NetworkInterfacePermissionId")]
                 [Validation(Required=false)]
                 public string NetworkInterfacePermissionId { get; set; }
 
                 /// <summary>
-                /// The permission on the ENI.
+                /// The ENI permission.
                 /// </summary>
                 [NameInMap("Permission")]
                 [Validation(Required=false)]
                 public string Permission { get; set; }
 
                 /// <summary>
-                /// The status of the permission on the ENI. Valid values:
+                /// The state of the ENI permission. Valid values:
                 /// 
                 /// *   Pending: The permission is being granted.
-                /// *   Granted: The permission has been granted.
+                /// *   Granted: The permission is granted.
                 /// *   Revoking: The permission is being revoked.
-                /// *   Revoked: The permission has been revoked.
+                /// *   Revoked: The permission is revoked.
                 /// </summary>
                 [NameInMap("PermissionState")]
                 [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The number of the returned page.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The maximum number of entries to return on each page.
         /// 
         /// Maximum value: 100.
         /// 

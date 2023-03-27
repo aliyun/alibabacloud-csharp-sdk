@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost> DedicatedHost { get; set; }
             public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost : TeaModel {
                 [NameInMap("SchedulerOptions")]
-                [Validation(Required=true)]
+                [Validation(Required=false)]
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSchedulerOptions SchedulerOptions { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSchedulerOptions : TeaModel {
                     [NameInMap("ManagedPrivateSpaceId")]
@@ -214,6 +214,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string DedicatedHostName { get; set; }
 
+                [NameInMap("DedicatedHostOwnerId")]
+                [Validation(Required=false)]
+                public long? DedicatedHostOwnerId { get; set; }
+
                 /// <summary>
                 /// The type of the dedicated host.
                 /// </summary>
@@ -275,6 +279,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [NameInMap("InstanceId")]
                         [Validation(Required=false)]
                         public string InstanceId { get; set; }
+
+                        [NameInMap("InstanceOwnerId")]
+                        [Validation(Required=false)]
+                        public long? InstanceOwnerId { get; set; }
 
                         /// <summary>
                         /// The instance type of the ECS instance created on the dedicated host.

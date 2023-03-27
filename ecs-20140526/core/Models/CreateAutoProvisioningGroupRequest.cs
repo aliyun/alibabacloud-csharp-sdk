@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             }
 
+            [NameInMap("AutoReleaseTime")]
+            [Validation(Required=false)]
+            public string AutoReleaseTime { get; set; }
+
             /// <summary>
             /// The performance mode of the burstable instance. Valid values:
             /// 

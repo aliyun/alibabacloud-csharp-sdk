@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RebootInstancesResponseBody : TeaModel {
-        /// <summary>
-        /// Details about the instance responses, which contain the status of each instance before and after the operation is called and the result of the operation.
-        /// </summary>
         [NameInMap("InstanceResponses")]
         [Validation(Required=false)]
         public RebootInstancesResponseBodyInstanceResponses InstanceResponses { get; set; }
@@ -20,37 +17,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<RebootInstancesResponseBodyInstanceResponsesInstanceResponse> InstanceResponse { get; set; }
             public class RebootInstancesResponseBodyInstanceResponsesInstanceResponse : TeaModel {
-                /// <summary>
-                /// The error code of the operation result. The return value 200 indicates success. For more information, see the "Error codes" section in this topic.
-                /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
-                /// <summary>
-                /// The current status of the instance.
-                /// </summary>
                 [NameInMap("CurrentStatus")]
                 [Validation(Required=false)]
                 public string CurrentStatus { get; set; }
 
-                /// <summary>
-                /// The ID of the instance.
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// The error message for an instance operation. The return value Success indicates operation success. For more information, see the "Error codes" section in this topic.
-                /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
-                /// <summary>
-                /// The status of the instance before the operation is called.
-                /// </summary>
                 [NameInMap("PreviousStatus")]
                 [Validation(Required=false)]
                 public string PreviousStatus { get; set; }
@@ -59,9 +41,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

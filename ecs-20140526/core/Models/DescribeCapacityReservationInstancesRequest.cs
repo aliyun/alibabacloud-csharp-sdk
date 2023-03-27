@@ -25,16 +25,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The number of entries to return on each page.
         /// 
-        /// Maximum value: 100
+        /// Maximum value: 100.
         /// 
-        /// Default value: 10.
+        /// Default value: 10
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token used to start the query. The token is obtained from the response of the previous request.
+        /// The token used to start the next query. Set the value to the NextToken value obtained from the response to the previous request.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

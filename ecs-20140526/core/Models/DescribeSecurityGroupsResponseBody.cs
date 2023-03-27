@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSecurityGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The query token returned in this call. If the return value of this parameter is empty when MaxResults and NextToken are used for a paged query, no more results are to be returned.
+        /// The pagination token that can be used in the next request to retrieve a new page of results. If the return value of this parameter is empty when you specify the MaxResults and NextToken parameters for a paged query, no more results are to be returned.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the security group.
+        /// The region ID of the security groups.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about the security groups.
+        /// The information about the security groups.
         /// </summary>
         [NameInMap("SecurityGroups")]
         [Validation(Required=false)]
@@ -144,14 +144,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTagsTag> Tag { get; set; }
                     public class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the security group.
+                        /// The tag keys of the security group.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value of the security group.
+                        /// The tag values of the security group.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The total number of security groups. If the `MaxResults` and `NextToken` parameters are specified in the request, the value of this parameter is not returned.
+        /// The total number of security groups. If you specify the `MaxResults` and `NextToken` parameters in the request, this parameter is empty.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

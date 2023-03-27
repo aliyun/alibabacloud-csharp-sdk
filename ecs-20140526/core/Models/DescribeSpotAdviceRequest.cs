@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSpotAdviceRequest : TeaModel {
         /// <summary>
-        /// The number of vCPUs of the instance type. For information about the valid values, see [Instance families](~~25378~~).
+        /// The number of vCPUs of the instance type. For more information, see [Instance families](~~25378~~).
         /// </summary>
         [NameInMap("Cores")]
         [Validation(Required=false)]
         public int? Cores { get; set; }
 
         /// <summary>
-        /// The number of GPUs per GPU-accelerated instance. For information about the valid values, see [GPU-accelerated compute optimized instance types](~~108496~~).
+        /// The number of GPUs that the GPU-accelerated instance has. For information about the valid values, see [GPU-accelerated compute optimized instance types](~~108496~~).
         /// </summary>
         [NameInMap("GpuAmount")]
         [Validation(Required=false)]
@@ -41,9 +41,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The level of the instance family. Valid values:
         /// 
-        /// *   EntryLevel
-        /// *   EnterpriseLevel
-        /// *   CreditEntryLevel. For more information, see [Burstable instance overview](~~59977~~).
+        /// *   EntryLevel: entry level.
+        /// *   EnterpriseLevel: enterprise level.
+        /// *   CreditEntryLevel: credit-based entry level. For more information, see [Overview](~~59977~~) of burstable instances.
         /// 
         /// This parameter is empty by default, which indicates that instance families of all levels are queried.
         /// </summary>
@@ -52,35 +52,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceFamilyLevel { get; set; }
 
         /// <summary>
-        /// The instance family. For information about the valid values, see [Instance families](~~25378~~).
+        /// The instance family. For more information, see [Instance families](~~25378~~).
         /// </summary>
         [NameInMap("InstanceTypeFamily")]
         [Validation(Required=false)]
         public string InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// The list of instance types. You can enter up to 10 instance types.
+        /// The instance types. You can specify to 10 instance types.
         /// </summary>
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
         public List<string> InstanceTypes { get; set; }
 
         /// <summary>
-        /// The memory size of the instance type. Unit: GiB. For information about the valid values, see [Instance families](~~25378~~).
+        /// The memory size of the instance type. Unit: GiB. For more information, see [Instance families](~~25378~~).
         /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public float? Memory { get; set; }
 
         /// <summary>
-        /// The minimum number of vCPUs of the instance type. For information about the valid values, see [Instance families](~~25378~~).
+        /// The minimum number of vCPUs of the instance type. For more information, see [Instance families](~~25378~~).
         /// </summary>
         [NameInMap("MinCores")]
         [Validation(Required=false)]
         public int? MinCores { get; set; }
 
         /// <summary>
-        /// The minimum memory size of the instance type. For information about the valid values, see [Instance families](~~25378~~).
+        /// The minimum memory size of the instance type. For more information, see [Instance families](~~25378~~).
         /// </summary>
         [NameInMap("MinMemory")]
         [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

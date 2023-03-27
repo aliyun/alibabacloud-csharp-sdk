@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInvocationResultsResponseBody : TeaModel {
         /// <summary>
-        /// Details of the execution result.
+        /// Details of the execution results.
         /// </summary>
         [NameInMap("Invocation")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string ContainerName { get; set; }
 
                     /// <summary>
-                    /// The size of truncated and discarded text when the size of text in the `Output` response parameter is larger than 24 KB.
+                    /// The size of the text that is truncated and discarded when the `Output` value exceeds 24 KB in size.
                     /// </summary>
                     [NameInMap("Dropped")]
                     [Validation(Required=false)]
@@ -60,20 +60,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// 
                     /// *   If this parameter is empty, the command is run normally.
                     /// *   InstanceNotExists: The instance does not exist or has been released.
-                    /// *   InstanceReleased: The instance is released while the command is being run.
-                    /// *   InstanceNotRunning: The instance is not running while the command is being run.
+                    /// *   InstanceReleased: The instance was released while the command was being run.
+                    /// *   InstanceNotRunning: The instance was not running while the command was being run.
                     /// *   CommandNotApplicable: The command is not applicable to the specified instance.
                     /// *   AccountNotExists: The specified account does not exist.
                     /// *   DirectoryNotExists: The specified directory does not exist.
-                    /// *   BadCronExpression: The specified cron expression for the execution schedule is invalid.
+                    /// *   BadCronExpression: The cron expression used to specify a schedule is invalid.
                     /// *   ClientNotRunning: The Cloud Assistant client is not running.
                     /// *   ClientNotResponse: The Cloud Assistant client does not respond.
                     /// *   ClientIsUpgrading: The Cloud Assistant client is being upgraded.
                     /// *   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.
-                    /// *   DeliveryTimeout: The request to send the command has timed out.
-                    /// *   ExecutionTimeout: The execution has timed out.
-                    /// *   ExecutionException: An exception has occurred while the command is being run.
-                    /// *   ExecutionInterrupted: The execution is interrupted.
+                    /// *   DeliveryTimeout: The request to send the command timed out.
+                    /// *   ExecutionTimeout: The execution timed out.
+                    /// *   ExecutionException: An exception occurred while the command was being run.
+                    /// *   ExecutionInterrupted: The execution was interrupted.
                     /// *   ExitCodeNonzero: The execution is complete, but the exit code is not 0.
                     /// </summary>
                     [NameInMap("ErrorCode")]
@@ -116,14 +116,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public long? ExitCode { get; set; }
 
                     /// <summary>
-                    /// The completion time of the execution. If an execution times out, the completion time of the execution is subject to the value of the TimedOut parameter specified in the [CreateCommand](~~64844~~) operation.
+                    /// The end time of the execution. If an execution times out, the end time of the execution is subject to the value of the TimedOut parameter specified in the [CreateCommand](~~64844~~) operation.
                     /// </summary>
                     [NameInMap("FinishedTime")]
                     [Validation(Required=false)]
                     public string FinishedTime { get; set; }
 
                     /// <summary>
-                    /// The ID of the instance.
+                    /// The ID of the instance
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// *   Failed:
                     /// 
                     ///     *   Command that is set to run only once: The execution is complete, but the exit code is not 0.
-                    ///     *   Command that is set to run on a schedule: The last execution is complete, the exit code is not 0, and the specified execution time is about to end.
+                    ///     *   Command that is set to run on a schedule: The last execution is complete, the exit code is not 0, and the specified cycle is about to end.
                     /// 
                     /// *   Error: The execution cannot proceed due to an exception.
                     /// 
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// 
                     /// *   Cancelled: The execution is canceled, and the command is not run.
                     /// 
-                    /// *   Stopping: The command that is running is being stopped.
+                    /// *   Stopping: The running command is being stopped.
                     /// 
                     /// *   Terminated: The command is terminated while it is being run.
                     /// 
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string InvokeId { get; set; }
 
                     /// <summary>
-                    /// The state of the execution.
+                    /// The execution state of the command.
                     /// </summary>
                     [NameInMap("InvokeRecordStatus")]
                     [Validation(Required=false)]
@@ -208,14 +208,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string StartTime { get; set; }
 
                     /// <summary>
-                    /// The time when the command stopped being run on the instance. If you call the `StopInvocation` operation to manually stop the execution, the value is the time when you call the operation.
+                    /// The time when the command stopped being run on the instance. If you call the `StopInvocation` operation to manually stop the execution, the value is the time when you called the operation.
                     /// </summary>
                     [NameInMap("StopTime")]
                     [Validation(Required=false)]
                     public string StopTime { get; set; }
 
                     /// <summary>
-                    /// The tags of the command.
+                    /// The tags of the command task.
                     /// </summary>
                     [NameInMap("Tags")]
                     [Validation(Required=false)]
@@ -226,14 +226,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public List<DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag> Tag { get; set; }
                         public class DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag : TeaModel {
                             /// <summary>
-                            /// The tag key of the command.
+                            /// The tag key of the command task.
                             /// </summary>
                             [NameInMap("TagKey")]
                             [Validation(Required=false)]
                             public string TagKey { get; set; }
 
                             /// <summary>
-                            /// The tag value of the command.
+                            /// The tag value of the command task.
                             /// </summary>
                             [NameInMap("TagValue")]
                             [Validation(Required=false)]
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The username that was used to run the command on the ECS instance.
+                    /// The username that was used to run the command on the instance.
                     /// </summary>
                     [NameInMap("Username")]
                     [Validation(Required=false)]

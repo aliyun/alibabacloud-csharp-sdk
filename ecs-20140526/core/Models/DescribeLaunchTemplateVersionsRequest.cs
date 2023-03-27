@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The ID of the launch template.
         /// 
-        /// You must specify LaunchTemplateId or LaunchTemplateName to determine a launch template.
+        /// You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.
         /// </summary>
         [NameInMap("LaunchTemplateId")]
         [Validation(Required=false)]
@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string LaunchTemplateName { get; set; }
 
+        /// <summary>
+        /// Version N of the launch template.
+        /// </summary>
         [NameInMap("LaunchTemplateVersion")]
         [Validation(Required=false)]
         public List<long?> LaunchTemplateVersion { get; set; }
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The number of entries to return on each page.
         /// 
-        /// Default value: 10.
+        /// Default value: 10
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

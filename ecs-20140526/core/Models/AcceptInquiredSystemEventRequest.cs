@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AcceptInquiredSystemEventRequest : TeaModel {
         /// <summary>
-        /// > This parameter is in invitational preview and is unavailable.
+        /// > This parameter is in invitational preview and is unavailable to general users.
         /// </summary>
         [NameInMap("Choice")]
         [Validation(Required=false)]

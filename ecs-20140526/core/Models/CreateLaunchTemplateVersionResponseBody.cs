@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateLaunchTemplateVersionResponseBody : TeaModel {
+        [NameInMap("LaunchTemplateId")]
+        [Validation(Required=false)]
+        public string LaunchTemplateId { get; set; }
+
         /// <summary>
         /// The version number of the launch template.
         /// </summary>

@@ -16,8 +16,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The type of the private pool to generate after the capacity reservation takes effect. Valid values:
             /// 
-            /// *   Open: open private pool
-            /// *   Target: targeted private pool
+            /// *   Open: open private pool.
+            /// *   Target: targeted private pool.
             /// 
             /// Default value: Open.
             /// </summary>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MatchCriteria { get; set; }
 
             /// <summary>
-            /// The name of the capacity reservation. The name must be 2 to 128 characters in length. The name start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+            /// The name of the capacity reservation. The description must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EndTimeType { get; set; }
 
         /// <summary>
-        /// The total number of instances for which capacity of an instance type is reserved.
+        /// The total number of instances for which to reserve the capacity of an instance type.
         /// </summary>
         [NameInMap("InstanceAmount")]
         [Validation(Required=false)]
@@ -92,12 +92,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The operating system of the image used by the instance. This parameter corresponds to the `Platform` parameter of regional reserved instances. If the operating system of a capacity reservation matches that of a regional reserved instance, the regional reserved instance can be applied to offset bills of the unused capacity of the capacity reservation. Valid values:
         /// 
-        /// *   Windows: Windows Server operating system
-        /// *   Linux: Linux and UNIX-like operating system
+        /// *   Windows: Windows Server operating system.
+        /// *   Linux: Linux and UNIX-like operating system.
         /// 
         /// Default value: Linux.
         /// 
-        /// > This parameter is unavailable.
+        /// > This parameter is unavailable for public use.
         /// </summary>
         [NameInMap("Platform")]
         [Validation(Required=false)]
@@ -142,14 +142,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<CreateCapacityReservationRequestTag> Tag { get; set; }
         public class CreateCapacityReservationRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
+            /// The key of tag N to add to the capacity reservation. Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
+            /// The value of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

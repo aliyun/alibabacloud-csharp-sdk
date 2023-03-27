@@ -114,6 +114,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        [NameInMap("EnableJumboFrame")]
+        [Validation(Required=false)]
+        public bool? EnableJumboFrame { get; set; }
+
         /// <summary>
         /// The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://icms.alibaba-inc.com/content/ecs/api?l=1&m=277&n=10049).
         /// </summary>

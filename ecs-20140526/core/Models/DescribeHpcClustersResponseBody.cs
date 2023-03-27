@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeHpcClustersResponseBody : TeaModel {
         /// <summary>
-        /// Details about the HPC clusters.
+        /// Details about the HPC clusters. The value is an array that consists of the information of each HPC cluster.
         /// </summary>
         [NameInMap("HpcClusters")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of HPC clusters queried.
+        /// The total number of the HPC clusters.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

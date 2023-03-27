@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The category of the snapshot.
                 /// 
-                /// > This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.
+                /// >  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
@@ -79,17 +79,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? Encrypted { get; set; }
 
                 /// <summary>
-                /// Indicates whether the instant access feature is enabled. Valid values:
+                /// Indicates whether the instant access feature was enabled. Valid values:
                 /// 
-                /// *   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-                /// *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
+                /// *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
+                /// *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.
                 /// </summary>
                 [NameInMap("InstantAccess")]
                 [Validation(Required=false)]
                 public bool? InstantAccess { get; set; }
 
                 /// <summary>
-                /// The duration of the instant access feature. The instant access feature is automatically disabled when the specified duration expires.
+                /// The validity period of the instant access feature. The instant access feature is automatically disabled when the specified period expires.
                 /// 
                 /// By default, the value of this parameter is the same as that of `RetentionDays`.
                 /// </summary>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? InstantAccessRetentionDays { get; set; }
 
                 /// <summary>
-                /// The ID of the KMS key used by the data disk.
+                /// The ID of the KMS key used for the data disk.
                 /// </summary>
                 [NameInMap("KMSKeyId")]
                 [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string LastModifiedTime { get; set; }
 
                 /// <summary>
-                /// The product code of the Alibaba Cloud Marketplace image.
+                /// The product number inherited from Alibaba Cloud Marketplace.
                 /// </summary>
                 [NameInMap("ProductCode")]
                 [Validation(Required=false)]
@@ -126,14 +126,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Progress { get; set; }
 
                 /// <summary>
-                /// The remaining time that is required to create the snapshot. Unit: seconds.
+                /// The remaining time required to create the snapshot. Unit: seconds.
                 /// </summary>
                 [NameInMap("RemainTime")]
                 [Validation(Required=false)]
                 public int? RemainTime { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the snapshot belongs.
+                /// The ID of the resource group.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -179,14 +179,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string SnapshotType { get; set; }
 
                 /// <summary>
-                /// The ID of the source disk. This parameter is retained even after the source disk for which the snapshot was created is released.
+                /// The ID of the source disk. This parameter is retained even after the source disk is released.
                 /// </summary>
                 [NameInMap("SourceDiskId")]
                 [Validation(Required=false)]
                 public string SourceDiskId { get; set; }
 
                 /// <summary>
-                /// The capacity of the source disk. Unit: GiB.
+                /// The capacity of the source disk for which the snapshot was created. Unit: GiB.
                 /// </summary>
                 [NameInMap("SourceDiskSize")]
                 [Validation(Required=false)]
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// Indicates whether the snapshot has been used to create images or disks. Valid values:
+                /// Indicates whether the snapshot has been used to create custom images or disks. Valid values:
                 /// 
                 /// *   image
                 /// *   disk

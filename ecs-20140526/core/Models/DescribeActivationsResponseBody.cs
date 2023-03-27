@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// Indicates whether the activation code is disabled.
+            /// Indicates whether the activation code was disabled.
             /// </summary>
             [NameInMap("Disabled")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The IP addresses of hosts that are allowed to use the activation code.
+            /// The IP address range of hosts that are allowed to use the activation code.
             /// </summary>
             [NameInMap("IpAddressRange")]
             [Validation(Required=false)]

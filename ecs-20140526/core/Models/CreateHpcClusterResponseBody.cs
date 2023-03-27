@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateHpcClusterResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the HPC cluster.
+        /// The ID of cluster.
         /// </summary>
         [NameInMap("HpcClusterId")]
         [Validation(Required=false)]

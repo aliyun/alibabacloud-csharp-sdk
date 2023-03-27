@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string DefaultValue { get; set; }
 
                     /// <summary>
-                    /// The list of the supported maintenance actions.
+                    /// Details about the supported maintenance actions.
                     /// </summary>
                     [NameInMap("SupportedValues")]
                     [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The ID of the instance
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]

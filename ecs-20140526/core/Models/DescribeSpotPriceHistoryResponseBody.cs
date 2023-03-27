@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Currency { get; set; }
 
         /// <summary>
-        /// The start row of the next page. It is the value of the `Offset` parameter.
+        /// The start line of the next page. It is the value of the `Offset` request parameter.
         /// </summary>
         [NameInMap("NextOffset")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about the spot prices.
+        /// Details about the price history of the preemptible instance.
         /// </summary>
         [NameInMap("SpotPrices")]
         [Validation(Required=false)]
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// The price for a pay-as-you-go instance that has the same configuration as the specified preemptible instance.
+                /// The price for a pay-as-you-go instance that has the same configurations as the preemptible instance.
                 /// </summary>
                 [NameInMap("OriginPrice")]
                 [Validation(Required=false)]
                 public float? OriginPrice { get; set; }
 
                 /// <summary>
-                /// The spot price of the preemptible instance.
+                /// The spot price (market price) of the preemptible instance.
                 /// </summary>
                 [NameInMap("SpotPrice")]
                 [Validation(Required=false)]

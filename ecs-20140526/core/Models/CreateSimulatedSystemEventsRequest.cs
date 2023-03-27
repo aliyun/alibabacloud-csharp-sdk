@@ -13,29 +13,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// The type of the system event. Valid values:
         /// 
         /// *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
-        /// *   SystemFailure.Reboot: The instance is restarted due to a system failure.
-        /// *   InstanceFailure.Reboot: The instance is restarted due to an instance failure.
+        /// *   SystemFailure.Reboot: The instance is restarted due to a system error.
+        /// *   InstanceFailure.Reboot: The instance is restarted due to an instance error.
         /// *   SystemMaintenance.Stop: The instance is stopped due to system maintenance.
         /// *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
-        /// *   SystemFailure.Redeploy: The instance is redeployed due to a system failure.
-        /// *   SystemFailure.Stop: The instance is stopped due to a system failure.
-        /// *   InstanceFailure.Reboot: The instance is restarted due to an instance failure.
+        /// *   SystemFailure.Redeploy: The instance is redeployed due to a system error.
+        /// *   SystemFailure.Stop: The instance is stopped due to a system error.
+        /// *   InstanceFailure.Reboot: The instance is restarted due to an instance error.
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
 
         /// <summary>
-        /// The IDs of the instances. You can specify the IDs of up to 100 instances.
+        /// The IDs of instances. You can specify the IDs of up to 100 instances.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// The start time of the scheduled event execution. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// The scheduled start time of the scheduled event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// 
-        /// > For events that occur due to system failures or instance failures, the simulated events enter the Executing (`Executing`) state when the simulated events are created. The value of `NotBefore` is the time when the simulated events enter the Executed (`Executed`) state.
+        /// > For system events that occur due to system errors or instance errors, the simulated events of such system events enter the Executing (`Executing`) state when the simulated events are created. The value of `NotBefore` is the time when the simulated events enter the Executed (`Executed`) state.
         /// </summary>
         [NameInMap("NotBefore")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the event. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

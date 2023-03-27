@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeElasticityAssuranceInstancesResponseBody : TeaModel {
         /// <summary>
-        /// Details about the instances that were created by using the elasticity assurance.
+        /// Details about the instances that match and use the elasticity assurance.
         /// </summary>
         [NameInMap("ElasticityAssuranceItem")]
         [Validation(Required=false)]

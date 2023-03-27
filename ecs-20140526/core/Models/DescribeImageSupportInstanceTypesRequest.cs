@@ -10,18 +10,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageSupportInstanceTypesRequest : TeaModel {
         /// <summary>
-        /// The scenario in which the instance type is used. Default value: CreateEcs. Valid values:
-        /// 
-        /// *   CreateEcs: instance creation
-        /// *   Upgrade: instance type upgrade
-        /// *   Downgrade: instance type downgrade
-        /// *   RenewDowngrade: renewal and configuration downgrade
-        /// </summary>
-        [NameInMap("ActionType")]
-        [Validation(Required=false)]
-        public string ActionType { get; set; }
-
-        /// <summary>
         /// The list of filters to querying resources.
         /// </summary>
         [NameInMap("Filter")]

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// When you migrate an instance from a shared host to a dedicated host or between dedicated hosts, take note of the following items:
         /// 
         /// *   To migrate the instance to a specific dedicated host, specify this parameter.
-        /// *   To migrate the instance to a system-selected dedicated host, leave this parameter empty and set `Tenancy` to host.
+        /// *   To migrate the instance to a dedicated host that the system automatically selects, leave this parameter empty and set `Tenancy` to host.
         /// 
         /// For information about the automatic deployment feature, see [Features of dedicated hosts](~~118938~~).
         /// </summary>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DedicatedHostId { get; set; }
 
         /// <summary>
-        /// The number of the deployment set group in which to deploy the instance in the destination deployment set. This parameter is valid only when the destination deployment set uses the high availability group strategy (AvailabilityGroup). Valid values: 1 to 7.
+        /// The number of the deployment set group in which to deploy the instance in the destination deployment set. This parameter takes effect only when the destination deployment set uses the high availability group strategy (AvailabilityGroup). Valid values: 1 to 7.
         /// 
-        /// > If you call this operation to deploy an instance to a deployment set that uses the high availability group strategy (`AvailablilityGroup`) and leave this parameter empty, the system evenly distributes instances among the deployment set groups in the deployment set. If you call this operation to change the deployment set of an instance and specify the current deployment set of the instance as the destination deployment set, the system evenly distributes instances again among the deployment set groups in the deployment set.
+        /// > If you call this operation to deploy an instance to a deployment set that uses the high availability group strategy (`AvailablilityGroup`) and leave this parameter empty, the system evenly distributes instances among the deployment set groups in the deployment set. If you specify the current deployment set of the instance as the destination deployment set in the request, the system evenly distributes instances again among the deployment set groups in the deployment set.
         /// </summary>
         [NameInMap("DeploymentSetGroupNo")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to forcefully change the host of the instance when the deployment set of the instance is changed. Valid values:
         /// 
-        /// *   true: forcefully changes the host of the instance when the deployment set of the instance is changed. Hosts can be forcefully changed only for instances in the Running (Running) or Stopped (Stopped) state. The instances that are in the Stopped (Stopped) state do not include pay-as-you-go instances that are stopped in economical mode.
+        /// *   true: forcefully changes the host of the instance when the deployment set of the instance is changed. Hosts can be forcefully changed only for instances in the Running or Stopped state. The instances that are in the Stopped state do not include pay-as-you-go instances that are stopped in economical mode.
         /// 
         ///     **
         /// 
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the instance
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -128,8 +128,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to remove the specified instance from the specified deployment set. Valid values:
         /// 
-        /// *   true: removes the instance from the deployment set.
-        /// *   false: does not remove the instance from the deployment set.
+        /// *   true
+        /// *   false
         /// 
         /// Default value: false.
         /// 
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to deploy the instance on a dedicated host. Set the value to host to deploy the instance on a dedicated host.
+        /// Specifies whether to deploy the instance on a dedicated host. Set the value to host.
         /// </summary>
         [NameInMap("Tenancy")]
         [Validation(Required=false)]

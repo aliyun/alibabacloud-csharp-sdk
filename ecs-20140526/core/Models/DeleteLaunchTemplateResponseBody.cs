@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteLaunchTemplateResponseBody : TeaModel {
+        [NameInMap("LaunchTemplateId")]
+        [Validation(Required=false)]
+        public string LaunchTemplateId { get; set; }
+
         /// <summary>
         /// The ID of the request.
         /// </summary>

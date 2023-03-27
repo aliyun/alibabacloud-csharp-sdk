@@ -55,14 +55,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// The state of the execution. Valid values:
+        /// The execution state of the command. Valid values:
         /// 
         /// *   Running
         /// *   Finished
         /// *   Failed
         /// *   Stopped
         /// 
-        /// >  To improve compatibility, we recommend that you use the `InvocationStatus` parameter instead of the InvokeRecordStatus parameter.
+        /// > To ensure compatibility, we recommend that you use the `InvocationStatus` parameter instead of the InvokeRecordStatus parameter.
         /// </summary>
         [NameInMap("InvokeRecordStatus")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number of the page to return.
         /// 
         /// Pages start from page 1.
         /// 
@@ -106,9 +106,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-        /// 
-        /// >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+        /// The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -123,14 +121,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The list of tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeInvocationResultsRequestTag> Tag { get; set; }
         public class DescribeInvocationResultsRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+            /// The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
             /// 
             /// If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
             /// 
@@ -141,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.
+            /// The value of tag N of the command task. Valid values of N: 1 to 20. The tag value can be an empty string.
             /// 
             /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
             /// </summary>

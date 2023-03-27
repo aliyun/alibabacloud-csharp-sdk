@@ -1,3 +1,6 @@
+2023-03-27 Version: 3.0.3
+- Suppoort jumbo frame.
+
 2023-02-13 Version: 3.0.2
 - Support TagPolicy Verify NoTag.
 - Fixed bugs for DescribeDemands error code.

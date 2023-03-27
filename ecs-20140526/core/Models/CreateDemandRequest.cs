@@ -31,18 +31,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DemandDescription { get; set; }
 
         /// <summary>
-        /// The name of the demand. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with [http:// or https://](http://https://). The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+        /// The name of the demand. The name must be 2 to 128 characters in length and start with a letter but cannot start with [http:// or https://](http://https://). It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
         /// 
-        /// The default value is the instance type name.
+        /// The default value is the instance type.
         /// </summary>
         [NameInMap("DemandName")]
         [Validation(Required=false)]
         public string DemandName { get; set; }
 
         /// <summary>
-        /// The end time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.
+        /// The end time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard and use the UTC time. The format is yyyy-MM-dd hh:mm:ss.
         /// 
-        /// If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime must be later than the value of Starttime. Typically, the interval between the two times cannot be more than 10 days.
+        /// If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime must be later than the value of Starttime. In most cases, the interval between the two times cannot be more than 10 days.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -51,15 +51,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The billing method of the instance. Default value: PostPaid. Valid values:
         /// 
-        /// *   PrePaid: subscription
-        /// *   PostPaid: pay-as-you-go
+        /// *   PrePaid: subscription.
+        /// *   PostPaid: pay-as-you-go.
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The instance type. See [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of an instance type, or see [Select instance types](~~58291~~) to learn about how to select instance types.
+        /// The instance type. See [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of an instance type, or see [Select instance types](~~58291~~) to learn how to select instance types.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// The unit of the subscription period of the resource. Default value: Month. Valid values:
+        /// The unit of the subscription period. Default value: Month. Valid values:
         /// 
         /// *   Day
         /// *   Week
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -111,18 +111,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The start time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.
+        /// The start time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard and use the UTC time. The default format is yyyy-MM-dd HH:mm:ss.
         /// 
-        /// If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime must be later than the value of Starttime. Typically, the interval between the two times cannot be more than 10 days.
+        /// If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime must be later than the value of Starttime. In most cases, the interval between the two times cannot be more than 10 days.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+        /// The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent list of zones.
         /// 
-        /// This parameter is empty by default. If you do not specify a zone, the system randomly selects one.
+        /// This parameter is empty by default, which indicates that the system randomly selects a zone.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

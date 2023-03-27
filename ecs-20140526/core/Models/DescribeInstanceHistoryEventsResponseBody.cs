@@ -94,6 +94,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute ExtendedAttribute { get; set; }
                 public class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute : TeaModel {
+                    [NameInMap("CanAccept")]
+                    [Validation(Required=false)]
+                    public string CanAccept { get; set; }
+
+                    [NameInMap("Code")]
+                    [Validation(Required=false)]
+                    public string Code { get; set; }
+
                     /// <summary>
                     /// The device name of the local disk.
                     /// </summary>
@@ -118,15 +126,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// The type of the host. Valid values:
                     /// 
-                    /// *   ddh: dedicated host.
-                    /// *   managehost: physical machine in a smart hosting pool.
+                    /// *   ddh: dedicated host
+                    /// *   managehost: physical machine in a smart hosting pool
                     /// </summary>
                     [NameInMap("HostType")]
                     [Validation(Required=false)]
                     public string HostType { get; set; }
 
                     /// <summary>
-                    /// Details about the inactive cloud disks or local disks that have been released and must be removed.
+                    /// Details about the inactive cloud disks or local disks that have been released and must be cleared.
                     /// </summary>
                     [NameInMap("InactiveDisks")]
                     [Validation(Required=false)]
@@ -144,16 +152,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public string CreationTime { get; set; }
 
                             /// <summary>
-                            /// The category of the cloud disk or local disk. Valid values:
+                            /// The category of the disk. Valid values:
                             /// 
-                            /// *   cloud: basic disk.
-                            /// *   cloud_efficiency: ultra disk.
-                            /// *   cloud_ssd: standard SSD.
-                            /// *   cloud_essd: enhanced SSD (ESSD).
+                            /// *   cloud: basic disk
+                            /// *   cloud_efficiency: ultra disk
+                            /// *   cloud_ssd: standard SSD
+                            /// *   cloud_essd: enhanced SSD (ESSD) cloud_auto: ESSD AutoPL disk
                             /// *   local_ssd_pro: I/O-intensive local disk.
-                            /// *   local_hdd_pro: throughput-intensive local disk.
-                            /// *   ephemeral: retired local disk.
-                            /// *   ephemeral_ssd: retired local SSD.
+                            /// *   local_hdd_pro: throughput-intensive local disk
+                            /// *   ephemeral: retired local disk
+                            /// *   ephemeral_ssd: retired local SSD
                             /// </summary>
                             [NameInMap("DeviceCategory")]
                             [Validation(Required=false)]
@@ -169,8 +177,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             /// <summary>
                             /// The type of the disk. Valid values:
                             /// 
-                            /// *   system: system disk.
-                            /// *   data: data disk.
+                            /// *   system: system disk
+                            /// *   data: data disk
                             /// </summary>
                             [NameInMap("DeviceType")]
                             [Validation(Required=false)]
@@ -188,7 +196,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The migration solution of the instance. Valid value: MigrationOptions. Instances can be migrated only by using migration plans.
+                    /// The migration solution of the instance. Valid value: MigrationPlan. Instances can be migrated only by using migration plans.
                     /// </summary>
                     [NameInMap("MigrationOptions")]
                     [Validation(Required=false)]
@@ -207,6 +215,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public string OnlineRepairPolicy { get; set; }
 
+                    [NameInMap("PunishDomain")]
+                    [Validation(Required=false)]
+                    public string PunishDomain { get; set; }
+
+                    [NameInMap("PunishType")]
+                    [Validation(Required=false)]
+                    public string PunishType { get; set; }
+
+                    [NameInMap("PunishUrl")]
+                    [Validation(Required=false)]
+                    public string PunishUrl { get; set; }
+
                     /// <summary>
                     /// The rack number of the cloud box.
                     /// </summary>
@@ -224,7 +244,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ImpactLevel { get; set; }
 
                 /// <summary>
-                /// The ID of the instance that you query.
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -245,11 +265,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Reason { get; set; }
 
                 /// <summary>
-                /// The type of a resource. Valid values:
+                /// The type of the resource. Valid values:
                 /// 
-                /// *   instance: ECS instance.
-                /// *   ddh: dedicated host.
-                /// *   managehost: physical machine in a smart hosting pool.
+                /// *   instance: ECS instance
+                /// *   ddh: dedicated host
+                /// *   managehost: physical machine in a smart hosting pool
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
@@ -281,7 +301,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of instances that were queried.
+        /// The total number of instances.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DetachNetworkInterfaceRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The ID of the instance
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The trunk network card ID.
+        /// The ID of the trunk ENI.
         /// 
-        /// > This parameter is not online yet and cannot be used.
+        /// >  This parameter is unavailable for use.
         /// </summary>
         [NameInMap("TrunkNetworkInstanceId")]
         [Validation(Required=false)]

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeImagesResponseBodyImagesImage> Image { get; set; }
             public class DescribeImagesResponseBodyImagesImage : TeaModel {
                 /// <summary>
-                /// The image architecture. Valid values:
+                /// The architecture of the image. Valid values:
                 /// 
                 /// *   i386
                 /// *   x86\_64
@@ -32,12 +32,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Architecture { get; set; }
 
                 /// <summary>
-                /// The boot mode of the custom image. Valid values:
+                /// The new boot mode of the image. Valid values:
                 /// 
                 /// *   BIOS
                 /// *   UEFI
                 /// 
-                /// >  You must know which boot modes the specified image supports. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances which use this image can start normally.
+                /// > You need to be aware of the boot modes supported by the specified image. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances that use this image can start as expected.
                 /// </summary>
                 [NameInMap("BootMode")]
                 [Validation(Required=false)]
@@ -83,19 +83,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public string Name { get; set; }
 
                             /// <summary>
-                            /// The risk that the check item may have.
+                            /// The risk that is detected on the check item.
                             /// </summary>
                             [NameInMap("RiskCode")]
                             [Validation(Required=false)]
                             public string RiskCode { get; set; }
 
                             /// <summary>
-                            /// Indicates the severity of the risk that the check item of the imported custom image has. If the check item is at risk, this parameter is returned. If the check item is not at risk, this parameter is not returned.  
+                            /// Indicates the severity of the risk that is detected on the check item of the imported custom image. If the system detects a risk on the check item, this parameter is returned. If the system does not detect a risk on the check item, this parameter is not returned.
                             /// 
                             /// Valid values:
                             /// 
-                            /// - High: The check item has a high risk, which may affect instance startup. We strongly recommended that you handle the risk.
-                            /// - Medium: The check item has a medium risk, which may affect the startup performance or configurations of the instance. We recommend that you handle the risk.
+                            /// *   High: The check item is a high-risk item that may affect the startup of the instance. We strongly recommended that you fix this item at your earliest convenience.
+                            /// *   Medium: The check item is a medium-risk item that may affect the startup performance or configurations of the instance. We recommend that you fix this item.
                             /// </summary>
                             [NameInMap("RiskLevel")]
                             [Validation(Required=false)]
@@ -115,8 +115,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// The state of the image check task. Valid values:
                     /// 
-                    /// - Processing: The image check task is in progress.
-                    /// - Finished: The image check task is completed.
+                    /// *   Processing: The image check task is in progress.
+                    /// *   Finished: The image check task is completed.
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The mappings between disks and snapshots in the image.
+                /// The mappings between disks and snapshots that belong to the image.
                 /// </summary>
                 [NameInMap("DiskDeviceMappings")]
                 [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         /// <summary>
                         /// The device name of the disk. Example: /dev/xvdb.
                         /// 
-                        /// >  This parameter will be removed in the future. We recommend that you use other parameters to ensure compatibility.
+                        /// > This parameter will be removed in the future. To ensure compatibility, we recommend that you use other parameters.
                         /// </summary>
                         [NameInMap("Device")]
                         [Validation(Required=false)]
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public int? RemainTime { get; set; }
 
                         /// <summary>
-                        /// The size of the disk.
+                        /// The size of the cloud disk.
                         /// </summary>
                         [NameInMap("Size")]
                         [Validation(Required=false)]
@@ -214,8 +214,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// Indicates whether the image supports Non-Volatile Memory Express (NVMe). Valid values:
                     /// 
-                    /// - supported: The image supports NVMe. Instances created from this image support the NVMe protocol.
-                    /// - unsupported: The image does not support NVMe. Instances created from this image do not support the NVMe protocol.
+                    /// *   supported: The image supports NVMe. Instances created from this image also support NVMe.
+                    /// *   unsupported: The image does not support NVMe. Instances created from this image do not support NVMe.
                     /// </summary>
                     [NameInMap("NvmeSupport")]
                     [Validation(Required=false)]
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ImageOwnerAlias { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only when you query shared images or community images.
+                /// The ID of the Alibaba Cloud account to which the image belongs. This parameter is valid only when you query shared images or community images.
                 /// </summary>
                 [NameInMap("ImageOwnerId")]
                 [Validation(Required=false)]
@@ -278,10 +278,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? IsCopied { get; set; }
 
                 /// <summary>
-                /// Indicates whether the image is publicly available. Publicly available images include public images provided by Alibaba Cloud and custom images published as community images. Valid values: 
+                /// Indicates whether the image is publicly available. Publicly available images include public images provided by Alibaba Cloud and custom images published as community images. Valid values:
                 /// 
-                /// - true: The image is publicly available.
-                /// - false: The image is not publicly available.
+                /// *   true: The image is publicly available.
+                /// *   false: The image is not publicly available.
                 /// </summary>
                 [NameInMap("IsPublic")]
                 [Validation(Required=false)]
@@ -318,29 +318,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// Indicates whether the image supports logons of non-root users. Valid values:
                 /// 
-                /// - true: The image supports logons of non-root users.
-                /// - false: The image does not support logons of non-root users.
+                /// *   true: The image supports logons of non-root users.
+                /// *   false: The image does not support logons of non-root users.
                 /// </summary>
                 [NameInMap("LoginAsNonRootSupported")]
                 [Validation(Required=false)]
                 public bool? LoginAsNonRootSupported { get; set; }
 
                 /// <summary>
-                /// The Chinese name of the operating system.
+                /// The display name of the operating system in Chinese.
                 /// </summary>
                 [NameInMap("OSName")]
                 [Validation(Required=false)]
                 public string OSName { get; set; }
 
                 /// <summary>
-                /// The English name of the operating system.
+                /// The display name of the operating system in English.
                 /// </summary>
                 [NameInMap("OSNameEn")]
                 [Validation(Required=false)]
                 public string OSNameEn { get; set; }
 
                 /// <summary>
-                /// The type of the operating system. Valid values:
+                /// The OS type of the image. Valid values:
                 /// 
                 /// *   windows
                 /// *   linux

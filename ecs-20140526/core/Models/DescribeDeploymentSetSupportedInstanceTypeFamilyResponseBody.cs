@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody : TeaModel {
+        /// <summary>
+        /// The instance families that support deployment sets.
+        /// </summary>
         [NameInMap("InstanceTypeFamilies")]
         [Validation(Required=false)]
         public string InstanceTypeFamilies { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
