@@ -10987,13 +10987,13 @@ namespace AlibabaCloud.SDK.UniMkt20181212
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SearchAdvertisingShrinkRequest request = new SearchAdvertisingShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.App.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.App))
             {
-                request.AppShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.App.ToMap(), "App", "json");
+                request.AppShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.App, "App", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Device.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Device))
             {
-                request.DeviceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Device.ToMap(), "Device", "json");
+                request.DeviceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Device, "Device", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
             {
@@ -11003,9 +11003,9 @@ namespace AlibabaCloud.SDK.UniMkt20181212
             {
                 request.ImpShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Imp, "Imp", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.User.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.User))
             {
-                request.UserShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.User.ToMap(), "User", "json");
+                request.UserShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.User, "User", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppShrink))
@@ -11060,13 +11060,13 @@ namespace AlibabaCloud.SDK.UniMkt20181212
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SearchAdvertisingShrinkRequest request = new SearchAdvertisingShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.App.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.App))
             {
-                request.AppShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.App.ToMap(), "App", "json");
+                request.AppShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.App, "App", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Device.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Device))
             {
-                request.DeviceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Device.ToMap(), "Device", "json");
+                request.DeviceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Device, "Device", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
             {
@@ -11076,9 +11076,9 @@ namespace AlibabaCloud.SDK.UniMkt20181212
             {
                 request.ImpShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Imp, "Imp", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.User.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.User))
             {
-                request.UserShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.User.ToMap(), "User", "json");
+                request.UserShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.User, "User", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppShrink))
