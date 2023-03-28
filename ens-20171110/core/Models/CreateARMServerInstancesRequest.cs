@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
 
+        [NameInMap("NameSpace")]
+        [Validation(Required=false)]
+        public string NameSpace { get; set; }
+
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }

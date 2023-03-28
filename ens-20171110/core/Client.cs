@@ -1015,6 +1015,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["KeyPairName"] = request.KeyPairName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameSpace))
+            {
+                query["NameSpace"] = request.NameSpace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
                 query["PayType"] = request.PayType;
@@ -1085,6 +1089,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
             {
                 query["KeyPairName"] = request.KeyPairName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameSpace))
+            {
+                query["NameSpace"] = request.NameSpace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {

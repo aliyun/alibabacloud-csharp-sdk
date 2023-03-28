@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
 
+            [NameInMap("Namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
+
             [NameInMap("ServerId")]
             [Validation(Required=false)]
             public string ServerId { get; set; }
