@@ -93,6 +93,20 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
 
             }
 
+            [NameInMap("Headers")]
+            [Validation(Required=false)]
+            public List<GetPtsSceneResponseBodySceneHeaders> Headers { get; set; }
+            public class GetPtsSceneResponseBodySceneHeaders : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             [NameInMap("LoadConfig")]
             [Validation(Required=false)]
             public GetPtsSceneResponseBodySceneLoadConfig LoadConfig { get; set; }
