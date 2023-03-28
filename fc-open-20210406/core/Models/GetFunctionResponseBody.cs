@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public CustomContainerConfigInfo CustomContainerConfig { get; set; }
 
         /// <summary>
-        /// The custom Domain Name System (DNS) configurations of the function.
+        /// The custom DNS configurations of the function.
         /// </summary>
         [NameInMap("customDNS")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public int? DiskSize { get; set; }
 
         /// <summary>
-        /// The environment variables that you configured for the function. You can obtain the values of the environment variables from the function. For more information, see [Overview](~~69777~~).
+        /// The environment variables that are configured for the function. You can obtain the values of the environment variables from the function. For more information, see [Environment variables](~~69777~~).
         /// </summary>
         [NameInMap("environmentVariables")]
         [Validation(Required=false)]
@@ -107,6 +107,9 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string FunctionName { get; set; }
 
+        /// <summary>
+        /// The GPU memory capacity for the function. Unit: MB. The memory capacity must be a multiple of 1024 MB.
+        /// </summary>
         [NameInMap("gpuMemorySize")]
         [Validation(Required=false)]
         public int? GpuMemorySize { get; set; }
@@ -147,9 +150,9 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public InstanceLifecycleConfig InstanceLifecycleConfig { get; set; }
 
         /// <summary>
-        /// The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the number of the soft concurrency, the instance scale-up is triggered. For example, if your instance requires a long term to start, you can specify a suitable soft concurrency to start the instance in advance.
+        /// The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the number of the soft concurrency, the instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.
         /// 
-        /// The value must be less than or equal to that of **instanceConcurrency**.
+        /// The value must be less than or equal to that of the **instanceConcurrency** parameter.
         /// </summary>
         [NameInMap("instanceSoftConcurrency")]
         [Validation(Required=false)]
@@ -160,6 +163,9 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         /// 
         /// *   **e1**: elastic instance
         /// *   **c1**: performance instance
+        /// *   **fc.gpu.tesla.1**: GPU-accelerated instances (Tesla T4)
+        /// *   **fc.gpu.ampere.1**: GPU-accelerated instances (Ampere A10)
+        /// *   **g1**: same fc.gpu.tesla.1
         /// </summary>
         [NameInMap("instanceType")]
         [Validation(Required=false)]
@@ -173,14 +179,23 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string LastModifiedTime { get; set; }
 
         /// <summary>
-        /// An array that consists of the information of layers.
+        /// The list of layers (ARN V1 version).
         /// 
-        /// >  Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file with the same name in the layer with a larger subscript.
+        /// > If multiple layers exist, the layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file with the same name in the layer with a larger subscript. >
+        /// 
+        /// **
+        /// 
+        /// **Warning:** This parameter is to be deprecated. Use layersArnV2.
         /// </summary>
         [NameInMap("layers")]
         [Validation(Required=false)]
         public List<string> Layers { get; set; }
 
+        /// <summary>
+        /// The list of layers (ARN V2 version).
+        /// 
+        /// > If multiple layers exist, the layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name and a larger subscript in the layer.
+        /// </summary>
         [NameInMap("layersArnV2")]
         [Validation(Required=false)]
         public List<string> LayersArnV2 { get; set; }
@@ -193,7 +208,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public int? MemorySize { get; set; }
 
         /// <summary>
-        /// The runtime environment of the function. Valid values: **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore2.1**, **custom** and **custom-container**.
+        /// The runtime environment of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore2.1**, **custom**, and **custom-container**.
         /// </summary>
         [NameInMap("runtime")]
         [Validation(Required=false)]

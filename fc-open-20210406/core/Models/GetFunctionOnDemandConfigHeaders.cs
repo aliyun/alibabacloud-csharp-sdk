@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string XFcAccountId { get; set; }
 
         /// <summary>
-        /// The time when Function Compute API is called. Specify the time in the yyyy-mm-ddhh:mm:ss format.
+        /// The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
         /// </summary>
         [NameInMap("X-Fc-Date")]
         [Validation(Required=false)]
         public string XFcDate { get; set; }
 
         /// <summary>
-        /// The trace ID of the request for Function Compute API, which is also the unique ID of the request.
+        /// The unique ID of the trace.
         /// </summary>
         [NameInMap("X-Fc-Trace-Id")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class ListServicesRequest : TeaModel {
         /// <summary>
-        /// The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned configurations is less than or equal to the specified number.
+        /// The maximum number of resources to return. Default value: 20. The value cannot exceed 100. The number of returned configurations is less than or equal to the specified number.
         /// </summary>
         [NameInMap("limit")]
         [Validation(Required=false)]

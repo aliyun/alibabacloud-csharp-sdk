@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class GetFunctionOnDemandConfigRequest : TeaModel {
         /// <summary>
-        /// The alias of the service or LATEST.
+        /// Service alias or LATEST. Other versions are not supported.
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]

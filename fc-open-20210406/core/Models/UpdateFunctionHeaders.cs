@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// The ETag value of the resource. The value is used to ensure that the modified resource is consistent with the resource to be modified. The ETag value is returned in the responses of the [CreateFunction](~~415747~~), [GetFunction](~~415750~~), and [UpdateFunction](~~415749~~) operations.
+        /// The parameter that is used to ensure that the modified resource is consistent with the resource to be modified. The value of this parameter is returned in the responses of the [CreateFunction](~~415747~~), [GetFunction](~~415750~~), and [UpdateFunction](~~415749~~) operations.
         /// </summary>
         [NameInMap("If-Match")]
         [Validation(Required=false)]

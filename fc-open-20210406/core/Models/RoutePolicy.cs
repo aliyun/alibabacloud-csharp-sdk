@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 
         [NameInMap("policyItems")]
         [Validation(Required=false)]
-        public PolicyItem PolicyItems { get; set; }
+        public List<PolicyItem> PolicyItems { get; set; }
 
     }
 

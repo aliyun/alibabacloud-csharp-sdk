@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public CustomDNS CustomDNS { get; set; }
 
         /// <summary>
-        /// The custom health check configuration of the function. This parameter is applicable only to custom runtimes and custom containers.
+        /// The custom health check configurations of the function. This parameter is applicable to only custom runtimes and custom containers.
         /// </summary>
         [NameInMap("customHealthCheckConfig")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string FunctionName { get; set; }
 
         /// <summary>
-        /// GPU instance memory specifications of the function. Unit: MB. The value is a multiple of 1024.
+        /// The GPU memory capacity for the function. Unit: MB. The value must be a multiple of 1,024.
         /// </summary>
         [NameInMap("gpuMemorySize")]
         [Validation(Required=false)]
@@ -101,14 +101,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string Handler { get; set; }
 
         /// <summary>
-        /// The timeout period for the execution of the initializer function. Unit: seconds. Default value: 3. Valid values: 1 to 300. When this period expires, the execution of the initializer function is terminated.
+        /// The timeout period for the execution of the Initializer hook. Unit: seconds. Default value: 3. Valid values: 1 to 300. When this period expires, the execution of the Initializer hook is terminated.
         /// </summary>
         [NameInMap("initializationTimeout")]
         [Validation(Required=false)]
         public int? InitializationTimeout { get; set; }
 
         /// <summary>
-        /// The handler of the initializer function. For more information, see [Initializer functions](~~157704~~).
+        /// The handler of the Initializer hook. For more information, see [Initializer hook](~~157704~~).
         /// </summary>
         [NameInMap("initializer")]
         [Validation(Required=false)]
@@ -129,9 +129,9 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public InstanceLifecycleConfig InstanceLifecycleConfig { get; set; }
 
         /// <summary>
-        /// The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the number of the soft concurrency, the instance scale-up is triggered. For example, if your instance requires a long term to start, you can specify a suitable soft concurrency to start the instance in advance.
+        /// The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the value of soft concurrency, an instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.
         /// 
-        /// The value must be less than or equal to that of **instanceConcurrency**.
+        /// The value must be less than or equal to that of the **instanceConcurrency** parameter.
         /// </summary>
         [NameInMap("instanceSoftConcurrency")]
         [Validation(Required=false)]
@@ -142,15 +142,18 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         /// 
         /// *   **e1**: elastic instance
         /// *   **c1**: performance instance
+        /// *   **fc.gpu.tesla.1**: GPU-accelerated instance (Tesla T4)
+        /// *   **fc.gpu.ampere.1**: GPU-accelerated instance (Ampere A10)
+        /// *   **g1**: same as **fc.gpu.tesla.1**
         /// </summary>
         [NameInMap("instanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// An array that consists of the information of layers.
+        /// The information about layers.
         /// 
-        /// >  Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file with the same name in the layer with a larger subscript.
+        /// > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file with the same name as a layer with a larger subscript.
         /// </summary>
         [NameInMap("layers")]
         [Validation(Required=false)]
@@ -164,14 +167,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public int? MemorySize { get; set; }
 
         /// <summary>
-        /// The runtime environment of the function. Valid values: **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore2.1**, **custom** and **custom-container**.
+        /// The runtime environment of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore3.1**, **dotnetcore2.1**, **custom** and **custom-container**. For more information, see [Supported function runtime environments](~~73338~~).
         /// </summary>
         [NameInMap("runtime")]
         [Validation(Required=false)]
         public string Runtime { get; set; }
 
         /// <summary>
-        /// The timeout period for the execution of the function. Unit: seconds. Default value: 3. Minimum value: 1. When this period ends, the execution of the function is terminated.
+        /// The timeout period for the execution of the function. Unit: seconds. Default value: 3. Minimum value: 1. When the period ends, the execution of the function is terminated.
         /// </summary>
         [NameInMap("timeout")]
         [Validation(Required=false)]

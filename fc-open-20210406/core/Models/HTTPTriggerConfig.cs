@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class HTTPTriggerConfig : TeaModel {
+        [NameInMap("authConfig")]
+        [Validation(Required=false)]
+        public string AuthConfig { get; set; }
+
         [NameInMap("authType")]
         [Validation(Required=false)]
         public string AuthType { get; set; }

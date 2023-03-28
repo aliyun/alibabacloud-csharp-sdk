@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         /// <summary>
         /// Specifies whether to allow functions to access the Internet. Valid values:
         /// 
-        /// - **true**: allows functions in the specified service to access the Internet. Default value: true.
-        /// - **false**: does not allow functions in the specified service to access the Internet.
+        /// *   **true**: allows functions to access the Internet. This is the default value.
+        /// *   **false**: does not allow functions to access the Internet.
         /// </summary>
         [NameInMap("internetAccess")]
         [Validation(Required=false)]
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string Role { get; set; }
 
         /// <summary>
-        /// The name of the service. The name contains only letters, digits, hyphens (-), and underscores (_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).
+        /// The name of the service. The name can contain only letters, digits, hyphens (-), and underscores (\_). It cannot start with a digit or hyphen (-). It must be 1 to 128 characters in length.
         /// </summary>
         [NameInMap("serviceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// The configurations of Tracing Analysis. After Function Compute is integrated with Tracing Analysis, you can record the duration of a request in Function Compute, view the cold start time of a function, and record the execution duration of a function. For more information, see [Tracing Analysis](~~189804~~).
+        /// The configuration of Tracing Analysis. After Function Compute is integrated with Tracing Analysis, you can record the duration of a request in Function Compute, view the cold start time of a function, and record the execution duration of a function. For more information, see [Tracing Analysis](~~189804~~).
         /// </summary>
         [NameInMap("tracingConfig")]
         [Validation(Required=false)]
