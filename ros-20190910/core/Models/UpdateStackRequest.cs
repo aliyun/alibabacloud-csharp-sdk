@@ -59,6 +59,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public long? Parallelism { get; set; }
 
+        /// <summary>
+        /// The parameters.
+        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<UpdateStackRequestParameters> Parameters { get; set; }
@@ -187,6 +190,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string StackPolicyURL { get; set; }
 
+        /// <summary>
+        /// The value of tag N that you want to add to the template.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<UpdateStackRequestTags> Tags { get; set; }

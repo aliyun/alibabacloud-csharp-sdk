@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetServiceProvisionsRequest : TeaModel {
+        /// <summary>
+        /// The list of parameters.
+        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<GetServiceProvisionsRequestParameters> Parameters { get; set; }
@@ -42,6 +45,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The services.
+        /// </summary>
         [NameInMap("Services")]
         [Validation(Required=false)]
         public List<GetServiceProvisionsRequestServices> Services { get; set; }

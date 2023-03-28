@@ -53,6 +53,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public bool? DisableRollback { get; set; }
 
+        /// <summary>
+        /// The callback URL that is used to receive stack event N.
+        /// </summary>
         [NameInMap("NotificationURLs")]
         [Validation(Required=false)]
         public List<string> NotificationURLs { get; set; }
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? Parallelism { get; set; }
 
         /// <summary>
-        /// test
+        /// The parameters.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -164,7 +167,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackPolicyURL { get; set; }
 
         /// <summary>
-        /// test
+        /// The tags.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

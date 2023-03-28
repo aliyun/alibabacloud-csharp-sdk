@@ -57,6 +57,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListStackGroupsRequestTags> Tags { get; set; }

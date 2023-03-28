@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The logical ID of resource.
+        /// </summary>
         [NameInMap("LogicalResourceId")]
         [Validation(Required=false)]
         public List<string> LogicalResourceId { get; set; }

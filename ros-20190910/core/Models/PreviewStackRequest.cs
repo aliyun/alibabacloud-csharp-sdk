@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? Parallelism { get; set; }
 
         /// <summary>
-        /// test
+        /// The parameters.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]

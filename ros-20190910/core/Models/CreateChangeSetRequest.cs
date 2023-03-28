@@ -67,6 +67,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public bool? DisableRollback { get; set; }
 
+        /// <summary>
+        /// The callback URL that is used to receive stack event N.
+        /// </summary>
         [NameInMap("NotificationURLs")]
         [Validation(Required=false)]
         public List<string> NotificationURLs { get; set; }
@@ -91,6 +94,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public long? Parallelism { get; set; }
 
+        /// <summary>
+        /// The list of parameters.
+        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<CreateChangeSetRequestParameters> Parameters { get; set; }
@@ -147,6 +153,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ReplacementOption { get; set; }
 
+        /// <summary>
+        /// The key-value mapping between strings.
+        /// </summary>
         [NameInMap("ResourcesToImport")]
         [Validation(Required=false)]
         public List<CreateChangeSetRequestResourcesToImport> ResourcesToImport { get; set; }

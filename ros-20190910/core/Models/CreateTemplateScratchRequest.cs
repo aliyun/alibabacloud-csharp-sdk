@@ -167,6 +167,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateTemplateScratchRequestTags> Tags { get; set; }

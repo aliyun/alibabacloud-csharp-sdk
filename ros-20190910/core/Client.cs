@@ -9716,10 +9716,6 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["RegionId"] = request.RegionId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
-            {
-                query["TemplateBody"] = request.TemplateBody;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateURL))
             {
                 query["TemplateURL"] = request.TemplateURL;
@@ -9728,9 +9724,15 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["ValidationOption"] = request.ValidationOption;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
+            {
+                body["TemplateBody"] = request.TemplateBody;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9766,10 +9768,6 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["RegionId"] = request.RegionId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
-            {
-                query["TemplateBody"] = request.TemplateBody;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateURL))
             {
                 query["TemplateURL"] = request.TemplateURL;
@@ -9778,9 +9776,15 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["ValidationOption"] = request.ValidationOption;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
+            {
+                body["TemplateBody"] = request.TemplateBody;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {

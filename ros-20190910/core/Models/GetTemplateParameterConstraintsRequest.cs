@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The name of parameter N in the template.
+        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<GetTemplateParameterConstraintsRequestParameters> Parameters { get; set; }
@@ -69,6 +72,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the stack.
+        /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]
         public string StackId { get; set; }

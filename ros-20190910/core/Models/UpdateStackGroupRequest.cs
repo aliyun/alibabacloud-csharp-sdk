@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public Dictionary<string, object> OperationPreferences { get; set; }
 
         /// <summary>
-        /// test
+        /// The list of parameters.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]

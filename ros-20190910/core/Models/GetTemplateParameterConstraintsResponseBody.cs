@@ -68,14 +68,25 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public List<object> IllegalValueByRules { get; set; }
 
+            /// <summary>
+            /// The unsupported resources in the template.
+            /// </summary>
             [NameInMap("NotSupportResources")]
             [Validation(Required=false)]
             public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources> NotSupportResources { get; set; }
             public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources : TeaModel {
+                /// <summary>
+                /// The name of the resource property.
+                /// </summary>
                 [NameInMap("PropertyName")]
                 [Validation(Required=false)]
                 public string PropertyName { get; set; }
 
+                /// <summary>
+                /// The resource type.
+                /// 
+                /// You can call the [ListResourceTypes](~~133957~~) operation to query the resource type.
+                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
@@ -89,18 +100,30 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string ParameterKey { get; set; }
 
+            /// <summary>
+            /// The error details that are returned if the request fails.
+            /// </summary>
             [NameInMap("QueryErrors")]
             [Validation(Required=false)]
             public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> QueryErrors { get; set; }
             public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors : TeaModel {
+                /// <summary>
+                /// The error message.
+                /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
+                /// <summary>
+                /// The name of the resource.
+                /// </summary>
                 [NameInMap("ResourceName")]
                 [Validation(Required=false)]
                 public string ResourceName { get; set; }
 
+                /// <summary>
+                /// The resource type.
+                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }

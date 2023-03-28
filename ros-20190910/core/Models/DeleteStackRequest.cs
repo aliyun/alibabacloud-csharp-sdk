@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public bool? RetainAllResources { get; set; }
 
+        /// <summary>
+        /// The name of resource N that you want to retain.
+        /// </summary>
         [NameInMap("RetainResources")]
         [Validation(Required=false)]
         public List<string> RetainResources { get; set; }

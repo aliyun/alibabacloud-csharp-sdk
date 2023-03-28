@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CancelStackOperationRequest : TeaModel {
         /// <summary>
-        /// test
+        /// The operation N that you want to cancel on the stack.
         /// </summary>
         [NameInMap("AllowedStackOperations")]
         [Validation(Required=false)]

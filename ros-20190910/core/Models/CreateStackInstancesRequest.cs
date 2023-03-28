@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public Dictionary<string, object> OperationPreferences { get; set; }
 
         /// <summary>
-        /// test
+        /// The parameters.
         /// </summary>
         [NameInMap("ParameterOverrides")]
         [Validation(Required=false)]

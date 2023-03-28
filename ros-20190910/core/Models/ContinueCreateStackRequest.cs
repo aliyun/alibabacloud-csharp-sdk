@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? Parallelism { get; set; }
 
         /// <summary>
-        /// test
+        /// The parameters of the template.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -109,12 +109,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RamRoleName { get; set; }
 
         /// <summary>
-        /// test
+        /// Option N that ROS adopts when ROS continues to create the stack.
         /// </summary>
         [NameInMap("RecreatingOptions")]
         [Validation(Required=false)]
         public List<string> RecreatingOptions { get; set; }
 
+        /// <summary>
+        /// Resource N that ROS continues to create after the resource failed to be created.
+        /// </summary>
         [NameInMap("RecreatingResources")]
         [Validation(Required=false)]
         public List<string> RecreatingResources { get; set; }

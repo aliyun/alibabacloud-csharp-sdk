@@ -9,6 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GenerateTemplatePolicyRequest : TeaModel {
+        /// <summary>
+        /// The type of operation N for which you want to generate the policy information.
+        /// 
+        /// Valid values:
+        /// 
+        /// *   CreateStack: creates a stack by calling the CreateStack operation.
+        /// *   UpdateStack: updates a stack by calling the UpdateStack operation.
+        /// *   DeleteStack: deletes a stack by calling the DeleteStack operation.
+        /// *   DetectStackDrift: detects drifts on a stack by calling the DelectStackDrift operation.
+        /// *   ListStackOperationRisks: lists the risks of a deletion operation on a stack by setting the OperationType parameter to DeleteStack in the ListStackOperationRisks operation.
+        /// *   GetTemplateEstimateCost: queries the estimated prices of resources that you want to use in the template by calling the GetTemplateEstimateCost operation.
+        /// *   GetTemplateParameterConstraints: queries the values of parameters in the template by calling the GetTemplateParameterConstraints operation.
+        /// *   ImportResourcesToStack: imports resources to a stack by setting the ChangeSetType parameter to IMPORT in the CreateChangeSet operation.
+        /// *   SignalResource: sends a signal to a stack.
+        /// 
+        /// >  The default value is the combination of all valid values.
+        /// </summary>
         [NameInMap("OperationTypes")]
         [Validation(Required=false)]
         public List<string> OperationTypes { get; set; }

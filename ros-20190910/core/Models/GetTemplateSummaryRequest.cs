@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// test
+        /// The parameters.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]

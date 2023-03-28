@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStackEventsRequest : TeaModel {
+        /// <summary>
+        /// The logical ID of the resource that is defined in the template.
+        /// </summary>
         [NameInMap("LogicalResourceId")]
         [Validation(Required=false)]
         public List<string> LogicalResourceId { get; set; }
@@ -42,6 +45,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The list of resource types.
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public List<string> ResourceType { get; set; }
@@ -53,6 +59,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string StackId { get; set; }
 
+        /// <summary>
+        /// The state of the resource.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public List<string> Status { get; set; }

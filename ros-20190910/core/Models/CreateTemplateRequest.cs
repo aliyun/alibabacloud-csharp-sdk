@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateTemplateRequestTags> Tags { get; set; }

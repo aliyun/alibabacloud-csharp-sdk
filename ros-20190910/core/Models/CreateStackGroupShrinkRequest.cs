@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ExecutionRoleName { get; set; }
 
         /// <summary>
-        /// test
+        /// The parameters.
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -126,6 +126,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string StackGroupName { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateStackGroupShrinkRequestTags> Tags { get; set; }

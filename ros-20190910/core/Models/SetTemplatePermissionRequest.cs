@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class SetTemplatePermissionRequest : TeaModel {
+        /// <summary>
+        /// The list of one or more Alibaba Cloud accounts with which you want to share or unshare the template.
+        /// </summary>
         [NameInMap("AccountIds")]
         [Validation(Required=false)]
         public List<string> AccountIds { get; set; }

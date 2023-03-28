@@ -16,10 +16,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ChangeSetId { get; set; }
 
+        /// <summary>
+        /// The name of change set.
+        /// </summary>
         [NameInMap("ChangeSetName")]
         [Validation(Required=false)]
         public List<string> ChangeSetName { get; set; }
 
+        /// <summary>
+        /// The execution status of change set.
+        /// </summary>
         [NameInMap("ExecutionStatus")]
         [Validation(Required=false)]
         public List<string> ExecutionStatus { get; set; }
@@ -60,6 +66,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string StackId { get; set; }
 
+        /// <summary>
+        /// The status of change set.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public List<string> Status { get; set; }

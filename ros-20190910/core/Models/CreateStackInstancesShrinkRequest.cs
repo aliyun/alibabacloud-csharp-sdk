@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string OperationPreferencesShrink { get; set; }
 
         /// <summary>
-        /// test
+        /// The parameters.
         /// </summary>
         [NameInMap("ParameterOverrides")]
         [Validation(Required=false)]

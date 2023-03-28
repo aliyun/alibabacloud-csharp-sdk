@@ -34,6 +34,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The name of resource property N that you want to query.
+        /// </summary>
         [NameInMap("ResourceAttributes")]
         [Validation(Required=false)]
         public List<string> ResourceAttributes { get; set; }

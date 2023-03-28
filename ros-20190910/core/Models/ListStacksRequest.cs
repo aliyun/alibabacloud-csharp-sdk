@@ -74,18 +74,30 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string StackId { get; set; }
 
+        /// <summary>
+        /// The ID of stack N.
+        /// </summary>
         [NameInMap("StackIds")]
         [Validation(Required=false)]
         public List<string> StackIds { get; set; }
 
+        /// <summary>
+        /// The name of stack N.
+        /// </summary>
         [NameInMap("StackName")]
         [Validation(Required=false)]
         public List<string> StackName { get; set; }
 
+        /// <summary>
+        /// The state N of the stack.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public List<string> Status { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListStacksRequestTag> Tag { get; set; }

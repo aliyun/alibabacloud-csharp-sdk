@@ -34,6 +34,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The drift status of the resource.
+        /// </summary>
         [NameInMap("ResourceDriftStatus")]
         [Validation(Required=false)]
         public List<string> ResourceDriftStatus { get; set; }
