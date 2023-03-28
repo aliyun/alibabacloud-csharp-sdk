@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [Validation(Required=false)]
                 public ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo AortaInfo { get; set; }
                 public class ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo : TeaModel {
+                    /// <summary>
+                    /// 1
+                    /// </summary>
                     [NameInMap("Area")]
                     [Validation(Required=false)]
                     public List<float?> Area { get; set; }
@@ -51,6 +54,9 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [Validation(Required=false)]
                 public ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo PulmonaryInfo { get; set; }
                 public class ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo : TeaModel {
+                    /// <summary>
+                    /// 1
+                    /// </summary>
                     [NameInMap("Area")]
                     [Validation(Required=false)]
                     public List<float?> Area { get; set; }
