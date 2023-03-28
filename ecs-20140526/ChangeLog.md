@@ -1,3 +1,6 @@
+2023-03-28 Version: 3.0.4
+- Change visibility of param ActionType in DescribeImageSupportInstanceTypes.
+
 2023-03-27 Version: 3.0.3
 - Suppoort jumbo frame.
 

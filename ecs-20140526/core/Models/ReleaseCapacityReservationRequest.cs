@@ -13,18 +13,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public ReleaseCapacityReservationRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class ReleaseCapacityReservationRequestPrivatePoolOptions : TeaModel {
-            /// <summary>
-            /// The ID of the capacity reservation.
-            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
         }
 
-        /// <summary>
-        /// Specifies whether to perform a dry run. Set the value to false. false: does not perform a dry run and sends the request. The operation is performed.
-        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -37,9 +31,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

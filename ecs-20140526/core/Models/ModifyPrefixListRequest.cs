@@ -9,38 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyPrefixListRequest : TeaModel {
-        /// <summary>
-        /// The entries that to be added to the prefix list.
-        /// </summary>
         [NameInMap("AddEntry")]
         [Validation(Required=false)]
         public List<ModifyPrefixListRequestAddEntry> AddEntry { get; set; }
         public class ModifyPrefixListRequestAddEntry : TeaModel {
-            /// <summary>
-            /// The CIDR block of entry N to be added to the prefix list. Valid values of N: 0 to 200.
-            /// 
-            /// Take note of the following items when you add the entries:
-            /// 
-            /// *   The number of entries in the prefix list cannot be greater than the maximum number of entries allowed for the prefix list. You can call the [DescribePrefixListAttributes](~~205872~~) operation to query the maximum number of entries in a specific prefix list.
-            /// *   You cannot specify duplicate CIDR blocks.
-            /// *   The CIDR blocks cannot be the same as the `RemoveEntry.N.Cidr` values.
-            /// </summary>
             [NameInMap("Cidr")]
             [Validation(Required=false)]
             public string Cidr { get; set; }
 
-            /// <summary>
-            /// The description in entry N. The description must be 2 to 32 characters in length and cannot start with `http://` or `https://`. Valid values of N: 0 to 200.
-            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
         }
 
-        /// <summary>
-        /// The description of the prefix list. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
-        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -53,42 +35,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// The ID of the prefix list.
-        /// </summary>
         [NameInMap("PrefixListId")]
         [Validation(Required=false)]
         public string PrefixListId { get; set; }
 
-        /// <summary>
-        /// The name of the prefix list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
-        /// </summary>
         [NameInMap("PrefixListName")]
         [Validation(Required=false)]
         public string PrefixListName { get; set; }
 
-        /// <summary>
-        /// The region ID of the prefix list. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// The entries that to be deleted from the prefix list.
-        /// </summary>
         [NameInMap("RemoveEntry")]
         [Validation(Required=false)]
         public List<ModifyPrefixListRequestRemoveEntry> RemoveEntry { get; set; }
         public class ModifyPrefixListRequestRemoveEntry : TeaModel {
-            /// <summary>
-            /// The CIDR block of entry N to be deleted from the prefix list. Valid values of N: 0 to 200.
-            /// 
-            /// Take note of the following items when you delete the entries:
-            /// 
-            /// *   You cannot specify duplicate CIDR blocks.
-            /// *   The CIDR blocks cannot be the same as the `AddEntry.N.Cidr` values.
-            /// </summary>
             [NameInMap("Cidr")]
             [Validation(Required=false)]
             public string Cidr { get; set; }

@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class UnassignIpv6AddressesRequest : TeaModel {
+        /// <summary>
+        /// The IPv6 addresses to unassign. You can specify up to 10 IPv6 addresses in a single request.
+        /// </summary>
         [NameInMap("Ipv6Address")]
         [Validation(Required=false)]
         public List<string> Ipv6Address { get; set; }
 
+        /// <summary>
+        /// > This parameter is in invitational preview and is unavailable for general users.
+        /// </summary>
         [NameInMap("Ipv6Prefix")]
         [Validation(Required=false)]
         public List<string> Ipv6Prefix { get; set; }
 
+        /// <summary>
+        /// The ID of the ENI.
+        /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
         public string NetworkInterfaceId { get; set; }
@@ -29,6 +38,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

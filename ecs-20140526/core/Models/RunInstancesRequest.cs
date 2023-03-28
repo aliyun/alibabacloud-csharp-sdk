@@ -297,6 +297,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        [NameInMap("ImageOptions")]
+        [Validation(Required=false)]
+        public RunInstancesRequestImageOptions ImageOptions { get; set; }
+        public class RunInstancesRequestImageOptions : TeaModel {
+            [NameInMap("LoginAsNonRoot")]
+            [Validation(Required=false)]
+            public bool? LoginAsNonRoot { get; set; }
+
+        }
+
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }

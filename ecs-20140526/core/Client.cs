@@ -23821,14 +23821,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await DescribeDisksWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * *   The full status information of an EBS device includes the lifecycle status provided by the `Status` parameter, health status provided by the `HealthStatus` parameter, and event type provided by the `EventType` parameter of the EBS device. You can filter the results based on these parameters.
-          * *   The release time, scheduled execution time, and actual execution time of each EBS device event are identical. If you specify a period of time by using the `EventTime.Start` and `EventTime.End` parameters, all events that occurred within this period are queried. You can query events that occurred within the last seven days.
-          *
-          * @param request DescribeDisksFullStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDisksFullStatusResponse
-         */
         public DescribeDisksFullStatusResponse DescribeDisksFullStatusWithOptions(DescribeDisksFullStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23916,14 +23908,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeDisksFullStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * *   The full status information of an EBS device includes the lifecycle status provided by the `Status` parameter, health status provided by the `HealthStatus` parameter, and event type provided by the `EventType` parameter of the EBS device. You can filter the results based on these parameters.
-          * *   The release time, scheduled execution time, and actual execution time of each EBS device event are identical. If you specify a period of time by using the `EventTime.Start` and `EventTime.End` parameters, all events that occurred within this period are queried. You can query events that occurred within the last seven days.
-          *
-          * @param request DescribeDisksFullStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDisksFullStatusResponse
-         */
         public async Task<DescribeDisksFullStatusResponse> DescribeDisksFullStatusWithOptionsAsync(DescribeDisksFullStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24011,26 +23995,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeDisksFullStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * *   The full status information of an EBS device includes the lifecycle status provided by the `Status` parameter, health status provided by the `HealthStatus` parameter, and event type provided by the `EventType` parameter of the EBS device. You can filter the results based on these parameters.
-          * *   The release time, scheduled execution time, and actual execution time of each EBS device event are identical. If you specify a period of time by using the `EventTime.Start` and `EventTime.End` parameters, all events that occurred within this period are queried. You can query events that occurred within the last seven days.
-          *
-          * @param request DescribeDisksFullStatusRequest
-          * @return DescribeDisksFullStatusResponse
-         */
         public DescribeDisksFullStatusResponse DescribeDisksFullStatus(DescribeDisksFullStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDisksFullStatusWithOptions(request, runtime);
         }
 
-        /**
-          * *   The full status information of an EBS device includes the lifecycle status provided by the `Status` parameter, health status provided by the `HealthStatus` parameter, and event type provided by the `EventType` parameter of the EBS device. You can filter the results based on these parameters.
-          * *   The release time, scheduled execution time, and actual execution time of each EBS device event are identical. If you specify a period of time by using the `EventTime.Start` and `EventTime.End` parameters, all events that occurred within this period are queried. You can query events that occurred within the last seven days.
-          *
-          * @param request DescribeDisksFullStatusRequest
-          * @return DescribeDisksFullStatusResponse
-         */
         public async Task<DescribeDisksFullStatusResponse> DescribeDisksFullStatusAsync(DescribeDisksFullStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -25889,13 +25859,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await DescribeImagePipelineExecutionsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * You can use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the `DescribeImagePipelines` operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
-          *
-          * @param request DescribeImagePipelinesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeImagePipelinesResponse
-         */
         public DescribeImagePipelinesResponse DescribeImagePipelinesWithOptions(DescribeImagePipelinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25971,13 +25934,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeImagePipelinesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * You can use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the `DescribeImagePipelines` operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
-          *
-          * @param request DescribeImagePipelinesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeImagePipelinesResponse
-         */
         public async Task<DescribeImagePipelinesResponse> DescribeImagePipelinesWithOptionsAsync(DescribeImagePipelinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26053,24 +26009,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeImagePipelinesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * You can use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the `DescribeImagePipelines` operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
-          *
-          * @param request DescribeImagePipelinesRequest
-          * @return DescribeImagePipelinesResponse
-         */
         public DescribeImagePipelinesResponse DescribeImagePipelines(DescribeImagePipelinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeImagePipelinesWithOptions(request, runtime);
         }
 
-        /**
-          * You can use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the `DescribeImagePipelines` operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
-          *
-          * @param request DescribeImagePipelinesRequest
-          * @return DescribeImagePipelinesResponse
-         */
         public async Task<DescribeImagePipelinesResponse> DescribeImagePipelinesAsync(DescribeImagePipelinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -26203,6 +26147,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionType))
+            {
+                query["ActionType"] = request.ActionType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 query["Filter"] = request.Filter;
@@ -26250,6 +26198,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionType))
+            {
+                query["ActionType"] = request.ActionType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 query["Filter"] = request.Filter;
@@ -27919,14 +27871,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await DescribeInstanceRamRoleWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * * For information about the lifecycle states of an ECS instance, see [Instance states](~~25687~~).
-          * * You can also call this operation to query the list of ECS instances.
-          *
-          * @param request DescribeInstanceStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceStatusResponse
-         */
         public DescribeInstanceStatusResponse DescribeInstanceStatusWithOptions(DescribeInstanceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27990,14 +27934,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeInstanceStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * * For information about the lifecycle states of an ECS instance, see [Instance states](~~25687~~).
-          * * You can also call this operation to query the list of ECS instances.
-          *
-          * @param request DescribeInstanceStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceStatusResponse
-         */
         public async Task<DescribeInstanceStatusResponse> DescribeInstanceStatusWithOptionsAsync(DescribeInstanceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28061,26 +27997,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeInstanceStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * * For information about the lifecycle states of an ECS instance, see [Instance states](~~25687~~).
-          * * You can also call this operation to query the list of ECS instances.
-          *
-          * @param request DescribeInstanceStatusRequest
-          * @return DescribeInstanceStatusResponse
-         */
         public DescribeInstanceStatusResponse DescribeInstanceStatus(DescribeInstanceStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceStatusWithOptions(request, runtime);
         }
 
-        /**
-          * * For information about the lifecycle states of an ECS instance, see [Instance states](~~25687~~).
-          * * You can also call this operation to query the list of ECS instances.
-          *
-          * @param request DescribeInstanceStatusRequest
-          * @return DescribeInstanceStatusResponse
-         */
         public async Task<DescribeInstanceStatusResponse> DescribeInstanceStatusAsync(DescribeInstanceStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -28317,18 +28239,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await DescribeInstanceTypeFamiliesWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Description
-          * Before you call this operation, take note of the following items:
-          * *   The MaxResults parameter specifies the maximum number of entries to return on each page. The maximum value of this parameter is changed from 1600 to 100. If you called this operation in 2022, you can continue to use 1600 as the maximum value of MaxResults until November 15, 2023. As of November 15, 2023, only 100 can be used as the maximum value of MaxResults. If you do not specify the NextToken parameter when you call the DescribeInstanceTypes operation, only the first page of results that contains up to 100 entries is returned. If you want to retrieve more results, specify the NextToken parameter to perform paged queries, or specify filter conditions to filter results. For information about the best practices for using DescribeInstanceTypes, see [Compare the specifications of instance types](https://help.aliyun.com/practice_detail/461278) .
-          * *   We recommend that you specify the MaxResults and NextToken parameters to perform paged queries. The first time you call the DescribeInstanceTypes operation, specify MaxResults to limit the maximum number of entries to return in the call. If the number of entries to return exceeds the specified value of MaxResults, the response includes a NextToken value. You can set NextToken to the return value and specify MaxResults in your next request to DescribeInstanceTypes to retrieve the next page of results.
-          * *   The DescribeInstanceTypes operation is used to query only the specifications and performance information of instance types. To query instance types that are available in a specific region, call the [DescribeAvailableResource](~~66186~~) operation.
-          * *   To use special instance types such as instance types that are unavailable for purchase, [submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex.htm).
-          *
-          * @param request DescribeInstanceTypesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceTypesResponse
-         */
         public DescribeInstanceTypesResponse DescribeInstanceTypesWithOptions(DescribeInstanceTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28516,18 +28426,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeInstanceTypesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * Before you call this operation, take note of the following items:
-          * *   The MaxResults parameter specifies the maximum number of entries to return on each page. The maximum value of this parameter is changed from 1600 to 100. If you called this operation in 2022, you can continue to use 1600 as the maximum value of MaxResults until November 15, 2023. As of November 15, 2023, only 100 can be used as the maximum value of MaxResults. If you do not specify the NextToken parameter when you call the DescribeInstanceTypes operation, only the first page of results that contains up to 100 entries is returned. If you want to retrieve more results, specify the NextToken parameter to perform paged queries, or specify filter conditions to filter results. For information about the best practices for using DescribeInstanceTypes, see [Compare the specifications of instance types](https://help.aliyun.com/practice_detail/461278) .
-          * *   We recommend that you specify the MaxResults and NextToken parameters to perform paged queries. The first time you call the DescribeInstanceTypes operation, specify MaxResults to limit the maximum number of entries to return in the call. If the number of entries to return exceeds the specified value of MaxResults, the response includes a NextToken value. You can set NextToken to the return value and specify MaxResults in your next request to DescribeInstanceTypes to retrieve the next page of results.
-          * *   The DescribeInstanceTypes operation is used to query only the specifications and performance information of instance types. To query instance types that are available in a specific region, call the [DescribeAvailableResource](~~66186~~) operation.
-          * *   To use special instance types such as instance types that are unavailable for purchase, [submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex.htm).
-          *
-          * @param request DescribeInstanceTypesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInstanceTypesResponse
-         */
         public async Task<DescribeInstanceTypesResponse> DescribeInstanceTypesWithOptionsAsync(DescribeInstanceTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28715,34 +28613,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeInstanceTypesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * Before you call this operation, take note of the following items:
-          * *   The MaxResults parameter specifies the maximum number of entries to return on each page. The maximum value of this parameter is changed from 1600 to 100. If you called this operation in 2022, you can continue to use 1600 as the maximum value of MaxResults until November 15, 2023. As of November 15, 2023, only 100 can be used as the maximum value of MaxResults. If you do not specify the NextToken parameter when you call the DescribeInstanceTypes operation, only the first page of results that contains up to 100 entries is returned. If you want to retrieve more results, specify the NextToken parameter to perform paged queries, or specify filter conditions to filter results. For information about the best practices for using DescribeInstanceTypes, see [Compare the specifications of instance types](https://help.aliyun.com/practice_detail/461278) .
-          * *   We recommend that you specify the MaxResults and NextToken parameters to perform paged queries. The first time you call the DescribeInstanceTypes operation, specify MaxResults to limit the maximum number of entries to return in the call. If the number of entries to return exceeds the specified value of MaxResults, the response includes a NextToken value. You can set NextToken to the return value and specify MaxResults in your next request to DescribeInstanceTypes to retrieve the next page of results.
-          * *   The DescribeInstanceTypes operation is used to query only the specifications and performance information of instance types. To query instance types that are available in a specific region, call the [DescribeAvailableResource](~~66186~~) operation.
-          * *   To use special instance types such as instance types that are unavailable for purchase, [submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex.htm).
-          *
-          * @param request DescribeInstanceTypesRequest
-          * @return DescribeInstanceTypesResponse
-         */
         public DescribeInstanceTypesResponse DescribeInstanceTypes(DescribeInstanceTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceTypesWithOptions(request, runtime);
         }
 
-        /**
-          * ## Description
-          * Before you call this operation, take note of the following items:
-          * *   The MaxResults parameter specifies the maximum number of entries to return on each page. The maximum value of this parameter is changed from 1600 to 100. If you called this operation in 2022, you can continue to use 1600 as the maximum value of MaxResults until November 15, 2023. As of November 15, 2023, only 100 can be used as the maximum value of MaxResults. If you do not specify the NextToken parameter when you call the DescribeInstanceTypes operation, only the first page of results that contains up to 100 entries is returned. If you want to retrieve more results, specify the NextToken parameter to perform paged queries, or specify filter conditions to filter results. For information about the best practices for using DescribeInstanceTypes, see [Compare the specifications of instance types](https://help.aliyun.com/practice_detail/461278) .
-          * *   We recommend that you specify the MaxResults and NextToken parameters to perform paged queries. The first time you call the DescribeInstanceTypes operation, specify MaxResults to limit the maximum number of entries to return in the call. If the number of entries to return exceeds the specified value of MaxResults, the response includes a NextToken value. You can set NextToken to the return value and specify MaxResults in your next request to DescribeInstanceTypes to retrieve the next page of results.
-          * *   The DescribeInstanceTypes operation is used to query only the specifications and performance information of instance types. To query instance types that are available in a specific region, call the [DescribeAvailableResource](~~66186~~) operation.
-          * *   To use special instance types such as instance types that are unavailable for purchase, [submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex.htm).
-          *
-          * @param request DescribeInstanceTypesRequest
-          * @return DescribeInstanceTypesResponse
-         */
         public async Task<DescribeInstanceTypesResponse> DescribeInstanceTypesAsync(DescribeInstanceTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -29737,14 +29613,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await DescribeInstancesFullStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * *   After you run a command, the command may not succeed or return the expected results. You can call this operation to query the actual execution results.
-          * *   You can query information about command executions within the last four weeks. A maximum of 100,000 pieces of execution information can be retained.
-          *
-          * @param request DescribeInvocationResultsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInvocationResultsResponse
-         */
         public DescribeInvocationResultsResponse DescribeInvocationResultsWithOptions(DescribeInvocationResultsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29832,14 +29700,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeInvocationResultsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * *   After you run a command, the command may not succeed or return the expected results. You can call this operation to query the actual execution results.
-          * *   You can query information about command executions within the last four weeks. A maximum of 100,000 pieces of execution information can be retained.
-          *
-          * @param request DescribeInvocationResultsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeInvocationResultsResponse
-         */
         public async Task<DescribeInvocationResultsResponse> DescribeInvocationResultsWithOptionsAsync(DescribeInvocationResultsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29927,26 +29787,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeInvocationResultsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * *   After you run a command, the command may not succeed or return the expected results. You can call this operation to query the actual execution results.
-          * *   You can query information about command executions within the last four weeks. A maximum of 100,000 pieces of execution information can be retained.
-          *
-          * @param request DescribeInvocationResultsRequest
-          * @return DescribeInvocationResultsResponse
-         */
         public DescribeInvocationResultsResponse DescribeInvocationResults(DescribeInvocationResultsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInvocationResultsWithOptions(request, runtime);
         }
 
-        /**
-          * *   After you run a command, the command may not succeed or return the expected results. You can call this operation to query the actual execution results.
-          * *   You can query information about command executions within the last four weeks. A maximum of 100,000 pieces of execution information can be retained.
-          *
-          * @param request DescribeInvocationResultsRequest
-          * @return DescribeInvocationResultsResponse
-         */
         public async Task<DescribeInvocationResultsResponse> DescribeInvocationResultsAsync(DescribeInvocationResultsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -31381,14 +31227,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await DescribeNetworkInterfacePermissionsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * The `DescribeNetworkInterfaces` operation supports multiple pagination mechanisms. We recommend that you set `MaxResults` to specify the maximum number of entries to return in each request. The returned value of `NextToken` is a pagination token, which can be used in the next request to retrieve a new page of results. When you perform the next request, set `NextToken` to the `NextToken` value returned in the previous call and set `MaxResults` to specify the maximum number of entries to return in this call.
-          * > If you specify `MaxResults` or `NextToken`, the system returns results based on the preceding pagination mechanism. Otherwise, the system paginates the results based on the `PageNumber` and `PageSize` parameters.
-          *
-          * @param request DescribeNetworkInterfacesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeNetworkInterfacesResponse
-         */
         public DescribeNetworkInterfacesResponse DescribeNetworkInterfacesWithOptions(DescribeNetworkInterfacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -31512,14 +31350,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeNetworkInterfacesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * The `DescribeNetworkInterfaces` operation supports multiple pagination mechanisms. We recommend that you set `MaxResults` to specify the maximum number of entries to return in each request. The returned value of `NextToken` is a pagination token, which can be used in the next request to retrieve a new page of results. When you perform the next request, set `NextToken` to the `NextToken` value returned in the previous call and set `MaxResults` to specify the maximum number of entries to return in this call.
-          * > If you specify `MaxResults` or `NextToken`, the system returns results based on the preceding pagination mechanism. Otherwise, the system paginates the results based on the `PageNumber` and `PageSize` parameters.
-          *
-          * @param request DescribeNetworkInterfacesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeNetworkInterfacesResponse
-         */
         public async Task<DescribeNetworkInterfacesResponse> DescribeNetworkInterfacesWithOptionsAsync(DescribeNetworkInterfacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -31643,26 +31473,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeNetworkInterfacesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * The `DescribeNetworkInterfaces` operation supports multiple pagination mechanisms. We recommend that you set `MaxResults` to specify the maximum number of entries to return in each request. The returned value of `NextToken` is a pagination token, which can be used in the next request to retrieve a new page of results. When you perform the next request, set `NextToken` to the `NextToken` value returned in the previous call and set `MaxResults` to specify the maximum number of entries to return in this call.
-          * > If you specify `MaxResults` or `NextToken`, the system returns results based on the preceding pagination mechanism. Otherwise, the system paginates the results based on the `PageNumber` and `PageSize` parameters.
-          *
-          * @param request DescribeNetworkInterfacesRequest
-          * @return DescribeNetworkInterfacesResponse
-         */
         public DescribeNetworkInterfacesResponse DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNetworkInterfacesWithOptions(request, runtime);
         }
 
-        /**
-          * The `DescribeNetworkInterfaces` operation supports multiple pagination mechanisms. We recommend that you set `MaxResults` to specify the maximum number of entries to return in each request. The returned value of `NextToken` is a pagination token, which can be used in the next request to retrieve a new page of results. When you perform the next request, set `NextToken` to the `NextToken` value returned in the previous call and set `MaxResults` to specify the maximum number of entries to return in this call.
-          * > If you specify `MaxResults` or `NextToken`, the system returns results based on the preceding pagination mechanism. Otherwise, the system paginates the results based on the `PageNumber` and `PageSize` parameters.
-          *
-          * @param request DescribeNetworkInterfacesRequest
-          * @return DescribeNetworkInterfacesResponse
-         */
         public async Task<DescribeNetworkInterfacesResponse> DescribeNetworkInterfacesAsync(DescribeNetworkInterfacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -32241,14 +32057,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await DescribePrefixListAttributesWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Description
-          * You can specify the `AddressFamily`, `PrefixListId.N`, and `PrefixListName` request parameters to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-          *
-          * @param request DescribePrefixListsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePrefixListsResponse
-         */
         public DescribePrefixListsResponse DescribePrefixListsWithOptions(DescribePrefixListsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -32316,14 +32124,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribePrefixListsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * You can specify the `AddressFamily`, `PrefixListId.N`, and `PrefixListName` request parameters to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-          *
-          * @param request DescribePrefixListsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePrefixListsResponse
-         */
         public async Task<DescribePrefixListsResponse> DescribePrefixListsWithOptionsAsync(DescribePrefixListsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -32391,48 +32191,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribePrefixListsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * You can specify the `AddressFamily`, `PrefixListId.N`, and `PrefixListName` request parameters to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-          *
-          * @param request DescribePrefixListsRequest
-          * @return DescribePrefixListsResponse
-         */
         public DescribePrefixListsResponse DescribePrefixLists(DescribePrefixListsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePrefixListsWithOptions(request, runtime);
         }
 
-        /**
-          * ## Description
-          * You can specify the `AddressFamily`, `PrefixListId.N`, and `PrefixListName` request parameters to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-          *
-          * @param request DescribePrefixListsRequest
-          * @return DescribePrefixListsResponse
-         */
         public async Task<DescribePrefixListsResponse> DescribePrefixListsAsync(DescribePrefixListsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePrefixListsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Description
-          * *   The required parameters vary based on the types of resources whose prices you want to query.
-          *     *   When the `ResourceType` parameter is set to instance, you must specify the `InstanceType` parameter.
-          *     *   When the `ResourceType` parameter is set to disk, you must specify both the `DataDisk.1.Category` and `DataDisk.1.Size` parameters. When the `ResourceType` parameter is set to disk, only pay-as-you-go prices of cloud disks are returned. In this scenario, the `PriceUnit` parameter must be set to `Hour`.
-          *     *   When the `ResourceType` parameter is set to ddh, you must specify the `DedicatedHostType` parameter.
-          *     *   When the `ResourceType` parameter is set to ElasticityAssurance, you must specify the `InstanceType` parameter.
-          *     *   When the `ResourceType` parameter is set to CapacityReservation, you must specify the `InstanceType` parameter.
-          * *   When the `ResourceType` parameter is set to bandwidth, only the pay-by-traffic (`PayByTraffic`) price for network usage is returned.
-          * *   When the `ResourceType` parameter is set to instance, the prices of up to four data disks can be queried.
-          * *   By default, the `ChargeType` parameter is set to `PostPaid`. You can specify the `PriceUnit` parameter to query the prices of ECS resources that have different billing cycles.
-          *
-          * @param request DescribePriceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePriceResponse
-         */
         public DescribePriceResponse DescribePriceWithOptions(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -32580,22 +32350,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribePriceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * *   The required parameters vary based on the types of resources whose prices you want to query.
-          *     *   When the `ResourceType` parameter is set to instance, you must specify the `InstanceType` parameter.
-          *     *   When the `ResourceType` parameter is set to disk, you must specify both the `DataDisk.1.Category` and `DataDisk.1.Size` parameters. When the `ResourceType` parameter is set to disk, only pay-as-you-go prices of cloud disks are returned. In this scenario, the `PriceUnit` parameter must be set to `Hour`.
-          *     *   When the `ResourceType` parameter is set to ddh, you must specify the `DedicatedHostType` parameter.
-          *     *   When the `ResourceType` parameter is set to ElasticityAssurance, you must specify the `InstanceType` parameter.
-          *     *   When the `ResourceType` parameter is set to CapacityReservation, you must specify the `InstanceType` parameter.
-          * *   When the `ResourceType` parameter is set to bandwidth, only the pay-by-traffic (`PayByTraffic`) price for network usage is returned.
-          * *   When the `ResourceType` parameter is set to instance, the prices of up to four data disks can be queried.
-          * *   By default, the `ChargeType` parameter is set to `PostPaid`. You can specify the `PriceUnit` parameter to query the prices of ECS resources that have different billing cycles.
-          *
-          * @param request DescribePriceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribePriceResponse
-         */
         public async Task<DescribePriceResponse> DescribePriceWithOptionsAsync(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -32743,42 +32497,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribePriceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * *   The required parameters vary based on the types of resources whose prices you want to query.
-          *     *   When the `ResourceType` parameter is set to instance, you must specify the `InstanceType` parameter.
-          *     *   When the `ResourceType` parameter is set to disk, you must specify both the `DataDisk.1.Category` and `DataDisk.1.Size` parameters. When the `ResourceType` parameter is set to disk, only pay-as-you-go prices of cloud disks are returned. In this scenario, the `PriceUnit` parameter must be set to `Hour`.
-          *     *   When the `ResourceType` parameter is set to ddh, you must specify the `DedicatedHostType` parameter.
-          *     *   When the `ResourceType` parameter is set to ElasticityAssurance, you must specify the `InstanceType` parameter.
-          *     *   When the `ResourceType` parameter is set to CapacityReservation, you must specify the `InstanceType` parameter.
-          * *   When the `ResourceType` parameter is set to bandwidth, only the pay-by-traffic (`PayByTraffic`) price for network usage is returned.
-          * *   When the `ResourceType` parameter is set to instance, the prices of up to four data disks can be queried.
-          * *   By default, the `ChargeType` parameter is set to `PostPaid`. You can specify the `PriceUnit` parameter to query the prices of ECS resources that have different billing cycles.
-          *
-          * @param request DescribePriceRequest
-          * @return DescribePriceResponse
-         */
         public DescribePriceResponse DescribePrice(DescribePriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePriceWithOptions(request, runtime);
         }
 
-        /**
-          * ## Description
-          * *   The required parameters vary based on the types of resources whose prices you want to query.
-          *     *   When the `ResourceType` parameter is set to instance, you must specify the `InstanceType` parameter.
-          *     *   When the `ResourceType` parameter is set to disk, you must specify both the `DataDisk.1.Category` and `DataDisk.1.Size` parameters. When the `ResourceType` parameter is set to disk, only pay-as-you-go prices of cloud disks are returned. In this scenario, the `PriceUnit` parameter must be set to `Hour`.
-          *     *   When the `ResourceType` parameter is set to ddh, you must specify the `DedicatedHostType` parameter.
-          *     *   When the `ResourceType` parameter is set to ElasticityAssurance, you must specify the `InstanceType` parameter.
-          *     *   When the `ResourceType` parameter is set to CapacityReservation, you must specify the `InstanceType` parameter.
-          * *   When the `ResourceType` parameter is set to bandwidth, only the pay-by-traffic (`PayByTraffic`) price for network usage is returned.
-          * *   When the `ResourceType` parameter is set to instance, the prices of up to four data disks can be queried.
-          * *   By default, the `ChargeType` parameter is set to `PostPaid`. You can specify the `PriceUnit` parameter to query the prices of ECS resources that have different billing cycles.
-          *
-          * @param request DescribePriceRequest
-          * @return DescribePriceResponse
-         */
         public async Task<DescribePriceResponse> DescribePriceAsync(DescribePriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -33143,17 +32867,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Description
-          * *   You can call this operation to query the price for renewing a subscription instance for a specific period of time or to a synchronized expiration date.
-          * *   Take note of the following items:
-          *     *   If you set only the required parameters, the price for renewing a specified instance for one month is queried by default.
-          *     *   The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the synchronized expiration date-related parameter (`ExpectedRenewDay`) are mutually exclusive. You cannot set these parameters together to query the prices for renewing a specified instance for a period of time and to a synchronized expiration date at the same time.
-          *
-          * @param request DescribeRenewalPriceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRenewalPriceResponse
-         */
         public DescribeRenewalPriceResponse DescribeRenewalPriceWithOptions(DescribeRenewalPriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -33217,17 +32930,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeRenewalPriceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * *   You can call this operation to query the price for renewing a subscription instance for a specific period of time or to a synchronized expiration date.
-          * *   Take note of the following items:
-          *     *   If you set only the required parameters, the price for renewing a specified instance for one month is queried by default.
-          *     *   The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the synchronized expiration date-related parameter (`ExpectedRenewDay`) are mutually exclusive. You cannot set these parameters together to query the prices for renewing a specified instance for a period of time and to a synchronized expiration date at the same time.
-          *
-          * @param request DescribeRenewalPriceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeRenewalPriceResponse
-         */
         public async Task<DescribeRenewalPriceResponse> DescribeRenewalPriceWithOptionsAsync(DescribeRenewalPriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -33291,32 +32993,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeRenewalPriceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * *   You can call this operation to query the price for renewing a subscription instance for a specific period of time or to a synchronized expiration date.
-          * *   Take note of the following items:
-          *     *   If you set only the required parameters, the price for renewing a specified instance for one month is queried by default.
-          *     *   The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the synchronized expiration date-related parameter (`ExpectedRenewDay`) are mutually exclusive. You cannot set these parameters together to query the prices for renewing a specified instance for a period of time and to a synchronized expiration date at the same time.
-          *
-          * @param request DescribeRenewalPriceRequest
-          * @return DescribeRenewalPriceResponse
-         */
         public DescribeRenewalPriceResponse DescribeRenewalPrice(DescribeRenewalPriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRenewalPriceWithOptions(request, runtime);
         }
 
-        /**
-          * ## Description
-          * *   You can call this operation to query the price for renewing a subscription instance for a specific period of time or to a synchronized expiration date.
-          * *   Take note of the following items:
-          *     *   If you set only the required parameters, the price for renewing a specified instance for one month is queried by default.
-          *     *   The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the synchronized expiration date-related parameter (`ExpectedRenewDay`) are mutually exclusive. You cannot set these parameters together to query the prices for renewing a specified instance for a period of time and to a synchronized expiration date at the same time.
-          *
-          * @param request DescribeRenewalPriceRequest
-          * @return DescribeRenewalPriceResponse
-         */
         public async Task<DescribeRenewalPriceResponse> DescribeRenewalPriceAsync(DescribeRenewalPriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -35165,15 +34847,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await DescribeSnapshotGroupsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   You can specify multiple request parameters such as `RegionId`, `DiskIds`, and `InstanceId` to be queried. Specified parameters have logical AND relations.
-          * *   Only the specified parameters are used as filter conditions. If the `DiskIds` and `SnapshotLinkIds` parameters are set to empty JSON arrays, they are regarded as valid filter conditions and an empty result is returned.
-          *
-          * @param request DescribeSnapshotLinksRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSnapshotLinksResponse
-         */
         public DescribeSnapshotLinksResponse DescribeSnapshotLinksWithOptions(DescribeSnapshotLinksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -35237,15 +34910,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeSnapshotLinksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   You can specify multiple request parameters such as `RegionId`, `DiskIds`, and `InstanceId` to be queried. Specified parameters have logical AND relations.
-          * *   Only the specified parameters are used as filter conditions. If the `DiskIds` and `SnapshotLinkIds` parameters are set to empty JSON arrays, they are regarded as valid filter conditions and an empty result is returned.
-          *
-          * @param request DescribeSnapshotLinksRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeSnapshotLinksResponse
-         */
         public async Task<DescribeSnapshotLinksResponse> DescribeSnapshotLinksWithOptionsAsync(DescribeSnapshotLinksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -35309,28 +34973,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeSnapshotLinksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   You can specify multiple request parameters such as `RegionId`, `DiskIds`, and `InstanceId` to be queried. Specified parameters have logical AND relations.
-          * *   Only the specified parameters are used as filter conditions. If the `DiskIds` and `SnapshotLinkIds` parameters are set to empty JSON arrays, they are regarded as valid filter conditions and an empty result is returned.
-          *
-          * @param request DescribeSnapshotLinksRequest
-          * @return DescribeSnapshotLinksResponse
-         */
         public DescribeSnapshotLinksResponse DescribeSnapshotLinks(DescribeSnapshotLinksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSnapshotLinksWithOptions(request, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   You can specify multiple request parameters such as `RegionId`, `DiskIds`, and `InstanceId` to be queried. Specified parameters have logical AND relations.
-          * *   Only the specified parameters are used as filter conditions. If the `DiskIds` and `SnapshotLinkIds` parameters are set to empty JSON arrays, they are regarded as valid filter conditions and an empty result is returned.
-          *
-          * @param request DescribeSnapshotLinksRequest
-          * @return DescribeSnapshotLinksResponse
-         */
         public async Task<DescribeSnapshotLinksResponse> DescribeSnapshotLinksAsync(DescribeSnapshotLinksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -36907,13 +36555,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await DescribeStorageSetsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * If a tag key is specified and no tag values are specified, all tags that contain the tag key are returned. If a tag key-value pair is specified, only tags that exactly match the key-value pair are returned.
-          *
-          * @param request DescribeTagsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTagsResponse
-         */
         public DescribeTagsResponse DescribeTagsWithOptions(DescribeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -36977,13 +36618,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeTagsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * If a tag key is specified and no tag values are specified, all tags that contain the tag key are returned. If a tag key-value pair is specified, only tags that exactly match the key-value pair are returned.
-          *
-          * @param request DescribeTagsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeTagsResponse
-         */
         public async Task<DescribeTagsResponse> DescribeTagsWithOptionsAsync(DescribeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -37047,24 +36681,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DescribeTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * If a tag key is specified and no tag values are specified, all tags that contain the tag key are returned. If a tag key-value pair is specified, only tags that exactly match the key-value pair are returned.
-          *
-          * @param request DescribeTagsRequest
-          * @return DescribeTagsResponse
-         */
         public DescribeTagsResponse DescribeTags(DescribeTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTagsWithOptions(request, runtime);
         }
 
-        /**
-          * If a tag key is specified and no tag values are specified, all tags that contain the tag key are returned. If a tag key-value pair is specified, only tags that exactly match the key-value pair are returned.
-          *
-          * @param request DescribeTagsRequest
-          * @return DescribeTagsResponse
-         */
         public async Task<DescribeTagsResponse> DescribeTagsAsync(DescribeTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -38911,15 +38533,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await DetachInstanceRamRoleWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   After you detach an SSH key pair from an instance, you must call the [RebootInstance](~~25502~~) operation to restart the instance for the detach operation to take effect.
-          * *   The username and password authentication method is automatically selected for an instance after you unbind an SSH key pair from the instance.
-          *
-          * @param request DetachKeyPairRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DetachKeyPairResponse
-         */
         public DetachKeyPairResponse DetachKeyPairWithOptions(DetachKeyPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -38967,15 +38580,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DetachKeyPairResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   After you detach an SSH key pair from an instance, you must call the [RebootInstance](~~25502~~) operation to restart the instance for the detach operation to take effect.
-          * *   The username and password authentication method is automatically selected for an instance after you unbind an SSH key pair from the instance.
-          *
-          * @param request DetachKeyPairRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DetachKeyPairResponse
-         */
         public async Task<DetachKeyPairResponse> DetachKeyPairWithOptionsAsync(DetachKeyPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -39023,51 +38627,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DetachKeyPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   After you detach an SSH key pair from an instance, you must call the [RebootInstance](~~25502~~) operation to restart the instance for the detach operation to take effect.
-          * *   The username and password authentication method is automatically selected for an instance after you unbind an SSH key pair from the instance.
-          *
-          * @param request DetachKeyPairRequest
-          * @return DetachKeyPairResponse
-         */
         public DetachKeyPairResponse DetachKeyPair(DetachKeyPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachKeyPairWithOptions(request, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   After you detach an SSH key pair from an instance, you must call the [RebootInstance](~~25502~~) operation to restart the instance for the detach operation to take effect.
-          * *   The username and password authentication method is automatically selected for an instance after you unbind an SSH key pair from the instance.
-          *
-          * @param request DetachKeyPairRequest
-          * @return DetachKeyPairResponse
-         */
         public async Task<DetachKeyPairResponse> DetachKeyPairAsync(DetachKeyPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachKeyPairWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Description
-          * When you call this operation, take note of the following items:
-          * *   Primary ENIs cannot be detached from ECS instances.
-          * *   The ENI must be in the Detaching (Detaching) or InUse (InUse) state.
-          * *   The instance must be in the Running (Running) or Stopped (Stopped) state.
-          * *   This operation is an asynchronous operation. After this operation is called to detach an ENI, you can check the state or events of the ENI to determine whether the ENI is detached. The following figure shows the transitions between the states of the ENI.
-          * ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/en-US/20230223/uemr/DetachNetworkInterface.png)
-          *     *   If the ENI is in the Detaching state, the ENI detachment request is sent and the ENI is being detached from its associated instance.
-          *     *   If the ENI is in the Available state, the ENI is detached from its associated instance.
-          *     *   If the ENI is stuck in the Detaching state, the ENI may fail to be detached from the associated instance due to specific reasons. For example, the ENI may fail to be detached because the operating system did not respond to the ENI detachment request. If this occurs, you can re-initiate the request to detach the ENI. If the problem persists, restart the instance.
-          * **For information about examples on how to call this operation, see **[Detach an ENI](~~471551~~).
-          *
-          * @param request DetachNetworkInterfaceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DetachNetworkInterfaceResponse
-         */
         public DetachNetworkInterfaceResponse DetachNetworkInterfaceWithOptions(DetachNetworkInterfaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -39127,23 +38698,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DetachNetworkInterfaceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * When you call this operation, take note of the following items:
-          * *   Primary ENIs cannot be detached from ECS instances.
-          * *   The ENI must be in the Detaching (Detaching) or InUse (InUse) state.
-          * *   The instance must be in the Running (Running) or Stopped (Stopped) state.
-          * *   This operation is an asynchronous operation. After this operation is called to detach an ENI, you can check the state or events of the ENI to determine whether the ENI is detached. The following figure shows the transitions between the states of the ENI.
-          * ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/en-US/20230223/uemr/DetachNetworkInterface.png)
-          *     *   If the ENI is in the Detaching state, the ENI detachment request is sent and the ENI is being detached from its associated instance.
-          *     *   If the ENI is in the Available state, the ENI is detached from its associated instance.
-          *     *   If the ENI is stuck in the Detaching state, the ENI may fail to be detached from the associated instance due to specific reasons. For example, the ENI may fail to be detached because the operating system did not respond to the ENI detachment request. If this occurs, you can re-initiate the request to detach the ENI. If the problem persists, restart the instance.
-          * **For information about examples on how to call this operation, see **[Detach an ENI](~~471551~~).
-          *
-          * @param request DetachNetworkInterfaceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DetachNetworkInterfaceResponse
-         */
         public async Task<DetachNetworkInterfaceResponse> DetachNetworkInterfaceWithOptionsAsync(DetachNetworkInterfaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -39203,58 +38757,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DetachNetworkInterfaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * When you call this operation, take note of the following items:
-          * *   Primary ENIs cannot be detached from ECS instances.
-          * *   The ENI must be in the Detaching (Detaching) or InUse (InUse) state.
-          * *   The instance must be in the Running (Running) or Stopped (Stopped) state.
-          * *   This operation is an asynchronous operation. After this operation is called to detach an ENI, you can check the state or events of the ENI to determine whether the ENI is detached. The following figure shows the transitions between the states of the ENI.
-          * ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/en-US/20230223/uemr/DetachNetworkInterface.png)
-          *     *   If the ENI is in the Detaching state, the ENI detachment request is sent and the ENI is being detached from its associated instance.
-          *     *   If the ENI is in the Available state, the ENI is detached from its associated instance.
-          *     *   If the ENI is stuck in the Detaching state, the ENI may fail to be detached from the associated instance due to specific reasons. For example, the ENI may fail to be detached because the operating system did not respond to the ENI detachment request. If this occurs, you can re-initiate the request to detach the ENI. If the problem persists, restart the instance.
-          * **For information about examples on how to call this operation, see **[Detach an ENI](~~471551~~).
-          *
-          * @param request DetachNetworkInterfaceRequest
-          * @return DetachNetworkInterfaceResponse
-         */
         public DetachNetworkInterfaceResponse DetachNetworkInterface(DetachNetworkInterfaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachNetworkInterfaceWithOptions(request, runtime);
         }
 
-        /**
-          * ## Description
-          * When you call this operation, take note of the following items:
-          * *   Primary ENIs cannot be detached from ECS instances.
-          * *   The ENI must be in the Detaching (Detaching) or InUse (InUse) state.
-          * *   The instance must be in the Running (Running) or Stopped (Stopped) state.
-          * *   This operation is an asynchronous operation. After this operation is called to detach an ENI, you can check the state or events of the ENI to determine whether the ENI is detached. The following figure shows the transitions between the states of the ENI.
-          * ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/en-US/20230223/uemr/DetachNetworkInterface.png)
-          *     *   If the ENI is in the Detaching state, the ENI detachment request is sent and the ENI is being detached from its associated instance.
-          *     *   If the ENI is in the Available state, the ENI is detached from its associated instance.
-          *     *   If the ENI is stuck in the Detaching state, the ENI may fail to be detached from the associated instance due to specific reasons. For example, the ENI may fail to be detached because the operating system did not respond to the ENI detachment request. If this occurs, you can re-initiate the request to detach the ENI. If the problem persists, restart the instance.
-          * **For information about examples on how to call this operation, see **[Detach an ENI](~~471551~~).
-          *
-          * @param request DetachNetworkInterfaceRequest
-          * @return DetachNetworkInterfaceResponse
-         */
         public async Task<DetachNetworkInterfaceResponse> DetachNetworkInterfaceAsync(DetachNetworkInterfaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachNetworkInterfaceWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Description
-          * To prevent an activation code from being leaked, you can call the DisableActivation operation to disable the activation code. Disabled activation codes cannot be used to register new managed instances. However, managed instances that are already registered are not affected.
-          *
-          * @param request DisableActivationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DisableActivationResponse
-         */
         public DisableActivationResponse DisableActivationWithOptions(DisableActivationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -39306,14 +38820,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DisableActivationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * To prevent an activation code from being leaked, you can call the DisableActivation operation to disable the activation code. Disabled activation codes cannot be used to register new managed instances. However, managed instances that are already registered are not affected.
-          *
-          * @param request DisableActivationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DisableActivationResponse
-         */
         public async Task<DisableActivationResponse> DisableActivationWithOptionsAsync(DisableActivationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -39365,26 +38871,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<DisableActivationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * To prevent an activation code from being leaked, you can call the DisableActivation operation to disable the activation code. Disabled activation codes cannot be used to register new managed instances. However, managed instances that are already registered are not affected.
-          *
-          * @param request DisableActivationRequest
-          * @return DisableActivationResponse
-         */
         public DisableActivationResponse DisableActivation(DisableActivationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableActivationWithOptions(request, runtime);
         }
 
-        /**
-          * ## Description
-          * To prevent an activation code from being leaked, you can call the DisableActivation operation to disable the activation code. Disabled activation codes cannot be used to register new managed instances. However, managed instances that are already registered are not affected.
-          *
-          * @param request DisableActivationRequest
-          * @return DisableActivationResponse
-         */
         public async Task<DisableActivationResponse> DisableActivationAsync(DisableActivationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -40431,15 +39923,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await ExportSnapshotWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * *   ECS is a virtualized cloud-based service and cannot be connected to display devices. However, Alibaba Cloud caches system command outputs for the last start, restart, or shutdown of ECS instances. You can call the GetInstanceConsoleOutput operation to obtain the command outputs.
-          * *   The command outputs of instances that use the retired instance types cannot be obtained. For more information, see [Retired instance types](~~55263~~).
-          * *   The command outputs of Windows instances cannot be obtained.
-          *
-          * @param request GetInstanceConsoleOutputRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetInstanceConsoleOutputResponse
-         */
         public GetInstanceConsoleOutputResponse GetInstanceConsoleOutputWithOptions(GetInstanceConsoleOutputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -40495,15 +39978,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<GetInstanceConsoleOutputResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * *   ECS is a virtualized cloud-based service and cannot be connected to display devices. However, Alibaba Cloud caches system command outputs for the last start, restart, or shutdown of ECS instances. You can call the GetInstanceConsoleOutput operation to obtain the command outputs.
-          * *   The command outputs of instances that use the retired instance types cannot be obtained. For more information, see [Retired instance types](~~55263~~).
-          * *   The command outputs of Windows instances cannot be obtained.
-          *
-          * @param request GetInstanceConsoleOutputRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetInstanceConsoleOutputResponse
-         */
         public async Task<GetInstanceConsoleOutputResponse> GetInstanceConsoleOutputWithOptionsAsync(GetInstanceConsoleOutputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -40559,44 +40033,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<GetInstanceConsoleOutputResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * *   ECS is a virtualized cloud-based service and cannot be connected to display devices. However, Alibaba Cloud caches system command outputs for the last start, restart, or shutdown of ECS instances. You can call the GetInstanceConsoleOutput operation to obtain the command outputs.
-          * *   The command outputs of instances that use the retired instance types cannot be obtained. For more information, see [Retired instance types](~~55263~~).
-          * *   The command outputs of Windows instances cannot be obtained.
-          *
-          * @param request GetInstanceConsoleOutputRequest
-          * @return GetInstanceConsoleOutputResponse
-         */
         public GetInstanceConsoleOutputResponse GetInstanceConsoleOutput(GetInstanceConsoleOutputRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetInstanceConsoleOutputWithOptions(request, runtime);
         }
 
-        /**
-          * *   ECS is a virtualized cloud-based service and cannot be connected to display devices. However, Alibaba Cloud caches system command outputs for the last start, restart, or shutdown of ECS instances. You can call the GetInstanceConsoleOutput operation to obtain the command outputs.
-          * *   The command outputs of instances that use the retired instance types cannot be obtained. For more information, see [Retired instance types](~~55263~~).
-          * *   The command outputs of Windows instances cannot be obtained.
-          *
-          * @param request GetInstanceConsoleOutputRequest
-          * @return GetInstanceConsoleOutputResponse
-         */
         public async Task<GetInstanceConsoleOutputResponse> GetInstanceConsoleOutputAsync(GetInstanceConsoleOutputRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetInstanceConsoleOutputWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ECS returns an instance screenshot that is in the JPG format and encoded in Base64. You must manually decode the screenshot. We recommend that you call this operation for troubleshooting and diagnosis. When you call this operation, take note of the following items:
-          * *   The instance must be in the Running state.
-          * *   You cannot obtain screenshots of instances whose instance types have been retired. For more information, see [Retired instance types](~~55263~~).
-          * *   If you want to call this operation on the same instance multiple times, you must wait at least 10 seconds between each call. Otherwise, the `Throttling` error code is returned.
-          *
-          * @param request GetInstanceScreenshotRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetInstanceScreenshotResponse
-         */
         public GetInstanceScreenshotResponse GetInstanceScreenshotWithOptions(GetInstanceScreenshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -40652,16 +40100,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<GetInstanceScreenshotResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ECS returns an instance screenshot that is in the JPG format and encoded in Base64. You must manually decode the screenshot. We recommend that you call this operation for troubleshooting and diagnosis. When you call this operation, take note of the following items:
-          * *   The instance must be in the Running state.
-          * *   You cannot obtain screenshots of instances whose instance types have been retired. For more information, see [Retired instance types](~~55263~~).
-          * *   If you want to call this operation on the same instance multiple times, you must wait at least 10 seconds between each call. Otherwise, the `Throttling` error code is returned.
-          *
-          * @param request GetInstanceScreenshotRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetInstanceScreenshotResponse
-         */
         public async Task<GetInstanceScreenshotResponse> GetInstanceScreenshotWithOptionsAsync(GetInstanceScreenshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -40717,30 +40155,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<GetInstanceScreenshotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ECS returns an instance screenshot that is in the JPG format and encoded in Base64. You must manually decode the screenshot. We recommend that you call this operation for troubleshooting and diagnosis. When you call this operation, take note of the following items:
-          * *   The instance must be in the Running state.
-          * *   You cannot obtain screenshots of instances whose instance types have been retired. For more information, see [Retired instance types](~~55263~~).
-          * *   If you want to call this operation on the same instance multiple times, you must wait at least 10 seconds between each call. Otherwise, the `Throttling` error code is returned.
-          *
-          * @param request GetInstanceScreenshotRequest
-          * @return GetInstanceScreenshotResponse
-         */
         public GetInstanceScreenshotResponse GetInstanceScreenshot(GetInstanceScreenshotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetInstanceScreenshotWithOptions(request, runtime);
         }
 
-        /**
-          * ECS returns an instance screenshot that is in the JPG format and encoded in Base64. You must manually decode the screenshot. We recommend that you call this operation for troubleshooting and diagnosis. When you call this operation, take note of the following items:
-          * *   The instance must be in the Running state.
-          * *   You cannot obtain screenshots of instances whose instance types have been retired. For more information, see [Retired instance types](~~55263~~).
-          * *   If you want to call this operation on the same instance multiple times, you must wait at least 10 seconds between each call. Otherwise, the `Throttling` error code is returned.
-          *
-          * @param request GetInstanceScreenshotRequest
-          * @return GetInstanceScreenshotResponse
-         */
         public async Task<GetInstanceScreenshotResponse> GetInstanceScreenshotAsync(GetInstanceScreenshotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -41155,27 +40575,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await ImportImageWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * * A maximum of 500 key pairs can be created in each region.
-          * * The key pair that you wan to import must support one of the following encryption methods:
-          *     * rsa
-          *     * dsa
-          *     * ssh-rsa
-          *     * ssh-dss
-          *     * ecdsa
-          *     * ssh-rsa-cert-v00@openssh.com
-          *     * ssh-dss-cert-v00@openssh.com
-          *     * ssh-rsa-cert-v01@openssh.com
-          *     * ssh-dss-cert-v01@openssh.com
-          *     * ecdsa-sha2-nistp256-cert-v01@openssh.com
-          *     * ecdsa-sha2-nistp384-cert-v01@openssh.com
-          *     * ecdsa-sha2-nistp521-cert-v01@openssh.com
-          *
-          * @param request ImportKeyPairRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ImportKeyPairResponse
-         */
         public ImportKeyPairResponse ImportKeyPairWithOptions(ImportKeyPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -41231,27 +40630,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ImportKeyPairResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * * A maximum of 500 key pairs can be created in each region.
-          * * The key pair that you wan to import must support one of the following encryption methods:
-          *     * rsa
-          *     * dsa
-          *     * ssh-rsa
-          *     * ssh-dss
-          *     * ecdsa
-          *     * ssh-rsa-cert-v00@openssh.com
-          *     * ssh-dss-cert-v00@openssh.com
-          *     * ssh-rsa-cert-v01@openssh.com
-          *     * ssh-dss-cert-v01@openssh.com
-          *     * ecdsa-sha2-nistp256-cert-v01@openssh.com
-          *     * ecdsa-sha2-nistp384-cert-v01@openssh.com
-          *     * ecdsa-sha2-nistp521-cert-v01@openssh.com
-          *
-          * @param request ImportKeyPairRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ImportKeyPairResponse
-         */
         public async Task<ImportKeyPairResponse> ImportKeyPairWithOptionsAsync(ImportKeyPairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -41307,52 +40685,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ImportKeyPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * * A maximum of 500 key pairs can be created in each region.
-          * * The key pair that you wan to import must support one of the following encryption methods:
-          *     * rsa
-          *     * dsa
-          *     * ssh-rsa
-          *     * ssh-dss
-          *     * ecdsa
-          *     * ssh-rsa-cert-v00@openssh.com
-          *     * ssh-dss-cert-v00@openssh.com
-          *     * ssh-rsa-cert-v01@openssh.com
-          *     * ssh-dss-cert-v01@openssh.com
-          *     * ecdsa-sha2-nistp256-cert-v01@openssh.com
-          *     * ecdsa-sha2-nistp384-cert-v01@openssh.com
-          *     * ecdsa-sha2-nistp521-cert-v01@openssh.com
-          *
-          * @param request ImportKeyPairRequest
-          * @return ImportKeyPairResponse
-         */
         public ImportKeyPairResponse ImportKeyPair(ImportKeyPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ImportKeyPairWithOptions(request, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * * A maximum of 500 key pairs can be created in each region.
-          * * The key pair that you wan to import must support one of the following encryption methods:
-          *     * rsa
-          *     * dsa
-          *     * ssh-rsa
-          *     * ssh-dss
-          *     * ecdsa
-          *     * ssh-rsa-cert-v00@openssh.com
-          *     * ssh-dss-cert-v00@openssh.com
-          *     * ssh-rsa-cert-v01@openssh.com
-          *     * ssh-dss-cert-v01@openssh.com
-          *     * ecdsa-sha2-nistp256-cert-v01@openssh.com
-          *     * ecdsa-sha2-nistp384-cert-v01@openssh.com
-          *     * ecdsa-sha2-nistp521-cert-v01@openssh.com
-          *
-          * @param request ImportKeyPairRequest
-          * @return ImportKeyPairResponse
-         */
         public async Task<ImportKeyPairResponse> ImportKeyPairAsync(ImportKeyPairRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -41511,6 +40849,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await ImportSnapshotWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After you call the InstallCloudAssistant operation and then the [RebootInstance](~~25502~~) operation, the Cloud Assistant client is installed and takes effect.
+          *
+          * @param request InstallCloudAssistantRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InstallCloudAssistantResponse
+         */
         public InstallCloudAssistantResponse InstallCloudAssistantWithOptions(InstallCloudAssistantRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -41562,6 +40907,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<InstallCloudAssistantResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After you call the InstallCloudAssistant operation and then the [RebootInstance](~~25502~~) operation, the Cloud Assistant client is installed and takes effect.
+          *
+          * @param request InstallCloudAssistantRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InstallCloudAssistantResponse
+         */
         public async Task<InstallCloudAssistantResponse> InstallCloudAssistantWithOptionsAsync(InstallCloudAssistantRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -41613,38 +40965,30 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<InstallCloudAssistantResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After you call the InstallCloudAssistant operation and then the [RebootInstance](~~25502~~) operation, the Cloud Assistant client is installed and takes effect.
+          *
+          * @param request InstallCloudAssistantRequest
+          * @return InstallCloudAssistantResponse
+         */
         public InstallCloudAssistantResponse InstallCloudAssistant(InstallCloudAssistantRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return InstallCloudAssistantWithOptions(request, runtime);
         }
 
+        /**
+          * After you call the InstallCloudAssistant operation and then the [RebootInstance](~~25502~~) operation, the Cloud Assistant client is installed and takes effect.
+          *
+          * @param request InstallCloudAssistantRequest
+          * @return InstallCloudAssistantResponse
+         */
         public async Task<InstallCloudAssistantResponse> InstallCloudAssistantAsync(InstallCloudAssistantRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InstallCloudAssistantWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * *   The ECS instances on which you want to run the Cloud Assistant command must meet the following requirements. If you specify multiple ECS instances and one of the instances does not meet the requirements to run the command, the call fails. Specify instances that meet the requirements and call the InvokeCommand operation again.
-          *     *   The network type is virtual private cloud (VPC). For more information, see [What is a VPC?](~~34217~~)
-          *     *   The instances are in the Running (`Running`) state.
-          *     *   The Cloud Assistant client is installed on the instances. For more information, see [Install the Cloud Assistant client](~~64921~~).
-          *     *   Before you run PowerShell commands, make sure that the PowerShell module is configured for the instances.
-          * *   If you set the `Timed` parameter to false, the command is run only once.
-          * *   If you set the `Timed` parameter to true, the command is run on a schedule.
-          *     *   The schedule is specified by the `Frequency` parameter. The execution results of a command do not affect the next command execution.
-          *     *   If you want to specify a schedule by using a cron expression, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instance meets your business requirements. For more information, see [Configure the NTP service and time zone for Linux instances](~~92803~~) or [Configure the NTP service for Windows instances](~~51890~~).
-          *     To ensure that scheduled tasks can run as expected, make sure that the version of the Cloud Assistant client is not earlier than the following versions. A scheduled task can run a command at a specified interval, only once at a specified time, or at specific times based on a cron expression that includes a specific year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update the Cloud Assistant client to the latest version. For more information, see [Upgrade or disable upgrades for the Cloud Assistant client](~~134383~~).
-          *           - Linux: 2.2.3.282 
-          *           - Windows: 2.1.3.282 
-          * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on the Cloud Assistant client. If an execution fails, no execution information is generated.
-          * *   If you enable the custom parameter feature by setting the EnableParameter parameter to true when you create a command, you must specify custom parameters (`Parameters`) when you run the command.
-          *
-          * @param tmpReq InvokeCommandRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InvokeCommandResponse
-         */
         public InvokeCommandResponse InvokeCommandWithOptions(InvokeCommandRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -41750,26 +41094,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<InvokeCommandResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * *   The ECS instances on which you want to run the Cloud Assistant command must meet the following requirements. If you specify multiple ECS instances and one of the instances does not meet the requirements to run the command, the call fails. Specify instances that meet the requirements and call the InvokeCommand operation again.
-          *     *   The network type is virtual private cloud (VPC). For more information, see [What is a VPC?](~~34217~~)
-          *     *   The instances are in the Running (`Running`) state.
-          *     *   The Cloud Assistant client is installed on the instances. For more information, see [Install the Cloud Assistant client](~~64921~~).
-          *     *   Before you run PowerShell commands, make sure that the PowerShell module is configured for the instances.
-          * *   If you set the `Timed` parameter to false, the command is run only once.
-          * *   If you set the `Timed` parameter to true, the command is run on a schedule.
-          *     *   The schedule is specified by the `Frequency` parameter. The execution results of a command do not affect the next command execution.
-          *     *   If you want to specify a schedule by using a cron expression, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instance meets your business requirements. For more information, see [Configure the NTP service and time zone for Linux instances](~~92803~~) or [Configure the NTP service for Windows instances](~~51890~~).
-          *     To ensure that scheduled tasks can run as expected, make sure that the version of the Cloud Assistant client is not earlier than the following versions. A scheduled task can run a command at a specified interval, only once at a specified time, or at specific times based on a cron expression that includes a specific year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update the Cloud Assistant client to the latest version. For more information, see [Upgrade or disable upgrades for the Cloud Assistant client](~~134383~~).
-          *           - Linux: 2.2.3.282 
-          *           - Windows: 2.1.3.282 
-          * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on the Cloud Assistant client. If an execution fails, no execution information is generated.
-          * *   If you enable the custom parameter feature by setting the EnableParameter parameter to true when you create a command, you must specify custom parameters (`Parameters`) when you run the command.
-          *
-          * @param tmpReq InvokeCommandRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InvokeCommandResponse
-         */
         public async Task<InvokeCommandResponse> InvokeCommandWithOptionsAsync(InvokeCommandRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -41875,63 +41199,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<InvokeCommandResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * *   The ECS instances on which you want to run the Cloud Assistant command must meet the following requirements. If you specify multiple ECS instances and one of the instances does not meet the requirements to run the command, the call fails. Specify instances that meet the requirements and call the InvokeCommand operation again.
-          *     *   The network type is virtual private cloud (VPC). For more information, see [What is a VPC?](~~34217~~)
-          *     *   The instances are in the Running (`Running`) state.
-          *     *   The Cloud Assistant client is installed on the instances. For more information, see [Install the Cloud Assistant client](~~64921~~).
-          *     *   Before you run PowerShell commands, make sure that the PowerShell module is configured for the instances.
-          * *   If you set the `Timed` parameter to false, the command is run only once.
-          * *   If you set the `Timed` parameter to true, the command is run on a schedule.
-          *     *   The schedule is specified by the `Frequency` parameter. The execution results of a command do not affect the next command execution.
-          *     *   If you want to specify a schedule by using a cron expression, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instance meets your business requirements. For more information, see [Configure the NTP service and time zone for Linux instances](~~92803~~) or [Configure the NTP service for Windows instances](~~51890~~).
-          *     To ensure that scheduled tasks can run as expected, make sure that the version of the Cloud Assistant client is not earlier than the following versions. A scheduled task can run a command at a specified interval, only once at a specified time, or at specific times based on a cron expression that includes a specific year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update the Cloud Assistant client to the latest version. For more information, see [Upgrade or disable upgrades for the Cloud Assistant client](~~134383~~).
-          *           - Linux: 2.2.3.282 
-          *           - Windows: 2.1.3.282 
-          * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on the Cloud Assistant client. If an execution fails, no execution information is generated.
-          * *   If you enable the custom parameter feature by setting the EnableParameter parameter to true when you create a command, you must specify custom parameters (`Parameters`) when you run the command.
-          *
-          * @param request InvokeCommandRequest
-          * @return InvokeCommandResponse
-         */
         public InvokeCommandResponse InvokeCommand(InvokeCommandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return InvokeCommandWithOptions(request, runtime);
         }
 
-        /**
-          * *   The ECS instances on which you want to run the Cloud Assistant command must meet the following requirements. If you specify multiple ECS instances and one of the instances does not meet the requirements to run the command, the call fails. Specify instances that meet the requirements and call the InvokeCommand operation again.
-          *     *   The network type is virtual private cloud (VPC). For more information, see [What is a VPC?](~~34217~~)
-          *     *   The instances are in the Running (`Running`) state.
-          *     *   The Cloud Assistant client is installed on the instances. For more information, see [Install the Cloud Assistant client](~~64921~~).
-          *     *   Before you run PowerShell commands, make sure that the PowerShell module is configured for the instances.
-          * *   If you set the `Timed` parameter to false, the command is run only once.
-          * *   If you set the `Timed` parameter to true, the command is run on a schedule.
-          *     *   The schedule is specified by the `Frequency` parameter. The execution results of a command do not affect the next command execution.
-          *     *   If you want to specify a schedule by using a cron expression, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instance meets your business requirements. For more information, see [Configure the NTP service and time zone for Linux instances](~~92803~~) or [Configure the NTP service for Windows instances](~~51890~~).
-          *     To ensure that scheduled tasks can run as expected, make sure that the version of the Cloud Assistant client is not earlier than the following versions. A scheduled task can run a command at a specified interval, only once at a specified time, or at specific times based on a cron expression that includes a specific year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update the Cloud Assistant client to the latest version. For more information, see [Upgrade or disable upgrades for the Cloud Assistant client](~~134383~~).
-          *           - Linux: 2.2.3.282 
-          *           - Windows: 2.1.3.282 
-          * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on the Cloud Assistant client. If an execution fails, no execution information is generated.
-          * *   If you enable the custom parameter feature by setting the EnableParameter parameter to true when you create a command, you must specify custom parameters (`Parameters`) when you run the command.
-          *
-          * @param request InvokeCommandRequest
-          * @return InvokeCommandResponse
-         */
         public async Task<InvokeCommandResponse> InvokeCommandAsync(InvokeCommandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InvokeCommandWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * A resource is a cloud service entity that you create in Alibaba Cloud, such as an ECS instance, elastic network interface (ENI), or image. A resource group is a collection of infrastructure for projects, environments, or stacks. In a resource group, you can manage resources and monitor and run tasks in a centralized manner without switching between Alibaba Cloud services.
-          *
-          * @param request JoinResourceGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return JoinResourceGroupResponse
-         */
         public JoinResourceGroupResponse JoinResourceGroupWithOptions(JoinResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -41987,13 +41266,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<JoinResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * A resource is a cloud service entity that you create in Alibaba Cloud, such as an ECS instance, elastic network interface (ENI), or image. A resource group is a collection of infrastructure for projects, environments, or stacks. In a resource group, you can manage resources and monitor and run tasks in a centralized manner without switching between Alibaba Cloud services.
-          *
-          * @param request JoinResourceGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return JoinResourceGroupResponse
-         */
         public async Task<JoinResourceGroupResponse> JoinResourceGroupWithOptionsAsync(JoinResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -42049,46 +41321,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<JoinResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * A resource is a cloud service entity that you create in Alibaba Cloud, such as an ECS instance, elastic network interface (ENI), or image. A resource group is a collection of infrastructure for projects, environments, or stacks. In a resource group, you can manage resources and monitor and run tasks in a centralized manner without switching between Alibaba Cloud services.
-          *
-          * @param request JoinResourceGroupRequest
-          * @return JoinResourceGroupResponse
-         */
         public JoinResourceGroupResponse JoinResourceGroup(JoinResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return JoinResourceGroupWithOptions(request, runtime);
         }
 
-        /**
-          * A resource is a cloud service entity that you create in Alibaba Cloud, such as an ECS instance, elastic network interface (ENI), or image. A resource group is a collection of infrastructure for projects, environments, or stacks. In a resource group, you can manage resources and monitor and run tasks in a centralized manner without switching between Alibaba Cloud services.
-          *
-          * @param request JoinResourceGroupRequest
-          * @return JoinResourceGroupResponse
-         */
         public async Task<JoinResourceGroupResponse> JoinResourceGroupAsync(JoinResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await JoinResourceGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * > This operation is not recommended. We recommend that you call the [ModifyInstanceAttribute](~~25503~~) operation to add instances to or remove instances from a security group, and call the [ModifyNetworkInterfaceAttribute](~~58513~~) operation to add ENIs to or remove ENIs from a security group.
-          * When you call this operation, take note of the following items:
-          * *   Before you add an instance to a security group, the instance must be in the **Stopped** (Stopped) or **Running** (Running) state.
-          * *   An instance can be added to up to five security groups.
-          * *   To add an instance to more security groups, [submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex.htm). An instance can be added to up to 16 security groups.
-          * *
-          * *   A basic security group can contain up to 2,000 instances. An advanced security group can contain up to 65,536 instances.
-          * *   The security group and the instance must belong to the same region.
-          * *   The security group and the instance must be of the same network type. If the network type is Virtual Private Cloud (VPC), the security group and the instance must be in the same VPC.
-          * *   An instance and an ENI cannot be added to a security group at the same time. You cannot specify the `InstanceId` and `NetworkInterfaceId` parameters at the same time.
-          *
-          * @param request JoinSecurityGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return JoinSecurityGroupResponse
-         */
         public JoinSecurityGroupResponse JoinSecurityGroupWithOptions(JoinSecurityGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -42144,22 +41388,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<JoinSecurityGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * > This operation is not recommended. We recommend that you call the [ModifyInstanceAttribute](~~25503~~) operation to add instances to or remove instances from a security group, and call the [ModifyNetworkInterfaceAttribute](~~58513~~) operation to add ENIs to or remove ENIs from a security group.
-          * When you call this operation, take note of the following items:
-          * *   Before you add an instance to a security group, the instance must be in the **Stopped** (Stopped) or **Running** (Running) state.
-          * *   An instance can be added to up to five security groups.
-          * *   To add an instance to more security groups, [submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex.htm). An instance can be added to up to 16 security groups.
-          * *
-          * *   A basic security group can contain up to 2,000 instances. An advanced security group can contain up to 65,536 instances.
-          * *   The security group and the instance must belong to the same region.
-          * *   The security group and the instance must be of the same network type. If the network type is Virtual Private Cloud (VPC), the security group and the instance must be in the same VPC.
-          * *   An instance and an ENI cannot be added to a security group at the same time. You cannot specify the `InstanceId` and `NetworkInterfaceId` parameters at the same time.
-          *
-          * @param request JoinSecurityGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return JoinSecurityGroupResponse
-         */
         public async Task<JoinSecurityGroupResponse> JoinSecurityGroupWithOptionsAsync(JoinSecurityGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -42215,42 +41443,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<JoinSecurityGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * > This operation is not recommended. We recommend that you call the [ModifyInstanceAttribute](~~25503~~) operation to add instances to or remove instances from a security group, and call the [ModifyNetworkInterfaceAttribute](~~58513~~) operation to add ENIs to or remove ENIs from a security group.
-          * When you call this operation, take note of the following items:
-          * *   Before you add an instance to a security group, the instance must be in the **Stopped** (Stopped) or **Running** (Running) state.
-          * *   An instance can be added to up to five security groups.
-          * *   To add an instance to more security groups, [submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex.htm). An instance can be added to up to 16 security groups.
-          * *
-          * *   A basic security group can contain up to 2,000 instances. An advanced security group can contain up to 65,536 instances.
-          * *   The security group and the instance must belong to the same region.
-          * *   The security group and the instance must be of the same network type. If the network type is Virtual Private Cloud (VPC), the security group and the instance must be in the same VPC.
-          * *   An instance and an ENI cannot be added to a security group at the same time. You cannot specify the `InstanceId` and `NetworkInterfaceId` parameters at the same time.
-          *
-          * @param request JoinSecurityGroupRequest
-          * @return JoinSecurityGroupResponse
-         */
         public JoinSecurityGroupResponse JoinSecurityGroup(JoinSecurityGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return JoinSecurityGroupWithOptions(request, runtime);
         }
 
-        /**
-          * > This operation is not recommended. We recommend that you call the [ModifyInstanceAttribute](~~25503~~) operation to add instances to or remove instances from a security group, and call the [ModifyNetworkInterfaceAttribute](~~58513~~) operation to add ENIs to or remove ENIs from a security group.
-          * When you call this operation, take note of the following items:
-          * *   Before you add an instance to a security group, the instance must be in the **Stopped** (Stopped) or **Running** (Running) state.
-          * *   An instance can be added to up to five security groups.
-          * *   To add an instance to more security groups, [submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex.htm). An instance can be added to up to 16 security groups.
-          * *
-          * *   A basic security group can contain up to 2,000 instances. An advanced security group can contain up to 65,536 instances.
-          * *   The security group and the instance must belong to the same region.
-          * *   The security group and the instance must be of the same network type. If the network type is Virtual Private Cloud (VPC), the security group and the instance must be in the same VPC.
-          * *   An instance and an ENI cannot be added to a security group at the same time. You cannot specify the `InstanceId` and `NetworkInterfaceId` parameters at the same time.
-          *
-          * @param request JoinSecurityGroupRequest
-          * @return JoinSecurityGroupResponse
-         */
         public async Task<JoinSecurityGroupResponse> JoinSecurityGroupAsync(JoinSecurityGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -42421,15 +41619,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await LeaveSecurityGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * Before you call this operation to query the states of Cloud Assistant plug-ins on ECS instances, make sure that the versions of the Cloud Assistant client installed on the instances are not earlier than the following ones:
-          * - 2.2.3.344 for Linux instances
-          * - 2.1.3.344 for Windows instances
-          *
-          * @param request ListPluginStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListPluginStatusResponse
-         */
         public ListPluginStatusResponse ListPluginStatusWithOptions(ListPluginStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -42493,15 +41682,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ListPluginStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation to query the states of Cloud Assistant plug-ins on ECS instances, make sure that the versions of the Cloud Assistant client installed on the instances are not earlier than the following ones:
-          * - 2.2.3.344 for Linux instances
-          * - 2.1.3.344 for Windows instances
-          *
-          * @param request ListPluginStatusRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListPluginStatusResponse
-         */
         public async Task<ListPluginStatusResponse> ListPluginStatusWithOptionsAsync(ListPluginStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -42565,47 +41745,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ListPluginStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation to query the states of Cloud Assistant plug-ins on ECS instances, make sure that the versions of the Cloud Assistant client installed on the instances are not earlier than the following ones:
-          * - 2.2.3.344 for Linux instances
-          * - 2.1.3.344 for Windows instances
-          *
-          * @param request ListPluginStatusRequest
-          * @return ListPluginStatusResponse
-         */
         public ListPluginStatusResponse ListPluginStatus(ListPluginStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListPluginStatusWithOptions(request, runtime);
         }
 
-        /**
-          * Before you call this operation to query the states of Cloud Assistant plug-ins on ECS instances, make sure that the versions of the Cloud Assistant client installed on the instances are not earlier than the following ones:
-          * - 2.2.3.344 for Linux instances
-          * - 2.1.3.344 for Windows instances
-          *
-          * @param request ListPluginStatusRequest
-          * @return ListPluginStatusResponse
-         */
         public async Task<ListPluginStatusResponse> ListPluginStatusAsync(ListPluginStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListPluginStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
-          * *   `ResourceId.N`
-          * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
-          * *   `TagFilter.N`
-          * If one of the following sets of request parameters is specified as filter conditions, only ECS resources that meet all of the specified filter conditions are returned:
-          * *   Set 1: `Tag.N.Key, Tag.N.Value`, and `ResourceId.N`
-          * *   Set 2: `TagFilter.N.TagKey, TagFilter.N.TagValues.N`, and `ResourceId.N`
-          *
-          * @param request ListTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTagResourcesResponse
-         */
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -42673,19 +41824,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
-          * *   `ResourceId.N`
-          * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
-          * *   `TagFilter.N`
-          * If one of the following sets of request parameters is specified as filter conditions, only ECS resources that meet all of the specified filter conditions are returned:
-          * *   Set 1: `Tag.N.Key, Tag.N.Value`, and `ResourceId.N`
-          * *   Set 2: `TagFilter.N.TagKey, TagFilter.N.TagValues.N`, and `ResourceId.N`
-          *
-          * @param request ListTagResourcesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListTagResourcesResponse
-         */
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -42753,51 +41891,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
-          * *   `ResourceId.N`
-          * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
-          * *   `TagFilter.N`
-          * If one of the following sets of request parameters is specified as filter conditions, only ECS resources that meet all of the specified filter conditions are returned:
-          * *   Set 1: `Tag.N.Key, Tag.N.Value`, and `ResourceId.N`
-          * *   Set 2: `TagFilter.N.TagKey, TagFilter.N.TagValues.N`, and `ResourceId.N`
-          *
-          * @param request ListTagResourcesRequest
-          * @return ListTagResourcesResponse
-         */
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
-        /**
-          * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
-          * *   `ResourceId.N`
-          * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
-          * *   `TagFilter.N`
-          * If one of the following sets of request parameters is specified as filter conditions, only ECS resources that meet all of the specified filter conditions are returned:
-          * *   Set 1: `Tag.N.Key, Tag.N.Value`, and `ResourceId.N`
-          * *   Set 2: `TagFilter.N.TagKey, TagFilter.N.TagValues.N`, and `ResourceId.N`
-          *
-          * @param request ListTagResourcesRequest
-          * @return ListTagResourcesResponse
-         */
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If you modify the capacity or capacity-related settings of an auto provisioning group, the group executes the scheduling task once after the modification.
-          * *   You cannot modify an auto provisioning group when the group is being deleted.
-          *
-          * @param request ModifyAutoProvisioningGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyAutoProvisioningGroupResponse
-         */
         public ModifyAutoProvisioningGroupResponse ModifyAutoProvisioningGroupWithOptions(ModifyAutoProvisioningGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -42881,15 +41986,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyAutoProvisioningGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If you modify the capacity or capacity-related settings of an auto provisioning group, the group executes the scheduling task once after the modification.
-          * *   You cannot modify an auto provisioning group when the group is being deleted.
-          *
-          * @param request ModifyAutoProvisioningGroupRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyAutoProvisioningGroupResponse
-         */
         public async Task<ModifyAutoProvisioningGroupResponse> ModifyAutoProvisioningGroupWithOptionsAsync(ModifyAutoProvisioningGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -42973,28 +42069,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyAutoProvisioningGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If you modify the capacity or capacity-related settings of an auto provisioning group, the group executes the scheduling task once after the modification.
-          * *   You cannot modify an auto provisioning group when the group is being deleted.
-          *
-          * @param request ModifyAutoProvisioningGroupRequest
-          * @return ModifyAutoProvisioningGroupResponse
-         */
         public ModifyAutoProvisioningGroupResponse ModifyAutoProvisioningGroup(ModifyAutoProvisioningGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAutoProvisioningGroupWithOptions(request, runtime);
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If you modify the capacity or capacity-related settings of an auto provisioning group, the group executes the scheduling task once after the modification.
-          * *   You cannot modify an auto provisioning group when the group is being deleted.
-          *
-          * @param request ModifyAutoProvisioningGroupRequest
-          * @return ModifyAutoProvisioningGroupResponse
-         */
         public async Task<ModifyAutoProvisioningGroupResponse> ModifyAutoProvisioningGroupAsync(ModifyAutoProvisioningGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -43637,14 +42717,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await ModifyCapacityReservationWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * You can modify a command when it is being executed. After the command is modified, the new command content applies to subsequent executions.
-          * You cannot modify the command type. For example, you cannot change a shell command (RunShellScript) to a batch command (RunBatScript).
-          *
-          * @param request ModifyCommandRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyCommandResponse
-         */
         public ModifyCommandResponse ModifyCommandWithOptions(ModifyCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -43716,14 +42788,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyCommandResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * You can modify a command when it is being executed. After the command is modified, the new command content applies to subsequent executions.
-          * You cannot modify the command type. For example, you cannot change a shell command (RunShellScript) to a batch command (RunBatScript).
-          *
-          * @param request ModifyCommandRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyCommandResponse
-         */
         public async Task<ModifyCommandResponse> ModifyCommandWithOptionsAsync(ModifyCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -43795,41 +42859,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyCommandResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * You can modify a command when it is being executed. After the command is modified, the new command content applies to subsequent executions.
-          * You cannot modify the command type. For example, you cannot change a shell command (RunShellScript) to a batch command (RunBatScript).
-          *
-          * @param request ModifyCommandRequest
-          * @return ModifyCommandResponse
-         */
         public ModifyCommandResponse ModifyCommand(ModifyCommandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyCommandWithOptions(request, runtime);
         }
 
-        /**
-          * You can modify a command when it is being executed. After the command is modified, the new command content applies to subsequent executions.
-          * You cannot modify the command type. For example, you cannot change a shell command (RunShellScript) to a batch command (RunBatScript).
-          *
-          * @param request ModifyCommandRequest
-          * @return ModifyCommandResponse
-         */
         public async Task<ModifyCommandResponse> ModifyCommandAsync(ModifyCommandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyCommandWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Description
-          * *   All the Elastic Compute Service (ECS) instances that are hosted on a dedicated host must be in the Stopped (`Stopped`) state before you can modify the CPU overcommit ratio of the dedicated host.
-          * *   Modifications to the CPU overcommit ratio of a dedicated host do not affect the operation of the dedicated host. After the CPU overcommit ratio is modified, the number of allocated vCPUs on the dedicated host cannot exceed the new total number of vCPUs. Otherwise, ECS instances that use the excess vCPUs cannot start.
-          *
-          * @param request ModifyDedicatedHostAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDedicatedHostAttributeResponse
-         */
         public ModifyDedicatedHostAttributeResponse ModifyDedicatedHostAttributeWithOptions(ModifyDedicatedHostAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -43905,15 +42946,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyDedicatedHostAttributeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * *   All the Elastic Compute Service (ECS) instances that are hosted on a dedicated host must be in the Stopped (`Stopped`) state before you can modify the CPU overcommit ratio of the dedicated host.
-          * *   Modifications to the CPU overcommit ratio of a dedicated host do not affect the operation of the dedicated host. After the CPU overcommit ratio is modified, the number of allocated vCPUs on the dedicated host cannot exceed the new total number of vCPUs. Otherwise, ECS instances that use the excess vCPUs cannot start.
-          *
-          * @param request ModifyDedicatedHostAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDedicatedHostAttributeResponse
-         */
         public async Task<ModifyDedicatedHostAttributeResponse> ModifyDedicatedHostAttributeWithOptionsAsync(ModifyDedicatedHostAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -43989,41 +43021,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyDedicatedHostAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * *   All the Elastic Compute Service (ECS) instances that are hosted on a dedicated host must be in the Stopped (`Stopped`) state before you can modify the CPU overcommit ratio of the dedicated host.
-          * *   Modifications to the CPU overcommit ratio of a dedicated host do not affect the operation of the dedicated host. After the CPU overcommit ratio is modified, the number of allocated vCPUs on the dedicated host cannot exceed the new total number of vCPUs. Otherwise, ECS instances that use the excess vCPUs cannot start.
-          *
-          * @param request ModifyDedicatedHostAttributeRequest
-          * @return ModifyDedicatedHostAttributeResponse
-         */
         public ModifyDedicatedHostAttributeResponse ModifyDedicatedHostAttribute(ModifyDedicatedHostAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDedicatedHostAttributeWithOptions(request, runtime);
         }
 
-        /**
-          * ## Description
-          * *   All the Elastic Compute Service (ECS) instances that are hosted on a dedicated host must be in the Stopped (`Stopped`) state before you can modify the CPU overcommit ratio of the dedicated host.
-          * *   Modifications to the CPU overcommit ratio of a dedicated host do not affect the operation of the dedicated host. After the CPU overcommit ratio is modified, the number of allocated vCPUs on the dedicated host cannot exceed the new total number of vCPUs. Otherwise, ECS instances that use the excess vCPUs cannot start.
-          *
-          * @param request ModifyDedicatedHostAttributeRequest
-          * @return ModifyDedicatedHostAttributeResponse
-         */
         public async Task<ModifyDedicatedHostAttributeResponse> ModifyDedicatedHostAttributeAsync(ModifyDedicatedHostAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDedicatedHostAttributeWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * The pay-as-you-go dedicated host is automatically released at the specified time. Make sure that the dedicated host is no longer needed and that its data is backed up.
-          *
-          * @param request ModifyDedicatedHostAutoReleaseTimeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDedicatedHostAutoReleaseTimeResponse
-         */
         public ModifyDedicatedHostAutoReleaseTimeResponse ModifyDedicatedHostAutoReleaseTimeWithOptions(ModifyDedicatedHostAutoReleaseTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -44075,13 +43084,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyDedicatedHostAutoReleaseTimeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * The pay-as-you-go dedicated host is automatically released at the specified time. Make sure that the dedicated host is no longer needed and that its data is backed up.
-          *
-          * @param request ModifyDedicatedHostAutoReleaseTimeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDedicatedHostAutoReleaseTimeResponse
-         */
         public async Task<ModifyDedicatedHostAutoReleaseTimeResponse> ModifyDedicatedHostAutoReleaseTimeWithOptionsAsync(ModifyDedicatedHostAutoReleaseTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -44133,39 +43135,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyDedicatedHostAutoReleaseTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * The pay-as-you-go dedicated host is automatically released at the specified time. Make sure that the dedicated host is no longer needed and that its data is backed up.
-          *
-          * @param request ModifyDedicatedHostAutoReleaseTimeRequest
-          * @return ModifyDedicatedHostAutoReleaseTimeResponse
-         */
         public ModifyDedicatedHostAutoReleaseTimeResponse ModifyDedicatedHostAutoReleaseTime(ModifyDedicatedHostAutoReleaseTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDedicatedHostAutoReleaseTimeWithOptions(request, runtime);
         }
 
-        /**
-          * The pay-as-you-go dedicated host is automatically released at the specified time. Make sure that the dedicated host is no longer needed and that its data is backed up.
-          *
-          * @param request ModifyDedicatedHostAutoReleaseTimeRequest
-          * @return ModifyDedicatedHostAutoReleaseTimeResponse
-         */
         public async Task<ModifyDedicatedHostAutoReleaseTimeResponse> ModifyDedicatedHostAutoReleaseTimeAsync(ModifyDedicatedHostAutoReleaseTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDedicatedHostAutoReleaseTimeWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Description
-          * *   If you enable auto-renewal for your subscription dedicated host, the dedicated host is automatically renewed nine days before expiration. The renewal fees are automatically paid at 08:00:00 (UTC+8). If the fees are not paid, they are paid at the same point in time the next day. Automatic payment stops after the fees are paid or after the dedicated host expires and is locked. Make sure that you have sufficient balance within your account.
-          * *   Subscription dedicated hosts can be automatically renewed along with the subscription Elastic Compute Service (ECS) instances hosted on the dedicated hosts. For more information, see the description of the AutoRenewWithEcs parameter.
-          *
-          * @param request ModifyDedicatedHostAutoRenewAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDedicatedHostAutoRenewAttributeResponse
-         */
         public ModifyDedicatedHostAutoRenewAttributeResponse ModifyDedicatedHostAutoRenewAttributeWithOptions(ModifyDedicatedHostAutoRenewAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -44233,15 +43214,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyDedicatedHostAutoRenewAttributeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * *   If you enable auto-renewal for your subscription dedicated host, the dedicated host is automatically renewed nine days before expiration. The renewal fees are automatically paid at 08:00:00 (UTC+8). If the fees are not paid, they are paid at the same point in time the next day. Automatic payment stops after the fees are paid or after the dedicated host expires and is locked. Make sure that you have sufficient balance within your account.
-          * *   Subscription dedicated hosts can be automatically renewed along with the subscription Elastic Compute Service (ECS) instances hosted on the dedicated hosts. For more information, see the description of the AutoRenewWithEcs parameter.
-          *
-          * @param request ModifyDedicatedHostAutoRenewAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDedicatedHostAutoRenewAttributeResponse
-         */
         public async Task<ModifyDedicatedHostAutoRenewAttributeResponse> ModifyDedicatedHostAutoRenewAttributeWithOptionsAsync(ModifyDedicatedHostAutoRenewAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -44309,28 +43281,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyDedicatedHostAutoRenewAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * *   If you enable auto-renewal for your subscription dedicated host, the dedicated host is automatically renewed nine days before expiration. The renewal fees are automatically paid at 08:00:00 (UTC+8). If the fees are not paid, they are paid at the same point in time the next day. Automatic payment stops after the fees are paid or after the dedicated host expires and is locked. Make sure that you have sufficient balance within your account.
-          * *   Subscription dedicated hosts can be automatically renewed along with the subscription Elastic Compute Service (ECS) instances hosted on the dedicated hosts. For more information, see the description of the AutoRenewWithEcs parameter.
-          *
-          * @param request ModifyDedicatedHostAutoRenewAttributeRequest
-          * @return ModifyDedicatedHostAutoRenewAttributeResponse
-         */
         public ModifyDedicatedHostAutoRenewAttributeResponse ModifyDedicatedHostAutoRenewAttribute(ModifyDedicatedHostAutoRenewAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDedicatedHostAutoRenewAttributeWithOptions(request, runtime);
         }
 
-        /**
-          * ## Description
-          * *   If you enable auto-renewal for your subscription dedicated host, the dedicated host is automatically renewed nine days before expiration. The renewal fees are automatically paid at 08:00:00 (UTC+8). If the fees are not paid, they are paid at the same point in time the next day. Automatic payment stops after the fees are paid or after the dedicated host expires and is locked. Make sure that you have sufficient balance within your account.
-          * *   Subscription dedicated hosts can be automatically renewed along with the subscription Elastic Compute Service (ECS) instances hosted on the dedicated hosts. For more information, see the description of the AutoRenewWithEcs parameter.
-          *
-          * @param request ModifyDedicatedHostAutoRenewAttributeRequest
-          * @return ModifyDedicatedHostAutoRenewAttributeResponse
-         */
         public async Task<ModifyDedicatedHostAutoRenewAttributeResponse> ModifyDedicatedHostAutoRenewAttributeAsync(ModifyDedicatedHostAutoRenewAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -44621,6 +43577,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await ModifyDedicatedHostsChargeTypeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to modify the demand information about instance types. Alibaba Cloud provides the requested resources based on your demand. You can file demands only for I/O optimized instance types and instances of the virtual private cloud (VPC) type. Parameters except `DemandName` and `DemandDescription` can be modified only for demands that are in the Rejected state.
+          * > This operation is in internal preview and has not been officially released. We recommend that you do not use this operation.
+          *
+          * @param request ModifyDemandRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDemandResponse
+         */
         public ModifyDemandResponse ModifyDemandWithOptions(ModifyDemandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -44712,6 +43676,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyDemandResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to modify the demand information about instance types. Alibaba Cloud provides the requested resources based on your demand. You can file demands only for I/O optimized instance types and instances of the virtual private cloud (VPC) type. Parameters except `DemandName` and `DemandDescription` can be modified only for demands that are in the Rejected state.
+          * > This operation is in internal preview and has not been officially released. We recommend that you do not use this operation.
+          *
+          * @param request ModifyDemandRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDemandResponse
+         */
         public async Task<ModifyDemandResponse> ModifyDemandWithOptionsAsync(ModifyDemandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -44803,12 +43775,26 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyDemandResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to modify the demand information about instance types. Alibaba Cloud provides the requested resources based on your demand. You can file demands only for I/O optimized instance types and instances of the virtual private cloud (VPC) type. Parameters except `DemandName` and `DemandDescription` can be modified only for demands that are in the Rejected state.
+          * > This operation is in internal preview and has not been officially released. We recommend that you do not use this operation.
+          *
+          * @param request ModifyDemandRequest
+          * @return ModifyDemandResponse
+         */
         public ModifyDemandResponse ModifyDemand(ModifyDemandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDemandWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to modify the demand information about instance types. Alibaba Cloud provides the requested resources based on your demand. You can file demands only for I/O optimized instance types and instances of the virtual private cloud (VPC) type. Parameters except `DemandName` and `DemandDescription` can be modified only for demands that are in the Rejected state.
+          * > This operation is in internal preview and has not been officially released. We recommend that you do not use this operation.
+          *
+          * @param request ModifyDemandRequest
+          * @return ModifyDemandResponse
+         */
         public async Task<ModifyDemandResponse> ModifyDemandAsync(ModifyDemandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -45235,21 +44221,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await ModifyDiskAttributeWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * After you change the billing method, the payment (if any) is automatically completed. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com/) to pay for the order.
-          * When you call this operation, take note of the following items:
-          * *   You can change the billing method from subscription to pay-as-you-go for disks that are attached to a subscription instance.
-          * *   You can change the billing method from pay-as-you-go to subscription for data disks that are attached to a subscription or pay-as-you-go instance.
-          * *   The instance cannot be in the Stopped state due to overdue payments.
-          * *   You can change the billing method of each disk up to three times. Up to three refunds can be made for the price differences for each disk.
-          * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
-          * *   You cannot change the billing method again within 5 minutes of a successful change.
-          * *   The billing method of disks with the multi-attach feature enabled must be pay-as-you-go and cannot be changed to subscription.
-          *
-          * @param request ModifyDiskChargeTypeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDiskChargeTypeResponse
-         */
         public ModifyDiskChargeTypeResponse ModifyDiskChargeTypeWithOptions(ModifyDiskChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -45313,21 +44284,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyDiskChargeTypeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * After you change the billing method, the payment (if any) is automatically completed. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com/) to pay for the order.
-          * When you call this operation, take note of the following items:
-          * *   You can change the billing method from subscription to pay-as-you-go for disks that are attached to a subscription instance.
-          * *   You can change the billing method from pay-as-you-go to subscription for data disks that are attached to a subscription or pay-as-you-go instance.
-          * *   The instance cannot be in the Stopped state due to overdue payments.
-          * *   You can change the billing method of each disk up to three times. Up to three refunds can be made for the price differences for each disk.
-          * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
-          * *   You cannot change the billing method again within 5 minutes of a successful change.
-          * *   The billing method of disks with the multi-attach feature enabled must be pay-as-you-go and cannot be changed to subscription.
-          *
-          * @param request ModifyDiskChargeTypeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyDiskChargeTypeResponse
-         */
         public async Task<ModifyDiskChargeTypeResponse> ModifyDiskChargeTypeWithOptionsAsync(ModifyDiskChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -45391,46 +44347,34 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyDiskChargeTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * After you change the billing method, the payment (if any) is automatically completed. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com/) to pay for the order.
-          * When you call this operation, take note of the following items:
-          * *   You can change the billing method from subscription to pay-as-you-go for disks that are attached to a subscription instance.
-          * *   You can change the billing method from pay-as-you-go to subscription for data disks that are attached to a subscription or pay-as-you-go instance.
-          * *   The instance cannot be in the Stopped state due to overdue payments.
-          * *   You can change the billing method of each disk up to three times. Up to three refunds can be made for the price differences for each disk.
-          * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
-          * *   You cannot change the billing method again within 5 minutes of a successful change.
-          * *   The billing method of disks with the multi-attach feature enabled must be pay-as-you-go and cannot be changed to subscription.
-          *
-          * @param request ModifyDiskChargeTypeRequest
-          * @return ModifyDiskChargeTypeResponse
-         */
         public ModifyDiskChargeTypeResponse ModifyDiskChargeType(ModifyDiskChargeTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDiskChargeTypeWithOptions(request, runtime);
         }
 
-        /**
-          * After you change the billing method, the payment (if any) is automatically completed. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com/) to pay for the order.
-          * When you call this operation, take note of the following items:
-          * *   You can change the billing method from subscription to pay-as-you-go for disks that are attached to a subscription instance.
-          * *   You can change the billing method from pay-as-you-go to subscription for data disks that are attached to a subscription or pay-as-you-go instance.
-          * *   The instance cannot be in the Stopped state due to overdue payments.
-          * *   You can change the billing method of each disk up to three times. Up to three refunds can be made for the price differences for each disk.
-          * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
-          * *   You cannot change the billing method again within 5 minutes of a successful change.
-          * *   The billing method of disks with the multi-attach feature enabled must be pay-as-you-go and cannot be changed to subscription.
-          *
-          * @param request ModifyDiskChargeTypeRequest
-          * @return ModifyDiskChargeTypeResponse
-         */
         public async Task<ModifyDiskChargeTypeResponse> ModifyDiskChargeTypeAsync(ModifyDiskChargeTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDiskChargeTypeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Description
+          * When you call this operation, take note of the following items:
+          * *   To modify the performance level of an ESSD, take note of the following items:
+          *     *   For a subscription ESSD, you can only upgrade its performance level.
+          *     *   For a pay-as-you-go ESSD, You can upgrade or downgrade its performance level. However, you cannot downgrade the performance level to PL0.
+          *     *   The ESSD must be in the **In Use** (In_Use) or **Unattached** (Available) state.
+          *     *   If the ESSD is attached to an ECS instance, the instance must be in the **Running** (Running) or **Stopped** (Stopped) state. The instance cannot be in the Expired state or stopped due to an overdue payment.
+          *     *   If you cannot upgrade the performance level of the ESSD due to its capacity, resize the ESSD by calling the [ResizeDisk](~~25522~~) operation and then try again. For more information, see [Enhanced SSDs](~~122389~~).
+          * *   For more information about the limits on changing the category of a disk, see the "Limits" section of the [Change the category of a disk](~~161980~~) topic.
+          * The new disk category or performance level takes effect immediately after this operation is executed. Alibaba Cloud calculates the bill based on the new disk category and performance level.
+          *
+          * @param request ModifyDiskSpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDiskSpecResponse
+         */
         public ModifyDiskSpecResponse ModifyDiskSpecWithOptions(ModifyDiskSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -45490,6 +44434,22 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyDiskSpecResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * When you call this operation, take note of the following items:
+          * *   To modify the performance level of an ESSD, take note of the following items:
+          *     *   For a subscription ESSD, you can only upgrade its performance level.
+          *     *   For a pay-as-you-go ESSD, You can upgrade or downgrade its performance level. However, you cannot downgrade the performance level to PL0.
+          *     *   The ESSD must be in the **In Use** (In_Use) or **Unattached** (Available) state.
+          *     *   If the ESSD is attached to an ECS instance, the instance must be in the **Running** (Running) or **Stopped** (Stopped) state. The instance cannot be in the Expired state or stopped due to an overdue payment.
+          *     *   If you cannot upgrade the performance level of the ESSD due to its capacity, resize the ESSD by calling the [ResizeDisk](~~25522~~) operation and then try again. For more information, see [Enhanced SSDs](~~122389~~).
+          * *   For more information about the limits on changing the category of a disk, see the "Limits" section of the [Change the category of a disk](~~161980~~) topic.
+          * The new disk category or performance level takes effect immediately after this operation is executed. Alibaba Cloud calculates the bill based on the new disk category and performance level.
+          *
+          * @param request ModifyDiskSpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDiskSpecResponse
+         */
         public async Task<ModifyDiskSpecResponse> ModifyDiskSpecWithOptionsAsync(ModifyDiskSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -45549,12 +44509,42 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyDiskSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Description
+          * When you call this operation, take note of the following items:
+          * *   To modify the performance level of an ESSD, take note of the following items:
+          *     *   For a subscription ESSD, you can only upgrade its performance level.
+          *     *   For a pay-as-you-go ESSD, You can upgrade or downgrade its performance level. However, you cannot downgrade the performance level to PL0.
+          *     *   The ESSD must be in the **In Use** (In_Use) or **Unattached** (Available) state.
+          *     *   If the ESSD is attached to an ECS instance, the instance must be in the **Running** (Running) or **Stopped** (Stopped) state. The instance cannot be in the Expired state or stopped due to an overdue payment.
+          *     *   If you cannot upgrade the performance level of the ESSD due to its capacity, resize the ESSD by calling the [ResizeDisk](~~25522~~) operation and then try again. For more information, see [Enhanced SSDs](~~122389~~).
+          * *   For more information about the limits on changing the category of a disk, see the "Limits" section of the [Change the category of a disk](~~161980~~) topic.
+          * The new disk category or performance level takes effect immediately after this operation is executed. Alibaba Cloud calculates the bill based on the new disk category and performance level.
+          *
+          * @param request ModifyDiskSpecRequest
+          * @return ModifyDiskSpecResponse
+         */
         public ModifyDiskSpecResponse ModifyDiskSpec(ModifyDiskSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDiskSpecWithOptions(request, runtime);
         }
 
+        /**
+          * ## Description
+          * When you call this operation, take note of the following items:
+          * *   To modify the performance level of an ESSD, take note of the following items:
+          *     *   For a subscription ESSD, you can only upgrade its performance level.
+          *     *   For a pay-as-you-go ESSD, You can upgrade or downgrade its performance level. However, you cannot downgrade the performance level to PL0.
+          *     *   The ESSD must be in the **In Use** (In_Use) or **Unattached** (Available) state.
+          *     *   If the ESSD is attached to an ECS instance, the instance must be in the **Running** (Running) or **Stopped** (Stopped) state. The instance cannot be in the Expired state or stopped due to an overdue payment.
+          *     *   If you cannot upgrade the performance level of the ESSD due to its capacity, resize the ESSD by calling the [ResizeDisk](~~25522~~) operation and then try again. For more information, see [Enhanced SSDs](~~122389~~).
+          * *   For more information about the limits on changing the category of a disk, see the "Limits" section of the [Change the category of a disk](~~161980~~) topic.
+          * The new disk category or performance level takes effect immediately after this operation is executed. Alibaba Cloud calculates the bill based on the new disk category and performance level.
+          *
+          * @param request ModifyDiskSpecRequest
+          * @return ModifyDiskSpecResponse
+         */
         public async Task<ModifyDiskSpecResponse> ModifyDiskSpecAsync(ModifyDiskSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -46925,29 +45915,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await ModifyInstanceAttachmentAttributesWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, the instance is locked for security reasons and all operations are prohibited on it.
-          * When you call this operation, take note of the following items:
-          * *   Modify the hostname (`HostName`): After the hostname is modified, you must restart the instance by performing the operations described in [Restart an instance](~~25440~~) in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new hostname to take effect. The new hostname does not take effect if you restart the instance from within the operating system.
-          * *   Reset the password (`Password`):
-          *     *   The instance must not be in the **Starting** (`Starting`) state.
-          *     *   After the password is reset, you must restart the instance by performing the operations described in [Restart an instance](~~25440~~) in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new password to take effect. The new password does not take effect if you restart the instance from within the operating system.
-          * *   Modify user data (`UserData`):
-          *     *   The instance must be in the **Stopped** (`Stopped`) state.
-          *     *   The instance must meet the conditions on user data. For more information, see [Overview of ECS instance user data](~~49121~~).
-          * *   Change the security group (`SecurityGroupIds.N`):
-          *     *   You can move an instance to a security group of a different type. Before you move an instance to a security group of a different type, we recommend that you evaluate the differences in rule configurations of the two security group types. This helps prevent business continuity issues when you switch security groups.
-          *     *   Security groups of instances in the classic network cannot be changed. For more information, see the description of the `SecurityGroupIds.N` parameter.
-          * *   Modify the number of queues supported by the primary elastic network interface (ENI) (`NetworkInterfaceQueueNumber`):
-          *     *   The instance must be in the Stopped (`Stopped`) state.
-          *     *   The value of this parameter cannot exceed the maximum number of queues per ENI allowed for the instance type.
-          *     *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To obtain the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` parameters.
-          *     *   If you set the NetworkInterfaceQueueNumber parameter to -1, the value is reset to the default value for the instance type. To obtain the default number of queues supported by the primary ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `PrimaryEniQueueNumber` parameter.
-          *
-          * @param request ModifyInstanceAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceAttributeResponse
-         */
         public ModifyInstanceAttributeResponse ModifyInstanceAttributeWithOptions(ModifyInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -47039,29 +46006,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyInstanceAttributeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, the instance is locked for security reasons and all operations are prohibited on it.
-          * When you call this operation, take note of the following items:
-          * *   Modify the hostname (`HostName`): After the hostname is modified, you must restart the instance by performing the operations described in [Restart an instance](~~25440~~) in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new hostname to take effect. The new hostname does not take effect if you restart the instance from within the operating system.
-          * *   Reset the password (`Password`):
-          *     *   The instance must not be in the **Starting** (`Starting`) state.
-          *     *   After the password is reset, you must restart the instance by performing the operations described in [Restart an instance](~~25440~~) in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new password to take effect. The new password does not take effect if you restart the instance from within the operating system.
-          * *   Modify user data (`UserData`):
-          *     *   The instance must be in the **Stopped** (`Stopped`) state.
-          *     *   The instance must meet the conditions on user data. For more information, see [Overview of ECS instance user data](~~49121~~).
-          * *   Change the security group (`SecurityGroupIds.N`):
-          *     *   You can move an instance to a security group of a different type. Before you move an instance to a security group of a different type, we recommend that you evaluate the differences in rule configurations of the two security group types. This helps prevent business continuity issues when you switch security groups.
-          *     *   Security groups of instances in the classic network cannot be changed. For more information, see the description of the `SecurityGroupIds.N` parameter.
-          * *   Modify the number of queues supported by the primary elastic network interface (ENI) (`NetworkInterfaceQueueNumber`):
-          *     *   The instance must be in the Stopped (`Stopped`) state.
-          *     *   The value of this parameter cannot exceed the maximum number of queues per ENI allowed for the instance type.
-          *     *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To obtain the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` parameters.
-          *     *   If you set the NetworkInterfaceQueueNumber parameter to -1, the value is reset to the default value for the instance type. To obtain the default number of queues supported by the primary ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `PrimaryEniQueueNumber` parameter.
-          *
-          * @param request ModifyInstanceAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceAttributeResponse
-         */
         public async Task<ModifyInstanceAttributeResponse> ModifyInstanceAttributeWithOptionsAsync(ModifyInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -47153,56 +46097,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, the instance is locked for security reasons and all operations are prohibited on it.
-          * When you call this operation, take note of the following items:
-          * *   Modify the hostname (`HostName`): After the hostname is modified, you must restart the instance by performing the operations described in [Restart an instance](~~25440~~) in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new hostname to take effect. The new hostname does not take effect if you restart the instance from within the operating system.
-          * *   Reset the password (`Password`):
-          *     *   The instance must not be in the **Starting** (`Starting`) state.
-          *     *   After the password is reset, you must restart the instance by performing the operations described in [Restart an instance](~~25440~~) in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new password to take effect. The new password does not take effect if you restart the instance from within the operating system.
-          * *   Modify user data (`UserData`):
-          *     *   The instance must be in the **Stopped** (`Stopped`) state.
-          *     *   The instance must meet the conditions on user data. For more information, see [Overview of ECS instance user data](~~49121~~).
-          * *   Change the security group (`SecurityGroupIds.N`):
-          *     *   You can move an instance to a security group of a different type. Before you move an instance to a security group of a different type, we recommend that you evaluate the differences in rule configurations of the two security group types. This helps prevent business continuity issues when you switch security groups.
-          *     *   Security groups of instances in the classic network cannot be changed. For more information, see the description of the `SecurityGroupIds.N` parameter.
-          * *   Modify the number of queues supported by the primary elastic network interface (ENI) (`NetworkInterfaceQueueNumber`):
-          *     *   The instance must be in the Stopped (`Stopped`) state.
-          *     *   The value of this parameter cannot exceed the maximum number of queues per ENI allowed for the instance type.
-          *     *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To obtain the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` parameters.
-          *     *   If you set the NetworkInterfaceQueueNumber parameter to -1, the value is reset to the default value for the instance type. To obtain the default number of queues supported by the primary ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `PrimaryEniQueueNumber` parameter.
-          *
-          * @param request ModifyInstanceAttributeRequest
-          * @return ModifyInstanceAttributeResponse
-         */
         public ModifyInstanceAttributeResponse ModifyInstanceAttribute(ModifyInstanceAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceAttributeWithOptions(request, runtime);
         }
 
-        /**
-          * If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, the instance is locked for security reasons and all operations are prohibited on it.
-          * When you call this operation, take note of the following items:
-          * *   Modify the hostname (`HostName`): After the hostname is modified, you must restart the instance by performing the operations described in [Restart an instance](~~25440~~) in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new hostname to take effect. The new hostname does not take effect if you restart the instance from within the operating system.
-          * *   Reset the password (`Password`):
-          *     *   The instance must not be in the **Starting** (`Starting`) state.
-          *     *   After the password is reset, you must restart the instance by performing the operations described in [Restart an instance](~~25440~~) in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new password to take effect. The new password does not take effect if you restart the instance from within the operating system.
-          * *   Modify user data (`UserData`):
-          *     *   The instance must be in the **Stopped** (`Stopped`) state.
-          *     *   The instance must meet the conditions on user data. For more information, see [Overview of ECS instance user data](~~49121~~).
-          * *   Change the security group (`SecurityGroupIds.N`):
-          *     *   You can move an instance to a security group of a different type. Before you move an instance to a security group of a different type, we recommend that you evaluate the differences in rule configurations of the two security group types. This helps prevent business continuity issues when you switch security groups.
-          *     *   Security groups of instances in the classic network cannot be changed. For more information, see the description of the `SecurityGroupIds.N` parameter.
-          * *   Modify the number of queues supported by the primary elastic network interface (ENI) (`NetworkInterfaceQueueNumber`):
-          *     *   The instance must be in the Stopped (`Stopped`) state.
-          *     *   The value of this parameter cannot exceed the maximum number of queues per ENI allowed for the instance type.
-          *     *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To obtain the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` parameters.
-          *     *   If you set the NetworkInterfaceQueueNumber parameter to -1, the value is reset to the default value for the instance type. To obtain the default number of queues supported by the primary ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `PrimaryEniQueueNumber` parameter.
-          *
-          * @param request ModifyInstanceAttributeRequest
-          * @return ModifyInstanceAttributeResponse
-         */
         public async Task<ModifyInstanceAttributeResponse> ModifyInstanceAttributeAsync(ModifyInstanceAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -47499,23 +46399,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await ModifyInstanceAutoRenewAttributeWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * Before you call this operation, make sure that you understand the billing methods and pricing schedule of ECS. For more information, see the [Elastic Compute Service](https://www.alibabacloud.com/product/ecs#pricing) product page.
-          * When you call this operation, take note of the following items:
-          * * The instances must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state, and you have no overdue payments for them.
-          * * After you change the billing method, automatic payment is enabled by default. Make sure that you have sufficient balance in your account. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the `AutoPay` parameter to `false` to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com/) to pay for the order.
-          * * **Change the billing method from subscription to pay-as-you-go**:
-          *     * Your ECS usage determines whether the billing method of an instance can be changed from subscription to pay-as-you-go.
-          *     * After you change the billing method of an instance from subscription to pay-as-you-go, the new billing method remains in effect for the remaining lifecycle of the instance. The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
-          *     * **Refund rule**: You have a quota for the total refund amount each month, and unused balance of this quota is not carried forward into the next month. After you use up the refund quota of the current month, you can change the billing method only when the next month arrives. The refund amount incurred when you change the billing method is calculated based on the following formula: **Number of vCPUs × (Number of remaining days × 24 ± Number of remaining or elapsed hours)**.
-          * * **Change the billing method from pay-as-you-go to subscription**:
-          *     * You can change the billing method of all data disks attached to an instance from pay-as-you-go to subscription.
-          *     * This operation cannot be called for a pay-as-you-go instance that has an automatic release time set.
-          *
-          * @param request ModifyInstanceChargeTypeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceChargeTypeResponse
-         */
         public ModifyInstanceChargeTypeResponse ModifyInstanceChargeTypeWithOptions(ModifyInstanceChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -47595,23 +46478,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyInstanceChargeTypeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, make sure that you understand the billing methods and pricing schedule of ECS. For more information, see the [Elastic Compute Service](https://www.alibabacloud.com/product/ecs#pricing) product page.
-          * When you call this operation, take note of the following items:
-          * * The instances must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state, and you have no overdue payments for them.
-          * * After you change the billing method, automatic payment is enabled by default. Make sure that you have sufficient balance in your account. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the `AutoPay` parameter to `false` to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com/) to pay for the order.
-          * * **Change the billing method from subscription to pay-as-you-go**:
-          *     * Your ECS usage determines whether the billing method of an instance can be changed from subscription to pay-as-you-go.
-          *     * After you change the billing method of an instance from subscription to pay-as-you-go, the new billing method remains in effect for the remaining lifecycle of the instance. The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
-          *     * **Refund rule**: You have a quota for the total refund amount each month, and unused balance of this quota is not carried forward into the next month. After you use up the refund quota of the current month, you can change the billing method only when the next month arrives. The refund amount incurred when you change the billing method is calculated based on the following formula: **Number of vCPUs × (Number of remaining days × 24 ± Number of remaining or elapsed hours)**.
-          * * **Change the billing method from pay-as-you-go to subscription**:
-          *     * You can change the billing method of all data disks attached to an instance from pay-as-you-go to subscription.
-          *     * This operation cannot be called for a pay-as-you-go instance that has an automatic release time set.
-          *
-          * @param request ModifyInstanceChargeTypeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceChargeTypeResponse
-         */
         public async Task<ModifyInstanceChargeTypeResponse> ModifyInstanceChargeTypeWithOptionsAsync(ModifyInstanceChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -47691,44 +46557,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyInstanceChargeTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, make sure that you understand the billing methods and pricing schedule of ECS. For more information, see the [Elastic Compute Service](https://www.alibabacloud.com/product/ecs#pricing) product page.
-          * When you call this operation, take note of the following items:
-          * * The instances must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state, and you have no overdue payments for them.
-          * * After you change the billing method, automatic payment is enabled by default. Make sure that you have sufficient balance in your account. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the `AutoPay` parameter to `false` to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com/) to pay for the order.
-          * * **Change the billing method from subscription to pay-as-you-go**:
-          *     * Your ECS usage determines whether the billing method of an instance can be changed from subscription to pay-as-you-go.
-          *     * After you change the billing method of an instance from subscription to pay-as-you-go, the new billing method remains in effect for the remaining lifecycle of the instance. The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
-          *     * **Refund rule**: You have a quota for the total refund amount each month, and unused balance of this quota is not carried forward into the next month. After you use up the refund quota of the current month, you can change the billing method only when the next month arrives. The refund amount incurred when you change the billing method is calculated based on the following formula: **Number of vCPUs × (Number of remaining days × 24 ± Number of remaining or elapsed hours)**.
-          * * **Change the billing method from pay-as-you-go to subscription**:
-          *     * You can change the billing method of all data disks attached to an instance from pay-as-you-go to subscription.
-          *     * This operation cannot be called for a pay-as-you-go instance that has an automatic release time set.
-          *
-          * @param request ModifyInstanceChargeTypeRequest
-          * @return ModifyInstanceChargeTypeResponse
-         */
         public ModifyInstanceChargeTypeResponse ModifyInstanceChargeType(ModifyInstanceChargeTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceChargeTypeWithOptions(request, runtime);
         }
 
-        /**
-          * Before you call this operation, make sure that you understand the billing methods and pricing schedule of ECS. For more information, see the [Elastic Compute Service](https://www.alibabacloud.com/product/ecs#pricing) product page.
-          * When you call this operation, take note of the following items:
-          * * The instances must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state, and you have no overdue payments for them.
-          * * After you change the billing method, automatic payment is enabled by default. Make sure that you have sufficient balance in your account. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the `AutoPay` parameter to `false` to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com/) to pay for the order.
-          * * **Change the billing method from subscription to pay-as-you-go**:
-          *     * Your ECS usage determines whether the billing method of an instance can be changed from subscription to pay-as-you-go.
-          *     * After you change the billing method of an instance from subscription to pay-as-you-go, the new billing method remains in effect for the remaining lifecycle of the instance. The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
-          *     * **Refund rule**: You have a quota for the total refund amount each month, and unused balance of this quota is not carried forward into the next month. After you use up the refund quota of the current month, you can change the billing method only when the next month arrives. The refund amount incurred when you change the billing method is calculated based on the following formula: **Number of vCPUs × (Number of remaining days × 24 ± Number of remaining or elapsed hours)**.
-          * * **Change the billing method from pay-as-you-go to subscription**:
-          *     * You can change the billing method of all data disks attached to an instance from pay-as-you-go to subscription.
-          *     * This operation cannot be called for a pay-as-you-go instance that has an automatic release time set.
-          *
-          * @param request ModifyInstanceChargeTypeRequest
-          * @return ModifyInstanceChargeTypeResponse
-         */
         public async Task<ModifyInstanceChargeTypeResponse> ModifyInstanceChargeTypeAsync(ModifyInstanceChargeTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -47971,15 +46805,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await ModifyInstanceDeploymentWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * This operation is used to modify the maintenance policy of an instance. The maintenance policy consists of the following maintenance attributes:
-          * *   Maintenance window: the time period that you specify for maintenance.
-          * *   Maintenance action: the action that you specify in response to instance shutdown.
-          *
-          * @param request ModifyInstanceMaintenanceAttributesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceMaintenanceAttributesResponse
-         */
         public ModifyInstanceMaintenanceAttributesResponse ModifyInstanceMaintenanceAttributesWithOptions(ModifyInstanceMaintenanceAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -48039,15 +46864,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyInstanceMaintenanceAttributesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * This operation is used to modify the maintenance policy of an instance. The maintenance policy consists of the following maintenance attributes:
-          * *   Maintenance window: the time period that you specify for maintenance.
-          * *   Maintenance action: the action that you specify in response to instance shutdown.
-          *
-          * @param request ModifyInstanceMaintenanceAttributesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceMaintenanceAttributesResponse
-         */
         public async Task<ModifyInstanceMaintenanceAttributesResponse> ModifyInstanceMaintenanceAttributesWithOptionsAsync(ModifyInstanceMaintenanceAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -48107,28 +46923,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyInstanceMaintenanceAttributesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * This operation is used to modify the maintenance policy of an instance. The maintenance policy consists of the following maintenance attributes:
-          * *   Maintenance window: the time period that you specify for maintenance.
-          * *   Maintenance action: the action that you specify in response to instance shutdown.
-          *
-          * @param request ModifyInstanceMaintenanceAttributesRequest
-          * @return ModifyInstanceMaintenanceAttributesResponse
-         */
         public ModifyInstanceMaintenanceAttributesResponse ModifyInstanceMaintenanceAttributes(ModifyInstanceMaintenanceAttributesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceMaintenanceAttributesWithOptions(request, runtime);
         }
 
-        /**
-          * This operation is used to modify the maintenance policy of an instance. The maintenance policy consists of the following maintenance attributes:
-          * *   Maintenance window: the time period that you specify for maintenance.
-          * *   Maintenance action: the action that you specify in response to instance shutdown.
-          *
-          * @param request ModifyInstanceMaintenanceAttributesRequest
-          * @return ModifyInstanceMaintenanceAttributesResponse
-         */
         public async Task<ModifyInstanceMaintenanceAttributesResponse> ModifyInstanceMaintenanceAttributesAsync(ModifyInstanceMaintenanceAttributesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -48493,24 +47293,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await ModifyInstanceNetworkSpecWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Description
-          * Before you call this operation, make sure that you understand the billing methods and pricing schedule of ECS. For more information, visit the [Elastic Compute Service](https://www.aliyun.com/price/product#/ecs/detail) product page.
-          * For information about ECS SDK for Python used to change resource configurations, see [Query available resources for configuration changes](~~109517~~).
-          * When you call this operation, take note of the following items:
-          * *   You must have no overdue payments in your account.
-          * *   You can adjust the public bandwidth of an instance only when the instance is in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
-          * *   Before you change the instance type of a pay-as-you-go instance, you can call the [DescribeResourcesModification](~~66187~~) operation to query the instance types to which you can change.
-          * *   You can change the instance type of an instance only when the instance is in the **Stopped** (`Stopped`) state.
-          * *   The instance type and the public bandwidth of an instance cannot be changed together.
-          * *   As of November 27, 2020, the maximum bandwidth value available for you to create ECS instances or to change ECS instance configurations is subject to throttling policies for your account. To increase the maximum bandwidth value, submit a ticket. The following throttling policies apply:
-          *     *   Within a single region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s.
-          *     *   Within a single region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.
-          *
-          * @param request ModifyInstanceSpecRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceSpecResponse
-         */
         public ModifyInstanceSpecResponse ModifyInstanceSpecWithOptions(ModifyInstanceSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -48586,24 +47368,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyInstanceSpecResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * Before you call this operation, make sure that you understand the billing methods and pricing schedule of ECS. For more information, visit the [Elastic Compute Service](https://www.aliyun.com/price/product#/ecs/detail) product page.
-          * For information about ECS SDK for Python used to change resource configurations, see [Query available resources for configuration changes](~~109517~~).
-          * When you call this operation, take note of the following items:
-          * *   You must have no overdue payments in your account.
-          * *   You can adjust the public bandwidth of an instance only when the instance is in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
-          * *   Before you change the instance type of a pay-as-you-go instance, you can call the [DescribeResourcesModification](~~66187~~) operation to query the instance types to which you can change.
-          * *   You can change the instance type of an instance only when the instance is in the **Stopped** (`Stopped`) state.
-          * *   The instance type and the public bandwidth of an instance cannot be changed together.
-          * *   As of November 27, 2020, the maximum bandwidth value available for you to create ECS instances or to change ECS instance configurations is subject to throttling policies for your account. To increase the maximum bandwidth value, submit a ticket. The following throttling policies apply:
-          *     *   Within a single region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s.
-          *     *   Within a single region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.
-          *
-          * @param request ModifyInstanceSpecRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceSpecResponse
-         */
         public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpecWithOptionsAsync(ModifyInstanceSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -48679,46 +47443,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyInstanceSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * Before you call this operation, make sure that you understand the billing methods and pricing schedule of ECS. For more information, visit the [Elastic Compute Service](https://www.aliyun.com/price/product#/ecs/detail) product page.
-          * For information about ECS SDK for Python used to change resource configurations, see [Query available resources for configuration changes](~~109517~~).
-          * When you call this operation, take note of the following items:
-          * *   You must have no overdue payments in your account.
-          * *   You can adjust the public bandwidth of an instance only when the instance is in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
-          * *   Before you change the instance type of a pay-as-you-go instance, you can call the [DescribeResourcesModification](~~66187~~) operation to query the instance types to which you can change.
-          * *   You can change the instance type of an instance only when the instance is in the **Stopped** (`Stopped`) state.
-          * *   The instance type and the public bandwidth of an instance cannot be changed together.
-          * *   As of November 27, 2020, the maximum bandwidth value available for you to create ECS instances or to change ECS instance configurations is subject to throttling policies for your account. To increase the maximum bandwidth value, submit a ticket. The following throttling policies apply:
-          *     *   Within a single region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s.
-          *     *   Within a single region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.
-          *
-          * @param request ModifyInstanceSpecRequest
-          * @return ModifyInstanceSpecResponse
-         */
         public ModifyInstanceSpecResponse ModifyInstanceSpec(ModifyInstanceSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceSpecWithOptions(request, runtime);
         }
 
-        /**
-          * ## Description
-          * Before you call this operation, make sure that you understand the billing methods and pricing schedule of ECS. For more information, visit the [Elastic Compute Service](https://www.aliyun.com/price/product#/ecs/detail) product page.
-          * For information about ECS SDK for Python used to change resource configurations, see [Query available resources for configuration changes](~~109517~~).
-          * When you call this operation, take note of the following items:
-          * *   You must have no overdue payments in your account.
-          * *   You can adjust the public bandwidth of an instance only when the instance is in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
-          * *   Before you change the instance type of a pay-as-you-go instance, you can call the [DescribeResourcesModification](~~66187~~) operation to query the instance types to which you can change.
-          * *   You can change the instance type of an instance only when the instance is in the **Stopped** (`Stopped`) state.
-          * *   The instance type and the public bandwidth of an instance cannot be changed together.
-          * *   As of November 27, 2020, the maximum bandwidth value available for you to create ECS instances or to change ECS instance configurations is subject to throttling policies for your account. To increase the maximum bandwidth value, submit a ticket. The following throttling policies apply:
-          *     *   Within a single region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s.
-          *     *   Within a single region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.
-          *
-          * @param request ModifyInstanceSpecRequest
-          * @return ModifyInstanceSpecResponse
-         */
         public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpecAsync(ModifyInstanceSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -49751,19 +48481,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await ModifyPhysicalConnectionAttributeWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ## Description
-          * *   The specified CIDR block must be valid. For example, 10.0.0.0/8 is a valid CIDR block while 10.0.0.1/8 is not. For more information, see the [What is CIDR?](https://www.alibabacloud.com/help/doc-detail/40637.htm#section-jua-0tj-q5m) section in Network FAQ.
-          * *   When you add or delete an entry, you cannot specify duplicate CIDR blocks. Examples:
-          *     *   For IPv4 CIDR blocks, you cannot specify the 10.0.0.0/8 CIDR block in two entries. You cannot specify the 10.0.0.1/32 CIDR block in one entry and the 10.0.0.1 CIDR block in another entry. These two CIDR blocks are the same.
-          *     *   For IPv6 CIDR blocks, you cannot specify the 2001:fd01:0:0:0:0:0:0/32 CIDR block in one entry and the 2001:fd01::/32 CIDR block in another entry. These two CIDR blocks are the same.
-          * *   The CIDR block in an entry to be added cannot the same as that in an entry to be deleted. For example, when you add an entry in which the 10.0.0.0/8 CIDR block is specified, the entry to be deleted cannot have the 10.0.0.0/8 CIDR block specified.
-          * *   If you want to modify the description of an entry, you must specify the CIDR block (`AddEntry.N.Cidr`) and new description (`AddEntry.N.Description`) in the entry.
-          *
-          * @param request ModifyPrefixListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyPrefixListResponse
-         */
         public ModifyPrefixListResponse ModifyPrefixListWithOptions(ModifyPrefixListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -49831,19 +48548,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyPrefixListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * *   The specified CIDR block must be valid. For example, 10.0.0.0/8 is a valid CIDR block while 10.0.0.1/8 is not. For more information, see the [What is CIDR?](https://www.alibabacloud.com/help/doc-detail/40637.htm#section-jua-0tj-q5m) section in Network FAQ.
-          * *   When you add or delete an entry, you cannot specify duplicate CIDR blocks. Examples:
-          *     *   For IPv4 CIDR blocks, you cannot specify the 10.0.0.0/8 CIDR block in two entries. You cannot specify the 10.0.0.1/32 CIDR block in one entry and the 10.0.0.1 CIDR block in another entry. These two CIDR blocks are the same.
-          *     *   For IPv6 CIDR blocks, you cannot specify the 2001:fd01:0:0:0:0:0:0/32 CIDR block in one entry and the 2001:fd01::/32 CIDR block in another entry. These two CIDR blocks are the same.
-          * *   The CIDR block in an entry to be added cannot the same as that in an entry to be deleted. For example, when you add an entry in which the 10.0.0.0/8 CIDR block is specified, the entry to be deleted cannot have the 10.0.0.0/8 CIDR block specified.
-          * *   If you want to modify the description of an entry, you must specify the CIDR block (`AddEntry.N.Cidr`) and new description (`AddEntry.N.Description`) in the entry.
-          *
-          * @param request ModifyPrefixListRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyPrefixListResponse
-         */
         public async Task<ModifyPrefixListResponse> ModifyPrefixListWithOptionsAsync(ModifyPrefixListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -49911,60 +48615,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyPrefixListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * *   The specified CIDR block must be valid. For example, 10.0.0.0/8 is a valid CIDR block while 10.0.0.1/8 is not. For more information, see the [What is CIDR?](https://www.alibabacloud.com/help/doc-detail/40637.htm#section-jua-0tj-q5m) section in Network FAQ.
-          * *   When you add or delete an entry, you cannot specify duplicate CIDR blocks. Examples:
-          *     *   For IPv4 CIDR blocks, you cannot specify the 10.0.0.0/8 CIDR block in two entries. You cannot specify the 10.0.0.1/32 CIDR block in one entry and the 10.0.0.1 CIDR block in another entry. These two CIDR blocks are the same.
-          *     *   For IPv6 CIDR blocks, you cannot specify the 2001:fd01:0:0:0:0:0:0/32 CIDR block in one entry and the 2001:fd01::/32 CIDR block in another entry. These two CIDR blocks are the same.
-          * *   The CIDR block in an entry to be added cannot the same as that in an entry to be deleted. For example, when you add an entry in which the 10.0.0.0/8 CIDR block is specified, the entry to be deleted cannot have the 10.0.0.0/8 CIDR block specified.
-          * *   If you want to modify the description of an entry, you must specify the CIDR block (`AddEntry.N.Cidr`) and new description (`AddEntry.N.Description`) in the entry.
-          *
-          * @param request ModifyPrefixListRequest
-          * @return ModifyPrefixListResponse
-         */
         public ModifyPrefixListResponse ModifyPrefixList(ModifyPrefixListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyPrefixListWithOptions(request, runtime);
         }
 
-        /**
-          * ## Description
-          * *   The specified CIDR block must be valid. For example, 10.0.0.0/8 is a valid CIDR block while 10.0.0.1/8 is not. For more information, see the [What is CIDR?](https://www.alibabacloud.com/help/doc-detail/40637.htm#section-jua-0tj-q5m) section in Network FAQ.
-          * *   When you add or delete an entry, you cannot specify duplicate CIDR blocks. Examples:
-          *     *   For IPv4 CIDR blocks, you cannot specify the 10.0.0.0/8 CIDR block in two entries. You cannot specify the 10.0.0.1/32 CIDR block in one entry and the 10.0.0.1 CIDR block in another entry. These two CIDR blocks are the same.
-          *     *   For IPv6 CIDR blocks, you cannot specify the 2001:fd01:0:0:0:0:0:0/32 CIDR block in one entry and the 2001:fd01::/32 CIDR block in another entry. These two CIDR blocks are the same.
-          * *   The CIDR block in an entry to be added cannot the same as that in an entry to be deleted. For example, when you add an entry in which the 10.0.0.0/8 CIDR block is specified, the entry to be deleted cannot have the 10.0.0.0/8 CIDR block specified.
-          * *   If you want to modify the description of an entry, you must specify the CIDR block (`AddEntry.N.Cidr`) and new description (`AddEntry.N.Description`) in the entry.
-          *
-          * @param request ModifyPrefixListRequest
-          * @return ModifyPrefixListResponse
-         */
         public async Task<ModifyPrefixListResponse> ModifyPrefixListAsync(ModifyPrefixListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyPrefixListWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * Before you call this operation, make sure that you understand the billing methods, pricing schedule, and refund policies of [ECS](https://www.alibabacloud.com/product/ecs#pricing). For more information, see [Request a refund for the downgrade of resource specifications](~~201955~~).
-          * Before you change the instance type of a subscription instance, you can call the [DescribeResourcesModification](~~66187~~) operation to query the supported instance types. You can use ECS SDK for Python to query the instance types to which you can change. For more information, see [Query available resources for configuration changes](~~109517~~).
-          * When you call this operation, take note of the following item:
-          * *   You cannot change the instance type of an expired instance. Renew the instance and try again.
-          * *   When you downgrade the instance type of an instance, take note of the following items:
-          *     *   The instance must be in the **Stopped** (`Stopped`) state.
-          *     *   You must specify the operation type by setting the `OperatorType` parameter to downgrade.
-          *     *   You can downgrade the configurations of an instance for up to three times. In this case, you can apply for up to three refunds for price differences for an instance. Downgrade operations include instance type downgrades, bandwidth configuration downgrades, and the change of the disk billing method from subscription to pay-as-you-go.
-          *     *   The price difference is refunded to the payment account that you used to purchase the instance. You cannot apply for a refund for vouchers that you already redeemed.
-          * *   This operation is asynchronous. The system requires 5 to 10 seconds to change the instance type of an instance. For the instance type change to take effect, you must restart the instance in the ECS console or by calling the RebootInstance operation. If you restart only the operating system of the instance, the instance type change does not take effect.
-          *     *   If the instance is in the **Stopped** state, you need to only start the instance. You do not need to restart the instance after it enters the Running state.
-          *     *   If you set the `RebootWhenFinished` parameter to true for the instance, you do not need to restart the instance.
-          *
-          * @param request ModifyPrepayInstanceSpecRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyPrepayInstanceSpecResponse
-         */
         public ModifyPrepayInstanceSpecResponse ModifyPrepayInstanceSpecWithOptions(ModifyPrepayInstanceSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -50048,24 +48710,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyPrepayInstanceSpecResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, make sure that you understand the billing methods, pricing schedule, and refund policies of [ECS](https://www.alibabacloud.com/product/ecs#pricing). For more information, see [Request a refund for the downgrade of resource specifications](~~201955~~).
-          * Before you change the instance type of a subscription instance, you can call the [DescribeResourcesModification](~~66187~~) operation to query the supported instance types. You can use ECS SDK for Python to query the instance types to which you can change. For more information, see [Query available resources for configuration changes](~~109517~~).
-          * When you call this operation, take note of the following item:
-          * *   You cannot change the instance type of an expired instance. Renew the instance and try again.
-          * *   When you downgrade the instance type of an instance, take note of the following items:
-          *     *   The instance must be in the **Stopped** (`Stopped`) state.
-          *     *   You must specify the operation type by setting the `OperatorType` parameter to downgrade.
-          *     *   You can downgrade the configurations of an instance for up to three times. In this case, you can apply for up to three refunds for price differences for an instance. Downgrade operations include instance type downgrades, bandwidth configuration downgrades, and the change of the disk billing method from subscription to pay-as-you-go.
-          *     *   The price difference is refunded to the payment account that you used to purchase the instance. You cannot apply for a refund for vouchers that you already redeemed.
-          * *   This operation is asynchronous. The system requires 5 to 10 seconds to change the instance type of an instance. For the instance type change to take effect, you must restart the instance in the ECS console or by calling the RebootInstance operation. If you restart only the operating system of the instance, the instance type change does not take effect.
-          *     *   If the instance is in the **Stopped** state, you need to only start the instance. You do not need to restart the instance after it enters the Running state.
-          *     *   If you set the `RebootWhenFinished` parameter to true for the instance, you do not need to restart the instance.
-          *
-          * @param request ModifyPrepayInstanceSpecRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyPrepayInstanceSpecResponse
-         */
         public async Task<ModifyPrepayInstanceSpecResponse> ModifyPrepayInstanceSpecWithOptionsAsync(ModifyPrepayInstanceSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -50149,46 +48793,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifyPrepayInstanceSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, make sure that you understand the billing methods, pricing schedule, and refund policies of [ECS](https://www.alibabacloud.com/product/ecs#pricing). For more information, see [Request a refund for the downgrade of resource specifications](~~201955~~).
-          * Before you change the instance type of a subscription instance, you can call the [DescribeResourcesModification](~~66187~~) operation to query the supported instance types. You can use ECS SDK for Python to query the instance types to which you can change. For more information, see [Query available resources for configuration changes](~~109517~~).
-          * When you call this operation, take note of the following item:
-          * *   You cannot change the instance type of an expired instance. Renew the instance and try again.
-          * *   When you downgrade the instance type of an instance, take note of the following items:
-          *     *   The instance must be in the **Stopped** (`Stopped`) state.
-          *     *   You must specify the operation type by setting the `OperatorType` parameter to downgrade.
-          *     *   You can downgrade the configurations of an instance for up to three times. In this case, you can apply for up to three refunds for price differences for an instance. Downgrade operations include instance type downgrades, bandwidth configuration downgrades, and the change of the disk billing method from subscription to pay-as-you-go.
-          *     *   The price difference is refunded to the payment account that you used to purchase the instance. You cannot apply for a refund for vouchers that you already redeemed.
-          * *   This operation is asynchronous. The system requires 5 to 10 seconds to change the instance type of an instance. For the instance type change to take effect, you must restart the instance in the ECS console or by calling the RebootInstance operation. If you restart only the operating system of the instance, the instance type change does not take effect.
-          *     *   If the instance is in the **Stopped** state, you need to only start the instance. You do not need to restart the instance after it enters the Running state.
-          *     *   If you set the `RebootWhenFinished` parameter to true for the instance, you do not need to restart the instance.
-          *
-          * @param request ModifyPrepayInstanceSpecRequest
-          * @return ModifyPrepayInstanceSpecResponse
-         */
         public ModifyPrepayInstanceSpecResponse ModifyPrepayInstanceSpec(ModifyPrepayInstanceSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyPrepayInstanceSpecWithOptions(request, runtime);
         }
 
-        /**
-          * Before you call this operation, make sure that you understand the billing methods, pricing schedule, and refund policies of [ECS](https://www.alibabacloud.com/product/ecs#pricing). For more information, see [Request a refund for the downgrade of resource specifications](~~201955~~).
-          * Before you change the instance type of a subscription instance, you can call the [DescribeResourcesModification](~~66187~~) operation to query the supported instance types. You can use ECS SDK for Python to query the instance types to which you can change. For more information, see [Query available resources for configuration changes](~~109517~~).
-          * When you call this operation, take note of the following item:
-          * *   You cannot change the instance type of an expired instance. Renew the instance and try again.
-          * *   When you downgrade the instance type of an instance, take note of the following items:
-          *     *   The instance must be in the **Stopped** (`Stopped`) state.
-          *     *   You must specify the operation type by setting the `OperatorType` parameter to downgrade.
-          *     *   You can downgrade the configurations of an instance for up to three times. In this case, you can apply for up to three refunds for price differences for an instance. Downgrade operations include instance type downgrades, bandwidth configuration downgrades, and the change of the disk billing method from subscription to pay-as-you-go.
-          *     *   The price difference is refunded to the payment account that you used to purchase the instance. You cannot apply for a refund for vouchers that you already redeemed.
-          * *   This operation is asynchronous. The system requires 5 to 10 seconds to change the instance type of an instance. For the instance type change to take effect, you must restart the instance in the ECS console or by calling the RebootInstance operation. If you restart only the operating system of the instance, the instance type change does not take effect.
-          *     *   If the instance is in the **Stopped** state, you need to only start the instance. You do not need to restart the instance after it enters the Running state.
-          *     *   If you set the `RebootWhenFinished` parameter to true for the instance, you do not need to restart the instance.
-          *
-          * @param request ModifyPrepayInstanceSpecRequest
-          * @return ModifyPrepayInstanceSpecResponse
-         */
         public async Task<ModifyPrepayInstanceSpecResponse> ModifyPrepayInstanceSpecAsync(ModifyPrepayInstanceSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -51285,16 +49895,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await ModifySecurityGroupEgressRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   When InnerAccessPolicy is set to Accept for a security group, the instances in the security group can communicate with each other. In this case, the Accept internal access control policy takes precedence over user-created security group rules to keep instances in the security group accessible to each other.
-          * *   When InnerAccessPolicy is set to Drop for a security group, the instances in the security group are isolated from each other. In this case, user-created security group rules take precedence over the Drop internal access control policy and can be used to allow access between the instances. For example, you can call the [AuthorizeSecurityGroup](~~25554~~) operation to create an inbound security group rule that allows the instances in the security group to communicate with each other.
-          * *   You can call the [DescribeSecurityGroupAttribute](~~25555~~) operation to query the internal access policy of a security group.
-          *
-          * @param request ModifySecurityGroupPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifySecurityGroupPolicyResponse
-         */
         public ModifySecurityGroupPolicyResponse ModifySecurityGroupPolicyWithOptions(ModifySecurityGroupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -51350,16 +49950,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifySecurityGroupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   When InnerAccessPolicy is set to Accept for a security group, the instances in the security group can communicate with each other. In this case, the Accept internal access control policy takes precedence over user-created security group rules to keep instances in the security group accessible to each other.
-          * *   When InnerAccessPolicy is set to Drop for a security group, the instances in the security group are isolated from each other. In this case, user-created security group rules take precedence over the Drop internal access control policy and can be used to allow access between the instances. For example, you can call the [AuthorizeSecurityGroup](~~25554~~) operation to create an inbound security group rule that allows the instances in the security group to communicate with each other.
-          * *   You can call the [DescribeSecurityGroupAttribute](~~25555~~) operation to query the internal access policy of a security group.
-          *
-          * @param request ModifySecurityGroupPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifySecurityGroupPolicyResponse
-         */
         public async Task<ModifySecurityGroupPolicyResponse> ModifySecurityGroupPolicyWithOptionsAsync(ModifySecurityGroupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -51415,30 +50005,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ModifySecurityGroupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   When InnerAccessPolicy is set to Accept for a security group, the instances in the security group can communicate with each other. In this case, the Accept internal access control policy takes precedence over user-created security group rules to keep instances in the security group accessible to each other.
-          * *   When InnerAccessPolicy is set to Drop for a security group, the instances in the security group are isolated from each other. In this case, user-created security group rules take precedence over the Drop internal access control policy and can be used to allow access between the instances. For example, you can call the [AuthorizeSecurityGroup](~~25554~~) operation to create an inbound security group rule that allows the instances in the security group to communicate with each other.
-          * *   You can call the [DescribeSecurityGroupAttribute](~~25555~~) operation to query the internal access policy of a security group.
-          *
-          * @param request ModifySecurityGroupPolicyRequest
-          * @return ModifySecurityGroupPolicyResponse
-         */
         public ModifySecurityGroupPolicyResponse ModifySecurityGroupPolicy(ModifySecurityGroupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySecurityGroupPolicyWithOptions(request, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   When InnerAccessPolicy is set to Accept for a security group, the instances in the security group can communicate with each other. In this case, the Accept internal access control policy takes precedence over user-created security group rules to keep instances in the security group accessible to each other.
-          * *   When InnerAccessPolicy is set to Drop for a security group, the instances in the security group are isolated from each other. In this case, user-created security group rules take precedence over the Drop internal access control policy and can be used to allow access between the instances. For example, you can call the [AuthorizeSecurityGroup](~~25554~~) operation to create an inbound security group rule that allows the instances in the security group to communicate with each other.
-          * *   You can call the [DescribeSecurityGroupAttribute](~~25555~~) operation to query the internal access policy of a security group.
-          *
-          * @param request ModifySecurityGroupPolicyRequest
-          * @return ModifySecurityGroupPolicyResponse
-         */
         public async Task<ModifySecurityGroupPolicyResponse> ModifySecurityGroupPolicyAsync(ModifySecurityGroupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -53015,14 +51587,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await ModifyVpcAttributeWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * *   Before you call this operation, make sure that you are familiar with the billing method of reserved instances. For more information, see [Reserved instances](~~100371~~).
-          * *   Before you purchase a reserved instance, you can call the [DescribeAvailableResource](~~66186~~) operation to query available instance resources.
-          *
-          * @param request PurchaseReservedInstancesOfferingRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return PurchaseReservedInstancesOfferingResponse
-         */
         public PurchaseReservedInstancesOfferingResponse PurchaseReservedInstancesOfferingWithOptions(PurchaseReservedInstancesOfferingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -53126,14 +51690,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<PurchaseReservedInstancesOfferingResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * *   Before you call this operation, make sure that you are familiar with the billing method of reserved instances. For more information, see [Reserved instances](~~100371~~).
-          * *   Before you purchase a reserved instance, you can call the [DescribeAvailableResource](~~66186~~) operation to query available instance resources.
-          *
-          * @param request PurchaseReservedInstancesOfferingRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return PurchaseReservedInstancesOfferingResponse
-         */
         public async Task<PurchaseReservedInstancesOfferingResponse> PurchaseReservedInstancesOfferingWithOptionsAsync(PurchaseReservedInstancesOfferingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -53237,26 +51793,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<PurchaseReservedInstancesOfferingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * *   Before you call this operation, make sure that you are familiar with the billing method of reserved instances. For more information, see [Reserved instances](~~100371~~).
-          * *   Before you purchase a reserved instance, you can call the [DescribeAvailableResource](~~66186~~) operation to query available instance resources.
-          *
-          * @param request PurchaseReservedInstancesOfferingRequest
-          * @return PurchaseReservedInstancesOfferingResponse
-         */
         public PurchaseReservedInstancesOfferingResponse PurchaseReservedInstancesOffering(PurchaseReservedInstancesOfferingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PurchaseReservedInstancesOfferingWithOptions(request, runtime);
         }
 
-        /**
-          * *   Before you call this operation, make sure that you are familiar with the billing method of reserved instances. For more information, see [Reserved instances](~~100371~~).
-          * *   Before you purchase a reserved instance, you can call the [DescribeAvailableResource](~~66186~~) operation to query available instance resources.
-          *
-          * @param request PurchaseReservedInstancesOfferingRequest
-          * @return PurchaseReservedInstancesOfferingResponse
-         */
         public async Task<PurchaseReservedInstancesOfferingResponse> PurchaseReservedInstancesOfferingAsync(PurchaseReservedInstancesOfferingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -53875,6 +52417,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await RebootInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   The ECS instances to which you want to restart are in the **Running** (`Running`) state.
+          * *   You can restart multiple instances at a time and use the `BatchOptimization` parameter to specify the batch operation mode.
+          * *   Instances can be forcefully restarted. A force restart (`ForceStop`) is equivalent to powering off traditional servers to restart them. This operation may lead to data loss if data in the instance operating system is not written to block storage devices.
+          * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of the instance, the instance is locked for security reasons and all operations are prohibited on it.
+          *
+          * @param request RebootInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RebootInstancesResponse
+         */
         public RebootInstancesResponse RebootInstancesWithOptions(RebootInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -53934,6 +52486,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<RebootInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   The ECS instances to which you want to restart are in the **Running** (`Running`) state.
+          * *   You can restart multiple instances at a time and use the `BatchOptimization` parameter to specify the batch operation mode.
+          * *   Instances can be forcefully restarted. A force restart (`ForceStop`) is equivalent to powering off traditional servers to restart them. This operation may lead to data loss if data in the instance operating system is not written to block storage devices.
+          * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of the instance, the instance is locked for security reasons and all operations are prohibited on it.
+          *
+          * @param request RebootInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RebootInstancesResponse
+         */
         public async Task<RebootInstancesResponse> RebootInstancesWithOptionsAsync(RebootInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -53993,12 +52555,30 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<RebootInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   The ECS instances to which you want to restart are in the **Running** (`Running`) state.
+          * *   You can restart multiple instances at a time and use the `BatchOptimization` parameter to specify the batch operation mode.
+          * *   Instances can be forcefully restarted. A force restart (`ForceStop`) is equivalent to powering off traditional servers to restart them. This operation may lead to data loss if data in the instance operating system is not written to block storage devices.
+          * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of the instance, the instance is locked for security reasons and all operations are prohibited on it.
+          *
+          * @param request RebootInstancesRequest
+          * @return RebootInstancesResponse
+         */
         public RebootInstancesResponse RebootInstances(RebootInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RebootInstancesWithOptions(request, runtime);
         }
 
+        /**
+          * *   The ECS instances to which you want to restart are in the **Running** (`Running`) state.
+          * *   You can restart multiple instances at a time and use the `BatchOptimization` parameter to specify the batch operation mode.
+          * *   Instances can be forcefully restarted. A force restart (`ForceStop`) is equivalent to powering off traditional servers to restart them. This operation may lead to data loss if data in the instance operating system is not written to block storage devices.
+          * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of the instance, the instance is locked for security reasons and all operations are prohibited on it.
+          *
+          * @param request RebootInstancesRequest
+          * @return RebootInstancesResponse
+         */
         public async Task<RebootInstancesResponse> RebootInstancesAsync(RebootInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -54263,33 +52843,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await RedeployDedicatedHostWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * RedeployInstance is an asynchronous operation. This operation migrates data before it restarts the instance. After the instance is redeployed, the instance enters the Running (`Running`) state. If the instance fails to be redeployed, the instance returns to the original physical server and the state before the redeployment.
-          * When you call this operation, take note of the following items:
-          * * The instance must be in the Running or Stopped state. After the instance is redeployed, the following changes occur to the status of the instance:
-          *   * If the instance is in the Running (`Running`) state, the instance enters the Stopping (`Stopping`) state.
-          *   * If the instance is in the Stopped (`Stopped`) state, the instance enters the Starting (`Starting`) state.
-          * * If an instance is deployed on a dedicated host, you cannot redeploy the instance.
-          * * If the `OperationLocks` parameter in the DescribeInstances response contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons and cannot be redeployed.
-          * * If you receive notifications about simulated events that are created by calling the CreateSimulatedSystemEvent operation for an instance, you cannot redeploy the instance.
-          * * When you handle a local disk-related system event for an instance, if the damaged local disk is isolated but the **SystemMaintenance.RebootAndReInitErrorDisk** event is not sent, you can still call the RedeployInstance operation to redeploy the instance. The SystemMaintenance.RebootAndReInitErrorDisk event indicates that the instance is restarted and the damaged disks are reinitialized due to system maintenance. For more information, see [System events for ECS instances equipped with local disks](~~107693~~).
-          * The following table describes the system events that you can handle by calling the RedeployInstance operation. The table also provides the possible event status.
-          * |System event|Event status|
-          * |---|---|
-          * |Instance restart due to system maintenance (SystemMaintenance.Reboot)|Inquiring and Scheduled|
-          * |Instance redeployment due to system maintenance (SystemMaintenance.Redeploy)|Inquiring and Scheduled|
-          * |Instance restart and replacement of damaged disks due to system maintenance (SystemMaintenance.RebootAndIsolateErrorDisk)|Inquiring|
-          * |Instance restart and re-initialization of damaged disks due to system maintenance (SystemMaintenance.RebootAndReInitErrorDisk)|Inquiring|
-          * |Instance redeployment due to system errors (SystemFailure.Redeploy)|Inquiring and Scheduled|
-          * |For ECS instances that use only local disks: instance restart due to a system error (SystemFailure.Reboot)|Executing|
-          * |Isolation of damaged disks due to system maintenance (SystemMaintenance.IsolateErrorDisk)|Inquiring|
-          * |Re-initialization of damaged disks due to system maintenance (SystemMaintenance.ReInitErrorDisk)|Inquiring|
-          * **Note**When instances that use local disks are redeployed, the local disks are re-initialized and data in the local disks is cleared.
-          *
-          * @param request RedeployInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RedeployInstanceResponse
-         */
         public RedeployInstanceResponse RedeployInstanceWithOptions(RedeployInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -54337,33 +52890,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<RedeployInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * RedeployInstance is an asynchronous operation. This operation migrates data before it restarts the instance. After the instance is redeployed, the instance enters the Running (`Running`) state. If the instance fails to be redeployed, the instance returns to the original physical server and the state before the redeployment.
-          * When you call this operation, take note of the following items:
-          * * The instance must be in the Running or Stopped state. After the instance is redeployed, the following changes occur to the status of the instance:
-          *   * If the instance is in the Running (`Running`) state, the instance enters the Stopping (`Stopping`) state.
-          *   * If the instance is in the Stopped (`Stopped`) state, the instance enters the Starting (`Starting`) state.
-          * * If an instance is deployed on a dedicated host, you cannot redeploy the instance.
-          * * If the `OperationLocks` parameter in the DescribeInstances response contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons and cannot be redeployed.
-          * * If you receive notifications about simulated events that are created by calling the CreateSimulatedSystemEvent operation for an instance, you cannot redeploy the instance.
-          * * When you handle a local disk-related system event for an instance, if the damaged local disk is isolated but the **SystemMaintenance.RebootAndReInitErrorDisk** event is not sent, you can still call the RedeployInstance operation to redeploy the instance. The SystemMaintenance.RebootAndReInitErrorDisk event indicates that the instance is restarted and the damaged disks are reinitialized due to system maintenance. For more information, see [System events for ECS instances equipped with local disks](~~107693~~).
-          * The following table describes the system events that you can handle by calling the RedeployInstance operation. The table also provides the possible event status.
-          * |System event|Event status|
-          * |---|---|
-          * |Instance restart due to system maintenance (SystemMaintenance.Reboot)|Inquiring and Scheduled|
-          * |Instance redeployment due to system maintenance (SystemMaintenance.Redeploy)|Inquiring and Scheduled|
-          * |Instance restart and replacement of damaged disks due to system maintenance (SystemMaintenance.RebootAndIsolateErrorDisk)|Inquiring|
-          * |Instance restart and re-initialization of damaged disks due to system maintenance (SystemMaintenance.RebootAndReInitErrorDisk)|Inquiring|
-          * |Instance redeployment due to system errors (SystemFailure.Redeploy)|Inquiring and Scheduled|
-          * |For ECS instances that use only local disks: instance restart due to a system error (SystemFailure.Reboot)|Executing|
-          * |Isolation of damaged disks due to system maintenance (SystemMaintenance.IsolateErrorDisk)|Inquiring|
-          * |Re-initialization of damaged disks due to system maintenance (SystemMaintenance.ReInitErrorDisk)|Inquiring|
-          * **Note**When instances that use local disks are redeployed, the local disks are re-initialized and data in the local disks is cleared.
-          *
-          * @param request RedeployInstanceRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RedeployInstanceResponse
-         */
         public async Task<RedeployInstanceResponse> RedeployInstanceWithOptionsAsync(RedeployInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -54411,77 +52937,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<RedeployInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * RedeployInstance is an asynchronous operation. This operation migrates data before it restarts the instance. After the instance is redeployed, the instance enters the Running (`Running`) state. If the instance fails to be redeployed, the instance returns to the original physical server and the state before the redeployment.
-          * When you call this operation, take note of the following items:
-          * * The instance must be in the Running or Stopped state. After the instance is redeployed, the following changes occur to the status of the instance:
-          *   * If the instance is in the Running (`Running`) state, the instance enters the Stopping (`Stopping`) state.
-          *   * If the instance is in the Stopped (`Stopped`) state, the instance enters the Starting (`Starting`) state.
-          * * If an instance is deployed on a dedicated host, you cannot redeploy the instance.
-          * * If the `OperationLocks` parameter in the DescribeInstances response contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons and cannot be redeployed.
-          * * If you receive notifications about simulated events that are created by calling the CreateSimulatedSystemEvent operation for an instance, you cannot redeploy the instance.
-          * * When you handle a local disk-related system event for an instance, if the damaged local disk is isolated but the **SystemMaintenance.RebootAndReInitErrorDisk** event is not sent, you can still call the RedeployInstance operation to redeploy the instance. The SystemMaintenance.RebootAndReInitErrorDisk event indicates that the instance is restarted and the damaged disks are reinitialized due to system maintenance. For more information, see [System events for ECS instances equipped with local disks](~~107693~~).
-          * The following table describes the system events that you can handle by calling the RedeployInstance operation. The table also provides the possible event status.
-          * |System event|Event status|
-          * |---|---|
-          * |Instance restart due to system maintenance (SystemMaintenance.Reboot)|Inquiring and Scheduled|
-          * |Instance redeployment due to system maintenance (SystemMaintenance.Redeploy)|Inquiring and Scheduled|
-          * |Instance restart and replacement of damaged disks due to system maintenance (SystemMaintenance.RebootAndIsolateErrorDisk)|Inquiring|
-          * |Instance restart and re-initialization of damaged disks due to system maintenance (SystemMaintenance.RebootAndReInitErrorDisk)|Inquiring|
-          * |Instance redeployment due to system errors (SystemFailure.Redeploy)|Inquiring and Scheduled|
-          * |For ECS instances that use only local disks: instance restart due to a system error (SystemFailure.Reboot)|Executing|
-          * |Isolation of damaged disks due to system maintenance (SystemMaintenance.IsolateErrorDisk)|Inquiring|
-          * |Re-initialization of damaged disks due to system maintenance (SystemMaintenance.ReInitErrorDisk)|Inquiring|
-          * **Note**When instances that use local disks are redeployed, the local disks are re-initialized and data in the local disks is cleared.
-          *
-          * @param request RedeployInstanceRequest
-          * @return RedeployInstanceResponse
-         */
         public RedeployInstanceResponse RedeployInstance(RedeployInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RedeployInstanceWithOptions(request, runtime);
         }
 
-        /**
-          * RedeployInstance is an asynchronous operation. This operation migrates data before it restarts the instance. After the instance is redeployed, the instance enters the Running (`Running`) state. If the instance fails to be redeployed, the instance returns to the original physical server and the state before the redeployment.
-          * When you call this operation, take note of the following items:
-          * * The instance must be in the Running or Stopped state. After the instance is redeployed, the following changes occur to the status of the instance:
-          *   * If the instance is in the Running (`Running`) state, the instance enters the Stopping (`Stopping`) state.
-          *   * If the instance is in the Stopped (`Stopped`) state, the instance enters the Starting (`Starting`) state.
-          * * If an instance is deployed on a dedicated host, you cannot redeploy the instance.
-          * * If the `OperationLocks` parameter in the DescribeInstances response contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons and cannot be redeployed.
-          * * If you receive notifications about simulated events that are created by calling the CreateSimulatedSystemEvent operation for an instance, you cannot redeploy the instance.
-          * * When you handle a local disk-related system event for an instance, if the damaged local disk is isolated but the **SystemMaintenance.RebootAndReInitErrorDisk** event is not sent, you can still call the RedeployInstance operation to redeploy the instance. The SystemMaintenance.RebootAndReInitErrorDisk event indicates that the instance is restarted and the damaged disks are reinitialized due to system maintenance. For more information, see [System events for ECS instances equipped with local disks](~~107693~~).
-          * The following table describes the system events that you can handle by calling the RedeployInstance operation. The table also provides the possible event status.
-          * |System event|Event status|
-          * |---|---|
-          * |Instance restart due to system maintenance (SystemMaintenance.Reboot)|Inquiring and Scheduled|
-          * |Instance redeployment due to system maintenance (SystemMaintenance.Redeploy)|Inquiring and Scheduled|
-          * |Instance restart and replacement of damaged disks due to system maintenance (SystemMaintenance.RebootAndIsolateErrorDisk)|Inquiring|
-          * |Instance restart and re-initialization of damaged disks due to system maintenance (SystemMaintenance.RebootAndReInitErrorDisk)|Inquiring|
-          * |Instance redeployment due to system errors (SystemFailure.Redeploy)|Inquiring and Scheduled|
-          * |For ECS instances that use only local disks: instance restart due to a system error (SystemFailure.Reboot)|Executing|
-          * |Isolation of damaged disks due to system maintenance (SystemMaintenance.IsolateErrorDisk)|Inquiring|
-          * |Re-initialization of damaged disks due to system maintenance (SystemMaintenance.ReInitErrorDisk)|Inquiring|
-          * **Note**When instances that use local disks are redeployed, the local disks are re-initialized and data in the local disks is cleared.
-          *
-          * @param request RedeployInstanceRequest
-          * @return RedeployInstanceResponse
-         */
         public async Task<RedeployInstanceResponse> RedeployInstanceAsync(RedeployInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RedeployInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * When the release mode of an immediate capacity reservation is set to manual release, you can call this operation to release the capacity reservation.
-          *
-          * @param request ReleaseCapacityReservationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ReleaseCapacityReservationResponse
-         */
         public ReleaseCapacityReservationResponse ReleaseCapacityReservationWithOptions(ReleaseCapacityReservationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -54533,13 +53000,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ReleaseCapacityReservationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * When the release mode of an immediate capacity reservation is set to manual release, you can call this operation to release the capacity reservation.
-          *
-          * @param request ReleaseCapacityReservationRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ReleaseCapacityReservationResponse
-         */
         public async Task<ReleaseCapacityReservationResponse> ReleaseCapacityReservationWithOptionsAsync(ReleaseCapacityReservationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -54591,24 +53051,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ReleaseCapacityReservationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * When the release mode of an immediate capacity reservation is set to manual release, you can call this operation to release the capacity reservation.
-          *
-          * @param request ReleaseCapacityReservationRequest
-          * @return ReleaseCapacityReservationResponse
-         */
         public ReleaseCapacityReservationResponse ReleaseCapacityReservation(ReleaseCapacityReservationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseCapacityReservationWithOptions(request, runtime);
         }
 
-        /**
-          * When the release mode of an immediate capacity reservation is set to manual release, you can call this operation to release the capacity reservation.
-          *
-          * @param request ReleaseCapacityReservationRequest
-          * @return ReleaseCapacityReservationResponse
-         */
         public async Task<ReleaseCapacityReservationResponse> ReleaseCapacityReservationAsync(ReleaseCapacityReservationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -55343,6 +53791,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await RenewDedicatedHostsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   Before you call this operation, make sure that you are familiar with the billing methods and pricing schedule of ECS. For more information, see the [Elastic Compute Service](https://www.alibabacloud.com/product/ecs#pricing) product page.
+          * *   You can call this operation to renew a subscription ECS instance for a period of time or to a synchronized expiration date.
+          * *   You cannot renew a subscription instance for a specific period of time and to a synchronized expiration date at the same time by calling this operation. The parameter pair (`Period` and `PeriodUnit`) that is related to the renewal period and the `ExpectedRenewDay` parameter are mutually exclusive.
+          * *   Your account must have sufficient credits.
+          *
+          * @param request RenewInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RenewInstanceResponse
+         */
         public RenewInstanceResponse RenewInstanceWithOptions(RenewInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -55402,6 +53860,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<RenewInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   Before you call this operation, make sure that you are familiar with the billing methods and pricing schedule of ECS. For more information, see the [Elastic Compute Service](https://www.alibabacloud.com/product/ecs#pricing) product page.
+          * *   You can call this operation to renew a subscription ECS instance for a period of time or to a synchronized expiration date.
+          * *   You cannot renew a subscription instance for a specific period of time and to a synchronized expiration date at the same time by calling this operation. The parameter pair (`Period` and `PeriodUnit`) that is related to the renewal period and the `ExpectedRenewDay` parameter are mutually exclusive.
+          * *   Your account must have sufficient credits.
+          *
+          * @param request RenewInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RenewInstanceResponse
+         */
         public async Task<RenewInstanceResponse> RenewInstanceWithOptionsAsync(RenewInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -55461,12 +53929,30 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<RenewInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   Before you call this operation, make sure that you are familiar with the billing methods and pricing schedule of ECS. For more information, see the [Elastic Compute Service](https://www.alibabacloud.com/product/ecs#pricing) product page.
+          * *   You can call this operation to renew a subscription ECS instance for a period of time or to a synchronized expiration date.
+          * *   You cannot renew a subscription instance for a specific period of time and to a synchronized expiration date at the same time by calling this operation. The parameter pair (`Period` and `PeriodUnit`) that is related to the renewal period and the `ExpectedRenewDay` parameter are mutually exclusive.
+          * *   Your account must have sufficient credits.
+          *
+          * @param request RenewInstanceRequest
+          * @return RenewInstanceResponse
+         */
         public RenewInstanceResponse RenewInstance(RenewInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RenewInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * *   Before you call this operation, make sure that you are familiar with the billing methods and pricing schedule of ECS. For more information, see the [Elastic Compute Service](https://www.alibabacloud.com/product/ecs#pricing) product page.
+          * *   You can call this operation to renew a subscription ECS instance for a period of time or to a synchronized expiration date.
+          * *   You cannot renew a subscription instance for a specific period of time and to a synchronized expiration date at the same time by calling this operation. The parameter pair (`Period` and `PeriodUnit`) that is related to the renewal period and the `ExpectedRenewDay` parameter are mutually exclusive.
+          * *   Your account must have sufficient credits.
+          *
+          * @param request RenewInstanceRequest
+          * @return RenewInstanceResponse
+         */
         public async Task<RenewInstanceResponse> RenewInstanceAsync(RenewInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -56121,13 +54607,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await ResetDiskWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * This operation will be removed in the future. We recommend that you call the [ResetDisk](~~25520~~) operation to roll back a disk.
-          *
-          * @param request ResetDisksRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ResetDisksResponse
-         */
         public ResetDisksResponse ResetDisksWithOptions(ResetDisksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -56179,13 +54658,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ResetDisksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * This operation will be removed in the future. We recommend that you call the [ResetDisk](~~25520~~) operation to roll back a disk.
-          *
-          * @param request ResetDisksRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ResetDisksResponse
-         */
         public async Task<ResetDisksResponse> ResetDisksWithOptionsAsync(ResetDisksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -56237,24 +54709,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<ResetDisksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * This operation will be removed in the future. We recommend that you call the [ResetDisk](~~25520~~) operation to roll back a disk.
-          *
-          * @param request ResetDisksRequest
-          * @return ResetDisksResponse
-         */
         public ResetDisksResponse ResetDisks(ResetDisksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetDisksWithOptions(request, runtime);
         }
 
-        /**
-          * This operation will be removed in the future. We recommend that you call the [ResetDisk](~~25520~~) operation to roll back a disk.
-          *
-          * @param request ResetDisksRequest
-          * @return ResetDisksResponse
-         */
         public async Task<ResetDisksResponse> ResetDisksAsync(ResetDisksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -57129,6 +55589,28 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await RevokeSecurityGroupEgressWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Compared with the [CreateCommand](~~64844~~) and [InvokeCommand](~~64841~~) operations, you can call the RunCommand operation once to create and run a command.
+          * When you call this operation, take note of the following items:
+          * *   The instances on which you want to run a command must reside in a virtual private cloud (VPC).
+          * *   The instances must be in the `Running` state.
+          * *   The Cloud Assistant client must be installed on the instances. For more information, see [InstallCloudAssistant](~~85916~~).
+          * *   Before you run a PowerShell command on a Windows instance, make sure that the PowerShell module is installed on the instance.
+          * *   If you want to specify a schedule by using a cron expression, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instance meets your business requirements. For information about time zones, see [Configure the NTP service for ECS instances that run CentOS 6](~~92803~~) or [Configure the NTP service for Windows instances](~~51890~~).
+          * *   You can specify the `TimeOut` parameter to specify a timeout period for executions of the command on instances. If an execution times out, the Cloud Assistant client forcibly terminates the command process.
+          *     *   If the one-time execution of a command times out, the execution state of the command changes to Failed. You can call the [InvokeRecordStatus](~~64845~~) operation to query the command execution state.
+          *     *   For a scheduled task, the timeout period takes effect on each execution of the command. When a command execution times out, the subsequent executions of the command are not affected. If a scheduled execution of a command times out, the execution state of the command changes to Failed. You can call the [InvokeRecordStatus](~~64845~~) operation to query the command execution state.
+          *     To ensure that scheduled tasks can run as expected, make sure that the version of the Cloud Assistant client is not earlier than the following versions. A scheduled task can run a command at a specific interval, only once at a specific time, or at specific times based on a cron expression that includes a specific year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update the Cloud Assistant client to the latest version. For more information, see [Upgrade or disable upgrades for the Cloud Assistant client](~~134383~~).
+          *           - Linux: 2.2.3.282 
+          *           - Windows: 2.1.3.282 
+          * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on the Cloud Assistant client. If an execution fails, no execution information is generated.
+          * *   If you set the `EnableParameter` parameter to true, the custom parameter feature is enabled. If you specify the `CommandContent` parameter, you can specify custom parameters in the `{{parameter}}` format. After the command is run, the key-value pairs of the custom parameters are passed in.
+          * *   You can retain up to 500 to 10,000 Cloud Assistant commands in each region based on your ECS usage. You can call the [DescribeAccountAttribute](~~73772~~) operation to query quotas.
+          *
+          * @param tmpReq RunCommandRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RunCommandResponse
+         */
         public RunCommandResponse RunCommandWithOptions(RunCommandRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -57262,6 +55744,28 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<RunCommandResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Compared with the [CreateCommand](~~64844~~) and [InvokeCommand](~~64841~~) operations, you can call the RunCommand operation once to create and run a command.
+          * When you call this operation, take note of the following items:
+          * *   The instances on which you want to run a command must reside in a virtual private cloud (VPC).
+          * *   The instances must be in the `Running` state.
+          * *   The Cloud Assistant client must be installed on the instances. For more information, see [InstallCloudAssistant](~~85916~~).
+          * *   Before you run a PowerShell command on a Windows instance, make sure that the PowerShell module is installed on the instance.
+          * *   If you want to specify a schedule by using a cron expression, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instance meets your business requirements. For information about time zones, see [Configure the NTP service for ECS instances that run CentOS 6](~~92803~~) or [Configure the NTP service for Windows instances](~~51890~~).
+          * *   You can specify the `TimeOut` parameter to specify a timeout period for executions of the command on instances. If an execution times out, the Cloud Assistant client forcibly terminates the command process.
+          *     *   If the one-time execution of a command times out, the execution state of the command changes to Failed. You can call the [InvokeRecordStatus](~~64845~~) operation to query the command execution state.
+          *     *   For a scheduled task, the timeout period takes effect on each execution of the command. When a command execution times out, the subsequent executions of the command are not affected. If a scheduled execution of a command times out, the execution state of the command changes to Failed. You can call the [InvokeRecordStatus](~~64845~~) operation to query the command execution state.
+          *     To ensure that scheduled tasks can run as expected, make sure that the version of the Cloud Assistant client is not earlier than the following versions. A scheduled task can run a command at a specific interval, only once at a specific time, or at specific times based on a cron expression that includes a specific year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update the Cloud Assistant client to the latest version. For more information, see [Upgrade or disable upgrades for the Cloud Assistant client](~~134383~~).
+          *           - Linux: 2.2.3.282 
+          *           - Windows: 2.1.3.282 
+          * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on the Cloud Assistant client. If an execution fails, no execution information is generated.
+          * *   If you set the `EnableParameter` parameter to true, the custom parameter feature is enabled. If you specify the `CommandContent` parameter, you can specify custom parameters in the `{{parameter}}` format. After the command is run, the key-value pairs of the custom parameters are passed in.
+          * *   You can retain up to 500 to 10,000 Cloud Assistant commands in each region based on your ECS usage. You can call the [DescribeAccountAttribute](~~73772~~) operation to query quotas.
+          *
+          * @param tmpReq RunCommandRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RunCommandResponse
+         */
         public async Task<RunCommandResponse> RunCommandWithOptionsAsync(RunCommandRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -57395,12 +55899,54 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<RunCommandResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Compared with the [CreateCommand](~~64844~~) and [InvokeCommand](~~64841~~) operations, you can call the RunCommand operation once to create and run a command.
+          * When you call this operation, take note of the following items:
+          * *   The instances on which you want to run a command must reside in a virtual private cloud (VPC).
+          * *   The instances must be in the `Running` state.
+          * *   The Cloud Assistant client must be installed on the instances. For more information, see [InstallCloudAssistant](~~85916~~).
+          * *   Before you run a PowerShell command on a Windows instance, make sure that the PowerShell module is installed on the instance.
+          * *   If you want to specify a schedule by using a cron expression, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instance meets your business requirements. For information about time zones, see [Configure the NTP service for ECS instances that run CentOS 6](~~92803~~) or [Configure the NTP service for Windows instances](~~51890~~).
+          * *   You can specify the `TimeOut` parameter to specify a timeout period for executions of the command on instances. If an execution times out, the Cloud Assistant client forcibly terminates the command process.
+          *     *   If the one-time execution of a command times out, the execution state of the command changes to Failed. You can call the [InvokeRecordStatus](~~64845~~) operation to query the command execution state.
+          *     *   For a scheduled task, the timeout period takes effect on each execution of the command. When a command execution times out, the subsequent executions of the command are not affected. If a scheduled execution of a command times out, the execution state of the command changes to Failed. You can call the [InvokeRecordStatus](~~64845~~) operation to query the command execution state.
+          *     To ensure that scheduled tasks can run as expected, make sure that the version of the Cloud Assistant client is not earlier than the following versions. A scheduled task can run a command at a specific interval, only once at a specific time, or at specific times based on a cron expression that includes a specific year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update the Cloud Assistant client to the latest version. For more information, see [Upgrade or disable upgrades for the Cloud Assistant client](~~134383~~).
+          *           - Linux: 2.2.3.282 
+          *           - Windows: 2.1.3.282 
+          * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on the Cloud Assistant client. If an execution fails, no execution information is generated.
+          * *   If you set the `EnableParameter` parameter to true, the custom parameter feature is enabled. If you specify the `CommandContent` parameter, you can specify custom parameters in the `{{parameter}}` format. After the command is run, the key-value pairs of the custom parameters are passed in.
+          * *   You can retain up to 500 to 10,000 Cloud Assistant commands in each region based on your ECS usage. You can call the [DescribeAccountAttribute](~~73772~~) operation to query quotas.
+          *
+          * @param request RunCommandRequest
+          * @return RunCommandResponse
+         */
         public RunCommandResponse RunCommand(RunCommandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RunCommandWithOptions(request, runtime);
         }
 
+        /**
+          * Compared with the [CreateCommand](~~64844~~) and [InvokeCommand](~~64841~~) operations, you can call the RunCommand operation once to create and run a command.
+          * When you call this operation, take note of the following items:
+          * *   The instances on which you want to run a command must reside in a virtual private cloud (VPC).
+          * *   The instances must be in the `Running` state.
+          * *   The Cloud Assistant client must be installed on the instances. For more information, see [InstallCloudAssistant](~~85916~~).
+          * *   Before you run a PowerShell command on a Windows instance, make sure that the PowerShell module is installed on the instance.
+          * *   If you want to specify a schedule by using a cron expression, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instance meets your business requirements. For information about time zones, see [Configure the NTP service for ECS instances that run CentOS 6](~~92803~~) or [Configure the NTP service for Windows instances](~~51890~~).
+          * *   You can specify the `TimeOut` parameter to specify a timeout period for executions of the command on instances. If an execution times out, the Cloud Assistant client forcibly terminates the command process.
+          *     *   If the one-time execution of a command times out, the execution state of the command changes to Failed. You can call the [InvokeRecordStatus](~~64845~~) operation to query the command execution state.
+          *     *   For a scheduled task, the timeout period takes effect on each execution of the command. When a command execution times out, the subsequent executions of the command are not affected. If a scheduled execution of a command times out, the execution state of the command changes to Failed. You can call the [InvokeRecordStatus](~~64845~~) operation to query the command execution state.
+          *     To ensure that scheduled tasks can run as expected, make sure that the version of the Cloud Assistant client is not earlier than the following versions. A scheduled task can run a command at a specific interval, only once at a specific time, or at specific times based on a cron expression that includes a specific year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update the Cloud Assistant client to the latest version. For more information, see [Upgrade or disable upgrades for the Cloud Assistant client](~~134383~~).
+          *           - Linux: 2.2.3.282 
+          *           - Windows: 2.1.3.282 
+          * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on the Cloud Assistant client. If an execution fails, no execution information is generated.
+          * *   If you set the `EnableParameter` parameter to true, the custom parameter feature is enabled. If you specify the `CommandContent` parameter, you can specify custom parameters in the `{{parameter}}` format. After the command is run, the key-value pairs of the custom parameters are passed in.
+          * *   You can retain up to 500 to 10,000 Cloud Assistant commands in each region based on your ECS usage. You can call the [DescribeAccountAttribute](~~73772~~) operation to query quotas.
+          *
+          * @param request RunCommandRequest
+          * @return RunCommandResponse
+         */
         public async Task<RunCommandResponse> RunCommandAsync(RunCommandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -57502,6 +56048,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageOptions))
+            {
+                query["ImageOptions"] = request.ImageOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
             {
@@ -57825,6 +56375,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageOptions))
+            {
+                query["ImageOptions"] = request.ImageOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
             {
@@ -59037,15 +57591,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await StopInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * *   If you call the DescribeInstances operation and the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instances are locked for security reasons and cannot be stopped.
-          * *   If the economical mode is enabled for pay-as-you-go instances, you can set `StoppedMode` to KeepCharging to enable the standard mode for the instances. Then, after the instances are stopped in standard mode, you continue to be charged for them, and their instance type resources and public IP addresses are retained.
-          * *   Batch operations are supported. You can use the `BatchOptimization` parameter to specify the batch operation mode.
-          *
-          * @param request StopInstancesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StopInstancesResponse
-         */
         public StopInstancesResponse StopInstancesWithOptions(StopInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -59109,15 +57654,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<StopInstancesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * *   If you call the DescribeInstances operation and the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instances are locked for security reasons and cannot be stopped.
-          * *   If the economical mode is enabled for pay-as-you-go instances, you can set `StoppedMode` to KeepCharging to enable the standard mode for the instances. Then, after the instances are stopped in standard mode, you continue to be charged for them, and their instance type resources and public IP addresses are retained.
-          * *   Batch operations are supported. You can use the `BatchOptimization` parameter to specify the batch operation mode.
-          *
-          * @param request StopInstancesRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return StopInstancesResponse
-         */
         public async Task<StopInstancesResponse> StopInstancesWithOptionsAsync(StopInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -59181,28 +57717,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<StopInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * *   If you call the DescribeInstances operation and the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instances are locked for security reasons and cannot be stopped.
-          * *   If the economical mode is enabled for pay-as-you-go instances, you can set `StoppedMode` to KeepCharging to enable the standard mode for the instances. Then, after the instances are stopped in standard mode, you continue to be charged for them, and their instance type resources and public IP addresses are retained.
-          * *   Batch operations are supported. You can use the `BatchOptimization` parameter to specify the batch operation mode.
-          *
-          * @param request StopInstancesRequest
-          * @return StopInstancesResponse
-         */
         public StopInstancesResponse StopInstances(StopInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopInstancesWithOptions(request, runtime);
         }
 
-        /**
-          * *   If you call the DescribeInstances operation and the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instances are locked for security reasons and cannot be stopped.
-          * *   If the economical mode is enabled for pay-as-you-go instances, you can set `StoppedMode` to KeepCharging to enable the standard mode for the instances. Then, after the instances are stopped in standard mode, you continue to be charged for them, and their instance type resources and public IP addresses are retained.
-          * *   Batch operations are supported. You can use the `BatchOptimization` parameter to specify the batch operation mode.
-          *
-          * @param request StopInstancesRequest
-          * @return StopInstancesResponse
-         */
         public async Task<StopInstancesResponse> StopInstancesAsync(StopInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -59757,6 +58277,15 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return await TerminateVirtualBorderRouterWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * When you call this operation, take note of the following items:
+          * *   The ENI must be in the **Available** (Available) or **InUse** (InUse) state.
+          * *   If the ENI is a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the **Running** (Running) or **Stopped** (Stopped) state.
+          *
+          * @param request UnassignIpv6AddressesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnassignIpv6AddressesResponse
+         */
         public UnassignIpv6AddressesResponse UnassignIpv6AddressesWithOptions(UnassignIpv6AddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -59816,6 +58345,15 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<UnassignIpv6AddressesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * When you call this operation, take note of the following items:
+          * *   The ENI must be in the **Available** (Available) or **InUse** (InUse) state.
+          * *   If the ENI is a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the **Running** (Running) or **Stopped** (Stopped) state.
+          *
+          * @param request UnassignIpv6AddressesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnassignIpv6AddressesResponse
+         */
         public async Task<UnassignIpv6AddressesResponse> UnassignIpv6AddressesWithOptionsAsync(UnassignIpv6AddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -59875,18 +58413,42 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<UnassignIpv6AddressesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * When you call this operation, take note of the following items:
+          * *   The ENI must be in the **Available** (Available) or **InUse** (InUse) state.
+          * *   If the ENI is a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the **Running** (Running) or **Stopped** (Stopped) state.
+          *
+          * @param request UnassignIpv6AddressesRequest
+          * @return UnassignIpv6AddressesResponse
+         */
         public UnassignIpv6AddressesResponse UnassignIpv6Addresses(UnassignIpv6AddressesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnassignIpv6AddressesWithOptions(request, runtime);
         }
 
+        /**
+          * When you call this operation, take note of the following items:
+          * *   The ENI must be in the **Available** (Available) or **InUse** (InUse) state.
+          * *   If the ENI is a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the **Running** (Running) or **Stopped** (Stopped) state.
+          *
+          * @param request UnassignIpv6AddressesRequest
+          * @return UnassignIpv6AddressesResponse
+         */
         public async Task<UnassignIpv6AddressesResponse> UnassignIpv6AddressesAsync(UnassignIpv6AddressesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnassignIpv6AddressesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   The ENI from which to unassign secondary private IP addresses must be in the **Available** (Available) or **InUse** (InUse) state.
+          * *   If the ENI is a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the **Running** (Running) or **Stopped** (Stopped) state.
+          *
+          * @param request UnassignPrivateIpAddressesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnassignPrivateIpAddressesResponse
+         */
         public UnassignPrivateIpAddressesResponse UnassignPrivateIpAddressesWithOptions(UnassignPrivateIpAddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -59946,6 +58508,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<UnassignPrivateIpAddressesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   The ENI from which to unassign secondary private IP addresses must be in the **Available** (Available) or **InUse** (InUse) state.
+          * *   If the ENI is a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the **Running** (Running) or **Stopped** (Stopped) state.
+          *
+          * @param request UnassignPrivateIpAddressesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnassignPrivateIpAddressesResponse
+         */
         public async Task<UnassignPrivateIpAddressesResponse> UnassignPrivateIpAddressesWithOptionsAsync(UnassignPrivateIpAddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -60005,12 +58575,26 @@ namespace AlibabaCloud.SDK.Ecs20140526
             return TeaModel.ToObject<UnassignPrivateIpAddressesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   The ENI from which to unassign secondary private IP addresses must be in the **Available** (Available) or **InUse** (InUse) state.
+          * *   If the ENI is a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the **Running** (Running) or **Stopped** (Stopped) state.
+          *
+          * @param request UnassignPrivateIpAddressesRequest
+          * @return UnassignPrivateIpAddressesResponse
+         */
         public UnassignPrivateIpAddressesResponse UnassignPrivateIpAddresses(UnassignPrivateIpAddressesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnassignPrivateIpAddressesWithOptions(request, runtime);
         }
 
+        /**
+          * *   The ENI from which to unassign secondary private IP addresses must be in the **Available** (Available) or **InUse** (InUse) state.
+          * *   If the ENI is a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the **Running** (Running) or **Stopped** (Stopped) state.
+          *
+          * @param request UnassignPrivateIpAddressesRequest
+          * @return UnassignPrivateIpAddressesResponse
+         */
         public async Task<UnassignPrivateIpAddressesResponse> UnassignPrivateIpAddressesAsync(UnassignPrivateIpAddressesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

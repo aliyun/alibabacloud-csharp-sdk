@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDedicatedHostsChargeTypeResponseBody : TeaModel {
-        /// <summary>
-        /// Details about the charges for the order.
-        /// </summary>
         [NameInMap("FeeOfInstances")]
         [Validation(Required=false)]
         public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances FeeOfInstances { get; set; }
@@ -20,27 +17,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstancesFeeOfInstance> FeeOfInstance { get; set; }
             public class ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstancesFeeOfInstance : TeaModel {
-                /// <summary>
-                /// The unit of currency for the bill.
-                /// 
-                /// Alibaba Cloud China site (aliyun.com): CNY.
-                /// 
-                /// Alibaba Cloud International site (alibabacloud.com): USD.
-                /// </summary>
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
                 public string Currency { get; set; }
 
-                /// <summary>
-                /// The cost value.
-                /// </summary>
                 [NameInMap("Fee")]
                 [Validation(Required=false)]
                 public string Fee { get; set; }
 
-                /// <summary>
-                /// The ID of the dedicated host.
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
@@ -49,16 +33,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        /// <summary>
-        /// The ID of the order.
-        /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

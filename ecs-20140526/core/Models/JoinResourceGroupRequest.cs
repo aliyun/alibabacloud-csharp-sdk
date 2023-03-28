@@ -17,23 +17,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// The ID of the resource group to which you want to assign the resource.
-        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        /// <summary>
-        /// The ID of the resource. The value of this parameter varies based on the resource type. For example, when ResourceType is set to instance, the ResourceId refers to InstanceId.
-        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
@@ -46,22 +37,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        /// <summary>
-        /// The type of the ECS resource. Valid values:
-        /// 
-        /// *   instance: instance
-        /// *   disk: Elastic Block Storage device
-        /// *   snapshot: snapshot
-        /// *   image: image
-        /// *   securitygroup: security group
-        /// *   ddh: dedicated host
-        /// *   ddhcluster: dedicated host cluster
-        /// *   eni: ENI
-        /// *   keypair: SSH key pair
-        /// *   launchtemplate: launch template
-        /// 
-        /// These values are case-sensitive.
-        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
