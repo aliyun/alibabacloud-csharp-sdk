@@ -1893,6 +1893,10 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteOptions))
+            {
+                query["DeleteOptions"] = request.DeleteOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRoleName))
             {
                 query["RamRoleName"] = request.RamRoleName;
@@ -1936,6 +1940,10 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteOptions))
+            {
+                query["DeleteOptions"] = request.DeleteOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRoleName))
             {
                 query["RamRoleName"] = request.RamRoleName;

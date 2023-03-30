@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DeleteStackRequest : TeaModel {
+        [NameInMap("DeleteOptions")]
+        [Validation(Required=false)]
+        public List<string> DeleteOptions { get; set; }
+
         /// <summary>
         /// The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses credentials of the role to call the APIs of Alibaba Cloud services.
         /// 

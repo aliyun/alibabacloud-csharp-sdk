@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetFeatureDetailsResponseBody : TeaModel {
+        [NameInMap("DriftDetection")]
+        [Validation(Required=false)]
+        public GetFeatureDetailsResponseBodyDriftDetection DriftDetection { get; set; }
+        public class GetFeatureDetailsResponseBodyDriftDetection : TeaModel {
+            [NameInMap("SupportedResourceTypes")]
+            [Validation(Required=false)]
+            public List<string> SupportedResourceTypes { get; set; }
+
+        }
+
         /// <summary>
         /// The ID of the request.
         /// </summary>
@@ -57,6 +67,26 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [NameInMap("SupportedFilters")]
                 [Validation(Required=false)]
                 public List<string> SupportedFilters { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("ResourceImport")]
+        [Validation(Required=false)]
+        public GetFeatureDetailsResponseBodyResourceImport ResourceImport { get; set; }
+        public class GetFeatureDetailsResponseBodyResourceImport : TeaModel {
+            [NameInMap("SupportedResourceTypes")]
+            [Validation(Required=false)]
+            public List<GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes> SupportedResourceTypes { get; set; }
+            public class GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes : TeaModel {
+                [NameInMap("ResourceIdentifiers")]
+                [Validation(Required=false)]
+                public List<string> ResourceIdentifiers { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
 
             }
 
