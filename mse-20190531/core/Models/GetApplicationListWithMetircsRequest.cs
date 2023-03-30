@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 10.
+        /// The number of entries to return on each page. Default value: 10
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region where the instance resides. Examples:
+        /// The ID of the region where the Microservices Engine (MSE) instance resides. Examples:
         /// 
         /// *   cn-hangzhou: China (Hangzhou)
         /// *   cn-beijing: China (Beijing)

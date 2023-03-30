@@ -24,6 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string AppId { get; set; }
 
         /// <summary>
@@ -32,6 +33,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
+
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
 
         /// <summary>
         /// The number of the page to return.

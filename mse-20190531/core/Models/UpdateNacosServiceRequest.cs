@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The ID of the instance.
         /// 
-        /// >  This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
+        /// > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

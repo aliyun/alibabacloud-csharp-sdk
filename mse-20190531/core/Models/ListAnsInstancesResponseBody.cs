@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// Indicates whether the information about the temporary node is obtained. Valid values:
+            /// Indicates whether the information about the ephemeral node is obtained. Valid values:
             /// 
             /// *   `true`: yes
             /// *   `false`: no
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Ephemeral { get; set; }
 
             /// <summary>
-            /// The number of failed checks.
+            /// The number of counted failures.
             /// </summary>
             [NameInMap("FailCount")]
             [Validation(Required=false)]
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// The number of successful checks.
+            /// The number of counted successes.
             /// </summary>
             [NameInMap("OkCount")]
             [Validation(Required=false)]
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The number of the page to return.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

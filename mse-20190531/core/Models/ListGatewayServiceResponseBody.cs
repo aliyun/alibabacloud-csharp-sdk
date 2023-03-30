@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The response parameters.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListGatewayServiceResponseBodyData Data { get; set; }
         public class ListGatewayServiceResponseBodyData : TeaModel {
             /// <summary>
-            /// The page number of the returned page.
+            /// The number of the returned page.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
@@ -217,21 +217,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GatewayUniqueId { get; set; }
 
                 /// <summary>
-                /// The time when the service was created.
+                /// The creation time.
                 /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// The time when the service was last modified.
+                /// The modification time.
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// The group.
+                /// The name of the group.
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// The IP addresses of the service.
+                /// The IP addresses.
                 /// </summary>
                 [NameInMap("Ips")]
                 [Validation(Required=false)]
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public List<int?> Ports { get; set; }
 
                 /// <summary>
-                /// The name of the service registered with the service registry.
+                /// The name of the service that is registered with the service registry.
                 /// </summary>
                 [NameInMap("ServiceNameInRegistry")]
                 [Validation(Required=false)]
@@ -457,7 +457,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

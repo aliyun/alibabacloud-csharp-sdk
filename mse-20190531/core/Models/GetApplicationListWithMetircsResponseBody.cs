@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public GetApplicationListWithMetircsResponseBodyData Data { get; set; }
         public class GetApplicationListWithMetircsResponseBodyData : TeaModel {
             /// <summary>
-            /// The page number of the returned page.
+            /// The number of the page to return.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// The metric about the application.
+                /// The current metrics.
                 /// </summary>
                 [NameInMap("CurMetrics")]
                 [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public double? BlockQps { get; set; }
 
                     /// <summary>
-                    /// The number of abnormal QPS.
+                    /// The abnormal QPS.
                     /// </summary>
                     [NameInMap("ExpQps")]
                     [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public double? PassQps { get; set; }
 
                     /// <summary>
-                    /// The number of queries per second (QPS).
+                    /// The queries per second (QPS).
                     /// </summary>
                     [NameInMap("Qps")]
                     [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public double? BlockQps { get; set; }
 
                     /// <summary>
-                    /// The number of abnormal QPS.
+                    /// The abnormal QPS.
                     /// </summary>
                     [NameInMap("ExpQps")]
                     [Validation(Required=false)]
@@ -207,14 +207,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the instance resides.
+                /// The ID of the region.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The service source.
+                /// The source.
                 /// </summary>
                 [NameInMap("Source")]
                 [Validation(Required=false)]

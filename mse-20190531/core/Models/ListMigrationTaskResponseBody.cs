@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// The ID of the task.
+            /// The ID of the job.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The total number of entries.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

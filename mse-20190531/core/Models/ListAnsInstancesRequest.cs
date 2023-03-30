@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of the Nacos instance.
         /// 
         /// > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
         /// </summary>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The alias of the cluster.
+        /// The alias of the Nacos instance.
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The ID of the instance.
         /// 
-        /// >  This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
+        /// > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Specifies whether to disable the risk item notification feature.
+        /// Specifies whether to disable the notification feature if the risk item occurs.
         /// 
         /// *   true: disabled
         /// *   false: enabled
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// The code of the risk.
+        /// The ID of the risk item.
         /// </summary>
         [NameInMap("RiskCode")]
         [Validation(Required=false)]

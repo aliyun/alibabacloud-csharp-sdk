@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteGatewayRouteResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The update time.
+            /// The modification time.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<ListNacosHistoryConfigsResponseBodyHistoryItems> HistoryItems { get; set; }
         public class ListNacosHistoryConfigsResponseBodyHistoryItems : TeaModel {
             /// <summary>
-            /// The tags of the application.
+            /// The application tag.
             /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? LastModifiedTime { get; set; }
 
             /// <summary>
-            /// The type of the configuration file.
+            /// The format of the configuration file.
             /// </summary>
             [NameInMap("OpType")]
             [Validation(Required=false)]

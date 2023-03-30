@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Group { get; set; }
 
             /// <summary>
-            /// The MD5 value of the configuration.
+            /// The message digest of the configuration.
             /// </summary>
             [NameInMap("Md5")]
             [Validation(Required=false)]

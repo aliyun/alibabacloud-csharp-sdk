@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? DomainId { get; set; }
 
         /// <summary>
-        /// The IDs of domains.
+        /// The list of domain IDs.
         /// </summary>
         [NameInMap("DomainIdListJSON")]
         [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<AddGatewayRouteRequestFallbackServices> FallbackServices { get; set; }
         public class AddGatewayRouteRequestFallbackServices : TeaModel {
             /// <summary>
-            /// The type of the protocol.
+            /// The type of the protocol. Valid values:
             /// </summary>
             [NameInMap("AgreementType")]
             [Validation(Required=false)]
@@ -170,6 +170,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// Routing policy Json string.
+        /// </summary>
         [NameInMap("Policies")]
         [Validation(Required=false)]
         public string Policies { get; set; }
@@ -315,25 +318,30 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The sequence number of the route. (A small value indicates a high priority.)
+        /// The sequence number of the route. A small value indicates a high priority.
         /// </summary>
         [NameInMap("RouteOrder")]
         [Validation(Required=false)]
         public int? RouteOrder { get; set; }
 
+        /// <summary>
+        /// RouteType: 
+        /// 
+        /// Op: Control routing.
+        /// </summary>
         [NameInMap("RouteType")]
         [Validation(Required=false)]
         public string RouteType { get; set; }
 
         /// <summary>
-        /// The information about services.
+        /// The services.
         /// </summary>
         [NameInMap("Services")]
         [Validation(Required=false)]
         public List<AddGatewayRouteRequestServices> Services { get; set; }
         public class AddGatewayRouteRequestServices : TeaModel {
             /// <summary>
-            /// The type of the protocol.
+            /// The type of the protocol. Valid values:
             /// </summary>
             [NameInMap("AgreementType")]
             [Validation(Required=false)]
@@ -354,7 +362,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public AddGatewayRouteRequestServicesHttpDubboTranscoder HttpDubboTranscoder { get; set; }
             public class AddGatewayRouteRequestServicesHttpDubboTranscoder : TeaModel {
                 /// <summary>
-                /// The name of the service group.
+                /// The service group.
                 /// </summary>
                 [NameInMap("DubboServiceGroup")]
                 [Validation(Required=false)]

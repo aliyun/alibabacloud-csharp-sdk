@@ -153,14 +153,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string VSwitchId2 { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) in which the instances reside.
+        /// The ID of the virtual private cloud (VPC).
         /// </summary>
         [NameInMap("Vpc")]
         [Validation(Required=false)]
         public string Vpc { get; set; }
 
         /// <summary>
-        /// The sample rate of Tracing Analysis. Valid values: \[1,100].
+        /// The sampling rate of Tracing Analysis. Valid values: \[1,100].
         /// </summary>
         [NameInMap("XtraceRatio")]
         [Validation(Required=false)]

@@ -27,14 +27,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string AppIds { get; set; }
 
-            [NameInMap("DbGrayEnable")]
-            [Validation(Required=false)]
-            public string DbGrayEnable { get; set; }
-
-            [NameInMap("Enable")]
-            [Validation(Required=false)]
-            public string Enable { get; set; }
-
             [NameInMap("EntryApp")]
             [Validation(Required=false)]
             public string EntryApp { get; set; }
@@ -66,14 +58,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
-
-            [NameInMap("Source")]
-            [Validation(Required=false)]
-            public string Source { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public int? Status { get; set; }
 
             [NameInMap("UserId")]
             [Validation(Required=false)]

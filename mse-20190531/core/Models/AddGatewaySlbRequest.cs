@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// The type of the service source. Valid values:
         /// 
-        /// *   PUB_NET: public network
-        /// *   PRIVATE_NET: private network
+        /// *   PUB_NET: Internet
+        /// *   PRIVATE_NET: VPC
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

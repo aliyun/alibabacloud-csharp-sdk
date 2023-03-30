@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// The time when the migration task was created.
+            /// The creation time.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// The time when the migration task was updated.
+            /// The modification time.
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]

@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// Specifies whether to modify the whitelist.
+        /// Specifies whether to enable the whitelist feature.
         /// </summary>
         [NameInMap("IsWhite")]
         [Validation(Required=false)]

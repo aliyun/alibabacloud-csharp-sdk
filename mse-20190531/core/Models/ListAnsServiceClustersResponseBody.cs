@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? DefaultPort { get; set; }
 
                 /// <summary>
-                /// The type of health checks.
+                /// The type of health check.
                 /// </summary>
                 [NameInMap("HealthCheckerType")]
                 [Validation(Required=false)]
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The complete name of the service.
+                /// The full name of the service.
                 /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the health check is initiated by the server. This parameter is valid only when the service is a temporary service.
+                /// Indicates whether an end-to-end health check is initiated by the server. This parameter is valid only if the service is a temporary service.
                 /// </summary>
                 [NameInMap("UseIPPort4Check")]
                 [Validation(Required=false)]
@@ -77,8 +77,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <summary>
             /// Indicates whether the service is a temporary service. Valid values:
             /// 
-            /// *   `true`: The service is a temporary service.
-            /// *   `false`: The service is not a temporary service.
+            /// *   `true`: yes
+            /// *   `false`: no
             /// </summary>
             [NameInMap("Ephemeral")]
             [Validation(Required=false)]

@@ -1,0 +1,102 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Mse20190531.Models
+{
+    public class ListGatewayAuthConsumerResourceResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public ListGatewayAuthConsumerResourceResponseBodyData Data { get; set; }
+        public class ListGatewayAuthConsumerResourceResponseBodyData : TeaModel {
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public int? PageNumber { get; set; }
+
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+
+            [NameInMap("Result")]
+            [Validation(Required=false)]
+            public List<ListGatewayAuthConsumerResourceResponseBodyDataResult> Result { get; set; }
+            public class ListGatewayAuthConsumerResourceResponseBodyDataResult : TeaModel {
+                [NameInMap("ConsumerId")]
+                [Validation(Required=false)]
+                public long? ConsumerId { get; set; }
+
+                [NameInMap("GatewayUniqueId")]
+                [Validation(Required=false)]
+                public string GatewayUniqueId { get; set; }
+
+                [NameInMap("GmtCreate")]
+                [Validation(Required=false)]
+                public string GmtCreate { get; set; }
+
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
+                public string GmtModified { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public long? Id { get; set; }
+
+                [NameInMap("ResourceStatus")]
+                [Validation(Required=false)]
+                public bool? ResourceStatus { get; set; }
+
+                [NameInMap("RouteId")]
+                [Validation(Required=false)]
+                public long? RouteId { get; set; }
+
+                [NameInMap("RouteName")]
+                [Validation(Required=false)]
+                public string RouteName { get; set; }
+
+            }
+
+            [NameInMap("TotalSize")]
+            [Validation(Required=false)]
+            public long? TotalSize { get; set; }
+
+        }
+
+        [NameInMap("DynamicCode")]
+        [Validation(Required=false)]
+        public string DynamicCode { get; set; }
+
+        [NameInMap("DynamicMessage")]
+        [Validation(Required=false)]
+        public string DynamicMessage { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+    }
+
+}

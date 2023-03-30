@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ServiceProtocol { get; set; }
 
             /// <summary>
-            /// The type of the service source.
+            /// The source type.
             /// </summary>
             [NameInMap("SourceType")]
             [Validation(Required=false)]

@@ -1,0 +1,34 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Mse20190531.Models
+{
+    public class UpdateGatewayRouteAuthShrinkRequest : TeaModel {
+        [NameInMap("AcceptLanguage")]
+        [Validation(Required=false)]
+        public string AcceptLanguage { get; set; }
+
+        [NameInMap("AuthJSON")]
+        [Validation(Required=false)]
+        public string AuthJSONShrink { get; set; }
+
+        [NameInMap("GatewayId")]
+        [Validation(Required=false)]
+        public long? GatewayId { get; set; }
+
+        [NameInMap("GatewayUniqueId")]
+        [Validation(Required=false)]
+        public string GatewayUniqueId { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public long? Id { get; set; }
+
+    }
+
+}

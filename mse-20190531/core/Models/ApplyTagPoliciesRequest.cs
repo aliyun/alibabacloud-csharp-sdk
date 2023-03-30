@@ -24,7 +24,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string AppId { get; set; }
+
+        [NameInMap("AppName")]
+        [Validation(Required=false)]
+        public string AppName { get; set; }
 
         /// <summary>
         /// Specifies whether to enable the routing rule.
@@ -32,6 +37,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
+
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
 
         /// <summary>
         /// Optional. The ID of the namespace.
