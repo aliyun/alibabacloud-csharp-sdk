@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DocumentAutoml20221229.Models
 {
-    public class PredictClassifierModelResponseBody : TeaModel {
+    public class GetModelAsyncPredictResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Data { get; set; }
+        public string Data { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
