@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.DocumentAutoml20221229.Models
         [Validation(Required=false)]
         public string Content { get; set; }
 
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public string Body { get; set; }
+
     }
 
 }
