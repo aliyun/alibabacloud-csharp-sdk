@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteDataServiceApiRequest : TeaModel {
+        /// <summary>
+        /// The ID of the API in DataService Studio.
+        /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public long? ApiId { get; set; }
 
+        /// <summary>
+        /// The ID of the workspace.
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        /// <summary>
+        /// The ID of the tenant.
+        /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public long? TenantId { get; set; }
