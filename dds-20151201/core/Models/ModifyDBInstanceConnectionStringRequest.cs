@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string NewConnectionString { get; set; }
 
+        [NameInMap("NewPort")]
+        [Validation(Required=false)]
+        public int? NewPort { get; set; }
+
         /// <summary>
         /// The ID of the mongos in the specified sharded cluster instance. Only one mongos ID can be specified in each call.
         /// 

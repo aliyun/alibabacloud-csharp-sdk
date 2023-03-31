@@ -139,6 +139,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        [NameInMap("GlobalSecurityGroupIds")]
+        [Validation(Required=false)]
+        public string GlobalSecurityGroupIds { get; set; }
+
         /// <summary>
         /// The zone where the hidden node is deployed for multi-zone deployment. Valid values:
         /// 

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The ID of the instance.
         /// 
-        /// >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+        /// > If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -26,30 +26,28 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// The end of the time range that is specified to query the audit log. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// The end of the time range to query. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
         /// 
-        /// >  The end time must be within 24 hours from the start time. Otherwise, the query fails.
+        /// > The end time must be within 24 hours from the start time. Otherwise, the query fails.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The form of the audit log that the operation returns. Valid values:
+        /// The form of the audit log that the operation returns. Default value: File. Valid values:
         /// 
-        /// *   **File**: triggers the generation of audit logs. If this parameter is set to File, only common parameters are returned.
+        /// *   **File** triggers the generation of audit logs. If this parameter is set to File, only common parameters are returned.
         /// *   **Stream**: returns data streams.
-        /// 
-        /// Default value: **Stream**.
         /// </summary>
         [NameInMap("Form")]
         [Validation(Required=false)]
         public string Form { get; set; }
 
         /// <summary>
-        /// The ID of the mongos node or shard node whose audit logs you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.
+        /// The ID of the mongos node or shard node whose parameter modification records you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.
         /// 
-        /// >  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.
+        /// > This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a sharded cluster instance.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -58,8 +56,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The order of time in which the log entries to return are sorted. Valid values:
         /// 
-        /// *   asc: The log entries are sorted by time in ascending order.
-        /// *   desc: The log entries are sorted by time in descending order.
+        /// *   **asc**: The log entries are sorted by time in ascending order.
+        /// *   **desc**: The log entries are sorted by time in descending order.
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
@@ -74,14 +72,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+        /// The number of the page to return. Pages start from page 1. Valid values: any non-zero positive integer. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
+        /// The number of entries to return per page. Default value: 30. Valid values: **30**, **50**, and **100**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -114,7 +112,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The user of the database. If you do not specify this parameter, this operation returns records of all users.
+        /// The account of the database. If you do not specify this parameter, this operation returns records of all accounts.
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]

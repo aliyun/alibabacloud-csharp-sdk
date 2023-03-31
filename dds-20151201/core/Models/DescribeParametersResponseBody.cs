@@ -104,6 +104,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeParametersResponseBodyRunningParametersParameter> Parameter { get; set; }
             public class DescribeParametersResponseBodyRunningParametersParameter : TeaModel {
+                [NameInMap("CharacterType")]
+                [Validation(Required=false)]
+                public string CharacterType { get; set; }
+
                 /// <summary>
                 /// The valid values of the parameter.
                 /// </summary>

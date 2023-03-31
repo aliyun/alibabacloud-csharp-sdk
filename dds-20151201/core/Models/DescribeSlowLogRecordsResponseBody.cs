@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// Details about the slow query logs.
+        /// Details of the slow query logs.
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string HostAddress { get; set; }
 
                 /// <summary>
-                /// The data entries that are scanned during indexing.
+                /// The number of rows involved in index scans.
                 /// </summary>
                 [NameInMap("KeysExamined")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string QueryTimes { get; set; }
 
                 /// <summary>
-                /// The number of entries returned.
+                /// The number of rows returned by the SQL statement.
                 /// </summary>
                 [NameInMap("ReturnRowCounts")]
                 [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries.
+        /// The total number of returned entries.
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

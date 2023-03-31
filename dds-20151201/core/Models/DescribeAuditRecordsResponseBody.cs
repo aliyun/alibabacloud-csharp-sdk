@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string ExecuteTime { get; set; }
 
                 /// <summary>
-                /// The IP address of the client.
+                /// The IP addresses of the client.
                 /// </summary>
                 [NameInMap("HostAddress")]
                 [Validation(Required=false)]
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// The ID of the thread that is recorded in the SQL audit log entry.
+                /// The ID of the thread.
                 /// </summary>
                 [NameInMap("ThreadID")]
                 [Validation(Required=false)]
                 public string ThreadID { get; set; }
 
                 /// <summary>
-                /// The duration of the statement execution. Unit: microseconds.
+                /// The execution time of the statement. Unit: microseconds.
                 /// </summary>
                 [NameInMap("TotalExecutionTimes")]
                 [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries.
+        /// The total number of returned entries.
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
