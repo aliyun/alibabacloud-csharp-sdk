@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string AppInstanceType { get; set; }
 
+            [NameInMap("AppPolicyId")]
+            [Validation(Required=false)]
+            public string AppPolicyId { get; set; }
+
             [NameInMap("Apps")]
             [Validation(Required=false)]
             public List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> Apps { get; set; }

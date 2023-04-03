@@ -1415,6 +1415,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 query["Language"] = request.Language;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeInstanceType))
+            {
+                query["NodeInstanceType"] = request.NodeInstanceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
             {
                 query["OsType"] = request.OsType;
@@ -1461,6 +1465,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeInstanceType))
+            {
+                query["NodeInstanceType"] = request.NodeInstanceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
             {

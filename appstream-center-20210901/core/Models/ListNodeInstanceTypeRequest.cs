@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string Language { get; set; }
 
+        [NameInMap("NodeInstanceType")]
+        [Validation(Required=false)]
+        public string NodeInstanceType { get; set; }
+
         [NameInMap("OsType")]
         [Validation(Required=false)]
         public string OsType { get; set; }
