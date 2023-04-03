@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDnsGtmMonitorResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the health check configuration.
+        /// </summary>
         [NameInMap("MonitorConfigId")]
         [Validation(Required=false)]
         public string MonitorConfigId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

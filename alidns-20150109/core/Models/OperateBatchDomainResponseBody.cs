@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class OperateBatchDomainResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the task.
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public long? TaskId { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmInstanceSystemCnameResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The CNAME record assigned by the system.
+        /// </summary>
         [NameInMap("SystemCname")]
         [Validation(Required=false)]
         public string SystemCname { get; set; }

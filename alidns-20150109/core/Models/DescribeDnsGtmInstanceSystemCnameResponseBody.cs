@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The CNAME domain name assigned by the system.
+        /// </summary>
         [NameInMap("SystemCname")]
         [Validation(Required=false)]
         public string SystemCname { get; set; }

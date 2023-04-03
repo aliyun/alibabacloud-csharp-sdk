@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmAvailableAlertGroupRequest : TeaModel {
+        /// <summary>
+        /// The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmMonitorConfigRequest : TeaModel {
+        /// <summary>
+        /// The language of the values of specific response parameters.
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The ID of the health check configuration.
+        /// </summary>
         [NameInMap("MonitorConfigId")]
         [Validation(Required=false)]
         public string MonitorConfigId { get; set; }

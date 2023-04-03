@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DeleteDomainGroupRequest : TeaModel {
+        /// <summary>
+        /// The ID of the domain name group.
+        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        /// <summary>
+        /// The language type.
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

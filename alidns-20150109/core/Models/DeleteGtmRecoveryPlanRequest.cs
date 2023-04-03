@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DeleteGtmRecoveryPlanRequest : TeaModel {
+        /// <summary>
+        /// The language used by the user.
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The ID of the disaster recovery plan that you want to delete.
+        /// </summary>
         [NameInMap("RecoveryPlanId")]
         [Validation(Required=false)]
         public long? RecoveryPlanId { get; set; }

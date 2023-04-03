@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDomainBackupRequest : TeaModel {
+        /// <summary>
+        /// The domain name for which you want to create a backup task.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The backup cycle. Valid values:
+        /// 
+        /// *   **DAY**: Backs up data once every day.
+        /// *   **HOUR**: Backs up data once every hour.
+        /// </summary>
         [NameInMap("PeriodType")]
         [Validation(Required=false)]
         public string PeriodType { get; set; }

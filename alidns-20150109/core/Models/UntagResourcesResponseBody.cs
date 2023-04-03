@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UntagResourcesResponseBody : TeaModel {
+        /// <summary>
+        /// "dns-example.com","dns-test.com"
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

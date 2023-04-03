@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCustomLineRequest : TeaModel {
+        /// <summary>
+        /// The language type.
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The unique ID of the custom line.
+        /// </summary>
         [NameInMap("LineId")]
         [Validation(Required=false)]
         public long? LineId { get; set; }

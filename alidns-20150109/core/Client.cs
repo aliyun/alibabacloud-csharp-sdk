@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          *
+          * @param request AddCustomLineRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddCustomLineResponse
+         */
         public AddCustomLineResponse AddCustomLineWithOptions(AddCustomLineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -76,6 +84,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<AddCustomLineResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          *
+          * @param request AddCustomLineRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddCustomLineResponse
+         */
         public async Task<AddCustomLineResponse> AddCustomLineWithOptionsAsync(AddCustomLineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -115,12 +131,26 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<AddCustomLineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          *
+          * @param request AddCustomLineRequest
+          * @return AddCustomLineResponse
+         */
         public AddCustomLineResponse AddCustomLine(AddCustomLineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddCustomLineWithOptions(request, runtime);
         }
 
+        /**
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          *
+          * @param request AddCustomLineRequest
+          * @return AddCustomLineResponse
+         */
         public async Task<AddCustomLineResponse> AddCustomLineAsync(AddCustomLineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -613,6 +643,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await AddDnsGtmAddressPoolWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ***
+          *
+          * @param request AddDnsGtmMonitorRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddDnsGtmMonitorResponse
+         */
         public AddDnsGtmMonitorResponse AddDnsGtmMonitorWithOptions(AddDnsGtmMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -668,6 +705,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<AddDnsGtmMonitorResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ***
+          *
+          * @param request AddDnsGtmMonitorRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddDnsGtmMonitorResponse
+         */
         public async Task<AddDnsGtmMonitorResponse> AddDnsGtmMonitorWithOptionsAsync(AddDnsGtmMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -723,18 +767,38 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<AddDnsGtmMonitorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ***
+          *
+          * @param request AddDnsGtmMonitorRequest
+          * @return AddDnsGtmMonitorResponse
+         */
         public AddDnsGtmMonitorResponse AddDnsGtmMonitor(AddDnsGtmMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddDnsGtmMonitorWithOptions(request, runtime);
         }
 
+        /**
+          * ***
+          *
+          * @param request AddDnsGtmMonitorRequest
+          * @return AddDnsGtmMonitorResponse
+         */
         public async Task<AddDnsGtmMonitorResponse> AddDnsGtmMonitorAsync(AddDnsGtmMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddDnsGtmMonitorWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can check whether a domain name is valid based on the following topic:
+          * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+          *
+          * @param request AddDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddDomainResponse
+         */
         public AddDomainResponse AddDomainWithOptions(AddDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -774,6 +838,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<AddDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can check whether a domain name is valid based on the following topic:
+          * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+          *
+          * @param request AddDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddDomainResponse
+         */
         public async Task<AddDomainResponse> AddDomainWithOptionsAsync(AddDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -813,12 +885,26 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<AddDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can check whether a domain name is valid based on the following topic:
+          * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+          *
+          * @param request AddDomainRequest
+          * @return AddDomainResponse
+         */
         public AddDomainResponse AddDomain(AddDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddDomainWithOptions(request, runtime);
         }
 
+        /**
+          * You can check whether a domain name is valid based on the following topic:
+          * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+          *
+          * @param request AddDomainRequest
+          * @return AddDomainResponse
+         */
         public async Task<AddDomainResponse> AddDomainAsync(AddDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1755,6 +1841,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await ChangeDomainGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  You can call this operation to change the domain name for an Alibaba Cloud DNS instance to which a domain name is bound. You can also call this operation to bind a domain name to an Alibaba Cloud DNS instance to which no domain name is bound. If you need to unbind a domain name from an Alibaba Cloud DNS instance, you can call this operation. In this case, the NewDomain parameter must not be specified.
+          *
+          * @param request ChangeDomainOfDnsProductRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ChangeDomainOfDnsProductResponse
+         */
         public ChangeDomainOfDnsProductResponse ChangeDomainOfDnsProductWithOptions(ChangeDomainOfDnsProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1798,6 +1891,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<ChangeDomainOfDnsProductResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation to change the domain name for an Alibaba Cloud DNS instance to which a domain name is bound. You can also call this operation to bind a domain name to an Alibaba Cloud DNS instance to which no domain name is bound. If you need to unbind a domain name from an Alibaba Cloud DNS instance, you can call this operation. In this case, the NewDomain parameter must not be specified.
+          *
+          * @param request ChangeDomainOfDnsProductRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ChangeDomainOfDnsProductResponse
+         */
         public async Task<ChangeDomainOfDnsProductResponse> ChangeDomainOfDnsProductWithOptionsAsync(ChangeDomainOfDnsProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1841,12 +1941,24 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<ChangeDomainOfDnsProductResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  You can call this operation to change the domain name for an Alibaba Cloud DNS instance to which a domain name is bound. You can also call this operation to bind a domain name to an Alibaba Cloud DNS instance to which no domain name is bound. If you need to unbind a domain name from an Alibaba Cloud DNS instance, you can call this operation. In this case, the NewDomain parameter must not be specified.
+          *
+          * @param request ChangeDomainOfDnsProductRequest
+          * @return ChangeDomainOfDnsProductResponse
+         */
         public ChangeDomainOfDnsProductResponse ChangeDomainOfDnsProduct(ChangeDomainOfDnsProductRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChangeDomainOfDnsProductWithOptions(request, runtime);
         }
 
+        /**
+          * >  You can call this operation to change the domain name for an Alibaba Cloud DNS instance to which a domain name is bound. You can also call this operation to bind a domain name to an Alibaba Cloud DNS instance to which no domain name is bound. If you need to unbind a domain name from an Alibaba Cloud DNS instance, you can call this operation. In this case, the NewDomain parameter must not be specified.
+          *
+          * @param request ChangeDomainOfDnsProductRequest
+          * @return ChangeDomainOfDnsProductResponse
+         */
         public async Task<ChangeDomainOfDnsProductResponse> ChangeDomainOfDnsProductAsync(ChangeDomainOfDnsProductRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2387,6 +2499,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DeleteDnsGtmAddressPoolWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
+          * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
+          *
+          * @param request DeleteDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDomainResponse
+         */
         public DeleteDomainResponse DeleteDomainWithOptions(DeleteDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2418,6 +2538,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
+          * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
+          *
+          * @param request DeleteDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDomainResponse
+         */
         public async Task<DeleteDomainResponse> DeleteDomainWithOptionsAsync(DeleteDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2449,18 +2577,39 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
+          * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
+          *
+          * @param request DeleteDomainRequest
+          * @return DeleteDomainResponse
+         */
         public DeleteDomainResponse DeleteDomain(DeleteDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDomainWithOptions(request, runtime);
         }
 
+        /**
+          * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
+          * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
+          *
+          * @param request DeleteDomainRequest
+          * @return DeleteDomainResponse
+         */
         public async Task<DeleteDomainResponse> DeleteDomainAsync(DeleteDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDomainWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+          *
+          * @param request DeleteDomainGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDomainGroupResponse
+         */
         public DeleteDomainGroupResponse DeleteDomainGroupWithOptions(DeleteDomainGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2492,6 +2641,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteDomainGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+          *
+          * @param request DeleteDomainGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDomainGroupResponse
+         */
         public async Task<DeleteDomainGroupResponse> DeleteDomainGroupWithOptionsAsync(DeleteDomainGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2523,12 +2679,24 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteDomainGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+          *
+          * @param request DeleteDomainGroupRequest
+          * @return DeleteDomainGroupResponse
+         */
         public DeleteDomainGroupResponse DeleteDomainGroup(DeleteDomainGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDomainGroupWithOptions(request, runtime);
         }
 
+        /**
+          * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+          *
+          * @param request DeleteDomainGroupRequest
+          * @return DeleteDomainGroupResponse
+         */
         public async Task<DeleteDomainGroupResponse> DeleteDomainGroupAsync(DeleteDomainGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2839,6 +3007,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DeleteGtmRecoveryPlanWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If the DNS records to be deleted contain locked DNS records, locked DNS records will not be deleted.
+          *
+          * @param request DeleteSubDomainRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteSubDomainRecordsResponse
+         */
         public DeleteSubDomainRecordsResponse DeleteSubDomainRecordsWithOptions(DeleteSubDomainRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2882,6 +3057,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteSubDomainRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If the DNS records to be deleted contain locked DNS records, locked DNS records will not be deleted.
+          *
+          * @param request DeleteSubDomainRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteSubDomainRecordsResponse
+         */
         public async Task<DeleteSubDomainRecordsResponse> DeleteSubDomainRecordsWithOptionsAsync(DeleteSubDomainRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2925,12 +3107,24 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteSubDomainRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If the DNS records to be deleted contain locked DNS records, locked DNS records will not be deleted.
+          *
+          * @param request DeleteSubDomainRecordsRequest
+          * @return DeleteSubDomainRecordsResponse
+         */
         public DeleteSubDomainRecordsResponse DeleteSubDomainRecords(DeleteSubDomainRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSubDomainRecordsWithOptions(request, runtime);
         }
 
+        /**
+          * If the DNS records to be deleted contain locked DNS records, locked DNS records will not be deleted.
+          *
+          * @param request DeleteSubDomainRecordsRequest
+          * @return DeleteSubDomainRecordsResponse
+         */
         public async Task<DeleteSubDomainRecordsResponse> DeleteSubDomainRecordsAsync(DeleteSubDomainRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3019,6 +3213,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeBatchResultCountWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the batch tasks have been executed.
+          *
+          * @param request DescribeBatchResultDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeBatchResultDetailResponse
+         */
         public DescribeBatchResultDetailResponse DescribeBatchResultDetailWithOptions(DescribeBatchResultDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3066,6 +3267,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeBatchResultDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the batch tasks have been executed.
+          *
+          * @param request DescribeBatchResultDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeBatchResultDetailResponse
+         */
         public async Task<DescribeBatchResultDetailResponse> DescribeBatchResultDetailWithOptionsAsync(DescribeBatchResultDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3113,12 +3321,24 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeBatchResultDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the batch tasks have been executed.
+          *
+          * @param request DescribeBatchResultDetailRequest
+          * @return DescribeBatchResultDetailResponse
+         */
         public DescribeBatchResultDetailResponse DescribeBatchResultDetail(DescribeBatchResultDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBatchResultDetailWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the batch tasks have been executed.
+          *
+          * @param request DescribeBatchResultDetailRequest
+          * @return DescribeBatchResultDetailResponse
+         */
         public async Task<DescribeBatchResultDetailResponse> DescribeBatchResultDetailAsync(DescribeBatchResultDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4781,6 +5001,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeDnsProductInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
+          *
+          * @param request DescribeDnsProductInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDnsProductInstancesResponse
+         */
         public DescribeDnsProductInstancesResponse DescribeDnsProductInstancesWithOptions(DescribeDnsProductInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4828,6 +5055,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDnsProductInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
+          *
+          * @param request DescribeDnsProductInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDnsProductInstancesResponse
+         */
         public async Task<DescribeDnsProductInstancesResponse> DescribeDnsProductInstancesWithOptionsAsync(DescribeDnsProductInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4875,12 +5109,24 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDnsProductInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
+          *
+          * @param request DescribeDnsProductInstancesRequest
+          * @return DescribeDnsProductInstancesResponse
+         */
         public DescribeDnsProductInstancesResponse DescribeDnsProductInstances(DescribeDnsProductInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDnsProductInstancesWithOptions(request, runtime);
         }
 
+        /**
+          * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
+          *
+          * @param request DescribeDnsProductInstancesRequest
+          * @return DescribeDnsProductInstancesResponse
+         */
         public async Task<DescribeDnsProductInstancesResponse> DescribeDnsProductInstancesAsync(DescribeDnsProductInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5615,6 +5861,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeDomainGroupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * In this example, the domain name is bound to an Alibaba Cloud DNS instance of Enterprise Ultimate Edition. For more information about valid lines, see the return values of the RecordLines parameter.
+          *
+          * @param request DescribeDomainInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainInfoResponse
+         */
         public DescribeDomainInfoResponse DescribeDomainInfoWithOptions(DescribeDomainInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5650,6 +5903,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDomainInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * In this example, the domain name is bound to an Alibaba Cloud DNS instance of Enterprise Ultimate Edition. For more information about valid lines, see the return values of the RecordLines parameter.
+          *
+          * @param request DescribeDomainInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainInfoResponse
+         */
         public async Task<DescribeDomainInfoResponse> DescribeDomainInfoWithOptionsAsync(DescribeDomainInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5685,12 +5945,24 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDomainInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * In this example, the domain name is bound to an Alibaba Cloud DNS instance of Enterprise Ultimate Edition. For more information about valid lines, see the return values of the RecordLines parameter.
+          *
+          * @param request DescribeDomainInfoRequest
+          * @return DescribeDomainInfoResponse
+         */
         public DescribeDomainInfoResponse DescribeDomainInfo(DescribeDomainInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainInfoWithOptions(request, runtime);
         }
 
+        /**
+          * In this example, the domain name is bound to an Alibaba Cloud DNS instance of Enterprise Ultimate Edition. For more information about valid lines, see the return values of the RecordLines parameter.
+          *
+          * @param request DescribeDomainInfoRequest
+          * @return DescribeDomainInfoResponse
+         */
         public async Task<DescribeDomainInfoResponse> DescribeDomainInfoAsync(DescribeDomainInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5819,6 +6091,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeDomainLogsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  This operation queries the authoritative server of the registry to obtain the name servers of a domain name. If the domain name is in the serverHold or clientHold state, an exception may occur.
+          *
+          * @param request DescribeDomainNsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainNsResponse
+         */
         public DescribeDomainNsResponse DescribeDomainNsWithOptions(DescribeDomainNsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5850,6 +6129,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDomainNsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  This operation queries the authoritative server of the registry to obtain the name servers of a domain name. If the domain name is in the serverHold or clientHold state, an exception may occur.
+          *
+          * @param request DescribeDomainNsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainNsResponse
+         */
         public async Task<DescribeDomainNsResponse> DescribeDomainNsWithOptionsAsync(DescribeDomainNsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5881,12 +6167,24 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDomainNsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  This operation queries the authoritative server of the registry to obtain the name servers of a domain name. If the domain name is in the serverHold or clientHold state, an exception may occur.
+          *
+          * @param request DescribeDomainNsRequest
+          * @return DescribeDomainNsResponse
+         */
         public DescribeDomainNsResponse DescribeDomainNs(DescribeDomainNsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainNsWithOptions(request, runtime);
         }
 
+        /**
+          * >  This operation queries the authoritative server of the registry to obtain the name servers of a domain name. If the domain name is in the serverHold or clientHold state, an exception may occur.
+          *
+          * @param request DescribeDomainNsRequest
+          * @return DescribeDomainNsResponse
+         */
         public async Task<DescribeDomainNsResponse> DescribeDomainNsAsync(DescribeDomainNsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5975,6 +6273,15 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeDomainRecordInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You can specify the DomainName, PageNumber, and PageSize parameters to query the DNS records of a domain name.
+          * *   You can also specify the RRKeyWord, TypeKeyWord, or ValueKeyWord parameter to query the DNS records that contain the specified keyword.
+          * *   By default, the DNS records are sorted in reverse chronological order based on the time when they were added.
+          *
+          * @param request DescribeDomainRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainRecordsResponse
+         */
         public DescribeDomainRecordsResponse DescribeDomainRecordsWithOptions(DescribeDomainRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6058,6 +6365,15 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDomainRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can specify the DomainName, PageNumber, and PageSize parameters to query the DNS records of a domain name.
+          * *   You can also specify the RRKeyWord, TypeKeyWord, or ValueKeyWord parameter to query the DNS records that contain the specified keyword.
+          * *   By default, the DNS records are sorted in reverse chronological order based on the time when they were added.
+          *
+          * @param request DescribeDomainRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainRecordsResponse
+         */
         public async Task<DescribeDomainRecordsResponse> DescribeDomainRecordsWithOptionsAsync(DescribeDomainRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6141,18 +6457,171 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDomainRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can specify the DomainName, PageNumber, and PageSize parameters to query the DNS records of a domain name.
+          * *   You can also specify the RRKeyWord, TypeKeyWord, or ValueKeyWord parameter to query the DNS records that contain the specified keyword.
+          * *   By default, the DNS records are sorted in reverse chronological order based on the time when they were added.
+          *
+          * @param request DescribeDomainRecordsRequest
+          * @return DescribeDomainRecordsResponse
+         */
         public DescribeDomainRecordsResponse DescribeDomainRecords(DescribeDomainRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainRecordsWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can specify the DomainName, PageNumber, and PageSize parameters to query the DNS records of a domain name.
+          * *   You can also specify the RRKeyWord, TypeKeyWord, or ValueKeyWord parameter to query the DNS records that contain the specified keyword.
+          * *   By default, the DNS records are sorted in reverse chronological order based on the time when they were added.
+          *
+          * @param request DescribeDomainRecordsRequest
+          * @return DescribeDomainRecordsResponse
+         */
         public async Task<DescribeDomainRecordsResponse> DescribeDomainRecordsAsync(DescribeDomainRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainRecordsWithOptionsAsync(request, runtime);
         }
 
+        public DescribeDomainResolveStatisticsSummaryResponse DescribeDomainResolveStatisticsSummaryWithOptions(DescribeDomainResolveStatisticsSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchMode))
+            {
+                query["SearchMode"] = request.SearchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            {
+                query["Threshold"] = request.Threshold;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDomainResolveStatisticsSummary",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDomainResolveStatisticsSummaryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDomainResolveStatisticsSummaryResponse> DescribeDomainResolveStatisticsSummaryWithOptionsAsync(DescribeDomainResolveStatisticsSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchMode))
+            {
+                query["SearchMode"] = request.SearchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            {
+                query["Threshold"] = request.Threshold;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDomainResolveStatisticsSummary",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDomainResolveStatisticsSummaryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDomainResolveStatisticsSummaryResponse DescribeDomainResolveStatisticsSummary(DescribeDomainResolveStatisticsSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDomainResolveStatisticsSummaryWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDomainResolveStatisticsSummaryResponse> DescribeDomainResolveStatisticsSummaryAsync(DescribeDomainResolveStatisticsSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDomainResolveStatisticsSummaryWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * Real-time data is collected per hour.
+          *
+          * @param request DescribeDomainStatisticsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainStatisticsResponse
+         */
         public DescribeDomainStatisticsResponse DescribeDomainStatisticsWithOptions(DescribeDomainStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6196,6 +6665,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDomainStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Real-time data is collected per hour.
+          *
+          * @param request DescribeDomainStatisticsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainStatisticsResponse
+         */
         public async Task<DescribeDomainStatisticsResponse> DescribeDomainStatisticsWithOptionsAsync(DescribeDomainStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6239,12 +6715,24 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDomainStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Real-time data is collected per hour.
+          *
+          * @param request DescribeDomainStatisticsRequest
+          * @return DescribeDomainStatisticsResponse
+         */
         public DescribeDomainStatisticsResponse DescribeDomainStatistics(DescribeDomainStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainStatisticsWithOptions(request, runtime);
         }
 
+        /**
+          * Real-time data is collected per hour.
+          *
+          * @param request DescribeDomainStatisticsRequest
+          * @return DescribeDomainStatisticsResponse
+         */
         public async Task<DescribeDomainStatisticsResponse> DescribeDomainStatisticsAsync(DescribeDomainStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6373,6 +6861,16 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeDomainStatisticsSummaryWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You can specify the PageNumber and PageSize parameters to query domain names.
+          * *   You can specify the KeyWord parameter to query domain names that contain the specified keyword.
+          * *   By default, the domain names in a list are sorted in descending order of the time they were added.
+          * *   You can specify the GroupId parameter. If you do not specify this parameter, all domain names are queried by default.
+          *
+          * @param request DescribeDomainsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainsResponse
+         */
         public DescribeDomainsResponse DescribeDomainsWithOptions(DescribeDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6428,6 +6926,16 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDomainsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can specify the PageNumber and PageSize parameters to query domain names.
+          * *   You can specify the KeyWord parameter to query domain names that contain the specified keyword.
+          * *   By default, the domain names in a list are sorted in descending order of the time they were added.
+          * *   You can specify the GroupId parameter. If you do not specify this parameter, all domain names are queried by default.
+          *
+          * @param request DescribeDomainsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDomainsResponse
+         */
         public async Task<DescribeDomainsResponse> DescribeDomainsWithOptionsAsync(DescribeDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6483,12 +6991,30 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can specify the PageNumber and PageSize parameters to query domain names.
+          * *   You can specify the KeyWord parameter to query domain names that contain the specified keyword.
+          * *   By default, the domain names in a list are sorted in descending order of the time they were added.
+          * *   You can specify the GroupId parameter. If you do not specify this parameter, all domain names are queried by default.
+          *
+          * @param request DescribeDomainsRequest
+          * @return DescribeDomainsResponse
+         */
         public DescribeDomainsResponse DescribeDomains(DescribeDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainsWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can specify the PageNumber and PageSize parameters to query domain names.
+          * *   You can specify the KeyWord parameter to query domain names that contain the specified keyword.
+          * *   By default, the domain names in a list are sorted in descending order of the time they were added.
+          * *   You can specify the GroupId parameter. If you do not specify this parameter, all domain names are queried by default.
+          *
+          * @param request DescribeDomainsRequest
+          * @return DescribeDomainsResponse
+         */
         public async Task<DescribeDomainsResponse> DescribeDomainsAsync(DescribeDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9465,6 +9991,159 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeRecordLogsWithOptionsAsync(request, runtime);
         }
 
+        public DescribeRecordResolveStatisticsSummaryResponse DescribeRecordResolveStatisticsSummaryWithOptions(DescribeRecordResolveStatisticsSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainType))
+            {
+                query["DomainType"] = request.DomainType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchMode))
+            {
+                query["SearchMode"] = request.SearchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            {
+                query["Threshold"] = request.Threshold;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRecordResolveStatisticsSummary",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRecordResolveStatisticsSummaryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeRecordResolveStatisticsSummaryResponse> DescribeRecordResolveStatisticsSummaryWithOptionsAsync(DescribeRecordResolveStatisticsSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainType))
+            {
+                query["DomainType"] = request.DomainType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchMode))
+            {
+                query["SearchMode"] = request.SearchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            {
+                query["Threshold"] = request.Threshold;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRecordResolveStatisticsSummary",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRecordResolveStatisticsSummaryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeRecordResolveStatisticsSummaryResponse DescribeRecordResolveStatisticsSummary(DescribeRecordResolveStatisticsSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRecordResolveStatisticsSummaryWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeRecordResolveStatisticsSummaryResponse> DescribeRecordResolveStatisticsSummaryAsync(DescribeRecordResolveStatisticsSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRecordResolveStatisticsSummaryWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * Real-time data is collected per hour.
+          *
+          * @param request DescribeRecordStatisticsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRecordStatisticsResponse
+         */
         public DescribeRecordStatisticsResponse DescribeRecordStatisticsWithOptions(DescribeRecordStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9512,6 +10191,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeRecordStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Real-time data is collected per hour.
+          *
+          * @param request DescribeRecordStatisticsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRecordStatisticsResponse
+         */
         public async Task<DescribeRecordStatisticsResponse> DescribeRecordStatisticsWithOptionsAsync(DescribeRecordStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9559,12 +10245,24 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeRecordStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Real-time data is collected per hour.
+          *
+          * @param request DescribeRecordStatisticsRequest
+          * @return DescribeRecordStatisticsResponse
+         */
         public DescribeRecordStatisticsResponse DescribeRecordStatistics(DescribeRecordStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRecordStatisticsWithOptions(request, runtime);
         }
 
+        /**
+          * Real-time data is collected per hour.
+          *
+          * @param request DescribeRecordStatisticsRequest
+          * @return DescribeRecordStatisticsResponse
+         */
         public async Task<DescribeRecordStatisticsResponse> DescribeRecordStatisticsAsync(DescribeRecordStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10347,6 +11045,16 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await GetTxtRecordForVerifyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You can specify ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
+          * *   Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you specify only Tag.N.Value, an error message is returned.
+          * *   If you specify Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
+          * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
+          *
+          * @param request ListTagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10390,6 +11098,16 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You can specify ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
+          * *   Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you specify only Tag.N.Value, an error message is returned.
+          * *   If you specify Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
+          * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
+          *
+          * @param request ListTagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10433,18 +11151,44 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You can specify ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
+          * *   Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you specify only Tag.N.Value, an error message is returned.
+          * *   If you specify Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
+          * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
+          *
+          * @param request ListTagResourcesRequest
+          * @return ListTagResourcesResponse
+         */
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
+        /**
+          * *   You can specify ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
+          * *   Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you specify only Tag.N.Value, an error message is returned.
+          * *   If you specify Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
+          * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
+          *
+          * @param request ListTagResourcesRequest
+          * @return ListTagResourcesResponse
+         */
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If the operation succeeds, the name of the DNS server changes to that of an Alibaba Cloud DNS server (ending with hichina.com).
+          * >  Before you call this operation, make sure that your domain name has been registered with Alibaba Cloud and the DNS server in use is not an Alibaba Cloud DNS server.
+          *
+          * @param request ModifyHichinaDomainDNSRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyHichinaDomainDNSResponse
+         */
         public ModifyHichinaDomainDNSResponse ModifyHichinaDomainDNSWithOptions(ModifyHichinaDomainDNSRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10480,6 +11224,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<ModifyHichinaDomainDNSResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If the operation succeeds, the name of the DNS server changes to that of an Alibaba Cloud DNS server (ending with hichina.com).
+          * >  Before you call this operation, make sure that your domain name has been registered with Alibaba Cloud and the DNS server in use is not an Alibaba Cloud DNS server.
+          *
+          * @param request ModifyHichinaDomainDNSRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyHichinaDomainDNSResponse
+         */
         public async Task<ModifyHichinaDomainDNSResponse> ModifyHichinaDomainDNSWithOptionsAsync(ModifyHichinaDomainDNSRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10515,12 +11267,26 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<ModifyHichinaDomainDNSResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If the operation succeeds, the name of the DNS server changes to that of an Alibaba Cloud DNS server (ending with hichina.com).
+          * >  Before you call this operation, make sure that your domain name has been registered with Alibaba Cloud and the DNS server in use is not an Alibaba Cloud DNS server.
+          *
+          * @param request ModifyHichinaDomainDNSRequest
+          * @return ModifyHichinaDomainDNSResponse
+         */
         public ModifyHichinaDomainDNSResponse ModifyHichinaDomainDNS(ModifyHichinaDomainDNSRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHichinaDomainDNSWithOptions(request, runtime);
         }
 
+        /**
+          * If the operation succeeds, the name of the DNS server changes to that of an Alibaba Cloud DNS server (ending with hichina.com).
+          * >  Before you call this operation, make sure that your domain name has been registered with Alibaba Cloud and the DNS server in use is not an Alibaba Cloud DNS server.
+          *
+          * @param request ModifyHichinaDomainDNSRequest
+          * @return ModifyHichinaDomainDNSResponse
+         */
         public async Task<ModifyHichinaDomainDNSResponse> ModifyHichinaDomainDNSAsync(ModifyHichinaDomainDNSRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11421,6 +12187,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await SetDNSSLBStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request SetDnsGtmAccessModeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetDnsGtmAccessModeResponse
+         */
         public SetDnsGtmAccessModeResponse SetDnsGtmAccessModeWithOptions(SetDnsGtmAccessModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11456,6 +12229,13 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<SetDnsGtmAccessModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request SetDnsGtmAccessModeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetDnsGtmAccessModeResponse
+         */
         public async Task<SetDnsGtmAccessModeResponse> SetDnsGtmAccessModeWithOptionsAsync(SetDnsGtmAccessModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11491,12 +12271,24 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<SetDnsGtmAccessModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request SetDnsGtmAccessModeRequest
+          * @return SetDnsGtmAccessModeResponse
+         */
         public SetDnsGtmAccessModeResponse SetDnsGtmAccessMode(SetDnsGtmAccessModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetDnsGtmAccessModeWithOptions(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request SetDnsGtmAccessModeRequest
+          * @return SetDnsGtmAccessModeResponse
+         */
         public async Task<SetDnsGtmAccessModeResponse> SetDnsGtmAccessModeAsync(SetDnsGtmAccessModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12535,6 +13327,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await UpdateAppKeyStateWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          *
+          * @param request UpdateCustomLineRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateCustomLineResponse
+         */
         public UpdateCustomLineResponse UpdateCustomLineWithOptions(UpdateCustomLineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12574,6 +13374,14 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<UpdateCustomLineResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          *
+          * @param request UpdateCustomLineRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateCustomLineResponse
+         */
         public async Task<UpdateCustomLineResponse> UpdateCustomLineWithOptionsAsync(UpdateCustomLineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12613,12 +13421,26 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<UpdateCustomLineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          *
+          * @param request UpdateCustomLineRequest
+          * @return UpdateCustomLineResponse
+         */
         public UpdateCustomLineResponse UpdateCustomLine(UpdateCustomLineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateCustomLineWithOptions(request, runtime);
         }
 
+        /**
+          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          *
+          * @param request UpdateCustomLineRequest
+          * @return UpdateCustomLineResponse
+         */
         public async Task<UpdateCustomLineResponse> UpdateCustomLineAsync(UpdateCustomLineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

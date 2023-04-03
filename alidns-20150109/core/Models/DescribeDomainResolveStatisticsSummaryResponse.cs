@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
-    public class ValidateDnsGtmAttributeInfoResponse : TeaModel {
+    public class DescribeDomainResolveStatisticsSummaryResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ValidateDnsGtmAttributeInfoResponseBody Body { get; set; }
+        public DescribeDomainResolveStatisticsSummaryResponseBody Body { get; set; }
 
     }
 
