@@ -57,10 +57,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public Notification Notification { get; set; }
 
-        [NameInMap("NotifyTopicName")]
-        [Validation(Required=false)]
-        public string NotifyTopicName { get; set; }
-
         [NameInMap("Pages")]
         [Validation(Required=false)]
         public string Pages { get; set; }

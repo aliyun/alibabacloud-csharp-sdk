@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public Notification Notification { get; set; }
 
-        [NameInMap("NotifyTopicName")]
-        [Validation(Required=false)]
-        public string NotifyTopicName { get; set; }
-
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
@@ -80,10 +76,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [NameInMap("Image")]
             [Validation(Required=false)]
             public TargetImage Image { get; set; }
-
-            [NameInMap("Preset")]
-            [Validation(Required=false)]
-            public PresetReference Preset { get; set; }
 
             [NameInMap("Segment")]
             [Validation(Required=false)]

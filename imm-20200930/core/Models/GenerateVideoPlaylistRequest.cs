@@ -71,10 +71,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public float? InitialTranscode { get; set; }
 
-            [NameInMap("PresetId")]
-            [Validation(Required=false)]
-            public PresetReference PresetId { get; set; }
-
             [NameInMap("Speed")]
             [Validation(Required=false)]
             public float? Speed { get; set; }

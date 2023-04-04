@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class CreateDetectVideoLabelsTaskResponse : TeaModel {
+    public class GetVideoModerationResultResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public CreateDetectVideoLabelsTaskResponseBody Body { get; set; }
+        public GetVideoModerationResultResponseBody Body { get; set; }
 
     }
 

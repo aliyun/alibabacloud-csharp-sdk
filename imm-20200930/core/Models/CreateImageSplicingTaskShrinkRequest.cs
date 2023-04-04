@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string NotificationShrink { get; set; }
 
-        [NameInMap("NotifyTopicName")]
-        [Validation(Required=false)]
-        public string NotifyTopicName { get; set; }
-
         [NameInMap("Padding")]
         [Validation(Required=false)]
         public long? Padding { get; set; }

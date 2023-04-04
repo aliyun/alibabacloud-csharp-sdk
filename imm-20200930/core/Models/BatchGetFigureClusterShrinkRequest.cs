@@ -8,26 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class CreateFigureClusteringTaskRequest : TeaModel {
+    public class BatchGetFigureClusterShrinkRequest : TeaModel {
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
-        [NameInMap("Notification")]
+        [NameInMap("ObjectIds")]
         [Validation(Required=false)]
-        public Notification Notification { get; set; }
+        public string ObjectIdsShrink { get; set; }
 
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Tags { get; set; }
-
-        [NameInMap("UserData")]
-        [Validation(Required=false)]
-        public string UserData { get; set; }
 
     }
 

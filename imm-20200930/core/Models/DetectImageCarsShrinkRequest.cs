@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class CreateDetectVideoLabelsTaskShrinkRequest : TeaModel {
+    public class DetectImageCarsShrinkRequest : TeaModel {
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public string CredentialConfigShrink { get; set; }
-
-        [NameInMap("NotifyTopicName")]
-        [Validation(Required=false)]
-        public string NotifyTopicName { get; set; }
 
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
@@ -24,14 +20,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("SourceURI")]
         [Validation(Required=false)]
         public string SourceURI { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string TagsShrink { get; set; }
-
-        [NameInMap("UserData")]
-        [Validation(Required=false)]
-        public string UserData { get; set; }
 
     }
 

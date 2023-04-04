@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class CreateDetectVideoLabelsTaskResponseBody : TeaModel {
-        [NameInMap("EventId")]
+    public class BatchGetFigureClusterResponseBody : TeaModel {
+        [NameInMap("FigureClusters")]
         [Validation(Required=false)]
-        public string EventId { get; set; }
+        public List<FigureCluster> FigureClusters { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
 
     }
 
