@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public string DomainType { get; set; }
 
+            [NameInMap("SubDomain")]
+            [Validation(Required=false)]
+            public string SubDomain { get; set; }
+
         }
 
         [NameInMap("TotalItems")]
