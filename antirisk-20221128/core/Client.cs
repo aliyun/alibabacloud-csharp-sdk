@@ -115,5 +115,83 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return await GetZidTagByAtokenWithOptionsAsync(request, headers, runtime);
         }
 
+        public GetZidTagScoreByAtokenResponse GetZidTagScoreByAtokenWithOptions(GetZidTagScoreByAtokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Atoken))
+            {
+                query["atoken"] = request.Atoken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                query["dataSourceId"] = request.DataSourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetZidTagScoreByAtoken",
+                Version = "2022-11-28",
+                Protocol = "HTTPS",
+                Pathname = "/anti/getZidTagScoreByAtoken",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetZidTagScoreByAtokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetZidTagScoreByAtokenResponse> GetZidTagScoreByAtokenWithOptionsAsync(GetZidTagScoreByAtokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Atoken))
+            {
+                query["atoken"] = request.Atoken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                query["dataSourceId"] = request.DataSourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetZidTagScoreByAtoken",
+                Version = "2022-11-28",
+                Protocol = "HTTPS",
+                Pathname = "/anti/getZidTagScoreByAtoken",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetZidTagScoreByAtokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetZidTagScoreByAtokenResponse GetZidTagScoreByAtoken(GetZidTagScoreByAtokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetZidTagScoreByAtokenWithOptions(request, headers, runtime);
+        }
+
+        public async Task<GetZidTagScoreByAtokenResponse> GetZidTagScoreByAtokenAsync(GetZidTagScoreByAtokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetZidTagScoreByAtokenWithOptionsAsync(request, headers, runtime);
+        }
+
     }
 }
