@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class ListGroupRequest : TeaModel {
-        [NameInMap("limit")]
+    public class ListMyGroupDriveResponseBody : TeaModel {
+        [NameInMap("items")]
         [Validation(Required=false)]
-        public int? Limit { get; set; }
+        public List<Drive> Items { get; set; }
 
-        [NameInMap("marker")]
+        [NameInMap("next_marker")]
         [Validation(Required=false)]
-        public string Marker { get; set; }
+        public string NextMarker { get; set; }
 
     }
 

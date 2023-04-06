@@ -8,13 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class FilePutUserTagsResponseBody : TeaModel {
+    public class GetDomainRequest : TeaModel {
         /// <summary>
-        /// file id
+        /// domain id
         /// </summary>
-        [NameInMap("file_id")]
+        [NameInMap("domain_id")]
         [Validation(Required=false)]
-        public string FileId { get; set; }
+        public string DomainId { get; set; }
+
+        [NameInMap("get_quota_used")]
+        [Validation(Required=false)]
+        public bool? GetQuotaUsed { get; set; }
 
     }
 

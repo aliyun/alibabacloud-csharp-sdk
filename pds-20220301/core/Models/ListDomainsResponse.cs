@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class WalkFileResponse : TeaModel {
+    public class ListDomainsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public WalkFileResponseBody Body { get; set; }
+        public ListDomainsResponseBody Body { get; set; }
 
     }
 

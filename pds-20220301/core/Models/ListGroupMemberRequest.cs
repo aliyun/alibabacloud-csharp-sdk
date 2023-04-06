@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class ListGroupRequest : TeaModel {
+    public class ListGroupMemberRequest : TeaModel {
+        [NameInMap("group_id")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
         [NameInMap("limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [NameInMap("marker")]
         [Validation(Required=false)]
         public string Marker { get; set; }
+
+        [NameInMap("member_type")]
+        [Validation(Required=false)]
+        public string MemberType { get; set; }
 
     }
 

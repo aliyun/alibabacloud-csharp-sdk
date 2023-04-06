@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class ListGroupRequest : TeaModel {
+    public class ListReceivedFileRequest : TeaModel {
         [NameInMap("limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }

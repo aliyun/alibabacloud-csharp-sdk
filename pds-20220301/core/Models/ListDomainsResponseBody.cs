@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class WalkFileResponseBody : TeaModel {
+    public class ListDomainsResponseBody : TeaModel {
         [NameInMap("items")]
         [Validation(Required=false)]
-        public List<File> Items { get; set; }
+        public List<Domain> Items { get; set; }
 
         [NameInMap("next_marker")]
         [Validation(Required=false)]

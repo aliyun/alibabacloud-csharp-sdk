@@ -26,18 +26,96 @@ namespace AlibabaCloud.SDK.Pds20220301
         }
 
 
-        public AuthorizeResponse Authorize(AuthorizeRequest request)
+        public AddGroupMemberResponse AddGroupMemberWithOptions(string domainId, AddGroupMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return AuthorizeWithOptions(request, headers, runtime);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["domain_id"] = domainId;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["group_id"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                body["member_id"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberType))
+            {
+                body["member_type"] = request.MemberType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddGroupMember",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/group/add_member",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddGroupMemberResponse>(Execute(params_, req, runtime));
         }
 
-        public async Task<AuthorizeResponse> AuthorizeAsync(AuthorizeRequest request)
+        public async Task<AddGroupMemberResponse> AddGroupMemberWithOptionsAsync(string domainId, AddGroupMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["domain_id"] = domainId;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["group_id"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                body["member_id"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberType))
+            {
+                body["member_type"] = request.MemberType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddGroupMember",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/group/add_member",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddGroupMemberResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public AddGroupMemberResponse AddGroupMember(string domainId, AddGroupMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await AuthorizeWithOptionsAsync(request, headers, runtime);
+            return AddGroupMemberWithOptions(domainId, request, headers, runtime);
+        }
+
+        public async Task<AddGroupMemberResponse> AddGroupMemberAsync(string domainId, AddGroupMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AddGroupMemberWithOptionsAsync(domainId, request, headers, runtime);
         }
 
         public AuthorizeResponse AuthorizeWithOptions(AuthorizeRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -156,18 +234,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<AuthorizeResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public BatchResponse Batch(BatchRequest request)
+        public AuthorizeResponse Authorize(AuthorizeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return BatchWithOptions(request, headers, runtime);
+            return AuthorizeWithOptions(request, headers, runtime);
         }
 
-        public async Task<BatchResponse> BatchAsync(BatchRequest request)
+        public async Task<AuthorizeResponse> AuthorizeAsync(AuthorizeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await BatchWithOptionsAsync(request, headers, runtime);
+            return await AuthorizeWithOptionsAsync(request, headers, runtime);
         }
 
         public BatchResponse BatchWithOptions(BatchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -234,18 +312,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<BatchResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public CancelShareLinkResponse CancelShareLink(CancelShareLinkRequest request)
+        public BatchResponse Batch(BatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CancelShareLinkWithOptions(request, headers, runtime);
+            return BatchWithOptions(request, headers, runtime);
         }
 
-        public async Task<CancelShareLinkResponse> CancelShareLinkAsync(CancelShareLinkRequest request)
+        public async Task<BatchResponse> BatchAsync(BatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CancelShareLinkWithOptionsAsync(request, headers, runtime);
+            return await BatchWithOptionsAsync(request, headers, runtime);
         }
 
         public CancelShareLinkResponse CancelShareLinkWithOptions(CancelShareLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -304,18 +382,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CancelShareLinkResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ClearRecyclebinResponse ClearRecyclebin(ClearRecyclebinRequest request)
+        public CancelShareLinkResponse CancelShareLink(CancelShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ClearRecyclebinWithOptions(request, headers, runtime);
+            return CancelShareLinkWithOptions(request, headers, runtime);
         }
 
-        public async Task<ClearRecyclebinResponse> ClearRecyclebinAsync(ClearRecyclebinRequest request)
+        public async Task<CancelShareLinkResponse> CancelShareLinkAsync(CancelShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ClearRecyclebinWithOptionsAsync(request, headers, runtime);
+            return await CancelShareLinkWithOptionsAsync(request, headers, runtime);
         }
 
         public ClearRecyclebinResponse ClearRecyclebinWithOptions(ClearRecyclebinRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -374,18 +452,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ClearRecyclebinResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public CompleteFileResponse CompleteFile(CompleteFileRequest request)
+        public ClearRecyclebinResponse ClearRecyclebin(ClearRecyclebinRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CompleteFileWithOptions(request, headers, runtime);
+            return ClearRecyclebinWithOptions(request, headers, runtime);
         }
 
-        public async Task<CompleteFileResponse> CompleteFileAsync(CompleteFileRequest request)
+        public async Task<ClearRecyclebinResponse> ClearRecyclebinAsync(ClearRecyclebinRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CompleteFileWithOptionsAsync(request, headers, runtime);
+            return await ClearRecyclebinWithOptionsAsync(request, headers, runtime);
         }
 
         public CompleteFileResponse CompleteFileWithOptions(CompleteFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -460,18 +538,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CompleteFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public CopyFileResponse CopyFile(CopyFileRequest request)
+        public CompleteFileResponse CompleteFile(CompleteFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CopyFileWithOptions(request, headers, runtime);
+            return CompleteFileWithOptions(request, headers, runtime);
         }
 
-        public async Task<CopyFileResponse> CopyFileAsync(CopyFileRequest request)
+        public async Task<CompleteFileResponse> CompleteFileAsync(CompleteFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CopyFileWithOptionsAsync(request, headers, runtime);
+            return await CompleteFileWithOptionsAsync(request, headers, runtime);
         }
 
         public CopyFileResponse CopyFileWithOptions(CopyFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -554,18 +632,136 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CopyFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public CreateDriveResponse CreateDrive(CreateDriveRequest request)
+        public CopyFileResponse CopyFile(CopyFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateDriveWithOptions(request, headers, runtime);
+            return CopyFileWithOptions(request, headers, runtime);
         }
 
-        public async Task<CreateDriveResponse> CreateDriveAsync(CreateDriveRequest request)
+        public async Task<CopyFileResponse> CopyFileAsync(CopyFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateDriveWithOptionsAsync(request, headers, runtime);
+            return await CopyFileWithOptionsAsync(request, headers, runtime);
+        }
+
+        public CreateDomainResponse CreateDomainWithOptions(CreateDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                body["domain_name"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitDriveEnable))
+            {
+                body["init_drive_enable"] = request.InitDriveEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitDriveSize))
+            {
+                body["init_drive_size"] = request.InitDriveSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentDomainId))
+            {
+                body["parent_domain_id"] = request.ParentDomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SizeQuota))
+            {
+                body["size_quota"] = request.SizeQuota;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserCountQuota))
+            {
+                body["user_count_quota"] = request.UserCountQuota;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDomain",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/domain/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDomainResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateDomainResponse> CreateDomainWithOptionsAsync(CreateDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                body["domain_name"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitDriveEnable))
+            {
+                body["init_drive_enable"] = request.InitDriveEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitDriveSize))
+            {
+                body["init_drive_size"] = request.InitDriveSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentDomainId))
+            {
+                body["parent_domain_id"] = request.ParentDomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SizeQuota))
+            {
+                body["size_quota"] = request.SizeQuota;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserCountQuota))
+            {
+                body["user_count_quota"] = request.UserCountQuota;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDomain",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/domain/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDomainResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateDomainResponse CreateDomain(CreateDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateDomainWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateDomainResponse> CreateDomainAsync(CreateDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateDomainWithOptionsAsync(request, headers, runtime);
         }
 
         public CreateDriveResponse CreateDriveWithOptions(CreateDriveRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -680,18 +876,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CreateDriveResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public CreateFileResponse CreateFile(CreateFileRequest request)
+        public CreateDriveResponse CreateDrive(CreateDriveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateFileWithOptions(request, headers, runtime);
+            return CreateDriveWithOptions(request, headers, runtime);
         }
 
-        public async Task<CreateFileResponse> CreateFileAsync(CreateFileRequest request)
+        public async Task<CreateDriveResponse> CreateDriveAsync(CreateDriveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateFileWithOptionsAsync(request, headers, runtime);
+            return await CreateDriveWithOptionsAsync(request, headers, runtime);
         }
 
         public CreateFileResponse CreateFileWithOptions(CreateFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -730,7 +926,7 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["hidden"] = request.Hidden;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageMediaMetadata.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageMediaMetadata))
             {
                 body["image_media_metadata"] = request.ImageMediaMetadata;
             }
@@ -778,7 +974,7 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["user_tags"] = request.UserTags;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoMediaMetadata.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoMediaMetadata))
             {
                 body["video_media_metadata"] = request.VideoMediaMetadata;
             }
@@ -838,7 +1034,7 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["hidden"] = request.Hidden;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageMediaMetadata.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageMediaMetadata))
             {
                 body["image_media_metadata"] = request.ImageMediaMetadata;
             }
@@ -886,7 +1082,7 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["user_tags"] = request.UserTags;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoMediaMetadata.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoMediaMetadata))
             {
                 body["video_media_metadata"] = request.VideoMediaMetadata;
             }
@@ -910,18 +1106,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CreateFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public CreateGroupResponse CreateGroup(CreateGroupRequest request)
+        public CreateFileResponse CreateFile(CreateFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateGroupWithOptions(request, headers, runtime);
+            return CreateFileWithOptions(request, headers, runtime);
         }
 
-        public async Task<CreateGroupResponse> CreateGroupAsync(CreateGroupRequest request)
+        public async Task<CreateFileResponse> CreateFileAsync(CreateFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateGroupWithOptionsAsync(request, headers, runtime);
+            return await CreateFileWithOptionsAsync(request, headers, runtime);
         }
 
         public CreateGroupResponse CreateGroupWithOptions(CreateGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1004,18 +1200,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CreateGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public CreateShareLinkResponse CreateShareLink(CreateShareLinkRequest request)
+        public CreateGroupResponse CreateGroup(CreateGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateShareLinkWithOptions(request, headers, runtime);
+            return CreateGroupWithOptions(request, headers, runtime);
         }
 
-        public async Task<CreateShareLinkResponse> CreateShareLinkAsync(CreateShareLinkRequest request)
+        public async Task<CreateGroupResponse> CreateGroupAsync(CreateGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateShareLinkWithOptionsAsync(request, headers, runtime);
+            return await CreateGroupWithOptionsAsync(request, headers, runtime);
         }
 
         public CreateShareLinkResponse CreateShareLinkWithOptions(CreateShareLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1170,18 +1366,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CreateShareLinkResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public CreateUserResponse CreateUser(CreateUserRequest request)
+        public CreateShareLinkResponse CreateShareLink(CreateShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateUserWithOptions(request, headers, runtime);
+            return CreateShareLinkWithOptions(request, headers, runtime);
         }
 
-        public async Task<CreateUserResponse> CreateUserAsync(CreateUserRequest request)
+        public async Task<CreateShareLinkResponse> CreateShareLinkAsync(CreateShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateUserWithOptionsAsync(request, headers, runtime);
+            return await CreateShareLinkWithOptionsAsync(request, headers, runtime);
         }
 
         public CreateUserResponse CreateUserWithOptions(CreateUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1320,18 +1516,88 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<CreateUserResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteDriveResponse DeleteDrive(DeleteDriveRequest request)
+        public CreateUserResponse CreateUser(CreateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteDriveWithOptions(request, headers, runtime);
+            return CreateUserWithOptions(request, headers, runtime);
         }
 
-        public async Task<DeleteDriveResponse> DeleteDriveAsync(DeleteDriveRequest request)
+        public async Task<CreateUserResponse> CreateUserAsync(CreateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteDriveWithOptionsAsync(request, headers, runtime);
+            return await CreateUserWithOptionsAsync(request, headers, runtime);
+        }
+
+        public DeleteDomainResponse DeleteDomainWithOptions(DeleteDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
+            {
+                body["domain_id"] = request.DomainId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDomain",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/domain/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDomainResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DeleteDomainResponse> DeleteDomainWithOptionsAsync(DeleteDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
+            {
+                body["domain_id"] = request.DomainId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDomain",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/domain/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDomainResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public DeleteDomainResponse DeleteDomain(DeleteDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteDomainWithOptions(request, headers, runtime);
+        }
+
+        public async Task<DeleteDomainResponse> DeleteDomainAsync(DeleteDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteDomainWithOptionsAsync(request, headers, runtime);
         }
 
         public DeleteDriveResponse DeleteDriveWithOptions(DeleteDriveRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1390,18 +1656,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<DeleteDriveResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteFileResponse DeleteFile(DeleteFileRequest request)
+        public DeleteDriveResponse DeleteDrive(DeleteDriveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteFileWithOptions(request, headers, runtime);
+            return DeleteDriveWithOptions(request, headers, runtime);
         }
 
-        public async Task<DeleteFileResponse> DeleteFileAsync(DeleteFileRequest request)
+        public async Task<DeleteDriveResponse> DeleteDriveAsync(DeleteDriveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteFileWithOptionsAsync(request, headers, runtime);
+            return await DeleteDriveWithOptionsAsync(request, headers, runtime);
         }
 
         public DeleteFileResponse DeleteFileWithOptions(DeleteFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1468,18 +1734,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<DeleteFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteGroupResponse DeleteGroup(DeleteGroupRequest request)
+        public DeleteFileResponse DeleteFile(DeleteFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteGroupWithOptions(request, headers, runtime);
+            return DeleteFileWithOptions(request, headers, runtime);
         }
 
-        public async Task<DeleteGroupResponse> DeleteGroupAsync(DeleteGroupRequest request)
+        public async Task<DeleteFileResponse> DeleteFileAsync(DeleteFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteGroupWithOptionsAsync(request, headers, runtime);
+            return await DeleteFileWithOptionsAsync(request, headers, runtime);
         }
 
         public DeleteGroupResponse DeleteGroupWithOptions(DeleteGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1538,18 +1804,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<DeleteGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteRevisionResponse DeleteRevision(DeleteRevisionRequest request)
+        public DeleteGroupResponse DeleteGroup(DeleteGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteRevisionWithOptions(request, headers, runtime);
+            return DeleteGroupWithOptions(request, headers, runtime);
         }
 
-        public async Task<DeleteRevisionResponse> DeleteRevisionAsync(DeleteRevisionRequest request)
+        public async Task<DeleteGroupResponse> DeleteGroupAsync(DeleteGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteRevisionWithOptionsAsync(request, headers, runtime);
+            return await DeleteGroupWithOptionsAsync(request, headers, runtime);
         }
 
         public DeleteRevisionResponse DeleteRevisionWithOptions(DeleteRevisionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1624,18 +1890,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<DeleteRevisionResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteUserResponse DeleteUser(DeleteUserRequest request)
+        public DeleteRevisionResponse DeleteRevision(DeleteRevisionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteUserWithOptions(request, headers, runtime);
+            return DeleteRevisionWithOptions(request, headers, runtime);
         }
 
-        public async Task<DeleteUserResponse> DeleteUserAsync(DeleteUserRequest request)
+        public async Task<DeleteRevisionResponse> DeleteRevisionAsync(DeleteRevisionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteUserWithOptionsAsync(request, headers, runtime);
+            return await DeleteRevisionWithOptionsAsync(request, headers, runtime);
         }
 
         public DeleteUserResponse DeleteUserWithOptions(DeleteUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1694,18 +1960,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<DeleteUserResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeltaGetLastCursorResponse DeltaGetLastCursor(DeltaGetLastCursorRequest request)
+        public DeleteUserResponse DeleteUser(DeleteUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeltaGetLastCursorWithOptions(request, headers, runtime);
+            return DeleteUserWithOptions(request, headers, runtime);
         }
 
-        public async Task<DeltaGetLastCursorResponse> DeltaGetLastCursorAsync(DeltaGetLastCursorRequest request)
+        public async Task<DeleteUserResponse> DeleteUserAsync(DeleteUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeltaGetLastCursorWithOptionsAsync(request, headers, runtime);
+            return await DeleteUserWithOptionsAsync(request, headers, runtime);
         }
 
         public DeltaGetLastCursorResponse DeltaGetLastCursorWithOptions(DeltaGetLastCursorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1772,18 +2038,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<DeltaGetLastCursorResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DownloadFileResponse DownloadFile(DownloadFileRequest request)
+        public DeltaGetLastCursorResponse DeltaGetLastCursor(DeltaGetLastCursorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DownloadFileWithOptions(request, headers, runtime);
+            return DeltaGetLastCursorWithOptions(request, headers, runtime);
         }
 
-        public async Task<DownloadFileResponse> DownloadFileAsync(DownloadFileRequest request)
+        public async Task<DeltaGetLastCursorResponse> DeltaGetLastCursorAsync(DeltaGetLastCursorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DownloadFileWithOptionsAsync(request, headers, runtime);
+            return await DeltaGetLastCursorWithOptionsAsync(request, headers, runtime);
         }
 
         public DownloadFileResponse DownloadFileWithOptions(DownloadFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1874,18 +2140,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<DownloadFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public FileAddPermissionResponse FileAddPermission(FileAddPermissionRequest request)
+        public DownloadFileResponse DownloadFile(DownloadFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return FileAddPermissionWithOptions(request, headers, runtime);
+            return DownloadFileWithOptions(request, headers, runtime);
         }
 
-        public async Task<FileAddPermissionResponse> FileAddPermissionAsync(FileAddPermissionRequest request)
+        public async Task<DownloadFileResponse> DownloadFileAsync(DownloadFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await FileAddPermissionWithOptionsAsync(request, headers, runtime);
+            return await DownloadFileWithOptionsAsync(request, headers, runtime);
         }
 
         public FileAddPermissionResponse FileAddPermissionWithOptions(FileAddPermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1960,18 +2226,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<FileAddPermissionResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public FileDeleteUserTagsResponse FileDeleteUserTags(FileDeleteUserTagsRequest request)
+        public FileAddPermissionResponse FileAddPermission(FileAddPermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return FileDeleteUserTagsWithOptions(request, headers, runtime);
+            return FileAddPermissionWithOptions(request, headers, runtime);
         }
 
-        public async Task<FileDeleteUserTagsResponse> FileDeleteUserTagsAsync(FileDeleteUserTagsRequest request)
+        public async Task<FileAddPermissionResponse> FileAddPermissionAsync(FileAddPermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await FileDeleteUserTagsWithOptionsAsync(request, headers, runtime);
+            return await FileAddPermissionWithOptionsAsync(request, headers, runtime);
         }
 
         public FileDeleteUserTagsResponse FileDeleteUserTagsWithOptions(FileDeleteUserTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2046,18 +2312,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<FileDeleteUserTagsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public FileListPermissionResponse FileListPermission(FileListPermissionRequest request)
+        public FileDeleteUserTagsResponse FileDeleteUserTags(FileDeleteUserTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return FileListPermissionWithOptions(request, headers, runtime);
+            return FileDeleteUserTagsWithOptions(request, headers, runtime);
         }
 
-        public async Task<FileListPermissionResponse> FileListPermissionAsync(FileListPermissionRequest request)
+        public async Task<FileDeleteUserTagsResponse> FileDeleteUserTagsAsync(FileDeleteUserTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await FileListPermissionWithOptionsAsync(request, headers, runtime);
+            return await FileDeleteUserTagsWithOptionsAsync(request, headers, runtime);
         }
 
         public FileListPermissionResponse FileListPermissionWithOptions(FileListPermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2124,18 +2390,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<FileListPermissionResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public FilePutUserTagsResponse FilePutUserTags(FilePutUserTagsRequest request)
+        public FileListPermissionResponse FileListPermission(FileListPermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return FilePutUserTagsWithOptions(request, headers, runtime);
+            return FileListPermissionWithOptions(request, headers, runtime);
         }
 
-        public async Task<FilePutUserTagsResponse> FilePutUserTagsAsync(FilePutUserTagsRequest request)
+        public async Task<FileListPermissionResponse> FileListPermissionAsync(FileListPermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await FilePutUserTagsWithOptionsAsync(request, headers, runtime);
+            return await FileListPermissionWithOptionsAsync(request, headers, runtime);
         }
 
         public FilePutUserTagsResponse FilePutUserTagsWithOptions(FilePutUserTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2210,18 +2476,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<FilePutUserTagsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public FileRemovePermissionResponse FileRemovePermission(FileRemovePermissionRequest request)
+        public FilePutUserTagsResponse FilePutUserTags(FilePutUserTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return FileRemovePermissionWithOptions(request, headers, runtime);
+            return FilePutUserTagsWithOptions(request, headers, runtime);
         }
 
-        public async Task<FileRemovePermissionResponse> FileRemovePermissionAsync(FileRemovePermissionRequest request)
+        public async Task<FilePutUserTagsResponse> FilePutUserTagsAsync(FilePutUserTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await FileRemovePermissionWithOptionsAsync(request, headers, runtime);
+            return await FilePutUserTagsWithOptionsAsync(request, headers, runtime);
         }
 
         public FileRemovePermissionResponse FileRemovePermissionWithOptions(FileRemovePermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2296,18 +2562,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<FileRemovePermissionResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetAsyncTaskResponse GetAsyncTask(GetAsyncTaskRequest request)
+        public FileRemovePermissionResponse FileRemovePermission(FileRemovePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetAsyncTaskWithOptions(request, headers, runtime);
+            return FileRemovePermissionWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetAsyncTaskResponse> GetAsyncTaskAsync(GetAsyncTaskRequest request)
+        public async Task<FileRemovePermissionResponse> FileRemovePermissionAsync(FileRemovePermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetAsyncTaskWithOptionsAsync(request, headers, runtime);
+            return await FileRemovePermissionWithOptionsAsync(request, headers, runtime);
         }
 
         public GetAsyncTaskResponse GetAsyncTaskWithOptions(GetAsyncTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2366,18 +2632,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetAsyncTaskResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetDefaultDriveResponse GetDefaultDrive(GetDefaultDriveRequest request)
+        public GetAsyncTaskResponse GetAsyncTask(GetAsyncTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetDefaultDriveWithOptions(request, headers, runtime);
+            return GetAsyncTaskWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetDefaultDriveResponse> GetDefaultDriveAsync(GetDefaultDriveRequest request)
+        public async Task<GetAsyncTaskResponse> GetAsyncTaskAsync(GetAsyncTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetDefaultDriveWithOptionsAsync(request, headers, runtime);
+            return await GetAsyncTaskWithOptionsAsync(request, headers, runtime);
         }
 
         public GetDefaultDriveResponse GetDefaultDriveWithOptions(GetDefaultDriveRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2436,18 +2702,96 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetDefaultDriveResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetDownloadUrlResponse GetDownloadUrl(GetDownloadUrlRequest request)
+        public GetDefaultDriveResponse GetDefaultDrive(GetDefaultDriveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetDownloadUrlWithOptions(request, headers, runtime);
+            return GetDefaultDriveWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetDownloadUrlResponse> GetDownloadUrlAsync(GetDownloadUrlRequest request)
+        public async Task<GetDefaultDriveResponse> GetDefaultDriveAsync(GetDefaultDriveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetDownloadUrlWithOptionsAsync(request, headers, runtime);
+            return await GetDefaultDriveWithOptionsAsync(request, headers, runtime);
+        }
+
+        public GetDomainResponse GetDomainWithOptions(GetDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
+            {
+                body["domain_id"] = request.DomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GetQuotaUsed))
+            {
+                body["get_quota_used"] = request.GetQuotaUsed;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDomain",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/domain/get",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDomainResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetDomainResponse> GetDomainWithOptionsAsync(GetDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
+            {
+                body["domain_id"] = request.DomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GetQuotaUsed))
+            {
+                body["get_quota_used"] = request.GetQuotaUsed;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDomain",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/domain/get",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDomainResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetDomainResponse GetDomain(GetDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetDomainWithOptions(request, headers, runtime);
+        }
+
+        public async Task<GetDomainResponse> GetDomainAsync(GetDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetDomainWithOptionsAsync(request, headers, runtime);
         }
 
         public GetDownloadUrlResponse GetDownloadUrlWithOptions(GetDownloadUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2530,18 +2874,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetDownloadUrlResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetDriveResponse GetDrive(GetDriveRequest request)
+        public GetDownloadUrlResponse GetDownloadUrl(GetDownloadUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetDriveWithOptions(request, headers, runtime);
+            return GetDownloadUrlWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetDriveResponse> GetDriveAsync(GetDriveRequest request)
+        public async Task<GetDownloadUrlResponse> GetDownloadUrlAsync(GetDownloadUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetDriveWithOptionsAsync(request, headers, runtime);
+            return await GetDownloadUrlWithOptionsAsync(request, headers, runtime);
         }
 
         public GetDriveResponse GetDriveWithOptions(GetDriveRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2600,18 +2944,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetDriveResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetFileResponse GetFile(GetFileRequest request)
+        public GetDriveResponse GetDrive(GetDriveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetFileWithOptions(request, headers, runtime);
+            return GetDriveWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetFileResponse> GetFileAsync(GetFileRequest request)
+        public async Task<GetDriveResponse> GetDriveAsync(GetDriveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetFileWithOptionsAsync(request, headers, runtime);
+            return await GetDriveWithOptionsAsync(request, headers, runtime);
         }
 
         public GetFileResponse GetFileWithOptions(GetFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2694,18 +3038,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetGroupResponse GetGroup(GetGroupRequest request)
+        public GetFileResponse GetFile(GetFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetGroupWithOptions(request, headers, runtime);
+            return GetFileWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetGroupResponse> GetGroupAsync(GetGroupRequest request)
+        public async Task<GetFileResponse> GetFileAsync(GetFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetGroupWithOptionsAsync(request, headers, runtime);
+            return await GetFileWithOptionsAsync(request, headers, runtime);
         }
 
         public GetGroupResponse GetGroupWithOptions(GetGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2764,18 +3108,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetLinkInfoResponse GetLinkInfo(GetLinkInfoRequest request)
+        public GetGroupResponse GetGroup(GetGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetLinkInfoWithOptions(request, headers, runtime);
+            return GetGroupWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetLinkInfoResponse> GetLinkInfoAsync(GetLinkInfoRequest request)
+        public async Task<GetGroupResponse> GetGroupAsync(GetGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetLinkInfoWithOptionsAsync(request, headers, runtime);
+            return await GetGroupWithOptionsAsync(request, headers, runtime);
         }
 
         public GetLinkInfoResponse GetLinkInfoWithOptions(GetLinkInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2850,18 +3194,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetLinkInfoResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetLinkInfoByUserIdResponse GetLinkInfoByUserId(GetLinkInfoByUserIdRequest request)
+        public GetLinkInfoResponse GetLinkInfo(GetLinkInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetLinkInfoByUserIdWithOptions(request, headers, runtime);
+            return GetLinkInfoWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetLinkInfoByUserIdResponse> GetLinkInfoByUserIdAsync(GetLinkInfoByUserIdRequest request)
+        public async Task<GetLinkInfoResponse> GetLinkInfoAsync(GetLinkInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetLinkInfoByUserIdWithOptionsAsync(request, headers, runtime);
+            return await GetLinkInfoWithOptionsAsync(request, headers, runtime);
         }
 
         public GetLinkInfoByUserIdResponse GetLinkInfoByUserIdWithOptions(GetLinkInfoByUserIdRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2920,18 +3264,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetLinkInfoByUserIdResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetRevisionResponse GetRevision(GetRevisionRequest request)
+        public GetLinkInfoByUserIdResponse GetLinkInfoByUserId(GetLinkInfoByUserIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetRevisionWithOptions(request, headers, runtime);
+            return GetLinkInfoByUserIdWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetRevisionResponse> GetRevisionAsync(GetRevisionRequest request)
+        public async Task<GetLinkInfoByUserIdResponse> GetLinkInfoByUserIdAsync(GetLinkInfoByUserIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetRevisionWithOptionsAsync(request, headers, runtime);
+            return await GetLinkInfoByUserIdWithOptionsAsync(request, headers, runtime);
         }
 
         public GetRevisionResponse GetRevisionWithOptions(GetRevisionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3022,18 +3366,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetRevisionResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetShareLinkResponse GetShareLink(GetShareLinkRequest request)
+        public GetRevisionResponse GetRevision(GetRevisionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetShareLinkWithOptions(request, headers, runtime);
+            return GetRevisionWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetShareLinkResponse> GetShareLinkAsync(GetShareLinkRequest request)
+        public async Task<GetRevisionResponse> GetRevisionAsync(GetRevisionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetShareLinkWithOptionsAsync(request, headers, runtime);
+            return await GetRevisionWithOptionsAsync(request, headers, runtime);
         }
 
         public GetShareLinkResponse GetShareLinkWithOptions(GetShareLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3092,18 +3436,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetShareLinkResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetShareLinkByAnonymousResponse GetShareLinkByAnonymous(GetShareLinkByAnonymousRequest request)
+        public GetShareLinkResponse GetShareLink(GetShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetShareLinkByAnonymousWithOptions(request, headers, runtime);
+            return GetShareLinkWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetShareLinkByAnonymousResponse> GetShareLinkByAnonymousAsync(GetShareLinkByAnonymousRequest request)
+        public async Task<GetShareLinkResponse> GetShareLinkAsync(GetShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetShareLinkByAnonymousWithOptionsAsync(request, headers, runtime);
+            return await GetShareLinkWithOptionsAsync(request, headers, runtime);
         }
 
         public GetShareLinkByAnonymousResponse GetShareLinkByAnonymousWithOptions(GetShareLinkByAnonymousRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3162,18 +3506,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetShareLinkByAnonymousResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetShareLinkTokenResponse GetShareLinkToken(GetShareLinkTokenRequest request)
+        public GetShareLinkByAnonymousResponse GetShareLinkByAnonymous(GetShareLinkByAnonymousRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetShareLinkTokenWithOptions(request, headers, runtime);
+            return GetShareLinkByAnonymousWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetShareLinkTokenResponse> GetShareLinkTokenAsync(GetShareLinkTokenRequest request)
+        public async Task<GetShareLinkByAnonymousResponse> GetShareLinkByAnonymousAsync(GetShareLinkByAnonymousRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetShareLinkTokenWithOptionsAsync(request, headers, runtime);
+            return await GetShareLinkByAnonymousWithOptionsAsync(request, headers, runtime);
         }
 
         public GetShareLinkTokenResponse GetShareLinkTokenWithOptions(GetShareLinkTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3248,18 +3592,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetShareLinkTokenResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetUploadUrlResponse GetUploadUrl(GetUploadUrlRequest request)
+        public GetShareLinkTokenResponse GetShareLinkToken(GetShareLinkTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetUploadUrlWithOptions(request, headers, runtime);
+            return GetShareLinkTokenWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetUploadUrlResponse> GetUploadUrlAsync(GetUploadUrlRequest request)
+        public async Task<GetShareLinkTokenResponse> GetShareLinkTokenAsync(GetShareLinkTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetUploadUrlWithOptionsAsync(request, headers, runtime);
+            return await GetShareLinkTokenWithOptionsAsync(request, headers, runtime);
         }
 
         public GetUploadUrlResponse GetUploadUrlWithOptions(GetUploadUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3350,18 +3694,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetUploadUrlResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetUserResponse GetUser(GetUserRequest request)
+        public GetUploadUrlResponse GetUploadUrl(GetUploadUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetUserWithOptions(request, headers, runtime);
+            return GetUploadUrlWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetUserResponse> GetUserAsync(GetUserRequest request)
+        public async Task<GetUploadUrlResponse> GetUploadUrlAsync(GetUploadUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetUserWithOptionsAsync(request, headers, runtime);
+            return await GetUploadUrlWithOptionsAsync(request, headers, runtime);
         }
 
         public GetUserResponse GetUserWithOptions(GetUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3420,18 +3764,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetUserResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetVideoPreviewPlayInfoResponse GetVideoPreviewPlayInfo(GetVideoPreviewPlayInfoRequest request)
+        public GetUserResponse GetUser(GetUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetVideoPreviewPlayInfoWithOptions(request, headers, runtime);
+            return GetUserWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetVideoPreviewPlayInfoResponse> GetVideoPreviewPlayInfoAsync(GetVideoPreviewPlayInfoRequest request)
+        public async Task<GetUserResponse> GetUserAsync(GetUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetVideoPreviewPlayInfoWithOptionsAsync(request, headers, runtime);
+            return await GetUserWithOptionsAsync(request, headers, runtime);
         }
 
         public GetVideoPreviewPlayInfoResponse GetVideoPreviewPlayInfoWithOptions(GetVideoPreviewPlayInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3461,6 +3805,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 body["template_id"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlExpireSec))
+            {
+                body["url_expire_sec"] = request.UrlExpireSec;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3510,6 +3858,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["template_id"] = request.TemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlExpireSec))
+            {
+                body["url_expire_sec"] = request.UrlExpireSec;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3530,18 +3882,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetVideoPreviewPlayInfoResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetVideoPreviewPlayMetaResponse GetVideoPreviewPlayMeta(GetVideoPreviewPlayMetaRequest request)
+        public GetVideoPreviewPlayInfoResponse GetVideoPreviewPlayInfo(GetVideoPreviewPlayInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetVideoPreviewPlayMetaWithOptions(request, headers, runtime);
+            return GetVideoPreviewPlayInfoWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetVideoPreviewPlayMetaResponse> GetVideoPreviewPlayMetaAsync(GetVideoPreviewPlayMetaRequest request)
+        public async Task<GetVideoPreviewPlayInfoResponse> GetVideoPreviewPlayInfoAsync(GetVideoPreviewPlayInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetVideoPreviewPlayMetaWithOptionsAsync(request, headers, runtime);
+            return await GetVideoPreviewPlayInfoWithOptionsAsync(request, headers, runtime);
         }
 
         public GetVideoPreviewPlayMetaResponse GetVideoPreviewPlayMetaWithOptions(GetVideoPreviewPlayMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3624,18 +3976,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<GetVideoPreviewPlayMetaResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ImportUserResponse ImportUser(ImportUserRequest request)
+        public GetVideoPreviewPlayMetaResponse GetVideoPreviewPlayMeta(GetVideoPreviewPlayMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ImportUserWithOptions(request, headers, runtime);
+            return GetVideoPreviewPlayMetaWithOptions(request, headers, runtime);
         }
 
-        public async Task<ImportUserResponse> ImportUserAsync(ImportUserRequest request)
+        public async Task<GetVideoPreviewPlayMetaResponse> GetVideoPreviewPlayMetaAsync(GetVideoPreviewPlayMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ImportUserWithOptionsAsync(request, headers, runtime);
+            return await GetVideoPreviewPlayMetaWithOptionsAsync(request, headers, runtime);
         }
 
         public ImportUserResponse ImportUserWithOptions(ImportUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3750,18 +4102,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ImportUserResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public LinkAccountResponse LinkAccount(LinkAccountRequest request)
+        public ImportUserResponse ImportUser(ImportUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return LinkAccountWithOptions(request, headers, runtime);
+            return ImportUserWithOptions(request, headers, runtime);
         }
 
-        public async Task<LinkAccountResponse> LinkAccountAsync(LinkAccountRequest request)
+        public async Task<ImportUserResponse> ImportUserAsync(ImportUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await LinkAccountWithOptionsAsync(request, headers, runtime);
+            return await ImportUserWithOptionsAsync(request, headers, runtime);
         }
 
         public LinkAccountResponse LinkAccountWithOptions(LinkAccountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3844,18 +4196,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<LinkAccountResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListAddressGroupsResponse ListAddressGroups(ListAddressGroupsRequest request)
+        public LinkAccountResponse LinkAccount(LinkAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListAddressGroupsWithOptions(request, headers, runtime);
+            return LinkAccountWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListAddressGroupsResponse> ListAddressGroupsAsync(ListAddressGroupsRequest request)
+        public async Task<LinkAccountResponse> LinkAccountAsync(LinkAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListAddressGroupsWithOptionsAsync(request, headers, runtime);
+            return await LinkAccountWithOptionsAsync(request, headers, runtime);
         }
 
         public ListAddressGroupsResponse ListAddressGroupsWithOptions(ListAddressGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3946,18 +4298,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListAddressGroupsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListDeltaResponse ListDelta(ListDeltaRequest request)
+        public ListAddressGroupsResponse ListAddressGroups(ListAddressGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListDeltaWithOptions(request, headers, runtime);
+            return ListAddressGroupsWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListDeltaResponse> ListDeltaAsync(ListDeltaRequest request)
+        public async Task<ListAddressGroupsResponse> ListAddressGroupsAsync(ListAddressGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListDeltaWithOptionsAsync(request, headers, runtime);
+            return await ListAddressGroupsWithOptionsAsync(request, headers, runtime);
         }
 
         public ListDeltaResponse ListDeltaWithOptions(ListDeltaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4040,18 +4392,104 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListDeltaResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListDriveResponse ListDrive(ListDriveRequest request)
+        public ListDeltaResponse ListDelta(ListDeltaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListDriveWithOptions(request, headers, runtime);
+            return ListDeltaWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListDriveResponse> ListDriveAsync(ListDriveRequest request)
+        public async Task<ListDeltaResponse> ListDeltaAsync(ListDeltaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListDriveWithOptionsAsync(request, headers, runtime);
+            return await ListDeltaWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListDomainsResponse ListDomainsWithOptions(ListDomainsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                body["marker"] = request.Marker;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentDomainId))
+            {
+                body["parent_domain_id"] = request.ParentDomainId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDomains",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/domain/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDomainsResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListDomainsResponse> ListDomainsWithOptionsAsync(ListDomainsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                body["marker"] = request.Marker;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentDomainId))
+            {
+                body["parent_domain_id"] = request.ParentDomainId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDomains",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/domain/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDomainsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListDomainsResponse ListDomains(ListDomainsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListDomainsWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListDomainsResponse> ListDomainsAsync(ListDomainsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListDomainsWithOptionsAsync(request, headers, runtime);
         }
 
         public ListDriveResponse ListDriveWithOptions(ListDriveRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4134,18 +4572,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListDriveResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListFacegroupsResponse ListFacegroups(ListFacegroupsRequest request)
+        public ListDriveResponse ListDrive(ListDriveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListFacegroupsWithOptions(request, headers, runtime);
+            return ListDriveWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListFacegroupsResponse> ListFacegroupsAsync(ListFacegroupsRequest request)
+        public async Task<ListDriveResponse> ListDriveAsync(ListDriveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListFacegroupsWithOptionsAsync(request, headers, runtime);
+            return await ListDriveWithOptionsAsync(request, headers, runtime);
         }
 
         public ListFacegroupsResponse ListFacegroupsWithOptions(ListFacegroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4228,18 +4666,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListFacegroupsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListFileResponse ListFile(ListFileRequest request)
+        public ListFacegroupsResponse ListFacegroups(ListFacegroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListFileWithOptions(request, headers, runtime);
+            return ListFacegroupsWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListFileResponse> ListFileAsync(ListFileRequest request)
+        public async Task<ListFacegroupsResponse> ListFacegroupsAsync(ListFacegroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListFileWithOptionsAsync(request, headers, runtime);
+            return await ListFacegroupsWithOptionsAsync(request, headers, runtime);
         }
 
         public ListFileResponse ListFileWithOptions(ListFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4370,18 +4808,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListGroupResponse ListGroup(ListGroupRequest request)
+        public ListFileResponse ListFile(ListFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListGroupWithOptions(request, headers, runtime);
+            return ListFileWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListGroupResponse> ListGroupAsync(ListGroupRequest request)
+        public async Task<ListFileResponse> ListFileAsync(ListFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListGroupWithOptionsAsync(request, headers, runtime);
+            return await ListFileWithOptionsAsync(request, headers, runtime);
         }
 
         public ListGroupResponse ListGroupWithOptions(ListGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4448,18 +4886,118 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListMyDrivesResponse ListMyDrives(ListMyDrivesRequest request)
+        public ListGroupResponse ListGroup(ListGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListMyDrivesWithOptions(request, headers, runtime);
+            return ListGroupWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListMyDrivesResponse> ListMyDrivesAsync(ListMyDrivesRequest request)
+        public async Task<ListGroupResponse> ListGroupAsync(ListGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListMyDrivesWithOptionsAsync(request, headers, runtime);
+            return await ListGroupWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListGroupMemberResponse ListGroupMemberWithOptions(string domainId, ListGroupMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["domain_id"] = domainId;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["group_id"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                body["marker"] = request.Marker;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberType))
+            {
+                body["member_type"] = request.MemberType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGroupMember",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/group/list_member",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGroupMemberResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListGroupMemberResponse> ListGroupMemberWithOptionsAsync(string domainId, ListGroupMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["domain_id"] = domainId;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["group_id"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                body["marker"] = request.Marker;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberType))
+            {
+                body["member_type"] = request.MemberType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGroupMember",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/group/list_member",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGroupMemberResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListGroupMemberResponse ListGroupMember(string domainId, ListGroupMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListGroupMemberWithOptions(domainId, request, headers, runtime);
+        }
+
+        public async Task<ListGroupMemberResponse> ListGroupMemberAsync(string domainId, ListGroupMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListGroupMemberWithOptionsAsync(domainId, request, headers, runtime);
         }
 
         public ListMyDrivesResponse ListMyDrivesWithOptions(ListMyDrivesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4526,18 +5064,180 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListMyDrivesResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListRecyclebinResponse ListRecyclebin(ListRecyclebinRequest request)
+        public ListMyDrivesResponse ListMyDrives(ListMyDrivesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListRecyclebinWithOptions(request, headers, runtime);
+            return ListMyDrivesWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListRecyclebinResponse> ListRecyclebinAsync(ListRecyclebinRequest request)
+        public async Task<ListMyDrivesResponse> ListMyDrivesAsync(ListMyDrivesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListRecyclebinWithOptionsAsync(request, headers, runtime);
+            return await ListMyDrivesWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListMyGroupDriveResponse ListMyGroupDriveWithOptions(string domainId, ListMyGroupDriveRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["domain_id"] = domainId;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                body["marker"] = request.Marker;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMyGroupDrive",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/drive/list_my_group_drive",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMyGroupDriveResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListMyGroupDriveResponse> ListMyGroupDriveWithOptionsAsync(string domainId, ListMyGroupDriveRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["domain_id"] = domainId;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                body["marker"] = request.Marker;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMyGroupDrive",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/drive/list_my_group_drive",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMyGroupDriveResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListMyGroupDriveResponse ListMyGroupDrive(string domainId, ListMyGroupDriveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMyGroupDriveWithOptions(domainId, request, headers, runtime);
+        }
+
+        public async Task<ListMyGroupDriveResponse> ListMyGroupDriveAsync(string domainId, ListMyGroupDriveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMyGroupDriveWithOptionsAsync(domainId, request, headers, runtime);
+        }
+
+        public ListReceivedFileResponse ListReceivedFileWithOptions(ListReceivedFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                body["marker"] = request.Marker;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListReceivedFile",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/file/list_received_file",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListReceivedFileResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListReceivedFileResponse> ListReceivedFileWithOptionsAsync(ListReceivedFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                body["marker"] = request.Marker;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListReceivedFile",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/file/list_received_file",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListReceivedFileResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListReceivedFileResponse ListReceivedFile(ListReceivedFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListReceivedFileWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListReceivedFileResponse> ListReceivedFileAsync(ListReceivedFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListReceivedFileWithOptionsAsync(request, headers, runtime);
         }
 
         public ListRecyclebinResponse ListRecyclebinWithOptions(ListRecyclebinRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4620,18 +5320,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListRecyclebinResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListRevisionResponse ListRevision(ListRevisionRequest request)
+        public ListRecyclebinResponse ListRecyclebin(ListRecyclebinRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListRevisionWithOptions(request, headers, runtime);
+            return ListRecyclebinWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListRevisionResponse> ListRevisionAsync(ListRevisionRequest request)
+        public async Task<ListRecyclebinResponse> ListRecyclebinAsync(ListRecyclebinRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListRevisionWithOptionsAsync(request, headers, runtime);
+            return await ListRecyclebinWithOptionsAsync(request, headers, runtime);
         }
 
         public ListRevisionResponse ListRevisionWithOptions(ListRevisionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4722,18 +5422,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListRevisionResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListShareLinkResponse ListShareLink(ListShareLinkRequest request)
+        public ListRevisionResponse ListRevision(ListRevisionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListShareLinkWithOptions(request, headers, runtime);
+            return ListRevisionWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListShareLinkResponse> ListShareLinkAsync(ListShareLinkRequest request)
+        public async Task<ListRevisionResponse> ListRevisionAsync(ListRevisionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListShareLinkWithOptionsAsync(request, headers, runtime);
+            return await ListRevisionWithOptionsAsync(request, headers, runtime);
         }
 
         public ListShareLinkResponse ListShareLinkWithOptions(ListShareLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4832,18 +5532,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListShareLinkResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListTagsResponse ListTags(ListTagsRequest request)
+        public ListShareLinkResponse ListShareLink(ListShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListTagsWithOptions(request, headers, runtime);
+            return ListShareLinkWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListTagsResponse> ListTagsAsync(ListTagsRequest request)
+        public async Task<ListShareLinkResponse> ListShareLinkAsync(ListShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListTagsWithOptionsAsync(request, headers, runtime);
+            return await ListShareLinkWithOptionsAsync(request, headers, runtime);
         }
 
         public ListTagsResponse ListTagsWithOptions(ListTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4918,18 +5618,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListTagsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListUploadedPartsResponse ListUploadedParts(ListUploadedPartsRequest request)
+        public ListTagsResponse ListTags(ListTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListUploadedPartsWithOptions(request, headers, runtime);
+            return ListTagsWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListUploadedPartsResponse> ListUploadedPartsAsync(ListUploadedPartsRequest request)
+        public async Task<ListTagsResponse> ListTagsAsync(ListTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListUploadedPartsWithOptionsAsync(request, headers, runtime);
+            return await ListTagsWithOptionsAsync(request, headers, runtime);
         }
 
         public ListUploadedPartsResponse ListUploadedPartsWithOptions(ListUploadedPartsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5028,18 +5728,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListUploadedPartsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListUserResponse ListUser(ListUserRequest request)
+        public ListUploadedPartsResponse ListUploadedParts(ListUploadedPartsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListUserWithOptions(request, headers, runtime);
+            return ListUploadedPartsWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListUserResponse> ListUserAsync(ListUserRequest request)
+        public async Task<ListUploadedPartsResponse> ListUploadedPartsAsync(ListUploadedPartsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListUserWithOptionsAsync(request, headers, runtime);
+            return await ListUploadedPartsWithOptionsAsync(request, headers, runtime);
         }
 
         public ListUserResponse ListUserWithOptions(ListUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5106,18 +5806,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ListUserResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public MoveFileResponse MoveFile(MoveFileRequest request)
+        public ListUserResponse ListUser(ListUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return MoveFileWithOptions(request, headers, runtime);
+            return ListUserWithOptions(request, headers, runtime);
         }
 
-        public async Task<MoveFileResponse> MoveFileAsync(MoveFileRequest request)
+        public async Task<ListUserResponse> ListUserAsync(ListUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await MoveFileWithOptionsAsync(request, headers, runtime);
+            return await ListUserWithOptionsAsync(request, headers, runtime);
         }
 
         public MoveFileResponse MoveFileWithOptions(MoveFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5200,18 +5900,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<MoveFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ParseKeywordsResponse ParseKeywords(ParseKeywordsRequest request)
+        public MoveFileResponse MoveFile(MoveFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ParseKeywordsWithOptions(request, headers, runtime);
+            return MoveFileWithOptions(request, headers, runtime);
         }
 
-        public async Task<ParseKeywordsResponse> ParseKeywordsAsync(ParseKeywordsRequest request)
+        public async Task<MoveFileResponse> MoveFileAsync(MoveFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ParseKeywordsWithOptionsAsync(request, headers, runtime);
+            return await MoveFileWithOptionsAsync(request, headers, runtime);
         }
 
         public ParseKeywordsResponse ParseKeywordsWithOptions(ParseKeywordsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5270,18 +5970,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ParseKeywordsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public RemoveFaceGroupFileResponse RemoveFaceGroupFile(RemoveFaceGroupFileRequest request)
+        public ParseKeywordsResponse ParseKeywords(ParseKeywordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RemoveFaceGroupFileWithOptions(request, headers, runtime);
+            return ParseKeywordsWithOptions(request, headers, runtime);
         }
 
-        public async Task<RemoveFaceGroupFileResponse> RemoveFaceGroupFileAsync(RemoveFaceGroupFileRequest request)
+        public async Task<ParseKeywordsResponse> ParseKeywordsAsync(ParseKeywordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RemoveFaceGroupFileWithOptionsAsync(request, headers, runtime);
+            return await ParseKeywordsWithOptionsAsync(request, headers, runtime);
         }
 
         public RemoveFaceGroupFileResponse RemoveFaceGroupFileWithOptions(RemoveFaceGroupFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5356,18 +6056,110 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<RemoveFaceGroupFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public RestoreFileResponse RestoreFile(RestoreFileRequest request)
+        public RemoveFaceGroupFileResponse RemoveFaceGroupFile(RemoveFaceGroupFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RestoreFileWithOptions(request, headers, runtime);
+            return RemoveFaceGroupFileWithOptions(request, headers, runtime);
         }
 
-        public async Task<RestoreFileResponse> RestoreFileAsync(RestoreFileRequest request)
+        public async Task<RemoveFaceGroupFileResponse> RemoveFaceGroupFileAsync(RemoveFaceGroupFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RestoreFileWithOptionsAsync(request, headers, runtime);
+            return await RemoveFaceGroupFileWithOptionsAsync(request, headers, runtime);
+        }
+
+        public RemoveGroupMemberResponse RemoveGroupMemberWithOptions(string domainId, RemoveGroupMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["domain_id"] = domainId;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["group_id"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                body["member_id"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberType))
+            {
+                body["member_type"] = request.MemberType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveGroupMember",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/group/remove_member",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveGroupMemberResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<RemoveGroupMemberResponse> RemoveGroupMemberWithOptionsAsync(string domainId, RemoveGroupMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["domain_id"] = domainId;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["group_id"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                body["member_id"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberType))
+            {
+                body["member_type"] = request.MemberType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveGroupMember",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/group/remove_member",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveGroupMemberResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public RemoveGroupMemberResponse RemoveGroupMember(string domainId, RemoveGroupMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RemoveGroupMemberWithOptions(domainId, request, headers, runtime);
+        }
+
+        public async Task<RemoveGroupMemberResponse> RemoveGroupMemberAsync(string domainId, RemoveGroupMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RemoveGroupMemberWithOptionsAsync(domainId, request, headers, runtime);
         }
 
         public RestoreFileResponse RestoreFileWithOptions(RestoreFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5434,18 +6226,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<RestoreFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public RestoreRevisionResponse RestoreRevision(RestoreRevisionRequest request)
+        public RestoreFileResponse RestoreFile(RestoreFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RestoreRevisionWithOptions(request, headers, runtime);
+            return RestoreFileWithOptions(request, headers, runtime);
         }
 
-        public async Task<RestoreRevisionResponse> RestoreRevisionAsync(RestoreRevisionRequest request)
+        public async Task<RestoreFileResponse> RestoreFileAsync(RestoreFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RestoreRevisionWithOptionsAsync(request, headers, runtime);
+            return await RestoreFileWithOptionsAsync(request, headers, runtime);
         }
 
         public RestoreRevisionResponse RestoreRevisionWithOptions(RestoreRevisionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5520,18 +6312,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<RestoreRevisionResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ScanFileResponse ScanFile(ScanFileRequest request)
+        public RestoreRevisionResponse RestoreRevision(RestoreRevisionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ScanFileWithOptions(request, headers, runtime);
+            return RestoreRevisionWithOptions(request, headers, runtime);
         }
 
-        public async Task<ScanFileResponse> ScanFileAsync(ScanFileRequest request)
+        public async Task<RestoreRevisionResponse> RestoreRevisionAsync(RestoreRevisionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ScanFileWithOptionsAsync(request, headers, runtime);
+            return await RestoreRevisionWithOptionsAsync(request, headers, runtime);
         }
 
         public ScanFileResponse ScanFileWithOptions(ScanFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5614,18 +6406,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<ScanFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public SearchAddressGroupsResponse SearchAddressGroups(SearchAddressGroupsRequest request)
+        public ScanFileResponse ScanFile(ScanFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SearchAddressGroupsWithOptions(request, headers, runtime);
+            return ScanFileWithOptions(request, headers, runtime);
         }
 
-        public async Task<SearchAddressGroupsResponse> SearchAddressGroupsAsync(SearchAddressGroupsRequest request)
+        public async Task<ScanFileResponse> ScanFileAsync(ScanFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SearchAddressGroupsWithOptionsAsync(request, headers, runtime);
+            return await ScanFileWithOptionsAsync(request, headers, runtime);
         }
 
         public SearchAddressGroupsResponse SearchAddressGroupsWithOptions(SearchAddressGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5732,18 +6524,112 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<SearchAddressGroupsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public SearchDriveResponse SearchDrive(SearchDriveRequest request)
+        public SearchAddressGroupsResponse SearchAddressGroups(SearchAddressGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SearchDriveWithOptions(request, headers, runtime);
+            return SearchAddressGroupsWithOptions(request, headers, runtime);
         }
 
-        public async Task<SearchDriveResponse> SearchDriveAsync(SearchDriveRequest request)
+        public async Task<SearchAddressGroupsResponse> SearchAddressGroupsAsync(SearchAddressGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SearchDriveWithOptionsAsync(request, headers, runtime);
+            return await SearchAddressGroupsWithOptionsAsync(request, headers, runtime);
+        }
+
+        public SearchDomainsResponse SearchDomainsWithOptions(SearchDomainsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                body["marker"] = request.Marker;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["order_by"] = request.OrderBy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchDomains",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/domain/search",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchDomainsResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<SearchDomainsResponse> SearchDomainsWithOptionsAsync(SearchDomainsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                body["marker"] = request.Marker;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["order_by"] = request.OrderBy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchDomains",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/domain/search",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchDomainsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public SearchDomainsResponse SearchDomains(SearchDomainsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SearchDomainsWithOptions(request, headers, runtime);
+        }
+
+        public async Task<SearchDomainsResponse> SearchDomainsAsync(SearchDomainsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SearchDomainsWithOptionsAsync(request, headers, runtime);
         }
 
         public SearchDriveResponse SearchDriveWithOptions(SearchDriveRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5834,18 +6720,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<SearchDriveResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public SearchFileResponse SearchFile(SearchFileRequest request)
+        public SearchDriveResponse SearchDrive(SearchDriveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SearchFileWithOptions(request, headers, runtime);
+            return SearchDriveWithOptions(request, headers, runtime);
         }
 
-        public async Task<SearchFileResponse> SearchFileAsync(SearchFileRequest request)
+        public async Task<SearchDriveResponse> SearchDriveAsync(SearchDriveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SearchFileWithOptionsAsync(request, headers, runtime);
+            return await SearchDriveWithOptionsAsync(request, headers, runtime);
         }
 
         public SearchFileResponse SearchFileWithOptions(SearchFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5944,18 +6830,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<SearchFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public SearchShareLinkResponse SearchShareLink(SearchShareLinkRequest request)
+        public SearchFileResponse SearchFile(SearchFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SearchShareLinkWithOptions(request, headers, runtime);
+            return SearchFileWithOptions(request, headers, runtime);
         }
 
-        public async Task<SearchShareLinkResponse> SearchShareLinkAsync(SearchShareLinkRequest request)
+        public async Task<SearchFileResponse> SearchFileAsync(SearchFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SearchShareLinkWithOptionsAsync(request, headers, runtime);
+            return await SearchFileWithOptionsAsync(request, headers, runtime);
         }
 
         public SearchShareLinkResponse SearchShareLinkWithOptions(SearchShareLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6062,18 +6948,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<SearchShareLinkResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public SearchUserResponse SearchUser(SearchUserRequest request)
+        public SearchShareLinkResponse SearchShareLink(SearchShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SearchUserWithOptions(request, headers, runtime);
+            return SearchShareLinkWithOptions(request, headers, runtime);
         }
 
-        public async Task<SearchUserResponse> SearchUserAsync(SearchUserRequest request)
+        public async Task<SearchShareLinkResponse> SearchShareLinkAsync(SearchShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SearchUserWithOptionsAsync(request, headers, runtime);
+            return await SearchShareLinkWithOptionsAsync(request, headers, runtime);
         }
 
         public SearchUserResponse SearchUserWithOptions(SearchUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6196,18 +7082,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<SearchUserResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public TokenResponse Token(TokenRequest request)
+        public SearchUserResponse SearchUser(SearchUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return TokenWithOptions(request, headers, runtime);
+            return SearchUserWithOptions(request, headers, runtime);
         }
 
-        public async Task<TokenResponse> TokenAsync(TokenRequest request)
+        public async Task<SearchUserResponse> SearchUserAsync(SearchUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await TokenWithOptionsAsync(request, headers, runtime);
+            return await SearchUserWithOptionsAsync(request, headers, runtime);
         }
 
         public TokenResponse TokenWithOptions(TokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6314,18 +7200,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<TokenResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public TrashFileResponse TrashFile(TrashFileRequest request)
+        public TokenResponse Token(TokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return TrashFileWithOptions(request, headers, runtime);
+            return TokenWithOptions(request, headers, runtime);
         }
 
-        public async Task<TrashFileResponse> TrashFileAsync(TrashFileRequest request)
+        public async Task<TokenResponse> TokenAsync(TokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await TrashFileWithOptionsAsync(request, headers, runtime);
+            return await TokenWithOptionsAsync(request, headers, runtime);
         }
 
         public TrashFileResponse TrashFileWithOptions(TrashFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6392,18 +7278,136 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<TrashFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public UpdateDriveResponse UpdateDrive(UpdateDriveRequest request)
+        public TrashFileResponse TrashFile(TrashFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateDriveWithOptions(request, headers, runtime);
+            return TrashFileWithOptions(request, headers, runtime);
         }
 
-        public async Task<UpdateDriveResponse> UpdateDriveAsync(UpdateDriveRequest request)
+        public async Task<TrashFileResponse> TrashFileAsync(TrashFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateDriveWithOptionsAsync(request, headers, runtime);
+            return await TrashFileWithOptionsAsync(request, headers, runtime);
+        }
+
+        public UpdateDomainResponse UpdateDomainWithOptions(UpdateDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
+            {
+                body["domain_id"] = request.DomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                body["domain_name"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitDriveEnable))
+            {
+                body["init_drive_enable"] = request.InitDriveEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitDriveSize))
+            {
+                body["init_drive_size"] = request.InitDriveSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SizeQuota))
+            {
+                body["size_quota"] = request.SizeQuota;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserCountQuota))
+            {
+                body["user_count_quota"] = request.UserCountQuota;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDomain",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/domain/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDomainResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateDomainResponse> UpdateDomainWithOptionsAsync(UpdateDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
+            {
+                body["domain_id"] = request.DomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                body["domain_name"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitDriveEnable))
+            {
+                body["init_drive_enable"] = request.InitDriveEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitDriveSize))
+            {
+                body["init_drive_size"] = request.InitDriveSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SizeQuota))
+            {
+                body["size_quota"] = request.SizeQuota;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserCountQuota))
+            {
+                body["user_count_quota"] = request.UserCountQuota;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDomain",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/domain/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDomainResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateDomainResponse UpdateDomain(UpdateDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateDomainWithOptions(request, headers, runtime);
+        }
+
+        public async Task<UpdateDomainResponse> UpdateDomainAsync(UpdateDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateDomainWithOptionsAsync(request, headers, runtime);
         }
 
         public UpdateDriveResponse UpdateDriveWithOptions(UpdateDriveRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6494,18 +7498,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<UpdateDriveResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public UpdateFacegroupResponse UpdateFacegroup(UpdateFacegroupRequest request)
+        public UpdateDriveResponse UpdateDrive(UpdateDriveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateFacegroupWithOptions(request, headers, runtime);
+            return UpdateDriveWithOptions(request, headers, runtime);
         }
 
-        public async Task<UpdateFacegroupResponse> UpdateFacegroupAsync(UpdateFacegroupRequest request)
+        public async Task<UpdateDriveResponse> UpdateDriveAsync(UpdateDriveRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateFacegroupWithOptionsAsync(request, headers, runtime);
+            return await UpdateDriveWithOptionsAsync(request, headers, runtime);
         }
 
         public UpdateFacegroupResponse UpdateFacegroupWithOptions(UpdateFacegroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6596,18 +7600,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<UpdateFacegroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public UpdateFileResponse UpdateFile(UpdateFileRequest request)
+        public UpdateFacegroupResponse UpdateFacegroup(UpdateFacegroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateFileWithOptions(request, headers, runtime);
+            return UpdateFacegroupWithOptions(request, headers, runtime);
         }
 
-        public async Task<UpdateFileResponse> UpdateFileAsync(UpdateFileRequest request)
+        public async Task<UpdateFacegroupResponse> UpdateFacegroupAsync(UpdateFacegroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateFileWithOptionsAsync(request, headers, runtime);
+            return await UpdateFacegroupWithOptionsAsync(request, headers, runtime);
         }
 
         public UpdateFileResponse UpdateFileWithOptions(UpdateFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6730,18 +7734,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<UpdateFileResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public UpdateGroupResponse UpdateGroup(UpdateGroupRequest request)
+        public UpdateFileResponse UpdateFile(UpdateFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateGroupWithOptions(request, headers, runtime);
+            return UpdateFileWithOptions(request, headers, runtime);
         }
 
-        public async Task<UpdateGroupResponse> UpdateGroupAsync(UpdateGroupRequest request)
+        public async Task<UpdateFileResponse> UpdateFileAsync(UpdateFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateGroupWithOptionsAsync(request, headers, runtime);
+            return await UpdateFileWithOptionsAsync(request, headers, runtime);
         }
 
         public UpdateGroupResponse UpdateGroupWithOptions(UpdateGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6816,18 +7820,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<UpdateGroupResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public UpdateRevisionResponse UpdateRevision(UpdateRevisionRequest request)
+        public UpdateGroupResponse UpdateGroup(UpdateGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateRevisionWithOptions(request, headers, runtime);
+            return UpdateGroupWithOptions(request, headers, runtime);
         }
 
-        public async Task<UpdateRevisionResponse> UpdateRevisionAsync(UpdateRevisionRequest request)
+        public async Task<UpdateGroupResponse> UpdateGroupAsync(UpdateGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateRevisionWithOptionsAsync(request, headers, runtime);
+            return await UpdateGroupWithOptionsAsync(request, headers, runtime);
         }
 
         public UpdateRevisionResponse UpdateRevisionWithOptions(UpdateRevisionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6918,18 +7922,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<UpdateRevisionResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public UpdateShareLinkResponse UpdateShareLink(UpdateShareLinkRequest request)
+        public UpdateRevisionResponse UpdateRevision(UpdateRevisionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateShareLinkWithOptions(request, headers, runtime);
+            return UpdateRevisionWithOptions(request, headers, runtime);
         }
 
-        public async Task<UpdateShareLinkResponse> UpdateShareLinkAsync(UpdateShareLinkRequest request)
+        public async Task<UpdateRevisionResponse> UpdateRevisionAsync(UpdateRevisionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateShareLinkWithOptionsAsync(request, headers, runtime);
+            return await UpdateRevisionWithOptionsAsync(request, headers, runtime);
         }
 
         public UpdateShareLinkResponse UpdateShareLinkWithOptions(UpdateShareLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7116,18 +8120,18 @@ namespace AlibabaCloud.SDK.Pds20220301
             return TeaModel.ToObject<UpdateShareLinkResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public UpdateUserResponse UpdateUser(UpdateUserRequest request)
+        public UpdateShareLinkResponse UpdateShareLink(UpdateShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateUserWithOptions(request, headers, runtime);
+            return UpdateShareLinkWithOptions(request, headers, runtime);
         }
 
-        public async Task<UpdateUserResponse> UpdateUserAsync(UpdateUserRequest request)
+        public async Task<UpdateShareLinkResponse> UpdateShareLinkAsync(UpdateShareLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateUserWithOptionsAsync(request, headers, runtime);
+            return await UpdateShareLinkWithOptionsAsync(request, headers, runtime);
         }
 
         public UpdateUserResponse UpdateUserWithOptions(UpdateUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7256,6 +8260,20 @@ namespace AlibabaCloud.SDK.Pds20220301
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpdateUserResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateUserResponse UpdateUser(UpdateUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateUserWithOptions(request, headers, runtime);
+        }
+
+        public async Task<UpdateUserResponse> UpdateUserAsync(UpdateUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateUserWithOptionsAsync(request, headers, runtime);
         }
 
     }

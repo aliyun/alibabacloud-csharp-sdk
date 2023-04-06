@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        [NameInMap("url_expire_sec")]
+        [Validation(Required=false)]
+        public long? UrlExpireSec { get; set; }
+
     }
 
 }
