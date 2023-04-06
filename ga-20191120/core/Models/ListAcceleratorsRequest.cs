@@ -37,12 +37,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The state of the GA instance. Valid values:
+        /// The status of the GA instance. Valid values:
         /// 
         /// *   **init**: The GA instance is being initialized.
         /// *   **active**: The GA instance is available.
@@ -56,14 +59,31 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string State { get; set; }
 
+        /// <summary>
+        /// The tags of the GA instance.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListAcceleratorsRequestTag> Tag { get; set; }
         public class ListAcceleratorsRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key of the GA resource. The tag key cannot be an empty string.
+            /// 
+            /// The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// 
+            /// You can specify up to 20 tag keys.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value of the GA resource. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// 
+            /// You can specify up to 20 tag values.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

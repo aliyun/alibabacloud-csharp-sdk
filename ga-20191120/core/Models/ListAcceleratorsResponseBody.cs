@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListAcceleratorsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the GA instances.
+        /// The information about the GA instances.
         /// </summary>
         [NameInMap("Accelerators")]
         [Validation(Required=false)]
@@ -30,12 +30,18 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
 
+            /// <summary>
+            /// The bandwidth metering method.
+            /// 
+            /// *   **BandwidthPackage**: billed based on bandwidth plans.
+            /// *   **CDT**: billed based on data transfer.
+            /// </summary>
             [NameInMap("BandwidthBillingType")]
             [Validation(Required=false)]
             public string BandwidthBillingType { get; set; }
 
             /// <summary>
-            /// Details about the basic bandwidth plan that is associated with the GA instance.
+            /// The details about the basic bandwidth plan that is associated with the GA instance.
             /// </summary>
             [NameInMap("BasicBandwidthPackage")]
             [Validation(Required=false)]
@@ -51,9 +57,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The type of the bandwidth that is provided by the basic bandwidth plan. Valid values:
                 /// 
-                /// *   **Basic**: standard bandwidth plans
-                /// *   **Enhanced**: enhanced bandwidth plans
-                /// *   **Advanced**: premium bandwidth plans
+                /// *   **Basic**: basic
+                /// *   **Enhanced**: enhanced
+                /// *   **Advanced**: premium
                 /// </summary>
                 [NameInMap("BandwidthType")]
                 [Validation(Required=false)]
@@ -76,34 +82,43 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string CenId { get; set; }
 
             /// <summary>
-            /// The timestamp that indicates the time when the GA instance was created.
+            /// The timestamp that indicates when the GA instance is created.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// The type of cross-border acceleration. This parameter is returned for GA instances whose bandwidth metering method is pay-by-data-transfer.
+            /// 
+            /// **bpgPro** is returned, which indicates BGP (Multi-ISP) Pro lines.
+            /// </summary>
             [NameInMap("CrossBorderMode")]
             [Validation(Required=false)]
             public string CrossBorderMode { get; set; }
 
+            [NameInMap("CrossBorderStatus")]
+            [Validation(Required=false)]
+            public bool? CrossBorderStatus { get; set; }
+
             /// <summary>
-            /// Details about the cross-region acceleration bandwidth plan that is associated with the GA instance.
+            /// The details about the cross-border acceleration bandwidth plan that is associated with the GA instance.
             /// 
-            /// This array is returned only for GA instances that are created on the International site (alibabacloud.com).
+            /// This array is returned only for GA instances that are created on the international site (alibabacloud.com).
             /// </summary>
             [NameInMap("CrossDomainBandwidthPackage")]
             [Validation(Required=false)]
             public ListAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage CrossDomainBandwidthPackage { get; set; }
             public class ListAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage : TeaModel {
                 /// <summary>
-                /// The bandwidth that is provided by the cross-region acceleration bandwidth plan. Unit: Mbit /s.
+                /// The bandwidth that is provided by the cross-border acceleration bandwidth plan. Unit: Mbit/s.
                 /// </summary>
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
                 public int? Bandwidth { get; set; }
 
                 /// <summary>
-                /// The ID of the cross-region acceleration bandwidth plan.
+                /// The ID of the cross-border acceleration bandwidth plan.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -112,7 +127,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance that is associated with the GA instance.
+            /// The ID of the Anti-DDoS Pro/Premium instance that is associated with the GA instance.
             /// </summary>
             [NameInMap("DdosId")]
             [Validation(Required=false)]
@@ -133,7 +148,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string DnsName { get; set; }
 
             /// <summary>
-            /// The timestamp that indicates the time when the GA instance expires.
+            /// The timestamp that indicates when the GA instance expires.
             /// </summary>
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
@@ -179,12 +194,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// The ID of the resource group.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The CNAME that is used to associate the GA instance with an Anti-DDoS Pro instance or an Anti-DDoS Premium instance.
+            /// The CNAME that is used to associate the GA instance with an Anti-DDoS Pro/Premium instance.
             /// </summary>
             [NameInMap("SecondDnsName")]
             [Validation(Required=false)]
@@ -209,18 +227,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// *   **90**: Large VⅢ
             /// *   **100**: Super Large Ⅰ
             /// *   **200**: Super Large Ⅱ
-            /// *   **300**: Super Large Ⅲ
             /// 
-            /// >  The Large Ⅲ specification and higher specifications are available only for accounts that are added to the whitelist. To use other specifications of GA instances, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+            /// >  The Large Ⅲ specification and higher specifications are available only to users that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.
             /// 
-            /// Each instance specification provides different capabilities. For more information, see the "Specifications of standard GA instances" section in [Overview](~~153127~~).
+            /// Different specifications provide different capabilities. For more information, see [Instance specifications](~~153127~~).
             /// </summary>
             [NameInMap("Spec")]
             [Validation(Required=false)]
             public string Spec { get; set; }
 
             /// <summary>
-            /// The state of the GA instance. Valid values:
+            /// The status of the GA instance. Valid values:
             /// 
             /// *   **init**: The GA instance is being initialized.
             /// *   **active**: The GA instance is available.
@@ -234,14 +251,23 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string State { get; set; }
 
+            /// <summary>
+            /// The tags of the GA instance.
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListAcceleratorsResponseBodyAcceleratorsTags> Tags { get; set; }
             public class ListAcceleratorsResponseBodyAcceleratorsTags : TeaModel {
+                /// <summary>
+                /// The tag key.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The tag value.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -279,7 +305,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

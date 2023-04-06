@@ -40,11 +40,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The secondary address of the endpoint.
         /// 
-        /// This parameter is returned if the endpoint type is set to **ECS**, **ENI**, or **NLB**.
+        /// This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.
         /// 
-        /// *   If the endpoint type is set to **ECS**, **EndpointSubAddress** returns the secondary private IP address of the primary ENI or the primary private IP address of the primary ENI.
-        /// *   If the endpoint type is set to **ENI**, **EndpointSubAddress** returns the secondary private IP address of the secondary ENI or the primary private IP address of the secondary ENI is used.
-        /// *   If the endpoint type is set to **NLB**, **EndpointSubAddress** returns the primary private IP address of the backend server of the NLB instance.
+        /// *   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.
+        /// *   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.
+        /// *   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.
         /// </summary>
         [NameInMap("EndpointSubAddress")]
         [Validation(Required=false)]
@@ -53,10 +53,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The type of the secondary address of the endpoint.
         /// 
-        /// *   **primary:** primary private IP address
-        /// *   **secondary:** secondary private IP address
+        /// *   **primary**: a primary private IP address.
+        /// *   **secondary**: a secondary private IP address.
         /// 
-        /// This parameter is returned if the type of the endpoint is set to **ECS**, **ENI**, or **NLB**. If the endpoint type is set to **NLB**, **primary**is returned.
+        /// This parameter is returned if the type of the endpoint is set to **ECS**, **ENI**, or **NLB**. If the endpoint type is set to **NLB**, **primary** is returned.
         /// </summary>
         [NameInMap("EndpointSubAddressType")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointZoneId { get; set; }
 
         /// <summary>
-        /// The name of the endpoint that is associated with the basic GA instance.
+        /// The name of the endpoint.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -100,13 +100,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The status of the endpoint. Valid values:
         /// 
-        /// *   **init:** The endpoint is being initialized.
-        /// *   **active:** The endpoint is available.
-        /// *   **updating:** The endpoint is being configured.
-        /// *   **binding:** The endpoint is being associated.
-        /// *   **unbinding:** The endpoint is being disassociated.
-        /// *   **deleting:** The endpoint is being deleted.
-        /// *   **bound:** The endpoint is associated.
+        /// *   **init**: The endpoint is being initialized.
+        /// *   **active**: The endpoint is available.
+        /// *   **updating**: The endpoint is being configured.
+        /// *   **binding**: The endpoint is being associated.
+        /// *   **unbinding**: The endpoint is being disassociated.
+        /// *   **deleting**: The endpoint is being deleted.
+        /// *   **bound**: The endpoint is associated.
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

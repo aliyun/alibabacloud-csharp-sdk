@@ -31,40 +31,60 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The state of the bandwidth plan. Valid values:
+        /// The status of the bandwidth plan. Valid values:
         /// 
         /// *   **init**: The bandwidth plan is being initialized.
         /// *   **active**: The bandwidth plan is available.
-        /// *   **binded**: The bandwidth plan is associated with a GA instance.
+        /// *   **binded**: The bandwidth plan is associated.
         /// *   **binding**: The bandwidth plan is being associated.
         /// *   **unbinding**: The bandwidth plan is being disassociated.
         /// *   **updating**: The bandwidth plan is being updated.
         /// *   **finacialLocked**: The bandwidth plan is locked due to overdue payments.
-        /// *   **Locked**: The bandwidth plan is locked.
+        /// *   **locked**: The bandwidth plan is locked.
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
 
+        /// <summary>
+        /// The tag of the bandwidth plan.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListBandwidthPackagesRequestTag> Tag { get; set; }
         public class ListBandwidthPackagesRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key of the bandwidth plan. The tag key cannot be an empty string.
+            /// 
+            /// The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// 
+            /// You can specify up to 20 tag keys.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value of the bandwidth plan. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// 
+            /// You can specify up to 20 tag values.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -75,9 +95,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The type of the bandwidth plan. Valid values:
         /// 
         /// *   **Basic**: a basic bandwidth plan
-        /// *   **CrossDomain**: a cross-region acceleration bandwidth plan
+        /// *   **CrossDomain**: a cross-border acceleration bandwidth plan
         /// 
-        /// If you call this operation on the Alibaba Cloud China Site (aliyun.com), you can only set Type to **Basic**.
+        /// If you call this operation on the China site (aliyun.com), you can set Type only to **Basic**.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

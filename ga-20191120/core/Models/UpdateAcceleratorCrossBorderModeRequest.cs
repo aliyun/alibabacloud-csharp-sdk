@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
-    public class UpdateCrossPrivateStateRequest : TeaModel {
+    public class UpdateAcceleratorCrossBorderModeRequest : TeaModel {
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
-        [NameInMap("CrossPrivateState")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public bool? CrossPrivateState { get; set; }
+        public string ClientToken { get; set; }
+
+        [NameInMap("CrossBorderMode")]
+        [Validation(Required=false)]
+        public string CrossBorderMode { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

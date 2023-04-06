@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// Details about the acceleration regions.
+        /// The details about the acceleration regions.
         /// </summary>
         [NameInMap("IpSets")]
         [Validation(Required=false)]
@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string IpSetId { get; set; }
 
+            /// <summary>
+            /// The line type of the EIP in the acceleration region.
+            /// </summary>
             [NameInMap("IspType")]
             [Validation(Required=false)]
             public string IspType { get; set; }

@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DescribeCustomRoutingEndPointTrafficPolicyRequest : TeaModel {
+        /// <summary>
+        /// The ID of the endpoint to which the traffic destination belongs.
+        /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// The ID of the traffic policy to be queried.
+        /// The ID of the traffic destination to be queried.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

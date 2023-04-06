@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -27,6 +27,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string EndpointGroupId { get; set; }
 
+        /// <summary>
+        /// The IDs of the endpoints to be deleted.
+        /// 
+        /// If you do not set this parameter, all the endpoints in the specified endpoint group are deleted.
+        /// 
+        /// You can specify at most 10 endpoint IDs.
+        /// </summary>
         [NameInMap("EndpointIds")]
         [Validation(Required=false)]
         public List<string> EndpointIds { get; set; }

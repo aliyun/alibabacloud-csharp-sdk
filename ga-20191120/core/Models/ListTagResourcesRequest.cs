@@ -9,34 +9,87 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListTagResourcesRequest : TeaModel {
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate the value, but you must ensure that the value is unique among all requests. The ClientToken value contain only ASCII characters.
+        /// 
+        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The token that determines the start point of the next query. Valid values:
+        /// 
+        /// *   If this is your first query and no next queries are to be sent, ignore this parameter.
+        /// *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// An array of IDs of resources whose tag information you want to query.
+        /// 
+        /// *   If you set the **ResourceType** parameter to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.
+        /// *   If you set the **ResourceType** parameter to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.
+        /// *   If you set the **ResourceType** parameter to**bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
+        /// *   If you set the **ResourceType** parameter to **acl**, set the value of ResourceId to the ID of an ACL.
+        /// 
+        /// You can specify up to 50 GA resource IDs.
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
+        /// <summary>
+        /// The type of the resource whose tag information you want to query. Valid values:
+        /// 
+        /// *   **accelerator:** a standard GA instance.
+        /// *   **basicaccelerator:** a basic GA instance.
+        /// *   **bandwidthpackage:** a bandwidth plan.
+        /// *   **acl:** an access control list (ACL).
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// An array of tags of GA resources.
+        /// 
+        /// You can specify up to 20 tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key of the GA resource. The tag key cannot be an empty string.
+            /// 
+            /// The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// 
+            /// You can specify up to 20 tag keys.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value of the GA resource. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length and and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// 
+            /// You can specify up to 20 tag values.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

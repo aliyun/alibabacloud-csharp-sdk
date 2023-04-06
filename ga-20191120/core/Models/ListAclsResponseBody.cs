@@ -31,13 +31,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string AclName { get; set; }
 
             /// <summary>
-            /// The state of the network ACL. Valid values:
+            /// The status of the network ACL. Valid values:
             /// 
             /// *   **init**: The network ACL is being initialized.
             /// *   **active**: The network ACL is available.
             /// *   **configuring**: The network ACL is being configured.
             /// *   **updating**: The network ACL is being updated.
-            /// *   **deleting**: The GA instance is being deleted.
+            /// *   **deleting:** The network ACL is being deleted.
             /// </summary>
             [NameInMap("AclStatus")]
             [Validation(Required=false)]
@@ -53,18 +53,30 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string AddressIPVersion { get; set; }
 
+            /// <summary>
+            /// The ID of the resource group.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// The tags of the network ACL.
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListAclsResponseBodyAclsTags> Tags { get; set; }
             public class ListAclsResponseBodyAclsTags : TeaModel {
+                /// <summary>
+                /// The tag key of the network ACL.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The tag value of the network ACL.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -81,10 +93,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the next query. Valid values:
+        /// The token that is used for the next query. Valid values:
         /// 
-        /// *   If **NextToken** was not returned, it indicates that no additional results exist.
-        /// *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+        /// *   If **NextToken** is not returned, it indicates that no additional results exist.
+        /// *   If **NextToken** is returned, the value is the token that is used for the next query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

@@ -19,24 +19,29 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// > If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request is different.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to only precheck the request. Default value: false. Valid values:
+        /// Specifies whether to perform a dry run. Valid values:
         /// 
-        /// *   **true**: prechecks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-        /// *   **false**: sends the request. After the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
+        /// *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// The information about the endpoint groups.
+        /// 
+        /// You can specify at most five endpoint groups.
+        /// </summary>
         [NameInMap("EndpointGroupConfigurations")]
         [Validation(Required=false)]
         public List<CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurations> EndpointGroupConfigurations { get; set; }
@@ -46,37 +51,49 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// 
             /// The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.
             /// 
-            /// You can specify up to five endpoint group descriptions.
+            /// You can specify at most five endpoint group descriptions.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// The mapping configuration of the endpoint group.
+            /// 
+            /// You need to specify the backend service ports and protocols for the endpoint group. The ports are mapped to listener ports.
+            /// 
+            /// You can specify at most 20 mapping configurations for each endpoint group.
+            /// </summary>
             [NameInMap("DestinationConfigurations")]
             [Validation(Required=false)]
             public List<CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsDestinationConfigurations> DestinationConfigurations { get; set; }
             public class CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsDestinationConfigurations : TeaModel {
                 /// <summary>
-                /// The start port of the backend service port range of the endpoint group.
+                /// The first backend service port for the endpoint group.
                 /// 
-                /// Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
+                /// Valid values: **1** to **65499**. The value of **FromPort** must be smaller than or equal to the value of **ToPort**.
                 /// 
-                /// You can specify up to 20 start ports of backend service port ranges for each endpoint group.
+                /// You can specify at most 20 first backend service ports for each endpoint group.
                 /// </summary>
                 [NameInMap("FromPort")]
                 [Validation(Required=false)]
                 public int? FromPort { get; set; }
 
+                /// <summary>
+                /// The backend service protocol.
+                /// 
+                /// You can specify up to four backend service protocols in each mapping configuration.
+                /// </summary>
                 [NameInMap("Protocols")]
                 [Validation(Required=false)]
                 public List<string> Protocols { get; set; }
 
                 /// <summary>
-                /// The end port of the backend service port range of the endpoint group.
+                /// The last backend service port for the endpoint group.
                 /// 
-                /// Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
+                /// Valid values: **1** to **65499**. The value of **FromPort** must be smaller than or equal to the value of **ToPort**.
                 /// 
-                /// You can specify up to 20 end ports of backend service port ranges for each endpoint group.
+                /// You can specify at most 20 last backend service ports for each endpoint group.
                 /// </summary>
                 [NameInMap("ToPort")]
                 [Validation(Required=false)]
@@ -84,53 +101,72 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
             }
 
+            /// <summary>
+            /// The information about the endpoints.
+            /// 
+            /// You can specify at most 10 endpoints for each endpoint group.
+            /// </summary>
             [NameInMap("EndpointConfigurations")]
             [Validation(Required=false)]
             public List<CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> EndpointConfigurations { get; set; }
             public class CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations : TeaModel {
                 /// <summary>
-                /// The name of the endpoint (vSwitch).
+                /// The name of the vSwitch that is specified as an endpoint.
                 /// </summary>
                 [NameInMap("Endpoint")]
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
+                /// <summary>
+                /// The destination to which traffic is forwarded.
+                /// 
+                /// You can specify at most 20 destinations for each endpoint.
+                /// </summary>
                 [NameInMap("PolicyConfigurations")]
                 [Validation(Required=false)]
                 public List<CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurations> PolicyConfigurations { get; set; }
                 public class CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurations : TeaModel {
                     /// <summary>
-                    /// The IP address of the destination to which to allow traffic.
+                    /// The IP address of the destination to which traffic is forwarded.
                     /// 
                     /// This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
                     /// 
-                    /// You can specify up to 20 destination IP addresses for each endpoint.
+                    /// You can specify at most 20 destination IP addresses for each endpoint.
                     /// </summary>
                     [NameInMap("Address")]
                     [Validation(Required=false)]
                     public string Address { get; set; }
 
+                    /// <summary>
+                    /// The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.
+                    /// 
+                    /// If you leave this parameter empty, traffic is forwarded to all destination ports.
+                    /// 
+                    /// This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
+                    /// 
+                    /// You can specify port ranges for at most 20 destinations in each endpoint and specify at most five port ranges for each destination.
+                    /// </summary>
                     [NameInMap("PortRanges")]
                     [Validation(Required=false)]
                     public List<CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurationsPortRanges> PortRanges { get; set; }
                     public class CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurationsPortRanges : TeaModel {
                         /// <summary>
-                        /// The start port of the port range in the destination to which to allow traffic. The specified port must fall within the port range of the specified endpoint group.
+                        /// The first port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.
                         /// 
                         /// This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
                         /// 
-                        /// You can specify port ranges for up to 20 destinations for each endpoint and specify up to 5 start ports for each destination.
+                        /// You can specify port ranges for at most 20 destinations in each endpoint and specify at most five first ports for each destination.
                         /// </summary>
                         [NameInMap("FromPort")]
                         [Validation(Required=false)]
                         public int? FromPort { get; set; }
 
                         /// <summary>
-                        /// The end port of the port range in the destination to which to allow traffic. The specified port must fall within the port range of the specified endpoint group.
+                        /// The last port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.
                         /// 
                         /// This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
                         /// 
-                        /// You can specify port ranges for up to 20 destinations for each endpoint and specify up to 5 end ports for each destination.
+                        /// You can specify port ranges for at most 20 destinations in each endpoint and specify at most five last ports for each destination.
                         /// </summary>
                         [NameInMap("ToPort")]
                         [Validation(Required=false)]
@@ -141,24 +177,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 }
 
                 /// <summary>
-                /// The access policy of traffic to the specified vSwitches. Default value: DenyAll. Valid values:
+                /// The traffic policy that is used to process traffic to the endpoint. Valid values:
                 /// 
-                /// *   **AllowAll**: allows all traffic to the vSwitch.
+                /// *   **AllowAll**: allows all traffic to the endpoint.
+                /// *   **DenyAll** (default): denies all traffic to the endpoint.
+                /// *   **AllowCustom**: allows traffic only to specified destinations in the endpoint.
                 /// 
-                /// *   **DenyAll**: denies all traffic to the vSwitch.
-                /// 
-                /// *   **AllowCustom**: allows traffic only to specified destinations in the vSwitch.
-                /// 
-                ///     If you set this parameter to AllowCustom, you must specify IP addresses and port ranges of destinations to which to allow traffic. If you specify only IP addresses and do not specify port ranges, GA can forward traffic to the specified IP addresses over all ports in the destinations.
+                /// If you set this parameter to AllowCustom, you must specify IP addresses and port ranges as the destinations to which traffic is distributed. If you specify only IP addresses and do not specify port ranges, GA can forward traffic to the specified IP addresses over all destination ports.
                 /// </summary>
                 [NameInMap("TrafficToEndpointPolicy")]
                 [Validation(Required=false)]
                 public string TrafficToEndpointPolicy { get; set; }
 
                 /// <summary>
-                /// The backend service type of the endpoint. Default value: PrivateSubNet.
+                /// The type of endpoint.
                 /// 
-                /// Set the value to **PrivateSubNet**, which indicates private CIDR blocks.
+                /// Set the value to **PrivateSubNet**, which specifies a private CIDR block. This is the default value.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -167,9 +201,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The ID of the region in which to create the endpoint group.
+            /// The ID of the region in which the endpoint group resides.
             /// 
-            /// You can specify up to five region IDs.
+            /// You can specify at most five region IDs.
             /// </summary>
             [NameInMap("EndpointGroupRegion")]
             [Validation(Required=false)]
@@ -178,9 +212,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The name of the endpoint group.
             /// 
-            /// The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+            /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
             /// 
-            /// You can specify up to five endpoint group names.
+            /// You can specify at most five endpoint group names.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

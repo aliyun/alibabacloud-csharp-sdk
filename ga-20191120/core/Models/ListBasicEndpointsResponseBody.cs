@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public List<ListBasicEndpointsResponseBodyEndpoints> Endpoints { get; set; }
         public class ListBasicEndpointsResponseBodyEndpoints : TeaModel {
+            /// <summary>
+            /// The ID of the basic GA instance.
+            /// </summary>
             [NameInMap("AcceleratorId")]
             [Validation(Required=false)]
             public string AcceleratorId { get; set; }
@@ -28,7 +31,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string EndpointAddress { get; set; }
 
             /// <summary>
-            /// The ID of the endpoint group to which the endpoints belong.
+            /// The ID of the endpoint group to which the endpoint belongs.
             /// </summary>
             [NameInMap("EndpointGroupId")]
             [Validation(Required=false)]
@@ -44,15 +47,24 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The secondary address of the endpoint.
             /// 
-            /// This parameter is returned when the accelerated IP address is associated with the secondary private IP address of an ECS instance or ENI.
+            /// This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.
             /// 
-            /// *   When the endpoint type is **ECS**, **EndpointSubAddress** returns the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is returned.
-            /// *   When the endpoint type is **ENI**, **EndpointSubAddress** returns the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is returned.
+            /// *   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.
+            /// *   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.
+            /// *   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.
             /// </summary>
             [NameInMap("EndpointSubAddress")]
             [Validation(Required=false)]
             public string EndpointSubAddress { get; set; }
 
+            /// <summary>
+            /// The secondary address type of the endpoint.
+            /// 
+            /// *   **primary**: a primary private IP address.
+            /// *   **secondary**: a secondary private IP address.
+            /// 
+            /// This parameter is returned if the type of the endpoint is set to **ECS**, **ENI**, or **NLB**. If the endpoint type is set to **NLB**, **primary** is returned.
+            /// </summary>
             [NameInMap("EndpointSubAddressType")]
             [Validation(Required=false)]
             public string EndpointSubAddressType { get; set; }
@@ -60,18 +72,27 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The type of endpoint. Valid values:
             /// 
-            /// *   **ENI**: ENI
-            /// *   **SLB**: CLB
-            /// *   **ECS**: ECS
+            /// *   **ENI**: ENI.
+            /// *   **SLB**: CLB instance.
+            /// *   **ECS**: ECS instance.
+            /// *   **NLB**: NLB instance.
             /// </summary>
             [NameInMap("EndpointType")]
             [Validation(Required=false)]
             public string EndpointType { get; set; }
 
+            /// <summary>
+            /// The zone ID of the endpoint.
+            /// 
+            /// This parameter is returned only when the endpoint type is set to **NLB**.
+            /// </summary>
             [NameInMap("EndpointZoneId")]
             [Validation(Required=false)]
             public string EndpointZoneId { get; set; }
 
+            /// <summary>
+            /// The name of the endpoint.
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -94,7 +115,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The number of entries returned on each page.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -104,7 +125,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// The token that determines the start point of the query. Valid values:
         /// 
         /// *   If **NextToken** is not returned, it indicates that no additional results exist.
-        /// *   If **NextToken** is returned, the value is the token that is used for the next query.
+        /// *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

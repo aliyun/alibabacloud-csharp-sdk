@@ -30,12 +30,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The ID of the GA resource.
         /// 
-        /// *   If **ResourceType** is set to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.
-        /// *   If **ResourceType** is set to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.
-        /// *   If **ResourceType** is set to**bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
-        /// *   If **ResourceType** is set to **acl**, set the value of ResourceId to the ID of an ACL.
+        /// *   If you set the **ResourceType** parameter to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.
+        /// *   If you set the **ResourceType** parameter to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.
+        /// *   If you set the **ResourceType** parameter to**bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
+        /// *   If you set the **ResourceType** parameter to **acl**, set the value of ResourceId to the ID of an ACL.
         /// 
-        /// You can specify up to 50 GA resource IDs.
+        /// You can specify 1 to 50 GA resource IDs.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The tag key of the GA resource. The tag key cannot be an empty string.
             /// 
-            /// It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
             /// 
             /// You can specify up to 20 tag keys.
             /// </summary>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The tag value of the GA resource. The tag value can be an empty string.
             /// 
-            /// The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.
+            /// The tag value can be up to 128 characters in length and and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
             /// 
             /// You can specify up to 20 tag values.
             /// </summary>

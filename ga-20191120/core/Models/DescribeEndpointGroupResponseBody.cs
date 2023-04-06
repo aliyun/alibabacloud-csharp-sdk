@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public bool? EnableClientIPPreservation { get; set; }
 
+            [NameInMap("EnableProxyProtocol")]
+            [Validation(Required=false)]
+            public bool? EnableProxyProtocol { get; set; }
+
             /// <summary>
             /// The IP address or domain name of the endpoint.
             /// </summary>
@@ -304,13 +308,6 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [NameInMap("ThresholdCount")]
         [Validation(Required=false)]
         public int? ThresholdCount { get; set; }
-
-        /// <summary>
-        /// The total number of entries returned.
-        /// </summary>
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
 
         /// <summary>
         /// The weight of the endpoint group. If the listener is associated with multiple endpoint groups, this parameter indicates the weight of the current endpoint group.

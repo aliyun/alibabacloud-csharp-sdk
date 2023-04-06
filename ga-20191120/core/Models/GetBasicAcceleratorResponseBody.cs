@@ -17,17 +17,18 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// The bandwidth billing method. Valid values:
+        /// The bandwidth metering method.
         /// 
         /// *   **BandwidthPackage**: billed based on bandwidth plans.
-        /// *   **CDT**: billed based on data transfer.
+        /// *   **CDT**: billed by Cloud Data Transfer (CDT) and based on data transfer.
+        /// *   **CDT95**: billed by CDT and based on the 95th percentile bandwidth. This bandwidth metering method is available only to users that are included in the whitelist.
         /// </summary>
         [NameInMap("BandwidthBillingType")]
         [Validation(Required=false)]
         public string BandwidthBillingType { get; set; }
 
         /// <summary>
-        /// Details about the basic bandwidth plan that is associated with the basic GA instance.
+        /// The details about the basic bandwidth plan that is associated with the basic GA instance.
         /// </summary>
         [NameInMap("BasicBandwidthPackage")]
         [Validation(Required=false)]
@@ -41,7 +42,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// The type of the bandwidth that is provided by the basic bandwidth plan. Valid values:
+            /// The type of the bandwidth that is provided by the basic bandwidth plan.
             /// 
             /// *   **Basic**: basic
             /// *   **Enhanced**: enhanced
@@ -61,14 +62,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The ID of the endpoint group that is associated with the basic GA instance.
+        /// The ID of the endpoint group.
         /// </summary>
         [NameInMap("BasicEndpointGroupId")]
         [Validation(Required=false)]
         public string BasicEndpointGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the basic GA instance is deployed.
+        /// The ID of the acceleration region.
         /// </summary>
         [NameInMap("BasicIpSetId")]
         [Validation(Required=false)]
@@ -82,30 +83,34 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// The timestamp that indicates when the basic GA instance was created.
+        /// The timestamp that indicates when the basic GA instance is created.
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
+        [NameInMap("CrossBorderStatus")]
+        [Validation(Required=false)]
+        public bool? CrossBorderStatus { get; set; }
+
         /// <summary>
-        /// Details about the cross-region acceleration bandwidth plan that is associated with the GA instance.
+        /// The details about the cross-border acceleration bandwidth plan that is associated with the GA instance.
         /// 
-        /// This parameter is returned only when you call this operation on the International site (alibabacloud.com).
+        /// This array is returned only for GA instances that are created on the international site (alibabacloud.com).
         /// </summary>
         [NameInMap("CrossDomainBandwidthPackage")]
         [Validation(Required=false)]
         public GetBasicAcceleratorResponseBodyCrossDomainBandwidthPackage CrossDomainBandwidthPackage { get; set; }
         public class GetBasicAcceleratorResponseBodyCrossDomainBandwidthPackage : TeaModel {
             /// <summary>
-            /// The bandwidth value of the cross-region acceleration bandwidth plan. Unit: Mbit/s.
+            /// The bandwidth value of the cross-border acceleration bandwidth plan. Unit: Mbit/s.
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// The ID of the cross-region acceleration bandwidth plan.
+            /// The ID of the cross-border acceleration bandwidth plan.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -114,10 +119,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// Indicates whether China Unicom cross-border communication is enabled.
+        /// Indicates whether cross-border acceleration is enabled.
         /// 
-        /// *   **true**: China Unicom cross-border communication is enabled.
-        /// *   **false**: China Unicom cross-border communication is disabled.
+        /// *   **true**: yes
+        /// *   **false**: no
         /// </summary>
         [NameInMap("CrossPrivateState")]
         [Validation(Required=false)]
@@ -132,6 +137,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         /// <summary>
         /// The timestamp that indicates when the basic GA instance expires.
+        /// 
+        /// The time follows the UNIX time format. It is the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
         /// </summary>
         [NameInMap("ExpiredTime")]
         [Validation(Required=false)]
@@ -165,33 +172,45 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the basic GA instance belongs.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The state of the basic GA instance. Valid values:
+        /// The status of the basic GA instance.
         /// 
-        /// *   **init**: The basic GA instance is being initialized.
-        /// *   **active**: The basic GA instance is available.
-        /// *   **configuring**: The basic GA instance is being configured.
-        /// *   **binding**: The basic GA instance is being associated.
-        /// *   **unbinding**: The basic GA instance is being disassociated.
-        /// *   **deleting**: The basic GA instance is being deleted.
-        /// *   **finacialLocked**: The basic GA instance is locked due to overdue payments.
+        /// *   **init**: The GA instance is being initialized.
+        /// *   **active**: The GA instance is available.
+        /// *   **configuring**: The GA instance is being configured.
+        /// *   **binding**: The GA instance is being associated.
+        /// *   **unbinding**: The GA instance is being disassociated.
+        /// *   **deleting**: The GA instance is being deleted.
+        /// *   **finacialLocked**: The GA instance is locked due to overdue payments.
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
 
+        /// <summary>
+        /// The tags of the basic GA instance.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetBasicAcceleratorResponseBodyTags> Tags { get; set; }
         public class GetBasicAcceleratorResponseBodyTags : TeaModel {
+            /// <summary>
+            /// The tag key of the basic GA instance.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value of the basic GA instance.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

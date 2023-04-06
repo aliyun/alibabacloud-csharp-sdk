@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// The description of the endpoint group that is associated with the basic GA instance.
+        /// The description of the endpoint group.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointAddress { get; set; }
 
         /// <summary>
-        /// The ID of the endpoint group that is associated with the basic GA instance.
+        /// The ID of the endpoint group.
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
@@ -44,6 +44,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string EndpointGroupRegion { get; set; }
 
+        /// <summary>
+        /// The secondary address of the endpoint.
+        /// 
+        /// This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.
+        /// 
+        /// *   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.
+        /// *   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.
+        /// *   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.
+        /// </summary>
         [NameInMap("EndpointSubAddress")]
         [Validation(Required=false)]
         public string EndpointSubAddress { get; set; }
@@ -51,15 +60,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The type of endpoint. Valid values:
         /// 
-        /// *   **ENI**: elastic network interface (ENI)
-        /// *   **SLB**: Server Load Balancer (SLB) instance
+        /// *   **ENI**: elastic network interface (ENI).
+        /// *   **SLB**: Classic Load Balancer (CLB) instance.
+        /// *   **ECS**: Elastic Compute Service (ECS) instance.
+        /// *   **NLB**: Network Load Balancer (NLB) instance
         /// </summary>
         [NameInMap("EndpointType")]
         [Validation(Required=false)]
         public string EndpointType { get; set; }
 
         /// <summary>
-        /// The name of the endpoint group that is associated with the basic GA instance.
+        /// The name of the endpoint group.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -73,12 +84,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The state of the endpoint group.
+        /// The status of the endpoint group. Valid values:
         /// 
-        /// *   **init**: The endpoint group is being initialized.
-        /// *   **active**: The endpoint group is running as expected.
-        /// *   **updating**: The endpoint group is being updated.
-        /// *   **deleting**: The endpoint group is being deleted.
+        /// *   **init**: being initialized.
+        /// *   **active**: running as expected.
+        /// *   **updating**: being updated.
+        /// *   **deleting**: being deleted.
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

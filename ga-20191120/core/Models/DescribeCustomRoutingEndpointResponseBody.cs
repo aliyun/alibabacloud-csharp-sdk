@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// 终端节点当前状态。
+        /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
@@ -58,9 +61,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The access policy of traffic for the specified endpoint. Valid values:
         /// 
-        /// *   **AllowAll**: allows all traffic to the endpoint.
-        /// *   **DenyAll**: denies all traffic to the endpoint.
-        /// *   **AllowCustom**: allows traffic only to specified destinations.
+        /// *   **AllowAll:** allows all traffic to the endpoint.
+        /// *   **DenyAll:** denies all traffic to the endpoint.
+        /// *   **AllowCustom:** allows traffic only to specified destinations in the endpoint
         /// </summary>
         [NameInMap("TrafficToEndpointPolicy")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListBasicAccelerateIpEndpointRelationsRequest : TeaModel {
         /// <summary>
-        /// The ID of the accelerated IP address of the basic GA instance.
+        /// The ID of the accelerated IP address.
         /// </summary>
         [NameInMap("AccelerateIpId")]
         [Validation(Required=false)]
@@ -26,16 +26,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the endpoint that is associated with the basic GA instance.
+        /// The ID of the endpoint.
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// The token that determines the start point of the query. Valid values:
         /// 
-        /// *   If this is your first and only query, ignore this parameter.
-        /// *   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.
+        /// *   If this is your first query or no next query is to be sent, ignore this parameter.
+        /// *   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

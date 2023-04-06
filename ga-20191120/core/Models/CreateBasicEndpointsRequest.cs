@@ -19,21 +19,24 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must ensure that it is unique among all requests. The token can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
         /// 
-        /// >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the endpoint group that is associated with the basic GA instance.
+        /// The ID of the endpoint group.
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
         public string EndpointGroupId { get; set; }
 
+        /// <summary>
+        /// The endpoints that are associated with the basic GA instance.
+        /// </summary>
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
         public List<CreateBasicEndpointsRequestEndpoints> Endpoints { get; set; }
@@ -48,34 +51,56 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The secondary address of the endpoint.
             /// 
-            /// This parameter is required when the accelerated IP address is associated with the secondary private IP address of an ECS instance or ENI.
+            /// This parameter is required if the endpoint type is **ECS**, **ENI**, or **NLB**.
             /// 
-            /// *   When the endpoint type is **ECS**, you can set **EndpointSubAddress** to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.
-            /// *   When the endpoint type is **ENI**, you can set **EndpointSubAddress** to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.
+            /// *   If the endpoint type is **ECS**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.
+            /// *   If the endpoint type is **ENI**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.
+            /// *   This parameter is required if the endpoint type is **NLB**. **EndpointSubAddress** is the primary private IP address of the NLB backend server.
             /// </summary>
             [NameInMap("EndpointSubAddress")]
             [Validation(Required=false)]
             public string EndpointSubAddress { get; set; }
 
+            /// <summary>
+            /// The type of the secondary address of the endpoint. Valid values:
+            /// 
+            /// *   **primary**: a primary private IP address.
+            /// *   **secondary**: a secondary private IP address.
+            /// 
+            /// This parameter is required if the endpoint type is **ECS**, **ENI**, or **NLB**. If the endpoint type is **NLB**, only **primary** is supported.
+            /// </summary>
             [NameInMap("EndpointSubAddressType")]
             [Validation(Required=false)]
             public string EndpointSubAddressType { get; set; }
 
             /// <summary>
-            /// The type of endpoint. Valid values:
+            /// The type of the endpoint. Valid values:
             /// 
-            /// *   **ENI**: elastic network interface (ENI)
-            /// *   **SLB**: Classic Load Balancer (CLB)
-            /// *   **ECS**: Elastic Compute Service (ECS)
+            /// *   **ENI**: elastic network interface (ENI).
+            /// *   **SLB**: Classic Load Balancer (CLB) instance.
+            /// *   **ECS**: Elastic Compute Service (ECS) instance.
+            /// *   **NLB**: Network Load Balancer (NLB) instance.
+            /// 
+            /// >  This parameter is required.
             /// </summary>
             [NameInMap("EndpointType")]
             [Validation(Required=false)]
             public string EndpointType { get; set; }
 
+            /// <summary>
+            /// The ID of the zone where the endpoint resides.
+            /// 
+            /// This parameter is required only if the endpoint type is **NLB**.
+            /// </summary>
             [NameInMap("EndpointZoneId")]
             [Validation(Required=false)]
             public string EndpointZoneId { get; set; }
 
+            /// <summary>
+            /// The name of the endpoint.
+            /// 
+            /// The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }

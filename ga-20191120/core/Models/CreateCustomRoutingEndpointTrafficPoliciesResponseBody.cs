@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateCustomRoutingEndpointTrafficPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of the access policies of traffic.
+        /// The IDs of the traffic destinations.
         /// </summary>
         [NameInMap("PolicyIds")]
         [Validation(Required=false)]

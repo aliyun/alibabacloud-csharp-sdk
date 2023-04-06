@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListAclsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the network ACL. You can specify up to 20 network ACL IDs in each request.
+        /// </summary>
         [NameInMap("AclIds")]
         [Validation(Required=false)]
         public List<string> AclIds { get; set; }
@@ -25,9 +28,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -41,10 +44,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// The token that is used for the next query. Valid values:
         /// 
-        /// *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
-        /// *   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.
+        /// *   If this is your first and only query, ignore this parameter.
+        /// *   If a subsequent query is to be performed, set the parameter to the value of NextToken that is returned from the last call.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -57,18 +60,38 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The tags of the resource.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListAclsRequestTag> Tag { get; set; }
         public class ListAclsRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key of the network ACL. The tag key cannot be an empty string.
+            /// 
+            /// The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// 
+            /// You can specify up to 20 tag keys.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value of the network ACL. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// 
+            /// You can specify up to 20 tag values.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

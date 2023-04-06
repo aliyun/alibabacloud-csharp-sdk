@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string EndpointGroupId { get; set; }
 
             /// <summary>
-            /// The list of endpoint group IP addresses.
+            /// A list of endpoint group IP addresses.
             /// </summary>
             [NameInMap("EndpointGroupIpList")]
             [Validation(Required=false)]
             public List<string> EndpointGroupIpList { get; set; }
 
             /// <summary>
-            /// The ID of the region where the endpoint group is created.
+            /// The ID of the region where the endpoint group is deployed.
             /// </summary>
             [NameInMap("EndpointGroupRegion")]
             [Validation(Required=false)]
@@ -73,12 +73,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The status of the endpoint group.
+            /// The status of the endpoint group. Valid values:
             /// 
-            /// *   **init**: being initialized
-            /// *   **active**: running as expected
-            /// *   **updating**: being updated
-            /// *   **deleting**: being deleted
+            /// *   **init**: The endpoint group is being initialized.
+            /// *   **active**: The endpoint group is running as expected.
+            /// *   **updating**: The endpoint group is being updated.
+            /// *   **deleting**: The endpoint group is being deleted.
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on each page.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

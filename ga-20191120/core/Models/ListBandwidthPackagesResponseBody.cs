@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The type of the bandwidth. Valid values:
             /// 
-            /// *   **Basic**: basic bandwidth
-            /// *   **Enhanced**: enhanced bandwidth
-            /// *   **Advanced**: premium bandwidth
+            /// *   **Basic**: standard
+            /// *   **Enhanced**: enhanced
+            /// *   **Advanced**: premium
             /// </summary>
             [NameInMap("BandwidthType")]
             [Validation(Required=false)]
@@ -59,18 +59,18 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string BillingType { get; set; }
 
             /// <summary>
-            /// Area A specified in the cross-region acceleration bandwidth plan. Only **China-mainland** (the Chinese mainland) is returned.
+            /// Area A of the cross-border acceleration bandwidth plan. Only **China-mainland** (the Chinese mainland) is returned.
             /// 
-            /// This parameter is returned only if you call this operation on the International site (alibabacloud.com).
+            /// This parameter is returned only if you call this operation on the international site (alibabacloud.com).
             /// </summary>
             [NameInMap("CbnGeographicRegionIdA")]
             [Validation(Required=false)]
             public string CbnGeographicRegionIdA { get; set; }
 
             /// <summary>
-            /// Area B specified in the cross-region acceleration bandwidth plan. Only **Global** (global) is returned.
+            /// Area B of the cross-border acceleration bandwidth plan. Only **Global** (global) is returned.
             /// 
-            /// This parameter is returned only if you call this operation on the International site (alibabacloud.com).
+            /// This parameter is returned only if you call this operation on the international site (alibabacloud.com).
             /// </summary>
             [NameInMap("CbnGeographicRegionIdB")]
             [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used.
+            /// The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile metering method is used.
             /// </summary>
             [NameInMap("Ratio")]
             [Validation(Required=false)]
@@ -125,34 +125,46 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// The ID of the resource group.
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The state of the bandwidth plan. Valid values:
+            /// The status of the bandwidth plan. Valid values:
             /// 
             /// *   **init**: The bandwidth plan is being initialized.
             /// *   **active**: The bandwidth plan is available.
-            /// *   **binded**: The bandwidth plan is associated with a GA instance.
+            /// *   **binded**: The bandwidth plan is associated.
             /// *   **binding**: The bandwidth plan is being associated.
             /// *   **unbinding**: The bandwidth plan is being disassociated.
             /// *   **updating**: The bandwidth plan is being updated.
             /// *   **finacialLocked**: The bandwidth plan is locked due to overdue payments.
-            /// *   **Locked**: The bandwidth plan is locked.
+            /// *   **locked**: The bandwidth plan is locked.
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
 
+            /// <summary>
+            /// The tag of the bandwidth plan.
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListBandwidthPackagesResponseBodyBandwidthPackagesTags> Tags { get; set; }
             public class ListBandwidthPackagesResponseBodyBandwidthPackagesTags : TeaModel {
+                /// <summary>
+                /// The tag key of the bandwidth plan.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The tag value of the bandwidth plan.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -163,9 +175,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// The type of the bandwidth plan. Valid values:
             /// 
             /// *   **Basic**: a basic bandwidth plan
-            /// *   **CrossDomain**: a cross-region acceleration bandwidth plan
+            /// *   **CrossDomain**: a cross-border acceleration bandwidth plan
             /// 
-            /// If you call this operation on the Alibaba Cloud China Site (aliyun.com), only **Basic** is returned.
+            /// If you call this operation on the China site (aliyun.com), only **Basic** is returned.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
