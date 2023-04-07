@@ -1,0 +1,416 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.BtripOpen20220520.Models
+{
+    public class HotelGoodsQueryResponseBody : TeaModel {
+        [NameInMap("code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("module")]
+        [Validation(Required=false)]
+        public HotelGoodsQueryResponseBodyModule Module { get; set; }
+        public class HotelGoodsQueryResponseBodyModule : TeaModel {
+            [NameInMap("address")]
+            [Validation(Required=false)]
+            public string Address { get; set; }
+
+            [NameInMap("booking_instructions")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> BookingInstructions { get; set; }
+
+            [NameInMap("can_foreigner")]
+            [Validation(Required=false)]
+            public bool? CanForeigner { get; set; }
+
+            [NameInMap("check_in")]
+            [Validation(Required=false)]
+            public string CheckIn { get; set; }
+
+            [NameInMap("check_out")]
+            [Validation(Required=false)]
+            public string CheckOut { get; set; }
+
+            [NameInMap("descriptions")]
+            [Validation(Required=false)]
+            public List<string> Descriptions { get; set; }
+
+            [NameInMap("dinamic_banner_pic_urls")]
+            [Validation(Required=false)]
+            public List<string> DinamicBannerPicUrls { get; set; }
+
+            [NameInMap("early_arrival_time")]
+            [Validation(Required=false)]
+            public string EarlyArrivalTime { get; set; }
+
+            [NameInMap("hotel_id")]
+            [Validation(Required=false)]
+            public long? HotelId { get; set; }
+
+            [NameInMap("hotel_name")]
+            [Validation(Required=false)]
+            public string HotelName { get; set; }
+
+            [NameInMap("late_arrival_time")]
+            [Validation(Required=false)]
+            public string LateArrivalTime { get; set; }
+
+            [NameInMap("rooms")]
+            [Validation(Required=false)]
+            public List<HotelGoodsQueryResponseBodyModuleRooms> Rooms { get; set; }
+            public class HotelGoodsQueryResponseBodyModuleRooms : TeaModel {
+                [NameInMap("area")]
+                [Validation(Required=false)]
+                public string Area { get; set; }
+
+                [NameInMap("bed_type_string")]
+                [Validation(Required=false)]
+                public string BedTypeString { get; set; }
+
+                [NameInMap("extra_bed")]
+                [Validation(Required=false)]
+                public bool? ExtraBed { get; set; }
+
+                [NameInMap("facility")]
+                [Validation(Required=false)]
+                public string Facility { get; set; }
+
+                [NameInMap("floor")]
+                [Validation(Required=false)]
+                public string Floor { get; set; }
+
+                [NameInMap("max_occupancy")]
+                [Validation(Required=false)]
+                public int? MaxOccupancy { get; set; }
+
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("network_service")]
+                [Validation(Required=false)]
+                public string NetworkService { get; set; }
+
+                [NameInMap("pics")]
+                [Validation(Required=false)]
+                public string Pics { get; set; }
+
+                [NameInMap("rates")]
+                [Validation(Required=false)]
+                public List<HotelGoodsQueryResponseBodyModuleRoomsRates> Rates { get; set; }
+                public class HotelGoodsQueryResponseBodyModuleRoomsRates : TeaModel {
+                    [NameInMap("bed_desc")]
+                    [Validation(Required=false)]
+                    public string BedDesc { get; set; }
+
+                    [NameInMap("bed_type")]
+                    [Validation(Required=false)]
+                    public string BedType { get; set; }
+
+                    [NameInMap("breakfast")]
+                    [Validation(Required=false)]
+                    public string Breakfast { get; set; }
+
+                    [NameInMap("btrip_cancel_rule")]
+                    [Validation(Required=false)]
+                    public HotelGoodsQueryResponseBodyModuleRoomsRatesBtripCancelRule BtripCancelRule { get; set; }
+                    public class HotelGoodsQueryResponseBodyModuleRoomsRatesBtripCancelRule : TeaModel {
+                        [NameInMap("btrip_hotel_cancel_policy_d_t_o")]
+                        [Validation(Required=false)]
+                        public HotelGoodsQueryResponseBodyModuleRoomsRatesBtripCancelRuleBtripHotelCancelPolicyDTO BtripHotelCancelPolicyDTO { get; set; }
+                        public class HotelGoodsQueryResponseBodyModuleRoomsRatesBtripCancelRuleBtripHotelCancelPolicyDTO : TeaModel {
+                            [NameInMap("btrip_hotel_cancel_policy_info_d_t_o_list")]
+                            [Validation(Required=false)]
+                            public List<HotelGoodsQueryResponseBodyModuleRoomsRatesBtripCancelRuleBtripHotelCancelPolicyDTOBtripHotelCancelPolicyInfoDTOList> BtripHotelCancelPolicyInfoDTOList { get; set; }
+                            public class HotelGoodsQueryResponseBodyModuleRoomsRatesBtripCancelRuleBtripHotelCancelPolicyDTOBtripHotelCancelPolicyInfoDTOList : TeaModel {
+                                [NameInMap("hour")]
+                                [Validation(Required=false)]
+                                public long? Hour { get; set; }
+
+                                [NameInMap("value")]
+                                [Validation(Required=false)]
+                                public long? Value { get; set; }
+
+                            }
+
+                            [NameInMap("cancel_policy_type")]
+                            [Validation(Required=false)]
+                            public int? CancelPolicyType { get; set; }
+
+                        }
+
+                        [NameInMap("cancel_policy_title")]
+                        [Validation(Required=false)]
+                        public string CancelPolicyTitle { get; set; }
+
+                        [NameInMap("check_in")]
+                        [Validation(Required=false)]
+                        public string CheckIn { get; set; }
+
+                    }
+
+                    [NameInMap("btrip_hotel_cancel_desc")]
+                    [Validation(Required=false)]
+                    public List<HotelGoodsQueryResponseBodyModuleRoomsRatesBtripHotelCancelDesc> BtripHotelCancelDesc { get; set; }
+                    public class HotelGoodsQueryResponseBodyModuleRoomsRatesBtripHotelCancelDesc : TeaModel {
+                        [NameInMap("desc")]
+                        [Validation(Required=false)]
+                        public string Desc { get; set; }
+
+                        [NameInMap("title")]
+                        [Validation(Required=false)]
+                        public string Title { get; set; }
+
+                    }
+
+                    [NameInMap("can_smoking")]
+                    [Validation(Required=false)]
+                    public bool? CanSmoking { get; set; }
+
+                    [NameInMap("cancel_policy_desc")]
+                    [Validation(Required=false)]
+                    public string CancelPolicyDesc { get; set; }
+
+                    [NameInMap("cancel_policy_type")]
+                    [Validation(Required=false)]
+                    public int? CancelPolicyType { get; set; }
+
+                    [NameInMap("company_aassist")]
+                    [Validation(Required=false)]
+                    public string CompanyAassist { get; set; }
+
+                    [NameInMap("confirm_type")]
+                    [Validation(Required=false)]
+                    public int? ConfirmType { get; set; }
+
+                    [NameInMap("currency_code")]
+                    [Validation(Required=false)]
+                    public string CurrencyCode { get; set; }
+
+                    [NameInMap("daily_price_format_yuan")]
+                    [Validation(Required=false)]
+                    public string DailyPriceFormatYuan { get; set; }
+
+                    [NameInMap("daily_price_view")]
+                    [Validation(Required=false)]
+                    public string DailyPriceView { get; set; }
+
+                    [NameInMap("end_time_daily")]
+                    [Validation(Required=false)]
+                    public string EndTimeDaily { get; set; }
+
+                    [NameInMap("hotel_detail_rate_price_d_t_o")]
+                    [Validation(Required=false)]
+                    public List<HotelGoodsQueryResponseBodyModuleRoomsRatesHotelDetailRatePriceDTO> HotelDetailRatePriceDTO { get; set; }
+                    public class HotelGoodsQueryResponseBodyModuleRoomsRatesHotelDetailRatePriceDTO : TeaModel {
+                        [NameInMap("before_discount_price")]
+                        [Validation(Required=false)]
+                        public long? BeforeDiscountPrice { get; set; }
+
+                        [NameInMap("breakfast")]
+                        [Validation(Required=false)]
+                        public string Breakfast { get; set; }
+
+                        [NameInMap("discount_price")]
+                        [Validation(Required=false)]
+                        public long? DiscountPrice { get; set; }
+
+                        [NameInMap("last_discounts_price")]
+                        [Validation(Required=false)]
+                        public long? LastDiscountsPrice { get; set; }
+
+                        [NameInMap("last_num")]
+                        [Validation(Required=false)]
+                        public int? LastNum { get; set; }
+
+                        [NameInMap("rate_start_time")]
+                        [Validation(Required=false)]
+                        public string RateStartTime { get; set; }
+
+                        [NameInMap("status")]
+                        [Validation(Required=false)]
+                        public int? Status { get; set; }
+
+                    }
+
+                    [NameInMap("instant_confirm")]
+                    [Validation(Required=false)]
+                    public bool? InstantConfirm { get; set; }
+
+                    [NameInMap("inventory_price")]
+                    [Validation(Required=false)]
+                    public string InventoryPrice { get; set; }
+
+                    [NameInMap("is_business_pay4_goods")]
+                    [Validation(Required=false)]
+                    public bool? IsBusinessPay4Goods { get; set; }
+
+                    [NameInMap("is_guarantee")]
+                    [Validation(Required=false)]
+                    public int? IsGuarantee { get; set; }
+
+                    [NameInMap("is_need_email")]
+                    [Validation(Required=false)]
+                    public bool? IsNeedEmail { get; set; }
+
+                    [NameInMap("item_id")]
+                    [Validation(Required=false)]
+                    public long? ItemId { get; set; }
+
+                    [NameInMap("last_cancel_time")]
+                    [Validation(Required=false)]
+                    public string LastCancelTime { get; set; }
+
+                    [NameInMap("max_occupancy")]
+                    [Validation(Required=false)]
+                    public int? MaxOccupancy { get; set; }
+
+                    [NameInMap("min_adv_hours")]
+                    [Validation(Required=false)]
+                    public int? MinAdvHours { get; set; }
+
+                    [NameInMap("min_days")]
+                    [Validation(Required=false)]
+                    public int? MinDays { get; set; }
+
+                    [NameInMap("nod")]
+                    [Validation(Required=false)]
+                    public int? Nod { get; set; }
+
+                    [NameInMap("nop")]
+                    [Validation(Required=false)]
+                    public int? Nop { get; set; }
+
+                    [NameInMap("order_ship_time")]
+                    [Validation(Required=false)]
+                    public int? OrderShipTime { get; set; }
+
+                    [NameInMap("payment_type")]
+                    [Validation(Required=false)]
+                    public int? PaymentType { get; set; }
+
+                    [NameInMap("price_type")]
+                    [Validation(Required=false)]
+                    public int? PriceType { get; set; }
+
+                    [NameInMap("promotion_info")]
+                    [Validation(Required=false)]
+                    public string PromotionInfo { get; set; }
+
+                    [NameInMap("rate_id")]
+                    [Validation(Required=false)]
+                    public long? RateId { get; set; }
+
+                    [NameInMap("rate_plan_name")]
+                    [Validation(Required=false)]
+                    public string RatePlanName { get; set; }
+
+                    [NameInMap("rp_id")]
+                    [Validation(Required=false)]
+                    public long? RpId { get; set; }
+
+                    [NameInMap("seller_id")]
+                    [Validation(Required=false)]
+                    public long? SellerId { get; set; }
+
+                    [NameInMap("start_time_daily")]
+                    [Validation(Required=false)]
+                    public string StartTimeDaily { get; set; }
+
+                    [NameInMap("status")]
+                    [Validation(Required=false)]
+                    public int? Status { get; set; }
+
+                    [NameInMap("supplier_code")]
+                    [Validation(Required=false)]
+                    public string SupplierCode { get; set; }
+
+                    [NameInMap("supplier_name")]
+                    [Validation(Required=false)]
+                    public string SupplierName { get; set; }
+
+                    [NameInMap("support_special_invoice")]
+                    [Validation(Required=false)]
+                    public bool? SupportSpecialInvoice { get; set; }
+
+                    [NameInMap("unrounding_daily_price_format_yuan")]
+                    [Validation(Required=false)]
+                    public string UnroundingDailyPriceFormatYuan { get; set; }
+
+                }
+
+                [NameInMap("room_dasc")]
+                [Validation(Required=false)]
+                public string RoomDasc { get; set; }
+
+                [NameInMap("room_facility")]
+                [Validation(Required=false)]
+                public List<string> RoomFacility { get; set; }
+
+                [NameInMap("room_service")]
+                [Validation(Required=false)]
+                public List<HotelGoodsQueryResponseBodyModuleRoomsRoomService> RoomService { get; set; }
+                public class HotelGoodsQueryResponseBodyModuleRoomsRoomService : TeaModel {
+                    [NameInMap("color")]
+                    [Validation(Required=false)]
+                    public string Color { get; set; }
+
+                    [NameInMap("desc")]
+                    [Validation(Required=false)]
+                    public string Desc { get; set; }
+
+                    [NameInMap("highlight_color_color")]
+                    [Validation(Required=false)]
+                    public string HighlightColorColor { get; set; }
+
+                    [NameInMap("title")]
+                    [Validation(Required=false)]
+                    public string Title { get; set; }
+
+                }
+
+                [NameInMap("srid")]
+                [Validation(Required=false)]
+                public long? Srid { get; set; }
+
+                [NameInMap("status")]
+                [Validation(Required=false)]
+                public int? Status { get; set; }
+
+                [NameInMap("window_type")]
+                [Validation(Required=false)]
+                public string WindowType { get; set; }
+
+            }
+
+            [NameInMap("search_id")]
+            [Validation(Required=false)]
+            public string SearchId { get; set; }
+
+        }
+
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("traceId")]
+        [Validation(Required=false)]
+        public string TraceId { get; set; }
+
+    }
+
+}
