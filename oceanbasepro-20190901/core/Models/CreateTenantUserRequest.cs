@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("EncryptionType")]
+        [Validation(Required=false)]
+        public string EncryptionType { get; set; }
+
         /// <summary>
         /// The ID of the OceanBase cluster.
         /// </summary>

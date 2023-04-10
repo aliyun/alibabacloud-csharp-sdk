@@ -993,6 +993,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionType))
+            {
+                body["EncryptionType"] = request.EncryptionType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
@@ -1043,6 +1047,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionType))
+            {
+                body["EncryptionType"] = request.EncryptionType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -5237,6 +5245,162 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceNameWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyInstanceNodeNumResponse ModifyInstanceNodeNumWithOptions(ModifyInstanceNodeNumRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNum))
+            {
+                body["NodeNum"] = request.NodeNum;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceNodeNum",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceNodeNumResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyInstanceNodeNumResponse> ModifyInstanceNodeNumWithOptionsAsync(ModifyInstanceNodeNumRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNum))
+            {
+                body["NodeNum"] = request.NodeNum;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceNodeNum",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceNodeNumResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyInstanceNodeNumResponse ModifyInstanceNodeNum(ModifyInstanceNodeNumRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyInstanceNodeNumWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyInstanceNodeNumResponse> ModifyInstanceNodeNumAsync(ModifyInstanceNodeNumRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyInstanceNodeNumWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyInstanceSpecResponse ModifyInstanceSpecWithOptions(ModifyInstanceSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
+            {
+                body["DiskSize"] = request.DiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
+            {
+                body["InstanceClass"] = request.InstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceSpec",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceSpecResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpecWithOptionsAsync(ModifyInstanceSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
+            {
+                body["DiskSize"] = request.DiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
+            {
+                body["InstanceClass"] = request.InstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceSpec",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceSpecResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyInstanceSpecResponse ModifyInstanceSpec(ModifyInstanceSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyInstanceSpecWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpecAsync(ModifyInstanceSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyInstanceSpecWithOptionsAsync(request, runtime);
         }
 
         public ModifyInstanceTagsResponse ModifyInstanceTagsWithOptions(ModifyInstanceTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
