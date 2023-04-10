@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.DocumentAutoml20221229.Models
         [Validation(Required=false)]
         public bool? AutoPrediction { get; set; }
 
+        [NameInMap("Body")]
+        [Validation(Required=false)]
+        public string Body { get; set; }
+
         [NameInMap("ClassifierId")]
         [Validation(Required=false)]
         public long? ClassifierId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.DocumentAutoml20221229.Models
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
-
-        [NameInMap("body")]
-        [Validation(Required=false)]
-        public string Body { get; set; }
 
     }
 

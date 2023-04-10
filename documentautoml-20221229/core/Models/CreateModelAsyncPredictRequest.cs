@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.DocumentAutoml20221229.Models
         [Validation(Required=false)]
         public bool? BinaryToText { get; set; }
 
+        [NameInMap("Body")]
+        [Validation(Required=false)]
+        public string Body { get; set; }
+
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
@@ -35,10 +39,6 @@ namespace AlibabaCloud.SDK.DocumentAutoml20221229.Models
         [NameInMap("ServiceVersion")]
         [Validation(Required=false)]
         public string ServiceVersion { get; set; }
-
-        [NameInMap("body")]
-        [Validation(Required=false)]
-        public string Body { get; set; }
 
     }
 
