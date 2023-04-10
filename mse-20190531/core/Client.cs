@@ -1266,10 +1266,6 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["ClusterType"] = request.ClusterType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
-            {
-                query["Id"] = request.Id;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginInstanceAddress))
             {
                 query["OriginInstanceAddress"] = request.OriginInstanceAddress;
@@ -1332,10 +1328,6 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
             {
                 query["ClusterType"] = request.ClusterType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
-            {
-                query["Id"] = request.Id;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginInstanceAddress))
             {

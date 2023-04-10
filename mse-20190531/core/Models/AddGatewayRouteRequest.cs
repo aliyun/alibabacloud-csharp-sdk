@@ -21,6 +21,42 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The destination service type.
+        /// 
+        /// Valid values
+        /// 
+        /// <!-- -->
+        /// 
+        /// :
+        /// 
+        /// *   VersionOriented
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Multiple
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Single
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Mock\"\"
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Redirect
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("DestinationType")]
         [Validation(Required=false)]
@@ -85,7 +121,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<AddGatewayRouteRequestFallbackServices> FallbackServices { get; set; }
         public class AddGatewayRouteRequestFallbackServices : TeaModel {
             /// <summary>
-            /// The type of the protocol. Valid values:
+            /// The type of the protocol.
             /// </summary>
             [NameInMap("AgreementType")]
             [Validation(Required=false)]
@@ -106,7 +142,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The namespace in which the service resides.
+            /// The namespace to which the service belongs.
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
@@ -170,9 +206,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        /// <summary>
-        /// Routing policy Json string.
-        /// </summary>
         [NameInMap("Policies")]
         [Validation(Required=false)]
         public string Policies { get; set; }
@@ -318,30 +351,25 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// The sequence number of the route. A small value indicates a high priority.
+        /// The sequence number of the route. (A small value indicates a high priority.)
         /// </summary>
         [NameInMap("RouteOrder")]
         [Validation(Required=false)]
         public int? RouteOrder { get; set; }
 
-        /// <summary>
-        /// RouteType: 
-        /// 
-        /// Op: Control routing.
-        /// </summary>
         [NameInMap("RouteType")]
         [Validation(Required=false)]
         public string RouteType { get; set; }
 
         /// <summary>
-        /// The services.
+        /// The list of services.
         /// </summary>
         [NameInMap("Services")]
         [Validation(Required=false)]
         public List<AddGatewayRouteRequestServices> Services { get; set; }
         public class AddGatewayRouteRequestServices : TeaModel {
             /// <summary>
-            /// The type of the protocol. Valid values:
+            /// The type of the protocol.
             /// </summary>
             [NameInMap("AgreementType")]
             [Validation(Required=false)]
@@ -362,7 +390,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public AddGatewayRouteRequestServicesHttpDubboTranscoder HttpDubboTranscoder { get; set; }
             public class AddGatewayRouteRequestServicesHttpDubboTranscoder : TeaModel {
                 /// <summary>
-                /// The service group.
+                /// The name of the service group.
                 /// </summary>
                 [NameInMap("DubboServiceGroup")]
                 [Validation(Required=false)]
@@ -416,14 +444,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string HttpMothed { get; set; }
 
                     /// <summary>
-                    /// The path that is used to match a method.
+                    /// The path used for method matching.
                     /// </summary>
                     [NameInMap("Mothedpath")]
                     [Validation(Required=false)]
                     public string Mothedpath { get; set; }
 
                     /// <summary>
-                    /// The information of parameter mappings.
+                    /// The information about parameter mappings.
                     /// </summary>
                     [NameInMap("ParamMapsList")]
                     [Validation(Required=false)]
@@ -494,7 +522,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The namespace in which the service resides.
+            /// The namespace to which the service belongs.
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]

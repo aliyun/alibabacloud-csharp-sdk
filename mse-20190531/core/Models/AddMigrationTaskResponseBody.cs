@@ -28,20 +28,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// The creation time.
-            /// </summary>
-            [NameInMap("GmtCreate")]
-            [Validation(Required=false)]
-            public string GmtCreate { get; set; }
-
-            /// <summary>
-            /// The update time.
-            /// </summary>
-            [NameInMap("GmtModified")]
-            [Validation(Required=false)]
-            public string GmtModified { get; set; }
-
-            /// <summary>
             /// The ID of the task.
             /// </summary>
             [NameInMap("Id")]
@@ -112,13 +98,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
-
-        /// <summary>
-        /// The HTTP status code returned.
-        /// </summary>
-        [NameInMap("HttpCode")]
-        [Validation(Required=false)]
-        public string HttpCode { get; set; }
 
         /// <summary>
         /// The message returned.

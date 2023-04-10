@@ -31,13 +31,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// The ID of the task. You do not need to configure this parameter.
-        /// </summary>
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
-        /// <summary>
         /// The source instance node address.
         /// </summary>
         [NameInMap("OriginInstanceAddress")]

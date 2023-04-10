@@ -21,6 +21,42 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// The destination service type.
+        /// 
+        /// Valid values
+        /// 
+        /// <!-- -->
+        /// 
+        /// :
+        /// 
+        /// *   VersionOriented
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Multiple
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Single
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Mock\"\"
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
+        /// 
+        /// *   Redirect
+        /// 
+        ///     <!-- -->
+        /// 
+        ///     <!-- -->
         /// </summary>
         [NameInMap("DestinationType")]
         [Validation(Required=false)]
@@ -89,9 +125,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        /// <summary>
-        /// Routing policy Json string.
-        /// </summary>
         [NameInMap("Policies")]
         [Validation(Required=false)]
         public string Policies { get; set; }
@@ -111,23 +144,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RedirectJSONShrink { get; set; }
 
         /// <summary>
-        /// The sequence number of the route. A small value indicates a high priority.
+        /// The sequence number of the route. (A small value indicates a high priority.)
         /// </summary>
         [NameInMap("RouteOrder")]
         [Validation(Required=false)]
         public int? RouteOrder { get; set; }
 
-        /// <summary>
-        /// RouteType: 
-        /// 
-        /// Op: Control routing.
-        /// </summary>
         [NameInMap("RouteType")]
         [Validation(Required=false)]
         public string RouteType { get; set; }
 
         /// <summary>
-        /// The services.
+        /// The list of services.
         /// </summary>
         [NameInMap("Services")]
         [Validation(Required=false)]
