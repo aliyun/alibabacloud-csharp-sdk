@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.DocumentAutoml20221229</AssemblyName>
-    <Version>1.0.7</Version>
+    <Version>1.0.8</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud documentAutoml (20221229) SDK Library for .NET</Description>
