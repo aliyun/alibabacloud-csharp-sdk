@@ -1231,6 +1231,72 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return await GetTitleIntelligenceWithOptionsAsync(request, runtime);
         }
 
+        public GetTranslateImageBatchResultResponse GetTranslateImageBatchResultWithOptions(GetTranslateImageBatchResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTranslateImageBatchResult",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTranslateImageBatchResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetTranslateImageBatchResultResponse> GetTranslateImageBatchResultWithOptionsAsync(GetTranslateImageBatchResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTranslateImageBatchResult",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTranslateImageBatchResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetTranslateImageBatchResultResponse GetTranslateImageBatchResult(GetTranslateImageBatchResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTranslateImageBatchResultWithOptions(request, runtime);
+        }
+
+        public async Task<GetTranslateImageBatchResultResponse> GetTranslateImageBatchResultAsync(GetTranslateImageBatchResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTranslateImageBatchResultWithOptionsAsync(request, runtime);
+        }
+
         public GetTranslateReportResponse GetTranslateReportWithOptions(GetTranslateReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2089,6 +2155,112 @@ namespace AlibabaCloud.SDK.Alimt20181012
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TranslateImageWithOptionsAsync(request, runtime);
+        }
+
+        public TranslateImageBatchResponse TranslateImageBatchWithOptions(TranslateImageBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomTaskId))
+            {
+                body["CustomTaskId"] = request.CustomTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ext))
+            {
+                body["Ext"] = request.Ext;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Field))
+            {
+                body["Field"] = request.Field;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrls))
+            {
+                body["ImageUrls"] = request.ImageUrls;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["TargetLanguage"] = request.TargetLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TranslateImageBatch",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TranslateImageBatchResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<TranslateImageBatchResponse> TranslateImageBatchWithOptionsAsync(TranslateImageBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomTaskId))
+            {
+                body["CustomTaskId"] = request.CustomTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ext))
+            {
+                body["Ext"] = request.Ext;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Field))
+            {
+                body["Field"] = request.Field;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrls))
+            {
+                body["ImageUrls"] = request.ImageUrls;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["TargetLanguage"] = request.TargetLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TranslateImageBatch",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TranslateImageBatchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public TranslateImageBatchResponse TranslateImageBatch(TranslateImageBatchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TranslateImageBatchWithOptions(request, runtime);
+        }
+
+        public async Task<TranslateImageBatchResponse> TranslateImageBatchAsync(TranslateImageBatchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TranslateImageBatchWithOptionsAsync(request, runtime);
         }
 
     }

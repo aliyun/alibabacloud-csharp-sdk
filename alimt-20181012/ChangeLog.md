@@ -1,3 +1,6 @@
+2023-04-11 Version: 2.0.6
+- Update Core .
+
 2022-10-14 Version: 2.0.5
 - Generated csharp 2018-10-12 for alimt.
 

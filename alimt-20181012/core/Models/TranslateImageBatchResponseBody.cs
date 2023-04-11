@@ -8,14 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
-    public class GetUserResponseBody : TeaModel {
+    public class TranslateImageBatchResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public TranslateImageBatchResponseBodyData Data { get; set; }
+        public class TranslateImageBatchResponseBodyData : TeaModel {
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
