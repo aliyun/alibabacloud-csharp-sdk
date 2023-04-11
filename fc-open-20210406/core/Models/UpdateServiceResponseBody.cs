@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         /// Specifies whether to allow functions to access the Internet. Valid values:
         /// 
         /// *   **true**: allows functions in the specified service to access the Internet.
-        /// *   **false**: does not allow functions in the specified service to access the Internet.
+        /// *   **false**: does not allow functions to access the Internet.
         /// </summary>
         [NameInMap("internetAccess")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// The configurations of Tracing Analysis. After you configure Tracing Analysis for a service in Function Compute, you can record the execution duration of a request, view the amount of cold start time for a function, and record the execution duration of a function. For more information, see [Overview](~~189804~~).
+        /// The configuration of Tracing Analysis. After you configure Tracing Analysis for a service in Function Compute, you can record the execution duration of a request, view the amount of cold start time for a function, and record the execution duration of a function. For more information, see [Overview](~~189804~~).
         /// </summary>
         [NameInMap("tracingConfig")]
         [Validation(Required=false)]

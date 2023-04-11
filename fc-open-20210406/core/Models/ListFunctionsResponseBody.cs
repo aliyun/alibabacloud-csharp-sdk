@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             public string CodeChecksum { get; set; }
 
             /// <summary>
-            /// The size of the function code package that is returned by the system. Unit: byte.
+            /// The size of the function code package that is returned by the system. Unit: bytes.
             /// </summary>
             [NameInMap("codeSize")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             public float? Cpu { get; set; }
 
             /// <summary>
-            /// The time when the function is created.
+            /// The time when the function was created.
             /// </summary>
             [NameInMap("createdTime")]
             [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             public string FunctionName { get; set; }
 
             /// <summary>
-            /// The GPU memory capacity for the function. Unit: MB. The memory capacity must be a multiple of 1024 MB.
+            /// The GPU memory capacity for the function. Unit: MB. The value is a multiple of 1,024.
             /// </summary>
             [NameInMap("gpuMemorySize")]
             [Validation(Required=false)]
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             public string Handler { get; set; }
 
             /// <summary>
-            /// The timeout period for the execution of the initializer function. Unit: seconds. Default value: 3. Valid values: 1 to 300. When this period ends, the execution of the initializer function is terminated.
+            /// The timeout period for the execution of the Initializer hook. Unit: seconds. Default value: 3. Valid values: 1 to 300. When this period ends, the execution of the Initializer hook is terminated.
             /// </summary>
             [NameInMap("initializationTimeout")]
             [Validation(Required=false)]
             public int? InitializationTimeout { get; set; }
 
             /// <summary>
-            /// The handler of the initializer function. The format of the value is determined by the programming language that you use. For more information, see [Initializer function](~~157704~~).
+            /// The handler of the Initializer hook. The format of the value is determined by the programming language that you use. For more information, see [Initializer hook](~~157704~~).
             /// </summary>
             [NameInMap("initializer")]
             [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             public InstanceLifecycleConfig InstanceLifecycleConfig { get; set; }
 
             /// <summary>
-            /// The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the number of the soft concurrency, the instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.
+            /// The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the value of soft concurrency, an instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.
             /// 
             /// The value must be less than or equal to that of the **instanceConcurrency** parameter.
             /// </summary>
@@ -156,9 +156,9 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             /// 
             /// *   **e1**: elastic instance
             /// *   **c1**: performance instance
-            /// *   **fc.gpu.tesla.1**: GPU-accelerated instances (Tesla T4)
-            /// *   **fc.gpu.ampere.1**: GPU-accelerated instances (Ampere A10)
-            /// *   **g1**: same fc.gpu.tesla.1
+            /// *   **fc.gpu.tesla.1**: GPU-accelerated instance (Tesla T4)
+            /// *   **fc.gpu.ampere.1**: GPU-accelerated instance (Ampere A10)
+            /// *   **g1**: same as fc.gpu.tesla.1
             /// </summary>
             [NameInMap("instanceType")]
             [Validation(Required=false)]
@@ -172,9 +172,9 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             public string LastModifiedTime { get; set; }
 
             /// <summary>
-            /// An array that consists of the information of layers.
+            /// The information about layers.
             /// 
-            /// > If multiple layers exist, the layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name and a larger subscript in the layer.
+            /// > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.
             /// </summary>
             [NameInMap("layers")]
             [Validation(Required=false)]
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         }
 
         /// <summary>
-        /// The token used to obtain more results. If this parameter is left empty, all the results are returned.
+        /// The token used to obtain more results. If this parameter is not returned, all the layers are returned.
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]

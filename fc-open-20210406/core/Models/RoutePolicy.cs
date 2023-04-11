@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
     public class RoutePolicy : TeaModel {
         [NameInMap("condition")]
         [Validation(Required=false)]
-        public byte[] Condition { get; set; }
+        public string Condition { get; set; }
 
         [NameInMap("policyItems")]
         [Validation(Required=false)]

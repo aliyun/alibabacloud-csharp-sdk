@@ -11,19 +11,19 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
     public class PolicyItem : TeaModel {
         [NameInMap("key")]
         [Validation(Required=false)]
-        public byte[] Key { get; set; }
+        public string Key { get; set; }
 
         [NameInMap("operator")]
         [Validation(Required=false)]
-        public byte[] Operator { get; set; }
+        public string Operator { get; set; }
 
         [NameInMap("type")]
         [Validation(Required=false)]
-        public byte[] Type { get; set; }
+        public string Type { get; set; }
 
         [NameInMap("value")]
         [Validation(Required=false)]
-        public byte[] Value { get; set; }
+        public string Value { get; set; }
 
     }
 

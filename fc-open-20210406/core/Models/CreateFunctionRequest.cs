@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public int? InitializationTimeout { get; set; }
 
         /// <summary>
-        /// The handler of the Initializer hook. For more information, see [Initializer hook](~~157704~~).
+        /// The handler of the Initializer hook. For more information, see [Initializer hooks](~~157704~~).
         /// </summary>
         [NameInMap("initializer")]
         [Validation(Required=false)]
@@ -153,14 +153,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         /// <summary>
         /// The information about layers.
         /// 
-        /// > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file with the same name as a layer with a larger subscript.
+        /// > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.
         /// </summary>
         [NameInMap("layers")]
         [Validation(Required=false)]
         public List<string> Layers { get; set; }
 
         /// <summary>
-        /// The memory size for the function. Unit: MB. The memory size must be a multiple of 64 MB. The memory size varies based on the function instance type. For more information, see [Instance types](~~179379~~).
+        /// The memory size for the function. Unit: MB. The value must be a multiple of 64. The memory size varies based on the function instance type. For more information, see [Instance types](~~179379~~).
         /// </summary>
         [NameInMap("memorySize")]
         [Validation(Required=false)]

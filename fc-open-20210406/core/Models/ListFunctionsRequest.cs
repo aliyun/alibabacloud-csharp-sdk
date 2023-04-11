@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string Qualifier { get; set; }
 
         /// <summary>
-        /// The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.
+        /// The starting position of the result list. The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.
         /// </summary>
         [NameInMap("startKey")]
         [Validation(Required=false)]
