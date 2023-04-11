@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public int? Code { get; set; }
 
         /// <summary>
         /// The response.
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
-            public long? PageNumber { get; set; }
+            public int? PageNumber { get; set; }
 
             /// <summary>
             /// The number of entries returned per page.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
-            public long? PageSize { get; set; }
+            public int? PageSize { get; set; }
 
             /// <summary>
             /// The data returned.
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
-                public long? Count { get; set; }
+                public int? Count { get; set; }
 
                 /// <summary>
                 /// The registration latency.
                 /// </summary>
                 [NameInMap("DelayTime")]
                 [Validation(Required=false)]
-                public long? DelayTime { get; set; }
+                public int? DelayTime { get; set; }
 
                 /// <summary>
                 /// The status. Valid values:
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 /// </summary>
                 [NameInMap("FuncType")]
                 [Validation(Required=false)]
-                public long? FuncType { get; set; }
+                public int? FuncType { get; set; }
 
                 /// <summary>
                 /// Indicates whether the graceful start and shutdown feature is enabled.
@@ -118,18 +118,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? Related { get; set; }
 
                 /// <summary>
-                /// The wait time for application shutdown.
-                /// </summary>
-                [NameInMap("ShutdownWaitSeconds")]
-                [Validation(Required=false)]
-                public int? ShutdownWaitSeconds { get; set; }
-
-                /// <summary>
                 /// The prefetching duration.
                 /// </summary>
                 [NameInMap("WarmupTime")]
                 [Validation(Required=false)]
-                public long? WarmupTime { get; set; }
+                public int? WarmupTime { get; set; }
 
             }
 
@@ -138,16 +131,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// </summary>
             [NameInMap("TotalSize")]
             [Validation(Required=false)]
-            public long? TotalSize { get; set; }
+            public int? TotalSize { get; set; }
 
         }
 
-        /// <summary>
-        /// The HTTP status code returned.
-        /// </summary>
-        [NameInMap("HttpCode")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=false)]
-        public string HttpCode { get; set; }
+        public string ErrorCode { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
 
         /// <summary>
         /// The message returned.

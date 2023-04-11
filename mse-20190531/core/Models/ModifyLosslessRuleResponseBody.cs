@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ModifyLosslessRuleResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public object Data { get; set; }
+
         /// <summary>
         /// The error code returned if the request failed.
         /// </summary>
@@ -16,12 +24,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
-        /// <summary>
-        /// The HTTP status code returned.
-        /// </summary>
-        [NameInMap("HttpCode")]
+        [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
-        public string HttpCode { get; set; }
+        public int? HttpStatusCode { get; set; }
 
         /// <summary>
         /// The message returned.

@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
         /// The number of entries to return on each page. Default value: 10
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long? PageSize { get; set; }
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// The ID of the region.
@@ -61,13 +61,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        /// <summary>
-        /// The service source that the application accesses.
-        /// </summary>
-        [NameInMap("Source")]
-        [Validation(Required=false)]
-        public string Source { get; set; }
 
     }
 

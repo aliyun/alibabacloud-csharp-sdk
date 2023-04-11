@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("DelayTime")]
         [Validation(Required=false)]
-        public long? DelayTime { get; set; }
+        public int? DelayTime { get; set; }
 
         /// <summary>
         /// Specifies whether to enable the alert rule. Valid values:
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("FuncType")]
         [Validation(Required=false)]
-        public long? FuncType { get; set; }
+        public int? FuncType { get; set; }
 
         /// <summary>
         /// Specifies whether to display online and offline processing details.
@@ -100,25 +100,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Related { get; set; }
 
         /// <summary>
-        /// The cooldown duration. Unit: seconds.
-        /// </summary>
-        [NameInMap("ShutdownWaitSeconds")]
-        [Validation(Required=false)]
-        public int? ShutdownWaitSeconds { get; set; }
-
-        /// <summary>
-        /// The service source.
-        /// </summary>
-        [NameInMap("Source")]
-        [Validation(Required=false)]
-        public string Source { get; set; }
-
-        /// <summary>
         /// The prefetching duration.
         /// </summary>
         [NameInMap("WarmupTime")]
         [Validation(Required=false)]
-        public long? WarmupTime { get; set; }
+        public int? WarmupTime { get; set; }
 
     }
 
