@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListColumnsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the columns returned.
+        /// The details about columns.
         /// </summary>
         [NameInMap("ColumnList")]
         [Validation(Required=false)]
@@ -21,31 +21,31 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListColumnsResponseBodyColumnListColumn> Column { get; set; }
             public class ListColumnsResponseBodyColumnListColumn : TeaModel {
                 /// <summary>
-                /// Indicates whether the field is an auto-increment field. Valid values:
+                /// Indicates whether the column is an auto-increment column. Valid values:
                 /// 
-                /// *   true: The field is an auto-increment field.
-                /// *   false: The field is not an auto-increment field.
+                /// *   true: The column is an auto-increment column.
+                /// *   false: The column is not an auto-increment column.
                 /// </summary>
                 [NameInMap("AutoIncrement")]
                 [Validation(Required=false)]
                 public bool? AutoIncrement { get; set; }
 
                 /// <summary>
-                /// The ID of the field.
+                /// The ID of the column.
                 /// </summary>
                 [NameInMap("ColumnId")]
                 [Validation(Required=false)]
                 public string ColumnId { get; set; }
 
                 /// <summary>
-                /// The name of the field.
+                /// The name of the column.
                 /// </summary>
                 [NameInMap("ColumnName")]
                 [Validation(Required=false)]
                 public string ColumnName { get; set; }
 
                 /// <summary>
-                /// The data type of the field.
+                /// The data type of the column.
                 /// </summary>
                 [NameInMap("ColumnType")]
                 [Validation(Required=false)]
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public int? DataScale { get; set; }
 
                 /// <summary>
-                /// The default value of the field.
+                /// The default value of the column.
                 /// </summary>
                 [NameInMap("DefaultValue")]
                 [Validation(Required=false)]
                 public string DefaultValue { get; set; }
 
                 /// <summary>
-                /// The description of the field.
+                /// The description of the column.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -99,33 +99,33 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string FunctionType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the field can be empty. Valid values:
+                /// Indicates whether the column can be empty. Valid values:
                 /// 
-                /// *   **true**: The field can be empty.
-                /// *   **false**: The field cannot be empty.
+                /// *   **true**: The column can be empty.
+                /// *   **false**: The column cannot be empty.
                 /// </summary>
                 [NameInMap("Nullable")]
                 [Validation(Required=false)]
                 public bool? Nullable { get; set; }
 
                 /// <summary>
-                /// The security level of the field. Valid values:
+                /// The security level of the column. Valid values:
                 /// 
-                /// *   INNER: The field is an internal field but not sensitive.
-                /// *   SENSITIVE: The field is a sensitive field.
-                /// *   CONFIDENTIAL: The field is a confidential field.
+                /// *   INNER: The column is an internal column but not sensitive.
+                /// *   SENSITIVE: The column is a sensitive column.
+                /// *   CONFIDENTIAL: The column is a confidential column.
                 /// 
-                /// >  For more information, see [Adjust the sensitivity level of one or more fields](~~66091~~).
+                /// > For more information, see [Sensitivity levels of fields](~~66091~~).
                 /// </summary>
                 [NameInMap("SecurityLevel")]
                 [Validation(Required=false)]
                 public string SecurityLevel { get; set; }
 
                 /// <summary>
-                /// Indicates whether the field is a sensitive field. Valid values:
+                /// Indicates whether the column is a sensitive column. Valid values:
                 /// 
-                /// *   **true**: The field is a sensitive field.
-                /// *   **false**: The field is not a sensitive field.
+                /// *   **true**: The column is a sensitive column.
+                /// *   **false**: The column is not a sensitive column.
                 /// </summary>
                 [NameInMap("Sensitive")]
                 [Validation(Required=false)]
@@ -159,8 +159,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// - **true**: The request was successful.
-        /// - **false**: The request failed.
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

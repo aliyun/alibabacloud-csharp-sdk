@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateTaskResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// The error code returned.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// The error message returned if the request fails.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the task node returned when the task was created.
+        /// The ID of the task node returned if the node is created.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

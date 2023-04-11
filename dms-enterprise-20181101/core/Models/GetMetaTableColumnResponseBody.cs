@@ -17,33 +17,33 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public List<GetMetaTableColumnResponseBodyColumnList> ColumnList { get; set; }
         public class GetMetaTableColumnResponseBodyColumnList : TeaModel {
             /// <summary>
-            /// Indicates whether the field is an auto-increment field. Valid values:
+            /// Indicates whether the column is an auto-increment column. Valid values:
             /// 
-            /// *   **true**: The field is an auto-increment field.
-            /// *   **false**: The field is not an auto-increment field.
+            /// *   **true**: The column is an auto-increment column.
+            /// *   **false**: The column is not an auto-increment column.
             /// </summary>
             [NameInMap("AutoIncrement")]
             [Validation(Required=false)]
             public bool? AutoIncrement { get; set; }
 
             /// <summary>
-            /// The ID of the field.
+            /// The ID of the column.
             /// </summary>
             [NameInMap("ColumnId")]
             [Validation(Required=false)]
             public string ColumnId { get; set; }
 
             /// <summary>
-            /// The name of the field.
+            /// The name of the column.
             /// </summary>
             [NameInMap("ColumnName")]
             [Validation(Required=false)]
             public string ColumnName { get; set; }
 
             /// <summary>
-            /// The data type of the field.
+            /// The data type of the column.
             /// 
-            /// >  The returned data type is not unique. For example, the returned data type can be **bigint** or **int**.
+            /// > The return value of a column is not unique, such as **bigint** or **int**.
             /// </summary>
             [NameInMap("ColumnType")]
             [Validation(Required=false)]
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public int? DataPrecision { get; set; }
 
             /// <summary>
-            /// The number of decimal places that the field shows.
+            /// The number of decimal places for the field.
             /// </summary>
             [NameInMap("DataScale")]
             [Validation(Required=false)]
             public int? DataScale { get; set; }
 
             /// <summary>
-            /// The description of the field.
+            /// The description of the column.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -105,13 +105,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string PrimaryKey { get; set; }
 
             /// <summary>
-            /// The sensitivity level of the field. Valid values:
+            /// The sensitivity level of the column. Valid values:
             /// 
-            /// *   **INNER**: The field is not sensitive.
-            /// *   **SENSITIVE**: The field is sensitive.
-            /// *   **CONFIDENTIAL**: The field is confidential.
+            /// *   **INNER**: The column is not sensitive.
+            /// *   **SENSITIVE**: The column is sensitive.
+            /// *   **CONFIDENTIAL**: The column is confidential.
             /// 
-            /// >  For more information, see [Sensitivity levels of fields](~~66091~~).
+            /// > For more information, see [Sensitivity levels of columns](~~66091~~).
             /// </summary>
             [NameInMap("SecurityLevel")]
             [Validation(Required=false)]

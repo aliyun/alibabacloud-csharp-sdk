@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string DbType { get; set; }
 
         /// <summary>
-        /// The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+        /// The environment type of the database. For more information, see [Change the environment type of an instance](~~163309~~).
         /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string SearchTarget { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

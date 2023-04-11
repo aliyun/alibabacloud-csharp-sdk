@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public long? DagId { get; set; }
 
         /// <summary>
-        /// The position of the node on the Directed Acyclic Graph (DAG).
+        /// The position of the node on the directed acyclic graph (DAG).
         /// </summary>
         [NameInMap("GraphParam")]
         [Validation(Required=false)]
         public string GraphParam { get; set; }
 
         /// <summary>
-        /// The configuration for the node.
+        /// The configuration of the node.
         /// </summary>
         [NameInMap("NodeContent")]
         [Validation(Required=false)]
         public string NodeContent { get; set; }
 
         /// <summary>
-        /// The name of the node you want to create.
+        /// The name of the node that you want to create.
         /// </summary>
         [NameInMap("NodeName")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string NodeOutput { get; set; }
 
         /// <summary>
-        /// The type of the node you want to create. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
+        /// The type of the node that you want to create. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
         /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The ID of the tenant.
         /// 
-        /// > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+        /// > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
         /// <summary>
-        /// The time variables configured for the node.
+        /// The time variables for the node.
         /// </summary>
         [NameInMap("TimeVariables")]
         [Validation(Required=false)]

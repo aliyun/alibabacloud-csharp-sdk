@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListTablesResponseBody : TeaModel {
         /// <summary>
-        /// The error code that is returned if the request fails.
+        /// The error code returned.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request fails.
+        /// The error message returned.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// - **true**: The request was successful.
-        /// - **false**: The request failed.
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public long? NumRows { get; set; }
 
                 /// <summary>
-                /// The IDs of the owners of the table.
+                /// The ID list of the table owners.
                 /// </summary>
                 [NameInMap("OwnerIdList")]
                 [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The nicknames of the owners of the table.
+                /// The nickname list of the table owners.
                 /// </summary>
                 [NameInMap("OwnerNameList")]
                 [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string TableId { get; set; }
 
                 /// <summary>
-                /// The name of the table.
+                /// The table name.
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]

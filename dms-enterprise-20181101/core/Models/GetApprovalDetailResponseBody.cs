@@ -76,21 +76,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             /// <summary>
             /// The type of the ticket. Valid values:
             /// 
-            /// - **NDDL**: The ticket is used to change the schema design.
-            /// - **DATA_TRACK**: The ticket is used to track data.
-            /// - **TABLE_SYNC**: The ticket is used to synchronize databases and tables.
-            /// - **PERM_APPLY**: The ticket is used to apply for permissions.
-            /// - **DATA_EXPORT**: The ticket is used to export data.
-            /// - **DATA_CORRECT**: The ticket is used to change data.
-            /// - **OWNER_APPLY**: The ticket is used to apply for the owner role of a resource.
-            /// - **SENSITIVITY**: The ticket is used to change column sensitivity levels.
+            /// *   **NDDL**: a schema design ticket
+            /// *   **DATA_TRACK**: a data tracking ticket
+            /// *   **TABLE_SYNC**: a table synchronization ticket
+            /// *   **PERM_APPLY**: a permission application ticket
+            /// *   **DATA_EXPORT**: a data export ticket
+            /// *   **DATA_CORRECT**: a data change ticket
+            /// *   **OWNER_APPLY**: an owner role application ticket
+            /// *   **SENSITIVITY**: a column sensitivity level change ticket
             /// </summary>
             [NameInMap("OrderType")]
             [Validation(Required=false)]
             public string OrderType { get; set; }
 
             /// <summary>
-            /// The reason for the approval.
+            /// The reasons for the approval.
             /// </summary>
             [NameInMap("ReasonList")]
             [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             }
 
             /// <summary>
-            /// The ID of the approval template.
+            /// The ID of the workflow template.
             /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
@@ -119,12 +119,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             /// <summary>
             /// The approval status of the ticket. Valid values:
             /// 
-            /// - **AUDITING**: The ticket is being processed.
-            /// - **REJECT**: The ticket was rejected.
-            /// - **CANCEL**: The ticket was revoked.
-            /// - **APPROVED**: The ticket was approved.
+            /// *   **AUDITING**: The ticket is being reviewed.
+            /// *   **REJECT**: The ticket was rejected.
+            /// *   **CANCEL**: The ticket was revoked.
+            /// *   **APPROVED**: The ticket was approved.
             /// 
-            /// >  If an approval process contains multiple approval nodes, this parameter is returned for each approval node.
+            /// > An approval process contains multiple approval nodes, and this parameter is returned for each approval node.
             /// </summary>
             [NameInMap("WorkflowInsCode")]
             [Validation(Required=false)]
@@ -185,7 +185,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     /// <summary>
                     /// The approval status of the ticket. Valid values:
                     /// 
-                    /// *   **AUDITING**: The ticket is being processed.
+                    /// *   **START**: The ticket was submitted.
+                    /// *   **ERROR**: An error occurred.
+                    /// *   **AUDITING**: The ticket is being reviewed.
                     /// *   **REJECT**: The ticket was rejected.
                     /// *   **CANCEL**: The ticket was revoked.
                     /// *   **APPROVED**: The ticket was approved.
@@ -201,14 +203,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The error code returned if the request fails.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request fails.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
@@ -222,10 +224,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// Indicates whether the request is successful. Valid values:
         /// 
-        /// - **true**: The request was successful.
-        /// - **false**: The request failed.
+        /// *   **true**: The request is successful.
+        /// *   **false**: The request fails.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

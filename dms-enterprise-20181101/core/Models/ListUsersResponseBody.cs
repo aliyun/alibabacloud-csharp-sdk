@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListUsersResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// - **true**: The request was successful.
-        /// - **false**: The request failed.
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListUsersResponseBodyUserListUser> User { get; set; }
             public class ListUsersResponseBodyUserListUser : TeaModel {
                 /// <summary>
-                /// The number of queries that are performed on the current day.
+                /// The number of queries that were performed on the current day.
                 /// </summary>
                 [NameInMap("CurExecuteCount")]
                 [Validation(Required=false)]
                 public long? CurExecuteCount { get; set; }
 
                 /// <summary>
-                /// The number of rows that are queried on the current day.
+                /// The number of rows that were queried on the current day.
                 /// </summary>
                 [NameInMap("CurResultCount")]
                 [Validation(Required=false)]
@@ -75,8 +75,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// <summary>
                 /// The DingTalk chatbot URL that is used to receive notifications.
                 /// 
-                /// > * The system returns this parameter if the user has set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-                /// > * The system does not return this parameter if the user has not set a DingTalk chatbot URL.
+                /// > 
+                /// 
+                /// *   The system returns this parameter if you have set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+                /// 
+                /// *   The system does not return this parameter if you have not set a DingTalk chatbot URL.
                 /// </summary>
                 [NameInMap("DingRobot")]
                 [Validation(Required=false)]
@@ -85,15 +88,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// <summary>
                 /// The email address that is used to receive notifications.
                 /// 
-                /// > * The system returns this parameter if the user has set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-                /// > * The system does not return this parameter if the user has not set an email address.
+                /// > 
+                /// 
+                /// *   The system returns this parameter if you have set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+                /// 
+                /// *   The system does not return this parameter if you have not set an email address.
                 /// </summary>
                 [NameInMap("Email")]
                 [Validation(Required=false)]
                 public string Email { get; set; }
 
                 /// <summary>
-                /// The last time when the user logged on to the console.
+                /// The time when the user last logged on to the console.
                 /// </summary>
                 [NameInMap("LastLoginTime")]
                 [Validation(Required=false)]
@@ -114,10 +120,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public long? MaxResultCount { get; set; }
 
                 /// <summary>
-                /// The mobile phone number that is used to receive notifications.
+                /// The mobile phone number of the user.
                 /// 
-                /// > * The system returns this parameter if the user has set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-                /// > * The system does not return this parameter if the user has not set a mobile phone number.
+                /// > 
+                /// 
+                /// *   The system returns this parameter if you have set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+                /// 
+                /// *   The system does not return this parameter if you have not set a mobile phone number.
                 /// </summary>
                 [NameInMap("Mobile")]
                 [Validation(Required=false)]
@@ -133,9 +142,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// <summary>
                 /// The notification method. The system returns one or more values. Valid values:
                 /// 
-                /// *   **SMS**: text message.
+                /// *   **SMS**: text message
                 /// *   **EMAIL**: email.
-                /// *   **DingTalk**: DingTalk.
+                /// *   **DINGDING**: DingTalk.
                 /// *   **DINGROBOT**: DingTalk chatbot.
                 /// *   **WEBHOOK**: webhook.
                 /// </summary>
@@ -144,20 +153,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string NotificationMode { get; set; }
 
                 /// <summary>
-                /// The UID of the Alibaba Cloud account of the user.
+                /// The ID of the Alibaba Cloud account of the user.
                 /// </summary>
                 [NameInMap("ParentUid")]
                 [Validation(Required=false)]
                 public string ParentUid { get; set; }
 
                 /// <summary>
-                /// The ID of the role that is assigned to the user. Valid values:
-                /// 
-                /// *   **1**: a regular user role.
-                /// *   **2**: a DBA role.
-                /// *   **3**: a DMS administrator role.
-                /// *   **4**: a security administrator role.
-                /// *   **6**: a schema read-only user role.
+                /// The IDs of the roles.
                 /// </summary>
                 [NameInMap("RoleIdList")]
                 [Validation(Required=false)]
@@ -170,13 +173,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The name of the role that is assigned to the user. Valid values:
-                /// 
-                /// *   **USER**: a regular user.
-                /// *   **DBA**: a DBA.
-                /// *   **ADMIN**: a DMS administrator.
-                /// *   **SECURITY_ADMIN**: a security administrator.
-                /// *   **STRUCT\_READ\_ONLY**: a schema read-only user.
+                /// The names of roles.
                 /// </summary>
                 [NameInMap("RoleNameList")]
                 [Validation(Required=false)]
@@ -192,7 +189,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// The signature method that is used to secure connections when a webhook URL is used. Valid values:
                 /// 
                 /// *   **NONE**: no signature.
-                /// *   **HMAC_SHA1**: HMAC-SHA1.
+                /// *   **HMAC_SHA1**: HMAC_SHA1.
                 /// </summary>
                 [NameInMap("SignatureMethod")]
                 [Validation(Required=false)]
@@ -210,7 +207,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string State { get; set; }
 
                 /// <summary>
-                /// The UID of the user.
+                /// The ID of the Alibaba Cloud account.
                 /// </summary>
                 [NameInMap("Uid")]
                 [Validation(Required=false)]
@@ -226,8 +223,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// <summary>
                 /// The webhook URL that is used to receive notifications.
                 /// 
-                /// > * If the user has set a webhook URL, DMS sends notifications to the specified URL.
-                /// > * The system does not return this parameter if the user has not set a webhook URL.
+                /// > 
+                /// 
+                /// *   If you have set a webhook URL, DMS sends notifications to the specified URL.
+                /// 
+                /// *   The system does not return this parameter if you have not set a webhook URL.
                 /// </summary>
                 [NameInMap("Webhook")]
                 [Validation(Required=false)]

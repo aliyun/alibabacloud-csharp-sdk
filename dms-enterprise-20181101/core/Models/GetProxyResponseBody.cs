@@ -24,35 +24,35 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string CreatorName { get; set; }
 
         /// <summary>
-        /// The error code returned.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The port that was used by HTTPS clients to connect to the database instance.
+        /// The port number used by the HTTPS protocol.
         /// </summary>
         [NameInMap("HttpsPort")]
         [Validation(Required=false)]
         public int? HttpsPort { get; set; }
 
         /// <summary>
-        /// The ID of the database instance.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public long? InstanceId { get; set; }
 
         /// <summary>
-        /// Indicates whether the internal endpoint is enabled. Default value: **true**.
+        /// Indicates whether the internal endpoint was enabled. Default value: **true**.
         /// </summary>
         [NameInMap("PrivateEnable")]
         [Validation(Required=false)]
@@ -65,10 +65,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string PrivateHost { get; set; }
 
+        /// <summary>
+        /// The port number used by the protocol.
+        /// </summary>
         [NameInMap("ProtocolPort")]
         [Validation(Required=false)]
         public int? ProtocolPort { get; set; }
 
+        /// <summary>
+        /// The protocol type of the database. Example: MYSQL.
+        /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
@@ -81,25 +87,31 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public long? ProxyId { get; set; }
 
         /// <summary>
-        /// Indicates whether the public endpoint is enabled. Valid values:
+        /// Indicates whether the public endpoint was enabled. Valid values:
         /// 
-        /// - **true**: The public endpoint is enabled.
-        /// - **false**: The public endpoint is disabled.
+        /// *   **true**: The public endpoint was enabled.
+        /// *   **false**: The public endpoint was disabled.
         /// </summary>
         [NameInMap("PublicEnable")]
         [Validation(Required=false)]
         public bool? PublicEnable { get; set; }
 
         /// <summary>
-        /// The public endpoint. A public endpoint is returned no matter whether the public endpoint is enabled or disabled.  
+        /// The public endpoint. A public endpoint is returned no matter whether the public endpoint is enabled or disabled.
         /// 
-        /// > - If the value of the PublicEnable parameter is **true**, a valid public endpoint that can be resolved by using Alibaba Cloud DNS (DNS) is returned.
-        /// > - If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using DNS is returned.
+        /// > 
+        /// 
+        /// *   If the value of the PublicEnable parameter is **true**, a valid public endpoint that can be resolved by using Alibaba Cloud DNS is returned.
+        /// 
+        /// *   If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using Alibaba Cloud DNS is returned.
         /// </summary>
         [NameInMap("PublicHost")]
         [Validation(Required=false)]
         public string PublicHost { get; set; }
 
+        /// <summary>
+        /// The ID of the region in which the instance resides.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -114,8 +126,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// - **true**: The request was successful.
-        /// - **false**: The request failed.
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

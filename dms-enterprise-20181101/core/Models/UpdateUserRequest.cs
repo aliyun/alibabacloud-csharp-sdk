@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateUserRequest : TeaModel {
+        /// <summary>
+        /// The maximum number of queries that can be performed each day.
+        /// </summary>
         [NameInMap("MaxExecuteCount")]
         [Validation(Required=false)]
         public long? MaxExecuteCount { get; set; }
 
+        /// <summary>
+        /// The maximum number of rows that can be queried each day.
+        /// </summary>
         [NameInMap("MaxResultCount")]
         [Validation(Required=false)]
         public long? MaxResultCount { get; set; }
 
+        /// <summary>
+        /// The DingTalk ID or mobile number of the user.
+        /// </summary>
         [NameInMap("Mobile")]
         [Validation(Required=false)]
         public string Mobile { get; set; }
 
+        /// <summary>
+        /// The roles that the user assumes. For more information about the valid values, see the Request parameters section in the [RegisterUser](~~141565~~) topic.
+        /// </summary>
         [NameInMap("RoleNames")]
         [Validation(Required=false)]
         public string RoleNames { get; set; }
@@ -28,19 +40,22 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// The ID of the tenant.
         /// 
-        /// >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+        /// > : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
         /// <summary>
-        /// The UID of the user. You can view your UID by moving the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console.
+        /// The Alibaba Cloud unique ID (UID) of the user to update.
         /// </summary>
         [NameInMap("Uid")]
         [Validation(Required=false)]
         public long? Uid { get; set; }
 
+        /// <summary>
+        /// The nickname of the user.
+        /// </summary>
         [NameInMap("UserNick")]
         [Validation(Required=false)]
         public string UserNick { get; set; }

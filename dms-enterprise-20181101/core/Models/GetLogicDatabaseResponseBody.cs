@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetLogicDatabaseResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// The status code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The details about the logical database.
+        /// The details of the logical database.
         /// </summary>
         [NameInMap("LogicDatabase")]
         [Validation(Required=false)]
@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string DatabaseId { get; set; }
 
+            /// <summary>
+            /// The IDs of database shards of the logical database.
+            /// </summary>
             [NameInMap("DatabaseIds")]
             [Validation(Required=false)]
             public GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds DatabaseIds { get; set; }
@@ -55,7 +58,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             }
 
             /// <summary>
-            /// The type of the database. For more information about the valid values of the DbType parameter, see [DbType parameter](https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter).
+            /// The database engine. For more information about the valid values of the DbType parameter, see [DbType parameter](~~198106~~).
             /// </summary>
             [NameInMap("DbType")]
             [Validation(Required=false)]
@@ -64,14 +67,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             /// <summary>
             /// The type of the environment to which the database belongs. Valid values:
             /// 
-            /// - product: production environment
-            /// - dev: development environment
-            /// - pre: staging environment
-            /// - test: test environment
-            /// - sit: SIT environment
-            /// - uat: user acceptance testing (UAT) environment
-            /// - pet: stress testing environment
-            /// - stag: STAG environment
+            /// *   product: production environment
+            /// *   dev: development environment
+            /// *   pre: pre-release environment
+            /// *   test: test environment
+            /// *   sit: system integration testing (SIT) environment
+            /// *   uat: user acceptance testing (UAT) environment
+            /// *   pet: stress testing environment
+            /// *   stag: staging environment
             /// </summary>
             [NameInMap("EnvType")]
             [Validation(Required=false)]
@@ -134,10 +137,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// - true: The request is successful.
-        /// - false: The request fails.
+        /// *   true: The request was successful.
+        /// *   false: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

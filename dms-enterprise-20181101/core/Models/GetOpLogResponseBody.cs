@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetOpLogResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request fails.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request fails.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
@@ -37,8 +37,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// <summary>
                 /// The endpoint of the database instance.
                 /// 
-                /// > * This parameter is valid only for database instances of the LocalInstance type.
-                /// > * This parameter is valid only for operations on the functional modules related to tasks.
+                /// > 
+                /// 
+                /// *   This parameter is valid only for database instances of the LocalInstance type.
+                /// 
+                /// *   This parameter is valid only for operations on the functional modules related to tasks.
                 /// </summary>
                 [NameInMap("Database")]
                 [Validation(Required=false)]
@@ -82,7 +85,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public long? OrderId { get; set; }
 
                 /// <summary>
-                /// The UID of the Alibaba Cloud account.
+                /// The ID of the Alibaba Cloud account.
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
@@ -107,10 +110,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// - **true**: The request is successful.
-        /// - **false**: The request fails.
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class SearchDatabaseResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// The error code.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The error message.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
@@ -48,6 +48,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public string Alias { get; set; }
 
+                /// <summary>
+                /// The name of the catalog to which the database belongs.
+                /// 
+                /// > If the type of the database engine is PostgreSQL, the name of the database is displayed.
+                /// </summary>
                 [NameInMap("CatalogName")]
                 [Validation(Required=false)]
                 public string CatalogName { get; set; }
@@ -67,7 +72,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string DatalinkName { get; set; }
 
                 /// <summary>
-                /// The type of the database.
+                /// The type of the database engine.
                 /// </summary>
                 [NameInMap("DbType")]
                 [Validation(Required=false)]
@@ -88,7 +93,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string Encoding { get; set; }
 
                 /// <summary>
-                /// The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+                /// The environment type of the database. For more information, see [Change the environment type of an instance](~~163309~~).
                 /// </summary>
                 [NameInMap("EnvType")]
                 [Validation(Required=false)]
@@ -112,7 +117,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public bool? Logic { get; set; }
 
                 /// <summary>
-                /// The IDs of the owners of the database.
+                /// The IDs of the owners of the databases.
                 /// </summary>
                 [NameInMap("OwnerIdList")]
                 [Validation(Required=false)]
@@ -138,7 +143,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The port number of the instance in which the database resides.
+                /// The port of the instance in which the database resides.
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
@@ -159,7 +164,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string SearchName { get; set; }
 
                 /// <summary>
-                /// The system ID (Sid) of the instance in which the database resides.
+                /// The system ID (SID) of the instance in which the database resides.
                 /// </summary>
                 [NameInMap("Sid")]
                 [Validation(Required=false)]
@@ -170,10 +175,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// Indicates whether the request is successful. Valid values:
         /// 
-        /// - **true**: The request was successful.
-        /// - **false**: The request failed.
+        /// *   **true**: The request is successful.
+        /// *   **false**: The request fails.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

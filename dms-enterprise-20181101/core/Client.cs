@@ -1190,6 +1190,114 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
+          * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request CreateAuthorityTemplateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAuthorityTemplateResponse
+         */
+        public CreateAuthorityTemplateResponse CreateAuthorityTemplateWithOptions(CreateAuthorityTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAuthorityTemplate",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAuthorityTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request CreateAuthorityTemplateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAuthorityTemplateResponse
+         */
+        public async Task<CreateAuthorityTemplateResponse> CreateAuthorityTemplateWithOptionsAsync(CreateAuthorityTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAuthorityTemplate",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAuthorityTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request CreateAuthorityTemplateRequest
+          * @return CreateAuthorityTemplateResponse
+         */
+        public CreateAuthorityTemplateResponse CreateAuthorityTemplate(CreateAuthorityTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAuthorityTemplateWithOptions(request, runtime);
+        }
+
+        /**
+          * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request CreateAuthorityTemplateRequest
+          * @return CreateAuthorityTemplateResponse
+         */
+        public async Task<CreateAuthorityTemplateResponse> CreateAuthorityTemplateAsync(CreateAuthorityTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAuthorityTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /**
           * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
           *
           * @param tmpReq CreateDataCorrectOrderRequest
@@ -2542,7 +2650,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * For more instructions on this feature, see [SQL audit](~~60374~~) .
+          * For more information about the SQL review feature, see [SQL review](~~60374~~).
           *
           * @param tmpReq CreateSQLReviewOrderRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2598,7 +2706,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * For more instructions on this feature, see [SQL audit](~~60374~~) .
+          * For more information about the SQL review feature, see [SQL review](~~60374~~).
           *
           * @param tmpReq CreateSQLReviewOrderRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2654,7 +2762,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * For more instructions on this feature, see [SQL audit](~~60374~~) .
+          * For more information about the SQL review feature, see [SQL review](~~60374~~).
           *
           * @param request CreateSQLReviewOrderRequest
           * @return CreateSQLReviewOrderResponse
@@ -2666,7 +2774,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * For more instructions on this feature, see [SQL audit](~~60374~~) .
+          * For more information about the SQL review feature, see [SQL review](~~60374~~).
           *
           * @param request CreateSQLReviewOrderRequest
           * @return CreateSQLReviewOrderResponse
@@ -5114,8 +5222,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * If the security rules of the instance need to be approved for synchronization, call [SubmitStructSyncOrderApproval](~~206166~~) The interface initiates an approval process and completes the approval.
-          * >  You can call [GetStructSyncJobDetail](~~206160~~) You can call this operation to query whether the target instance requires an approval.
+          * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+          * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
           *
           * @param request ExecuteStructSyncRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5153,8 +5261,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * If the security rules of the instance need to be approved for synchronization, call [SubmitStructSyncOrderApproval](~~206166~~) The interface initiates an approval process and completes the approval.
-          * >  You can call [GetStructSyncJobDetail](~~206160~~) You can call this operation to query whether the target instance requires an approval.
+          * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+          * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
           *
           * @param request ExecuteStructSyncRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5192,8 +5300,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * If the security rules of the instance need to be approved for synchronization, call [SubmitStructSyncOrderApproval](~~206166~~) The interface initiates an approval process and completes the approval.
-          * >  You can call [GetStructSyncJobDetail](~~206160~~) You can call this operation to query whether the target instance requires an approval.
+          * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+          * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
           *
           * @param request ExecuteStructSyncRequest
           * @return ExecuteStructSyncResponse
@@ -5205,8 +5313,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * If the security rules of the instance need to be approved for synchronization, call [SubmitStructSyncOrderApproval](~~206166~~) The interface initiates an approval process and completes the approval.
-          * >  You can call [GetStructSyncJobDetail](~~206160~~) You can call this operation to query whether the target instance requires an approval.
+          * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+          * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
           *
           * @param request ExecuteStructSyncRequest
           * @return ExecuteStructSyncResponse
@@ -5289,6 +5397,206 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetApprovalDetailWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * You must be a Data Management (DMS) administrator or a database administrator (DBA). For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request GetAuthorityTemplateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAuthorityTemplateResponse
+         */
+        public GetAuthorityTemplateResponse GetAuthorityTemplateWithOptions(GetAuthorityTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAuthorityTemplate",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAuthorityTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * You must be a Data Management (DMS) administrator or a database administrator (DBA). For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request GetAuthorityTemplateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAuthorityTemplateResponse
+         */
+        public async Task<GetAuthorityTemplateResponse> GetAuthorityTemplateWithOptionsAsync(GetAuthorityTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAuthorityTemplate",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAuthorityTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * You must be a Data Management (DMS) administrator or a database administrator (DBA). For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request GetAuthorityTemplateRequest
+          * @return GetAuthorityTemplateResponse
+         */
+        public GetAuthorityTemplateResponse GetAuthorityTemplate(GetAuthorityTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAuthorityTemplateWithOptions(request, runtime);
+        }
+
+        /**
+          * You must be a Data Management (DMS) administrator or a database administrator (DBA). For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request GetAuthorityTemplateRequest
+          * @return GetAuthorityTemplateResponse
+         */
+        public async Task<GetAuthorityTemplateResponse> GetAuthorityTemplateAsync(GetAuthorityTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAuthorityTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request GetAuthorityTemplateItemRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAuthorityTemplateItemResponse
+         */
+        public GetAuthorityTemplateItemResponse GetAuthorityTemplateItemWithOptions(GetAuthorityTemplateItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAuthorityTemplateItem",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAuthorityTemplateItemResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request GetAuthorityTemplateItemRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetAuthorityTemplateItemResponse
+         */
+        public async Task<GetAuthorityTemplateItemResponse> GetAuthorityTemplateItemWithOptionsAsync(GetAuthorityTemplateItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAuthorityTemplateItem",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAuthorityTemplateItemResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request GetAuthorityTemplateItemRequest
+          * @return GetAuthorityTemplateItemResponse
+         */
+        public GetAuthorityTemplateItemResponse GetAuthorityTemplateItem(GetAuthorityTemplateItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAuthorityTemplateItemWithOptions(request, runtime);
+        }
+
+        /**
+          * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request GetAuthorityTemplateItemRequest
+          * @return GetAuthorityTemplateItemResponse
+         */
+        public async Task<GetAuthorityTemplateItemResponse> GetAuthorityTemplateItemAsync(GetAuthorityTemplateItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAuthorityTemplateItemWithOptionsAsync(request, runtime);
         }
 
         public GetDBTaskSQLJobLogResponse GetDBTaskSQLJobLogWithOptions(GetDBTaskSQLJobLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5682,7 +5990,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * This interface applies to: [Common data change](~~58419~~) and [Batch Data import](~~144643~~) .
+          * This operation applies to [regular data change](~~58419~~) and [batch data import](~~144643~~).
           *
           * @param request GetDataCorrectSQLFileRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5720,7 +6028,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * This interface applies to: [Common data change](~~58419~~) and [Batch Data import](~~144643~~) .
+          * This operation applies to [regular data change](~~58419~~) and [batch data import](~~144643~~).
           *
           * @param request GetDataCorrectSQLFileRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5758,7 +6066,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * This interface applies to: [Common data change](~~58419~~) and [Batch Data import](~~144643~~) .
+          * This operation applies to [regular data change](~~58419~~) and [batch data import](~~144643~~).
           *
           * @param request GetDataCorrectSQLFileRequest
           * @return GetDataCorrectSQLFileResponse
@@ -5770,7 +6078,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * This interface applies to: [Common data change](~~58419~~) and [Batch Data import](~~144643~~) .
+          * This operation applies to [regular data change](~~58419~~) and [batch data import](~~144643~~).
           *
           * @param request GetDataCorrectSQLFileRequest
           * @return GetDataCorrectSQLFileResponse
@@ -6169,6 +6477,88 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDataExportOrderDetailWithOptionsAsync(request, runtime);
+        }
+
+        public GetDataImportSQLResponse GetDataImportSQLWithOptions(GetDataImportSQLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlId))
+            {
+                query["SqlId"] = request.SqlId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataImportSQL",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataImportSQLResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetDataImportSQLResponse> GetDataImportSQLWithOptionsAsync(GetDataImportSQLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlId))
+            {
+                query["SqlId"] = request.SqlId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataImportSQL",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataImportSQLResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetDataImportSQLResponse GetDataImportSQL(GetDataImportSQLRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDataImportSQLWithOptions(request, runtime);
+        }
+
+        public async Task<GetDataImportSQLResponse> GetDataImportSQLAsync(GetDataImportSQLRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDataImportSQLWithOptionsAsync(request, runtime);
         }
 
         public GetDatabaseResponse GetDatabaseWithOptions(GetDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6633,6 +7023,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await GetLogicDatabaseWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request GetMetaTableColumnRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetMetaTableColumnResponse
+         */
         public GetMetaTableColumnResponse GetMetaTableColumnWithOptions(GetMetaTableColumnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6664,6 +7061,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetMetaTableColumnResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request GetMetaTableColumnRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetMetaTableColumnResponse
+         */
         public async Task<GetMetaTableColumnResponse> GetMetaTableColumnWithOptionsAsync(GetMetaTableColumnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6695,18 +7099,37 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetMetaTableColumnResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request GetMetaTableColumnRequest
+          * @return GetMetaTableColumnResponse
+         */
         public GetMetaTableColumnResponse GetMetaTableColumn(GetMetaTableColumnRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetMetaTableColumnWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request GetMetaTableColumnRequest
+          * @return GetMetaTableColumnResponse
+         */
         public async Task<GetMetaTableColumnResponse> GetMetaTableColumnAsync(GetMetaTableColumnRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetMetaTableColumnWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request GetMetaTableDetailInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetMetaTableDetailInfoResponse
+         */
         public GetMetaTableDetailInfoResponse GetMetaTableDetailInfoWithOptions(GetMetaTableDetailInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6738,6 +7161,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetMetaTableDetailInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request GetMetaTableDetailInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetMetaTableDetailInfoResponse
+         */
         public async Task<GetMetaTableDetailInfoResponse> GetMetaTableDetailInfoWithOptionsAsync(GetMetaTableDetailInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6769,12 +7199,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetMetaTableDetailInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request GetMetaTableDetailInfoRequest
+          * @return GetMetaTableDetailInfoResponse
+         */
         public GetMetaTableDetailInfoResponse GetMetaTableDetailInfo(GetMetaTableDetailInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetMetaTableDetailInfoWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request GetMetaTableDetailInfoRequest
+          * @return GetMetaTableDetailInfoResponse
+         */
         public async Task<GetMetaTableDetailInfoResponse> GetMetaTableDetailInfoAsync(GetMetaTableDetailInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7210,7 +7652,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * This interface is applicable to obtaining: **Database-permission** , **Table-permissions** , **sensitive column-permission** .
+          * You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
           *
           * @param request GetPermApplyOrderDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7248,7 +7690,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * This interface is applicable to obtaining: **Database-permission** , **Table-permissions** , **sensitive column-permission** .
+          * You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
           *
           * @param request GetPermApplyOrderDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7286,7 +7728,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * This interface is applicable to obtaining: **Database-permission** , **Table-permissions** , **sensitive column-permission** .
+          * You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
           *
           * @param request GetPermApplyOrderDetailRequest
           * @return GetPermApplyOrderDetailResponse
@@ -7298,7 +7740,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * This interface is applicable to obtaining: **Database-permission** , **Table-permissions** , **sensitive column-permission** .
+          * You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
           *
           * @param request GetPermApplyOrderDetailRequest
           * @return GetPermApplyOrderDetailResponse
@@ -7387,10 +7829,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyId))
             {
                 query["ProxyId"] = request.ProxyId;
@@ -7422,10 +7860,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyId))
             {
                 query["ProxyId"] = request.ProxyId;
@@ -8823,6 +9257,130 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await GetUserUploadFileJobWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You must be a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request GrantTemplateAuthorityRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GrantTemplateAuthorityResponse
+         */
+        public GrantTemplateAuthorityResponse GrantTemplateAuthorityWithOptions(GrantTemplateAuthorityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireDate))
+            {
+                query["ExpireDate"] = request.ExpireDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIds))
+            {
+                query["UserIds"] = request.UserIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrantTemplateAuthority",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrantTemplateAuthorityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * You must be a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request GrantTemplateAuthorityRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GrantTemplateAuthorityResponse
+         */
+        public async Task<GrantTemplateAuthorityResponse> GrantTemplateAuthorityWithOptionsAsync(GrantTemplateAuthorityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireDate))
+            {
+                query["ExpireDate"] = request.ExpireDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIds))
+            {
+                query["UserIds"] = request.UserIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrantTemplateAuthority",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrantTemplateAuthorityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * You must be a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request GrantTemplateAuthorityRequest
+          * @return GrantTemplateAuthorityResponse
+         */
+        public GrantTemplateAuthorityResponse GrantTemplateAuthority(GrantTemplateAuthorityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GrantTemplateAuthorityWithOptions(request, runtime);
+        }
+
+        /**
+          * You must be a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request GrantTemplateAuthorityRequest
+          * @return GrantTemplateAuthorityResponse
+         */
+        public async Task<GrantTemplateAuthorityResponse> GrantTemplateAuthorityAsync(GrantTemplateAuthorityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GrantTemplateAuthorityWithOptionsAsync(request, runtime);
+        }
+
         public GrantUserPermissionResponse GrantUserPermissionWithOptions(GrantUserPermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9101,6 +9659,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await ListClassificationTemplatesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request ListColumnsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListColumnsResponse
+         */
         public ListColumnsResponse ListColumnsWithOptions(ListColumnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9136,6 +9701,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ListColumnsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request ListColumnsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListColumnsResponse
+         */
         public async Task<ListColumnsResponse> ListColumnsWithOptionsAsync(ListColumnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9171,12 +9743,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ListColumnsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request ListColumnsRequest
+          * @return ListColumnsResponse
+         */
         public ListColumnsResponse ListColumns(ListColumnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListColumnsWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request ListColumnsRequest
+          * @return ListColumnsResponse
+         */
         public async Task<ListColumnsResponse> ListColumnsAsync(ListColumnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9765,6 +10349,186 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDataCorrectPreCheckSQLWithOptionsAsync(request, runtime);
+        }
+
+        public ListDataImportSQLPreCheckDetailResponse ListDataImportSQLPreCheckDetailWithOptions(ListDataImportSQLPreCheckDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumer))
+            {
+                query["PageNumer"] = request.PageNumer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlType))
+            {
+                query["SqlType"] = request.SqlType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusCode))
+            {
+                query["StatusCode"] = request.StatusCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataImportSQLPreCheckDetail",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataImportSQLPreCheckDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListDataImportSQLPreCheckDetailResponse> ListDataImportSQLPreCheckDetailWithOptionsAsync(ListDataImportSQLPreCheckDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumer))
+            {
+                query["PageNumer"] = request.PageNumer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlType))
+            {
+                query["SqlType"] = request.SqlType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusCode))
+            {
+                query["StatusCode"] = request.StatusCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataImportSQLPreCheckDetail",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataImportSQLPreCheckDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListDataImportSQLPreCheckDetailResponse ListDataImportSQLPreCheckDetail(ListDataImportSQLPreCheckDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataImportSQLPreCheckDetailWithOptions(request, runtime);
+        }
+
+        public async Task<ListDataImportSQLPreCheckDetailResponse> ListDataImportSQLPreCheckDetailAsync(ListDataImportSQLPreCheckDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataImportSQLPreCheckDetailWithOptionsAsync(request, runtime);
+        }
+
+        public ListDataImportSQLTypeResponse ListDataImportSQLTypeWithOptions(ListDataImportSQLTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataImportSQLType",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataImportSQLTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListDataImportSQLTypeResponse> ListDataImportSQLTypeWithOptionsAsync(ListDataImportSQLTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataImportSQLType",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataImportSQLTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListDataImportSQLTypeResponse ListDataImportSQLType(ListDataImportSQLTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataImportSQLTypeWithOptions(request, runtime);
+        }
+
+        public async Task<ListDataImportSQLTypeResponse> ListDataImportSQLTypeAsync(ListDataImportSQLTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataImportSQLTypeWithOptionsAsync(request, runtime);
         }
 
         public ListDatabaseUserPermssionsResponse ListDatabaseUserPermssionsWithOptions(ListDatabaseUserPermssionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -12261,6 +13025,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await ListStandardGroupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request ListTablesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTablesResponse
+         */
         public ListTablesResponse ListTablesWithOptions(ListTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12308,6 +13079,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ListTablesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request ListTablesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListTablesResponse
+         */
         public async Task<ListTablesResponse> ListTablesWithOptionsAsync(ListTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12355,12 +13133,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ListTablesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request ListTablesRequest
+          * @return ListTablesResponse
+         */
         public ListTablesResponse ListTables(ListTablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTablesWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request ListTablesRequest
+          * @return ListTablesResponse
+         */
         public async Task<ListTablesResponse> ListTablesAsync(ListTablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15063,6 +15853,114 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await RetryDataCorrectPreCheckWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You must be a database administrator (DBA) or a DMS administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request RevokeTemplateAuthorityRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RevokeTemplateAuthorityResponse
+         */
+        public RevokeTemplateAuthorityResponse RevokeTemplateAuthorityWithOptions(RevokeTemplateAuthorityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIds))
+            {
+                query["UserIds"] = request.UserIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeTemplateAuthority",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeTemplateAuthorityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * You must be a database administrator (DBA) or a DMS administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request RevokeTemplateAuthorityRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RevokeTemplateAuthorityResponse
+         */
+        public async Task<RevokeTemplateAuthorityResponse> RevokeTemplateAuthorityWithOptionsAsync(RevokeTemplateAuthorityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIds))
+            {
+                query["UserIds"] = request.UserIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeTemplateAuthority",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeTemplateAuthorityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * You must be a database administrator (DBA) or a DMS administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request RevokeTemplateAuthorityRequest
+          * @return RevokeTemplateAuthorityResponse
+         */
+        public RevokeTemplateAuthorityResponse RevokeTemplateAuthority(RevokeTemplateAuthorityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RevokeTemplateAuthorityWithOptions(request, runtime);
+        }
+
+        /**
+          * You must be a database administrator (DBA) or a DMS administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request RevokeTemplateAuthorityRequest
+          * @return RevokeTemplateAuthorityResponse
+         */
+        public async Task<RevokeTemplateAuthorityResponse> RevokeTemplateAuthorityAsync(RevokeTemplateAuthorityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RevokeTemplateAuthorityWithOptionsAsync(request, runtime);
+        }
+
         public RevokeUserPermissionResponse RevokeUserPermissionWithOptions(RevokeUserPermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15323,6 +16221,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await SearchDatabaseWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation only for database instances that are managed in Security Collaboration mode.
+          *
+          * @param request SearchTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SearchTableResponse
+         */
         public SearchTableResponse SearchTableWithOptions(SearchTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15382,6 +16287,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<SearchTableResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for database instances that are managed in Security Collaboration mode.
+          *
+          * @param request SearchTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SearchTableResponse
+         */
         public async Task<SearchTableResponse> SearchTableWithOptionsAsync(SearchTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15441,12 +16353,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<SearchTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for database instances that are managed in Security Collaboration mode.
+          *
+          * @param request SearchTableRequest
+          * @return SearchTableResponse
+         */
         public SearchTableResponse SearchTable(SearchTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SearchTableWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation only for database instances that are managed in Security Collaboration mode.
+          *
+          * @param request SearchTableRequest
+          * @return SearchTableResponse
+         */
         public async Task<SearchTableResponse> SearchTableAsync(SearchTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15937,6 +16861,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await SyncDatabaseMetaWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request SyncInstanceMetaRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SyncInstanceMetaResponse
+         */
         public SyncInstanceMetaResponse SyncInstanceMetaWithOptions(SyncInstanceMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15972,6 +16903,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<SyncInstanceMetaResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request SyncInstanceMetaRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SyncInstanceMetaResponse
+         */
         public async Task<SyncInstanceMetaResponse> SyncInstanceMetaWithOptionsAsync(SyncInstanceMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16007,16 +16945,144 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<SyncInstanceMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request SyncInstanceMetaRequest
+          * @return SyncInstanceMetaResponse
+         */
         public SyncInstanceMetaResponse SyncInstanceMeta(SyncInstanceMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SyncInstanceMetaWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation only for database instances whose control mode is Security Collaboration.
+          *
+          * @param request SyncInstanceMetaRequest
+          * @return SyncInstanceMetaResponse
+         */
         public async Task<SyncInstanceMetaResponse> SyncInstanceMetaAsync(SyncInstanceMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SyncInstanceMetaWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request UpdateAuthorityTemplateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateAuthorityTemplateResponse
+         */
+        public UpdateAuthorityTemplateResponse UpdateAuthorityTemplateWithOptions(UpdateAuthorityTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAuthorityTemplate",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAuthorityTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request UpdateAuthorityTemplateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateAuthorityTemplateResponse
+         */
+        public async Task<UpdateAuthorityTemplateResponse> UpdateAuthorityTemplateWithOptionsAsync(UpdateAuthorityTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAuthorityTemplate",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAuthorityTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request UpdateAuthorityTemplateRequest
+          * @return UpdateAuthorityTemplateResponse
+         */
+        public UpdateAuthorityTemplateResponse UpdateAuthorityTemplate(UpdateAuthorityTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateAuthorityTemplateWithOptions(request, runtime);
+        }
+
+        /**
+          * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+          *
+          * @param request UpdateAuthorityTemplateRequest
+          * @return UpdateAuthorityTemplateResponse
+         */
+        public async Task<UpdateAuthorityTemplateResponse> UpdateAuthorityTemplateAsync(UpdateAuthorityTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateAuthorityTemplateWithOptionsAsync(request, runtime);
         }
 
         /**
