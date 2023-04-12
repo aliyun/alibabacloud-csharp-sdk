@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
         [Validation(Required=false)]
         public GetOperateResultResponseBodyData Data { get; set; }
         public class GetOperateResultResponseBodyData : TeaModel {
+            [NameInMap("ExecuteResult")]
+            [Validation(Required=false)]
+            public string ExecuteResult { get; set; }
+
             [NameInMap("OperateType")]
             [Validation(Required=false)]
             public string OperateType { get; set; }

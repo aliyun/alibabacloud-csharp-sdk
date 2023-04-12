@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkcard20210520.Models
 {
     public class ListOrderRequest : TeaModel {
+        [NameInMap("CredentialNo")]
+        [Validation(Required=false)]
+        public string CredentialNo { get; set; }
+
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }

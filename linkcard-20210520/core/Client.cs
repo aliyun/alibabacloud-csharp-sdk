@@ -2018,6 +2018,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialNo))
+            {
+                query["CredentialNo"] = request.CredentialNo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
             {
                 query["EndDate"] = request.EndDate;
@@ -2069,6 +2073,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialNo))
+            {
+                query["CredentialNo"] = request.CredentialNo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
             {
                 query["EndDate"] = request.EndDate;
