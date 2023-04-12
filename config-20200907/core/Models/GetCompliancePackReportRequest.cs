@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetCompliancePackReportRequest : TeaModel {
+        /// <summary>
+        /// The ID of the compliance package.
+        /// 
+        /// For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~263332~~).
+        /// </summary>
         [NameInMap("CompliancePackId")]
         [Validation(Required=false)]
         public string CompliancePackId { get; set; }

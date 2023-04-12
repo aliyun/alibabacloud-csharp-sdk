@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListRemediationTemplatesRequest : TeaModel {
+        /// <summary>
+        /// The identifier of the managed rule.
+        /// 
+        /// You can call the [ListCompliancePackTemplates](~~261176~~) operation to obtain the managed rule identifier.
+        /// </summary>
         [NameInMap("ManagedRuleIdentifier")]
         [Validation(Required=false)]
         public string ManagedRuleIdentifier { get; set; }
 
+        /// <summary>
+        /// The type of the remediation template. Valid value: OOS, which stands for Operation Orchestration Service.
+        /// </summary>
         [NameInMap("RemediationType")]
         [Validation(Required=false)]
         public string RemediationType { get; set; }

@@ -1,3 +1,6 @@
+2023-04-12 Version: 2.2.7
+- Fix resourceOwnerId param.
+
 2022-08-12 Version: 2.1.9
 - Fix ListManagedRules bugs.
 

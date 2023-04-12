@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetConfigRulesReportRequest : TeaModel {
+        /// <summary>
+        /// The ID of the compliance evaluation report.
+        /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]
         public string ReportId { get; set; }

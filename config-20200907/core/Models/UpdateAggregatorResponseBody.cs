@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateAggregatorResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the account group.
+        /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

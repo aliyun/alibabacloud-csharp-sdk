@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateResourceComplianceByPackRequest : TeaModel {
+        /// <summary>
+        /// The ID of the account group.
+        /// 
+        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
+        /// <summary>
+        /// The ID of the compliance package.
+        /// 
+        /// For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).
+        /// </summary>
         [NameInMap("CompliancePackId")]
         [Validation(Required=false)]
         public string CompliancePackId { get; set; }

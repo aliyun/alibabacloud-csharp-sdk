@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class StartRemediationRequest : TeaModel {
+        /// <summary>
+        /// The ID of the rule.
+        /// 
+        /// You can call the [ListConfigRules](~~169607~~) operation to obtain the rule ID.
+        /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
         public string ConfigRuleId { get; set; }

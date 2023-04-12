@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateAggregateConfigDeliveryChannelResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the delivery channel.
+        /// </summary>
         [NameInMap("DeliveryChannelId")]
         [Validation(Required=false)]
         public string DeliveryChannelId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

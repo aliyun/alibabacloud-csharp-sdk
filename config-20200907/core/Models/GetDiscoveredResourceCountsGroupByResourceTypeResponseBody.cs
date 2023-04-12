@@ -9,20 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody : TeaModel {
+        /// <summary>
+        /// The statistics on the resources.
+        /// </summary>
         [NameInMap("DiscoveredResourceCountsSummary")]
         [Validation(Required=false)]
         public List<GetDiscoveredResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary> DiscoveredResourceCountsSummary { get; set; }
         public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary : TeaModel {
+            /// <summary>
+            /// The resource type by which the statistics are collected.
+            /// 
+            /// >  We recommend that you use the `ResourceType` parameter.
+            /// </summary>
+            [NameInMap("GroupName")]
+            [Validation(Required=false)]
+            public string GroupName { get; set; }
+
+            /// <summary>
+            /// The total number of resources.
+            /// </summary>
             [NameInMap("ResourceCount")]
             [Validation(Required=false)]
             public long? ResourceCount { get; set; }
 
+            /// <summary>
+            /// The resource type by which the statistics are collected.
+            /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -17,14 +17,27 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public List<GetAggregateResourceComplianceGroupByRegionResponseBodyComplianceResultComplianceResultList> ComplianceResultList { get; set; }
             public class GetAggregateResourceComplianceGroupByRegionResponseBodyComplianceResultComplianceResultList : TeaModel {
+                [NameInMap("Compliances")]
+                [Validation(Required=false)]
                 public List<GetAggregateResourceComplianceGroupByRegionResponseBodyComplianceResultComplianceResultListCompliances> Compliances { get; set; }
                 public class GetAggregateResourceComplianceGroupByRegionResponseBodyComplianceResultComplianceResultListCompliances : TeaModel {
+                    [NameInMap("ComplianceType")]
+                    [Validation(Required=false)]
                     public string ComplianceType { get; set; }
+
+                    [NameInMap("Count")]
+                    [Validation(Required=false)]
                     public long? Count { get; set; }
+
                 }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

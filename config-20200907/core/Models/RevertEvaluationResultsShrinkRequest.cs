@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class RevertEvaluationResultsShrinkRequest : TeaModel {
+        /// <summary>
+        /// The ID of the rule.
+        /// 
+        /// For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).
+        /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
         public string ConfigRuleId { get; set; }
 
+        /// <summary>
+        /// The resources that are to be reevaluated.
+        /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public string ResourcesShrink { get; set; }

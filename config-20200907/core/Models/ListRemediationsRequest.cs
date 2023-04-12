@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListRemediationsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the rule. If you want to specify multiple IDs, separate them with commas (,).
+        /// 
+        /// You can call the [ListConfigRules](~~169607~~) operation to obtain the rule ID.
+        /// </summary>
         [NameInMap("ConfigRuleIds")]
         [Validation(Required=false)]
         public string ConfigRuleIds { get; set; }

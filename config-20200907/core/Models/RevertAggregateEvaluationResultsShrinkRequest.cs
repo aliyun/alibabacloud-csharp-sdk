@@ -9,14 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class RevertAggregateEvaluationResultsShrinkRequest : TeaModel {
+        /// <summary>
+        /// The ID of the account group.
+        /// 
+        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
+        /// <summary>
+        /// The ID of the rule in the account group.
+        /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
         public string ConfigRuleId { get; set; }
 
+        /// <summary>
+        /// The resources that are to be reevaluated.
+        /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public string ResourcesShrink { get; set; }

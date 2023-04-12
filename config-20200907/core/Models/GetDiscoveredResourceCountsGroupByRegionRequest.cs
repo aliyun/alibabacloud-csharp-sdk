@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetDiscoveredResourceCountsGroupByRegionRequest : TeaModel {
+        /// <summary>
+        /// The type of the resource.
+        /// 
+        /// For more information about how to query the type of a resource, see [ListDiscoveredResources](~~169620~~).
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
