@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class ListAccountsResponseBody : TeaModel {
+        /// <summary>
+        /// The members returned.
+        /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
         public ListAccountsResponseBodyAccounts Accounts { get; set; }
@@ -17,46 +20,90 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
             [Validation(Required=false)]
             public List<ListAccountsResponseBodyAccountsAccount> Account { get; set; }
             public class ListAccountsResponseBodyAccountsAccount : TeaModel {
+                /// <summary>
+                /// The Alibaba Cloud account ID of the member.
+                /// </summary>
                 [NameInMap("AccountId")]
                 [Validation(Required=false)]
                 public string AccountId { get; set; }
 
+                /// <summary>
+                /// The Alibaba Cloud account name of the member.
+                /// </summary>
                 [NameInMap("AccountName")]
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
+                /// <summary>
+                /// The display name of the member.
+                /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
+                /// <summary>
+                /// The ID of the folder.
+                /// </summary>
                 [NameInMap("FolderId")]
                 [Validation(Required=false)]
                 public string FolderId { get; set; }
 
+                /// <summary>
+                /// The way in which the member joins the resource directory. Valid values:
+                /// 
+                /// *   invited: The member is invited to join the resource directory.
+                /// *   created: The member is directly created in the resource directory.
+                /// </summary>
                 [NameInMap("JoinMethod")]
                 [Validation(Required=false)]
                 public string JoinMethod { get; set; }
 
+                /// <summary>
+                /// The time when the member joined the resource directory. The time is displayed in UTC.
+                /// </summary>
                 [NameInMap("JoinTime")]
                 [Validation(Required=false)]
                 public string JoinTime { get; set; }
 
+                /// <summary>
+                /// The time when the member was modified. The time is displayed in UTC.
+                /// </summary>
                 [NameInMap("ModifyTime")]
                 [Validation(Required=false)]
                 public string ModifyTime { get; set; }
 
+                /// <summary>
+                /// The ID of the resource directory.
+                /// </summary>
                 [NameInMap("ResourceDirectoryId")]
                 [Validation(Required=false)]
                 public string ResourceDirectoryId { get; set; }
 
+                /// <summary>
+                /// The path of the member in the resource directory.
+                /// </summary>
                 [NameInMap("ResourceDirectoryPath")]
                 [Validation(Required=false)]
                 public string ResourceDirectoryPath { get; set; }
 
+                /// <summary>
+                /// The status of the member. Valid values:
+                /// 
+                /// *   CreateSuccess: The member is created.
+                /// *   PromoteVerifying: The upgrade of the member is being confirmed.
+                /// *   PromoteFailed: The upgrade of the member fails.
+                /// *   PromoteExpired: The upgrade of the member expires.
+                /// *   PromoteCancelled: The upgrade of the member is canceled.
+                /// *   PromoteSuccess: The member is upgraded.
+                /// *   InviteSuccess: The member accepts the invitation.
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// The tags that are added to the member.
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public ListAccountsResponseBodyAccountsAccountTags Tags { get; set; }
@@ -65,10 +112,16 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
                     [Validation(Required=false)]
                     public List<ListAccountsResponseBodyAccountsAccountTagsTag> Tag { get; set; }
                     public class ListAccountsResponseBodyAccountsAccountTagsTag : TeaModel {
+                        /// <summary>
+                        /// The tag key.
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
+                        /// <summary>
+                        /// The tag value.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -77,6 +130,12 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 
                 }
 
+                /// <summary>
+                /// The type of the member. Valid values:
+                /// 
+                /// *   CloudAccount: cloud account
+                /// *   ResourceAccount: resource account
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -85,18 +144,30 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 
         }
 
+        /// <summary>
+        /// The page number of the returned page.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries returned per page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of entries returned.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

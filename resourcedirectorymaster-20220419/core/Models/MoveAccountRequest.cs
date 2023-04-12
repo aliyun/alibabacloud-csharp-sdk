@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class MoveAccountRequest : TeaModel {
+        /// <summary>
+        /// The Alibaba Cloud account ID of the member that you want to move.
+        /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
+        /// <summary>
+        /// The ID of the destination folder.
+        /// </summary>
         [NameInMap("DestinationFolderId")]
         [Validation(Required=false)]
         public string DestinationFolderId { get; set; }

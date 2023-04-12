@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class GetPayerForAccountResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the billing account.
+        /// </summary>
         [NameInMap("PayerAccountId")]
         [Validation(Required=false)]
         public string PayerAccountId { get; set; }
 
+        /// <summary>
+        /// The name of the billing account.
+        /// </summary>
         [NameInMap("PayerAccountName")]
         [Validation(Required=false)]
         public string PayerAccountName { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class GetPayerForAccountRequest : TeaModel {
+        /// <summary>
+        /// The ID of the billing account.
+        /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }

@@ -9,32 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class GetFolderResponseBody : TeaModel {
+        /// <summary>
+        /// The information about the folder.
+        /// </summary>
         [NameInMap("Folder")]
         [Validation(Required=false)]
         public GetFolderResponseBodyFolder Folder { get; set; }
         public class GetFolderResponseBodyFolder : TeaModel {
+            /// <summary>
+            /// The time when the folder was created.
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// The ID of the folder.
+            /// </summary>
             [NameInMap("FolderId")]
             [Validation(Required=false)]
             public string FolderId { get; set; }
 
+            /// <summary>
+            /// The name of the folder.
+            /// </summary>
             [NameInMap("FolderName")]
             [Validation(Required=false)]
             public string FolderName { get; set; }
 
+            /// <summary>
+            /// The ID of the parent folder.
+            /// </summary>
             [NameInMap("ParentFolderId")]
             [Validation(Required=false)]
             public string ParentFolderId { get; set; }
 
+            /// <summary>
+            /// The path of the folder in the resource directory.
+            /// </summary>
             [NameInMap("ResourceDirectoryPath")]
             [Validation(Required=false)]
             public string ResourceDirectoryPath { get; set; }
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class ListDelegatedServicesForAccountResponseBody : TeaModel {
+        /// <summary>
+        /// The information about the trusted services.
+        /// 
+        /// > If the value of this parameter is empty, the member is not specified as a delegated administrator account.
+        /// </summary>
         [NameInMap("DelegatedServices")]
         [Validation(Required=false)]
         public ListDelegatedServicesForAccountResponseBodyDelegatedServices DelegatedServices { get; set; }
@@ -17,14 +22,26 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
             [Validation(Required=false)]
             public List<ListDelegatedServicesForAccountResponseBodyDelegatedServicesDelegatedService> DelegatedService { get; set; }
             public class ListDelegatedServicesForAccountResponseBodyDelegatedServicesDelegatedService : TeaModel {
+                /// <summary>
+                /// The time when the member was specified as a delegated administrator account.
+                /// </summary>
                 [NameInMap("DelegationEnabledTime")]
                 [Validation(Required=false)]
                 public string DelegationEnabledTime { get; set; }
 
+                /// <summary>
+                /// The identifier of the trusted service.
+                /// </summary>
                 [NameInMap("ServicePrincipal")]
                 [Validation(Required=false)]
                 public string ServicePrincipal { get; set; }
 
+                /// <summary>
+                /// The status of the trusted service. Valid values:
+                /// 
+                /// *   ENABLED: enabled
+                /// *   DISABLED: disabled
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
@@ -33,6 +50,9 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class ListAncestorsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the subfolder.
+        /// </summary>
         [NameInMap("ChildId")]
         [Validation(Required=false)]
         public string ChildId { get; set; }
