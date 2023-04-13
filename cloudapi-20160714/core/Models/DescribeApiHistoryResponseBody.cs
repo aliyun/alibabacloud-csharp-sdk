@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// 
         /// *   **ANONYMOUS**: The API can be anonymously called. Take note of the following information:
         /// 
-        ///     *   All users who have the permissions to obtain the API information can call this API. API Gateway neither authenticates callers nor configures user-specific throttling policies. You must configure throttling policies for public APIs.
+        ///     *   All users who have obtained the API service information can call this API. API Gateway neither authenticates callers nor sets user-specific throttling policies. If this API is a public one, you must set throttling policies for it.
         /// </summary>
         [NameInMap("AuthType")]
         [Validation(Required=false)]
         public string AuthType { get; set; }
 
         /// <summary>
-        /// The backend configurations.
+        /// The configuration items of the backend service.
         /// </summary>
         [NameInMap("BackendConfig")]
         [Validation(Required=false)]
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string FailResultSample { get; set; }
 
         /// <summary>
-        /// *   Indicates whether to forcefully check X-Ca-Nonce. X-Ca-Nonce is the unique identifier of a request and is generally identified by UUID. If the **ForceNonceCheck** parameter is set to **true**, X-Ca-Nonce is forcefully checked. After API Gateway receives this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.
+        /// *   Indicates whether to forcefully check X-Ca-Nonce. X-Ca-Nonce is the unique identifier of a request and is generally identified by UUID. If the **ForceNonceCheck** parameter is set to **true**, X-Ca-Nonce is forcefully checked. After API Gateway receives this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps defend against replay attacks.
         /// *   If the **ForceNonceCheck** parameter is set to **false**, X-Ca-Nonce is not checked. When you create an API, the default value of this parameter is false.
         /// </summary>
         [NameInMap("ForceNonceCheck")]
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public DescribeApiHistoryResponseBodyRequestConfig RequestConfig { get; set; }
         public class DescribeApiHistoryResponseBodyRequestConfig : TeaModel {
             /// <summary>
-            /// The format in which data was transmitted to the server for POST and PUT requests. Valid values: FORM and STREAM. FORM indicates that data was transmitted as forms that consist of key-value pairs. STREAM indicates that data was transmitted as byte streams. This parameter takes effect when the RequestMode parameter is set to MAPPING.
+            /// The format in which data was transmitted to the server for a POST or PUT request. Valid values: FORM and STREAM. FORM indicates that data was transmitted as forms that consist of key-value pairs. STREAM indicates that data was transmitted as byte streams. This parameter takes effect when the RequestMode parameter is set to MAPPING.
             /// </summary>
             [NameInMap("BodyFormat")]
             [Validation(Required=false)]
@@ -385,7 +385,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public string RequestPath { get; set; }
 
             /// <summary>
-            /// The type of the protocol that is supported by the API. Valid values: HTTP, HTTPS, and WebSocket. Separate values with commas (,). Example: "HTTP,HTTPS".
+            /// The type of the protocol that is supported by the API. Valid values: HTTP, HTTPS, and WebSocket. Separate multiple values with commas (,). Example: "HTTP,HTTPS".
             /// </summary>
             [NameInMap("RequestProtocol")]
             [Validation(Required=false)]
@@ -428,7 +428,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ArrayItemsType { get; set; }
 
                 /// <summary>
-                /// The default value.
+                /// The default value of the parameter.
                 /// </summary>
                 [NameInMap("DefaultValue")]
                 [Validation(Required=false)]
@@ -463,7 +463,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string DocShow { get; set; }
 
                 /// <summary>
-                /// The hash values that are specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
+                /// The hash values can be specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate multiple hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
                 /// </summary>
                 [NameInMap("EnumValue")]
                 [Validation(Required=false)]
@@ -562,7 +562,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// Indicates whether a child node exists.
+                /// Indicates whether a subnode exists.
                 /// </summary>
                 [NameInMap("HasChild")]
                 [Validation(Required=false)]
@@ -615,7 +615,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// The sample response that is returned.
+        /// The sample response.
         /// </summary>
         [NameInMap("ResultSample")]
         [Validation(Required=false)]
@@ -1023,7 +1023,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiHistoryResponseBodyServiceParametersMapServiceParameterMap> ServiceParameterMap { get; set; }
             public class DescribeApiHistoryResponseBodyServiceParametersMapServiceParameterMap : TeaModel {
                 /// <summary>
-                /// The name of the frontend parameter. The name must be included in RequestParametersObject and matches ApiParameterName in RequestParameters.
+                /// The name of the frontend parameter. The name must be included in RequestParametersObject and match ApiParameterName in RequestParameters.
                 /// </summary>
                 [NameInMap("RequestParameterName")]
                 [Validation(Required=false)]
@@ -1044,7 +1044,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// The environment to which the API is published. Valid values:
         /// 
         /// *   **RELEASE**: production environment
-        /// *   **PRE**: pre-release environment
+        /// *   **PRE**: staging environment
         /// *   **TEST**: test environment
         /// </summary>
         [NameInMap("StageName")]
