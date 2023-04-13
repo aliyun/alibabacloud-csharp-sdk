@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStacksRequest : TeaModel {
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
         /// <summary>
         /// The number of the page to return.
         /// 
@@ -87,6 +91,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("StackName")]
         [Validation(Required=false)]
         public List<string> StackName { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         /// <summary>
         /// The state N of the stack.

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string CreateOption { get; set; }
 
+        [NameInMap("CreateOptions")]
+        [Validation(Required=false)]
+        public List<string> CreateOptions { get; set; }
+
         /// <summary>
         /// Specifies whether to enable deletion protection for the stack. Default value: Disabled. Valid values:
         /// 

@@ -10,18 +10,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the destination resource group.
-        /// 
-        /// For more information about resource groups, see [What is a resource group?](~~94475~~)
+        /// The ID of the resource group to which you want to move the resource. For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// The region ID of the resource.
-        /// 
-        /// You can call the [DescribeRegions](~~131035~~) operation to query region IDs.
+        /// The region ID of the resource.\
+        /// You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,9 +34,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// The type of the resource. Valid values:
         /// 
-        /// *   stack
-        /// *   stackgroup
-        /// *   template
+        /// *   stack: stack
+        /// *   stackgroup: stack group
+        /// *   template: template
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

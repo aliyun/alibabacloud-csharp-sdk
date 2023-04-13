@@ -724,6 +724,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["CreateOption"] = request.CreateOption;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateOptions))
+            {
+                query["CreateOptions"] = request.CreateOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
             {
                 query["DeletionProtection"] = request.DeletionProtection;
@@ -841,6 +845,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateOption))
             {
                 query["CreateOption"] = request.CreateOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateOptions))
+            {
+                query["CreateOptions"] = request.CreateOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
             {
@@ -6536,6 +6544,10 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -6571,6 +6583,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StackName))
             {
                 query["StackName"] = request.StackName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -6610,6 +6626,10 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -6645,6 +6665,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StackName))
             {
                 query["StackName"] = request.StackName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
