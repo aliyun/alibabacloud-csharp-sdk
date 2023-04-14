@@ -83,10 +83,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string CheckOut { get; set; }
 
-            [NameInMap("code")]
-            [Validation(Required=false)]
-            public string Code { get; set; }
-
             [NameInMap("confirm_order_time")]
             [Validation(Required=false)]
             public string ConfirmOrderTime { get; set; }
@@ -102,10 +98,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("create_order_time")]
             [Validation(Required=false)]
             public string CreateOrderTime { get; set; }
-
-            [NameInMap("desc")]
-            [Validation(Required=false)]
-            public string Desc { get; set; }
 
             [NameInMap("early_arrival_time")]
             [Validation(Required=false)]

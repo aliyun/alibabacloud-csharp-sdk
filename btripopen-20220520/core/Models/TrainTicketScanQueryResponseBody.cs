@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Department { get; set; }
 
+                [NameInMap("id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
                 [NameInMap("invoice_title")]
                 [Validation(Required=false)]
                 public string InvoiceTitle { get; set; }

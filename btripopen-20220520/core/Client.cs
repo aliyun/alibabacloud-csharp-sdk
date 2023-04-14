@@ -3689,6 +3689,110 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await CostCenterSaveWithOptionsAsync(request, headers, runtime);
         }
 
+        public CreateSubCorpResponse CreateSubCorpWithOptions(CreateSubCorpRequest request, CreateSubCorpHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterCorpId))
+            {
+                body["outer_corp_id"] = request.OuterCorpId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterCorpName))
+            {
+                body["outer_corp_name"] = request.OuterCorpName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSubCorp",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/sub_corps/v1/corps",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSubCorpResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateSubCorpResponse> CreateSubCorpWithOptionsAsync(CreateSubCorpRequest request, CreateSubCorpHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterCorpId))
+            {
+                body["outer_corp_id"] = request.OuterCorpId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterCorpName))
+            {
+                body["outer_corp_name"] = request.OuterCorpName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSubCorp",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/sub_corps/v1/corps",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSubCorpResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateSubCorpResponse CreateSubCorp(CreateSubCorpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateSubCorpHeaders headers = new CreateSubCorpHeaders();
+            return CreateSubCorpWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateSubCorpResponse> CreateSubCorpAsync(CreateSubCorpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateSubCorpHeaders headers = new CreateSubCorpHeaders();
+            return await CreateSubCorpWithOptionsAsync(request, headers, runtime);
+        }
+
         public DeleteInvoiceEntityResponse DeleteInvoiceEntityWithOptions(DeleteInvoiceEntityRequest tmpReq, DeleteInvoiceEntityHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6543,6 +6647,294 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             FlightSearchListHeaders headers = new FlightSearchListHeaders();
             return await FlightSearchListWithOptionsAsync(request, headers, runtime);
+        }
+
+        public GroupDepartSaveResponse GroupDepartSaveWithOptions(GroupDepartSaveRequest tmpReq, GroupDepartSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GroupDepartSaveShrinkRequest request = new GroupDepartSaveShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubCorpIdList))
+            {
+                request.SubCorpIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubCorpIdList, "sub_corp_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeptName))
+            {
+                body["dept_name"] = request.DeptName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerIds))
+            {
+                body["manager_ids"] = request.ManagerIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterDeptId))
+            {
+                body["outer_dept_id"] = request.OuterDeptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterDeptPid))
+            {
+                body["outer_dept_pid"] = request.OuterDeptPid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpIdListShrink))
+            {
+                body["sub_corp_id_list"] = request.SubCorpIdListShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GroupDepartSave",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/sub_corps/v1/departs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GroupDepartSaveResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GroupDepartSaveResponse> GroupDepartSaveWithOptionsAsync(GroupDepartSaveRequest tmpReq, GroupDepartSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GroupDepartSaveShrinkRequest request = new GroupDepartSaveShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubCorpIdList))
+            {
+                request.SubCorpIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubCorpIdList, "sub_corp_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeptName))
+            {
+                body["dept_name"] = request.DeptName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerIds))
+            {
+                body["manager_ids"] = request.ManagerIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterDeptId))
+            {
+                body["outer_dept_id"] = request.OuterDeptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterDeptPid))
+            {
+                body["outer_dept_pid"] = request.OuterDeptPid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpIdListShrink))
+            {
+                body["sub_corp_id_list"] = request.SubCorpIdListShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GroupDepartSave",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/sub_corps/v1/departs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GroupDepartSaveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GroupDepartSaveResponse GroupDepartSave(GroupDepartSaveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GroupDepartSaveHeaders headers = new GroupDepartSaveHeaders();
+            return GroupDepartSaveWithOptions(request, headers, runtime);
+        }
+
+        public async Task<GroupDepartSaveResponse> GroupDepartSaveAsync(GroupDepartSaveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GroupDepartSaveHeaders headers = new GroupDepartSaveHeaders();
+            return await GroupDepartSaveWithOptionsAsync(request, headers, runtime);
+        }
+
+        public GroupUserSaveResponse GroupUserSaveWithOptions(GroupUserSaveRequest tmpReq, GroupUserSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GroupUserSaveShrinkRequest request = new GroupUserSaveShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubCorpIdList))
+            {
+                request.SubCorpIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubCorpIdList, "sub_corp_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobNo))
+            {
+                body["job_no"] = request.JobNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LeaveStatus))
+            {
+                body["leave_status"] = request.LeaveStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
+            {
+                body["phone"] = request.Phone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealNameEn))
+            {
+                body["real_name_en"] = request.RealNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpIdListShrink))
+            {
+                body["sub_corp_id_list"] = request.SubCorpIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["user_name"] = request.UserName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GroupUserSave",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/sub_corps/v1/users",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GroupUserSaveResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GroupUserSaveResponse> GroupUserSaveWithOptionsAsync(GroupUserSaveRequest tmpReq, GroupUserSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GroupUserSaveShrinkRequest request = new GroupUserSaveShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubCorpIdList))
+            {
+                request.SubCorpIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubCorpIdList, "sub_corp_id_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobNo))
+            {
+                body["job_no"] = request.JobNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LeaveStatus))
+            {
+                body["leave_status"] = request.LeaveStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
+            {
+                body["phone"] = request.Phone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealNameEn))
+            {
+                body["real_name_en"] = request.RealNameEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpIdListShrink))
+            {
+                body["sub_corp_id_list"] = request.SubCorpIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["user_id"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["user_name"] = request.UserName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GroupUserSave",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/sub_corps/v1/users",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GroupUserSaveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GroupUserSaveResponse GroupUserSave(GroupUserSaveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GroupUserSaveHeaders headers = new GroupUserSaveHeaders();
+            return GroupUserSaveWithOptions(request, headers, runtime);
+        }
+
+        public async Task<GroupUserSaveResponse> GroupUserSaveAsync(GroupUserSaveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GroupUserSaveHeaders headers = new GroupUserSaveHeaders();
+            return await GroupUserSaveWithOptionsAsync(request, headers, runtime);
         }
 
         public HotelBillSettlementQueryResponse HotelBillSettlementQueryWithOptions(HotelBillSettlementQueryRequest request, HotelBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
