@@ -9,27 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateChatappTemplateShrinkRequest : TeaModel {
+        [NameInMap("AllowCategoryChange")]
+        [Validation(Required=false)]
+        public bool? AllowCategoryChange { get; set; }
+
         /// <summary>
-        /// The category of the message template. Valid values:
+        /// The category of the template when the TemplateType parameter is set to WHATSAPP. Valid values:
         /// 
-        /// *   **ACCOUNT_UPDATE**: account update
-        /// *   **PAYMENT_UPDATE**: payment update
-        /// *   **PERSONAL_FINANCE\_UPDATE**: personal finance update
-        /// *   **SHIPPING_UPDATE**: traffic update
-        /// *   **RESERVATION_UPDATE**: reservation update
-        /// *   **ISSUE_RESOLUTION**: issue resolution
-        /// *   **APPOINTMENT_UPDATE**: appointment update
-        /// *   **TRANSPORTATION_UPDATE**: logistics information update
-        /// *   **TICKET_UPDATE**: ticket update
-        /// *   **ALERT_UPDATE**: alert update
-        /// *   **AUTO_REPLY**: auto reply
+        /// *   **TRANSACTIONAL**: a transactional template
+        /// *   **MARKETING**: a marketing template
+        /// *   **OTP**: a one-time password template
+        /// 
+        /// The category of the template when the TemplateType parameter is set to VIBER. Valid values:
+        /// 
+        /// *   **text**: a text message template
+        /// *   **image**: an image message template
+        /// *   **text_image_button**: a template that contains multiple media objects, including text, image, and button
+        /// *   **text_button**: a template that contains the text and button media objects
+        /// *   **document**: a document message template
+        /// *   **video**: a video message template
+        /// *   **text_video**: a template that contains the text and video media objects
+        /// *   **text_video_button**: a template that contains multiple media objects, including text, video, and button
+        /// *   **text_image**: a template that contains the text and image media objects
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// The components of the message template.
+        /// The list of components of the message template.
         /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
@@ -40,7 +48,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The unique identifier of the WhatsApp account that you register.
+        /// The ID of the WhatsApp account that you register.
         /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
@@ -55,14 +63,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ExampleShrink { get; set; }
 
         /// <summary>
-        /// Assigned by ISV for RAM user authentication and authorization.
+        /// The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// The language that is used in the message template.
+        /// The language that is used in the message template. For more information, see [Language codes](~~463420~~).
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
@@ -76,11 +84,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The type of the message template. Valid values:
+        /// The type of the message template.
         /// 
         /// *   **WHATSAPP**
-        /// *   VIBER (under development)
-        /// *   LINE (under development)
+        /// *   **VIBER**
+        /// *   LINE: the LINE message template. The LINE message template is under development.
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

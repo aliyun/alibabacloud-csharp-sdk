@@ -13,8 +13,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// The type of the message channel. Valid values:
         /// 
         /// *   **whatsapp**
-        /// *   **viber**. This message channel is supported only when you set the Type parameter to message.
-        /// *   line. The feature ChatApp sends messages by using Line is under development.
+        /// *   **viber**
+        /// *   line. The feature that ChatAPP sends messages by using Line is under development.
         /// </summary>
         [NameInMap("ChannelType")]
         [Validation(Required=false)]
@@ -41,11 +41,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// *   When you set the **MessageType** parameter to **text**, the **text** parameter is required.
         /// *   When you set the **MessageType** parameter to **image**, the **link** parameter is required.
         /// *   When you set the **MessageType** parameter to **video**, the **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.
-        /// *   When you set the **MessageType** parameter to **document**, the **link**, **fileName**, and **fileType** parameters are required.
+        /// *   When you set the **MessageType** parameter to  **document**, the **link**, **fileName**, and **fileType** parameters are required.
         /// *   When you set the **MessageType** parameter to **text_button**, the **text**, **caption**, and **action** parameters are required.
         /// *   When you set the **MessageType** parameter to **text_image_button**, the **text**, **link**, **caption**, and **action** parameters are required.
         /// *   When you set the **MessageType** parameter to **text_video**, the **text**, **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.
-        /// *   When you set the **MessageType** parameter to **text_video_button**, the **text**, **link**, **thumbnail**, **fileSize**, **duration**, and **caption** parameters are required, and the **action** parameter is invalid.
+        /// *   When you set the **MessageType** parameter to **text_video_button**, the **text**, **link**, **thumbnail**, **fileSize**, **duration**, and **caption** parameters are required. The **action** parameter is invalid.
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The unique identifier of the WhatsApp account that you register.
+        /// The ID of the WhatsApp account that you register.
         /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string FallBackContent { get; set; }
 
+        [NameInMap("FallBackDuration")]
+        [Validation(Required=false)]
+        public int? FallBackDuration { get; set; }
+
         /// <summary>
         /// The ID of the fallback strategy. You can create a fallback strategy and view the information in the console.
         /// </summary>
@@ -90,7 +94,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// The phone number of the message sender.
         /// 
-        /// >  You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatApp console.
+        /// > You can specify a phone number that is registered for a WhatsApp account and is approved in the ChatAPP console.
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
@@ -118,7 +122,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// The type of the message. This parameter is required only if you set the Type parameter to **message**. Valid values:
+        /// The specific type of the message. This parameter is required only if you set the Type parameter to **message**. Valid values:
         /// 
         /// **When you set the ChannelType parameter to whatsapp**
         /// 
@@ -140,11 +144,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// *   **video**: the video message.
         /// *   **document**: the document message.
         /// *   **text_button**: messages that contain the text and button media objects.
-        /// *   **text_image_button**: messages that contain multiple media objects, including the text, image, and button.
+        /// *   **text_image_button**: messages that contain multiple media objects, including the text, image, and button media objects.
         /// *   **text_video**: messages that contain the text and video media objects.
-        /// *   **text_video_button**: messages that contain multiple media objects, including text, video, and button.
+        /// *   **text_video_button**: messages that contain multiple media objects, including text, video, and button media objects.
+        /// *   **text_image**: messages that contain the text and image media objects..
         /// 
-        /// >  For more information, see [Parameters of a message template](~~454530~~).
+        /// > For more information, see [Parameters of a message template](~~454530~~).
         /// </summary>
         [NameInMap("MessageType")]
         [Validation(Required=false)]
@@ -164,6 +169,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Tag { get; set; }
 
+        /// <summary>
+        /// The ID of the task.
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
@@ -206,7 +214,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// The type of the message. Valid values:
         /// 
-        /// *   **template**: a template message. A template message is sent based on a template that is created in the ChatApp console and is approved. You can send template messages at any time based on your business requirements.
+        /// *   **template**: a template message. A template message is sent based on a template that is created in the ChatAPP console and is approved. You can send template messages at any time based on your business requirements.
         /// *   **message**: a custom message. You can send a custom message to a user only within 24 hours after you receive the last message from the user.
         /// </summary>
         [NameInMap("Type")]

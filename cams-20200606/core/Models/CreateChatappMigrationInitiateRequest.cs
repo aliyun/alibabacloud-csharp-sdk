@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateChatappMigrationInitiateRequest : TeaModel {
         /// <summary>
-        /// The country code of the phone number.
+        /// The country code of a phone number.
         /// </summary>
         [NameInMap("CountryCode")]
         [Validation(Required=false)]

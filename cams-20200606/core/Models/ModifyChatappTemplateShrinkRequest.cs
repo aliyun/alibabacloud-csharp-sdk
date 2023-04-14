@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The ID of the WhatsApp Business account under the ISV account.
+        /// The ID of the WhatsApp Business account under the independent software vendor (ISV) account.
         /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ExampleShrink { get; set; }
 
         /// <summary>
-        /// The ISV verification code, which is used to verify whether the user is authorized by ISV.
+        /// The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]

@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryChatappBindWabaResponseBodyData Data { get; set; }
         public class QueryChatappBindWabaResponseBodyData : TeaModel {
             /// <summary>
-            /// The audit status of the WhatApp Business account.
+            /// The review status of the WhatsApp Business account.
             /// </summary>
             [NameInMap("AccountReviewStatus")]
             [Validation(Required=false)]
             public string AccountReviewStatus { get; set; }
 
             /// <summary>
-            /// Currency
+            /// The currency.
             /// </summary>
             [NameInMap("Currency")]
             [Validation(Required=false)]
             public string Currency { get; set; }
 
             /// <summary>
-            /// WabaID
+            /// The ID of the WhatsApp Business account.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string MessageTemplateNamespace { get; set; }
 
             /// <summary>
-            /// The name of the WhatApp Business account.
+            /// The name of the WhatsApp Business account.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

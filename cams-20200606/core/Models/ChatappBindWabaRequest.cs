@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappBindWabaRequest : TeaModel {
         /// <summary>
-        /// WabaId
+        /// The ID of the WhatsApp Business account.
         /// </summary>
         [NameInMap("WabaId")]
         [Validation(Required=false)]

@@ -9,41 +9,49 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateChatappTemplateRequest : TeaModel {
+        [NameInMap("AllowCategoryChange")]
+        [Validation(Required=false)]
+        public bool? AllowCategoryChange { get; set; }
+
         /// <summary>
-        /// The category of the message template. Valid values:
+        /// The category of the template when the TemplateType parameter is set to WHATSAPP. Valid values:
         /// 
-        /// *   **ACCOUNT_UPDATE**: account update
-        /// *   **PAYMENT_UPDATE**: payment update
-        /// *   **PERSONAL_FINANCE\_UPDATE**: personal finance update
-        /// *   **SHIPPING_UPDATE**: traffic update
-        /// *   **RESERVATION_UPDATE**: reservation update
-        /// *   **ISSUE_RESOLUTION**: issue resolution
-        /// *   **APPOINTMENT_UPDATE**: appointment update
-        /// *   **TRANSPORTATION_UPDATE**: logistics information update
-        /// *   **TICKET_UPDATE**: ticket update
-        /// *   **ALERT_UPDATE**: alert update
-        /// *   **AUTO_REPLY**: auto reply
+        /// *   **TRANSACTIONAL**: a transactional template
+        /// *   **MARKETING**: a marketing template
+        /// *   **OTP**: a one-time password template
+        /// 
+        /// The category of the template when the TemplateType parameter is set to VIBER. Valid values:
+        /// 
+        /// *   **text**: a text message template
+        /// *   **image**: an image message template
+        /// *   **text_image_button**: a template that contains multiple media objects, including text, image, and button
+        /// *   **text_button**: a template that contains the text and button media objects
+        /// *   **document**: a document message template
+        /// *   **video**: a video message template
+        /// *   **text_video**: a template that contains the text and video media objects
+        /// *   **text_video_button**: a template that contains multiple media objects, including text, video, and button
+        /// *   **text_image**: a template that contains the text and image media objects
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// The components of the message template.
+        /// The list of components of the message template.
         /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
         public List<CreateChatappTemplateRequestComponents> Components { get; set; }
         public class CreateChatappTemplateRequestComponents : TeaModel {
             /// <summary>
-            /// This parameter applies only to components of the **BUTTONS** type.
+            /// The list of buttons, which applies only to the **BUTTONS** component.
             /// </summary>
             [NameInMap("Buttons")]
             [Validation(Required=false)]
             public List<CreateChatappTemplateRequestComponentsButtons> Buttons { get; set; }
             public class CreateChatappTemplateRequestComponentsButtons : TeaModel {
                 /// <summary>
-                /// The mobile phone number. This parameter is valid only if the Type parameter is set to **PHONE_NUMBER**.
+                /// The phone number. This parameter is valid only if the Type parameter is set to **PHONE_NUMBER**.
                 /// </summary>
                 [NameInMap("PhoneNumber")]
                 [Validation(Required=false)]
@@ -59,19 +67,24 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// <summary>
                 /// The type of the button. Valid values:
                 /// 
-                /// *   **PHONE_NUMBER**: a phone call button
+                /// *   **PHONE_NUMBER**: a phone number button
                 /// *   **URL**: a URL button
                 /// *   **QUICK_REPLY**: a quick reply button
                 /// 
-                /// > *   A quick reply button cannot coexist with a phone call button or a URL button in a message template.
-                /// > *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a message template.
+                /// > 
+                /// 
+                /// *   When the TemplateType parameter is set to WHATSAPP, if you have created a website link or a phone number link, you cannot create an quick reply button.
+                /// 
+                /// *   When the TemplateType parameter is set to WHATSAPP, you can add a combination of two URL buttons or a combination of a URL button and a phone number button to a message template.
+                /// 
+                /// *   When the TemplateType parameter is set to VIBER, you can add only one button and the button must be of the URL type.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The URL to be accessed when you click the URL button.
+                /// The URL to be accessed when users click the URL button.
                 /// </summary>
                 [NameInMap("Url")]
                 [Validation(Required=false)]
@@ -96,6 +109,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string Caption { get; set; }
 
+            /// <summary>
+            /// The duration of the video message when the TemplateType parameter is set to VIBER. Valid values: 0 to 600. Unit: seconds.
+            /// </summary>
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public int? Duration { get; set; }
@@ -107,15 +123,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string FileName { get; set; }
 
+            /// <summary>
+            /// The type of the file when the TemplateType parameter is set to VIBER.
+            /// </summary>
             [NameInMap("FileType")]
             [Validation(Required=false)]
             public string FileType { get; set; }
 
             /// <summary>
-            /// The format of the message.
+            /// The type of the media resources that are included in the message.
             /// 
             /// *   **TEXT**: text
-            /// *   **IMGAGE**: image
+            /// *   **IMAGE**: image
             /// *   **DOCUMENT**: document
             /// *   **VIDEO**: video
             /// </summary>
@@ -124,12 +143,15 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Format { get; set; }
 
             /// <summary>
-            /// The text of the message to be sent.
+            /// The text of the message that is sent.
             /// </summary>
             [NameInMap("Text")]
             [Validation(Required=false)]
             public string Text { get; set; }
 
+            /// <summary>
+            /// The thumbnail URL of the video message when the TemplateType parameter is set to VIBER.
+            /// </summary>
             [NameInMap("ThumbUrl")]
             [Validation(Required=false)]
             public string ThumbUrl { get; set; }
@@ -142,7 +164,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// *   **FOOTER**
             /// *   **BUTTONS**
             /// 
-            /// > A component of the **BODY** type cannot exceed 1,024 characters in length. A component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.
+            /// > When the TemplateType parameter is set to WHATSAPP, the component of the **BODY** type cannot exceed 1,024 characters in length. The component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.
+            /// 
+            /// > When the TemplateType parameter is set to VIBER, the **FOOTER** parameter is invalid.
+            /// 
+            /// > When the TemplateType parameter is set to VIBER, media objects including image, video, and text are placed in the **HEADER** component. A device displays that the image is placed below the text.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -162,7 +188,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The unique identifier of the WhatsApp account that you register.
+        /// The ID of the WhatsApp account that you register.
         /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
@@ -177,14 +203,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public Dictionary<string, string> Example { get; set; }
 
         /// <summary>
-        /// Assigned by ISV for RAM user authentication and authorization.
+        /// The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// The language that is used in the message template.
+        /// The language that is used in the message template. For more information, see [Language codes](~~463420~~).
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
@@ -198,11 +224,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The type of the message template. Valid values:
+        /// The type of the message template.
         /// 
         /// *   **WHATSAPP**
-        /// *   VIBER (under development)
-        /// *   LINE (under development)
+        /// *   **VIBER**
+        /// *   LINE: the LINE message template. The LINE message template is under development.
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

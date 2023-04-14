@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class BeeBotChatRequest : TeaModel {
         /// <summary>
-        /// The ID of chatbot instance.
+        /// The ID of the bot instance.
         /// </summary>
         [NameInMap("ChatBotInstanceId")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The name of the intent in the dialog flow. When this parameter is specified, the bot will conduct a Q\&A according to the intent.
+        /// The name of the intent in the dialog flow. When this parameter is specified, the bot conducts a Q\&A based on the intent.
         /// </summary>
         [NameInMap("IntentName")]
         [Validation(Required=false)]
         public string IntentName { get; set; }
 
         /// <summary>
-        /// ISV verification code, which is used to verify whether the sub-account is authorized by ISV.
+        /// The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string SenderNick { get; set; }
 
         /// <summary>
-        /// The ID of the session, which identifies the session and context information of the visitor.
+        /// The ID of the session, which is used to identify the session and store context information of the session.
         /// </summary>
         [NameInMap("SessionId")]
         [Validation(Required=false)]

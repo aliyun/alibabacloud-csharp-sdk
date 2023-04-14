@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public CreateChatappMigrationInitiateResponseBodyData Data { get; set; }
         public class CreateChatappMigrationInitiateResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the phone number.
+            /// The ID of the number.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]

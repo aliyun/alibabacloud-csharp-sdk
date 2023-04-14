@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// The HTTP status code returned.
         /// 
-        /// *   A code of OK indicates that the call is successful.
-        /// *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
+        /// *   A value of OK indicates that the call is successful.
+        /// *   Other values indicate that the call fails. For more information, see [Error codes](https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes).
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]

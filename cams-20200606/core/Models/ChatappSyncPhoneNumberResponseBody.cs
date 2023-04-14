@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The list of phone numbers.
+        /// Details of the phone numbers.
         /// </summary>
         [NameInMap("PhoneNumbers")]
         [Validation(Required=false)]
@@ -41,21 +41,21 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CodeVerificationStatus { get; set; }
 
             /// <summary>
-            /// The maximum number of messages that can be sent to users by using the phone number.
+            /// The number of phone numbers to which messages can be sent in a day.
             /// </summary>
             [NameInMap("MessagingLimitTier")]
             [Validation(Required=false)]
             public string MessagingLimitTier { get; set; }
 
             /// <summary>
-            /// The review status of the business name.
+            /// The review status of the business display name.
             /// </summary>
             [NameInMap("NameStatus")]
             [Validation(Required=false)]
             public string NameStatus { get; set; }
 
             /// <summary>
-            /// The review status of the new business name.
+            /// The review status of the new business display name.
             /// </summary>
             [NameInMap("NewNameStatus")]
             [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string UpQueue { get; set; }
 
             /// <summary>
-            /// The name of the business to which the phone number belongs.
+            /// The display name of the business to which the phone number belongs.
             /// </summary>
             [NameInMap("VerifiedName")]
             [Validation(Required=false)]

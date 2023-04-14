@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public GetPhoneNumberVerificationStatusResponseBodyData Data { get; set; }
         public class GetPhoneNumberVerificationStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// The verification status of the phone number.
+            /// The verification status.
             /// </summary>
             [NameInMap("CodeVerificationStatus")]
             [Validation(Required=false)]
             public string CodeVerificationStatus { get; set; }
 
             /// <summary>
-            /// The ID of the phone number.
+            /// The ID of the number.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]

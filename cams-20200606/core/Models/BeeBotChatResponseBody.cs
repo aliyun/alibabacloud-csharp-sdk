@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// The data returned.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,21 +31,21 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string MessageId { get; set; }
 
             /// <summary>
-            /// The list of the message.
+            /// The list of messages.
             /// </summary>
             [NameInMap("Messages")]
             [Validation(Required=false)]
             public List<BeeBotChatResponseBodyDataMessages> Messages { get; set; }
             public class BeeBotChatResponseBodyDataMessages : TeaModel {
                 /// <summary>
-                /// If the AnswerType parameter is set to Recommend, this parameter indicates the source of the recommended answer.
+                /// When the AnswerType parameter is set to Recommend, this parameter indicates the source of the recommended answer.
                 /// </summary>
                 [NameInMap("AnswerSource")]
                 [Validation(Required=false)]
                 public string AnswerSource { get; set; }
 
                 /// <summary>
-                /// The type of the message.
+                /// The type of the answer.
                 /// </summary>
                 [NameInMap("AnswerType")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string HitStatement { get; set; }
 
                     /// <summary>
-                    /// The ID of the hit problem in the knowledge base.
+                    /// The ID of the hit question in the knowledge base.
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 }
 
                 /// <summary>
-                /// When the AnswerType parameter is set to Recommend, this parameter contains a list of recommends returned by the bot.
+                /// The list of recommended knowledge. When the AnswerType parameter is set to Recommend, this parameter is returned.
                 /// </summary>
                 [NameInMap("Recommends")]
                 [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string KnowledgeId { get; set; }
 
                     /// <summary>
-                    /// The recommended content, which may be the entity in graph-based question answering, the standard knowledge in knowledge-based question answering, or the column value in table-based question answering.
+                    /// The title of the recommended knowledge. Valid values: the entity in graph-based question answering, the knowledge title in knowledge-based question answering, or the column value in table-based question answering.
                     /// </summary>
                     [NameInMap("Title")]
                     [Validation(Required=false)]
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string ContentType { get; set; }
 
                     /// <summary>
-                    /// When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+                    /// The name of the dialog. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
                     /// </summary>
                     [NameInMap("DialogName")]
                     [Validation(Required=false)]
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string HitStatement { get; set; }
 
                     /// <summary>
-                    /// When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+                    /// The name of the intent. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
                     /// </summary>
                     [NameInMap("IntentName")]
                     [Validation(Required=false)]
@@ -240,14 +240,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string MetaData { get; set; }
 
                     /// <summary>
-                    /// When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+                    /// The ID of the node. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
                     /// </summary>
                     [NameInMap("NodeId")]
                     [Validation(Required=false)]
                     public string NodeId { get; set; }
 
                     /// <summary>
-                    /// When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+                    /// The name of the node. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
                     /// </summary>
                     [NameInMap("NodeName")]
                     [Validation(Required=false)]
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                         public bool? Hit { get; set; }
 
                         /// <summary>
-                        /// The name of the slot.
+                        /// The name.
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

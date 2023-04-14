@@ -17,14 +17,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// Specifies whether to use HTTP callbacks to receive receipts. Valid values: Y and N. A value of Y indicates that HTTP callbacks are used to receive receipts. A value of N indicates that HTTP callbacks are not used to receive receipts.
+        /// Specifies whether to use HTTP callbacks to receive message receipts. Valid values:
+        /// 
+        /// *   Y: indicates that HTTP callbacks are used to receive receipts.
+        /// *   N: indicates that HTTP callbacks are not used to receive receipts.
         /// </summary>
         [NameInMap("HttpFlag")]
         [Validation(Required=false)]
         public string HttpFlag { get; set; }
 
         /// <summary>
-        /// Specifies whether to use Message Service (MNS) queues to receive receipts. Valid values: Y and N. A value of Y indicates that MNS queues are used to receive receipts. A value of N indicates that MNS queues are not used to receive receipts.
+        /// Specifies whether to use Message Service (MNS) queues to receive receipts. Valid values:
+        /// 
+        /// *   Y: indicates that MNS queues are used to receive receipts.
+        /// *   N: indicates that MNS queues are not used to receive receipts.
         /// </summary>
         [NameInMap("QueueFlag")]
         [Validation(Required=false)]

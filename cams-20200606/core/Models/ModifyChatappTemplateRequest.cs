@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public List<ModifyChatappTemplateRequestComponents> Components { get; set; }
         public class ModifyChatappTemplateRequestComponents : TeaModel {
             /// <summary>
-            /// The list of buttons, which applies only to the **BUTTONS** component.
+            /// The buttons. This parameter is applicable only to components of the **BUTTONS** type.
             /// </summary>
             [NameInMap("Buttons")]
             [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string PhoneNumber { get; set; }
 
                 /// <summary>
-                /// The text of the message that is sent.
+                /// The text of the message to be sent.
                 /// </summary>
                 [NameInMap("Text")]
                 [Validation(Required=false)]
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// <summary>
                 /// The type of the button.
                 /// 
-                /// *   **PHONE_NUMBER**: the phone call button
-                /// *   **URL**: the URL button
-                /// *   **QUICK_REPLY**: the quick reply button
+                /// *   **PHONE_NUMBER**: a phone number button
+                /// *   **URL**: a URL button
+                /// *   **QUICK_REPLY**: a quick reply button
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -62,8 +62,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// <summary>
                 /// The type of the URL. Valid values:
                 /// 
-                /// *   **static**: the static URL
-                /// *   **dynamic**: the dynamic URL
+                /// *   **static**: a static URL
+                /// *   **dynamic**: a dynamic URL
                 /// </summary>
                 [NameInMap("UrlType")]
                 [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <summary>
             /// The description.
             /// 
-            /// >  When the Type parameter is set to **HEADER** and the Format parameter is set to **IMAGE/DOCUMENT/VIDEO**, you can specify the description.
+            /// > When the Type parameter is set to **HEADER** and the Format parameter is set to **IMAGE, DOCUMENT, or VIDEO**, you can specify a description.
             /// </summary>
             [NameInMap("Caption")]
             [Validation(Required=false)]
@@ -85,9 +85,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public int? Duration { get; set; }
 
             /// <summary>
-            /// The name of the file
+            /// The name of the file.
             /// 
-            /// > : When the Type parameter is set to **HEADER** and the Format parameter is set to **DOCUMENT**, you can specify a name of the file.
+            /// > When the Type parameter is set to **HEADER** and the Format parameter is set to **DOCUMENT**, you can specify a name for the file.
             /// </summary>
             [NameInMap("FileName")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Format { get; set; }
 
             /// <summary>
-            /// The text of the message that is sent.
+            /// The text of the message to be sent.
             /// </summary>
             [NameInMap("Text")]
             [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string ThumbUrl { get; set; }
 
             /// <summary>
-            /// The type of the component.
+            /// The type of the component. Valid values:
             /// 
             /// *   **BODY**
             /// *   **HEADER**
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The ID of the WhatsApp Business account under the ISV account.
+        /// The ID of the WhatsApp Business account under the independent software vendor (ISV) account.
         /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public Dictionary<string, string> Example { get; set; }
 
         /// <summary>
-        /// The ISV verification code, which is used to verify whether the user is authorized by ISV.
+        /// The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappVerifyAndRegisterRequest : TeaModel {
         /// <summary>
-        /// The space ID of the user under the ISV account.
+        /// The space ID of the user under the independent software vendor (ISV) account.
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]

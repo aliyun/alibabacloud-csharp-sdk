@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// The business information about the WhatsApp Business account.
+        /// The business information about the WABA.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

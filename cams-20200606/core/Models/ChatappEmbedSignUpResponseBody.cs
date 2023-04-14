@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of WhatsApp Business accounts.
+        /// The list of the WhatsApp Business accounts.
         /// </summary>
         [NameInMap("Wabas")]
         [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// WabaId
+            /// The ID of the WhatsApp Business account.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string MessageTemplateNamespace { get; set; }
 
             /// <summary>
-            /// Waba Name
+            /// The name of the WhatsApp Business account.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// The ID of the WhatApp Business account of the ISV account.
+        /// The ID of the WhatsApp Business account under the ISV account.
         /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string FallBackContent { get; set; }
 
+        [NameInMap("FallBackDuration")]
+        [Validation(Required=false)]
+        public int? FallBackDuration { get; set; }
+
         /// <summary>
         /// The ID of the fallback strategy.
         /// </summary>
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FallBackId { get; set; }
 
         /// <summary>
-        /// The message sender.
+        /// The phone number of the message sender.
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// Viber消息类型，取值：pormotion或transation。
+        /// The message type when the ChannelType parameter is set to viber. Valid values: promotion and transaction.
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
@@ -81,7 +85,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string SenderListShrink { get; set; }
 
         /// <summary>
-        /// Viber消息发送时tag信息。
+        /// The tag information when the ChannelType parameter is set to viber.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -95,14 +99,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// The code of the message template.
+        /// The encoding of the message template.
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// Viber消息发送超时时间，单位：秒，取值范围 30~1209600。
+        /// The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600. Unit: seconds.
         /// </summary>
         [NameInMap("Ttl")]
         [Validation(Required=false)]

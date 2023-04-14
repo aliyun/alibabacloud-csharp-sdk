@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// The HTTP status code returned.
         /// 
-        /// *   A code of OK indicates that the call is successful.
-        /// *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
+        /// *   A value of OK indicates that the call is successful.
+        /// *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -41,24 +41,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <summary>
             /// The category of the message template. Valid values:
             /// 
-            /// *   **ACCOUNT_UPDATE**: account update
-            /// *   **PAYMENT_UPDATE**: payment update
-            /// *   **PERSONAL_FINANCE\_UPDATE**: personal finance update
-            /// *   **SHIPPING_UPDATE**: traffic update
-            /// *   **RESERVATION_UPDATE**: reservation update
-            /// *   **ISSUE_RESOLUTION**: issue resolution
-            /// *   **APPOINTMENT_UPDATE**: appointment update
-            /// *   **TRANSPORTATION_UPDATE**: logistics information update
-            /// *   **TICKET_UPDATE**: ticket update
-            /// *   **ALERT_UPDATE**: alert update
-            /// *   **AUTO_REPLY**: auto reply
+            /// *   **TRANSACTIONAL**: a transactional template
+            /// *   **MARKETING**: a marketing template
+            /// *   **OTP**: a one-time password template
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
 
             /// <summary>
-            /// The language that is used in the message template.
+            /// The language that is used in the message template. For more information, see [Language codes](~~463420~~).
             /// </summary>
             [NameInMap("Language")]
             [Validation(Required=false)]
@@ -78,6 +70,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string TemplateName { get; set; }
 
+            /// <summary>
+            /// The type of the template. Valid values: WHATSAPP and VIBER.
+            /// </summary>
             [NameInMap("TemplateType")]
             [Validation(Required=false)]
             public string TemplateType { get; set; }
@@ -97,6 +92,13 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// 总记录条数。
+        /// </summary>
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public int? Total { get; set; }
 
     }
 

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CustSpaceId { get; set; }
 
             /// <summary>
-            /// wabaId
+            /// The ID of the WhatsApp Business account.
             /// </summary>
             [NameInMap("WabaId")]
             [Validation(Required=false)]
