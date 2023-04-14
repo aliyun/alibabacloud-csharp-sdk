@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
-    public class GetCertifyResultRequest : TeaModel {
+    public class VerifyWithFusionAuthTokenRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("Token")]
+        [NameInMap("VerifyToken")]
         [Validation(Required=false)]
-        public string Token { get; set; }
+        public string VerifyToken { get; set; }
 
     }
 
