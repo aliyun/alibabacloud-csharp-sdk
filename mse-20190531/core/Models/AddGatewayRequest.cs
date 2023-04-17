@@ -82,6 +82,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public int? Replica { get; set; }
 
+        [NameInMap("RequestPars")]
+        [Validation(Required=false)]
+        public string RequestPars { get; set; }
+
         /// <summary>
         /// The ID of the resource group.
         /// </summary>

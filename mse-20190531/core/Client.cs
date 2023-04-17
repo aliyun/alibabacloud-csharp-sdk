@@ -350,6 +350,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["Replica"] = request.Replica;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestPars))
+            {
+                query["RequestPars"] = request.RequestPars;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -440,6 +444,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replica))
             {
                 query["Replica"] = request.Replica;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestPars))
+            {
+                query["RequestPars"] = request.RequestPars;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
