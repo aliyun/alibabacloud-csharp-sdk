@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRecommendInstanceTypeRequest : TeaModel {
         /// <summary>
-        /// The number of vCPUs of the instance.
+        /// The number of vCPUs for the instance.
         /// 
-        /// >  If the `Cores` and `Memory` parameters are both specified, all instance types that offer the vCPUs and memory size specified by the parameters are matched.
+        /// > If the `Cores` and `Memory` parameters are both specified, all instance types with the vCPUs and memory size specified by the parameters are queried.
         /// </summary>
         [NameInMap("Cores")]
         [Validation(Required=false)]
         public int? Cores { get; set; }
 
         /// <summary>
-        /// The billing method of the instances of the instance type. For more information, see [Billing overview](~~25398~~). Valid values:
+        /// The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:
         /// 
-        /// * PrePaid: subscription
-        /// * PostPaid: pay-as-you-go
+        /// *   PrePaid: subscription
+        /// *   PostPaid: pay-as-you-go
         /// 
         /// Default value: PostPaid.
         /// </summary>
@@ -33,39 +33,39 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The level of the instance family. Valid values:
         /// 
-        /// * EntryLevel
-        /// * EnterpriseLevel.
-        /// * CreditEntryLevel. For more information, see [Burstable instance families](~~59977~~).
+        /// *   EntryLevel.
+        /// *   EnterpriseLevel.
+        /// *   CreditEntryLevel: credit-based entry level. For more information, see [Burstable instance families](~~59977~~).
         /// </summary>
         [NameInMap("InstanceFamilyLevel")]
         [Validation(Required=false)]
         public string InstanceFamilyLevel { get; set; }
 
         /// <summary>
-        /// The specified instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.
+        /// The specified instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent list of instance types.
         /// 
-        /// >  If the `InstanceType` parameter is specified, none of the `Cores` and `Memory` parameters can be specified.
+        /// > If the `InstanceType` parameter is specified, the `Cores` and `Memory` are ignored.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// Instance families to be filtered out. You can specify up to 10 instance families.
+        /// Specifies the instance families from which the alternative instance types are selected. You can specify up to 10 instance types.
         /// </summary>
         [NameInMap("InstanceTypeFamily")]
         [Validation(Required=false)]
         public List<string> InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// Specifies whether to match I/O optimized instances. The IoOptimized parameter cannot be specified when the instance is not I/O optimized. Valid values:
+        /// Indicates whether the instance is an I/O optimized instance. The IoOptimized parameter cannot be specified when the instance is not I/O optimized. Valid values:
         /// 
-        /// * optimized: matches I/O optimized instances.
-        /// * none: matches non-I/O optimized instances.
+        /// *   optimized
+        /// *   none
         /// 
         /// Default value: optimized.
         /// 
-        /// If you query alternative instance types for retired instance types, this parameter is set to none by default. Default value: none.
+        /// If you query alternative instance types for retired instance types, this parameter is set to none by default.
         /// </summary>
         [NameInMap("IoOptimized")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The maximum hourly price for pay-as-you-go instances or preemptible instances.
         /// 
-        /// >  If this parameter is specified, the `SpotStrategy` parameter must be set to `SpotWithPriceLimit`.
+        /// >  This parameter takes effect only when `SpotStrategy` is set to `SpotWithPriceLimit`.
         /// </summary>
         [NameInMap("MaxPrice")]
         [Validation(Required=false)]
@@ -83,17 +83,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The memory size of the instance. Unit: GiB.
         /// 
-        /// >  If the `Cores` and `Memory` parameters are both specified, all instance types that offer the vCPUs and memory size specified by the parameters are matched.
+        /// > If the `Cores` and `Memory` parameters are both specified, all instance types with the vCPUs and memory size specified by the parameters are queried.
         /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public float? Memory { get; set; }
 
         /// <summary>
-        /// The network type of the ECS instance. Valid values:
+        /// The network type of the instance. Valid values:
         /// 
-        /// *   classic: classic network
-        /// *   vpc: VPC
+        /// *   classic
+        /// *   vpc
         /// 
         /// Default value: vpc.
         /// </summary>
@@ -110,11 +110,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The policy for recommending instance types. Valid values:
+        /// The policy based on which the system recommends the instance type. Valid values:
         /// 
-        /// * InventoryFirst: Instance types are recommended in descending order based on resource availability.
-        /// * PriceFirst: Instance types are recommended in ascending order based on hourly price per vCPU.
-        /// * NewProductFirst: The latest instance types are recommended first.
+        /// *   InventoryFirst: Instance types are recommended in descending order based on resource availability.
+        /// *   PriceFirst: Instance types are recommended in ascending order based on hourly price per vCPU.
+        /// *   NewProductFirst: The latest instance types are recommended first.
         /// 
         /// Default value: InventoryFirst.
         /// </summary>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PriorityStrategy { get; set; }
 
         /// <summary>
-        /// The region ID of the alternative instance types. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -138,10 +138,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specifies the scenario in which the instance type is recommended. Valid values:
+        /// Specifies the scenarios in which the instance type is recommended. Valid values:
         /// 
-        /// * UPGRADE: instance type upgrade or downgrade
-        /// * CREATE: instance creation
+        /// *   UPGRADE: instance type upgrade or downgrade
+        /// *   CREATE: instance creation
         /// 
         /// Default value: CREATE.
         /// </summary>
@@ -152,11 +152,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The bidding policy of preemptible instances. Valid values:
         /// 
-        /// * NoSpot: applies to regular pay-as-you-go instances.
-        /// * SpotWithPriceLimit: applies to preemptible instances that have user-defined maximum hourly prices.
-        /// * SpotAsPriceGo: applies to preemptible instances that are of the market price at the time of purchase.
+        /// *   NoSpot: The instance is created as a pay-as-you-go instance.
+        /// *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
+        /// *   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be as high as the pay-as-you-go price.
         /// 
-        /// > If the `SpotStrategy` parameter is specified, the `InstanceChargeType` parameter must be set to `PostPaid`.
+        /// > The `SpotStrategy` parameter takes effect only when `InstanceChargeType` is set to `PostPaid`.
         /// 
         /// Default value: NoSpot.
         /// </summary>
@@ -165,12 +165,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SpotStrategy { get; set; }
 
         /// <summary>
-        /// The category of the system disk. Valid values:
+        /// The type of the system disk. Valid values:
         /// 
-        /// * cloud_efficiency: ultra disk
-        /// * cloud_ssd: standard SSD
-        /// * cloud_essd: enhanced SSD (ESSD)
-        /// * cloud: basic disk
+        /// *   cloud_efficiency: ultra disk
+        /// *   cloud_ssd: SSD
+        /// *   cloud_essd: enhanced SSD (ESSD)
+        /// *   cloud: basic disk
         /// 
         /// For non-I/O optimized instances, the default value is cloud.
         /// 
@@ -181,21 +181,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SystemDiskCategory { get; set; }
 
         /// <summary>
-        /// The zone ID of the alternative instance types. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+        /// The ID of the zone for which to query resources. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
         /// 
-        /// When you specify this parameter, we recommend that you set ZoneMatchMode to the default value Include. This value indicates that instance types in the zone specified by ZoneId are preferentially recommended, and instance types in other zones in the same region are also listed.
+        /// We recommend that you set the value of ZoneMatchMode to Include, which is the default value. As a result, instance types within zones specified by ZoneId are recommended with priority. Instance types in other zones within the same region are also listed.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// Specifies which alternative instance types are recommended. Valid values:
+        /// Specifies whether to recommend only instance types in the zone specified by ZoneId. Valid values:
         /// 
-        /// * Strict: recommends only alternative instance types in the zone specified by ZoneId.
-        /// * Include: recommends all instance types in all the zones in the same region as the specified instance type.
+        /// *   Strict: only instance types within zones specified by the ZoneId parameter are recommended.
+        /// *   Include: instance types in other zones within the same region are also recommended.
         /// 
-        /// When `ZoneId` is specified, the default value of this parameter is Strict. This value indicates that only alternative instance types in the zone specified by ZoneId are recommended.
+        /// If `ZoneId` is specified, the default value of this parameter is Strict. This value indicates that only alternative instance types in the zone specified by ZoneId are recommended.
         /// </summary>
         [NameInMap("ZoneMatchMode")]
         [Validation(Required=false)]

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// The ID of the ECS instance from which the disk is to be detached.
+        /// The ID of the ECS instance from which to detach the disk.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

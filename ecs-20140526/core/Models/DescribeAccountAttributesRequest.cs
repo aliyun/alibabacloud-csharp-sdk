@@ -10,7 +10,43 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAccountAttributesRequest : TeaModel {
         /// <summary>
-        /// The list of attribute names.
+        /// The type of resource quota N. Valid values of N: 1 to 8. Valid values:
+        /// 
+        /// *   instance-network-type: available network types
+        /// 
+        /// *   max-security-groups: the maximum number of security groups
+        /// 
+        /// *   max-elastic-network-interfaces: the maximum number of ENIs
+        /// 
+        /// *   max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances
+        /// 
+        /// *   max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances
+        /// 
+        /// *   used-postpaid-instance-vcpu-count: the number of vCPUs that have been allocated to pay-as-you-go instances
+        /// 
+        /// *   used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to preemptible instances
+        /// 
+        /// *   max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks
+        /// 
+        /// *   used-postpaid-yundisk-capacity: the capacity of pay-as-you-go disks that have been created
+        /// 
+        /// *   max-dedicated-hosts: the maximum number of dedicated hosts
+        /// 
+        /// *   supported-postpaid-instance-types: the instance types of pay-as-you-go I/O optimized instances
+        /// 
+        /// *   max-axt-command-count: the maximum number of Cloud Assistant commands
+        /// 
+        /// *   max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day
+        /// 
+        /// *   real-name-authentication: whether the account has passed the real-name verification
+        /// 
+        ///     **
+        /// 
+        ///     **Note**You must pass the real-name verification before you create an ECS instance in the Chinese mainland regions.
+        /// 
+        /// *   max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances
+        /// 
+        /// This parameter is empty by default.
         /// </summary>
         [NameInMap("AttributeName")]
         [Validation(Required=false)]
@@ -21,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -36,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the zone.
+        /// The ID of the zone in which the resource resides.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

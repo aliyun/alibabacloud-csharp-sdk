@@ -51,6 +51,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("PerformanceControlOptions")]
+        [Validation(Required=false)]
+        public ModifyDiskSpecRequestPerformanceControlOptions PerformanceControlOptions { get; set; }
+        public class ModifyDiskSpecRequestPerformanceControlOptions : TeaModel {
+            [NameInMap("IOPS")]
+            [Validation(Required=false)]
+            public int? IOPS { get; set; }
+
+            [NameInMap("Recover")]
+            [Validation(Required=false)]
+            public string Recover { get; set; }
+
+            [NameInMap("Throughput")]
+            [Validation(Required=false)]
+            public int? Throughput { get; set; }
+
+        }
+
         /// <summary>
         /// The new performance level of the ESSD. Valid values:
         /// 

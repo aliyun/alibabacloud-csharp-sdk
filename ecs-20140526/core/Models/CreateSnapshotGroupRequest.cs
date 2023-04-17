@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of disk N for which you want to create snapshots. You can specify multiple disk IDs across instances with the same zone. Valid values of N: 1 to 16. A single snapshot-consistent group can contain snapshots of up to 16 disks and cannot exceed 32 TiB in size.
+        /// The ID of disk N for which you want to create snapshots. You can specify multiple disk IDs across instances within the same zone. Valid values of N: 1 to 16. A single snapshot-consistent group can contain snapshots of up to 16 disks and cannot exceed 32 TiB in size.
         /// 
-        /// When you call this operation, take note of the following items:
+        /// Take note of the following items:
         /// 
         /// *   You cannot specify both DiskId.N and `ExcludeDiskId.N`.
-        /// *   If `InstanceId` is specified, DiskId.N is only used to specify the disks that are attached to the instance specified by InstanceId.
+        /// *   If `InstanceId` is set, you can use DiskId.N to specify only disks attached to the instance specified by InstanceId, and you cannot use DiskId.N to specify disks attached to multiple instances.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// This parameter is empty by default, which indicates that snapshots are created for all the disks of the instance.
         /// 
-        /// > You cannot specify both ExcludeDiskId.N and `DiskId.N`.
+        /// > You cannot specify ExcludeDiskId.N and `DiskId.N` in the same request.
         /// </summary>
         [NameInMap("ExcludeDiskId")]
         [Validation(Required=false)]
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the instant access feature. Valid values:
+        /// Specify whether to enable the instant access feature. Valid values:
         /// 
-        /// *   true: enables the instant access feature.
-        /// *   false: disables the instant access feature.
+        /// *   true
+        /// *   false
         /// 
         /// Default value: false.
         /// </summary>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// This parameter takes effect only when `InstantAccess` is set to true. The instant access feature is automatically disabled when the specified duration of the instant access feature expires.
         /// 
-        /// This parameter is empty by default, which indicates that the expiration time of the instant access feature is determined by the time when the snapshots are released.
+        /// This parameter is empty by default, which indicates that the instant access feature expires when snapshots are released.
         /// </summary>
         [NameInMap("InstantAccessRetentionDays")]
         [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -114,14 +114,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StorageLocationArn { get; set; }
 
         /// <summary>
-        /// The tags to add to the snapshot-consistent group.
+        /// The tags of the command.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateSnapshotGroupRequestTag> Tag { get; set; }
         public class CreateSnapshotGroupRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag value cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

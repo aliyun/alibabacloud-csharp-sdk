@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ConvertNatPublicIpToEipRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance whose public IP address you want to convert into an EIP.
+        /// The ID of the instance whose public IP address you want to convert to an EIP.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

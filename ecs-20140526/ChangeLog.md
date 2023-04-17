@@ -1,3 +1,6 @@
+2023-04-17 Version: 3.0.5
+- Add ModifyDiskDeployment.
+
 2023-03-28 Version: 3.0.4
 - Change visibility of param ActionType in DescribeImageSupportInstanceTypes.
 

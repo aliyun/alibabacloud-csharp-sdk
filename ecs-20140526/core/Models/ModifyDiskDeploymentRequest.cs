@@ -8,7 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
-    public class DescribeReservedInstanceAutoRenewAttributeRequest : TeaModel {
+    public class ModifyDiskDeploymentRequest : TeaModel {
+        [NameInMap("DiskCategory")]
+        [Validation(Required=false)]
+        public string DiskCategory { get; set; }
+
+        [NameInMap("DiskId")]
+        [Validation(Required=false)]
+        public string DiskId { get; set; }
+
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -17,19 +29,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
-        /// </summary>
-        [NameInMap("RegionId")]
+        [NameInMap("PerformanceLevel")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        /// <summary>
-        /// The ID of reserved instance N.
-        /// </summary>
-        [NameInMap("ReservedInstanceId")]
-        [Validation(Required=false)]
-        public List<string> ReservedInstanceId { get; set; }
+        public string PerformanceLevel { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -38,6 +40,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("StorageClusterId")]
+        [Validation(Required=false)]
+        public string StorageClusterId { get; set; }
 
     }
 

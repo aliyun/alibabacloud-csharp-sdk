@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class UnassignPrivateIpAddressesRequest : TeaModel {
+        /// <summary>
+        /// > This parameter is in invitational preview and is unavailable for general users.
+        /// </summary>
         [NameInMap("Ipv4Prefix")]
         [Validation(Required=false)]
         public List<string> Ipv4Prefix { get; set; }

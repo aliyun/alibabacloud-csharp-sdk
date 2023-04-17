@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -145,9 +145,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The lifecycle state of the instance. Valid values:
         /// 
-        /// *   Starting: The instance is being started.
-        /// *   Running: The instance is running.
-        /// *   Stopped: The instance is stopped.
+        /// *   Starting
+        /// *   Running
+        /// *   Stopped
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

@@ -21,16 +21,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The auto-renewal period for the instance.
         /// 
-        /// *   Valid values of `Duration` when `PeriodUnit` is set to `Year` (year): 1, 2, 3, 4, and 5.
-        /// *   Valid values of `Duration` when `PeriodUnit` is set to `Month` (month): 1, 2, 3, 6, 12, 24, 36, 48, and 60.
-        /// *   Valid values of `Duration` when `PeriodUnit` is set to `Week` (week): 1, 2, 3, and 4.
+        /// *   Valid values of `Duration` when `PeriodUnit` is set to `Year`: 1, 2, 3, 4, and 5.
+        /// *   Valid values of `Duration` when `PeriodUnit` is set to `Month` : 1, 2, 3, 6, 12, 24, 36, 48, and 60.
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can specify IDs of up to 100 subscription instances. Separate the instance IDs with commas (,).
+        /// The ID of the instance You can specify IDs of up to 100 subscription instances. Separate the instance IDs with commas (,).
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -47,7 +46,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The unit of the renewal period (`Duration`). Default value: Month. Valid values:
         /// 
-        /// *   Week
         /// *   Month
         /// *   Year
         /// </summary>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -31,6 +31,58 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource> AvailableResource { get; set; }
                     public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource : TeaModel {
+                        [NameInMap("ConditionSupportedResources")]
+                        [Validation(Required=false)]
+                        public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResources ConditionSupportedResources { get; set; }
+                        public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResources : TeaModel {
+                            [NameInMap("ConditionSupportedResource")]
+                            [Validation(Required=false)]
+                            public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResource> ConditionSupportedResource { get; set; }
+                            public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResource : TeaModel {
+                                [NameInMap("Conditions")]
+                                [Validation(Required=false)]
+                                public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResourceConditions Conditions { get; set; }
+                                public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResourceConditions : TeaModel {
+                                    [NameInMap("Condition")]
+                                    [Validation(Required=false)]
+                                    public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResourceConditionsCondition> Condition { get; set; }
+                                    public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResourceConditionsCondition : TeaModel {
+                                        [NameInMap("Key")]
+                                        [Validation(Required=false)]
+                                        public string Key { get; set; }
+
+                                    }
+
+                                }
+
+                                [NameInMap("Max")]
+                                [Validation(Required=false)]
+                                public int? Max { get; set; }
+
+                                [NameInMap("Min")]
+                                [Validation(Required=false)]
+                                public int? Min { get; set; }
+
+                                [NameInMap("Status")]
+                                [Validation(Required=false)]
+                                public string Status { get; set; }
+
+                                [NameInMap("StatusCategory")]
+                                [Validation(Required=false)]
+                                public string StatusCategory { get; set; }
+
+                                [NameInMap("Unit")]
+                                [Validation(Required=false)]
+                                public string Unit { get; set; }
+
+                                [NameInMap("Value")]
+                                [Validation(Required=false)]
+                                public string Value { get; set; }
+
+                            }
+
+                        }
+
                         /// <summary>
                         /// Details about the resources.
                         /// </summary>

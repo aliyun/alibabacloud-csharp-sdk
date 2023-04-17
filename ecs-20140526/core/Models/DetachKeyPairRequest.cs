@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DetachKeyPairRequest : TeaModel {
+        /// <summary>
+        /// The IDs of instances from which you want to unbind the SSH key pair. The value can be a JSON array that consists of up to 50 instance IDs. Separate multiple instance IDs with commas (,).
+        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
+        /// <summary>
+        /// The names of SSH key pairs.
+        /// </summary>
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
@@ -21,6 +27,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the SSH key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

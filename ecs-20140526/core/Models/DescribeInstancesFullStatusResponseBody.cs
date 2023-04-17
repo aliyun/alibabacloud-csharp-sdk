@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType> ScheduledSystemEventType { get; set; }
                     public class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType : TeaModel {
                         /// <summary>
-                        /// The state of the event. Valid values:
+                        /// The state of the event.
                         /// </summary>
                         [NameInMap("EventCycleStatus")]
                         [Validation(Required=false)]

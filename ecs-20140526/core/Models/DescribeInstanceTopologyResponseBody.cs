@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeInstanceTopologyResponseBodyTopologysTopology> Topology { get; set; }
             public class DescribeInstanceTopologyResponseBodyTopologysTopology : TeaModel {
                 /// <summary>
-                /// The ID of the host where the ECS instance is deployed. This parameter is encrypted and cannot match the ID of the instance. However, if the values of this parameter for different ECS instances are the same, the ECS instances are deployed on the same host.
+                /// The ID of the host where the ECS instance resides. This parameter is encrypted and cannot match the ID of the ECS instance. However, if the values of this parameter for different ECS instances are the same, the ECS instances reside on the same host.
                 /// </summary>
                 [NameInMap("HostId")]
                 [Validation(Required=false)]

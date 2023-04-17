@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StartImagePipelineExecutionResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the image creation task.
+        /// </summary>
         [NameInMap("ExecutionId")]
         [Validation(Required=false)]
         public string ExecutionId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

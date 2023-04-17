@@ -9,14 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ReInitDiskRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to automatically start the instance after the disk is re-initialized.
+        /// 
+        /// Default value: false.
+        /// </summary>
         [NameInMap("AutoStartInstance")]
         [Validation(Required=false)]
         public bool? AutoStartInstance { get; set; }
 
+        /// <summary>
+        /// The ID of the disk.
+        /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
+        /// <summary>
+        /// The name of the key pair.
+        /// 
+        /// > The parameter is applicable only to Linux instances. You can bind an SSH key pair to an instance as the logon credential when you re-initialize the system disk of the instance. After the SSH key pair is bound, the username and password-based logon method is disabled for the instance.
+        /// </summary>
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
@@ -29,6 +42,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to reset the password of the instance when you re-initialize its system disk. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
+        /// 
+        ///     ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/
+        /// 
+        /// For Windows instances, passwords cannot start with a forward slash (/).
+        /// 
+        /// > If the `Password` parameter is specified, we recommend that you send requests over HTTPS to prevent password leaks.
+        /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
@@ -41,6 +63,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to use Security Center for free after the system disk is re-initialized. Valid values:
+        /// 
+        /// *   Active: uses Security Center for free after the system disk is re-initialized. This value is applicable only to public images.
+        /// *   Deactive: does not use Security Center for free after the system disk is re-initialized. This value is applicable to all images.
+        /// 
+        /// Default value: Deactive.
+        /// </summary>
         [NameInMap("SecurityEnhancementStrategy")]
         [Validation(Required=false)]
         public string SecurityEnhancementStrategy { get; set; }

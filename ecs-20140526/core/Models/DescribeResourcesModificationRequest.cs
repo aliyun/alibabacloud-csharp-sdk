@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeResourcesModificationRequest : TeaModel {
+        [NameInMap("Conditions")]
+        [Validation(Required=false)]
+        public List<string> Conditions { get; set; }
+
         /// <summary>
         /// The number of vCPU cores of the instance type. For more information, see [Instance families](~~25378~~). This parameter is valid only when DestinationResource is set to InstanceType.
         /// </summary>

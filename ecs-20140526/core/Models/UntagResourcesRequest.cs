@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class UntagResourcesRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to remove all tags from the resource. This parameter is valid only when the TagKey.N parameter is not specified. Valid values:
+        /// 
+        /// *   true
+        /// *   false
+        /// 
+        /// Default value: false.
+        /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
@@ -21,10 +29,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The resource IDs.
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
@@ -37,10 +51,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The type of the resource. Valid values:
+        /// 
+        /// *   instance: ECS instance
+        /// *   disk: disk
+        /// *   snapshot: snapshot
+        /// *   image: image
+        /// *   securitygroup: security group
+        /// *   volume: storage volume
+        /// *   eni: elastic network interface (ENI)
+        /// *   ddh: dedicated host
+        /// *   ddhcluster: dedicated host cluster
+        /// *   keypair: SSH key pair
+        /// *   launchtemplate: launch template
+        /// *   reservedinstance: reserved instance
+        /// *   snapshotpolicy: automatic snapshot policy
+        /// *   elasticityassurance: elasticity assurance
+        /// *   capacityreservation: capacity reservation
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// The tag keys of the resource.
+        /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public List<string> TagKey { get; set; }

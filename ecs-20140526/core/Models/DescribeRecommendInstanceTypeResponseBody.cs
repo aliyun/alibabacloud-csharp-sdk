@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRecommendInstanceTypeResponseBody : TeaModel {
         /// <summary>
-        /// Details of recommended instance types.
+        /// Details about the recommended instance types.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// The billing method of the instances of the instance type.
+                /// The billing method of the instance.
                 /// </summary>
                 [NameInMap("InstanceChargeType")]
                 [Validation(Required=false)]
@@ -86,14 +86,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The network type of the ECS instance.
+                /// The network type of the instance.
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// The sorting priority.
+                /// The priority based on which the system sorts the instance types.
                 /// </summary>
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
@@ -107,28 +107,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// Indicates the scenario in which the instance type was recommended.
+                /// The scenarios in which the instance type is recommended.
                 /// </summary>
                 [NameInMap("Scene")]
                 [Validation(Required=false)]
                 public string Scene { get; set; }
 
                 /// <summary>
-                /// The preemption policy for the preemptible instance.
+                /// The bidding policy for the preemptible instance.
                 /// </summary>
                 [NameInMap("SpotStrategy")]
                 [Validation(Required=false)]
                 public string SpotStrategy { get; set; }
 
                 /// <summary>
-                /// The zone ID of the instance type.
+                /// The ID of the zone in which the instance type is available.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
 
                 /// <summary>
-                /// Details of the zones where the alternative instance types are available.
+                /// Details about zones where the instance types resides.
                 /// </summary>
                 [NameInMap("Zones")]
                 [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZonesZone> Zone { get; set; }
                     public class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZonesZone : TeaModel {
                         /// <summary>
-                        /// Details of network types of the alternative instance types.
+                        /// Details about network types of instance types.
                         /// </summary>
                         [NameInMap("NetworkTypes")]
                         [Validation(Required=false)]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// The zone ID of the specified instance type.
+                        /// The ID of the zone in which the instance type is available.
                         /// </summary>
                         [NameInMap("ZoneNo")]
                         [Validation(Required=false)]

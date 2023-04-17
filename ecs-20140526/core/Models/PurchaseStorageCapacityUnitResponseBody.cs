@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class PurchaseStorageCapacityUnitResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the order.
+        /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The IDs of the SCUs.
+        /// </summary>
         [NameInMap("StorageCapacityUnitIds")]
         [Validation(Required=false)]
         public PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds StorageCapacityUnitIds { get; set; }

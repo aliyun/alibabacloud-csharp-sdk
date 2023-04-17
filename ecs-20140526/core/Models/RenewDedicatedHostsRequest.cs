@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RenewDedicatedHostsRequest : TeaModel {
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The IDs of dedicated hosts. You can specify the IDs of up to 100 subscription dedicated hosts. Specify dedicated host IDs as a JSON array and separate the IDs with commas (,). Example: `["dh-xxxxxxxxx", "dh-yyyyyyyyy", ... "dh-zzzzzzzzz"]`.
+        /// </summary>
         [NameInMap("DedicatedHostIds")]
         [Validation(Required=false)]
         public string DedicatedHostIds { get; set; }
@@ -25,14 +31,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The renewal duration of the dedicated host. Valid values:
+        /// 
+        /// *   Valid values when the PeriodUnit parameter is set to Week: 1, 2, 3, and 4.
+        /// *   Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
+        /// *   Valid values when the PeriodUnit parameter is set to Year: 1, 2, 3, 4, and 5.
+        /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
+        /// <summary>
+        /// The unit of the renewal duration of the dedicated host. Valid values:
+        /// 
+        /// *   Week
+        /// *   Month
+        /// *   Year
+        /// 
+        /// Default value: Month.
+        /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
+        /// <summary>
+        /// The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
