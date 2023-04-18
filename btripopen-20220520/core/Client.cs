@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
-            {
-                query["app_key"] = request.AppKey;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSecret))
             {
                 query["app_secret"] = request.AppSecret;
@@ -73,10 +69,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
-            {
-                query["app_key"] = request.AppKey;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSecret))
             {
                 query["app_secret"] = request.AppSecret;
