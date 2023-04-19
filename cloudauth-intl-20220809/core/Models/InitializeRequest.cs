@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class InitializeRequest : TeaModel {
+        [NameInMap("Crop")]
+        [Validation(Required=false)]
+        public string Crop { get; set; }
+
         [NameInMap("DocType")]
         [Validation(Required=false)]
         public string DocType { get; set; }
@@ -25,6 +29,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string FlowType { get; set; }
 
+        [NameInMap("IdFaceQuality")]
+        [Validation(Required=false)]
+        public string IdFaceQuality { get; set; }
+
+        [NameInMap("IdSpoof")]
+        [Validation(Required=false)]
+        public string IdSpoof { get; set; }
+
         [NameInMap("MerchantBizId")]
         [Validation(Required=false)]
         public string MerchantBizId { get; set; }
@@ -36,6 +48,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [NameInMap("MetaInfo")]
         [Validation(Required=false)]
         public string MetaInfo { get; set; }
+
+        [NameInMap("Ocr")]
+        [Validation(Required=false)]
+        public string Ocr { get; set; }
 
         [NameInMap("OperationMode")]
         [Validation(Required=false)]
@@ -52,6 +68,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [NameInMap("ProductConfig")]
         [Validation(Required=false)]
         public string ProductConfig { get; set; }
+
+        [NameInMap("ReturnUrl")]
+        [Validation(Required=false)]
+        public string ReturnUrl { get; set; }
 
         [NameInMap("SceneCode")]
         [Validation(Required=false)]

@@ -237,6 +237,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Crop))
+            {
+                query["Crop"] = request.Crop;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
             {
                 query["DocType"] = request.DocType;
@@ -253,6 +257,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["FlowType"] = request.FlowType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdFaceQuality))
+            {
+                query["IdFaceQuality"] = request.IdFaceQuality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdSpoof))
+            {
+                query["IdSpoof"] = request.IdSpoof;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
                 query["MerchantBizId"] = request.MerchantBizId;
@@ -264,6 +276,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaInfo))
             {
                 query["MetaInfo"] = request.MetaInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ocr))
+            {
+                query["Ocr"] = request.Ocr;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationMode))
             {
@@ -280,6 +296,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductConfig))
             {
                 query["ProductConfig"] = request.ProductConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnUrl))
+            {
+                query["ReturnUrl"] = request.ReturnUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
             {
@@ -312,6 +332,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Crop))
+            {
+                query["Crop"] = request.Crop;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
             {
                 query["DocType"] = request.DocType;
@@ -328,6 +352,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["FlowType"] = request.FlowType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdFaceQuality))
+            {
+                query["IdFaceQuality"] = request.IdFaceQuality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdSpoof))
+            {
+                query["IdSpoof"] = request.IdSpoof;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
                 query["MerchantBizId"] = request.MerchantBizId;
@@ -339,6 +371,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaInfo))
             {
                 query["MetaInfo"] = request.MetaInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ocr))
+            {
+                query["Ocr"] = request.Ocr;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationMode))
             {
@@ -355,6 +391,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductConfig))
             {
                 query["ProductConfig"] = request.ProductConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnUrl))
+            {
+                query["ReturnUrl"] = request.ReturnUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
             {

@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             [Validation(Required=false)]
             public string TransactionId { get; set; }
 
+            [NameInMap("TransactionUrl")]
+            [Validation(Required=false)]
+            public string TransactionUrl { get; set; }
+
         }
 
     }
