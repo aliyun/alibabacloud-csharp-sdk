@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Cloudauth20221125.Models
             [Validation(Required=false)]
             public string BizCode { get; set; }
 
+            [NameInMap("ReasonCode")]
+            [Validation(Required=false)]
+            public string ReasonCode { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
