@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BillDate { get; set; }
 
+                [NameInMap("check_code")]
+                [Validation(Required=false)]
+                public string CheckCode { get; set; }
+
                 [NameInMap("cost_center")]
                 [Validation(Required=false)]
                 public string CostCenter { get; set; }
@@ -44,6 +48,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("department")]
                 [Validation(Required=false)]
                 public string Department { get; set; }
+
+                [NameInMap("drawer")]
+                [Validation(Required=false)]
+                public string Drawer { get; set; }
+
+                [NameInMap("id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
 
                 [NameInMap("insurance_company")]
                 [Validation(Required=false)]
@@ -65,9 +77,59 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string InvoiceDay { get; set; }
 
+                [NameInMap("invoice_details")]
+                [Validation(Required=false)]
+                public List<InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails> InvoiceDetails { get; set; }
+                public class InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails : TeaModel {
+                    [NameInMap("amount")]
+                    [Validation(Required=false)]
+                    public string Amount { get; set; }
+
+                    [NameInMap("index")]
+                    [Validation(Required=false)]
+                    public string Index { get; set; }
+
+                    [NameInMap("item_name")]
+                    [Validation(Required=false)]
+                    public string ItemName { get; set; }
+
+                    [NameInMap("quantity")]
+                    [Validation(Required=false)]
+                    public string Quantity { get; set; }
+
+                    [NameInMap("specification")]
+                    [Validation(Required=false)]
+                    public string Specification { get; set; }
+
+                    [NameInMap("tax")]
+                    [Validation(Required=false)]
+                    public string Tax { get; set; }
+
+                    [NameInMap("tax_rate")]
+                    [Validation(Required=false)]
+                    public string TaxRate { get; set; }
+
+                    [NameInMap("unit")]
+                    [Validation(Required=false)]
+                    public string Unit { get; set; }
+
+                    [NameInMap("unit_price")]
+                    [Validation(Required=false)]
+                    public string UnitPrice { get; set; }
+
+                }
+
+                [NameInMap("invoice_location")]
+                [Validation(Required=false)]
+                public string InvoiceLocation { get; set; }
+
                 [NameInMap("invoice_no")]
                 [Validation(Required=false)]
                 public string InvoiceNo { get; set; }
+
+                [NameInMap("invoice_title")]
+                [Validation(Required=false)]
+                public string InvoiceTitle { get; set; }
 
                 [NameInMap("order_id")]
                 [Validation(Required=false)]
@@ -81,9 +143,21 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Passenger { get; set; }
 
+                [NameInMap("password_area")]
+                [Validation(Required=false)]
+                public string PasswordArea { get; set; }
+
                 [NameInMap("project")]
                 [Validation(Required=false)]
                 public string Project { get; set; }
+
+                [NameInMap("purchaser_bank_account_info")]
+                [Validation(Required=false)]
+                public string PurchaserBankAccountInfo { get; set; }
+
+                [NameInMap("purchaser_contact_info")]
+                [Validation(Required=false)]
+                public string PurchaserContactInfo { get; set; }
 
                 [NameInMap("purchaser_name")]
                 [Validation(Required=false)]
@@ -93,9 +167,25 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string PurchaserTaxNo { get; set; }
 
-                [NameInMap("real_invoice_title")]
+                [NameInMap("recipient")]
                 [Validation(Required=false)]
-                public string RealInvoiceTitle { get; set; }
+                public string Recipient { get; set; }
+
+                [NameInMap("remarks")]
+                [Validation(Required=false)]
+                public string Remarks { get; set; }
+
+                [NameInMap("reviewer")]
+                [Validation(Required=false)]
+                public string Reviewer { get; set; }
+
+                [NameInMap("seller_bank_account_info")]
+                [Validation(Required=false)]
+                public string SellerBankAccountInfo { get; set; }
+
+                [NameInMap("seller_contact_info")]
+                [Validation(Required=false)]
+                public string SellerContactInfo { get; set; }
 
                 [NameInMap("seller_name")]
                 [Validation(Required=false)]
@@ -105,6 +195,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string SellerTaxNo { get; set; }
 
+                [NameInMap("smart_check_code")]
+                [Validation(Required=false)]
+                public string SmartCheckCode { get; set; }
+
                 [NameInMap("tax_amount")]
                 [Validation(Required=false)]
                 public string TaxAmount { get; set; }
@@ -112,6 +206,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("tax_rate")]
                 [Validation(Required=false)]
                 public string TaxRate { get; set; }
+
+                [NameInMap("total_amount_in_words")]
+                [Validation(Required=false)]
+                public string TotalAmountInWords { get; set; }
 
             }
 

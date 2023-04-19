@@ -223,6 +223,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["action_type"] = request.ActionType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CarScenesCode))
+            {
+                query["car_scenes_code"] = request.CarScenesCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryId))
             {
                 query["itinerary_id"] = request.ItineraryId;
@@ -279,6 +283,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionType))
             {
                 query["action_type"] = request.ActionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CarScenesCode))
+            {
+                query["car_scenes_code"] = request.CarScenesCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryId))
             {

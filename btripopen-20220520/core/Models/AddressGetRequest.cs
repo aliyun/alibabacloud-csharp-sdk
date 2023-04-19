@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? ActionType { get; set; }
 
+        [NameInMap("car_scenes_code")]
+        [Validation(Required=false)]
+        public string CarScenesCode { get; set; }
+
         [NameInMap("itinerary_id")]
         [Validation(Required=false)]
         public string ItineraryId { get; set; }
