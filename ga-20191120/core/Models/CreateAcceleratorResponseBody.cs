@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The ID of the order.
         /// 
-        /// If bills are not automatically paid, you must go to the [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payments.
+        /// If you did not configure automatic payment, you must go to the [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payments.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// 
         /// *   If you set the **ResourceType** parameter to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.
         /// *   If you set the **ResourceType** parameter to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.
-        /// *   If you set the **ResourceType** parameter to**bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
+        /// *   If you set the **ResourceType** parameter to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
         /// *   If you set the **ResourceType** parameter to **acl**, set the value of ResourceId to the ID of an ACL.
         /// 
         /// You can specify up to 50 GA resource IDs.
