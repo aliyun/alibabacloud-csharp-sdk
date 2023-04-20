@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
-    public class DescribeFileUploadSignedUrlRequest : TeaModel {
-        [NameInMap("ContentType")]
+    public class CreateSpaceWithOrderResponseBody : TeaModel {
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string ContentType { get; set; }
+        public string InstanceId { get; set; }
 
-        [NameInMap("FileId")]
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public string FileId { get; set; }
+        public string OrderId { get; set; }
 
-        [NameInMap("Filename")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Filename { get; set; }
-
-        [NameInMap("Size")]
-        [Validation(Required=false)]
-        public long? Size { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("SpaceId")]
         [Validation(Required=false)]

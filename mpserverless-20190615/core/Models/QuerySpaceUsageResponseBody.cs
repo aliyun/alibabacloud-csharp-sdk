@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
 
             }
 
+            [NameInMap("EffectiveBillFlag")]
+            [Validation(Required=false)]
+            public bool? EffectiveBillFlag { get; set; }
+
             [NameInMap("FcUsage")]
             [Validation(Required=false)]
             public QuerySpaceUsageResponseBodySpaceUsageDataListFcUsage FcUsage { get; set; }

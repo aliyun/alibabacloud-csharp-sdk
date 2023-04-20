@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
+        [NameInMap("Mode")]
+        [Validation(Required=false)]
+        public string Mode { get; set; }
+
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Prefix")]
+        [Validation(Required=false)]
+        public string Prefix { get; set; }
 
         [NameInMap("SpaceId")]
         [Validation(Required=false)]
