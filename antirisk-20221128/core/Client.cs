@@ -37,6 +37,92 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public GetRealTimeRiskInfoResponse GetRealTimeRiskInfoWithOptions(GetRealTimeRiskInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Atoken))
+            {
+                query["atoken"] = request.Atoken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                query["dataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extra))
+            {
+                query["extra"] = request.Extra;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRealTimeRiskInfo",
+                Version = "2022-11-28",
+                Protocol = "HTTPS",
+                Pathname = "/anti/getRealTimeRiskInfo",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRealTimeRiskInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetRealTimeRiskInfoResponse> GetRealTimeRiskInfoWithOptionsAsync(GetRealTimeRiskInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Atoken))
+            {
+                query["atoken"] = request.Atoken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                query["dataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extra))
+            {
+                query["extra"] = request.Extra;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRealTimeRiskInfo",
+                Version = "2022-11-28",
+                Protocol = "HTTPS",
+                Pathname = "/anti/getRealTimeRiskInfo",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRealTimeRiskInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetRealTimeRiskInfoResponse GetRealTimeRiskInfo(GetRealTimeRiskInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetRealTimeRiskInfoWithOptions(request, headers, runtime);
+        }
+
+        public async Task<GetRealTimeRiskInfoResponse> GetRealTimeRiskInfoAsync(GetRealTimeRiskInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetRealTimeRiskInfoWithOptionsAsync(request, headers, runtime);
+        }
+
         public GetZidTagByAtokenResponse GetZidTagByAtokenWithOptions(GetZidTagByAtokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -191,6 +277,108 @@ namespace AlibabaCloud.SDK.Antirisk20221128
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetZidTagScoreByAtokenWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListChannelRiskDetailsResponse ListChannelRiskDetailsWithOptions(ListChannelRiskDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                query["dataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.End))
+            {
+                query["end"] = request.End;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAllChannel))
+            {
+                query["isAllChannel"] = request.IsAllChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
+            {
+                query["start"] = request.Start;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChannelRiskDetails",
+                Version = "2022-11-28",
+                Protocol = "HTTPS",
+                Pathname = "/anti/listChannelRiskDetails",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChannelRiskDetailsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListChannelRiskDetailsResponse> ListChannelRiskDetailsWithOptionsAsync(ListChannelRiskDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                query["dataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.End))
+            {
+                query["end"] = request.End;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAllChannel))
+            {
+                query["isAllChannel"] = request.IsAllChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
+            {
+                query["start"] = request.Start;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChannelRiskDetails",
+                Version = "2022-11-28",
+                Protocol = "HTTPS",
+                Pathname = "/anti/listChannelRiskDetails",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChannelRiskDetailsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListChannelRiskDetailsResponse ListChannelRiskDetails(ListChannelRiskDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListChannelRiskDetailsWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListChannelRiskDetailsResponse> ListChannelRiskDetailsAsync(ListChannelRiskDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListChannelRiskDetailsWithOptionsAsync(request, headers, runtime);
         }
 
     }

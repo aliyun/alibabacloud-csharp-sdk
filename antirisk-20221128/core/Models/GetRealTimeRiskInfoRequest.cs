@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,10 +11,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Antirisk20221128.Models
 {
-    public class GetZidTagByAtokenRequest : TeaModel {
-        /// <summary>
-        /// atoken
-        /// </summary>
+    public class GetRealTimeRiskInfoRequest : TeaModel {
         [NameInMap("atoken")]
         [Validation(Required=false)]
         public string Atoken { get; set; }
@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Antirisk20221128.Models
         [NameInMap("dataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
+
+        [NameInMap("extra")]
+        [Validation(Required=false)]
+        public string Extra { get; set; }
 
     }
 
