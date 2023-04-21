@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetOfficeSiteSsoStatusResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether SSO is enabled.
+        /// </summary>
         [NameInMap("SsoStatus")]
         [Validation(Required=false)]
         public bool? SsoStatus { get; set; }

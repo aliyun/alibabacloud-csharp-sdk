@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetSpMetadataResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The metadata of the SP.
+        /// </summary>
         [NameInMap("SpMetadata")]
         [Validation(Required=false)]
         public string SpMetadata { get; set; }

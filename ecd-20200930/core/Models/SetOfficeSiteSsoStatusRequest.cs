@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SetOfficeSiteSsoStatusRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to enable SSO. Valid values:
+        /// 
+        /// *   true: enables SSO
+        /// *   false: disables SSO
+        /// </summary>
         [NameInMap("EnableSso")]
         [Validation(Required=false)]
         public bool? EnableSso { get; set; }
 
+        /// <summary>
+        /// The ID of the workspace.
+        /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

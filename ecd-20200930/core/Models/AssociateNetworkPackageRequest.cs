@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class AssociateNetworkPackageRequest : TeaModel {
+        /// <summary>
+        /// The ID of the Internet access package. You can call the [DescribeNetworkPackages](~~216079~~) operation to query the ID of the Internet access package.
+        /// </summary>
         [NameInMap("NetworkPackageId")]
         [Validation(Required=false)]
         public string NetworkPackageId { get; set; }
 
+        /// <summary>
+        /// The ID of the workspace. You can call the [DescribeOfficeSites](~~216071~~) operation to query the ID of the workspace.
+        /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
+        /// <summary>
+        /// The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

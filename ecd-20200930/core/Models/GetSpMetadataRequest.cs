@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetSpMetadataRequest : TeaModel {
+        /// <summary>
+        /// The ID of the workspace. The parameter is the same as the `OfficeSiteId` parameter. We recommend that you use `OfficeSiteId` instead of `DirectoryId`. You can specify a value for either the `DirectoryId` parameter or the `OfficeSiteId` parameter, but not both.
+        /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
+        /// <summary>
+        /// The ID of the workspace.
+        /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

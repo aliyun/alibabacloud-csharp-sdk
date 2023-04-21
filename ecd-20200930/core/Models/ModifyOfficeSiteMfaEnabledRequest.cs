@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyOfficeSiteMfaEnabledRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to enable MFA. Valid values:
+        /// 
+        /// *   true: enables MFA
+        /// *   false: disables MFA
+        /// </summary>
         [NameInMap("MfaEnabled")]
         [Validation(Required=false)]
         public bool? MfaEnabled { get; set; }
 
+        /// <summary>
+        /// The ID of the workspace.
+        /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

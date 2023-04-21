@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("Scope")]
+        [Validation(Required=false)]
+        public string Scope { get; set; }
+
     }
 
 }

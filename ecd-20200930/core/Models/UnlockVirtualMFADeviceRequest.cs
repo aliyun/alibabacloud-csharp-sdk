@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class UnlockVirtualMFADeviceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The serial number of the virtual MFA device, which is a unique identifier.
+        /// 
+        /// You can call the [DescribeVirtualMFADevices](~~206210~~) operation to query the serial number of the virtual MFA device bound to AD users.
+        /// </summary>
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]
         public string SerialNumber { get; set; }

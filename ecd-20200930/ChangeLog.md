@@ -1,3 +1,6 @@
+2023-04-21 Version: 2.0.14
+- Support desktop group auto scale.
+
 2022-09-16 Version: 2.0.13
 - Support remote coordinate control.
 

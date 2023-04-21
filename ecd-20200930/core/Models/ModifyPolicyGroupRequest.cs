@@ -87,6 +87,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DomainList { get; set; }
 
+        [NameInMap("EndUserApplyAdminCoordinate")]
+        [Validation(Required=false)]
+        public string EndUserApplyAdminCoordinate { get; set; }
+
+        [NameInMap("EndUserGroupCoordinate")]
+        [Validation(Required=false)]
+        public string EndUserGroupCoordinate { get; set; }
+
         [NameInMap("GpuAcceleration")]
         [Validation(Required=false)]
         public string GpuAcceleration { get; set; }
@@ -98,6 +106,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("Html5FileTransfer")]
         [Validation(Required=false)]
         public string Html5FileTransfer { get; set; }
+
+        [NameInMap("InternetCommunicationProtocol")]
+        [Validation(Required=false)]
+        public string InternetCommunicationProtocol { get; set; }
 
         [NameInMap("LocalDrive")]
         [Validation(Required=false)]
@@ -138,6 +150,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("Recording")]
         [Validation(Required=false)]
         public string Recording { get; set; }
+
+        [NameInMap("RecordingAudio")]
+        [Validation(Required=false)]
+        public string RecordingAudio { get; set; }
+
+        [NameInMap("RecordingDuration")]
+        [Validation(Required=false)]
+        public int? RecordingDuration { get; set; }
 
         [NameInMap("RecordingEndTime")]
         [Validation(Required=false)]
@@ -211,6 +231,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         }
 
+        [NameInMap("Scope")]
+        [Validation(Required=false)]
+        public string Scope { get; set; }
+
+        [NameInMap("ScopeValue")]
+        [Validation(Required=false)]
+        public List<string> ScopeValue { get; set; }
+
         [NameInMap("UsbRedirect")]
         [Validation(Required=false)]
         public string UsbRedirect { get; set; }
@@ -249,6 +277,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         }
 
+        [NameInMap("VideoRedirect")]
+        [Validation(Required=false)]
+        public string VideoRedirect { get; set; }
+
         [NameInMap("VisualQuality")]
         [Validation(Required=false)]
         public string VisualQuality { get; set; }
@@ -257,9 +289,33 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Watermark { get; set; }
 
+        [NameInMap("WatermarkColor")]
+        [Validation(Required=false)]
+        public int? WatermarkColor { get; set; }
+
+        [NameInMap("WatermarkDegree")]
+        [Validation(Required=false)]
+        public double? WatermarkDegree { get; set; }
+
+        [NameInMap("WatermarkFontSize")]
+        [Validation(Required=false)]
+        public int? WatermarkFontSize { get; set; }
+
+        [NameInMap("WatermarkFontStyle")]
+        [Validation(Required=false)]
+        public string WatermarkFontStyle { get; set; }
+
+        [NameInMap("WatermarkRowAmount")]
+        [Validation(Required=false)]
+        public int? WatermarkRowAmount { get; set; }
+
         [NameInMap("WatermarkTransparency")]
         [Validation(Required=false)]
         public string WatermarkTransparency { get; set; }
+
+        [NameInMap("WatermarkTransparencyValue")]
+        [Validation(Required=false)]
+        public int? WatermarkTransparencyValue { get; set; }
 
         [NameInMap("WatermarkType")]
         [Validation(Required=false)]
