@@ -21,6 +21,38 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
+                [NameInMap("FaceInfos")]
+                [Validation(Required=false)]
+                public List<QueryFaceImageTemplateResponseBodyDataElementsFaceInfos> FaceInfos { get; set; }
+                public class QueryFaceImageTemplateResponseBodyDataElementsFaceInfos : TeaModel {
+                    [NameInMap("FaceRect")]
+                    [Validation(Required=false)]
+                    public QueryFaceImageTemplateResponseBodyDataElementsFaceInfosFaceRect FaceRect { get; set; }
+                    public class QueryFaceImageTemplateResponseBodyDataElementsFaceInfosFaceRect : TeaModel {
+                        [NameInMap("Height")]
+                        [Validation(Required=false)]
+                        public string Height { get; set; }
+
+                        [NameInMap("Width")]
+                        [Validation(Required=false)]
+                        public string Width { get; set; }
+
+                        [NameInMap("X")]
+                        [Validation(Required=false)]
+                        public string X { get; set; }
+
+                        [NameInMap("Y")]
+                        [Validation(Required=false)]
+                        public string Y { get; set; }
+
+                    }
+
+                    [NameInMap("TemplateFaceID")]
+                    [Validation(Required=false)]
+                    public string TemplateFaceID { get; set; }
+
+                }
+
                 [NameInMap("TemplateId")]
                 [Validation(Required=false)]
                 public string TemplateId { get; set; }

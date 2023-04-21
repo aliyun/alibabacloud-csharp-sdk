@@ -8381,9 +8381,21 @@ namespace AlibabaCloud.SDK.Facebody20191230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddWatermark))
+            {
+                body["AddWatermark"] = request.AddWatermark;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageURL))
             {
                 body["ImageURL"] = request.ImageURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeInfos))
+            {
+                body["MergeInfos"] = request.MergeInfos;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelVersion))
+            {
+                body["ModelVersion"] = request.ModelVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -8412,9 +8424,21 @@ namespace AlibabaCloud.SDK.Facebody20191230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddWatermark))
+            {
+                body["AddWatermark"] = request.AddWatermark;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageURL))
             {
                 body["ImageURL"] = request.ImageURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeInfos))
+            {
+                body["MergeInfos"] = request.MergeInfos;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelVersion))
+            {
+                body["ModelVersion"] = request.ModelVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
