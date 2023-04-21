@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }

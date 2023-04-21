@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Cursor { get; set; }
 
-        [NameInMap("type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
     }
 
 }

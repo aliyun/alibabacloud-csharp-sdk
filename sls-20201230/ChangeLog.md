@@ -1,3 +1,6 @@
+2023-04-21 Version: 2.0.0
+- Update project structure.
+
 2022-09-15 Version: 1.4.1
 - Fix signature bug.
 

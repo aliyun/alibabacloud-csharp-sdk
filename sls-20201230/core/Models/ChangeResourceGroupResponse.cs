@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class BatchCreateEtlMetaResponse : TeaModel {
+    public class ChangeResourceGroupResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }

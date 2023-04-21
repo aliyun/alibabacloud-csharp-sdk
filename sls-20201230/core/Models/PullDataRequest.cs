@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class ListEtlJobResponseBody : TeaModel {
+    public class PullDataRequest : TeaModel {
         [NameInMap("count")]
         [Validation(Required=false)]
-        public int? Count { get; set; }
+        public string Count { get; set; }
 
-        [NameInMap("etlJobNameList")]
+        [NameInMap("cursor")]
         [Validation(Required=false)]
-        public List<string> EtlJobNameList { get; set; }
+        public string Cursor { get; set; }
 
-        [NameInMap("total")]
+        [NameInMap("endCursor")]
         [Validation(Required=false)]
-        public int? Total { get; set; }
+        public string EndCursor { get; set; }
 
     }
 

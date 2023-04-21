@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class GetEtlMetaResponseBody : TeaModel {
-        [NameInMap("etlMetaList")]
+    public class UpdateMachineGroupMachineRequest : TeaModel {
+        [NameInMap("action")]
         [Validation(Required=false)]
-        public List<EtlMeta> EtlMetaList { get; set; }
+        public string Action { get; set; }
 
-        [NameInMap("total")]
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public int? Total { get; set; }
+        public List<string> Body { get; set; }
 
     }
 

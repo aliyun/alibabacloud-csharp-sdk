@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class ListEtlMetaNameRequest : TeaModel {
-        [NameInMap("offset")]
+    public class ConsumerGroupHeartBeatRequest : TeaModel {
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public int? Offset { get; set; }
+        public List<int?> Body { get; set; }
 
-        [NameInMap("size")]
+        [NameInMap("consumer")]
         [Validation(Required=false)]
-        public int? Size { get; set; }
+        public string Consumer { get; set; }
 
     }
 

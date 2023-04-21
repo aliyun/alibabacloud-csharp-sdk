@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
     public class GetLogsRequest : TeaModel {
         [NameInMap("from")]
         [Validation(Required=false)]
-        public long? From { get; set; }
+        public int? From { get; set; }
 
         [NameInMap("line")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         [NameInMap("to")]
         [Validation(Required=false)]
-        public long? To { get; set; }
+        public int? To { get; set; }
 
         [NameInMap("topic")]
         [Validation(Required=false)]

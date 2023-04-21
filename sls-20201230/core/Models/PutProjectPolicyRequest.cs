@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class MergeShardsRequest : TeaModel {
-        [NameInMap("action")]
+    public class PutProjectPolicyRequest : TeaModel {
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public string Action { get; set; }
+        public string Body { get; set; }
 
     }
 

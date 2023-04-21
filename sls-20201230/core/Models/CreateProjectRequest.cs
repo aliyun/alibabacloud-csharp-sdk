@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
     }
 
 }

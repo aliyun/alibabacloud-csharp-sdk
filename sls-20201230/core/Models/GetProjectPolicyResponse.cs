@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class ListEtlMetaResponse : TeaModel {
+    public class GetProjectPolicyResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListEtlMetaResponseBody Body { get; set; }
+        public string Body { get; set; }
 
     }
 

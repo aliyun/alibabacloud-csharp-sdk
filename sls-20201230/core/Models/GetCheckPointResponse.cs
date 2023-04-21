@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=true)]
         public List<GetCheckPointResponseBody> Body { get; set; }
         public class GetCheckPointResponseBody : TeaModel {
+            /// <summary>
+            /// Shard ID。
+            /// </summary>
             [NameInMap("shard")]
             [Validation(Required=false)]
             public int? Shard { get; set; }

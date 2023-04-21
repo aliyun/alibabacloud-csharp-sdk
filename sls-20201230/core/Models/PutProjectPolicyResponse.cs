@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class GetEtlJobResponse : TeaModel {
+    public class PutProjectPolicyResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -16,10 +16,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("statusCode")]
         [Validation(Required=true)]
         public int? StatusCode { get; set; }
-
-        [NameInMap("body")]
-        [Validation(Required=true)]
-        public EtlJob Body { get; set; }
 
     }
 
