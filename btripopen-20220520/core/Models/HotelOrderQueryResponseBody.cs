@@ -104,6 +104,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string DepartName { get; set; }
 
+                [NameInMap("extend_field")]
+                [Validation(Required=false)]
+                public string ExtendField { get; set; }
+
                 [NameInMap("gmt_create")]
                 [Validation(Required=false)]
                 public long? GmtCreate { get; set; }
