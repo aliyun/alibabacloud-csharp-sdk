@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         [NameInMap("Files")]
         [Validation(Required=false)]
-        public List<FileForReq> Files { get; set; }
+        public List<InputFile> Files { get; set; }
 
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
