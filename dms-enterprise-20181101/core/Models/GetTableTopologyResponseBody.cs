@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// 
                 /// **
                 /// 
-                /// **Description**This parameter is not returned for physical tables.
+                /// **Description** This parameter is not returned for physical tables.
                 /// </summary>
                 [NameInMap("TableNameExpr")]
                 [Validation(Required=false)]
