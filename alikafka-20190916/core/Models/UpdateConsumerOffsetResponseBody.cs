@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
-    public class DescribeNodeStatusResponseBody : TeaModel {
+    public class UpdateConsumerOffsetResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
@@ -20,16 +20,6 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("StatusList")]
-        [Validation(Required=false)]
-        public DescribeNodeStatusResponseBodyStatusList StatusList { get; set; }
-        public class DescribeNodeStatusResponseBodyStatusList : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public List<string> Status { get; set; }
-
-        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

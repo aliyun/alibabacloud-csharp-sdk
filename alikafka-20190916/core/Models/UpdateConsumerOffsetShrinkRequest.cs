@@ -8,27 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
-    public class DeleteConsumerGroupRequest : TeaModel {
-        /// <summary>
-        /// The name of the consumer group.
-        /// </summary>
+    public class UpdateConsumerOffsetShrinkRequest : TeaModel {
         [NameInMap("ConsumerId")]
         [Validation(Required=false)]
         public string ConsumerId { get; set; }
 
-        /// <summary>
-        /// The ID of the instance.
-        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// The region ID of the instance.
-        /// </summary>
+        [NameInMap("Offsets")]
+        [Validation(Required=false)]
+        public string OffsetsShrink { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResetType")]
+        [Validation(Required=false)]
+        public string ResetType { get; set; }
+
+        [NameInMap("Time")]
+        [Validation(Required=false)]
+        public string Time { get; set; }
+
+        [NameInMap("Topic")]
+        [Validation(Required=false)]
+        public string Topic { get; set; }
 
     }
 

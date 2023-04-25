@@ -9,42 +9,100 @@ using Tea;
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class UpgradePrePayOrderRequest : TeaModel {
+        /// <summary>
+        /// The number of topics. We recommend that you do not configure this parameter.
+        /// 
+        /// *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
+        /// *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
+        /// *   The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.
+        /// *   For more information about the valid values, see [Billing overview](~~84737~~).
+        /// </summary>
         [NameInMap("DiskSize")]
         [Validation(Required=false)]
         public int? DiskSize { get; set; }
 
+        /// <summary>
+        /// The maximum traffic for the instance. We recommend that you do not configure this parameter.
+        /// 
+        /// *   The maximum traffic volume that you specify must be greater than or equal to the current maximum traffic volume of the instance.
+        /// *   You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.
+        /// *   For more information about the valid values, see [Billing overview](~~84737~~).
+        /// </summary>
         [NameInMap("EipMax")]
         [Validation(Required=false)]
         public int? EipMax { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("EipModel")]
         [Validation(Required=false)]
         public bool? EipModel { get; set; }
 
+        /// <summary>
+        /// The region ID of the instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The edition of the instance. Valid values:
+        /// 
+        /// *   **normal**: Standard Edition (High Write)
+        /// *   **professional**: Professional Edition (High Write)
+        /// *   **professionalForHighRead**: Professional Edition (High Read)
+        /// 
+        /// You cannot downgrade an instance from the Professional Edition to the Standard Edition. For more information about these instance editions, see [Billing overview](~~84737~~).
+        /// </summary>
         [NameInMap("IoMax")]
         [Validation(Required=false)]
         public int? IoMax { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("IoMaxSpec")]
         [Validation(Required=false)]
         public string IoMaxSpec { get; set; }
 
+        /// <summary>
+        /// The number of partitions. We recommend that you configure this parameter.
+        /// 
+        /// *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
+        /// *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
+        /// *   For more information about the valid values, see [Billing overview](~~84737~~).
+        /// </summary>
         [NameInMap("PartitionNum")]
         [Validation(Required=false)]
         public int? PartitionNum { get; set; }
 
+        /// <summary>
+        /// The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The error message returned.
+        /// </summary>
         [NameInMap("SpecType")]
         [Validation(Required=false)]
         public string SpecType { get; set; }
 
+        /// <summary>
+        /// The Internet traffic for the instance.
+        /// 
+        /// *   The Internet traffic volume that you specify must be greater than or equal to the current Internet traffic volume of the instance.
+        /// *   For more information about the valid values, see [Billing overview](~~84737~~).
+        /// 
+        /// > 
+        /// 
+        /// *   If the **EipModel** parameter is set to **true**, set the **EipMax** parameter to a value that is greater than 0.
+        /// 
+        /// *   If the **EipModel** parameter is set to **false**, set the **EipMax** parameter to **0**.
+        /// </summary>
         [NameInMap("TopicQuota")]
         [Validation(Required=false)]
         public int? TopicQuota { get; set; }

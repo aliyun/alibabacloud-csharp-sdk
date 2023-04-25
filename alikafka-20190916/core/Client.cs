@@ -567,6 +567,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return await CreatePostPayOrderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The maximum traffic for the instance. We recommend that you do not configure this parameter.
+          * *   You must configure at least one of the **IoMax** and **IoMaxSpec** parameters. If both parameters are configured, the value of the **IoMaxSpec** parameter takes effect. We recommend that you configure only the **IoMaxSpec** parameter.
+          * *   For more information about the valid values, see [Billing](~~84737~~).
+          *
+          * @param request CreatePrePayOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreatePrePayOrderResponse
+         */
         public CreatePrePayOrderResponse CreatePrePayOrderWithOptions(CreatePrePayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -638,6 +647,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreatePrePayOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The maximum traffic for the instance. We recommend that you do not configure this parameter.
+          * *   You must configure at least one of the **IoMax** and **IoMaxSpec** parameters. If both parameters are configured, the value of the **IoMaxSpec** parameter takes effect. We recommend that you configure only the **IoMaxSpec** parameter.
+          * *   For more information about the valid values, see [Billing](~~84737~~).
+          *
+          * @param request CreatePrePayOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreatePrePayOrderResponse
+         */
         public async Task<CreatePrePayOrderResponse> CreatePrePayOrderWithOptionsAsync(CreatePrePayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -709,12 +727,28 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreatePrePayOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The maximum traffic for the instance. We recommend that you do not configure this parameter.
+          * *   You must configure at least one of the **IoMax** and **IoMaxSpec** parameters. If both parameters are configured, the value of the **IoMaxSpec** parameter takes effect. We recommend that you configure only the **IoMaxSpec** parameter.
+          * *   For more information about the valid values, see [Billing](~~84737~~).
+          *
+          * @param request CreatePrePayOrderRequest
+          * @return CreatePrePayOrderResponse
+         */
         public CreatePrePayOrderResponse CreatePrePayOrder(CreatePrePayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreatePrePayOrderWithOptions(request, runtime);
         }
 
+        /**
+          * The maximum traffic for the instance. We recommend that you do not configure this parameter.
+          * *   You must configure at least one of the **IoMax** and **IoMaxSpec** parameters. If both parameters are configured, the value of the **IoMaxSpec** parameter takes effect. We recommend that you configure only the **IoMaxSpec** parameter.
+          * *   For more information about the valid values, see [Billing](~~84737~~).
+          *
+          * @param request CreatePrePayOrderRequest
+          * @return CreatePrePayOrderResponse
+         */
         public async Task<CreatePrePayOrderResponse> CreatePrePayOrderAsync(CreatePrePayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -819,23 +853,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return await CreateSaslUserWithOptionsAsync(request, runtime);
         }
 
-        public CreateTopicResponse CreateTopicWithOptions(CreateTopicRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * The description of the topic.
+          * *   The description can contain only letters, digits, hyphens (-), and underscores (\\_).
+          * *   The description must be 3 to 64 characters in length.
+          *
+          * @param request CreateTopicRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTopicResponse
+         */
+        public CreateTopicResponse CreateTopicWithOptions(CreateTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            CreateTopicShrinkRequest request = new CreateTopicShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Config))
-            {
-                request.ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Config, "Config", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompactTopic))
             {
                 query["CompactTopic"] = request.CompactTopic;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
             {
-                query["Config"] = request.ConfigShrink;
+                query["Config"] = request.Config;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -892,23 +929,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreateTopicResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateTopicResponse> CreateTopicWithOptionsAsync(CreateTopicRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * The description of the topic.
+          * *   The description can contain only letters, digits, hyphens (-), and underscores (\\_).
+          * *   The description must be 3 to 64 characters in length.
+          *
+          * @param request CreateTopicRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTopicResponse
+         */
+        public async Task<CreateTopicResponse> CreateTopicWithOptionsAsync(CreateTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            CreateTopicShrinkRequest request = new CreateTopicShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Config))
-            {
-                request.ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Config, "Config", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompactTopic))
             {
                 query["CompactTopic"] = request.CompactTopic;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
             {
-                query["Config"] = request.ConfigShrink;
+                query["Config"] = request.Config;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -965,12 +1005,28 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<CreateTopicResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The description of the topic.
+          * *   The description can contain only letters, digits, hyphens (-), and underscores (\\_).
+          * *   The description must be 3 to 64 characters in length.
+          *
+          * @param request CreateTopicRequest
+          * @return CreateTopicResponse
+         */
         public CreateTopicResponse CreateTopic(CreateTopicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTopicWithOptions(request, runtime);
         }
 
+        /**
+          * The description of the topic.
+          * *   The description can contain only letters, digits, hyphens (-), and underscores (\\_).
+          * *   The description must be 3 to 64 characters in length.
+          *
+          * @param request CreateTopicRequest
+          * @return CreateTopicResponse
+         */
         public async Task<CreateTopicResponse> CreateTopicAsync(CreateTopicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2615,6 +2671,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return await ModifyTopicRemarkWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The region ID of the instance.
+          *
+          * @param request ReleaseInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReleaseInstanceResponse
+         */
         public ReleaseInstanceResponse ReleaseInstanceWithOptions(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2650,6 +2713,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ReleaseInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The region ID of the instance.
+          *
+          * @param request ReleaseInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReleaseInstanceResponse
+         */
         public async Task<ReleaseInstanceResponse> ReleaseInstanceWithOptionsAsync(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2685,12 +2755,24 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<ReleaseInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The region ID of the instance.
+          *
+          * @param request ReleaseInstanceRequest
+          * @return ReleaseInstanceResponse
+         */
         public ReleaseInstanceResponse ReleaseInstance(ReleaseInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * The region ID of the instance.
+          *
+          * @param request ReleaseInstanceRequest
+          * @return ReleaseInstanceResponse
+         */
         public async Task<ReleaseInstanceResponse> ReleaseInstanceAsync(ReleaseInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3217,6 +3299,139 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return await UpdateAllowedIpWithOptionsAsync(request, runtime);
         }
 
+        public UpdateConsumerOffsetResponse UpdateConsumerOffsetWithOptions(UpdateConsumerOffsetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateConsumerOffsetShrinkRequest request = new UpdateConsumerOffsetShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Offsets))
+            {
+                request.OffsetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Offsets, "Offsets", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerId))
+            {
+                query["ConsumerId"] = request.ConsumerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OffsetsShrink))
+            {
+                query["Offsets"] = request.OffsetsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResetType))
+            {
+                query["ResetType"] = request.ResetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Time))
+            {
+                query["Time"] = request.Time;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                query["Topic"] = request.Topic;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConsumerOffset",
+                Version = "2019-09-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateConsumerOffsetResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateConsumerOffsetResponse> UpdateConsumerOffsetWithOptionsAsync(UpdateConsumerOffsetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateConsumerOffsetShrinkRequest request = new UpdateConsumerOffsetShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Offsets))
+            {
+                request.OffsetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Offsets, "Offsets", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerId))
+            {
+                query["ConsumerId"] = request.ConsumerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OffsetsShrink))
+            {
+                query["Offsets"] = request.OffsetsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResetType))
+            {
+                query["ResetType"] = request.ResetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Time))
+            {
+                query["Time"] = request.Time;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                query["Topic"] = request.Topic;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConsumerOffset",
+                Version = "2019-09-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateConsumerOffsetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateConsumerOffsetResponse UpdateConsumerOffset(UpdateConsumerOffsetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateConsumerOffsetWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateConsumerOffsetResponse> UpdateConsumerOffsetAsync(UpdateConsumerOffsetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateConsumerOffsetWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * The region ID of the instance.
+          *
+          * @param request UpdateInstanceConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateInstanceConfigResponse
+         */
         public UpdateInstanceConfigResponse UpdateInstanceConfigWithOptions(UpdateInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3252,6 +3467,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpdateInstanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The region ID of the instance.
+          *
+          * @param request UpdateInstanceConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateInstanceConfigResponse
+         */
         public async Task<UpdateInstanceConfigResponse> UpdateInstanceConfigWithOptionsAsync(UpdateInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3287,18 +3509,43 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpdateInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The region ID of the instance.
+          *
+          * @param request UpdateInstanceConfigRequest
+          * @return UpdateInstanceConfigResponse
+         */
         public UpdateInstanceConfigResponse UpdateInstanceConfig(UpdateInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateInstanceConfigWithOptions(request, runtime);
         }
 
+        /**
+          * The region ID of the instance.
+          *
+          * @param request UpdateInstanceConfigRequest
+          * @return UpdateInstanceConfigResponse
+         */
         public async Task<UpdateInstanceConfigResponse> UpdateInstanceConfigAsync(UpdateInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateInstanceConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## **Permissions**
+          * A RAM user must be granted the required permissions before the RAM user call the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](~~185815~~).
+          * |API|Action|Resource|
+          * |---|---|---|
+          * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
+          * ## **QPS limits**
+          * You can send a maximum of two queries per second (QPS).
+          *
+          * @param request UpgradeInstanceVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeInstanceVersionResponse
+         */
         public UpgradeInstanceVersionResponse UpgradeInstanceVersionWithOptions(UpgradeInstanceVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3334,6 +3581,19 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpgradeInstanceVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## **Permissions**
+          * A RAM user must be granted the required permissions before the RAM user call the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](~~185815~~).
+          * |API|Action|Resource|
+          * |---|---|---|
+          * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
+          * ## **QPS limits**
+          * You can send a maximum of two queries per second (QPS).
+          *
+          * @param request UpgradeInstanceVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeInstanceVersionResponse
+         */
         public async Task<UpgradeInstanceVersionResponse> UpgradeInstanceVersionWithOptionsAsync(UpgradeInstanceVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3369,18 +3629,49 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpgradeInstanceVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## **Permissions**
+          * A RAM user must be granted the required permissions before the RAM user call the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](~~185815~~).
+          * |API|Action|Resource|
+          * |---|---|---|
+          * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
+          * ## **QPS limits**
+          * You can send a maximum of two queries per second (QPS).
+          *
+          * @param request UpgradeInstanceVersionRequest
+          * @return UpgradeInstanceVersionResponse
+         */
         public UpgradeInstanceVersionResponse UpgradeInstanceVersion(UpgradeInstanceVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeInstanceVersionWithOptions(request, runtime);
         }
 
+        /**
+          * ## **Permissions**
+          * A RAM user must be granted the required permissions before the RAM user call the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](~~185815~~).
+          * |API|Action|Resource|
+          * |---|---|---|
+          * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
+          * ## **QPS limits**
+          * You can send a maximum of two queries per second (QPS).
+          *
+          * @param request UpgradeInstanceVersionRequest
+          * @return UpgradeInstanceVersionResponse
+         */
         public async Task<UpgradeInstanceVersionResponse> UpgradeInstanceVersionAsync(UpgradeInstanceVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeInstanceVersionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
+          *
+          * @param request UpgradePostPayOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradePostPayOrderResponse
+         */
         public UpgradePostPayOrderResponse UpgradePostPayOrderWithOptions(UpgradePostPayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3444,6 +3735,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpgradePostPayOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
+          *
+          * @param request UpgradePostPayOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradePostPayOrderResponse
+         */
         public async Task<UpgradePostPayOrderResponse> UpgradePostPayOrderWithOptionsAsync(UpgradePostPayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3507,18 +3805,39 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpgradePostPayOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
+          *
+          * @param request UpgradePostPayOrderRequest
+          * @return UpgradePostPayOrderResponse
+         */
         public UpgradePostPayOrderResponse UpgradePostPayOrder(UpgradePostPayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradePostPayOrderWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
+          *
+          * @param request UpgradePostPayOrderRequest
+          * @return UpgradePostPayOrderResponse
+         */
         public async Task<UpgradePostPayOrderResponse> UpgradePostPayOrderAsync(UpgradePostPayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradePostPayOrderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The size of the disk.
+          * *   The disk size that you specify must be greater than or equal to the current disk size of the instance.
+          * *   For more information about the valid values, see [Billing overview](~~84737~~).
+          *
+          * @param request UpgradePrePayOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradePrePayOrderResponse
+         */
         public UpgradePrePayOrderResponse UpgradePrePayOrderWithOptions(UpgradePrePayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3582,6 +3901,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpgradePrePayOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The size of the disk.
+          * *   The disk size that you specify must be greater than or equal to the current disk size of the instance.
+          * *   For more information about the valid values, see [Billing overview](~~84737~~).
+          *
+          * @param request UpgradePrePayOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradePrePayOrderResponse
+         */
         public async Task<UpgradePrePayOrderResponse> UpgradePrePayOrderWithOptionsAsync(UpgradePrePayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3645,12 +3973,28 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             return TeaModel.ToObject<UpgradePrePayOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The size of the disk.
+          * *   The disk size that you specify must be greater than or equal to the current disk size of the instance.
+          * *   For more information about the valid values, see [Billing overview](~~84737~~).
+          *
+          * @param request UpgradePrePayOrderRequest
+          * @return UpgradePrePayOrderResponse
+         */
         public UpgradePrePayOrderResponse UpgradePrePayOrder(UpgradePrePayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradePrePayOrderWithOptions(request, runtime);
         }
 
+        /**
+          * The size of the disk.
+          * *   The disk size that you specify must be greater than or equal to the current disk size of the instance.
+          * *   For more information about the valid values, see [Billing overview](~~84737~~).
+          *
+          * @param request UpgradePrePayOrderRequest
+          * @return UpgradePrePayOrderResponse
+         */
         public async Task<UpgradePrePayOrderResponse> UpgradePrePayOrderAsync(UpgradePrePayOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

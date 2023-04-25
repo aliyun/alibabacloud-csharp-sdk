@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
-    public class DescribeNodeStatusResponse : TeaModel {
+    public class UpdateConsumerOffsetResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeNodeStatusResponseBody Body { get; set; }
+        public UpdateConsumerOffsetResponseBody Body { get; set; }
 
     }
 
