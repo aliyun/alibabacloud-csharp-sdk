@@ -8,28 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class GetMonoRecordingResponseBody : TeaModel {
+    public class PublishContactFlowResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetMonoRecordingResponseBodyData Data { get; set; }
-        public class GetMonoRecordingResponseBodyData : TeaModel {
-            [NameInMap("Duration")]
-            [Validation(Required=false)]
-            public long? Duration { get; set; }
-
-            [NameInMap("FileName")]
-            [Validation(Required=false)]
-            public string FileName { get; set; }
-
-            [NameInMap("FileUrl")]
-            [Validation(Required=false)]
-            public string FileUrl { get; set; }
-
-        }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]

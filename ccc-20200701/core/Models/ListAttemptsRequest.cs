@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string ContactId { get; set; }
 
+        [NameInMap("Criteria")]
+        [Validation(Required=false)]
+        public string Criteria { get; set; }
+
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }

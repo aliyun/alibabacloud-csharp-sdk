@@ -8,26 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class GetMonoRecordingResponseBody : TeaModel {
+    public class BridgeRtcCallResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetMonoRecordingResponseBodyData Data { get; set; }
-        public class GetMonoRecordingResponseBodyData : TeaModel {
-            [NameInMap("Duration")]
+        public BridgeRtcCallResponseBodyData Data { get; set; }
+        public class BridgeRtcCallResponseBodyData : TeaModel {
+            [NameInMap("InstanceId")]
             [Validation(Required=false)]
-            public long? Duration { get; set; }
+            public string InstanceId { get; set; }
 
-            [NameInMap("FileName")]
+            [NameInMap("JobId")]
             [Validation(Required=false)]
-            public string FileName { get; set; }
+            public string JobId { get; set; }
 
-            [NameInMap("FileUrl")]
+            [NameInMap("TokenInfo")]
             [Validation(Required=false)]
-            public string FileUrl { get; set; }
+            public string TokenInfo { get; set; }
 
         }
 
@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("Params")]
+        [Validation(Required=false)]
+        public List<string> Params { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

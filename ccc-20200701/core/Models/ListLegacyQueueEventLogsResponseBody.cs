@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public string Dnis { get; set; }
 
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public long? Id { get; set; }
+
                 [NameInMap("QueueTime")]
                 [Validation(Required=false)]
                 public long? QueueTime { get; set; }

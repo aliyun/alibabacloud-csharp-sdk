@@ -145,6 +145,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public long? StartTime { get; set; }
 
+                [NameInMap("TalkTime")]
+                [Validation(Required=false)]
+                public long? TalkTime { get; set; }
+
                 [NameInMap("WaitTime")]
                 [Validation(Required=false)]
                 public long? WaitTime { get; set; }

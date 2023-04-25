@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class RemoveUsersRequest : TeaModel {
-        [NameInMap("Force")]
+    public class AppendCasesShrinkRequest : TeaModel {
+        [NameInMap("CampaignId")]
         [Validation(Required=false)]
-        public bool? Force { get; set; }
+        public string CampaignId { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("UserIdList")]
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public string UserIdList { get; set; }
+        public string BodyShrink { get; set; }
 
     }
 

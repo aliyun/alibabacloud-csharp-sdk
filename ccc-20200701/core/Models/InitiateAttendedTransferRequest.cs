@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class InitiateAttendedTransferRequest : TeaModel {
+        [NameInMap("CallPriority")]
+        [Validation(Required=false)]
+        public int? CallPriority { get; set; }
+
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }
@@ -20,6 +24,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
+
+        [NameInMap("StrategyName")]
+        [Validation(Required=false)]
+        public string StrategyName { get; set; }
+
+        [NameInMap("StrategyParams")]
+        [Validation(Required=false)]
+        public string StrategyParams { get; set; }
 
         [NameInMap("TimeoutSeconds")]
         [Validation(Required=false)]

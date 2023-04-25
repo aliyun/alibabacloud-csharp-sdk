@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("ExecutingUntilTimeout")]
+        [Validation(Required=false)]
+        public bool? ExecutingUntilTimeout { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

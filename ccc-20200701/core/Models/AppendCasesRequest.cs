@@ -8,15 +8,23 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class AddCasesRequest : TeaModel {
+    public class AppendCasesRequest : TeaModel {
         [NameInMap("CampaignId")]
         [Validation(Required=false)]
         public string CampaignId { get; set; }
 
-        [NameInMap("CaseList")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public List<AddCasesRequestCaseList> CaseList { get; set; }
-        public class AddCasesRequestCaseList : TeaModel {
+        public string InstanceId { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public List<AppendCasesRequestBody> Body { get; set; }
+        public class AppendCasesRequestBody : TeaModel {
+            [NameInMap("AgentId")]
+            [Validation(Required=false)]
+            public string AgentId { get; set; }
+
             [NameInMap("Caller")]
             [Validation(Required=false)]
             public string Caller { get; set; }
@@ -38,10 +46,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string ReferenceId { get; set; }
 
         }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
 
     }
 

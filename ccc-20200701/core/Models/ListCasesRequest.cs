@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string PhoneNumber { get; set; }
 
+        [NameInMap("State")]
+        [Validation(Required=false)]
+        public string State { get; set; }
+
     }
 
 }

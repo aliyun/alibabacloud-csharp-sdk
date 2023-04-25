@@ -8,38 +8,42 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class ModifyUserRequest : TeaModel {
-        [NameInMap("DisplayId")]
+    public class BridgeRtcCallRequest : TeaModel {
+        [NameInMap("Callee")]
         [Validation(Required=false)]
-        public string DisplayId { get; set; }
+        public string Callee { get; set; }
 
-        [NameInMap("DisplayName")]
+        [NameInMap("Caller")]
         [Validation(Required=false)]
-        public string DisplayName { get; set; }
+        public string Caller { get; set; }
 
-        [NameInMap("Force")]
+        [NameInMap("DeviceId")]
         [Validation(Required=false)]
-        public bool? Force { get; set; }
+        public string DeviceId { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("Mobile")]
+        [NameInMap("ServiceProvider")]
         [Validation(Required=false)]
-        public string Mobile { get; set; }
+        public string ServiceProvider { get; set; }
 
-        [NameInMap("RoleId")]
+        [NameInMap("Tags")]
         [Validation(Required=false)]
-        public string RoleId { get; set; }
+        public string Tags { get; set; }
+
+        [NameInMap("TimeoutSeconds")]
+        [Validation(Required=false)]
+        public int? TimeoutSeconds { get; set; }
 
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
 
-        [NameInMap("WorkMode")]
+        [NameInMap("VideoEnabled")]
         [Validation(Required=false)]
-        public string WorkMode { get; set; }
+        public bool? VideoEnabled { get; set; }
 
     }
 
