@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateVodDomainRequest : TeaModel {
         /// <summary>
-        /// The domain name for CDN.
+        /// The accelerated domain name.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The information about the address of the origin server.
+        /// The information about the addresses of origin servers.
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public string Sources { get; set; }
 
         /// <summary>
-        /// The top-level domain name.
+        /// The top-level domain.
         /// </summary>
         [NameInMap("TopLevelDomain")]
         [Validation(Required=false)]

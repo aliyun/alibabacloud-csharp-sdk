@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class PreloadVodObjectCachesRequest : TeaModel {
-        /// <summary>
-        /// The URL of the file to be prefetched. Separate multiple URLs with line breaks (\n or \r\n).
-        /// </summary>
         [NameInMap("ObjectPath")]
         [Validation(Required=false)]
         public string ObjectPath { get; set; }

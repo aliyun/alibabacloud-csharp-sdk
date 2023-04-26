@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListAIJobRequest : TeaModel {
         /// <summary>
-        /// The list of job IDs. You can obtain the job ID from the PlayInfo parameter in the response to the [GetPlayInfo](~~56124~~) operation.
-        /// 
-        /// >  You can specify a maximum of 10 job IDs in a request. Separate multiple IDs with commas (,).
+        /// The time when the job is complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("JobIds")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodCertificateListRequest : TeaModel {
         /// <summary>
-        /// The domain name for CDN.
+        /// certificate
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

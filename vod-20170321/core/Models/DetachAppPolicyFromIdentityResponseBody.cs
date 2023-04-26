@@ -9,22 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DetachAppPolicyFromIdentityResponseBody : TeaModel {
-        /// <summary>
-        /// The name of the policy that failed to be detached from the identity.
-        /// </summary>
         [NameInMap("FailedPolicyNames")]
         [Validation(Required=false)]
         public List<string> FailedPolicyNames { get; set; }
 
-        /// <summary>
-        /// The name of the policy that was not found.
-        /// </summary>
         [NameInMap("NonExistPolicyNames")]
         [Validation(Required=false)]
         public List<string> NonExistPolicyNames { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// Revokes application permissions from the specified identity. The identity may a RAM user or RAM role.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

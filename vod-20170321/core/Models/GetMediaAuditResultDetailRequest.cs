@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaAuditResultDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the video.
+        /// The category of the pornographic content review result. Valid values:
+        /// 
+        /// *   **normal**
+        /// *   **porn**
+        /// *   **sexy**
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
 
         /// <summary>
-        /// The page number of the review result to return. The default value is **1**. A maximum of **20** records can be returned on each page.
+        /// The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]

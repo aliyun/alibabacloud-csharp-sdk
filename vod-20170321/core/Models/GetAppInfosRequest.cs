@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAppInfosRequest : TeaModel {
         /// <summary>
-        /// The ID of the application. You can specify a maximum of 10 application IDs. Separate them with commas (,).
+        /// The type of the application. Valid values:
+        /// 
+        /// - **System**
+        /// - **Custom**
         /// </summary>
         [NameInMap("AppIds")]
         [Validation(Required=false)]

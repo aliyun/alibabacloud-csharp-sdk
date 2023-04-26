@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The detailed usage of storage-related resources.
+        /// The storage usage data returned.
         /// </summary>
         [NameInMap("StorageData")]
         [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<DescribeVodStorageDataResponseBodyStorageDataStorageDataItem> StorageDataItem { get; set; }
             public class DescribeVodStorageDataResponseBodyStorageDataStorageDataItem : TeaModel {
                 /// <summary>
-                /// The outbound traffic. Unit: byte. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.
+                /// The outbound traffic. Unit: bytes. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.
                 /// </summary>
                 [NameInMap("NetworkOut")]
                 [Validation(Required=false)]
                 public string NetworkOut { get; set; }
 
                 /// <summary>
-                /// The storage volume. Unit: byte.
+                /// The detailed usage data of storage-related resources. Unit: bytes.
                 /// </summary>
                 [NameInMap("StorageUtilization")]
                 [Validation(Required=false)]

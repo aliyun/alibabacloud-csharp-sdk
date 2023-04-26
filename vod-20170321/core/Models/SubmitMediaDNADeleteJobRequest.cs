@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitMediaDNADeleteJobRequest : TeaModel {
         /// <summary>
-        /// The ID of the video.
+        /// Deletes a video fingerprinting job.
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]

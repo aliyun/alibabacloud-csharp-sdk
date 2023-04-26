@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         /// <summary>
                         /// The type of video AI. Valid values:
                         /// 
-                        /// - **AIVideoCensor**: automated review
-                        /// - **AIVideoFPShot**: media fingerprinting
-                        /// - **AIVideoTag**: smart tag
+                        /// *   **AIVideoCensor**: automated review
+                        /// *   **AIVideoFPShot**: media fingerprinting
+                        /// *   **AIVideoTag**: smart tagging
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 }
 
                 /// <summary>
-                /// The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The timestamp of the returned data. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
@@ -67,8 +67,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// The time granularity at which the data was queried. Valid values:
         /// 
-        /// - **hour**
-        /// - **day**
+        /// *   **hour**
+        /// *   **day**
         /// </summary>
         [NameInMap("DataInterval")]
         [Validation(Required=false)]

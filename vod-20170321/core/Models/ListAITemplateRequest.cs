@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListAITemplateRequest : TeaModel {
         /// <summary>
-        /// The type of the AI template. Valid values:
+        /// Indicates whether the template is the default AI template. Valid values:
         /// 
-        /// *   **AIMediaAudit**: automated review
-        /// *   **AIImage**: smart thumbnail
+        /// *   **Default**
+        /// *   **NotDefault**
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

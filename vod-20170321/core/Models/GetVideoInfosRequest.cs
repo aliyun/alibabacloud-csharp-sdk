@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetVideoInfosRequest : TeaModel {
         /// <summary>
-        /// The list of video IDs. Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified.
+        /// The tags of the video. Multiple tags are separated by commas (,).
         /// </summary>
         [NameInMap("VideoIds")]
         [Validation(Required=false)]

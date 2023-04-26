@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetVodTemplateRequest : TeaModel {
         /// <summary>
-        /// The ID of the snapshot template.
+        /// Indicates whether the template is the default one. Valid values:
+        /// 
+        /// *   **Default**: The template is the default one.
+        /// *   **NotDefault**: The template is not the default one.
         /// </summary>
         [NameInMap("VodTemplateId")]
         [Validation(Required=false)]

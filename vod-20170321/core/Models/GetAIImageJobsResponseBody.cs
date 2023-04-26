@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAIImageJobsResponseBody : TeaModel {
         /// <summary>
-        /// The image AI processing jobs.
+        /// The time when the image AI processing job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("AIImageJobList")]
         [Validation(Required=false)]
@@ -26,14 +26,23 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AIImageResult { get; set; }
 
             /// <summary>
-            /// The error code.
+            /// The user data.
+            /// 
+            /// *   The value must be a JSON string.
+            /// *   The MessageCallback or Extend parameter is returned.
+            /// *   The value contains a maximum of 512 bytes.
+            /// 
+            /// For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// The time when the image AI processing job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// The ID of the image AI processing job. You can obtain the value of JobId from the response to the [SubmitAIImageJob](~~186922~~) operation.
+            /// 
+            /// *   You can specify a maximum of 10 IDs.
+            /// *   Separate multiple IDs with commas (,).
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -47,51 +56,36 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// The error message.
+            /// Queries jobs of image AI processing.
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The status of the job. Valid values:
-            /// 
-            /// *   **success**
-            /// *   **fail**
+            /// The error code.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
-            /// <summary>
-            /// The configurations of the AI template that was used to submit the job.
-            /// </summary>
             [NameInMap("TemplateConfig")]
             [Validation(Required=false)]
             public string TemplateConfig { get; set; }
 
-            /// <summary>
-            /// The ID of the AI template.
-            /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// The user data.
-            /// 
-            /// *   The value must be a JSON string.
-            /// *   The MessageCallback or Extend parameter is returned.
-            /// *   The value contains a maximum of 512 bytes.
-            /// 
-            /// For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+            /// The ID of the request.
             /// </summary>
             [NameInMap("UserData")]
             [Validation(Required=false)]
             public string UserData { get; set; }
 
             /// <summary>
-            /// The ID of the video.
+            /// The configurations of the AI template that was used to submit the job.
             /// </summary>
             [NameInMap("VideoId")]
             [Validation(Required=false)]
@@ -100,7 +94,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The information about the image AI processing job.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

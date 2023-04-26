@@ -10,31 +10,28 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddVodTemplateRequest : TeaModel {
         /// <summary>
-        /// The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+        /// Creates a snapshot template.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The name of the template.
-        /// 
-        /// *   The name can be up to 128 bytes in length.
-        /// *   The value must be encoded in UTF-8.
+        /// The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The configurations of the snapshot template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.
+        /// The operation that you want to perform. Set the value to **AddVodTemplate**.
         /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
         public string TemplateConfig { get; set; }
 
         /// <summary>
-        /// The type of the template. Set the value to **Snapshot**.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

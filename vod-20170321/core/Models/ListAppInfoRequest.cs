@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListAppInfoRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. By default, pages start from page 1.
+        /// The operation that you want to perform. Set the value to **ListAppInfo**.
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
+        /// The type of the application. Valid values:
+        /// 
+        /// *   **System**
+        /// *   **Custom**
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The status of the application. After an application is created, it enters the **Normal** state. Valid values:
-        /// 
-        /// *   **Normal**
-        /// *   **Disable**
+        /// The details of each application.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

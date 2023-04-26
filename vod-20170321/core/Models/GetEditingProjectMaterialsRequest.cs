@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetEditingProjectMaterialsRequest : TeaModel {
         /// <summary>
-        /// The type of the material. Valid values:
-        /// 
-        /// *   **video**
-        /// *   **audio**
-        /// *   **image**
+        /// The URLs of material snapshots. The value is an array.
         /// </summary>
         [NameInMap("MaterialType")]
         [Validation(Required=false)]
@@ -47,10 +43,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the material. Valid values:
-        /// 
-        /// *   **video**
-        /// *   **audio**
+        /// The ID of the material.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

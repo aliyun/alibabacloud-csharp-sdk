@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetWatermarkRequest : TeaModel {
         /// <summary>
-        /// The ID of the watermark.
+        /// The information about the watermark.
         /// </summary>
         [NameInMap("WatermarkId")]
         [Validation(Required=false)]

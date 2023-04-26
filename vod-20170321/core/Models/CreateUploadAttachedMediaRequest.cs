@@ -17,10 +17,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// The type of the media asset. Valid values:
-        /// *   **watermark**
-        /// *   **subtitle**
-        /// *   **material**
+        /// The name of the source file.
         /// </summary>
         [NameInMap("BusinessType")]
         [Validation(Required=false)]
@@ -45,25 +42,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// The name of the source file.
-        /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
-        /// <summary>
-        /// The size of the auxiliary media asset. Unit: byte.
-        /// </summary>
         [NameInMap("FileSize")]
         [Validation(Required=false)]
         public string FileSize { get; set; }
 
         /// <summary>
-        /// The file name extension. Valid values:
-        /// *   Valid values for watermarks: **png, gif, apng, and mov**
-        /// *   Valid values for subtitles: **srt, ass, stl, ttml, and vtt**
-        /// *   Valid values for materials: **jpg, gif, png, mp4, mat, and zip**
+        /// The size of the auxiliary media asset. Unit: byte.
         /// </summary>
         [NameInMap("MediaExt")]
         [Validation(Required=false)]
@@ -91,9 +79,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// The title of the media asset. Take note of the following items:
-        /// *   The title can be up to 128 bytes in length.
-        /// *   The value must be encoded in UTF-8.
+        /// The file name extension. Valid values:
+        /// *   Valid values for watermarks: **png, gif, apng, and mov**
+        /// *   Valid values for subtitles: **srt, ass, stl, ttml, and vtt**
+        /// *   Valid values for materials: **jpg, gif, png, mp4, mat, and zip**
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

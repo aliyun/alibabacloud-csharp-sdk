@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SSLPri { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the SSL certificate. Valid values:
+        /// Specifies whether to enable the SSL certificate. Default value: off. Valid values:
         /// 
         /// *   **on**
         /// *   **off**

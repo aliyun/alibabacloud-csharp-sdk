@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The configurations of the snapshot template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.
+        /// Modifies a snapshot template.
         /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
         public string TemplateConfig { get; set; }
 
         /// <summary>
-        /// The ID of the snapshot template.
+        /// The operation that you want to perform. Set the value to **UpdateVodTemplate**.
         /// </summary>
         [NameInMap("VodTemplateId")]
         [Validation(Required=false)]

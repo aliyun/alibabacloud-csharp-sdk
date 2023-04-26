@@ -10,35 +10,40 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetVideoInfosResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of the videos that do not exist.
+        /// The status of the video. By default, videos in all states are returned. Multiple states are separated by commas (,). Valid values:
+        /// 
+        /// *   **Uploading**: The video is being uploaded.
+        /// *   **UploadFail**: The video fails to be uploaded.
+        /// *   **UploadSucc**: The video is uploaded.
+        /// *   **Transcoding**: The video is being transcoded.
+        /// *   **TranscodeFail**: The video fails to be transcoded.
+        /// *   **Blocked**: The video is blocked.
+        /// *   **Normal**: The video can be played.
         /// </summary>
         [NameInMap("NonExistVideoIds")]
         [Validation(Required=false)]
         public List<string> NonExistVideoIds { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The title of the video.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the video.
+        /// The description of the video.
         /// </summary>
         [NameInMap("VideoList")]
         [Validation(Required=false)]
         public List<GetVideoInfosResponseBodyVideoList> VideoList { get; set; }
         public class GetVideoInfosResponseBodyVideoList : TeaModel {
-            /// <summary>
-            /// The ID of the application.
-            /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
 
             /// <summary>
-            /// The ID of the video category.
+            /// The Object Storage Service (OSS) bucket where the video file is stored.
             /// </summary>
             [NameInMap("CateId")]
             [Validation(Required=false)]
@@ -51,9 +56,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public string CateName { get; set; }
 
-            /// <summary>
-            /// The URL of the video thumbnail.
-            /// </summary>
             [NameInMap("CoverURL")]
             [Validation(Required=false)]
             public string CoverURL { get; set; }
@@ -66,85 +68,74 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The description of the video.
+            /// Queries the information about multiple videos at a time.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            /// <summary>
-            /// The duration of the video. Unit: seconds.
-            /// </summary>
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public float? Duration { get; set; }
 
             /// <summary>
-            /// The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+            /// The URL array of video snapshots.
             /// </summary>
             [NameInMap("ModificationTime")]
             [Validation(Required=false)]
             public string ModificationTime { get; set; }
 
-            /// <summary>
-            /// The size of the video mezzanine file. Unit: byte.
-            /// </summary>
+            [NameInMap("RestoreExpiration")]
+            [Validation(Required=false)]
+            public string RestoreExpiration { get; set; }
+
+            [NameInMap("RestoreStatus")]
+            [Validation(Required=false)]
+            public string RestoreStatus { get; set; }
+
             [NameInMap("Size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
 
-            /// <summary>
-            /// The URL array of video snapshots.
-            /// </summary>
             [NameInMap("Snapshots")]
             [Validation(Required=false)]
             public List<string> Snapshots { get; set; }
 
             /// <summary>
-            /// The status of the video. By default, videos in all states are returned. Multiple states are separated by commas (,). Valid values:
-            /// 
-            /// *   **Uploading**: The video is being uploaded.
-            /// *   **UploadFail**: The video fails to be uploaded.
-            /// *   **UploadSucc**: The video is uploaded.
-            /// *   **Transcoding**: The video is being transcoded.
-            /// *   **TranscodeFail**: The video fails to be transcoded.
-            /// *   **Blocked**: The video is blocked.
-            /// *   **Normal**: The video can be played.
+            /// The URL of the video thumbnail.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("StorageClass")]
+            [Validation(Required=false)]
+            public string StorageClass { get; set; }
+
             /// <summary>
-            /// The Object Storage Service (OSS) bucket where the video file is stored.
+            /// The information about the video.
             /// </summary>
             [NameInMap("StorageLocation")]
             [Validation(Required=false)]
             public string StorageLocation { get; set; }
 
             /// <summary>
-            /// The tags of the video. Multiple tags are separated by commas (,).
+            /// The ID of the video category.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public string Tags { get; set; }
 
-            /// <summary>
-            /// The ID of the template group that was used to transcode the video.
-            /// </summary>
             [NameInMap("TemplateGroupId")]
             [Validation(Required=false)]
             public string TemplateGroupId { get; set; }
 
-            /// <summary>
-            /// The title of the video.
-            /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
-            /// The ID of the video.
+            /// The list of video IDs. Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified.
             /// </summary>
             [NameInMap("VideoId")]
             [Validation(Required=false)]

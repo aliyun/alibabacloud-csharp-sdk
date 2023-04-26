@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteWatermarkRequest : TeaModel {
-        /// <summary>
-        /// The ID of the watermark.
-        /// </summary>
         [NameInMap("WatermarkId")]
         [Validation(Required=false)]
         public string WatermarkId { get; set; }

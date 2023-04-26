@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainTrafficDataResponseBody : TeaModel {
         /// <summary>
-        /// The time interval between the returned entries. Unit: seconds.
+        /// The time interval between the entries returned. Unit: seconds.
         /// </summary>
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// The domain name for CDN.
+        /// The accelerated domain name.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -38,21 +38,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The total traffic.
+        /// The total amount of network traffic.
         /// </summary>
         [NameInMap("TotalTraffic")]
         [Validation(Required=false)]
         public string TotalTraffic { get; set; }
 
         /// <summary>
-        /// The network traffic data that is collected for each interval.
+        /// The network traffic that was collected at each interval.
         /// </summary>
         [NameInMap("TrafficDataPerInterval")]
         [Validation(Required=false)]
@@ -63,35 +63,35 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<DescribeVodDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeVodDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule : TeaModel {
                 /// <summary>
-                /// The volume of the network traffic in mainland China. Unit: byte.
+                /// The amount of network traffic in the Chinese mainland. Unit: bytes.
                 /// </summary>
                 [NameInMap("DomesticValue")]
                 [Validation(Required=false)]
                 public string DomesticValue { get; set; }
 
                 /// <summary>
-                /// The volume of the HTTPS network traffic on L1 nodes in mainland China. Unit: byte.
+                /// The amount of HTTPS network traffic on points of presence (POPs) in the Chinese mainland. Unit: bytes.
                 /// </summary>
                 [NameInMap("HttpsDomesticValue")]
                 [Validation(Required=false)]
                 public string HttpsDomesticValue { get; set; }
 
                 /// <summary>
-                /// The volume of the HTTPS network traffic on L1 nodes outside mainland China. Unit: byte.
+                /// The amount of HTTPS network traffic on POPs outside the Chinese mainland. Unit: bytes.
                 /// </summary>
                 [NameInMap("HttpsOverseasValue")]
                 [Validation(Required=false)]
                 public string HttpsOverseasValue { get; set; }
 
                 /// <summary>
-                /// The total volume of the HTTPS network traffic on L1 nodes. Unit: byte.
+                /// The total amount of HTTPS network traffic on POPs. Unit: bytes.
                 /// </summary>
                 [NameInMap("HttpsValue")]
                 [Validation(Required=false)]
                 public string HttpsValue { get; set; }
 
                 /// <summary>
-                /// The volume of the network traffic outside mainland China. Unit: byte.
+                /// The amount of network traffic outside the Chinese mainland. Unit: bytes.
                 /// </summary>
                 [NameInMap("OverseasValue")]
                 [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string TimeStamp { get; set; }
 
                 /// <summary>
-                /// The total volume of the network traffic. Unit: byte.
+                /// The total amount of network traffic. Unit: bytes.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

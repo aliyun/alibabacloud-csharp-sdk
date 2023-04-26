@@ -10,39 +10,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaAuditResultTimelineResponseBody : TeaModel {
         /// <summary>
-        /// The collection of review result timelines.
+        /// The position in the video. Unit: milliseconds.
         /// </summary>
         [NameInMap("MediaAuditResultTimeline")]
         [Validation(Required=false)]
         public GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimeline MediaAuditResultTimeline { get; set; }
         public class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimeline : TeaModel {
-            /// <summary>
-            /// The collection of ad timelines.
-            /// </summary>
             [NameInMap("Ad")]
             [Validation(Required=false)]
             public List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineAd> Ad { get; set; }
             public class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineAd : TeaModel {
-                /// <summary>
-                /// The category of the review result. Valid values:
-                /// 
-                /// *   **normal**: normal content
-                /// *   **ad**: ad or text violation
-                /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
-                /// <summary>
-                /// The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
-                /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public string Score { get; set; }
 
-                /// <summary>
-                /// The position in the video. Unit: milliseconds.
-                /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
                 public string Timestamp { get; set; }
@@ -50,32 +35,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// The collection of undesirable scene timelines.
+            /// Queries the timelines of all snapshots that violate content regulations.
             /// </summary>
             [NameInMap("Live")]
             [Validation(Required=false)]
             public List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLive> Live { get; set; }
             public class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLive : TeaModel {
-                /// <summary>
-                /// The category of the review result. Valid values:
-                /// 
-                /// *   **normal**
-                /// *   **terrorism**
-                /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
-                /// <summary>
-                /// The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
-                /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public string Score { get; set; }
 
-                /// <summary>
-                /// The position in the video. Unit: milliseconds.
-                /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
                 public string Timestamp { get; set; }
@@ -83,31 +56,31 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// The collection of logo timelines.
+            /// The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
             /// </summary>
             [NameInMap("Logo")]
             [Validation(Required=false)]
             public List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLogo> Logo { get; set; }
             public class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLogo : TeaModel {
                 /// <summary>
-                /// The category of the review result. Valid values:
-                /// 
-                /// *   **normal**
-                /// *   **logo**
+                /// The ID of the request.
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+                /// The category of the review result. Valid values:
+                /// 
+                /// *   **normal**: normal content
+                /// *   **ad**: ad or text violation
                 /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public string Score { get; set; }
 
                 /// <summary>
-                /// The position in the video. Unit: milliseconds.
+                /// The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
                 /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
@@ -116,32 +89,31 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// The collection of pornographic content timelines.
+            /// The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
             /// </summary>
             [NameInMap("Porn")]
             [Validation(Required=false)]
             public List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelinePorn> Porn { get; set; }
             public class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelinePorn : TeaModel {
                 /// <summary>
-                /// The category of the review result. Valid values:
-                /// 
-                /// *   **porn**
-                /// *   **sexy**
-                /// *   **normal**
+                /// The collection of logo timelines.
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+                /// The category of the review result. Valid values:
+                /// 
+                /// *   **normal**
+                /// *   **terrorism**
                 /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public string Score { get; set; }
 
                 /// <summary>
-                /// The position in the video. Unit: milliseconds.
+                /// The operation that you want to perform. Set the value to **GetMediaAuditResultTimeline**.
                 /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
@@ -150,36 +122,28 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// The collection of terrorist content timelines.
+            /// The ID of the video.
             /// </summary>
             [NameInMap("Terrorism")]
             [Validation(Required=false)]
             public List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineTerrorism> Terrorism { get; set; }
             public class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineTerrorism : TeaModel {
                 /// <summary>
-                /// The category of the review result. Valid values:
-                /// 
-                /// *   **terrorism**: terrorist content
-                /// *   **outfit**: special costume
-                /// *   **logo**: special logo
-                /// *   **weapon**: weapon
-                /// *   **politics**: politically sensitive content
-                /// *   **others**: other terrorist and politically sensitive content
-                /// *   **normal**: normal content
+                /// The collection of pornographic content timelines.
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// The score of the review result category.
+                /// The collection of review result timelines.
                 /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public string Score { get; set; }
 
                 /// <summary>
-                /// The position in the video. Unit: milliseconds.
+                /// The collection of undesirable scene timelines.
                 /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
@@ -190,7 +154,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The position in the video. Unit: milliseconds.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

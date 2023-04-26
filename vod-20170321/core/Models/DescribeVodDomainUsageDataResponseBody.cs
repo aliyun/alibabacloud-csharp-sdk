@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainUsageDataResponseBody : TeaModel {
         /// <summary>
-        /// The region where the data was queried.
+        /// The billable region where the data was collected.
         /// </summary>
         [NameInMap("Area")]
         [Validation(Required=false)]
         public string Area { get; set; }
 
         /// <summary>
-        /// The time interval between the returned entries. Unit: seconds.
+        /// The time interval between the entries returned. Unit: seconds.
         /// </summary>
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// The domain name for CDN.
+        /// The accelerated domain name.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -45,25 +45,25 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The type of the content based on which the data is generated. Valid values:
+        /// The type of content returned. Valid values:
         /// 
-        /// *   **static**
-        /// *   **dynamic**
-        /// *   **all**
+        /// *   **static**: static content
+        /// *   **dynamic**: dynamic content
+        /// *   **all**: all content
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The details of traffic or bandwidth data.
+        /// The traffic or bandwidth data returned at each interval.
         /// </summary>
         [NameInMap("UsageDataPerInterval")]
         [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string TimeStamp { get; set; }
 
                 /// <summary>
-                /// The traffic or bandwidth data. The unit of bandwidth is bit/s.
+                /// The traffic or bandwidth data. Unit: bit/s.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

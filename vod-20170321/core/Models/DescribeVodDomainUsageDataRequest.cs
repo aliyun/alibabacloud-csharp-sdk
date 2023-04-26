@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainUsageDataRequest : TeaModel {
         /// <summary>
-        /// The region where the data is queried. The default value is CN, which indicates mainland China. Valid values:
+        /// The region where you want to query data. Default value: CN. Valid values:
         /// 
-        /// *   **CN**: mainland China.
-        /// *   **OverSeas**: outside mainland China.
+        /// *   **CN**: Chinese mainland
+        /// *   **OverSeas**: outside the Chinese mainland
         /// </summary>
         [NameInMap("Area")]
         [Validation(Required=false)]
         public string Area { get; set; }
 
         /// <summary>
-        /// The domain name for CDN. If you do not specify this parameter, the merged data of all your domain names for CDN is returned. You can specify multiple domain names. Separate them with commas (,).
+        /// The accelerated domain name. If you leave this parameter empty, the merged data of all your accelerated domain names is returned. Separate multiple accelerated domain names with commas (,).
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The type of the data to be queried. Valid values:
+        /// The type of the data to return. Valid values:
         /// 
-        /// *   **bps**: bandwidth.
-        /// *   **traf**: traffic.
+        /// *   **bps**: bandwidth
+        /// *   **traf**: traffic
         /// </summary>
         [NameInMap("Field")]
         [Validation(Required=false)]
@@ -59,11 +59,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The type of the content based on which the data is generated. Valid values:
+        /// The type of content that you want to query. Valid values:
         /// 
-        /// *   **static**
-        /// *   **dynamic**
-        /// *   **all**
+        /// *   **static**: static content
+        /// *   **dynamic**: dynamic content
+        /// *   **all**: all content
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

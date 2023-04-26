@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodTranscodeDataResponseBody : TeaModel {
         /// <summary>
-        /// The time granularity at which the data was queried. Valid values:
+        /// The interval at which the data was queried. Valid values:
         /// 
         /// *   **hour**
         /// *   **day**
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The statistics on transcoding.
+        /// The transcoding statistics returned.
         /// </summary>
         [NameInMap("TranscodeData")]
         [Validation(Required=false)]
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         /// 
                         /// *   **Audio**: audio transcoding
                         /// *   **Segmentation**: container format conversion
-                        /// *   H.264 and H.265-related video transcoding specifications, such as **H264.LD, H264.SD, H264.HD, H264.2K, and H264.4K**
+                        /// *   **H264.LD, H264.SD, H264.HD, H264.2K, H264.4K, and more**
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// The transcoding length. Unit: seconds.
+                        /// The transcoding duration. Unit: seconds.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]

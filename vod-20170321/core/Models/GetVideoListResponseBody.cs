@@ -90,6 +90,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public string ModificationTime { get; set; }
 
+                [NameInMap("RestoreExpiration")]
+                [Validation(Required=false)]
+                public string RestoreExpiration { get; set; }
+
+                [NameInMap("RestoreStatus")]
+                [Validation(Required=false)]
+                public string RestoreStatus { get; set; }
+
                 /// <summary>
                 /// The size of the video mezzanine file. Unit: byte.
                 /// </summary>
@@ -124,6 +132,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("StorageClass")]
+                [Validation(Required=false)]
+                public string StorageClass { get; set; }
 
                 /// <summary>
                 /// The OSS bucket where the video file is stored.

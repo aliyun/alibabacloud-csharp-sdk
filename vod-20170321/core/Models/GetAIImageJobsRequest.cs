@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAIImageJobsRequest : TeaModel {
         /// <summary>
-        /// The ID of the image AI processing job. You can obtain the value of JobId from the response to the [SubmitAIImageJob](~~SubmitAIImageJob~~) operation.
-        /// *   You can specify a maximum of 10 IDs.
-        /// *   Separate multiple IDs with commas (,).
+        /// The returned data.
         /// </summary>
         [NameInMap("JobIds")]
         [Validation(Required=false)]

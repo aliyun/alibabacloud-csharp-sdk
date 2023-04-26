@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaAuditResultTimelineRequest : TeaModel {
         /// <summary>
-        /// The ID of the video.
+        /// The category of the review result. Valid values:
+        /// 
+        /// *   **normal**
+        /// *   **logo**
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]

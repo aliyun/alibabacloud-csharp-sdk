@@ -13,24 +13,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddAITemplateRequest : TeaModel {
         /// <summary>
-        /// The detailed configurations of the AI template. The value is a JSON string.
+        /// Adds an AI template for automated review and smart thumbnail tasks.
         /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
         public string TemplateConfig { get; set; }
 
         /// <summary>
-        /// The name of the AI template. The name can be up to 128 bytes in length.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// The type of the AI template. Valid values:
-        /// 
-        /// *   **AIMediaAudit**: automated review
-        /// *   **AIImage**: smart thumbnail
+        /// The operation that you want to perform. Set the value to **AddAITemplate**.
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

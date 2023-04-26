@@ -90,7 +90,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Before you add an AI template for automated review and smart thumbnail tasks, make sure that [automated review](https://ai.aliyun.com/vi/censor) and [smart thumbnail](https://ai.aliyun.com/vi/cover) are enabled.
+          * The type of the AI template. Valid values:
+          * *   **AIMediaAudit**: automated review
+          * *   **AIImage**: smart thumbnail
           *
           * @param request AddAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -132,7 +134,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Before you add an AI template for automated review and smart thumbnail tasks, make sure that [automated review](https://ai.aliyun.com/vi/censor) and [smart thumbnail](https://ai.aliyun.com/vi/cover) are enabled.
+          * The type of the AI template. Valid values:
+          * *   **AIMediaAudit**: automated review
+          * *   **AIImage**: smart thumbnail
           *
           * @param request AddAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -174,7 +178,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Before you add an AI template for automated review and smart thumbnail tasks, make sure that [automated review](https://ai.aliyun.com/vi/censor) and [smart thumbnail](https://ai.aliyun.com/vi/cover) are enabled.
+          * The type of the AI template. Valid values:
+          * *   **AIMediaAudit**: automated review
+          * *   **AIImage**: smart thumbnail
           *
           * @param request AddAITemplateRequest
           * @return AddAITemplateResponse
@@ -186,7 +192,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Before you add an AI template for automated review and smart thumbnail tasks, make sure that [automated review](https://ai.aliyun.com/vi/censor) and [smart thumbnail](https://ai.aliyun.com/vi/cover) are enabled.
+          * The type of the AI template. Valid values:
+          * *   **AIMediaAudit**: automated review
+          * *   **AIImage**: smart thumbnail
           *
           * @param request AddAITemplateRequest
           * @return AddAITemplateResponse
@@ -198,7 +206,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * A maximum of three category levels can be created. Each category can contain up to 100 subcategories.
+          * The level of the category. A value of **0** indicates a level 1 category.
           *
           * @param request AddCategoryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -240,7 +248,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * A maximum of three category levels can be created. Each category can contain up to 100 subcategories.
+          * The level of the category. A value of **0** indicates a level 1 category.
           *
           * @param request AddCategoryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -282,7 +290,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * A maximum of three category levels can be created. Each category can contain up to 100 subcategories.
+          * The level of the category. A value of **0** indicates a level 1 category.
           *
           * @param request AddCategoryRequest
           * @return AddCategoryResponse
@@ -294,7 +302,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * A maximum of three category levels can be created. Each category can contain up to 100 subcategories.
+          * The level of the category. A value of **0** indicates a level 1 category.
           *
           * @param request AddCategoryRequest
           * @return AddCategoryResponse
@@ -436,12 +444,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - You cannot perform custom operations on transcoding template groups that are **locked** in the ApsaraVideo VOD console. To manage these transcoding template groups, submit a ticket to contact Alibaba Cloud technical support.
-          * - An Object Storage Service (OSS) bucket is required to store files that are used for transcoding. You can create a transcoding template group only after ApsaraVideo VOD has allocated a bucket to you. You can activate the bucket on the Storage page in the ApsaraVideo VOD console.
-          * - You cannot add transcoding templates to the **No Transcoding** template group.
-          * - You can create a maximum of 20 transcoding template groups.
-          * - You can add a maximum of 20 transcoding templates to a transcoding template group.
-          * - If you need to generate an URL for adaptive bitrate streaming, you can add a maximum of 10 video packaging templates to a transcoding template group. If you add more than 10 video packaging templates, URLs of the video transcoded based on the video packaging templates are generated but the URL for adaptive bitrate streaming is not generated.
+          * The ID of the transcoding template group.
           *
           * @param request AddTranscodeTemplateGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -487,12 +490,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - You cannot perform custom operations on transcoding template groups that are **locked** in the ApsaraVideo VOD console. To manage these transcoding template groups, submit a ticket to contact Alibaba Cloud technical support.
-          * - An Object Storage Service (OSS) bucket is required to store files that are used for transcoding. You can create a transcoding template group only after ApsaraVideo VOD has allocated a bucket to you. You can activate the bucket on the Storage page in the ApsaraVideo VOD console.
-          * - You cannot add transcoding templates to the **No Transcoding** template group.
-          * - You can create a maximum of 20 transcoding template groups.
-          * - You can add a maximum of 20 transcoding templates to a transcoding template group.
-          * - If you need to generate an URL for adaptive bitrate streaming, you can add a maximum of 10 video packaging templates to a transcoding template group. If you add more than 10 video packaging templates, URLs of the video transcoded based on the video packaging templates are generated but the URL for adaptive bitrate streaming is not generated.
+          * The ID of the transcoding template group.
           *
           * @param request AddTranscodeTemplateGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -538,12 +536,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - You cannot perform custom operations on transcoding template groups that are **locked** in the ApsaraVideo VOD console. To manage these transcoding template groups, submit a ticket to contact Alibaba Cloud technical support.
-          * - An Object Storage Service (OSS) bucket is required to store files that are used for transcoding. You can create a transcoding template group only after ApsaraVideo VOD has allocated a bucket to you. You can activate the bucket on the Storage page in the ApsaraVideo VOD console.
-          * - You cannot add transcoding templates to the **No Transcoding** template group.
-          * - You can create a maximum of 20 transcoding template groups.
-          * - You can add a maximum of 20 transcoding templates to a transcoding template group.
-          * - If you need to generate an URL for adaptive bitrate streaming, you can add a maximum of 10 video packaging templates to a transcoding template group. If you add more than 10 video packaging templates, URLs of the video transcoded based on the video packaging templates are generated but the URL for adaptive bitrate streaming is not generated.
+          * The ID of the transcoding template group.
           *
           * @param request AddTranscodeTemplateGroupRequest
           * @return AddTranscodeTemplateGroupResponse
@@ -555,12 +548,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - You cannot perform custom operations on transcoding template groups that are **locked** in the ApsaraVideo VOD console. To manage these transcoding template groups, submit a ticket to contact Alibaba Cloud technical support.
-          * - An Object Storage Service (OSS) bucket is required to store files that are used for transcoding. You can create a transcoding template group only after ApsaraVideo VOD has allocated a bucket to you. You can activate the bucket on the Storage page in the ApsaraVideo VOD console.
-          * - You cannot add transcoding templates to the **No Transcoding** template group.
-          * - You can create a maximum of 20 transcoding template groups.
-          * - You can add a maximum of 20 transcoding templates to a transcoding template group.
-          * - If you need to generate an URL for adaptive bitrate streaming, you can add a maximum of 10 video packaging templates to a transcoding template group. If you add more than 10 video packaging templates, URLs of the video transcoded based on the video packaging templates are generated but the URL for adaptive bitrate streaming is not generated.
+          * The ID of the transcoding template group.
           *
           * @param request AddTranscodeTemplateGroupRequest
           * @return AddTranscodeTemplateGroupResponse
@@ -572,9 +560,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   This operation is available only in the **China (Shanghai)** region.
-          * *   Before you add a domain name for CDN, you must activate [ApsaraVideo VOD](~~51512~~) and apply for an Internet content provider (ICP) filing for domain name.
-          * *   If the content on the origin server is not stored on Alibaba Cloud, the content must be reviewed by Alibaba Cloud. The review will be complete by the end of the next business day after you submit an application.
+          * The ID of the request.
           *
           * @param request AddVodDomainRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -636,9 +622,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   This operation is available only in the **China (Shanghai)** region.
-          * *   Before you add a domain name for CDN, you must activate [ApsaraVideo VOD](~~51512~~) and apply for an Internet content provider (ICP) filing for domain name.
-          * *   If the content on the origin server is not stored on Alibaba Cloud, the content must be reviewed by Alibaba Cloud. The review will be complete by the end of the next business day after you submit an application.
+          * The ID of the request.
           *
           * @param request AddVodDomainRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -700,9 +684,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   This operation is available only in the **China (Shanghai)** region.
-          * *   Before you add a domain name for CDN, you must activate [ApsaraVideo VOD](~~51512~~) and apply for an Internet content provider (ICP) filing for domain name.
-          * *   If the content on the origin server is not stored on Alibaba Cloud, the content must be reviewed by Alibaba Cloud. The review will be complete by the end of the next business day after you submit an application.
+          * The ID of the request.
           *
           * @param request AddVodDomainRequest
           * @return AddVodDomainResponse
@@ -714,9 +696,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   This operation is available only in the **China (Shanghai)** region.
-          * *   Before you add a domain name for CDN, you must activate [ApsaraVideo VOD](~~51512~~) and apply for an Internet content provider (ICP) filing for domain name.
-          * *   If the content on the origin server is not stored on Alibaba Cloud, the content must be reviewed by Alibaba Cloud. The review will be complete by the end of the next business day after you submit an application.
+          * The ID of the request.
           *
           * @param request AddVodDomainRequest
           * @return AddVodDomainResponse
@@ -728,8 +708,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   After you create a snapshot template, you can specify the ID of the snapshot template in the request of the [SubmitSnapshotJob](~~72213~~) operation to take snapshots.
-          * > *   You can receive the [SnapshotComplete](~~57337~~) event notification by using an HTTP or HTTPS URL or in Message Service (MNS). For more information, see [Overview](~~55627~~).
+          * The type of the template. Set the value to **Snapshot**.
           *
           * @param request AddVodTemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -775,8 +754,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   After you create a snapshot template, you can specify the ID of the snapshot template in the request of the [SubmitSnapshotJob](~~72213~~) operation to take snapshots.
-          * > *   You can receive the [SnapshotComplete](~~57337~~) event notification by using an HTTP or HTTPS URL or in Message Service (MNS). For more information, see [Overview](~~55627~~).
+          * The type of the template. Set the value to **Snapshot**.
           *
           * @param request AddVodTemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -822,8 +800,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   After you create a snapshot template, you can specify the ID of the snapshot template in the request of the [SubmitSnapshotJob](~~72213~~) operation to take snapshots.
-          * > *   You can receive the [SnapshotComplete](~~57337~~) event notification by using an HTTP or HTTPS URL or in Message Service (MNS). For more information, see [Overview](~~55627~~).
+          * The type of the template. Set the value to **Snapshot**.
           *
           * @param request AddVodTemplateRequest
           * @return AddVodTemplateResponse
@@ -835,8 +812,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   After you create a snapshot template, you can specify the ID of the snapshot template in the request of the [SubmitSnapshotJob](~~72213~~) operation to take snapshots.
-          * > *   You can receive the [SnapshotComplete](~~57337~~) event notification by using an HTTP or HTTPS URL or in Message Service (MNS). For more information, see [Overview](~~55627~~).
+          * The type of the template. Set the value to **Snapshot**.
           *
           * @param request AddVodTemplateRequest
           * @return AddVodTemplateResponse
@@ -848,7 +824,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ApsaraVideo VOD supports static image watermarks such as PNG files and dynamic image watermarks such as GIF, APNG, and MOV files.
+          * The name of the watermark. Only letters and digits are supported.
+          * *   The name can be up to 128 bytes in length.
+          * *   The value must be encoded in UTF-8.
           *
           * @param request AddWatermarkRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -898,7 +876,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ApsaraVideo VOD supports static image watermarks such as PNG files and dynamic image watermarks such as GIF, APNG, and MOV files.
+          * The name of the watermark. Only letters and digits are supported.
+          * *   The name can be up to 128 bytes in length.
+          * *   The value must be encoded in UTF-8.
           *
           * @param request AddWatermarkRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -948,7 +928,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ApsaraVideo VOD supports static image watermarks such as PNG files and dynamic image watermarks such as GIF, APNG, and MOV files.
+          * The name of the watermark. Only letters and digits are supported.
+          * *   The name can be up to 128 bytes in length.
+          * *   The value must be encoded in UTF-8.
           *
           * @param request AddWatermarkRequest
           * @return AddWatermarkResponse
@@ -960,7 +942,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ApsaraVideo VOD supports static image watermarks such as PNG files and dynamic image watermarks such as GIF, APNG, and MOV files.
+          * The name of the watermark. Only letters and digits are supported.
+          * *   The name can be up to 128 bytes in length.
+          * *   The value must be encoded in UTF-8.
           *
           * @param request AddWatermarkRequest
           * @return AddWatermarkResponse
@@ -972,7 +956,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > You can grant a maximum of 10 application permissions to a RAM user or RAM role.
+          * The name of the policy that was not found.
           *
           * @param request AttachAppPolicyToIdentityRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1018,7 +1002,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > You can grant a maximum of 10 application permissions to a RAM user or RAM role.
+          * The name of the policy that was not found.
           *
           * @param request AttachAppPolicyToIdentityRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1064,7 +1048,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > You can grant a maximum of 10 application permissions to a RAM user or RAM role.
+          * The name of the policy that was not found.
           *
           * @param request AttachAppPolicyToIdentityRequest
           * @return AttachAppPolicyToIdentityResponse
@@ -1076,7 +1060,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > You can grant a maximum of 10 application permissions to a RAM user or RAM role.
+          * The name of the policy that was not found.
           *
           * @param request AttachAppPolicyToIdentityRequest
           * @return AttachAppPolicyToIdentityResponse
@@ -1212,8 +1196,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the domain name that you want to enable is invalid or your Alibaba Cloud account has overdue payments, you cannot call this operation to enable the domain name.
+          * The operation that you want to perform. Set the value to **BatchStartVodDomain**.
           *
           * @param request BatchStartVodDomainRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1255,8 +1238,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the domain name that you want to enable is invalid or your Alibaba Cloud account has overdue payments, you cannot call this operation to enable the domain name.
+          * The operation that you want to perform. Set the value to **BatchStartVodDomain**.
           *
           * @param request BatchStartVodDomainRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1298,8 +1280,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the domain name that you want to enable is invalid or your Alibaba Cloud account has overdue payments, you cannot call this operation to enable the domain name.
+          * The operation that you want to perform. Set the value to **BatchStartVodDomain**.
           *
           * @param request BatchStartVodDomainRequest
           * @return BatchStartVodDomainResponse
@@ -1311,8 +1292,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the domain name that you want to enable is invalid or your Alibaba Cloud account has overdue payments, you cannot call this operation to enable the domain name.
+          * The operation that you want to perform. Set the value to **BatchStartVodDomain**.
           *
           * @param request BatchStartVodDomainRequest
           * @return BatchStartVodDomainResponse
@@ -1540,7 +1520,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can create a maximum of 10 applications within an Alibaba Cloud account. For more information, see [Overview](https://www.alibabacloud.com/help/en/apsaravideo-for-vod/latest/overview-1).
+          * The description of the application. 
+          * - The description can contain up to 512 characters in length.
+          * - The description can contain only UTF-8 characters.
           *
           * @param request CreateAppInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1578,7 +1560,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can create a maximum of 10 applications within an Alibaba Cloud account. For more information, see [Overview](https://www.alibabacloud.com/help/en/apsaravideo-for-vod/latest/overview-1).
+          * The description of the application. 
+          * - The description can contain up to 512 characters in length.
+          * - The description can contain only UTF-8 characters.
           *
           * @param request CreateAppInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1616,7 +1600,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can create a maximum of 10 applications within an Alibaba Cloud account. For more information, see [Overview](https://www.alibabacloud.com/help/en/apsaravideo-for-vod/latest/overview-1).
+          * The description of the application. 
+          * - The description can contain up to 512 characters in length.
+          * - The description can contain only UTF-8 characters.
           *
           * @param request CreateAppInfoRequest
           * @return CreateAppInfoResponse
@@ -1628,7 +1614,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can create a maximum of 10 applications within an Alibaba Cloud account. For more information, see [Overview](https://www.alibabacloud.com/help/en/apsaravideo-for-vod/latest/overview-1).
+          * The description of the application. 
+          * - The description can contain up to 512 characters in length.
+          * - The description can contain only UTF-8 characters.
           *
           * @param request CreateAppInfoRequest
           * @return CreateAppInfoResponse
@@ -1706,9 +1694,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - The process of obtaining upload URLs and credentials is a core process in ApsaraVideo VOD and is required for each upload operation. ApsaraVideo VOD provides multiple upload methods. You can upload auxiliary media assets by using server upload SDKs, client upload SDKs, URLs of auxiliary media assets, Object Storage Service (OSS) API, or native OSS SDKs. Each upload method has different requirements for obtaining upload URLs and credentials. For more information, see the "Usage notes" section of the [Upload URLs and credentials](~~55397~~) topic.
-          * - If the upload credential expires, you can call this operation to obtain a new upload URL and credential. The default validity period of an upload credential is 3,000 seconds.
-          * - You can configure a callback to receive an [AttachedMediaUploadComplete](~~103250~~) event notification to determine whether the upload is successful.
+          * The type of the media asset. Valid values:
+          * *   **watermark**
+          * *   **subtitle**
+          * *   **material**
           *
           * @param request CreateUploadAttachedMediaRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1782,9 +1771,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - The process of obtaining upload URLs and credentials is a core process in ApsaraVideo VOD and is required for each upload operation. ApsaraVideo VOD provides multiple upload methods. You can upload auxiliary media assets by using server upload SDKs, client upload SDKs, URLs of auxiliary media assets, Object Storage Service (OSS) API, or native OSS SDKs. Each upload method has different requirements for obtaining upload URLs and credentials. For more information, see the "Usage notes" section of the [Upload URLs and credentials](~~55397~~) topic.
-          * - If the upload credential expires, you can call this operation to obtain a new upload URL and credential. The default validity period of an upload credential is 3,000 seconds.
-          * - You can configure a callback to receive an [AttachedMediaUploadComplete](~~103250~~) event notification to determine whether the upload is successful.
+          * The type of the media asset. Valid values:
+          * *   **watermark**
+          * *   **subtitle**
+          * *   **material**
           *
           * @param request CreateUploadAttachedMediaRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1858,9 +1848,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - The process of obtaining upload URLs and credentials is a core process in ApsaraVideo VOD and is required for each upload operation. ApsaraVideo VOD provides multiple upload methods. You can upload auxiliary media assets by using server upload SDKs, client upload SDKs, URLs of auxiliary media assets, Object Storage Service (OSS) API, or native OSS SDKs. Each upload method has different requirements for obtaining upload URLs and credentials. For more information, see the "Usage notes" section of the [Upload URLs and credentials](~~55397~~) topic.
-          * - If the upload credential expires, you can call this operation to obtain a new upload URL and credential. The default validity period of an upload credential is 3,000 seconds.
-          * - You can configure a callback to receive an [AttachedMediaUploadComplete](~~103250~~) event notification to determine whether the upload is successful.
+          * The type of the media asset. Valid values:
+          * *   **watermark**
+          * *   **subtitle**
+          * *   **material**
           *
           * @param request CreateUploadAttachedMediaRequest
           * @return CreateUploadAttachedMediaResponse
@@ -1872,9 +1863,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - The process of obtaining upload URLs and credentials is a core process in ApsaraVideo VOD and is required for each upload operation. ApsaraVideo VOD provides multiple upload methods. You can upload auxiliary media assets by using server upload SDKs, client upload SDKs, URLs of auxiliary media assets, Object Storage Service (OSS) API, or native OSS SDKs. Each upload method has different requirements for obtaining upload URLs and credentials. For more information, see the "Usage notes" section of the [Upload URLs and credentials](~~55397~~) topic.
-          * - If the upload credential expires, you can call this operation to obtain a new upload URL and credential. The default validity period of an upload credential is 3,000 seconds.
-          * - You can configure a callback to receive an [AttachedMediaUploadComplete](~~103250~~) event notification to determine whether the upload is successful.
+          * The type of the media asset. Valid values:
+          * *   **watermark**
+          * *   **subtitle**
+          * *   **material**
           *
           * @param request CreateUploadAttachedMediaRequest
           * @return CreateUploadAttachedMediaResponse
@@ -1886,11 +1878,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## Description
-          * *   You must obtain a URL and a credential before you upload a media file to ApsaraVideo VOD. ApsaraVideo VOD provides multiple upload methods. You can upload files by using server upload SDKs, client upload SDKs, URLs, Object Storage Service (OSS) API, or OSS SDKs. Each upload method has different requirements for obtaining upload URLs and credentials. For more information, see the "Usage notes" section of the [Upload URLs and credentials](~~55397~~) topic.
-          * *   The upload credential is not automatically updated when you upload an image. By default, an upload credential is valid for 3,000 seconds before it expires. If your credential expires, call this operation again to obtain the credential.
-          * *   You can call the [CreateUploadAttachedMedia](~~98467~~) operation to upload image watermarks.
-          * *   You can configure a callback for [ImageUploadComplete](~~91968~~) to receive notifications about the image upload status.
+          * The custom configurations. For example, you can specify callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+          * > *   The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
+          * > *   To use the upload acceleration feature, submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex) to enable this feature. For more information, see [Overview](~~55396~~).
           *
           * @param request CreateUploadImageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1960,11 +1950,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## Description
-          * *   You must obtain a URL and a credential before you upload a media file to ApsaraVideo VOD. ApsaraVideo VOD provides multiple upload methods. You can upload files by using server upload SDKs, client upload SDKs, URLs, Object Storage Service (OSS) API, or OSS SDKs. Each upload method has different requirements for obtaining upload URLs and credentials. For more information, see the "Usage notes" section of the [Upload URLs and credentials](~~55397~~) topic.
-          * *   The upload credential is not automatically updated when you upload an image. By default, an upload credential is valid for 3,000 seconds before it expires. If your credential expires, call this operation again to obtain the credential.
-          * *   You can call the [CreateUploadAttachedMedia](~~98467~~) operation to upload image watermarks.
-          * *   You can configure a callback for [ImageUploadComplete](~~91968~~) to receive notifications about the image upload status.
+          * The custom configurations. For example, you can specify callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+          * > *   The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
+          * > *   To use the upload acceleration feature, submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex) to enable this feature. For more information, see [Overview](~~55396~~).
           *
           * @param request CreateUploadImageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2034,11 +2022,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## Description
-          * *   You must obtain a URL and a credential before you upload a media file to ApsaraVideo VOD. ApsaraVideo VOD provides multiple upload methods. You can upload files by using server upload SDKs, client upload SDKs, URLs, Object Storage Service (OSS) API, or OSS SDKs. Each upload method has different requirements for obtaining upload URLs and credentials. For more information, see the "Usage notes" section of the [Upload URLs and credentials](~~55397~~) topic.
-          * *   The upload credential is not automatically updated when you upload an image. By default, an upload credential is valid for 3,000 seconds before it expires. If your credential expires, call this operation again to obtain the credential.
-          * *   You can call the [CreateUploadAttachedMedia](~~98467~~) operation to upload image watermarks.
-          * *   You can configure a callback for [ImageUploadComplete](~~91968~~) to receive notifications about the image upload status.
+          * The custom configurations. For example, you can specify callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+          * > *   The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
+          * > *   To use the upload acceleration feature, submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex) to enable this feature. For more information, see [Overview](~~55396~~).
           *
           * @param request CreateUploadImageRequest
           * @return CreateUploadImageResponse
@@ -2050,11 +2036,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## Description
-          * *   You must obtain a URL and a credential before you upload a media file to ApsaraVideo VOD. ApsaraVideo VOD provides multiple upload methods. You can upload files by using server upload SDKs, client upload SDKs, URLs, Object Storage Service (OSS) API, or OSS SDKs. Each upload method has different requirements for obtaining upload URLs and credentials. For more information, see the "Usage notes" section of the [Upload URLs and credentials](~~55397~~) topic.
-          * *   The upload credential is not automatically updated when you upload an image. By default, an upload credential is valid for 3,000 seconds before it expires. If your credential expires, call this operation again to obtain the credential.
-          * *   You can call the [CreateUploadAttachedMedia](~~98467~~) operation to upload image watermarks.
-          * *   You can configure a callback for [ImageUploadComplete](~~91968~~) to receive notifications about the image upload status.
+          * The custom configurations. For example, you can specify callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+          * > *   The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
+          * > *   To use the upload acceleration feature, submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex) to enable this feature. For more information, see [Overview](~~55396~~).
           *
           * @param request CreateUploadImageRequest
           * @return CreateUploadImageResponse
@@ -2066,13 +2050,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call this operation to obtain upload URLs and credentials for video and audio files. For more information, see [Upload URLs and credentials](~~55397~~).
-          * *   You can call this operation only to obtain the upload URLs and credentials for media files and create media assets in ApsaraVideo VOD. You cannot call this operation to upload media files. For more information about how to upload media files by calling API operations, see [Upload media files by calling API operations](~~476208~~).
-          * *   If the upload credential expires, call the [RefreshUploadVideo](~~55408~~) operation to obtain a new upload credential. The default validity period of an upload credential is 3,000 seconds.
-          * *   You can configure a callback to receive an [event notification](~~55396~~) when an audio or video file is uploaded. Alternatively, after you upload an audio or video file, you can call the [GetMezzanineInfo](~~59624~~) operation to determine whether the upload is successful based on the file status in the response.
-          * *   The VideoId parameter that is returned after you call this operation can be used for media processing or lifecycle management of media assets.
-          * *   You must obtain a URL and a credential before you upload a media file to ApsaraVideo VOD. ApsaraVideo VOD supports multiple upload methods. Each method has different requirements on upload URLs and credentials. For more information, see [Upload URLs and credentials](~~55397~~).
-          * > If you have more questions about the ApsaraVideo VOD API, join the DingTalk group 2720012141 for consultation.
+          * Obtains the upload URLs and credentials for media files and creates media assets in ApsaraVideo VOD.
           *
           * @param request CreateUploadVideoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2150,13 +2128,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call this operation to obtain upload URLs and credentials for video and audio files. For more information, see [Upload URLs and credentials](~~55397~~).
-          * *   You can call this operation only to obtain the upload URLs and credentials for media files and create media assets in ApsaraVideo VOD. You cannot call this operation to upload media files. For more information about how to upload media files by calling API operations, see [Upload media files by calling API operations](~~476208~~).
-          * *   If the upload credential expires, call the [RefreshUploadVideo](~~55408~~) operation to obtain a new upload credential. The default validity period of an upload credential is 3,000 seconds.
-          * *   You can configure a callback to receive an [event notification](~~55396~~) when an audio or video file is uploaded. Alternatively, after you upload an audio or video file, you can call the [GetMezzanineInfo](~~59624~~) operation to determine whether the upload is successful based on the file status in the response.
-          * *   The VideoId parameter that is returned after you call this operation can be used for media processing or lifecycle management of media assets.
-          * *   You must obtain a URL and a credential before you upload a media file to ApsaraVideo VOD. ApsaraVideo VOD supports multiple upload methods. Each method has different requirements on upload URLs and credentials. For more information, see [Upload URLs and credentials](~~55397~~).
-          * > If you have more questions about the ApsaraVideo VOD API, join the DingTalk group 2720012141 for consultation.
+          * Obtains the upload URLs and credentials for media files and creates media assets in ApsaraVideo VOD.
           *
           * @param request CreateUploadVideoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2234,13 +2206,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call this operation to obtain upload URLs and credentials for video and audio files. For more information, see [Upload URLs and credentials](~~55397~~).
-          * *   You can call this operation only to obtain the upload URLs and credentials for media files and create media assets in ApsaraVideo VOD. You cannot call this operation to upload media files. For more information about how to upload media files by calling API operations, see [Upload media files by calling API operations](~~476208~~).
-          * *   If the upload credential expires, call the [RefreshUploadVideo](~~55408~~) operation to obtain a new upload credential. The default validity period of an upload credential is 3,000 seconds.
-          * *   You can configure a callback to receive an [event notification](~~55396~~) when an audio or video file is uploaded. Alternatively, after you upload an audio or video file, you can call the [GetMezzanineInfo](~~59624~~) operation to determine whether the upload is successful based on the file status in the response.
-          * *   The VideoId parameter that is returned after you call this operation can be used for media processing or lifecycle management of media assets.
-          * *   You must obtain a URL and a credential before you upload a media file to ApsaraVideo VOD. ApsaraVideo VOD supports multiple upload methods. Each method has different requirements on upload URLs and credentials. For more information, see [Upload URLs and credentials](~~55397~~).
-          * > If you have more questions about the ApsaraVideo VOD API, join the DingTalk group 2720012141 for consultation.
+          * Obtains the upload URLs and credentials for media files and creates media assets in ApsaraVideo VOD.
           *
           * @param request CreateUploadVideoRequest
           * @return CreateUploadVideoResponse
@@ -2252,13 +2218,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call this operation to obtain upload URLs and credentials for video and audio files. For more information, see [Upload URLs and credentials](~~55397~~).
-          * *   You can call this operation only to obtain the upload URLs and credentials for media files and create media assets in ApsaraVideo VOD. You cannot call this operation to upload media files. For more information about how to upload media files by calling API operations, see [Upload media files by calling API operations](~~476208~~).
-          * *   If the upload credential expires, call the [RefreshUploadVideo](~~55408~~) operation to obtain a new upload credential. The default validity period of an upload credential is 3,000 seconds.
-          * *   You can configure a callback to receive an [event notification](~~55396~~) when an audio or video file is uploaded. Alternatively, after you upload an audio or video file, you can call the [GetMezzanineInfo](~~59624~~) operation to determine whether the upload is successful based on the file status in the response.
-          * *   The VideoId parameter that is returned after you call this operation can be used for media processing or lifecycle management of media assets.
-          * *   You must obtain a URL and a credential before you upload a media file to ApsaraVideo VOD. ApsaraVideo VOD supports multiple upload methods. Each method has different requirements on upload URLs and credentials. For more information, see [Upload URLs and credentials](~~55397~~).
-          * > If you have more questions about the ApsaraVideo VOD API, join the DingTalk group 2720012141 for consultation.
+          * Obtains the upload URLs and credentials for media files and creates media assets in ApsaraVideo VOD.
           *
           * @param request CreateUploadVideoRequest
           * @return CreateUploadVideoResponse
@@ -2476,7 +2436,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You cannot delete an AI template that is set as the default template.
+          * The ID of the AI template. You can use one of the following methods to obtain the ID of the AI template:
+          * *   Call the [AddAITemplate](~~102930~~) operation to add an AI template if no AI template exists. The value of TemplateId from the response is the ID of the AI template.
+          * *   Call the [ListAITemplate](~~102936~~) operation if the template already exists. The value of TemplateId from the response is the ID of the AI template.
           *
           * @param request DeleteAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2510,7 +2472,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You cannot delete an AI template that is set as the default template.
+          * The ID of the AI template. You can use one of the following methods to obtain the ID of the AI template:
+          * *   Call the [AddAITemplate](~~102930~~) operation to add an AI template if no AI template exists. The value of TemplateId from the response is the ID of the AI template.
+          * *   Call the [ListAITemplate](~~102936~~) operation if the template already exists. The value of TemplateId from the response is the ID of the AI template.
           *
           * @param request DeleteAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2544,7 +2508,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You cannot delete an AI template that is set as the default template.
+          * The ID of the AI template. You can use one of the following methods to obtain the ID of the AI template:
+          * *   Call the [AddAITemplate](~~102930~~) operation to add an AI template if no AI template exists. The value of TemplateId from the response is the ID of the AI template.
+          * *   Call the [ListAITemplate](~~102936~~) operation if the template already exists. The value of TemplateId from the response is the ID of the AI template.
           *
           * @param request DeleteAITemplateRequest
           * @return DeleteAITemplateResponse
@@ -2556,7 +2522,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You cannot delete an AI template that is set as the default template.
+          * The ID of the AI template. You can use one of the following methods to obtain the ID of the AI template:
+          * *   Call the [AddAITemplate](~~102930~~) operation to add an AI template if no AI template exists. The value of TemplateId from the response is the ID of the AI template.
+          * *   Call the [ListAITemplate](~~102936~~) operation if the template already exists. The value of TemplateId from the response is the ID of the AI template.
           *
           * @param request DeleteAITemplateRequest
           * @return DeleteAITemplateResponse
@@ -2568,8 +2536,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## Usage note
-          * Application with resources can not be deleted.
+          * The ID of the request.
           *
           * @param request DeleteAppInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2603,8 +2570,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## Usage note
-          * Application with resources can not be deleted.
+          * The ID of the request.
           *
           * @param request DeleteAppInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2638,8 +2604,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## Usage note
-          * Application with resources can not be deleted.
+          * The ID of the request.
           *
           * @param request DeleteAppInfoRequest
           * @return DeleteAppInfoResponse
@@ -2651,8 +2616,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## Usage note
-          * Application with resources can not be deleted.
+          * The ID of the request.
           *
           * @param request DeleteAppInfoRequest
           * @return DeleteAppInfoResponse
@@ -2664,7 +2628,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation physically deletes auxiliary media assets. Deleted auxiliary media assets cannot be recovered. Exercise caution when you call this operation.
+          * The ID of the request.
           *
           * @param request DeleteAttachedMediaRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2698,7 +2662,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation physically deletes auxiliary media assets. Deleted auxiliary media assets cannot be recovered. Exercise caution when you call this operation.
+          * The ID of the request.
           *
           * @param request DeleteAttachedMediaRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2732,7 +2696,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation physically deletes auxiliary media assets. Deleted auxiliary media assets cannot be recovered. Exercise caution when you call this operation.
+          * The ID of the request.
           *
           * @param request DeleteAttachedMediaRequest
           * @return DeleteAttachedMediaResponse
@@ -2744,7 +2708,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation physically deletes auxiliary media assets. Deleted auxiliary media assets cannot be recovered. Exercise caution when you call this operation.
+          * The ID of the request.
           *
           * @param request DeleteAttachedMediaRequest
           * @return DeleteAttachedMediaResponse
@@ -2847,13 +2811,6 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await DeleteCategoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * > This operation deletes only the information about animated stickers, but not the animated stickers themselves.
-          *
-          * @param request DeleteDynamicImageRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDynamicImageResponse
-         */
         public DeleteDynamicImageResponse DeleteDynamicImageWithOptions(DeleteDynamicImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2885,13 +2842,6 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<DeleteDynamicImageResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * > This operation deletes only the information about animated stickers, but not the animated stickers themselves.
-          *
-          * @param request DeleteDynamicImageRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteDynamicImageResponse
-         */
         public async Task<DeleteDynamicImageResponse> DeleteDynamicImageWithOptionsAsync(DeleteDynamicImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2923,24 +2873,12 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<DeleteDynamicImageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * > This operation deletes only the information about animated stickers, but not the animated stickers themselves.
-          *
-          * @param request DeleteDynamicImageRequest
-          * @return DeleteDynamicImageResponse
-         */
         public DeleteDynamicImageResponse DeleteDynamicImage(DeleteDynamicImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDynamicImageWithOptions(request, runtime);
         }
 
-        /**
-          * > This operation deletes only the information about animated stickers, but not the animated stickers themselves.
-          *
-          * @param request DeleteDynamicImageRequest
-          * @return DeleteDynamicImageResponse
-         */
         public async Task<DeleteDynamicImageResponse> DeleteDynamicImageAsync(DeleteDynamicImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3046,7 +2984,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation irreversibly deletes image mezzanine files. Deleted images cannot be recovered. If some images are cached in Content Delivery Network (CDN), the image URLs do not immediately become invalid.
+          * The URL of the image.
+          * *   This parameter only takes effect when the **DeleteImageType** parameter is set to **ImageURL**. In this case, you must set this parameter.
+          * *   Encode multiple image URLs and separate them with commas (,).
+          * *   The use of special characters in image URLs may lead to the failure to delete the images. To prevent such failure, you must encode the image URLs before you concatenate them into a string with commas (,).
           *
           * @param request DeleteImageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3096,7 +3037,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation irreversibly deletes image mezzanine files. Deleted images cannot be recovered. If some images are cached in Content Delivery Network (CDN), the image URLs do not immediately become invalid.
+          * The URL of the image.
+          * *   This parameter only takes effect when the **DeleteImageType** parameter is set to **ImageURL**. In this case, you must set this parameter.
+          * *   Encode multiple image URLs and separate them with commas (,).
+          * *   The use of special characters in image URLs may lead to the failure to delete the images. To prevent such failure, you must encode the image URLs before you concatenate them into a string with commas (,).
           *
           * @param request DeleteImageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3146,7 +3090,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation irreversibly deletes image mezzanine files. Deleted images cannot be recovered. If some images are cached in Content Delivery Network (CDN), the image URLs do not immediately become invalid.
+          * The URL of the image.
+          * *   This parameter only takes effect when the **DeleteImageType** parameter is set to **ImageURL**. In this case, you must set this parameter.
+          * *   Encode multiple image URLs and separate them with commas (,).
+          * *   The use of special characters in image URLs may lead to the failure to delete the images. To prevent such failure, you must encode the image URLs before you concatenate them into a string with commas (,).
           *
           * @param request DeleteImageRequest
           * @return DeleteImageResponse
@@ -3158,7 +3105,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation irreversibly deletes image mezzanine files. Deleted images cannot be recovered. If some images are cached in Content Delivery Network (CDN), the image URLs do not immediately become invalid.
+          * The URL of the image.
+          * *   This parameter only takes effect when the **DeleteImageType** parameter is set to **ImageURL**. In this case, you must set this parameter.
+          * *   Encode multiple image URLs and separate them with commas (,).
+          * *   The use of special characters in image URLs may lead to the failure to delete the images. To prevent such failure, you must encode the image URLs before you concatenate them into a string with commas (,).
           *
           * @param request DeleteImageRequest
           * @return DeleteImageResponse
@@ -3270,7 +3220,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * All media processing operations in ApsaraVideo VOD, such as transcoding, snapshot capture, and content moderation, are performed on mezzanine files. If you delete the mezzanine files, you cannot perform follow-up media processing operations. Exercise caution when you call this operation.
+          * The IDs of the videos that do not exist.
           *
           * @param request DeleteMezzaninesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3308,7 +3258,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * All media processing operations in ApsaraVideo VOD, such as transcoding, snapshot capture, and content moderation, are performed on mezzanine files. If you delete the mezzanine files, you cannot perform follow-up media processing operations. Exercise caution when you call this operation.
+          * The IDs of the videos that do not exist.
           *
           * @param request DeleteMezzaninesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3346,7 +3296,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * All media processing operations in ApsaraVideo VOD, such as transcoding, snapshot capture, and content moderation, are performed on mezzanine files. If you delete the mezzanine files, you cannot perform follow-up media processing operations. Exercise caution when you call this operation.
+          * The IDs of the videos that do not exist.
           *
           * @param request DeleteMezzaninesRequest
           * @return DeleteMezzaninesResponse
@@ -3358,7 +3308,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * All media processing operations in ApsaraVideo VOD, such as transcoding, snapshot capture, and content moderation, are performed on mezzanine files. If you delete the mezzanine files, you cannot perform follow-up media processing operations. Exercise caution when you call this operation.
+          * The IDs of the videos that do not exist.
           *
           * @param request DeleteMezzaninesRequest
           * @return DeleteMezzaninesResponse
@@ -3776,9 +3726,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   After a domain name for CDN is removed from ApsaraVideo VOD, the domain name becomes unavailable. Proceed with caution. We recommend that you restore the A record at your DNS service provider before you remove the domain name for CDN.
-          * > *   After you call this operation to remove a domain name for CDN from ApsaraVideo VOD, all records that are related to the domain name are deleted. If you only want to disable a domain name for CDN, call the [BatchStopVodDomain](~~120208~~) operation.
+          * The ID of the request.
           *
           * @param request DeleteVodDomainRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3824,9 +3772,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   After a domain name for CDN is removed from ApsaraVideo VOD, the domain name becomes unavailable. Proceed with caution. We recommend that you restore the A record at your DNS service provider before you remove the domain name for CDN.
-          * > *   After you call this operation to remove a domain name for CDN from ApsaraVideo VOD, all records that are related to the domain name are deleted. If you only want to disable a domain name for CDN, call the [BatchStopVodDomain](~~120208~~) operation.
+          * The ID of the request.
           *
           * @param request DeleteVodDomainRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3872,9 +3818,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   After a domain name for CDN is removed from ApsaraVideo VOD, the domain name becomes unavailable. Proceed with caution. We recommend that you restore the A record at your DNS service provider before you remove the domain name for CDN.
-          * > *   After you call this operation to remove a domain name for CDN from ApsaraVideo VOD, all records that are related to the domain name are deleted. If you only want to disable a domain name for CDN, call the [BatchStopVodDomain](~~120208~~) operation.
+          * The ID of the request.
           *
           * @param request DeleteVodDomainRequest
           * @return DeleteVodDomainResponse
@@ -3886,9 +3830,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   After a domain name for CDN is removed from ApsaraVideo VOD, the domain name becomes unavailable. Proceed with caution. We recommend that you restore the A record at your DNS service provider before you remove the domain name for CDN.
-          * > *   After you call this operation to remove a domain name for CDN from ApsaraVideo VOD, all records that are related to the domain name are deleted. If you only want to disable a domain name for CDN, call the [BatchStopVodDomain](~~120208~~) operation.
+          * The ID of the request.
           *
           * @param request DeleteVodDomainRequest
           * @return DeleteVodDomainResponse
@@ -3900,9 +3842,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   After the configurations of a domain name for CDN are deleted, the domain name becomes unavailable. We recommend that you restore the A record at your DNS service provider before you delete the configurations of the domain name for CDN.
-          * > *   After you call this operation to delete the configurations of a domain name for CDN, all records that are related to the domain name are deleted. If you only want to disable a domain name for CDN, call the [BatchStopVodDomain](~~120208~~) operation.
+          * The ID of the request.
           *
           * @param request DeleteVodSpecificConfigRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3948,9 +3888,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   After the configurations of a domain name for CDN are deleted, the domain name becomes unavailable. We recommend that you restore the A record at your DNS service provider before you delete the configurations of the domain name for CDN.
-          * > *   After you call this operation to delete the configurations of a domain name for CDN, all records that are related to the domain name are deleted. If you only want to disable a domain name for CDN, call the [BatchStopVodDomain](~~120208~~) operation.
+          * The ID of the request.
           *
           * @param request DeleteVodSpecificConfigRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3996,9 +3934,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   After the configurations of a domain name for CDN are deleted, the domain name becomes unavailable. We recommend that you restore the A record at your DNS service provider before you delete the configurations of the domain name for CDN.
-          * > *   After you call this operation to delete the configurations of a domain name for CDN, all records that are related to the domain name are deleted. If you only want to disable a domain name for CDN, call the [BatchStopVodDomain](~~120208~~) operation.
+          * The ID of the request.
           *
           * @param request DeleteVodSpecificConfigRequest
           * @return DeleteVodSpecificConfigResponse
@@ -4010,9 +3946,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   After the configurations of a domain name for CDN are deleted, the domain name becomes unavailable. We recommend that you restore the A record at your DNS service provider before you delete the configurations of the domain name for CDN.
-          * > *   After you call this operation to delete the configurations of a domain name for CDN, all records that are related to the domain name are deleted. If you only want to disable a domain name for CDN, call the [BatchStopVodDomain](~~120208~~) operation.
+          * The ID of the request.
           *
           * @param request DeleteVodSpecificConfigRequest
           * @return DeleteVodSpecificConfigResponse
@@ -4090,8 +4024,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   The default watermark cannot be deleted.
-          * > *   If you delete a watermark, its mezzanine file is also physically deleted and cannot be recovered.
+          * The ID of the request.
           *
           * @param request DeleteWatermarkRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4125,8 +4058,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   The default watermark cannot be deleted.
-          * > *   If you delete a watermark, its mezzanine file is also physically deleted and cannot be recovered.
+          * The ID of the request.
           *
           * @param request DeleteWatermarkRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4160,8 +4092,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   The default watermark cannot be deleted.
-          * > *   If you delete a watermark, its mezzanine file is also physically deleted and cannot be recovered.
+          * The ID of the request.
           *
           * @param request DeleteWatermarkRequest
           * @return DeleteWatermarkResponse
@@ -4173,8 +4104,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   The default watermark cannot be deleted.
-          * > *   If you delete a watermark, its mezzanine file is also physically deleted and cannot be recovered.
+          * The ID of the request.
           *
           * @param request DeleteWatermarkRequest
           * @return DeleteWatermarkResponse
@@ -4186,11 +4116,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can query playback statistics on top 1,000 videos at most on a specified day. By default, top videos are sorted in descending order based on video views.
-          * > *   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
-          * > *   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
-          * > *   You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.
+          * The number of entries to return on each page. Default value: **100**. Maximum value: **1000**.
           *
           * @param request DescribePlayTopVideosRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4236,11 +4162,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can query playback statistics on top 1,000 videos at most on a specified day. By default, top videos are sorted in descending order based on video views.
-          * > *   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
-          * > *   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
-          * > *   You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.
+          * The number of entries to return on each page. Default value: **100**. Maximum value: **1000**.
           *
           * @param request DescribePlayTopVideosRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4286,11 +4208,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can query playback statistics on top 1,000 videos at most on a specified day. By default, top videos are sorted in descending order based on video views.
-          * > *   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
-          * > *   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
-          * > *   You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.
+          * The number of entries to return on each page. Default value: **100**. Maximum value: **1000**.
           *
           * @param request DescribePlayTopVideosRequest
           * @return DescribePlayTopVideosResponse
@@ -4302,11 +4220,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can query playback statistics on top 1,000 videos at most on a specified day. By default, top videos are sorted in descending order based on video views.
-          * > *   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
-          * > *   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
-          * > *   You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.
+          * The number of entries to return on each page. Default value: **100**. Maximum value: **1000**.
           *
           * @param request DescribePlayTopVideosRequest
           * @return DescribePlayTopVideosResponse
@@ -4318,10 +4232,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
-          * > *   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
-          * > *   You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.
+          * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
           *
           * @param request DescribePlayUserAvgRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4363,10 +4274,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
-          * > *   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
-          * > *   You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.
+          * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
           *
           * @param request DescribePlayUserAvgRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4408,10 +4316,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
-          * > *   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
-          * > *   You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.
+          * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
           *
           * @param request DescribePlayUserAvgRequest
           * @return DescribePlayUserAvgResponse
@@ -4423,10 +4328,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
-          * > *   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
-          * > *   You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.
+          * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
           *
           * @param request DescribePlayUserAvgRequest
           * @return DescribePlayUserAvgResponse
@@ -4558,10 +4460,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
-          * > *   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
-          * > *   You can query only data in the last 730 days. The maximum time range to query is 180 days.
+          * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
           *
           * @param request DescribePlayVideoStatisRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4607,10 +4506,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
-          * > *   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
-          * > *   You can query only data in the last 730 days. The maximum time range to query is 180 days.
+          * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
           *
           * @param request DescribePlayVideoStatisRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4656,10 +4552,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
-          * > *   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
-          * > *   You can query only data in the last 730 days. The maximum time range to query is 180 days.
+          * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
           *
           * @param request DescribePlayVideoStatisRequest
           * @return DescribePlayVideoStatisResponse
@@ -4671,10 +4564,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
-          * > *   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
-          * > *   You can query only data in the last 730 days. The maximum time range to query is 180 days.
+          * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
           *
           * @param request DescribePlayVideoStatisRequest
           * @return DescribePlayVideoStatisResponse
@@ -4687,7 +4577,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
+          * >*   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
           *
           * @param request DescribeVodAIDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4738,7 +4628,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
+          * >*   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
           *
           * @param request DescribeVodAIDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4789,7 +4679,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
+          * >*   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
           *
           * @param request DescribeVodAIDataRequest
           * @return DescribeVodAIDataResponse
@@ -4802,7 +4692,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
+          * >*   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
           *
           * @param request DescribeVodAIDataRequest
           * @return DescribeVodAIDataResponse
@@ -4814,7 +4704,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * The domain name for CDN.
           *
           * @param request DescribeVodCertificateListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4856,7 +4746,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * The domain name for CDN.
           *
           * @param request DescribeVodCertificateListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4898,7 +4788,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * The domain name for CDN.
           *
           * @param request DescribeVodCertificateListRequest
           * @return DescribeVodCertificateListResponse
@@ -4910,7 +4800,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * The domain name for CDN.
           *
           * @param request DescribeVodCertificateListRequest
           * @return DescribeVodCertificateListResponse
@@ -5061,13 +4951,6 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await DescribeVodDomainBpsDataWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * > This operation is available only in the **China (Shanghai)** region.
-          *
-          * @param request DescribeVodDomainCertificateInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeVodDomainCertificateInfoResponse
-         */
         public DescribeVodDomainCertificateInfoResponse DescribeVodDomainCertificateInfoWithOptions(DescribeVodDomainCertificateInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5099,13 +4982,6 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<DescribeVodDomainCertificateInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * > This operation is available only in the **China (Shanghai)** region.
-          *
-          * @param request DescribeVodDomainCertificateInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeVodDomainCertificateInfoResponse
-         */
         public async Task<DescribeVodDomainCertificateInfoResponse> DescribeVodDomainCertificateInfoWithOptionsAsync(DescribeVodDomainCertificateInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5137,24 +5013,12 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<DescribeVodDomainCertificateInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * > This operation is available only in the **China (Shanghai)** region.
-          *
-          * @param request DescribeVodDomainCertificateInfoRequest
-          * @return DescribeVodDomainCertificateInfoResponse
-         */
         public DescribeVodDomainCertificateInfoResponse DescribeVodDomainCertificateInfo(DescribeVodDomainCertificateInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVodDomainCertificateInfoWithOptions(request, runtime);
         }
 
-        /**
-          * > This operation is available only in the **China (Shanghai)** region.
-          *
-          * @param request DescribeVodDomainCertificateInfoRequest
-          * @return DescribeVodDomainCertificateInfoResponse
-         */
         public async Task<DescribeVodDomainCertificateInfoResponse> DescribeVodDomainCertificateInfoAsync(DescribeVodDomainCertificateInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5162,7 +5026,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * The name of the function.
           *
           * @param request DescribeVodDomainConfigsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5208,7 +5072,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * The name of the function.
           *
           * @param request DescribeVodDomainConfigsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5254,7 +5118,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * The name of the function.
           *
           * @param request DescribeVodDomainConfigsRequest
           * @return DescribeVodDomainConfigsResponse
@@ -5266,7 +5130,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * The name of the function.
           *
           * @param request DescribeVodDomainConfigsRequest
           * @return DescribeVodDomainConfigsResponse
@@ -5278,7 +5142,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * The description of the domain name for CDN.
           *
           * @param request DescribeVodDomainDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5320,7 +5184,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * The description of the domain name for CDN.
           *
           * @param request DescribeVodDomainDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5362,7 +5226,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * The description of the domain name for CDN.
           *
           * @param request DescribeVodDomainDetailRequest
           * @return DescribeVodDomainDetailResponse
@@ -5374,7 +5238,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation is available only in the **China (Shanghai)** region.
+          * The description of the domain name for CDN.
           *
           * @param request DescribeVodDomainDetailRequest
           * @return DescribeVodDomainDetailResponse
@@ -5386,11 +5250,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## Usage note
-          * *   This operation is available only in the **China (Shanghai)** region.
-          * *   For more information about the log format and latency, see [Download logs](~~86099~~).
-          * *   If you specify neither the StartTime parameter nor the EndTime parameter, the log data in the last 24 hours is queried.
-          * *   You can specify both the StartTime and EndTime parameters to query the log data that is generated in the specified duration.
+          * The total number of entries returned on the current page.
           *
           * @param request DescribeVodDomainLogRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5444,11 +5304,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## Usage note
-          * *   This operation is available only in the **China (Shanghai)** region.
-          * *   For more information about the log format and latency, see [Download logs](~~86099~~).
-          * *   If you specify neither the StartTime parameter nor the EndTime parameter, the log data in the last 24 hours is queried.
-          * *   You can specify both the StartTime and EndTime parameters to query the log data that is generated in the specified duration.
+          * The total number of entries returned on the current page.
           *
           * @param request DescribeVodDomainLogRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5502,11 +5358,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## Usage note
-          * *   This operation is available only in the **China (Shanghai)** region.
-          * *   For more information about the log format and latency, see [Download logs](~~86099~~).
-          * *   If you specify neither the StartTime parameter nor the EndTime parameter, the log data in the last 24 hours is queried.
-          * *   You can specify both the StartTime and EndTime parameters to query the log data that is generated in the specified duration.
+          * The total number of entries returned on the current page.
           *
           * @param request DescribeVodDomainLogRequest
           * @return DescribeVodDomainLogResponse
@@ -5518,11 +5370,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## Usage note
-          * *   This operation is available only in the **China (Shanghai)** region.
-          * *   For more information about the log format and latency, see [Download logs](~~86099~~).
-          * *   If you specify neither the StartTime parameter nor the EndTime parameter, the log data in the last 24 hours is queried.
-          * *   You can specify both the StartTime and EndTime parameters to query the log data that is generated in the specified duration.
+          * The total number of entries returned on the current page.
           *
           * @param request DescribeVodDomainLogRequest
           * @return DescribeVodDomainLogResponse
@@ -5533,23 +5381,6 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await DescribeVodDomainLogWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * * This operation is available only in the **China (Shanghai)** region.
-          * * ApsaraVideo VOD stores the origin bandwidth data for 90 days before the data is deleted.
-          * * If you do not set the `StartTime` or `EndTime` parameter, the request returns the data collected in the last 24 hours. If you set both the `StartTime` and `EndTime` parameters, the request returns the data collected within the specified time range.
-          * * You can specify a maximum of 500 domain names in a request. Separate multiple domain names with commas (,). If you specify multiple domain names in a request, aggregation results are returned.
-          * ### Time granularity
-          * The time granularity supported by the Interval parameter varies based on the time range per query specified by using `StartTime` and `EndTime`. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Time range per query (days)|Historical data available (days)|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|(0, 3\\]|93|15 minutes|
-          * |1 hour|(3, 31\\]|186|4 hours|
-          * |1 day|(31, 366\\]|366|04:00 on the next day|
-          *
-          * @param request DescribeVodDomainSrcBpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeVodDomainSrcBpsDataResponse
-         */
         public DescribeVodDomainSrcBpsDataResponse DescribeVodDomainSrcBpsDataWithOptions(DescribeVodDomainSrcBpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5593,23 +5424,6 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<DescribeVodDomainSrcBpsDataResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * * This operation is available only in the **China (Shanghai)** region.
-          * * ApsaraVideo VOD stores the origin bandwidth data for 90 days before the data is deleted.
-          * * If you do not set the `StartTime` or `EndTime` parameter, the request returns the data collected in the last 24 hours. If you set both the `StartTime` and `EndTime` parameters, the request returns the data collected within the specified time range.
-          * * You can specify a maximum of 500 domain names in a request. Separate multiple domain names with commas (,). If you specify multiple domain names in a request, aggregation results are returned.
-          * ### Time granularity
-          * The time granularity supported by the Interval parameter varies based on the time range per query specified by using `StartTime` and `EndTime`. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Time range per query (days)|Historical data available (days)|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|(0, 3\\]|93|15 minutes|
-          * |1 hour|(3, 31\\]|186|4 hours|
-          * |1 day|(31, 366\\]|366|04:00 on the next day|
-          *
-          * @param request DescribeVodDomainSrcBpsDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeVodDomainSrcBpsDataResponse
-         */
         public async Task<DescribeVodDomainSrcBpsDataResponse> DescribeVodDomainSrcBpsDataWithOptionsAsync(DescribeVodDomainSrcBpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5653,44 +5467,12 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<DescribeVodDomainSrcBpsDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * * This operation is available only in the **China (Shanghai)** region.
-          * * ApsaraVideo VOD stores the origin bandwidth data for 90 days before the data is deleted.
-          * * If you do not set the `StartTime` or `EndTime` parameter, the request returns the data collected in the last 24 hours. If you set both the `StartTime` and `EndTime` parameters, the request returns the data collected within the specified time range.
-          * * You can specify a maximum of 500 domain names in a request. Separate multiple domain names with commas (,). If you specify multiple domain names in a request, aggregation results are returned.
-          * ### Time granularity
-          * The time granularity supported by the Interval parameter varies based on the time range per query specified by using `StartTime` and `EndTime`. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Time range per query (days)|Historical data available (days)|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|(0, 3\\]|93|15 minutes|
-          * |1 hour|(3, 31\\]|186|4 hours|
-          * |1 day|(31, 366\\]|366|04:00 on the next day|
-          *
-          * @param request DescribeVodDomainSrcBpsDataRequest
-          * @return DescribeVodDomainSrcBpsDataResponse
-         */
         public DescribeVodDomainSrcBpsDataResponse DescribeVodDomainSrcBpsData(DescribeVodDomainSrcBpsDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVodDomainSrcBpsDataWithOptions(request, runtime);
         }
 
-        /**
-          * * This operation is available only in the **China (Shanghai)** region.
-          * * ApsaraVideo VOD stores the origin bandwidth data for 90 days before the data is deleted.
-          * * If you do not set the `StartTime` or `EndTime` parameter, the request returns the data collected in the last 24 hours. If you set both the `StartTime` and `EndTime` parameters, the request returns the data collected within the specified time range.
-          * * You can specify a maximum of 500 domain names in a request. Separate multiple domain names with commas (,). If you specify multiple domain names in a request, aggregation results are returned.
-          * ### Time granularity
-          * The time granularity supported by the Interval parameter varies based on the time range per query specified by using `StartTime` and `EndTime`. The following table describes the time period within which historical data is available and the data delay.
-          * |Time granularity|Time range per query (days)|Historical data available (days)|Data delay|
-          * |---|---|---|---|
-          * |5 minutes|(0, 3\\]|93|15 minutes|
-          * |1 hour|(3, 31\\]|186|4 hours|
-          * |1 day|(31, 366\\]|366|04:00 on the next day|
-          *
-          * @param request DescribeVodDomainSrcBpsDataRequest
-          * @return DescribeVodDomainSrcBpsDataResponse
-         */
         public async Task<DescribeVodDomainSrcBpsDataResponse> DescribeVodDomainSrcBpsDataAsync(DescribeVodDomainSrcBpsDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5862,7 +5644,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * If you specify neither the StartTime parameter nor the EndTime parameter, the data in the last 24 hours is queried. Alternatively, you can specify both the StartTime and EndTime parameters to query data that is generated in the specified duration. You can query data for the last 90 days at most.
+          * *   This operation is available only in the **China (Shanghai)** region.
+          * *   You can specify multiple accelerated domain names in a request.
+          * *   If you do not specify the StartTime or EndTime parameter, data of the last 24 hours is returned. You can specify the StartTime and EndTime parameters to query data that is generated in the specified time range. You can query data of the last 90 days.
+          * ### QPS limit
+          * You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
           *
           * @param request DescribeVodDomainTrafficDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5920,7 +5706,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * If you specify neither the StartTime parameter nor the EndTime parameter, the data in the last 24 hours is queried. Alternatively, you can specify both the StartTime and EndTime parameters to query data that is generated in the specified duration. You can query data for the last 90 days at most.
+          * *   This operation is available only in the **China (Shanghai)** region.
+          * *   You can specify multiple accelerated domain names in a request.
+          * *   If you do not specify the StartTime or EndTime parameter, data of the last 24 hours is returned. You can specify the StartTime and EndTime parameters to query data that is generated in the specified time range. You can query data of the last 90 days.
+          * ### QPS limit
+          * You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
           *
           * @param request DescribeVodDomainTrafficDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5978,7 +5768,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * If you specify neither the StartTime parameter nor the EndTime parameter, the data in the last 24 hours is queried. Alternatively, you can specify both the StartTime and EndTime parameters to query data that is generated in the specified duration. You can query data for the last 90 days at most.
+          * *   This operation is available only in the **China (Shanghai)** region.
+          * *   You can specify multiple accelerated domain names in a request.
+          * *   If you do not specify the StartTime or EndTime parameter, data of the last 24 hours is returned. You can specify the StartTime and EndTime parameters to query data that is generated in the specified time range. You can query data of the last 90 days.
+          * ### QPS limit
+          * You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
           *
           * @param request DescribeVodDomainTrafficDataRequest
           * @return DescribeVodDomainTrafficDataResponse
@@ -5990,7 +5784,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * If you specify neither the StartTime parameter nor the EndTime parameter, the data in the last 24 hours is queried. Alternatively, you can specify both the StartTime and EndTime parameters to query data that is generated in the specified duration. You can query data for the last 90 days at most.
+          * *   This operation is available only in the **China (Shanghai)** region.
+          * *   You can specify multiple accelerated domain names in a request.
+          * *   If you do not specify the StartTime or EndTime parameter, data of the last 24 hours is returned. You can specify the StartTime and EndTime parameters to query data that is generated in the specified time range. You can query data of the last 90 days.
+          * ### QPS limit
+          * You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
           *
           * @param request DescribeVodDomainTrafficDataRequest
           * @return DescribeVodDomainTrafficDataResponse
@@ -6002,9 +5800,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can specify a maximum of 100 domain names for CDN at a time. Separate them with commas (,). If you do not specify a domain name for CDN, the data of all domain names for CDN within your Alibaba Cloud account is returned.
-          * > *   You can query data for the past one year at most and query data for a maximum of three months per request. If you query data for one to three days, the system returns the statistics collected on an hourly basis. If you query data for four days or more, the system returns the statistics collected on a daily basis.
+          * > -   This operation is available only in the **China (Shanghai)** region.
+          * >-  You can specify a maximum of 100 accelerated domain names in a request. Separate multiple domain names with commas (,). If you do not specify an accelerated domain name, the data of all accelerated domain names within your Alibaba Cloud account is returned.
+          * >-  You can query data in the last year. The maximum time range that can be queried is three months. If you specify a time range of one to three days, the system returns data on an hourly basis. If you specify a time range of four days or more, the system returns data on a daily basis.
           *
           * @param request DescribeVodDomainUsageDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6066,9 +5864,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can specify a maximum of 100 domain names for CDN at a time. Separate them with commas (,). If you do not specify a domain name for CDN, the data of all domain names for CDN within your Alibaba Cloud account is returned.
-          * > *   You can query data for the past one year at most and query data for a maximum of three months per request. If you query data for one to three days, the system returns the statistics collected on an hourly basis. If you query data for four days or more, the system returns the statistics collected on a daily basis.
+          * > -   This operation is available only in the **China (Shanghai)** region.
+          * >-  You can specify a maximum of 100 accelerated domain names in a request. Separate multiple domain names with commas (,). If you do not specify an accelerated domain name, the data of all accelerated domain names within your Alibaba Cloud account is returned.
+          * >-  You can query data in the last year. The maximum time range that can be queried is three months. If you specify a time range of one to three days, the system returns data on an hourly basis. If you specify a time range of four days or more, the system returns data on a daily basis.
           *
           * @param request DescribeVodDomainUsageDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6130,9 +5928,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can specify a maximum of 100 domain names for CDN at a time. Separate them with commas (,). If you do not specify a domain name for CDN, the data of all domain names for CDN within your Alibaba Cloud account is returned.
-          * > *   You can query data for the past one year at most and query data for a maximum of three months per request. If you query data for one to three days, the system returns the statistics collected on an hourly basis. If you query data for four days or more, the system returns the statistics collected on a daily basis.
+          * > -   This operation is available only in the **China (Shanghai)** region.
+          * >-  You can specify a maximum of 100 accelerated domain names in a request. Separate multiple domain names with commas (,). If you do not specify an accelerated domain name, the data of all accelerated domain names within your Alibaba Cloud account is returned.
+          * >-  You can query data in the last year. The maximum time range that can be queried is three months. If you specify a time range of one to three days, the system returns data on an hourly basis. If you specify a time range of four days or more, the system returns data on a daily basis.
           *
           * @param request DescribeVodDomainUsageDataRequest
           * @return DescribeVodDomainUsageDataResponse
@@ -6144,9 +5942,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can specify a maximum of 100 domain names for CDN at a time. Separate them with commas (,). If you do not specify a domain name for CDN, the data of all domain names for CDN within your Alibaba Cloud account is returned.
-          * > *   You can query data for the past one year at most and query data for a maximum of three months per request. If you query data for one to three days, the system returns the statistics collected on an hourly basis. If you query data for four days or more, the system returns the statistics collected on a daily basis.
+          * > -   This operation is available only in the **China (Shanghai)** region.
+          * >-  You can specify a maximum of 100 accelerated domain names in a request. Separate multiple domain names with commas (,). If you do not specify an accelerated domain name, the data of all accelerated domain names within your Alibaba Cloud account is returned.
+          * >-  You can query data in the last year. The maximum time range that can be queried is three months. If you specify a time range of one to three days, the system returns data on an hourly basis. If you specify a time range of four days or more, the system returns data on a daily basis.
           *
           * @param request DescribeVodDomainUsageDataRequest
           * @return DescribeVodDomainUsageDataResponse
@@ -6263,7 +6061,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If you specify neither the TaskId parameter nor the ObjectPath parameter, the data in the last three days on the first page is returned. By default, one page displays a maximum of 20 entries. You can specify the Taskid and Objectpath parameters at the same time.
+          * >*   If you do not specify the TaskId or ObjectPath parameter, the data in the last three days is returned on the first page. By default, one page displays a maximum of 20 entries. You can specify the TaskId and ObjectPath parameters at the same time.
           *
           * @param request DescribeVodRefreshTasksRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6338,7 +6136,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If you specify neither the TaskId parameter nor the ObjectPath parameter, the data in the last three days on the first page is returned. By default, one page displays a maximum of 20 entries. You can specify the Taskid and Objectpath parameters at the same time.
+          * >*   If you do not specify the TaskId or ObjectPath parameter, the data in the last three days is returned on the first page. By default, one page displays a maximum of 20 entries. You can specify the TaskId and ObjectPath parameters at the same time.
           *
           * @param request DescribeVodRefreshTasksRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6413,7 +6211,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If you specify neither the TaskId parameter nor the ObjectPath parameter, the data in the last three days on the first page is returned. By default, one page displays a maximum of 20 entries. You can specify the Taskid and Objectpath parameters at the same time.
+          * >*   If you do not specify the TaskId or ObjectPath parameter, the data in the last three days is returned on the first page. By default, one page displays a maximum of 20 entries. You can specify the TaskId and ObjectPath parameters at the same time.
           *
           * @param request DescribeVodRefreshTasksRequest
           * @return DescribeVodRefreshTasksResponse
@@ -6426,7 +6224,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If you specify neither the TaskId parameter nor the ObjectPath parameter, the data in the last three days on the first page is returned. By default, one page displays a maximum of 20 entries. You can specify the Taskid and Objectpath parameters at the same time.
+          * >*   If you do not specify the TaskId or ObjectPath parameter, the data in the last three days is returned on the first page. By default, one page displays a maximum of 20 entries. You can specify the TaskId and ObjectPath parameters at the same time.
           *
           * @param request DescribeVodRefreshTasksRequest
           * @return DescribeVodRefreshTasksResponse
@@ -6439,7 +6237,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
+          * >*   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
           *
           * @param request DescribeVodStorageDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6494,7 +6292,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
+          * >*   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
           *
           * @param request DescribeVodStorageDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6549,7 +6347,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
+          * >*   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
           *
           * @param request DescribeVodStorageDataRequest
           * @return DescribeVodStorageDataResponse
@@ -6562,7 +6360,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /**
           * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
+          * >*   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
           *
           * @param request DescribeVodStorageDataRequest
           * @return DescribeVodStorageDataResponse
@@ -6574,8 +6372,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
+          * *   This operation is available only in the **China (Shanghai)** region.
+          * *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
           *
           * @param request DescribeVodTranscodeDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6633,8 +6431,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
+          * *   This operation is available only in the **China (Shanghai)** region.
+          * *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
           *
           * @param request DescribeVodTranscodeDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6692,8 +6490,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
+          * *   This operation is available only in the **China (Shanghai)** region.
+          * *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
           *
           * @param request DescribeVodTranscodeDataRequest
           * @return DescribeVodTranscodeDataResponse
@@ -6705,8 +6503,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
+          * *   This operation is available only in the **China (Shanghai)** region.
+          * *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
           *
           * @param request DescribeVodTranscodeDataRequest
           * @return DescribeVodTranscodeDataResponse
@@ -6914,7 +6712,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can grant a maximum of 10 application permissions to a RAM user or RAM role.
+          * The name of the policy that was not found.
           *
           * @param request DetachAppPolicyFromIdentityRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6960,7 +6758,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can grant a maximum of 10 application permissions to a RAM user or RAM role.
+          * The name of the policy that was not found.
           *
           * @param request DetachAppPolicyFromIdentityRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7006,7 +6804,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can grant a maximum of 10 application permissions to a RAM user or RAM role.
+          * The name of the policy that was not found.
           *
           * @param request DetachAppPolicyFromIdentityRequest
           * @return DetachAppPolicyFromIdentityResponse
@@ -7018,7 +6816,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can grant a maximum of 10 application permissions to a RAM user or RAM role.
+          * The name of the policy that was not found.
           *
           * @param request DetachAppPolicyFromIdentityRequest
           * @return DetachAppPolicyFromIdentityResponse
@@ -7120,11 +6918,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Call the [SubmitAIImageJob](~~SubmitAIImageJob~~) operation to submit image AI processing jobs before you call this operation to query image AI processing jobs. You can query a maximum of 10 jobs of image AI processing in one request.
-          * - The smart thumbnail feature is not supported. You cannot call this operation.
-          * - Call the [SubmitAIImageJob](~~SubmitAIImageJob~~) operation to submit image AI processing jobs before you call this operation to query image AI processing jobs. You can query a maximum of 10 jobs of image AI processing in one request.
-          * ### QPS limit
-          * You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The image AI processing jobs.
           *
           * @param request GetAIImageJobsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7174,11 +6968,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Call the [SubmitAIImageJob](~~SubmitAIImageJob~~) operation to submit image AI processing jobs before you call this operation to query image AI processing jobs. You can query a maximum of 10 jobs of image AI processing in one request.
-          * - The smart thumbnail feature is not supported. You cannot call this operation.
-          * - Call the [SubmitAIImageJob](~~SubmitAIImageJob~~) operation to submit image AI processing jobs before you call this operation to query image AI processing jobs. You can query a maximum of 10 jobs of image AI processing in one request.
-          * ### QPS limit
-          * You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The image AI processing jobs.
           *
           * @param request GetAIImageJobsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7228,11 +7018,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Call the [SubmitAIImageJob](~~SubmitAIImageJob~~) operation to submit image AI processing jobs before you call this operation to query image AI processing jobs. You can query a maximum of 10 jobs of image AI processing in one request.
-          * - The smart thumbnail feature is not supported. You cannot call this operation.
-          * - Call the [SubmitAIImageJob](~~SubmitAIImageJob~~) operation to submit image AI processing jobs before you call this operation to query image AI processing jobs. You can query a maximum of 10 jobs of image AI processing in one request.
-          * ### QPS limit
-          * You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The image AI processing jobs.
           *
           * @param request GetAIImageJobsRequest
           * @return GetAIImageJobsResponse
@@ -7244,11 +7030,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Call the [SubmitAIImageJob](~~SubmitAIImageJob~~) operation to submit image AI processing jobs before you call this operation to query image AI processing jobs. You can query a maximum of 10 jobs of image AI processing in one request.
-          * - The smart thumbnail feature is not supported. You cannot call this operation.
-          * - Call the [SubmitAIImageJob](~~SubmitAIImageJob~~) operation to submit image AI processing jobs before you call this operation to query image AI processing jobs. You can query a maximum of 10 jobs of image AI processing in one request.
-          * ### QPS limit
-          * You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The image AI processing jobs.
           *
           * @param request GetAIImageJobsRequest
           * @return GetAIImageJobsResponse
@@ -7260,7 +7042,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ApsaraVideo VOD stores the snapshots of the intelligent review results free of charge for two weeks. After this period, the snapshots are automatically deleted.
+          * The recommendation for review results. Valid values:
+          * *   **block**: The content violates the regulations.
+          * *   **review**: The content may violate the regulations.
+          * *   **pass**: The content passes the review.
           *
           * @param request GetAIMediaAuditJobRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7294,7 +7079,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ApsaraVideo VOD stores the snapshots of the intelligent review results free of charge for two weeks. After this period, the snapshots are automatically deleted.
+          * The recommendation for review results. Valid values:
+          * *   **block**: The content violates the regulations.
+          * *   **review**: The content may violate the regulations.
+          * *   **pass**: The content passes the review.
           *
           * @param request GetAIMediaAuditJobRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7328,7 +7116,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ApsaraVideo VOD stores the snapshots of the intelligent review results free of charge for two weeks. After this period, the snapshots are automatically deleted.
+          * The recommendation for review results. Valid values:
+          * *   **block**: The content violates the regulations.
+          * *   **review**: The content may violate the regulations.
+          * *   **pass**: The content passes the review.
           *
           * @param request GetAIMediaAuditJobRequest
           * @return GetAIMediaAuditJobResponse
@@ -7340,7 +7131,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ApsaraVideo VOD stores the snapshots of the intelligent review results free of charge for two weeks. After this period, the snapshots are automatically deleted.
+          * The recommendation for review results. Valid values:
+          * *   **block**: The content violates the regulations.
+          * *   **review**: The content may violate the regulations.
+          * *   **pass**: The content passes the review.
           *
           * @param request GetAIMediaAuditJobRequest
           * @return GetAIMediaAuditJobResponse
@@ -7352,9 +7146,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Before you call this operation to query the details of an AI template, you must obtain the ID of the AI template.
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](https://help.aliyun.com/document_detail/89863.html#title-vd3-499-o36).
           *
           * @param request GetAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7388,9 +7180,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Before you call this operation to query the details of an AI template, you must obtain the ID of the AI template.
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](https://help.aliyun.com/document_detail/89863.html#title-vd3-499-o36).
           *
           * @param request GetAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7424,9 +7214,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Before you call this operation to query the details of an AI template, you must obtain the ID of the AI template.
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](https://help.aliyun.com/document_detail/89863.html#title-vd3-499-o36).
           *
           * @param request GetAITemplateRequest
           * @return GetAITemplateResponse
@@ -7438,9 +7226,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Before you call this operation to query the details of an AI template, you must obtain the ID of the AI template.
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](https://help.aliyun.com/document_detail/89863.html#title-vd3-499-o36).
           *
           * @param request GetAITemplateRequest
           * @return GetAITemplateResponse
@@ -7452,10 +7238,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - The smart tagging feature is not supported. You cannot call this operation.
-          * - You can obtain the smart tagging results by using the video ID.
-          * ### QPS limit
-          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * Milliseconds
           *
           * @param request GetAIVideoTagResultRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7505,10 +7288,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - The smart tagging feature is not supported. You cannot call this operation.
-          * - You can obtain the smart tagging results by using the video ID.
-          * ### QPS limit
-          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * Milliseconds
           *
           * @param request GetAIVideoTagResultRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7558,10 +7338,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - The smart tagging feature is not supported. You cannot call this operation.
-          * - You can obtain the smart tagging results by using the video ID.
-          * ### QPS limit
-          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * Milliseconds
           *
           * @param request GetAIVideoTagResultRequest
           * @return GetAIVideoTagResultResponse
@@ -7573,10 +7350,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - The smart tagging feature is not supported. You cannot call this operation.
-          * - You can obtain the smart tagging results by using the video ID.
-          * ### QPS limit
-          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * Milliseconds
           *
           * @param request GetAIVideoTagResultRequest
           * @return GetAIVideoTagResultResponse
@@ -7588,7 +7362,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Supports batch query.
+          * The description of the application.
           *
           * @param request GetAppInfosRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7622,7 +7396,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Supports batch query.
+          * The description of the application.
           *
           * @param request GetAppInfosRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7656,7 +7430,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Supports batch query.
+          * The description of the application.
           *
           * @param request GetAppInfosRequest
           * @return GetAppInfosResponse
@@ -7668,7 +7442,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Supports batch query.
+          * The description of the application.
           *
           * @param request GetAppInfosRequest
           * @return GetAppInfosResponse
@@ -7950,9 +7724,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can query information only about the default AI template for automated review.
-          * ### QPS limit
-          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](https://help.aliyun.com/document_detail/89863.html#title-vd3-499-o36).
           *
           * @param request GetDefaultAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7986,9 +7758,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can query information only about the default AI template for automated review.
-          * ### QPS limit
-          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](https://help.aliyun.com/document_detail/89863.html#title-vd3-499-o36).
           *
           * @param request GetDefaultAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8022,9 +7792,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can query information only about the default AI template for automated review.
-          * ### QPS limit
-          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](https://help.aliyun.com/document_detail/89863.html#title-vd3-499-o36).
           *
           * @param request GetDefaultAITemplateRequest
           * @return GetDefaultAITemplateResponse
@@ -8036,9 +7804,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can query information only about the default AI template for automated review.
-          * ### QPS limit
-          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](https://help.aliyun.com/document_detail/89863.html#title-vd3-499-o36).
           *
           * @param request GetDefaultAITemplateRequest
           * @return GetDefaultAITemplateResponse
@@ -8148,7 +7914,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * During editing, you can add materials to the timeline, but some of them may not be used.
+          * The time when the material was last updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
           *
           * @param request GetEditingProjectMaterialsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8206,7 +7972,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * During editing, you can add materials to the timeline, but some of them may not be used.
+          * The time when the material was last updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
           *
           * @param request GetEditingProjectMaterialsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8264,7 +8030,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * During editing, you can add materials to the timeline, but some of them may not be used.
+          * The time when the material was last updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
           *
           * @param request GetEditingProjectMaterialsRequest
           * @return GetEditingProjectMaterialsResponse
@@ -8276,7 +8042,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * During editing, you can add materials to the timeline, but some of them may not be used.
+          * The time when the material was last updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
           *
           * @param request GetEditingProjectMaterialsRequest
           * @return GetEditingProjectMaterialsResponse
@@ -8486,7 +8252,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * If notifications for the [CreateAuditComplete](~~89576~~) event are configured, event notifications are sent to the callback URL after automated review is complete. You can call this operation to query the details of audio review results.
+          * The start time of the audio that failed the review. Unit: seconds.
           *
           * @param request GetMediaAuditAudioResultDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8540,7 +8306,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * If notifications for the [CreateAuditComplete](~~89576~~) event are configured, event notifications are sent to the callback URL after automated review is complete. You can call this operation to query the details of audio review results.
+          * The start time of the audio that failed the review. Unit: seconds.
           *
           * @param request GetMediaAuditAudioResultDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8594,7 +8360,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * If notifications for the [CreateAuditComplete](~~89576~~) event are configured, event notifications are sent to the callback URL after automated review is complete. You can call this operation to query the details of audio review results.
+          * The start time of the audio that failed the review. Unit: seconds.
           *
           * @param request GetMediaAuditAudioResultDetailRequest
           * @return GetMediaAuditAudioResultDetailResponse
@@ -8606,7 +8372,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * If notifications for the [CreateAuditComplete](~~89576~~) event are configured, event notifications are sent to the callback URL after automated review is complete. You can call this operation to query the details of audio review results.
+          * The start time of the audio that failed the review. Unit: seconds.
           *
           * @param request GetMediaAuditAudioResultDetailRequest
           * @return GetMediaAuditAudioResultDetailResponse
@@ -8684,8 +8450,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - By default, only details of snapshots that violate content regulations and potentially violate content regulations are returned.
-          * - ApsaraVideo VOD stores the snapshots in the automated review results free of charge for two weeks. After this period, the snapshots are automatically deleted.
+          * Details about review results.
           *
           * @param request GetMediaAuditResultDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8723,8 +8488,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - By default, only details of snapshots that violate content regulations and potentially violate content regulations are returned.
-          * - ApsaraVideo VOD stores the snapshots in the automated review results free of charge for two weeks. After this period, the snapshots are automatically deleted.
+          * Details about review results.
           *
           * @param request GetMediaAuditResultDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8762,8 +8526,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - By default, only details of snapshots that violate content regulations and potentially violate content regulations are returned.
-          * - ApsaraVideo VOD stores the snapshots in the automated review results free of charge for two weeks. After this period, the snapshots are automatically deleted.
+          * Details about review results.
           *
           * @param request GetMediaAuditResultDetailRequest
           * @return GetMediaAuditResultDetailResponse
@@ -8775,8 +8538,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - By default, only details of snapshots that violate content regulations and potentially violate content regulations are returned.
-          * - ApsaraVideo VOD stores the snapshots in the automated review results free of charge for two weeks. After this period, the snapshots are automatically deleted.
+          * Details about review results.
           *
           * @param request GetMediaAuditResultDetailRequest
           * @return GetMediaAuditResultDetailResponse
@@ -8854,9 +8616,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation is available only in the Singapore (Singapore) region.
-          * ### QPS limit
-          * You can call this operation up to 20 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit](~~342790~~).
+          * The details of the matched video. Information such as the location and duration of the video is returned.
           *
           * @param request GetMediaDNAResultRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8906,9 +8666,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation is available only in the Singapore (Singapore) region.
-          * ### QPS limit
-          * You can call this operation up to 20 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit](~~342790~~).
+          * The details of the matched video. Information such as the location and duration of the video is returned.
           *
           * @param request GetMediaDNAResultRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8958,9 +8716,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation is available only in the Singapore (Singapore) region.
-          * ### QPS limit
-          * You can call this operation up to 20 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit](~~342790~~).
+          * The details of the matched video. Information such as the location and duration of the video is returned.
           *
           * @param request GetMediaDNAResultRequest
           * @return GetMediaDNAResultResponse
@@ -8972,9 +8728,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation is available only in the Singapore (Singapore) region.
-          * ### QPS limit
-          * You can call this operation up to 20 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit](~~342790~~).
+          * The details of the matched video. Information such as the location and duration of the video is returned.
           *
           * @param request GetMediaDNAResultRequest
           * @return GetMediaDNAResultResponse
@@ -9178,7 +8932,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > You can obtain the complete mezzanine file information only after a stream is transcoded.
+          * The sampling format.
           *
           * @param request GetMezzanineInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9224,7 +8978,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > You can obtain the complete mezzanine file information only after a stream is transcoded.
+          * The sampling format.
           *
           * @param request GetMezzanineInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9270,7 +9024,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > You can obtain the complete mezzanine file information only after a stream is transcoded.
+          * The sampling format.
           *
           * @param request GetMezzanineInfoRequest
           * @return GetMezzanineInfoResponse
@@ -9282,7 +9036,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > You can obtain the complete mezzanine file information only after a stream is transcoded.
+          * The sampling format.
           *
           * @param request GetMezzanineInfoRequest
           * @return GetMezzanineInfoResponse
@@ -9294,11 +9048,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can use the ID of a media file to query the playback URL of the file. After you integrate ApsaraVideo Player SDK for URL-based playback or a third-party player, you can use the obtained playback URLs to play audio and video files.
-          * *   Only videos in the Normal state can be played. The Status parameter in the response indicates the status of the video. For more information, see [Overview](~~57290~~).
-          * *   If video playback fails, you can call the [GetMezzanineInfo](~~GetMezzanineInfo~~) operation to check whether the video source information is correct.
-          * ### QPS limits
-          * You can call this operation up to 360 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The ID of the media file.
           *
           * @param request GetPlayInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9368,11 +9118,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can use the ID of a media file to query the playback URL of the file. After you integrate ApsaraVideo Player SDK for URL-based playback or a third-party player, you can use the obtained playback URLs to play audio and video files.
-          * *   Only videos in the Normal state can be played. The Status parameter in the response indicates the status of the video. For more information, see [Overview](~~57290~~).
-          * *   If video playback fails, you can call the [GetMezzanineInfo](~~GetMezzanineInfo~~) operation to check whether the video source information is correct.
-          * ### QPS limits
-          * You can call this operation up to 360 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The ID of the media file.
           *
           * @param request GetPlayInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9442,11 +9188,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can use the ID of a media file to query the playback URL of the file. After you integrate ApsaraVideo Player SDK for URL-based playback or a third-party player, you can use the obtained playback URLs to play audio and video files.
-          * *   Only videos in the Normal state can be played. The Status parameter in the response indicates the status of the video. For more information, see [Overview](~~57290~~).
-          * *   If video playback fails, you can call the [GetMezzanineInfo](~~GetMezzanineInfo~~) operation to check whether the video source information is correct.
-          * ### QPS limits
-          * You can call this operation up to 360 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The ID of the media file.
           *
           * @param request GetPlayInfoRequest
           * @return GetPlayInfoResponse
@@ -9458,11 +9200,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can use the ID of a media file to query the playback URL of the file. After you integrate ApsaraVideo Player SDK for URL-based playback or a third-party player, you can use the obtained playback URLs to play audio and video files.
-          * *   Only videos in the Normal state can be played. The Status parameter in the response indicates the status of the video. For more information, see [Overview](~~57290~~).
-          * *   If video playback fails, you can call the [GetMezzanineInfo](~~GetMezzanineInfo~~) operation to check whether the video source information is correct.
-          * ### QPS limits
-          * You can call this operation up to 360 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The ID of the media file.
           *
           * @param request GetPlayInfoRequest
           * @return GetPlayInfoResponse
@@ -9578,7 +9316,18 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to query only transcoding tasks created within the past year.
+          * The video resolution. Valid values:
+          * *   **LD**: low definition
+          * *   **SD**: standard definition
+          * *   **HD**: high definition
+          * *   **FHD**: ultra high definition
+          * *   **OD**: original definition
+          * *   **2K**: 2K
+          * *   **4K**: 4K
+          * *   **SQ**: standard sound quality
+          * *   **HQ**: high sound quality
+          * *   **AUTO**: adaptive bitrate Adaptive bitrate streams are returned only if PackageSetting is set in the transcoding template. For more information, see [Basic structures](~~52839~~).
+          * > This parameter indicates the definition that is configured in the transcoding template and does not indicate the actual resolution of the output video.
           *
           * @param request GetTranscodeTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9612,7 +9361,18 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to query only transcoding tasks created within the past year.
+          * The video resolution. Valid values:
+          * *   **LD**: low definition
+          * *   **SD**: standard definition
+          * *   **HD**: high definition
+          * *   **FHD**: ultra high definition
+          * *   **OD**: original definition
+          * *   **2K**: 2K
+          * *   **4K**: 4K
+          * *   **SQ**: standard sound quality
+          * *   **HQ**: high sound quality
+          * *   **AUTO**: adaptive bitrate Adaptive bitrate streams are returned only if PackageSetting is set in the transcoding template. For more information, see [Basic structures](~~52839~~).
+          * > This parameter indicates the definition that is configured in the transcoding template and does not indicate the actual resolution of the output video.
           *
           * @param request GetTranscodeTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9646,7 +9406,18 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to query only transcoding tasks created within the past year.
+          * The video resolution. Valid values:
+          * *   **LD**: low definition
+          * *   **SD**: standard definition
+          * *   **HD**: high definition
+          * *   **FHD**: ultra high definition
+          * *   **OD**: original definition
+          * *   **2K**: 2K
+          * *   **4K**: 4K
+          * *   **SQ**: standard sound quality
+          * *   **HQ**: high sound quality
+          * *   **AUTO**: adaptive bitrate Adaptive bitrate streams are returned only if PackageSetting is set in the transcoding template. For more information, see [Basic structures](~~52839~~).
+          * > This parameter indicates the definition that is configured in the transcoding template and does not indicate the actual resolution of the output video.
           *
           * @param request GetTranscodeTaskRequest
           * @return GetTranscodeTaskResponse
@@ -9658,7 +9429,18 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to query only transcoding tasks created within the past year.
+          * The video resolution. Valid values:
+          * *   **LD**: low definition
+          * *   **SD**: standard definition
+          * *   **HD**: high definition
+          * *   **FHD**: ultra high definition
+          * *   **OD**: original definition
+          * *   **2K**: 2K
+          * *   **4K**: 4K
+          * *   **SQ**: standard sound quality
+          * *   **HQ**: high sound quality
+          * *   **AUTO**: adaptive bitrate Adaptive bitrate streams are returned only if PackageSetting is set in the transcoding template. For more information, see [Basic structures](~~52839~~).
+          * > This parameter indicates the definition that is configured in the transcoding template and does not indicate the actual resolution of the output video.
           *
           * @param request GetTranscodeTaskRequest
           * @return GetTranscodeTaskResponse
@@ -9670,7 +9452,26 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+          * Valid values for the definition of a common transcoding template:
+          * *   **LD**: low definition.
+          * *   **SD**: standard definition.
+          * *   **HD**: high definition.
+          * *   **FHD**: ultra high definition.
+          * *   **OD**: original quality.
+          * *   **2K**
+          * *   **4K**
+          * *   **SQ**: standard sound quality.
+          * *   **HQ**: high sound quality.
+          * Valid values for the definition of a Narrowband HD™ 1.0 transcoding template:
+          * *   **LD-NBV1**: low definition.
+          * *   **SD-NBV1**: standard definition.
+          * *   **HD-NBV1**: high definition.
+          * *   **FHD-NBV1**: ultra high definition.
+          * *   **2K-NBV1**
+          * *   **4K-NBV1**
+          * >*   You cannot modify the definition of transcoding templates.
+          * >*   You cannot modify the system parameters, such as the video resolution, audio resolution, and bitrate, of Narrowband HD™ 1.0 transcoding templates.
+          * >*   You can create only Narrowband HD™ 1.0 transcoding templates that support the FLV, M3U8 (HLS), and MP4 output formats.
           *
           * @param request GetTranscodeTemplateGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9704,7 +9505,26 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+          * Valid values for the definition of a common transcoding template:
+          * *   **LD**: low definition.
+          * *   **SD**: standard definition.
+          * *   **HD**: high definition.
+          * *   **FHD**: ultra high definition.
+          * *   **OD**: original quality.
+          * *   **2K**
+          * *   **4K**
+          * *   **SQ**: standard sound quality.
+          * *   **HQ**: high sound quality.
+          * Valid values for the definition of a Narrowband HD™ 1.0 transcoding template:
+          * *   **LD-NBV1**: low definition.
+          * *   **SD-NBV1**: standard definition.
+          * *   **HD-NBV1**: high definition.
+          * *   **FHD-NBV1**: ultra high definition.
+          * *   **2K-NBV1**
+          * *   **4K-NBV1**
+          * >*   You cannot modify the definition of transcoding templates.
+          * >*   You cannot modify the system parameters, such as the video resolution, audio resolution, and bitrate, of Narrowband HD™ 1.0 transcoding templates.
+          * >*   You can create only Narrowband HD™ 1.0 transcoding templates that support the FLV, M3U8 (HLS), and MP4 output formats.
           *
           * @param request GetTranscodeTemplateGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9738,7 +9558,26 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+          * Valid values for the definition of a common transcoding template:
+          * *   **LD**: low definition.
+          * *   **SD**: standard definition.
+          * *   **HD**: high definition.
+          * *   **FHD**: ultra high definition.
+          * *   **OD**: original quality.
+          * *   **2K**
+          * *   **4K**
+          * *   **SQ**: standard sound quality.
+          * *   **HQ**: high sound quality.
+          * Valid values for the definition of a Narrowband HD™ 1.0 transcoding template:
+          * *   **LD-NBV1**: low definition.
+          * *   **SD-NBV1**: standard definition.
+          * *   **HD-NBV1**: high definition.
+          * *   **FHD-NBV1**: ultra high definition.
+          * *   **2K-NBV1**
+          * *   **4K-NBV1**
+          * >*   You cannot modify the definition of transcoding templates.
+          * >*   You cannot modify the system parameters, such as the video resolution, audio resolution, and bitrate, of Narrowband HD™ 1.0 transcoding templates.
+          * >*   You can create only Narrowband HD™ 1.0 transcoding templates that support the FLV, M3U8 (HLS), and MP4 output formats.
           *
           * @param request GetTranscodeTemplateGroupRequest
           * @return GetTranscodeTemplateGroupResponse
@@ -9750,7 +9589,26 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+          * Valid values for the definition of a common transcoding template:
+          * *   **LD**: low definition.
+          * *   **SD**: standard definition.
+          * *   **HD**: high definition.
+          * *   **FHD**: ultra high definition.
+          * *   **OD**: original quality.
+          * *   **2K**
+          * *   **4K**
+          * *   **SQ**: standard sound quality.
+          * *   **HQ**: high sound quality.
+          * Valid values for the definition of a Narrowband HD™ 1.0 transcoding template:
+          * *   **LD-NBV1**: low definition.
+          * *   **SD-NBV1**: standard definition.
+          * *   **HD-NBV1**: high definition.
+          * *   **FHD-NBV1**: ultra high definition.
+          * *   **2K-NBV1**
+          * *   **4K-NBV1**
+          * >*   You cannot modify the definition of transcoding templates.
+          * >*   You cannot modify the system parameters, such as the video resolution, audio resolution, and bitrate, of Narrowband HD™ 1.0 transcoding templates.
+          * >*   You can create only Narrowband HD™ 1.0 transcoding templates that support the FLV, M3U8 (HLS), and MP4 output formats.
           *
           * @param request GetTranscodeTemplateGroupRequest
           * @return GetTranscodeTemplateGroupResponse
@@ -9762,8 +9620,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can query the information about a URL-based upload job by specifying the upload URL or using the job ID returned when you upload media files. The information includes the status of the upload job, custom configurations, the time when the job was created, and the time when the job was complete.
-          * If the upload fails, you can view the error code and error message. If the upload is successful, you can obtain the video ID.
+          * The size of the uploaded media file. Unit: byte.
           *
           * @param request GetURLUploadInfosRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9801,8 +9658,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can query the information about a URL-based upload job by specifying the upload URL or using the job ID returned when you upload media files. The information includes the status of the upload job, custom configurations, the time when the job was created, and the time when the job was complete.
-          * If the upload fails, you can view the error code and error message. If the upload is successful, you can obtain the video ID.
+          * The size of the uploaded media file. Unit: byte.
           *
           * @param request GetURLUploadInfosRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9840,8 +9696,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can query the information about a URL-based upload job by specifying the upload URL or using the job ID returned when you upload media files. The information includes the status of the upload job, custom configurations, the time when the job was created, and the time when the job was complete.
-          * If the upload fails, you can view the error code and error message. If the upload is successful, you can obtain the video ID.
+          * The size of the uploaded media file. Unit: byte.
           *
           * @param request GetURLUploadInfosRequest
           * @return GetURLUploadInfosResponse
@@ -9853,8 +9708,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can query the information about a URL-based upload job by specifying the upload URL or using the job ID returned when you upload media files. The information includes the status of the upload job, custom configurations, the time when the job was created, and the time when the job was complete.
-          * If the upload fails, you can view the error code and error message. If the upload is successful, you can obtain the video ID.
+          * The size of the uploaded media file. Unit: byte.
           *
           * @param request GetURLUploadInfosRequest
           * @return GetURLUploadInfosResponse
@@ -9866,15 +9720,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call this operation to obtain the upload details only about audio and video files.
-          * *   If you use the ApsaraVideo VOD console to upload audio and video files, you can call this operation to query information such as the upload ratio. If you use an upload SDK to upload audio and video files, make sure that the version of the [upload SDK](~~52200~~) meets one of the following requirements:
-          *     *   The version of the upload SDK for Java is 1.4.4 or later.
-          *     *   The version of the upload SDK for C++ is 1.0.0 or later.
-          *     *   The version of the upload SDK for PHP is 1.0.2 or later.
-          *     *   The version of the upload SDK for Python is 1.3.0 or later.
-          *     *   The version of the upload SDK for JavaScript is 1.4.0 or later.
-          *     *   The version of the upload SDK for Android is 1.5.0 or later.
-          *     *   The version of the upload SDK for iOS is 1.5.0 or later.
+          * The type of the media file. Set the value to **video**, which indicates audio and video files.
           *
           * @param request GetUploadDetailsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9912,15 +9758,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call this operation to obtain the upload details only about audio and video files.
-          * *   If you use the ApsaraVideo VOD console to upload audio and video files, you can call this operation to query information such as the upload ratio. If you use an upload SDK to upload audio and video files, make sure that the version of the [upload SDK](~~52200~~) meets one of the following requirements:
-          *     *   The version of the upload SDK for Java is 1.4.4 or later.
-          *     *   The version of the upload SDK for C++ is 1.0.0 or later.
-          *     *   The version of the upload SDK for PHP is 1.0.2 or later.
-          *     *   The version of the upload SDK for Python is 1.3.0 or later.
-          *     *   The version of the upload SDK for JavaScript is 1.4.0 or later.
-          *     *   The version of the upload SDK for Android is 1.5.0 or later.
-          *     *   The version of the upload SDK for iOS is 1.5.0 or later.
+          * The type of the media file. Set the value to **video**, which indicates audio and video files.
           *
           * @param request GetUploadDetailsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9958,15 +9796,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call this operation to obtain the upload details only about audio and video files.
-          * *   If you use the ApsaraVideo VOD console to upload audio and video files, you can call this operation to query information such as the upload ratio. If you use an upload SDK to upload audio and video files, make sure that the version of the [upload SDK](~~52200~~) meets one of the following requirements:
-          *     *   The version of the upload SDK for Java is 1.4.4 or later.
-          *     *   The version of the upload SDK for C++ is 1.0.0 or later.
-          *     *   The version of the upload SDK for PHP is 1.0.2 or later.
-          *     *   The version of the upload SDK for Python is 1.3.0 or later.
-          *     *   The version of the upload SDK for JavaScript is 1.4.0 or later.
-          *     *   The version of the upload SDK for Android is 1.5.0 or later.
-          *     *   The version of the upload SDK for iOS is 1.5.0 or later.
+          * The type of the media file. Set the value to **video**, which indicates audio and video files.
           *
           * @param request GetUploadDetailsRequest
           * @return GetUploadDetailsResponse
@@ -9978,15 +9808,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call this operation to obtain the upload details only about audio and video files.
-          * *   If you use the ApsaraVideo VOD console to upload audio and video files, you can call this operation to query information such as the upload ratio. If you use an upload SDK to upload audio and video files, make sure that the version of the [upload SDK](~~52200~~) meets one of the following requirements:
-          *     *   The version of the upload SDK for Java is 1.4.4 or later.
-          *     *   The version of the upload SDK for C++ is 1.0.0 or later.
-          *     *   The version of the upload SDK for PHP is 1.0.2 or later.
-          *     *   The version of the upload SDK for Python is 1.3.0 or later.
-          *     *   The version of the upload SDK for JavaScript is 1.4.0 or later.
-          *     *   The version of the upload SDK for Android is 1.5.0 or later.
-          *     *   The version of the upload SDK for iOS is 1.5.0 or later.
+          * The type of the media file. Set the value to **video**, which indicates audio and video files.
           *
           * @param request GetUploadDetailsRequest
           * @return GetUploadDetailsResponse
@@ -9998,10 +9820,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call this operation to obtain the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags of a media file based on the file ID.
-          * *   After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the **VideoAnalysisComplete** event and call this operation to query information about a media file after you receive the **VideoAnalysisComplete** callback. For more information, see [Overview](~~55627~~).
-          * ### QPS limits
-          * You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The video snapshot URLs.
           *
           * @param request GetVideoInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10035,10 +9854,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call this operation to obtain the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags of a media file based on the file ID.
-          * *   After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the **VideoAnalysisComplete** event and call this operation to query information about a media file after you receive the **VideoAnalysisComplete** callback. For more information, see [Overview](~~55627~~).
-          * ### QPS limits
-          * You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The video snapshot URLs.
           *
           * @param request GetVideoInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10072,10 +9888,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call this operation to obtain the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags of a media file based on the file ID.
-          * *   After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the **VideoAnalysisComplete** event and call this operation to query information about a media file after you receive the **VideoAnalysisComplete** callback. For more information, see [Overview](~~55627~~).
-          * ### QPS limits
-          * You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The video snapshot URLs.
           *
           * @param request GetVideoInfoRequest
           * @return GetVideoInfoResponse
@@ -10087,10 +9900,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call this operation to obtain the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags of a media file based on the file ID.
-          * *   After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the **VideoAnalysisComplete** event and call this operation to query information about a media file after you receive the **VideoAnalysisComplete** callback. For more information, see [Overview](~~55627~~).
-          * ### QPS limits
-          * You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The video snapshot URLs.
           *
           * @param request GetVideoInfoRequest
           * @return GetVideoInfoResponse
@@ -10102,7 +9912,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to obtain the basic information about multiple videos at a time based on video IDs. The basic information includes the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags of each video.
+          * The duration of the video. Unit: seconds.
           *
           * @param request GetVideoInfosRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10136,7 +9946,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to obtain the basic information about multiple videos at a time based on video IDs. The basic information includes the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags of each video.
+          * The duration of the video. Unit: seconds.
           *
           * @param request GetVideoInfosRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10170,7 +9980,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to obtain the basic information about multiple videos at a time based on video IDs. The basic information includes the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags of each video.
+          * The duration of the video. Unit: seconds.
           *
           * @param request GetVideoInfosRequest
           * @return GetVideoInfosResponse
@@ -10182,7 +9992,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to obtain the basic information about multiple videos at a time based on video IDs. The basic information includes the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags of each video.
+          * The duration of the video. Unit: seconds.
           *
           * @param request GetVideoInfosRequest
           * @return GetVideoInfosResponse
@@ -10694,7 +10504,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to query video fingerprinting jobs and smart tagging jobs.
+          * The IDs of the jobs that do not exist.
           *
           * @param request ListAIJobRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10744,7 +10554,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to query video fingerprinting jobs and smart tagging jobs.
+          * The IDs of the jobs that do not exist.
           *
           * @param request ListAIJobRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10794,7 +10604,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to query video fingerprinting jobs and smart tagging jobs.
+          * The IDs of the jobs that do not exist.
           *
           * @param request ListAIJobRequest
           * @return ListAIJobResponse
@@ -10806,7 +10616,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to query video fingerprinting jobs and smart tagging jobs.
+          * The IDs of the jobs that do not exist.
           *
           * @param request ListAIJobRequest
           * @return ListAIJobResponse
@@ -10818,9 +10628,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to query AI templates of a specified type.
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The returned result.
           *
           * @param request ListAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10854,9 +10662,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to query AI templates of a specified type.
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The returned result.
           *
           * @param request ListAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10890,9 +10696,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to query AI templates of a specified type.
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The returned result.
           *
           * @param request ListAITemplateRequest
           * @return ListAITemplateResponse
@@ -10904,9 +10708,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to query AI templates of a specified type.
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The returned result.
           *
           * @param request ListAITemplateRequest
           * @return ListAITemplateResponse
@@ -10918,7 +10720,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Supports filtering queries by application status.
+          * The description of the application.
           *
           * @param request ListAppInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10960,7 +10762,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Supports filtering queries by application status.
+          * The description of the application.
           *
           * @param request ListAppInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11002,7 +10804,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Supports filtering queries by application status.
+          * The description of the application.
           *
           * @param request ListAppInfoRequest
           * @return ListAppInfoResponse
@@ -11014,7 +10816,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Supports filtering queries by application status.
+          * The description of the application.
           *
           * @param request ListAppInfoRequest
           * @return ListAppInfoResponse
@@ -11026,7 +10828,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > The IdentityType and IdentityName parameters take effect only when an identity assumes the application administrator role to call this operation. Otherwise, only application policies that are attached to the current identity are returned.
+          * The name of the identity.
+          * *   Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.
+          * *   Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.
           *
           * @param request ListAppPoliciesForIdentityRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11068,7 +10872,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > The IdentityType and IdentityName parameters take effect only when an identity assumes the application administrator role to call this operation. Otherwise, only application policies that are attached to the current identity are returned.
+          * The name of the identity.
+          * *   Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.
+          * *   Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.
           *
           * @param request ListAppPoliciesForIdentityRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11110,7 +10916,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > The IdentityType and IdentityName parameters take effect only when an identity assumes the application administrator role to call this operation. Otherwise, only application policies that are attached to the current identity are returned.
+          * The name of the identity.
+          * *   Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.
+          * *   Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.
           *
           * @param request ListAppPoliciesForIdentityRequest
           * @return ListAppPoliciesForIdentityResponse
@@ -11122,7 +10930,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > The IdentityType and IdentityName parameters take effect only when an identity assumes the application administrator role to call this operation. Otherwise, only application policies that are attached to the current identity are returned.
+          * The name of the identity.
+          * *   Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.
+          * *   Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.
           *
           * @param request ListAppPoliciesForIdentityRequest
           * @return ListAppPoliciesForIdentityResponse
@@ -11538,8 +11348,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call the [GetTranscodeTask](~~109121~~) operation to query details about transcoding jobs.
-          * *   **You can call this operation to query only transcoding tasks created within the past year.**
+          * The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
           *
           * @param request ListTranscodeTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11589,8 +11398,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call the [GetTranscodeTask](~~109121~~) operation to query details about transcoding jobs.
-          * *   **You can call this operation to query only transcoding tasks created within the past year.**
+          * The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
           *
           * @param request ListTranscodeTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11640,8 +11448,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call the [GetTranscodeTask](~~109121~~) operation to query details about transcoding jobs.
-          * *   **You can call this operation to query only transcoding tasks created within the past year.**
+          * The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
           *
           * @param request ListTranscodeTaskRequest
           * @return ListTranscodeTaskResponse
@@ -11653,8 +11460,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can call the [GetTranscodeTask](~~109121~~) operation to query details about transcoding jobs.
-          * *   **You can call this operation to query only transcoding tasks created within the past year.**
+          * The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
           *
           * @param request ListTranscodeTaskRequest
           * @return ListTranscodeTaskResponse
@@ -11666,7 +11472,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation does not return the configurations of transcoding templates in each transcoding template group. To query the configurations of transcoding templates in a specific transcoding template group, call the [GetTranscodeTemplateGroup](~~102670~~) operation.
+          * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
           *
           * @param request ListTranscodeTemplateGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11700,7 +11506,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation does not return the configurations of transcoding templates in each transcoding template group. To query the configurations of transcoding templates in a specific transcoding template group, call the [GetTranscodeTemplateGroup](~~102670~~) operation.
+          * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
           *
           * @param request ListTranscodeTemplateGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11734,7 +11540,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation does not return the configurations of transcoding templates in each transcoding template group. To query the configurations of transcoding templates in a specific transcoding template group, call the [GetTranscodeTemplateGroup](~~102670~~) operation.
+          * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
           *
           * @param request ListTranscodeTemplateGroupRequest
           * @return ListTranscodeTemplateGroupResponse
@@ -11746,7 +11552,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > This operation does not return the configurations of transcoding templates in each transcoding template group. To query the configurations of transcoding templates in a specific transcoding template group, call the [GetTranscodeTemplateGroup](~~102670~~) operation.
+          * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
           *
           * @param request ListTranscodeTemplateGroupRequest
           * @return ListTranscodeTemplateGroupResponse
@@ -11980,9 +11786,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can submit a maximum of 500 requests to prefetch resources based on URLs each day by using an Alibaba Cloud account. You cannot prefetch resources based on directories.
-          * > *   You can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh content and the [PreloadVodObjectCaches](~~69211~~l) operation to prefetch content.
+          * The operation that you want to perform. Set the value to **PreloadVodObjectCaches**.
           *
           * @param request PreloadVodObjectCachesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12024,9 +11828,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can submit a maximum of 500 requests to prefetch resources based on URLs each day by using an Alibaba Cloud account. You cannot prefetch resources based on directories.
-          * > *   You can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh content and the [PreloadVodObjectCaches](~~69211~~l) operation to prefetch content.
+          * The operation that you want to perform. Set the value to **PreloadVodObjectCaches**.
           *
           * @param request PreloadVodObjectCachesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12068,9 +11870,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can submit a maximum of 500 requests to prefetch resources based on URLs each day by using an Alibaba Cloud account. You cannot prefetch resources based on directories.
-          * > *   You can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh content and the [PreloadVodObjectCaches](~~69211~~l) operation to prefetch content.
+          * The operation that you want to perform. Set the value to **PreloadVodObjectCaches**.
           *
           * @param request PreloadVodObjectCachesRequest
           * @return PreloadVodObjectCachesResponse
@@ -12082,9 +11882,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can submit a maximum of 500 requests to prefetch resources based on URLs each day by using an Alibaba Cloud account. You cannot prefetch resources based on directories.
-          * > *   You can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh content and the [PreloadVodObjectCaches](~~69211~~l) operation to prefetch content.
+          * The operation that you want to perform. Set the value to **PreloadVodObjectCaches**.
           *
           * @param request PreloadVodObjectCachesRequest
           * @return PreloadVodObjectCachesResponse
@@ -12096,14 +11894,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   This operation returns only the submission result of a video production task. When the submission result is returned, video production may still be in progress. After a video production task is submitted, the task is queued in the background for asynchronous processing.
-          * *   The mezzanine files that are referenced in the timeline of an online editing project can be materials from media assets or videos in the media library.
-          * *   Videos are produced based on the ProjectId and Timeline parameters. Take note of the following items when you specify the parameters:
-          * *   You must specify at least one of the ProjectId and Timeline parameters. Otherwise, video production fails.
-          * *   If you specify only the Timeline parameter, the system automatically creates an online editing project with the specified timeline. Then, the system obtains the mezzanine files that are referenced in the timeline and produces a video from the mezzanine files.
-          * *   If you specify only the ProjectId parameter, the system obtains the latest timeline of the specified project and produces a video based on the timeline.
-          *  *   If you specify both the ProjectId and Timeline parameters, the system produces a video based on the specified timeline and updates the timeline and mezzanine files for the specified online editing project. If you specify other parameters, the system also updates related settings for the online editing project.
-          *  *   You can apply effects to the video to be produced. For more information, see [Special effects](~~69082~~).
+          * The title of the online editing project.
           *
           * @param request ProduceEditingProjectVideoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12177,14 +11968,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   This operation returns only the submission result of a video production task. When the submission result is returned, video production may still be in progress. After a video production task is submitted, the task is queued in the background for asynchronous processing.
-          * *   The mezzanine files that are referenced in the timeline of an online editing project can be materials from media assets or videos in the media library.
-          * *   Videos are produced based on the ProjectId and Timeline parameters. Take note of the following items when you specify the parameters:
-          * *   You must specify at least one of the ProjectId and Timeline parameters. Otherwise, video production fails.
-          * *   If you specify only the Timeline parameter, the system automatically creates an online editing project with the specified timeline. Then, the system obtains the mezzanine files that are referenced in the timeline and produces a video from the mezzanine files.
-          * *   If you specify only the ProjectId parameter, the system obtains the latest timeline of the specified project and produces a video based on the timeline.
-          *  *   If you specify both the ProjectId and Timeline parameters, the system produces a video based on the specified timeline and updates the timeline and mezzanine files for the specified online editing project. If you specify other parameters, the system also updates related settings for the online editing project.
-          *  *   You can apply effects to the video to be produced. For more information, see [Special effects](~~69082~~).
+          * The title of the online editing project.
           *
           * @param request ProduceEditingProjectVideoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12258,14 +12042,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   This operation returns only the submission result of a video production task. When the submission result is returned, video production may still be in progress. After a video production task is submitted, the task is queued in the background for asynchronous processing.
-          * *   The mezzanine files that are referenced in the timeline of an online editing project can be materials from media assets or videos in the media library.
-          * *   Videos are produced based on the ProjectId and Timeline parameters. Take note of the following items when you specify the parameters:
-          * *   You must specify at least one of the ProjectId and Timeline parameters. Otherwise, video production fails.
-          * *   If you specify only the Timeline parameter, the system automatically creates an online editing project with the specified timeline. Then, the system obtains the mezzanine files that are referenced in the timeline and produces a video from the mezzanine files.
-          * *   If you specify only the ProjectId parameter, the system obtains the latest timeline of the specified project and produces a video based on the timeline.
-          *  *   If you specify both the ProjectId and Timeline parameters, the system produces a video based on the specified timeline and updates the timeline and mezzanine files for the specified online editing project. If you specify other parameters, the system also updates related settings for the online editing project.
-          *  *   You can apply effects to the video to be produced. For more information, see [Special effects](~~69082~~).
+          * The title of the online editing project.
           *
           * @param request ProduceEditingProjectVideoRequest
           * @return ProduceEditingProjectVideoResponse
@@ -12277,14 +12054,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   This operation returns only the submission result of a video production task. When the submission result is returned, video production may still be in progress. After a video production task is submitted, the task is queued in the background for asynchronous processing.
-          * *   The mezzanine files that are referenced in the timeline of an online editing project can be materials from media assets or videos in the media library.
-          * *   Videos are produced based on the ProjectId and Timeline parameters. Take note of the following items when you specify the parameters:
-          * *   You must specify at least one of the ProjectId and Timeline parameters. Otherwise, video production fails.
-          * *   If you specify only the Timeline parameter, the system automatically creates an online editing project with the specified timeline. Then, the system obtains the mezzanine files that are referenced in the timeline and produces a video from the mezzanine files.
-          * *   If you specify only the ProjectId parameter, the system obtains the latest timeline of the specified project and produces a video based on the timeline.
-          *  *   If you specify both the ProjectId and Timeline parameters, the system produces a video based on the specified timeline and updates the timeline and mezzanine files for the specified online editing project. If you specify other parameters, the system also updates related settings for the online editing project.
-          *  *   You can apply effects to the video to be produced. For more information, see [Special effects](~~69082~~).
+          * The title of the online editing project.
           *
           * @param request ProduceEditingProjectVideoRequest
           * @return ProduceEditingProjectVideoResponse
@@ -12296,11 +12066,13 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - ApsaraVideo VOD allows you to refresh and prefetch resources. The refresh feature forces the point of presence (POP) to clear cached resources and retrieve the latest resources from origin servers. The prefetch feature allows the POP to retrieve frequently accessed resources from origin servers during off-peak hours. This increases the cache hit ratio.
-          * - You can call this operation to submit refresh or prefetch tasks based on the media ID. You can also specify the format and resolution of the media streams to refresh or prefetch based on your business requirements.
-          * - You can submit a maximum of 20 refresh or prefetch tasks at a time.
-          * ### QPS limits
-          * You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The formats of the media streams you want to refresh or prefetch. You can specify multiple formats. Separate multiple formats with commas (,). If you leave this parameter empty, media streams in all formats are refreshed or prefetched by default. Valid values:
+          * *   **mp4**
+          * *   **m3u8**
+          * *   **mp3**
+          * *   **flv**
+          * *   **webm**
+          * *   **ts**
           *
           * @param request RefreshMediaPlayUrlsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12366,11 +12138,13 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - ApsaraVideo VOD allows you to refresh and prefetch resources. The refresh feature forces the point of presence (POP) to clear cached resources and retrieve the latest resources from origin servers. The prefetch feature allows the POP to retrieve frequently accessed resources from origin servers during off-peak hours. This increases the cache hit ratio.
-          * - You can call this operation to submit refresh or prefetch tasks based on the media ID. You can also specify the format and resolution of the media streams to refresh or prefetch based on your business requirements.
-          * - You can submit a maximum of 20 refresh or prefetch tasks at a time.
-          * ### QPS limits
-          * You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The formats of the media streams you want to refresh or prefetch. You can specify multiple formats. Separate multiple formats with commas (,). If you leave this parameter empty, media streams in all formats are refreshed or prefetched by default. Valid values:
+          * *   **mp4**
+          * *   **m3u8**
+          * *   **mp3**
+          * *   **flv**
+          * *   **webm**
+          * *   **ts**
           *
           * @param request RefreshMediaPlayUrlsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12436,11 +12210,13 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - ApsaraVideo VOD allows you to refresh and prefetch resources. The refresh feature forces the point of presence (POP) to clear cached resources and retrieve the latest resources from origin servers. The prefetch feature allows the POP to retrieve frequently accessed resources from origin servers during off-peak hours. This increases the cache hit ratio.
-          * - You can call this operation to submit refresh or prefetch tasks based on the media ID. You can also specify the format and resolution of the media streams to refresh or prefetch based on your business requirements.
-          * - You can submit a maximum of 20 refresh or prefetch tasks at a time.
-          * ### QPS limits
-          * You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The formats of the media streams you want to refresh or prefetch. You can specify multiple formats. Separate multiple formats with commas (,). If you leave this parameter empty, media streams in all formats are refreshed or prefetched by default. Valid values:
+          * *   **mp4**
+          * *   **m3u8**
+          * *   **mp3**
+          * *   **flv**
+          * *   **webm**
+          * *   **ts**
           *
           * @param request RefreshMediaPlayUrlsRequest
           * @return RefreshMediaPlayUrlsResponse
@@ -12452,11 +12228,13 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - ApsaraVideo VOD allows you to refresh and prefetch resources. The refresh feature forces the point of presence (POP) to clear cached resources and retrieve the latest resources from origin servers. The prefetch feature allows the POP to retrieve frequently accessed resources from origin servers during off-peak hours. This increases the cache hit ratio.
-          * - You can call this operation to submit refresh or prefetch tasks based on the media ID. You can also specify the format and resolution of the media streams to refresh or prefetch based on your business requirements.
-          * - You can submit a maximum of 20 refresh or prefetch tasks at a time.
-          * ### QPS limits
-          * You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The formats of the media streams you want to refresh or prefetch. You can specify multiple formats. Separate multiple formats with commas (,). If you leave this parameter empty, media streams in all formats are refreshed or prefetched by default. Valid values:
+          * *   **mp4**
+          * *   **m3u8**
+          * *   **mp3**
+          * *   **flv**
+          * *   **webm**
+          * *   **ts**
           *
           * @param request RefreshMediaPlayUrlsRequest
           * @return RefreshMediaPlayUrlsResponse
@@ -12468,7 +12246,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * If you want to overwrite a video or audio source file, you can obtain the upload URL of the source file by calling this operation. Then, you can upload a new source file without changing the video or audio ID. However, the file overwriting may automatically trigger transcoding and snapshot jobs if these jobs are configured. For more information, see [Upload URLs and credentials](~~55397~~).
+          * The upload credential.
+          * > The upload credential returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload credential, you must decode the upload credential by using the Base64 algorithm. You must parse the upload credential only if you use native OSS SDKs or OSS API for uploads.
           *
           * @param request RefreshUploadVideoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12514,7 +12293,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * If you want to overwrite a video or audio source file, you can obtain the upload URL of the source file by calling this operation. Then, you can upload a new source file without changing the video or audio ID. However, the file overwriting may automatically trigger transcoding and snapshot jobs if these jobs are configured. For more information, see [Upload URLs and credentials](~~55397~~).
+          * The upload credential.
+          * > The upload credential returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload credential, you must decode the upload credential by using the Base64 algorithm. You must parse the upload credential only if you use native OSS SDKs or OSS API for uploads.
           *
           * @param request RefreshUploadVideoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12560,7 +12340,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * If you want to overwrite a video or audio source file, you can obtain the upload URL of the source file by calling this operation. Then, you can upload a new source file without changing the video or audio ID. However, the file overwriting may automatically trigger transcoding and snapshot jobs if these jobs are configured. For more information, see [Upload URLs and credentials](~~55397~~).
+          * The upload credential.
+          * > The upload credential returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload credential, you must decode the upload credential by using the Base64 algorithm. You must parse the upload credential only if you use native OSS SDKs or OSS API for uploads.
           *
           * @param request RefreshUploadVideoRequest
           * @return RefreshUploadVideoResponse
@@ -12572,7 +12353,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * If you want to overwrite a video or audio source file, you can obtain the upload URL of the source file by calling this operation. Then, you can upload a new source file without changing the video or audio ID. However, the file overwriting may automatically trigger transcoding and snapshot jobs if these jobs are configured. For more information, see [Upload URLs and credentials](~~55397~~).
+          * The upload credential.
+          * > The upload credential returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload credential, you must decode the upload credential by using the Base64 algorithm. You must parse the upload credential only if you use native OSS SDKs or OSS API for uploads.
           *
           * @param request RefreshUploadVideoRequest
           * @return RefreshUploadVideoResponse
@@ -12584,9 +12366,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can submit a maximum of 2,000 requests to refresh resources based on URLs and 100 requests to refresh resources based on directories each day by using an Alibaba Cloud account.
-          * > *   You can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh content and the [PreloadVodObjectCaches](~~69211~~) operation to prefetch content.
+          * The ID of the refresh task. Separate multiple task IDs with commas (,).
           *
           * @param request RefreshVodObjectCachesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12632,9 +12412,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can submit a maximum of 2,000 requests to refresh resources based on URLs and 100 requests to refresh resources based on directories each day by using an Alibaba Cloud account.
-          * > *   You can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh content and the [PreloadVodObjectCaches](~~69211~~) operation to prefetch content.
+          * The ID of the refresh task. Separate multiple task IDs with commas (,).
           *
           * @param request RefreshVodObjectCachesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12680,9 +12458,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can submit a maximum of 2,000 requests to refresh resources based on URLs and 100 requests to refresh resources based on directories each day by using an Alibaba Cloud account.
-          * > *   You can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh content and the [PreloadVodObjectCaches](~~69211~~) operation to prefetch content.
+          * The ID of the refresh task. Separate multiple task IDs with commas (,).
           *
           * @param request RefreshVodObjectCachesRequest
           * @return RefreshVodObjectCachesResponse
@@ -12694,9 +12470,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   This operation is available only in the **China (Shanghai)** region.
-          * > *   You can submit a maximum of 2,000 requests to refresh resources based on URLs and 100 requests to refresh resources based on directories each day by using an Alibaba Cloud account.
-          * > *   You can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh content and the [PreloadVodObjectCaches](~~69211~~) operation to prefetch content.
+          * The ID of the refresh task. Separate multiple task IDs with commas (,).
           *
           * @param request RefreshVodObjectCachesRequest
           * @return RefreshVodObjectCachesResponse
@@ -12982,12 +12756,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter criteria. This allows you to traverse data page by page. If the number of data records that meet the specified filter criteria exceeds 5,000, use Method 2.
-          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter criteria, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the desired page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
-          *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
-          *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
-          *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
+          * The preprocessing status. Valid values:
+          * *   **UnPreprocess**
+          * *   **Preprocessing**
+          * *   **PreprocessSucceed**
+          * *   **PreprocessFailed**
           *
           * @param request SearchMediaRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13045,12 +12818,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter criteria. This allows you to traverse data page by page. If the number of data records that meet the specified filter criteria exceeds 5,000, use Method 2.
-          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter criteria, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the desired page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
-          *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
-          *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
-          *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
+          * The preprocessing status. Valid values:
+          * *   **UnPreprocess**
+          * *   **Preprocessing**
+          * *   **PreprocessSucceed**
+          * *   **PreprocessFailed**
           *
           * @param request SearchMediaRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13108,12 +12880,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter criteria. This allows you to traverse data page by page. If the number of data records that meet the specified filter criteria exceeds 5,000, use Method 2.
-          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter criteria, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the desired page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
-          *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
-          *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
-          *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
+          * The preprocessing status. Valid values:
+          * *   **UnPreprocess**
+          * *   **Preprocessing**
+          * *   **PreprocessSucceed**
+          * *   **PreprocessFailed**
           *
           * @param request SearchMediaRequest
           * @return SearchMediaResponse
@@ -13125,12 +12896,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-          * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter criteria. This allows you to traverse data page by page. If the number of data records that meet the specified filter criteria exceeds 5,000, use Method 2.
-          * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter criteria, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the desired page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
-          *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
-          *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
-          *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
+          * The preprocessing status. Valid values:
+          * *   **UnPreprocess**
+          * *   **Preprocessing**
+          * *   **PreprocessSucceed**
+          * *   **PreprocessFailed**
           *
           * @param request SearchMediaRequest
           * @return SearchMediaResponse
@@ -13142,7 +12912,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > You can play videos in the Checking or Blocked state only from the IP addresses that are added to review security groups.
+          * The name of the review security group. Default value: **Default**. You can specify a maximum of 10 review security groups.
           *
           * @param request SetAuditSecurityIpRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13184,7 +12954,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > You can play videos in the Checking or Blocked state only from the IP addresses that are added to review security groups.
+          * The name of the review security group. Default value: **Default**. You can specify a maximum of 10 review security groups.
           *
           * @param request SetAuditSecurityIpRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13226,7 +12996,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > You can play videos in the Checking or Blocked state only from the IP addresses that are added to review security groups.
+          * The name of the review security group. Default value: **Default**. You can specify a maximum of 10 review security groups.
           *
           * @param request SetAuditSecurityIpRequest
           * @return SetAuditSecurityIpResponse
@@ -13238,7 +13008,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > You can play videos in the Checking or Blocked state only from the IP addresses that are added to review security groups.
+          * The name of the review security group. Default value: **Default**. You can specify a maximum of 10 review security groups.
           *
           * @param request SetAuditSecurityIpRequest
           * @return SetAuditSecurityIpResponse
@@ -13250,7 +13020,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > After you use the cross-domain policy file to update the resources on the origin server, you must refresh the resources that are cached on Alibaba Cloud CDN nodes. You can use the ApsaraVideo VOD console to refresh resources. For more information, see [Refresh and prefetch](~~86098~~). Alternatively, you can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh resources.
+          * The ID of the request.
           *
           * @param request SetCrossdomainContentRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13308,7 +13078,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > After you use the cross-domain policy file to update the resources on the origin server, you must refresh the resources that are cached on Alibaba Cloud CDN nodes. You can use the ApsaraVideo VOD console to refresh resources. For more information, see [Refresh and prefetch](~~86098~~). Alternatively, you can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh resources.
+          * The ID of the request.
           *
           * @param request SetCrossdomainContentRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13366,7 +13136,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > After you use the cross-domain policy file to update the resources on the origin server, you must refresh the resources that are cached on Alibaba Cloud CDN nodes. You can use the ApsaraVideo VOD console to refresh resources. For more information, see [Refresh and prefetch](~~86098~~). Alternatively, you can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh resources.
+          * The ID of the request.
           *
           * @param request SetCrossdomainContentRequest
           * @return SetCrossdomainContentResponse
@@ -13378,7 +13148,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > After you use the cross-domain policy file to update the resources on the origin server, you must refresh the resources that are cached on Alibaba Cloud CDN nodes. You can use the ApsaraVideo VOD console to refresh resources. For more information, see [Refresh and prefetch](~~86098~~). Alternatively, you can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh resources.
+          * The ID of the request.
           *
           * @param request SetCrossdomainContentRequest
           * @return SetCrossdomainContentResponse
@@ -13390,7 +13160,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Before you can call this operation to specify an AI template as the default template, you must obtain the ID of the AI template. You cannot delete an AI template after you specify it as the default template.
+          * The ID of the request.
           *
           * @param request SetDefaultAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13424,7 +13194,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Before you can call this operation to specify an AI template as the default template, you must obtain the ID of the AI template. You cannot delete an AI template after you specify it as the default template.
+          * The ID of the request.
           *
           * @param request SetDefaultAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13458,7 +13228,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Before you can call this operation to specify an AI template as the default template, you must obtain the ID of the AI template. You cannot delete an AI template after you specify it as the default template.
+          * The ID of the request.
           *
           * @param request SetDefaultAITemplateRequest
           * @return SetDefaultAITemplateResponse
@@ -13470,7 +13240,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * Before you can call this operation to specify an AI template as the default template, you must obtain the ID of the AI template. You cannot delete an AI template after you specify it as the default template.
+          * The ID of the request.
           *
           * @param request SetDefaultAITemplateRequest
           * @return SetDefaultAITemplateResponse
@@ -14134,11 +13904,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * After you call this operation, you can call the [GetAIImageJobs](~~GetAIImageJobs~~) operation to query the AI processing result of the job.
-          * - The smart thumbnail feature is not supported. You cannot call this operation.
-          * - After you call this operation, you can call the [GetAIImageJobs](~~GetAIImageJobs~~) operation to query the job execution result.
-          * ### QPS limit
-          * You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The returned data.
           *
           * @param request SubmitAIImageJobRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14200,11 +13966,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * After you call this operation, you can call the [GetAIImageJobs](~~GetAIImageJobs~~) operation to query the AI processing result of the job.
-          * - The smart thumbnail feature is not supported. You cannot call this operation.
-          * - After you call this operation, you can call the [GetAIImageJobs](~~GetAIImageJobs~~) operation to query the job execution result.
-          * ### QPS limit
-          * You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The returned data.
           *
           * @param request SubmitAIImageJobRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14266,11 +14028,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * After you call this operation, you can call the [GetAIImageJobs](~~GetAIImageJobs~~) operation to query the AI processing result of the job.
-          * - The smart thumbnail feature is not supported. You cannot call this operation.
-          * - After you call this operation, you can call the [GetAIImageJobs](~~GetAIImageJobs~~) operation to query the job execution result.
-          * ### QPS limit
-          * You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The returned data.
           *
           * @param request SubmitAIImageJobRequest
           * @return SubmitAIImageJobResponse
@@ -14282,11 +14040,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * After you call this operation, you can call the [GetAIImageJobs](~~GetAIImageJobs~~) operation to query the AI processing result of the job.
-          * - The smart thumbnail feature is not supported. You cannot call this operation.
-          * - After you call this operation, you can call the [GetAIImageJobs](~~GetAIImageJobs~~) operation to query the job execution result.
-          * ### QPS limit
-          * You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The returned data.
           *
           * @param request SubmitAIImageJobRequest
           * @return SubmitAIImageJobResponse
@@ -14298,11 +14052,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   AI jobs include smart tagging jobs and video fingerprinting jobs. You must activate the AI service before you call this operation to submit AI jobs.
-          * *   If this is the first time you use the video fingerprinting feature, you must submit a ticket to apply for using the media fingerprint library for free. Otherwise, the video fingerprinting feature will be affected.
-          * *   After you submit an AI job, ApsaraVideo VOD asynchronously processes the job. The operation may return a response before the job is complete.
-          * ### QPS limits
-          * You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The returned data.
           *
           * @param request SubmitAIJobRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14364,11 +14114,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   AI jobs include smart tagging jobs and video fingerprinting jobs. You must activate the AI service before you call this operation to submit AI jobs.
-          * *   If this is the first time you use the video fingerprinting feature, you must submit a ticket to apply for using the media fingerprint library for free. Otherwise, the video fingerprinting feature will be affected.
-          * *   After you submit an AI job, ApsaraVideo VOD asynchronously processes the job. The operation may return a response before the job is complete.
-          * ### QPS limits
-          * You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The returned data.
           *
           * @param request SubmitAIJobRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14430,11 +14176,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   AI jobs include smart tagging jobs and video fingerprinting jobs. You must activate the AI service before you call this operation to submit AI jobs.
-          * *   If this is the first time you use the video fingerprinting feature, you must submit a ticket to apply for using the media fingerprint library for free. Otherwise, the video fingerprinting feature will be affected.
-          * *   After you submit an AI job, ApsaraVideo VOD asynchronously processes the job. The operation may return a response before the job is complete.
-          * ### QPS limits
-          * You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The returned data.
           *
           * @param request SubmitAIJobRequest
           * @return SubmitAIJobResponse
@@ -14446,11 +14188,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   AI jobs include smart tagging jobs and video fingerprinting jobs. You must activate the AI service before you call this operation to submit AI jobs.
-          * *   If this is the first time you use the video fingerprinting feature, you must submit a ticket to apply for using the media fingerprint library for free. Otherwise, the video fingerprinting feature will be affected.
-          * *   After you submit an AI job, ApsaraVideo VOD asynchronously processes the job. The operation may return a response before the job is complete.
-          * ### QPS limits
-          * You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+          * The returned data.
           *
           * @param request SubmitAIJobRequest
           * @return SubmitAIJobResponse
@@ -14560,8 +14298,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can capture a part of a video and generate animated images only when the video is in the **UploadSucces**, **Transcoding**, **Normal**, **Checking**, or **Blocked** state.
-          * *   The fee for generating animated images is included in the video transcoding fees. Both the services are charged by resolution and duration.
+          * The ID of the video.
           *
           * @param request SubmitDynamicImageJobRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14603,8 +14340,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can capture a part of a video and generate animated images only when the video is in the **UploadSucces**, **Transcoding**, **Normal**, **Checking**, or **Blocked** state.
-          * *   The fee for generating animated images is included in the video transcoding fees. Both the services are charged by resolution and duration.
+          * The ID of the video.
           *
           * @param request SubmitDynamicImageJobRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14646,8 +14382,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can capture a part of a video and generate animated images only when the video is in the **UploadSucces**, **Transcoding**, **Normal**, **Checking**, or **Blocked** state.
-          * *   The fee for generating animated images is included in the video transcoding fees. Both the services are charged by resolution and duration.
+          * The ID of the video.
           *
           * @param request SubmitDynamicImageJobRequest
           * @return SubmitDynamicImageJobResponse
@@ -14659,8 +14394,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can capture a part of a video and generate animated images only when the video is in the **UploadSucces**, **Transcoding**, **Normal**, **Checking**, or **Blocked** state.
-          * *   The fee for generating animated images is included in the video transcoding fees. Both the services are charged by resolution and duration.
+          * The ID of the video.
           *
           * @param request SubmitDynamicImageJobRequest
           * @return SubmitDynamicImageJobResponse
@@ -14672,9 +14406,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation is available only in the Singapore (Singapore) region.
-          * ### QPS limit
-          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see QPS limit.
+          * The ID of the request.
           *
           * @param request SubmitMediaDNADeleteJobRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14724,9 +14456,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation is available only in the Singapore (Singapore) region.
-          * ### QPS limit
-          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see QPS limit.
+          * The ID of the request.
           *
           * @param request SubmitMediaDNADeleteJobRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14776,9 +14506,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation is available only in the Singapore (Singapore) region.
-          * ### QPS limit
-          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see QPS limit.
+          * The ID of the request.
           *
           * @param request SubmitMediaDNADeleteJobRequest
           * @return SubmitMediaDNADeleteJobResponse
@@ -14790,9 +14518,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * This operation is available only in the Singapore (Singapore) region.
-          * ### QPS limit
-          * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see QPS limit.
+          * The ID of the request.
           *
           * @param request SubmitMediaDNADeleteJobRequest
           * @return SubmitMediaDNADeleteJobResponse
@@ -14804,8 +14530,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   During video preprocessing, videos are transcoded to meet the playback requirements of the production studio. Therefore, you are **charged** for video preprocessing. You can submit a ticket for information about the **production studio** service.
-          *  *   You can obtain the preprocessing result in the [TranscodeComplete](~~55638~~) event notification. If the value of the **Preprocess** parameter is true in the event notification, the video is preprocessed.
+          * The ID of the job.
           *
           * @param request SubmitPreprocessJobsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14843,8 +14568,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   During video preprocessing, videos are transcoded to meet the playback requirements of the production studio. Therefore, you are **charged** for video preprocessing. You can submit a ticket for information about the **production studio** service.
-          *  *   You can obtain the preprocessing result in the [TranscodeComplete](~~55638~~) event notification. If the value of the **Preprocess** parameter is true in the event notification, the video is preprocessed.
+          * The ID of the job.
           *
           * @param request SubmitPreprocessJobsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14882,8 +14606,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   During video preprocessing, videos are transcoded to meet the playback requirements of the production studio. Therefore, you are **charged** for video preprocessing. You can submit a ticket for information about the **production studio** service.
-          *  *   You can obtain the preprocessing result in the [TranscodeComplete](~~55638~~) event notification. If the value of the **Preprocess** parameter is true in the event notification, the video is preprocessed.
+          * The ID of the job.
           *
           * @param request SubmitPreprocessJobsRequest
           * @return SubmitPreprocessJobsResponse
@@ -14895,8 +14618,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   During video preprocessing, videos are transcoded to meet the playback requirements of the production studio. Therefore, you are **charged** for video preprocessing. You can submit a ticket for information about the **production studio** service.
-          *  *   You can obtain the preprocessing result in the [TranscodeComplete](~~55638~~) event notification. If the value of the **Preprocess** parameter is true in the event notification, the video is preprocessed.
+          * The ID of the job.
           *
           * @param request SubmitPreprocessJobsRequest
           * @return SubmitPreprocessJobsResponse
@@ -14908,8 +14630,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   Only snapshots in the JPG format are generated.
-          * > *   After a snapshot job is complete, ApsaraVideo VOD sends a [SnapshotComplete](~~57337~~) event notification that contains EventType=SnapshotComplete and SubType=SpecifiedTime.
+          * The ID of the snapshot template.
+          * *   We recommend that you create a snapshot template before you specify the ID of the snapshot template.
+          * *   If you set the SnapshotTemplateId parameter, all the other request parameters except the Action and VideoId parameters are ignored.
+          * *   For more information about how to create a snapshot template, see [AddVodTemplate](~~99406~~).
           *
           * @param request SubmitSnapshotJobRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14975,8 +14699,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   Only snapshots in the JPG format are generated.
-          * > *   After a snapshot job is complete, ApsaraVideo VOD sends a [SnapshotComplete](~~57337~~) event notification that contains EventType=SnapshotComplete and SubType=SpecifiedTime.
+          * The ID of the snapshot template.
+          * *   We recommend that you create a snapshot template before you specify the ID of the snapshot template.
+          * *   If you set the SnapshotTemplateId parameter, all the other request parameters except the Action and VideoId parameters are ignored.
+          * *   For more information about how to create a snapshot template, see [AddVodTemplate](~~99406~~).
           *
           * @param request SubmitSnapshotJobRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15042,8 +14768,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   Only snapshots in the JPG format are generated.
-          * > *   After a snapshot job is complete, ApsaraVideo VOD sends a [SnapshotComplete](~~57337~~) event notification that contains EventType=SnapshotComplete and SubType=SpecifiedTime.
+          * The ID of the snapshot template.
+          * *   We recommend that you create a snapshot template before you specify the ID of the snapshot template.
+          * *   If you set the SnapshotTemplateId parameter, all the other request parameters except the Action and VideoId parameters are ignored.
+          * *   For more information about how to create a snapshot template, see [AddVodTemplate](~~99406~~).
           *
           * @param request SubmitSnapshotJobRequest
           * @return SubmitSnapshotJobResponse
@@ -15055,8 +14783,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   Only snapshots in the JPG format are generated.
-          * > *   After a snapshot job is complete, ApsaraVideo VOD sends a [SnapshotComplete](~~57337~~) event notification that contains EventType=SnapshotComplete and SubType=SpecifiedTime.
+          * The ID of the snapshot template.
+          * *   We recommend that you create a snapshot template before you specify the ID of the snapshot template.
+          * *   If you set the SnapshotTemplateId parameter, all the other request parameters except the Action and VideoId parameters are ignored.
+          * *   For more information about how to create a snapshot template, see [AddVodTemplate](~~99406~~).
           *
           * @param request SubmitSnapshotJobRequest
           * @return SubmitSnapshotJobResponse
@@ -15068,9 +14798,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can transcode a video only in the UploadSucc, Normal, or Checking state.
-          *  *   You can obtain the transcoding result in the [StreamTranscodeComplete](~~55636~~) or [TranscodeComplete](~~55638~~) event notification.
-          *  *   If you initiate an HTTP Live Streaming (HLS) packaging task, you can call this operation to dynamically override the subtitle. If the packaging task does not contain subtitles, we recommend that you do not call this operation to initiate the packaging task. Instead, you can specify the ID of the specific template group when you upload the video. The packaging process is automatically initiated.
+          * The ID of the transcoding template group used when the video is transcoded. To specify a transcoding template group, you can log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.18.2f1a2267jCybwh#/vod/settings/transcode/vod) and view the ID of the transcoding template group on the Transcode page.
           *
           * @param request SubmitTranscodeJobsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15128,9 +14856,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can transcode a video only in the UploadSucc, Normal, or Checking state.
-          *  *   You can obtain the transcoding result in the [StreamTranscodeComplete](~~55636~~) or [TranscodeComplete](~~55638~~) event notification.
-          *  *   If you initiate an HTTP Live Streaming (HLS) packaging task, you can call this operation to dynamically override the subtitle. If the packaging task does not contain subtitles, we recommend that you do not call this operation to initiate the packaging task. Instead, you can specify the ID of the specific template group when you upload the video. The packaging process is automatically initiated.
+          * The ID of the transcoding template group used when the video is transcoded. To specify a transcoding template group, you can log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.18.2f1a2267jCybwh#/vod/settings/transcode/vod) and view the ID of the transcoding template group on the Transcode page.
           *
           * @param request SubmitTranscodeJobsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15188,9 +14914,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can transcode a video only in the UploadSucc, Normal, or Checking state.
-          *  *   You can obtain the transcoding result in the [StreamTranscodeComplete](~~55636~~) or [TranscodeComplete](~~55638~~) event notification.
-          *  *   If you initiate an HTTP Live Streaming (HLS) packaging task, you can call this operation to dynamically override the subtitle. If the packaging task does not contain subtitles, we recommend that you do not call this operation to initiate the packaging task. Instead, you can specify the ID of the specific template group when you upload the video. The packaging process is automatically initiated.
+          * The ID of the transcoding template group used when the video is transcoded. To specify a transcoding template group, you can log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.18.2f1a2267jCybwh#/vod/settings/transcode/vod) and view the ID of the transcoding template group on the Transcode page.
           *
           * @param request SubmitTranscodeJobsRequest
           * @return SubmitTranscodeJobsResponse
@@ -15202,9 +14926,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * *   You can transcode a video only in the UploadSucc, Normal, or Checking state.
-          *  *   You can obtain the transcoding result in the [StreamTranscodeComplete](~~55636~~) or [TranscodeComplete](~~55638~~) event notification.
-          *  *   If you initiate an HTTP Live Streaming (HLS) packaging task, you can call this operation to dynamically override the subtitle. If the packaging task does not contain subtitles, we recommend that you do not call this operation to initiate the packaging task. Instead, you can specify the ID of the specific template group when you upload the video. The packaging process is automatically initiated.
+          * The ID of the transcoding template group used when the video is transcoded. To specify a transcoding template group, you can log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.18.2f1a2267jCybwh#/vod/settings/transcode/vod) and view the ID of the transcoding template group on the Transcode page.
           *
           * @param request SubmitTranscodeJobsRequest
           * @return SubmitTranscodeJobsResponse
@@ -15215,15 +14937,6 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await SubmitTranscodeJobsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * You can call this operation to initiate a VOD workflow to process media files. For more information, see [Workflows](~~115347~~).
-          * ### QPS limits
-          * You can call this operation up to 20 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
-          *
-          * @param request SubmitWorkflowJobRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SubmitWorkflowJobResponse
-         */
         public SubmitWorkflowJobResponse SubmitWorkflowJobWithOptions(SubmitWorkflowJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15255,15 +14968,6 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<SubmitWorkflowJobResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation to initiate a VOD workflow to process media files. For more information, see [Workflows](~~115347~~).
-          * ### QPS limits
-          * You can call this operation up to 20 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
-          *
-          * @param request SubmitWorkflowJobRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SubmitWorkflowJobResponse
-         */
         public async Task<SubmitWorkflowJobResponse> SubmitWorkflowJobWithOptionsAsync(SubmitWorkflowJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15295,28 +14999,12 @@ namespace AlibabaCloud.SDK.Vod20170321
             return TeaModel.ToObject<SubmitWorkflowJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * You can call this operation to initiate a VOD workflow to process media files. For more information, see [Workflows](~~115347~~).
-          * ### QPS limits
-          * You can call this operation up to 20 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
-          *
-          * @param request SubmitWorkflowJobRequest
-          * @return SubmitWorkflowJobResponse
-         */
         public SubmitWorkflowJobResponse SubmitWorkflowJob(SubmitWorkflowJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubmitWorkflowJobWithOptions(request, runtime);
         }
 
-        /**
-          * You can call this operation to initiate a VOD workflow to process media files. For more information, see [Workflows](~~115347~~).
-          * ### QPS limits
-          * You can call this operation up to 20 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
-          *
-          * @param request SubmitWorkflowJobRequest
-          * @return SubmitWorkflowJobResponse
-         */
         public async Task<SubmitWorkflowJobResponse> SubmitWorkflowJobAsync(SubmitWorkflowJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15324,9 +15012,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * After you call the [AddAITemplate](~~102930~~) to add an AI template, you can call this operation to modify the AI template.
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The returned result.
           *
           * @param request UpdateAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15368,9 +15054,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * After you call the [AddAITemplate](~~102930~~) to add an AI template, you can call this operation to modify the AI template.
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The returned result.
           *
           * @param request UpdateAITemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15412,9 +15096,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * After you call the [AddAITemplate](~~102930~~) to add an AI template, you can call this operation to modify the AI template.
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The returned result.
           *
           * @param request UpdateAITemplateRequest
           * @return UpdateAITemplateResponse
@@ -15426,9 +15108,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * After you call the [AddAITemplate](~~102930~~) to add an AI template, you can call this operation to modify the AI template.
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+          * The returned result.
           *
           * @param request UpdateAITemplateRequest
           * @return UpdateAITemplateResponse
@@ -15440,8 +15120,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## QPS limit
-          * A single user can perform a maximum of 30 queries per second (QPS). Throttling is triggered when the number of calls per second exceeds the QPS limit. The throttling may affect your business. Thus, we recommend that you observe the QPS limit on this operation.
+          * The ID of the request.
           *
           * @param request UpdateAppInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15487,8 +15166,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## QPS limit
-          * A single user can perform a maximum of 30 queries per second (QPS). Throttling is triggered when the number of calls per second exceeds the QPS limit. The throttling may affect your business. Thus, we recommend that you observe the QPS limit on this operation.
+          * The ID of the request.
           *
           * @param request UpdateAppInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15534,8 +15212,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## QPS limit
-          * A single user can perform a maximum of 30 queries per second (QPS). Throttling is triggered when the number of calls per second exceeds the QPS limit. The throttling may affect your business. Thus, we recommend that you observe the QPS limit on this operation.
+          * The ID of the request.
           *
           * @param request UpdateAppInfoRequest
           * @return UpdateAppInfoResponse
@@ -15547,8 +15224,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * ## QPS limit
-          * A single user can perform a maximum of 30 queries per second (QPS). Throttling is triggered when the number of calls per second exceeds the QPS limit. The throttling may affect your business. Thus, we recommend that you observe the QPS limit on this operation.
+          * The ID of the request.
           *
           * @param request UpdateAppInfoRequest
           * @return UpdateAppInfoResponse
@@ -15560,7 +15236,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The specific parameter of an auxiliary media asset is updated only when a new value is passed in the parameter.
+          * The ID of the request.
           *
           * @param request UpdateAttachedMediaInfosRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15594,7 +15270,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The specific parameter of an auxiliary media asset is updated only when a new value is passed in the parameter.
+          * The ID of the request.
           *
           * @param request UpdateAttachedMediaInfosRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15628,7 +15304,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The specific parameter of an auxiliary media asset is updated only when a new value is passed in the parameter.
+          * The ID of the request.
           *
           * @param request UpdateAttachedMediaInfosRequest
           * @return UpdateAttachedMediaInfosResponse
@@ -15640,7 +15316,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The specific parameter of an auxiliary media asset is updated only when a new value is passed in the parameter.
+          * The ID of the request.
           *
           * @param request UpdateAttachedMediaInfosRequest
           * @return UpdateAttachedMediaInfosResponse
@@ -15922,8 +15598,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   You cannot add, modify, or remove transcoding templates in a transcoding template group that is locked in the ApsaraVideo VOD console. To manage such transcoding template groups, contact the ApsaraVideo VOD technical support.
-          * > *   You can call the GetTranscodeTemplateGroup operation to query the configurations of a transcoding template group and check whether the transcoding template group is locked by using the response parameter Locked.
+          * The ID of the transcoding template group.
           *
           * @param request UpdateTranscodeTemplateGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15969,8 +15644,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   You cannot add, modify, or remove transcoding templates in a transcoding template group that is locked in the ApsaraVideo VOD console. To manage such transcoding template groups, contact the ApsaraVideo VOD technical support.
-          * > *   You can call the GetTranscodeTemplateGroup operation to query the configurations of a transcoding template group and check whether the transcoding template group is locked by using the response parameter Locked.
+          * The ID of the transcoding template group.
           *
           * @param request UpdateTranscodeTemplateGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16016,8 +15690,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   You cannot add, modify, or remove transcoding templates in a transcoding template group that is locked in the ApsaraVideo VOD console. To manage such transcoding template groups, contact the ApsaraVideo VOD technical support.
-          * > *   You can call the GetTranscodeTemplateGroup operation to query the configurations of a transcoding template group and check whether the transcoding template group is locked by using the response parameter Locked.
+          * The ID of the transcoding template group.
           *
           * @param request UpdateTranscodeTemplateGroupRequest
           * @return UpdateTranscodeTemplateGroupResponse
@@ -16029,8 +15702,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * > *   You cannot add, modify, or remove transcoding templates in a transcoding template group that is locked in the ApsaraVideo VOD console. To manage such transcoding template groups, contact the ApsaraVideo VOD technical support.
-          * > *   You can call the GetTranscodeTemplateGroup operation to query the configurations of a transcoding template group and check whether the transcoding template group is locked by using the response parameter Locked.
+          * The ID of the transcoding template group.
           *
           * @param request UpdateTranscodeTemplateGroupRequest
           * @return UpdateTranscodeTemplateGroupResponse
@@ -16042,7 +15714,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The specific parameter of a video is updated only when a new value is passed in the parameter.
+          * The ID of the video.
           *
           * @param request UpdateVideoInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16096,7 +15768,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The specific parameter of a video is updated only when a new value is passed in the parameter.
+          * The ID of the video.
           *
           * @param request UpdateVideoInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16150,7 +15822,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The specific parameter of a video is updated only when a new value is passed in the parameter.
+          * The ID of the video.
           *
           * @param request UpdateVideoInfoRequest
           * @return UpdateVideoInfoResponse
@@ -16162,7 +15834,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * The specific parameter of a video is updated only when a new value is passed in the parameter.
+          * The ID of the video.
           *
           * @param request UpdateVideoInfoRequest
           * @return UpdateVideoInfoResponse
@@ -16580,10 +16252,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - If a callback is configured, you can receive an [UploadByURLComplete](~~86326~~) event notification after the media file is uploaded. You can query the upload status by calling the [GetURLUploadInfos](~~106830~~) operation.
-          * - After an upload job is submitted, the job is asynchronously executed on the cloud. All submitted upload jobs are queued for execution. You can check the job status based on the URL and media file ID that are returned in the event notification.
-          * - You can call the UploadMediaByURL operation if the media file is not stored on a local server or terminal and needs to be uploaded by using a URL that can be accessed from the Internet.
-          * - You can call the UploadMediaByURL operation only in the **China (Shanghai)** region.
+          * The ID of the workflow. To view the ID of the workflow, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Processing** > **Workflows**.
+          * > If both the WorkflowId and TemplateGroupId parameters are set, the value of the WorkflowId parameter takes effect. For more information, see [Workflows](~~115347~~).
           *
           * @param request UploadMediaByURLRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16641,10 +16311,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - If a callback is configured, you can receive an [UploadByURLComplete](~~86326~~) event notification after the media file is uploaded. You can query the upload status by calling the [GetURLUploadInfos](~~106830~~) operation.
-          * - After an upload job is submitted, the job is asynchronously executed on the cloud. All submitted upload jobs are queued for execution. You can check the job status based on the URL and media file ID that are returned in the event notification.
-          * - You can call the UploadMediaByURL operation if the media file is not stored on a local server or terminal and needs to be uploaded by using a URL that can be accessed from the Internet.
-          * - You can call the UploadMediaByURL operation only in the **China (Shanghai)** region.
+          * The ID of the workflow. To view the ID of the workflow, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Processing** > **Workflows**.
+          * > If both the WorkflowId and TemplateGroupId parameters are set, the value of the WorkflowId parameter takes effect. For more information, see [Workflows](~~115347~~).
           *
           * @param request UploadMediaByURLRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16702,10 +16370,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - If a callback is configured, you can receive an [UploadByURLComplete](~~86326~~) event notification after the media file is uploaded. You can query the upload status by calling the [GetURLUploadInfos](~~106830~~) operation.
-          * - After an upload job is submitted, the job is asynchronously executed on the cloud. All submitted upload jobs are queued for execution. You can check the job status based on the URL and media file ID that are returned in the event notification.
-          * - You can call the UploadMediaByURL operation if the media file is not stored on a local server or terminal and needs to be uploaded by using a URL that can be accessed from the Internet.
-          * - You can call the UploadMediaByURL operation only in the **China (Shanghai)** region.
+          * The ID of the workflow. To view the ID of the workflow, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Processing** > **Workflows**.
+          * > If both the WorkflowId and TemplateGroupId parameters are set, the value of the WorkflowId parameter takes effect. For more information, see [Workflows](~~115347~~).
           *
           * @param request UploadMediaByURLRequest
           * @return UploadMediaByURLResponse
@@ -16717,10 +16383,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * - If a callback is configured, you can receive an [UploadByURLComplete](~~86326~~) event notification after the media file is uploaded. You can query the upload status by calling the [GetURLUploadInfos](~~106830~~) operation.
-          * - After an upload job is submitted, the job is asynchronously executed on the cloud. All submitted upload jobs are queued for execution. You can check the job status based on the URL and media file ID that are returned in the event notification.
-          * - You can call the UploadMediaByURL operation if the media file is not stored on a local server or terminal and needs to be uploaded by using a URL that can be accessed from the Internet.
-          * - You can call the UploadMediaByURL operation only in the **China (Shanghai)** region.
+          * The ID of the workflow. To view the ID of the workflow, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Processing** > **Workflows**.
+          * > If both the WorkflowId and TemplateGroupId parameters are set, the value of the WorkflowId parameter takes effect. For more information, see [Workflows](~~115347~~).
           *
           * @param request UploadMediaByURLRequest
           * @return UploadMediaByURLResponse
@@ -16732,8 +16396,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to upload transcoded streams to ApsaraVideo VOD from external storage. The following HDR types of transcoded streams are supported: HDR, HDR 10, HLG, Dolby Vision, HDR Vivid, and SDR+. You can call the [GetURLUploadInfos](~~106830~~) operation to query the upload status. After the upload is complete, the callback of the UploadByURLComplete event is returned.
-          * >  This operation is available only in the Singapore (Singapore) region.
+          * The URL of the transcoded stream.
+          * If URL authentication is required, you must pass authentication information in this parameter and make sure that the URL can be accessed over the Internet.
           *
           * @param request UploadStreamByURLRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16787,8 +16451,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to upload transcoded streams to ApsaraVideo VOD from external storage. The following HDR types of transcoded streams are supported: HDR, HDR 10, HLG, Dolby Vision, HDR Vivid, and SDR+. You can call the [GetURLUploadInfos](~~106830~~) operation to query the upload status. After the upload is complete, the callback of the UploadByURLComplete event is returned.
-          * >  This operation is available only in the Singapore (Singapore) region.
+          * The URL of the transcoded stream.
+          * If URL authentication is required, you must pass authentication information in this parameter and make sure that the URL can be accessed over the Internet.
           *
           * @param request UploadStreamByURLRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16842,8 +16506,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to upload transcoded streams to ApsaraVideo VOD from external storage. The following HDR types of transcoded streams are supported: HDR, HDR 10, HLG, Dolby Vision, HDR Vivid, and SDR+. You can call the [GetURLUploadInfos](~~106830~~) operation to query the upload status. After the upload is complete, the callback of the UploadByURLComplete event is returned.
-          * >  This operation is available only in the Singapore (Singapore) region.
+          * The URL of the transcoded stream.
+          * If URL authentication is required, you must pass authentication information in this parameter and make sure that the URL can be accessed over the Internet.
           *
           * @param request UploadStreamByURLRequest
           * @return UploadStreamByURLResponse
@@ -16855,8 +16519,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         }
 
         /**
-          * You can call this operation to upload transcoded streams to ApsaraVideo VOD from external storage. The following HDR types of transcoded streams are supported: HDR, HDR 10, HLG, Dolby Vision, HDR Vivid, and SDR+. You can call the [GetURLUploadInfos](~~106830~~) operation to query the upload status. After the upload is complete, the callback of the UploadByURLComplete event is returned.
-          * >  This operation is available only in the Singapore (Singapore) region.
+          * The URL of the transcoded stream.
+          * If URL authentication is required, you must pass authentication information in this parameter and make sure that the URL can be accessed over the Internet.
           *
           * @param request UploadStreamByURLRequest
           * @return UploadStreamByURLResponse

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddVodDomainResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The URL that is used for health checks.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

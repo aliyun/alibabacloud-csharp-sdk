@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainDetailRequest : TeaModel {
         /// <summary>
-        /// The domain name for CDN.
+        /// The status of the origin server. Valid values:
+        /// 
+        /// *   **online**: indicates that the origin server is enabled.
+        /// *   **offline**: indicates that the origin server is disabled.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

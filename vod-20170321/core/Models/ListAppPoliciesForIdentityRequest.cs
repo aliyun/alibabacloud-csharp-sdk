@@ -10,27 +10,27 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListAppPoliciesForIdentityRequest : TeaModel {
         /// <summary>
-        /// The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+        /// The ID of the application.
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The name of the identity.
+        /// The type of the identity. Valid values:
         /// 
-        /// *   Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.
-        /// *   Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.
+        /// *   **RamUser**: a RAM user.
+        /// *   **RamRole**: a RAM role.
         /// </summary>
         [NameInMap("IdentityName")]
         [Validation(Required=false)]
         public string IdentityName { get; set; }
 
         /// <summary>
-        /// The type of the identity. Valid values:
+        /// The type of the policy. Valid values:
         /// 
-        /// *   **RamUser**: a RAM user.
-        /// *   **RamRole**: a RAM role.
+        /// *   **System**
+        /// *   **Custom**
         /// </summary>
         [NameInMap("IdentityType")]
         [Validation(Required=false)]
