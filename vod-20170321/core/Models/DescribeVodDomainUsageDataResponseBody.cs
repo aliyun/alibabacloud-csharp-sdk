@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// The start of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// The type of content returned. Valid values:
         /// 
         /// *   **static**: static content
-        /// *   **dynamic**: dynamic content
+        /// *   **dynamic**: dynamic requests
         /// *   **all**: all content
         /// </summary>
         [NameInMap("Type")]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<DescribeVodDomainUsageDataResponseBodyUsageDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeVodDomainUsageDataResponseBodyUsageDataPerIntervalDataModule : TeaModel {
                 /// <summary>
-                /// The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The timestamp of the data returned. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]

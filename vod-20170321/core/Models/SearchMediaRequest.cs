@@ -10,25 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SearchMediaRequest : TeaModel {
         /// <summary>
-        /// The level of the category.
+        /// Details about media assets.
         /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public string Fields { get; set; }
-
-        /// <summary>
-        /// The operation that you want to perform. Set the value to **SearchMedia**.
-        /// </summary>
-        [NameInMap("Match")]
-        [Validation(Required=false)]
-        public string Match { get; set; }
-
-        /// <summary>
-        /// Details about media assets.
-        /// </summary>
-        [NameInMap("PageNo")]
-        [Validation(Required=false)]
-        public int? PageNo { get; set; }
 
         /// <summary>
         /// The preprocessing status. Only preprocessed videos can be used for live streaming in the production studio. Valid values:
@@ -38,26 +24,47 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// *   **PreprocessSucceed**
         /// *   **PreprocessFailed**
         /// </summary>
+        [NameInMap("Match")]
+        [Validation(Required=false)]
+        public string Match { get; set; }
+
+        /// <summary>
+        /// The ID of the media asset.
+        /// </summary>
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public int? PageNo { get; set; }
+
+        /// <summary>
+        /// The type of the media asset that you want to query. Default value: video. Valid values:
+        /// 
+        /// *   **video**
+        /// *   **audio**
+        /// *   **image**
+        /// *   **attached**
+        /// 
+        /// > If this parameter is set to **video** or **audio** and you want to traverse all data that meets the filter criteria, you must set the ScrollToken parameter.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The size of the video file.
+        /// The tags of the image file.
         /// </summary>
         [NameInMap("ScrollToken")]
         [Validation(Required=false)]
         public string ScrollToken { get; set; }
 
         /// <summary>
-        /// The ID of the parent category.
+        /// The list of sprite snapshots.
         /// </summary>
         [NameInMap("SearchType")]
         [Validation(Required=false)]
         public string SearchType { get; set; }
 
         /// <summary>
-        /// The list of sprite snapshots.
+        /// The size of the video file.
         /// </summary>
         [NameInMap("SortBy")]
         [Validation(Required=false)]

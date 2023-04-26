@@ -10,58 +10,67 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListLiveRecordVideoRequest : TeaModel {
         /// <summary>
-        /// The name of the application that was used to record the live stream.
+        /// The sorting rule of results. Valid values:
+        /// 
+        /// *   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.
+        /// *   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// The domain name of the recorded live stream.
+        /// The operation that you want to perform. Set the value to **ListLiveRecordVideo**.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The query is performed based on the time range during which the required live streams were recorded. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// CreationTime:Desc
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The name of the recorded live stream.
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **100**. Default value: **10**.
+        /// The ID of the transcoding template group.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The sorting rule of results. Valid values:
-        /// *   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.
-        /// *   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.
+        /// The duration of the video. Unit: seconds.
         /// </summary>
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. The query is performed based on the time range during which the required live streams were recorded. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// The name of the video category.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The name of the recorded live stream.
+        /// The status of the video. Valid values:
+        /// 
+        /// *   **Uploading:**: indicates that the video is being uploaded.
+        /// *   **UploadFail**: indicates that the video failed to be uploaded.
+        /// *   **UploadSucces**: indicates that the video was uploaded.
+        /// *   **Transcoding**: indicates that the video is being transcoded.
+        /// *   **TranscodeFail**: indicates that the video failed to be transcoded.
+        /// *   **Blocked**: indicates that the video is blocked.
+        /// *   **Normal**: indicates that the video is in a normal state.
         /// </summary>
         [NameInMap("StreamName")]
         [Validation(Required=false)]

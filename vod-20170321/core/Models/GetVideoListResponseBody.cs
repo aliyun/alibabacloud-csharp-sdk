@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of videos.
+        /// The total number of media files returned.
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]
         public int? Total { get; set; }
 
         /// <summary>
-        /// The information about the video. The information about a maximum of first 5,000 video records can be obtained in a single request.
+        /// The information about the media file. Information about a maximum of 5,000 media files can be returned.
         /// </summary>
         [NameInMap("VideoList")]
         [Validation(Required=false)]
@@ -35,56 +35,56 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<GetVideoListResponseBodyVideoListVideo> Video { get; set; }
             public class GetVideoListResponseBodyVideoListVideo : TeaModel {
                 /// <summary>
-                /// The ID of the application. Default value: **app-1000000**.
+                /// The application ID. Default value: **app-1000000**.
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// The ID of the video category.
+                /// The category ID.
                 /// </summary>
                 [NameInMap("CateId")]
                 [Validation(Required=false)]
                 public long? CateId { get; set; }
 
                 /// <summary>
-                /// The name of the video category.
+                /// The category name.
                 /// </summary>
                 [NameInMap("CateName")]
                 [Validation(Required=false)]
                 public string CateName { get; set; }
 
                 /// <summary>
-                /// The URL of the video thumbnail.
+                /// The thumbnail URL of the media file.
                 /// </summary>
                 [NameInMap("CoverURL")]
                 [Validation(Required=false)]
                 public string CoverURL { get; set; }
 
                 /// <summary>
-                /// The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the media file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description of the video.
+                /// The description of the media file.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The duration of the video. Unit: seconds.
+                /// The duration of the media file. Unit: seconds.
                 /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public float? Duration { get; set; }
 
                 /// <summary>
-                /// The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// The time when the video was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ModificationTime")]
                 [Validation(Required=false)]
@@ -99,14 +99,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string RestoreStatus { get; set; }
 
                 /// <summary>
-                /// The size of the video mezzanine file. Unit: byte.
+                /// The size of the source file. Unit: bytes.
                 /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public long? Size { get; set; }
 
                 /// <summary>
-                /// The URL array of video snapshots.
+                /// The video snapshot URLs.
                 /// </summary>
                 [NameInMap("Snapshots")]
                 [Validation(Required=false)]
@@ -119,15 +119,19 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 }
 
                 /// <summary>
-                /// The status of the video. By default, videos in all states are returned. Multiple states are separated by commas (,). Valid values:
+                /// The video status. Valid values:
                 /// 
                 /// *   **Uploading**: The video is being uploaded.
-                /// *   **UploadFail**: The video fails to be uploaded.
-                /// *   **UploadSucc**: The video is uploaded.
+                /// *   **UploadFail**: The video failed to be uploaded.
+                /// *   **UploadSucc**: The video has been uploaded.
                 /// *   **Transcoding**: The video is being transcoded.
-                /// *   **TranscodeFail**: The video fails to be transcoded.
+                /// *   **TranscodeFail**: The video failed to be transcoded.
+                /// *   **checking**: The video is being reviewed.
                 /// *   **Blocked**: The video is blocked.
-                /// *   **Normal**: The video can be played.
+                /// *   **Normal**: The video is normal.
+                /// *   **ProduceFail**: The video failed to be produced.
+                /// 
+                /// For more information about each video status, see the "Status: the status of a video" section of the [Basic data types](~~52839#section-p7c-jgy-070~~) topic.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -138,28 +142,28 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string StorageClass { get; set; }
 
                 /// <summary>
-                /// The OSS bucket where the video file is stored.
+                /// The storage address of the media file.
                 /// </summary>
                 [NameInMap("StorageLocation")]
                 [Validation(Required=false)]
                 public string StorageLocation { get; set; }
 
                 /// <summary>
-                /// The tags of the video. Multiple tags are separated by commas (,).
+                /// The tags of the media file. Multiple tags are separated by commas (,).
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public string Tags { get; set; }
 
                 /// <summary>
-                /// The title of the video.
+                /// The title of the media file.
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
 
                 /// <summary>
-                /// The ID of the video.
+                /// The ID of the media file.
                 /// </summary>
                 [NameInMap("VideoId")]
                 [Validation(Required=false)]
