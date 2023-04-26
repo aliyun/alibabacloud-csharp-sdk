@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        /// <summary>
+        /// url超时时间，单位：秒。
+        /// 默认15分钟，最大4小时。
+        /// </summary>
         [NameInMap("url_expire_sec")]
         [Validation(Required=false)]
         public long? UrlExpireSec { get; set; }

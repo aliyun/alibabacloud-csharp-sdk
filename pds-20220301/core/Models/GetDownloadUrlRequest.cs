@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string FileName { get; set; }
 
+        [NameInMap("share_id")]
+        [Validation(Required=false)]
+        public string ShareId { get; set; }
+
     }
 
 }

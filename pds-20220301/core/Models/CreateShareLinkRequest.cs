@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public long? SaveLimit { get; set; }
 
+        [NameInMap("share_all_files")]
+        [Validation(Required=false)]
+        public bool? ShareAllFiles { get; set; }
+
         [NameInMap("share_name")]
         [Validation(Required=false)]
         public string ShareName { get; set; }

@@ -8,10 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class FilePutUserTagsResponseBody : TeaModel {
+    public class CsiGetFileInfoRequest : TeaModel {
+        [NameInMap("drive_id")]
+        [Validation(Required=false)]
+        public string DriveId { get; set; }
+
         [NameInMap("file_id")]
         [Validation(Required=false)]
         public string FileId { get; set; }
+
+        [NameInMap("url_expire_sec")]
+        [Validation(Required=false)]
+        public int? UrlExpireSec { get; set; }
 
     }
 

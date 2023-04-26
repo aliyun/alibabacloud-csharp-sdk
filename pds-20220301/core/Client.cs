@@ -568,6 +568,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["file_id"] = request.FileId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
+            {
+                body["share_id"] = request.ShareId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToDriveId))
+            {
+                body["to_drive_id"] = request.ToDriveId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToParentFileId))
             {
                 body["to_parent_file_id"] = request.ToParentFileId;
@@ -607,6 +615,14 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
             {
                 body["file_id"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
+            {
+                body["share_id"] = request.ShareId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToDriveId))
+            {
+                body["to_drive_id"] = request.ToDriveId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToParentFileId))
             {
@@ -1214,6 +1230,108 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await CreateGroupWithOptionsAsync(request, headers, runtime);
         }
 
+        public CreateIdentityToBenefitPkgMappingResponse CreateIdentityToBenefitPkgMappingWithOptions(CreateIdentityToBenefitPkgMappingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                body["amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BenefitPkgId))
+            {
+                body["benefit_pkg_id"] = request.BenefitPkgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            {
+                body["expire_time"] = request.ExpireTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityId))
+            {
+                body["identity_id"] = request.IdentityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityType))
+            {
+                body["identity_type"] = request.IdentityType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIdentityToBenefitPkgMapping",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/benefit/identity_to_benefit_pkg_mapping/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIdentityToBenefitPkgMappingResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CreateIdentityToBenefitPkgMappingResponse> CreateIdentityToBenefitPkgMappingWithOptionsAsync(CreateIdentityToBenefitPkgMappingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                body["amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BenefitPkgId))
+            {
+                body["benefit_pkg_id"] = request.BenefitPkgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            {
+                body["expire_time"] = request.ExpireTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityId))
+            {
+                body["identity_id"] = request.IdentityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityType))
+            {
+                body["identity_type"] = request.IdentityType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIdentityToBenefitPkgMapping",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/benefit/identity_to_benefit_pkg_mapping/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIdentityToBenefitPkgMappingResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CreateIdentityToBenefitPkgMappingResponse CreateIdentityToBenefitPkgMapping(CreateIdentityToBenefitPkgMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateIdentityToBenefitPkgMappingWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateIdentityToBenefitPkgMappingResponse> CreateIdentityToBenefitPkgMappingAsync(CreateIdentityToBenefitPkgMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateIdentityToBenefitPkgMappingWithOptionsAsync(request, headers, runtime);
+        }
+
         public CreateShareLinkResponse CreateShareLinkWithOptions(CreateShareLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1257,6 +1375,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaveLimit))
             {
                 body["save_limit"] = request.SaveLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareAllFiles))
+            {
+                body["share_all_files"] = request.ShareAllFiles;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareName))
             {
@@ -1333,6 +1455,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaveLimit))
             {
                 body["save_limit"] = request.SaveLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareAllFiles))
+            {
+                body["share_all_files"] = request.ShareAllFiles;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareName))
             {
@@ -1528,6 +1654,92 @@ namespace AlibabaCloud.SDK.Pds20220301
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateUserWithOptionsAsync(request, headers, runtime);
+        }
+
+        public CsiGetFileInfoResponse CsiGetFileInfoWithOptions(CsiGetFileInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriveId))
+            {
+                body["drive_id"] = request.DriveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                body["file_id"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlExpireSec))
+            {
+                body["url_expire_sec"] = request.UrlExpireSec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CsiGetFileInfo",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/csi/get_file_info",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CsiGetFileInfoResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<CsiGetFileInfoResponse> CsiGetFileInfoWithOptionsAsync(CsiGetFileInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriveId))
+            {
+                body["drive_id"] = request.DriveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                body["file_id"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlExpireSec))
+            {
+                body["url_expire_sec"] = request.UrlExpireSec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CsiGetFileInfo",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/csi/get_file_info",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CsiGetFileInfoResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public CsiGetFileInfoResponse CsiGetFileInfo(CsiGetFileInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CsiGetFileInfoWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CsiGetFileInfoResponse> CsiGetFileInfoAsync(CsiGetFileInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CsiGetFileInfoWithOptionsAsync(request, headers, runtime);
         }
 
         public DeleteDomainResponse DeleteDomainWithOptions(DeleteDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2072,6 +2284,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["office_thumbnail_process"] = request.OfficeThumbnailProcess;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
+            {
+                body["share_id"] = request.ShareId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoThumbnailProcess))
             {
                 body["video_thumbnail_process"] = request.VideoThumbnailProcess;
@@ -2115,6 +2331,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeThumbnailProcess))
             {
                 body["office_thumbnail_process"] = request.OfficeThumbnailProcess;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
+            {
+                body["share_id"] = request.ShareId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoThumbnailProcess))
             {
@@ -2814,6 +3034,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["file_name"] = request.FileName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
+            {
+                body["share_id"] = request.ShareId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2853,6 +3077,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
                 body["file_name"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
+            {
+                body["share_id"] = request.ShareId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2974,6 +3202,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["file_id"] = request.FileId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
+            {
+                body["share_id"] = request.ShareId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlExpireSec))
             {
                 body["url_expire_sec"] = request.UrlExpireSec;
@@ -3013,6 +3245,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
             {
                 body["file_id"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
+            {
+                body["share_id"] = request.ShareId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlExpireSec))
             {
@@ -3120,6 +3356,92 @@ namespace AlibabaCloud.SDK.Pds20220301
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetGroupWithOptionsAsync(request, headers, runtime);
+        }
+
+        public GetIdentityToBenefitPkgMappingResponse GetIdentityToBenefitPkgMappingWithOptions(GetIdentityToBenefitPkgMappingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BenefitPkgId))
+            {
+                body["benefit_pkg_id"] = request.BenefitPkgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityId))
+            {
+                body["identity_id"] = request.IdentityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityType))
+            {
+                body["identity_type"] = request.IdentityType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIdentityToBenefitPkgMapping",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/benefit/identity_to_benefit_pkg_mapping/get",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIdentityToBenefitPkgMappingResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<GetIdentityToBenefitPkgMappingResponse> GetIdentityToBenefitPkgMappingWithOptionsAsync(GetIdentityToBenefitPkgMappingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BenefitPkgId))
+            {
+                body["benefit_pkg_id"] = request.BenefitPkgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityId))
+            {
+                body["identity_id"] = request.IdentityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityType))
+            {
+                body["identity_type"] = request.IdentityType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIdentityToBenefitPkgMapping",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/benefit/identity_to_benefit_pkg_mapping/get",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIdentityToBenefitPkgMappingResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public GetIdentityToBenefitPkgMappingResponse GetIdentityToBenefitPkgMapping(GetIdentityToBenefitPkgMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetIdentityToBenefitPkgMappingWithOptions(request, headers, runtime);
+        }
+
+        public async Task<GetIdentityToBenefitPkgMappingResponse> GetIdentityToBenefitPkgMappingAsync(GetIdentityToBenefitPkgMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetIdentityToBenefitPkgMappingWithOptionsAsync(request, headers, runtime);
         }
 
         public GetLinkInfoResponse GetLinkInfoWithOptions(GetLinkInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4116,6 +4438,76 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await ImportUserWithOptionsAsync(request, headers, runtime);
         }
 
+        public InvestigateFileResponse InvestigateFileWithOptions(InvestigateFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriveFileIds))
+            {
+                body["drive_file_ids"] = request.DriveFileIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InvestigateFile",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/csi/investigate_file",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InvestigateFileResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<InvestigateFileResponse> InvestigateFileWithOptionsAsync(InvestigateFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriveFileIds))
+            {
+                body["drive_file_ids"] = request.DriveFileIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InvestigateFile",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/csi/investigate_file",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InvestigateFileResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public InvestigateFileResponse InvestigateFile(InvestigateFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return InvestigateFileWithOptions(request, headers, runtime);
+        }
+
+        public async Task<InvestigateFileResponse> InvestigateFileAsync(InvestigateFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await InvestigateFileWithOptionsAsync(request, headers, runtime);
+        }
+
         public LinkAccountResponse LinkAccountWithOptions(LinkAccountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4716,6 +5108,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["parent_file_id"] = request.ParentFileId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
+            {
+                body["share_id"] = request.ShareId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["status"] = request.Status;
@@ -4779,6 +5175,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentFileId))
             {
                 body["parent_file_id"] = request.ParentFileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
+            {
+                body["share_id"] = request.ShareId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -4998,6 +5398,92 @@ namespace AlibabaCloud.SDK.Pds20220301
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListGroupMemberWithOptionsAsync(domainId, request, headers, runtime);
+        }
+
+        public ListIdentityToBenefitPkgMappingResponse ListIdentityToBenefitPkgMappingWithOptions(ListIdentityToBenefitPkgMappingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityId))
+            {
+                body["identity_id"] = request.IdentityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityType))
+            {
+                body["identity_type"] = request.IdentityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeExpired))
+            {
+                body["include_expired"] = request.IncludeExpired;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIdentityToBenefitPkgMapping",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/benefit/identity_to_benefit_pkg_mapping/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIdentityToBenefitPkgMappingResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListIdentityToBenefitPkgMappingResponse> ListIdentityToBenefitPkgMappingWithOptionsAsync(ListIdentityToBenefitPkgMappingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityId))
+            {
+                body["identity_id"] = request.IdentityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityType))
+            {
+                body["identity_type"] = request.IdentityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeExpired))
+            {
+                body["include_expired"] = request.IncludeExpired;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIdentityToBenefitPkgMapping",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/benefit/identity_to_benefit_pkg_mapping/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIdentityToBenefitPkgMappingResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListIdentityToBenefitPkgMappingResponse ListIdentityToBenefitPkgMapping(ListIdentityToBenefitPkgMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListIdentityToBenefitPkgMappingWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListIdentityToBenefitPkgMappingResponse> ListIdentityToBenefitPkgMappingAsync(ListIdentityToBenefitPkgMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListIdentityToBenefitPkgMappingWithOptionsAsync(request, headers, runtime);
         }
 
         public ListMyDrivesResponse ListMyDrivesWithOptions(ListMyDrivesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7426,6 +7912,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["drive_name"] = request.DriveName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["owner"] = request.Owner;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["status"] = request.Status;
@@ -7469,6 +7959,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriveName))
             {
                 body["drive_name"] = request.DriveName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["owner"] = request.Owner;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -7832,6 +8326,108 @@ namespace AlibabaCloud.SDK.Pds20220301
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateGroupWithOptionsAsync(request, headers, runtime);
+        }
+
+        public UpdateIdentityToBenefitPkgMappingResponse UpdateIdentityToBenefitPkgMappingWithOptions(UpdateIdentityToBenefitPkgMappingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                body["amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BenefitPkgId))
+            {
+                body["benefit_pkg_id"] = request.BenefitPkgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            {
+                body["expire_time"] = request.ExpireTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityId))
+            {
+                body["identity_id"] = request.IdentityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityType))
+            {
+                body["identity_type"] = request.IdentityType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateIdentityToBenefitPkgMapping",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/benefit/identity_to_benefit_pkg_mapping/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateIdentityToBenefitPkgMappingResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<UpdateIdentityToBenefitPkgMappingResponse> UpdateIdentityToBenefitPkgMappingWithOptionsAsync(UpdateIdentityToBenefitPkgMappingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                body["amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BenefitPkgId))
+            {
+                body["benefit_pkg_id"] = request.BenefitPkgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            {
+                body["expire_time"] = request.ExpireTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityId))
+            {
+                body["identity_id"] = request.IdentityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityType))
+            {
+                body["identity_type"] = request.IdentityType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateIdentityToBenefitPkgMapping",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/benefit/identity_to_benefit_pkg_mapping/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateIdentityToBenefitPkgMappingResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UpdateIdentityToBenefitPkgMappingResponse UpdateIdentityToBenefitPkgMapping(UpdateIdentityToBenefitPkgMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateIdentityToBenefitPkgMappingWithOptions(request, headers, runtime);
+        }
+
+        public async Task<UpdateIdentityToBenefitPkgMappingResponse> UpdateIdentityToBenefitPkgMappingAsync(UpdateIdentityToBenefitPkgMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateIdentityToBenefitPkgMappingWithOptionsAsync(request, headers, runtime);
         }
 
         public UpdateRevisionResponse UpdateRevisionWithOptions(UpdateRevisionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

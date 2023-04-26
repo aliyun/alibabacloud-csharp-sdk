@@ -1,3 +1,6 @@
+2023-04-26 Version: 1.0.4
+- support benefit management
+
 2023-04-06 Version: 1.0.3
 - Add domain api
 

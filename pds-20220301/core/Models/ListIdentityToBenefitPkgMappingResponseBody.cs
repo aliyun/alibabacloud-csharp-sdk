@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
-    public class FilePutUserTagsResponseBody : TeaModel {
-        [NameInMap("file_id")]
+    public class ListIdentityToBenefitPkgMappingResponseBody : TeaModel {
+        [NameInMap("items")]
         [Validation(Required=false)]
-        public string FileId { get; set; }
+        public List<IdentityToBenefitPkgMapping> Items { get; set; }
 
     }
 

@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string OfficeThumbnailProcess { get; set; }
 
+        [NameInMap("share_id")]
+        [Validation(Required=false)]
+        public string ShareId { get; set; }
+
         [NameInMap("video_thumbnail_process")]
         [Validation(Required=false)]
         public string VideoThumbnailProcess { get; set; }
