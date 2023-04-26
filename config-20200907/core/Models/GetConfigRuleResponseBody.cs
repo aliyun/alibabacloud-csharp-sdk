@@ -375,6 +375,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public int? RiskLevel { get; set; }
 
+            [NameInMap("Scope")]
+            [Validation(Required=false)]
+            public GetConfigRuleResponseBodyConfigRuleScope Scope { get; set; }
+            public class GetConfigRuleResponseBodyConfigRuleScope : TeaModel {
+                [NameInMap("ComplianceResourceTypes")]
+                [Validation(Required=false)]
+                public List<string> ComplianceResourceTypes { get; set; }
+
+            }
+
             /// <summary>
             /// The information about how the rule was created.
             /// </summary>

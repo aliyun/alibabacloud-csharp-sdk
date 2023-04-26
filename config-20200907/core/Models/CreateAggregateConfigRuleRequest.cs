@@ -10,91 +10,23 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateAggregateConfigRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the account group.
+        /// The way in which the rule is to be created. Valid values:
         /// 
-        /// For more information about how to query the ID of an account group, see [ListAggregators](~~255797~~).
+        /// *   ALIYUN: The rule is to be created based on a managed rule of Alibaba Cloud.
+        /// *   CUSTOM_FC: The rule is a custom rule.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// The ID of the resource group to which the rule applies. Separate multiple resource group IDs with commas (,).
+        /// 
+        /// >  This parameter applies only to a managed rule.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
-
-        /// <summary>
-        /// The name of the rule.
-        /// </summary>
-        [NameInMap("ConfigRuleName")]
-        [Validation(Required=false)]
-        public string ConfigRuleName { get; set; }
-
-        /// <summary>
-        /// The trigger type of the rule. Valid values:
-        /// 
-        /// *   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.
-        /// *   ScheduledNotification: The rule is periodically triggered.
-        /// </summary>
-        [NameInMap("ConfigRuleTriggerTypes")]
-        [Validation(Required=false)]
-        public string ConfigRuleTriggerTypes { get; set; }
-
-        /// <summary>
-        /// The description of the rule.
-        /// </summary>
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        /// <summary>
-        /// The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule. Separate multiple member account IDs with commas (,).
-        /// 
-        /// >  This parameter applies only to a managed rule.
-        /// </summary>
-        [NameInMap("ExcludeAccountIdsScope")]
-        [Validation(Required=false)]
-        public string ExcludeAccountIdsScope { get; set; }
-
-        /// <summary>
-        /// The ID of the resource directory to which the rule does not apply, which means that the resources within member accounts in the resource directory are not evaluated based on the rule. Separate multiple resource directory IDs with commas (,).
-        /// 
-        /// > 
-        /// *   This parameter applies only to a rule of a global account group.
-        /// *   This parameter applies only to a managed rule.
-        /// </summary>
-        [NameInMap("ExcludeFolderIdsScope")]
-        [Validation(Required=false)]
-        public string ExcludeFolderIdsScope { get; set; }
-
-        /// <summary>
-        /// The ID of the resource to be excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).
-        /// 
-        /// >  This parameter applies only to a managed rule.
-        /// </summary>
-        [NameInMap("ExcludeResourceIdsScope")]
-        [Validation(Required=false)]
-        public string ExcludeResourceIdsScope { get; set; }
-
-        /// <summary>
-        /// The ID of the resource directory to which the rule applies, which means that the resources within member accounts in the resource directory are evaluated based on the rule.
-        /// 
-        /// > 
-        /// *   This parameter applies only to a rule of a global account group.
-        /// *   This parameter applies only to a managed rule.
-        /// </summary>
-        [NameInMap("FolderIdsScope")]
-        [Validation(Required=false)]
-        public string FolderIdsScope { get; set; }
-
-        /// <summary>
-        /// The input parameters of the rule.
-        /// </summary>
-        [NameInMap("InputParameters")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> InputParameters { get; set; }
 
         /// <summary>
         /// The intervals at which the rule is triggered. Valid values:
@@ -107,34 +39,47 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// 
         /// >  This parameter is required if the `ConfigRuleTriggerTypes` parameter is set to `ScheduledNotification`.
         /// </summary>
-        [NameInMap("MaximumExecutionFrequency")]
+        [NameInMap("ConfigRuleName")]
         [Validation(Required=false)]
-        public string MaximumExecutionFrequency { get; set; }
+        public string ConfigRuleName { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the rule applies. Separate multiple region IDs with commas (,).
-        /// 
-        /// >  This parameter applies only to a managed rule.
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
-        [NameInMap("RegionIdsScope")]
+        [NameInMap("ConfigRuleTriggerTypes")]
         [Validation(Required=false)]
-        public string RegionIdsScope { get; set; }
-
-        /// <summary>
-        /// The ID of the resource group to which the rule applies. Separate multiple resource group IDs with commas (,).
-        /// 
-        /// >  This parameter applies only to a managed rule.
-        /// </summary>
-        [NameInMap("ResourceGroupIdsScope")]
-        [Validation(Required=false)]
-        public string ResourceGroupIdsScope { get; set; }
+        public string ConfigRuleTriggerTypes { get; set; }
 
         /// <summary>
         /// The type of the resource to be evaluated by the rule. Separate multiple resource types with commas (,).
         /// </summary>
-        [NameInMap("ResourceTypesScope")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public List<string> ResourceTypesScope { get; set; }
+        public string Description { get; set; }
+
+        [NameInMap("ExcludeAccountIdsScope")]
+        [Validation(Required=false)]
+        public string ExcludeAccountIdsScope { get; set; }
+
+        [NameInMap("ExcludeFolderIdsScope")]
+        [Validation(Required=false)]
+        public string ExcludeFolderIdsScope { get; set; }
+
+        /// <summary>
+        /// The tag value used to filter resources. The rule applies only to the resources with the specified tag value.
+        /// 
+        /// >  This parameter applies only to a managed rule. You must set the `TagKeyScope` and `TagValueScope` parameters at the same time.
+        /// </summary>
+        [NameInMap("ExcludeResourceIdsScope")]
+        [Validation(Required=false)]
+        public string ExcludeResourceIdsScope { get; set; }
+
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("FolderIdsScope")]
+        [Validation(Required=false)]
+        public string FolderIdsScope { get; set; }
 
         /// <summary>
         /// The risk level of the resources that are not compliant with the rule. Valid values:
@@ -143,9 +88,27 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// *   2: medium risk level
         /// *   3: low risk level
         /// </summary>
-        [NameInMap("RiskLevel")]
+        [NameInMap("InputParameters")]
         [Validation(Required=false)]
-        public int? RiskLevel { get; set; }
+        public Dictionary<string, object> InputParameters { get; set; }
+
+        /// <summary>
+        /// The ID of the region to which the rule applies. Separate multiple region IDs with commas (,).
+        /// 
+        /// >  This parameter applies only to a managed rule.
+        /// </summary>
+        [NameInMap("MaximumExecutionFrequency")]
+        [Validation(Required=false)]
+        public string MaximumExecutionFrequency { get; set; }
+
+        /// <summary>
+        /// The tag key used to filter resources. The rule applies only to the resources with the specified tag key. Separate multiple parameter values with commas (,).
+        /// 
+        /// >  This parameter applies only to a managed rule. You must set the `TagKeyScope` and `TagValueScope` parameters at the same time.
+        /// </summary>
+        [NameInMap("RegionIdsScope")]
+        [Validation(Required=false)]
+        public string RegionIdsScope { get; set; }
 
         /// <summary>
         /// The identifier of the rule.
@@ -155,19 +118,54 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// 
         /// For more information about how to query the name of a managed rule, see [Managed rules](~~127404~~).
         /// </summary>
+        [NameInMap("ResourceGroupIdsScope")]
+        [Validation(Required=false)]
+        public string ResourceGroupIdsScope { get; set; }
+
+        /// <summary>
+        /// The ID of the resource to be excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).
+        /// 
+        /// >  This parameter applies only to a managed rule.
+        /// </summary>
+        [NameInMap("ResourceTypesScope")]
+        [Validation(Required=false)]
+        public List<string> ResourceTypesScope { get; set; }
+
+        /// <summary>
+        /// The ID of the account group.
+        /// 
+        /// For more information about how to query the ID of an account group, see [ListAggregators](~~255797~~).
+        /// </summary>
+        [NameInMap("RiskLevel")]
+        [Validation(Required=false)]
+        public int? RiskLevel { get; set; }
+
+        /// <summary>
+        /// The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule. Separate multiple member account IDs with commas (,).
+        /// 
+        /// >  This parameter applies only to a managed rule.
+        /// </summary>
         [NameInMap("SourceIdentifier")]
         [Validation(Required=false)]
         public string SourceIdentifier { get; set; }
 
         /// <summary>
-        /// The way in which the rule is to be created. Valid values:
+        /// The ID of the resource directory to which the rule does not apply, which means that the resources within member accounts in the resource directory are not evaluated based on the rule. Separate multiple resource directory IDs with commas (,).
         /// 
-        /// *   ALIYUN: The rule is to be created based on a managed rule of Alibaba Cloud.
-        /// *   CUSTOM_FC: The rule is a custom rule.
+        /// > 
+        /// *   This parameter applies only to a rule of a global account group.
+        /// *   This parameter applies only to a managed rule.
         /// </summary>
         [NameInMap("SourceOwner")]
         [Validation(Required=false)]
         public string SourceOwner { get; set; }
+
+        /// <summary>
+        /// The ID of the rule.
+        /// </summary>
+        [NameInMap("TagKeyLogicScope")]
+        [Validation(Required=false)]
+        public string TagKeyLogicScope { get; set; }
 
         /// <summary>
         /// The logical relationship among the tag keys if you specify multiple tag keys by using the `TagKeyScope` parameter. For example, if you set the `TagKeyScope` parameter to `ECS,OSS` and set the TagKeyLogicScope parameter to `AND`, the rule applies to resources with both the `ECS` and `OSS` tag keys. Valid values:
@@ -175,23 +173,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// *   AND: the logical relationship of AND
         /// *   OR: the logical relationship of OR
         /// </summary>
-        [NameInMap("TagKeyLogicScope")]
-        [Validation(Required=false)]
-        public string TagKeyLogicScope { get; set; }
-
-        /// <summary>
-        /// The tag key used to filter resources. The rule applies only to the resources with the specified tag key. Separate multiple parameter values with commas (,).
-        /// 
-        /// >  This parameter applies only to a managed rule. You must set the `TagKeyScope` and `TagValueScope` parameters at the same time.
-        /// </summary>
         [NameInMap("TagKeyScope")]
         [Validation(Required=false)]
         public string TagKeyScope { get; set; }
 
         /// <summary>
-        /// The tag value used to filter resources. The rule applies only to the resources with the specified tag value.
+        /// The ID of the resource directory to which the rule applies, which means that the resources within member accounts in the resource directory are evaluated based on the rule.
         /// 
-        /// >  This parameter applies only to a managed rule. You must set the `TagKeyScope` and `TagValueScope` parameters at the same time.
+        /// > 
+        /// *   This parameter applies only to a rule of a global account group.
+        /// *   This parameter applies only to a managed rule.
         /// </summary>
         [NameInMap("TagValueScope")]
         [Validation(Required=false)]

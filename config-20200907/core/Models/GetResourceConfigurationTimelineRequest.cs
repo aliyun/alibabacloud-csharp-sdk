@@ -10,53 +10,51 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetResourceConfigurationTimelineRequest : TeaModel {
         /// <summary>
-        /// The timestamp that specifies the end of the time range to query. The default value is the time when the GetResourceConfigurationTimeline operation is called. Unit: milliseconds.
+        /// The token that is used to initiate the next request. If the response of the current request is truncated, this token is used to initiate another request and obtain the remaining entries.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return for a single request. Valid values: 1 to 100.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to initiate the next request. If the response of the current request is truncated, this token is used to initiate another request and obtain the remaining entries.
+        /// The maximum number of entries returned for a single request.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the resource resides.
+        /// The token that is used to initiate the next request.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// The ID of the resource.
+        /// The type of the resource.
         /// 
-        /// For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](~~169620~~).
+        /// For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~169620~~).
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource.
-        /// 
-        /// For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~169620~~).
+        /// The information about the configuration timeline.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The timestamp that specifies the beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.
+        /// The ID of the region in which the resource resides.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

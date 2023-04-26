@@ -18,6 +18,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ManagedRuleIdentifier { get; set; }
 
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
         /// <summary>
         /// The type of the remediation template. Valid value: OOS, which stands for Operation Orchestration Service.
         /// </summary>

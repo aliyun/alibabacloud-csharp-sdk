@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListRemediationTemplatesResponseBody : TeaModel {
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
         /// <summary>
         /// The details of the remediation template.
         /// </summary>
@@ -29,6 +37,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [NameInMap("TemplateDefinition")]
             [Validation(Required=false)]
             public string TemplateDefinition { get; set; }
+
+            [NameInMap("TemplateDescription")]
+            [Validation(Required=false)]
+            public string TemplateDescription { get; set; }
 
             /// <summary>
             /// The identifier of the remediation template.
@@ -52,6 +64,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public string TotalCount { get; set; }
 
     }
 

@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class StartRemediationRequest : TeaModel {
         /// <summary>
-        /// The ID of the rule.
-        /// 
-        /// You can call the [ListConfigRules](~~169607~~) operation to obtain the rule ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]

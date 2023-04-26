@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateResourceCountsGroupByRegionRequest : TeaModel {
         /// <summary>
-        /// The ID of the account group.
-        /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// The total number of resources in the region.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The ID of the folder in the resource directory. For more information about how to obtain the ID of a folder, see [View the basic information of a folder](~~111223~~).
+        /// The dimension by which statistics are collected.
+        /// 
+        /// >  In most cases, the `Region` parameter is returned instead of the GroupName parameter.
         /// </summary>
         [NameInMap("FolderId")]
         [Validation(Required=false)]
@@ -35,9 +35,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource.
-        /// 
-        /// For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
+        /// The statistics on resources.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

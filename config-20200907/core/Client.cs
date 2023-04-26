@@ -43,7 +43,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
+          * The ID of the rule. Separate multiple rule IDs with commas (,).
+          * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
           *
           * @param request ActiveAggregateConfigRulesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -81,7 +82,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
+          * The ID of the rule. Separate multiple rule IDs with commas (,).
+          * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
           *
           * @param request ActiveAggregateConfigRulesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -119,7 +121,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
+          * The ID of the rule. Separate multiple rule IDs with commas (,).
+          * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
           *
           * @param request ActiveAggregateConfigRulesRequest
           * @return ActiveAggregateConfigRulesResponse
@@ -131,7 +134,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
+          * The ID of the rule. Separate multiple rule IDs with commas (,).
+          * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
           *
           * @param request ActiveAggregateConfigRulesRequest
           * @return ActiveAggregateConfigRulesResponse
@@ -899,9 +903,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to create a rule based on the required-tags managed rule in the `ca-a4e5626622af0079****` account group. The return result shows that the rule is created and its ID is `cr-4e3d626622af0080****`.  
-          * ## Limits
-          * A management account can contain up to 200 rules.
+          * The description of the rule.
           *
           * @param tmpReq CreateAggregateConfigRuleRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1021,9 +1023,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to create a rule based on the required-tags managed rule in the `ca-a4e5626622af0079****` account group. The return result shows that the rule is created and its ID is `cr-4e3d626622af0080****`.  
-          * ## Limits
-          * A management account can contain up to 200 rules.
+          * The description of the rule.
           *
           * @param tmpReq CreateAggregateConfigRuleRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1143,9 +1143,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to create a rule based on the required-tags managed rule in the `ca-a4e5626622af0079****` account group. The return result shows that the rule is created and its ID is `cr-4e3d626622af0080****`.  
-          * ## Limits
-          * A management account can contain up to 200 rules.
+          * The description of the rule.
           *
           * @param request CreateAggregateConfigRuleRequest
           * @return CreateAggregateConfigRuleResponse
@@ -1157,9 +1155,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to create a rule based on the required-tags managed rule in the `ca-a4e5626622af0079****` account group. The return result shows that the rule is created and its ID is `cr-4e3d626622af0080****`.  
-          * ## Limits
-          * A management account can contain up to 200 rules.
+          * The description of the rule.
           *
           * @param request CreateAggregateConfigRuleRequest
           * @return CreateAggregateConfigRuleResponse
@@ -2407,7 +2403,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
+          * The ID of the rule. Separate multiple rule IDs with commas (,).
+          * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
           *
           * @param request DeactiveAggregateConfigRulesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2445,7 +2442,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
+          * The ID of the rule. Separate multiple rule IDs with commas (,).
+          * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
           *
           * @param request DeactiveAggregateConfigRulesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2483,7 +2481,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
+          * The ID of the rule. Separate multiple rule IDs with commas (,).
+          * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
           *
           * @param request DeactiveAggregateConfigRulesRequest
           * @return DeactiveAggregateConfigRulesResponse
@@ -2495,7 +2494,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
+          * The ID of the rule. Separate multiple rule IDs with commas (,).
+          * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
           *
           * @param request DeactiveAggregateConfigRulesRequest
           * @return DeactiveAggregateConfigRulesResponse
@@ -3023,7 +3023,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * In the example of this topic, a request is sent to delete the account group whose ID is `ca-9190626622af00a9****`.
+          * The operation that you want to perform. Set the value to **DeleteAggregators**.
           *
           * @param request DeleteAggregatorsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3061,7 +3061,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * In the example of this topic, a request is sent to delete the account group whose ID is `ca-9190626622af00a9****`.
+          * The operation that you want to perform. Set the value to **DeleteAggregators**.
           *
           * @param request DeleteAggregatorsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3099,7 +3099,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * In the example of this topic, a request is sent to delete the account group whose ID is `ca-9190626622af00a9****`.
+          * The operation that you want to perform. Set the value to **DeleteAggregators**.
           *
           * @param request DeleteAggregatorsRequest
           * @return DeleteAggregatorsResponse
@@ -3111,7 +3111,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * In the example of this topic, a request is sent to delete the account group whose ID is `ca-9190626622af00a9****`.
+          * The operation that you want to perform. Set the value to **DeleteAggregators**.
           *
           * @param request DeleteAggregatorsRequest
           * @return DeleteAggregatorsResponse
@@ -4859,7 +4859,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the `new-bucket` resource in the `ca-5885626622af0008****` account group.
+          * The type of the resource.
+          * For more information about how to query the type of a resource, see [ListAggregateDiscoveredResources](~~411691~~).
           *
           * @param request GetAggregateDiscoveredResourceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4889,7 +4890,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the `new-bucket` resource in the `ca-5885626622af0008****` account group.
+          * The type of the resource.
+          * For more information about how to query the type of a resource, see [ListAggregateDiscoveredResources](~~411691~~).
           *
           * @param request GetAggregateDiscoveredResourceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4919,7 +4921,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the `new-bucket` resource in the `ca-5885626622af0008****` account group.
+          * The type of the resource.
+          * For more information about how to query the type of a resource, see [ListAggregateDiscoveredResources](~~411691~~).
           *
           * @param request GetAggregateDiscoveredResourceRequest
           * @return GetAggregateDiscoveredResourceResponse
@@ -4931,7 +4934,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the `new-bucket` resource in the `ca-5885626622af0008****` account group.
+          * The type of the resource.
+          * For more information about how to query the type of a resource, see [ListAggregateDiscoveredResources](~~411691~~).
           *
           * @param request GetAggregateDiscoveredResourceRequest
           * @return GetAggregateDiscoveredResourceResponse
@@ -4943,7 +4947,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The return result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
+          * The ID of the rule.
+          * For more information about how to query the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
           *
           * @param request GetAggregateResourceComplianceByConfigRuleRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4993,7 +4998,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The return result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
+          * The ID of the rule.
+          * For more information about how to query the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
           *
           * @param request GetAggregateResourceComplianceByConfigRuleRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5043,7 +5049,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The return result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
+          * The ID of the rule.
+          * For more information about how to query the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
           *
           * @param request GetAggregateResourceComplianceByConfigRuleRequest
           * @return GetAggregateResourceComplianceByConfigRuleResponse
@@ -5055,7 +5062,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The return result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
+          * The ID of the rule.
+          * For more information about how to query the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
           *
           * @param request GetAggregateResourceComplianceByConfigRuleRequest
           * @return GetAggregateResourceComplianceByConfigRuleResponse
@@ -5299,7 +5307,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the compliance timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows the following two timestamps on the compliance timeline: `1625200295276` and `1625200228510`. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8), and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).
+          * The operation that you want to perform. Set the value to **GetAggregateResourceComplianceTimeline**.
           *
           * @param request GetAggregateResourceComplianceTimelineRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5329,7 +5337,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the compliance timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows the following two timestamps on the compliance timeline: `1625200295276` and `1625200228510`. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8), and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).
+          * The operation that you want to perform. Set the value to **GetAggregateResourceComplianceTimeline**.
           *
           * @param request GetAggregateResourceComplianceTimelineRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5359,7 +5367,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the compliance timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows the following two timestamps on the compliance timeline: `1625200295276` and `1625200228510`. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8), and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).
+          * The operation that you want to perform. Set the value to **GetAggregateResourceComplianceTimeline**.
           *
           * @param request GetAggregateResourceComplianceTimelineRequest
           * @return GetAggregateResourceComplianceTimelineResponse
@@ -5371,7 +5379,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the compliance timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows the following two timestamps on the compliance timeline: `1625200295276` and `1625200228510`. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8), and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).
+          * The operation that you want to perform. Set the value to **GetAggregateResourceComplianceTimeline**.
           *
           * @param request GetAggregateResourceComplianceTimelineRequest
           * @return GetAggregateResourceComplianceTimelineResponse
@@ -5383,7 +5391,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
+          * The ID of the resource.
+          * For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
           *
           * @param request GetAggregateResourceConfigurationTimelineRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5413,7 +5422,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
+          * The ID of the resource.
+          * For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
           *
           * @param request GetAggregateResourceConfigurationTimelineRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5443,7 +5453,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
+          * The ID of the resource.
+          * For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
           *
           * @param request GetAggregateResourceConfigurationTimelineRequest
           * @return GetAggregateResourceConfigurationTimelineResponse
@@ -5455,7 +5466,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region within the `100931896542****` member account of the `ca-5885626622af0008****` account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
+          * The ID of the resource.
+          * For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
           *
           * @param request GetAggregateResourceConfigurationTimelineRequest
           * @return GetAggregateResourceConfigurationTimelineResponse
@@ -5467,7 +5479,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * This topic provides an example on how to query the statistics on the resources in an account group named `ca-a260626622af0005****` by region. The returned result shows that a total of `10` resources exist in the `cn-hangzhou` region.
+          * The ID of the account group.
+          * For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
           *
           * @param request GetAggregateResourceCountsGroupByRegionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5517,7 +5530,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * This topic provides an example on how to query the statistics on the resources in an account group named `ca-a260626622af0005****` by region. The returned result shows that a total of `10` resources exist in the `cn-hangzhou` region.
+          * The ID of the account group.
+          * For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
           *
           * @param request GetAggregateResourceCountsGroupByRegionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5567,7 +5581,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * This topic provides an example on how to query the statistics on the resources in an account group named `ca-a260626622af0005****` by region. The returned result shows that a total of `10` resources exist in the `cn-hangzhou` region.
+          * The ID of the account group.
+          * For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
           *
           * @param request GetAggregateResourceCountsGroupByRegionRequest
           * @return GetAggregateResourceCountsGroupByRegionResponse
@@ -5579,7 +5594,8 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * This topic provides an example on how to query the statistics on the resources in an account group named `ca-a260626622af0005****` by region. The returned result shows that a total of `10` resources exist in the `cn-hangzhou` region.
+          * The ID of the account group.
+          * For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
           *
           * @param request GetAggregateResourceCountsGroupByRegionRequest
           * @return GetAggregateResourceCountsGroupByRegionResponse
@@ -7191,7 +7207,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
+          * The timestamp that specifies the beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.
           *
           * @param request GetResourceConfigurationTimelineRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7221,7 +7237,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
+          * The timestamp that specifies the beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.
           *
           * @param request GetResourceConfigurationTimelineRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7251,7 +7267,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
+          * The timestamp that specifies the beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.
           *
           * @param request GetResourceConfigurationTimelineRequest
           * @return GetResourceConfigurationTimelineResponse
@@ -7263,7 +7279,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * The sample request in this topic shows you how to query the configuration timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is `1624961112000`. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).
+          * The timestamp that specifies the beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.
           *
           * @param request GetResourceConfigurationTimelineRequest
           * @return GetResourceConfigurationTimelineResponse
@@ -8065,7 +8081,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * This example shows how to query the resources in the `ca-c560626622af0005****` account group. The response shows that the account group contains eight resources.
+          * The token that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.``
           *
           * @param request ListAggregateDiscoveredResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8131,7 +8147,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * This example shows how to query the resources in the `ca-c560626622af0005****` account group. The response shows that the account group contains eight resources.
+          * The token that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.``
           *
           * @param request ListAggregateDiscoveredResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8197,7 +8213,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * This example shows how to query the resources in the `ca-c560626622af0005****` account group. The response shows that the account group contains eight resources.
+          * The token that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.``
           *
           * @param request ListAggregateDiscoveredResourcesRequest
           * @return ListAggregateDiscoveredResourcesResponse
@@ -8209,7 +8225,7 @@ namespace AlibabaCloud.SDK.Config20200907
         }
 
         /**
-          * This example shows how to query the resources in the `ca-c560626622af0005****` account group. The response shows that the account group contains eight resources.
+          * The token that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.``
           *
           * @param request ListAggregateDiscoveredResourcesRequest
           * @return ListAggregateDiscoveredResourcesResponse
@@ -8458,6 +8474,144 @@ namespace AlibabaCloud.SDK.Config20200907
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAggregateResourceEvaluationResultsWithOptionsAsync(request, runtime);
+        }
+
+        public ListAggregateResourceRelationsResponse ListAggregateResourceRelationsWithOptions(ListAggregateResourceRelationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                query["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationType))
+            {
+                query["RelationType"] = request.RelationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceAccountId))
+            {
+                query["ResourceAccountId"] = request.ResourceAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetResourceId))
+            {
+                query["TargetResourceId"] = request.TargetResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetResourceType))
+            {
+                query["TargetResourceType"] = request.TargetResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAggregateResourceRelations",
+                Version = "2020-09-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAggregateResourceRelationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListAggregateResourceRelationsResponse> ListAggregateResourceRelationsWithOptionsAsync(ListAggregateResourceRelationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                query["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationType))
+            {
+                query["RelationType"] = request.RelationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceAccountId))
+            {
+                query["ResourceAccountId"] = request.ResourceAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetResourceId))
+            {
+                query["TargetResourceId"] = request.TargetResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetResourceType))
+            {
+                query["TargetResourceType"] = request.TargetResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAggregateResourceRelations",
+                Version = "2020-09-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAggregateResourceRelationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListAggregateResourceRelationsResponse ListAggregateResourceRelations(ListAggregateResourceRelationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAggregateResourceRelationsWithOptions(request, runtime);
+        }
+
+        public async Task<ListAggregateResourceRelationsResponse> ListAggregateResourceRelationsAsync(ListAggregateResourceRelationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAggregateResourceRelationsWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -9421,6 +9575,14 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 query["ManagedRuleIdentifier"] = request.ManagedRuleIdentifier;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemediationType))
             {
                 query["RemediationType"] = request.RemediationType;
@@ -9458,6 +9620,14 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedRuleIdentifier))
             {
                 query["ManagedRuleIdentifier"] = request.ManagedRuleIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemediationType))
             {
@@ -9521,6 +9691,14 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 query["ConfigRuleIds"] = request.ConfigRuleIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9554,6 +9732,14 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleIds))
             {
                 query["ConfigRuleIds"] = request.ConfigRuleIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9728,6 +9914,128 @@ namespace AlibabaCloud.SDK.Config20200907
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListResourceEvaluationResultsWithOptionsAsync(request, runtime);
+        }
+
+        public ListResourceRelationsResponse ListResourceRelationsWithOptions(ListResourceRelationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationType))
+            {
+                query["RelationType"] = request.RelationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetResourceId))
+            {
+                query["TargetResourceId"] = request.TargetResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetResourceType))
+            {
+                query["TargetResourceType"] = request.TargetResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceRelations",
+                Version = "2020-09-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceRelationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListResourceRelationsResponse> ListResourceRelationsWithOptionsAsync(ListResourceRelationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationType))
+            {
+                query["RelationType"] = request.RelationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetResourceId))
+            {
+                query["TargetResourceId"] = request.TargetResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetResourceType))
+            {
+                query["TargetResourceType"] = request.TargetResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceRelations",
+                Version = "2020-09-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceRelationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListResourceRelationsResponse ListResourceRelations(ListResourceRelationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListResourceRelationsWithOptions(request, runtime);
+        }
+
+        public async Task<ListResourceRelationsResponse> ListResourceRelationsAsync(ListResourceRelationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListResourceRelationsWithOptionsAsync(request, runtime);
         }
 
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -12150,7 +12458,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /**
           * @deprecated : UpdateDeliveryChannel is deprecated, please use Config::2020-09-07::UpdateConfigDeliveryChannel,Config::2020-09-07::UpdateAggregateConfigDeliveryChannel instead.
-          * In this example, the status of the delivery channel whose ID is `cdc-8e45ff4e06a3a8****` is changed to 0, which indicates that the delivery channel is disabled. After the delivery channel is disabled, Cloud Config retains the last delivery configuration and stops resource data delivery.
+          * The operation that you want to perform. Set the value to **UpdateDeliveryChannel**.
           *
           * @param request UpdateDeliveryChannelRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12230,7 +12538,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /**
           * @deprecated : UpdateDeliveryChannel is deprecated, please use Config::2020-09-07::UpdateConfigDeliveryChannel,Config::2020-09-07::UpdateAggregateConfigDeliveryChannel instead.
-          * In this example, the status of the delivery channel whose ID is `cdc-8e45ff4e06a3a8****` is changed to 0, which indicates that the delivery channel is disabled. After the delivery channel is disabled, Cloud Config retains the last delivery configuration and stops resource data delivery.
+          * The operation that you want to perform. Set the value to **UpdateDeliveryChannel**.
           *
           * @param request UpdateDeliveryChannelRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12310,7 +12618,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /**
           * @deprecated : UpdateDeliveryChannel is deprecated, please use Config::2020-09-07::UpdateConfigDeliveryChannel,Config::2020-09-07::UpdateAggregateConfigDeliveryChannel instead.
-          * In this example, the status of the delivery channel whose ID is `cdc-8e45ff4e06a3a8****` is changed to 0, which indicates that the delivery channel is disabled. After the delivery channel is disabled, Cloud Config retains the last delivery configuration and stops resource data delivery.
+          * The operation that you want to perform. Set the value to **UpdateDeliveryChannel**.
           *
           * @param request UpdateDeliveryChannelRequest
           * @return UpdateDeliveryChannelResponse
@@ -12324,7 +12632,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /**
           * @deprecated : UpdateDeliveryChannel is deprecated, please use Config::2020-09-07::UpdateConfigDeliveryChannel,Config::2020-09-07::UpdateAggregateConfigDeliveryChannel instead.
-          * In this example, the status of the delivery channel whose ID is `cdc-8e45ff4e06a3a8****` is changed to 0, which indicates that the delivery channel is disabled. After the delivery channel is disabled, Cloud Config retains the last delivery configuration and stops resource data delivery.
+          * The operation that you want to perform. Set the value to **UpdateDeliveryChannel**.
           *
           * @param request UpdateDeliveryChannelRequest
           * @return UpdateDeliveryChannelResponse

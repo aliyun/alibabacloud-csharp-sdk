@@ -10,18 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ActiveAggregateConfigRulesRequest : TeaModel {
         /// <summary>
-        /// The ID of the account group.
-        /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// The result of the operation to enable the rule.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The ID of the rule. Separate multiple rule IDs with commas (,).
-        /// 
-        /// For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+        /// The results of the operations to enable the specified rules.
         /// </summary>
         [NameInMap("ConfigRuleIds")]
         [Validation(Required=false)]

@@ -58,6 +58,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public List<string> Labels { get; set; }
 
+                [NameInMap("RemediationTemplateIdentifier")]
+                [Validation(Required=false)]
+                public string RemediationTemplateIdentifier { get; set; }
+
+                [NameInMap("RemediationTemplateName")]
+                [Validation(Required=false)]
+                public string RemediationTemplateName { get; set; }
+
                 /// <summary>
                 /// The risk level of the resources that do not comply with the managed rule. Valid values:
                 /// 
@@ -78,6 +86,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public List<string> ComplianceResourceTypes { get; set; }
 
                 }
+
+                [NameInMap("SupportPreviewManagedRule")]
+                [Validation(Required=false)]
+                public bool? SupportPreviewManagedRule { get; set; }
 
             }
 

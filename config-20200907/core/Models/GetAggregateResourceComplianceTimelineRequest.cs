@@ -10,39 +10,35 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateResourceComplianceTimelineRequest : TeaModel {
         /// <summary>
-        /// The ID of the account group.
-        /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// The tags of the resource.
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The timestamp that specifies the end of the time range to query. The default value indicates the time when the GetAggregateResourceComplianceTimeline operation is called. Unit: milliseconds.
+        /// The maximum number of entries returned for a single request.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return for a single request. Valid values: 1 to 100.
+        /// The compliance evaluation records on the compliance timeline.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to initiate the next request. If the response of the current request is truncated, this token is used to initiate another request and obtain the remaining entries.
+        /// The ID of the zone in which the resource resides.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the resource resides.
-        /// 
-        /// For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](~~265983~~).
+        /// The ID of the Alibaba Cloud account to which the resource belongs.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -53,9 +49,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public long? ResourceAccountId { get; set; }
 
         /// <summary>
-        /// The ID of the resource.
-        /// 
-        /// For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
+        /// The information about the compliance timeline.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -67,16 +61,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource.
-        /// 
-        /// For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
+        /// The ID of the request.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The timestamp that specifies the beginning of the time range to query. By default, Cloud Config retrieves the compliance evaluations in the last 30 days for the specified resource. Unit: milliseconds.
+        /// The token that is used to initiate the next request.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
