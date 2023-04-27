@@ -10,45 +10,39 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListInstanceUserPermissionsResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// The ID of the authorization record.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The number of entries to return on each page.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The operation that you want to perform. Set the value to **ListInstanceUserPermissions**.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// 
-        /// - true: The request is successful.
-        /// - false: The request fails.
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// The nickname of the user.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// The permissions of the user on the instance.
+        /// The error message.
         /// </summary>
         [NameInMap("UserPermissions")]
         [Validation(Required=false)]
@@ -59,14 +53,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermission> UserPermission { get; set; }
             public class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermission : TeaModel {
                 /// <summary>
-                /// The ID of the instance.
+                /// The details of permissions.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The details of permissions.
+                /// The number of the page to return.
                 /// </summary>
                 [NameInMap("PermDetails")]
                 [Validation(Required=false)]
@@ -77,32 +71,22 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail> PermDetail { get; set; }
                     public class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail : TeaModel {
                         /// <summary>
-                        /// The time when the permissions were granted.
+                        /// Queries the permissions of a user on a specific instance.
                         /// </summary>
                         [NameInMap("CreateDate")]
                         [Validation(Required=false)]
                         public string CreateDate { get; set; }
 
                         /// <summary>
-                        /// The time when the permissions expire.
+                        /// The ID of the request.
                         /// </summary>
                         [NameInMap("ExpireDate")]
                         [Validation(Required=false)]
                         public string ExpireDate { get; set; }
 
-                        /// <summary>
-                        /// This parameter is reserved.
-                        /// </summary>
                         [NameInMap("ExtraData")]
                         [Validation(Required=false)]
                         public string ExtraData { get; set; }
-
-                        /// <summary>
-                        /// The user who grants the permissions.
-                        /// </summary>
-                        [NameInMap("OriginFrom")]
-                        [Validation(Required=false)]
-                        public string OriginFrom { get; set; }
 
                         /// <summary>
                         /// The type of the permissions. Valid values:
@@ -110,13 +94,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                         /// *   LOGIN: the logon permissions
                         /// *   PERF: the query permissions on the instance
                         /// </summary>
+                        [NameInMap("OriginFrom")]
+                        [Validation(Required=false)]
+                        public string OriginFrom { get; set; }
+
+                        /// <summary>
+                        /// The time when the permissions were granted.
+                        /// </summary>
                         [NameInMap("PermType")]
                         [Validation(Required=false)]
                         public string PermType { get; set; }
 
-                        /// <summary>
-                        /// The ID of the authorization record.
-                        /// </summary>
                         [NameInMap("UserAccessId")]
                         [Validation(Required=false)]
                         public string UserAccessId { get; set; }
@@ -126,14 +114,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The ID of the user.
+                /// The ID of the tenant.
+                /// 
+                /// >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }
 
                 /// <summary>
-                /// The nickname of the user.
+                /// The ID of the user.
                 /// </summary>
                 [NameInMap("UserNickName")]
                 [Validation(Required=false)]

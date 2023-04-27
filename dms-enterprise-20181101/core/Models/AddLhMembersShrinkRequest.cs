@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class AddLhMembersShrinkRequest : TeaModel {
         /// <summary>
-        /// The information about the users to be added.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
         /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]
         public string MembersShrink { get; set; }
 
         /// <summary>
-        /// The ID of the object.
-        /// 
-        /// *   If the object is a workspace, you can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.
-        /// *   If the object is a task flow, you can call the [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the task flow ID.
+        /// The ID of the user to be added. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.
         /// </summary>
         [NameInMap("ObjectId")]
         [Validation(Required=false)]
@@ -36,9 +33,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public int? ObjectType { get; set; }
 
-        /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
-        /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }

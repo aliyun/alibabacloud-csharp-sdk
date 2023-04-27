@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateTaskFlowConstantsRequest : TeaModel {
         /// <summary>
-        /// The constants for the task flow.
+        /// The key value of a constant for the task flow.
         /// </summary>
         [NameInMap("DagConstants")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The key value of a constant for the task flow.
+            /// The ID of the request. You can use the ID to locate logs and troubleshoot issues.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("DagId")]
         [Validation(Required=false)]
         public long? DagId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+        /// The constants for the task flow.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

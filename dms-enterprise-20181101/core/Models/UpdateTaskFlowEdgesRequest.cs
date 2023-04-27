@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateTaskFlowEdgesRequest : TeaModel {
         /// <summary>
-        /// The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+        /// $.parameters[3].schema.example
         /// </summary>
         [NameInMap("DagId")]
         [Validation(Required=false)]
         public long? DagId { get; set; }
 
         /// <summary>
-        /// The list of updated task flow edges.
+        /// $.parameters[3].schema.enumValueTitles
         /// </summary>
         [NameInMap("Edges")]
         [Validation(Required=false)]
         public List<UpdateTaskFlowEdgesRequestEdges> Edges { get; set; }
         public class UpdateTaskFlowEdgesRequestEdges : TeaModel {
             /// <summary>
-            /// The ID of the task flow edge.
+            /// $.parameters[2].schema.description
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// The ID of the end node on the edge.
+            /// $.parameters[2].schema.example
             /// </summary>
             [NameInMap("NodeEnd")]
             [Validation(Required=false)]
             public long? NodeEnd { get; set; }
 
             /// <summary>
-            /// The ID of the start node on the edge.
+            /// $.parameters[2].schema.enumValueTitles
             /// </summary>
             [NameInMap("NodeFrom")]
             [Validation(Required=false)]
@@ -47,9 +47,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the tenant.
-        /// 
-        /// >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+        /// $.parameters[3].schema.description
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

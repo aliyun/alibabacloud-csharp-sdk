@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public long? DagId { get; set; }
 
         /// <summary>
-        /// The position of the node on the directed acyclic graph (DAG).
+        /// The position of the node on the Directed Acyclic Graph (DAG).
         /// </summary>
         [NameInMap("GraphParam")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string NodeName { get; set; }
 
         /// <summary>
-        /// The output variables for the task.
+        /// The output variables configured for the task.
         /// </summary>
         [NameInMap("NodeOutput")]
         [Validation(Required=false)]
@@ -52,16 +52,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// The tenant ID.
         /// 
-        /// > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
+        /// >  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
         /// <summary>
-        /// The time variables for the node.
+        /// The time variables configured for the node.
         /// </summary>
         [NameInMap("TimeVariables")]
         [Validation(Required=false)]

@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetInstanceRequest : TeaModel {
         /// <summary>
-        /// The endpoint of the database instance. You can call the [ListInstances](~~141936~~) operation to obtain the endpoint.
+        /// The name of the security rule set corresponding to the control mode.
         /// </summary>
         [NameInMap("Host")]
         [Validation(Required=false)]
         public string Host { get; set; }
 
         /// <summary>
-        /// The port number that is used to connect to the database instance. You can call the [ListInstances](~~141936~~) operation to obtain the port number.
+        /// The name of the database link for the database instance.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public int? Port { get; set; }
 
         /// <summary>
-        /// The system ID (SID) of the database instance. You can call the [ListInstances](~~141936~~) operation to obtain the SID.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
         /// </summary>
         [NameInMap("Sid")]
         [Validation(Required=false)]
         public string Sid { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+        /// The ID of the virtual private cloud (VPC) to which the database instance belongs.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

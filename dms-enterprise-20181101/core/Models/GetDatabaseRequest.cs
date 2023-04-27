@@ -10,37 +10,35 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetDatabaseRequest : TeaModel {
         /// <summary>
-        /// The endpoint that is used to connect to the database.
+        /// The error code.
         /// </summary>
         [NameInMap("Host")]
         [Validation(Required=false)]
         public string Host { get; set; }
 
         /// <summary>
-        /// The port that is used to connect to the database.
+        /// The name of the catalog to which the database belongs.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public int? Port { get; set; }
 
         /// <summary>
-        /// The name of the database.
+        /// The details of the database.
         /// </summary>
         [NameInMap("SchemaName")]
         [Validation(Required=false)]
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// The system identifier (SID) of the database.
-        /// 
-        /// >  The SID uniquely identifies an Oracle database. After a database is created, a SID is generated for the database.
+        /// The operation that you want to perform. Set the value to **GetDatabase**.
         /// </summary>
         [NameInMap("Sid")]
         [Validation(Required=false)]
         public string Sid { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.
+        /// The ID of the database.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

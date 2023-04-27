@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListStandardGroupsRequest : TeaModel {
         /// <summary>
-        /// The ID of the tenant.
+        /// The error code returned if the request fails.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

@@ -10,68 +10,55 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateStandardGroupResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request fails.
+        /// The name of the security rule set.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request fails.
+        /// The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The operation that you want to perform. Set the value to **CreateStandardGroup**.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The created security rule set.
+        /// The name of the security rule set.
         /// </summary>
         [NameInMap("StandardGroup")]
         [Validation(Required=false)]
         public CreateStandardGroupResponseBodyStandardGroup StandardGroup { get; set; }
         public class CreateStandardGroupResponseBodyStandardGroup : TeaModel {
-            /// <summary>
-            /// The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
-            /// </summary>
             [NameInMap("DbType")]
             [Validation(Required=false)]
             public string DbType { get; set; }
 
             /// <summary>
-            /// The description of the security rule set.
+            /// The ID of the request.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            /// <summary>
-            /// The control mode. Valid values:
-            /// 
-            /// *   **NONE_CONTROL**: Flexible Management
-            /// *   **STABLE**: Stable Change
-            /// *   **COMMON**: Security Collaboration
-            /// </summary>
             [NameInMap("GroupMode")]
             [Validation(Required=false)]
             public string GroupMode { get; set; }
 
             /// <summary>
-            /// The name of the security rule set.
+            /// The ID of the tenant.
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
-            /// <summary>
-            /// The ID of the user who creates the security rule set.
-            /// </summary>
             [NameInMap("LastMenderId")]
             [Validation(Required=false)]
             public long? LastMenderId { get; set; }
@@ -79,10 +66,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
-        /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// The error message returned if the request fails.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

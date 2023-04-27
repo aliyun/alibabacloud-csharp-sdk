@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetUserActiveTenantRequest : TeaModel {
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+        /// The name of the tenant.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

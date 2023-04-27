@@ -10,42 +10,43 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListStandardGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request fails.
+        /// The ID of the tenant.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request fails.
+        /// The security rule sets returned.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The operation that you want to perform. Set the value to **ListStandardGroups**.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The security rule sets returned.
+        /// The control mode. Valid values:
+        /// 
+        /// *   **NONE_CONTROL**: Flexible Management
+        /// *   **STABLE**: Stable Change
+        /// *   **COMMON**: Security Collaboration
         /// </summary>
         [NameInMap("StandardGroupList")]
         [Validation(Required=false)]
         public List<ListStandardGroupsResponseBodyStandardGroupList> StandardGroupList { get; set; }
         public class ListStandardGroupsResponseBodyStandardGroupList : TeaModel {
-            /// <summary>
-            /// The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
-            /// </summary>
             [NameInMap("DbType")]
             [Validation(Required=false)]
             public string DbType { get; set; }
 
             /// <summary>
-            /// The description of the security rule set.
+            /// The ID of the request.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -55,13 +56,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public long? GroupId { get; set; }
 
-            /// <summary>
-            /// The control mode. Valid values:
-            /// 
-            /// *   **NONE_CONTROL**: Flexible Management
-            /// *   **STABLE**: Stable Change
-            /// *   **COMMON**: Security Collaboration
-            /// </summary>
             [NameInMap("GroupMode")]
             [Validation(Required=false)]
             public string GroupMode { get; set; }
@@ -73,9 +67,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
-            /// <summary>
-            /// The ID of the user who queries the security sets.
-            /// </summary>
             [NameInMap("LastMenderId")]
             [Validation(Required=false)]
             public long? LastMenderId { get; set; }
@@ -83,10 +74,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
-        /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// The error message returned if the request fails.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

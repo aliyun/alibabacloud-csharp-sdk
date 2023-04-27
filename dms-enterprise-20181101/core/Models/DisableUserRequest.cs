@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class DisableUserRequest : TeaModel {
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
         /// <summary>
-        /// The UID of the Alibaba Cloud account.
+        /// You can call this operation to disable a user that is temporarily not used in Data Management (DMS) Enterprise.
         /// </summary>
         [NameInMap("Uid")]
         [Validation(Required=false)]

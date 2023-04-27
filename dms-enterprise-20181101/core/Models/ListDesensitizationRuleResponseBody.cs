@@ -17,70 +17,61 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public List<ListDesensitizationRuleResponseBodyDesensitizationRuleList> DesensitizationRuleList { get; set; }
         public class ListDesensitizationRuleResponseBodyDesensitizationRuleList : TeaModel {
             /// <summary>
-            /// The parameter.
+            /// The type of the masking algorithm.
             /// </summary>
             [NameInMap("FuncParams")]
             [Validation(Required=false)]
             public string FuncParams { get; set; }
 
             /// <summary>
-            /// The example.
+            /// The algorithm type.
             /// </summary>
             [NameInMap("FuncSample")]
             [Validation(Required=false)]
             public string FuncSample { get; set; }
 
             /// <summary>
-            /// The algorithm type.
+            /// The algorithm used for masking.
             /// </summary>
             [NameInMap("FunctionType")]
             [Validation(Required=false)]
             public string FunctionType { get; set; }
 
             /// <summary>
-            /// The ID of the user who last modified the masking rule.
+            /// The ID of the request.
             /// </summary>
             [NameInMap("LastModifierId")]
             [Validation(Required=false)]
             public string LastModifierId { get; set; }
 
-            /// <summary>
-            /// The name of the user who last modified the masking rule.
-            /// </summary>
             [NameInMap("LastModifierName")]
             [Validation(Required=false)]
             public string LastModifierName { get; set; }
 
-            /// <summary>
-            /// The number of times that the masking was used.
-            /// </summary>
             [NameInMap("ReferenceCount")]
             [Validation(Required=false)]
             public int? ReferenceCount { get; set; }
 
             /// <summary>
-            /// The description of the rule.
+            /// The ID of the user who last modified the masking rule.
             /// </summary>
             [NameInMap("RuleDesc")]
             [Validation(Required=false)]
             public string RuleDesc { get; set; }
 
-            /// <summary>
-            /// The ID of the masking rule.
-            /// </summary>
             [NameInMap("RuleId")]
             [Validation(Required=false)]
             public int? RuleId { get; set; }
 
             /// <summary>
-            /// The name of the masking rule.
+            /// The error message returned if the request failed.
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
             /// <summary>
-            /// The algorithm used for masking.
+            /// The parameter.
             /// </summary>
             [NameInMap("RuleType")]
             [Validation(Required=false)]
@@ -89,38 +80,37 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The error code returned if the request failed.
+        /// The algorithm used for masking.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// The ID of the tenant.
+        /// 
+        /// >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [View information about the current tenant](~~181330~~).
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The name of the user who last modified the masking rule.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
-        /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// The number of times that the masking was used.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of entries returned. By default, this parameter is not returned.
+        /// The number of entries to return on each page. The maximum value is 100.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

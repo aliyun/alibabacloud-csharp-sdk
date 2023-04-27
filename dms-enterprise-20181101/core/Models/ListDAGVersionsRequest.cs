@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListDAGVersionsRequest : TeaModel {
         /// <summary>
-        /// The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.
+        /// The number of the page to return.
         /// </summary>
         [NameInMap("DagId")]
         [Validation(Required=false)]
         public long? DagId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The number of entries to return on each page.
         /// </summary>
         [NameInMap("PageIndex")]
         [Validation(Required=false)]
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The error code returned if the request fails.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+        /// The ID of the previously published version.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

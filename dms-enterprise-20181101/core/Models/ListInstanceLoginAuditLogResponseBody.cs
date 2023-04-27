@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListInstanceLoginAuditLogResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// The ID of the user.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The number of the page to return.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The logon records of the instance.
+        /// The database account that is used to log on to the instance.
         /// </summary>
         [NameInMap("InstanceLoginAuditLogList")]
         [Validation(Required=false)]
@@ -34,43 +34,34 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListInstanceLoginAuditLogResponseBodyInstanceLoginAuditLogListInstanceLoginAuditLog> InstanceLoginAuditLog { get; set; }
             public class ListInstanceLoginAuditLogResponseBodyInstanceLoginAuditLogListInstanceLoginAuditLog : TeaModel {
-                /// <summary>
-                /// The database account that is used to log on to the instance.
-                /// </summary>
                 [NameInMap("DbUser")]
                 [Validation(Required=false)]
                 public string DbUser { get; set; }
 
-                /// <summary>
-                /// The ID of the instance.
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public long? InstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the instance.
+                /// The ID of the request.
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// The time when the user performed an operation on the instance.
+                /// The name of the instance.
                 /// </summary>
                 [NameInMap("OpTime")]
                 [Validation(Required=false)]
                 public string OpTime { get; set; }
 
-                /// <summary>
-                /// The source IP address of the request.
-                /// </summary>
                 [NameInMap("RequestIp")]
                 [Validation(Required=false)]
                 public string RequestIp { get; set; }
 
                 /// <summary>
-                /// The ID of the user.
+                /// The source IP address of the request.
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
@@ -88,24 +79,23 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The error message returned.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// The beginning of the time range to query.
         /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// >  The start time supports fuzzy match. Specify the time in the YYYY-MM-DD hh:mm:ss format.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// The number of entries to return on each page. Maximum value: 100.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

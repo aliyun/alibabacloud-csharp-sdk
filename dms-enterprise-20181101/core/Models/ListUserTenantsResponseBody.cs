@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListUserTenantsResponseBody : TeaModel {
-        /// <summary>
-        /// The error code.
-        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
-        /// <summary>
-        /// The error message.
-        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
@@ -30,43 +24,25 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// 
-        /// *   **true**: The request is successful.
-        /// *   **false**: The request fails.
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The details of the tenants that were returned.
+        /// The operation that you want to perform. Set the value to **ListUserTenants**.
         /// </summary>
         [NameInMap("TenantList")]
         [Validation(Required=false)]
         public List<ListUserTenantsResponseBodyTenantList> TenantList { get; set; }
         public class ListUserTenantsResponseBodyTenantList : TeaModel {
-            /// <summary>
-            /// The status of the tenant. Valid values:
-            /// 
-            /// *   **ACTIVE**: The tenant is used to access DMS.
-            /// *   **IN_ACTIVE**: The tenant is not used.
-            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
-            /// <summary>
-            /// The name of the tenant.
-            /// </summary>
             [NameInMap("TenantName")]
             [Validation(Required=false)]
             public string TenantName { get; set; }
 
-            /// <summary>
-            /// The ID of the tenant.
-            /// </summary>
             [NameInMap("Tid")]
             [Validation(Required=false)]
             public long? Tid { get; set; }

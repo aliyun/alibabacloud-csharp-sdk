@@ -10,28 +10,27 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListSensitiveColumnsDetailResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// WB01053274
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
-        /// <summary>
-        /// The error message returned.
-        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the field.
+        /// 
+        /// >  You can also call the [ListColumns](~~141870~~) operation to obtain the name of the field.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the sensitive field.
+        /// The data type of the field.
         /// </summary>
         [NameInMap("SensitiveColumnsDetailList")]
         [Validation(Required=false)]
@@ -42,46 +41,25 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail> SensitiveColumnsDetail { get; set; }
             public class ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail : TeaModel {
                 /// <summary>
-                /// The description of the field.
+                /// $.parameters[6].schema.description
                 /// </summary>
                 [NameInMap("ColumnDescription")]
                 [Validation(Required=false)]
                 public string ColumnDescription { get; set; }
 
                 /// <summary>
-                /// The name of the field.
+                /// The ID of the request.
                 /// </summary>
                 [NameInMap("ColumnName")]
                 [Validation(Required=false)]
                 public string ColumnName { get; set; }
 
                 /// <summary>
-                /// The data type of the field.
+                /// $.parameters[7].schema.description
                 /// </summary>
                 [NameInMap("ColumnType")]
                 [Validation(Required=false)]
                 public string ColumnType { get; set; }
-
-                /// <summary>
-                /// The ID of the database.
-                /// </summary>
-                [NameInMap("DbId")]
-                [Validation(Required=false)]
-                public long? DbId { get; set; }
-
-                /// <summary>
-                /// The type of the database.
-                /// </summary>
-                [NameInMap("DbType")]
-                [Validation(Required=false)]
-                public string DbType { get; set; }
-
-                /// <summary>
-                /// The type of the environment to which the database belongs.
-                /// </summary>
-                [NameInMap("EnvType")]
-                [Validation(Required=false)]
-                public string EnvType { get; set; }
 
                 /// <summary>
                 /// Indicates whether the database is a logical database. Valid values:
@@ -89,26 +67,47 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// *   **true**: The database is a logical database.
                 /// *   **false**: The database is not a logical database.
                 /// </summary>
+                [NameInMap("DbId")]
+                [Validation(Required=false)]
+                public long? DbId { get; set; }
+
+                /// <summary>
+                /// $.parameters[6].schema.enumValueTitles
+                /// </summary>
+                [NameInMap("DbType")]
+                [Validation(Required=false)]
+                public string DbType { get; set; }
+
+                /// <summary>
+                /// ListSensitiveColumnsDetail
+                /// </summary>
+                [NameInMap("EnvType")]
+                [Validation(Required=false)]
+                public string EnvType { get; set; }
+
+                /// <summary>
+                /// $.parameters[7].schema.example
+                /// </summary>
                 [NameInMap("Logic")]
                 [Validation(Required=false)]
                 public bool? Logic { get; set; }
 
                 /// <summary>
-                /// The name of the database.
+                /// $.parameters[7].schema.enumValueTitles
                 /// </summary>
                 [NameInMap("SchemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
 
                 /// <summary>
-                /// The name that is used to search for the database.
+                /// Queries the details of a sensitive field.
                 /// </summary>
                 [NameInMap("SearchName")]
                 [Validation(Required=false)]
                 public string SearchName { get; set; }
 
                 /// <summary>
-                /// The name of the table.
+                /// $.parameters[6].schema.example
                 /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
@@ -118,12 +117,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         }
 
-        /// <summary>
-        /// Indicates whether the request was successful. Valid values:
-        /// 
-        /// - **true**: The request was successful.
-        /// - **false**: The request failed.
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

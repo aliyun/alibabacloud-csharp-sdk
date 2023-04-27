@@ -9,33 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetUserActiveTenantResponseBody : TeaModel {
-        /// <summary>
-        /// The error code.
-        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
-        /// <summary>
-        /// The error message.
-        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The status of the tenant. Valid values:
+        /// 
+        /// *   **ACTIVE**: The tenant is used to access DMS.
+        /// *   **IN_ACTIVE**: The tenant is not used.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// 
-        /// *   **true**: The request is successful.
-        /// *   **false**: The request fails.
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
@@ -48,24 +39,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public GetUserActiveTenantResponseBodyTenant Tenant { get; set; }
         public class GetUserActiveTenantResponseBodyTenant : TeaModel {
             /// <summary>
-            /// The status of the tenant. Valid values:
-            /// 
-            /// *   **ACTIVE**: The tenant is used to access DMS.
-            /// *   **IN_ACTIVE**: The tenant is not used.
+            /// The error code.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The name of the tenant.
+            /// The operation that you want to perform. Set the value to **GetUserActiveTenant**.
             /// </summary>
             [NameInMap("TenantName")]
             [Validation(Required=false)]
             public string TenantName { get; set; }
 
             /// <summary>
-            /// The ID of the tenant.
+            /// The ID of the request.
             /// </summary>
             [NameInMap("Tid")]
             [Validation(Required=false)]

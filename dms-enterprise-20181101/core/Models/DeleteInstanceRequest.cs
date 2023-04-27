@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class DeleteInstanceRequest : TeaModel {
         /// <summary>
-        /// The endpoint of the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to obtain the endpoint.
+        /// The error code that is returned.
         /// </summary>
         [NameInMap("Host")]
         [Validation(Required=false)]
         public string Host { get; set; }
 
         /// <summary>
-        /// The port number that is used to connect to the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to obtain the port number.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public int? Port { get; set; }
 
         /// <summary>
-        /// The system ID (SID) of the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to obtain the SID.
+        /// The operation that you want to perform. Set the value to **DeleteInstance**.
         /// </summary>
         [NameInMap("Sid")]
         [Validation(Required=false)]
         public string Sid { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+        /// The system ID (SID) of the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to obtain the SID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

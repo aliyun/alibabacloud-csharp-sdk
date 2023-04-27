@@ -10,11 +10,32 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListOrdersRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query.
+        /// The user who submitted the ticket.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        /// <summary>
+        /// The end of the time range to query.
+        /// </summary>
+        [NameInMap("OrderResultType")]
+        [Validation(Required=false)]
+        public string OrderResultType { get; set; }
+
+        /// <summary>
+        /// The type of the tickets that you want to query. For more information, see [PluginType parameter](~~429109~~).
+        /// </summary>
+        [NameInMap("OrderStatus")]
+        [Validation(Required=false)]
+        public string OrderStatus { get; set; }
+
+        /// <summary>
+        /// The keyword that is used to query tickets.
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         /// <summary>
         /// The scope of the tickets that you want to query. Valid values:
@@ -25,9 +46,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// *   **AS_OWNER**: the tickets that are processed by the current user.
         /// *   **AS_Related**: the tickets that are related to the current user.
         /// </summary>
-        [NameInMap("OrderResultType")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string OrderResultType { get; set; }
+        public int? PageSize { get; set; }
+
+        /// <summary>
+        /// The ID of the user who submitted the ticket.
+        /// </summary>
+        [NameInMap("PluginType")]
+        [Validation(Required=false)]
+        public string PluginType { get; set; }
 
         /// <summary>
         /// The status of the tickets that you want to query. Valid values:
@@ -36,57 +64,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// *   **FINISHED**: queries the tickets that are completed.
         /// *   **RUNNING**: queries the tickets that are being processed.
         /// </summary>
-        [NameInMap("OrderStatus")]
-        [Validation(Required=false)]
-        public string OrderStatus { get; set; }
-
-        /// <summary>
-        /// The number of the page to return.
-        /// </summary>
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        /// <summary>
-        /// The number of entries to return on each page.
-        /// </summary>
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        /// <summary>
-        /// The type of the tickets that you want to query. For more information, see [PluginType parameter](~~429109~~).
-        /// </summary>
-        [NameInMap("PluginType")]
-        [Validation(Required=false)]
-        public string PluginType { get; set; }
-
-        /// <summary>
-        /// The keyword that is used to query tickets.
-        /// </summary>
         [NameInMap("SearchContent")]
         [Validation(Required=false)]
         public string SearchContent { get; set; }
 
         /// <summary>
-        /// The time condition based on which you want to query tickets. Valid values:
-        /// 
-        /// *   **CREATE_TIME**: the time when a ticket was created.
-        /// *   **MODIFY_TIME**: the time when a ticket was last modified.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
         /// </summary>
         [NameInMap("SearchDateType")]
         [Validation(Required=false)]
         public string SearchDateType { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query.
+        /// The remarks of the ticket.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+        /// The beginning of the time range to query.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

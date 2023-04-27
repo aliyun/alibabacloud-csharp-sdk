@@ -9,23 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListLogicDatabasesRequest : TeaModel {
-        /// <summary>
-        /// The number of the page to return.
-        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        /// <summary>
-        /// The number of entries to return on each page.
-        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the tenant ID.
-        /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }

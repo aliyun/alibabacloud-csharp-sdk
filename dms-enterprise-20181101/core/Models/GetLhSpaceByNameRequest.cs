@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetLhSpaceByNameRequest : TeaModel {
         /// <summary>
-        /// The name of the workspace.
+        /// Indicates whether the workspace is deleted. Valid values:
+        /// 
+        /// *   **true**: The workspace is deleted.
+        /// *   **false**: The workspace is not deleted.
         /// </summary>
         [NameInMap("SpaceName")]
         [Validation(Required=false)]
         public string SpaceName { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+        /// The type of the database. Valid values:
+        /// 
+        /// *   **14**: AnalyticDB for MySQL
+        /// *   **18**: AnalyticDB for PostgreSQL
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

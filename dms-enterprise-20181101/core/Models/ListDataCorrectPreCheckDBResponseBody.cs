@@ -10,43 +10,34 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListDataCorrectPreCheckDBResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the ID of the tenant.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The name of the database.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The information about the databases that are involved in the precheck.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("PreCheckDBList")]
         [Validation(Required=false)]
         public List<ListDataCorrectPreCheckDBResponseBodyPreCheckDBList> PreCheckDBList { get; set; }
         public class ListDataCorrectPreCheckDBResponseBodyPreCheckDBList : TeaModel {
-            /// <summary>
-            /// The ID of the database.
-            /// </summary>
             [NameInMap("DbId")]
             [Validation(Required=false)]
             public long? DbId { get; set; }
 
-            /// <summary>
-            /// The name of the database.
-            /// </summary>
             [NameInMap("SearchName")]
             [Validation(Required=false)]
             public string SearchName { get; set; }
 
-            /// <summary>
-            /// The number of SQL statements.
-            /// </summary>
             [NameInMap("SqlNum")]
             [Validation(Required=false)]
             public long? SqlNum { get; set; }
@@ -54,14 +45,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the ticket for the data change.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// The number of SQL statements.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

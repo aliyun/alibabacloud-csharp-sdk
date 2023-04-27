@@ -9,43 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetOrderAttachmentFileResponseBody : TeaModel {
-        /// <summary>
-        /// The error code returned. Take note of the following rules:
-        /// 
-        /// *   The **ErrorCode** parameter is not returned if the request is successful.
-        /// *   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section of this topic.
-        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
-        /// <summary>
-        /// The error message returned if the request failed.
-        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        /// <summary>
-        /// The download URL of the attachment.
-        /// </summary>
         [NameInMap("FileUrl")]
         [Validation(Required=false)]
         public string FileUrl { get; set; }
 
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// Indicates whether the request was successful. Valid values:
-        /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

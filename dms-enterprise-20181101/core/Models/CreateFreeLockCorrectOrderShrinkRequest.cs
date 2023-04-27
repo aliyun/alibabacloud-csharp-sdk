@@ -17,28 +17,28 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string AttachmentKey { get; set; }
 
         /// <summary>
-        /// The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.
+        /// The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// The parameters of the ticket.
+        /// The key of the attachment that contains the SQL statements used to roll back the data change.
         /// </summary>
         [NameInMap("Param")]
         [Validation(Required=false)]
         public string ParamShrink { get; set; }
 
         /// <summary>
-        /// The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.
+        /// The parameters of the ticket.
         /// </summary>
         [NameInMap("RelatedUserList")]
         [Validation(Required=false)]
         public string RelatedUserListShrink { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+        /// The ID of the ticket.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

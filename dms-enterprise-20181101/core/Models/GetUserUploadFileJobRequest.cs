@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetUserUploadFileJobRequest : TeaModel {
         /// <summary>
-        /// The key of the file upload task. You can call the [CreateUploadFileJob](~~206059~~) or [CreateUploadOSSFileJob](~~206060~~) operation to query the key.
+        /// The method used to upload the file. Valid values:
+        /// 
+        /// *   **URL**
+        /// *   **OSS**
         /// </summary>
         [NameInMap("JobKey")]
         [Validation(Required=false)]

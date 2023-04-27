@@ -10,28 +10,32 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateStandardGroupRequest : TeaModel {
         /// <summary>
-        /// The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+        /// The created security rule set.
         /// </summary>
         [NameInMap("DbType")]
         [Validation(Required=false)]
         public string DbType { get; set; }
 
         /// <summary>
-        /// The description of the security rule set.
+        /// The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the security rule set.
+        /// The control mode. Valid values:
+        /// 
+        /// *   **NONE_CONTROL**: Flexible Management
+        /// *   **STABLE**: Stable Change
+        /// *   **COMMON**: Security Collaboration
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// The error code returned if the request fails.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request fails.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the task node returned if the node is created.
+        /// The ID of the task node returned when the task was created.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

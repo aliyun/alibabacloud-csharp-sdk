@@ -9,39 +9,38 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class PublishAndDeployTaskFlowResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the deployment record.
-        /// </summary>
         [NameInMap("DeployId")]
         [Validation(Required=false)]
         public long? DeployId { get; set; }
 
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <PublishAndDeployTaskFlowResponse>
+        ///     <RequestId>64E26249-B61F-51C6-B6DF-47EFF50128CC</RequestId>
+        ///     <ErrorCode>UnknownError</ErrorCode>
+        ///     <ErrorMessage>Unknown server error</ErrorMessage>
+        ///     <Success>true</Success>
+        /// </PublishAndDeployTaskFlowResponse>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// Publishes and deploys a task flow.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can use the ID to query logs and troubleshoot issues.
+        /// 12**
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
-        /// 
-        /// *   **true**: The request was successful.
-        /// *   **false**: The request failed.
+        /// WB01220210
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -17,16 +17,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public long? DagId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
-        /// 
-        /// > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+        /// The response parameters.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
         /// <summary>
-        /// The description of the version.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("VersionComments")]
         [Validation(Required=false)]

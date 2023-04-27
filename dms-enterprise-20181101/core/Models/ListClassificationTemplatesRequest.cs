@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListClassificationTemplatesRequest : TeaModel {
         /// <summary>
-        /// The ID of the tenant.
+        /// The type of the classification template. Valid values:
         /// 
-        /// > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+        /// *   **INNER**: built-in template
+        /// *   **USER_DEFINE**: custom template
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

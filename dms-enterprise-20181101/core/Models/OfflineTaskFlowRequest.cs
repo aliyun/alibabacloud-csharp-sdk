@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class OfflineTaskFlowRequest : TeaModel {
         /// <summary>
-        /// The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the task flow ID.
+        /// The error code returned if the request fails.
         /// </summary>
         [NameInMap("DagId")]
         [Validation(Required=false)]
         public long? DagId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

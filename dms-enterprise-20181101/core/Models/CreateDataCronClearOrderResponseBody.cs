@@ -9,23 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateDataCronClearOrderResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the ticket.
-        /// </summary>
         [NameInMap("CreateOrderResult")]
         [Validation(Required=false)]
         public List<long?> CreateOrderResult { get; set; }
 
-        /// <summary>
-        /// The error code.
-        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
-        /// <summary>
-        /// The error message.
-        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
@@ -38,7 +29,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// Specifies whether to specify an end time for the task. Valid values:
+        /// 
+        /// *   **true**: specifies an end time for the task. The task is automatically suspended after this end time.
+        /// *   **false**: does not specify an end time for the task. The task is stopped after the historical data is cleared.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

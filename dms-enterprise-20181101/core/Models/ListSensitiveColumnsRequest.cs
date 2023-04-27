@@ -10,16 +10,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListSensitiveColumnsRequest : TeaModel {
         /// <summary>
-        /// The name of the field. You can call the [ListColumns](~~141870~~) operation to query the name of the field.
+        /// The operation that you want to perform. Set the value to **ListSensitiveColumns**.
         /// </summary>
         [NameInMap("ColumnName")]
         [Validation(Required=false)]
         public string ColumnName { get; set; }
 
         /// <summary>
-        /// The ID of the database. You can call the [SearchDatabase](~~141876~~) operation to query the ID of the database.
-        /// 
-        /// >  You can also call the [ListDatabases](~~141873~~) operation to query the ID of the physical database and the [ListLogicDatabases](~~141874~~) operation to query the ID of a logical database.
+        /// 1860
         /// </summary>
         [NameInMap("DbId")]
         [Validation(Required=false)]
@@ -36,23 +34,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public bool? Logic { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The error message.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of the page to return.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The name of the database. You can call the [SearchDatabase](~~141876~~) operation to query the name of the database.
-        /// 
-        /// >  You can also call the [ListDatabases](~~141873~~) operation to query the name of a physical database and the [ListLogicDatabases](~~141874~~) operation to query the name of a logical database.
+        /// The number of entries to return on each page.
         /// </summary>
         [NameInMap("SchemaName")]
         [Validation(Required=false)]
@@ -69,16 +65,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string SecurityLevel { get; set; }
 
         /// <summary>
-        /// The name of the table. You can call the [ListTables](~~141878~~) operation to query the ID of the table.
+        /// The error code.
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]
         public string TableName { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
-        /// 
-        /// >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+        /// The name of the table. You can call the [ListTables](~~141878~~) operation to query the ID of the table.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

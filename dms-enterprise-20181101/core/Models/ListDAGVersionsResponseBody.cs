@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListDAGVersionsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the published versions.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
         /// </summary>
         [NameInMap("DagVersionList")]
         [Validation(Required=false)]
@@ -21,43 +21,34 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListDAGVersionsResponseBodyDagVersionListDagVersion> DagVersion { get; set; }
             public class ListDAGVersionsResponseBodyDagVersionListDagVersion : TeaModel {
                 /// <summary>
-                /// The name of the task flow.
+                /// The name of the task flow owner.
                 /// </summary>
                 [NameInMap("DagName")]
                 [Validation(Required=false)]
                 public string DagName { get; set; }
 
                 /// <summary>
-                /// The ID of the task flow owner.
+                /// The name of the task flow.
                 /// </summary>
                 [NameInMap("DagOwnerId")]
                 [Validation(Required=false)]
                 public string DagOwnerId { get; set; }
 
                 /// <summary>
-                /// The name of the task flow owner.
+                /// The ID of the request.
                 /// </summary>
                 [NameInMap("DagOwnerNickName")]
                 [Validation(Required=false)]
                 public string DagOwnerNickName { get; set; }
 
-                /// <summary>
-                /// The ID of the previously published version.
-                /// </summary>
                 [NameInMap("LastVersionId")]
                 [Validation(Required=false)]
                 public long? LastVersionId { get; set; }
 
-                /// <summary>
-                /// The description of the version.
-                /// </summary>
                 [NameInMap("VersionComments")]
                 [Validation(Required=false)]
                 public string VersionComments { get; set; }
 
-                /// <summary>
-                /// The ID of the version.
-                /// </summary>
                 [NameInMap("VersionId")]
                 [Validation(Required=false)]
                 public long? VersionId { get; set; }
@@ -67,7 +58,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The error code returned if the request fails.
+        /// The information about the published versions.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -81,24 +72,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The operation that you want to perform. Set the value to **ListDAGVersions**.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// 
-        /// *   **true**: The request is successful.
-        /// *   **false**: The request fails.
+        /// The ID of the version.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

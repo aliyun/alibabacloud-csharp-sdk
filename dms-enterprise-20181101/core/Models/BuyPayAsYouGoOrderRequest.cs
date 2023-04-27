@@ -10,38 +10,36 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class BuyPayAsYouGoOrderRequest : TeaModel {
         /// <summary>
-        /// The type of the resource that you want to purchase.
+        /// The number of database instances that you want to use DMS to manage.
         /// 
-        /// *   **VersionType**: DMS that supports control modes
-        /// *   **SensitiveDataProtection**: DMS that supports sensitive data protection
+        /// > : A quota can be used for only one database instance.
         /// </summary>
         [NameInMap("CommodityType")]
         [Validation(Required=false)]
         public string CommodityType { get; set; }
 
         /// <summary>
-        /// The number of database instances that you want to use DMS to manage.
+        /// The control mode of DMS. Valid values:
         /// 
-        /// > A quota can be used for only one database instance.
+        /// *   **stand**: Stable Change
+        /// *   **safety**: Security Collaboration
         /// </summary>
         [NameInMap("InsNum")]
         [Validation(Required=false)]
         public int? InsNum { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// The type of the resource that you want to purchase.
         /// 
-        /// > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+        /// *   **VersionType**: DMS that supports control modes
+        /// *   **SensitiveDataProtection**: DMS that supports sensitive data protection
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
         /// <summary>
-        /// The control mode of DMS. Valid values:
-        /// 
-        /// *   **stand**: Stable Change
-        /// *   **safety**: Security Collaboration
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("VersionType")]
         [Validation(Required=false)]
