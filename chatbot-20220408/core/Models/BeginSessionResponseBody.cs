@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// 静默超时时间
+        /// </summary>
         [NameInMap("SilenceReplyTimeout")]
         [Validation(Required=false)]
         public int? SilenceReplyTimeout { get; set; }
