@@ -9,13 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeInstanceRequest : TeaModel {
+        /// <summary>
+        /// The region where the WAF instance resides. Valid values:
+        /// 
+        /// *   **cn-hangzhou:** the Chinese mainland
+        /// *   **ap-southeast-1:** outside the Chinese mainland.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ResourceGroupId")]
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
+        [NameInMap("ResourceManagerResourceGroupId")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string ResourceManagerResourceGroupId { get; set; }
 
     }
 

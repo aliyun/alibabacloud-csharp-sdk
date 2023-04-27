@@ -61,6 +61,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             }
 
+            /// <summary>
+            /// 阿里云资源组ID。
+            /// </summary>
+            [NameInMap("ResourceManagerResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceManagerResourceGroupId { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class DescribeInstanceCompatibleResponse : TeaModel {
+    public class DescribeHybridCloudGroupsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeInstanceCompatibleResponseBody Body { get; set; }
+        public DescribeHybridCloudGroupsResponseBody Body { get; set; }
 
     }
 

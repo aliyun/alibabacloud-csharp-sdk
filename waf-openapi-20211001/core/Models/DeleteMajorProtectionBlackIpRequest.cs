@@ -9,18 +9,49 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DeleteMajorProtectionBlackIpRequest : TeaModel {
+        /// <summary>
+        /// The ID of the Web Application Firewall (WAF) instance.
+        /// 
+        /// >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The IP address blacklist for major event protection that you want to delete. You can specify multiple CIDR blocks or IP addresses. IPv4 and IPv6 addresses are supported. Separate the CIDR blocks or IP addresses with commas (,). For more information, see [Protection for major events](~~425591~~).
+        /// </summary>
         [NameInMap("IpList")]
         [Validation(Required=false)]
         public string IpList { get; set; }
 
+        /// <summary>
+        /// The region where the WAF instance resides. Valid values:
+        /// 
+        /// *   **cn-hangzhou:** the Chinese mainland.
+        /// *   **ap-southeast-1:** outside the Chinese mainland.
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
+        [NameInMap("ResourceManagerResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceManagerResourceGroupId { get; set; }
+
+        /// <summary>
+        /// The ID of the IP address blacklist rule for major event protection.
+        /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public long? RuleId { get; set; }
 
+        /// <summary>
+        /// The ID of the IP address blacklist rule template for major event protection.
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public long? TemplateId { get; set; }

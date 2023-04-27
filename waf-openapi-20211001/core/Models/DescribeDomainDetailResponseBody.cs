@@ -9,6 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDomainDetailResponseBody : TeaModel {
+        [NameInMap("CertDetail")]
+        [Validation(Required=false)]
+        public DescribeDomainDetailResponseBodyCertDetail CertDetail { get; set; }
+        public class DescribeDomainDetailResponseBodyCertDetail : TeaModel {
+            [NameInMap("CommonName")]
+            [Validation(Required=false)]
+            public string CommonName { get; set; }
+
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public long? EndTime { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Sans")]
+            [Validation(Required=false)]
+            public List<string> Sans { get; set; }
+
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public long? StartTime { get; set; }
+
+        }
+
         [NameInMap("Cname")]
         [Validation(Required=false)]
         public string Cname { get; set; }
@@ -64,6 +94,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [NameInMap("ProtectionResource")]
             [Validation(Required=false)]
             public string ProtectionResource { get; set; }
+
+            [NameInMap("SM2AccessOnly")]
+            [Validation(Required=false)]
+            public bool? SM2AccessOnly { get; set; }
+
+            [NameInMap("SM2CertId")]
+            [Validation(Required=false)]
+            public bool? SM2CertId { get; set; }
+
+            [NameInMap("SM2Enabled")]
+            [Validation(Required=false)]
+            public bool? SM2Enabled { get; set; }
 
             [NameInMap("TLSVersion")]
             [Validation(Required=false)]
@@ -156,6 +198,40 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("ResourceManagerResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceManagerResourceGroupId { get; set; }
+
+        [NameInMap("SM2CertDetail")]
+        [Validation(Required=false)]
+        public DescribeDomainDetailResponseBodySM2CertDetail SM2CertDetail { get; set; }
+        public class DescribeDomainDetailResponseBodySM2CertDetail : TeaModel {
+            [NameInMap("CommonName")]
+            [Validation(Required=false)]
+            public string CommonName { get; set; }
+
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public long? EndTime { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Sans")]
+            [Validation(Required=false)]
+            public List<string> Sans { get; set; }
+
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public long? StartTime { get; set; }
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
