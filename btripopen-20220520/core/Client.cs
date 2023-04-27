@@ -8123,6 +8123,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripOrderId))
+            {
+                body["btrip_order_id"] = request.BtripOrderId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripUserId))
             {
                 body["btrip_user_id"] = request.BtripUserId;
@@ -8130,10 +8134,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyPayFee))
             {
                 body["company_pay_fee"] = request.CompanyPayFee;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisOrderId))
-            {
-                body["dis_order_id"] = request.DisOrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PersonPayFee))
             {
@@ -8184,6 +8184,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripOrderId))
+            {
+                body["btrip_order_id"] = request.BtripOrderId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripUserId))
             {
                 body["btrip_user_id"] = request.BtripUserId;
@@ -8191,10 +8195,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyPayFee))
             {
                 body["company_pay_fee"] = request.CompanyPayFee;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisOrderId))
-            {
-                body["dis_order_id"] = request.DisOrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PersonPayFee))
             {

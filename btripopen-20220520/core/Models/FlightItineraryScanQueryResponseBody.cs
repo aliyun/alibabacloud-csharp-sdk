@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<FlightItineraryScanQueryResponseBodyModuleItems> Items { get; set; }
             public class FlightItineraryScanQueryResponseBodyModuleItems : TeaModel {
+                /// <summary>
+                /// 销售单位代号
+                /// </summary>
                 [NameInMap("agent_code")]
                 [Validation(Required=false)]
                 public string AgentCode { get; set; }
@@ -45,54 +48,93 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Department { get; set; }
 
+                /// <summary>
+                /// 机票行程明细
+                /// </summary>
                 [NameInMap("flights")]
                 [Validation(Required=false)]
                 public List<FlightItineraryScanQueryResponseBodyModuleItemsFlights> Flights { get; set; }
                 public class FlightItineraryScanQueryResponseBodyModuleItemsFlights : TeaModel {
+                    /// <summary>
+                    /// 航班至
+                    /// </summary>
                     [NameInMap("arrival_station")]
                     [Validation(Required=false)]
                     public string ArrivalStation { get; set; }
 
+                    /// <summary>
+                    /// 座位等级
+                    /// </summary>
                     [NameInMap("cabin_class")]
                     [Validation(Required=false)]
                     public string CabinClass { get; set; }
 
+                    /// <summary>
+                    /// 承运人
+                    /// </summary>
                     [NameInMap("carrier")]
                     [Validation(Required=false)]
                     public string Carrier { get; set; }
 
+                    /// <summary>
+                    /// 航班从
+                    /// </summary>
                     [NameInMap("departure_station")]
                     [Validation(Required=false)]
                     public string DepartureStation { get; set; }
 
+                    /// <summary>
+                    /// 日期
+                    /// </summary>
                     [NameInMap("flight_date")]
                     [Validation(Required=false)]
                     public string FlightDate { get; set; }
 
+                    /// <summary>
+                    /// 航班号
+                    /// </summary>
                     [NameInMap("flight_number")]
                     [Validation(Required=false)]
                     public string FlightNumber { get; set; }
 
+                    /// <summary>
+                    /// 时间
+                    /// </summary>
                     [NameInMap("flight_time")]
                     [Validation(Required=false)]
                     public string FlightTime { get; set; }
 
+                    /// <summary>
+                    /// 免费行李
+                    /// </summary>
                     [NameInMap("free_baggage_allowance")]
                     [Validation(Required=false)]
                     public string FreeBaggageAllowance { get; set; }
 
+                    /// <summary>
+                    /// 行号
+                    /// </summary>
                     [NameInMap("index")]
                     [Validation(Required=false)]
                     public string Index { get; set; }
 
+                    /// <summary>
+                    /// 客票级别
+                    /// </summary>
                     [NameInMap("seat_class")]
                     [Validation(Required=false)]
                     public string SeatClass { get; set; }
 
+                    /// <summary>
+                    /// 客票生效日期
+                    /// </summary>
                     [NameInMap("valid_from_date")]
                     [Validation(Required=false)]
                     public string ValidFromDate { get; set; }
 
+                    /// <summary>
+                    /// 有效截止日期
+                    /// </summary>
                     [NameInMap("valid_to_date")]
                     [Validation(Required=false)]
                     public string ValidToDate { get; set; }
@@ -103,6 +145,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string FuelSurcharge { get; set; }
 
+                /// <summary>
+                /// UK
+                /// </summary>
                 [NameInMap("id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
@@ -115,10 +160,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string InvoiceTitle { get; set; }
 
+                /// <summary>
+                /// 填开单位
+                /// </summary>
                 [NameInMap("issue_company")]
                 [Validation(Required=false)]
                 public string IssueCompany { get; set; }
 
+                /// <summary>
+                /// 填开日期
+                /// </summary>
                 [NameInMap("issue_date")]
                 [Validation(Required=false)]
                 public string IssueDate { get; set; }
@@ -143,6 +194,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Project { get; set; }
 
+                /// <summary>
+                /// 提示信息
+                /// </summary>
                 [NameInMap("prompt_message")]
                 [Validation(Required=false)]
                 public string PromptMessage { get; set; }
@@ -167,6 +221,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string TotalPrice { get; set; }
 
+                /// <summary>
+                /// 验证码
+                /// </summary>
                 [NameInMap("validation_code")]
                 [Validation(Required=false)]
                 public string ValidationCode { get; set; }

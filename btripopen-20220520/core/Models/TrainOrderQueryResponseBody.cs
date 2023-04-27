@@ -149,10 +149,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string DepartName { get; set; }
 
+                /// <summary>
+                /// 火车票超标审批id
+                /// </summary>
                 [NameInMap("exceed_apply_id")]
                 [Validation(Required=false)]
                 public string ExceedApplyId { get; set; }
 
+                /// <summary>
+                /// 火车票超标审批三方id
+                /// </summary>
                 [NameInMap("exceed_third_part_apply_id")]
                 [Validation(Required=false)]
                 public string ExceedThirdPartApplyId { get; set; }

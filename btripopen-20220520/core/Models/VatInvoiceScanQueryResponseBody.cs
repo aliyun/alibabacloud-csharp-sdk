@@ -123,6 +123,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string InvoiceTypeDesc { get; set; }
 
+                [NameInMap("machine_code")]
+                [Validation(Required=false)]
+                public string MachineCode { get; set; }
+
                 [NameInMap("oss_url")]
                 [Validation(Required=false)]
                 public string OssUrl { get; set; }

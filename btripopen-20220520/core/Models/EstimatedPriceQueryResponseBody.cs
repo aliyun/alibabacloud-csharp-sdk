@@ -47,6 +47,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            /// <summary>
+            /// 酒店费用总额，单位为元
+            /// </summary>
             [NameInMap("total_hotel_fee")]
             [Validation(Required=false)]
             public long? TotalHotelFee { get; set; }
@@ -67,9 +70,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public long? ArrDate { get; set; }
 
-                    /// <summary>
-                    /// cheapest
-                    /// </summary>
                     [NameInMap("cheapest")]
                     [Validation(Required=false)]
                     public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutesCheapest Cheapest { get; set; }

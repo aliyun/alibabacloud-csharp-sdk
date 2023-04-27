@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelOrderPayRequest : TeaModel {
+        [NameInMap("btrip_order_id")]
+        [Validation(Required=false)]
+        public long? BtripOrderId { get; set; }
+
         [NameInMap("btrip_user_id")]
         [Validation(Required=false)]
         public string BtripUserId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [NameInMap("company_pay_fee")]
         [Validation(Required=false)]
         public long? CompanyPayFee { get; set; }
-
-        [NameInMap("dis_order_id")]
-        [Validation(Required=false)]
-        public string DisOrderId { get; set; }
 
         [NameInMap("person_pay_fee")]
         [Validation(Required=false)]
