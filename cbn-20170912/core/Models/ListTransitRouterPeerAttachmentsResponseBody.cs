@@ -17,38 +17,38 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If the returned value of **NextToken** is empty, it indicates that no next query is to be sent.
-        /// *   If the returned value of **NextToken** is not empty, the value indicates the token that is used for the next query.
+        /// *   If the **NextToken** parameter is empty, no next page exists.
+        /// *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The list of cross-region connections.
+        /// The queried inter-region connections.
         /// </summary>
         [NameInMap("TransitRouterAttachments")]
         [Validation(Required=false)]
         public List<ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments> TransitRouterAttachments { get; set; }
         public class ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments : TeaModel {
             /// <summary>
-            /// Indicates whether the local Enterprise Edition transit router automatically advertises routes of the cross-region connection to the peer transit router. Valid values:
+            /// Indicates whether the local Enterprise Edition transit router automatically advertises routes of the inter-region connection to the peer transit router. Valid values:
             /// 
             /// *   **false** (default): no
             /// *   **true**: yes
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public bool? AutoPublishRouteEnabled { get; set; }
 
             /// <summary>
-            /// The bandwidth value of the cross-region connection. Unit: Mbit/s.
+            /// The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.
             /// 
-            /// *   If **BandwidthType** is set to **BandwidthPackage**, this parameter indicates the bandwidth that is available for the cross-region connection.
-            /// *   If **BandwidthType** is set to **DataTransfer**, this parameter indicates the bandwidth limit of the cross-region connection.
+            /// *   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.
+            /// *   This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set **BandwidthType** to **DataTransfer**.
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
@@ -72,27 +72,30 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// 
             /// **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
             /// 
-            /// **DataTransfer**: uses pay-by-data-transfer bandwidth.
+            /// **DataTransfer**: bills bandwidth based on the pay-by-data-transfer metering method.
             /// </summary>
             [NameInMap("BandwidthType")]
             [Validation(Required=false)]
             public string BandwidthType { get; set; }
 
             /// <summary>
-            /// The ID of the bandwidth plan that is used to allocate bandwidth to the cross-region connection.
+            /// The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
             /// </summary>
             [NameInMap("CenBandwidthPackageId")]
             [Validation(Required=false)]
             public string CenBandwidthPackageId { get; set; }
 
+            /// <summary>
+            /// The CEN instance ID.
+            /// </summary>
             [NameInMap("CenId")]
             [Validation(Required=false)]
             public string CenId { get; set; }
 
             /// <summary>
-            /// The time when the cross-region connection was created.
+            /// The time when the inter-region connection was created.
             /// 
-            /// The time follows the ISO8601 standard in the `YYYY-MM-ddTHH:mmZ` format. The time is displayed in UTC.
+            /// The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -120,14 +123,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public long? PeerTransitRouterOwnerId { get; set; }
 
             /// <summary>
-            /// The ID of the region where the peer transit router is deployed.
+            /// The region ID of the peer transit router.
             /// </summary>
             [NameInMap("PeerTransitRouterRegionId")]
             [Validation(Required=false)]
             public string PeerTransitRouterRegionId { get; set; }
 
             /// <summary>
-            /// The ID of the region where the Enterprise Edition transit router is deployed.
+            /// The region ID of the Enterprise Edition transit router.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -136,7 +139,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The type of the resource to which the transit router is connected. Valid values:
             /// 
-            /// *   **VPC**: virtual private cloud (VPC)
+            /// *   **VPC**: VPC
             /// *   **CCN**: Cloud Connect Network (CCN) instance
             /// *   **VBR**: virtual border router (VBR)
             /// *   **TR**: transit router
@@ -146,33 +149,33 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The status of the cross-region connection. Valid values:
+            /// The status of the inter-region connection. Valid values:
             /// 
-            /// *   **Attached**: The local transit router is connected to the peer transit router.
-            /// *   **Attaching**: The local transit router is connecting to the peer transit router.
-            /// *   **Detaching**: The local transit router is disconnecting from the peer transit router.
-            /// *   **Detached**: The local transit router is disconnected from the peer transit router.
+            /// *   **Attached**: The inter-region connection is created.
+            /// *   **Attaching**: The inter-region connection is being created on the transit router.
+            /// *   **Detaching**: The inter-region connection is being deleted from the transit router.
+            /// *   **Detached**: The inter-region connection is deleted from the transit router.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The list of tags.
+            /// The tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachmentsTags> Tags { get; set; }
             public class ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachmentsTags : TeaModel {
                 /// <summary>
-                /// The key of tag.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of the tag.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -181,21 +184,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// The description of the cross-region connection.
+            /// The description of the inter-region connection.
             /// </summary>
             [NameInMap("TransitRouterAttachmentDescription")]
             [Validation(Required=false)]
             public string TransitRouterAttachmentDescription { get; set; }
 
             /// <summary>
-            /// The ID of the cross-region connection.
+            /// The ID of the inter-region connection.
             /// </summary>
             [NameInMap("TransitRouterAttachmentId")]
             [Validation(Required=false)]
             public string TransitRouterAttachmentId { get; set; }
 
             /// <summary>
-            /// The name of the cross-region connection.
+            /// The name of the inter-region connection.
             /// </summary>
             [NameInMap("TransitRouterAttachmentName")]
             [Validation(Required=false)]

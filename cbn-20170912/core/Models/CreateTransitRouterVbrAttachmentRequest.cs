@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:
+        /// Specifies whether to perform a dry run. Default values:
         /// 
         /// *   **false** (default): performs a dry run and sends the request.
         /// *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the VBR is deployed.
+        /// The region ID of the VBR.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>

@@ -21,10 +21,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable the auto-renewal feature. Valid values:
+        /// 
+        /// *   **true**: enables auto-renewal.
+        /// *   **false** (default): disables auto-renewal.
+        /// 
+        /// > Only subscription bandwidth plans support auto-renewal.
+        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        /// <summary>
+        /// The auto-renewal duration. Unit: months. Valid values: **0** to **2147483647**. Default value: **1**.
+        /// </summary>
         [NameInMap("AutoRenewDuration")]
         [Validation(Required=false)]
         public int? AutoRenewDuration { get; set; }
@@ -37,7 +48,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// The billing method of the bandwidth plan. Valid value: **PREPAY**, which indicates that the billing method is pay-as-you-go.
+        /// The billing method of the bandwidth plan. Set the value to **PREPAY**, which indicates that the billing method is pay-as-you-go.
         /// </summary>
         [NameInMap("BandwidthPackageChargeType")]
         [Validation(Required=false)]
@@ -46,7 +57,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate a token, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -108,7 +119,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// *   If **PricingCycle** is set to **Month**, set **Period** to a value from **1** to **3** or **6**.
         /// *   If **PricingCycle** is set to **Year**, set **Period** to a value from **1** to **3**.
         /// 
-        /// >  This parameter is required when **BandwidthPackageChargeType** is set to **PREPAY**.
+        /// > This parameter is required when **BandwidthPackageChargeType** is set to **PREPAY**.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -133,16 +144,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The information about the tags.
+        /// 
+        /// You can specify at most 20 tags in each call.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateCenBandwidthPackageRequestTag> Tag { get; set; }
         public class CreateCenBandwidthPackageRequestTag : TeaModel {
             /// <summary>
-            /// The tag keys of the resources.
+            /// The tag key.
             /// 
-            /// The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// 
             /// You can specify at most 20 tag keys.
             /// </summary>
@@ -151,11 +164,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag values of the resources.
+            /// The tag value.
             /// 
-            /// The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
             /// 
-            /// Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+            /// Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

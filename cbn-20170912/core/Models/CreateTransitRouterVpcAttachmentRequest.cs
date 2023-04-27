@@ -10,35 +10,38 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterVpcAttachmentRequest : TeaModel {
         /// <summary>
-        /// The ID of the Cloud Enterprise Network (CEN) instance.
+        /// 是否使企业版转发路由器自动发布路由到VPC实例。
+        /// 
+        /// - **false**（默认值）：否。
+        /// - **true**：是。
+        /// </summary>
+        [NameInMap("AutoPublishRouteEnabled")]
+        [Validation(Required=false)]
+        public bool? AutoPublishRouteEnabled { get; set; }
+
+        /// <summary>
+        /// PARAMETER_ILLEGAL_RESOURCE_REGIONID
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// The billing method. Valid values: The default value is **POSTPAY**, which specifies the pay-as-you-go billing method.
+        /// IllegalParam.ZoneId
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
-        /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+        /// You are not authorized to create the service linked role. Role Name: AliyunServiceRoleForCEN. Service Name: cen.aliyuncs.com. Make sure that the user has been granted the ram:CreateServiceLinkedRole permission.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:
-        /// 
-        /// *   **false** (default): performs a dry run and sends the request.
-        /// *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// The specified ZoneId is illegal.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -53,9 +56,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the VPC is deployed.
-        /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// The Specified Parameter RegionId is illegal
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -70,31 +71,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The information about the tags.
-        /// 
-        /// You can specify at most 20 tags in each call.
+        /// InvalidTransitRouterId.NotFound
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateTransitRouterVpcAttachmentRequestTag> Tag { get; set; }
         public class CreateTransitRouterVpcAttachmentRequestTag : TeaModel {
             /// <summary>
-            /// The tag key.
-            /// 
-            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-            /// 
-            /// You can specify at most 20 tag keys.
+            /// The specified  TransitRouterId is not found.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
-            /// 
-            /// The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-            /// 
-            /// Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+            /// INVALID_OPERATION_RESOURCE_ATTACHMENT_STATUS
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -103,70 +94,56 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The description of the VPC connection.
-        /// 
-        /// The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+        /// MissingParam.CenIdOrRegionId
         /// </summary>
         [NameInMap("TransitRouterAttachmentDescription")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentDescription { get; set; }
 
         /// <summary>
-        /// The name of the VPC connection.
-        /// 
-        /// The name must be 2 to 128 characters in length, and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.
+        /// MissingParam.CenId or RegionId
         /// </summary>
         [NameInMap("TransitRouterAttachmentName")]
         [Validation(Required=false)]
         public string TransitRouterAttachmentName { get; set; }
 
         /// <summary>
-        /// The ID of the Enterprise Edition transit router.
+        /// IllegalParam.RegionId
         /// </summary>
         [NameInMap("TransitRouterId")]
         [Validation(Required=false)]
         public string TransitRouterId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC.
+        /// Either CenId or RegionId must be specified.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the VPC belongs. The default value is the ID of the current Alibaba Cloud account.
-        /// 
-        /// > If the network instance and CEN instance belong to different Alibaba Cloud accounts, this parameter is required.
+        /// IllegalParam.ZoneId
         /// </summary>
         [NameInMap("VpcOwnerId")]
         [Validation(Required=false)]
         public long? VpcOwnerId { get; set; }
 
         /// <summary>
-        /// A vSwitch in a zone of the Enterprise Edition transit router.
-        /// 
-        /// You can specify at most 10 vSwitches in each call.
+        /// IllegalParam.ChargeType
         /// </summary>
         [NameInMap("ZoneMappings")]
         [Validation(Required=false)]
         public List<CreateTransitRouterVpcAttachmentRequestZoneMappings> ZoneMappings { get; set; }
         public class CreateTransitRouterVpcAttachmentRequestZoneMappings : TeaModel {
             /// <summary>
-            /// A vSwitch in a zone of the Enterprise Edition transit router.
-            /// 
-            /// You can specify vSwitches for at most 10 zones in each call.
+            /// The specified ChargeType is illegal.
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// The ID of the zone supported by Enterprise Edition transit routers.
-            /// 
-            /// You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
-            /// 
-            /// You can specify at most 10 zones in each call.
+            /// InvalidTransitRouterId.NotFound
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

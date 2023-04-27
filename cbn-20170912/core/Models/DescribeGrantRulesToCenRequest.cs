@@ -17,20 +17,24 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1** to **100**.  
+        /// The type of the network instance. Valid values:
         /// 
-        /// - If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** in the response indicates the total number of entries.
-        /// - If a value is specified for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.
+        /// *   **VPC**: VPC
+        /// *   **VBR**: VBR
+        /// *   **CCN**: CCN instance
+        /// *   **VPN**: IPsec-VPN connection
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// The type of the network instance. Valid values:
         /// 
-        /// - If this is your first query or no subsequent query is to be sent, ignore this parameter.
-        /// - If a subsequent query is to be sent, set the value to the value of **NextToken** that was returned from the last call.
+        /// *   **VPC**: VPC
+        /// *   **VBR**: VBR
+        /// *   **CCN**: CCN instance
+        /// *   **VPN**: IPsec-VPN connection
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -45,21 +49,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The type of the network instance. Valid values:
-        /// 
-        /// - **VPC**: virtual private cloud (VPC)
-        /// - **VBR**: virtual border router (VBR)
-        /// - **CCN**: Cloud Connect Network (CCN) instance
-        /// - **VPN**: IPsec-VPN connection
+        /// The ID of the Alibaba Cloud account to which the network instance belongs.
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
         /// <summary>
-        /// The ID of the region where the network instance is deployed.
-        /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// The number of entries returned.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

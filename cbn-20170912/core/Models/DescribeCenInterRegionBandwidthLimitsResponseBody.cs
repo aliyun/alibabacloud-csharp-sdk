@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenInterRegionBandwidthLimitsResponseBody : TeaModel {
         /// <summary>
-        /// The list of cross-region connections.
+        /// The ID of the peer region.
         /// </summary>
         [NameInMap("CenInterRegionBandwidthLimits")]
         [Validation(Required=false)]
@@ -20,55 +20,32 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit> CenInterRegionBandwidthLimit { get; set; }
             public class DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit : TeaModel {
-                /// <summary>
-                /// The bandwidth limit of the cross-region connection. Unit: Mbit/s.
-                /// </summary>
                 [NameInMap("BandwidthLimit")]
                 [Validation(Required=false)]
                 public long? BandwidthLimit { get; set; }
 
-                /// <summary>
-                /// The ID of the bandwidth plan.
-                /// </summary>
                 [NameInMap("BandwidthPackageId")]
                 [Validation(Required=false)]
                 public string BandwidthPackageId { get; set; }
 
-                /// <summary>
-                /// The ID of the CEN instance.
-                /// </summary>
                 [NameInMap("CenId")]
                 [Validation(Required=false)]
                 public string CenId { get; set; }
 
-                /// <summary>
-                /// The connected areas.
-                /// </summary>
                 [NameInMap("GeographicSpanId")]
                 [Validation(Required=false)]
                 public string GeographicSpanId { get; set; }
 
-                /// <summary>
-                /// The ID of the local region.
-                /// 
-                /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
-                /// </summary>
                 [NameInMap("LocalRegionId")]
                 [Validation(Required=false)]
                 public string LocalRegionId { get; set; }
 
-                /// <summary>
-                /// The ID of the peer region.
-                /// </summary>
                 [NameInMap("OppositeRegionId")]
                 [Validation(Required=false)]
                 public string OppositeRegionId { get; set; }
 
                 /// <summary>
-                /// The status of the bandwidth of the cross-region connection. Valid values:
-                /// 
-                /// *   **Active**: The bandwidth limit of the cross-region connection is effective.
-                /// *   **Modifying**: The bandwidth limit of the cross-region connection is being changed.
+                /// Queries the bandwidth limits of cross-region connections.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -79,28 +56,28 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The ID of the CEN instance.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of the page to return. Default value: **1**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The bandwidth limit of the cross-region connection. Unit: Mbit/s.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The list of cross-region connections.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

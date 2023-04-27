@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// - If this is your first query or no subsequent query is to be sent, ignore this parameter.
-        /// - If a subsequent query is to be sent, set the value to the value of **NextToken** that was returned from the last call.
+        /// *   You do not need to specify this parameter for the first request.
+        /// *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -69,24 +69,24 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryDestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// The IDs of the route entries.
+        /// The route entry ID.
         /// 
-        /// You can query at most 20 route entries in each call.
+        /// You can specify at most 20 route IDs in each call.
         /// 
-        /// >  You can call this operation to query only static routes.
+        /// >  You can use only this parameter to query static routes.
         /// </summary>
         [NameInMap("TransitRouterRouteEntryIds")]
         [Validation(Required=false)]
         public List<string> TransitRouterRouteEntryIds { get; set; }
 
         /// <summary>
-        /// The names of the routes.
+        /// The route name.
         /// 
-        /// The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: `, . ; / @ \_ -`. You can also leave the name empty.
+        /// The name must be 0 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.
         /// 
-        /// You can query multiple route entries in each call. Maximum value of **N**: **20**.
+        /// You can specify at most 20 route names in each call.
         /// 
-        /// >  You can call this operation to query only static routes.
+        /// >  You can use only this parameter to query static routes.
         /// </summary>
         [NameInMap("TransitRouterRouteEntryNames")]
         [Validation(Required=false)]
@@ -117,11 +117,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryOriginResourceType { get; set; }
 
         /// <summary>
-        /// The status of the route. Valid values: Valid values:
+        /// The status of the route. Valid values:
         /// 
-        /// - **Creating**: The route is being created.
-        /// - **Active**: The rule is available.
-        /// - **Deleting**: The rule is being deleted.
+        /// *   **Creating**: The route is being created.
+        /// *   **Active**: The route is available.
+        /// *   **Deleting**: The route is being deleted.
         /// </summary>
         [NameInMap("TransitRouterRouteEntryStatus")]
         [Validation(Required=false)]

@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenRegionDomainRouteEntriesRequest : TeaModel {
         /// <summary>
-        /// The ID of the CEN instance.
+        /// The status of the routes that you want to query. Valid values:
+        /// 
+        /// *   **Active** (default value): active routes
+        /// *   **Candidate**: standby routes
+        /// *   **Rejected**: rejected routes
+        /// *   **Prohibited**: prohibited routes
+        /// *   **All**: all routes
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// The ID of the region that you want to query.
-        /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// The ID of the CEN instance.
         /// </summary>
         [NameInMap("CenRegionId")]
         [Validation(Required=false)]
@@ -34,14 +38,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The ID of the region where the route map is applied.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
+        /// Whether the route can be advertised to other regions. Valid values: 
+        /// 
+        /// - **Active**: The route can be advertised to other regions.
+        /// - **Prohibited**: The route cannot be advertised to other regions.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -56,13 +63,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The status of the routes that you want to query. Valid values:
+        /// The ID of the region that you want to query.
         /// 
-        /// *   **Active** (default value): active routes
-        /// *   **Candidate**: standby routes
-        /// *   **Rejected**: rejected routes
-        /// *   **Prohibited**: prohibited routes
-        /// *   **All**: all routes
+        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

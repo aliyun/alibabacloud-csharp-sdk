@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceRegionId { get; set; }
 
         /// <summary>
-        /// The ID of the route table of the network instance.
+        /// The ID of the route table of the network instance. If you do not specify a route table ID, the system queries the routes in the system route tables of the VPCs by default.
         /// </summary>
         [NameInMap("ChildInstanceRouteTableId")]
         [Validation(Required=false)]

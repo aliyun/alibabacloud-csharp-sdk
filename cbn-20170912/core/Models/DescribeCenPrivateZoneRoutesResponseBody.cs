@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string PrivateZoneDnsServers { get; set; }
 
         /// <summary>
-        /// The configuration details of PrivateZone.
+        /// The detailed configuration of PrivateZone.
         /// </summary>
         [NameInMap("PrivateZoneInfos")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string HostRegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the virtual private cloud (VPC) that is associated with PrivateZone.
+                /// The ID of the VPC that is associated with PrivateZone.
                 /// </summary>
                 [NameInMap("HostVpcId")]
                 [Validation(Required=false)]

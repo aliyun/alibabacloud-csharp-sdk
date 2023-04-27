@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteCenChildInstanceRouteEntryToCenRequest : TeaModel {
         /// <summary>
-        /// The ID of the Cloud Enterprise Network (CEN) instance.
+        /// The ID of the CEN instance.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the Alibaba Cloud account to which the network instance belongs.
         /// 
-        /// > If the network instance belongs to another Alibaba Cloud account, this parameter is required.
+        /// > If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.
         /// </summary>
         [NameInMap("ChildInstanceAliUid")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The ID of the region where the network instance is deployed.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
         /// </summary>
         [NameInMap("ChildInstanceRegionId")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceType { get; set; }
 
         /// <summary>
-        /// The destination CIDR block of the route entry.
+        /// The destination CIDR block of the route.
         /// 
         /// Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.
         /// </summary>

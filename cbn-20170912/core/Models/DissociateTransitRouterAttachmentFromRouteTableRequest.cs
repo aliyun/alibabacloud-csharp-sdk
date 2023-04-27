@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
         /// 
         /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
         /// </summary>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to check the request but not perform the operation. The system checks the permissions and the status of the specified instances. Valid values:
+        /// Specifies whether to perform a dry run to check information such as the permissions and the instance status. Default values:
         /// 
-        /// *   **false** (default): sends the request. If the request passes the precheck, the associated forwarding correlation is deleted.
-        /// *   **true**: sends a request for precheck only. The associated forwarding correlation is not deleted after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the check fails, the corresponding error message is returned. If the request passes the check, the system returns the ID of the request.
+        /// *   **false** (default): performs a dry run and sends the request.
+        /// *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]

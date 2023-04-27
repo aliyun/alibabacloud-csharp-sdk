@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The type of the network instance. Valid values:
         /// 
-        /// *   **VPC**: virtual private cloud (VPC)
-        /// *   **VBR**: virtual border router (VBR)
+        /// *   **VPC**: VPC
+        /// *   **VBR**: VBR
         /// *   **CCN**: CCN instance
         /// </summary>
         [NameInMap("ChildInstanceType")]

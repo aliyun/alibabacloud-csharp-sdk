@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// The token that determines the start point of the next query. Valid values:
         /// 
-        /// - If **NextToken** was not returned, it indicates that no additional results exist.
-        /// - If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+        /// *   If **NextToken** is not returned, it indicates that no additional results exist.
+        /// *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments> TransitRouterAttachments { get; set; }
         public class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments : TeaModel {
             /// <summary>
-            /// Indicates whether to allow the transit router to automatically advertise routes to the IPsec connection. Valid values:
+            /// Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN connection. Valid values:
             /// 
             /// *   **true**: yes
             /// *   **false**: no
@@ -62,16 +62,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string CenId { get; set; }
 
             /// <summary>
-            /// The billing method of the VPC connection.
+            /// The billing method of the VPN attachment.
             /// 
-            /// Valid value: **POSTPAY**, which is the default value and specifies the pay-as-you-go billing method.
+            /// The value is POSTPAY, which is the default value and specifies the pay-as-you-go billing method.
             /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// The time when the VPN attachment was created. 
+            /// The time when the VPN attachment was created.
             /// 
             /// The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
             /// </summary>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// The type of resource to which the transit router is connected. 
+            /// The type of resource to which the transit router is connected.
             /// 
             /// Valid value: **VPN**, which indicates that an IPsec-VPN connection is attached to the transit router.
             /// </summary>
@@ -89,33 +89,33 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The status of the VPN attachment. Valid values: 
+            /// The status of the VPN attachment. Valid values:
             /// 
-            /// - **Attached**: The VPC attachment has been created on the transit router.
-            /// - **Attaching**: The VPC attachment is being created on the transit router.
-            /// - **Detaching**: The VPC attachment is being deleted from the transit router.
-            /// - **Detached**: The local transit router is disconnected from the peer transit router.
+            /// *   **Attached**: The VPC attachment has been created on the transit router.
+            /// *   **Attaching**: The VPN attachment is being created on the transit router.
+            /// *   **Detaching**: The VPN attachment is being deleted from the transit router.
+            /// *   **Detached**: The VPN attachment is deleted from the transit router.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The tags.
+            /// A list of tags.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsTags> Tags { get; set; }
             public class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsTags : TeaModel {
                 /// <summary>
-                /// The key of tag.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The value of tag.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -159,16 +159,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VpnId { get; set; }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account that owns the IPsec-VPN connection.
+            /// The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.
             /// </summary>
             [NameInMap("VpnOwnerId")]
             [Validation(Required=false)]
             public long? VpnOwnerId { get; set; }
 
             /// <summary>
-            /// The ID of the region to which the IPsec-VPN connection belongs. 
+            /// The ID of the region to which the IPsec-VPN connection belongs.
             /// 
-            /// You can call the [DescribeRegions](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/describeregions) operation to query the most recent region list.
+            /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
             /// </summary>
             [NameInMap("VpnRegionId")]
             [Validation(Required=false)]
@@ -182,9 +182,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsZones> Zones { get; set; }
             public class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsZones : TeaModel {
                 /// <summary>
-                /// The zone ID. 
+                /// The ID of the zone.
                 /// 
-                /// You can call [DescribeZones](https://www.alibabacloud.com/help/en/virtual-private-cloud/latest/describezones) to query zones by ID.
+                /// You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

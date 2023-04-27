@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterPeerAttachmentsRequest : TeaModel {
         /// <summary>
-        /// The ID of the CEN instance.
+        /// The ID of the Cloud Enterprise Network (CEN) instance.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// The number of entries to return per page. The default value is **20**. The maximum value is **100**.
+        /// The number of entries returned per page. Default value: **20**. Maximum value: **100**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If this is your first query or no next query is to be sent, ignore this parameter.
-        /// *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
+        /// *   You do not need to specify this parameter for the first request.
+        /// *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -59,16 +59,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The information about the tag.
+        /// 
+        /// You can specify at most 20 tags in each call.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTransitRouterPeerAttachmentsRequestTag> Tag { get; set; }
         public class ListTransitRouterPeerAttachmentsRequestTag : TeaModel {
             /// <summary>
-            /// The tag keys of the resources. 
+            /// The tag key.
             /// 
-            /// The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  
+            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// 
             /// You can specify at most 20 tag keys.
             /// </summary>
@@ -77,11 +79,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag values of the resources. 
+            /// The tag value.
             /// 
-            /// The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  
+            /// The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
             /// 
-            /// Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+            /// Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -90,7 +92,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// The ID of the cross-region connection.
+        /// The ID of the inter-region connection.
         /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]

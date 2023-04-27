@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListGrantVSwitchEnisRequest : TeaModel {
-        /// <summary>
-        /// The ID of the CEN instance to which the VPC is attached.
-        /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
@@ -32,18 +29,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        /// <summary>
-        /// The ID of a vSwitch in the VPC.
-        /// 
-        /// You can specify only one vSwitch in each call.
-        /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
-        /// <summary>
-        /// The ID of the VPC.
-        /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

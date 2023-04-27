@@ -10,33 +10,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class RevokeInstanceFromTransitRouterRequest : TeaModel {
         /// <summary>
-        /// Enter the ID of the Cloud Enterprise Network (CEN) instance to which the transit router belongs.
+        /// Revokes the permissions that a transit router uses to connect to network instances that belong to another Alibaba Cloud account.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
-        /// <summary>
-        /// The ID of the Alibaba Cloud account to which the CEN instance belongs.
-        /// </summary>
         [NameInMap("CenOwnerId")]
         [Validation(Required=false)]
         public long? CenOwnerId { get; set; }
 
-        /// <summary>
-        /// The ID of the network instance.
-        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// The type of the network instance. Valid values:
-        /// 
-        /// *   **VPC**: VPC
-        /// *   **ExpressConnect**: VBR
-        /// *   **VPN**: IPsec-VPN connection
-        /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
@@ -49,11 +36,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// The ID of the region where the network instance is deployed.
-        /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

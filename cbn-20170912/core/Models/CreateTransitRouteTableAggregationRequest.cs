@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
         /// 
         /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
         /// </summary>
@@ -76,6 +76,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string TransitRouteTableAggregationName { get; set; }
 
+        /// <summary>
+        /// The scope of networks that you want to advertise the aggregate route.
+        /// 
+        /// Set the value to **VPC**, which specified that the aggregate route is advertised to VPCs that are in associated forwarding relationship with a route table of the Enterprise Edition transit router and have route synchronization enabled.
+        /// </summary>
         [NameInMap("TransitRouteTableAggregationScope")]
         [Validation(Required=false)]
         public string TransitRouteTableAggregationScope { get; set; }

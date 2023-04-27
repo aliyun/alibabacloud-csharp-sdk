@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterVbrAttachmentsResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned on each page.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query.
+        /// The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// A list of VBR connections.
+        /// The queried VBR connections.
         /// </summary>
         [NameInMap("TransitRouterAttachments")]
         [Validation(Required=false)]
@@ -54,6 +54,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public bool? AutoPublishRouteEnabled { get; set; }
 
+            /// <summary>
+            /// The ID of the CEN instance.
+            /// </summary>
             [NameInMap("CenId")]
             [Validation(Required=false)]
             public string CenId { get; set; }
@@ -70,8 +73,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// The type of resource to which the transit router is connected. Valid values:
             /// 
-            /// *   **VPC**: virtual private cloud (VPC)
-            /// *   **CCN**: CCN instance
+            /// *   **VPC**: VPC
+            /// *   **CCN**: Cloud Connect Network (CCN) instance
             /// *   **VBR**: VBR
             /// *   **TR**: transit router
             /// </summary>
@@ -143,7 +146,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterId { get; set; }
 
             /// <summary>
-            /// The ID of the VBR.
+            /// The VBR ID.
             /// </summary>
             [NameInMap("VbrId")]
             [Validation(Required=false)]
@@ -157,7 +160,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public long? VbrOwnerId { get; set; }
 
             /// <summary>
-            /// The ID of the region where the VBR is deployed.
+            /// The region ID of the VBR.
             /// </summary>
             [NameInMap("VbrRegionId")]
             [Validation(Required=false)]

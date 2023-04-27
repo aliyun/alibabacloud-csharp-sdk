@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// The token that determines the start point of the next query. Valid values:
         /// 
-        /// - If this is your first query or no subsequent query is to be sent, ignore this parameter.
-        /// - If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+        /// *   If this is your first query and no subsequent queries are to be sent, ignore this parameter.
+        /// *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -59,16 +59,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags of the resources.
+        /// The information about the tags that are added to the CEN instance.
+        /// 
+        /// You can query at most 20 tags in each call.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTransitRouterVpnAttachmentsRequestTag> Tag { get; set; }
         public class ListTransitRouterVpnAttachmentsRequestTag : TeaModel {
             /// <summary>
-            /// The tag keys of the resources. 
+            /// The tag key.
             /// 
-            /// The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  
+            /// The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// 
             /// You can specify at most 20 tag keys.
             /// </summary>
@@ -77,11 +79,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag values of the resources. 
+            /// The tag value.
             /// 
-            /// The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  
+            /// The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
             /// 
-            /// Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+            /// Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

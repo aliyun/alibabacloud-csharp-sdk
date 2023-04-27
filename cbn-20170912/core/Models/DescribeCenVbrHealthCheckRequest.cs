@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenVbrHealthCheckRequest : TeaModel {
         /// <summary>
-        /// The ID of the CEN instance.
+        /// The ID of the VBR.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
+        /// The ID of the CEN instance.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -47,25 +47,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the VBR.
+        /// The number of the page to return. Default value: **1**.
         /// </summary>
         [NameInMap("VbrInstanceId")]
         [Validation(Required=false)]
         public string VbrInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account that owns the VBR.
-        /// 
-        /// >  The parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.
+        /// The ID of the region where the VBR is deployed.
         /// </summary>
         [NameInMap("VbrInstanceOwnerId")]
         [Validation(Required=false)]
         public long? VbrInstanceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the VBR is deployed.
-        /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// The operation that you want to perform. Set the value to **DescribeCenVbrHealthCheck**.
         /// </summary>
         [NameInMap("VbrInstanceRegionId")]
         [Validation(Required=false)]

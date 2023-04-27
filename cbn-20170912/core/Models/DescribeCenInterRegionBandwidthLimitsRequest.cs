@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenInterRegionBandwidthLimitsRequest : TeaModel {
         /// <summary>
-        /// The ID of the Cloud Enterprise Network (CEN) instance.
+        /// The operation that you want to perform. Set the value to **DescribeCenInterRegionBandwidthLimits**.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
@@ -25,14 +25,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The connected areas.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.
+        /// The ID of the local region.
+        /// 
+        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

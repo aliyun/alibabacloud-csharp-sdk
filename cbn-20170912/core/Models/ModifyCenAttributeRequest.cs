@@ -10,25 +10,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyCenAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the CEN instance.
+        /// Modifies the name and description of a Cloud Enterprise Network (CEN) instance.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// The description of the CEN instance.
-        /// 
-        /// The description must be 2 to 256 characters in length. It must start with a letter or Chinese character and cannot start with `http://` or `https://`.
+        /// WB656982
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the CEN instance.
-        /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
+        /// ModifyCenAttribute
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -42,11 +38,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// The level of CIDR block overlapping.
-        /// 
-        /// Set the value to **REDUCED** (default). This value specifies that CIDR blocks can overlap but cannot be the same.
-        /// </summary>
         [NameInMap("ProtectionLevel")]
         [Validation(Required=false)]
         public string ProtectionLevel { get; set; }
