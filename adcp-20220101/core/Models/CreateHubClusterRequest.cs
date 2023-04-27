@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class CreateHubClusterRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to use a public IP address to expose the API server. Valid values: - true: uses a public IP address to expose the API server. - true: uses an internal IP address to expose the API server.
+        /// Specifies whether to expose the API server to the Internet. Valid values:
+        /// 
+        /// *   true: exposes the API server to the Internet.
+        /// *   false: exposes the API server to the internal network.
         /// </summary>
         [NameInMap("ApiServerPublicEip")]
         [Validation(Required=false)]
@@ -21,14 +24,17 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         public bool? ArgoServerEnabled { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable audit logs. Valid values: - true: enables audit logs. - false: disables audit logs.
+        /// Specifies whether to enable the audit log feature. Valid values:
+        /// 
+        /// *   true: enables the audit log feature.
+        /// *   false: disables the audit log feature.
         /// </summary>
         [NameInMap("AuditLogEnabled")]
         [Validation(Required=false)]
         public bool? AuditLogEnabled { get; set; }
 
         /// <summary>
-        /// Specifies whether the security group is an advanced security group.
+        /// Specifies whether to use an advanced security group.
         /// </summary>
         [NameInMap("IsEnterpriseSecurityGroup")]
         [Validation(Required=false)]
@@ -46,12 +52,12 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         public string PriceLimit { get; set; }
 
         /// <summary>
-        /// Scenario-oriented master control type. The value can be:
+        /// The type of scenario for which the master instance is suitable. Valid values:
         /// 
-        /// - `Default`: Standard scenario Master instance.
-        /// - `XFlow`: Workflow scenario master instance.
+        /// *   `Default`: The master instance is suitable for standard scenarios.
+        /// *   `XFlow`: The master instance is suitable for workflow scenarios.
         /// 
-        /// Default Value: `Default`.
+        /// Default value: `Default`.
         /// </summary>
         [NameInMap("Profile")]
         [Validation(Required=false)]

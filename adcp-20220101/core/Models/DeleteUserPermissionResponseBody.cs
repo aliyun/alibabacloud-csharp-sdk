@@ -8,14 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
-    public class DescribeHubClusterKubeconfigResponseBody : TeaModel {
-        /// <summary>
-        /// The content of the kubeconfig file.
-        /// </summary>
-        [NameInMap("Kubeconfig")]
-        [Validation(Required=false)]
-        public string Kubeconfig { get; set; }
-
+    public class DeleteUserPermissionResponseBody : TeaModel {
         /// <summary>
         /// The ID of the request.
         /// </summary>

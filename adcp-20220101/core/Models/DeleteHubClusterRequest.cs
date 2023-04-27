@@ -17,12 +17,20 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to forcefully delete the master instance. Valid values: - true: forcefully delete the master instance. - false: does not forcefully delete the master instance. Default value: false.
+        /// Specifies whether to forcefully delete the master instance in ACK One. Valid values:
+        /// 
+        /// *   true: forcefully deletes the master instance in ACK One.
+        /// *   false: does not forcibly delete the master instance in ACK One.
+        /// 
+        /// Default value: false.
         /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }
 
+        /// <summary>
+        /// The list of resources to retain.
+        /// </summary>
         [NameInMap("RetainResources")]
         [Validation(Required=false)]
         public List<string> RetainResources { get; set; }

@@ -8,27 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
-    public class DeleteHubClusterResponseBody : TeaModel {
+    public class DeleteUserPermissionRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// The ID of the master instance.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the RAM user.
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// The ID of the job.
-        /// </summary>
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string UserId { get; set; }
 
     }
 

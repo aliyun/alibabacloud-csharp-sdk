@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class DescribeHubClusterDetailsResponseBody : TeaModel {
         /// <summary>
-        /// The details about the master instance.
+        /// The details of the master instance.
         /// </summary>
         [NameInMap("Cluster")]
         [Validation(Required=false)]
         public DescribeHubClusterDetailsResponseBodyCluster Cluster { get; set; }
         public class DescribeHubClusterDetailsResponseBodyCluster : TeaModel {
             /// <summary>
-            /// Information about the API server of the master instance.
+            /// The details of the API server of the master instance.
             /// </summary>
             [NameInMap("ApiServer")]
             [Validation(Required=false)]
@@ -31,7 +31,10 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string ApiServerEipId { get; set; }
 
                 /// <summary>
-                /// Indicates whether a public endpoint is used to expose the API server. Valid values: - true: a public endpoint is used to expose the API server. - false: no public endpoint is used to expose the API server.
+                /// Indicates whether the API server is accessible over the Internet. Valid values:
+                /// 
+                /// *   true: The API server is accessible over the Internet.
+                /// *   false: The API server is inaccessible over the Internet.
                 /// </summary>
                 [NameInMap("EnabledPublic")]
                 [Validation(Required=false)]
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
             }
 
             /// <summary>
-            /// The details about the master instance.
+            /// The details of the master instance.
             /// </summary>
             [NameInMap("ClusterInfo")]
             [Validation(Required=false)]
@@ -61,7 +64,9 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// The specification of the master instance. Valid values: - ack.pro.small: ACK Pro
+                /// The specification of the master instance. Valid value:
+                /// 
+                /// *   ack.pro.small: ACK Pro cluster
                 /// </summary>
                 [NameInMap("ClusterSpec")]
                 [Validation(Required=false)]
@@ -75,7 +80,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The error message that is returned when the system fails to create the master instance.
+                /// The error message returned when the master instance failed to be created.
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
@@ -103,7 +108,15 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The status of the master instance. Valid values: - initial: The master instance is being initialized. - failed: The master instance failed to be created. - running: The master instance is running. - inactive: The master instance is inactive. - deleting: The master instance is being deleted. - delete_failed: The master instance failed to be deleted. - deleted: The master instance is deleted.
+                /// The status of the master instance. Valid values:
+                /// 
+                /// *   initial: The master instance is being initialized.
+                /// *   failed: The master instance failed to be created.
+                /// *   running: The master instance is running
+                /// *   inactive: The master instance is pending.
+                /// *   deleting: The master instance is being deleted.
+                /// *   delete_failed: The master instance failed to be deleted.
+                /// *   deleted: The master instance is deleted.
                 /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
@@ -117,7 +130,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string UpdateTime { get; set; }
 
                 /// <summary>
-                /// The Kubernetes version of the master instance.
+                /// The version of the master instance.
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
@@ -126,14 +139,14 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
             }
 
             /// <summary>
-            /// The list of the deletion conditions of the master instance.
+            /// The deletion conditions of the master instance.
             /// </summary>
             [NameInMap("Conditions")]
             [Validation(Required=false)]
             public List<DescribeHubClusterDetailsResponseBodyClusterConditions> Conditions { get; set; }
             public class DescribeHubClusterDetailsResponseBodyClusterConditions : TeaModel {
                 /// <summary>
-                /// The error message of the deletion condition.
+                /// The error message returned.
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -147,10 +160,11 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string Reason { get; set; }
 
                 /// <summary>
-                /// The status of the deletion condition. Valid values:
-                /// - True: The master instance cannot be deleted.
-                /// - False: The master instance can be deleted.
-                /// - Unknow: Whether the master instance can be deleted is unknown.
+                /// The status of the master instance that the deletion condition indicates. Valid values:
+                /// 
+                /// *   True: The master instance cannot be deleted.
+                /// *   False: The master instance can be deleted.
+                /// *   Unknow: Whether the master instance can be deleted is unknown.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -173,14 +187,14 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
             public DescribeHubClusterDetailsResponseBodyClusterEndpoints Endpoints { get; set; }
             public class DescribeHubClusterDetailsResponseBodyClusterEndpoints : TeaModel {
                 /// <summary>
-                /// The internal endpoint of the API server of the master instance.
+                /// The endpoint that is used to access the API server over the internal network.
                 /// </summary>
                 [NameInMap("IntranetApiServerEndpoint")]
                 [Validation(Required=false)]
                 public string IntranetApiServerEndpoint { get; set; }
 
                 /// <summary>
-                /// The public endpoint of the API server of the master instance.
+                /// The endpoint that is used to access the API server over the Internet.
                 /// </summary>
                 [NameInMap("PublicApiServerEndpoint")]
                 [Validation(Required=false)]
@@ -196,21 +210,24 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
             public DescribeHubClusterDetailsResponseBodyClusterLogConfig LogConfig { get; set; }
             public class DescribeHubClusterDetailsResponseBodyClusterLogConfig : TeaModel {
                 /// <summary>
-                /// Indicates whether audit logs are enabled. Valid values: - true: audit logs are enabled. - false: audit logs are disabled.
+                /// Indicates whether the audit logging feature is enabled. Valid values:
+                /// 
+                /// *   true: Audit logging is enabled.
+                /// *   false: Audit logging is disabled.
                 /// </summary>
                 [NameInMap("EnableLog")]
                 [Validation(Required=false)]
                 public bool? EnableLog { get; set; }
 
                 /// <summary>
-                /// The name of the Log Service project.
+                /// The name of the project of Log Service.
                 /// </summary>
                 [NameInMap("LogProject")]
                 [Validation(Required=false)]
                 public string LogProject { get; set; }
 
                 /// <summary>
-                /// The retention period of the logs.
+                /// The number of days that logs are retained by Log Service.
                 /// </summary>
                 [NameInMap("LogStoreTTL")]
                 [Validation(Required=false)]
@@ -219,21 +236,24 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
             }
 
             /// <summary>
-            /// The Service Mesh (ASM) configurations.
+            /// The configurations of Alibaba Cloud Service Mesh (ASM).
             /// </summary>
             [NameInMap("MeshConfig")]
             [Validation(Required=false)]
             public DescribeHubClusterDetailsResponseBodyClusterMeshConfig MeshConfig { get; set; }
             public class DescribeHubClusterDetailsResponseBodyClusterMeshConfig : TeaModel {
                 /// <summary>
-                /// Indicates whether ASM is enabled. Valid values: - true: ASM is enabled. - false: ASM is disabled.
+                /// Indicates whether ASM is enabled. Valid values:
+                /// 
+                /// *   true: ASM is enabled.
+                /// *   false: ASM is disabled.
                 /// </summary>
                 [NameInMap("EnableMesh")]
                 [Validation(Required=false)]
                 public bool? EnableMesh { get; set; }
 
                 /// <summary>
-                /// The ID of the ASM instance.
+                /// service mesh (ASM) instance ID
                 /// </summary>
                 [NameInMap("MeshId")]
                 [Validation(Required=false)]
@@ -256,21 +276,25 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
                 public string ClusterDomain { get; set; }
 
                 /// <summary>
-                /// The IP version that is supported by the master instance. Valid values: - ipv4: IPv4. - ipv6: IPv6. - dual: IPv4 and IPv6.
+                /// The IP version that is supported by the master instance. Valid values:
+                /// 
+                /// *   ipv4: IPv4.
+                /// *   ipv6: IPv6.
+                /// *   dual: IPv4 and IPv6.
                 /// </summary>
                 [NameInMap("IPStack")]
                 [Validation(Required=false)]
                 public string IPStack { get; set; }
 
                 /// <summary>
-                /// The ID of the associated security group.
+                /// The IDs of the associated security groups.
                 /// </summary>
                 [NameInMap("SecurityGroupIDs")]
                 [Validation(Required=false)]
                 public List<string> SecurityGroupIDs { get; set; }
 
                 /// <summary>
-                /// A list of the vSwitches that are used by the master instance.
+                /// The details of the vSwitches.
                 /// </summary>
                 [NameInMap("VSwitches")]
                 [Validation(Required=false)]

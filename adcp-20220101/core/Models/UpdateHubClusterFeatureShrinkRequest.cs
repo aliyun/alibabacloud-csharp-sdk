@@ -25,46 +25,60 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         public bool? ArgoServerEnabled { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable audit logs. Valid values: - true: enable audit logs. - false: disables audit logs.
+        /// Specifies whether to enable the audit logging feature. Valid values:
+        /// 
+        /// *   true: enables the audit logging feature.
+        /// *   false: disables the audit logging feature.
         /// </summary>
         [NameInMap("AuditLogEnabled")]
         [Validation(Required=false)]
         public bool? AuditLogEnabled { get; set; }
 
         /// <summary>
-        /// The ID of the master instance.
+        /// The ID of the cluster.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable deletion protection for the master instance. After you enable deletion protection, you cannot delete the master instance in the console or by calling API operations. Valid values:
+        /// Specifies whether to enable deletion protection for the cluster. After you enable deletion protection, you cannot delete the master instance in the console or by calling the DeleteHubCluster operation. Valid values:
+        /// 
+        /// *   true: enables deletion protection for the cluster.
+        /// *   false: disables deletion protection for the cluster. This is the default value.
         /// </summary>
         [NameInMap("DeletionProtection")]
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Service Mesh (ASM). Valid values: true: enables ASM. false: disables ASM.
+        /// Specifies whether to enable Alibaba Cloud Service Mesh (ASM). Valid values:
+        /// 
+        /// true: enables ASM. false: disables ASM.
         /// </summary>
         [NameInMap("EnableMesh")]
         [Validation(Required=false)]
         public bool? EnableMesh { get; set; }
 
         /// <summary>
-        /// The name of the master instance. The name must be 1 to 63 characters in length, and can contain letters and digits. The name must start with a letter. The name can contain letters, digits, underscores (_), and hyphens (-).
+        /// The name of the cluster. The name must be 1 to 63 characters in length. It must start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-).
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The limit on the prices of containers in the workflow. This parameter takes effect only if the WorkflowScheduleMode parameter is set to cost-optimized.
+        /// </summary>
         [NameInMap("PriceLimit")]
         [Validation(Required=false)]
         public string PriceLimit { get; set; }
 
         /// <summary>
-        /// Specifies whether to associate an elastic IP address (EIP) with the API server. Default value: false. To associate an EIP with the API server, set the value to true. You can use a custom EIP by setting the ApiServerEipId parameter. If you do not set the ApiServerEipId parameter, the system automatically creates an EIP.
+        /// Specifies whether to associate an elastic IP address (EIP) with the API server. Valid values:
+        /// 
+        /// *   true: associates an EIP with the API server. You can specify the ApiServerEipId parameter. If you do not specify the ApiServerEipId parameter, the system automatically creates an EIP.
+        /// *   false: disassociates an EIP from the API server.
         /// </summary>
         [NameInMap("PublicApiServerEnabled")]
         [Validation(Required=false)]
