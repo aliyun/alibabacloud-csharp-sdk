@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public TimeRange UpdateTimeRange { get; set; }
 
+        [NameInMap("WithTotalCount")]
+        [Validation(Required=false)]
+        public bool? WithTotalCount { get; set; }
+
     }
 
 }

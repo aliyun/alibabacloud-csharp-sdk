@@ -9013,6 +9013,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["UpdateTimeRange"] = request.UpdateTimeRangeShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithTotalCount))
+            {
+                query["WithTotalCount"] = request.WithTotalCount;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9081,6 +9085,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateTimeRangeShrink))
             {
                 query["UpdateTimeRange"] = request.UpdateTimeRangeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithTotalCount))
+            {
+                query["WithTotalCount"] = request.WithTotalCount;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

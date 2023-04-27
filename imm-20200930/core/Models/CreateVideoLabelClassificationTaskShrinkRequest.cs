@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string CredentialConfigShrink { get; set; }
 
+        /// <summary>
+        /// 消息通知配置，支持使用MNS、RocketMQ接收异步消息通知。
+        /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public string NotificationShrink { get; set; }
