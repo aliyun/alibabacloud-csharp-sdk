@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string PerspectiveShrink { get; set; }
 
+        [NameInMap("SandBox")]
+        [Validation(Required=false)]
+        public bool? SandBox { get; set; }
+
         [NameInMap("SenderId")]
         [Validation(Required=false)]
         public string SenderId { get; set; }
