@@ -65,10 +65,16 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                     [Validation(Required=false)]
                     public List<float?> MinorAxis { get; set; }
 
+                    /// <summary>
+                    /// 结节最大径位置所在帧的ID标识。
+                    /// </summary>
                     [NameInMap("RecistSOPInstanceUID")]
                     [Validation(Required=false)]
                     public string RecistSOPInstanceUID { get; set; }
 
+                    /// <summary>
+                    /// 结节为恶性的置信度。取值范围0~1。
+                    /// </summary>
                     [NameInMap("Risk")]
                     [Validation(Required=false)]
                     public float? Risk { get; set; }
