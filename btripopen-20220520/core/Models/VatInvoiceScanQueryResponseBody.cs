@@ -69,6 +69,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string Amount { get; set; }
 
+                    /// <summary>
+                    /// 行号
+                    /// </summary>
                     [NameInMap("index")]
                     [Validation(Required=false)]
                     public string Index { get; set; }
@@ -123,6 +126,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string InvoiceTypeDesc { get; set; }
 
+                /// <summary>
+                /// 机器码
+                /// </summary>
                 [NameInMap("machine_code")]
                 [Validation(Required=false)]
                 public string MachineCode { get; set; }

@@ -101,6 +101,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                             [Validation(Required=false)]
                             public List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems> BaggageSubItems { get; set; }
                             public class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems : TeaModel {
+                                /// <summary>
+                                /// attributes
+                                /// </summary>
                                 [NameInMap("attributes")]
                                 [Validation(Required=false)]
                                 public Dictionary<string, object> Attributes { get; set; }

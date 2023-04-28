@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string DepartName { get; set; }
 
+        /// <summary>
+        /// 可将补充描述传入此字段，账单中将会体现此字段的值。可以用于企业的统计和对账
+        /// </summary>
         [NameInMap("extend_field")]
         [Validation(Required=false)]
         public string ExtendField { get; set; }
@@ -81,6 +84,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            /// <summary>
+            /// 超级经济舱折扣。1到10的整数
+            /// </summary>
             [NameInMap("premium_economy_discount")]
             [Validation(Required=false)]
             public int? PremiumEconomyDiscount { get; set; }
@@ -257,6 +263,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? Status { get; set; }
 
+        [NameInMap("sub_corp_id")]
+        [Validation(Required=false)]
+        public string SubCorpId { get; set; }
+
         [NameInMap("thirdpart_apply_id")]
         [Validation(Required=false)]
         public string ThirdpartApplyId { get; set; }
@@ -329,6 +339,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            /// <summary>
+            /// 超级经济舱折扣。1到10的整数
+            /// </summary>
             [NameInMap("premium_economy_discount")]
             [Validation(Required=false)]
             public int? PremiumEconomyDiscount { get; set; }

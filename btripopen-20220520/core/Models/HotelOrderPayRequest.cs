@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelOrderPayRequest : TeaModel {
+        /// <summary>
+        /// 供应商订单号（取自创单返回的订单号）
+        /// </summary>
         [NameInMap("btrip_order_id")]
         [Validation(Required=false)]
         public long? BtripOrderId { get; set; }

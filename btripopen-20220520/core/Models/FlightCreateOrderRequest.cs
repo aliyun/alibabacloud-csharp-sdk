@@ -119,10 +119,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// 国籍
+            /// </summary>
             [NameInMap("nationality")]
             [Validation(Required=false)]
             public string Nationality { get; set; }
 
+            /// <summary>
+            /// 国籍二字码
+            /// </summary>
             [NameInMap("nationality_code")]
             [Validation(Required=false)]
             public string NationalityCode { get; set; }

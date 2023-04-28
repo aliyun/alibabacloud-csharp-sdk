@@ -624,6 +624,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpId))
+            {
+                body["sub_corp_id"] = request.SubCorpId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartApplyId))
             {
                 body["thirdpart_apply_id"] = request.ThirdpartApplyId;
@@ -817,6 +821,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpId))
+            {
+                body["sub_corp_id"] = request.SubCorpId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartApplyId))
             {
                 body["thirdpart_apply_id"] = request.ThirdpartApplyId;
@@ -941,6 +949,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpId))
+            {
+                body["sub_corp_id"] = request.SubCorpId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 body["user_id"] = request.UserId;
@@ -997,6 +1009,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpId))
+            {
+                body["sub_corp_id"] = request.SubCorpId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
@@ -1193,6 +1209,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["start_time"] = request.StartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpId))
+            {
+                query["sub_corp_id"] = request.SubCorpId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 query["type"] = request.Type;
@@ -1269,6 +1289,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["start_time"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpId))
+            {
+                query["sub_corp_id"] = request.SubCorpId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -1422,6 +1446,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpId))
+            {
+                body["sub_corp_id"] = request.SubCorpId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartApplyId))
             {
@@ -1606,6 +1634,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpId))
+            {
+                body["sub_corp_id"] = request.SubCorpId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartApplyId))
             {
                 body["thirdpart_apply_id"] = request.ThirdpartApplyId;
@@ -1717,6 +1749,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["apply_show_id"] = request.ApplyShowId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpId))
+            {
+                query["sub_corp_id"] = request.SubCorpId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartApplyId))
             {
                 query["thirdpart_apply_id"] = request.ThirdpartApplyId;
@@ -1765,6 +1801,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyShowId))
             {
                 query["apply_show_id"] = request.ApplyShowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpId))
+            {
+                query["sub_corp_id"] = request.SubCorpId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartApplyId))
             {

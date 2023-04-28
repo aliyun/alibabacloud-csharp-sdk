@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BillDate { get; set; }
 
+                /// <summary>
+                /// 校验码
+                /// </summary>
                 [NameInMap("check_code")]
                 [Validation(Required=false)]
                 public string CheckCode { get; set; }
@@ -49,10 +52,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Department { get; set; }
 
+                /// <summary>
+                /// 开票人
+                /// </summary>
                 [NameInMap("drawer")]
                 [Validation(Required=false)]
                 public string Drawer { get; set; }
 
+                /// <summary>
+                /// 应用ID
+                /// </summary>
                 [NameInMap("id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
@@ -77,48 +86,81 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string InvoiceDay { get; set; }
 
+                /// <summary>
+                /// 发票明细
+                /// </summary>
                 [NameInMap("invoice_details")]
                 [Validation(Required=false)]
                 public List<InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails> InvoiceDetails { get; set; }
                 public class InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails : TeaModel {
+                    /// <summary>
+                    /// 金额
+                    /// </summary>
                     [NameInMap("amount")]
                     [Validation(Required=false)]
                     public string Amount { get; set; }
 
+                    /// <summary>
+                    /// 行号
+                    /// </summary>
                     [NameInMap("index")]
                     [Validation(Required=false)]
                     public string Index { get; set; }
 
+                    /// <summary>
+                    /// 货物或应税劳务、服务名称
+                    /// </summary>
                     [NameInMap("item_name")]
                     [Validation(Required=false)]
                     public string ItemName { get; set; }
 
+                    /// <summary>
+                    /// 数量
+                    /// </summary>
                     [NameInMap("quantity")]
                     [Validation(Required=false)]
                     public string Quantity { get; set; }
 
+                    /// <summary>
+                    /// 规格型号
+                    /// </summary>
                     [NameInMap("specification")]
                     [Validation(Required=false)]
                     public string Specification { get; set; }
 
+                    /// <summary>
+                    /// 税额
+                    /// </summary>
                     [NameInMap("tax")]
                     [Validation(Required=false)]
                     public string Tax { get; set; }
 
+                    /// <summary>
+                    /// 税率
+                    /// </summary>
                     [NameInMap("tax_rate")]
                     [Validation(Required=false)]
                     public string TaxRate { get; set; }
 
+                    /// <summary>
+                    /// 单位
+                    /// </summary>
                     [NameInMap("unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
+                    /// <summary>
+                    /// 单价
+                    /// </summary>
                     [NameInMap("unit_price")]
                     [Validation(Required=false)]
                     public string UnitPrice { get; set; }
 
                 }
 
+                /// <summary>
+                /// 发票地区
+                /// </summary>
                 [NameInMap("invoice_location")]
                 [Validation(Required=false)]
                 public string InvoiceLocation { get; set; }
@@ -127,10 +169,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string InvoiceNo { get; set; }
 
+                /// <summary>
+                /// 发票抬头
+                /// </summary>
                 [NameInMap("invoice_title")]
                 [Validation(Required=false)]
                 public string InvoiceTitle { get; set; }
 
+                /// <summary>
+                /// 机器码
+                /// </summary>
                 [NameInMap("machine_code")]
                 [Validation(Required=false)]
                 public string MachineCode { get; set; }
@@ -147,6 +195,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Passenger { get; set; }
 
+                /// <summary>
+                /// 密码区
+                /// </summary>
                 [NameInMap("password_area")]
                 [Validation(Required=false)]
                 public string PasswordArea { get; set; }
@@ -155,10 +206,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Project { get; set; }
 
+                /// <summary>
+                /// 购方银行信息
+                /// </summary>
                 [NameInMap("purchaser_bank_account_info")]
                 [Validation(Required=false)]
                 public string PurchaserBankAccountInfo { get; set; }
 
+                /// <summary>
+                /// 购方联系方式
+                /// </summary>
                 [NameInMap("purchaser_contact_info")]
                 [Validation(Required=false)]
                 public string PurchaserContactInfo { get; set; }
@@ -171,22 +228,37 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string PurchaserTaxNo { get; set; }
 
+                /// <summary>
+                /// 收款人
+                /// </summary>
                 [NameInMap("recipient")]
                 [Validation(Required=false)]
                 public string Recipient { get; set; }
 
+                /// <summary>
+                /// 备注
+                /// </summary>
                 [NameInMap("remarks")]
                 [Validation(Required=false)]
                 public string Remarks { get; set; }
 
+                /// <summary>
+                /// 复核人
+                /// </summary>
                 [NameInMap("reviewer")]
                 [Validation(Required=false)]
                 public string Reviewer { get; set; }
 
+                /// <summary>
+                /// 销售方银行信息
+                /// </summary>
                 [NameInMap("seller_bank_account_info")]
                 [Validation(Required=false)]
                 public string SellerBankAccountInfo { get; set; }
 
+                /// <summary>
+                /// 销售方联系方式
+                /// </summary>
                 [NameInMap("seller_contact_info")]
                 [Validation(Required=false)]
                 public string SellerContactInfo { get; set; }
@@ -199,6 +271,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string SellerTaxNo { get; set; }
 
+                /// <summary>
+                /// 校验码
+                /// </summary>
                 [NameInMap("smart_check_code")]
                 [Validation(Required=false)]
                 public string SmartCheckCode { get; set; }
@@ -211,6 +286,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string TaxRate { get; set; }
 
+                /// <summary>
+                /// 大写金额
+                /// </summary>
                 [NameInMap("total_amount_in_words")]
                 [Validation(Required=false)]
                 public string TotalAmountInWords { get; set; }

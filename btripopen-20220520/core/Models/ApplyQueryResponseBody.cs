@@ -83,6 +83,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string DepartName { get; set; }
 
+            /// <summary>
+            /// 补充描述，账单中将会体现此字段的值。可以用于企业的统计和对账
+            /// </summary>
             [NameInMap("extend_field")]
             [Validation(Required=false)]
             public string ExtendField { get; set; }

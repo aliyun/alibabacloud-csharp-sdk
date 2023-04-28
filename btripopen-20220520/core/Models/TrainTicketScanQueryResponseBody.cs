@@ -101,10 +101,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string TaxRate { get; set; }
 
+                /// <summary>
+                /// 取票号
+                /// </summary>
                 [NameInMap("ticket_no")]
                 [Validation(Required=false)]
                 public string TicketNo { get; set; }
 
+                /// <summary>
+                /// 车次
+                /// </summary>
                 [NameInMap("train_no")]
                 [Validation(Required=false)]
                 public string TrainNo { get; set; }
