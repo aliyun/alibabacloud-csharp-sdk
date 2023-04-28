@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             {
                 query["AuthCode"] = request.AuthCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
                 query["InputNumber"] = request.InputNumber;
@@ -91,6 +95,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
             {
                 query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
@@ -141,104 +149,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeEmptyNumberWithOptionsAsync(request, runtime);
-        }
-
-        public DescribeEmptyNumberDetectResponse DescribeEmptyNumberDetectWithOptions(DescribeEmptyNumberDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptType))
-            {
-                query["EncryptType"] = request.EncryptType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
-            {
-                query["Phone"] = request.Phone;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeEmptyNumberDetect",
-                Version = "2020-02-17",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeEmptyNumberDetectResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeEmptyNumberDetectResponse> DescribeEmptyNumberDetectWithOptionsAsync(DescribeEmptyNumberDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptType))
-            {
-                query["EncryptType"] = request.EncryptType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
-            {
-                query["Phone"] = request.Phone;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeEmptyNumberDetect",
-                Version = "2020-02-17",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeEmptyNumberDetectResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeEmptyNumberDetectResponse DescribeEmptyNumberDetect(DescribeEmptyNumberDetectRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeEmptyNumberDetectWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeEmptyNumberDetectResponse> DescribeEmptyNumberDetectAsync(DescribeEmptyNumberDetectRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeEmptyNumberDetectWithOptionsAsync(request, runtime);
         }
 
         public DescribePhoneNumberAnalysisResponse DescribePhoneNumberAnalysisWithOptions(DescribePhoneNumberAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -363,96 +273,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             return await DescribePhoneNumberAnalysisWithOptionsAsync(request, runtime);
         }
 
-        public DescribePhoneNumberAttributeResponse DescribePhoneNumberAttributeWithOptions(DescribePhoneNumberAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
-            {
-                query["PhoneNumber"] = request.PhoneNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribePhoneNumberAttribute",
-                Version = "2020-02-17",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribePhoneNumberAttributeResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribePhoneNumberAttributeResponse> DescribePhoneNumberAttributeWithOptionsAsync(DescribePhoneNumberAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
-            {
-                query["PhoneNumber"] = request.PhoneNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribePhoneNumberAttribute",
-                Version = "2020-02-17",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribePhoneNumberAttributeResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribePhoneNumberAttributeResponse DescribePhoneNumberAttribute(DescribePhoneNumberAttributeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribePhoneNumberAttributeWithOptions(request, runtime);
-        }
-
-        public async Task<DescribePhoneNumberAttributeResponse> DescribePhoneNumberAttributeAsync(DescribePhoneNumberAttributeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribePhoneNumberAttributeWithOptionsAsync(request, runtime);
-        }
-
         public DescribePhoneNumberOnlineTimeResponse DescribePhoneNumberOnlineTimeWithOptions(DescribePhoneNumberOnlineTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -464,6 +284,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Carrier))
             {
                 query["Carrier"] = request.Carrier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
@@ -515,6 +339,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Carrier))
             {
                 query["Carrier"] = request.Carrier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
@@ -673,194 +501,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             return await DescribePhoneNumberOperatorAttributeWithOptionsAsync(request, runtime);
         }
 
-        public DescribePhoneNumberResaleResponse DescribePhoneNumberResaleWithOptions(DescribePhoneNumberResaleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
-            {
-                query["PhoneNumber"] = request.PhoneNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Since))
-            {
-                query["Since"] = request.Since;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribePhoneNumberResale",
-                Version = "2020-02-17",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribePhoneNumberResaleResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribePhoneNumberResaleResponse> DescribePhoneNumberResaleWithOptionsAsync(DescribePhoneNumberResaleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
-            {
-                query["PhoneNumber"] = request.PhoneNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Since))
-            {
-                query["Since"] = request.Since;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribePhoneNumberResale",
-                Version = "2020-02-17",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribePhoneNumberResaleResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribePhoneNumberResaleResponse DescribePhoneNumberResale(DescribePhoneNumberResaleRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribePhoneNumberResaleWithOptions(request, runtime);
-        }
-
-        public async Task<DescribePhoneNumberResaleResponse> DescribePhoneNumberResaleAsync(DescribePhoneNumberResaleRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribePhoneNumberResaleWithOptionsAsync(request, runtime);
-        }
-
-        public DescribePhoneNumberStatusResponse DescribePhoneNumberStatusWithOptions(DescribePhoneNumberStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
-            {
-                query["PhoneNumber"] = request.PhoneNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribePhoneNumberStatus",
-                Version = "2020-02-17",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribePhoneNumberStatusResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribePhoneNumberStatusResponse> DescribePhoneNumberStatusWithOptionsAsync(DescribePhoneNumberStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
-            {
-                query["PhoneNumber"] = request.PhoneNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribePhoneNumberStatus",
-                Version = "2020-02-17",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribePhoneNumberStatusResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribePhoneNumberStatusResponse DescribePhoneNumberStatus(DescribePhoneNumberStatusRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribePhoneNumberStatusWithOptions(request, runtime);
-        }
-
-        public async Task<DescribePhoneNumberStatusResponse> DescribePhoneNumberStatusAsync(DescribePhoneNumberStatusRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribePhoneNumberStatusWithOptionsAsync(request, runtime);
-        }
-
         public DescribePhoneTwiceTelVerifyResponse DescribePhoneTwiceTelVerifyWithOptions(DescribePhoneTwiceTelVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -868,6 +508,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
             {
                 query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
@@ -919,6 +563,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
             {
                 query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
@@ -1195,6 +843,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             {
                 query["AuthCode"] = request.AuthCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
                 query["InputNumber"] = request.InputNumber;
@@ -1241,6 +893,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
             {
                 query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
@@ -1407,6 +1063,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             {
                 query["AuthCode"] = request.AuthCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
                 query["InputNumber"] = request.InputNumber;
@@ -1453,6 +1113,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
             {
                 query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
@@ -1513,6 +1177,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             {
                 query["AuthCode"] = request.AuthCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
                 query["InputNumber"] = request.InputNumber;
@@ -1559,6 +1227,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
             {
                 query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
@@ -1619,6 +1291,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             {
                 query["AuthCode"] = request.AuthCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
                 query["InputNumber"] = request.InputNumber;
@@ -1665,6 +1341,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
             {
                 query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
@@ -1725,6 +1405,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             {
                 query["AuthCode"] = request.AuthCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
                 query["InputNumber"] = request.InputNumber;
@@ -1771,6 +1455,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
             {
                 query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
@@ -1835,6 +1523,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             {
                 query["CertCode"] = request.CertCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
                 query["InputNumber"] = request.InputNumber;
@@ -1858,10 +1550,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteName))
-            {
-                query["RouteName"] = request.RouteName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1894,6 +1582,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             {
                 query["CertCode"] = request.CertCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
                 query["InputNumber"] = request.InputNumber;
@@ -1917,10 +1609,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteName))
-            {
-                query["RouteName"] = request.RouteName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1960,6 +1648,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
             {
                 query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
@@ -2011,6 +1703,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
             {
                 query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {

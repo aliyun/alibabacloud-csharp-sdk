@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public string CertCode { get; set; }
 
+        [NameInMap("ExtendFunction")]
+        [Validation(Required=false)]
+        public string ExtendFunction { get; set; }
+
         [NameInMap("InputNumber")]
         [Validation(Required=false)]
         public string InputNumber { get; set; }
@@ -40,10 +44,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RouteName")]
-        [Validation(Required=false)]
-        public string RouteName { get; set; }
 
     }
 
