@@ -37,13 +37,6 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-          * After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
-          *
-          * @param request AcceptHandshakeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AcceptHandshakeResponse
-         */
         public AcceptHandshakeResponse AcceptHandshakeWithOptions(AcceptHandshakeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -71,13 +64,6 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return TeaModel.ToObject<AcceptHandshakeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
-          *
-          * @param request AcceptHandshakeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AcceptHandshakeResponse
-         */
         public async Task<AcceptHandshakeResponse> AcceptHandshakeWithOptionsAsync(AcceptHandshakeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -105,24 +91,12 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return TeaModel.ToObject<AcceptHandshakeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
-          *
-          * @param request AcceptHandshakeRequest
-          * @return AcceptHandshakeResponse
-         */
         public AcceptHandshakeResponse AcceptHandshake(AcceptHandshakeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AcceptHandshakeWithOptions(request, runtime);
         }
 
-        /**
-          * After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
-          *
-          * @param request AcceptHandshakeRequest
-          * @return AcceptHandshakeResponse
-         */
         public async Task<AcceptHandshakeResponse> AcceptHandshakeAsync(AcceptHandshakeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -302,10 +276,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * After you attach a custom access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
-          * By default, the system access control policy FullAliyunAccess is attached to each folder and member.
-          * The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
-          * A maximum of 10 access control policies can be attached to a folder or member.
+          * The ID of the request.
           *
           * @param request AttachControlPolicyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -343,10 +314,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * After you attach a custom access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
-          * By default, the system access control policy FullAliyunAccess is attached to each folder and member.
-          * The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
-          * A maximum of 10 access control policies can be attached to a folder or member.
+          * The ID of the request.
           *
           * @param request AttachControlPolicyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -384,10 +352,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * After you attach a custom access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
-          * By default, the system access control policy FullAliyunAccess is attached to each folder and member.
-          * The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
-          * A maximum of 10 access control policies can be attached to a folder or member.
+          * The ID of the request.
           *
           * @param request AttachControlPolicyRequest
           * @return AttachControlPolicyResponse
@@ -399,10 +364,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * After you attach a custom access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
-          * By default, the system access control policy FullAliyunAccess is attached to each folder and member.
-          * The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
-          * A maximum of 10 access control policies can be attached to a folder or member.
+          * The ID of the request.
           *
           * @param request AttachControlPolicyRequest
           * @return AttachControlPolicyResponse
@@ -414,8 +376,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
-          * To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
+          * The ID of the request.
           *
           * @param request BindSecureMobilePhoneRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -457,8 +418,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
-          * To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
+          * The ID of the request.
           *
           * @param request BindSecureMobilePhoneRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -500,8 +460,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
-          * To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
+          * The ID of the request.
           *
           * @param request BindSecureMobilePhoneRequest
           * @return BindSecureMobilePhoneResponse
@@ -513,8 +472,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
-          * To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
+          * The ID of the request.
           *
           * @param request BindSecureMobilePhoneRequest
           * @return BindSecureMobilePhoneResponse
@@ -814,7 +772,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Before you delete a member, you must call this API operation to check whether the member can be deleted.
+          * The returned result.
           *
           * @param request CheckAccountDeleteRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -848,7 +806,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Before you delete a member, you must call this API operation to check whether the member can be deleted.
+          * The returned result.
           *
           * @param request CheckAccountDeleteRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -882,7 +840,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Before you delete a member, you must call this API operation to check whether the member can be deleted.
+          * The returned result.
           *
           * @param request CheckAccountDeleteRequest
           * @return CheckAccountDeleteResponse
@@ -894,7 +852,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Before you delete a member, you must call this API operation to check whether the member can be deleted.
+          * The returned result.
           *
           * @param request CheckAccountDeleteRequest
           * @return CheckAccountDeleteResponse
@@ -996,7 +954,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * A maximum of five levels of folders can be created under the Root folder.
+          * The name of the folder.
           *
           * @param request CreateFolderRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1034,7 +992,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * A maximum of five levels of folders can be created under the Root folder.
+          * The name of the folder.
           *
           * @param request CreateFolderRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1072,7 +1030,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * A maximum of five levels of folders can be created under the Root folder.
+          * The name of the folder.
           *
           * @param request CreateFolderRequest
           * @return CreateFolderResponse
@@ -1084,7 +1042,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * A maximum of five levels of folders can be created under the Root folder.
+          * The name of the folder.
           *
           * @param request CreateFolderRequest
           * @return CreateFolderResponse
@@ -1096,8 +1054,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.
-          * This topic provides an example on how to call the API operation to create a member in the `fd-r23M55****` folder. The display name of the member is `Dev`, and the prefix for the Alibaba Cloud account name of the member is `alice`.
+          * The Alibaba Cloud account name of the member.
           *
           * @param request CreateResourceAccountRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1151,8 +1108,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.
-          * This topic provides an example on how to call the API operation to create a member in the `fd-r23M55****` folder. The display name of the member is `Dev`, and the prefix for the Alibaba Cloud account name of the member is `alice`.
+          * The Alibaba Cloud account name of the member.
           *
           * @param request CreateResourceAccountRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1206,8 +1162,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.
-          * This topic provides an example on how to call the API operation to create a member in the `fd-r23M55****` folder. The display name of the member is `Dev`, and the prefix for the Alibaba Cloud account name of the member is `alice`.
+          * The Alibaba Cloud account name of the member.
           *
           * @param request CreateResourceAccountRequest
           * @return CreateResourceAccountResponse
@@ -1219,8 +1174,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.
-          * This topic provides an example on how to call the API operation to create a member in the `fd-r23M55****` folder. The display name of the member is `Dev`, and the prefix for the Alibaba Cloud account name of the member is `alice`.
+          * The Alibaba Cloud account name of the member.
           *
           * @param request CreateResourceAccountRequest
           * @return CreateResourceAccountResponse
@@ -1297,15 +1251,6 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return await DeclineHandshakeWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * > The member deletion feature is in invitational preview. You can contact the customer business manager (CBM) of Alibaba Cloud to apply for a trial.
-          * Before you delete a member, we recommend that you call the [CheckAccountDelete](~~CheckAccountDelete~~) and [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
-          * After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see [Delete a member of the resource account type](~~446078~~).
-          *
-          * @param tmpReq DeleteAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteAccountResponse
-         */
         public DeleteAccountResponse DeleteAccountWithOptions(DeleteAccountRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1343,15 +1288,6 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return TeaModel.ToObject<DeleteAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * > The member deletion feature is in invitational preview. You can contact the customer business manager (CBM) of Alibaba Cloud to apply for a trial.
-          * Before you delete a member, we recommend that you call the [CheckAccountDelete](~~CheckAccountDelete~~) and [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
-          * After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see [Delete a member of the resource account type](~~446078~~).
-          *
-          * @param tmpReq DeleteAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteAccountResponse
-         */
         public async Task<DeleteAccountResponse> DeleteAccountWithOptionsAsync(DeleteAccountRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1389,28 +1325,12 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return TeaModel.ToObject<DeleteAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * > The member deletion feature is in invitational preview. You can contact the customer business manager (CBM) of Alibaba Cloud to apply for a trial.
-          * Before you delete a member, we recommend that you call the [CheckAccountDelete](~~CheckAccountDelete~~) and [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
-          * After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see [Delete a member of the resource account type](~~446078~~).
-          *
-          * @param request DeleteAccountRequest
-          * @return DeleteAccountResponse
-         */
         public DeleteAccountResponse DeleteAccount(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAccountWithOptions(request, runtime);
         }
 
-        /**
-          * > The member deletion feature is in invitational preview. You can contact the customer business manager (CBM) of Alibaba Cloud to apply for a trial.
-          * Before you delete a member, we recommend that you call the [CheckAccountDelete](~~CheckAccountDelete~~) and [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
-          * After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see [Delete a member of the resource account type](~~446078~~).
-          *
-          * @param request DeleteAccountRequest
-          * @return DeleteAccountResponse
-         */
         public async Task<DeleteAccountResponse> DeleteAccountAsync(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1418,7 +1338,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * If you want to delete a custom access control policy that is attached to folders or members, you must call the [DetachControlPolicy](~~DetachControlPolicy~~) operation to detach the policy before you delete it.
+          * The ID of the request.
           *
           * @param request DeleteControlPolicyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1452,7 +1372,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * If you want to delete a custom access control policy that is attached to folders or members, you must call the [DetachControlPolicy](~~DetachControlPolicy~~) operation to detach the policy before you delete it.
+          * The ID of the request.
           *
           * @param request DeleteControlPolicyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1486,7 +1406,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * If you want to delete a custom access control policy that is attached to folders or members, you must call the [DetachControlPolicy](~~DetachControlPolicy~~) operation to detach the policy before you delete it.
+          * The ID of the request.
           *
           * @param request DeleteControlPolicyRequest
           * @return DeleteControlPolicyResponse
@@ -1498,7 +1418,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * If you want to delete a custom access control policy that is attached to folders or members, you must call the [DetachControlPolicy](~~DetachControlPolicy~~) operation to detach the policy before you delete it.
+          * The ID of the request.
           *
           * @param request DeleteControlPolicyRequest
           * @return DeleteControlPolicyResponse
@@ -1510,7 +1430,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Before you delete a folder, you must make sure that the folder does not contain members or subfolders.
+          * The ID of the request.
           *
           * @param request DeleteFolderRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1544,7 +1464,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Before you delete a folder, you must make sure that the folder does not contain members or subfolders.
+          * The ID of the request.
           *
           * @param request DeleteFolderRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1578,7 +1498,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Before you delete a folder, you must make sure that the folder does not contain members or subfolders.
+          * The ID of the request.
           *
           * @param request DeleteFolderRequest
           * @return DeleteFolderResponse
@@ -1590,7 +1510,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Before you delete a folder, you must make sure that the folder does not contain members or subfolders.
+          * The ID of the request.
           *
           * @param request DeleteFolderRequest
           * @return DeleteFolderResponse
@@ -1675,13 +1595,6 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return await DeleteMessageContactWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
-          *
-          * @param request DeregisterDelegatedAdministratorRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeregisterDelegatedAdministratorResponse
-         */
         public DeregisterDelegatedAdministratorResponse DeregisterDelegatedAdministratorWithOptions(DeregisterDelegatedAdministratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1713,13 +1626,6 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return TeaModel.ToObject<DeregisterDelegatedAdministratorResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
-          *
-          * @param request DeregisterDelegatedAdministratorRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeregisterDelegatedAdministratorResponse
-         */
         public async Task<DeregisterDelegatedAdministratorResponse> DeregisterDelegatedAdministratorWithOptionsAsync(DeregisterDelegatedAdministratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1751,24 +1657,12 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return TeaModel.ToObject<DeregisterDelegatedAdministratorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
-          *
-          * @param request DeregisterDelegatedAdministratorRequest
-          * @return DeregisterDelegatedAdministratorResponse
-         */
         public DeregisterDelegatedAdministratorResponse DeregisterDelegatedAdministrator(DeregisterDelegatedAdministratorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeregisterDelegatedAdministratorWithOptions(request, runtime);
         }
 
-        /**
-          * If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
-          *
-          * @param request DeregisterDelegatedAdministratorRequest
-          * @return DeregisterDelegatedAdministratorResponse
-         */
         public async Task<DeregisterDelegatedAdministratorResponse> DeregisterDelegatedAdministratorAsync(DeregisterDelegatedAdministratorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1776,9 +1670,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Before you disable a resource directory, you must make sure that the following requirements are met:
-          * *   All members of the cloud account type in the resource directory are removed. You can call the [RemoveCloudAccount](~~RemoveCloudAccount~~) operation to remove a member of the cloud account type.
-          * *   All folders except the Root folder are deleted from the resource directory. You can call the [DeleteFolder](~~DeleteFolder~~) operation to delete a folder.
+          * The ID of the request.
           *
           * @param request DestroyResourceDirectoryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1803,9 +1695,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Before you disable a resource directory, you must make sure that the following requirements are met:
-          * *   All members of the cloud account type in the resource directory are removed. You can call the [RemoveCloudAccount](~~RemoveCloudAccount~~) operation to remove a member of the cloud account type.
-          * *   All folders except the Root folder are deleted from the resource directory. You can call the [DeleteFolder](~~DeleteFolder~~) operation to delete a folder.
+          * The ID of the request.
           *
           * @param request DestroyResourceDirectoryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1830,9 +1720,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Before you disable a resource directory, you must make sure that the following requirements are met:
-          * *   All members of the cloud account type in the resource directory are removed. You can call the [RemoveCloudAccount](~~RemoveCloudAccount~~) operation to remove a member of the cloud account type.
-          * *   All folders except the Root folder are deleted from the resource directory. You can call the [DeleteFolder](~~DeleteFolder~~) operation to delete a folder.
+          * The ID of the request.
           *
           * @return DestroyResourceDirectoryResponse
          */
@@ -1843,9 +1731,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Before you disable a resource directory, you must make sure that the following requirements are met:
-          * *   All members of the cloud account type in the resource directory are removed. You can call the [RemoveCloudAccount](~~RemoveCloudAccount~~) operation to remove a member of the cloud account type.
-          * *   All folders except the Root folder are deleted from the resource directory. You can call the [DeleteFolder](~~DeleteFolder~~) operation to delete a folder.
+          * The ID of the request.
           *
           * @return DestroyResourceDirectoryResponse
          */
@@ -1855,14 +1741,6 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return await DestroyResourceDirectoryWithOptionsAsync(runtime);
         }
 
-        /**
-          * After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
-          * Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
-          *
-          * @param request DetachControlPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DetachControlPolicyResponse
-         */
         public DetachControlPolicyResponse DetachControlPolicyWithOptions(DetachControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1894,14 +1772,6 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return TeaModel.ToObject<DetachControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
-          * Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
-          *
-          * @param request DetachControlPolicyRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DetachControlPolicyResponse
-         */
         public async Task<DetachControlPolicyResponse> DetachControlPolicyWithOptionsAsync(DetachControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1933,26 +1803,12 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return TeaModel.ToObject<DetachControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
-          * Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
-          *
-          * @param request DetachControlPolicyRequest
-          * @return DetachControlPolicyResponse
-         */
         public DetachControlPolicyResponse DetachControlPolicy(DetachControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachControlPolicyWithOptions(request, runtime);
         }
 
-        /**
-          * After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
-          * Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
-          *
-          * @param request DetachControlPolicyRequest
-          * @return DetachControlPolicyResponse
-         */
         public async Task<DetachControlPolicyResponse> DetachControlPolicyAsync(DetachControlPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1960,8 +1816,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.
-          * > If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.
+          * The ID of the request.
           *
           * @param request DisableControlPolicyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1986,8 +1841,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.
-          * > If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.
+          * The ID of the request.
           *
           * @param request DisableControlPolicyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2012,8 +1866,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.
-          * > If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.
+          * The ID of the request.
           *
           * @return DisableControlPolicyResponse
          */
@@ -2024,8 +1877,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.
-          * > If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.
+          * The ID of the request.
           *
           * @return DisableControlPolicyResponse
          */
@@ -2110,7 +1962,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * The Control Policy feature provided by the Resource Directory service allows you to manage the permission boundaries of the folders or members in your resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see [Overview of the Control Policy feature](~~178671~~).
+          * The ID of the request.
           *
           * @param request EnableControlPolicyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2135,7 +1987,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * The Control Policy feature provided by the Resource Directory service allows you to manage the permission boundaries of the folders or members in your resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see [Overview of the Control Policy feature](~~178671~~).
+          * The ID of the request.
           *
           * @param request EnableControlPolicyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2160,7 +2012,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * The Control Policy feature provided by the Resource Directory service allows you to manage the permission boundaries of the folders or members in your resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see [Overview of the Control Policy feature](~~178671~~).
+          * The ID of the request.
           *
           * @return EnableControlPolicyResponse
          */
@@ -2171,7 +2023,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * The Control Policy feature provided by the Resource Directory service allows you to manage the permission boundaries of the folders or members in your resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see [Overview of the Control Policy feature](~~178671~~).
+          * The ID of the request.
           *
           * @return EnableControlPolicyResponse
          */
@@ -2182,7 +2034,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * You can use the current account or a newly created account to enable a resource directory. For more information, see [Enable a resource directory](~~111215~~).
+          * The ID of the request.
           *
           * @param request EnableResourceDirectoryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2228,7 +2080,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * You can use the current account or a newly created account to enable a resource directory. For more information, see [Enable a resource directory](~~111215~~).
+          * The ID of the request.
           *
           * @param request EnableResourceDirectoryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2274,7 +2126,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * You can use the current account or a newly created account to enable a resource directory. For more information, see [Enable a resource directory](~~111215~~).
+          * The ID of the request.
           *
           * @param request EnableResourceDirectoryRequest
           * @return EnableResourceDirectoryResponse
@@ -2286,7 +2138,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * You can use the current account or a newly created account to enable a resource directory. For more information, see [Enable a resource directory](~~111215~~).
+          * The ID of the request.
           *
           * @param request EnableResourceDirectoryRequest
           * @return EnableResourceDirectoryResponse
@@ -2372,7 +2224,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * After you call the [CheckAccountDelete](~~CheckAccountDelete~~) operation to perform a member deletion check, you can call the [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
+          * Container Service for Kubernetes
           *
           * @param request GetAccountDeletionCheckResultRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2406,7 +2258,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * After you call the [CheckAccountDelete](~~CheckAccountDelete~~) operation to perform a member deletion check, you can call the [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
+          * Container Service for Kubernetes
           *
           * @param request GetAccountDeletionCheckResultRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2440,7 +2292,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * After you call the [CheckAccountDelete](~~CheckAccountDelete~~) operation to perform a member deletion check, you can call the [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
+          * Container Service for Kubernetes
           *
           * @param request GetAccountDeletionCheckResultRequest
           * @return GetAccountDeletionCheckResultResponse
@@ -2452,7 +2304,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * After you call the [CheckAccountDelete](~~CheckAccountDelete~~) operation to perform a member deletion check, you can call the [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
+          * Container Service for Kubernetes
           *
           * @param request GetAccountDeletionCheckResultRequest
           * @return GetAccountDeletionCheckResultResponse
@@ -3037,6 +2889,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             {
                 query["Note"] = request.Note;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentFolderId))
+            {
+                query["ParentFolderId"] = request.ParentFolderId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -3075,6 +2931,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Note))
             {
                 query["Note"] = request.Note;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentFolderId))
+            {
+                query["ParentFolderId"] = request.ParentFolderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -4344,7 +4204,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Only a management account or delegated administrator account can be used to call this operation.
+          * The time when the trusted service was enabled.
           *
           * @param request ListTrustedServiceStatusRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4386,7 +4246,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Only a management account or delegated administrator account can be used to call this operation.
+          * The time when the trusted service was enabled.
           *
           * @param request ListTrustedServiceStatusRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4428,7 +4288,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Only a management account or delegated administrator account can be used to call this operation.
+          * The time when the trusted service was enabled.
           *
           * @param request ListTrustedServiceStatusRequest
           * @return ListTrustedServiceStatusResponse
@@ -4440,7 +4300,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
         }
 
         /**
-          * Only a management account or delegated administrator account can be used to call this operation.
+          * The time when the trusted service was enabled.
           *
           * @param request ListTrustedServiceStatusRequest
           * @return ListTrustedServiceStatusResponse
@@ -4525,16 +4385,6 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return await MoveAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory. When you call this operation, you must take note of the following limits:
-          * *   Only some trusted services support delegated administrator accounts. For more information, see [Supported trusted services](~~208133~~).
-          * *   Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.
-          * *   The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
-          *
-          * @param request RegisterDelegatedAdministratorRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RegisterDelegatedAdministratorResponse
-         */
         public RegisterDelegatedAdministratorResponse RegisterDelegatedAdministratorWithOptions(RegisterDelegatedAdministratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4566,16 +4416,6 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return TeaModel.ToObject<RegisterDelegatedAdministratorResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory. When you call this operation, you must take note of the following limits:
-          * *   Only some trusted services support delegated administrator accounts. For more information, see [Supported trusted services](~~208133~~).
-          * *   Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.
-          * *   The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
-          *
-          * @param request RegisterDelegatedAdministratorRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RegisterDelegatedAdministratorResponse
-         */
         public async Task<RegisterDelegatedAdministratorResponse> RegisterDelegatedAdministratorWithOptionsAsync(RegisterDelegatedAdministratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4607,30 +4447,12 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return TeaModel.ToObject<RegisterDelegatedAdministratorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory. When you call this operation, you must take note of the following limits:
-          * *   Only some trusted services support delegated administrator accounts. For more information, see [Supported trusted services](~~208133~~).
-          * *   Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.
-          * *   The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
-          *
-          * @param request RegisterDelegatedAdministratorRequest
-          * @return RegisterDelegatedAdministratorResponse
-         */
         public RegisterDelegatedAdministratorResponse RegisterDelegatedAdministrator(RegisterDelegatedAdministratorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RegisterDelegatedAdministratorWithOptions(request, runtime);
         }
 
-        /**
-          * The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory. When you call this operation, you must take note of the following limits:
-          * *   Only some trusted services support delegated administrator accounts. For more information, see [Supported trusted services](~~208133~~).
-          * *   Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.
-          * *   The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
-          *
-          * @param request RegisterDelegatedAdministratorRequest
-          * @return RegisterDelegatedAdministratorResponse
-         */
         public async Task<RegisterDelegatedAdministratorResponse> RegisterDelegatedAdministratorAsync(RegisterDelegatedAdministratorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5373,16 +5195,6 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ### Prerequisites
-          * *   To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-          * *   Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see [Switch a resource account to a cloud account](~~111233~~).
-          * *   Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see [Switch a cloud account to a resource account](~~209980~~).
-          *
-          * @param request UpdateAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateAccountResponse
-         */
         public UpdateAccountResponse UpdateAccountWithOptions(UpdateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5418,16 +5230,6 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return TeaModel.ToObject<UpdateAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ### Prerequisites
-          * *   To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-          * *   Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see [Switch a resource account to a cloud account](~~111233~~).
-          * *   Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see [Switch a cloud account to a resource account](~~209980~~).
-          *
-          * @param request UpdateAccountRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateAccountResponse
-         */
         public async Task<UpdateAccountResponse> UpdateAccountWithOptionsAsync(UpdateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5463,30 +5265,12 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
             return TeaModel.ToObject<UpdateAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ### Prerequisites
-          * *   To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-          * *   Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see [Switch a resource account to a cloud account](~~111233~~).
-          * *   Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see [Switch a cloud account to a resource account](~~209980~~).
-          *
-          * @param request UpdateAccountRequest
-          * @return UpdateAccountResponse
-         */
         public UpdateAccountResponse UpdateAccount(UpdateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateAccountWithOptions(request, runtime);
         }
 
-        /**
-          * ### Prerequisites
-          * *   To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-          * *   Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see [Switch a resource account to a cloud account](~~111233~~).
-          * *   Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see [Switch a cloud account to a resource account](~~209980~~).
-          *
-          * @param request UpdateAccountRequest
-          * @return UpdateAccountResponse
-         */
         public async Task<UpdateAccountResponse> UpdateAccountAsync(UpdateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

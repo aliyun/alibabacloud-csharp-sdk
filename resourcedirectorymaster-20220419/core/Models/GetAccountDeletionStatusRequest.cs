@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class GetAccountDeletionStatusRequest : TeaModel {
-        /// <summary>
-        /// The Alibaba Cloud account ID of the member.
-        /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }

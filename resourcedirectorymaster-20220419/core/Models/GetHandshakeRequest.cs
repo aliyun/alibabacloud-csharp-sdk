@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class GetHandshakeRequest : TeaModel {
-        /// <summary>
-        /// The ID of the invitation.
-        /// </summary>
         [NameInMap("HandshakeId")]
         [Validation(Required=false)]
         public string HandshakeId { get; set; }
