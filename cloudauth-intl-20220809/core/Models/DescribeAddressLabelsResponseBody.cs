@@ -8,10 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
-    public class InitializeResponseBody : TeaModel {
+    public class DescribeAddressLabelsResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public DescribeAddressLabelsResponseBodyData Data { get; set; }
+        public class DescribeAddressLabelsResponseBodyData : TeaModel {
+            [NameInMap("LabelList")]
+            [Validation(Required=false)]
+            public List<string> LabelList { get; set; }
+
+        }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -24,23 +34,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Result")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public InitializeResponseBodyResult Result { get; set; }
-        public class InitializeResponseBodyResult : TeaModel {
-            [NameInMap("ClientCfg")]
-            [Validation(Required=false)]
-            public string ClientCfg { get; set; }
-
-            [NameInMap("TransactionId")]
-            [Validation(Required=false)]
-            public string TransactionId { get; set; }
-
-            [NameInMap("TransactionUrl")]
-            [Validation(Required=false)]
-            public string TransactionUrl { get; set; }
-
-        }
+        public bool? Success { get; set; }
 
     }
 

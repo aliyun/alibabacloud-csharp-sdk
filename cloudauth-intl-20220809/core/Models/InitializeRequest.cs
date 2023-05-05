@@ -49,6 +49,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string MetaInfo { get; set; }
 
+        /// <summary>
+        /// OCR。
+        /// </summary>
         [NameInMap("Ocr")]
         [Validation(Required=false)]
         public string Ocr { get; set; }
