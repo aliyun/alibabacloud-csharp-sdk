@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string SubCorpId { get; set; }
 
+        [NameInMap("taobao_callback_url")]
+        [Validation(Required=false)]
+        public string TaobaoCallbackUrl { get; set; }
+
         [NameInMap("type")]
         [Validation(Required=false)]
         public int? Type { get; set; }

@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string AlipayTradeNo { get; set; }
 
+                [NameInMap("apply_extend_field")]
+                [Validation(Required=false)]
+                public string ApplyExtendField { get; set; }
+
                 [NameInMap("apply_id")]
                 [Validation(Required=false)]
                 public string ApplyId { get; set; }

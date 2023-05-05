@@ -239,6 +239,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["sub_corp_id"] = request.SubCorpId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaobaoCallbackUrl))
+            {
+                query["taobao_callback_url"] = request.TaobaoCallbackUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 query["type"] = request.Type;
@@ -299,6 +303,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpId))
             {
                 query["sub_corp_id"] = request.SubCorpId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaobaoCallbackUrl))
+            {
+                query["taobao_callback_url"] = request.TaobaoCallbackUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
