@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
                     [Validation(Required=false)]
                     public string DeeplinkUrl { get; set; }
 
+                    [NameInMap("InputItemId")]
+                    [Validation(Required=false)]
+                    public string InputItemId { get; set; }
+
                     [NameInMap("ItemId")]
                     [Validation(Required=false)]
                     public string ItemId { get; set; }
