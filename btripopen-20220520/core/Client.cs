@@ -11219,6 +11219,154 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await SyncThirdUserMappingWithOptionsAsync(request, headers, runtime);
         }
 
+        public TBAccountInfoQueryResponse TBAccountInfoQueryWithOptions(string userId, TBAccountInfoQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TBAccountInfoQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/account/v1/tb-accounts/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(userId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TBAccountInfoQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<TBAccountInfoQueryResponse> TBAccountInfoQueryWithOptionsAsync(string userId, TBAccountInfoQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TBAccountInfoQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/account/v1/tb-accounts/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(userId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TBAccountInfoQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public TBAccountInfoQueryResponse TBAccountInfoQuery(string userId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TBAccountInfoQueryHeaders headers = new TBAccountInfoQueryHeaders();
+            return TBAccountInfoQueryWithOptions(userId, headers, runtime);
+        }
+
+        public async Task<TBAccountInfoQueryResponse> TBAccountInfoQueryAsync(string userId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TBAccountInfoQueryHeaders headers = new TBAccountInfoQueryHeaders();
+            return await TBAccountInfoQueryWithOptionsAsync(userId, headers, runtime);
+        }
+
+        public TBAccountUnbindResponse TBAccountUnbindWithOptions(string userId, TBAccountUnbindHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TBAccountUnbind",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/account/v1/tb-accounts/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(userId) + "/action/unbind",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TBAccountUnbindResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<TBAccountUnbindResponse> TBAccountUnbindWithOptionsAsync(string userId, TBAccountUnbindHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TBAccountUnbind",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/account/v1/tb-accounts/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(userId) + "/action/unbind",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TBAccountUnbindResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public TBAccountUnbindResponse TBAccountUnbind(string userId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TBAccountUnbindHeaders headers = new TBAccountUnbindHeaders();
+            return TBAccountUnbindWithOptions(userId, headers, runtime);
+        }
+
+        public async Task<TBAccountUnbindResponse> TBAccountUnbindAsync(string userId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TBAccountUnbindHeaders headers = new TBAccountUnbindHeaders();
+            return await TBAccountUnbindWithOptionsAsync(userId, headers, runtime);
+        }
+
         public TicketChangingApplyResponse TicketChangingApplyWithOptions(TicketChangingApplyRequest tmpReq, TicketChangingApplyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
