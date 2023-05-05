@@ -229,6 +229,10 @@ namespace AlibabaCloud.SDK.DocumentAutoml20221229
             {
                 query["AutoPrediction"] = request.AutoPrediction;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BinaryToText))
+            {
+                query["BinaryToText"] = request.BinaryToText;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClassifierId))
             {
                 query["ClassifierId"] = request.ClassifierId;
@@ -269,6 +273,10 @@ namespace AlibabaCloud.SDK.DocumentAutoml20221229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPrediction))
             {
                 query["AutoPrediction"] = request.AutoPrediction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BinaryToText))
+            {
+                query["BinaryToText"] = request.BinaryToText;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClassifierId))
             {
