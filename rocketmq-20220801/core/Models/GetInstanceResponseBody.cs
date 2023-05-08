@@ -98,6 +98,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
             }
 
+            [NameInMap("groupCount")]
+            [Validation(Required=false)]
+            public long? GroupCount { get; set; }
+
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
@@ -146,7 +150,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
                     [NameInMap("ipWhitelist")]
                     [Validation(Required=false)]
-                    public string IpWhitelist { get; set; }
+                    public List<string> IpWhitelist { get; set; }
 
                 }
 
@@ -242,6 +246,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string ServiceCode { get; set; }
 
+            [NameInMap("software")]
+            [Validation(Required=false)]
+            public GetInstanceResponseBodyDataSoftware Software { get; set; }
+            public class GetInstanceResponseBodyDataSoftware : TeaModel {
+                [NameInMap("maintainTime")]
+                [Validation(Required=false)]
+                public string MaintainTime { get; set; }
+
+                [NameInMap("softwareVersion")]
+                [Validation(Required=false)]
+                public string SoftwareVersion { get; set; }
+
+                [NameInMap("upgradeMethod")]
+                [Validation(Required=false)]
+                public string UpgradeMethod { get; set; }
+
+            }
+
             [NameInMap("startTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
@@ -253,6 +275,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [NameInMap("subSeriesCode")]
             [Validation(Required=false)]
             public string SubSeriesCode { get; set; }
+
+            [NameInMap("topicCount")]
+            [Validation(Required=false)]
+            public long? TopicCount { get; set; }
 
             [NameInMap("updateTime")]
             [Validation(Required=false)]
