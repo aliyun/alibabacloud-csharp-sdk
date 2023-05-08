@@ -6925,10 +6925,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["job_no"] = request.JobNo;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LeaveStatus))
-            {
-                body["leave_status"] = request.LeaveStatus;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
             {
                 body["phone"] = request.Phone;
@@ -6991,10 +6987,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobNo))
             {
                 body["job_no"] = request.JobNo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LeaveStatus))
-            {
-                body["leave_status"] = request.LeaveStatus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
             {

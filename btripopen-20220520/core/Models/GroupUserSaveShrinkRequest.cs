@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string JobNo { get; set; }
 
-        [NameInMap("leave_status")]
-        [Validation(Required=false)]
-        public int? LeaveStatus { get; set; }
-
         [NameInMap("phone")]
         [Validation(Required=false)]
         public string Phone { get; set; }
