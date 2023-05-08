@@ -45,6 +45,20 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string FileUrl { get; set; }
 
+            [NameInMap("HoldTimeSegments")]
+            [Validation(Required=false)]
+            public List<ListMultiChannelRecordingsResponseBodyDataHoldTimeSegments> HoldTimeSegments { get; set; }
+            public class ListMultiChannelRecordingsResponseBodyDataHoldTimeSegments : TeaModel {
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
+                public long? EndTime { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
+                public long? StartTime { get; set; }
+
+            }
+
             [NameInMap("RamId")]
             [Validation(Required=false)]
             public string RamId { get; set; }
