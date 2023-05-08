@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class IsvGetAppIdRequest : TeaModel {
-        /// <summary>
-        /// The type of the application. Set the value to WHATSAPP.
-        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the message.
+        /// The ID of the message that was sent.
         /// </summary>
         [NameInMap("MessageId")]
         [Validation(Required=false)]

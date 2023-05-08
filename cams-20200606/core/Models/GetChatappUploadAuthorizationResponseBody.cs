@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Dir { get; set; }
 
             /// <summary>
-            /// The address of the server to which a file is uploaded in OSS.
+            /// The address of the OSS server to which a file is uploaded.
             /// </summary>
             [NameInMap("EndPoint")]
             [Validation(Required=false)]

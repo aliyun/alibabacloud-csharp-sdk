@@ -1074,7 +1074,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The status of the phone number.
           *
           * @param request CreateChatappMigrationInitiateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1116,7 +1116,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The status of the phone number.
           *
           * @param request CreateChatappMigrationInitiateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1158,7 +1158,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The status of the phone number.
           *
           * @param request CreateChatappMigrationInitiateRequest
           * @return CreateChatappMigrationInitiateResponse
@@ -1170,7 +1170,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The status of the phone number.
           *
           * @param request CreateChatappMigrationInitiateRequest
           * @return CreateChatappMigrationInitiateResponse
@@ -1182,8 +1182,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The error message.
           *
           * @param tmpReq CreateChatappTemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1263,8 +1262,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The error message.
           *
           * @param tmpReq CreateChatappTemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1344,8 +1342,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The error message.
           *
           * @param request CreateChatappTemplateRequest
           * @return CreateChatappTemplateResponse
@@ -1357,8 +1354,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The error message.
           *
           * @param request CreateChatappTemplateRequest
           * @return CreateChatappTemplateResponse
@@ -1490,8 +1486,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The type of the file attached in the Viber message template.
           *
           * @param request GetChatappTemplateDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1545,8 +1540,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The type of the file attached in the Viber message template.
           *
           * @param request GetChatappTemplateDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1600,8 +1594,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The type of the file attached in the Viber message template.
           *
           * @param request GetChatappTemplateDetailRequest
           * @return GetChatappTemplateDetailResponse
@@ -1613,8 +1606,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The type of the file attached in the Viber message template.
           *
           * @param request GetChatappTemplateDetailRequest
           * @return GetChatappTemplateDetailResponse
@@ -1626,7 +1618,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request GetChatappUploadAuthorizationRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1660,7 +1652,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request GetChatappUploadAuthorizationRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1694,7 +1686,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request GetChatappUploadAuthorizationRequest
           * @return GetChatappUploadAuthorizationResponse
@@ -1706,7 +1698,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request GetChatappUploadAuthorizationRequest
           * @return GetChatappUploadAuthorizationResponse
@@ -1834,7 +1826,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The ID of the phone number.
           *
           * @param request GetMigrationVerifyCodeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1880,7 +1872,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The ID of the phone number.
           *
           * @param request GetMigrationVerifyCodeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1926,7 +1918,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The ID of the phone number.
           *
           * @param request GetMigrationVerifyCodeRequest
           * @return GetMigrationVerifyCodeResponse
@@ -1938,7 +1930,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The ID of the phone number.
           *
           * @param request GetMigrationVerifyCodeRequest
           * @return GetMigrationVerifyCodeResponse
@@ -2050,7 +2042,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The message ID.
           *
           * @param request IsvGetAppIdRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2084,7 +2076,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The message ID.
           *
           * @param request IsvGetAppIdRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2118,7 +2110,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The message ID.
           *
           * @param request IsvGetAppIdRequest
           * @return IsvGetAppIdResponse
@@ -2130,7 +2122,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The message ID.
           *
           * @param request IsvGetAppIdRequest
           * @return IsvGetAppIdResponse
@@ -2306,8 +2298,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The name of the message template.
           *
           * @param tmpReq ModifyChatappTemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2383,8 +2374,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The name of the message template.
           *
           * @param tmpReq ModifyChatappTemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2460,8 +2450,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The name of the message template.
           *
           * @param request ModifyChatappTemplateRequest
           * @return ModifyChatappTemplateResponse
@@ -2473,8 +2462,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * ### QPS limit
-          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The name of the message template.
           *
           * @param request ModifyChatappTemplateRequest
           * @return ModifyChatappTemplateResponse
@@ -3266,7 +3254,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 200 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param tmpReq SendChatappMessageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3396,7 +3384,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 200 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param tmpReq SendChatappMessageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3526,7 +3514,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 200 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request SendChatappMessageRequest
           * @return SendChatappMessageResponse
@@ -3538,7 +3526,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 200 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request SendChatappMessageRequest
           * @return SendChatappMessageResponse
@@ -3550,7 +3538,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request SubmitIsvCustomerTermsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3608,7 +3596,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request SubmitIsvCustomerTermsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3666,7 +3654,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request SubmitIsvCustomerTermsRequest
           * @return SubmitIsvCustomerTermsResponse
@@ -3678,7 +3666,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request SubmitIsvCustomerTermsRequest
           * @return SubmitIsvCustomerTermsResponse
@@ -3806,7 +3794,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The error message returned.
           *
           * @param request UpdatePhoneWebhookRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3860,7 +3848,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The error message returned.
           *
           * @param request UpdatePhoneWebhookRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3914,7 +3902,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The error message returned.
           *
           * @param request UpdatePhoneWebhookRequest
           * @return UpdatePhoneWebhookResponse
@@ -3926,7 +3914,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         }
 
         /**
-          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * The error message returned.
           *
           * @param request UpdatePhoneWebhookRequest
           * @return UpdatePhoneWebhookResponse

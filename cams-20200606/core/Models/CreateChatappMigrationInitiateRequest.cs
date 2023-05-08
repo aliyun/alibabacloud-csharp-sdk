@@ -9,23 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateChatappMigrationInitiateRequest : TeaModel {
-        /// <summary>
-        /// The country code of a phone number.
-        /// </summary>
         [NameInMap("CountryCode")]
         [Validation(Required=false)]
         public string CountryCode { get; set; }
 
-        /// <summary>
-        /// The space ID of the user under the ISV account.
-        /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
-        /// <summary>
-        /// The phone number without the country code.
-        /// </summary>
         [NameInMap("MobileNumber")]
         [Validation(Required=false)]
         public string MobileNumber { get; set; }

@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// The name of the image template.
+        /// The name of the message template.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// 
         /// *   **WHATSAPP**
         /// *   **VIBER**
-        /// *   LINE: the LINE message template. This type of message template will be released later.
+        /// *   LINE: the Line message template. This type of message template will be released later.
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]
