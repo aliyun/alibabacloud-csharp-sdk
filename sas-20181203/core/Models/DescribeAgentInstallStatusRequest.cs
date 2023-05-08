@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAgentInstallStatusRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and response. Valid values:
+        /// The language of the content within the request and response. Valid value:
         /// 
         /// *   **zh**: Chinese
         /// *   **en**: English

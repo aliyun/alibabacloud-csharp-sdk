@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class VerifyCheckResultRequest : TeaModel {
+        /// <summary>
+        /// An array that consists of the IDs of risk items.
+        /// </summary>
         [NameInMap("CheckIds")]
         [Validation(Required=false)]
         public List<long?> CheckIds { get; set; }

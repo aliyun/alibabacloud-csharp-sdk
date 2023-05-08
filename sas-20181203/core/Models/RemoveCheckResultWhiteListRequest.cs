@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class RemoveCheckResultWhiteListRequest : TeaModel {
+        /// <summary>
+        /// This parameter is deprecated.
+        /// </summary>
         [NameInMap("CheckGroupId")]
         [Validation(Required=false)]
         public string CheckGroupId { get; set; }
 
+        /// <summary>
+        /// The IDs of check items.
+        /// </summary>
         [NameInMap("CheckIds")]
         [Validation(Required=false)]
         public List<long?> CheckIds { get; set; }
 
+        /// <summary>
+        /// This parameter is deprecated.
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ExportSuspEventsResponseBody : TeaModel {
+        /// <summary>
+        /// The name of the exported file.
+        /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
+        /// <summary>
+        /// The ID of the export record.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public int? Id { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string From { get; set; }
 
+        /// <summary>
+        /// WB01014029
+        /// </summary>
         [NameInMap("Operation")]
         [Validation(Required=false)]
         public string Operation { get; set; }
 
+        /// <summary>
+        /// Handles multiple exceptions at a time.
+        /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string SubOperation { get; set; }
 
+        /// <summary>
+        /// OperationSuspEvents
+        /// </summary>
         [NameInMap("SuspiciousEventIds")]
         [Validation(Required=false)]
         public string SuspiciousEventIds { get; set; }

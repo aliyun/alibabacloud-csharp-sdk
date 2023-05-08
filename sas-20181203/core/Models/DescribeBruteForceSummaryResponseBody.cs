@@ -17,9 +17,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? AllStrategyCount { get; set; }
 
+            [NameInMap("AntiBruteForceRuleCount")]
+            [Validation(Required=false)]
+            public string AntiBruteForceRuleCount { get; set; }
+
+            [NameInMap("CustomEffectiveCount")]
+            [Validation(Required=false)]
+            public string CustomEffectiveCount { get; set; }
+
+            [NameInMap("CustomRecordCount")]
+            [Validation(Required=false)]
+            public string CustomRecordCount { get; set; }
+
             [NameInMap("EffectiveCount")]
             [Validation(Required=false)]
             public int? EffectiveCount { get; set; }
+
+            [NameInMap("SystemEffectiveCount")]
+            [Validation(Required=false)]
+            public string SystemEffectiveCount { get; set; }
+
+            [NameInMap("SystemRecordCount")]
+            [Validation(Required=false)]
+            public string SystemRecordCount { get; set; }
 
         }
 

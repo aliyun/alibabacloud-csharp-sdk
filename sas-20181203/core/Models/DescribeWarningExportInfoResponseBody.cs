@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <summary>
+        /// Queries the progress of a export task for a baseline check result.
+        /// </summary>
         [NameInMap("Link")]
         [Validation(Required=false)]
         public string Link { get; set; }
@@ -33,6 +36,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// DescribeWarningExportInfo
+        /// </summary>
         [NameInMap("Progress")]
         [Validation(Required=false)]
         public int? Progress { get; set; }

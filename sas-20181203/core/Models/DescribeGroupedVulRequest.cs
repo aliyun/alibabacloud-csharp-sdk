@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        /// <summary>
+        /// The name of the vulnerability.
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -57,10 +60,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string TargetType { get; set; }
 
+        /// <summary>
+        /// The total number of fixed vulnerabilities.
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        /// <summary>
+        /// The number of vulnerabilities that have the **high** priority.
+        /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]
         public string Uuids { get; set; }

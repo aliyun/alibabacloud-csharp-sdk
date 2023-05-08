@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperationCancelIgnoreSuspEventRequest : TeaModel {
+        /// <summary>
+        /// OperationCancelIgnoreSuspEvent
+        /// </summary>
         [NameInMap("SecurityEventIds")]
         [Validation(Required=false)]
         public List<long?> SecurityEventIds { get; set; }

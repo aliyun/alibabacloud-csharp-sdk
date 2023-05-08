@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteSecurityEventMarkMissListRequest : TeaModel {
+        /// <summary>
+        /// The IDs of custom defense rule.
+        /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public List<long?> Ids { get; set; }

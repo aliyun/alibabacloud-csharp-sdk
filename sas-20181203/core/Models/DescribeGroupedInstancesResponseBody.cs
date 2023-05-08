@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? AsapVulInstanceCount { get; set; }
 
+            [NameInMap("AuthVersionCheckCount")]
+            [Validation(Required=false)]
+            public int? AuthVersionCheckCount { get; set; }
+
             [NameInMap("FieldAliasName")]
             [Validation(Required=false)]
             public string FieldAliasName { get; set; }
@@ -39,28 +43,46 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <summary>
+        /// The number of assets that are not protected by Security Center.
+        /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeGroupedInstancesResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeGroupedInstancesResponseBodyPageInfo : TeaModel {
+            /// <summary>
+            /// 58928
+            /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
+            /// <summary>
+            /// The ID of the request, which is used to locate and troubleshoot issues.
+            /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
+            /// <summary>
+            /// Queries the statistical information about assets based on a specified filter condition.
+            /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
+            /// <summary>
+            /// DescribeGroupedInstances
+            /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
 
         }
 
+        /// <summary>
+        /// The name of the server group.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

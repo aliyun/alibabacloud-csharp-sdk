@@ -10,16 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the server group that you want to delete.
-        /// 
-        /// >  To delete a server group, you must provide the ID of the server group. You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the ID.
+        /// WB01014029
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// DeleteGroup
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

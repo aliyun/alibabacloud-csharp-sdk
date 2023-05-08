@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeAntiBruteForceRulesResponseBodyRules> Rules { get; set; }
         public class DescribeAntiBruteForceRulesResponseBodyRules : TeaModel {
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
             [NameInMap("DefaultRule")]
             [Validation(Required=false)]
             public bool? DefaultRule { get; set; }

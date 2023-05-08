@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListPluginForUuidShrinkRequest : TeaModel {
+        /// <summary>
+        /// An array that consists of the information about the plug-ins.
+        /// </summary>
         [NameInMap("Types")]
         [Validation(Required=false)]
         public string TypesShrink { get; set; }
 
+        /// <summary>
+        /// The configurations of the plug-in.
+        /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]
         public string Uuid { get; set; }

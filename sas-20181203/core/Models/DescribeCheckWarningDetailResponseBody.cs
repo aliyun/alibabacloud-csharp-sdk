@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckWarningDetailResponseBody : TeaModel {
+        /// <summary>
+        /// Queries the details about a specified check item.
+        /// </summary>
         [NameInMap("Advice")]
         [Validation(Required=false)]
         public string Advice { get; set; }
@@ -37,6 +40,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// DescribeCheckWarningDetail
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

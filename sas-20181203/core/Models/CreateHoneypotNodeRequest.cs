@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateHoneypotNodeRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to allow the honeypots to access the Internet. Valid values:
+        /// Specifies whether to allow honeypots to access the Internet. Valid values:
         /// 
-        /// *   **true**: allows the honeypots to access the Internet.
-        /// *   **false**: does not allow the honeypots to access the Internet.
+        /// *   **true**: allows honeypots to access the Internet.
+        /// *   **false**: does not allow honeypots to access the Internet.
         /// </summary>
         [NameInMap("AllowHoneypotAccessInternet")]
         [Validation(Required=false)]
         public bool? AllowHoneypotAccessInternet { get; set; }
 
         /// <summary>
-        /// The number of probes that you want to allocate for the management node.
+        /// The number of available probes.
         /// </summary>
         [NameInMap("AvailableProbeNum")]
         [Validation(Required=false)]

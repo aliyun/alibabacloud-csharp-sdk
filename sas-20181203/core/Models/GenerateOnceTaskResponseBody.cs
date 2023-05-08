@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GenerateOnceTaskResponseBody : TeaModel {
+        /// <summary>
+        /// The number of scan tasks that are complete.
+        /// </summary>
         [NameInMap("CanCreate")]
         [Validation(Required=false)]
         public bool? CanCreate { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string LastTask { get; set; }
 
+        /// <summary>
+        /// The ID of the scan task.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

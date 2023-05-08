@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class PublicSyncAndCreateImageScanTaskResponseBody : TeaModel {
+        /// <summary>
+        /// The total number of images to scan.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public PublicSyncAndCreateImageScanTaskResponseBodyData Data { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? ExecTime { get; set; }
 
+            /// <summary>
+            /// PublicSyncAndCreateImageScanTask
+            /// </summary>
             [NameInMap("FinishCount")]
             [Validation(Required=false)]
             public int? FinishCount { get; set; }
@@ -41,16 +47,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// The ID of the request, which is used to locate and troubleshoot issues.
+            /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
+            /// <summary>
+            /// Adds images to Security Center and creates an image scan task to scan the images.
+            /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
 
         }
 
+        /// <summary>
+        /// The data returned if the call is successful.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

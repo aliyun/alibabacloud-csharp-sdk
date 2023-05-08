@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class FindContainerNetworkConnectShrinkRequest : TeaModel {
+        /// <summary>
+        /// The number of entries returned per page. Default value: **20**.
+        /// </summary>
         [NameInMap("CriteriaType")]
         [Validation(Required=false)]
         public string CriteriaType { get; set; }
@@ -33,6 +36,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string SrcNodeShrink { get; set; }
 
+        /// <summary>
+        /// The page number of the returned page.
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }

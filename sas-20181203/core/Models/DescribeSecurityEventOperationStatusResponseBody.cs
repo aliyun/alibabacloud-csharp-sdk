@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSecurityEventOperationStatusResponseBody : TeaModel {
+        /// <summary>
+        /// The source IP address of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// 192.168.XX.XX
+        /// </summary>
         [NameInMap("SecurityEventOperationStatusResponse")]
         [Validation(Required=false)]
         public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponse SecurityEventOperationStatusResponse { get; set; }
         public class DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponse : TeaModel {
+            /// <summary>
+            /// DescribeSecurityEventOperationStatus
+            /// </summary>
             [NameInMap("SecurityEventOperationStatuses")]
             [Validation(Required=false)]
             public List<DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses> SecurityEventOperationStatuses { get; set; }
@@ -35,6 +44,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <summary>
+            /// Queries the alert events that are triggered by the same IP address rule or of the same alert type as a specific alert event if you want to handle the specific alert event in batch operation mode.
+            /// </summary>
             [NameInMap("TaskStatus")]
             [Validation(Required=false)]
             public string TaskStatus { get; set; }

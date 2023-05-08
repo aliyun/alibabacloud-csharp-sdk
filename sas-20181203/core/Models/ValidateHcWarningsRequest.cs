@@ -9,14 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ValidateHcWarningsRequest : TeaModel {
+        [NameInMap("CheckIds")]
+        [Validation(Required=false)]
+        public string CheckIds { get; set; }
+
+        /// <summary>
+        /// The UUIDs of servers on which you want to verify risk items.
+        /// </summary>
         [NameInMap("RiskIds")]
         [Validation(Required=false)]
         public string RiskIds { get; set; }
 
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]
         public string Uuids { get; set; }

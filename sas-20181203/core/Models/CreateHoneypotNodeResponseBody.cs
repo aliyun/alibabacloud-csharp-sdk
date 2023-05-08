@@ -16,10 +16,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// The data returned.
+        /// </summary>
         [NameInMap("HoneypotNode")]
         [Validation(Required=false)]
         public CreateHoneypotNodeResponseBodyHoneypotNode HoneypotNode { get; set; }
         public class CreateHoneypotNodeResponseBodyHoneypotNode : TeaModel {
+            /// <summary>
+            /// The ID of the management node.
+            /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public string NodeId { get; set; }

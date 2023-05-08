@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackupPolicyResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// </summary>
         [NameInMap("BackupPolicyDetail")]
         [Validation(Required=false)]
         public DescribeBackupPolicyResponseBodyBackupPolicyDetail BackupPolicyDetail { get; set; }
@@ -25,10 +28,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// DescribeBackupPolicy
+            /// </summary>
             [NameInMap("Policy")]
             [Validation(Required=false)]
             public string Policy { get; set; }
 
+            /// <summary>
+            /// Queries the details of an anti-ransomware policy for servers.
+            /// </summary>
             [NameInMap("PolicyVersion")]
             [Validation(Required=false)]
             public string PolicyVersion { get; set; }
@@ -37,6 +46,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// The ID of the anti-ransomware policy.
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -47,6 +59,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <summary>
+        /// The ID of the region in which backup data is stored.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

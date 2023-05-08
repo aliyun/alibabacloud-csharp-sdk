@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOnceTaskResultInfoResponseBody : TeaModel {
+        /// <summary>
+        /// The information about the task.
+        /// </summary>
         [NameInMap("CollectTime")]
         [Validation(Required=false)]
         public long? CollectTime { get; set; }
@@ -17,6 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? FinishCount { get; set; }
 
+        /// <summary>
+        /// The status of the task. Valid values:
+        /// 
+        /// *   **INIT**: The task is not started.
+        /// *   **START**: The task is started.
+        /// *   **SUCCESS**: The task is complete.
+        /// *   **TIMEOUT**: The task times out.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

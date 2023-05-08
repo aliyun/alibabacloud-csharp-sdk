@@ -10,18 +10,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageRepoDetailListResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the information about image repositories.
+        /// Indicates whether the image repository is at risk. Valid values:
+        /// 
+        /// *   **YES**
+        /// *   **NO**
         /// </summary>
         [NameInMap("ImageRepoResponses")]
         [Validation(Required=false)]
         public List<DescribeImageRepoDetailListResponseBodyImageRepoResponses> ImageRepoResponses { get; set; }
         public class DescribeImageRepoDetailListResponseBodyImageRepoResponses : TeaModel {
             /// <summary>
-            /// The number of alerts that are generated for the image repository.
+            /// The number of images.
             /// </summary>
             [NameInMap("AlarmCount")]
             [Validation(Required=false)]
             public int? AlarmCount { get; set; }
+
+            /// <summary>
+            /// The region ID of the image.
+            /// </summary>
+            [NameInMap("AlarmStatus")]
+            [Validation(Required=false)]
+            public string AlarmStatus { get; set; }
 
             /// <summary>
             /// Indicates whether alerts are generated for the image repository. Valid values:
@@ -29,23 +39,48 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **YES**
             /// *   **NO**
             /// </summary>
-            [NameInMap("AlarmStatus")]
-            [Validation(Required=false)]
-            public string AlarmStatus { get; set; }
-
-            /// <summary>
-            /// The address of the image repository.
-            /// </summary>
             [NameInMap("Endpoints")]
             [Validation(Required=false)]
             public string Endpoints { get; set; }
 
             /// <summary>
-            /// The number of baseline risk items on the image repository.
+            /// The number of alerts that are generated for the image repository.
             /// </summary>
             [NameInMap("HcCount")]
             [Validation(Required=false)]
             public int? HcCount { get; set; }
+
+            /// <summary>
+            /// The namespace to which the image repository belongs.
+            /// </summary>
+            [NameInMap("HcStatus")]
+            [Validation(Required=false)]
+            public string HcStatus { get; set; }
+
+            [NameInMap("ImageCount")]
+            [Validation(Required=false)]
+            public int? ImageCount { get; set; }
+
+            /// <summary>
+            /// The number of baseline risk items on the image repository.
+            /// </summary>
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            /// <summary>
+            /// The number of vulnerabilities detected on the image repository.
+            /// </summary>
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
+            /// <summary>
+            /// The ID of the image repository.
+            /// </summary>
+            [NameInMap("RegistryType")]
+            [Validation(Required=false)]
+            public string RegistryType { get; set; }
 
             /// <summary>
             /// Indicates whether baseline risk items are detected on the image repository. Valid values:
@@ -53,30 +88,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **NO**
             /// *   **YES**
             /// </summary>
-            [NameInMap("HcStatus")]
+            [NameInMap("RepoId")]
             [Validation(Required=false)]
-            public string HcStatus { get; set; }
+            public string RepoId { get; set; }
 
-            /// <summary>
-            /// The number of images.
-            /// </summary>
-            [NameInMap("ImageCount")]
+            [NameInMap("RepoName")]
             [Validation(Required=false)]
-            public int? ImageCount { get; set; }
+            public string RepoName { get; set; }
 
-            /// <summary>
-            /// The ID of the image.
-            /// </summary>
-            [NameInMap("InstanceId")]
+            [NameInMap("RepoNamespace")]
             [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            /// <summary>
-            /// The region ID of the image.
-            /// </summary>
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
+            public string RepoNamespace { get; set; }
 
             /// <summary>
             /// The type of the image repository. Valid values:
@@ -86,53 +108,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **quay**
             /// *   **CI/CD**
             /// </summary>
-            [NameInMap("RegistryType")]
-            [Validation(Required=false)]
-            public string RegistryType { get; set; }
-
-            /// <summary>
-            /// The ID of the image repository.
-            /// </summary>
-            [NameInMap("RepoId")]
-            [Validation(Required=false)]
-            public string RepoId { get; set; }
-
-            /// <summary>
-            /// The name of the image repository.
-            /// </summary>
-            [NameInMap("RepoName")]
-            [Validation(Required=false)]
-            public string RepoName { get; set; }
-
-            /// <summary>
-            /// The namespace to which the image repository belongs.
-            /// </summary>
-            [NameInMap("RepoNamespace")]
-            [Validation(Required=false)]
-            public string RepoNamespace { get; set; }
-
-            /// <summary>
-            /// Indicates whether the image repository is at risk. Valid values:
-            /// 
-            /// *   **YES**
-            /// *   **NO**
-            /// </summary>
             [NameInMap("RiskStatus")]
             [Validation(Required=false)]
             public string RiskStatus { get; set; }
 
             /// <summary>
-            /// The number of vulnerabilities detected on the image repository.
+            /// The name of the image repository.
             /// </summary>
             [NameInMap("VulCount")]
             [Validation(Required=false)]
             public int? VulCount { get; set; }
 
             /// <summary>
-            /// Indicates whether vulnerabilities are detected on the image repository. Valid values:
-            /// 
-            /// *   **YES**
-            /// *   **NO**
+            /// The ID of the image.
             /// </summary>
             [NameInMap("VulStatus")]
             [Validation(Required=false)]
@@ -141,35 +129,35 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The pagination information.
+        /// The total number of image repositories.
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeImageRepoDetailListResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeImageRepoDetailListResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// The address of the image repository.
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// The number of entries returned on the current page.
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// An array that consists of the information about image repositories.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of image repositories.
+            /// The information about the image repository.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -178,7 +166,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

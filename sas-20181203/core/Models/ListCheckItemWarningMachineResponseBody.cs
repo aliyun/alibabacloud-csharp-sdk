@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public bool? Bind { get; set; }
 
+            [NameInMap("ContainerId")]
+            [Validation(Required=false)]
+            public string ContainerId { get; set; }
+
+            [NameInMap("ContainerName")]
+            [Validation(Required=false)]
+            public string ContainerName { get; set; }
+
             [NameInMap("FixList")]
             [Validation(Required=false)]
             public List<ListCheckItemWarningMachineResponseBodyListFixList> FixList { get; set; }

@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClientConfSetupRequest : TeaModel {
+        /// <summary>
+        /// The tag that is added to the server.
+        /// </summary>
         [NameInMap("StrategyTag")]
         [Validation(Required=false)]
         public string StrategyTag { get; set; }
 
+        /// <summary>
+        /// The value of the tag. Valid values:
+        /// 
+        /// *   major
+        /// *   advanced
+        /// *   basic
+        /// </summary>
         [NameInMap("StrategyTagValue")]
         [Validation(Required=false)]
         public string StrategyTagValue { get; set; }

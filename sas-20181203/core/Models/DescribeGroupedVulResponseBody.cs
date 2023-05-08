@@ -45,6 +45,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? NntfCount { get; set; }
 
+            /// <summary>
+            /// 支持RASP实时防护，取值：
+            /// - **0**：不支持
+            /// - **1**：支持
+            /// > 无该属性也表示不支持。
+            /// </summary>
             [NameInMap("RaspDefend")]
             [Validation(Required=false)]
             public int? RaspDefend { get; set; }

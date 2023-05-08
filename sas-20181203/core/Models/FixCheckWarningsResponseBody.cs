@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class FixCheckWarningsResponseBody : TeaModel {
+        /// <summary>
+        /// FixCheckWarnings
+        /// </summary>
         [NameInMap("BatchId")]
         [Validation(Required=false)]
         public long? BatchId { get; set; }

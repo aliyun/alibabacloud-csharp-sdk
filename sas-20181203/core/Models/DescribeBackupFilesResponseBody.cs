@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <summary>
+        /// The number of entries returned per page. Default value: **10**.
+        /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeBackupFilesResponseBodyPageInfo PageInfo { get; set; }
@@ -39,20 +42,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Count { get; set; }
 
+            /// <summary>
+            /// The ID of the request, which is used to locate and troubleshoot issues.
+            /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
+            /// <summary>
+            /// Queries backup files.
+            /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
+            /// <summary>
+            /// WB01014029
+            /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
 
         }
 
+        /// <summary>
+        /// The number of the page to return. Default value: **1**.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

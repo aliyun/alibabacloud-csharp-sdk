@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ResuleCode { get; set; }
 
             /// <summary>
-            /// The installation result. Valid values:
+            /// The installation result. Valid value:
             /// 
             /// *   **-1**: not installed
             /// *   **0**: being installed

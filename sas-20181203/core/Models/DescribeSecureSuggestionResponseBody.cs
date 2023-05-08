@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSecureSuggestionResponseBody : TeaModel {
+        /// <summary>
+        /// 192.168.XX.XX
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Queries suggestions on how to handle the security risks that affect the security score.
+        /// </summary>
         [NameInMap("Suggestions")]
         [Validation(Required=false)]
         public List<DescribeSecureSuggestionResponseBodySuggestions> Suggestions { get; set; }
@@ -35,6 +41,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <summary>
+            /// DescribeSecureSuggestion
+            /// </summary>
             [NameInMap("Points")]
             [Validation(Required=false)]
             public int? Points { get; set; }
@@ -45,6 +54,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <summary>
+        /// The source IP address of the request.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

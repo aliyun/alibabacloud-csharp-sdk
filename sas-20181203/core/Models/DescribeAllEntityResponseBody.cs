@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAllEntityResponseBody : TeaModel {
+        /// <summary>
+        /// Queries the information about all assets. The information includes asset group IDs and asset names.
+        /// </summary>
         [NameInMap("EntityList")]
         [Validation(Required=false)]
         public List<DescribeAllEntityResponseBodyEntityList> EntityList { get; set; }
@@ -37,12 +40,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Os { get; set; }
 
+            /// <summary>
+            /// DescribeAllEntity
+            /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]
             public string Uuid { get; set; }
 
         }
 
+        /// <summary>
+        /// The IP address of the server.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

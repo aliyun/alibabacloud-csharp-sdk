@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulListPageRequest : TeaModel {
+        /// <summary>
+        /// The number of the page to return.
+        /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.
+        /// </summary>
         [NameInMap("CveId")]
         [Validation(Required=false)]
         public string CveId { get; set; }
 
+        /// <summary>
+        /// The number of entries to return on each page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The name of the vulnerability.
+        /// </summary>
         [NameInMap("VulNameLike")]
         [Validation(Required=false)]
         public string VulNameLike { get; set; }

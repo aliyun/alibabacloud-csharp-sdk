@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateHoneypotResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned. The status code **200** indicates that the request was is successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+        /// The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public CreateHoneypotResponseBodyData Data { get; set; }
         public class CreateHoneypotResponseBodyData : TeaModel {
             /// <summary>
-            /// The name of the management node to which the honeypot is deployed.
+            /// The name of the management node.
             /// </summary>
             [NameInMap("ControlNodeName")]
             [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HoneypotId { get; set; }
 
             /// <summary>
-            /// The display name of the image that is used for the honeypot.
+            /// The display name of the honeypot image.
             /// </summary>
             [NameInMap("HoneypotImageDisplayName")]
             [Validation(Required=false)]
             public string HoneypotImageDisplayName { get; set; }
 
             /// <summary>
-            /// The name of the image that is used for the honeypot.
+            /// The name of the honeypot image.
             /// </summary>
             [NameInMap("HoneypotImageName")]
             [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PresetId { get; set; }
 
             /// <summary>
-            /// The status of the honeypot.
+            /// An array that consists of the status information about the honeypot.
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]

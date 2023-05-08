@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWarningExportInfoRequest : TeaModel {
+        /// <summary>
+        /// The name of the exported Excel file.
+        /// </summary>
         [NameInMap("ExportId")]
         [Validation(Required=false)]
         public long? ExportId { get; set; }

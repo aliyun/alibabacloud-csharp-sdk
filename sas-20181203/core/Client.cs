@@ -97,6 +97,96 @@ namespace AlibabaCloud.SDK.Sas20181203
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public AddAssetSelectionCriteriaResponse AddAssetSelectionCriteriaWithOptions(AddAssetSelectionCriteriaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Criteria))
+            {
+                query["Criteria"] = request.Criteria;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CriteriaOperation))
+            {
+                query["CriteriaOperation"] = request.CriteriaOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionKey))
+            {
+                query["SelectionKey"] = request.SelectionKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetOperationList))
+            {
+                query["TargetOperationList"] = request.TargetOperationList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddAssetSelectionCriteria",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddAssetSelectionCriteriaResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AddAssetSelectionCriteriaResponse> AddAssetSelectionCriteriaWithOptionsAsync(AddAssetSelectionCriteriaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Criteria))
+            {
+                query["Criteria"] = request.Criteria;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CriteriaOperation))
+            {
+                query["CriteriaOperation"] = request.CriteriaOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionKey))
+            {
+                query["SelectionKey"] = request.SelectionKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetOperationList))
+            {
+                query["TargetOperationList"] = request.TargetOperationList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddAssetSelectionCriteria",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddAssetSelectionCriteriaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AddAssetSelectionCriteriaResponse AddAssetSelectionCriteria(AddAssetSelectionCriteriaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddAssetSelectionCriteriaWithOptions(request, runtime);
+        }
+
+        public async Task<AddAssetSelectionCriteriaResponse> AddAssetSelectionCriteriaAsync(AddAssetSelectionCriteriaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddAssetSelectionCriteriaWithOptionsAsync(request, runtime);
+        }
+
         public AddCheckInstanceResultWhiteListResponse AddCheckInstanceResultWhiteListWithOptions(AddCheckInstanceResultWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1881,6 +1971,80 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await CreateAntiBruteForceRuleWithOptionsAsync(request, runtime);
         }
 
+        public CreateAssetSelectionConfigResponse CreateAssetSelectionConfigWithOptions(CreateAssetSelectionConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
+            {
+                query["BusinessType"] = request.BusinessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAssetSelectionConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAssetSelectionConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateAssetSelectionConfigResponse> CreateAssetSelectionConfigWithOptionsAsync(CreateAssetSelectionConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
+            {
+                query["BusinessType"] = request.BusinessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAssetSelectionConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAssetSelectionConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateAssetSelectionConfigResponse CreateAssetSelectionConfig(CreateAssetSelectionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAssetSelectionConfigWithOptions(request, runtime);
+        }
+
+        public async Task<CreateAssetSelectionConfigResponse> CreateAssetSelectionConfigAsync(CreateAssetSelectionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAssetSelectionConfigWithOptionsAsync(request, runtime);
+        }
+
         public CreateBackupPolicyResponse CreateBackupPolicyWithOptions(CreateBackupPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2310,8 +2474,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can call this operation to push a file to the cloud for detection. Before you call this operation, make sure that the file is uploaded. You can call the CreateFileDetectUploadUrl operation to upload the file.
-          * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
+          * The identifier of the file. Only MD5 hash values are supported.
           *
           * @param request CreateFileDetectRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2357,8 +2520,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can call this operation to push a file to the cloud for detection. Before you call this operation, make sure that the file is uploaded. You can call the CreateFileDetectUploadUrl operation to upload the file.
-          * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
+          * The identifier of the file. Only MD5 hash values are supported.
           *
           * @param request CreateFileDetectRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2404,8 +2566,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can call this operation to push a file to the cloud for detection. Before you call this operation, make sure that the file is uploaded. You can call the CreateFileDetectUploadUrl operation to upload the file.
-          * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
+          * The identifier of the file. Only MD5 hash values are supported.
           *
           * @param request CreateFileDetectRequest
           * @return CreateFileDetectResponse
@@ -2417,8 +2578,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can call this operation to push a file to the cloud for detection. Before you call this operation, make sure that the file is uploaded. You can call the CreateFileDetectUploadUrl operation to upload the file.
-          * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
+          * The identifier of the file. Only MD5 hash values are supported.
           *
           * @param request CreateFileDetectRequest
           * @return CreateFileDetectResponse
@@ -3439,6 +3599,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await CreateJenkinsImageRegistryWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the request, which is used to locate and troubleshoot issues.
+          *
+          * @param request CreateOrUpdateAssetGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOrUpdateAssetGroupResponse
+         */
         public CreateOrUpdateAssetGroupResponse CreateOrUpdateAssetGroupWithOptions(CreateOrUpdateAssetGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3474,6 +3641,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<CreateOrUpdateAssetGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request, which is used to locate and troubleshoot issues.
+          *
+          * @param request CreateOrUpdateAssetGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOrUpdateAssetGroupResponse
+         */
         public async Task<CreateOrUpdateAssetGroupResponse> CreateOrUpdateAssetGroupWithOptionsAsync(CreateOrUpdateAssetGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3509,12 +3683,24 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<CreateOrUpdateAssetGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request, which is used to locate and troubleshoot issues.
+          *
+          * @param request CreateOrUpdateAssetGroupRequest
+          * @return CreateOrUpdateAssetGroupResponse
+         */
         public CreateOrUpdateAssetGroupResponse CreateOrUpdateAssetGroup(CreateOrUpdateAssetGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateOrUpdateAssetGroupWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the request, which is used to locate and troubleshoot issues.
+          *
+          * @param request CreateOrUpdateAssetGroupRequest
+          * @return CreateOrUpdateAssetGroupResponse
+         */
         public async Task<CreateOrUpdateAssetGroupResponse> CreateOrUpdateAssetGroupAsync(CreateOrUpdateAssetGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3643,13 +3829,6 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await CreateRestoreJobWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * For more information about service-linked roles, see [Service-linked roles](~~160674~~).
-          *
-          * @param request CreateServiceLinkedRoleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateServiceLinkedRoleResponse
-         */
         public CreateServiceLinkedRoleResponse CreateServiceLinkedRoleWithOptions(CreateServiceLinkedRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3677,13 +3856,6 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<CreateServiceLinkedRoleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * For more information about service-linked roles, see [Service-linked roles](~~160674~~).
-          *
-          * @param request CreateServiceLinkedRoleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateServiceLinkedRoleResponse
-         */
         public async Task<CreateServiceLinkedRoleResponse> CreateServiceLinkedRoleWithOptionsAsync(CreateServiceLinkedRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3711,24 +3883,12 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<CreateServiceLinkedRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * For more information about service-linked roles, see [Service-linked roles](~~160674~~).
-          *
-          * @param request CreateServiceLinkedRoleRequest
-          * @return CreateServiceLinkedRoleResponse
-         */
         public CreateServiceLinkedRoleResponse CreateServiceLinkedRole(CreateServiceLinkedRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateServiceLinkedRoleWithOptions(request, runtime);
         }
 
-        /**
-          * For more information about service-linked roles, see [Service-linked roles](~~160674~~).
-          *
-          * @param request CreateServiceLinkedRoleRequest
-          * @return CreateServiceLinkedRoleResponse
-         */
         public async Task<CreateServiceLinkedRoleResponse> CreateServiceLinkedRoleAsync(CreateServiceLinkedRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4706,7 +4866,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * The **Default** server group that is provided by Security Center cannot be deleted. After you delete a group, the assets in this group are moved to the **Default** group.
+          * 200
           *
           * @param request DeleteGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4744,7 +4904,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * The **Default** server group that is provided by Security Center cannot be deleted. After you delete a group, the assets in this group are moved to the **Default** group.
+          * 200
           *
           * @param request DeleteGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4782,7 +4942,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * The **Default** server group that is provided by Security Center cannot be deleted. After you delete a group, the assets in this group are moved to the **Default** group.
+          * 200
           *
           * @param request DeleteGroupRequest
           * @return DeleteGroupResponse
@@ -4794,7 +4954,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * The **Default** server group that is provided by Security Center cannot be deleted. After you delete a group, the assets in this group are moved to the **Default** group.
+          * 200
           *
           * @param request DeleteGroupRequest
           * @return DeleteGroupResponse
@@ -5677,6 +5837,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DeleteSuspEventNodeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the request, which is used to locate and troubleshoot issues.
+          *
+          * @param request DeleteTagWithUuidRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTagWithUuidResponse
+         */
         public DeleteTagWithUuidResponse DeleteTagWithUuidWithOptions(DeleteTagWithUuidRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5708,6 +5875,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DeleteTagWithUuidResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request, which is used to locate and troubleshoot issues.
+          *
+          * @param request DeleteTagWithUuidRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteTagWithUuidResponse
+         */
         public async Task<DeleteTagWithUuidResponse> DeleteTagWithUuidWithOptionsAsync(DeleteTagWithUuidRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5739,12 +5913,24 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DeleteTagWithUuidResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request, which is used to locate and troubleshoot issues.
+          *
+          * @param request DeleteTagWithUuidRequest
+          * @return DeleteTagWithUuidResponse
+         */
         public DeleteTagWithUuidResponse DeleteTagWithUuid(DeleteTagWithUuidRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTagWithUuidWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the request, which is used to locate and troubleshoot issues.
+          *
+          * @param request DeleteTagWithUuidRequest
+          * @return DeleteTagWithUuidResponse
+         */
         public async Task<DeleteTagWithUuidResponse> DeleteTagWithUuidAsync(DeleteTagWithUuidRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6891,6 +7077,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Id"] = request.Id;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
@@ -6933,6 +7123,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
@@ -7588,7 +7782,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can call the DescribeBackupClients operation to query the servers on which the anti-ransomware agent is installed in a specified region.
+          * The data returned.
           *
           * @param request DescribeBackupClientsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7622,7 +7816,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can call the DescribeBackupClients operation to query the servers on which the anti-ransomware agent is installed in a specified region.
+          * The data returned.
           *
           * @param request DescribeBackupClientsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7656,7 +7850,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can call the DescribeBackupClients operation to query the servers on which the anti-ransomware agent is installed in a specified region.
+          * The data returned.
           *
           * @param request DescribeBackupClientsRequest
           * @return DescribeBackupClientsResponse
@@ -7668,7 +7862,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * You can call the DescribeBackupClients operation to query the servers on which the anti-ransomware agent is installed in a specified region.
+          * The data returned.
           *
           * @param request DescribeBackupClientsRequest
           * @return DescribeBackupClientsResponse
@@ -8023,6 +8217,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DescribeBackupPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The number of the restoration tasks that are in the **being restored** state.
+          *
+          * @param request DescribeBackupRestoreCountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeBackupRestoreCountResponse
+         */
         public DescribeBackupRestoreCountResponse DescribeBackupRestoreCountWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -8041,6 +8242,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeBackupRestoreCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The number of the restoration tasks that are in the **being restored** state.
+          *
+          * @param request DescribeBackupRestoreCountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeBackupRestoreCountResponse
+         */
         public async Task<DescribeBackupRestoreCountResponse> DescribeBackupRestoreCountWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -8059,12 +8267,22 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeBackupRestoreCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The number of the restoration tasks that are in the **being restored** state.
+          *
+          * @return DescribeBackupRestoreCountResponse
+         */
         public DescribeBackupRestoreCountResponse DescribeBackupRestoreCount()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackupRestoreCountWithOptions(runtime);
         }
 
+        /**
+          * The number of the restoration tasks that are in the **being restored** state.
+          *
+          * @return DescribeBackupRestoreCountResponse
+         */
         public async Task<DescribeBackupRestoreCountResponse> DescribeBackupRestoreCountAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8753,6 +8971,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["CheckType"] = request.CheckType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerName))
+            {
+                query["ContainerName"] = request.ContainerName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
@@ -8811,6 +9033,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckType))
             {
                 query["CheckType"] = request.CheckType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerName))
+            {
+                query["ContainerName"] = request.ContainerName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
@@ -9019,6 +9245,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DescribeClientConfStrategyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can search for assets by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
+          *
+          * @param request DescribeCloudCenterInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCloudCenterInstancesResponse
+         */
         public DescribeCloudCenterInstancesResponse DescribeCloudCenterInstancesWithOptions(DescribeCloudCenterInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9078,6 +9311,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeCloudCenterInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can search for assets by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
+          *
+          * @param request DescribeCloudCenterInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCloudCenterInstancesResponse
+         */
         public async Task<DescribeCloudCenterInstancesResponse> DescribeCloudCenterInstancesWithOptionsAsync(DescribeCloudCenterInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9137,12 +9377,24 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeCloudCenterInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can search for assets by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
+          *
+          * @param request DescribeCloudCenterInstancesRequest
+          * @return DescribeCloudCenterInstancesResponse
+         */
         public DescribeCloudCenterInstancesResponse DescribeCloudCenterInstances(DescribeCloudCenterInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCloudCenterInstancesWithOptions(request, runtime);
         }
 
+        /**
+          * You can search for assets by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
+          *
+          * @param request DescribeCloudCenterInstancesRequest
+          * @return DescribeCloudCenterInstancesResponse
+         */
         public async Task<DescribeCloudCenterInstancesResponse> DescribeCloudCenterInstancesAsync(DescribeCloudCenterInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10028,7 +10280,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * Only users who created a Container Registry Enterprise Edition instance can call this operation.
+          * The number of nodes on which alerts are generated in the current container cluster.
           *
           * @param request DescribeContainerStatisticsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10062,7 +10314,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * Only users who created a Container Registry Enterprise Edition instance can call this operation.
+          * The number of nodes on which alerts are generated in the current container cluster.
           *
           * @param request DescribeContainerStatisticsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -10096,7 +10348,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * Only users who created a Container Registry Enterprise Edition instance can call this operation.
+          * The number of nodes on which alerts are generated in the current container cluster.
           *
           * @param request DescribeContainerStatisticsRequest
           * @return DescribeContainerStatisticsResponse
@@ -10108,7 +10360,7 @@ namespace AlibabaCloud.SDK.Sas20181203
         }
 
         /**
-          * Only users who created a Container Registry Enterprise Edition instance can call this operation.
+          * The number of nodes on which alerts are generated in the current container cluster.
           *
           * @param request DescribeContainerStatisticsRequest
           * @return DescribeContainerStatisticsResponse
@@ -12259,6 +12511,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleVersionCheckCode))
+            {
+                query["SaleVersionCheckCode"] = request.SaleVersionCheckCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vendor))
             {
                 query["Vendor"] = request.Vendor;
@@ -12317,6 +12573,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleVersionCheckCode))
+            {
+                query["SaleVersionCheckCode"] = request.SaleVersionCheckCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vendor))
             {
@@ -15227,6 +15487,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DescribeImageSensitiveFileListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Queries the risk statistics of container images.
+          *
+          * @param request DescribeImageStatisticsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeImageStatisticsResponse
+         */
         public DescribeImageStatisticsResponse DescribeImageStatisticsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -15245,6 +15512,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeImageStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Queries the risk statistics of container images.
+          *
+          * @param request DescribeImageStatisticsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeImageStatisticsResponse
+         */
         public async Task<DescribeImageStatisticsResponse> DescribeImageStatisticsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -15263,18 +15537,35 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeImageStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Queries the risk statistics of container images.
+          *
+          * @return DescribeImageStatisticsResponse
+         */
         public DescribeImageStatisticsResponse DescribeImageStatistics()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeImageStatisticsWithOptions(runtime);
         }
 
+        /**
+          * Queries the risk statistics of container images.
+          *
+          * @return DescribeImageStatisticsResponse
+         */
         public async Task<DescribeImageStatisticsResponse> DescribeImageStatisticsAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeImageStatisticsWithOptionsAsync(runtime);
         }
 
+        /**
+          * To query the information about the recently detected image vulnerabilities, call the [PublicCreateImageScanTask](~~PublicCreateImageScanTask~~) operation. Wait 1 to 5 minutes until the call is successful and call the DescribeImageVulList operation.
+          *
+          * @param request DescribeImageVulListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeImageVulListResponse
+         */
         public DescribeImageVulListResponse DescribeImageVulListWithOptions(DescribeImageVulListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15410,6 +15701,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeImageVulListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To query the information about the recently detected image vulnerabilities, call the [PublicCreateImageScanTask](~~PublicCreateImageScanTask~~) operation. Wait 1 to 5 minutes until the call is successful and call the DescribeImageVulList operation.
+          *
+          * @param request DescribeImageVulListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeImageVulListResponse
+         */
         public async Task<DescribeImageVulListResponse> DescribeImageVulListWithOptionsAsync(DescribeImageVulListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15545,12 +15843,24 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeImageVulListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To query the information about the recently detected image vulnerabilities, call the [PublicCreateImageScanTask](~~PublicCreateImageScanTask~~) operation. Wait 1 to 5 minutes until the call is successful and call the DescribeImageVulList operation.
+          *
+          * @param request DescribeImageVulListRequest
+          * @return DescribeImageVulListResponse
+         */
         public DescribeImageVulListResponse DescribeImageVulList(DescribeImageVulListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeImageVulListWithOptions(request, runtime);
         }
 
+        /**
+          * To query the information about the recently detected image vulnerabilities, call the [PublicCreateImageScanTask](~~PublicCreateImageScanTask~~) operation. Wait 1 to 5 minutes until the call is successful and call the DescribeImageVulList operation.
+          *
+          * @param request DescribeImageVulListRequest
+          * @return DescribeImageVulListResponse
+         */
         public async Task<DescribeImageVulListResponse> DescribeImageVulListAsync(DescribeImageVulListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15687,6 +15997,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DescribeInstallCodeWithOptionsAsync(runtime);
         }
 
+        /**
+          * The ID of the server group to which the server belongs.
+          *
+          * @param request DescribeInstallCodesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstallCodesResponse
+         */
         public DescribeInstallCodesResponse DescribeInstallCodesWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -15705,6 +16022,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeInstallCodesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the server group to which the server belongs.
+          *
+          * @param request DescribeInstallCodesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstallCodesResponse
+         */
         public async Task<DescribeInstallCodesResponse> DescribeInstallCodesWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -15723,12 +16047,22 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeInstallCodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the server group to which the server belongs.
+          *
+          * @return DescribeInstallCodesResponse
+         */
         public DescribeInstallCodesResponse DescribeInstallCodes()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstallCodesWithOptions(runtime);
         }
 
+        /**
+          * The ID of the server group to which the server belongs.
+          *
+          * @return DescribeInstallCodesResponse
+         */
         public async Task<DescribeInstallCodesResponse> DescribeInstallCodesAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18933,6 +19267,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DescribeQuaraFileDownloadInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The name of the CSV file. The CSV file contains the files that fail to be restored.
+          *
+          * @param request DescribeRestoreJobsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRestoreJobsResponse
+         */
         public DescribeRestoreJobsResponse DescribeRestoreJobsWithOptions(DescribeRestoreJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18972,6 +19313,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeRestoreJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The name of the CSV file. The CSV file contains the files that fail to be restored.
+          *
+          * @param request DescribeRestoreJobsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRestoreJobsResponse
+         */
         public async Task<DescribeRestoreJobsResponse> DescribeRestoreJobsWithOptionsAsync(DescribeRestoreJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19011,12 +19359,24 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeRestoreJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The name of the CSV file. The CSV file contains the files that fail to be restored.
+          *
+          * @param request DescribeRestoreJobsRequest
+          * @return DescribeRestoreJobsResponse
+         */
         public DescribeRestoreJobsResponse DescribeRestoreJobs(DescribeRestoreJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRestoreJobsWithOptions(request, runtime);
         }
 
+        /**
+          * The name of the CSV file. The CSV file contains the files that fail to be restored.
+          *
+          * @param request DescribeRestoreJobsRequest
+          * @return DescribeRestoreJobsResponse
+         */
         public async Task<DescribeRestoreJobsResponse> DescribeRestoreJobsAsync(DescribeRestoreJobsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19115,6 +19475,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the ListCheckInstanceResult operation.
           *
           * @param request DescribeRiskCheckItemResultRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19170,6 +19531,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the ListCheckInstanceResult operation.
           *
           * @param request DescribeRiskCheckItemResultRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19225,6 +19587,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the ListCheckInstanceResult operation.
           *
           * @param request DescribeRiskCheckItemResultRequest
           * @return DescribeRiskCheckItemResultResponse
@@ -19238,6 +19601,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the ListCheckInstanceResult operation.
           *
           * @param request DescribeRiskCheckItemResultRequest
           * @return DescribeRiskCheckItemResultResponse
@@ -19251,6 +19615,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the ListCheckResult operation.
           *
           * @param request DescribeRiskCheckResultRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19330,6 +19695,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the ListCheckResult operation.
           *
           * @param request DescribeRiskCheckResultRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19409,6 +19775,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the ListCheckResult operation.
           *
           * @param request DescribeRiskCheckResultRequest
           * @return DescribeRiskCheckResultResponse
@@ -19422,6 +19789,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the ListCheckResult operation.
           *
           * @param request DescribeRiskCheckResultRequest
           * @return DescribeRiskCheckResultResponse
@@ -19435,6 +19803,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * The number of detected risk items.
           *
           * @param request DescribeRiskCheckSummaryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19482,6 +19851,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * The number of detected risk items.
           *
           * @param request DescribeRiskCheckSummaryRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19529,6 +19899,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * The number of detected risk items.
           *
           * @param request DescribeRiskCheckSummaryRequest
           * @return DescribeRiskCheckSummaryResponse
@@ -19542,6 +19913,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * The number of detected risk items.
           *
           * @param request DescribeRiskCheckSummaryRequest
           * @return DescribeRiskCheckSummaryResponse
@@ -19555,6 +19927,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the ListCheckStandard operation instead.
           *
           * @param request DescribeRiskItemTypeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19598,6 +19971,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the ListCheckStandard operation instead.
           *
           * @param request DescribeRiskItemTypeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19641,6 +20015,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the ListCheckStandard operation instead.
           *
           * @param request DescribeRiskItemTypeRequest
           * @return DescribeRiskItemTypeResponse
@@ -19654,6 +20029,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the ListCheckStandard operation instead.
           *
           * @param request DescribeRiskItemTypeRequest
           * @return DescribeRiskItemTypeResponse
@@ -19667,6 +20043,8 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).
+          * > If you do not specify this parameter, an empty list is returned.
           *
           * @param request DescribeRiskListCheckResultRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19722,6 +20100,8 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).
+          * > If you do not specify this parameter, an empty list is returned.
           *
           * @param request DescribeRiskListCheckResultRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -19777,6 +20157,8 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).
+          * > If you do not specify this parameter, an empty list is returned.
           *
           * @param request DescribeRiskListCheckResultRequest
           * @return DescribeRiskListCheckResultResponse
@@ -19790,6 +20172,8 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).
+          * > If you do not specify this parameter, an empty list is returned.
           *
           * @param request DescribeRiskListCheckResultRequest
           * @return DescribeRiskListCheckResultResponse
@@ -20329,6 +20713,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the GetCheckConfig operation.
           *
           * @param request DescribeSecurityCheckScheduleConfigRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -20372,6 +20757,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the GetCheckConfig operation.
           *
           * @param request DescribeSecurityCheckScheduleConfigRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -20415,6 +20801,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the GetCheckConfig operation.
           *
           * @param request DescribeSecurityCheckScheduleConfigRequest
           * @return DescribeSecurityCheckScheduleConfigResponse
@@ -20428,6 +20815,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the GetCheckConfig operation.
           *
           * @param request DescribeSecurityCheckScheduleConfigRequest
           * @return DescribeSecurityCheckScheduleConfigResponse
@@ -23789,6 +24177,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DescribeVpcHoneyPotCriteriaWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you specify only the Action request parameter in your request, Security Center returns the list of all VPCs regardless of whether a honeypot is deployed on a VPC.
+          *
+          * @param request DescribeVpcHoneyPotListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcHoneyPotListResponse
+         */
         public DescribeVpcHoneyPotListResponse DescribeVpcHoneyPotListWithOptions(DescribeVpcHoneyPotListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23836,6 +24231,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeVpcHoneyPotListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you specify only the Action request parameter in your request, Security Center returns the list of all VPCs regardless of whether a honeypot is deployed on a VPC.
+          *
+          * @param request DescribeVpcHoneyPotListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVpcHoneyPotListResponse
+         */
         public async Task<DescribeVpcHoneyPotListResponse> DescribeVpcHoneyPotListWithOptionsAsync(DescribeVpcHoneyPotListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23883,12 +24285,24 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeVpcHoneyPotListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you specify only the Action request parameter in your request, Security Center returns the list of all VPCs regardless of whether a honeypot is deployed on a VPC.
+          *
+          * @param request DescribeVpcHoneyPotListRequest
+          * @return DescribeVpcHoneyPotListResponse
+         */
         public DescribeVpcHoneyPotListResponse DescribeVpcHoneyPotList(DescribeVpcHoneyPotListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcHoneyPotListWithOptions(request, runtime);
         }
 
+        /**
+          * If you specify only the Action request parameter in your request, Security Center returns the list of all VPCs regardless of whether a honeypot is deployed on a VPC.
+          *
+          * @param request DescribeVpcHoneyPotListRequest
+          * @return DescribeVpcHoneyPotListResponse
+         */
         public async Task<DescribeVpcHoneyPotListResponse> DescribeVpcHoneyPotListAsync(DescribeVpcHoneyPotListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -24189,6 +24603,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DescribeVulDetailsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If the value of ExportStatus is success, the URL at which you can download the exported Excel file is returned.
+          *
+          * @param request DescribeVulExportInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVulExportInfoResponse
+         */
         public DescribeVulExportInfoResponse DescribeVulExportInfoWithOptions(DescribeVulExportInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24216,6 +24637,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeVulExportInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If the value of ExportStatus is success, the URL at which you can download the exported Excel file is returned.
+          *
+          * @param request DescribeVulExportInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVulExportInfoResponse
+         */
         public async Task<DescribeVulExportInfoResponse> DescribeVulExportInfoWithOptionsAsync(DescribeVulExportInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24243,12 +24671,24 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<DescribeVulExportInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If the value of ExportStatus is success, the URL at which you can download the exported Excel file is returned.
+          *
+          * @param request DescribeVulExportInfoRequest
+          * @return DescribeVulExportInfoResponse
+         */
         public DescribeVulExportInfoResponse DescribeVulExportInfo(DescribeVulExportInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVulExportInfoWithOptions(request, runtime);
         }
 
+        /**
+          * If the value of ExportStatus is success, the URL at which you can download the exported Excel file is returned.
+          *
+          * @param request DescribeVulExportInfoRequest
+          * @return DescribeVulExportInfoResponse
+         */
         public async Task<DescribeVulExportInfoResponse> DescribeVulExportInfoAsync(DescribeVulExportInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -26417,6 +26857,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await ExecStrategyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the exported file.
+          *
+          * @param request ExportRecordRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExportRecordResponse
+         */
         public ExportRecordResponse ExportRecordWithOptions(ExportRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26452,6 +26899,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<ExportRecordResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the exported file.
+          *
+          * @param request ExportRecordRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExportRecordResponse
+         */
         public async Task<ExportRecordResponse> ExportRecordWithOptionsAsync(ExportRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26487,12 +26941,24 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<ExportRecordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the exported file.
+          *
+          * @param request ExportRecordRequest
+          * @return ExportRecordResponse
+         */
         public ExportRecordResponse ExportRecord(ExportRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExportRecordWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the exported file.
+          *
+          * @param request ExportRecordRequest
+          * @return ExportRecordResponse
+         */
         public async Task<ExportRecordResponse> ExportRecordAsync(ExportRecordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -26701,6 +27167,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await ExportSuspEventsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the exported file.
+          *
+          * @param request ExportVulRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExportVulResponse
+         */
         public ExportVulResponse ExportVulWithOptions(ExportVulRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26764,6 +27237,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<ExportVulResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the exported file.
+          *
+          * @param request ExportVulRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExportVulResponse
+         */
         public async Task<ExportVulResponse> ExportVulWithOptionsAsync(ExportVulRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26827,12 +27307,24 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<ExportVulResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the exported file.
+          *
+          * @param request ExportVulRequest
+          * @return ExportVulResponse
+         */
         public ExportVulResponse ExportVul(ExportVulRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExportVulWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the exported file.
+          *
+          * @param request ExportVulRequest
+          * @return ExportVulResponse
+         */
         public async Task<ExportVulResponse> ExportVulAsync(ExportVulRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -27461,6 +27953,72 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAppNetworkWithOptionsAsync(request, runtime);
+        }
+
+        public GetAssetSelectionConfigResponse GetAssetSelectionConfigWithOptions(GetAssetSelectionConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
+            {
+                query["BusinessType"] = request.BusinessType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAssetSelectionConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAssetSelectionConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetAssetSelectionConfigResponse> GetAssetSelectionConfigWithOptionsAsync(GetAssetSelectionConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
+            {
+                query["BusinessType"] = request.BusinessType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAssetSelectionConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAssetSelectionConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetAssetSelectionConfigResponse GetAssetSelectionConfig(GetAssetSelectionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAssetSelectionConfigWithOptions(request, runtime);
+        }
+
+        public async Task<GetAssetSelectionConfigResponse> GetAssetSelectionConfigAsync(GetAssetSelectionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAssetSelectionConfigWithOptionsAsync(request, runtime);
         }
 
         public GetAssetsPropertyDetailResponse GetAssetsPropertyDetailWithOptions(GetAssetsPropertyDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -28631,6 +29189,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await GetFileDetectApiInvokeInfoWithOptionsAsync(runtime);
         }
 
+        /**
+          * The extended information about the file detection result.
+          *
+          * @param request GetFileDetectResultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetFileDetectResultResponse
+         */
         public GetFileDetectResultResponse GetFileDetectResultWithOptions(GetFileDetectResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28666,6 +29231,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<GetFileDetectResultResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The extended information about the file detection result.
+          *
+          * @param request GetFileDetectResultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetFileDetectResultResponse
+         */
         public async Task<GetFileDetectResultResponse> GetFileDetectResultWithOptionsAsync(GetFileDetectResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28701,12 +29273,24 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<GetFileDetectResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The extended information about the file detection result.
+          *
+          * @param request GetFileDetectResultRequest
+          * @return GetFileDetectResultResponse
+         */
         public GetFileDetectResultResponse GetFileDetectResult(GetFileDetectResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetFileDetectResultWithOptions(request, runtime);
         }
 
+        /**
+          * The extended information about the file detection result.
+          *
+          * @param request GetFileDetectResultRequest
+          * @return GetFileDetectResultResponse
+         */
         public async Task<GetFileDetectResultResponse> GetFileDetectResultAsync(GetFileDetectResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -30287,6 +30871,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await InstallBackupClientWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > Before you call this operation, make sure that the Security Center agent on your servers is online and the servers can access Alibaba Cloud services.
+          *
+          * @param request InstallCloudMonitorRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InstallCloudMonitorResponse
+         */
         public InstallCloudMonitorResponse InstallCloudMonitorWithOptions(InstallCloudMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30330,6 +30921,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<InstallCloudMonitorResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > Before you call this operation, make sure that the Security Center agent on your servers is online and the servers can access Alibaba Cloud services.
+          *
+          * @param request InstallCloudMonitorRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InstallCloudMonitorResponse
+         */
         public async Task<InstallCloudMonitorResponse> InstallCloudMonitorWithOptionsAsync(InstallCloudMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30373,12 +30971,24 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<InstallCloudMonitorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > Before you call this operation, make sure that the Security Center agent on your servers is online and the servers can access Alibaba Cloud services.
+          *
+          * @param request InstallCloudMonitorRequest
+          * @return InstallCloudMonitorResponse
+         */
         public InstallCloudMonitorResponse InstallCloudMonitor(InstallCloudMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return InstallCloudMonitorWithOptions(request, runtime);
         }
 
+        /**
+          * > Before you call this operation, make sure that the Security Center agent on your servers is online and the servers can access Alibaba Cloud services.
+          *
+          * @param request InstallCloudMonitorRequest
+          * @return InstallCloudMonitorResponse
+         */
         public async Task<InstallCloudMonitorResponse> InstallCloudMonitorAsync(InstallCloudMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -30613,6 +31223,162 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await JoinWebLockProcessWhiteListWithOptionsAsync(request, runtime);
+        }
+
+        public ListAssetSelectionSelectedTargetResponse ListAssetSelectionSelectedTargetWithOptions(ListAssetSelectionSelectedTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionKey))
+            {
+                query["SelectionKey"] = request.SelectionKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetList))
+            {
+                query["TargetList"] = request.TargetList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAssetSelectionSelectedTarget",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAssetSelectionSelectedTargetResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListAssetSelectionSelectedTargetResponse> ListAssetSelectionSelectedTargetWithOptionsAsync(ListAssetSelectionSelectedTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionKey))
+            {
+                query["SelectionKey"] = request.SelectionKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetList))
+            {
+                query["TargetList"] = request.TargetList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAssetSelectionSelectedTarget",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAssetSelectionSelectedTargetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListAssetSelectionSelectedTargetResponse ListAssetSelectionSelectedTarget(ListAssetSelectionSelectedTargetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAssetSelectionSelectedTargetWithOptions(request, runtime);
+        }
+
+        public async Task<ListAssetSelectionSelectedTargetResponse> ListAssetSelectionSelectedTargetAsync(ListAssetSelectionSelectedTargetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAssetSelectionSelectedTargetWithOptionsAsync(request, runtime);
+        }
+
+        public ListAssetSelectionTargetResponse ListAssetSelectionTargetWithOptions(ListAssetSelectionTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionKey))
+            {
+                query["SelectionKey"] = request.SelectionKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAssetSelectionTarget",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAssetSelectionTargetResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListAssetSelectionTargetResponse> ListAssetSelectionTargetWithOptionsAsync(ListAssetSelectionTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionKey))
+            {
+                query["SelectionKey"] = request.SelectionKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAssetSelectionTarget",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAssetSelectionTargetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListAssetSelectionTargetResponse ListAssetSelectionTarget(ListAssetSelectionTargetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAssetSelectionTargetWithOptions(request, runtime);
+        }
+
+        public async Task<ListAssetSelectionTargetResponse> ListAssetSelectionTargetAsync(ListAssetSelectionTargetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAssetSelectionTargetWithOptionsAsync(request, runtime);
         }
 
         public ListAvailableHoneypotResponse ListAvailableHoneypotWithOptions(ListAvailableHoneypotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -33171,6 +33937,80 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await ListPrivateRegistryTypeWithOptionsAsync(request, runtime);
         }
 
+        public ListQueryRaspAppInfoResponse ListQueryRaspAppInfoWithOptions(ListQueryRaspAppInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
+            {
+                query["Uuids"] = request.Uuids;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListQueryRaspAppInfo",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListQueryRaspAppInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListQueryRaspAppInfoResponse> ListQueryRaspAppInfoWithOptionsAsync(ListQueryRaspAppInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
+            {
+                query["Uuids"] = request.Uuids;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListQueryRaspAppInfo",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListQueryRaspAppInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListQueryRaspAppInfoResponse ListQueryRaspAppInfo(ListQueryRaspAppInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListQueryRaspAppInfoWithOptions(request, runtime);
+        }
+
+        public async Task<ListQueryRaspAppInfoResponse> ListQueryRaspAppInfoAsync(ListQueryRaspAppInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListQueryRaspAppInfoWithOptionsAsync(request, runtime);
+        }
+
         public ListRuleTargetAllResponse ListRuleTargetAllWithOptions(ListRuleTargetAllRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -34111,6 +34951,14 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await ModifyAppVulScanCycleWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the new server group to which the servers belong.
+          * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+          *
+          * @param request ModifyAssetGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyAssetGroupResponse
+         */
         public ModifyAssetGroupResponse ModifyAssetGroupWithOptions(ModifyAssetGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -34146,6 +34994,14 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<ModifyAssetGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the new server group to which the servers belong.
+          * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+          *
+          * @param request ModifyAssetGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyAssetGroupResponse
+         */
         public async Task<ModifyAssetGroupResponse> ModifyAssetGroupWithOptionsAsync(ModifyAssetGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -34181,12 +35037,26 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<ModifyAssetGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the new server group to which the servers belong.
+          * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+          *
+          * @param request ModifyAssetGroupRequest
+          * @return ModifyAssetGroupResponse
+         */
         public ModifyAssetGroupResponse ModifyAssetGroup(ModifyAssetGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAssetGroupWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the new server group to which the servers belong.
+          * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+          *
+          * @param request ModifyAssetGroupRequest
+          * @return ModifyAssetGroupResponse
+         */
         public async Task<ModifyAssetGroupResponse> ModifyAssetGroupAsync(ModifyAssetGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -36367,6 +37237,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await ModifyNoticeConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the request, which is used to locate and troubleshoot issues.
+          *
+          * @param request ModifyOpenLogShipperRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyOpenLogShipperResponse
+         */
         public ModifyOpenLogShipperResponse ModifyOpenLogShipperWithOptions(ModifyOpenLogShipperRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -36394,6 +37271,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<ModifyOpenLogShipperResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request, which is used to locate and troubleshoot issues.
+          *
+          * @param request ModifyOpenLogShipperRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyOpenLogShipperResponse
+         */
         public async Task<ModifyOpenLogShipperResponse> ModifyOpenLogShipperWithOptionsAsync(ModifyOpenLogShipperRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -36421,12 +37305,24 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<ModifyOpenLogShipperResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the request, which is used to locate and troubleshoot issues.
+          *
+          * @param request ModifyOpenLogShipperRequest
+          * @return ModifyOpenLogShipperResponse
+         */
         public ModifyOpenLogShipperResponse ModifyOpenLogShipper(ModifyOpenLogShipperRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyOpenLogShipperWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the request, which is used to locate and troubleshoot issues.
+          *
+          * @param request ModifyOpenLogShipperRequest
+          * @return ModifyOpenLogShipperResponse
+         */
         public async Task<ModifyOpenLogShipperResponse> ModifyOpenLogShipperAsync(ModifyOpenLogShipperRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -36679,8 +37575,77 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await ModifyPushAllTaskWithOptionsAsync(request, runtime);
         }
 
+        public ModifyRefreshProcessInfoResponse ModifyRefreshProcessInfoWithOptions(ModifyRefreshProcessInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyRefreshProcessInfo",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyRefreshProcessInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyRefreshProcessInfoResponse> ModifyRefreshProcessInfoWithOptionsAsync(ModifyRefreshProcessInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyRefreshProcessInfo",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyRefreshProcessInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyRefreshProcessInfoResponse ModifyRefreshProcessInfo(ModifyRefreshProcessInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyRefreshProcessInfoWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyRefreshProcessInfoResponse> ModifyRefreshProcessInfoAsync(ModifyRefreshProcessInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyRefreshProcessInfoWithOptionsAsync(request, runtime);
+        }
+
         /**
           * @deprecated
+          * This operation is phased out. You can use the following operations:
+          * \\-To **ignore a check item**, use the AddCheckResultWhiteList operation.
+          * \\-To **cancel ignoring a check item**, use the RemoveCheckResultWhiteList operation.
           *
           * @param request ModifyRiskCheckStatusRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -36736,6 +37701,9 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the following operations:
+          * \\-To **ignore a check item**, use the AddCheckResultWhiteList operation.
+          * \\-To **cancel ignoring a check item**, use the RemoveCheckResultWhiteList operation.
           *
           * @param request ModifyRiskCheckStatusRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -36791,6 +37759,9 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the following operations:
+          * \\-To **ignore a check item**, use the AddCheckResultWhiteList operation.
+          * \\-To **cancel ignoring a check item**, use the RemoveCheckResultWhiteList operation.
           *
           * @param request ModifyRiskCheckStatusRequest
           * @return ModifyRiskCheckStatusResponse
@@ -36804,6 +37775,9 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the following operations:
+          * \\-To **ignore a check item**, use the AddCheckResultWhiteList operation.
+          * \\-To **cancel ignoring a check item**, use the RemoveCheckResultWhiteList operation.
           *
           * @param request ModifyRiskCheckStatusRequest
           * @return ModifyRiskCheckStatusResponse
@@ -36817,6 +37791,9 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the following operations:
+          * \\-To **ignore a risk item**, use the AddCheckInstanceResultWhiteList operation.
+          * \\-To **cancel ignoring a risk item**, use the RemoveCheckInstanceResultWhiteList operation.
           *
           * @param request ModifyRiskSingleResultStatusRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -36872,6 +37849,9 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the following operations:
+          * \\-To **ignore a risk item**, use the AddCheckInstanceResultWhiteList operation.
+          * \\-To **cancel ignoring a risk item**, use the RemoveCheckInstanceResultWhiteList operation.
           *
           * @param request ModifyRiskSingleResultStatusRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -36927,6 +37907,9 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the following operations:
+          * \\-To **ignore a risk item**, use the AddCheckInstanceResultWhiteList operation.
+          * \\-To **cancel ignoring a risk item**, use the RemoveCheckInstanceResultWhiteList operation.
           *
           * @param request ModifyRiskSingleResultStatusRequest
           * @return ModifyRiskSingleResultStatusResponse
@@ -36940,6 +37923,9 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * This operation is phased out. You can use the following operations:
+          * \\-To **ignore a risk item**, use the AddCheckInstanceResultWhiteList operation.
+          * \\-To **cancel ignoring a risk item**, use the RemoveCheckInstanceResultWhiteList operation.
           *
           * @param request ModifyRiskSingleResultStatusRequest
           * @return ModifyRiskSingleResultStatusResponse
@@ -36953,6 +37939,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * The ID of the request, which is used to locate and troubleshoot issues.
           *
           * @param request ModifySecurityCheckScheduleConfigRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -37008,6 +37995,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * The ID of the request, which is used to locate and troubleshoot issues.
           *
           * @param request ModifySecurityCheckScheduleConfigRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -37063,6 +38051,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * The ID of the request, which is used to locate and troubleshoot issues.
           *
           * @param request ModifySecurityCheckScheduleConfigRequest
           * @return ModifySecurityCheckScheduleConfigResponse
@@ -37076,6 +38065,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /**
           * @deprecated
+          * The ID of the request, which is used to locate and troubleshoot issues.
           *
           * @param request ModifySecurityCheckScheduleConfigRequest
           * @return ModifySecurityCheckScheduleConfigResponse
@@ -38295,6 +39285,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await ModifyWebLockCreateConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After you delete a directory that has web tamper proofing enabled on a server, files in the directory are no longer protected by web tamper proofing. The information about the websites that are hosted on the server may be maliciously modified by attackers. Proceed with caution.
+          *
+          * @param request ModifyWebLockDeleteConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyWebLockDeleteConfigResponse
+         */
         public ModifyWebLockDeleteConfigResponse ModifyWebLockDeleteConfigWithOptions(ModifyWebLockDeleteConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -38334,6 +39331,13 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<ModifyWebLockDeleteConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After you delete a directory that has web tamper proofing enabled on a server, files in the directory are no longer protected by web tamper proofing. The information about the websites that are hosted on the server may be maliciously modified by attackers. Proceed with caution.
+          *
+          * @param request ModifyWebLockDeleteConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyWebLockDeleteConfigResponse
+         */
         public async Task<ModifyWebLockDeleteConfigResponse> ModifyWebLockDeleteConfigWithOptionsAsync(ModifyWebLockDeleteConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -38373,12 +39377,24 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<ModifyWebLockDeleteConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After you delete a directory that has web tamper proofing enabled on a server, files in the directory are no longer protected by web tamper proofing. The information about the websites that are hosted on the server may be maliciously modified by attackers. Proceed with caution.
+          *
+          * @param request ModifyWebLockDeleteConfigRequest
+          * @return ModifyWebLockDeleteConfigResponse
+         */
         public ModifyWebLockDeleteConfigResponse ModifyWebLockDeleteConfig(ModifyWebLockDeleteConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyWebLockDeleteConfigWithOptions(request, runtime);
         }
 
+        /**
+          * After you delete a directory that has web tamper proofing enabled on a server, files in the directory are no longer protected by web tamper proofing. The information about the websites that are hosted on the server may be maliciously modified by attackers. Proceed with caution.
+          *
+          * @param request ModifyWebLockDeleteConfigRequest
+          * @return ModifyWebLockDeleteConfigResponse
+         */
         public async Task<ModifyWebLockDeleteConfigResponse> ModifyWebLockDeleteConfigAsync(ModifyWebLockDeleteConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -40335,6 +41351,16 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await PauseClientWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The result of the image scan task. Valid values:
+          * *   **SUCCESS**: The task is successful.
+          * *   **TASK_NOT_SUPPORT_REGION**: The images are deployed in a region that is not supported by container image scan.
+          * > For more information about the regions supported by container image scan, see the "Regions supported by container image scan" section in this topic.
+          *
+          * @param request PublicCreateImageScanTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PublicCreateImageScanTaskResponse
+         */
         public PublicCreateImageScanTaskResponse PublicCreateImageScanTaskWithOptions(PublicCreateImageScanTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -40394,6 +41420,16 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<PublicCreateImageScanTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The result of the image scan task. Valid values:
+          * *   **SUCCESS**: The task is successful.
+          * *   **TASK_NOT_SUPPORT_REGION**: The images are deployed in a region that is not supported by container image scan.
+          * > For more information about the regions supported by container image scan, see the "Regions supported by container image scan" section in this topic.
+          *
+          * @param request PublicCreateImageScanTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PublicCreateImageScanTaskResponse
+         */
         public async Task<PublicCreateImageScanTaskResponse> PublicCreateImageScanTaskWithOptionsAsync(PublicCreateImageScanTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -40453,12 +41489,30 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<PublicCreateImageScanTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The result of the image scan task. Valid values:
+          * *   **SUCCESS**: The task is successful.
+          * *   **TASK_NOT_SUPPORT_REGION**: The images are deployed in a region that is not supported by container image scan.
+          * > For more information about the regions supported by container image scan, see the "Regions supported by container image scan" section in this topic.
+          *
+          * @param request PublicCreateImageScanTaskRequest
+          * @return PublicCreateImageScanTaskResponse
+         */
         public PublicCreateImageScanTaskResponse PublicCreateImageScanTask(PublicCreateImageScanTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PublicCreateImageScanTaskWithOptions(request, runtime);
         }
 
+        /**
+          * The result of the image scan task. Valid values:
+          * *   **SUCCESS**: The task is successful.
+          * *   **TASK_NOT_SUPPORT_REGION**: The images are deployed in a region that is not supported by container image scan.
+          * > For more information about the regions supported by container image scan, see the "Regions supported by container image scan" section in this topic.
+          *
+          * @param request PublicCreateImageScanTaskRequest
+          * @return PublicCreateImageScanTaskResponse
+         */
         public async Task<PublicCreateImageScanTaskResponse> PublicCreateImageScanTaskAsync(PublicCreateImageScanTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -42285,6 +43339,17 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await SubmitCheckWithOptionsAsync(runtime);
         }
 
+        /**
+          * If you no longer require protection for servers that are not deployed on Alibaba Cloud, you can call this operation to unbind the servers from Security Center. After you unbind a server that is not deployed on Alibaba Cloud from Security Center, the server no longer consumes the quota of protected servers or protected server vCPUs. This way, you can install the Security Center agent on other servers to meet your business requirements.
+          * > You can unbind only the servers that are not deployed on Alibaba Cloud from Security Center. If you use an Alibaba Cloud Elastic Compute Service (ECS) instance, you do not need to unbind the ECS instance. If you uninstall the Security Center agent from an ECS instance, the ECS instance still exists as a disconnected server in the asset list of the Security Center console. The ECS instance is not removed from the asset list.
+          * **Prerequisites**
+          * *   The server that you want to unbind from Security Center is not deployed on Alibaba Cloud and the Security Center agent is disabled for the server. In this case, the agent is in the Close state and Security Center does not protect the server. You can call the [PauseClient](~~PauseClient~~) operation to disable the agent.
+          * *   The client protection feature is disabled for the server that you want to unbind from Security Center. For more information about how to disable the client protection feature, see [Use the client protection feature](https://www.alibabacloud.com/help/en/security-center/latest/local-file-detection-engine).
+          *
+          * @param request UnbindAegisRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnbindAegisResponse
+         */
         public UnbindAegisResponse UnbindAegisWithOptions(UnbindAegisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -42312,6 +43377,17 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<UnbindAegisResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you no longer require protection for servers that are not deployed on Alibaba Cloud, you can call this operation to unbind the servers from Security Center. After you unbind a server that is not deployed on Alibaba Cloud from Security Center, the server no longer consumes the quota of protected servers or protected server vCPUs. This way, you can install the Security Center agent on other servers to meet your business requirements.
+          * > You can unbind only the servers that are not deployed on Alibaba Cloud from Security Center. If you use an Alibaba Cloud Elastic Compute Service (ECS) instance, you do not need to unbind the ECS instance. If you uninstall the Security Center agent from an ECS instance, the ECS instance still exists as a disconnected server in the asset list of the Security Center console. The ECS instance is not removed from the asset list.
+          * **Prerequisites**
+          * *   The server that you want to unbind from Security Center is not deployed on Alibaba Cloud and the Security Center agent is disabled for the server. In this case, the agent is in the Close state and Security Center does not protect the server. You can call the [PauseClient](~~PauseClient~~) operation to disable the agent.
+          * *   The client protection feature is disabled for the server that you want to unbind from Security Center. For more information about how to disable the client protection feature, see [Use the client protection feature](https://www.alibabacloud.com/help/en/security-center/latest/local-file-detection-engine).
+          *
+          * @param request UnbindAegisRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnbindAegisResponse
+         */
         public async Task<UnbindAegisResponse> UnbindAegisWithOptionsAsync(UnbindAegisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -42339,12 +43415,32 @@ namespace AlibabaCloud.SDK.Sas20181203
             return TeaModel.ToObject<UnbindAegisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you no longer require protection for servers that are not deployed on Alibaba Cloud, you can call this operation to unbind the servers from Security Center. After you unbind a server that is not deployed on Alibaba Cloud from Security Center, the server no longer consumes the quota of protected servers or protected server vCPUs. This way, you can install the Security Center agent on other servers to meet your business requirements.
+          * > You can unbind only the servers that are not deployed on Alibaba Cloud from Security Center. If you use an Alibaba Cloud Elastic Compute Service (ECS) instance, you do not need to unbind the ECS instance. If you uninstall the Security Center agent from an ECS instance, the ECS instance still exists as a disconnected server in the asset list of the Security Center console. The ECS instance is not removed from the asset list.
+          * **Prerequisites**
+          * *   The server that you want to unbind from Security Center is not deployed on Alibaba Cloud and the Security Center agent is disabled for the server. In this case, the agent is in the Close state and Security Center does not protect the server. You can call the [PauseClient](~~PauseClient~~) operation to disable the agent.
+          * *   The client protection feature is disabled for the server that you want to unbind from Security Center. For more information about how to disable the client protection feature, see [Use the client protection feature](https://www.alibabacloud.com/help/en/security-center/latest/local-file-detection-engine).
+          *
+          * @param request UnbindAegisRequest
+          * @return UnbindAegisResponse
+         */
         public UnbindAegisResponse UnbindAegis(UnbindAegisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnbindAegisWithOptions(request, runtime);
         }
 
+        /**
+          * If you no longer require protection for servers that are not deployed on Alibaba Cloud, you can call this operation to unbind the servers from Security Center. After you unbind a server that is not deployed on Alibaba Cloud from Security Center, the server no longer consumes the quota of protected servers or protected server vCPUs. This way, you can install the Security Center agent on other servers to meet your business requirements.
+          * > You can unbind only the servers that are not deployed on Alibaba Cloud from Security Center. If you use an Alibaba Cloud Elastic Compute Service (ECS) instance, you do not need to unbind the ECS instance. If you uninstall the Security Center agent from an ECS instance, the ECS instance still exists as a disconnected server in the asset list of the Security Center console. The ECS instance is not removed from the asset list.
+          * **Prerequisites**
+          * *   The server that you want to unbind from Security Center is not deployed on Alibaba Cloud and the Security Center agent is disabled for the server. In this case, the agent is in the Close state and Security Center does not protect the server. You can call the [PauseClient](~~PauseClient~~) operation to disable the agent.
+          * *   The client protection feature is disabled for the server that you want to unbind from Security Center. For more information about how to disable the client protection feature, see [Use the client protection feature](https://www.alibabacloud.com/help/en/security-center/latest/local-file-detection-engine).
+          *
+          * @param request UnbindAegisRequest
+          * @return UnbindAegisResponse
+         */
         public async Task<UnbindAegisResponse> UnbindAegisAsync(UnbindAegisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -43125,13 +44221,13 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckIds))
+            {
+                query["CheckIds"] = request.CheckIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskIds))
             {
                 query["RiskIds"] = request.RiskIds;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
             {
@@ -43160,13 +44256,13 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckIds))
+            {
+                query["CheckIds"] = request.CheckIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskIds))
             {
                 query["RiskIds"] = request.RiskIds;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
             {
