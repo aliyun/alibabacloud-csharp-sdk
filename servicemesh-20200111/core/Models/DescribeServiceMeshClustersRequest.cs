@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public long? Offset { get; set; }
 
+        /// <summary>
+        /// The ID of the virtual private cloud (VPC).
+        /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }

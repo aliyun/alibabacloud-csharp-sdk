@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeUserPermissionsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the RAM user or RAM role.
+        /// </summary>
         [NameInMap("SubAccountUserId")]
         [Validation(Required=false)]
         public string SubAccountUserId { get; set; }

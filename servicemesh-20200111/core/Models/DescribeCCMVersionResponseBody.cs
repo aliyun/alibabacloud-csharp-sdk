@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeCCMVersionResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("CCMVersions")]
         [Validation(Required=false)]
         public Dictionary<string, CCMVersionsValue> CCMVersions { get; set; }

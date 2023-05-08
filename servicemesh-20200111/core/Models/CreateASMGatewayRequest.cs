@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class CreateASMGatewayRequest : TeaModel {
+        /// <summary>
+        /// The YAML content that is used to create the ASM gateway.
+        /// </summary>
         [NameInMap("Body")]
         [Validation(Required=false)]
         public string Body { get; set; }
 
+        /// <summary>
+        /// The name of the ASM gateway.
+        /// </summary>
         [NameInMap("IstioGatewayName")]
         [Validation(Required=false)]
         public string IstioGatewayName { get; set; }
 
+        /// <summary>
+        /// The ID of the ASM instance.
+        /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }

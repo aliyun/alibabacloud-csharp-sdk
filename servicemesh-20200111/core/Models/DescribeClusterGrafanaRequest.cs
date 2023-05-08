@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeClusterGrafanaRequest : TeaModel {
+        /// <summary>
+        /// The ID of the cluster on the data plane.
+        /// </summary>
         [NameInMap("K8sClusterId")]
         [Validation(Required=false)]
         public string K8sClusterId { get; set; }
 
+        /// <summary>
+        /// The ID of the ASM instance.
+        /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }

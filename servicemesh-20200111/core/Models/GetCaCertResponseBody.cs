@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class GetCaCertResponseBody : TeaModel {
+        /// <summary>
+        /// The Base64-encoded content of the CA certificate.
+        /// </summary>
         [NameInMap("CaCert")]
         [Validation(Required=false)]
         public string CaCert { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeServiceMeshKubeconfigResponseBody : TeaModel {
+        /// <summary>
+        /// The content of the kubeconfig file of the cluster.
+        /// </summary>
         [NameInMap("Kubeconfig")]
         [Validation(Required=false)]
         public string Kubeconfig { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

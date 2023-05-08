@@ -782,10 +782,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["GatewayAPIEnabled"] = request.GatewayAPIEnabled;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalRateLimitEnabled))
-            {
-                body["GlobalRateLimitEnabled"] = request.GlobalRateLimitEnabled;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeIPRanges))
             {
                 body["IncludeIPRanges"] = request.IncludeIPRanges;
@@ -1092,10 +1088,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayAPIEnabled))
             {
                 body["GatewayAPIEnabled"] = request.GatewayAPIEnabled;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalRateLimitEnabled))
-            {
-                body["GlobalRateLimitEnabled"] = request.GlobalRateLimitEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeIPRanges))
             {
@@ -2056,72 +2048,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeASMGatewayImportedServicesWithOptionsAsync(request, runtime);
-        }
-
-        public DescribeAhasProResponse DescribeAhasProWithOptions(DescribeAhasProRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                body["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeAhasPro",
-                Version = "2020-01-11",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeAhasProResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeAhasProResponse> DescribeAhasProWithOptionsAsync(DescribeAhasProRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                body["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeAhasPro",
-                Version = "2020-01-11",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeAhasProResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeAhasProResponse DescribeAhasPro(DescribeAhasProRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeAhasProWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeAhasProResponse> DescribeAhasProAsync(DescribeAhasProRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeAhasProWithOptionsAsync(request, runtime);
         }
 
         public DescribeCCMVersionResponse DescribeCCMVersionWithOptions(DescribeCCMVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5668,6 +5594,13 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await ModifyServiceMeshNameWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods of Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
+          *
+          * @param request ReActivateAuditRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReActivateAuditResponse
+         */
         public ReActivateAuditResponse ReActivateAuditWithOptions(ReActivateAuditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5699,6 +5632,13 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<ReActivateAuditResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods of Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
+          *
+          * @param request ReActivateAuditRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReActivateAuditResponse
+         */
         public async Task<ReActivateAuditResponse> ReActivateAuditWithOptionsAsync(ReActivateAuditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5730,12 +5670,24 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<ReActivateAuditResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods of Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
+          *
+          * @param request ReActivateAuditRequest
+          * @return ReActivateAuditResponse
+         */
         public ReActivateAuditResponse ReActivateAudit(ReActivateAuditRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReActivateAuditWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods of Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
+          *
+          * @param request ReActivateAuditRequest
+          * @return ReActivateAuditResponse
+         */
         public async Task<ReActivateAuditResponse> ReActivateAuditAsync(ReActivateAuditRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6738,6 +6690,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["DNSProxyingEnabled"] = request.DNSProxyingEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultComponentsScheduleConfig))
+            {
+                body["DefaultComponentsScheduleConfig"] = request.DefaultComponentsScheduleConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiscoverySelectors))
             {
                 body["DiscoverySelectors"] = request.DiscoverySelectors;
@@ -6753,6 +6709,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAutoDiagnosis))
             {
                 body["EnableAutoDiagnosis"] = request.EnableAutoDiagnosis;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableBootstrapXdsAgent))
+            {
+                body["EnableBootstrapXdsAgent"] = request.EnableBootstrapXdsAgent;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCRHistory))
             {
@@ -6786,10 +6746,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["GatewayAPIEnabled"] = request.GatewayAPIEnabled;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalRateLimitEnabled))
-            {
-                body["GlobalRateLimitEnabled"] = request.GlobalRateLimitEnabled;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HoldApplicationUntilProxyStarts))
             {
                 body["HoldApplicationUntilProxyStarts"] = request.HoldApplicationUntilProxyStarts;
@@ -6817,6 +6773,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterceptionMode))
             {
                 body["InterceptionMode"] = request.InterceptionMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KialiArmsAuthTokens))
+            {
+                body["KialiArmsAuthTokens"] = request.KialiArmsAuthTokens;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KialiEnabled))
             {
@@ -7137,6 +7097,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["DNSProxyingEnabled"] = request.DNSProxyingEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultComponentsScheduleConfig))
+            {
+                body["DefaultComponentsScheduleConfig"] = request.DefaultComponentsScheduleConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiscoverySelectors))
             {
                 body["DiscoverySelectors"] = request.DiscoverySelectors;
@@ -7152,6 +7116,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAutoDiagnosis))
             {
                 body["EnableAutoDiagnosis"] = request.EnableAutoDiagnosis;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableBootstrapXdsAgent))
+            {
+                body["EnableBootstrapXdsAgent"] = request.EnableBootstrapXdsAgent;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCRHistory))
             {
@@ -7185,10 +7153,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["GatewayAPIEnabled"] = request.GatewayAPIEnabled;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalRateLimitEnabled))
-            {
-                body["GlobalRateLimitEnabled"] = request.GlobalRateLimitEnabled;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HoldApplicationUntilProxyStarts))
             {
                 body["HoldApplicationUntilProxyStarts"] = request.HoldApplicationUntilProxyStarts;
@@ -7216,6 +7180,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterceptionMode))
             {
                 body["InterceptionMode"] = request.InterceptionMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KialiArmsAuthTokens))
+            {
+                body["KialiArmsAuthTokens"] = request.KialiArmsAuthTokens;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KialiEnabled))
             {
@@ -7524,6 +7492,22 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["PreStop"] = request.PreStop;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyInitAckSloCPUResourceLimit))
+            {
+                body["ProxyInitAckSloCPUResourceLimit"] = request.ProxyInitAckSloCPUResourceLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyInitAckSloCPUResourceRequest))
+            {
+                body["ProxyInitAckSloCPUResourceRequest"] = request.ProxyInitAckSloCPUResourceRequest;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyInitAckSloMemoryResourceLimit))
+            {
+                body["ProxyInitAckSloMemoryResourceLimit"] = request.ProxyInitAckSloMemoryResourceLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyInitAckSloMemoryResourceRequest))
+            {
+                body["ProxyInitAckSloMemoryResourceRequest"] = request.ProxyInitAckSloMemoryResourceRequest;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyInitCPUResourceLimit))
             {
                 body["ProxyInitCPUResourceLimit"] = request.ProxyInitCPUResourceLimit;
@@ -7540,6 +7524,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["ProxyInitMemoryResourceRequest"] = request.ProxyInitMemoryResourceRequest;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyMetadata))
+            {
+                body["ProxyMetadata"] = request.ProxyMetadata;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyStatsMatcher))
             {
                 body["ProxyStatsMatcher"] = request.ProxyStatsMatcher;
@@ -7547,6 +7535,22 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
                 body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SidecarProxyAckSloCPUResourceLimit))
+            {
+                body["SidecarProxyAckSloCPUResourceLimit"] = request.SidecarProxyAckSloCPUResourceLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SidecarProxyAckSloCPUResourceRequest))
+            {
+                body["SidecarProxyAckSloCPUResourceRequest"] = request.SidecarProxyAckSloCPUResourceRequest;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SidecarProxyAckSloMemoryResourceLimit))
+            {
+                body["SidecarProxyAckSloMemoryResourceLimit"] = request.SidecarProxyAckSloMemoryResourceLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SidecarProxyAckSloMemoryResourceRequest))
+            {
+                body["SidecarProxyAckSloMemoryResourceRequest"] = request.SidecarProxyAckSloMemoryResourceRequest;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SidecarProxyCPUResourceLimit))
             {
@@ -7655,6 +7659,22 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["PreStop"] = request.PreStop;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyInitAckSloCPUResourceLimit))
+            {
+                body["ProxyInitAckSloCPUResourceLimit"] = request.ProxyInitAckSloCPUResourceLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyInitAckSloCPUResourceRequest))
+            {
+                body["ProxyInitAckSloCPUResourceRequest"] = request.ProxyInitAckSloCPUResourceRequest;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyInitAckSloMemoryResourceLimit))
+            {
+                body["ProxyInitAckSloMemoryResourceLimit"] = request.ProxyInitAckSloMemoryResourceLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyInitAckSloMemoryResourceRequest))
+            {
+                body["ProxyInitAckSloMemoryResourceRequest"] = request.ProxyInitAckSloMemoryResourceRequest;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyInitCPUResourceLimit))
             {
                 body["ProxyInitCPUResourceLimit"] = request.ProxyInitCPUResourceLimit;
@@ -7671,6 +7691,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["ProxyInitMemoryResourceRequest"] = request.ProxyInitMemoryResourceRequest;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyMetadata))
+            {
+                body["ProxyMetadata"] = request.ProxyMetadata;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyStatsMatcher))
             {
                 body["ProxyStatsMatcher"] = request.ProxyStatsMatcher;
@@ -7678,6 +7702,22 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
                 body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SidecarProxyAckSloCPUResourceLimit))
+            {
+                body["SidecarProxyAckSloCPUResourceLimit"] = request.SidecarProxyAckSloCPUResourceLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SidecarProxyAckSloCPUResourceRequest))
+            {
+                body["SidecarProxyAckSloCPUResourceRequest"] = request.SidecarProxyAckSloCPUResourceRequest;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SidecarProxyAckSloMemoryResourceLimit))
+            {
+                body["SidecarProxyAckSloMemoryResourceLimit"] = request.SidecarProxyAckSloMemoryResourceLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SidecarProxyAckSloMemoryResourceRequest))
+            {
+                body["SidecarProxyAckSloMemoryResourceRequest"] = request.SidecarProxyAckSloMemoryResourceRequest;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SidecarProxyCPUResourceLimit))
             {

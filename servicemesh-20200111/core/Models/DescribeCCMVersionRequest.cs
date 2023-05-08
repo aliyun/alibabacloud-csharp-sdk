@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeCCMVersionRequest : TeaModel {
+        /// <summary>
+        /// The versions of the CCM component in all clusters on the data plane.
+        /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }

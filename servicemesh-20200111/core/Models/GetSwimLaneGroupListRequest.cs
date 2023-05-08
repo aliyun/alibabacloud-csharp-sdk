@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class GetSwimLaneGroupListRequest : TeaModel {
+        /// <summary>
+        /// A list of services associated with the lane group.
+        /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }

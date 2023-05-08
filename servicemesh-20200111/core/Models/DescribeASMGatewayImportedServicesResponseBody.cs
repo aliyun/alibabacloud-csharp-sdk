@@ -9,20 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeASMGatewayImportedServicesResponseBody : TeaModel {
+        /// <summary>
+        /// The imported services.
+        /// </summary>
         [NameInMap("ImportedServices")]
         [Validation(Required=false)]
         public List<DescribeASMGatewayImportedServicesResponseBodyImportedServices> ImportedServices { get; set; }
         public class DescribeASMGatewayImportedServicesResponseBodyImportedServices : TeaModel {
+            /// <summary>
+            /// The name of the service.
+            /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
+            /// <summary>
+            /// The namespace in which the service resides.
+            /// </summary>
             [NameInMap("ServiceNamespace")]
             [Validation(Required=false)]
             public string ServiceNamespace { get; set; }
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

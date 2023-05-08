@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeGuestClusterNamespacesResponseBody : TeaModel {
+        /// <summary>
+        /// The labels of the namespaces. Labels are returned only when the `ShowNsLabels` parameter is set to `true`.
+        /// </summary>
         [NameInMap("NsLabels")]
         [Validation(Required=false)]
         public Dictionary<string, object> NsLabels { get; set; }
 
+        /// <summary>
+        /// The names of the namespaces.
+        /// </summary>
         [NameInMap("NsList")]
         [Validation(Required=false)]
         public List<string> NsList { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
