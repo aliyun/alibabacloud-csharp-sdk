@@ -35,9 +35,33 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
+        [NameInMap("SecurityPolicy")]
+        [Validation(Required=false)]
+        public ModifyAppInstanceGroupAttributeRequestSecurityPolicy SecurityPolicy { get; set; }
+        public class ModifyAppInstanceGroupAttributeRequestSecurityPolicy : TeaModel {
+            [NameInMap("ResetAfterUnbind")]
+            [Validation(Required=false)]
+            public bool? ResetAfterUnbind { get; set; }
+
+            [NameInMap("SkipUserAuthCheck")]
+            [Validation(Required=false)]
+            public bool? SkipUserAuthCheck { get; set; }
+
+        }
+
         [NameInMap("SessionTimeout")]
         [Validation(Required=false)]
         public int? SessionTimeout { get; set; }
+
+        [NameInMap("StoragePolicy")]
+        [Validation(Required=false)]
+        public ModifyAppInstanceGroupAttributeRequestStoragePolicy StoragePolicy { get; set; }
+        public class ModifyAppInstanceGroupAttributeRequestStoragePolicy : TeaModel {
+            [NameInMap("StorageTypeList")]
+            [Validation(Required=false)]
+            public List<string> StorageTypeList { get; set; }
+
+        }
 
     }
 

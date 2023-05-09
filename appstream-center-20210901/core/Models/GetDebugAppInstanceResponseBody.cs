@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
-    public class ListAppInstancesRequest : TeaModel {
+    public class GetDebugAppInstanceResponseBody : TeaModel {
+        [NameInMap("AppId")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
+
         [NameInMap("AppInstanceGroupId")]
         [Validation(Required=false)]
         public string AppInstanceGroupId { get; set; }
@@ -17,25 +21,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstanceId { get; set; }
 
-        [NameInMap("AppInstanceIdList")]
+        [NameInMap("AppVersion")]
         [Validation(Required=false)]
-        public List<string> AppInstanceIdList { get; set; }
+        public string AppVersion { get; set; }
 
-        [NameInMap("IncludeDeleted")]
+        [NameInMap("AuthCode")]
         [Validation(Required=false)]
-        public bool? IncludeDeleted { get; set; }
+        public string AuthCode { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public List<string> Status { get; set; }
+        public string UserId { get; set; }
 
     }
 

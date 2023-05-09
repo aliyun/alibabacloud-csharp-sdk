@@ -21,6 +21,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string AppInstanceId { get; set; }
 
+            [NameInMap("BindInfo")]
+            [Validation(Required=false)]
+            public ListAppInstancesResponseBodyAppInstanceModelsBindInfo BindInfo { get; set; }
+            public class ListAppInstancesResponseBodyAppInstanceModelsBindInfo : TeaModel {
+                [NameInMap("EndUserId")]
+                [Validation(Required=false)]
+                public string EndUserId { get; set; }
+
+                [NameInMap("UsageDuration")]
+                [Validation(Required=false)]
+                public long? UsageDuration { get; set; }
+
+            }
+
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }

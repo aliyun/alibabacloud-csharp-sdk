@@ -214,6 +214,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string SessionTimeout { get; set; }
 
+            [NameInMap("SkipUserAuthCheck")]
+            [Validation(Required=false)]
+            public bool? SkipUserAuthCheck { get; set; }
+
             [NameInMap("SpecId")]
             [Validation(Required=false)]
             public string SpecId { get; set; }

@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public CreateAppInstanceGroupRequestNetwork Network { get; set; }
         public class CreateAppInstanceGroupRequestNetwork : TeaModel {
+            [NameInMap("IpExpireMinutes")]
+            [Validation(Required=false)]
+            public int? IpExpireMinutes { get; set; }
+
             [NameInMap("Routes")]
             [Validation(Required=false)]
             public List<CreateAppInstanceGroupRequestNetworkRoutes> Routes { get; set; }
@@ -167,15 +171,46 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public CreateAppInstanceGroupRequestRuntimePolicy RuntimePolicy { get; set; }
         public class CreateAppInstanceGroupRequestRuntimePolicy : TeaModel {
+            [NameInMap("DebugMode")]
+            [Validation(Required=false)]
+            public string DebugMode { get; set; }
+
+            /// <summary>
+            /// 会话类型。
+            /// </summary>
             [NameInMap("SessionType")]
             [Validation(Required=false)]
             public string SessionType { get; set; }
 
         }
 
+        [NameInMap("SecurityPolicy")]
+        [Validation(Required=false)]
+        public CreateAppInstanceGroupRequestSecurityPolicy SecurityPolicy { get; set; }
+        public class CreateAppInstanceGroupRequestSecurityPolicy : TeaModel {
+            [NameInMap("ResetAfterUnbind")]
+            [Validation(Required=false)]
+            public bool? ResetAfterUnbind { get; set; }
+
+            [NameInMap("SkipUserAuthCheck")]
+            [Validation(Required=false)]
+            public bool? SkipUserAuthCheck { get; set; }
+
+        }
+
         [NameInMap("SessionTimeout")]
         [Validation(Required=false)]
         public int? SessionTimeout { get; set; }
+
+        [NameInMap("StoragePolicy")]
+        [Validation(Required=false)]
+        public CreateAppInstanceGroupRequestStoragePolicy StoragePolicy { get; set; }
+        public class CreateAppInstanceGroupRequestStoragePolicy : TeaModel {
+            [NameInMap("StorageTypeList")]
+            [Validation(Required=false)]
+            public List<string> StorageTypeList { get; set; }
+
+        }
 
         [NameInMap("UserInfo")]
         [Validation(Required=false)]

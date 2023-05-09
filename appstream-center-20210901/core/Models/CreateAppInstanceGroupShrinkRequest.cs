@@ -69,9 +69,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string RuntimePolicyShrink { get; set; }
 
+        [NameInMap("SecurityPolicy")]
+        [Validation(Required=false)]
+        public string SecurityPolicyShrink { get; set; }
+
         [NameInMap("SessionTimeout")]
         [Validation(Required=false)]
         public int? SessionTimeout { get; set; }
+
+        [NameInMap("StoragePolicy")]
+        [Validation(Required=false)]
+        public string StoragePolicyShrink { get; set; }
 
         [NameInMap("UserInfo")]
         [Validation(Required=false)]

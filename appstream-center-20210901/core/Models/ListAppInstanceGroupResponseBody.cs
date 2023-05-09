@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string AppInstanceType { get; set; }
 
+            /// <summary>
+            /// 策略ID。
+            /// </summary>
             [NameInMap("AppPolicyId")]
             [Validation(Required=false)]
             public string AppPolicyId { get; set; }
@@ -41,6 +44,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> Apps { get; set; }
             public class ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps : TeaModel {
+                /// <summary>
+                /// 应用图标。
+                /// </summary>
                 [NameInMap("AppIcon")]
                 [Validation(Required=false)]
                 public string AppIcon { get; set; }
@@ -53,16 +59,25 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
+                /// <summary>
+                /// 应用版本。
+                /// </summary>
                 [NameInMap("AppVersion")]
                 [Validation(Required=false)]
                 public string AppVersion { get; set; }
 
+                /// <summary>
+                /// 应用版本名称。
+                /// </summary>
                 [NameInMap("AppVersionName")]
                 [Validation(Required=false)]
                 public string AppVersionName { get; set; }
 
             }
 
+            /// <summary>
+            /// 售卖模式。
+            /// </summary>
             [NameInMap("ChargeResourceMode")]
             [Validation(Required=false)]
             public string ChargeResourceMode { get; set; }
@@ -222,6 +237,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("SessionTimeout")]
             [Validation(Required=false)]
             public string SessionTimeout { get; set; }
+
+            [NameInMap("SkipUserAuthCheck")]
+            [Validation(Required=false)]
+            public bool? SkipUserAuthCheck { get; set; }
 
             [NameInMap("SpecId")]
             [Validation(Required=false)]
