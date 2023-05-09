@@ -7163,6 +7163,94 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await HotelBillSettlementQueryWithOptionsAsync(request, headers, runtime);
         }
 
+        public HotelCityCodeListResponse HotelCityCodeListWithOptions(HotelCityCodeListRequest request, HotelCityCodeListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CountryCode))
+            {
+                query["country_code"] = request.CountryCode;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "HotelCityCodeList",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/dtb-hotel/v1/city-codes/action/search",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<HotelCityCodeListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<HotelCityCodeListResponse> HotelCityCodeListWithOptionsAsync(HotelCityCodeListRequest request, HotelCityCodeListHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CountryCode))
+            {
+                query["country_code"] = request.CountryCode;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "HotelCityCodeList",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/dtb-hotel/v1/city-codes/action/search",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<HotelCityCodeListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public HotelCityCodeListResponse HotelCityCodeList(HotelCityCodeListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            HotelCityCodeListHeaders headers = new HotelCityCodeListHeaders();
+            return HotelCityCodeListWithOptions(request, headers, runtime);
+        }
+
+        public async Task<HotelCityCodeListResponse> HotelCityCodeListAsync(HotelCityCodeListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            HotelCityCodeListHeaders headers = new HotelCityCodeListHeaders();
+            return await HotelCityCodeListWithOptionsAsync(request, headers, runtime);
+        }
+
         public HotelExceedApplyQueryResponse HotelExceedApplyQueryWithOptions(HotelExceedApplyQueryRequest request, HotelExceedApplyQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
