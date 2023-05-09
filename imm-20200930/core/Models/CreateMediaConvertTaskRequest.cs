@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateMediaConvertTaskRequest : TeaModel {
+        [NameInMap("AlignmentIndex")]
+        [Validation(Required=false)]
+        public int? AlignmentIndex { get; set; }
+
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public CredentialConfig CredentialConfig { get; set; }

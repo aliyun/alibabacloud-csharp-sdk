@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string SourceURI { get; set; }
 
-        [NameInMap("Token")]
-        [Validation(Required=false)]
-        public string Token { get; set; }
-
     }
 
 }

@@ -3215,6 +3215,10 @@ namespace AlibabaCloud.SDK.Imm20200930
                 request.TargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Targets, "Targets", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlignmentIndex))
+            {
+                query["AlignmentIndex"] = request.AlignmentIndex;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
@@ -3288,6 +3292,10 @@ namespace AlibabaCloud.SDK.Imm20200930
                 request.TargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Targets, "Targets", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlignmentIndex))
+            {
+                query["AlignmentIndex"] = request.AlignmentIndex;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
@@ -8883,10 +8891,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["SourceURI"] = request.SourceURI;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
-            {
-                query["Token"] = request.Token;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -8927,10 +8931,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceURI))
             {
                 query["SourceURI"] = request.SourceURI;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
-            {
-                query["Token"] = request.Token;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
