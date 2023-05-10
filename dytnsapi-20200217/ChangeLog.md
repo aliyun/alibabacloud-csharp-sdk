@@ -1,3 +1,7 @@
+2023-05-10 Version: 1.0.22
+- Supported insufficient balance check.
+- Other improvements.
+
 2023-04-28 Version: 1.0.21
 - Change api backend.
 - Modify error code.

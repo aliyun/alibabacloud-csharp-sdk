@@ -403,6 +403,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             {
                 query["AuthCode"] = request.AuthCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
                 query["InputNumber"] = request.InputNumber;
@@ -449,6 +453,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
             {
                 query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendFunction))
+            {
+                query["ExtendFunction"] = request.ExtendFunction;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
             {
