@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
-    public class ListResourceTypesResponseBody : TeaModel {
+    public class ListResourceTypeVersionsResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ResourceTypeSummaries")]
+        [NameInMap("ResourceTypeVersions")]
         [Validation(Required=false)]
-        public List<ListResourceTypesResponseBodyResourceTypeSummaries> ResourceTypeSummaries { get; set; }
-        public class ListResourceTypesResponseBodyResourceTypeSummaries : TeaModel {
+        public List<ListResourceTypeVersionsResponseBodyResourceTypeVersions> ResourceTypeVersions { get; set; }
+        public class ListResourceTypeVersionsResponseBodyResourceTypeVersions : TeaModel {
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
-
-            [NameInMap("DefaultVersionId")]
-            [Validation(Required=false)]
-            public string DefaultVersionId { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -33,9 +29,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string EntityType { get; set; }
 
-            [NameInMap("LatestVersionId")]
+            [NameInMap("IsDefaultVersion")]
             [Validation(Required=false)]
-            public string LatestVersionId { get; set; }
+            public bool? IsDefaultVersion { get; set; }
 
             [NameInMap("Provider")]
             [Validation(Required=false)]
@@ -45,22 +41,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
-            [NameInMap("TotalVersionCount")]
-            [Validation(Required=false)]
-            public int? TotalVersionCount { get; set; }
-
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
 
-        }
+            [NameInMap("VersionId")]
+            [Validation(Required=false)]
+            public string VersionId { get; set; }
 
-        /// <summary>
-        /// The array of resource types.
-        /// </summary>
-        [NameInMap("ResourceTypes")]
-        [Validation(Required=false)]
-        public List<string> ResourceTypes { get; set; }
+        }
 
     }
 

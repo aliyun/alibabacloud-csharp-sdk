@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
-    public class GetResourceTypeTemplateRequest : TeaModel {
+    public class ListResourceTypeVersionsRequest : TeaModel {
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
-
-        [NameInMap("VersionId")]
-        [Validation(Required=false)]
-        public string VersionId { get; set; }
 
     }
 

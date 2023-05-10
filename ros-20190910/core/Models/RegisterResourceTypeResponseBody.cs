@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
-    public class GetTemplateEstimateCostResponseBody : TeaModel {
+    public class RegisterResourceTypeResponseBody : TeaModel {
+        [NameInMap("RegistrationId")]
+        [Validation(Required=false)]
+        public string RegistrationId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Resources")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Resources { get; set; }
 
     }
 

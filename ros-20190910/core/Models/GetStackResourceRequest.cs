@@ -10,49 +10,62 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetStackResourceRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.
-        /// 
-        /// The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
-        /// 
-        /// For more information, see [Ensure idempotence](~~134212~~).
+        /// The logical ID of the resource defined in the template.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The logical ID of the resource defined in the template.
+        /// The status of the resource. Valid values:
+        /// 
+        /// *   CREATE_COMPLETE
+        /// *   CREATE_FAILED
+        /// *   CREATE_IN_PROGRESS
+        /// *   UPDATE_IN_PROGRESS
+        /// *   UPDATE_FAILED
+        /// *   UPDATE_COMPLETE
+        /// *   DELETE_IN_PROGRESS
+        /// *   DELETE_FAILED
+        /// *   CHECK_IN_PROGRESS
+        /// *   CHECK_FAILED
+        /// *   CHECK_COMPLETE
+        /// *   IMPORT_IN_PROGRESS
+        /// *   IMPORT_FAILED
+        /// *   IMPORT_COMPLETE
         /// </summary>
         [NameInMap("LogicalResourceId")]
         [Validation(Required=false)]
         public string LogicalResourceId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the stack belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// The name of resource property N that you want to query.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of resource property N that you want to query.
+        /// The description of the resource.
         /// </summary>
         [NameInMap("ResourceAttributes")]
         [Validation(Required=false)]
         public List<string> ResourceAttributes { get; set; }
 
         /// <summary>
-        /// Specifies whether to query the resource properties. Valid values:
+        /// The name of resource property N that you want to query.
         /// 
-        /// *   true
-        /// *   false
+        /// >  Maximum value of N: 20.
         /// </summary>
         [NameInMap("ShowResourceAttributes")]
         [Validation(Required=false)]
         public bool? ShowResourceAttributes { get; set; }
 
         /// <summary>
-        /// The ID of the stack.
+        /// Specifies whether to query the resource properties. Valid values:
+        /// 
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]

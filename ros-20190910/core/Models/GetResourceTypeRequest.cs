@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetResourceTypeRequest : TeaModel {
         /// <summary>
-        /// The type of the resource.
-        /// 
-        /// For more information about resource types supported by Resource Orchestration Service (ROS), see [List of resource types by service](~~127039~~).
+        /// The attributes of the resource.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
+
+        [NameInMap("VersionId")]
+        [Validation(Required=false)]
+        public string VersionId { get; set; }
 
     }
 

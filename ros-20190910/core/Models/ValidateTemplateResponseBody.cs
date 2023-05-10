@@ -10,92 +10,33 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ValidateTemplateResponseBody : TeaModel {
         /// <summary>
-        /// The description of the template.
+        /// The DataSource resource types.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The output items of the template.
+        /// The path of the regular resource. In most cases, the path of a regular resource is the same as the resource name.
         /// </summary>
         [NameInMap("Outputs")]
         [Validation(Required=false)]
         public List<ValidateTemplateResponseBodyOutputs> Outputs { get; set; }
         public class ValidateTemplateResponseBodyOutputs : TeaModel {
             /// <summary>
-            /// The description of the output item.
+            /// The update information about the stack.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The alias of the output item.
+            /// The parameters that can be modified. If you change only values of the parameters in a stack template and use the template to update the stack, no validation errors are caused.
             /// </summary>
             [NameInMap("Label")]
             [Validation(Required=false)]
             public string Label { get; set; }
 
-            /// <summary>
-            /// The name of the output item.
-            /// </summary>
-            [NameInMap("OutputKey")]
-            [Validation(Required=false)]
-            public string OutputKey { get; set; }
-
-        }
-
-        /// <summary>
-        /// The parameters in the Parameters section of the template.
-        /// 
-        /// The Parameters section contains the parameters that you must specify when you use the template to create a stack. You can use the parameters to specify the stack details, such as the username, the password, and the Elastic Compute Service (ECS) instance type in the specified region.
-        /// </summary>
-        [NameInMap("Parameters")]
-        [Validation(Required=false)]
-        public List<Dictionary<string, object>> Parameters { get; set; }
-
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// The resource types that are used in the template.
-        /// </summary>
-        [NameInMap("ResourceTypes")]
-        [Validation(Required=false)]
-        public ValidateTemplateResponseBodyResourceTypes ResourceTypes { get; set; }
-        public class ValidateTemplateResponseBodyResourceTypes : TeaModel {
-            /// <summary>
-            /// The DataSource resource types.
-            /// </summary>
-            [NameInMap("DataSources")]
-            [Validation(Required=false)]
-            public List<string> DataSources { get; set; }
-
-            /// <summary>
-            /// The regular resource types.
-            /// </summary>
-            [NameInMap("Resources")]
-            [Validation(Required=false)]
-            public List<string> Resources { get; set; }
-
-        }
-
-        /// <summary>
-        /// The regular resources that are defined in the template.
-        /// 
-        /// > 
-        /// *   For a Resource Orchestration Service (ROS) template, the resource whose definition contains the `Count` parameter is not displayed as a list.
-        /// *   For a Terraform template, the resource whose definition contains the `count` or `for_each` parameter is not displayed as a list.
-        /// </summary>
-        [NameInMap("Resources")]
-        [Validation(Required=false)]
-        public List<ValidateTemplateResponseBodyResources> Resources { get; set; }
-        public class ValidateTemplateResponseBodyResources : TeaModel {
             /// <summary>
             /// The pattern in which the logical IDs of regular resources are formed.
             /// 
@@ -124,19 +65,88 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             ///     *   `app[*].server[*]`: In this case, the `count` or `for_each` parameter is contained in the `app` module and the `server` resource. The value of the `ResourcePath` parameter is `app.server`.
             ///     *   `app.app_group[*].server`: In this case, the `count` or `for_each` parameter is contained in the `app_group` module, but not in the `app` module and the `server` resource. The value of the `ResourcePath` parameter is `app.app_group.server`. The `app_group` module is a child module of the `app` module.
             /// </summary>
+            [NameInMap("OutputKey")]
+            [Validation(Required=false)]
+            public string OutputKey { get; set; }
+
+        }
+
+        /// <summary>
+        /// The regular resources that are defined in the template.
+        /// 
+        /// > 
+        /// *   For a Resource Orchestration Service (ROS) template, the resource whose definition contains the `Count` parameter is not displayed as a list.
+        /// *   For a Terraform template, the resource whose definition contains the `count` or `for_each` parameter is not displayed as a list.
+        /// </summary>
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public List<Dictionary<string, object>> Parameters { get; set; }
+
+        /// <summary>
+        /// The regular resource type.
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// The parameters that can be modified. If you change only values of the parameters in a stack template and use the template to update the stack, no validation errors are caused.
+        /// </summary>
+        [NameInMap("ResourceTypes")]
+        [Validation(Required=false)]
+        public ValidateTemplateResponseBodyResourceTypes ResourceTypes { get; set; }
+        public class ValidateTemplateResponseBodyResourceTypes : TeaModel {
+            /// <summary>
+            /// The parameters that can be modified under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values of the parameters determine whether validation errors are caused.
+            /// </summary>
+            [NameInMap("DataSources")]
+            [Validation(Required=false)]
+            public List<string> DataSources { get; set; }
+
+            /// <summary>
+            /// The parameters whose changes cause service interruptions. If you change only values of the parameters in a stack template and use the template to update the stack, service interruptions are caused.
+            /// 
+            /// > 
+            /// *   This parameter is supported only for a small number of resource types.
+            /// *   This parameter is valid only for changes that are made on ROS stacks.
+            /// </summary>
+            [NameInMap("Resources")]
+            [Validation(Required=false)]
+            public List<string> Resources { get; set; }
+
+        }
+
+        /// <summary>
+        /// The parameters whose changes cause service interruptions under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values and the update type determine whether service interruptions are caused.
+        /// 
+        /// > 
+        /// *   This parameter is supported only for a small number of resource types.
+        /// *   This parameter is valid only for changes that are made on ROS stacks.
+        /// </summary>
+        [NameInMap("Resources")]
+        [Validation(Required=false)]
+        public List<ValidateTemplateResponseBodyResources> Resources { get; set; }
+        public class ValidateTemplateResponseBodyResources : TeaModel {
+            /// <summary>
+            /// The parameters that cannot be modified. If you change only values of the parameters in a stack template and use the template to update the stack, validation errors are caused.
+            /// </summary>
             [NameInMap("LogicalResourceIdPattern")]
             [Validation(Required=false)]
             public string LogicalResourceIdPattern { get; set; }
 
             /// <summary>
-            /// The path of the regular resource. In most cases, the path of a regular resource is the same as the resource name.
+            /// The parameters that cannot be modified. If you change only values of the parameters in a stack template and use the template to update the stack, validation errors are caused.
             /// </summary>
             [NameInMap("ResourcePath")]
             [Validation(Required=false)]
             public string ResourcePath { get; set; }
 
             /// <summary>
-            /// The regular resource type.
+            /// The parameters whose changes cause service interruptions under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values and the update type determine whether service interruptions are caused.
+            /// 
+            /// > 
+            /// *   This parameter is supported only for a small number of resource types.
+            /// *   This parameter is valid only for changes that are made on ROS stacks.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
@@ -145,21 +155,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The update information about the stack.
+        /// The parameters that can be modified under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether validation errors are caused.
         /// </summary>
         [NameInMap("UpdateInfo")]
         [Validation(Required=false)]
         public ValidateTemplateResponseBodyUpdateInfo UpdateInfo { get; set; }
         public class ValidateTemplateResponseBodyUpdateInfo : TeaModel {
             /// <summary>
-            /// The parameters that can be modified. If you change only values of the parameters in a stack template and use the template to update the stack, no validation errors are caused.
+            /// The parameters that can be modified under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether validation errors are caused.
             /// </summary>
             [NameInMap("ParametersAllowedToBeModified")]
             [Validation(Required=false)]
             public List<string> ParametersAllowedToBeModified { get; set; }
 
             /// <summary>
-            /// The parameters whose changes cause service interruptions. If you change only values of the parameters in a stack template and use the template to update the stack, service interruptions are caused.
+            /// The parameters whose changes cause service interruptions under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether service interruptions are caused.
             /// 
             /// > 
             /// *   This parameter is supported only for a small number of resource types.
@@ -169,45 +179,22 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public List<string> ParametersCauseInterruptionIfModified { get; set; }
 
-            /// <summary>
-            /// The parameters that can be modified under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values of the parameters determine whether validation errors are caused.
-            /// </summary>
             [NameInMap("ParametersConditionallyAllowedToBeModified")]
             [Validation(Required=false)]
             public List<string> ParametersConditionallyAllowedToBeModified { get; set; }
 
-            /// <summary>
-            /// The parameters whose changes cause service interruptions under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values and the update type determine whether service interruptions are caused.
-            /// 
-            /// > 
-            /// *   This parameter is supported only for a small number of resource types.
-            /// *   This parameter is valid only for changes that are made on ROS stacks.
-            /// </summary>
             [NameInMap("ParametersConditionallyCauseInterruptionIfModified")]
             [Validation(Required=false)]
             public List<string> ParametersConditionallyCauseInterruptionIfModified { get; set; }
 
-            /// <summary>
-            /// The parameters that cannot be modified. If you change only values of the parameters in a stack template and use the template to update the stack, validation errors are caused.
-            /// </summary>
             [NameInMap("ParametersNotAllowedToBeModified")]
             [Validation(Required=false)]
             public List<string> ParametersNotAllowedToBeModified { get; set; }
 
-            /// <summary>
-            /// The parameters that can be modified under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether validation errors are caused.
-            /// </summary>
             [NameInMap("ParametersUncertainlyAllowedToBeModified")]
             [Validation(Required=false)]
             public List<string> ParametersUncertainlyAllowedToBeModified { get; set; }
 
-            /// <summary>
-            /// The parameters whose changes cause service interruptions under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether service interruptions are caused.
-            /// 
-            /// > 
-            /// *   This parameter is supported only for a small number of resource types.
-            /// *   This parameter is valid only for changes that are made on ROS stacks.
-            /// </summary>
             [NameInMap("ParametersUncertainlyCauseInterruptionIfModified")]
             [Validation(Required=false)]
             public List<string> ParametersUncertainlyCauseInterruptionIfModified { get; set; }

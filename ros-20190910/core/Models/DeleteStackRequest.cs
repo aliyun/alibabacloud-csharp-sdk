@@ -14,6 +14,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<string> DeleteOptions { get; set; }
 
         /// <summary>
+        /// The name of resource N that you want to retain.
+        /// </summary>
+        [NameInMap("RamRoleName")]
+        [Validation(Required=false)]
+        public string RamRoleName { get; set; }
+
+        /// <summary>
+        /// The name of resource N that you want to retain.
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        /// <summary>
         /// The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses credentials of the role to call the APIs of Alibaba Cloud services.
         /// 
         /// ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the role.
@@ -22,38 +36,19 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// 
         /// The name of the RAM role can be up to 64 bytes in length.
         /// </summary>
-        [NameInMap("RamRoleName")]
-        [Validation(Required=false)]
-        public string RamRoleName { get; set; }
-
-        /// <summary>
-        /// The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
-        /// </summary>
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        /// <summary>
-        /// Specifies whether to retain all resources in the stack.
-        /// 
-        /// Default value: false. Valid values:
-        /// 
-        /// *   true
-        /// *   false
-        /// </summary>
         [NameInMap("RetainAllResources")]
         [Validation(Required=false)]
         public bool? RetainAllResources { get; set; }
 
         /// <summary>
-        /// The name of resource N that you want to retain.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RetainResources")]
         [Validation(Required=false)]
         public List<string> RetainResources { get; set; }
 
         /// <summary>
-        /// The ID of the stack.
+        /// The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]

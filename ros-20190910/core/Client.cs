@@ -702,11 +702,22 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * A stack is a collection of Resource Orchestration Service (ROS) resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see [Overview](~~172973~~).
-          * When you call this operation, you must take note of the following limits:
-          * *   You can create up to 200 stacks within an Alibaba Cloud account.
-          * *   You can create up to 200 resources in a stack.
-          * This topic provides an example on how to create a stack named `MyStack` in the China (Hangzhou) region. The template body of the stack is `{"ROSTemplateFormatVersion":"2015-09-01"}`.
+          * | Error code | Error message | HTTPS status code | Description |
+          * | ---------- | ------------- | ----------------- | ----------- |
+          * | CircularDependency | Circular Dependency Found: {reason}. | 400 | The error message returned because the template contains circular dependencies. reason indicates the cause of the error. |
+          * | InvalidSchema | {reason}. | 400 | The error message returned because the format of the template is invalid. reason indicates the cause of the error. |
+          * | InvalidTemplateAttribute | The Referenced Attribute ({resource} {name}) is incorrect. | 400 | The error message returned because the resource property that is referenced in the Outputs section of the template is invalid. resource indicates the resource name. name indicates the property name. |
+          * | InvalidTemplatePropertyType | The specified value type of ({resource} {section}) is incorrect. | 400 | The error message returned because the type of the resource property that is defined in a section of the template is invalid. resource indicates the resource name. section indicates the section name. |
+          * | InvalidTemplateReference | The specified reference "{name}" (in {referencer}) is incorrect. | 400 | The error message returned because the template contains an invalid reference. name indicates the reference name. referencer indicates the referencer name. |
+          * | InvalidTemplateSection | The template section is invalid: {section}. | 400 | The error message returned because the template contains an invalid section. section indicates the section name. |
+          * | InvalidTemplateVersion | The template version is invalid: {reason}. | 400 | The error message returned because the template version is invalid. reason indicates the cause of the error. |
+          * | StackValidationFailed | {reason}. | 400 | The error message returned because the stack failed to be validated. reason indicates the cause of the error. |
+          * | UnknownUserParameter | The Parameter ({name}) was not defined in template. | 400 | The error message returned because the specified parameter is not defined in the template. name indicates the parameter name. |
+          * | UserParameterMissing | The Parameter {name} was not provided. | 400 | The error message returned because no value is specified for the specified parameter that is defined in the template. name indicates the parameter name. |
+          * | ActionInProgress | Stack {name} already has an action ({action}) in progress. | 409 | The error message returned because the stack is being changed. name indicates the name or ID of the stack. action indicates the change operation. |
+          * | StackExists | The Stack ({name}) already exists. | 409 | The error message returned because a stack that has the same name already exists. name indicates the stack name. |
+          * | TemplateNotFound | The Template ({ ID }) could not be found. | 404 | The error message returned because the specified template does not exist. ID indicates the template ID. |
+          * | TemplateNotFound | The Template { ID } with version { version } could not be found. | 404 | The error message returned because the specified template or template version does not exist. ID indicates the template ID. version indicates the template version. |
           *
           * @param request CreateStackRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -824,11 +835,22 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * A stack is a collection of Resource Orchestration Service (ROS) resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see [Overview](~~172973~~).
-          * When you call this operation, you must take note of the following limits:
-          * *   You can create up to 200 stacks within an Alibaba Cloud account.
-          * *   You can create up to 200 resources in a stack.
-          * This topic provides an example on how to create a stack named `MyStack` in the China (Hangzhou) region. The template body of the stack is `{"ROSTemplateFormatVersion":"2015-09-01"}`.
+          * | Error code | Error message | HTTPS status code | Description |
+          * | ---------- | ------------- | ----------------- | ----------- |
+          * | CircularDependency | Circular Dependency Found: {reason}. | 400 | The error message returned because the template contains circular dependencies. reason indicates the cause of the error. |
+          * | InvalidSchema | {reason}. | 400 | The error message returned because the format of the template is invalid. reason indicates the cause of the error. |
+          * | InvalidTemplateAttribute | The Referenced Attribute ({resource} {name}) is incorrect. | 400 | The error message returned because the resource property that is referenced in the Outputs section of the template is invalid. resource indicates the resource name. name indicates the property name. |
+          * | InvalidTemplatePropertyType | The specified value type of ({resource} {section}) is incorrect. | 400 | The error message returned because the type of the resource property that is defined in a section of the template is invalid. resource indicates the resource name. section indicates the section name. |
+          * | InvalidTemplateReference | The specified reference "{name}" (in {referencer}) is incorrect. | 400 | The error message returned because the template contains an invalid reference. name indicates the reference name. referencer indicates the referencer name. |
+          * | InvalidTemplateSection | The template section is invalid: {section}. | 400 | The error message returned because the template contains an invalid section. section indicates the section name. |
+          * | InvalidTemplateVersion | The template version is invalid: {reason}. | 400 | The error message returned because the template version is invalid. reason indicates the cause of the error. |
+          * | StackValidationFailed | {reason}. | 400 | The error message returned because the stack failed to be validated. reason indicates the cause of the error. |
+          * | UnknownUserParameter | The Parameter ({name}) was not defined in template. | 400 | The error message returned because the specified parameter is not defined in the template. name indicates the parameter name. |
+          * | UserParameterMissing | The Parameter {name} was not provided. | 400 | The error message returned because no value is specified for the specified parameter that is defined in the template. name indicates the parameter name. |
+          * | ActionInProgress | Stack {name} already has an action ({action}) in progress. | 409 | The error message returned because the stack is being changed. name indicates the name or ID of the stack. action indicates the change operation. |
+          * | StackExists | The Stack ({name}) already exists. | 409 | The error message returned because a stack that has the same name already exists. name indicates the stack name. |
+          * | TemplateNotFound | The Template ({ ID }) could not be found. | 404 | The error message returned because the specified template does not exist. ID indicates the template ID. |
+          * | TemplateNotFound | The Template { ID } with version { version } could not be found. | 404 | The error message returned because the specified template or template version does not exist. ID indicates the template ID. version indicates the template version. |
           *
           * @param request CreateStackRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -946,11 +968,22 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * A stack is a collection of Resource Orchestration Service (ROS) resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see [Overview](~~172973~~).
-          * When you call this operation, you must take note of the following limits:
-          * *   You can create up to 200 stacks within an Alibaba Cloud account.
-          * *   You can create up to 200 resources in a stack.
-          * This topic provides an example on how to create a stack named `MyStack` in the China (Hangzhou) region. The template body of the stack is `{"ROSTemplateFormatVersion":"2015-09-01"}`.
+          * | Error code | Error message | HTTPS status code | Description |
+          * | ---------- | ------------- | ----------------- | ----------- |
+          * | CircularDependency | Circular Dependency Found: {reason}. | 400 | The error message returned because the template contains circular dependencies. reason indicates the cause of the error. |
+          * | InvalidSchema | {reason}. | 400 | The error message returned because the format of the template is invalid. reason indicates the cause of the error. |
+          * | InvalidTemplateAttribute | The Referenced Attribute ({resource} {name}) is incorrect. | 400 | The error message returned because the resource property that is referenced in the Outputs section of the template is invalid. resource indicates the resource name. name indicates the property name. |
+          * | InvalidTemplatePropertyType | The specified value type of ({resource} {section}) is incorrect. | 400 | The error message returned because the type of the resource property that is defined in a section of the template is invalid. resource indicates the resource name. section indicates the section name. |
+          * | InvalidTemplateReference | The specified reference "{name}" (in {referencer}) is incorrect. | 400 | The error message returned because the template contains an invalid reference. name indicates the reference name. referencer indicates the referencer name. |
+          * | InvalidTemplateSection | The template section is invalid: {section}. | 400 | The error message returned because the template contains an invalid section. section indicates the section name. |
+          * | InvalidTemplateVersion | The template version is invalid: {reason}. | 400 | The error message returned because the template version is invalid. reason indicates the cause of the error. |
+          * | StackValidationFailed | {reason}. | 400 | The error message returned because the stack failed to be validated. reason indicates the cause of the error. |
+          * | UnknownUserParameter | The Parameter ({name}) was not defined in template. | 400 | The error message returned because the specified parameter is not defined in the template. name indicates the parameter name. |
+          * | UserParameterMissing | The Parameter {name} was not provided. | 400 | The error message returned because no value is specified for the specified parameter that is defined in the template. name indicates the parameter name. |
+          * | ActionInProgress | Stack {name} already has an action ({action}) in progress. | 409 | The error message returned because the stack is being changed. name indicates the name or ID of the stack. action indicates the change operation. |
+          * | StackExists | The Stack ({name}) already exists. | 409 | The error message returned because a stack that has the same name already exists. name indicates the stack name. |
+          * | TemplateNotFound | The Template ({ ID }) could not be found. | 404 | The error message returned because the specified template does not exist. ID indicates the template ID. |
+          * | TemplateNotFound | The Template { ID } with version { version } could not be found. | 404 | The error message returned because the specified template or template version does not exist. ID indicates the template ID. version indicates the template version. |
           *
           * @param request CreateStackRequest
           * @return CreateStackResponse
@@ -962,11 +995,22 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * A stack is a collection of Resource Orchestration Service (ROS) resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see [Overview](~~172973~~).
-          * When you call this operation, you must take note of the following limits:
-          * *   You can create up to 200 stacks within an Alibaba Cloud account.
-          * *   You can create up to 200 resources in a stack.
-          * This topic provides an example on how to create a stack named `MyStack` in the China (Hangzhou) region. The template body of the stack is `{"ROSTemplateFormatVersion":"2015-09-01"}`.
+          * | Error code | Error message | HTTPS status code | Description |
+          * | ---------- | ------------- | ----------------- | ----------- |
+          * | CircularDependency | Circular Dependency Found: {reason}. | 400 | The error message returned because the template contains circular dependencies. reason indicates the cause of the error. |
+          * | InvalidSchema | {reason}. | 400 | The error message returned because the format of the template is invalid. reason indicates the cause of the error. |
+          * | InvalidTemplateAttribute | The Referenced Attribute ({resource} {name}) is incorrect. | 400 | The error message returned because the resource property that is referenced in the Outputs section of the template is invalid. resource indicates the resource name. name indicates the property name. |
+          * | InvalidTemplatePropertyType | The specified value type of ({resource} {section}) is incorrect. | 400 | The error message returned because the type of the resource property that is defined in a section of the template is invalid. resource indicates the resource name. section indicates the section name. |
+          * | InvalidTemplateReference | The specified reference "{name}" (in {referencer}) is incorrect. | 400 | The error message returned because the template contains an invalid reference. name indicates the reference name. referencer indicates the referencer name. |
+          * | InvalidTemplateSection | The template section is invalid: {section}. | 400 | The error message returned because the template contains an invalid section. section indicates the section name. |
+          * | InvalidTemplateVersion | The template version is invalid: {reason}. | 400 | The error message returned because the template version is invalid. reason indicates the cause of the error. |
+          * | StackValidationFailed | {reason}. | 400 | The error message returned because the stack failed to be validated. reason indicates the cause of the error. |
+          * | UnknownUserParameter | The Parameter ({name}) was not defined in template. | 400 | The error message returned because the specified parameter is not defined in the template. name indicates the parameter name. |
+          * | UserParameterMissing | The Parameter {name} was not provided. | 400 | The error message returned because no value is specified for the specified parameter that is defined in the template. name indicates the parameter name. |
+          * | ActionInProgress | Stack {name} already has an action ({action}) in progress. | 409 | The error message returned because the stack is being changed. name indicates the name or ID of the stack. action indicates the change operation. |
+          * | StackExists | The Stack ({name}) already exists. | 409 | The error message returned because a stack that has the same name already exists. name indicates the stack name. |
+          * | TemplateNotFound | The Template ({ ID }) could not be found. | 404 | The error message returned because the specified template does not exist. ID indicates the template ID. |
+          * | TemplateNotFound | The Template { ID } with version { version } could not be found. | 404 | The error message returned because the specified template or template version does not exist. ID indicates the template ID. version indicates the template version. |
           *
           * @param request CreateStackRequest
           * @return CreateStackResponse
@@ -978,12 +1022,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * A stack group is a collection of Resource Orchestration Service (ROS) stacks that you can manage as a unit. You can use an ROS template of a stack group to create stacks within Alibaba Cloud accounts in multiple regions.
-          * You can create a stack group that is granted self-managed or service-managed permissions:
-          * *   If you use an Alibaba Cloud account to create a self-managed stack group, the administrator account and the execution account are Alibaba Cloud accounts.
-          * *   If you enable a resource directory and use the management account or a delegated administrator account of the resource directory to create a service-managed stack group, the administrator account is the management account or delegated administrator account, and the execution account is a member of the resource directory.
-          * For more information about stack groups, see [Overview](~~154578~~).
-          * This topic provides an example on how to create a self-managed stack group named `MyStackGroup` by using a template. In this example, the template ID is `5ecd1e10-b0e9-4389-a565-e4c15efc****`. The region ID of the stack group is `cn-hangzhou`.
+          * The operation that you want to perform. Set the value to CreateStackGroup.
           *
           * @param tmpReq CreateStackGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1006,6 +1045,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDeploymentShrink))
             {
                 query["AutoDeployment"] = request.AutoDeploymentShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Capabilities))
+            {
+                query["Capabilities"] = request.Capabilities;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1079,12 +1122,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * A stack group is a collection of Resource Orchestration Service (ROS) stacks that you can manage as a unit. You can use an ROS template of a stack group to create stacks within Alibaba Cloud accounts in multiple regions.
-          * You can create a stack group that is granted self-managed or service-managed permissions:
-          * *   If you use an Alibaba Cloud account to create a self-managed stack group, the administrator account and the execution account are Alibaba Cloud accounts.
-          * *   If you enable a resource directory and use the management account or a delegated administrator account of the resource directory to create a service-managed stack group, the administrator account is the management account or delegated administrator account, and the execution account is a member of the resource directory.
-          * For more information about stack groups, see [Overview](~~154578~~).
-          * This topic provides an example on how to create a self-managed stack group named `MyStackGroup` by using a template. In this example, the template ID is `5ecd1e10-b0e9-4389-a565-e4c15efc****`. The region ID of the stack group is `cn-hangzhou`.
+          * The operation that you want to perform. Set the value to CreateStackGroup.
           *
           * @param tmpReq CreateStackGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1107,6 +1145,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDeploymentShrink))
             {
                 query["AutoDeployment"] = request.AutoDeploymentShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Capabilities))
+            {
+                query["Capabilities"] = request.Capabilities;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -1180,12 +1222,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * A stack group is a collection of Resource Orchestration Service (ROS) stacks that you can manage as a unit. You can use an ROS template of a stack group to create stacks within Alibaba Cloud accounts in multiple regions.
-          * You can create a stack group that is granted self-managed or service-managed permissions:
-          * *   If you use an Alibaba Cloud account to create a self-managed stack group, the administrator account and the execution account are Alibaba Cloud accounts.
-          * *   If you enable a resource directory and use the management account or a delegated administrator account of the resource directory to create a service-managed stack group, the administrator account is the management account or delegated administrator account, and the execution account is a member of the resource directory.
-          * For more information about stack groups, see [Overview](~~154578~~).
-          * This topic provides an example on how to create a self-managed stack group named `MyStackGroup` by using a template. In this example, the template ID is `5ecd1e10-b0e9-4389-a565-e4c15efc****`. The region ID of the stack group is `cn-hangzhou`.
+          * The operation that you want to perform. Set the value to CreateStackGroup.
           *
           * @param request CreateStackGroupRequest
           * @return CreateStackGroupResponse
@@ -1197,12 +1234,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * A stack group is a collection of Resource Orchestration Service (ROS) stacks that you can manage as a unit. You can use an ROS template of a stack group to create stacks within Alibaba Cloud accounts in multiple regions.
-          * You can create a stack group that is granted self-managed or service-managed permissions:
-          * *   If you use an Alibaba Cloud account to create a self-managed stack group, the administrator account and the execution account are Alibaba Cloud accounts.
-          * *   If you enable a resource directory and use the management account or a delegated administrator account of the resource directory to create a service-managed stack group, the administrator account is the management account or delegated administrator account, and the execution account is a member of the resource directory.
-          * For more information about stack groups, see [Overview](~~154578~~).
-          * This topic provides an example on how to create a self-managed stack group named `MyStackGroup` by using a template. In this example, the template ID is `5ecd1e10-b0e9-4389-a565-e4c15efc****`. The region ID of the stack group is `cn-hangzhou`.
+          * The operation that you want to perform. Set the value to CreateStackGroup.
           *
           * @param request CreateStackGroupRequest
           * @return CreateStackGroupResponse
@@ -2491,6 +2523,80 @@ namespace AlibabaCloud.SDK.ROS20190910
             return await DeleteTemplateScratchWithOptionsAsync(request, runtime);
         }
 
+        public DeregisterResourceTypeResponse DeregisterResourceTypeWithOptions(DeregisterResourceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeregisterResourceType",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeregisterResourceTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeregisterResourceTypeResponse> DeregisterResourceTypeWithOptionsAsync(DeregisterResourceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeregisterResourceType",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeregisterResourceTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeregisterResourceTypeResponse DeregisterResourceType(DeregisterResourceTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeregisterResourceTypeWithOptions(request, runtime);
+        }
+
+        public async Task<DeregisterResourceTypeResponse> DeregisterResourceTypeAsync(DeregisterResourceTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeregisterResourceTypeWithOptionsAsync(request, runtime);
+        }
+
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3292,9 +3398,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
-          * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.
-          * >  In the Examples section, only part of the sample code is provided.
+          * The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
           *
           * @param request GetFeatureDetailsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3332,9 +3436,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
-          * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.
-          * >  In the Examples section, only part of the sample code is provided.
+          * The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
           *
           * @param request GetFeatureDetailsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3372,9 +3474,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
-          * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.
-          * >  In the Examples section, only part of the sample code is provided.
+          * The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
           *
           * @param request GetFeatureDetailsRequest
           * @return GetFeatureDetailsResponse
@@ -3386,9 +3486,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
-          * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.
-          * >  In the Examples section, only part of the sample code is provided.
+          * The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
           *
           * @param request GetFeatureDetailsRequest
           * @return GetFeatureDetailsResponse
@@ -3400,7 +3498,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the details of `ALIYUN::ROS::WaitConditionHandle`.
+          * | HttpCode | Error codes | Error message | Description |
+          * | -------- | ----------- | ------------- | ----------- |
+          * | 404 | ResourceTypeNotFound | The Resource Type ({name}) could not be found. | The error message returned because the specified resource type does not exist. name indicates the name of the resource type. |
           *
           * @param request GetResourceTypeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3413,6 +3513,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
                 query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3434,7 +3538,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the details of `ALIYUN::ROS::WaitConditionHandle`.
+          * | HttpCode | Error codes | Error message | Description |
+          * | -------- | ----------- | ------------- | ----------- |
+          * | 404 | ResourceTypeNotFound | The Resource Type ({name}) could not be found. | The error message returned because the specified resource type does not exist. name indicates the name of the resource type. |
           *
           * @param request GetResourceTypeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3447,6 +3553,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
                 query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3468,7 +3578,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the details of `ALIYUN::ROS::WaitConditionHandle`.
+          * | HttpCode | Error codes | Error message | Description |
+          * | -------- | ----------- | ------------- | ----------- |
+          * | 404 | ResourceTypeNotFound | The Resource Type ({name}) could not be found. | The error message returned because the specified resource type does not exist. name indicates the name of the resource type. |
           *
           * @param request GetResourceTypeRequest
           * @return GetResourceTypeResponse
@@ -3480,7 +3592,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the details of `ALIYUN::ROS::WaitConditionHandle`.
+          * | HttpCode | Error codes | Error message | Description |
+          * | -------- | ----------- | ------------- | ----------- |
+          * | 404 | ResourceTypeNotFound | The Resource Type ({name}) could not be found. | The error message returned because the specified resource type does not exist. name indicates the name of the resource type. |
           *
           * @param request GetResourceTypeRequest
           * @return GetResourceTypeResponse
@@ -3498,6 +3612,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
                 query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3525,6 +3643,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
                 query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3934,7 +4056,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this example, the information about a stack group named `MyStackGroup` is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.
+          * | Error code | Error message | HTTP status code | Description |
+          * | ---------- | ------------- | ---------------- | ----------- |
+          * | StackGroupNotFound | The StackGroup ({name}) could not be found. | 404 | The error message returned because the specified stack group does not exist. name indicates the name of the stack group. |
           *
           * @param request GetStackGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3976,7 +4100,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this example, the information about a stack group named `MyStackGroup` is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.
+          * | Error code | Error message | HTTP status code | Description |
+          * | ---------- | ------------- | ---------------- | ----------- |
+          * | StackGroupNotFound | The StackGroup ({name}) could not be found. | 404 | The error message returned because the specified stack group does not exist. name indicates the name of the stack group. |
           *
           * @param request GetStackGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4018,7 +4144,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this example, the information about a stack group named `MyStackGroup` is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.
+          * | Error code | Error message | HTTP status code | Description |
+          * | ---------- | ------------- | ---------------- | ----------- |
+          * | StackGroupNotFound | The StackGroup ({name}) could not be found. | 404 | The error message returned because the specified stack group does not exist. name indicates the name of the stack group. |
           *
           * @param request GetStackGroupRequest
           * @return GetStackGroupResponse
@@ -4030,7 +4158,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this example, the information about a stack group named `MyStackGroup` is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.
+          * | Error code | Error message | HTTP status code | Description |
+          * | ---------- | ------------- | ---------------- | ----------- |
+          * | StackGroupNotFound | The StackGroup ({name}) could not be found. | 404 | The error message returned because the specified stack group does not exist. name indicates the name of the stack group. |
           *
           * @param request GetStackGroupRequest
           * @return GetStackGroupResponse
@@ -4358,7 +4488,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this topic, a resource named `WebServer` in a stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is queried. The stack is deployed in the China (Hangzhou) region.
+          * The operation that you want to perform. Set the value to GetStackResource.
           *
           * @param request GetStackResourceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4412,7 +4542,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this topic, a resource named `WebServer` in a stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is queried. The stack is deployed in the China (Hangzhou) region.
+          * The operation that you want to perform. Set the value to GetStackResource.
           *
           * @param request GetStackResourceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4466,7 +4596,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this topic, a resource named `WebServer` in a stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is queried. The stack is deployed in the China (Hangzhou) region.
+          * The operation that you want to perform. Set the value to GetStackResource.
           *
           * @param request GetStackResourceRequest
           * @return GetStackResourceResponse
@@ -4478,7 +4608,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this topic, a resource named `WebServer` in a stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is queried. The stack is deployed in the China (Hangzhou) region.
+          * The operation that you want to perform. Set the value to GetStackResource.
           *
           * @param request GetStackResourceRequest
           * @return GetStackResourceResponse
@@ -4646,9 +4776,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * *   For more information about the resources that support price inquiry in Resource Orchestration Service (ROS) templates, see the **Resource types that support price inquiry** section of the [Estimate resource prices](~~203165~~) topic.
-          * *   For more information about the resources that support price inquiry in Terraform templates, see the "ROS resources supported by Terraform" section of the [ROS features and resources supported by Terraform](~~184389~~) topic.****
-          * This topic provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create by using a template. In this example, the template body is `{"ROSTemplateFormatVersion": "2015-09-01", "Parameters": {"Isp": {"Type": "String"}, "Name": {"Type": "String"},"Netmode": {"Type": "String"}, "Bandwidth": {"Type": "Number", "Default": 5}}, "Resources": {"NewEip": {"Type": "ALIYUN::VPC::EIP","Properties": {"InstanceChargeType": "Prepaid", "PricingCycle": "Month", "Isp": {"Ref": "Isp"}, "Period": 1, "DeletionProtection": false, "AutoPay": false, "Name": {"Ref": "Name"}, "InternetChargeType": "PayByTraffic", "Netmode": { "Ref": "Netmode"},"Bandwidth": 5}}}}`.
+          * The operation that you want to perform. Set the value to GetTemplateEstimateCost.
           *
           * @param request GetTemplateEstimateCostRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4714,9 +4842,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * *   For more information about the resources that support price inquiry in Resource Orchestration Service (ROS) templates, see the **Resource types that support price inquiry** section of the [Estimate resource prices](~~203165~~) topic.
-          * *   For more information about the resources that support price inquiry in Terraform templates, see the "ROS resources supported by Terraform" section of the [ROS features and resources supported by Terraform](~~184389~~) topic.****
-          * This topic provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create by using a template. In this example, the template body is `{"ROSTemplateFormatVersion": "2015-09-01", "Parameters": {"Isp": {"Type": "String"}, "Name": {"Type": "String"},"Netmode": {"Type": "String"}, "Bandwidth": {"Type": "Number", "Default": 5}}, "Resources": {"NewEip": {"Type": "ALIYUN::VPC::EIP","Properties": {"InstanceChargeType": "Prepaid", "PricingCycle": "Month", "Isp": {"Ref": "Isp"}, "Period": 1, "DeletionProtection": false, "AutoPay": false, "Name": {"Ref": "Name"}, "InternetChargeType": "PayByTraffic", "Netmode": { "Ref": "Netmode"},"Bandwidth": 5}}}}`.
+          * The operation that you want to perform. Set the value to GetTemplateEstimateCost.
           *
           * @param request GetTemplateEstimateCostRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4782,9 +4908,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * *   For more information about the resources that support price inquiry in Resource Orchestration Service (ROS) templates, see the **Resource types that support price inquiry** section of the [Estimate resource prices](~~203165~~) topic.
-          * *   For more information about the resources that support price inquiry in Terraform templates, see the "ROS resources supported by Terraform" section of the [ROS features and resources supported by Terraform](~~184389~~) topic.****
-          * This topic provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create by using a template. In this example, the template body is `{"ROSTemplateFormatVersion": "2015-09-01", "Parameters": {"Isp": {"Type": "String"}, "Name": {"Type": "String"},"Netmode": {"Type": "String"}, "Bandwidth": {"Type": "Number", "Default": 5}}, "Resources": {"NewEip": {"Type": "ALIYUN::VPC::EIP","Properties": {"InstanceChargeType": "Prepaid", "PricingCycle": "Month", "Isp": {"Ref": "Isp"}, "Period": 1, "DeletionProtection": false, "AutoPay": false, "Name": {"Ref": "Name"}, "InternetChargeType": "PayByTraffic", "Netmode": { "Ref": "Netmode"},"Bandwidth": 5}}}}`.
+          * The operation that you want to perform. Set the value to GetTemplateEstimateCost.
           *
           * @param request GetTemplateEstimateCostRequest
           * @return GetTemplateEstimateCostResponse
@@ -4796,9 +4920,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * *   For more information about the resources that support price inquiry in Resource Orchestration Service (ROS) templates, see the **Resource types that support price inquiry** section of the [Estimate resource prices](~~203165~~) topic.
-          * *   For more information about the resources that support price inquiry in Terraform templates, see the "ROS resources supported by Terraform" section of the [ROS features and resources supported by Terraform](~~184389~~) topic.****
-          * This topic provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create by using a template. In this example, the template body is `{"ROSTemplateFormatVersion": "2015-09-01", "Parameters": {"Isp": {"Type": "String"}, "Name": {"Type": "String"},"Netmode": {"Type": "String"}, "Bandwidth": {"Type": "Number", "Default": 5}}, "Resources": {"NewEip": {"Type": "ALIYUN::VPC::EIP","Properties": {"InstanceChargeType": "Prepaid", "PricingCycle": "Month", "Isp": {"Ref": "Isp"}, "Period": 1, "DeletionProtection": false, "AutoPay": false, "Name": {"Ref": "Name"}, "InternetChargeType": "PayByTraffic", "Netmode": { "Ref": "Netmode"},"Bandwidth": 5}}}}`.
+          * The operation that you want to perform. Set the value to GetTemplateEstimateCost.
           *
           * @param request GetTemplateEstimateCostRequest
           * @return GetTemplateEstimateCostResponse
@@ -5479,8 +5601,180 @@ namespace AlibabaCloud.SDK.ROS20190910
             return await ListChangeSetsWithOptionsAsync(request, runtime);
         }
 
+        public ListResourceTypeRegistrationsResponse ListResourceTypeRegistrationsWithOptions(ListResourceTypeRegistrationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                query["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegistrationId))
+            {
+                query["RegistrationId"] = request.RegistrationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceTypeRegistrations",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceTypeRegistrationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListResourceTypeRegistrationsResponse> ListResourceTypeRegistrationsWithOptionsAsync(ListResourceTypeRegistrationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                query["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegistrationId))
+            {
+                query["RegistrationId"] = request.RegistrationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceTypeRegistrations",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceTypeRegistrationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListResourceTypeRegistrationsResponse ListResourceTypeRegistrations(ListResourceTypeRegistrationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListResourceTypeRegistrationsWithOptions(request, runtime);
+        }
+
+        public async Task<ListResourceTypeRegistrationsResponse> ListResourceTypeRegistrationsAsync(ListResourceTypeRegistrationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListResourceTypeRegistrationsWithOptionsAsync(request, runtime);
+        }
+
+        public ListResourceTypeVersionsResponse ListResourceTypeVersionsWithOptions(ListResourceTypeVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceTypeVersions",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceTypeVersionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListResourceTypeVersionsResponse> ListResourceTypeVersionsWithOptionsAsync(ListResourceTypeVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceTypeVersions",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceTypeVersionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListResourceTypeVersionsResponse ListResourceTypeVersions(ListResourceTypeVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListResourceTypeVersionsWithOptions(request, runtime);
+        }
+
+        public async Task<ListResourceTypeVersionsResponse> ListResourceTypeVersionsAsync(ListResourceTypeVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListResourceTypeVersionsWithOptionsAsync(request, runtime);
+        }
+
         /**
-          * This topic provides an example on how to query the list of resource types supported by Resource Orchestration Service (ROS).
+          * For more information about errors common to all operations, see [Common error codes](/help/en/resource-orchestration-service/latest/common-error-codes).
           *
           * @param request ListResourceTypesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5493,6 +5787,14 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
             {
                 query["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Provider))
+            {
+                query["Provider"] = request.Provider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5514,7 +5816,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the list of resource types supported by Resource Orchestration Service (ROS).
+          * For more information about errors common to all operations, see [Common error codes](/help/en/resource-orchestration-service/latest/common-error-codes).
           *
           * @param request ListResourceTypesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5527,6 +5829,14 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
             {
                 query["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Provider))
+            {
+                query["Provider"] = request.Provider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5548,7 +5858,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the list of resource types supported by Resource Orchestration Service (ROS).
+          * For more information about errors common to all operations, see [Common error codes](/help/en/resource-orchestration-service/latest/common-error-codes).
           *
           * @param request ListResourceTypesRequest
           * @return ListResourceTypesResponse
@@ -5560,7 +5870,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the list of resource types supported by Resource Orchestration Service (ROS).
+          * For more information about errors common to all operations, see [Common error codes](/help/en/resource-orchestration-service/latest/common-error-codes).
           *
           * @param request ListResourceTypesRequest
           * @return ListResourceTypesResponse
@@ -5892,7 +6202,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the list of stack groups. In this example, the stack groups that are in the active state and deployed in the China (Hangzhou) region are queried.
+          * For more information about common request parameters, see [Common parameters](~~131957~~).
           *
           * @param request ListStackGroupsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5946,7 +6256,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the list of stack groups. In this example, the stack groups that are in the active state and deployed in the China (Hangzhou) region are queried.
+          * For more information about common request parameters, see [Common parameters](~~131957~~).
           *
           * @param request ListStackGroupsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6000,7 +6310,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the list of stack groups. In this example, the stack groups that are in the active state and deployed in the China (Hangzhou) region are queried.
+          * For more information about common request parameters, see [Common parameters](~~131957~~).
           *
           * @param request ListStackGroupsRequest
           * @return ListStackGroupsResponse
@@ -6012,7 +6322,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the list of stack groups. In this example, the stack groups that are in the active state and deployed in the China (Hangzhou) region are queried.
+          * For more information about common request parameters, see [Common parameters](~~131957~~).
           *
           * @param request ListStackGroupsRequest
           * @return ListStackGroupsResponse
@@ -6156,9 +6466,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The ListStackOperationRisks operation is suitable for the following scenarios:
-          * *   You want to detect high risks that may arise in resources when you delete a stack that contains the resources, and query the reason for each risk in a resource.
-          * *   You want to detect risks of creation failure that may arise when you create a stack. In this case, Resource Orchestration Service (ROS) allows you to detect only the required permissions that are not granted to the Alibaba Cloud account of the caller.
+          * The ID of the stack.
           *
           * @param request ListStackOperationRisksRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6232,9 +6540,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The ListStackOperationRisks operation is suitable for the following scenarios:
-          * *   You want to detect high risks that may arise in resources when you delete a stack that contains the resources, and query the reason for each risk in a resource.
-          * *   You want to detect risks of creation failure that may arise when you create a stack. In this case, Resource Orchestration Service (ROS) allows you to detect only the required permissions that are not granted to the Alibaba Cloud account of the caller.
+          * The ID of the stack.
           *
           * @param request ListStackOperationRisksRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6308,9 +6614,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The ListStackOperationRisks operation is suitable for the following scenarios:
-          * *   You want to detect high risks that may arise in resources when you delete a stack that contains the resources, and query the reason for each risk in a resource.
-          * *   You want to detect risks of creation failure that may arise when you create a stack. In this case, Resource Orchestration Service (ROS) allows you to detect only the required permissions that are not granted to the Alibaba Cloud account of the caller.
+          * The ID of the stack.
           *
           * @param request ListStackOperationRisksRequest
           * @return ListStackOperationRisksResponse
@@ -6322,9 +6626,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The ListStackOperationRisks operation is suitable for the following scenarios:
-          * *   You want to detect high risks that may arise in resources when you delete a stack that contains the resources, and query the reason for each risk in a resource.
-          * *   You want to detect risks of creation failure that may arise when you create a stack. In this case, Resource Orchestration Service (ROS) allows you to detect only the required permissions that are not granted to the Alibaba Cloud account of the caller.
+          * The ID of the stack.
           *
           * @param request ListStackOperationRisksRequest
           * @return ListStackOperationRisksResponse
@@ -6434,7 +6736,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` in the China (Hangzhou) region are queried.
+          * | Error code | Error message | HTTP status code | Description |
+          * | ---------- | ------------- | ---------------- | ----------- |
+          * | StackNotFound | The Stack ({name}) could not be found. | 404 | The error message returned because the specified stack does not exist. name indicates the name or ID of the stack. |
           *
           * @param request ListStackResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6472,7 +6776,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` in the China (Hangzhou) region are queried.
+          * | Error code | Error message | HTTP status code | Description |
+          * | ---------- | ------------- | ---------------- | ----------- |
+          * | StackNotFound | The Stack ({name}) could not be found. | 404 | The error message returned because the specified stack does not exist. name indicates the name or ID of the stack. |
           *
           * @param request ListStackResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6510,7 +6816,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` in the China (Hangzhou) region are queried.
+          * | Error code | Error message | HTTP status code | Description |
+          * | ---------- | ------------- | ---------------- | ----------- |
+          * | StackNotFound | The Stack ({name}) could not be found. | 404 | The error message returned because the specified stack does not exist. name indicates the name or ID of the stack. |
           *
           * @param request ListStackResourcesRequest
           * @return ListStackResourcesResponse
@@ -6522,7 +6830,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` in the China (Hangzhou) region are queried.
+          * | Error code | Error message | HTTP status code | Description |
+          * | ---------- | ------------- | ---------------- | ----------- |
+          * | StackNotFound | The Stack ({name}) could not be found. | 404 | The error message returned because the specified stack does not exist. name indicates the name or ID of the stack. |
           *
           * @param request ListStackResourcesRequest
           * @return ListStackResourcesResponse
@@ -6534,7 +6844,10 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the list of stacks. In this example, the stacks that are deployed in the China (Hangzhou) region are queried.
+          * Specifies whether to return nested stacks. Default value: false. Valid values:
+          * *   true
+          * *   false
+          * > If the ParentStackId parameter is specified, you must set the ShowNestedStack parameter to true.
           *
           * @param request ListStacksRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6616,7 +6929,10 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the list of stacks. In this example, the stacks that are deployed in the China (Hangzhou) region are queried.
+          * Specifies whether to return nested stacks. Default value: false. Valid values:
+          * *   true
+          * *   false
+          * > If the ParentStackId parameter is specified, you must set the ShowNestedStack parameter to true.
           *
           * @param request ListStacksRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6698,7 +7014,10 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the list of stacks. In this example, the stacks that are deployed in the China (Hangzhou) region are queried.
+          * Specifies whether to return nested stacks. Default value: false. Valid values:
+          * *   true
+          * *   false
+          * > If the ParentStackId parameter is specified, you must set the ShowNestedStack parameter to true.
           *
           * @param request ListStacksRequest
           * @return ListStacksResponse
@@ -6710,7 +7029,10 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to query the list of stacks. In this example, the stacks that are deployed in the China (Hangzhou) region are queried.
+          * Specifies whether to return nested stacks. Default value: false. Valid values:
+          * *   true
+          * *   false
+          * > If the ParentStackId parameter is specified, you must set the ShowNestedStack parameter to true.
           *
           * @param request ListStacksRequest
           * @return ListStacksResponse
@@ -7749,6 +8071,116 @@ namespace AlibabaCloud.SDK.ROS20190910
             return await PreviewStackWithOptionsAsync(request, runtime);
         }
 
+        public RegisterResourceTypeResponse RegisterResourceTypeWithOptions(RegisterResourceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                query["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateURL))
+            {
+                query["TemplateURL"] = request.TemplateURL;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
+            {
+                body["TemplateBody"] = request.TemplateBody;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RegisterResourceType",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RegisterResourceTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RegisterResourceTypeResponse> RegisterResourceTypeWithOptionsAsync(RegisterResourceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                query["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateURL))
+            {
+                query["TemplateURL"] = request.TemplateURL;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
+            {
+                body["TemplateBody"] = request.TemplateBody;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RegisterResourceType",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RegisterResourceTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RegisterResourceTypeResponse RegisterResourceType(RegisterResourceTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RegisterResourceTypeWithOptions(request, runtime);
+        }
+
+        public async Task<RegisterResourceTypeResponse> RegisterResourceTypeAsync(RegisterResourceTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RegisterResourceTypeWithOptionsAsync(request, runtime);
+        }
+
         public SetDeletionProtectionResponse SetDeletionProtectionWithOptions(SetDeletionProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7829,6 +8261,96 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetDeletionProtectionWithOptionsAsync(request, runtime);
+        }
+
+        public SetResourceTypeResponse SetResourceTypeWithOptions(SetResourceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultVersionId))
+            {
+                query["DefaultVersionId"] = request.DefaultVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetResourceType",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetResourceTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SetResourceTypeResponse> SetResourceTypeWithOptionsAsync(SetResourceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultVersionId))
+            {
+                query["DefaultVersionId"] = request.DefaultVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetResourceType",
+                Version = "2019-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetResourceTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SetResourceTypeResponse SetResourceType(SetResourceTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetResourceTypeWithOptions(request, runtime);
+        }
+
+        public async Task<SetResourceTypeResponse> SetResourceTypeAsync(SetResourceTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetResourceTypeWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -8786,7 +9308,8 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this example, the template content `{"ROSTemplateFormatVersion": "2015-09-01"}` is specified to update a stack group named `MyStackGroup`. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+          * The description of the stack group.
+          * The description must be 1 to 256 characters in length.
           *
           * @param tmpReq UpdateStackGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8829,6 +9352,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDeploymentShrink))
             {
                 query["AutoDeployment"] = request.AutoDeploymentShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Capabilities))
+            {
+                query["Capabilities"] = request.Capabilities;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -8910,7 +9437,8 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this example, the template content `{"ROSTemplateFormatVersion": "2015-09-01"}` is specified to update a stack group named `MyStackGroup`. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+          * The description of the stack group.
+          * The description must be 1 to 256 characters in length.
           *
           * @param tmpReq UpdateStackGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8953,6 +9481,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDeploymentShrink))
             {
                 query["AutoDeployment"] = request.AutoDeploymentShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Capabilities))
+            {
+                query["Capabilities"] = request.Capabilities;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -9034,7 +9566,8 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this example, the template content `{"ROSTemplateFormatVersion": "2015-09-01"}` is specified to update a stack group named `MyStackGroup`. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+          * The description of the stack group.
+          * The description must be 1 to 256 characters in length.
           *
           * @param request UpdateStackGroupRequest
           * @return UpdateStackGroupResponse
@@ -9046,7 +9579,8 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this example, the template content `{"ROSTemplateFormatVersion": "2015-09-01"}` is specified to update a stack group named `MyStackGroup`. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+          * The description of the stack group.
+          * The description must be 1 to 256 characters in length.
           *
           * @param request UpdateStackGroupRequest
           * @return UpdateStackGroupResponse
@@ -9730,7 +10264,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to validate a template that you want to use to create a stack. In this example, the `TemplateURL` parameter is set to `oss://ros/template/demo`.
+          * The description of the template.
           *
           * @param request ValidateTemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9782,7 +10316,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to validate a template that you want to use to create a stack. In this example, the `TemplateURL` parameter is set to `oss://ros/template/demo`.
+          * The description of the template.
           *
           * @param request ValidateTemplateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -9834,7 +10368,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to validate a template that you want to use to create a stack. In this example, the `TemplateURL` parameter is set to `oss://ros/template/demo`.
+          * The description of the template.
           *
           * @param request ValidateTemplateRequest
           * @return ValidateTemplateResponse
@@ -9846,7 +10380,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * This topic provides an example on how to validate a template that you want to use to create a stack. In this example, the `TemplateURL` parameter is set to `oss://ros/template/demo`.
+          * The description of the template.
           *
           * @param request ValidateTemplateRequest
           * @return ValidateTemplateResponse

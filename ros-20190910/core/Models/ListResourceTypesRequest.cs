@@ -10,15 +10,19 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListResourceTypesRequest : TeaModel {
         /// <summary>
-        /// The entity type. Valid values:
-        /// 
-        /// *   All: all resource types.
-        /// *   Resource: resources other than DataSource resources. For more information, see [Resources](~~28863~~).
-        /// *   DataSource: DataSource resources.
+        /// The array of resource types.
         /// </summary>
         [NameInMap("EntityType")]
         [Validation(Required=false)]
         public string EntityType { get; set; }
+
+        [NameInMap("Provider")]
+        [Validation(Required=false)]
+        public string Provider { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
     }
 

@@ -10,62 +10,84 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetStackResourceResponseBody : TeaModel {
         /// <summary>
-        /// The time when the resource was created.
-        /// 
-        /// The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+        /// The list of the resource properties.
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// The description of the resource.
+        /// The physical ID of the resource.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// The time when the last successful drift detection was performed on the stack.
-        /// </summary>
         [NameInMap("DriftDetectionTime")]
         [Validation(Required=false)]
         public string DriftDetectionTime { get; set; }
 
         /// <summary>
-        /// The logical ID of the resource defined in the template.
+        /// The time when the last successful drift detection was performed on the stack.
         /// </summary>
         [NameInMap("LogicalResourceId")]
         [Validation(Required=false)]
         public string LogicalResourceId { get; set; }
 
         /// <summary>
-        /// The metadata.
+        /// The logical ID of the resource defined in the template.
         /// </summary>
         [NameInMap("Metadata")]
         [Validation(Required=false)]
         public Dictionary<string, object> Metadata { get; set; }
 
+        [NameInMap("ModuleInfo")]
+        [Validation(Required=false)]
+        public GetStackResourceResponseBodyModuleInfo ModuleInfo { get; set; }
+        public class GetStackResourceResponseBodyModuleInfo : TeaModel {
+            [NameInMap("LogicalIdHierarchy")]
+            [Validation(Required=false)]
+            public string LogicalIdHierarchy { get; set; }
+
+            [NameInMap("TypeHierarchy")]
+            [Validation(Required=false)]
+            public string TypeHierarchy { get; set; }
+
+        }
+
         /// <summary>
-        /// The physical ID of the resource.
+        /// The resource type.
         /// </summary>
         [NameInMap("PhysicalResourceId")]
         [Validation(Required=false)]
         public string PhysicalResourceId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The time when the resource was created.
+        /// 
+        /// The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of the resource properties.
+        /// The time when the resource was updated.
+        /// 
+        /// The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("ResourceAttributes")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> ResourceAttributes { get; set; }
+
+        /// <summary>
+        /// The name of the stack.
+        /// 
+        /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
+        /// </summary>
+        [NameInMap("ResourceDriftStatus")]
+        [Validation(Required=false)]
+        public string ResourceDriftStatus { get; set; }
 
         /// <summary>
         /// The status of the resource in the last successful drift detection. Valid values:
@@ -75,66 +97,34 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// *   NOT_CHECKED: ROS has not checked whether the actual configuration of the resource differs from its expected template configuration.
         /// *   IN_SYNC: The actual configuration of the resource matches its expected template configuration.
         /// </summary>
-        [NameInMap("ResourceDriftStatus")]
-        [Validation(Required=false)]
-        public string ResourceDriftStatus { get; set; }
-
-        /// <summary>
-        /// The resource type.
-        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
-        /// <summary>
-        /// The ID of the stack.
-        /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]
         public string StackId { get; set; }
 
-        /// <summary>
-        /// The name of the stack.
-        /// 
-        /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
-        /// </summary>
         [NameInMap("StackName")]
         [Validation(Required=false)]
         public string StackName { get; set; }
 
         /// <summary>
-        /// The status of the resource. Valid values:
-        /// 
-        /// *   CREATE_COMPLETE
-        /// *   CREATE_FAILED
-        /// *   CREATE_IN_PROGRESS
-        /// *   UPDATE_IN_PROGRESS
-        /// *   UPDATE_FAILED
-        /// *   UPDATE_COMPLETE
-        /// *   DELETE_IN_PROGRESS
-        /// *   DELETE_FAILED
-        /// *   CHECK_IN_PROGRESS
-        /// *   CHECK_FAILED
-        /// *   CHECK_COMPLETE
-        /// *   IMPORT_IN_PROGRESS
-        /// *   IMPORT_FAILED
-        /// *   IMPORT_COMPLETE
+        /// The reason why the resource is in its current state.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The reason why the resource is in its current state.
+        /// The metadata.
         /// </summary>
         [NameInMap("StatusReason")]
         [Validation(Required=false)]
         public string StatusReason { get; set; }
 
         /// <summary>
-        /// The time when the resource was updated.
-        /// 
-        /// The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+        /// The ID of the stack.
         /// </summary>
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]
