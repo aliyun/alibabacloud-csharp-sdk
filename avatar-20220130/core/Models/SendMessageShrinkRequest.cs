@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Avatar20220130.Models
 {
     public class SendMessageShrinkRequest : TeaModel {
+        [NameInMap("Feedback")]
+        [Validation(Required=false)]
+        public bool? Feedback { get; set; }
+
         [NameInMap("SessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }

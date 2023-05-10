@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Avatar20220130.Models
 {
     public class StopInstanceResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
