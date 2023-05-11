@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class StopLiveStreamingRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("DeviceName")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
+        public string DeviceName { get; set; }
 
         [NameInMap("IotId")]
         [Validation(Required=false)]
         public string IotId { get; set; }
 
-        [NameInMap("StreamType")]
-        [Validation(Required=false)]
-        public int? StreamType { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
+
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
+
+        [NameInMap("StreamType")]
+        [Validation(Required=false)]
+        public int? StreamType { get; set; }
 
     }
 

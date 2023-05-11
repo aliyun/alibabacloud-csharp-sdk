@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class QueryDeviceEventRecordResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QueryDeviceEventRecordResponseBodyData> Data { get; set; }
         public class QueryDeviceEventRecordResponseBodyData : TeaModel {
-            [NameInMap("EndTime")]
-            [Validation(Required=false)]
-            public string EndTime { get; set; }
-
             [NameInMap("BeginTime")]
             [Validation(Required=false)]
             public string BeginTime { get; set; }
+
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public string EndTime { get; set; }
 
             [NameInMap("FileName")]
             [Validation(Required=false)]
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Linkvisual20180120.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

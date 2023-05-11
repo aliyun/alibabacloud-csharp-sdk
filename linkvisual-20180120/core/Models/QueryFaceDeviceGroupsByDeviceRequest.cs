@@ -9,37 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class QueryFaceDeviceGroupsByDeviceRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("DeviceName")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
-        [NameInMap("IsolationId")]
-        [Validation(Required=false)]
-        public string IsolationId { get; set; }
+        public string DeviceName { get; set; }
 
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
-        [NameInMap("ProductKey")]
+        [NameInMap("IsolationId")]
         [Validation(Required=false)]
-        public string ProductKey { get; set; }
+        public string IsolationId { get; set; }
 
-        [NameInMap("DeviceName")]
+        [NameInMap("PageNo")]
         [Validation(Required=false)]
-        public string DeviceName { get; set; }
+        public int? PageNo { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("PageNo")]
+        [NameInMap("ProductKey")]
         [Validation(Required=false)]
-        public int? PageNo { get; set; }
+        public string ProductKey { get; set; }
 
     }
 

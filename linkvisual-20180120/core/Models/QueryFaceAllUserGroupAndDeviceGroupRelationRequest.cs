@@ -9,25 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class QueryFaceAllUserGroupAndDeviceGroupRelationRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IsolationId")]
         [Validation(Required=false)]
         public string IsolationId { get; set; }
 
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
     }
 

@@ -9,29 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class QueryDevicePictureFileRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("CaptureId")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
+        public string CaptureId { get; set; }
 
-        [NameInMap("ApiRevision")]
+        [NameInMap("DeviceName")]
         [Validation(Required=false)]
-        public string ApiRevision { get; set; }
+        public string DeviceName { get; set; }
+
+        [NameInMap("ExpireTime")]
+        [Validation(Required=false)]
+        public int? ExpireTime { get; set; }
 
         [NameInMap("IotId")]
         [Validation(Required=false)]
         public string IotId { get; set; }
 
-        [NameInMap("CaptureId")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public string CaptureId { get; set; }
+        public string IotInstanceId { get; set; }
 
         [NameInMap("PictureType")]
         [Validation(Required=false)]
         public int? PictureType { get; set; }
 
-        [NameInMap("IotInstanceId")]
+        [NameInMap("ProductKey")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public string ProductKey { get; set; }
+
+        [NameInMap("ThumbWidth")]
+        [Validation(Required=false)]
+        public int? ThumbWidth { get; set; }
 
     }
 

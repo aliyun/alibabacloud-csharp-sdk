@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class QueryFaceUserIdByCustomUserIdRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("CustomUserId")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
+        public string CustomUserId { get; set; }
 
         [NameInMap("IsolationId")]
         [Validation(Required=false)]
         public string IsolationId { get; set; }
-
-        [NameInMap("CustomUserId")]
-        [Validation(Required=false)]
-        public string CustomUserId { get; set; }
 
     }
 

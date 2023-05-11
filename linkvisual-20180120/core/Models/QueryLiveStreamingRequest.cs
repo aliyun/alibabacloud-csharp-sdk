@@ -9,37 +9,57 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class QueryLiveStreamingRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("CacheDuration")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
+        public int? CacheDuration { get; set; }
 
-        [NameInMap("ApiRevision")]
+        [NameInMap("DeviceName")]
         [Validation(Required=false)]
-        public string ApiRevision { get; set; }
+        public string DeviceName { get; set; }
 
-        [NameInMap("IotId")]
+        [NameInMap("EnableStun")]
         [Validation(Required=false)]
-        public string IotId { get; set; }
-
-        [NameInMap("StreamType")]
-        [Validation(Required=false)]
-        public int? StreamType { get; set; }
-
-        [NameInMap("ShouldEncrypt")]
-        [Validation(Required=false)]
-        public bool? ShouldEncrypt { get; set; }
+        public bool? EnableStun { get; set; }
 
         [NameInMap("EncryptType")]
         [Validation(Required=false)]
         public int? EncryptType { get; set; }
 
-        [NameInMap("Scheme")]
+        [NameInMap("ForceIFrame")]
         [Validation(Required=false)]
-        public string Scheme { get; set; }
+        public bool? ForceIFrame { get; set; }
+
+        [NameInMap("IotId")]
+        [Validation(Required=false)]
+        public string IotId { get; set; }
 
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
+
+        [NameInMap("PlayUnLimited")]
+        [Validation(Required=false)]
+        public bool? PlayUnLimited { get; set; }
+
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
+
+        [NameInMap("Scheme")]
+        [Validation(Required=false)]
+        public string Scheme { get; set; }
+
+        [NameInMap("ShouldEncrypt")]
+        [Validation(Required=false)]
+        public bool? ShouldEncrypt { get; set; }
+
+        [NameInMap("StreamType")]
+        [Validation(Required=false)]
+        public int? StreamType { get; set; }
+
+        [NameInMap("UrlValidDuration")]
+        [Validation(Required=false)]
+        public int? UrlValidDuration { get; set; }
 
     }
 

@@ -9,25 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class UpdateEventRecordPlanRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("EventTypes")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
-        [NameInMap("PlanId")]
-        [Validation(Required=false)]
-        public string PlanId { get; set; }
+        public string EventTypes { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("EventTypes")]
+        [NameInMap("PlanId")]
         [Validation(Required=false)]
-        public string EventTypes { get; set; }
+        public string PlanId { get; set; }
 
         [NameInMap("PreRecordDuration")]
         [Validation(Required=false)]

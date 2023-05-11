@@ -9,33 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class TriggerRecordRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("DeviceName")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
+        public string DeviceName { get; set; }
 
         [NameInMap("IotId")]
         [Validation(Required=false)]
         public string IotId { get; set; }
 
-        [NameInMap("StreamType")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public int? StreamType { get; set; }
+        public string IotInstanceId { get; set; }
 
         [NameInMap("PreRecordDuration")]
         [Validation(Required=false)]
         public int? PreRecordDuration { get; set; }
 
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
+
         [NameInMap("RecordDuration")]
         [Validation(Required=false)]
         public int? RecordDuration { get; set; }
 
-        [NameInMap("IotInstanceId")]
+        [NameInMap("StreamType")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public int? StreamType { get; set; }
 
     }
 

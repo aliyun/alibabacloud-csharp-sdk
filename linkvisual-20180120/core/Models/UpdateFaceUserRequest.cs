@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class UpdateFaceUserRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("CustomUserId")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
+        public string CustomUserId { get; set; }
 
-        [NameInMap("ApiRevision")]
+        [NameInMap("FacePicUrl")]
         [Validation(Required=false)]
-        public string ApiRevision { get; set; }
+        public string FacePicUrl { get; set; }
 
         [NameInMap("IsolationId")]
         [Validation(Required=false)]
         public string IsolationId { get; set; }
-
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -33,13 +29,9 @@ namespace AlibabaCloud.SDK.Linkvisual20180120.Models
         [Validation(Required=false)]
         public string Params { get; set; }
 
-        [NameInMap("FacePicUrl")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public string FacePicUrl { get; set; }
-
-        [NameInMap("CustomUserId")]
-        [Validation(Required=false)]
-        public string CustomUserId { get; set; }
+        public string UserId { get; set; }
 
     }
 

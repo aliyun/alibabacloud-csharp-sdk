@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class UpdateRecordPlanRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
+        public string Name { get; set; }
 
         [NameInMap("PlanId")]
         [Validation(Required=false)]
         public string PlanId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
 
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class DeleteFaceDeviceGroupRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("DeviceGroupId")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
+        public string DeviceGroupId { get; set; }
 
         [NameInMap("IsolationId")]
         [Validation(Required=false)]
         public string IsolationId { get; set; }
-
-        [NameInMap("DeviceGroupId")]
-        [Validation(Required=false)]
-        public string DeviceGroupId { get; set; }
 
     }
 

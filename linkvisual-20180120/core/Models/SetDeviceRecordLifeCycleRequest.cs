@@ -9,21 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class SetDeviceRecordLifeCycleRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("Day")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
+        public int? Day { get; set; }
 
-        [NameInMap("ApiRevision")]
+        [NameInMap("DeviceName")]
         [Validation(Required=false)]
-        public string ApiRevision { get; set; }
+        public string DeviceName { get; set; }
 
         [NameInMap("IotId")]
         [Validation(Required=false)]
         public string IotId { get; set; }
 
-        [NameInMap("Day")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public int? Day { get; set; }
+        public string IotInstanceId { get; set; }
+
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
 
     }
 

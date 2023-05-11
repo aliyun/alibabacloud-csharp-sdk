@@ -9,37 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class UpdateTimeTemplateRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("AllDay")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
-        [NameInMap("TemplateId")]
-        [Validation(Required=false)]
-        public string TemplateId { get; set; }
+        public int? AllDay { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("AllDay")]
+        [NameInMap("TemplateId")]
         [Validation(Required=false)]
-        public int? AllDay { get; set; }
+        public string TemplateId { get; set; }
 
         [NameInMap("TimeSections")]
         [Validation(Required=false)]
         public List<UpdateTimeTemplateRequestTimeSections> TimeSections { get; set; }
         public class UpdateTimeTemplateRequestTimeSections : TeaModel {
-            [NameInMap("DayOfWeek")]
-            [Validation(Required=false)]
-            public int? DayOfWeek { get; set; }
-
             [NameInMap("Begin")]
             [Validation(Required=false)]
             public int? Begin { get; set; }
+
+            [NameInMap("DayOfWeek")]
+            [Validation(Required=false)]
+            public int? DayOfWeek { get; set; }
 
             [NameInMap("End")]
             [Validation(Required=false)]

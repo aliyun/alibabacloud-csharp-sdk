@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class DeleteTimeTemplateResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

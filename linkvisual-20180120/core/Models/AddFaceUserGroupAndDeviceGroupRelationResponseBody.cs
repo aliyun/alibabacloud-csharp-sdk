@@ -9,29 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class AddFaceUserGroupAndDeviceGroupRelationResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddFaceUserGroupAndDeviceGroupRelationResponseBodyData Data { get; set; }
         public class AddFaceUserGroupAndDeviceGroupRelationResponseBodyData : TeaModel {
-            [NameInMap("ModifiedTime")]
-            [Validation(Required=false)]
-            public string ModifiedTime { get; set; }
             [NameInMap("ControlId")]
             [Validation(Required=false)]
             public string ControlId { get; set; }
-        };
+
+            [NameInMap("ModifiedTime")]
+            [Validation(Required=false)]
+            public string ModifiedTime { get; set; }
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

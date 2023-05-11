@@ -6,10 +6,10 @@ English | [简体中文](README-CN.md)
 
 ## Installation
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Linkvisual20180120
+dotnet add package AlibabaCloud.SDK.Linkvisual20180120
 ```
 
 ## Issues

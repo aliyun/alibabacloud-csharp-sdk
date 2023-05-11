@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class AddFaceDeviceGroupRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("DeviceGroupName")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
+        public string DeviceGroupName { get; set; }
 
         [NameInMap("IsolationId")]
         [Validation(Required=false)]
         public string IsolationId { get; set; }
-
-        [NameInMap("DeviceGroupName")]
-        [Validation(Required=false)]
-        public string DeviceGroupName { get; set; }
 
     }
 

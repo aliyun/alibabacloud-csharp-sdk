@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class QueryRecordPlanDeviceByPlanRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
-        [NameInMap("PlanId")]
-        [Validation(Required=false)]
-        public string PlanId { get; set; }
-
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
@@ -28,6 +16,10 @@ namespace AlibabaCloud.SDK.Linkvisual20180120.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("PlanId")]
+        [Validation(Required=false)]
+        public string PlanId { get; set; }
 
     }
 

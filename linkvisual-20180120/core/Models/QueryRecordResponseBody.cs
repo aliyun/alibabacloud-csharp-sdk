@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class QueryRecordResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -21,30 +21,57 @@ namespace AlibabaCloud.SDK.Linkvisual20180120.Models
             [Validation(Required=false)]
             public List<QueryRecordResponseBodyDataList> List { get; set; }
             public class QueryRecordResponseBodyDataList : TeaModel {
-                public string SnapshotUrl { get; set; }
-                public string EndTime { get; set; }
-                public int? RecordType { get; set; }
-                public int? StreamType { get; set; }
+                [NameInMap("BeginTime")]
+                [Validation(Required=false)]
                 public string BeginTime { get; set; }
+
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
+                public string EndTime { get; set; }
+
+                [NameInMap("FileName")]
+                [Validation(Required=false)]
                 public string FileName { get; set; }
-                public int? VideoFrameNumber { get; set; }
+
+                [NameInMap("FileSize")]
+                [Validation(Required=false)]
                 public int? FileSize { get; set; }
+
+                [NameInMap("RecordType")]
+                [Validation(Required=false)]
+                public int? RecordType { get; set; }
+
+                [NameInMap("SnapshotUrl")]
+                [Validation(Required=false)]
+                public string SnapshotUrl { get; set; }
+
+                [NameInMap("StreamType")]
+                [Validation(Required=false)]
+                public int? StreamType { get; set; }
+
+                [NameInMap("VideoFrameNumber")]
+                [Validation(Required=false)]
+                public int? VideoFrameNumber { get; set; }
+
             }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
+
             [NameInMap("Page")]
             [Validation(Required=false)]
             public int? Page { get; set; }
-        };
+
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

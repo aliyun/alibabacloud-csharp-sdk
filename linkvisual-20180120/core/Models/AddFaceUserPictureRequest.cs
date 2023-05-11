@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class AddFaceUserPictureRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("FacePicUrl")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
+        public string FacePicUrl { get; set; }
 
         [NameInMap("IsolationId")]
         [Validation(Required=false)]
@@ -24,10 +20,6 @@ namespace AlibabaCloud.SDK.Linkvisual20180120.Models
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
-
-        [NameInMap("FacePicUrl")]
-        [Validation(Required=false)]
-        public string FacePicUrl { get; set; }
 
     }
 

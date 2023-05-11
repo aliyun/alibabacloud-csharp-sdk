@@ -9,29 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class QueryDeviceVodUrlRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("DeviceName")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
+        public string DeviceName { get; set; }
 
-        [NameInMap("ApiRevision")]
+        [NameInMap("EnableStun")]
         [Validation(Required=false)]
-        public string ApiRevision { get; set; }
+        public bool? EnableStun { get; set; }
 
-        [NameInMap("IotId")]
+        [NameInMap("EncryptType")]
         [Validation(Required=false)]
-        public string IotId { get; set; }
+        public int? EncryptType { get; set; }
 
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
-        [NameInMap("ShouldEncrypt")]
+        [NameInMap("IotId")]
         [Validation(Required=false)]
-        public bool? ShouldEncrypt { get; set; }
+        public string IotId { get; set; }
 
-        [NameInMap("EncryptType")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public int? EncryptType { get; set; }
+        public string IotInstanceId { get; set; }
+
+        [NameInMap("PlayUnLimited")]
+        [Validation(Required=false)]
+        public bool? PlayUnLimited { get; set; }
+
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
 
         [NameInMap("Scheme")]
         [Validation(Required=false)]
@@ -41,9 +49,13 @@ namespace AlibabaCloud.SDK.Linkvisual20180120.Models
         [Validation(Required=false)]
         public int? SeekTime { get; set; }
 
-        [NameInMap("IotInstanceId")]
+        [NameInMap("ShouldEncrypt")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public bool? ShouldEncrypt { get; set; }
+
+        [NameInMap("UrlValidDuration")]
+        [Validation(Required=false)]
+        public int? UrlValidDuration { get; set; }
 
     }
 

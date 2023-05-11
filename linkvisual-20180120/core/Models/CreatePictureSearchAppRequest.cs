@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class CreatePictureSearchAppRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("Desc")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
+        public string Desc { get; set; }
 
-        [NameInMap("ApiRevision")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public string ApiRevision { get; set; }
+        public string IotInstanceId { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
-
-        [NameInMap("Desc")]
-        [Validation(Required=false)]
-        public string Desc { get; set; }
 
     }
 

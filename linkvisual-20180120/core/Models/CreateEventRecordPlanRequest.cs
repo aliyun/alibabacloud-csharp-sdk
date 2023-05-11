@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class CreateEventRecordPlanRequest : TeaModel {
-        [NameInMap("ApiProduct")]
+        [NameInMap("EventTypes")]
         [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
+        public string EventTypes { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
-
-        [NameInMap("EventTypes")]
-        [Validation(Required=false)]
-        public string EventTypes { get; set; }
 
         [NameInMap("PreRecordDuration")]
         [Validation(Required=false)]

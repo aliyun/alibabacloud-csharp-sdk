@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkvisual20180120.Models
 {
     public class QueryDeviceEventResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -21,34 +21,57 @@ namespace AlibabaCloud.SDK.Linkvisual20180120.Models
             [Validation(Required=false)]
             public List<QueryDeviceEventResponseBodyDataList> List { get; set; }
             public class QueryDeviceEventResponseBodyDataList : TeaModel {
-                public string EventId { get; set; }
-                public string EventTime { get; set; }
-                public int? EventType { get; set; }
-                public string EventPicId { get; set; }
-                public string EventDesc { get; set; }
+                [NameInMap("EventData")]
+                [Validation(Required=false)]
                 public string EventData { get; set; }
+
+                [NameInMap("EventDesc")]
+                [Validation(Required=false)]
+                public string EventDesc { get; set; }
+
+                [NameInMap("EventId")]
+                [Validation(Required=false)]
+                public string EventId { get; set; }
+
+                [NameInMap("EventPicId")]
+                [Validation(Required=false)]
+                public string EventPicId { get; set; }
+
+                [NameInMap("EventTime")]
+                [Validation(Required=false)]
+                public string EventTime { get; set; }
+
+                [NameInMap("EventType")]
+                [Validation(Required=false)]
+                public int? EventType { get; set; }
+
             }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("PageCount")]
-            [Validation(Required=false)]
-            public int? PageCount { get; set; }
-            [NameInMap("Total")]
-            [Validation(Required=false)]
-            public int? Total { get; set; }
+
             [NameInMap("Page")]
             [Validation(Required=false)]
             public int? Page { get; set; }
-        };
+
+            [NameInMap("PageCount")]
+            [Validation(Required=false)]
+            public int? PageCount { get; set; }
+
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+
+            [NameInMap("Total")]
+            [Validation(Required=false)]
+            public int? Total { get; set; }
+
+        }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
