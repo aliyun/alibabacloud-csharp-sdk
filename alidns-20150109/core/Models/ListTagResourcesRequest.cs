@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// The language.
+        /// The language in which you want some response parameters to be returned.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// The token that determines the start point of the query.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -31,28 +31,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource.
+        /// The resource type.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The key-value pairs of tags.
+        /// An array of tag key-value pairs.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// The key of the tag.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// The value of the tag.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

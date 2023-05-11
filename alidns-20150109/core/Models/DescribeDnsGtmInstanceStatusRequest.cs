@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmInstanceStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The number of unavailable addresses.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

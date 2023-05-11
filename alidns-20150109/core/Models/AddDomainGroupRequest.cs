@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDomainGroupRequest : TeaModel {
         /// <summary>
-        /// The name of the domain name group.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The language type.
+        /// The name of the domain name group.
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

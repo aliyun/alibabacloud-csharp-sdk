@@ -38,8 +38,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
-          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          * The operation that you want to perform. Set the value to AddCustomLine.
           *
           * @param request AddCustomLineRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -85,8 +84,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
-          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          * The operation that you want to perform. Set the value to AddCustomLine.
           *
           * @param request AddCustomLineRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -132,8 +130,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
-          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          * The operation that you want to perform. Set the value to AddCustomLine.
           *
           * @param request AddCustomLineRequest
           * @return AddCustomLineResponse
@@ -145,8 +142,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
-          * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+          * The operation that you want to perform. Set the value to AddCustomLine.
           *
           * @param request AddCustomLineRequest
           * @return AddCustomLineResponse
@@ -5002,7 +4998,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
+          * The operation that you want to perform. Set the value to **DescribeDnsProductInstances**.
           *
           * @param request DescribeDnsProductInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5012,6 +5008,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainType))
             {
                 query["DomainType"] = request.DomainType;
@@ -5019,6 +5019,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -5056,7 +5060,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
+          * The operation that you want to perform. Set the value to **DescribeDnsProductInstances**.
           *
           * @param request DescribeDnsProductInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5066,6 +5070,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainType))
             {
                 query["DomainType"] = request.DomainType;
@@ -5073,6 +5081,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -5110,7 +5122,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
+          * The operation that you want to perform. Set the value to **DescribeDnsProductInstances**.
           *
           * @param request DescribeDnsProductInstancesRequest
           * @return DescribeDnsProductInstancesResponse
@@ -5122,7 +5134,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
+          * The operation that you want to perform. Set the value to **DescribeDnsProductInstances**.
           *
           * @param request DescribeDnsProductInstancesRequest
           * @return DescribeDnsProductInstancesResponse
@@ -6091,13 +6103,6 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeDomainLogsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * >  This operation queries the authoritative server of the registry to obtain the name servers of a domain name. If the domain name is in the serverHold or clientHold state, an exception may occur.
-          *
-          * @param request DescribeDomainNsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainNsResponse
-         */
         public DescribeDomainNsResponse DescribeDomainNsWithOptions(DescribeDomainNsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6129,13 +6134,6 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDomainNsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * >  This operation queries the authoritative server of the registry to obtain the name servers of a domain name. If the domain name is in the serverHold or clientHold state, an exception may occur.
-          *
-          * @param request DescribeDomainNsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainNsResponse
-         */
         public async Task<DescribeDomainNsResponse> DescribeDomainNsWithOptionsAsync(DescribeDomainNsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6167,24 +6165,12 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDomainNsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * >  This operation queries the authoritative server of the registry to obtain the name servers of a domain name. If the domain name is in the serverHold or clientHold state, an exception may occur.
-          *
-          * @param request DescribeDomainNsRequest
-          * @return DescribeDomainNsResponse
-         */
         public DescribeDomainNsResponse DescribeDomainNs(DescribeDomainNsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDomainNsWithOptions(request, runtime);
         }
 
-        /**
-          * >  This operation queries the authoritative server of the registry to obtain the name servers of a domain name. If the domain name is in the serverHold or clientHold state, an exception may occur.
-          *
-          * @param request DescribeDomainNsRequest
-          * @return DescribeDomainNsResponse
-         */
         public async Task<DescribeDomainNsResponse> DescribeDomainNsAsync(DescribeDomainNsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11046,9 +11032,9 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * *   You can specify ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
-          * *   Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you specify only Tag.N.Value, an error message is returned.
-          * *   If you specify Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
+          * *   Set ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
+          * *   Tag.N is a resource tag that consists of a key-value pair. If you set only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you set only Tag.N.Value, an error message is returned.
+          * *   If you set both Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
           * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
           *
           * @param request ListTagResourcesRequest
@@ -11099,9 +11085,9 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * *   You can specify ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
-          * *   Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you specify only Tag.N.Value, an error message is returned.
-          * *   If you specify Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
+          * *   Set ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
+          * *   Tag.N is a resource tag that consists of a key-value pair. If you set only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you set only Tag.N.Value, an error message is returned.
+          * *   If you set both Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
           * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
           *
           * @param request ListTagResourcesRequest
@@ -11152,9 +11138,9 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * *   You can specify ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
-          * *   Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you specify only Tag.N.Value, an error message is returned.
-          * *   If you specify Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
+          * *   Set ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
+          * *   Tag.N is a resource tag that consists of a key-value pair. If you set only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you set only Tag.N.Value, an error message is returned.
+          * *   If you set both Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
           * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
           *
           * @param request ListTagResourcesRequest
@@ -11167,9 +11153,9 @@ namespace AlibabaCloud.SDK.Alidns20150109
         }
 
         /**
-          * *   You can specify ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
-          * *   Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you specify only Tag.N.Value, an error message is returned.
-          * *   If you specify Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
+          * *   Set ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
+          * *   Tag.N is a resource tag that consists of a key-value pair. If you set only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you set only Tag.N.Value, an error message is returned.
+          * *   If you set both Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
           * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
           *
           * @param request ListTagResourcesRequest

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.
+        /// The token used to start the next query. If no value is returned for NextToken, no next queries are sent.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The unique ID of the request.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the resource and tags, such as the resource ID, the resource type, tag keys, and tag values.
+        /// Details of the resource and tags, including the resource ID, the resource type, tag keys, and tag values.
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The type of the resource. The returned parameter value is fixed to DOMAIN.
+            /// The type of the resource. Only DOMAIN is returned.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]

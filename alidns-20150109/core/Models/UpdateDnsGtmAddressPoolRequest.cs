@@ -10,31 +10,31 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDnsGtmAddressPoolRequest : TeaModel {
         /// <summary>
-        /// The addresses in the address pool.
+        /// The address pools.
         /// </summary>
         [NameInMap("Addr")]
         [Validation(Required=false)]
         public List<UpdateDnsGtmAddressPoolRequestAddr> Addr { get; set; }
         public class UpdateDnsGtmAddressPoolRequestAddr : TeaModel {
             /// <summary>
-            /// The address.
+            /// The address in the address pool.
             /// </summary>
             [NameInMap("Addr")]
             [Validation(Required=false)]
             public string Addr { get; set; }
 
             /// <summary>
-            /// The source region of the address. The value is a JSON string.
+            /// The source region of the address, in JSON-formatted string.
             /// 
-            /// *   lineCode: the line code of the source region of the address. This parameter is deprecated, and lineCodes prevails.
+            /// *   LineCode: the line code of the source region of the address. The LineCode field is deprecated, and the lineCodes field is used as a substitute.
             /// 
-            /// *   lineCodes: the line codes of the source regions of the address.
+            /// *   LineCodes: the line code list of the source regions of addresses.
             /// 
-            /// *   lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:
+            /// *   lineCodeRectifyType: the rectification type of the line codes. Default value: AUTO. Valid values:
             /// 
-            ///     *   NO_NEED: no need for rectification
-            ///     *   RECTIFIED: rectified
-            ///     *   AUTO: automatic rectification
+            ///     *   NO_NEED: no need for rectification.
+            ///     *   RECTIFIED: rectified.
+            ///     *   AUTO: automatic rectification.
             /// </summary>
             [NameInMap("AttributeInfo")]
             [Validation(Required=false)]
@@ -48,18 +48,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public int? LbaWeight { get; set; }
 
             /// <summary>
-            /// The mode of the address. Valid values:
+            /// The response mode: Valid values:
             /// 
-            /// *   SMART: smart return
-            /// *   ONLINE: always online
-            /// *   OFFLINE: always offline
+            /// *   SMART: smart return.
+            /// *   ONLINE: always online.
+            /// *   OFFLINE: always offline.
             /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public string Mode { get; set; }
 
             /// <summary>
-            /// The description of the address.
+            /// The additional information about the address.
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The load balancing policy for the address pool. Valid values:
+        /// The load balancing policy of the address pool. Valid values:
         /// 
         /// *   ALL_RR: returns all addresses.
         /// *   RATIO: returns addresses by weight.

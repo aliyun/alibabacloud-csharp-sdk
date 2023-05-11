@@ -10,29 +10,29 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDnsGtmAddressPoolRequest : TeaModel {
         /// <summary>
-        /// The addresses in the address pool.
+        /// The address pools.
         /// </summary>
         [NameInMap("Addr")]
         [Validation(Required=false)]
         public List<AddDnsGtmAddressPoolRequestAddr> Addr { get; set; }
         public class AddDnsGtmAddressPoolRequestAddr : TeaModel {
             /// <summary>
-            /// The address.
+            /// The address in the address pool.
             /// </summary>
             [NameInMap("Addr")]
             [Validation(Required=false)]
             public string Addr { get; set; }
 
             /// <summary>
-            /// The source region of the address. The value is a JSON string.
+            /// The source region of the address, in JSON-formatted string.
             /// 
-            /// *   lineCode: the line code of the source region of the address.
+            /// *   LineCode: the line code of the source region of the address.
             /// 
             /// *   lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:
             /// 
-            ///     *   NO_NEED: no need for rectification
-            ///     *   RECTIFIED: rectified
-            ///     *   AUTO: automatic rectification
+            ///     *   NO_NEED: no need for rectification.
+            ///     *   RECTIFIED: rectified.
+            ///     *   AUTO: automatic rectification.
             /// </summary>
             [NameInMap("AttributeInfo")]
             [Validation(Required=false)]
@@ -46,18 +46,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public int? LbaWeight { get; set; }
 
             /// <summary>
-            /// The mode of the address. Valid values:
+            /// The response mode of address resolution. Valid values:
             /// 
-            /// *   SMART: smart return
-            /// *   ONLINE: always online
-            /// *   OFFLINE: always offline
+            /// *   SMART: smart return.
+            /// *   ONLINE: always online.
+            /// *   OFFLINE: always offline.
             /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public string Mode { get; set; }
 
             /// <summary>
-            /// The description of the address.
+            /// The additional information about the address.
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.
+        /// The number of consecutive health check failures.
         /// </summary>
         [NameInMap("EvaluationCount")]
         [Validation(Required=false)]
         public int? EvaluationCount { get; set; }
 
         /// <summary>
-        /// The ID of the GTM instance for which you want to create an address pool.
+        /// The instance ID.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -87,21 +87,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// The monitored nodes.
+        /// The city nodes to monitor.
         /// </summary>
         [NameInMap("IspCityNode")]
         [Validation(Required=false)]
         public List<AddDnsGtmAddressPoolRequestIspCityNode> IspCityNode { get; set; }
         public class AddDnsGtmAddressPoolRequestIspCityNode : TeaModel {
             /// <summary>
-            /// The code of the city where the monitored node is deployed.
+            /// The code of the city node to monitor.
             /// </summary>
             [NameInMap("CityCode")]
             [Validation(Required=false)]
             public string CityCode { get; set; }
 
             /// <summary>
-            /// The code of the Internet service provider (ISP) to which the monitored node belongs.
+            /// The code of the Internet service provider (ISP) node to monitor.
             /// </summary>
             [NameInMap("IspCode")]
             [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The load balancing policy for the address pool. Valid values:
+        /// The load balancing policy of the address pool. Valid values:
         /// 
         /// *   ALL_RR: returns all addresses.
         /// *   RATIO: returns addresses by weight.
@@ -127,26 +127,26 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string LbaStrategy { get; set; }
 
         /// <summary>
-        /// The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:
+        /// The extended information. The required parameters vary based on the health check protocol.
         /// 
         /// *   HTTP or HTTPS:
         /// 
-        ///     *   port: the port to check.
+        ///     *   port: the check port.
         /// 
-        ///     *   host: the host configuration.
+        ///     *   host: the host settings.
         /// 
-        ///     *   path: the health check URL.
+        ///     *   path: the URL path.
         /// 
-        ///     *   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal.
+        ///     *   code: the return code greater than the specified value.
         /// 
         ///     *   failureRate: the failure rate.
         /// 
-        ///     *   sni: specifies whether to enable Server Name Indication (SNI). This parameter is only required for the HTTPS protocol. Valid values:
+        ///     *   sni: specifies whether to enable server name indication (SNI). This parameter is available only when Health Check Protocol is set to HTTPS. Valid values:
         /// 
         ///         *   true: enables SNI.
-        ///         *   Other value: disables SNI.
+        ///         *   other: disables SNI.
         /// 
-        ///     *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:
+        ///     *   nodeType: The type of the node to monitor when the address pool type is DOMAIN. Valid values:
         /// 
         ///         *   IPV4
         ///         *   IPV6
@@ -159,18 +159,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// 
         ///     *   packetLossRate: the loss rate of ping packets.
         /// 
-        ///     *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:
+        ///     *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:
         /// 
         ///         *   IPV4
         ///         *   IPV6
         /// 
         /// *   TCP:
         /// 
-        ///     *   port: the port to check.
+        ///     *   port: the check port.
         /// 
         ///     *   failureRate: the failure rate.
         /// 
-        ///     *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:
+        ///     *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:
         /// 
         ///         *   IPV4
         ///         *   IPV6
@@ -180,24 +180,24 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string MonitorExtendInfo { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the health check. If this parameter is set to OPEN, the system validates the health check configuration. If this parameter is set to CLOSE, the health check configuration is discarded. Default value: CLOSE. Valid values:
+        /// Specifies whether to enable the health check feature. If you set this parameter to OPEN, the system verifies the health check configurations. If you set this parameter to CLOSE, the system discards the health check configurations. Default value: CLOSE. Valid values:
         /// 
-        /// *   OPEN: enables the health check.
-        /// *   CLOSE: disables the health check.
+        /// *   OPEN: enables the health check feature.
+        /// *   CLOSE: disables the health check feature.
         /// </summary>
         [NameInMap("MonitorStatus")]
         [Validation(Required=false)]
         public string MonitorStatus { get; set; }
 
         /// <summary>
-        /// The name of the address pool that you want to create.
+        /// The name of the address pool.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The protocol used for the health check. Valid values:
+        /// The health check protocol. Valid values:
         /// 
         /// *   HTTP
         /// *   HTTPS
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// The health check timeout period. Unit: milliseconds.
+        /// The period of health check timeout. Unit: milliseconds.
         /// </summary>
         [NameInMap("Timeout")]
         [Validation(Required=false)]
@@ -218,9 +218,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// The type of the address pool. Valid values:
         /// 
-        /// *   IPV4: IPv4 address
-        /// *   IPV6: IPv6 address
-        /// *   DOMAIN: domain name
+        /// *   IPV4: IPv4 address.
+        /// *   IPV6: IPv6 address.
+        /// *   DOMAIN: domain name.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
