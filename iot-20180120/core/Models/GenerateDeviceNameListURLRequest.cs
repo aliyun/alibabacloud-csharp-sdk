@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GenerateDeviceNameListURLRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.
+        /// 
+        /// >*   If your instance has an ID, you must specify the ID for this parameter. Otherwise, the call fails.
+        /// >*   If your instance has no **Overview** page or ID, you do not need to configure this parameter.
+        /// 
+        /// For more information, see [Overview](~~356505~~).
+        /// </summary>
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }

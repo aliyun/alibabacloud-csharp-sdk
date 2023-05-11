@@ -9,14 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetDeviceShadowRequest : TeaModel {
+        /// <summary>
+        /// The DeviceName of the device.
+        /// </summary>
         [NameInMap("DeviceName")]
         [Validation(Required=false)]
         public string DeviceName { get; set; }
 
+        /// <summary>
+        /// The ID of the instance. You can view the ID of the instance on the **Overview** page in the IoT Platform console.****
+        /// 
+        /// >*   If the instance has an ID, you must specify the **IotInstanceId** parameter. If you do not specify this parameter, the call fails.
+        /// >*   If the instance does not have an **ID** or the **Overview** page is not displayed, you do not need to specify this parameter.
+        /// 
+        /// For more information, see [Overview](~~356505~~).
+        /// </summary>
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
+        /// <summary>
+        /// The **ProductKey** of the product to which the device belongs.
+        /// </summary>
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }

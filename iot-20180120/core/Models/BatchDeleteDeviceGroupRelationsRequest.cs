@@ -13,20 +13,37 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public List<BatchDeleteDeviceGroupRelationsRequestDevice> Device { get; set; }
         public class BatchDeleteDeviceGroupRelationsRequestDevice : TeaModel {
+            /// <summary>
+            /// The names of the devices to be removed. You can specify a maximum of 200 devices.
+            /// </summary>
             [NameInMap("DeviceName")]
             [Validation(Required=false)]
             public string DeviceName { get; set; }
 
+            /// <summary>
+            /// The ProductKeys of the products to which the devices belong. You can specify a maximum of 200 ProductKeys.
+            /// </summary>
             [NameInMap("ProductKey")]
             [Validation(Required=false)]
             public string ProductKey { get; set; }
 
         }
 
+        /// <summary>
+        /// The ID of the group. The ID is the globally unique identifier (GUID) for the group.
+        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        /// <summary>
+        /// The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.
+        /// 
+        /// >*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.
+        /// >*   If your instance has no **Overview** page or ID, you do not need to set this parameter.
+        /// 
+        /// For more information, see [Overview](~~356505~~).
+        /// </summary>
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }

@@ -9,14 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class DeleteConsumerGroupSubscribeRelationRequest : TeaModel {
+        /// <summary>
+        /// The ID of the consumer group. You can call the [QuerySubscribeRelation](~~170352~~) operation to query the consumer group ID in an AMQP subscription. You can also go to the IoT Platform console,and choose **Rules** > **Server-side Subscription** to view the consumer group ID.
+        /// </summary>
         [NameInMap("ConsumerGroupId")]
         [Validation(Required=false)]
         public string ConsumerGroupId { get; set; }
 
+        /// <summary>
+        /// The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.
+        /// 
+        /// >*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.
+        /// >*   If your instance has no **Overview** page or ID, you do not need to set this parameter.
+        /// 
+        /// For more information, see [Overview](~~356505~~).
+        /// </summary>
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
+        /// <summary>
+        /// The **ProductKey** of the product that is specified for the subscription.
+        /// </summary>
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }

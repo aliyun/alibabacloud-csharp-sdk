@@ -9,32 +9,58 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class InvokeThingServiceResponseBody : TeaModel {
+        /// <summary>
+        /// The error code returned if the call fails. For more information, see [Error codes](~~87387~~).
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// The data returned if the call is successful.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public InvokeThingServiceResponseBodyData Data { get; set; }
         public class InvokeThingServiceResponseBodyData : TeaModel {
+            /// <summary>
+            /// The ID of the message. IoT Platform sends the message to the device to call the service.
+            /// </summary>
             [NameInMap("MessageId")]
             [Validation(Required=false)]
             public string MessageId { get; set; }
 
+            /// <summary>
+            /// The result of the synchronous call.
+            /// 
+            /// If you asynchronously call the service, this parameter is not returned.
+            /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public string Result { get; set; }
 
         }
 
+        /// <summary>
+        /// The error message returned if the call fails.
+        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the call was successful. Valid values:
+        /// 
+        /// *   **true**: The call was successful. However, this value does not indicate that the service is implemented. To obtain the implementation result, view the logs of the device.
+        /// *   **false**: The call failed.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

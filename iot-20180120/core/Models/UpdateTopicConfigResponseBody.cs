@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
+        public string Message { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -9,10 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class DeleteProductTopicRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.
+        /// 
+        /// >*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.
+        /// >*   If your instance has no **Overview** page or ID, you do not need to set this parameter.
+        /// 
+        /// For more information, see [Overview](~~356505~~).
+        /// </summary>
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the topic category that you want to delete.
+        /// </summary>
         [NameInMap("TopicId")]
         [Validation(Required=false)]
         public string TopicId { get; set; }

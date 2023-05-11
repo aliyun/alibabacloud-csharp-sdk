@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ImportDTDataRequest : TeaModel {
+        [NameInMap("DTInstanceId")]
+        [Validation(Required=false)]
+        public string DTInstanceId { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }

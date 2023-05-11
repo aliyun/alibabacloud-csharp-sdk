@@ -17,6 +17,28 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public BatchCheckImportDeviceResponseBodyData Data { get; set; }
         public class BatchCheckImportDeviceResponseBodyData : TeaModel {
+            [NameInMap("InvalidDetailList")]
+            [Validation(Required=false)]
+            public List<BatchCheckImportDeviceResponseBodyDataInvalidDetailList> InvalidDetailList { get; set; }
+            public class BatchCheckImportDeviceResponseBodyDataInvalidDetailList : TeaModel {
+                [NameInMap("DeviceName")]
+                [Validation(Required=false)]
+                public string DeviceName { get; set; }
+
+                [NameInMap("DeviceSecret")]
+                [Validation(Required=false)]
+                public string DeviceSecret { get; set; }
+
+                [NameInMap("ErrorMsg")]
+                [Validation(Required=false)]
+                public string ErrorMsg { get; set; }
+
+                [NameInMap("Sn")]
+                [Validation(Required=false)]
+                public string Sn { get; set; }
+
+            }
+
             [NameInMap("InvalidDeviceNameList")]
             [Validation(Required=false)]
             public List<string> InvalidDeviceNameList { get; set; }

@@ -9,26 +9,62 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetThingModelTslPublishedRequest : TeaModel {
+        /// <summary>
+        /// The identifier of the custom TSL module. Each identifier is unique in a product.
+        /// 
+        /// If you do not specify this parameter, the default module is queried.
+        /// </summary>
         [NameInMap("FunctionBlockId")]
         [Validation(Required=false)]
         public string FunctionBlockId { get; set; }
 
+        /// <summary>
+        /// The ID of the instance. You can view the instance **ID** on the **Overview** page in the IoT Platform console.
+        /// 
+        /// >*   If your instance has an ID, you must configure this parameter. If you do not set this parameter, the call fails.
+        /// >*   If your instance has no **Overview** page or ID, you do not need to set this parameter.
+        /// 
+        /// For more information, see [Overview](~~356505~~).
+        /// </summary>
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
+        /// <summary>
+        /// The version number of the TSL model.
+        /// 
+        /// You can call the [ListThingModelVersion](~~150318~~) operation to view the version numbers of the TSL model for a product.
+        /// 
+        /// If you do not specify this parameter, the last published TSL model version is returned.
+        /// </summary>
         [NameInMap("ModelVersion")]
         [Validation(Required=false)]
         public string ModelVersion { get; set; }
 
+        /// <summary>
+        /// The **ProductKey** of the product.
+        /// </summary>
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// 
+        /// >  You cannot specify this parameter.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to retrieve a simplified TSL model.
+        /// 
+        /// *   true: retrieves a simplified TSL model. A simplified TSL model includes only the **identifier** and **dataType** attributes of properties, services, events, and related input or output parameters. Simplified TSL models can be used by device developers for reference.
+        /// *   false: retrieves the complete TSL model. A complete TSL model includes all the parameters and values of properties, services, and events. Complete TSL models can be used by cloud application developers for reference.
+        /// 
+        /// Default value: false.
+        /// </summary>
         [NameInMap("Simple")]
         [Validation(Required=false)]
         public bool? Simple { get; set; }
