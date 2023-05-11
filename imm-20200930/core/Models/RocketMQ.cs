@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class RocketMQ : TeaModel {
-        [NameInMap("Endpoint")]
-        [Validation(Required=false)]
-        public string Endpoint { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

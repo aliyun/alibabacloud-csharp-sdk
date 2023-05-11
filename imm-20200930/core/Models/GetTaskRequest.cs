@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        [NameInMap("RequestDefinition")]
+        [Validation(Required=false)]
+        public bool? RequestDefinition { get; set; }
+
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

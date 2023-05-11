@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
             [NameInMap("Height")]
             [Validation(Required=false)]
-            public int? Height { get; set; }
+            public double? Height { get; set; }
 
             [NameInMap("Interval")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
             [NameInMap("Width")]
             [Validation(Required=false)]
-            public int? Width { get; set; }
+            public double? Width { get; set; }
 
         }
 
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
             [NameInMap("Height")]
             [Validation(Required=false)]
-            public int? Height { get; set; }
+            public double? Height { get; set; }
 
             [NameInMap("Interval")]
             [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
             [NameInMap("Width")]
             [Validation(Required=false)]
-            public int? Width { get; set; }
+            public double? Width { get; set; }
 
         }
 

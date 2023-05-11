@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        [NameInMap("RequestDefinition")]
+        [Validation(Required=false)]
+        public bool? RequestDefinition { get; set; }
+
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public string Sort { get; set; }

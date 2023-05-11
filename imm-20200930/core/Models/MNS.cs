@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class MNS : TeaModel {
-        [NameInMap("Endpoint")]
-        [Validation(Required=false)]
-        public string Endpoint { get; set; }
-
         [NameInMap("TopicName")]
         [Validation(Required=false)]
         public string TopicName { get; set; }

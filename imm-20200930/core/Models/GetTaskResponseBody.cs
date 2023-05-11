@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        [NameInMap("Progress")]
+        [Validation(Required=false)]
+        public int? Progress { get; set; }
+
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
+
+        [NameInMap("TaskRequestDefinition")]
+        [Validation(Required=false)]
+        public string TaskRequestDefinition { get; set; }
 
         [NameInMap("TaskType")]
         [Validation(Required=false)]
