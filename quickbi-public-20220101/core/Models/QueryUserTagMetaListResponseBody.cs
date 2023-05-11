@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
         }
 
+        /// <summary>
+        /// Queries the metadata list of member tags in an organization.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

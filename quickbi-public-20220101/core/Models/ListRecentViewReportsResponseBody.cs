@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public ListRecentViewReportsResponseBodyResult Result { get; set; }
         public class ListRecentViewReportsResponseBodyResult : TeaModel {
+            [NameInMap("Attention")]
+            [Validation(Required=false)]
+            public string Attention { get; set; }
+
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<ListRecentViewReportsResponseBodyResultData> Data { get; set; }

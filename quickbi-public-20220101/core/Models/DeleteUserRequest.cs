@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public string TransferUserId { get; set; }
 
+        /// <summary>
+        /// Deletes a user from a specified organization.
+        /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }

@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        /// <summary>
+        /// Add organization members.
+        /// </summary>
         [NameInMap("AdminUser")]
         [Validation(Required=false)]
         public bool? AdminUser { get; set; }

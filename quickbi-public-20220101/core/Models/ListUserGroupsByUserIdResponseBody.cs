@@ -55,6 +55,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
         }
 
+        /// <summary>
+        /// The user group modifier. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

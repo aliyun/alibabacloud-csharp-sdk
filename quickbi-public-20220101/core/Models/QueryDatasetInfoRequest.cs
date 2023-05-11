@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDatasetInfoRequest : TeaModel {
+        /// <summary>
+        /// Queries information about a specified dataset.
+        /// </summary>
         [NameInMap("DatasetId")]
         [Validation(Required=false)]
         public string DatasetId { get; set; }

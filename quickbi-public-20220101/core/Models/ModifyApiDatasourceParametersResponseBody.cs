@@ -8,27 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
-    public class AuthorizeMenuResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
+    public class ModifyApiDatasourceParametersResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// The number of authorized menus.
-        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public int? Result { get; set; }
+        public bool? Result { get; set; }
 
-        /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

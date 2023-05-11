@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class DeleteUserGroupRequest : TeaModel {
+        /// <summary>
+        /// The ID of the user group.
+        /// </summary>
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]
         public string UserGroupId { get; set; }

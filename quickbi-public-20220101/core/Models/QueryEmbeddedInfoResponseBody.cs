@@ -45,6 +45,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
         }
 
+        /// <summary>
+        /// Indicates whether the request is successful. Valid values:
+        /// 
+        /// *   true: The request was successful.
+        /// *   false: The request failed.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

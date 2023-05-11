@@ -9,14 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class UpdateUserGroupRequest : TeaModel {
+        /// <summary>
+        /// The description of the user group.
+        /// 
+        /// *   Format verification: Maximum length 255
+        /// *   Special format verification: Chinese and English digits\_ \ / | () ] \[
+        /// </summary>
         [NameInMap("UserGroupDescription")]
         [Validation(Required=false)]
         public string UserGroupDescription { get; set; }
 
+        /// <summary>
+        /// The ID of the user group.
+        /// </summary>
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]
         public string UserGroupId { get; set; }
 
+        /// <summary>
+        /// The name of the user group.
+        /// 
+        /// *   Format verification: Maximum length 255
+        /// *   Special format verification: Chinese and English digits\_ \ / | () ] \[
+        /// </summary>
         [NameInMap("UserGroupName")]
         [Validation(Required=false)]
         public string UserGroupName { get; set; }

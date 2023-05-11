@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class UpdateDataLevelPermissionStatusRequest : TeaModel {
+        /// <summary>
+        /// The ID of the training dataset that you want to remove from the specified custom linguistic model.
+        /// </summary>
         [NameInMap("CubeId")]
         [Validation(Required=false)]
         public string CubeId { get; set; }

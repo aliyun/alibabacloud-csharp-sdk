@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
-    public class ListPortalMenuAuthorizationRequest : TeaModel {
-        /// <summary>
-        /// The ID of the BI portal.
-        /// </summary>
-        [NameInMap("DataPortalId")]
+    public class AllotDatasetAccelerationTaskRequest : TeaModel {
+        [NameInMap("CubeId")]
         [Validation(Required=false)]
-        public string DataPortalId { get; set; }
+        public string CubeId { get; set; }
 
     }
 

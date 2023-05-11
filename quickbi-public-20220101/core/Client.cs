@@ -37,6 +37,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          * Indicates whether the request is successful. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request failed.
+          *
+          * @param request AddDataLevelPermissionRuleUsersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddDataLevelPermissionRuleUsersResponse
+         */
         public AddDataLevelPermissionRuleUsersResponse AddDataLevelPermissionRuleUsersWithOptions(AddDataLevelPermissionRuleUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -64,6 +73,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddDataLevelPermissionRuleUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Indicates whether the request is successful. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request failed.
+          *
+          * @param request AddDataLevelPermissionRuleUsersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddDataLevelPermissionRuleUsersResponse
+         */
         public async Task<AddDataLevelPermissionRuleUsersResponse> AddDataLevelPermissionRuleUsersWithOptionsAsync(AddDataLevelPermissionRuleUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -91,18 +109,41 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddDataLevelPermissionRuleUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Indicates whether the request is successful. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request failed.
+          *
+          * @param request AddDataLevelPermissionRuleUsersRequest
+          * @return AddDataLevelPermissionRuleUsersResponse
+         */
         public AddDataLevelPermissionRuleUsersResponse AddDataLevelPermissionRuleUsers(AddDataLevelPermissionRuleUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddDataLevelPermissionRuleUsersWithOptions(request, runtime);
         }
 
+        /**
+          * Indicates whether the request is successful. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request failed.
+          *
+          * @param request AddDataLevelPermissionRuleUsersRequest
+          * @return AddDataLevelPermissionRuleUsersResponse
+         */
         public async Task<AddDataLevelPermissionRuleUsersResponse> AddDataLevelPermissionRuleUsersAsync(AddDataLevelPermissionRuleUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddDataLevelPermissionRuleUsersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ROW_LEVEL
+          *
+          * @param request AddDataLevelPermissionWhiteListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddDataLevelPermissionWhiteListResponse
+         */
         public AddDataLevelPermissionWhiteListResponse AddDataLevelPermissionWhiteListWithOptions(AddDataLevelPermissionWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -146,6 +187,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddDataLevelPermissionWhiteListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ROW_LEVEL
+          *
+          * @param request AddDataLevelPermissionWhiteListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddDataLevelPermissionWhiteListResponse
+         */
         public async Task<AddDataLevelPermissionWhiteListResponse> AddDataLevelPermissionWhiteListWithOptionsAsync(AddDataLevelPermissionWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -189,12 +237,24 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<AddDataLevelPermissionWhiteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ROW_LEVEL
+          *
+          * @param request AddDataLevelPermissionWhiteListRequest
+          * @return AddDataLevelPermissionWhiteListResponse
+         */
         public AddDataLevelPermissionWhiteListResponse AddDataLevelPermissionWhiteList(AddDataLevelPermissionWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddDataLevelPermissionWhiteListWithOptions(request, runtime);
         }
 
+        /**
+          * ROW_LEVEL
+          *
+          * @param request AddDataLevelPermissionWhiteListRequest
+          * @return AddDataLevelPermissionWhiteListResponse
+         */
         public async Task<AddDataLevelPermissionWhiteListResponse> AddDataLevelPermissionWhiteListAsync(AddDataLevelPermissionWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -781,6 +841,72 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddWorkspaceUsersWithOptionsAsync(request, runtime);
+        }
+
+        public AllotDatasetAccelerationTaskResponse AllotDatasetAccelerationTaskWithOptions(AllotDatasetAccelerationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CubeId))
+            {
+                query["CubeId"] = request.CubeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AllotDatasetAccelerationTask",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AllotDatasetAccelerationTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AllotDatasetAccelerationTaskResponse> AllotDatasetAccelerationTaskWithOptionsAsync(AllotDatasetAccelerationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CubeId))
+            {
+                query["CubeId"] = request.CubeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AllotDatasetAccelerationTask",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AllotDatasetAccelerationTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AllotDatasetAccelerationTaskResponse AllotDatasetAccelerationTask(AllotDatasetAccelerationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AllotDatasetAccelerationTaskWithOptions(request, runtime);
+        }
+
+        public async Task<AllotDatasetAccelerationTaskResponse> AllotDatasetAccelerationTaskAsync(AllotDatasetAccelerationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AllotDatasetAccelerationTaskWithOptionsAsync(request, runtime);
         }
 
         public AuthorizeMenuResponse AuthorizeMenuWithOptions(AuthorizeMenuRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1675,6 +1801,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return await DelayTicketExpireTimeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * {"ruleId":"a5bb24da-***-a891683e14da","cubeId":"7c7223ae-***-3c744528014b","delModel":{"userGroups":["0d5fb19b-***-1248fc27ca51","3d2c23d4-***-f6390f325c2d"],"users":["4334***358","Huang***3fa822"]}}
+          *
+          * @param request DeleteDataLevelPermissionRuleUsersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDataLevelPermissionRuleUsersResponse
+         */
         public DeleteDataLevelPermissionRuleUsersResponse DeleteDataLevelPermissionRuleUsersWithOptions(DeleteDataLevelPermissionRuleUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1702,6 +1835,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteDataLevelPermissionRuleUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * {"ruleId":"a5bb24da-***-a891683e14da","cubeId":"7c7223ae-***-3c744528014b","delModel":{"userGroups":["0d5fb19b-***-1248fc27ca51","3d2c23d4-***-f6390f325c2d"],"users":["4334***358","Huang***3fa822"]}}
+          *
+          * @param request DeleteDataLevelPermissionRuleUsersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDataLevelPermissionRuleUsersResponse
+         */
         public async Task<DeleteDataLevelPermissionRuleUsersResponse> DeleteDataLevelPermissionRuleUsersWithOptionsAsync(DeleteDataLevelPermissionRuleUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1729,18 +1869,37 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteDataLevelPermissionRuleUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * {"ruleId":"a5bb24da-***-a891683e14da","cubeId":"7c7223ae-***-3c744528014b","delModel":{"userGroups":["0d5fb19b-***-1248fc27ca51","3d2c23d4-***-f6390f325c2d"],"users":["4334***358","Huang***3fa822"]}}
+          *
+          * @param request DeleteDataLevelPermissionRuleUsersRequest
+          * @return DeleteDataLevelPermissionRuleUsersResponse
+         */
         public DeleteDataLevelPermissionRuleUsersResponse DeleteDataLevelPermissionRuleUsers(DeleteDataLevelPermissionRuleUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDataLevelPermissionRuleUsersWithOptions(request, runtime);
         }
 
+        /**
+          * {"ruleId":"a5bb24da-***-a891683e14da","cubeId":"7c7223ae-***-3c744528014b","delModel":{"userGroups":["0d5fb19b-***-1248fc27ca51","3d2c23d4-***-f6390f325c2d"],"users":["4334***358","Huang***3fa822"]}}
+          *
+          * @param request DeleteDataLevelPermissionRuleUsersRequest
+          * @return DeleteDataLevelPermissionRuleUsersResponse
+         */
         public async Task<DeleteDataLevelPermissionRuleUsersResponse> DeleteDataLevelPermissionRuleUsersAsync(DeleteDataLevelPermissionRuleUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDataLevelPermissionRuleUsersWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The ID of the training dataset that you want to remove from the specified custom linguistic model.
+          *
+          * @param request DeleteDataLevelRuleConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDataLevelRuleConfigResponse
+         */
         public DeleteDataLevelRuleConfigResponse DeleteDataLevelRuleConfigWithOptions(DeleteDataLevelRuleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1772,6 +1931,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteDataLevelRuleConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The ID of the training dataset that you want to remove from the specified custom linguistic model.
+          *
+          * @param request DeleteDataLevelRuleConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDataLevelRuleConfigResponse
+         */
         public async Task<DeleteDataLevelRuleConfigResponse> DeleteDataLevelRuleConfigWithOptionsAsync(DeleteDataLevelRuleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1803,12 +1969,24 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<DeleteDataLevelRuleConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The ID of the training dataset that you want to remove from the specified custom linguistic model.
+          *
+          * @param request DeleteDataLevelRuleConfigRequest
+          * @return DeleteDataLevelRuleConfigResponse
+         */
         public DeleteDataLevelRuleConfigResponse DeleteDataLevelRuleConfig(DeleteDataLevelRuleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDataLevelRuleConfigWithOptions(request, runtime);
         }
 
+        /**
+          * The ID of the training dataset that you want to remove from the specified custom linguistic model.
+          *
+          * @param request DeleteDataLevelRuleConfigRequest
+          * @return DeleteDataLevelRuleConfigResponse
+         */
         public async Task<DeleteDataLevelRuleConfigResponse> DeleteDataLevelRuleConfigAsync(DeleteDataLevelRuleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2375,6 +2553,96 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return await GetUserGroupInfoWithOptionsAsync(request, runtime);
         }
 
+        public ListApiDatasourceResponse ListApiDatasourceWithOptions(ListApiDatasourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWord))
+            {
+                query["KeyWord"] = request.KeyWord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApiDatasource",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApiDatasourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListApiDatasourceResponse> ListApiDatasourceWithOptionsAsync(ListApiDatasourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWord))
+            {
+                query["KeyWord"] = request.KeyWord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApiDatasource",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApiDatasourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListApiDatasourceResponse ListApiDatasource(ListApiDatasourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListApiDatasourceWithOptions(request, runtime);
+        }
+
+        public async Task<ListApiDatasourceResponse> ListApiDatasourceAsync(ListApiDatasourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListApiDatasourceWithOptionsAsync(request, runtime);
+        }
+
         public ListByUserGroupIdResponse ListByUserGroupIdWithOptions(ListByUserGroupIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2507,6 +2775,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return await ListCollectionsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
+          *
+          * @param request ListCubeDataLevelPermissionConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListCubeDataLevelPermissionConfigResponse
+         */
         public ListCubeDataLevelPermissionConfigResponse ListCubeDataLevelPermissionConfigWithOptions(ListCubeDataLevelPermissionConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2538,6 +2813,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListCubeDataLevelPermissionConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
+          *
+          * @param request ListCubeDataLevelPermissionConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListCubeDataLevelPermissionConfigResponse
+         */
         public async Task<ListCubeDataLevelPermissionConfigResponse> ListCubeDataLevelPermissionConfigWithOptionsAsync(ListCubeDataLevelPermissionConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2569,12 +2851,24 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<ListCubeDataLevelPermissionConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
+          *
+          * @param request ListCubeDataLevelPermissionConfigRequest
+          * @return ListCubeDataLevelPermissionConfigResponse
+         */
         public ListCubeDataLevelPermissionConfigResponse ListCubeDataLevelPermissionConfig(ListCubeDataLevelPermissionConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListCubeDataLevelPermissionConfigWithOptions(request, runtime);
         }
 
+        /**
+          * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
+          *
+          * @param request ListCubeDataLevelPermissionConfigRequest
+          * @return ListCubeDataLevelPermissionConfigResponse
+         */
         public async Task<ListCubeDataLevelPermissionConfigResponse> ListCubeDataLevelPermissionConfigAsync(ListCubeDataLevelPermissionConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3147,6 +3441,95 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return await ListUserGroupsByUserIdWithOptionsAsync(request, runtime);
         }
 
+        public ModifyApiDatasourceParametersResponse ModifyApiDatasourceParametersWithOptions(ModifyApiDatasourceParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApiDatasourceParameters",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApiDatasourceParametersResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyApiDatasourceParametersResponse> ModifyApiDatasourceParametersWithOptionsAsync(ModifyApiDatasourceParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApiDatasourceParameters",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApiDatasourceParametersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyApiDatasourceParametersResponse ModifyApiDatasourceParameters(ModifyApiDatasourceParametersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyApiDatasourceParametersWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyApiDatasourceParametersResponse> ModifyApiDatasourceParametersAsync(ModifyApiDatasourceParametersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyApiDatasourceParametersWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * f4cc43bc3***
+          *
+          * @param request QueryDataServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryDataServiceResponse
+         */
         public QueryDataServiceResponse QueryDataServiceWithOptions(QueryDataServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3182,6 +3565,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDataServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * f4cc43bc3***
+          *
+          * @param request QueryDataServiceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryDataServiceResponse
+         */
         public async Task<QueryDataServiceResponse> QueryDataServiceWithOptionsAsync(QueryDataServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3217,18 +3607,39 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDataServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * f4cc43bc3***
+          *
+          * @param request QueryDataServiceRequest
+          * @return QueryDataServiceResponse
+         */
         public QueryDataServiceResponse QueryDataService(QueryDataServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryDataServiceWithOptions(request, runtime);
         }
 
+        /**
+          * f4cc43bc3***
+          *
+          * @param request QueryDataServiceRequest
+          * @return QueryDataServiceResponse
+         */
         public async Task<QueryDataServiceResponse> QueryDataServiceAsync(QueryDataServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryDataServiceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The execution result of the interface is returned. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request fails.
+          *
+          * @param request QueryDatasetDetailInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryDatasetDetailInfoResponse
+         */
         public QueryDatasetDetailInfoResponse QueryDatasetDetailInfoWithOptions(QueryDatasetDetailInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3256,6 +3667,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDatasetDetailInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The execution result of the interface is returned. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request fails.
+          *
+          * @param request QueryDatasetDetailInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryDatasetDetailInfoResponse
+         */
         public async Task<QueryDatasetDetailInfoResponse> QueryDatasetDetailInfoWithOptionsAsync(QueryDatasetDetailInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3283,12 +3703,28 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryDatasetDetailInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The execution result of the interface is returned. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request fails.
+          *
+          * @param request QueryDatasetDetailInfoRequest
+          * @return QueryDatasetDetailInfoResponse
+         */
         public QueryDatasetDetailInfoResponse QueryDatasetDetailInfo(QueryDatasetDetailInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryDatasetDetailInfoWithOptions(request, runtime);
         }
 
+        /**
+          * The execution result of the interface is returned. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request fails.
+          *
+          * @param request QueryDatasetDetailInfoRequest
+          * @return QueryDatasetDetailInfoResponse
+         */
         public async Task<QueryDatasetDetailInfoResponse> QueryDatasetDetailInfoAsync(QueryDatasetDetailInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5175,6 +5611,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return await SetDataLevelPermissionExtraConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Indicates whether the request is successful. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request failed.
+          *
+          * @param request SetDataLevelPermissionRuleConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetDataLevelPermissionRuleConfigResponse
+         */
         public SetDataLevelPermissionRuleConfigResponse SetDataLevelPermissionRuleConfigWithOptions(SetDataLevelPermissionRuleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5202,6 +5647,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<SetDataLevelPermissionRuleConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Indicates whether the request is successful. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request failed.
+          *
+          * @param request SetDataLevelPermissionRuleConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetDataLevelPermissionRuleConfigResponse
+         */
         public async Task<SetDataLevelPermissionRuleConfigResponse> SetDataLevelPermissionRuleConfigWithOptionsAsync(SetDataLevelPermissionRuleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5229,18 +5683,41 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<SetDataLevelPermissionRuleConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Indicates whether the request is successful. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request failed.
+          *
+          * @param request SetDataLevelPermissionRuleConfigRequest
+          * @return SetDataLevelPermissionRuleConfigResponse
+         */
         public SetDataLevelPermissionRuleConfigResponse SetDataLevelPermissionRuleConfig(SetDataLevelPermissionRuleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetDataLevelPermissionRuleConfigWithOptions(request, runtime);
         }
 
+        /**
+          * Indicates whether the request is successful. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request failed.
+          *
+          * @param request SetDataLevelPermissionRuleConfigRequest
+          * @return SetDataLevelPermissionRuleConfigResponse
+         */
         public async Task<SetDataLevelPermissionRuleConfigResponse> SetDataLevelPermissionRuleConfigAsync(SetDataLevelPermissionRuleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetDataLevelPermissionRuleConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
+          *
+          * @param request SetDataLevelPermissionWhiteListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetDataLevelPermissionWhiteListResponse
+         */
         public SetDataLevelPermissionWhiteListResponse SetDataLevelPermissionWhiteListWithOptions(SetDataLevelPermissionWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5268,6 +5745,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<SetDataLevelPermissionWhiteListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
+          *
+          * @param request SetDataLevelPermissionWhiteListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetDataLevelPermissionWhiteListResponse
+         */
         public async Task<SetDataLevelPermissionWhiteListResponse> SetDataLevelPermissionWhiteListWithOptionsAsync(SetDataLevelPermissionWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5295,18 +5779,39 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<SetDataLevelPermissionWhiteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
+          *
+          * @param request SetDataLevelPermissionWhiteListRequest
+          * @return SetDataLevelPermissionWhiteListResponse
+         */
         public SetDataLevelPermissionWhiteListResponse SetDataLevelPermissionWhiteList(SetDataLevelPermissionWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetDataLevelPermissionWhiteListWithOptions(request, runtime);
         }
 
+        /**
+          * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
+          *
+          * @param request SetDataLevelPermissionWhiteListRequest
+          * @return SetDataLevelPermissionWhiteListResponse
+         */
         public async Task<SetDataLevelPermissionWhiteListResponse> SetDataLevelPermissionWhiteListAsync(SetDataLevelPermissionWhiteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetDataLevelPermissionWhiteListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The execution result of the interface. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request failed.
+          *
+          * @param request UpdateDataLevelPermissionStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateDataLevelPermissionStatusResponse
+         */
         public UpdateDataLevelPermissionStatusResponse UpdateDataLevelPermissionStatusWithOptions(UpdateDataLevelPermissionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5342,6 +5847,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateDataLevelPermissionStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The execution result of the interface. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request failed.
+          *
+          * @param request UpdateDataLevelPermissionStatusRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateDataLevelPermissionStatusResponse
+         */
         public async Task<UpdateDataLevelPermissionStatusResponse> UpdateDataLevelPermissionStatusWithOptionsAsync(UpdateDataLevelPermissionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5377,12 +5891,28 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<UpdateDataLevelPermissionStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The execution result of the interface. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request failed.
+          *
+          * @param request UpdateDataLevelPermissionStatusRequest
+          * @return UpdateDataLevelPermissionStatusResponse
+         */
         public UpdateDataLevelPermissionStatusResponse UpdateDataLevelPermissionStatus(UpdateDataLevelPermissionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateDataLevelPermissionStatusWithOptions(request, runtime);
         }
 
+        /**
+          * The execution result of the interface. Valid values:
+          * *   true: The request was successful.
+          * *   false: The request failed.
+          *
+          * @param request UpdateDataLevelPermissionStatusRequest
+          * @return UpdateDataLevelPermissionStatusResponse
+         */
         public async Task<UpdateDataLevelPermissionStatusResponse> UpdateDataLevelPermissionStatusAsync(UpdateDataLevelPermissionStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
