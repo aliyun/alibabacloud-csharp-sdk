@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string MessageContent { get; set; }
 
+        [NameInMap("MessageExpiryInterval")]
+        [Validation(Required=false)]
+        public long? MessageExpiryInterval { get; set; }
+
         /// <summary>
         /// The payload identifier of the message when you use MQTT 5.0 for communication. Valid values:
         /// 
@@ -96,6 +100,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("ResponseTopic")]
         [Validation(Required=false)]
         public string ResponseTopic { get; set; }
+
+        [NameInMap("Retained")]
+        [Validation(Required=false)]
+        public bool? Retained { get; set; }
 
         /// <summary>
         /// The custom topic for the device that receives the message.

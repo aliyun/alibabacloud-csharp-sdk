@@ -25143,6 +25143,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["IotInstanceId"] = request.IotInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageExpiryInterval))
+            {
+                query["MessageExpiryInterval"] = request.MessageExpiryInterval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayloadFormatIndicator))
             {
                 query["PayloadFormatIndicator"] = request.PayloadFormatIndicator;
@@ -25158,6 +25162,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseTopic))
             {
                 query["ResponseTopic"] = request.ResponseTopic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Retained))
+            {
+                query["Retained"] = request.Retained;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicFullName))
             {
@@ -25224,6 +25232,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             {
                 query["IotInstanceId"] = request.IotInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageExpiryInterval))
+            {
+                query["MessageExpiryInterval"] = request.MessageExpiryInterval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayloadFormatIndicator))
             {
                 query["PayloadFormatIndicator"] = request.PayloadFormatIndicator;
@@ -25239,6 +25251,10 @@ namespace AlibabaCloud.SDK.Iot20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseTopic))
             {
                 query["ResponseTopic"] = request.ResponseTopic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Retained))
+            {
+                query["Retained"] = request.Retained;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicFullName))
             {
