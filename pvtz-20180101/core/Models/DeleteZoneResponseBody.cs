@@ -9,13 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DeleteZoneResponseBody : TeaModel {
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// zone ID
+        /// </summary>
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

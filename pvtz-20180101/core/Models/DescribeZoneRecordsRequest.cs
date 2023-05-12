@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeZoneRecordsRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
-        [NameInMap("ZoneId")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string ZoneId { get; set; }
+        public string Lang { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -29,25 +25,24 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("UserClientIp")]
+        [NameInMap("SearchMode")]
         [Validation(Required=false)]
-        public string UserClientIp { get; set; }
+        public string SearchMode { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string Tag { get; set; }
 
-        [NameInMap("SearchMode")]
+        [NameInMap("UserClientIp")]
         [Validation(Required=false)]
-        public string SearchMode { get; set; }
+        public string UserClientIp { get; set; }
 
-        [NameInMap("OrderBy")]
+        /// <summary>
+        /// Zone ID。
+        /// </summary>
+        [NameInMap("ZoneId")]
         [Validation(Required=false)]
-        public string OrderBy { get; set; }
-
-        [NameInMap("Direction")]
-        [Validation(Required=false)]
-        public string Direction { get; set; }
+        public string ZoneId { get; set; }
 
     }
 

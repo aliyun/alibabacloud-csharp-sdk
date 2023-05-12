@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
         [NameInMap("ProxyPattern")]
         [Validation(Required=false)]
         public string ProxyPattern { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

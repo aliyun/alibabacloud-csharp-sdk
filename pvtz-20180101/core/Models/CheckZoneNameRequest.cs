@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("ZoneName")]
-        [Validation(Required=false)]
-        public string ZoneName { get; set; }
-
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
+
+        [NameInMap("ZoneName")]
+        [Validation(Required=false)]
+        public string ZoneName { get; set; }
 
     }
 

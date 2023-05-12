@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
-    public class DescribeUserServiceStatusResponseBody : TeaModel {
-        [NameInMap("Status")]
+    public class DescribeResolverRuleRequest : TeaModel {
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string Lang { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("RuleId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string RuleId { get; set; }
 
     }
 

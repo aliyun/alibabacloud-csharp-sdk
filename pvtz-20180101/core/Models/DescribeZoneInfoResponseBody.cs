@@ -9,45 +9,80 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeZoneInfoResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("BindVpcs")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public DescribeZoneInfoResponseBodyBindVpcs BindVpcs { get; set; }
+        public class DescribeZoneInfoResponseBodyBindVpcs : TeaModel {
+            [NameInMap("Vpc")]
+            [Validation(Required=false)]
+            public List<DescribeZoneInfoResponseBodyBindVpcsVpc> Vpc { get; set; }
+            public class DescribeZoneInfoResponseBodyBindVpcsVpc : TeaModel {
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
 
-        [NameInMap("SlaveDns")]
-        [Validation(Required=false)]
-        public bool? SlaveDns { get; set; }
+                [NameInMap("RegionName")]
+                [Validation(Required=false)]
+                public string RegionName { get; set; }
 
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+                /// <summary>
+                /// Vpc ID。
+                /// </summary>
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
 
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
+                [NameInMap("VpcName")]
+                [Validation(Required=false)]
+                public string VpcName { get; set; }
 
-        [NameInMap("ProxyPattern")]
-        [Validation(Required=false)]
-        public string ProxyPattern { get; set; }
+                [NameInMap("VpcType")]
+                [Validation(Required=false)]
+                public string VpcType { get; set; }
+
+                [NameInMap("VpcUserId")]
+                [Validation(Required=false)]
+                public long? VpcUserId { get; set; }
+
+            }
+
+        }
 
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
-        [NameInMap("ZoneType")]
+        [NameInMap("CreateTimestamp")]
         [Validation(Required=false)]
-        public string ZoneType { get; set; }
+        public long? CreateTimestamp { get; set; }
+
+        [NameInMap("IsPtr")]
+        [Validation(Required=false)]
+        public bool? IsPtr { get; set; }
+
+        [NameInMap("ProxyPattern")]
+        [Validation(Required=false)]
+        public string ProxyPattern { get; set; }
+
+        [NameInMap("RecordCount")]
+        [Validation(Required=false)]
+        public int? RecordCount { get; set; }
 
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
-        [NameInMap("ZoneName")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ZoneName { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("ZoneTag")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public string ZoneTag { get; set; }
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("SlaveDns")]
+        [Validation(Required=false)]
+        public bool? SlaveDns { get; set; }
 
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]
@@ -57,33 +92,24 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public long? UpdateTimestamp { get; set; }
 
-        [NameInMap("RecordCount")]
+        /// <summary>
+        /// Zone ID。
+        /// </summary>
+        [NameInMap("ZoneId")]
         [Validation(Required=false)]
-        public int? RecordCount { get; set; }
+        public string ZoneId { get; set; }
 
-        [NameInMap("CreateTimestamp")]
+        [NameInMap("ZoneName")]
         [Validation(Required=false)]
-        public long? CreateTimestamp { get; set; }
+        public string ZoneName { get; set; }
 
-        [NameInMap("BindVpcs")]
+        [NameInMap("ZoneTag")]
         [Validation(Required=false)]
-        public DescribeZoneInfoResponseBodyBindVpcs BindVpcs { get; set; }
-        public class DescribeZoneInfoResponseBodyBindVpcs : TeaModel {
-            [NameInMap("Vpc")]
-            [Validation(Required=false)]
-            public List<DescribeZoneInfoResponseBodyBindVpcsVpc> Vpc { get; set; }
-            public class DescribeZoneInfoResponseBodyBindVpcsVpc : TeaModel {
-                public string VpcName { get; set; }
-                public string VpcId { get; set; }
-                public string RegionName { get; set; }
-                public long? VpcUserId { get; set; }
-                public string RegionId { get; set; }
-            }
-        };
+        public string ZoneTag { get; set; }
 
-        [NameInMap("IsPtr")]
+        [NameInMap("ZoneType")]
         [Validation(Required=false)]
-        public bool? IsPtr { get; set; }
+        public string ZoneType { get; set; }
 
     }
 

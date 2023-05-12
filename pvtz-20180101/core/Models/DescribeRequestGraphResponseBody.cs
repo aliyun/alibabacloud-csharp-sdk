@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeRequestGraphResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("RequestDetails")]
         [Validation(Required=false)]
         public DescribeRequestGraphResponseBodyRequestDetails RequestDetails { get; set; }
@@ -21,11 +17,25 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             [Validation(Required=false)]
             public List<DescribeRequestGraphResponseBodyRequestDetailsZoneRequestTop> ZoneRequestTop { get; set; }
             public class DescribeRequestGraphResponseBodyRequestDetailsZoneRequestTop : TeaModel {
-                public string Time { get; set; }
+                [NameInMap("RequestCount")]
+                [Validation(Required=false)]
                 public long? RequestCount { get; set; }
+
+                [NameInMap("Time")]
+                [Validation(Required=false)]
+                public string Time { get; set; }
+
+                [NameInMap("Timestamp")]
+                [Validation(Required=false)]
                 public long? Timestamp { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -13,17 +13,16 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("ResourceId")]
-        [Validation(Required=false)]
-        public string ResourceId { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
         public string NewResourceGroupId { get; set; }
+
+        /// <summary>
+        /// Zone Id。
+        /// </summary>
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public string ResourceId { get; set; }
 
     }
 

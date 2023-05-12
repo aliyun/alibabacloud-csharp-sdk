@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -16,14 +13,6 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("ZoneName")]
-        [Validation(Required=false)]
-        public string ZoneName { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("ProxyPattern")]
         [Validation(Required=false)]
         public string ProxyPattern { get; set; }
@@ -32,13 +21,17 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("ZoneType")]
+        [NameInMap("ZoneName")]
         [Validation(Required=false)]
-        public string ZoneType { get; set; }
+        public string ZoneName { get; set; }
 
         [NameInMap("ZoneTag")]
         [Validation(Required=false)]
         public string ZoneTag { get; set; }
+
+        [NameInMap("ZoneType")]
+        [Validation(Required=false)]
+        public string ZoneType { get; set; }
 
     }
 

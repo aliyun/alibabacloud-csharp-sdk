@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeZoneRecordsResponseBody : TeaModel {
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("TotalPages")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public int? TotalPages { get; set; }
-
-        [NameInMap("TotalItems")]
-        [Validation(Required=false)]
-        public int? TotalItems { get; set; }
+        public int? PageSize { get; set; }
 
         [NameInMap("Records")]
         [Validation(Required=false)]
@@ -37,16 +25,53 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             [Validation(Required=false)]
             public List<DescribeZoneRecordsResponseBodyRecordsRecord> Record { get; set; }
             public class DescribeZoneRecordsResponseBodyRecordsRecord : TeaModel {
-                public string Status { get; set; }
-                public string Type { get; set; }
-                public string Value { get; set; }
-                public int? Ttl { get; set; }
-                public string Remark { get; set; }
-                public long? RecordId { get; set; }
-                public string Rr { get; set; }
+                [NameInMap("Priority")]
+                [Validation(Required=false)]
                 public int? Priority { get; set; }
+
+                [NameInMap("RecordId")]
+                [Validation(Required=false)]
+                public long? RecordId { get; set; }
+
+                [NameInMap("Remark")]
+                [Validation(Required=false)]
+                public string Remark { get; set; }
+
+                [NameInMap("Rr")]
+                [Validation(Required=false)]
+                public string Rr { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("Ttl")]
+                [Validation(Required=false)]
+                public int? Ttl { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalItems")]
+        [Validation(Required=false)]
+        public int? TotalItems { get; set; }
+
+        [NameInMap("TotalPages")]
+        [Validation(Required=false)]
+        public int? TotalPages { get; set; }
 
     }
 

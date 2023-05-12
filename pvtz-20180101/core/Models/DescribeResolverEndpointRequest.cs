@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
-    public class DescribeUserServiceStatusRequest : TeaModel {
+    public class DescribeResolverEndpointRequest : TeaModel {
+        [NameInMap("EndpointId")]
+        [Validation(Required=false)]
+        public string EndpointId { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class SetZoneRecordStatusResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("RecordId")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public long? RecordId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("RecordId")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public long? RecordId { get; set; }
+        public string Status { get; set; }
 
     }
 

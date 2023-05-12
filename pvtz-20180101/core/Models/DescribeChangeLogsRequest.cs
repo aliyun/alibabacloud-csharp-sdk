@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeChangeLogsRequest : TeaModel {
+        [NameInMap("EndTimestamp")]
+        [Validation(Required=false)]
+        public long? EndTimestamp { get; set; }
+
+        [NameInMap("EntityType")]
+        [Validation(Required=false)]
+        public string EntityType { get; set; }
+
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
@@ -16,10 +24,6 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -33,17 +37,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public long? StartTimestamp { get; set; }
 
-        [NameInMap("EndTimestamp")]
-        [Validation(Required=false)]
-        public long? EndTimestamp { get; set; }
-
-        [NameInMap("EntityType")]
-        [Validation(Required=false)]
-        public string EntityType { get; set; }
-
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

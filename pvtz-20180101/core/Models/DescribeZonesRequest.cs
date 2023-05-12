@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeZonesRequest : TeaModel {
+        [NameInMap("Keyword")]
+        [Validation(Required=false)]
+        public string Keyword { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -21,22 +25,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Keyword")]
-        [Validation(Required=false)]
-        public string Keyword { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        [NameInMap("SearchMode")]
-        [Validation(Required=false)]
-        public string SearchMode { get; set; }
-
         [NameInMap("QueryRegionId")]
         [Validation(Required=false)]
         public string QueryRegionId { get; set; }
 
+        /// <summary>
+        /// VPC ID。
+        /// </summary>
         [NameInMap("QueryVpcId")]
         [Validation(Required=false)]
         public string QueryVpcId { get; set; }
@@ -45,21 +40,31 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("OrderBy")]
+        [NameInMap("ResourceTag")]
         [Validation(Required=false)]
-        public string OrderBy { get; set; }
+        public List<DescribeZonesRequestResourceTag> ResourceTag { get; set; }
+        public class DescribeZonesRequestResourceTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
 
-        [NameInMap("Direction")]
-        [Validation(Required=false)]
-        public string Direction { get; set; }
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
 
-        [NameInMap("ZoneType")]
+        }
+
+        [NameInMap("SearchMode")]
         [Validation(Required=false)]
-        public string ZoneType { get; set; }
+        public string SearchMode { get; set; }
 
         [NameInMap("ZoneTag")]
         [Validation(Required=false)]
         public List<string> ZoneTag { get; set; }
+
+        [NameInMap("ZoneType")]
+        [Validation(Required=false)]
+        public string ZoneType { get; set; }
 
     }
 

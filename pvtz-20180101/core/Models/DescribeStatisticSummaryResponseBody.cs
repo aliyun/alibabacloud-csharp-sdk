@@ -9,27 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeStatisticSummaryResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ZoneRequestTops")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public DescribeStatisticSummaryResponseBodyZoneRequestTops ZoneRequestTops { get; set; }
-        public class DescribeStatisticSummaryResponseBodyZoneRequestTops : TeaModel {
-            [NameInMap("ZoneRequestTop")]
-            [Validation(Required=false)]
-            public List<DescribeStatisticSummaryResponseBodyZoneRequestTopsZoneRequestTop> ZoneRequestTop { get; set; }
-            public class DescribeStatisticSummaryResponseBodyZoneRequestTopsZoneRequestTop : TeaModel {
-                public long? RequestCount { get; set; }
-                public string ZoneName { get; set; }
-                public string BizType { get; set; }
-            }
-        };
+        public long? TotalCount { get; set; }
 
         [NameInMap("VpcRequestTops")]
         [Validation(Required=false)]
@@ -39,13 +25,60 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             [Validation(Required=false)]
             public List<DescribeStatisticSummaryResponseBodyVpcRequestTopsVpcRequestTop> VpcRequestTop { get; set; }
             public class DescribeStatisticSummaryResponseBodyVpcRequestTopsVpcRequestTop : TeaModel {
-                public string VpcId { get; set; }
-                public string RegionName { get; set; }
-                public string TunnelId { get; set; }
-                public long? RequestCount { get; set; }
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("RegionName")]
+                [Validation(Required=false)]
+                public string RegionName { get; set; }
+
+                [NameInMap("RequestCount")]
+                [Validation(Required=false)]
+                public long? RequestCount { get; set; }
+
+                [NameInMap("TunnelId")]
+                [Validation(Required=false)]
+                public string TunnelId { get; set; }
+
+                /// <summary>
+                /// VPC ID
+                /// </summary>
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+                [NameInMap("VpcType")]
+                [Validation(Required=false)]
+                public string VpcType { get; set; }
+
             }
-        };
+
+        }
+
+        [NameInMap("ZoneRequestTops")]
+        [Validation(Required=false)]
+        public DescribeStatisticSummaryResponseBodyZoneRequestTops ZoneRequestTops { get; set; }
+        public class DescribeStatisticSummaryResponseBodyZoneRequestTops : TeaModel {
+            [NameInMap("ZoneRequestTop")]
+            [Validation(Required=false)]
+            public List<DescribeStatisticSummaryResponseBodyZoneRequestTopsZoneRequestTop> ZoneRequestTop { get; set; }
+            public class DescribeStatisticSummaryResponseBodyZoneRequestTopsZoneRequestTop : TeaModel {
+                [NameInMap("BizType")]
+                [Validation(Required=false)]
+                public string BizType { get; set; }
+
+                [NameInMap("RequestCount")]
+                [Validation(Required=false)]
+                public long? RequestCount { get; set; }
+
+                [NameInMap("ZoneName")]
+                [Validation(Required=false)]
+                public string ZoneName { get; set; }
+
+            }
+
+        }
 
     }
 

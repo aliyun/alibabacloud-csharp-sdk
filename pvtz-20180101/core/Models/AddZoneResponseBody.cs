@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class AddZoneResponseBody : TeaModel {
-        [NameInMap("ZoneName")]
-        [Validation(Required=false)]
-        public string ZoneName { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -24,6 +16,17 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        /// <summary>
+        /// zone ID。
+        /// </summary>
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
+
+        [NameInMap("ZoneName")]
+        [Validation(Required=false)]
+        public string ZoneName { get; set; }
 
     }
 
