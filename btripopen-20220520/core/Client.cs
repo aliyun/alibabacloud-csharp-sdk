@@ -6771,6 +6771,110 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await FlightSearchListWithOptionsAsync(request, headers, runtime);
         }
 
+        public GroupCorpTokenResponse GroupCorpTokenWithOptions(GroupCorpTokenRequest request, GroupCorpTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSecret))
+            {
+                query["app_secret"] = request.AppSecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CorpId))
+            {
+                query["corp_id"] = request.CorpId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpId))
+            {
+                query["sub_corp_id"] = request.SubCorpId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripAccessToken))
+            {
+                realHeaders["x-acs-btrip-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripAccessToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GroupCorpToken",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/btrip-open-auth/v1/group-corp-token/action/take",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GroupCorpTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GroupCorpTokenResponse> GroupCorpTokenWithOptionsAsync(GroupCorpTokenRequest request, GroupCorpTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSecret))
+            {
+                query["app_secret"] = request.AppSecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CorpId))
+            {
+                query["corp_id"] = request.CorpId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpId))
+            {
+                query["sub_corp_id"] = request.SubCorpId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripAccessToken))
+            {
+                realHeaders["x-acs-btrip-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripAccessToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GroupCorpToken",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/btrip-open-auth/v1/group-corp-token/action/take",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GroupCorpTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GroupCorpTokenResponse GroupCorpToken(GroupCorpTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GroupCorpTokenHeaders headers = new GroupCorpTokenHeaders();
+            return GroupCorpTokenWithOptions(request, headers, runtime);
+        }
+
+        public async Task<GroupCorpTokenResponse> GroupCorpTokenAsync(GroupCorpTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GroupCorpTokenHeaders headers = new GroupCorpTokenHeaders();
+            return await GroupCorpTokenWithOptionsAsync(request, headers, runtime);
+        }
+
         public GroupDepartSaveResponse GroupDepartSaveWithOptions(GroupDepartSaveRequest tmpReq, GroupDepartSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
