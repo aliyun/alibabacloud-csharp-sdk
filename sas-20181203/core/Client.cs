@@ -2484,6 +2484,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadUrl))
+            {
+                query["DownloadUrl"] = request.DownloadUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HashKey))
             {
                 query["HashKey"] = request.HashKey;
@@ -2530,6 +2534,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadUrl))
+            {
+                query["DownloadUrl"] = request.DownloadUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HashKey))
             {
                 query["HashKey"] = request.HashKey;
@@ -3705,6 +3713,120 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateOrUpdateAssetGroupWithOptionsAsync(request, runtime);
+        }
+
+        public CreateOrUpdateDingTalkResponse CreateOrUpdateDingTalkWithOptions(CreateOrUpdateDingTalkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigList))
+            {
+                query["ConfigList"] = request.ConfigList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DingTalkLang))
+            {
+                query["DingTalkLang"] = request.DingTalkLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupIdList))
+            {
+                query["GroupIdList"] = request.GroupIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntervalTime))
+            {
+                query["IntervalTime"] = request.IntervalTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleActionName))
+            {
+                query["RuleActionName"] = request.RuleActionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendUrl))
+            {
+                query["SendUrl"] = request.SendUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOrUpdateDingTalk",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOrUpdateDingTalkResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateOrUpdateDingTalkResponse> CreateOrUpdateDingTalkWithOptionsAsync(CreateOrUpdateDingTalkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigList))
+            {
+                query["ConfigList"] = request.ConfigList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DingTalkLang))
+            {
+                query["DingTalkLang"] = request.DingTalkLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupIdList))
+            {
+                query["GroupIdList"] = request.GroupIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntervalTime))
+            {
+                query["IntervalTime"] = request.IntervalTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleActionName))
+            {
+                query["RuleActionName"] = request.RuleActionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendUrl))
+            {
+                query["SendUrl"] = request.SendUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOrUpdateDingTalk",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOrUpdateDingTalkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateOrUpdateDingTalkResponse CreateOrUpdateDingTalk(CreateOrUpdateDingTalkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateOrUpdateDingTalkWithOptions(request, runtime);
+        }
+
+        public async Task<CreateOrUpdateDingTalkResponse> CreateOrUpdateDingTalkAsync(CreateOrUpdateDingTalkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateOrUpdateDingTalkWithOptionsAsync(request, runtime);
         }
 
         public CreateRestoreJobResponse CreateRestoreJobWithOptions(CreateRestoreJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

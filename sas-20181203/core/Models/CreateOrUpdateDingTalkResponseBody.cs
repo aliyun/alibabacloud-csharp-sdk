@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class DescribeVulTargetStatisticsRequest : TeaModel {
-        /// <summary>
-        /// The data returned.
-        /// </summary>
-        [NameInMap("Type")]
+    public class CreateOrUpdateDingTalkResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string RequestId { get; set; }
 
     }
 

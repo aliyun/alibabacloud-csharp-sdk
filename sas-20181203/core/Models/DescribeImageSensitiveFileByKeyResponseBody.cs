@@ -9,53 +9,64 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageSensitiveFileByKeyResponseBody : TeaModel {
+        /// <summary>
+        /// The status code returned. If the 200 status code is returned, the request was successful.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// The HTTP status code returned.
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// The error message returned.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The risk level of the sensitive file. Valid values:
-        /// 
-        /// *   **high**
-        /// *   **medium**
-        /// *   **low**
+        /// The pagination information.
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeImageSensitiveFileByKeyResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeImageSensitiveFileByKeyResponseBodyPageInfo : TeaModel {
+            /// <summary>
+            /// The number of entries returned on the current page.
+            /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The ID of the request, which is used to locate and troubleshoot issues.
+            /// The page number of the returned page.
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
+            /// <summary>
+            /// The key of the last data entry.
+            /// </summary>
             [NameInMap("LastRowKey")]
             [Validation(Required=false)]
             public string LastRowKey { get; set; }
 
             /// <summary>
-            /// Queries the sensitive files in an image.
+            /// The number of entries returned per page.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// DescribeImageSensitiveFileByKey
+            /// The total number of entries returned.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -63,6 +74,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -75,18 +89,57 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeImageSensitiveFileByKeyResponseBodySensitiveFileList> SensitiveFileList { get; set; }
         public class DescribeImageSensitiveFileByKeyResponseBodySensitiveFileList : TeaModel {
             /// <summary>
-            /// The timestamp when the first scan was performed. Unit: milliseconds.
+            /// The suggestion.
             /// </summary>
             [NameInMap("Advice")]
             [Validation(Required=false)]
             public string Advice { get; set; }
 
             /// <summary>
-            /// The UUID of the image.
+            /// The file path.
             /// </summary>
             [NameInMap("FilePath")]
             [Validation(Required=false)]
             public string FilePath { get; set; }
+
+            /// <summary>
+            /// The timestamp when the first scan was performed. Unit: milliseconds.
+            /// </summary>
+            [NameInMap("FirstScanTime")]
+            [Validation(Required=false)]
+            public long? FirstScanTime { get; set; }
+
+            /// <summary>
+            /// The timestamp when the last scan was performed. Unit: milliseconds.
+            /// </summary>
+            [NameInMap("LastScanTime")]
+            [Validation(Required=false)]
+            public long? LastScanTime { get; set; }
+
+            /// <summary>
+            /// The digest of the image layer.
+            /// </summary>
+            [NameInMap("LayerDigest")]
+            [Validation(Required=false)]
+            public string LayerDigest { get; set; }
+
+            /// <summary>
+            /// The sensitive content.
+            /// </summary>
+            [NameInMap("Promt")]
+            [Validation(Required=false)]
+            public string Promt { get; set; }
+
+            /// <summary>
+            /// The risk level of the sensitive file. Valid values:
+            /// 
+            /// *   **high**
+            /// *   **medium**
+            /// *   **low**
+            /// </summary>
+            [NameInMap("RiskLevel")]
+            [Validation(Required=false)]
+            public string RiskLevel { get; set; }
 
             /// <summary>
             /// The alert type of the sensitive file. Valid values:
@@ -146,7 +199,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **github_oauth_token**: Github OAuth Token
             /// *   **pulumi_token**: Pulumi Token
             /// *   **ventrilo_voip**: Ventrilo VoIP Server Config
-            /// *   **macos_keychain**: MacOS Keychain
+            /// *   **macos_keychain**: macOS Keychain
             /// *   **amazon_mws_token**: Amazon MWS Token
             /// *   **dynatrace_token**: Dynatrace Token
             /// *   **java_keystore**: Java Keystore
@@ -204,47 +257,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **github_hub**: Github Token
             /// *   **rubygem**: Rubygem Token
             /// </summary>
-            [NameInMap("FirstScanTime")]
-            [Validation(Required=false)]
-            public long? FirstScanTime { get; set; }
-
-            /// <summary>
-            /// The language of the content within the request and response. Default value: **zh**. Valid values:
-            /// 
-            /// *   **zh**: Chinese
-            /// *   **en**: English
-            /// </summary>
-            [NameInMap("LastScanTime")]
-            [Validation(Required=false)]
-            public long? LastScanTime { get; set; }
-
-            /// <summary>
-            /// The type of the asset that you want to scan. Valid values:
-            /// 
-            /// *   **image**
-            /// *   **container**
-            /// </summary>
-            [NameInMap("LayerDigest")]
-            [Validation(Required=false)]
-            public string LayerDigest { get; set; }
-
-            /// <summary>
-            /// The number of entries returned on the current page.
-            /// </summary>
-            [NameInMap("Promt")]
-            [Validation(Required=false)]
-            public string Promt { get; set; }
-
-            /// <summary>
-            /// The suggestion.
-            /// </summary>
-            [NameInMap("RiskLevel")]
-            [Validation(Required=false)]
-            public string RiskLevel { get; set; }
-
-            /// <summary>
-            /// The pagination information.
-            /// </summary>
             [NameInMap("SensitiveFileKey")]
             [Validation(Required=false)]
             public string SensitiveFileKey { get; set; }
@@ -258,6 +270,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <summary>
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
