@@ -5565,6 +5565,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await ExecuteScriptWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+          * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
+          *
+          * @param request ExecuteStructSyncRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExecuteStructSyncResponse
+         */
         public ExecuteStructSyncResponse ExecuteStructSyncWithOptions(ExecuteStructSyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5596,6 +5604,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ExecuteStructSyncResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+          * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
+          *
+          * @param request ExecuteStructSyncRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ExecuteStructSyncResponse
+         */
         public async Task<ExecuteStructSyncResponse> ExecuteStructSyncWithOptionsAsync(ExecuteStructSyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5627,12 +5643,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<ExecuteStructSyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+          * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
+          *
+          * @param request ExecuteStructSyncRequest
+          * @return ExecuteStructSyncResponse
+         */
         public ExecuteStructSyncResponse ExecuteStructSync(ExecuteStructSyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExecuteStructSyncWithOptions(request, runtime);
         }
 
+        /**
+          * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+          * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
+          *
+          * @param request ExecuteStructSyncRequest
+          * @return ExecuteStructSyncResponse
+         */
         public async Task<ExecuteStructSyncResponse> ExecuteStructSyncAsync(ExecuteStructSyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17317,6 +17347,88 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await SetOwnersWithOptionsAsync(request, runtime);
         }
 
+        public SkipDataCorrectRowCheckResponse SkipDataCorrectRowCheckWithOptions(SkipDataCorrectRowCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                query["Reason"] = request.Reason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SkipDataCorrectRowCheck",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SkipDataCorrectRowCheckResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SkipDataCorrectRowCheckResponse> SkipDataCorrectRowCheckWithOptionsAsync(SkipDataCorrectRowCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                query["Reason"] = request.Reason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SkipDataCorrectRowCheck",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SkipDataCorrectRowCheckResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SkipDataCorrectRowCheckResponse SkipDataCorrectRowCheck(SkipDataCorrectRowCheckRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SkipDataCorrectRowCheckWithOptions(request, runtime);
+        }
+
+        public async Task<SkipDataCorrectRowCheckResponse> SkipDataCorrectRowCheckAsync(SkipDataCorrectRowCheckRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SkipDataCorrectRowCheckWithOptionsAsync(request, runtime);
+        }
+
         public StopTaskFlowInstanceResponse StopTaskFlowInstanceWithOptions(StopTaskFlowInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18756,9 +18868,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * Indicates whether the request was successful. Valid values:
-          * *   **true**: The request was successful.
-          * *   **false**: The request failed.
+          * ###
+          * The edges can be updated only when the following conditions are met:
+          * 1.  The specified edge exists in the directed acyclic graph (DAG) of the task flow specified by DagId.
+          * 2.  The specified edge nodes exist in the DAG of the task flow specified by DagId.
+          * 3.  After the update, rings do not exist in the DAG.
           *
           * @param tmpReq UpdateTaskFlowEdgesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -18806,9 +18920,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * Indicates whether the request was successful. Valid values:
-          * *   **true**: The request was successful.
-          * *   **false**: The request failed.
+          * ###
+          * The edges can be updated only when the following conditions are met:
+          * 1.  The specified edge exists in the directed acyclic graph (DAG) of the task flow specified by DagId.
+          * 2.  The specified edge nodes exist in the DAG of the task flow specified by DagId.
+          * 3.  After the update, rings do not exist in the DAG.
           *
           * @param tmpReq UpdateTaskFlowEdgesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -18856,9 +18972,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * Indicates whether the request was successful. Valid values:
-          * *   **true**: The request was successful.
-          * *   **false**: The request failed.
+          * ###
+          * The edges can be updated only when the following conditions are met:
+          * 1.  The specified edge exists in the directed acyclic graph (DAG) of the task flow specified by DagId.
+          * 2.  The specified edge nodes exist in the DAG of the task flow specified by DagId.
+          * 3.  After the update, rings do not exist in the DAG.
           *
           * @param request UpdateTaskFlowEdgesRequest
           * @return UpdateTaskFlowEdgesResponse
@@ -18870,9 +18988,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         }
 
         /**
-          * Indicates whether the request was successful. Valid values:
-          * *   **true**: The request was successful.
-          * *   **false**: The request failed.
+          * ###
+          * The edges can be updated only when the following conditions are met:
+          * 1.  The specified edge exists in the directed acyclic graph (DAG) of the task flow specified by DagId.
+          * 2.  The specified edge nodes exist in the DAG of the task flow specified by DagId.
+          * 3.  After the update, rings do not exist in the DAG.
           *
           * @param request UpdateTaskFlowEdgesRequest
           * @return UpdateTaskFlowEdgesResponse

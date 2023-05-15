@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetStructSyncJobDetailRequest : TeaModel {
         /// <summary>
-        /// The total number of tables.
+        /// The ticket ID.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// The error message that is returned.
+        /// The tenant ID.
+        /// 
+        /// > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]
