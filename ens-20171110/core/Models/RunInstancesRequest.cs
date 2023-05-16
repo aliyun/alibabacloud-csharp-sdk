@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        [NameInMap("InstanceChargeStrategy")]
+        [Validation(Required=false)]
+        public string InstanceChargeStrategy { get; set; }
+
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }

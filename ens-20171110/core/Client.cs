@@ -1619,6 +1619,100 @@ namespace AlibabaCloud.SDK.Ens20171110
             return await CreateEnsRouteEntryWithOptionsAsync(request, runtime);
         }
 
+        public CreateEnsSaleControlResponse CreateEnsSaleControlWithOptions(CreateEnsSaleControlRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateEnsSaleControlShrinkRequest request = new CreateEnsSaleControlShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SaleControls))
+            {
+                request.SaleControlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SaleControls, "SaleControls", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliUidAccount))
+            {
+                query["AliUidAccount"] = request.AliUidAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleControlsShrink))
+            {
+                query["SaleControls"] = request.SaleControlsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEnsSaleControl",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEnsSaleControlResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateEnsSaleControlResponse> CreateEnsSaleControlWithOptionsAsync(CreateEnsSaleControlRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateEnsSaleControlShrinkRequest request = new CreateEnsSaleControlShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SaleControls))
+            {
+                request.SaleControlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SaleControls, "SaleControls", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliUidAccount))
+            {
+                query["AliUidAccount"] = request.AliUidAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleControlsShrink))
+            {
+                query["SaleControls"] = request.SaleControlsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEnsSaleControl",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEnsSaleControlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateEnsSaleControlResponse CreateEnsSaleControl(CreateEnsSaleControlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateEnsSaleControlWithOptions(request, runtime);
+        }
+
+        public async Task<CreateEnsSaleControlResponse> CreateEnsSaleControlAsync(CreateEnsSaleControlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateEnsSaleControlWithOptionsAsync(request, runtime);
+        }
+
         public CreateEnsServiceResponse CreateEnsServiceWithOptions(CreateEnsServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4413,6 +4507,194 @@ namespace AlibabaCloud.SDK.Ens20171110
             return await DeleteEnsRouteEntryWithOptionsAsync(request, runtime);
         }
 
+        public DeleteEnsSaleConditionControlResponse DeleteEnsSaleConditionControlWithOptions(DeleteEnsSaleConditionControlRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteEnsSaleConditionControlShrinkRequest request = new DeleteEnsSaleConditionControlShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SaleControls))
+            {
+                request.SaleControlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SaleControls, "SaleControls", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliUidAccount))
+            {
+                query["AliUidAccount"] = request.AliUidAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleControlsShrink))
+            {
+                query["SaleControls"] = request.SaleControlsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEnsSaleConditionControl",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEnsSaleConditionControlResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteEnsSaleConditionControlResponse> DeleteEnsSaleConditionControlWithOptionsAsync(DeleteEnsSaleConditionControlRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteEnsSaleConditionControlShrinkRequest request = new DeleteEnsSaleConditionControlShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SaleControls))
+            {
+                request.SaleControlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SaleControls, "SaleControls", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliUidAccount))
+            {
+                query["AliUidAccount"] = request.AliUidAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleControlsShrink))
+            {
+                query["SaleControls"] = request.SaleControlsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEnsSaleConditionControl",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEnsSaleConditionControlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteEnsSaleConditionControlResponse DeleteEnsSaleConditionControl(DeleteEnsSaleConditionControlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteEnsSaleConditionControlWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteEnsSaleConditionControlResponse> DeleteEnsSaleConditionControlAsync(DeleteEnsSaleConditionControlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteEnsSaleConditionControlWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteEnsSaleControlResponse DeleteEnsSaleControlWithOptions(DeleteEnsSaleControlRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteEnsSaleControlShrinkRequest request = new DeleteEnsSaleControlShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SaleControls))
+            {
+                request.SaleControlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SaleControls, "SaleControls", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliUidAccount))
+            {
+                query["AliUidAccount"] = request.AliUidAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleControlsShrink))
+            {
+                query["SaleControls"] = request.SaleControlsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEnsSaleControl",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEnsSaleControlResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteEnsSaleControlResponse> DeleteEnsSaleControlWithOptionsAsync(DeleteEnsSaleControlRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteEnsSaleControlShrinkRequest request = new DeleteEnsSaleControlShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SaleControls))
+            {
+                request.SaleControlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SaleControls, "SaleControls", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliUidAccount))
+            {
+                query["AliUidAccount"] = request.AliUidAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleControlsShrink))
+            {
+                query["SaleControls"] = request.SaleControlsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEnsSaleControl",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEnsSaleControlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteEnsSaleControlResponse DeleteEnsSaleControl(DeleteEnsSaleControlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteEnsSaleControlWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteEnsSaleControlResponse> DeleteEnsSaleControlAsync(DeleteEnsSaleControlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteEnsSaleControlWithOptionsAsync(request, runtime);
+        }
+
         public DeleteEpnInstanceResponse DeleteEpnInstanceWithOptions(DeleteEpnInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5389,13 +5671,29 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                query["ImageType"] = request.ImageType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
             {
                 query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDate))
+            {
+                query["MaxDate"] = request.MaxDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDate))
+            {
+                query["MinDate"] = request.MinDate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -5404,6 +5702,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5428,13 +5730,29 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                query["ImageType"] = request.ImageType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
             {
                 query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDate))
+            {
+                query["MaxDate"] = request.MaxDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDate))
+            {
+                query["MinDate"] = request.MinDate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -5443,6 +5761,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5480,6 +5802,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DescribeARMServerInstancesShrinkRequest request = new DescribeARMServerInstancesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AICSpecs))
+            {
+                request.AICSpecsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AICSpecs, "AICSpecs", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EnsRegionIds))
             {
                 request.EnsRegionIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EnsRegionIds, "EnsRegionIds", "json");
@@ -5487,6 +5813,14 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerIds))
             {
                 request.ServerIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerIds, "ServerIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerSpecs))
+            {
+                request.ServerSpecsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerSpecs, "ServerSpecs", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.States))
+            {
+                request.StatesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.States, "States", "json");
             }
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5513,6 +5847,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DescribeARMServerInstancesShrinkRequest request = new DescribeARMServerInstancesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AICSpecs))
+            {
+                request.AICSpecsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AICSpecs, "AICSpecs", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EnsRegionIds))
             {
                 request.EnsRegionIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EnsRegionIds, "EnsRegionIds", "json");
@@ -5520,6 +5858,14 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerIds))
             {
                 request.ServerIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerIds, "ServerIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerSpecs))
+            {
+                request.ServerSpecsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerSpecs, "ServerSpecs", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.States))
+            {
+                request.StatesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.States, "States", "json");
             }
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6863,6 +7209,146 @@ namespace AlibabaCloud.SDK.Ens20171110
             return await DescribeElbAvailableResourceInfoWithOptionsAsync(runtime);
         }
 
+        public DescribeEnsCommodityCodeResponse DescribeEnsCommodityCodeWithOptions(DescribeEnsCommodityCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEnsCommodityCode",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEnsCommodityCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeEnsCommodityCodeResponse> DescribeEnsCommodityCodeWithOptionsAsync(DescribeEnsCommodityCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEnsCommodityCode",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEnsCommodityCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeEnsCommodityCodeResponse DescribeEnsCommodityCode(DescribeEnsCommodityCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeEnsCommodityCodeWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeEnsCommodityCodeResponse> DescribeEnsCommodityCodeAsync(DescribeEnsCommodityCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeEnsCommodityCodeWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeEnsCommodityModuleCodeResponse DescribeEnsCommodityModuleCodeWithOptions(DescribeEnsCommodityModuleCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleCode))
+            {
+                query["ModuleCode"] = request.ModuleCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEnsCommodityModuleCode",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEnsCommodityModuleCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeEnsCommodityModuleCodeResponse> DescribeEnsCommodityModuleCodeWithOptionsAsync(DescribeEnsCommodityModuleCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleCode))
+            {
+                query["ModuleCode"] = request.ModuleCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEnsCommodityModuleCode",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEnsCommodityModuleCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeEnsCommodityModuleCodeResponse DescribeEnsCommodityModuleCode(DescribeEnsCommodityModuleCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeEnsCommodityModuleCodeWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeEnsCommodityModuleCodeResponse> DescribeEnsCommodityModuleCodeAsync(DescribeEnsCommodityModuleCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeEnsCommodityModuleCodeWithOptionsAsync(request, runtime);
+        }
+
         public DescribeEnsEipAddressesResponse DescribeEnsEipAddressesWithOptions(DescribeEnsEipAddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7673,6 +8159,260 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeEnsRouteEntryListWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeEnsSaleControlResponse DescribeEnsSaleControlWithOptions(DescribeEnsSaleControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliUidAccount))
+            {
+                query["AliUidAccount"] = request.AliUidAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleCode))
+            {
+                query["ModuleCode"] = request.ModuleCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEnsSaleControl",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEnsSaleControlResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeEnsSaleControlResponse> DescribeEnsSaleControlWithOptionsAsync(DescribeEnsSaleControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliUidAccount))
+            {
+                query["AliUidAccount"] = request.AliUidAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleCode))
+            {
+                query["ModuleCode"] = request.ModuleCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEnsSaleControl",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEnsSaleControlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeEnsSaleControlResponse DescribeEnsSaleControl(DescribeEnsSaleControlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeEnsSaleControlWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeEnsSaleControlResponse> DescribeEnsSaleControlAsync(DescribeEnsSaleControlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeEnsSaleControlWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeEnsSaleControlAvailableResourceResponse DescribeEnsSaleControlAvailableResourceWithOptions(DescribeEnsSaleControlAvailableResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEnsSaleControlAvailableResource",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEnsSaleControlAvailableResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeEnsSaleControlAvailableResourceResponse> DescribeEnsSaleControlAvailableResourceWithOptionsAsync(DescribeEnsSaleControlAvailableResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEnsSaleControlAvailableResource",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEnsSaleControlAvailableResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeEnsSaleControlAvailableResourceResponse DescribeEnsSaleControlAvailableResource(DescribeEnsSaleControlAvailableResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeEnsSaleControlAvailableResourceWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeEnsSaleControlAvailableResourceResponse> DescribeEnsSaleControlAvailableResourceAsync(DescribeEnsSaleControlAvailableResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeEnsSaleControlAvailableResourceWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeEnsSaleControlStockResponse DescribeEnsSaleControlStockWithOptions(DescribeEnsSaleControlStockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliUidAccount))
+            {
+                query["AliUidAccount"] = request.AliUidAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleCode))
+            {
+                query["ModuleCode"] = request.ModuleCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEnsSaleControlStock",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEnsSaleControlStockResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeEnsSaleControlStockResponse> DescribeEnsSaleControlStockWithOptionsAsync(DescribeEnsSaleControlStockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliUidAccount))
+            {
+                query["AliUidAccount"] = request.AliUidAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleCode))
+            {
+                query["ModuleCode"] = request.ModuleCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEnsSaleControlStock",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEnsSaleControlStockResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeEnsSaleControlStockResponse DescribeEnsSaleControlStock(DescribeEnsSaleControlStockRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeEnsSaleControlStockWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeEnsSaleControlStockResponse> DescribeEnsSaleControlStockAsync(DescribeEnsSaleControlStockRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeEnsSaleControlStockWithOptionsAsync(request, runtime);
         }
 
         public DescribeEpnBandWidthDataResponse DescribeEpnBandWidthDataWithOptions(DescribeEpnBandWidthDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -10757,6 +11497,64 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePriceWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeRegionBandwidthQuotaResponse DescribeRegionBandwidthQuotaWithOptions(DescribeRegionBandwidthQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRegionBandwidthQuota",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRegionBandwidthQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeRegionBandwidthQuotaResponse> DescribeRegionBandwidthQuotaWithOptionsAsync(DescribeRegionBandwidthQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRegionBandwidthQuota",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRegionBandwidthQuotaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeRegionBandwidthQuotaResponse DescribeRegionBandwidthQuota(DescribeRegionBandwidthQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRegionBandwidthQuotaWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeRegionBandwidthQuotaResponse> DescribeRegionBandwidthQuotaAsync(DescribeRegionBandwidthQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRegionBandwidthQuotaWithOptionsAsync(request, runtime);
         }
 
         public DescribeRegionIspsResponse DescribeRegionIspsWithOptions(DescribeRegionIspsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -13991,9 +14789,15 @@ namespace AlibabaCloud.SDK.Ens20171110
             return await ReInitDiskWithOptionsAsync(request, runtime);
         }
 
-        public RebootAICInstanceResponse RebootAICInstanceWithOptions(RebootAICInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public RebootAICInstanceResponse RebootAICInstanceWithOptions(RebootAICInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RebootAICInstanceShrinkRequest request = new RebootAICInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -14014,9 +14818,15 @@ namespace AlibabaCloud.SDK.Ens20171110
             return TeaModel.ToObject<RebootAICInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<RebootAICInstanceResponse> RebootAICInstanceWithOptionsAsync(RebootAICInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<RebootAICInstanceResponse> RebootAICInstanceWithOptionsAsync(RebootAICInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RebootAICInstanceShrinkRequest request = new RebootAICInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -14049,9 +14859,15 @@ namespace AlibabaCloud.SDK.Ens20171110
             return await RebootAICInstanceWithOptionsAsync(request, runtime);
         }
 
-        public RebootARMServerInstanceResponse RebootARMServerInstanceWithOptions(RebootARMServerInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public RebootARMServerInstanceResponse RebootARMServerInstanceWithOptions(RebootARMServerInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RebootARMServerInstanceShrinkRequest request = new RebootARMServerInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerIds))
+            {
+                request.ServerIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerIds, "ServerIds", "json");
+            }
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -14072,9 +14888,15 @@ namespace AlibabaCloud.SDK.Ens20171110
             return TeaModel.ToObject<RebootARMServerInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<RebootARMServerInstanceResponse> RebootARMServerInstanceWithOptionsAsync(RebootARMServerInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<RebootARMServerInstanceResponse> RebootARMServerInstanceWithOptionsAsync(RebootARMServerInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RebootARMServerInstanceShrinkRequest request = new RebootARMServerInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerIds))
+            {
+                request.ServerIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerIds, "ServerIds", "json");
+            }
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -15445,9 +16267,15 @@ namespace AlibabaCloud.SDK.Ens20171110
             return await RescaleDeviceServiceWithOptionsAsync(request, runtime);
         }
 
-        public ResetAICInstanceResponse ResetAICInstanceWithOptions(ResetAICInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ResetAICInstanceResponse ResetAICInstanceWithOptions(ResetAICInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ResetAICInstanceShrinkRequest request = new ResetAICInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -15468,9 +16296,15 @@ namespace AlibabaCloud.SDK.Ens20171110
             return TeaModel.ToObject<ResetAICInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ResetAICInstanceResponse> ResetAICInstanceWithOptionsAsync(ResetAICInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ResetAICInstanceResponse> ResetAICInstanceWithOptionsAsync(ResetAICInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ResetAICInstanceShrinkRequest request = new ResetAICInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -16143,6 +16977,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["ImageId"] = request.ImageId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeStrategy))
+            {
+                query["InstanceChargeStrategy"] = request.InstanceChargeStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
             {
                 query["InstanceChargeType"] = request.InstanceChargeType;
@@ -16291,6 +17129,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeStrategy))
+            {
+                query["InstanceChargeStrategy"] = request.InstanceChargeStrategy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
             {
@@ -18263,6 +19105,100 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnassociateNetworkAclWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateEnsSaleControlResponse UpdateEnsSaleControlWithOptions(UpdateEnsSaleControlRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateEnsSaleControlShrinkRequest request = new UpdateEnsSaleControlShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SaleControls))
+            {
+                request.SaleControlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SaleControls, "SaleControls", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliUidAccount))
+            {
+                query["AliUidAccount"] = request.AliUidAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleControlsShrink))
+            {
+                query["SaleControls"] = request.SaleControlsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEnsSaleControl",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEnsSaleControlResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateEnsSaleControlResponse> UpdateEnsSaleControlWithOptionsAsync(UpdateEnsSaleControlRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateEnsSaleControlShrinkRequest request = new UpdateEnsSaleControlShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SaleControls))
+            {
+                request.SaleControlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SaleControls, "SaleControls", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliUidAccount))
+            {
+                query["AliUidAccount"] = request.AliUidAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleControlsShrink))
+            {
+                query["SaleControls"] = request.SaleControlsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEnsSaleControl",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEnsSaleControlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateEnsSaleControlResponse UpdateEnsSaleControl(UpdateEnsSaleControlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateEnsSaleControlWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateEnsSaleControlResponse> UpdateEnsSaleControlAsync(UpdateEnsSaleControlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateEnsSaleControlWithOptionsAsync(request, runtime);
         }
 
         public UpgradeAICInstanceImageResponse UpgradeAICInstanceImageWithOptions(UpgradeAICInstanceImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

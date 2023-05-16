@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class RebootARMServerInstanceRequest : TeaModel {
-        [NameInMap("ServerId")]
+    public class DescribeEnsSaleControlAvailableResourceRequest : TeaModel {
+        [NameInMap("CommodityCode")]
         [Validation(Required=false)]
-        public string ServerId { get; set; }
+        public string CommodityCode { get; set; }
 
-        [NameInMap("ServerIds")]
+        [NameInMap("OrderType")]
         [Validation(Required=false)]
-        public List<string> ServerIds { get; set; }
+        public string OrderType { get; set; }
 
     }
 

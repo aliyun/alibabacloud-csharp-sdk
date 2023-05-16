@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public List<string> InstanceIds { get; set; }
+
         [NameInMap("ServerId")]
         [Validation(Required=false)]
         public string ServerId { get; set; }

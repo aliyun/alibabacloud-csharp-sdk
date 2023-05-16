@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
@@ -35,9 +39,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         }
 
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

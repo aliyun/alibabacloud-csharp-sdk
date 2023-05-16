@@ -41,6 +41,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                [NameInMap("LatestAction")]
+                [Validation(Required=false)]
+                public string LatestAction { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
                 [NameInMap("NetworkAttributes")]
                 [Validation(Required=false)]
                 public DescribeARMServerInstancesResponseBodyServersAICInstancesNetworkAttributes NetworkAttributes { get; set; }
@@ -89,9 +97,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
 
+            [NameInMap("LatestAction")]
+            [Validation(Required=false)]
+            public string LatestAction { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
+
+            [NameInMap("PayType")]
+            [Validation(Required=false)]
+            public string PayType { get; set; }
 
             [NameInMap("ServerId")]
             [Validation(Required=false)]

@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class ResetAICInstanceRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("InstanceIds")]
-        [Validation(Required=false)]
-        public List<string> InstanceIds { get; set; }
-
+    public class RebootARMServerInstanceShrinkRequest : TeaModel {
         [NameInMap("ServerId")]
         [Validation(Required=false)]
         public string ServerId { get; set; }
+
+        [NameInMap("ServerIds")]
+        [Validation(Required=false)]
+        public string ServerIdsShrink { get; set; }
 
     }
 
