@@ -47,6 +47,24 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         [Validation(Required=false)]
         public bool? EmailVerified { get; set; }
 
+        [NameInMap("groups")]
+        [Validation(Required=false)]
+        public List<GetUserResponseBodyGroups> Groups { get; set; }
+        public class GetUserResponseBodyGroups : TeaModel {
+            [NameInMap("description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("groupId")]
+            [Validation(Required=false)]
+            public string GroupId { get; set; }
+
+            [NameInMap("groupName")]
+            [Validation(Required=false)]
+            public string GroupName { get; set; }
+
+        }
+
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

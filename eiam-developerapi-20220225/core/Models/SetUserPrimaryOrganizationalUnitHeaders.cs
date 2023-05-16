@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
-    public class CreateOrganizationalUnitHeaders : TeaModel {
+    public class SetUserPrimaryOrganizationalUnitHeaders : TeaModel {
         [NameInMap("commonHeaders")]
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }

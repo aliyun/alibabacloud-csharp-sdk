@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             [Validation(Required=false)]
             public long? LockExpireTime { get; set; }
 
+            /// <summary>
+            /// 密码是否已设置
+            /// </summary>
             [NameInMap("passwordSet")]
             [Validation(Required=false)]
             public bool? PasswordSet { get; set; }

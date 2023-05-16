@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
-    public class GetUserPasswordPolicyResponse : TeaModel {
+    public class RemoveUserFromOrganizationalUnitsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -16,10 +16,6 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         [NameInMap("statusCode")]
         [Validation(Required=true)]
         public int? StatusCode { get; set; }
-
-        [NameInMap("body")]
-        [Validation(Required=true)]
-        public GetUserPasswordPolicyResponseBody Body { get; set; }
 
     }
 
