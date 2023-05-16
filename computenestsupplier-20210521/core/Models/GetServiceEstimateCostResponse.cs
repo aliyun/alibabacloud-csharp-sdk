@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
-    public class GetSupplierInformationResponse : TeaModel {
+    public class GetServiceEstimateCostResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetSupplierInformationResponseBody Body { get; set; }
+        public GetServiceEstimateCostResponseBody Body { get; set; }
 
     }
 

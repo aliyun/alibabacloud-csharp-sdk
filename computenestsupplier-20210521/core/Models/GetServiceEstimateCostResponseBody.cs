@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
-    public class UpdateServiceResponseBody : TeaModel {
+    public class GetServiceEstimateCostResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Resources")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Resources { get; set; }
 
     }
 

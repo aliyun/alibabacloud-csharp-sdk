@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ShowDeleted")]
+        [Validation(Required=false)]
+        public bool? ShowDeleted { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListServiceInstancesRequestTag> Tag { get; set; }

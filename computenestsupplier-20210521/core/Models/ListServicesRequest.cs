@@ -9,9 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServicesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AllVersions")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public bool? AllVersions { get; set; }
+
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public List<ListServicesRequestFilter> Filter { get; set; }
+        public class ListServicesRequestFilter : TeaModel {
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public List<string> Value { get; set; }
+
+        }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -21,21 +35,25 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("AllVersions")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public bool? AllVersions { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("Filter")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public List<ListServicesRequestFilter> Filter { get; set; }
-        public class ListServicesRequestFilter : TeaModel {
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListServicesRequestTag> Tag { get; set; }
+        public class ListServicesRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
             [NameInMap("Value")]
             [Validation(Required=false)]
-            public List<string> Value { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
+            public string Value { get; set; }
 
         }
 

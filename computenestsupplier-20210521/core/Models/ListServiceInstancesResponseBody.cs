@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 [Validation(Required=false)]
                 public string DeployType { get; set; }
 
+                [NameInMap("EnablePrivateVpcConnection")]
+                [Validation(Required=false)]
+                public bool? EnablePrivateVpcConnection { get; set; }
+
                 [NameInMap("PublishTime")]
                 [Validation(Required=false)]
                 public string PublishTime { get; set; }

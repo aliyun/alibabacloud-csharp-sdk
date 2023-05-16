@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public bool? EnableInstanceOps { get; set; }
 
+        [NameInMap("EnableUserPrometheus")]
+        [Validation(Required=false)]
+        public string EnableUserPrometheus { get; set; }
+
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
@@ -53,6 +57,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 [Validation(Required=false)]
                 public List<GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs> ConnectionConfigs { get; set; }
                 public class GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs : TeaModel {
+                    [NameInMap("ConnectBandwidth")]
+                    [Validation(Required=false)]
+                    public int? ConnectBandwidth { get; set; }
+
+                    [NameInMap("DomainName")]
+                    [Validation(Required=false)]
+                    public string DomainName { get; set; }
+
                     [NameInMap("EndpointIps")]
                     [Validation(Required=false)]
                     public List<string> EndpointIps { get; set; }
@@ -137,6 +149,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public long? Progress { get; set; }
 
+        [NameInMap("RdAccountLoginUrl")]
+        [Validation(Required=false)]
+        public string RdAccountLoginUrl { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -210,6 +226,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [NameInMap("SupplierUrl")]
             [Validation(Required=false)]
             public string SupplierUrl { get; set; }
+
+            [NameInMap("UpgradableServiceVersions")]
+            [Validation(Required=false)]
+            public List<string> UpgradableServiceVersions { get; set; }
 
             [NameInMap("Version")]
             [Validation(Required=false)]

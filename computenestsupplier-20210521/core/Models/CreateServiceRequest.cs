@@ -9,71 +9,117 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class CreateServiceRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AlarmMetadata")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string AlarmMetadata { get; set; }
 
-        [NameInMap("SupplierName")]
+        [NameInMap("ApprovalType")]
         [Validation(Required=false)]
-        public string SupplierName { get; set; }
-
-        [NameInMap("SupplierUrl")]
-        [Validation(Required=false)]
-        public string SupplierUrl { get; set; }
+        public string ApprovalType { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("ServiceId")]
+        [NameInMap("DeployMetadata")]
         [Validation(Required=false)]
-        public string ServiceId { get; set; }
+        public string DeployMetadata { get; set; }
 
         [NameInMap("DeployType")]
         [Validation(Required=false)]
         public string DeployType { get; set; }
 
-        [NameInMap("DeployMetadata")]
+        [NameInMap("Duration")]
         [Validation(Required=false)]
-        public string DeployMetadata { get; set; }
-
-        [NameInMap("ServiceType")]
-        [Validation(Required=false)]
-        public string ServiceType { get; set; }
-
-        [NameInMap("ServiceInfo")]
-        [Validation(Required=false)]
-        public List<CreateServiceRequestServiceInfo> ServiceInfo { get; set; }
-        public class CreateServiceRequestServiceInfo : TeaModel {
-            [NameInMap("Locale")]
-            [Validation(Required=false)]
-            public string Locale { get; set; }
-
-            [NameInMap("ShortDescription")]
-            [Validation(Required=false)]
-            public string ShortDescription { get; set; }
-
-            [NameInMap("Image")]
-            [Validation(Required=false)]
-            public string Image { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-        }
+        public long? Duration { get; set; }
 
         [NameInMap("IsSupportOperated")]
         [Validation(Required=false)]
         public bool? IsSupportOperated { get; set; }
 
+        [NameInMap("LicenseMetadata")]
+        [Validation(Required=false)]
+        public string LicenseMetadata { get; set; }
+
+        [NameInMap("OperationMetadata")]
+        [Validation(Required=false)]
+        public string OperationMetadata { get; set; }
+
         [NameInMap("PolicyNames")]
         [Validation(Required=false)]
         public string PolicyNames { get; set; }
 
-        [NameInMap("Duration")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public long? Duration { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("ServiceId")]
+        [Validation(Required=false)]
+        public string ServiceId { get; set; }
+
+        [NameInMap("ServiceInfo")]
+        [Validation(Required=false)]
+        public List<CreateServiceRequestServiceInfo> ServiceInfo { get; set; }
+        public class CreateServiceRequestServiceInfo : TeaModel {
+            [NameInMap("Image")]
+            [Validation(Required=false)]
+            public string Image { get; set; }
+
+            [NameInMap("Locale")]
+            [Validation(Required=false)]
+            public string Locale { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("ShortDescription")]
+            [Validation(Required=false)]
+            public string ShortDescription { get; set; }
+
+        }
+
+        [NameInMap("ServiceType")]
+        [Validation(Required=false)]
+        public string ServiceType { get; set; }
+
+        [NameInMap("ShareType")]
+        [Validation(Required=false)]
+        public string ShareType { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateServiceRequestTag> Tag { get; set; }
+        public class CreateServiceRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        [NameInMap("TenantType")]
+        [Validation(Required=false)]
+        public string TenantType { get; set; }
+
+        [NameInMap("TrialDuration")]
+        [Validation(Required=false)]
+        public long? TrialDuration { get; set; }
+
+        [NameInMap("UpgradeMetadata")]
+        [Validation(Required=false)]
+        public string UpgradeMetadata { get; set; }
+
+        [NameInMap("VersionName")]
+        [Validation(Required=false)]
+        public string VersionName { get; set; }
 
     }
 
