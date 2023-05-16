@@ -25,9 +25,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? Status { get; set; }
 
-        /// <summary>
-        /// 子企业Id
-        /// </summary>
         [NameInMap("sub_corp_id")]
         [Validation(Required=false)]
         public string SubCorpId { get; set; }

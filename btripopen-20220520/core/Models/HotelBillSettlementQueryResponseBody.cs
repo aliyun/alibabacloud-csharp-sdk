@@ -232,6 +232,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
+                /// <summary>
+                /// 税率
+                /// </summary>
+                [NameInMap("tax_rate")]
+                [Validation(Required=false)]
+                public string TaxRate { get; set; }
+
                 [NameInMap("total_nights")]
                 [Validation(Required=false)]
                 public int? TotalNights { get; set; }

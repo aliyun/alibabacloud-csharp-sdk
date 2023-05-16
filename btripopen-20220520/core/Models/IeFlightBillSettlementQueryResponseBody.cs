@@ -304,6 +304,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? TaxFee { get; set; }
 
+                /// <summary>
+                /// 税率
+                /// </summary>
+                [NameInMap("tax_rate")]
+                [Validation(Required=false)]
+                public string TaxRate { get; set; }
+
                 [NameInMap("ticket_id")]
                 [Validation(Required=false)]
                 public string TicketId { get; set; }

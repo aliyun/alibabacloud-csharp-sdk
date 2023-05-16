@@ -248,6 +248,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string SubOrderId { get; set; }
 
+                /// <summary>
+                /// 税率
+                /// </summary>
+                [NameInMap("tax_rate")]
+                [Validation(Required=false)]
+                public string TaxRate { get; set; }
+
                 [NameInMap("traveler_id")]
                 [Validation(Required=false)]
                 public string TravelerId { get; set; }
