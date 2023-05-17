@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class Instance : TeaModel {
+        [NameInMap("CurrentAmount")]
+        [Validation(Required=false)]
+        public float? CurrentAmount { get; set; }
+
         [NameInMap("HostIP")]
         [Validation(Required=false)]
         public string HostIP { get; set; }
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? InstancePort { get; set; }
 
+        [NameInMap("IsSpot")]
+        [Validation(Required=false)]
+        public bool? IsSpot { get; set; }
+
         [NameInMap("LastState")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> LastState { get; set; }
@@ -36,6 +44,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
+
+        [NameInMap("OriginalAmount")]
+        [Validation(Required=false)]
+        public float? OriginalAmount { get; set; }
 
         [NameInMap("ReadyProcesses")]
         [Validation(Required=false)]

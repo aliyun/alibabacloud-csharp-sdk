@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateResourceInstancesResponseBody : TeaModel {
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public List<string> InstanceIds { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }

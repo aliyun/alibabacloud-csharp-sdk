@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string InstanceStatus { get; set; }
 
+        [NameInMap("InstanceSystemDiskSize")]
+        [Validation(Required=false)]
+        public int? InstanceSystemDiskSize { get; set; }
+
         [NameInMap("InstanceTenantIp")]
         [Validation(Required=false)]
         public string InstanceTenantIp { get; set; }
@@ -88,6 +92,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
+
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public string ResourceId { get; set; }
 
         [NameInMap("Zone")]
         [Validation(Required=false)]

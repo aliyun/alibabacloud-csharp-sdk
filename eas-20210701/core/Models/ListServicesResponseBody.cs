@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListServicesResponseBody : TeaModel {
-        /// <summary>
-        /// 页码。
-        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        /// <summary>
-        /// 每页显示的服务数。
-        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }

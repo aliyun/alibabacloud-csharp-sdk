@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public List<string> InstanceIds { get; set; }
+
         [NameInMap("OwnerUid")]
         [Validation(Required=false)]
         public string OwnerUid { get; set; }

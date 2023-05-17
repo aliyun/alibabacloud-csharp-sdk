@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("EventType")]
+        [Validation(Required=false)]
+        public string EventType { get; set; }
+
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public string PageNum { get; set; }

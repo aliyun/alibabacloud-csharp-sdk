@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public string Filter { get; set; }
+
+        [NameInMap("InstanceIP")]
+        [Validation(Required=false)]
+        public string InstanceIP { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -21,6 +29,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
+        [NameInMap("InstanceStatus")]
+        [Validation(Required=false)]
+        public string InstanceStatus { get; set; }
+
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -28,6 +44,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Sort")]
+        [Validation(Required=false)]
+        public string Sort { get; set; }
 
     }
 

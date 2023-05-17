@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string EcsInstanceType { get; set; }
 
+        [NameInMap("SystemDiskSize")]
+        [Validation(Required=false)]
+        public int? SystemDiskSize { get; set; }
+
+        [NameInMap("Zone")]
+        [Validation(Required=false)]
+        public string Zone { get; set; }
+
     }
 
 }
