@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public string Carrier { get; set; }
 
-        [NameInMap("ExtendFunction")]
-        [Validation(Required=false)]
-        public string ExtendFunction { get; set; }
-
         [NameInMap("InputNumber")]
         [Validation(Required=false)]
         public string InputNumber { get; set; }
