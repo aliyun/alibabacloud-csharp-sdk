@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class ListPermissionVersionsRequest : TeaModel {
+        /// <summary>
+        /// The information about the permission.
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// The name of the permission.
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("PermissionName")]
         [Validation(Required=false)]
         public string PermissionName { get; set; }

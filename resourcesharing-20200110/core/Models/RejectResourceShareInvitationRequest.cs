@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class RejectResourceShareInvitationRequest : TeaModel {
+        /// <summary>
+        /// The ID of the invitation.
+        /// </summary>
         [NameInMap("ResourceShareInvitationId")]
         [Validation(Required=false)]
         public string ResourceShareInvitationId { get; set; }
