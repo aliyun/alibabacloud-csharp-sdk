@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetStackGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the stack group.
+        /// The name of the stack group. The name must be unique within a region.
+        /// 
+        /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.
         /// 
         /// >  You must specify one of the StackGroupName and StackGroupId parameters.
         /// </summary>
@@ -19,14 +21,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The details of the stack group.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("StackGroupId")]
         [Validation(Required=false)]
         public string StackGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the stack group.
+        /// 
+        /// >  You must specify one of the StackGroupName and StackGroupId parameters.
         /// </summary>
         [NameInMap("StackGroupName")]
         [Validation(Required=false)]

@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStackResourcesResponseBody : TeaModel {
         /// <summary>
+        /// Details about resources.
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
         /// The status of the resource. Valid values:
         /// 
         /// *   INIT_COMPLETE: The resource is in the pending creation state.
@@ -29,35 +36,28 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// *   IMPORT_FAILED: The resource fails to be imported.
         /// *   IMPORT_COMPLETE: The resource is imported.
         /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// The logical ID of the resource. The logical ID is the resource name that is defined in the template.
-        /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<ListStackResourcesResponseBodyResources> Resources { get; set; }
         public class ListStackResourcesResponseBodyResources : TeaModel {
+            /// <summary>
+            /// The name of the stack.
+            /// 
+            /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The drift status of the resource in the most recent successful drift detection. Valid values:
-            /// 
-            /// *   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.
-            /// *   MODIFIED: The actual configuration of the resource differs from its expected template configuration.
-            /// *   NOT_CHECKED: ROS did not check whether the actual configuration of the resource differs from its expected template configuration.
-            /// *   IN_SYNC: The actual configuration of the resource matches its expected template configuration.
+            /// The type of the resource.
             /// </summary>
             [NameInMap("DriftDetectionTime")]
             [Validation(Required=false)]
             public string DriftDetectionTime { get; set; }
 
             /// <summary>
-            /// The ID of the stack.
+            /// The time when the resource was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("LogicalResourceId")]
             [Validation(Required=false)]
@@ -78,28 +78,33 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The type of the resource.
+            /// The most recent point in time when a successful drift detection operation was performed.
             /// </summary>
             [NameInMap("PhysicalResourceId")]
             [Validation(Required=false)]
             public string PhysicalResourceId { get; set; }
 
             /// <summary>
-            /// The time when the resource was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+            /// The reason why the resource is in a specific state.
             /// </summary>
             [NameInMap("ResourceDriftStatus")]
             [Validation(Required=false)]
             public string ResourceDriftStatus { get; set; }
 
             /// <summary>
-            /// The reason why the resource is in a specific state.
+            /// The drift status of the resource in the most recent successful drift detection. Valid values:
+            /// 
+            /// *   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.
+            /// *   MODIFIED: The actual configuration of the resource differs from its expected template configuration.
+            /// *   NOT_CHECKED: ROS did not check whether the actual configuration of the resource differs from its expected template configuration.
+            /// *   IN_SYNC: The actual configuration of the resource matches its expected template configuration.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The most recent point in time when a successful drift detection operation was performed.
+            /// The physical ID of the resource.
             /// </summary>
             [NameInMap("StackId")]
             [Validation(Required=false)]
@@ -110,23 +115,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string StackName { get; set; }
 
             /// <summary>
-            /// The time when the resource was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+            /// The logical ID of the resource. The logical ID is the resource name that is defined in the template.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The name of the stack.
-            /// 
-            /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
+            /// The time when the resource was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("StatusReason")]
             [Validation(Required=false)]
             public string StatusReason { get; set; }
 
             /// <summary>
-            /// The physical ID of the resource.
+            /// The ID of the stack.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]

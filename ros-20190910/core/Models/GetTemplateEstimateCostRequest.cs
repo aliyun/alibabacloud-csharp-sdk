@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("StackId")]
+        [Validation(Required=false)]
+        public string StackId { get; set; }
+
         /// <summary>
         /// The version of the template. This parameter takes effect only when the TemplateId parameter is specified.
         /// </summary>

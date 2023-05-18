@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The actual value of the resource property.
+        /// The property differences of the resource.
         /// </summary>
         [NameInMap("ResourceDrifts")]
         [Validation(Required=false)]
@@ -29,25 +29,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ActualProperties { get; set; }
 
             /// <summary>
-            /// The actual resource properties in JSON format.
+            /// The expected value of the resource property as defined in the template.
             /// </summary>
             [NameInMap("DriftDetectionTime")]
             [Validation(Required=false)]
             public string DriftDetectionTime { get; set; }
 
             /// <summary>
-            /// The ID of the request.
+            /// The query token value returned in this call.
             /// </summary>
             [NameInMap("ExpectedProperties")]
             [Validation(Required=false)]
             public string ExpectedProperties { get; set; }
 
             /// <summary>
-            /// The drift type of the resource property. Valid values:
-            /// 
-            /// *   ADD: The value has been added to a resource property whose data type was Array or List.
-            /// *   REMOVE: The property has been deleted from the current resource configuration.
-            /// *   NOT_EQUAL: The current property value differs from the expected value defined in the stack template.
+            /// The actual value of the resource property.
             /// </summary>
             [NameInMap("LogicalResourceId")]
             [Validation(Required=false)]
@@ -68,14 +64,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The expected value of the resource property as defined in the template.
+            /// The path of the resource property.
             /// </summary>
             [NameInMap("PhysicalResourceId")]
             [Validation(Required=false)]
             public string PhysicalResourceId { get; set; }
 
             /// <summary>
-            /// __null__
+            /// http://ros.aliyun-inc.com:8080/V2/ListStackResourceDrifts
             /// </summary>
             [NameInMap("PropertyDifferences")]
             [Validation(Required=false)]
@@ -95,12 +91,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public string DifferenceType { get; set; }
 
+                /// <summary>
+                /// ListStackResourceDrifts
+                /// </summary>
                 [NameInMap("ExpectedValue")]
                 [Validation(Required=false)]
                 public string ExpectedValue { get; set; }
 
                 /// <summary>
-                /// ListStackResourceDrifts
+                /// __null__
                 /// </summary>
                 [NameInMap("PropertyPath")]
                 [Validation(Required=false)]
@@ -109,21 +108,25 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// http://ros.aliyun-inc.com:8080/V2/ListStackResourceDrifts
+            /// The ID of the request.
             /// </summary>
             [NameInMap("ResourceDriftStatus")]
             [Validation(Required=false)]
             public string ResourceDriftStatus { get; set; }
 
             /// <summary>
-            /// The query token value returned in this call.
+            /// The actual resource properties in JSON format.
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The path of the resource property.
+            /// The drift type of the resource property. Valid values:
+            /// 
+            /// *   ADD: The value has been added to a resource property whose data type was Array or List.
+            /// *   REMOVE: The property has been deleted from the current resource configuration.
+            /// *   NOT_EQUAL: The current property value differs from the expected value defined in the stack template.
             /// </summary>
             [NameInMap("StackId")]
             [Validation(Required=false)]

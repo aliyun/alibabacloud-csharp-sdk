@@ -213,6 +213,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        [NameInMap("OrderIds")]
+        [Validation(Required=false)]
+        public List<string> OrderIds { get; set; }
+
         /// <summary>
         /// The output parameters of the stack.
         /// 
