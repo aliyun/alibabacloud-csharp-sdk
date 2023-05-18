@@ -169,6 +169,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public SearchMediaResponseBodyMediaInfoListAiRoughData AiRoughData { get; set; }
             public class SearchMediaResponseBodyMediaInfoListAiRoughData : TeaModel {
+                /// <summary>
+                /// 电视剧
+                /// </summary>
                 [NameInMap("AiCategory")]
                 [Validation(Required=false)]
                 public string AiCategory { get; set; }

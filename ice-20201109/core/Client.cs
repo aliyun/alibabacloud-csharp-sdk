@@ -13557,6 +13557,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["EditingProduceConfig"] = request.EditingProduceConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaMetadata))
+            {
+                query["MediaMetadata"] = request.MediaMetadata;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputMediaConfig))
             {
                 query["OutputMediaConfig"] = request.OutputMediaConfig;
@@ -13623,6 +13627,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditingProduceConfig))
             {
                 query["EditingProduceConfig"] = request.EditingProduceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaMetadata))
+            {
+                query["MediaMetadata"] = request.MediaMetadata;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputMediaConfig))
             {

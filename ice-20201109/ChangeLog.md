@@ -1,3 +1,6 @@
+2023-05-18 Version: 1.3.10
+- Add conditional transcoding parameters.
+
 2023-04-21 Version: 1.3.9
 - Add api called SubmitAvatarVideoJob, which render avatar videos.
 

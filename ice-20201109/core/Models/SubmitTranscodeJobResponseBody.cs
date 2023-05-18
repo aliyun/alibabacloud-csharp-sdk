@@ -360,6 +360,44 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                             }
 
+                            [NameInMap("TransConfig")]
+                            [Validation(Required=false)]
+                            public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig TransConfig { get; set; }
+                            public class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig : TeaModel {
+                                [NameInMap("AdjDarMethod")]
+                                [Validation(Required=false)]
+                                public string AdjDarMethod { get; set; }
+
+                                [NameInMap("IsCheckAudioBitrate")]
+                                [Validation(Required=false)]
+                                public string IsCheckAudioBitrate { get; set; }
+
+                                [NameInMap("IsCheckAudioBitrateFail")]
+                                [Validation(Required=false)]
+                                public string IsCheckAudioBitrateFail { get; set; }
+
+                                [NameInMap("IsCheckReso")]
+                                [Validation(Required=false)]
+                                public string IsCheckReso { get; set; }
+
+                                [NameInMap("IsCheckResoFail")]
+                                [Validation(Required=false)]
+                                public string IsCheckResoFail { get; set; }
+
+                                [NameInMap("IsCheckVideoBitrate")]
+                                [Validation(Required=false)]
+                                public string IsCheckVideoBitrate { get; set; }
+
+                                [NameInMap("IsCheckVideoBitrateFail")]
+                                [Validation(Required=false)]
+                                public string IsCheckVideoBitrateFail { get; set; }
+
+                                [NameInMap("TransMode")]
+                                [Validation(Required=false)]
+                                public string TransMode { get; set; }
+
+                            }
+
                             [NameInMap("Video")]
                             [Validation(Required=false)]
                             public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsVideo Video { get; set; }
@@ -1071,6 +1109,44 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                             [NameInMap("Tags")]
                             [Validation(Required=false)]
                             public Dictionary<string, object> Tags { get; set; }
+
+                            [NameInMap("TransConfig")]
+                            [Validation(Required=false)]
+                            public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig TransConfig { get; set; }
+                            public class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig : TeaModel {
+                                [NameInMap("AdjDarMethod")]
+                                [Validation(Required=false)]
+                                public string AdjDarMethod { get; set; }
+
+                                [NameInMap("IsCheckAudioBitrate")]
+                                [Validation(Required=false)]
+                                public string IsCheckAudioBitrate { get; set; }
+
+                                [NameInMap("IsCheckAudioBitrateFail")]
+                                [Validation(Required=false)]
+                                public string IsCheckAudioBitrateFail { get; set; }
+
+                                [NameInMap("IsCheckReso")]
+                                [Validation(Required=false)]
+                                public string IsCheckReso { get; set; }
+
+                                [NameInMap("IsCheckResoFail")]
+                                [Validation(Required=false)]
+                                public string IsCheckResoFail { get; set; }
+
+                                [NameInMap("IsCheckVideoBitrate")]
+                                [Validation(Required=false)]
+                                public string IsCheckVideoBitrate { get; set; }
+
+                                [NameInMap("IsCheckVideoBitrateFail")]
+                                [Validation(Required=false)]
+                                public string IsCheckVideoBitrateFail { get; set; }
+
+                                [NameInMap("TransMode")]
+                                [Validation(Required=false)]
+                                public string TransMode { get; set; }
+
+                            }
 
                             [NameInMap("Video")]
                             [Validation(Required=false)]
