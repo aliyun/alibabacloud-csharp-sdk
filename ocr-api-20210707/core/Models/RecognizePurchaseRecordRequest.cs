@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizePurchaseRecordRequest : TeaModel {
+        [NameInMap("OutputMultiOrders")]
+        [Validation(Required=false)]
+        public bool? OutputMultiOrders { get; set; }
+
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }
