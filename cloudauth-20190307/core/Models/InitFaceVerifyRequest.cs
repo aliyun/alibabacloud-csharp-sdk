@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string OuterOrderNo { get; set; }
 
+        [NameInMap("ProcedurePriority")]
+        [Validation(Required=false)]
+        public string ProcedurePriority { get; set; }
+
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
@@ -96,6 +100,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public long? SceneId { get; set; }
+
+        [NameInMap("SuitableType")]
+        [Validation(Required=false)]
+        public string SuitableType { get; set; }
 
         [NameInMap("UserId")]
         [Validation(Required=false)]

@@ -1569,6 +1569,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["OuterOrderNo"] = request.OuterOrderNo;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcedurePriority))
+            {
+                query["ProcedurePriority"] = request.ProcedurePriority;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["ProductCode"] = request.ProductCode;
@@ -1580,6 +1584,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
             {
                 query["SceneId"] = request.SceneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SuitableType))
+            {
+                query["SuitableType"] = request.SuitableType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
@@ -1690,6 +1698,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["OuterOrderNo"] = request.OuterOrderNo;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcedurePriority))
+            {
+                query["ProcedurePriority"] = request.ProcedurePriority;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["ProductCode"] = request.ProductCode;
@@ -1701,6 +1713,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
             {
                 query["SceneId"] = request.SceneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SuitableType))
+            {
+                query["SuitableType"] = request.SuitableType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
