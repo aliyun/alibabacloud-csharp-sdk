@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class SendVerificationCodeForBindSecureMobilePhoneResponseBody : TeaModel {
+        /// <summary>
+        /// The time when the verification code expires.
+        /// </summary>
         [NameInMap("ExpirationDate")]
         [Validation(Required=false)]
         public string ExpirationDate { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

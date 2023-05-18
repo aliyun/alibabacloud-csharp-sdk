@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class RemoveCloudAccountRequest : TeaModel {
+        /// <summary>
+        /// The ID of the member.
+        /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }

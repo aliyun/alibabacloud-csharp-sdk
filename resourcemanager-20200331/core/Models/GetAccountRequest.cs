@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetAccountRequest : TeaModel {
+        /// <summary>
+        /// The Alibaba Cloud account ID of the member.
+        /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to return the information of tags. Valid values:
+        /// 
+        /// *   false (default value)
+        /// *   true
+        /// </summary>
         [NameInMap("IncludeTags")]
         [Validation(Required=false)]
         public bool? IncludeTags { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DeleteFolderRequest : TeaModel {
+        /// <summary>
+        /// The ID of the folder.
+        /// </summary>
         [NameInMap("FolderId")]
         [Validation(Required=false)]
         public string FolderId { get; set; }

@@ -9,64 +9,109 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetRoleResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The information of the RAM role.
+        /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public GetRoleResponseBodyRole Role { get; set; }
         public class GetRoleResponseBodyRole : TeaModel {
+            /// <summary>
+            /// The Alibaba Cloud Resource Name (ARN) of the RAM role.
+            /// </summary>
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public string Arn { get; set; }
 
+            /// <summary>
+            /// The document of the policy that specifies the trusted entity to assume the RAM role.
+            /// </summary>
             [NameInMap("AssumeRolePolicyDocument")]
             [Validation(Required=false)]
             public string AssumeRolePolicyDocument { get; set; }
 
+            /// <summary>
+            /// The time when the RAM role was created.
+            /// </summary>
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
 
+            /// <summary>
+            /// The description of the RAM role.
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// Indicates whether the RAM role is a service linked role.
+            /// </summary>
             [NameInMap("IsServiceLinkedRole")]
             [Validation(Required=false)]
             public bool? IsServiceLinkedRole { get; set; }
 
+            /// <summary>
+            /// The information of the most recent deletion task.
+            /// </summary>
             [NameInMap("LatestDeletionTask")]
             [Validation(Required=false)]
             public GetRoleResponseBodyRoleLatestDeletionTask LatestDeletionTask { get; set; }
             public class GetRoleResponseBodyRoleLatestDeletionTask : TeaModel {
+                /// <summary>
+                /// The time when the deletion task was created.
+                /// </summary>
                 [NameInMap("CreateDate")]
                 [Validation(Required=false)]
                 public string CreateDate { get; set; }
 
+                /// <summary>
+                /// The ID of the deletion task.
+                /// </summary>
                 [NameInMap("DeletionTaskId")]
                 [Validation(Required=false)]
                 public string DeletionTaskId { get; set; }
 
             }
 
+            /// <summary>
+            /// The maximum session duration of the RAM role.
+            /// </summary>
             [NameInMap("MaxSessionDuration")]
             [Validation(Required=false)]
             public long? MaxSessionDuration { get; set; }
 
+            /// <summary>
+            /// The ID of the RAM role.
+            /// </summary>
             [NameInMap("RoleId")]
             [Validation(Required=false)]
             public string RoleId { get; set; }
 
+            /// <summary>
+            /// The name of the RAM role.
+            /// </summary>
             [NameInMap("RoleName")]
             [Validation(Required=false)]
             public string RoleName { get; set; }
 
+            /// <summary>
+            /// The name of the RAM role after authorization.
+            /// </summary>
             [NameInMap("RolePrincipalName")]
             [Validation(Required=false)]
             public string RolePrincipalName { get; set; }
 
+            /// <summary>
+            /// The time when the RAM role was updated.
+            /// </summary>
             [NameInMap("UpdateDate")]
             [Validation(Required=false)]
             public string UpdateDate { get; set; }
