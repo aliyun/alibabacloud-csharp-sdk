@@ -74,6 +74,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string Host { get; set; }
 
+            [NameInMap("InstanceAlias")]
+            [Validation(Required=false)]
+            public string InstanceAlias { get; set; }
+
             /// <summary>
             /// The status of the database. Valid values:
             /// 

@@ -8385,6 +8385,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await GetOwnerApplyOrderDetailWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
+          *
+          * @param request GetPermApplyOrderDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetPermApplyOrderDetailResponse
+         */
         public GetPermApplyOrderDetailResponse GetPermApplyOrderDetailWithOptions(GetPermApplyOrderDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8416,6 +8423,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetPermApplyOrderDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
+          *
+          * @param request GetPermApplyOrderDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetPermApplyOrderDetailResponse
+         */
         public async Task<GetPermApplyOrderDetailResponse> GetPermApplyOrderDetailWithOptionsAsync(GetPermApplyOrderDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8447,12 +8461,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<GetPermApplyOrderDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
+          *
+          * @param request GetPermApplyOrderDetailRequest
+          * @return GetPermApplyOrderDetailResponse
+         */
         public GetPermApplyOrderDetailResponse GetPermApplyOrderDetail(GetPermApplyOrderDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetPermApplyOrderDetailWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
+          *
+          * @param request GetPermApplyOrderDetailRequest
+          * @return GetPermApplyOrderDetailResponse
+         */
         public async Task<GetPermApplyOrderDetailResponse> GetPermApplyOrderDetailAsync(GetPermApplyOrderDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
