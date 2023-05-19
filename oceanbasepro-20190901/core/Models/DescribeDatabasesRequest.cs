@@ -10,48 +10,47 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeDatabasesRequest : TeaModel {
         /// <summary>
-        /// The name of the database.    
-        /// You cannot use reserved keywords, such as test and mysql.
+        /// It is an Alibaba Cloud asset management and configuration tool, with which you can manage multiple Alibaba Cloud products and services by using commands. It is easy to use and a good helper in migration to cloud.
         /// </summary>
         [NameInMap("DatabaseName")]
         [Validation(Required=false)]
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// The number of the page to return.   
-        /// - Start value: 1   
-        /// - Default value: 1
+        /// The return result of the request.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of rows to return on each page.   
-        /// - Maximum value: 100.  
-        /// - Default value: 10
+        /// Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The search keyword.
+        /// The information about the database tables.
         /// </summary>
         [NameInMap("SearchKey")]
         [Validation(Required=false)]
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// The request ID.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
         /// <summary>
-        /// Specifies whether to return the information of tables in the database.   
-        /// Default value: false.
+        /// The role of the account.    
+        /// In MySQL mode, a role is a database-level role. Valid values:  
+        /// - ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.  
+        /// - ReadOnly: a role that has only the read-only privilege SELECT.   
+        /// - DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   
+        /// - DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
         /// </summary>
         [NameInMap("WithTables")]
         [Validation(Required=false)]

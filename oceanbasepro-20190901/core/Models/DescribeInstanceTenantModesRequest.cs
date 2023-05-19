@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeInstanceTenantModesRequest : TeaModel {
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// The operation that you want to perform.   
+        /// Set the value to **DescribeInstanceTenantModes**.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

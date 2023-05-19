@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ModifyTenantUserStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// The operation that you want to perform.   
+        /// Set the value to **ModifyTenantUserStatus**.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -24,8 +25,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// The name of the database account.    
-        /// You cannot use reserved keywords, such as SYS and root.
+        /// The list of database accounts in the tenant.
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

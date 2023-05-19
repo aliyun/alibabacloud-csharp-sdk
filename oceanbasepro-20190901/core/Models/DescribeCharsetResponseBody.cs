@@ -10,22 +10,23 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeCharsetResponseBody : TeaModel {
         /// <summary>
-        /// The list of character sets.
+        /// ```
+        /// http(s)://[Endpoint]/?Action=DescribeCharset
+        /// &TenantMode=Oracle
+        /// &Common request parameters
+        /// ```
         /// </summary>
         [NameInMap("Charset")]
         [Validation(Required=false)]
         public List<DescribeCharsetResponseBodyCharset> Charset { get; set; }
         public class DescribeCharsetResponseBodyCharset : TeaModel {
             /// <summary>
-            /// The character set name.
+            /// DescribeCharset
             /// </summary>
             [NameInMap("Charset")]
             [Validation(Required=false)]
             public string Charset { get; set; }
 
-            /// <summary>
-            /// The collation set.
-            /// </summary>
             [NameInMap("Collations")]
             [Validation(Required=false)]
             public List<string> Collations { get; set; }
@@ -33,7 +34,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// The operation that you want to perform.   
+        /// Set the value to **DescribeCharset**.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

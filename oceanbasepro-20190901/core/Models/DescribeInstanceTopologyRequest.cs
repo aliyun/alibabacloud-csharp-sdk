@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeInstanceTopologyRequest : TeaModel {
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// The status of the node.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

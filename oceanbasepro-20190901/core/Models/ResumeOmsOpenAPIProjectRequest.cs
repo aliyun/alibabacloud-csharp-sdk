@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ResumeOmsOpenAPIProjectRequest : TeaModel {
         /// <summary>
-        /// The page number, which takes effect in a pagination query.
+        /// Contact the administrator.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The page size, which takes effect in a pagination query.
+        /// Indicates whether the call is successful.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The project ID.
+        /// Contact the administrator.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.
+        /// The suggestions (old).
         /// </summary>
         [NameInMap("WorkerGradeId")]
         [Validation(Required=false)]

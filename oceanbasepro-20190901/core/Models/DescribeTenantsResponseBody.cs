@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeTenantsResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// The ID of the tenant.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of tenants.
+        /// The ID of the OceanBase cluster.
         /// </summary>
         [NameInMap("Tenants")]
         [Validation(Required=false)]
@@ -39,50 +39,45 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// The time when the tenant was created.
+            /// The number of CPU cores in each resource unit of the tenant.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The data replica distribution mode of the tenant.   
-            /// 
-            /// - For the high availability version, N-N-N indicates the three-zone mode, and N-N indicates the dual-zone or single-zone mode.
-            /// - For the basic version, N indicates the single-zone mode. 
-            /// 
-            /// > <br>N represents the number of nodes in a single zone.
+            /// The search keyword.
             /// </summary>
             [NameInMap("DeployMode")]
             [Validation(Required=false)]
             public string DeployMode { get; set; }
 
             /// <summary>
-            /// The deployment type of the tenant. <br>
-            /// - multiple: multi-IDC deployment
-            /// - single: single-IDC deployment
-            /// - dual: dual-IDC deployment
+            /// The name of the tenant.   
+            /// It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_).  It cannot be set to sys.
             /// </summary>
             [NameInMap("DeployType")]
             [Validation(Required=false)]
             public string DeployType { get; set; }
 
             /// <summary>
-            /// The description of the tenant.
+            /// Example 1
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The total memory size of the tenant, in GB.
+            /// The number of the page to return.   
+            /// Start value: 1
+            /// - Default value: 1
             /// </summary>
             [NameInMap("Mem")]
             [Validation(Required=false)]
             public int? Mem { get; set; }
 
             /// <summary>
-            /// The primary zone of the tenant.
+            /// The return result of the request.
             /// </summary>
             [NameInMap("PrimaryZone")]
             [Validation(Required=false)]
@@ -105,59 +100,67 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// The ID of the tenant.
+            /// You can call this operation to query the tenants in an OceanBase cluster.
             /// </summary>
             [NameInMap("TenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
 
             /// <summary>
-            /// The tenant mode.   
-            /// Valid values:   
-            /// Oracle
-            /// MySQL
+            /// {
+            ///     "TotalCount": 1,
+            ///     "RequestId": "EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C",
+            ///     "Tenants": [
+            ///         {
+            ///             "VpcId": "vpc-bp1d2q3mhg9i23ofi****",
+            ///             "Status": "ONLINE",
+            ///             "PrimaryZone": "cn-hangzhou-i",
+            ///             "DeployType": "multiple",
+            ///             "DeployMode": "1-1-1",
+            ///             "CreateTime": "2021-09-17 15:52:17.0",
+            ///             "TenantName": "pay_online",
+            ///             "Mem": 20,
+            ///             "Cpu": 10,
+            ///             "Description": "PayCore business database",
+            ///             "TenantMode": "Oracle",
+            ///             "TenantId": "t33h8y08k****",
+            ///             "UnitCpu": 5,
+            ///             "UnitMem": 10,
+            ///             "UnitNum": 2,
+            ///             "UsedDiskSize": 10
+            ///         }
+            ///     ]
+            /// }
             /// </summary>
             [NameInMap("TenantMode")]
             [Validation(Required=false)]
             public string TenantMode { get; set; }
 
             /// <summary>
-            /// The name of the tenant.
+            /// The information of tenants.
             /// </summary>
             [NameInMap("TenantName")]
             [Validation(Required=false)]
             public string TenantName { get; set; }
 
-            /// <summary>
-            /// The number of CPU cores in each resource unit of the tenant.
-            /// </summary>
             [NameInMap("UnitCpu")]
             [Validation(Required=false)]
             public int? UnitCpu { get; set; }
 
-            /// <summary>
-            /// The memory size of each resource unit of the tenant, in GB.
-            /// </summary>
             [NameInMap("UnitMem")]
             [Validation(Required=false)]
             public int? UnitMem { get; set; }
 
-            /// <summary>
-            /// The number of resource units in the tenant.
-            /// </summary>
             [NameInMap("UnitNum")]
             [Validation(Required=false)]
             public int? UnitNum { get; set; }
 
-            /// <summary>
-            /// The number of used disks of the tenant.
-            /// </summary>
             [NameInMap("UsedDiskSize")]
             [Validation(Required=false)]
             public double? UsedDiskSize { get; set; }
 
             /// <summary>
-            /// The ID of the VPC.   <br>If no suitable VPC is available, create a VPC as prompted. For more information, see "What is a VPC".
+            /// The time when the tenant was created.
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
@@ -166,7 +169,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         }
 
         /// <summary>
-        /// The total number of tenants in the specified OceanBase cluster.
+        /// The total memory size of the tenant, in GB.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

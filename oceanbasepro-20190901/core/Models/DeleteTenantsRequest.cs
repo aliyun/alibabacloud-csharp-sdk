@@ -10,15 +10,19 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DeleteTenantsRequest : TeaModel {
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// You can call this operation to delete one or more tenants from an OceanBase cluster.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The list of tenant IDs.   
-        /// It is a JSON array. Each object in the array is a tenant name string.
+        /// ```
+        /// http(s)://[Endpoint]/?Action=DeleteTenants
+        /// &TenantIds=["ob2mr3oae0****", "ob2mr3oae1****"]
+        /// &InstanceId=ob317v4uif****
+        /// &Common request parameters
+        /// ```
         /// </summary>
         [NameInMap("TenantIds")]
         [Validation(Required=false)]

@@ -10,98 +10,89 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class CreateTenantRequest : TeaModel {
         /// <summary>
-        /// The character set.    
-        /// For more information, see DescribeCharset.
+        /// The description of the database.
         /// </summary>
         [NameInMap("Charset")]
         [Validation(Required=false)]
         public string Charset { get; set; }
 
         /// <summary>
-        /// The number of CPU cores of the tenant.   
-        /// 
-        /// > <br>The CPU specification of a single tenant cannot exceed that of the corresponding cluster. <br>For example, if the specification of the cluster is 14 CPU cores and 70 GB of memory, the CPU specification of the tenant cannot exceed 14 cores.
+        /// The number of resource distribution nodes in the tenant.    
+        /// The number is determined by the deployment mode of the cluster. If the cluster is deployed in 2-2-2 mode, the maximum number of resource distribution nodes is 2.
         /// </summary>
         [NameInMap("Cpu")]
         [Validation(Required=false)]
         public int? Cpu { get; set; }
 
         /// <summary>
-        /// The description of the database.
+        /// $.parameters[13].schema.example
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// The ID of the vSwitch.    
+        /// If no suitable vSwitch is available, create a vSwitch as prompted.   
+        /// For more information, see Use a vSwitch.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The memory size of the tenant, in GB.   
-        /// 
-        /// > <br>The memory size of a single tenant cannot exceed that of the corresponding cluster. <br>For example, if the specification of the cluster is 14 CPU cores and 70 GB of memory, the memory size of the tenant cannot exceed 70 GB.
+        /// The return result of the request.
         /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
         /// <summary>
-        /// The primary zone of the tenant.    
-        /// It is one of the zones in which the cluster is deployed.
+        /// $.parameters[12].schema.enumValueTitles
         /// </summary>
         [NameInMap("PrimaryZone")]
         [Validation(Required=false)]
         public string PrimaryZone { get; set; }
 
         /// <summary>
-        /// The tenant mode.    
-        /// Valid values: Oracle and MySQL.   
-        /// For more information, see [DescribeInstanceTenantModes](~~410354~~).
+        /// The ID of the tenant.
         /// </summary>
         [NameInMap("TenantMode")]
         [Validation(Required=false)]
         public string TenantMode { get; set; }
 
         /// <summary>
-        /// The name of the tenant.    
-        /// It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_).  It cannot be set to sys.
+        /// Alibaba Cloud CLI
         /// </summary>
         [NameInMap("TenantName")]
         [Validation(Required=false)]
         public string TenantName { get; set; }
 
         /// <summary>
-        /// The time zone of the tenant. For more information, see [DescribeTimeZones](~~410361~~).
+        /// The memory size of the tenant, in GB.   
+        /// 
+        /// > <br>The memory size of a single tenant cannot exceed that of the corresponding cluster. <br>For example, if the specification of the cluster is 14 CPU cores and 70 GB of memory, the memory size of the tenant cannot exceed 70 GB.
         /// </summary>
         [NameInMap("TimeZone")]
         [Validation(Required=false)]
         public string TimeZone { get; set; }
 
         /// <summary>
-        /// The number of resource distribution nodes in the tenant.    
-        /// The number is determined by the deployment mode of the cluster. If the cluster is deployed in 2-2-2 mode, the maximum number of resource distribution nodes is 2.
+        /// $.parameters[11].schema.description
         /// </summary>
         [NameInMap("UnitNum")]
         [Validation(Required=false)]
         public int? UnitNum { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch.    
-        /// If no suitable vSwitch is available, create a vSwitch as prompted.   
-        /// For more information, see Use a vSwitch.
+        /// $.parameters[12].schema.description
         /// </summary>
         [NameInMap("UserVSwitchId")]
         [Validation(Required=false)]
         public string UserVSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC.   
-        ///  If no suitable VPC is available, create a VPC as prompted.   
-        /// For more information, see "What is a VPC".
+        /// The time zone of the tenant.  For more information, see [DescribeTimeZones](https://help.aliyun.com/document_detail/410361.html).
         /// </summary>
         [NameInMap("UserVpcId")]
         [Validation(Required=false)]

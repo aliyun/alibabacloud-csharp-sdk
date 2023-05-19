@@ -9,64 +9,55 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class StartOmsOpenAPIProjectResponseBody : TeaModel {
-        /// <summary>
-        /// The suggestions.
-        /// </summary>
         [NameInMap("Advice")]
         [Validation(Required=false)]
         public string Advice { get; set; }
 
         /// <summary>
-        /// The error code (old).
+        /// The request ID.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// The time spent in processing the request, in seconds.
-        /// </summary>
         [NameInMap("Cost")]
         [Validation(Required=false)]
         public string Cost { get; set; }
 
-        /// <summary>
-        /// Indicates whether the project is started.
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
         /// <summary>
-        /// The error details.
+        /// The operation that you want to perform. Set the value to **StartOmsOpenAPIProject**.
         /// </summary>
         [NameInMap("ErrorDetail")]
         [Validation(Required=false)]
         public StartOmsOpenAPIProjectResponseBodyErrorDetail ErrorDetail { get; set; }
         public class StartOmsOpenAPIProjectResponseBodyErrorDetail : TeaModel {
             /// <summary>
-            /// The error code (new).
+            /// The error description (old).
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// Valid values: CRITICAL, ERROR, and WARN.
+            /// The error code (new).
             /// </summary>
             [NameInMap("Level")]
             [Validation(Required=false)]
             public string Level { get; set; }
 
             /// <summary>
-            /// The error description (new).
+            /// The page number, which takes effect in a pagination query.
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The suggestions (new).
+            /// The error details.
             /// </summary>
             [NameInMap("Proposal")]
             [Validation(Required=false)]
@@ -74,44 +65,29 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         }
 
-        /// <summary>
-        /// The error description (old).
-        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// The page number, which takes effect in a pagination query.
-        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        /// <summary>
-        /// The page size, which takes effect in a pagination query.
-        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// The request ID.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful.
+        /// The suggestions (new).
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// The total count, which takes effect in a pagination query.
-        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }

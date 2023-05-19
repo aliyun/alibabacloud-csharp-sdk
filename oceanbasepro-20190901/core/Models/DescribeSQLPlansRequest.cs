@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeSQLPlansRequest : TeaModel {
         /// <summary>
-        /// SQLID.
+        /// The time when the plan was loaded for the first time, .
         /// </summary>
         [NameInMap("SQLId")]
         [Validation(Required=false)]
         public string SQLId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// The time when the plan was loaded for the first time, .
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

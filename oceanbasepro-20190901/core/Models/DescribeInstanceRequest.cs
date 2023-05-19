@@ -10,25 +10,21 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// The size of the data disk, in GB.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. 
-        /// - Start value: 1  
-        /// - Default value: 1
+        /// The information about the storage resources of the cluster.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of rows to return on each page.   
-        /// - Maximum value: 100   
-        /// - Default value: 10
+        /// The server with the highest disk usage.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeOmsOpenAPIProjectStepsRequest : TeaModel {
         /// <summary>
-        /// The page number, which takes effect in a pagination query.
+        /// The read RT baseline of the source data source.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The page size, which takes effect in a pagination query.
+        /// The read/write RPS baseline of the destination data source.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The project ID.
+        /// The read/write RT baseline of the destination data source.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.
+        /// The read RT baseline of the source data source.
         /// </summary>
         [NameInMap("WorkerGradeId")]
         [Validation(Required=false)]

@@ -10,41 +10,35 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeSlowSQLHistoryListRequest : TeaModel {
         /// <summary>
-        /// The end time of the time range for querying the execution history of the slow SQL statement.   
-        /// The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+        /// The number of RPCs.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The number of the page to return.    
-        /// - Start value: 1   
-        /// - Default value: 1
+        /// The maximum response time.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of rows to return on each page.  
-        /// - Maximum value: 100   
-        /// - Default value: 10
+        /// The number of plan misses.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The SQL ID, which uniquely identifies an SQL statement.
+        /// The wait time for network.
         /// </summary>
         [NameInMap("SQLId")]
         [Validation(Required=false)]
         public string SQLId { get; set; }
 
         /// <summary>
-        /// The start time of the time range for querying the execution history of the slow SQL statement.   
-        /// The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+        /// The I/O wait time.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

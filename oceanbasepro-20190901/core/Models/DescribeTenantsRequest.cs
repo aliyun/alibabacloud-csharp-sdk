@@ -10,47 +10,42 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeTenantsRequest : TeaModel {
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// The number of used disks of the tenant.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.   
-        /// Start value: 1
-        /// - Default value: 1
+        /// It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of rows to return on each page.   
-        /// - Maximum value: 100.
-        /// - Default value: 10
+        /// You can call this operation to query the tenants in an OceanBase cluster.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The search keyword.
+        /// The primary zone of the tenant.
         /// </summary>
         [NameInMap("SearchKey")]
         [Validation(Required=false)]
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// Alibaba Cloud CLI
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
         /// <summary>
-        /// The name of the tenant.   
-        /// It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_).  It cannot be set to sys.
+        /// The information of tenants.
         /// </summary>
         [NameInMap("TenantName")]
         [Validation(Required=false)]

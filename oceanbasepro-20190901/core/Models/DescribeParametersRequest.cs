@@ -10,23 +10,21 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeParametersRequest : TeaModel {
         /// <summary>
-        /// The type of the parameter.    
-        /// Valid values: CLUSTER and TENANT.
+        /// It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.
         /// </summary>
         [NameInMap("Dimension")]
         [Validation(Required=false)]
         public string Dimension { get; set; }
 
         /// <summary>
-        /// The resource ID of the parameter type.   
-        /// You can leave this parameter unspecified when you call this operation to query cluster parameters. In the case of tenant parameters, pass the tenant ID.
+        /// Alibaba Cloud CLI
         /// </summary>
         [NameInMap("DimensionValue")]
         [Validation(Required=false)]
         public string DimensionValue { get; set; }
 
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// 498529
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -10,81 +10,88 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeParametersHistoryResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// The number of the page to return.    
+        /// - Start value: 1   
+        /// - Default value: 1
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of parameter modification records.
+        /// The time when the parameter modification took effect.
         /// </summary>
         [NameInMap("Respond")]
         [Validation(Required=false)]
         public List<DescribeParametersHistoryResponseBodyRespond> Respond { get; set; }
         public class DescribeParametersHistoryResponseBodyRespond : TeaModel {
             /// <summary>
-            /// The number of returned entries on each page.
+            /// The end time for the query of parameter modification history.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The parameter modification history.
+            /// The number of rows to return on each page.   
+            /// - Maximum value: 100   
+            /// - Default value: 10
             /// </summary>
             [NameInMap("Parameters")]
             [Validation(Required=false)]
             public List<DescribeParametersHistoryResponseBodyRespondParameters> Parameters { get; set; }
             public class DescribeParametersHistoryResponseBodyRespondParameters : TeaModel {
                 /// <summary>
-                /// The time when the parameter modification was initiated.
+                /// The request ID.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The resource ID of the parameter type.    
-                /// - When you called this operation to query the modification history of cluster parameters, the value is DEFAULT_DIMENSION_VALUE.   
-                /// - When you called this operation to query the modification history of tenant parameters, the value is the tenant ID.
+                /// ```
+                /// http(s)://[Endpoint]/?Action=DescribeParametersHistory
+                /// &InstanceId=ob317v4uif****
+                /// &Dimension=TENANT
+                /// &DimensionValue=ob2mr3oae0****
+                /// &StartTime=2021-06-13 15:40:43
+                /// &EndTime=2021-09-13 15:40:43
+                /// &PageSize=10
+                /// &PageNumber=1
+                /// &Common request parameters
+                /// ```
                 /// </summary>
                 [NameInMap("DimensionValue")]
                 [Validation(Required=false)]
                 public string DimensionValue { get; set; }
 
                 /// <summary>
-                /// The name of the parameter.
+                /// You can call this operation to query the modification history of cluster or tenant parameters.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// The value of the parameter after the modification.
-                /// </summary>
                 [NameInMap("NewValue")]
                 [Validation(Required=false)]
                 public string NewValue { get; set; }
 
                 /// <summary>
-                /// The parameter value before modification.
+                /// The start time of the time range for querying the parameter modification history.
                 /// </summary>
                 [NameInMap("OldValue")]
                 [Validation(Required=false)]
                 public string OldValue { get; set; }
 
                 /// <summary>
-                /// The modification status. Valid values:    
-                /// - APPLIED: The modification was successful.   
-                /// - SCHEDULING: The modification was to be made.
+                /// -
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The time when the parameter modification took effect.
+                /// The name of the parameter.
                 /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
@@ -93,7 +100,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             }
 
             /// <summary>
-            /// The number of parameter modification records.
+            /// The list of parameter modification records.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]

@@ -10,28 +10,26 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeInstanceCreatableZoneResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// Indicates whether the cluster is deployed in the zone.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of zones.
+        /// The operation that you want to perform.   
+        /// Set the value to **DescribeInstanceCreatableZone**.
         /// </summary>
         [NameInMap("ZoneList")]
         [Validation(Required=false)]
         public List<DescribeInstanceCreatableZoneResponseBodyZoneList> ZoneList { get; set; }
         public class DescribeInstanceCreatableZoneResponseBodyZoneList : TeaModel {
-            /// <summary>
-            /// Indicates whether the cluster is deployed in the zone.
-            /// </summary>
             [NameInMap("IsInCluster")]
             [Validation(Required=false)]
             public bool? IsInCluster { get; set; }
 
             /// <summary>
-            /// The ID of the zone.
+            /// DescribeInstanceCreatableZone
             /// </summary>
             [NameInMap("Zone")]
             [Validation(Required=false)]

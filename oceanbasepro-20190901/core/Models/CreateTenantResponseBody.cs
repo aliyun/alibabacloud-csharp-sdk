@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class CreateTenantResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// WB01144930
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// You can call this operation to create a tenant.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

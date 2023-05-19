@@ -17,8 +17,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The name of the IP address whitelist group.   
-        /// It must be 2 to 32 characters in length, start with a lowercase letter, end with a lowercase letter or digit, and contain only lowercase letters, digits, and underscores (_).
+        /// The information of the IP address whitelist group.
         /// </summary>
         [NameInMap("SecurityIpGroupName")]
         [Validation(Required=false)]

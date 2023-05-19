@@ -10,9 +10,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeCharsetRequest : TeaModel {
         /// <summary>
-        /// The tenant mode.    
-        /// Valid values: Oracle and MySQL.   
-        /// For more information, see [DescribeInstanceTenantModes](~~410354~~).
+        /// 实例的系列  - normal（默认）：标准集群版（云盘）  - normal_ssd：标准集群版（本地盘） - history：历史库集群版。
+        /// </summary>
+        [NameInMap("Series")]
+        [Validation(Required=false)]
+        public string Series { get; set; }
+
+        /// <summary>
+        /// The return result of the request.
         /// </summary>
         [NameInMap("TenantMode")]
         [Validation(Required=false)]

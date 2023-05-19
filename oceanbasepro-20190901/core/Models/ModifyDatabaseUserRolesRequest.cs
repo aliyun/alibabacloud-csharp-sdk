@@ -10,29 +10,28 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ModifyDatabaseUserRolesRequest : TeaModel {
         /// <summary>
-        /// The name of the database.    
-        /// You cannot use reserved keywords, such as test and mysql.
+        /// The ID of the tenant.
         /// </summary>
         [NameInMap("DatabaseName")]
         [Validation(Required=false)]
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// The account information.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// A list of usernames and their respective roles.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
         /// <summary>
-        /// A list of usernames and their respective roles.
+        /// The ID of the OceanBase cluster.
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeInstanceTagsRequest : TeaModel {
         /// <summary>
-        /// The list of cluster IDs.
+        /// The list of tags.
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The returned response.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

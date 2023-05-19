@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeRecommendIndexRequest : TeaModel {
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// The return result of the request.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// You can obtain the SQL ID from the return value of the DescribeSlowSQLList or DescribeTopSQLList operation.
+        /// The ID of the OceanBase cluster.
         /// </summary>
         [NameInMap("SQLId")]
         [Validation(Required=false)]
         public string SQLId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// The index recommended for the SQL statement after calculation by the diagnostic system.   
+        /// - If the recommended index is the primary key, PRIMARY is returned.  
+        /// - If an index created by the user is recommended, the index name is returned.   
+        /// The system recommends only one index for an SQL statement. You can call the DescribeIndexes operation to view the indexes of a table.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

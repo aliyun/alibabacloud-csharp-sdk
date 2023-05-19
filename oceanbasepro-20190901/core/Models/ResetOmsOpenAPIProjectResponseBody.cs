@@ -10,63 +10,57 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ResetOmsOpenAPIProjectResponseBody : TeaModel {
         /// <summary>
-        /// The suggestions (old).
+        /// You can call this operation to reset a data synchronization project.
         /// </summary>
         [NameInMap("Advice")]
         [Validation(Required=false)]
         public string Advice { get; set; }
 
         /// <summary>
-        /// The error code (old).
+        /// Indicates whether the resetting is successful.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// The time spent, in seconds.
-        /// </summary>
         [NameInMap("Cost")]
         [Validation(Required=false)]
         public string Cost { get; set; }
 
-        /// <summary>
-        /// Indicates whether the resetting is successful.
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
         /// <summary>
-        /// The error details.
+        /// The suggestions (new).
         /// </summary>
         [NameInMap("ErrorDetail")]
         [Validation(Required=false)]
         public ResetOmsOpenAPIProjectResponseBodyErrorDetail ErrorDetail { get; set; }
         public class ResetOmsOpenAPIProjectResponseBodyErrorDetail : TeaModel {
             /// <summary>
-            /// The error code (new).
+            /// The operation that you want to perform. Set the value to **ResetOmsOpenAPIProject**.
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// The error level. Valid values: CRITICAL, ERROR, and WARN.
+            /// The error description (old).
             /// </summary>
             [NameInMap("Level")]
             [Validation(Required=false)]
             public string Level { get; set; }
 
             /// <summary>
-            /// The error description (new).
+            /// The error code (new).
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// The suggestions (new).
+            /// The page number, which takes effect in a pagination query.
             /// </summary>
             [NameInMap("Proposal")]
             [Validation(Required=false)]
@@ -75,43 +69,31 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         }
 
         /// <summary>
-        /// The error description (old).
+        /// A system error occurred.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// The page number, which takes effect in a pagination query.
-        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        /// <summary>
-        /// The page size, which takes effect in a pagination query.
-        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// The request ID.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful.
+        /// The page number, which takes effect in a pagination query.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// The total count, which takes effect in a pagination query.
-        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }

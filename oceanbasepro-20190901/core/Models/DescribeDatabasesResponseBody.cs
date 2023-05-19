@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeDatabasesResponseBody : TeaModel {
         /// <summary>
-        /// The list of databases in the tenant.
+        /// The ID of the tenant.
         /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
@@ -21,42 +21,44 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public string Collation { get; set; }
 
             /// <summary>
-            /// The time when the database was created.
+            /// Specifies whether to return the information of tables in the database.   
+            /// Default value: false.
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
-            /// <summary>
-            /// The actual data size, in GB.
-            /// </summary>
             [NameInMap("DataSize")]
             [Validation(Required=false)]
             public double? DataSize { get; set; }
 
             /// <summary>
-            /// The name of the database.
+            /// The number of the page to return.   
+            /// - Start value: 1   
+            /// - Default value: 1
             /// </summary>
             [NameInMap("DatabaseName")]
             [Validation(Required=false)]
             public string DatabaseName { get; set; }
 
             /// <summary>
-            /// The database type.
+            /// The return result of the request.
             /// </summary>
             [NameInMap("DbType")]
             [Validation(Required=false)]
             public string DbType { get; set; }
 
             /// <summary>
-            /// The description of the database.
+            /// The name of the database.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The encoding standard of the database. Encoding standards such as utf8mb4 and GBK are supported.
+            /// The status of the database. Valid values:    
+            /// - ONLINE: The database is running.  
+            /// - DELETING: The database is being deleted.
             /// </summary>
             [NameInMap("Encoding")]
             [Validation(Required=false)]
@@ -66,66 +68,47 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
-            /// <summary>
-            /// The storage space required, in GB.
-            /// </summary>
             [NameInMap("RequiredSize")]
             [Validation(Required=false)]
             public double? RequiredSize { get; set; }
 
             /// <summary>
-            /// The status of the database. Valid values:    
-            /// - ONLINE: The database is running.  
-            /// - DELETING: The database is being deleted.
+            /// The list of databases in the tenant.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
-            /// <summary>
-            /// The information about the database tables.
-            /// </summary>
             [NameInMap("Tables")]
             [Validation(Required=false)]
             public List<DescribeDatabasesResponseBodyDatabasesTables> Tables { get; set; }
             public class DescribeDatabasesResponseBodyDatabasesTables : TeaModel {
-                /// <summary>
-                /// The name of the database table.
-                /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
                 public string TableName { get; set; }
 
             }
 
-            /// <summary>
-            /// The ID of the tenant.
-            /// </summary>
             [NameInMap("TenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }
 
             /// <summary>
-            /// The accounts that have privileges on the database.
+            /// The name of the database table.
             /// </summary>
             [NameInMap("Users")]
             [Validation(Required=false)]
             public List<DescribeDatabasesResponseBodyDatabasesUsers> Users { get; set; }
             public class DescribeDatabasesResponseBodyDatabasesUsers : TeaModel {
                 /// <summary>
-                /// The role of the account.    
-                /// In MySQL mode, a role is a database-level role. Valid values:  
-                /// - ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.  
-                /// - ReadOnly: a role that has only the read-only privilege SELECT.   
-                /// - DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   
-                /// - DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
+                /// The request ID.
                 /// </summary>
                 [NameInMap("Role")]
                 [Validation(Required=false)]
                 public string Role { get; set; }
 
                 /// <summary>
-                /// The name of the account.
+                /// Example 1
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
@@ -142,15 +125,12 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
         }
 
-        /// <summary>
-        /// The request ID.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of databases in the tenant.
+        /// The search keyword.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

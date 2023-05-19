@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ModifyInstanceTagsRequest : TeaModel {
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// The tags.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// You can call this operation to modify the value of the cluster tags.
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

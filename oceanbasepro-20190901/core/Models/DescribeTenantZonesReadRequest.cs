@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeTenantZonesReadRequest : TeaModel {
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// The zone information of the tenant.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// The return result of the request.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

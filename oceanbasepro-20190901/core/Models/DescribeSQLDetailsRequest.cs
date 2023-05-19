@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeSQLDetailsRequest : TeaModel {
         /// <summary>
-        /// SQLID.
+        /// The SQL text.
         /// </summary>
         [NameInMap("SQLId")]
         [Validation(Required=false)]
         public string SQLId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// SQLID.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

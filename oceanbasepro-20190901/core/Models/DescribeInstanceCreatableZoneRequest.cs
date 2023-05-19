@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeInstanceCreatableZoneRequest : TeaModel {
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// The ID of the zone.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

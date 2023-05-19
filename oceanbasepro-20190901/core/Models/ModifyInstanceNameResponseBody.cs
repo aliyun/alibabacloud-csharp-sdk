@@ -17,7 +17,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The operation that you want to perform.   
+        /// Set the value to **ModifyInstanceName**.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

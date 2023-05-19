@@ -314,7 +314,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-          * To call this operation, you must add the IP address of the OceanBase Migration Service (OMS) server to the whitelist of the Alibaba Cloud database instance, the security rules of the ECS instance, or the security settings of your self-managed database (usually the firewall of your self-managed database) to ensure that OMS can successfully access your database instance. To obtain the IP address of the OMS server, go to the OMS data source management page in the OMS console.
+          * The description of the data source.   
+          * It must be 2 to 256 characters in length. The default value is null.
           *
           * @param request CreateOmsMysqlDataSourceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -388,7 +389,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-          * To call this operation, you must add the IP address of the OceanBase Migration Service (OMS) server to the whitelist of the Alibaba Cloud database instance, the security rules of the ECS instance, or the security settings of your self-managed database (usually the firewall of your self-managed database) to ensure that OMS can successfully access your database instance. To obtain the IP address of the OMS server, go to the OMS data source management page in the OMS console.
+          * The description of the data source.   
+          * It must be 2 to 256 characters in length. The default value is null.
           *
           * @param request CreateOmsMysqlDataSourceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -462,7 +464,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-          * To call this operation, you must add the IP address of the OceanBase Migration Service (OMS) server to the whitelist of the Alibaba Cloud database instance, the security rules of the ECS instance, or the security settings of your self-managed database (usually the firewall of your self-managed database) to ensure that OMS can successfully access your database instance. To obtain the IP address of the OMS server, go to the OMS data source management page in the OMS console.
+          * The description of the data source.   
+          * It must be 2 to 256 characters in length. The default value is null.
           *
           * @param request CreateOmsMysqlDataSourceRequest
           * @return CreateOmsMysqlDataSourceResponse
@@ -474,7 +477,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-          * To call this operation, you must add the IP address of the OceanBase Migration Service (OMS) server to the whitelist of the Alibaba Cloud database instance, the security rules of the ECS instance, or the security settings of your self-managed database (usually the firewall of your self-managed database) to ensure that OMS can successfully access your database instance. To obtain the IP address of the OMS server, go to the OMS data source management page in the OMS console.
+          * The description of the data source.   
+          * It must be 2 to 256 characters in length. The default value is null.
           *
           * @param request CreateOmsMysqlDataSourceRequest
           * @return CreateOmsMysqlDataSourceResponse
@@ -1190,9 +1194,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-          * Before you call this operation, ensure that the following requirements are met:
-          * - The cluster is in the Running state.
-          * - The cluster is a primary cluster and the billing method is pay-as-you-go.
+          * Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
           *
           * @param request DeleteInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1230,9 +1232,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-          * Before you call this operation, ensure that the following requirements are met:
-          * - The cluster is in the Running state.
-          * - The cluster is a primary cluster and the billing method is pay-as-you-go.
+          * Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
           *
           * @param request DeleteInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1270,9 +1270,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-          * Before you call this operation, ensure that the following requirements are met:
-          * - The cluster is in the Running state.
-          * - The cluster is a primary cluster and the billing method is pay-as-you-go.
+          * Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
           *
           * @param request DeleteInstancesRequest
           * @return DeleteInstancesResponse
@@ -1284,9 +1282,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         }
 
         /**
-          * Before you call this operation, ensure that the following requirements are met:
-          * - The cluster is in the Running state.
-          * - The cluster is a primary cluster and the billing method is pay-as-you-go.
+          * Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
           *
           * @param request DeleteInstancesRequest
           * @return DeleteInstancesResponse
@@ -1991,6 +1987,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Series))
+            {
+                body["Series"] = request.Series;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantMode))
             {
                 body["TenantMode"] = request.TenantMode;
@@ -2018,6 +2018,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Series))
+            {
+                body["Series"] = request.Series;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantMode))
             {
                 body["TenantMode"] = request.TenantMode;
@@ -4993,6 +4997,88 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             return await DescribeZonesWithOptionsAsync(request, runtime);
         }
 
+        public KillProcessListResponse KillProcessListWithOptions(KillProcessListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionList))
+            {
+                body["SessionList"] = request.SessionList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "KillProcessList",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<KillProcessListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<KillProcessListResponse> KillProcessListWithOptionsAsync(KillProcessListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionList))
+            {
+                body["SessionList"] = request.SessionList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "KillProcessList",
+                Version = "2019-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<KillProcessListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public KillProcessListResponse KillProcessList(KillProcessListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return KillProcessListWithOptions(request, runtime);
+        }
+
+        public async Task<KillProcessListResponse> KillProcessListAsync(KillProcessListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await KillProcessListWithOptionsAsync(request, runtime);
+        }
+
         public ModifyDatabaseDescriptionResponse ModifyDatabaseDescriptionWithOptions(ModifyDatabaseDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6029,6 +6115,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionType))
+            {
+                body["EncryptionType"] = request.EncryptionType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
@@ -6068,6 +6158,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionType))
+            {
+                body["EncryptionType"] = request.EncryptionType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;

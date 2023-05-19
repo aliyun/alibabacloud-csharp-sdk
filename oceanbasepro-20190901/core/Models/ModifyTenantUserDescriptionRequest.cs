@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ModifyTenantUserDescriptionRequest : TeaModel {
         /// <summary>
-        /// The description of the database.
+        /// The operation that you want to perform.   
+        /// Set the value to **ModifyTenantUserDescription**.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -31,8 +32,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// The name of the database account.   
-        /// You cannot use reserved keywords, such as SYS and root.
+        /// The description of the database.
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

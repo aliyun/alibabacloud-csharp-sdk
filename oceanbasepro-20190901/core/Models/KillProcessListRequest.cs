@@ -8,30 +8,23 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
-    public class DescribeAvailableCpuResourceRequest : TeaModel {
+    public class KillProcessListRequest : TeaModel {
         /// <summary>
-        /// The CPU resources available.
+        /// The ID of the OceanBase cluster.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// ```
-        /// http(s)://[Endpoint]/?Action=DescribeAvailableCpuResource
-        /// &InstanceId=ob317v4uif****
-        /// &TenantId=ob2mr3oae0****
-        /// &ModifyType=update
-        /// &Common request parameters
-        /// ```
+        /// The list of the sessions that need to be closed.
         /// </summary>
-        [NameInMap("ModifyType")]
+        [NameInMap("SessionList")]
         [Validation(Required=false)]
-        public string ModifyType { get; set; }
+        public string SessionList { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform.   
-        /// Set the value to **DescribeAvailableCpuResource**.
+        /// The ID of the tenant.
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

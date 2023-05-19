@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DeleteTenantsResponseBody : TeaModel {
-        /// <summary>
-        /// The request ID.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// The list of tenant IDs.
-        /// </summary>
         [NameInMap("TenantIds")]
         [Validation(Required=false)]
         public List<string> TenantIds { get; set; }

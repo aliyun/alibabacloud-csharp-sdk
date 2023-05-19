@@ -9,25 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class CreateTenantReadOnlyConnectionRequest : TeaModel {
-        /// <summary>
-        /// The ID of the OceanBase cluster.
-        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// The ID of the tenant.
-        /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
-        /// <summary>
-        /// The ID of the zone.  
-        /// 
-        /// For more information, see AvailableZones in DescribeInstance.
-        /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }

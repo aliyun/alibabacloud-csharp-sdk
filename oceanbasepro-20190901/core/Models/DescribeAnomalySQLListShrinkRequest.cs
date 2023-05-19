@@ -10,63 +10,63 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeAnomalySQLListShrinkRequest : TeaModel {
         /// <summary>
-        /// The language of the returned data.   
-        /// Default value: CN for a China site and EN for an International site.
+        /// The search value.
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The name of the database.
+        /// {
+        ///   "UserName":testUser
+        /// }
         /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
 
         /// <summary>
-        /// The end time of the time range for querying suspicious SQL statements.   
-        /// The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+        /// zh-CN
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The filter condition.   
-        /// > <br> - All fields in OceanBase Database support filtering. <br> - You can write the key-value pair of a parameter in a JSON string in the JSON format to filter the parameter.
+        /// The number of the page to return.    
+        /// - Start value: 1   
+        /// - Default value: 1
         /// </summary>
         [NameInMap("FilterCondition")]
         [Validation(Required=false)]
         public string FilterConditionShrink { get; set; }
 
         /// <summary>
-        /// The IP address of the node.
+        /// The number of rows to return on each page.    
+        /// - Maximum value: 100   
+        /// - Default value: 10
         /// </summary>
         [NameInMap("NodeIp")]
         [Validation(Required=false)]
         public string NodeIp { get; set; }
 
         /// <summary>
-        /// The number of the page to return.    
-        /// - Start value: 1   
-        /// - Default value: 1
+        /// desc
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of rows to return on each page.    
-        /// - Maximum value: 100   
-        /// - Default value: 10
+        /// The start time of the time range for querying suspicious SQL statements.   
+        /// The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// SQLID.
+        /// 1
         /// </summary>
         [NameInMap("SQLId")]
         [Validation(Required=false)]
@@ -80,51 +80,50 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         public string SearchKeyWord { get; set; }
 
         /// <summary>
-        /// The search parameter.
+        /// The ID of the tenant.
         /// </summary>
         [NameInMap("SearchParameter")]
         [Validation(Required=false)]
         public string SearchParameter { get; set; }
 
         /// <summary>
-        /// The search rule.   
-        /// Valid values: "=", ">", ">=", "<", and "<="
+        /// Utilization above threshold
         /// </summary>
         [NameInMap("SearchRule")]
         [Validation(Required=false)]
         public string SearchRule { get; set; }
 
         /// <summary>
-        /// The search value.
+        /// 10
         /// </summary>
         [NameInMap("SearchValue")]
         [Validation(Required=false)]
         public string SearchValue { get; set; }
 
         /// <summary>
-        /// The sorted column.
+        /// The end time of the time range for querying suspicious SQL statements.   
+        /// The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
         /// </summary>
         [NameInMap("SortColumn")]
         [Validation(Required=false)]
         public string SortColumn { get; set; }
 
         /// <summary>
-        /// The sorting rule.
+        /// The request time, in ms.
         /// </summary>
         [NameInMap("SortOrder")]
         [Validation(Required=false)]
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// The start time of the time range for querying suspicious SQL statements.   
-        /// The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+        /// The total count.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// Alibaba Cloud CLI
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

@@ -10,22 +10,19 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeTimeZonesResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// DescribeTimeZones
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The time zones supported by the tenant.
+        /// The description of the time zone.
         /// </summary>
         [NameInMap("TimeZones")]
         [Validation(Required=false)]
         public DescribeTimeZonesResponseBodyTimeZones TimeZones { get; set; }
         public class DescribeTimeZonesResponseBodyTimeZones : TeaModel {
-            /// <summary>
-            /// The default time zone.
-            /// </summary>
             [NameInMap("Default")]
             [Validation(Required=false)]
             public string Default { get; set; }
@@ -38,14 +35,15 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public List<DescribeTimeZonesResponseBodyTimeZonesList> List { get; set; }
             public class DescribeTimeZonesResponseBodyTimeZonesList : TeaModel {
                 /// <summary>
-                /// The description of the time zone.
+                /// Example 1
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The name of the time zone.
+                /// The operation that you want to perform.   
+                /// Set the value to **DescribeTimeZones**.
                 /// </summary>
                 [NameInMap("TimeZone")]
                 [Validation(Required=false)]
