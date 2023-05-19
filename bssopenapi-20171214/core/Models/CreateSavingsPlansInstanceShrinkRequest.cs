@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
-    public class CreateSavingsPlansInstanceRequest : TeaModel {
+    public class CreateSavingsPlansInstanceShrinkRequest : TeaModel {
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
         public string CommodityCode { get; set; }
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         [NameInMap("ExtendMap")]
         [Validation(Required=false)]
-        public Dictionary<string, string> ExtendMap { get; set; }
+        public string ExtendMapShrink { get; set; }
 
         [NameInMap("PayMode")]
         [Validation(Required=false)]

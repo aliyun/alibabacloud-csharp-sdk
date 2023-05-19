@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryPriceEntityListRequest : TeaModel {
+        /// <summary>
+        /// The code of the service.
+        /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
         public string CommodityCode { get; set; }

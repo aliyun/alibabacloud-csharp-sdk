@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// data
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ReleaseInstanceResponseBodyData Data { get; set; }

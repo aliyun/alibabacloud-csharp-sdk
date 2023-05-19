@@ -13,14 +13,26 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The service code. You can query the service code by calling the **QueryProductList** operation.
+        /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
+        /// <summary>
+        /// The type of the service. You can query the service type by calling the **QueryProductList** operation.
+        /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
+        /// <summary>
+        /// The billing method. Valid values:
+        /// 
+        /// *   Subscription: subscription
+        /// *   PayAsYouGo: pay-as-you-go
+        /// </summary>
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]
         public string SubscriptionType { get; set; }

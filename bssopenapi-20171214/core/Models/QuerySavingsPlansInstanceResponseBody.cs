@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QuerySavingsPlansInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// The prepaid amount.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The return data.
+        /// The commitment.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QuerySavingsPlansInstanceResponseBodyData Data { get; set; }
         public class QuerySavingsPlansInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// The details about the instances.
+            /// The number of the page to return.
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
@@ -42,7 +42,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string AllocationStatus { get; set; }
 
                 /// <summary>
-                /// The currency. Valid values: CNY and USD.
+                /// The status of the instance. Valid values:
+                /// 
+                /// *   NORMAL: normal
+                /// *   LIMIT: stopped due to overdue payment
+                /// *   RELEASE: released
                 /// </summary>
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
@@ -57,7 +61,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string DeductCycleType { get; set; }
 
                 /// <summary>
-                /// The time when the instance expires. The time is in the format of yyyy-MM-dd HH:mm:ss.
+                /// The ID of the savings plan instance.
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
@@ -68,14 +72,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? EndTimestamp { get; set; }
 
                 /// <summary>
-                /// The instance family information. For an instance of the Elastic Compute Service (ECS) compute type, the value indicates the ECS instance family or the ECS instance family package.
+                /// The value of the tag.
                 /// </summary>
                 [NameInMap("InstanceFamily")]
                 [Validation(Required=false)]
                 public string InstanceFamily { get; set; }
 
                 /// <summary>
-                /// The ID of the savings plan instance.
+                /// The time when the instance takes effect. The time is in the format of yyyy-MM-dd HH:mm:ss.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -89,50 +93,48 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string LastBillUtilization { get; set; }
 
-                /// <summary>
-                /// The payment type. Valid values:
-                /// 
-                /// *   total: All Upfront
-                /// *   half: Partial Upfront
-                /// *   zero: No Upfront
-                /// </summary>
                 [NameInMap("PayMode")]
                 [Validation(Required=false)]
                 public string PayMode { get; set; }
 
                 /// <summary>
-                /// The commitment.
+                /// The total amount that is saved.
                 /// </summary>
                 [NameInMap("PoolValue")]
                 [Validation(Required=false)]
                 public string PoolValue { get; set; }
 
                 /// <summary>
-                /// The prepaid amount.
+                /// The page number of the returned page.
                 /// </summary>
                 [NameInMap("PrepayFee")]
                 [Validation(Required=false)]
                 public string PrepayFee { get; set; }
 
                 /// <summary>
-                /// The region.
+                /// The total number of entries.
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
+                [NameInMap("RestPoolValue")]
+                [Validation(Required=false)]
+                public string RestPoolValue { get; set; }
+
                 /// <summary>
-                /// The type of the savings plan. Valid values:
-                /// 
-                /// *   universal: general-purpose
-                /// *   ecs: ECS compute
+                /// The key of the tag.
                 /// </summary>
                 [NameInMap("SavingsType")]
                 [Validation(Required=false)]
                 public string SavingsType { get; set; }
 
                 /// <summary>
-                /// The time when the instance takes effect. The time is in the format of yyyy-MM-dd HH:mm:ss.
+                /// The payment type. Valid values:
+                /// 
+                /// *   total: All Upfront
+                /// *   half: Partial Upfront
+                /// *   zero: No Upfront
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
@@ -143,33 +145,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? StartTimestamp { get; set; }
 
                 /// <summary>
-                /// The status of the instance. Valid values:
-                /// 
-                /// *   NORMAL: normal
-                /// *   LIMIT: stopped due to overdue payment
-                /// *   RELEASE: released
+                /// The value of the tag to query.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
-                /// <summary>
-                /// The details about the tags.
-                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<QuerySavingsPlansInstanceResponseBodyDataItemsTags> Tags { get; set; }
                 public class QuerySavingsPlansInstanceResponseBodyDataItemsTags : TeaModel {
-                    /// <summary>
-                    /// The key of the tag.
-                    /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
-                    /// <summary>
-                    /// The value of the tag.
-                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
@@ -177,14 +166,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
                 /// <summary>
-                /// The total amount that is saved.
+                /// The ID of the request.
                 /// </summary>
                 [NameInMap("TotalSave")]
                 [Validation(Required=false)]
                 public string TotalSave { get; set; }
 
                 /// <summary>
-                /// The total usage.
+                /// The currency. Valid values: CNY and USD.
                 /// </summary>
                 [NameInMap("Utilization")]
                 [Validation(Required=false)]
@@ -193,21 +182,27 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// The type of the savings plan. Valid values:
+            /// 
+            /// *   universal: general-purpose
+            /// *   ecs: ECS compute
             /// </summary>
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// The key of the tag to query.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries.
+            /// The language of the return data. Valid values:
+            /// 
+            /// *   ZH: Chinese
+            /// *   EN: English
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -216,21 +211,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// The details about the instances.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The return data.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the operation was successful.
+        /// The region.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

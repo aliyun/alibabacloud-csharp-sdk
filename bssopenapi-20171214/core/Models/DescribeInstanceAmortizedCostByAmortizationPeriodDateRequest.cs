@@ -8,22 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
-    public class QuerySettleBillRequest : TeaModel {
-        [NameInMap("BillOwnerId")]
+    public class DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest : TeaModel {
+        [NameInMap("AmortizationDateEnd")]
         [Validation(Required=false)]
-        public long? BillOwnerId { get; set; }
+        public string AmortizationDateEnd { get; set; }
+
+        [NameInMap("AmortizationDateStart")]
+        [Validation(Required=false)]
+        public string AmortizationDateStart { get; set; }
+
+        [NameInMap("BillOwnerIdList")]
+        [Validation(Required=false)]
+        public List<string> BillOwnerIdList { get; set; }
+
+        [NameInMap("BillUserIdList")]
+        [Validation(Required=false)]
+        public List<string> BillUserIdList { get; set; }
 
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]
         public string BillingCycle { get; set; }
 
-        [NameInMap("IsDisplayLocalCurrency")]
+        [NameInMap("CostUnitCode")]
         [Validation(Required=false)]
-        public bool? IsDisplayLocalCurrency { get; set; }
+        public string CostUnitCode { get; set; }
 
-        [NameInMap("IsHideZeroCharge")]
+        [NameInMap("InstanceIdList")]
         [Validation(Required=false)]
-        public bool? IsHideZeroCharge { get; set; }
+        public List<string> InstanceIdList { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -33,29 +45,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
-        [NameInMap("ProductType")]
+        [NameInMap("ProductDetail")]
         [Validation(Required=false)]
-        public string ProductType { get; set; }
-
-        [NameInMap("RecordID")]
-        [Validation(Required=false)]
-        public string RecordID { get; set; }
+        public string ProductDetail { get; set; }
 
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]
         public string SubscriptionType { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
 
     }
 

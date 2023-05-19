@@ -1480,9 +1480,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return await CreateResourcePackageWithOptionsAsync(request, runtime);
         }
 
-        public CreateSavingsPlansInstanceResponse CreateSavingsPlansInstanceWithOptions(CreateSavingsPlansInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateSavingsPlansInstanceResponse CreateSavingsPlansInstanceWithOptions(CreateSavingsPlansInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSavingsPlansInstanceShrinkRequest request = new CreateSavingsPlansInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExtendMap))
+            {
+                request.ExtendMapShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExtendMap, "ExtendMap", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
             {
@@ -1495,6 +1501,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveDate))
             {
                 query["EffectiveDate"] = request.EffectiveDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendMapShrink))
+            {
+                query["ExtendMap"] = request.ExtendMapShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayMode))
             {
@@ -1543,9 +1553,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<CreateSavingsPlansInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateSavingsPlansInstanceResponse> CreateSavingsPlansInstanceWithOptionsAsync(CreateSavingsPlansInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateSavingsPlansInstanceResponse> CreateSavingsPlansInstanceWithOptionsAsync(CreateSavingsPlansInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSavingsPlansInstanceShrinkRequest request = new CreateSavingsPlansInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExtendMap))
+            {
+                request.ExtendMapShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExtendMap, "ExtendMap", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
             {
@@ -1558,6 +1574,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveDate))
             {
                 query["EffectiveDate"] = request.EffectiveDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendMapShrink))
+            {
+                query["ExtendMap"] = request.ExtendMapShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayMode))
             {
@@ -1692,6 +1712,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return await DeleteCostUnitWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is in beta testing and is only available for specific users in the whitelist. Excessive calls may result in performance issues. For example, the response times out.
+          *
+          * @param request DescribeCostBudgetsSummaryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCostBudgetsSummaryResponse
+         */
         public DescribeCostBudgetsSummaryResponse DescribeCostBudgetsSummaryWithOptions(DescribeCostBudgetsSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1735,6 +1762,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<DescribeCostBudgetsSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is in beta testing and is only available for specific users in the whitelist. Excessive calls may result in performance issues. For example, the response times out.
+          *
+          * @param request DescribeCostBudgetsSummaryRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCostBudgetsSummaryResponse
+         */
         public async Task<DescribeCostBudgetsSummaryResponse> DescribeCostBudgetsSummaryWithOptionsAsync(DescribeCostBudgetsSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1778,12 +1812,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<DescribeCostBudgetsSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is in beta testing and is only available for specific users in the whitelist. Excessive calls may result in performance issues. For example, the response times out.
+          *
+          * @param request DescribeCostBudgetsSummaryRequest
+          * @return DescribeCostBudgetsSummaryResponse
+         */
         public DescribeCostBudgetsSummaryResponse DescribeCostBudgetsSummary(DescribeCostBudgetsSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCostBudgetsSummaryWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is in beta testing and is only available for specific users in the whitelist. Excessive calls may result in performance issues. For example, the response times out.
+          *
+          * @param request DescribeCostBudgetsSummaryRequest
+          * @return DescribeCostBudgetsSummaryResponse
+         */
         public async Task<DescribeCostBudgetsSummaryResponse> DescribeCostBudgetsSummaryAsync(DescribeCostBudgetsSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1960,6 +2006,160 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceAmortizedCostByAmortizationPeriodWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeInstanceAmortizedCostByAmortizationPeriodDateResponse DescribeInstanceAmortizedCostByAmortizationPeriodDateWithOptions(DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AmortizationDateEnd))
+            {
+                body["AmortizationDateEnd"] = request.AmortizationDateEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AmortizationDateStart))
+            {
+                body["AmortizationDateStart"] = request.AmortizationDateStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillOwnerIdList))
+            {
+                body["BillOwnerIdList"] = request.BillOwnerIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillUserIdList))
+            {
+                body["BillUserIdList"] = request.BillUserIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingCycle))
+            {
+                body["BillingCycle"] = request.BillingCycle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CostUnitCode))
+            {
+                body["CostUnitCode"] = request.CostUnitCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdList))
+            {
+                body["InstanceIdList"] = request.InstanceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductDetail))
+            {
+                body["ProductDetail"] = request.ProductDetail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
+            {
+                body["SubscriptionType"] = request.SubscriptionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceAmortizedCostByAmortizationPeriodDate",
+                Version = "2017-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceAmortizedCostByAmortizationPeriodDateResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeInstanceAmortizedCostByAmortizationPeriodDateResponse> DescribeInstanceAmortizedCostByAmortizationPeriodDateWithOptionsAsync(DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AmortizationDateEnd))
+            {
+                body["AmortizationDateEnd"] = request.AmortizationDateEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AmortizationDateStart))
+            {
+                body["AmortizationDateStart"] = request.AmortizationDateStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillOwnerIdList))
+            {
+                body["BillOwnerIdList"] = request.BillOwnerIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillUserIdList))
+            {
+                body["BillUserIdList"] = request.BillUserIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingCycle))
+            {
+                body["BillingCycle"] = request.BillingCycle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CostUnitCode))
+            {
+                body["CostUnitCode"] = request.CostUnitCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdList))
+            {
+                body["InstanceIdList"] = request.InstanceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductDetail))
+            {
+                body["ProductDetail"] = request.ProductDetail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
+            {
+                body["SubscriptionType"] = request.SubscriptionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceAmortizedCostByAmortizationPeriodDate",
+                Version = "2017-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceAmortizedCostByAmortizationPeriodDateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeInstanceAmortizedCostByAmortizationPeriodDateResponse DescribeInstanceAmortizedCostByAmortizationPeriodDate(DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInstanceAmortizedCostByAmortizationPeriodDateWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeInstanceAmortizedCostByAmortizationPeriodDateResponse> DescribeInstanceAmortizedCostByAmortizationPeriodDateAsync(DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInstanceAmortizedCostByAmortizationPeriodDateWithOptionsAsync(request, runtime);
         }
 
         public DescribeInstanceAmortizedCostByConsumePeriodResponse DescribeInstanceAmortizedCostByConsumePeriodWithOptions(DescribeInstanceAmortizedCostByConsumePeriodRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2697,9 +2897,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * 1\\. The queried coverage details are the same as those displayed in the table on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-          * 2\\. You can call this operation to query the coverage details of RIs or SCUs.
-          * 3\\. You can call this operation to query coverage details at an hourly, daily, or monthly granularity.
+          * The amount of the resources deducted from a deduction plan.
           *
           * @param request DescribeResourceCoverageDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2757,9 +2955,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * 1\\. The queried coverage details are the same as those displayed in the table on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-          * 2\\. You can call this operation to query the coverage details of RIs or SCUs.
-          * 3\\. You can call this operation to query coverage details at an hourly, daily, or monthly granularity.
+          * The amount of the resources deducted from a deduction plan.
           *
           * @param request DescribeResourceCoverageDetailRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2817,9 +3013,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * 1\\. The queried coverage details are the same as those displayed in the table on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-          * 2\\. You can call this operation to query the coverage details of RIs or SCUs.
-          * 3\\. You can call this operation to query coverage details at an hourly, daily, or monthly granularity.
+          * The amount of the resources deducted from a deduction plan.
           *
           * @param request DescribeResourceCoverageDetailRequest
           * @return DescribeResourceCoverageDetailResponse
@@ -2831,9 +3025,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * 1\\. The queried coverage details are the same as those displayed in the table on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-          * 2\\. You can call this operation to query the coverage details of RIs or SCUs.
-          * 3\\. You can call this operation to query coverage details at an hourly, daily, or monthly granularity.
+          * The amount of the resources deducted from a deduction plan.
           *
           * @param request DescribeResourceCoverageDetailRequest
           * @return DescribeResourceCoverageDetailResponse
@@ -2845,8 +3037,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The queried total coverage data is the same as the aggregated data displayed on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-          * You can call this operation to query the total coverage data of RIs or SCUs.
+          * Indicates whether the operation was successful.
           *
           * @param request DescribeResourceCoverageTotalRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2896,8 +3087,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The queried total coverage data is the same as the aggregated data displayed on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-          * You can call this operation to query the total coverage data of RIs or SCUs.
+          * Indicates whether the operation was successful.
           *
           * @param request DescribeResourceCoverageTotalRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2947,8 +3137,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The queried total coverage data is the same as the aggregated data displayed on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-          * You can call this operation to query the total coverage data of RIs or SCUs.
+          * Indicates whether the operation was successful.
           *
           * @param request DescribeResourceCoverageTotalRequest
           * @return DescribeResourceCoverageTotalResponse
@@ -2960,8 +3149,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The queried total coverage data is the same as the aggregated data displayed on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-          * You can call this operation to query the total coverage data of RIs or SCUs.
+          * Indicates whether the operation was successful.
           *
           * @param request DescribeResourceCoverageTotalRequest
           * @return DescribeResourceCoverageTotalResponse
@@ -3642,6 +3830,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return await DescribeSavingsPlansUsageTotalWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The code of the service.
+          *
+          * @param request DescribeSplitItemBillRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSplitItemBillResponse
+         */
         public DescribeSplitItemBillResponse DescribeSplitItemBillWithOptions(DescribeSplitItemBillRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3717,6 +3912,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<DescribeSplitItemBillResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The code of the service.
+          *
+          * @param request DescribeSplitItemBillRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSplitItemBillResponse
+         */
         public async Task<DescribeSplitItemBillResponse> DescribeSplitItemBillWithOptionsAsync(DescribeSplitItemBillRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3792,12 +3994,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<DescribeSplitItemBillResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The code of the service.
+          *
+          * @param request DescribeSplitItemBillRequest
+          * @return DescribeSplitItemBillResponse
+         */
         public DescribeSplitItemBillResponse DescribeSplitItemBill(DescribeSplitItemBillRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSplitItemBillWithOptions(request, runtime);
         }
 
+        /**
+          * The code of the service.
+          *
+          * @param request DescribeSplitItemBillRequest
+          * @return DescribeSplitItemBillResponse
+         */
         public async Task<DescribeSplitItemBillResponse> DescribeSplitItemBillAsync(DescribeSplitItemBillRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4003,7 +4217,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.
+          * The ID of the customer.
           *
           * @param request GetCustomerListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4028,7 +4242,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.
+          * The ID of the customer.
           *
           * @param request GetCustomerListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4053,7 +4267,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.
+          * The ID of the customer.
           *
           * @return GetCustomerListResponse
          */
@@ -4064,7 +4278,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         }
 
         /**
-          * The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.
+          * The ID of the customer.
           *
           * @return GetCustomerListResponse
          */
@@ -4602,6 +4816,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return await GetSubscriptionPriceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * 1.  **Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.**
+          * 2.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          *
+          * @param request InquiryPriceRefundInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InquiryPriceRefundInstanceResponse
+         */
         public InquiryPriceRefundInstanceResponse InquiryPriceRefundInstanceWithOptions(InquiryPriceRefundInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4641,6 +4864,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<InquiryPriceRefundInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * 1.  **Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.**
+          * 2.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          *
+          * @param request InquiryPriceRefundInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InquiryPriceRefundInstanceResponse
+         */
         public async Task<InquiryPriceRefundInstanceResponse> InquiryPriceRefundInstanceWithOptionsAsync(InquiryPriceRefundInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4680,12 +4912,28 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<InquiryPriceRefundInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * 1.  **Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.**
+          * 2.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          *
+          * @param request InquiryPriceRefundInstanceRequest
+          * @return InquiryPriceRefundInstanceResponse
+         */
         public InquiryPriceRefundInstanceResponse InquiryPriceRefundInstance(InquiryPriceRefundInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return InquiryPriceRefundInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * 1.  **Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.**
+          * 2.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          *
+          * @param request InquiryPriceRefundInstanceRequest
+          * @return InquiryPriceRefundInstanceResponse
+         */
         public async Task<InquiryPriceRefundInstanceResponse> InquiryPriceRefundInstanceAsync(InquiryPriceRefundInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6030,6 +6278,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return await QueryCashCouponsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to query the information about a service based on the service code.
+          *
+          * @param request QueryCommodityListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryCommodityListResponse
+         */
         public QueryCommodityListResponse QueryCommodityListWithOptions(QueryCommodityListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6053,6 +6308,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<QueryCommodityListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to query the information about a service based on the service code.
+          *
+          * @param request QueryCommodityListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryCommodityListResponse
+         */
         public async Task<QueryCommodityListResponse> QueryCommodityListWithOptionsAsync(QueryCommodityListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6076,12 +6338,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<QueryCommodityListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to query the information about a service based on the service code.
+          *
+          * @param request QueryCommodityListRequest
+          * @return QueryCommodityListResponse
+         */
         public QueryCommodityListResponse QueryCommodityList(QueryCommodityListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryCommodityListWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to query the information about a service based on the service code.
+          *
+          * @param request QueryCommodityListRequest
+          * @return QueryCommodityListResponse
+         */
         public async Task<QueryCommodityListResponse> QueryCommodityListAsync(QueryCommodityListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6334,6 +6608,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return await QueryCustomerAddressListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The UID of the deducted instance.
+          *
+          * @param request QueryDPUtilizationDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryDPUtilizationDetailResponse
+         */
         public QueryDPUtilizationDetailResponse QueryDPUtilizationDetailWithOptions(QueryDPUtilizationDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6397,6 +6678,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<QueryDPUtilizationDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The UID of the deducted instance.
+          *
+          * @param request QueryDPUtilizationDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryDPUtilizationDetailResponse
+         */
         public async Task<QueryDPUtilizationDetailResponse> QueryDPUtilizationDetailWithOptionsAsync(QueryDPUtilizationDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6460,12 +6748,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<QueryDPUtilizationDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The UID of the deducted instance.
+          *
+          * @param request QueryDPUtilizationDetailRequest
+          * @return QueryDPUtilizationDetailResponse
+         */
         public QueryDPUtilizationDetailResponse QueryDPUtilizationDetail(QueryDPUtilizationDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryDPUtilizationDetailWithOptions(request, runtime);
         }
 
+        /**
+          * The UID of the deducted instance.
+          *
+          * @param request QueryDPUtilizationDetailRequest
+          * @return QueryDPUtilizationDetailResponse
+         */
         public async Task<QueryDPUtilizationDetailResponse> QueryDPUtilizationDetailAsync(QueryDPUtilizationDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7444,6 +7744,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return await QueryPrepaidCardsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to query the billable items of a service. A billable item is the minimum unit used to calculate costs.
+          *
+          * @param request QueryPriceEntityListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryPriceEntityListResponse
+         */
         public QueryPriceEntityListResponse QueryPriceEntityListWithOptions(QueryPriceEntityListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7467,6 +7774,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<QueryPriceEntityListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to query the billable items of a service. A billable item is the minimum unit used to calculate costs.
+          *
+          * @param request QueryPriceEntityListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryPriceEntityListResponse
+         */
         public async Task<QueryPriceEntityListResponse> QueryPriceEntityListWithOptionsAsync(QueryPriceEntityListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7490,12 +7804,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<QueryPriceEntityListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to query the billable items of a service. A billable item is the minimum unit used to calculate costs.
+          *
+          * @param request QueryPriceEntityListRequest
+          * @return QueryPriceEntityListResponse
+         */
         public QueryPriceEntityListResponse QueryPriceEntityList(QueryPriceEntityListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryPriceEntityListWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to query the billable items of a service. A billable item is the minimum unit used to calculate costs.
+          *
+          * @param request QueryPriceEntityListRequest
+          * @return QueryPriceEntityListResponse
+         */
         public async Task<QueryPriceEntityListResponse> QueryPriceEntityListAsync(QueryPriceEntityListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8950,6 +9276,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return await QueryUserOmsDataWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * 1.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
+          * 2.  Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          *
+          * @param request RefundInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RefundInstanceResponse
+         */
         public RefundInstanceResponse RefundInstanceWithOptions(RefundInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8993,6 +9328,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<RefundInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * 1.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
+          * 2.  Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          *
+          * @param request RefundInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RefundInstanceResponse
+         */
         public async Task<RefundInstanceResponse> RefundInstanceWithOptionsAsync(RefundInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9036,18 +9380,42 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<RefundInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * 1.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
+          * 2.  Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          *
+          * @param request RefundInstanceRequest
+          * @return RefundInstanceResponse
+         */
         public RefundInstanceResponse RefundInstance(RefundInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RefundInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * 1.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
+          * 2.  Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.
+          * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+          *
+          * @param request RefundInstanceRequest
+          * @return RefundInstanceResponse
+         */
         public async Task<RefundInstanceResponse> RefundInstanceAsync(RefundInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RefundInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * A value of true indicates that the execution is complete.
+          * A value of false indicates that an error occurs during the execution.
+          *
+          * @param request ReleaseInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReleaseInstanceResponse
+         */
         public ReleaseInstanceResponse ReleaseInstanceWithOptions(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9099,6 +9467,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<ReleaseInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * A value of true indicates that the execution is complete.
+          * A value of false indicates that an error occurs during the execution.
+          *
+          * @param request ReleaseInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReleaseInstanceResponse
+         */
         public async Task<ReleaseInstanceResponse> ReleaseInstanceWithOptionsAsync(ReleaseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9150,12 +9526,26 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<ReleaseInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * A value of true indicates that the execution is complete.
+          * A value of false indicates that an error occurs during the execution.
+          *
+          * @param request ReleaseInstanceRequest
+          * @return ReleaseInstanceResponse
+         */
         public ReleaseInstanceResponse ReleaseInstance(ReleaseInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * A value of true indicates that the execution is complete.
+          * A value of false indicates that an error occurs during the execution.
+          *
+          * @param request ReleaseInstanceRequest
+          * @return ReleaseInstanceResponse
+         */
         public async Task<ReleaseInstanceResponse> ReleaseInstanceAsync(ReleaseInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10238,39 +10628,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return await SetResellerUserStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   You can subscribe to only one type of bill at a time.
-          * *   The bills generated on the previous day are pushed on a daily basis the next day after you subscribe to the bills. The full-data bills for the previous month are pushed on the fourth day of each month. The monthly bills in the PDF format for the previous month are pushed on the fourth day of each month.
-          * *   The daily bills may be delayed. The delayed bills are pushed the next day after they are generated. The delayed bills may include the bills that should have been pushed on the previous day. We recommend that you query the full-data bills for the previous month at the beginning of each month.
-          * *   The bill subscriber must have the [AliyunConsumeDump2OSSRole](https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D) permission.
-          * *   The SubscribeBillToOSS operation has the same functionality as the Save Expense Details to OSS Bucket feature in User Center.
-          * *   To subscribe to the bills stored in an OSS bucket, make sure that the directory name specified for the OSS bucket conforms to the following naming rules:
-          * 1.  1.  The directory name can contain only UTF-8 characters and cannot contain emoticons.
-          * 2.  2.  Forward slashes (/) are used to separate paths and can be used to create subdirectories with ease. The directory name cannot start with a forward slash (/), a backslash (\\\\), or consecutive forward slashes (/).
-          * 3.  3.  The name of a subdirectory cannot be set to two consecutive periods (..).
-          * 4.  4.  The directory name must be 1 to 254 characters in length.
-          * *   File names:
-          *     *   **BillingItemDetailForBillingPeriod** (Detailed bills of billable items)
-          *         *   File name format for a daily push: `UID_BillingItemDetail_YYYYMMDD`. Example: `169**_BillingItemDetail_20190310`.
-          *         *   File name format for a full-data push at the beginning of the next month: `UID_BillingItemDetail_YYYYMM`. Example: `169**_BillingItemDetail_201903`.
-          *     *   **InstanceDetailForBillingPeriod** (Detailed bills of instances)
-          *         *   File name format for a daily push: `UID_InstanceDetail_YYYYMMDD`. Example: `169**_InstanceDetail_20190310`.
-          *         *   File name format for a full-data push at the beginning of the next month: `UID_InstanceDetail_YYYYMM`. Example: `169**_InstanceDetail_201903`.
-          *     *   **InstanceDetailMonthly** (Instance-based bills summarized by billing cycle)
-          *         *   File name format for a daily push: `UID_InstanceDetailMonthly_YYYYMM`. Example: `169**_InstanceDetailMonthly_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-          *     *   **BillingItemDetailMonthly** (Billable item-based bills summarized by billing cycle)
-          *         *   File name format for a daily push: `UID_BillingItemDetailMonthly_YYYYMM`. Example: `169**_BillingItemDetailMonthly_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-          *     *   **SplitItemDetailDaily** (Split bills summarized by day)
-          *         *   File name format for a daily push: `UID_SplitItemDetailDaily_YYYYMM`. Example: `169**_SplitItemDetailDaily_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-          *     *   **MonthBill** (Monthly bill in the PDF format)
-          *         *   File name format for a monthly push: `UID_MonthBill_YYYYMM`. Example: `169**_MonthBill_201903`. The bill for the previous month is pushed on the fourth day of each month.
-          * *   The bills of the MonthBill type are PDF files, whereas the bills of other types are CSV files. If the number of data rows in a bill exceeds a threshold, the bill is automatically split into multiple CSV files. Then, the multiple CSV files are automatically merged and compressed into a ZIP file that has the same name format as the original file.
-          *
-          * @param request SubscribeBillToOSSRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SubscribeBillToOSSResponse
-         */
         public SubscribeBillToOSSResponse SubscribeBillToOSSWithOptions(SubscribeBillToOSSRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10322,39 +10679,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<SubscribeBillToOSSResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   You can subscribe to only one type of bill at a time.
-          * *   The bills generated on the previous day are pushed on a daily basis the next day after you subscribe to the bills. The full-data bills for the previous month are pushed on the fourth day of each month. The monthly bills in the PDF format for the previous month are pushed on the fourth day of each month.
-          * *   The daily bills may be delayed. The delayed bills are pushed the next day after they are generated. The delayed bills may include the bills that should have been pushed on the previous day. We recommend that you query the full-data bills for the previous month at the beginning of each month.
-          * *   The bill subscriber must have the [AliyunConsumeDump2OSSRole](https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D) permission.
-          * *   The SubscribeBillToOSS operation has the same functionality as the Save Expense Details to OSS Bucket feature in User Center.
-          * *   To subscribe to the bills stored in an OSS bucket, make sure that the directory name specified for the OSS bucket conforms to the following naming rules:
-          * 1.  1.  The directory name can contain only UTF-8 characters and cannot contain emoticons.
-          * 2.  2.  Forward slashes (/) are used to separate paths and can be used to create subdirectories with ease. The directory name cannot start with a forward slash (/), a backslash (\\\\), or consecutive forward slashes (/).
-          * 3.  3.  The name of a subdirectory cannot be set to two consecutive periods (..).
-          * 4.  4.  The directory name must be 1 to 254 characters in length.
-          * *   File names:
-          *     *   **BillingItemDetailForBillingPeriod** (Detailed bills of billable items)
-          *         *   File name format for a daily push: `UID_BillingItemDetail_YYYYMMDD`. Example: `169**_BillingItemDetail_20190310`.
-          *         *   File name format for a full-data push at the beginning of the next month: `UID_BillingItemDetail_YYYYMM`. Example: `169**_BillingItemDetail_201903`.
-          *     *   **InstanceDetailForBillingPeriod** (Detailed bills of instances)
-          *         *   File name format for a daily push: `UID_InstanceDetail_YYYYMMDD`. Example: `169**_InstanceDetail_20190310`.
-          *         *   File name format for a full-data push at the beginning of the next month: `UID_InstanceDetail_YYYYMM`. Example: `169**_InstanceDetail_201903`.
-          *     *   **InstanceDetailMonthly** (Instance-based bills summarized by billing cycle)
-          *         *   File name format for a daily push: `UID_InstanceDetailMonthly_YYYYMM`. Example: `169**_InstanceDetailMonthly_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-          *     *   **BillingItemDetailMonthly** (Billable item-based bills summarized by billing cycle)
-          *         *   File name format for a daily push: `UID_BillingItemDetailMonthly_YYYYMM`. Example: `169**_BillingItemDetailMonthly_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-          *     *   **SplitItemDetailDaily** (Split bills summarized by day)
-          *         *   File name format for a daily push: `UID_SplitItemDetailDaily_YYYYMM`. Example: `169**_SplitItemDetailDaily_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-          *     *   **MonthBill** (Monthly bill in the PDF format)
-          *         *   File name format for a monthly push: `UID_MonthBill_YYYYMM`. Example: `169**_MonthBill_201903`. The bill for the previous month is pushed on the fourth day of each month.
-          * *   The bills of the MonthBill type are PDF files, whereas the bills of other types are CSV files. If the number of data rows in a bill exceeds a threshold, the bill is automatically split into multiple CSV files. Then, the multiple CSV files are automatically merged and compressed into a ZIP file that has the same name format as the original file.
-          *
-          * @param request SubscribeBillToOSSRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SubscribeBillToOSSResponse
-         */
         public async Task<SubscribeBillToOSSResponse> SubscribeBillToOSSWithOptionsAsync(SubscribeBillToOSSRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10406,76 +10730,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return TeaModel.ToObject<SubscribeBillToOSSResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   You can subscribe to only one type of bill at a time.
-          * *   The bills generated on the previous day are pushed on a daily basis the next day after you subscribe to the bills. The full-data bills for the previous month are pushed on the fourth day of each month. The monthly bills in the PDF format for the previous month are pushed on the fourth day of each month.
-          * *   The daily bills may be delayed. The delayed bills are pushed the next day after they are generated. The delayed bills may include the bills that should have been pushed on the previous day. We recommend that you query the full-data bills for the previous month at the beginning of each month.
-          * *   The bill subscriber must have the [AliyunConsumeDump2OSSRole](https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D) permission.
-          * *   The SubscribeBillToOSS operation has the same functionality as the Save Expense Details to OSS Bucket feature in User Center.
-          * *   To subscribe to the bills stored in an OSS bucket, make sure that the directory name specified for the OSS bucket conforms to the following naming rules:
-          * 1.  1.  The directory name can contain only UTF-8 characters and cannot contain emoticons.
-          * 2.  2.  Forward slashes (/) are used to separate paths and can be used to create subdirectories with ease. The directory name cannot start with a forward slash (/), a backslash (\\\\), or consecutive forward slashes (/).
-          * 3.  3.  The name of a subdirectory cannot be set to two consecutive periods (..).
-          * 4.  4.  The directory name must be 1 to 254 characters in length.
-          * *   File names:
-          *     *   **BillingItemDetailForBillingPeriod** (Detailed bills of billable items)
-          *         *   File name format for a daily push: `UID_BillingItemDetail_YYYYMMDD`. Example: `169**_BillingItemDetail_20190310`.
-          *         *   File name format for a full-data push at the beginning of the next month: `UID_BillingItemDetail_YYYYMM`. Example: `169**_BillingItemDetail_201903`.
-          *     *   **InstanceDetailForBillingPeriod** (Detailed bills of instances)
-          *         *   File name format for a daily push: `UID_InstanceDetail_YYYYMMDD`. Example: `169**_InstanceDetail_20190310`.
-          *         *   File name format for a full-data push at the beginning of the next month: `UID_InstanceDetail_YYYYMM`. Example: `169**_InstanceDetail_201903`.
-          *     *   **InstanceDetailMonthly** (Instance-based bills summarized by billing cycle)
-          *         *   File name format for a daily push: `UID_InstanceDetailMonthly_YYYYMM`. Example: `169**_InstanceDetailMonthly_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-          *     *   **BillingItemDetailMonthly** (Billable item-based bills summarized by billing cycle)
-          *         *   File name format for a daily push: `UID_BillingItemDetailMonthly_YYYYMM`. Example: `169**_BillingItemDetailMonthly_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-          *     *   **SplitItemDetailDaily** (Split bills summarized by day)
-          *         *   File name format for a daily push: `UID_SplitItemDetailDaily_YYYYMM`. Example: `169**_SplitItemDetailDaily_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-          *     *   **MonthBill** (Monthly bill in the PDF format)
-          *         *   File name format for a monthly push: `UID_MonthBill_YYYYMM`. Example: `169**_MonthBill_201903`. The bill for the previous month is pushed on the fourth day of each month.
-          * *   The bills of the MonthBill type are PDF files, whereas the bills of other types are CSV files. If the number of data rows in a bill exceeds a threshold, the bill is automatically split into multiple CSV files. Then, the multiple CSV files are automatically merged and compressed into a ZIP file that has the same name format as the original file.
-          *
-          * @param request SubscribeBillToOSSRequest
-          * @return SubscribeBillToOSSResponse
-         */
         public SubscribeBillToOSSResponse SubscribeBillToOSS(SubscribeBillToOSSRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SubscribeBillToOSSWithOptions(request, runtime);
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   You can subscribe to only one type of bill at a time.
-          * *   The bills generated on the previous day are pushed on a daily basis the next day after you subscribe to the bills. The full-data bills for the previous month are pushed on the fourth day of each month. The monthly bills in the PDF format for the previous month are pushed on the fourth day of each month.
-          * *   The daily bills may be delayed. The delayed bills are pushed the next day after they are generated. The delayed bills may include the bills that should have been pushed on the previous day. We recommend that you query the full-data bills for the previous month at the beginning of each month.
-          * *   The bill subscriber must have the [AliyunConsumeDump2OSSRole](https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D) permission.
-          * *   The SubscribeBillToOSS operation has the same functionality as the Save Expense Details to OSS Bucket feature in User Center.
-          * *   To subscribe to the bills stored in an OSS bucket, make sure that the directory name specified for the OSS bucket conforms to the following naming rules:
-          * 1.  1.  The directory name can contain only UTF-8 characters and cannot contain emoticons.
-          * 2.  2.  Forward slashes (/) are used to separate paths and can be used to create subdirectories with ease. The directory name cannot start with a forward slash (/), a backslash (\\\\), or consecutive forward slashes (/).
-          * 3.  3.  The name of a subdirectory cannot be set to two consecutive periods (..).
-          * 4.  4.  The directory name must be 1 to 254 characters in length.
-          * *   File names:
-          *     *   **BillingItemDetailForBillingPeriod** (Detailed bills of billable items)
-          *         *   File name format for a daily push: `UID_BillingItemDetail_YYYYMMDD`. Example: `169**_BillingItemDetail_20190310`.
-          *         *   File name format for a full-data push at the beginning of the next month: `UID_BillingItemDetail_YYYYMM`. Example: `169**_BillingItemDetail_201903`.
-          *     *   **InstanceDetailForBillingPeriod** (Detailed bills of instances)
-          *         *   File name format for a daily push: `UID_InstanceDetail_YYYYMMDD`. Example: `169**_InstanceDetail_20190310`.
-          *         *   File name format for a full-data push at the beginning of the next month: `UID_InstanceDetail_YYYYMM`. Example: `169**_InstanceDetail_201903`.
-          *     *   **InstanceDetailMonthly** (Instance-based bills summarized by billing cycle)
-          *         *   File name format for a daily push: `UID_InstanceDetailMonthly_YYYYMM`. Example: `169**_InstanceDetailMonthly_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-          *     *   **BillingItemDetailMonthly** (Billable item-based bills summarized by billing cycle)
-          *         *   File name format for a daily push: `UID_BillingItemDetailMonthly_YYYYMM`. Example: `169**_BillingItemDetailMonthly_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-          *     *   **SplitItemDetailDaily** (Split bills summarized by day)
-          *         *   File name format for a daily push: `UID_SplitItemDetailDaily_YYYYMM`. Example: `169**_SplitItemDetailDaily_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-          *     *   **MonthBill** (Monthly bill in the PDF format)
-          *         *   File name format for a monthly push: `UID_MonthBill_YYYYMM`. Example: `169**_MonthBill_201903`. The bill for the previous month is pushed on the fourth day of each month.
-          * *   The bills of the MonthBill type are PDF files, whereas the bills of other types are CSV files. If the number of data rows in a bill exceeds a threshold, the bill is automatically split into multiple CSV files. Then, the multiple CSV files are automatically merged and compressed into a ZIP file that has the same name format as the original file.
-          *
-          * @param request SubscribeBillToOSSRequest
-          * @return SubscribeBillToOSSResponse
-         */
         public async Task<SubscribeBillToOSSResponse> SubscribeBillToOSSAsync(SubscribeBillToOSSRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

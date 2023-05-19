@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryResellerAvailableQuotaRequest : TeaModel {
-        /// <summary>
-        /// You do not need to specify the parameter.
-        /// </summary>
         [NameInMap("ItemCodes")]
         [Validation(Required=false)]
         public string ItemCodes { get; set; }
