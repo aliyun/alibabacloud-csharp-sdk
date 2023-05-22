@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
+            [NameInMap("IsRamRole")]
+            [Validation(Required=false)]
+            public bool? IsRamRole { get; set; }
+
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }

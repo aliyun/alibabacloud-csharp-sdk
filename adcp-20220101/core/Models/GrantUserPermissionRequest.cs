@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("IsRamRole")]
+        [Validation(Required=false)]
+        public bool? IsRamRole { get; set; }
+
         /// <summary>
         /// The namespace to which the permissions are scoped. By default, this parameter is empty when you set role_type to cluster.
         /// </summary>

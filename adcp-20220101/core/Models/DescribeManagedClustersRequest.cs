@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class DescribeManagedClustersRequest : TeaModel {
         /// <summary>
-        /// The ID of the master instance.
+        /// The status of the association between the clusters and Service Mesh (ASM).
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

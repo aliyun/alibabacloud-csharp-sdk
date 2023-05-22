@@ -10,29 +10,26 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class AttachClusterToHubResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the master instance.
+        /// You can call the AttachClusterToHub operation to associate an Container Service for Kubernetes (ACK) cluster with a master instance of ACK One.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// A list of the IDs of the clusters that you want to associate with the master instance.
+        /// Zhishi
         /// </summary>
         [NameInMap("ManagedClusterIds")]
         [Validation(Required=false)]
         public List<string> ManagedClusterIds { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// Example 1
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// The ID of the task.
-        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

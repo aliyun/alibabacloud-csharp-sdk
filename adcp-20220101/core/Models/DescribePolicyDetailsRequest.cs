@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class DescribePolicyDetailsRequest : TeaModel {
+        /// <summary>
+        /// The name of the policy.
+        /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }

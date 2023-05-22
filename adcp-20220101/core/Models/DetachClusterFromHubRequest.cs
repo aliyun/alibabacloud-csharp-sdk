@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class DetachClusterFromHubRequest : TeaModel {
         /// <summary>
-        /// The ID of the master instance.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// A JSON string that can be parsed into a string array. The string specifies the clusters that you want to disassociate from the master instance.
+        /// The operation that you want to perform. Set the value to **DetachClusterFromHub**.
         /// </summary>
         [NameInMap("ClusterIds")]
         [Validation(Required=false)]
         public string ClusterIds { get; set; }
 
         /// <summary>
-        /// Specifies whether to only disassociate the clusters from Service Mesh (ASM) instances. Valid values: - true: only disassociates the clusters from ASM instances. - false: disassociates the clusters from the master instance and ASM instances.
+        /// Example 1
         /// </summary>
         [NameInMap("DetachFromMesh")]
         [Validation(Required=false)]

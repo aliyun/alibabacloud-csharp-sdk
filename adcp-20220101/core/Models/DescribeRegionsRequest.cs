@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The language. Valid values: zh, en, and jp.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]

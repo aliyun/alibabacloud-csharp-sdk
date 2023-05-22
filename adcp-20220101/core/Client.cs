@@ -1552,6 +1552,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             {
                 query["ClusterId"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRamRole))
+            {
+                query["IsRamRole"] = request.IsRamRole;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 query["Namespace"] = request.Namespace;
@@ -1594,6 +1598,10 @@ namespace AlibabaCloud.SDK.Adcp20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRamRole))
+            {
+                query["IsRamRole"] = request.IsRamRole;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {

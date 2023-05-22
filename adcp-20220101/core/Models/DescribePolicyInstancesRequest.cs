@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Adcp20220101.Models
 {
     public class DescribePolicyInstancesRequest : TeaModel {
+        /// <summary>
+        /// The ID of the master instance.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// The name of the policy.
+        /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
