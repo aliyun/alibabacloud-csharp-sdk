@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
                 [Validation(Required=false)]
                 public string VideoUrl { get; set; }
 
+                /// <summary>
+                /// 字粒度的时间戳文件，特定任务支持
+                /// </summary>
                 [NameInMap("WordSubtitlesUrl")]
                 [Validation(Required=false)]
                 public string WordSubtitlesUrl { get; set; }
