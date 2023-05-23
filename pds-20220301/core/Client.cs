@@ -4704,6 +4704,106 @@ namespace AlibabaCloud.SDK.Pds20220301
             return await ListAddressGroupsWithOptionsAsync(request, headers, runtime);
         }
 
+        public ListAssignmentResponse ListAssignmentWithOptions(string domainId, ListAssignmentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["domain_id"] = domainId;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManageResourceId))
+            {
+                body["manage_resource_id"] = request.ManageResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManageResourceType))
+            {
+                body["manage_resource_type"] = request.ManageResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                body["marker"] = request.Marker;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAssignment",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/role/list_assignment",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAssignmentResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<ListAssignmentResponse> ListAssignmentWithOptionsAsync(string domainId, ListAssignmentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["domain_id"] = domainId;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManageResourceId))
+            {
+                body["manage_resource_id"] = request.ManageResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManageResourceType))
+            {
+                body["manage_resource_type"] = request.ManageResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                body["marker"] = request.Marker;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAssignment",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/role/list_assignment",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAssignmentResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public ListAssignmentResponse ListAssignment(string domainId, ListAssignmentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAssignmentWithOptions(domainId, request, headers, runtime);
+        }
+
+        public async Task<ListAssignmentResponse> ListAssignmentAsync(string domainId, ListAssignmentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAssignmentWithOptionsAsync(domainId, request, headers, runtime);
+        }
+
         public ListDeltaResponse ListDeltaWithOptions(ListDeltaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
