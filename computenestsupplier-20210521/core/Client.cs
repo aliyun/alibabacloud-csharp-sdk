@@ -561,6 +561,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             {
                 query["ArtifactId"] = request.ArtifactId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactName))
+            {
+                query["ArtifactName"] = request.ArtifactName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactVersion))
             {
                 query["ArtifactVersion"] = request.ArtifactVersion;
@@ -591,6 +595,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactId))
             {
                 query["ArtifactId"] = request.ArtifactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactName))
+            {
+                query["ArtifactName"] = request.ArtifactName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactVersion))
             {
@@ -981,6 +989,72 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetServiceInstanceWithOptionsAsync(request, runtime);
+        }
+
+        public GetUploadCredentialsResponse GetUploadCredentialsWithOptions(GetUploadCredentialsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUploadCredentials",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUploadCredentialsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetUploadCredentialsResponse> GetUploadCredentialsWithOptionsAsync(GetUploadCredentialsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUploadCredentials",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUploadCredentialsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetUploadCredentialsResponse GetUploadCredentials(GetUploadCredentialsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetUploadCredentialsWithOptions(request, runtime);
+        }
+
+        public async Task<GetUploadCredentialsResponse> GetUploadCredentialsAsync(GetUploadCredentialsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetUploadCredentialsWithOptionsAsync(request, runtime);
         }
 
         public ListArtifactVersionsResponse ListArtifactVersionsWithOptions(ListArtifactVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

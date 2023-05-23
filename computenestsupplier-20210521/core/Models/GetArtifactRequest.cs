@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ArtifactId { get; set; }
 
+        [NameInMap("ArtifactName")]
+        [Validation(Required=false)]
+        public string ArtifactName { get; set; }
+
         [NameInMap("ArtifactVersion")]
         [Validation(Required=false)]
         public string ArtifactVersion { get; set; }
