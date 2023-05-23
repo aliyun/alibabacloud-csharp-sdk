@@ -9,98 +9,180 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiPlugin20220112.Models
 {
     public class ListSchedulesResponseBody : TeaModel {
+        /// <summary>
+        /// 返回数据。
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListSchedulesResponseBodyData Data { get; set; }
         public class ListSchedulesResponseBodyData : TeaModel {
+            /// <summary>
+            /// 分页数，从1开始，默认为1。
+            /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
+            /// <summary>
+            /// 分页大小，默认为10。
+            /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
+            /// <summary>
+            /// 触达计划列表。
+            /// </summary>
             [NameInMap("Schedules")]
             [Validation(Required=false)]
             public List<ListSchedulesResponseBodyDataSchedules> Schedules { get; set; }
             public class ListSchedulesResponseBodyDataSchedules : TeaModel {
+                /// <summary>
+                /// 创建时间 (UTC+8)。
+                /// </summary>
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
                 public string CreatedTime { get; set; }
 
+                /// <summary>
+                /// 终止时间（UTC+8）。
+                /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public int? EndTime { get; set; }
 
+                /// <summary>
+                /// 执行时间 (UTC+8)，为空立即执行。
+                /// </summary>
                 [NameInMap("ExecuteTime")]
                 [Validation(Required=false)]
                 public string ExecuteTime { get; set; }
 
+                /// <summary>
+                /// 人群ID。
+                /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
+                /// <summary>
+                /// 触达计划ID。
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// 触达计划名称。
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// 重复周期，按重复周期与重复周期单位执行。
+                /// </summary>
                 [NameInMap("RepeatCycle")]
                 [Validation(Required=false)]
                 public int? RepeatCycle { get; set; }
 
+                /// <summary>
+                /// 重复周期单位，若指定执行时间，则重复周期生效。
+                /// - 0: 从不（默认）。
+                /// - 1: 小时。
+                /// - 2: 天。
+                /// - 3: 周。
+                /// - 4: 月。
+                /// </summary>
                 [NameInMap("RepeatCycleUnit")]
                 [Validation(Required=false)]
                 public int? RepeatCycleUnit { get; set; }
 
+                /// <summary>
+                /// 重复次数。
+                /// - 0: 不设终止时间（默认）。
+                /// - N: 重复N次后终止。
+                /// </summary>
                 [NameInMap("RepeatTimes")]
                 [Validation(Required=false)]
                 public int? RepeatTimes { get; set; }
 
+                /// <summary>
+                /// 签名。
+                /// </summary>
                 [NameInMap("SignName")]
                 [Validation(Required=false)]
                 public string SignName { get; set; }
 
+                /// <summary>
+                /// 签名ID，或指定签名。
+                /// </summary>
                 [NameInMap("SignatureId")]
                 [Validation(Required=false)]
                 public string SignatureId { get; set; }
 
+                /// <summary>
+                /// 状态。
+                /// - 0: 检查中。
+                /// - 1: 检查成功。
+                /// - 2: 检查失败。
+                /// - 3: 发送中。
+                /// - 4: 发送成功。
+                /// - 5: 发送失败。
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
+                /// <summary>
+                /// 模板Code。
+                /// </summary>
                 [NameInMap("TemplateCode")]
                 [Validation(Required=false)]
                 public string TemplateCode { get; set; }
 
+                /// <summary>
+                /// 模板ID，或指定模板Code。
+                /// </summary>
                 [NameInMap("TemplateId")]
                 [Validation(Required=false)]
                 public string TemplateId { get; set; }
 
+                /// <summary>
+                /// 更新时间 (UTC+8)。
+                /// </summary>
                 [NameInMap("UpdatedTime")]
                 [Validation(Required=false)]
                 public string UpdatedTime { get; set; }
 
             }
 
+            /// <summary>
+            /// 触达计划数量。
+            /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
 
         }
 
+        /// <summary>
+        /// 错误码。
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public int? ErrorCode { get; set; }
 
+        /// <summary>
+        /// 错误信息。
+        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// 请求ID。
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
