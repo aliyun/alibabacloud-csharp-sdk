@@ -10,98 +10,105 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterMulticastDomainsResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned per page.
+        /// $.parameters[8].schema.example
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
-        /// 
-        /// *   If **NextToken** is empty, it indicates that no next query is to be sent.
-        /// *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
+        /// $.parameters[8].schema.enumValueTitles
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// $.parameters[7].schema.enumValueTitles
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// $.parameters[8].schema.description
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The information about the multicast domain.
+        /// {
+        ///     "RequestId": "8A0F93D1-FD6C-56FC-B6D2-668FC92D12D2",
+        ///     "TotalCount": 1,
+        ///     "MaxResults": 20,
+        ///     "NextToken": "FFmyTO70tTpLG6I3FmYAXGKPd****",
+        ///     "TransitRouterMulticastDomains": [
+        ///         {
+        ///             "TransitRouterMulticastDomainId": "tr-mcast-domain-3r3bvbypxqheej****",
+        ///             "TransitRouterMulticastDomainName": "nametest",
+        ///             "TransitRouterMulticastDomainDescription": "desctest",
+        ///             "Status": "Active"
+        ///         }
+        ///     ]
+        /// }
         /// </summary>
         [NameInMap("TransitRouterMulticastDomains")]
         [Validation(Required=false)]
         public List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains> TransitRouterMulticastDomains { get; set; }
         public class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains : TeaModel {
             /// <summary>
-            /// The status of the multicast domain.
-            /// 
-            /// Valid value: **Active**, which indicates that the multicast domain is available.
+            /// WB656982
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
-            /// <summary>
-            /// The tags of the multicast domain.
-            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags> Tags { get; set; }
             public class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags : TeaModel {
-                /// <summary>
-                /// The tag key of the multicast domain.
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                /// <summary>
-                /// The tag value of the multicast domain.
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
             }
 
-            /// <summary>
-            /// The ID of the transit router.
-            /// </summary>
             [NameInMap("TransitRouterId")]
             [Validation(Required=false)]
             public string TransitRouterId { get; set; }
 
             /// <summary>
-            /// The description of the multicast domain.
+            /// ListTransitRouterMulticastDomains
             /// </summary>
             [NameInMap("TransitRouterMulticastDomainDescription")]
             [Validation(Required=false)]
             public string TransitRouterMulticastDomainDescription { get; set; }
 
             /// <summary>
-            /// The ID of the multicast domain.
+            /// <ListTransitRouterMulticastDomainsResponse>
+            ///     <RequestId>8A0F93D1-FD6C-56FC-B6D2-668FC92D12D2</RequestId>
+            ///     <TotalCount>1</TotalCount>
+            ///     <MaxResults>20</MaxResults>
+            ///     <NextToken>FFmyTO70tTpLG6I3FmYAXGKPd****</NextToken>
+            ///     <TransitRouterMulticastDomains>
+            ///         <TransitRouterMulticastDomainId>tr-mcast-domain-3r3bvbypxqheej****</TransitRouterMulticastDomainId>
+            ///         <TransitRouterMulticastDomainName>nametest</TransitRouterMulticastDomainName>
+            ///         <TransitRouterMulticastDomainDescription>desctest</TransitRouterMulticastDomainDescription>
+            ///         <Status>Active</Status>
+            ///     </TransitRouterMulticastDomains>
+            /// </ListTransitRouterMulticastDomainsResponse>
             /// </summary>
             [NameInMap("TransitRouterMulticastDomainId")]
             [Validation(Required=false)]
             public string TransitRouterMulticastDomainId { get; set; }
 
             /// <summary>
-            /// The name of the multicast domain.
+            /// Queries the information about a multicast domain.
             /// </summary>
             [NameInMap("TransitRouterMulticastDomainName")]
             [Validation(Required=false)]

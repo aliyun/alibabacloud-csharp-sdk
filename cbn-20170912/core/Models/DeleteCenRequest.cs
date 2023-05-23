@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteCenRequest : TeaModel {
-        /// <summary>
-        /// The ID of the CEN instance.
-        /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }

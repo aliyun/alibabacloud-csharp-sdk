@@ -10,46 +10,43 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterCidrRequest : TeaModel {
         /// <summary>
-        /// The CIDR block that you want to create for the transit router.
+        /// The operation that you want to perform. Set the value to **CreateTransitRouterCidr**.
         /// </summary>
         [NameInMap("Cidr")]
         [Validation(Required=false)]
         public string Cidr { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// *   **true** (default): yes
         /// 
-        /// >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+        ///     A value of true specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached. The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. The blackhole route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.
+        /// 
+        /// *   **false**: no
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the CIDR block.
+        /// The name of the CIDR block.
         /// 
-        /// The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Specifies whether only to precheck the request. Valid values:
-        /// 
-        /// *   **true**: prechecks the request but does not create the CIDR block. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): sends the request. After the request passes the precheck, the CIDR block is created.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The name of the CIDR block.
-        /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+        /// The CIDR block that you want to create for the transit router.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -64,13 +61,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.
+        /// The description of the CIDR block.
         /// 
-        /// *   **true** (default): yes
-        /// 
-        ///     A value of true specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached. The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. The blackhole route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.
-        /// 
-        /// *   **false**: no
+        /// The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("PublishCidrRoute")]
         [Validation(Required=false)]

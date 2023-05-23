@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterVpcAttachmentResponseBody : TeaModel {
         /// <summary>
-        /// INVALID_VPC_STATUS
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The resource is not in a valid state for the attachment operation.
+        /// The ID of the VPC connection.
         /// </summary>
         [NameInMap("TransitRouterAttachmentId")]
         [Validation(Required=false)]

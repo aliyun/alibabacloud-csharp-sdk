@@ -14,17 +14,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// 
         /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// 
-        /// >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to only precheck the request. Valid values:
+        /// Specifies whether to perform a dry run. Valid values:
         /// 
-        /// *   **true** precheck the request and does not change the resource group to which the CEN instance or bandwidth plan belongs. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): sends the API request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
+        /// *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   **false:**: performs a dry run and sends the request.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The resource type. Valid values:
+        /// The type of the resource. Valid values:
         /// 
         /// *   **CEN**: CEN instance
         /// *   **bandwidthpackage**: bandwidth plan

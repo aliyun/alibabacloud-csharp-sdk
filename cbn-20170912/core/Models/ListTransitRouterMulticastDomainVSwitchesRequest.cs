@@ -9,26 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterMulticastDomainVSwitchesRequest : TeaModel {
-        /// <summary>
-        /// The ID of the Cloud Enterprise Network (CEN) instance.
-        /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
-        /// <summary>
-        /// The number of entries to return on each page. Minimum value: **0**. Default value: **20**.
-        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
-        /// <summary>
-        /// The token that determines the start point of the query. Valid values:
-        /// 
-        /// *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
-        /// *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
-        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -49,16 +37,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        /// <summary>
-        /// The vSwitch IDs.
-        /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]
         public List<string> VSwitchIds { get; set; }
 
-        /// <summary>
-        /// The ID of the VPC.
-        /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

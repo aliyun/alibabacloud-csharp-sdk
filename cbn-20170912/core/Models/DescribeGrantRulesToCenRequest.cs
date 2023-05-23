@@ -10,31 +10,41 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGrantRulesToCenRequest : TeaModel {
         /// <summary>
-        /// The ID of the CEN instance.
+        /// The CEN instance ID.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// The type of the network instance. Valid values:
+        /// 要查询的网络实例ID。
+        /// </summary>
+        [NameInMap("ChildInstanceId")]
+        [Validation(Required=false)]
+        public string ChildInstanceId { get; set; }
+
+        /// <summary>
+        /// 网络实例所属阿里云账号（主账号）ID。
+        /// </summary>
+        [NameInMap("ChildInstanceOwnerId")]
+        [Validation(Required=false)]
+        public long? ChildInstanceOwnerId { get; set; }
+
+        /// <summary>
+        /// The number of entries to return on each page. Valid values: **1** to **100**.
         /// 
-        /// *   **VPC**: VPC
-        /// *   **VBR**: VBR
-        /// *   **CCN**: CCN instance
-        /// *   **VPN**: IPsec-VPN connection
+        /// *   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** in the response indicates the total number of entries.
+        /// *   If a value is specified for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// The type of the network instance. Valid values:
+        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   **VPC**: VPC
-        /// *   **VBR**: VBR
-        /// *   **CCN**: CCN instance
-        /// *   **VPN**: IPsec-VPN connection
+        /// *   You do not need to specify this parameter for the first request.
+        /// *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -49,14 +59,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the network instance belongs.
+        /// The type of the network instance. Valid values:
+        /// 
+        /// *   **VPC**
+        /// *   **VBR**
+        /// *   **CCN**
+        /// *   **VPN**
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// The region ID of the network instance.
+        /// 
+        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

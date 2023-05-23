@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class WithdrawPublishedRouteEntriesResponseBody : TeaModel {
-        /// <summary>
-        /// The request ID.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

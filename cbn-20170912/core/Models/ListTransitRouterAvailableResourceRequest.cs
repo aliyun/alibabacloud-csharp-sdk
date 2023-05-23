@@ -18,9 +18,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Enterprise Edition transit router is deployed.
-        /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// The ID of the zone.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -35,13 +33,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to query only the zones in which the multicast feature is supported. Valid values:
-        /// 
-        /// *   **true**: yes
-        /// 
-        ///     After you call **ListTransitRouterAvailableResource**, if no zone is returned, it indicates that the Enterprise Edition transit router does not support the multicast feature.
-        /// 
-        /// *   **false** (default): no
+        /// A list of zones.
         /// </summary>
         [NameInMap("SupportMulticast")]
         [Validation(Required=false)]

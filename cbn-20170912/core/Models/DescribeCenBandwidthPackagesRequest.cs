@@ -10,36 +10,25 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenBandwidthPackagesRequest : TeaModel {
         /// <summary>
-        /// The filter conditions.
+        /// The description of the bandwidth plan.
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeCenBandwidthPackagesRequestFilter> Filter { get; set; }
         public class DescribeCenBandwidthPackagesRequestFilter : TeaModel {
             /// <summary>
-            /// The filter condition.
-            /// 
-            /// You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:
-            /// 
-            /// *   **CenId**: CEN instance ID
-            /// 
-            /// *   **Status**: bandwidth plan status. Valid values:
-            /// 
-            ///     *   **Idle**: not associated with a CEN instance.
-            ///     *   **InUse**: associated with a CEN instance.
-            /// 
-            /// *   **CenBandwidthPackageId**: bandwidth plan ID
-            /// 
-            /// *   **Name**: bandwidth plan name
-            /// 
-            ///     You can specify one or more filter conditions. The maximum value of **N** is **5**.
+            /// The operation that you want to perform. Set the value to **DescribeCenBandwidthPackages**.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The values of condition.
+            /// The status of the bandwidth plan. Valid values:
+            /// 
+            /// *   **Normal**: normal
+            /// *   **FinancialLocked**: locked due to overdue payments
+            /// *   **SecurityLocked**: locked due to security reasons
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -58,10 +47,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? IncludeReservationData { get; set; }
 
         /// <summary>
-        /// The logical operator between the filter conditions. Valid values:
+        /// The ID of the other connected area of the bandwidth plan. Valid values:
         /// 
-        /// *   **false** (default): **AND** Bandwidth plans that meet all filter conditions are returned.
-        /// *   **true**: **OR** Bandwidth plans that meet one of the filter conditions are returned.
+        /// *   **china**: Chinese mainland.
+        /// *   **asia-pacific**: Asia Pacific
+        /// *   **europe**: Europe
+        /// *   **australia**: Australia
+        /// *   **north-america**: North America
         /// </summary>
         [NameInMap("IsOrKey")]
         [Validation(Required=false)]
@@ -76,14 +68,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// Specify a filter value based on the **Key** parameter.
+        /// 
+        /// You can specify multiple values for a **filter key**. The logical relation among multiple filter values is **OR**. If a bandwidth package matches one of the values that you specify, the bandwidth package matches the filter condition.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// The ID of the peer region.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

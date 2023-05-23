@@ -10,28 +10,23 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCensRequest : TeaModel {
         /// <summary>
-        /// The list of the filter conditions.
+        /// The key of the tag.
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeCensRequestFilter> Filter { get; set; }
         public class DescribeCensRequestFilter : TeaModel {
             /// <summary>
-            /// The filter condition. Valid values:
-            /// 
-            /// *   **CenId**: the ID of a CEN instance.
-            /// *   **Name**: the name of a CEN instance.
-            /// 
-            /// By default, the logical operator among filter conditions is **AND**. Information about a CEN instance is returned only if the CEN instance matches all filter conditions.
-            /// 
-            /// You can specify at most five filter conditions in each call.
+            /// The name of the CEN instance.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The values of the filter condition.
+            /// The time when the CEN instance was created.
+            /// 
+            /// The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -55,7 +50,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
+        /// The value of the filter condition.
+        /// 
+        /// This parameter sets the value of a filter **key**. You can specify multiple values for a filter **key**. The logical operator among multiple filter values is **OR**. If a CEN instance matches one or more of the values that you specify, the CEN instance matches the filter condition.
+        /// 
+        /// You can specify at most five values in each filter condition.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -74,29 +73,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeCensRequestTag> Tag { get; set; }
         public class DescribeCensRequestTag : TeaModel {
             /// <summary>
-            /// The tag keys of the resources.
-            /// 
-            /// The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-            /// 
-            /// You can specify at most 20 tag keys.
+            /// The list of the filter conditions.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag values of the resources.
-            /// 
-            /// The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-            /// 
-            /// Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+            /// The description of the CEN instance.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

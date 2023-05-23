@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// The ID of one of the areas connected by the bandwidth plan. Valid values:
+        /// The ID of one of the connected areas of the bandwidth plan. Valid values:
         /// 
         /// *   **China**: Chinese mainland
         /// *   **North-America**: North America

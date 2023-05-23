@@ -10,16 +10,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenRouteMapsRequest : TeaModel {
         /// <summary>
-        /// The ID of the CEN instance.
+        /// The number of the page to return. Default value: **1**.
         /// </summary>
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the routing policy is applied.
+        /// The match method that is used to match routes based on the AS path.
         /// 
-        /// You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+        /// *   **Include**: fuzzy match. A route is a match if the AS path of the route overlaps with the AS path specified in the match condition.
+        /// *   **Complete**: exact match. A route is a match only if the AS path of the route is the same as the AS path specified in the match condition.
         /// </summary>
         [NameInMap("CenRegionId")]
         [Validation(Required=false)]
@@ -34,14 +35,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The route table ID of the transit router with which the routing policy is associated.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: **10**.
+        /// The IDs of the destination network instances to which the routes belong.
+        /// 
+        /// >  The destination network instance IDs are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to network instances in the current region.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -56,29 +59,27 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the routing policy.
+        /// Indicates whether the destination network instance IDs are excluded.
+        /// 
+        /// *   **false** (default): A route is a match if its destination network instance ID is in the list specified by **DestinationInstanceIds.N**.
+        /// *   **true**: A route is a match if its destination network instance ID is not in the list specified by **DestinationInstanceIds.N**.
         /// </summary>
         [NameInMap("RouteMapId")]
         [Validation(Required=false)]
         public string RouteMapId { get; set; }
 
         /// <summary>
-        /// The route table ID of the transit router with which the routing policy is associated.
+        /// The priority of the routing policy that you want to associate with the current one.
         /// </summary>
         [NameInMap("TransitRouterRouteTableId")]
         [Validation(Required=false)]
         public string TransitRouterRouteTableId { get; set; }
 
         /// <summary>
-        /// The direction in which the routing policy is applied. Valid values:
+        /// The match method that is used to match routes based on the community.
         /// 
-        /// *   **RegionIn**: Routes are advertised to the gateways in the regions that are connected by the CEN instance.
-        /// 
-        ///     For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.
-        /// 
-        /// *   **RegionOut**: Routes are advertised from the gateways in the regions that are connected by the CEN instance.
-        /// 
-        ///     For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the current region, or to gateways deployed in other regions.
+        /// *   **Include**: fuzzy match. A route is a match if the community of the route overlaps with the community specified in the match condition.
+        /// *   **Complete**: exact match. A route is a match only if the community of the route is the same as the community specified in the match condition.
         /// </summary>
         [NameInMap("TransmitDirection")]
         [Validation(Required=false)]
