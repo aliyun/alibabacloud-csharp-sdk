@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class RemoveIpControlPolicyItemResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// Removes one or more policies from an access control list (ACL).
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

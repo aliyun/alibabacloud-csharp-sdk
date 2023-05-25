@@ -93,6 +93,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string CertificateName { get; set; }
 
+                [NameInMap("CertificateValidEnd")]
+                [Validation(Required=false)]
+                public long? CertificateValidEnd { get; set; }
+
+                [NameInMap("CertificateValidStart")]
+                [Validation(Required=false)]
+                public long? CertificateValidStart { get; set; }
+
                 /// <summary>
                 /// The type of the custom domain name.
                 /// </summary>

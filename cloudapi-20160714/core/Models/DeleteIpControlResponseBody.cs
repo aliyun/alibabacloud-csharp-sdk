@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteIpControlResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// Deletes an access control list (ACL).
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

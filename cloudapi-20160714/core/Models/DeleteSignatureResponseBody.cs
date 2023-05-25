@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteSignatureResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// Deletes a backend signature key.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

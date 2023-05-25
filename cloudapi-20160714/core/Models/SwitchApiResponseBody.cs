@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SwitchApiResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// Switches the definition of an API in a specified runtime environment to a historical version.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

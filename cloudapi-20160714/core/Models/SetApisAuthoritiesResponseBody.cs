@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetApisAuthoritiesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// Authorizes a specified app to call multiple APIs.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

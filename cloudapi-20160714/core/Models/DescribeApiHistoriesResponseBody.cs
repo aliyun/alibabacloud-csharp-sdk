@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiHistoriesResponseBody : TeaModel {
         /// <summary>
-        /// The returned API information. It is an array consisting of ApiHisItem data.
+        /// The ID of the API.
         /// </summary>
         [NameInMap("ApiHisItems")]
         [Validation(Required=false)]
@@ -21,60 +21,32 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiHistoriesResponseBodyApiHisItemsApiHisItem> ApiHisItem { get; set; }
             public class DescribeApiHistoriesResponseBodyApiHisItemsApiHisItem : TeaModel {
                 /// <summary>
-                /// The ID of the API.
+                /// Creates an object
                 /// </summary>
                 [NameInMap("ApiId")]
                 [Validation(Required=false)]
                 public string ApiId { get; set; }
 
                 /// <summary>
-                /// The name of the API.
+                /// The region where the API is located.
                 /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
                 public string ApiName { get; set; }
 
                 /// <summary>
-                /// The publishing time (UTC) of the API.
+                /// The historical version of the API.
                 /// </summary>
                 [NameInMap("DeployedTime")]
                 [Validation(Required=false)]
                 public string DeployedTime { get; set; }
 
                 /// <summary>
-                /// The description of the API.
+                /// The name of the group to which an API belongs.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
-
-                /// <summary>
-                /// The ID of the API group.
-                /// </summary>
-                [NameInMap("GroupId")]
-                [Validation(Required=false)]
-                public string GroupId { get; set; }
-
-                /// <summary>
-                /// The name of the group to which an API belongs.
-                /// </summary>
-                [NameInMap("GroupName")]
-                [Validation(Required=false)]
-                public string GroupName { get; set; }
-
-                /// <summary>
-                /// The historical version of the API.
-                /// </summary>
-                [NameInMap("HistoryVersion")]
-                [Validation(Required=false)]
-                public string HistoryVersion { get; set; }
-
-                /// <summary>
-                /// The region where the API is located.
-                /// </summary>
-                [NameInMap("RegionId")]
-                [Validation(Required=false)]
-                public string RegionId { get; set; }
 
                 /// <summary>
                 /// The name of the runtime environment. Valid values:
@@ -82,12 +54,40 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 /// *   **RELEASE**
                 /// *   **TEST.
                 /// </summary>
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
+                public string GroupId { get; set; }
+
+                /// <summary>
+                /// The publishing time (UTC) of the API.
+                /// </summary>
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
+                public string GroupName { get; set; }
+
+                /// <summary>
+                /// CreateObject
+                /// </summary>
+                [NameInMap("HistoryVersion")]
+                [Validation(Required=false)]
+                public string HistoryVersion { get; set; }
+
+                /// <summary>
+                /// Queries the historical versions of a specified API.
+                /// </summary>
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
+
+                /// <summary>
+                /// The name of the API.
+                /// </summary>
                 [NameInMap("StageName")]
                 [Validation(Required=false)]
                 public string StageName { get; set; }
 
                 /// <summary>
-                /// Indicates whether an API version is effective. Valid values: ONLINE and OFFLINE.
+                /// The description of the API.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -98,28 +98,28 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The returned API information. It is an array consisting of ApiHisItem data.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The total number of returned entries.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// Indicates whether an API version is effective. Valid values: ONLINE and OFFLINE.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

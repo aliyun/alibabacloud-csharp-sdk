@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the key to be deleted.
+        /// *   This API is intended for API providers.
+        /// *   This API operation deletes an existing backend signature key.
+        /// *   You cannot delete a key that is bound to an API. To delete the key, you must unbind it first.
+        /// *   The QPS limit on this operation is 50 per user.
         /// </summary>
         [NameInMap("SignatureId")]
         [Validation(Required=false)]

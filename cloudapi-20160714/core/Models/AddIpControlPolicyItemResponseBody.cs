@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class AddIpControlPolicyItemResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the policy. The ID is unique.
+        /// When you call this operation, note that:
+        /// 
+        /// *   This operation is intended for API providers.
+        /// *   An added policy immediately takes effect on all APIs that are bound to the access control list (ACL).
+        /// *   A maximum of 100 policies can be added to an ACL.
         /// </summary>
         [NameInMap("PolicyItemId")]
         [Validation(Required=false)]
         public string PolicyItemId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// Adds a policy to an existing ACL.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

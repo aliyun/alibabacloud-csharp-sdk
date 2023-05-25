@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyIpControlPolicyItemResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// Modifies a policy in an access control list (ACL).
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

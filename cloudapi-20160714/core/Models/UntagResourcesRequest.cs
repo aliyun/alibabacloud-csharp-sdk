@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to delete all tags. This parameter is valid only when the **TagKey.N**parameter is not specified. Default value: false. Valid values:
-        /// 
-        /// *   **true**
-        /// *   **false**
+        /// The ID of the request.
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -24,11 +21,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:
+        /// The key of tag N.
         /// 
-        /// *   **apiGroup**
-        /// *   **plugin**
-        /// *   **app**
+        /// Valid values of N: `1 to 20.`
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

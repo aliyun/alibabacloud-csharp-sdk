@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeUpdateVpcInfoTaskRequest : TeaModel {
-        /// <summary>
-        /// The ID of the task.
-        /// </summary>
         [NameInMap("OperationUid")]
         [Validation(Required=false)]
         public string OperationUid { get; set; }

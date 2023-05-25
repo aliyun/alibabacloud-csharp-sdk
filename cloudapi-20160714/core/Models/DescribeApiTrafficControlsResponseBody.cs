@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiTrafficControlsResponseBody : TeaModel {
         /// <summary>
-        /// The binding time of the throttling policy.
+        /// The ID of the API.
         /// </summary>
         [NameInMap("ApiTrafficControls")]
         [Validation(Required=false)]
@@ -21,36 +21,36 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem> ApiTrafficControlItem { get; set; }
             public class DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem : TeaModel {
                 /// <summary>
-                /// The ID of the throttling policy.
+                /// The name of the throttling policy.
                 /// </summary>
                 [NameInMap("ApiId")]
                 [Validation(Required=false)]
                 public string ApiId { get; set; }
 
                 /// <summary>
-                /// *   This API is intended for API providers.
-                /// *   The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.
+                /// Queries the throttling policies bound to all members of an API group in a specified environment.
                 /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
                 public string ApiName { get; set; }
 
                 /// <summary>
-                /// The ID of the API.
+                /// The ID of the throttling policy.
                 /// </summary>
                 [NameInMap("BoundTime")]
                 [Validation(Required=false)]
                 public string BoundTime { get; set; }
 
                 /// <summary>
-                /// The name of the throttling policy.
+                /// API operation
                 /// </summary>
                 [NameInMap("TrafficControlId")]
                 [Validation(Required=false)]
                 public string TrafficControlId { get; set; }
 
                 /// <summary>
-                /// API operation
+                /// *   This API is intended for API providers.
+                /// *   The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.
                 /// </summary>
                 [NameInMap("TrafficControlName")]
                 [Validation(Required=false)]
@@ -61,28 +61,28 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// The returned throttling policy information. It is an array consisting of ApiTrafficControlItem data.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The total number of returned entries.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned throttling policy information. It is an array consisting of ApiTrafficControlItem data.
+        /// The binding time of the throttling policy.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

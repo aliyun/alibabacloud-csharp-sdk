@@ -9,30 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiMarketAttributesResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
-        /// <summary>
-        /// Indicates whether fees are charged.
-        /// </summary>
         [NameInMap("MarketChargingMode")]
         [Validation(Required=false)]
         public string MarketChargingMode { get; set; }
 
-        /// <summary>
-        /// auditing
-        /// </summary>
         [NameInMap("NeedCharging")]
         [Validation(Required=false)]
         public string NeedCharging { get; set; }
 
-        /// <summary>
-        /// The billing mode used by the Alibaba Cloud Marketplace.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

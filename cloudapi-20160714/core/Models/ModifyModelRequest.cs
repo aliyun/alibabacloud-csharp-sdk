@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyModelRequest : TeaModel {
         /// <summary>
-        /// The description of the new model definition.
+        /// The new definition of the model.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the API group to which the model belongs.
+        /// The new name of the model.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The name of the model.
+        /// The description of the new model definition.
         /// </summary>
         [NameInMap("ModelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
 
         /// <summary>
-        /// The new name of the model.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("NewModelName")]
         [Validation(Required=false)]
         public string NewModelName { get; set; }
 
         /// <summary>
-        /// The new definition of the model.
+        /// The ID of the API group to which the model belongs.
         /// </summary>
         [NameInMap("Schema")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class UntagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// UntagResources
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

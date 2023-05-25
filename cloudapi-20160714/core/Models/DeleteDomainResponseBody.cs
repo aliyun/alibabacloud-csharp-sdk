@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteDomainResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// Unbinds a custom domain name from a specified API group.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

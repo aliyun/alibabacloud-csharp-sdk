@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApisBySignatureRequest : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1. Default value: 1.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100. Default value: 10.
+        /// The number of the page to return. Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("SignatureId")]
         [Validation(Required=false)]

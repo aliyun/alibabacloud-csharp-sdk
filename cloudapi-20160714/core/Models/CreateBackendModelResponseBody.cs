@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateBackendModelResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the backend model.
-        /// </summary>
         [NameInMap("BackendModelId")]
         [Validation(Required=false)]
         public string BackendModelId { get; set; }
 
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

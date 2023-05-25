@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
-    public class DeleteTrafficControlRequest : TeaModel {
+    public class ValidateVpcConnectivityRequest : TeaModel {
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
-        [NameInMap("TrafficControlId")]
+        [NameInMap("VpcAccessId")]
         [Validation(Required=false)]
-        public string TrafficControlId { get; set; }
+        public string VpcAccessId { get; set; }
 
     }
 

@@ -14,11 +14,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:
-        /// 
-        /// *   **apiGroup**
-        /// *   **plugin**
-        /// *   **app**
+        /// The operation that you want to perform. Set the value to **TagResources**.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -33,18 +29,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N.
-            /// 
-            /// Valid values of N: `1 to 20.`
+            /// Adds tags to resources.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N.
-            /// 
-            /// Valid values of N: `1 to 20.`
+            /// TagResources
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

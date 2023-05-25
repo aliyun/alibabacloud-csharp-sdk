@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetSignatureApisRequest : TeaModel {
         /// <summary>
-        /// The name of the runtime environment. Valid values:
-        /// 
-        /// *   **RELEASE**
-        /// *   **PRE**
-        /// *   **TEST**
+        /// The ID of the request.
         /// </summary>
         [NameInMap("ApiIds")]
         [Validation(Required=false)]
         public string ApiIds { get; set; }
 
         /// <summary>
-        /// The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
+        /// The name of the runtime environment. Valid values:
+        /// 
+        /// *   **RELEASE**
+        /// *   **PRE**
+        /// *   **TEST**
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -32,14 +32,15 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the API group to which the API that you want to manage belongs.
+        /// The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
         /// </summary>
         [NameInMap("SignatureId")]
         [Validation(Required=false)]
         public string SignatureId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// *   This API is intended for API providers.
+        /// *   This operation allows you to bind a signature key to an API. You can bind signature keys for up to 100 APIs at a time.
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

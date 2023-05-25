@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApisResponseBody : TeaModel {
         /// <summary>
-        /// The returned API definition. It is an array that consists of ApiSummary data.
+        /// The queried API definitions.
         /// </summary>
         [NameInMap("ApiSummarys")]
         [Validation(Required=false)]
@@ -21,34 +21,43 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribeApisResponseBodyApiSummarysApiSummary> ApiSummary { get; set; }
             public class DescribeApisResponseBodyApiSummarysApiSummary : TeaModel {
                 /// <summary>
-                /// The ID of the API.
+                /// The API ID.
                 /// </summary>
                 [NameInMap("ApiId")]
                 [Validation(Required=false)]
                 public string ApiId { get; set; }
 
+                /// <summary>
+                /// The HTTP method of the API request.
+                /// </summary>
                 [NameInMap("ApiMethod")]
                 [Validation(Required=false)]
                 public string ApiMethod { get; set; }
 
                 /// <summary>
-                /// The name of the API operation.
+                /// The API name.
                 /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
                 public string ApiName { get; set; }
 
+                /// <summary>
+                /// The request path of the API.
+                /// </summary>
                 [NameInMap("ApiPath")]
                 [Validation(Required=false)]
                 public string ApiPath { get; set; }
 
                 /// <summary>
-                /// The creation time (UTC) of the query task.
+                /// The time when the API was created. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
                 public string CreatedTime { get; set; }
 
+                /// <summary>
+                /// The API publishing statuses.
+                /// </summary>
                 [NameInMap("DeployedInfos")]
                 [Validation(Required=false)]
                 public DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfos DeployedInfos { get; set; }
@@ -57,14 +66,27 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     [Validation(Required=false)]
                     public List<DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfosDeployedInfo> DeployedInfo { get; set; }
                     public class DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfosDeployedInfo : TeaModel {
+                        /// <summary>
+                        /// The deployment status. Valid values: DEPLOYED and NONDEPLOYED.
+                        /// </summary>
                         [NameInMap("DeployedStatus")]
                         [Validation(Required=false)]
                         public string DeployedStatus { get; set; }
 
+                        /// <summary>
+                        /// The deployed version.
+                        /// </summary>
                         [NameInMap("EffectiveVersion")]
                         [Validation(Required=false)]
                         public string EffectiveVersion { get; set; }
 
+                        /// <summary>
+                        /// Stage Name:
+                        /// 
+                        /// *   **RELEASE**: production environment
+                        /// *   **PRE**: staging environment
+                        /// *   **TEST**: test environment
+                        /// </summary>
                         [NameInMap("StageName")]
                         [Validation(Required=false)]
                         public string StageName { get; set; }
@@ -74,40 +96,43 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 }
 
                 /// <summary>
-                /// The description of the API.
+                /// The API description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the API group.
+                /// The API group ID.
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// The name of the group to which the API belongs.
+                /// The name of the API group to which the API belongs.
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The modification time (UTC) of the API.
+                /// The time when the API was modified. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
 
                 /// <summary>
-                /// The ID of the region in which the API resides.
+                /// The ID of the region to which the API belongs.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// The tags that are added to the APIs.
+                /// </summary>
                 [NameInMap("TagList")]
                 [Validation(Required=false)]
                 public DescribeApisResponseBodyApiSummarysApiSummaryTagList TagList { get; set; }
@@ -116,10 +141,16 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     [Validation(Required=false)]
                     public List<DescribeApisResponseBodyApiSummarysApiSummaryTagListTag> Tag { get; set; }
                     public class DescribeApisResponseBodyApiSummarysApiSummaryTagListTag : TeaModel {
+                        /// <summary>
+                        /// The tag key.
+                        /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
+                        /// <summary>
+                        /// The tag value.
+                        /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         public string TagValue { get; set; }
@@ -131,8 +162,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 /// <summary>
                 /// Indicates whether the API is public. Valid values:
                 /// 
-                /// *   **PUBLIC**
-                /// *   **PRIVATE**
+                /// *   **PUBLIC**: The API is public.
+                /// *   **PRIVATE**: The API is private.
                 /// </summary>
                 [NameInMap("Visibility")]
                 [Validation(Required=false)]
@@ -157,7 +188,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

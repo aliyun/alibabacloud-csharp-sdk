@@ -10,29 +10,35 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApisRequest : TeaModel {
         /// <summary>
-        /// The ID of the API.
+        /// The API ID.
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
+        /// <summary>
+        /// The HTTP method of the API request.
+        /// </summary>
         [NameInMap("ApiMethod")]
         [Validation(Required=false)]
         public string ApiMethod { get; set; }
 
         /// <summary>
-        /// The name of the API operation. The name is used for fuzzy match.
+        /// The API name. The name is used for fuzzy match.
         /// </summary>
         [NameInMap("ApiName")]
         [Validation(Required=false)]
         public string ApiName { get; set; }
 
+        /// <summary>
+        /// The request path of the API.
+        /// </summary>
         [NameInMap("ApiPath")]
         [Validation(Required=false)]
         public string ApiPath { get; set; }
 
         /// <summary>
-        /// The ID of the category.
+        /// The category ID.
         /// </summary>
         [NameInMap("CatalogId")]
         [Validation(Required=false)]
@@ -46,7 +52,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public bool? EnableTagAuth { get; set; }
 
         /// <summary>
-        /// The ID of the API group.
+        /// The API group ID.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -60,7 +66,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100. Default value: 10.
+        /// The number of entries to return on each page. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -75,7 +81,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string StageName { get; set; }
 
         /// <summary>
-        /// The tag of objects that match the rule. You can specify multiple tags.
+        /// The tags of objects that match the rule.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -89,7 +95,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// The tag value.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -97,15 +103,18 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         }
 
+        /// <summary>
+        /// Specifies whether to filter unpublished APIs.
+        /// </summary>
         [NameInMap("UnDeployed")]
         [Validation(Required=false)]
         public bool? UnDeployed { get; set; }
 
         /// <summary>
-        /// Specifies whether to make the API public. Valid values:
+        /// Specifies whether the API is public. Valid values:
         /// 
-        /// *   **PUBLIC: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**
-        /// *   **PRIVATE: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
+        /// *   **PUBLIC**: The API is public. If you publish the definition of a public API to the production environment, the definition is displayed on the APIs page for all users.
+        /// *   **PRIVATE**: The API is private. If you publish an API group that contains a private API in Alibaba Cloud Marketplace, the API is not displayed in Alibaba Cloud Marketplace.
         /// </summary>
         [NameInMap("Visibility")]
         [Validation(Required=false)]

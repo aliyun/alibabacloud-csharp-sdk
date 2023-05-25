@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeZonesRequest : TeaModel {
-        /// <summary>
-        /// The language in which you want to use to return the description of the system policy. Valid values:
-        /// 
-        /// *   en: English
-        /// *   zh-CN: Chinese
-        /// *   ja: Japanese
-        /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }

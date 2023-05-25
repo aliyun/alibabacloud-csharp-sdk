@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeployApiRequest : TeaModel {
         /// <summary>
-        /// The ID of the API.
+        /// The publishing remarks.
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
         /// <summary>
-        /// The publishing remarks.
+        /// *   This operation is intended for API providers. Only the API that you have defined and published to a runtime environment can be called.
+        /// *   An API is published to a cluster in less than 5 seconds.
+        /// *   The QPS limit on this operation is 50 per user.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the API group.
+        /// The name of the runtime environment. Valid values:
+        /// 
+        /// *   **RELEASE**
+        /// *   **PRE: the pre-release environment**
+        /// *   **TEST: the test environment**
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -35,11 +41,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The name of the runtime environment. Valid values:
-        /// 
-        /// *   **RELEASE**
-        /// *   **PRE: the pre-release environment**
-        /// *   **TEST: the test environment**
+        /// The ID of the request.
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

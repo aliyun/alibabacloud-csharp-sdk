@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateLogConfigRequest : TeaModel {
-        /// <summary>
-        /// The log type.
-        /// </summary>
         [NameInMap("LogType")]
         [Validation(Required=false)]
         public string LogType { get; set; }
@@ -27,9 +24,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string SlsLogStore { get; set; }
 
-        /// <summary>
-        /// The name of the Log Service project.
-        /// </summary>
         [NameInMap("SlsProject")]
         [Validation(Required=false)]
         public string SlsProject { get; set; }

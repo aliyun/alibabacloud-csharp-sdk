@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeployApiResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// Publishes an API to a specified environment.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

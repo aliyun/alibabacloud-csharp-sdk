@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiGroupVpcWhitelistResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// The ID of the VPC.
-        /// </summary>
         [NameInMap("VpcIds")]
         [Validation(Required=false)]
         public string VpcIds { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyModelResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// Updates the model of an API group.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

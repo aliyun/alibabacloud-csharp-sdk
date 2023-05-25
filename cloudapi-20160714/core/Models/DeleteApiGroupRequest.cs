@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteApiGroupRequest : TeaModel {
-        /// <summary>
-        /// The object tags that match the lifecycle rule. You can specify multiple tags.
-        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
@@ -20,23 +17,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
-        /// <summary>
-        /// The key of the tag.
-        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DeleteApiGroupRequestTag> Tag { get; set; }
         public class DeleteApiGroupRequestTag : TeaModel {
-            /// <summary>
-            /// The value of the tag.
-            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
-            /// <summary>
-            /// The ID of the request.
-            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

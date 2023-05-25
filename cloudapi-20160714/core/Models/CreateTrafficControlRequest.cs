@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateTrafficControlRequest : TeaModel {
         /// <summary>
-        /// The default throttling value for each API.
+        /// The default throttling value for each app.
         /// </summary>
         [NameInMap("ApiDefault")]
         [Validation(Required=false)]
         public int? ApiDefault { get; set; }
 
         /// <summary>
-        /// The default throttling value for each app.
+        /// ThrottlingTestDescription
         /// </summary>
         [NameInMap("AppDefault")]
         [Validation(Required=false)]
         public int? AppDefault { get; set; }
 
         /// <summary>
-        /// The description of the throttling policy.
+        /// The ID of the throttling policy.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -35,13 +35,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The name of the throttling policy. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). It cannot start with an underscore.
-        /// </summary>
-        [NameInMap("TrafficControlName")]
-        [Validation(Required=false)]
-        public string TrafficControlName { get; set; }
-
-        /// <summary>
         /// The unit to be used in the throttling policy. Valid values:
         /// 
         /// *   **SECOND**
@@ -49,12 +42,19 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         /// *   **HOUR**
         /// *   **DAY**
         /// </summary>
+        [NameInMap("TrafficControlName")]
+        [Validation(Required=false)]
+        public string TrafficControlName { get; set; }
+
+        /// <summary>
+        /// The default throttling value for each user.
+        /// </summary>
         [NameInMap("TrafficControlUnit")]
         [Validation(Required=false)]
         public string TrafficControlUnit { get; set; }
 
         /// <summary>
-        /// The default throttling value for each user.
+        /// The description of the throttling policy.
         /// </summary>
         [NameInMap("UserDefault")]
         [Validation(Required=false)]

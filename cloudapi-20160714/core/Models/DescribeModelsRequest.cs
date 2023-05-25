@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeModelsRequest : TeaModel {
         /// <summary>
-        /// The ID of the API group.
+        /// The number of entries to return on each page. Maximum value: 100. Default value: 10.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the model.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("ModelId")]
         [Validation(Required=false)]
         public string ModelId { get; set; }
 
         /// <summary>
-        /// The name of the model.
+        /// The number of the page to return. Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("ModelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1. Default value: 1.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100. Default value: 10.
+        /// The ID of the model.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

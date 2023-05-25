@@ -8,10 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
-    public class ReactivateDomainResponseBody : TeaModel {
-        /// <summary>
-        /// Reactivates a custom domain name whose validity status is Abnormal.
-        /// </summary>
+    public class ValidateVpcConnectivityResponseBody : TeaModel {
+        [NameInMap("Connected")]
+        [Validation(Required=false)]
+        public bool? Connected { get; set; }
+
+        [NameInMap("IpType")]
+        [Validation(Required=false)]
+        public string IpType { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

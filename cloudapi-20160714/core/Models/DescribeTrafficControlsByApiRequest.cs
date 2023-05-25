@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeTrafficControlsByApiRequest : TeaModel {
         /// <summary>
-        /// The ID of the API.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
         /// <summary>
-        /// The ID of the group to which the API to be queried belongs.
+        /// The runtime environment of the API. Valid values:
+        /// 
+        /// *   **RELEASE**
+        /// *   **TEST**
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -28,10 +31,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The runtime environment of the API. Valid values:
-        /// 
-        /// *   **RELEASE**
-        /// *   **TEST**
+        /// The returned throttling policy information. It is an array consisting of TrafficControlItem data.
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

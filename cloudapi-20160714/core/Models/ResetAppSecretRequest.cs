@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string AppKey { get; set; }
 
+        [NameInMap("NewAppKey")]
+        [Validation(Required=false)]
+        public string NewAppKey { get; set; }
+
         /// <summary>
         /// The new key of the application. To improve compatibility, we recommend that you use other parameters.
         /// </summary>

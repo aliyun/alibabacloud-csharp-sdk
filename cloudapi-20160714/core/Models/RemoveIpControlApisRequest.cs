@@ -10,24 +10,27 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class RemoveIpControlApisRequest : TeaModel {
         /// <summary>
-        /// The ID of the API to be managed.
-        /// 
-        /// *   If this parameter is not specified, all APIs of the API group are unbound in the specified environment by default.
-        /// *   The IDs of the APIs that you want to query. Separate multiple IDs with commas (,). A maximum of 100 IDs can be entered.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("ApiIds")]
         [Validation(Required=false)]
         public string ApiIds { get; set; }
 
         /// <summary>
-        /// The ID of the API group containing the API to be managed.
+        /// The name of the runtime environment. Valid values:
+        /// 
+        /// *   **RELEASE**
+        /// *   **TEST**
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the ACL.
+        /// The ID of the API to be managed.
+        /// 
+        /// *   If this parameter is not specified, all APIs of the API group are unbound in the specified environment by default.
+        /// *   The IDs of the APIs that you want to query. Separate multiple IDs with commas (,). A maximum of 100 IDs can be entered.
         /// </summary>
         [NameInMap("IpControlId")]
         [Validation(Required=false)]
@@ -38,10 +41,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The name of the runtime environment. Valid values:
-        /// 
-        /// *   **RELEASE**
-        /// *   **TEST**
+        /// *   This API is intended for API providers.
+        /// *   The unbinding takes effect immediately. After the API is unbound from the ACL, the corresponding environment does not have any IP address access control in place for the API.
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]

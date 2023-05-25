@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteModelResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// Deletes a model from Model Management for an API group.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

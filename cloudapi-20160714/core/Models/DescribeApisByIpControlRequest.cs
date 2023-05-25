@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApisByIpControlRequest : TeaModel {
         /// <summary>
-        /// The ID of the ACL.
+        /// The number of the page to return. Pages start from page 1. Default value: 1.
         /// </summary>
         [NameInMap("IpControlId")]
         [Validation(Required=false)]
         public string IpControlId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1. Default value: 1.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100. Default value: 10.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

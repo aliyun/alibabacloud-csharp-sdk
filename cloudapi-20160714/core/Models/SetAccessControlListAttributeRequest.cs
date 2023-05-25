@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetAccessControlListAttributeRequest : TeaModel {
-        /// <summary>
-        /// The ID of the ACL.
-        /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
-        /// <summary>
-        /// The name of the ACL.
-        /// </summary>
         [NameInMap("AclName")]
         [Validation(Required=false)]
         public string AclName { get; set; }

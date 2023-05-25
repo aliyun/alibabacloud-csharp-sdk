@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeSignaturesByApiRequest : TeaModel {
         /// <summary>
-        /// The runtime environment. Valid values:
-        /// 
-        /// *   **RELEASE**
-        /// *   **TEST**
+        /// The ID of the request.
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
         /// <summary>
-        /// The ID of the API.
+        /// The runtime environment. Valid values:
+        /// 
+        /// *   **RELEASE**
+        /// *   **TEST**
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The returned signature key information. It is an array consisting of SignatureItem data.
         /// </summary>
         [NameInMap("StageName")]
         [Validation(Required=false)]
