@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class RetryDataCorrectPreCheckRequest : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// The ID of the data change ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the data change ticket.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

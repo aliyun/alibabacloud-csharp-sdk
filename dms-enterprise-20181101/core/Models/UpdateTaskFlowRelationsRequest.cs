@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public List<UpdateTaskFlowRelationsRequestEdges> Edges { get; set; }
         public class UpdateTaskFlowRelationsRequestEdges : TeaModel {
             /// <summary>
-            /// The error code returned if the request failed.
+            /// The ID of the task flow edge.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+            /// The ID of the end node on the edge.
             /// </summary>
             [NameInMap("NodeEnd")]
             [Validation(Required=false)]
             public long? NodeEnd { get; set; }
 
             /// <summary>
-            /// The operation that you want to perform. Set the value to **UpdateTaskFlowRelations**.
+            /// The ID of the start node on the edge.
             /// </summary>
             [NameInMap("NodeFrom")]
             [Validation(Required=false)]
@@ -47,7 +47,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// The ID of the task flow edge.
+        /// The ID of the tenant.
+        /// 
+        /// >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

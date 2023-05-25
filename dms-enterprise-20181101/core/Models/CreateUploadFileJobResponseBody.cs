@@ -9,30 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateUploadFileJobResponseBody : TeaModel {
+        /// <summary>
+        /// The error code returned.
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **CreateUploadFileJob**.
+        /// The error message returned.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// The key of the task.
+        /// 
+        /// >  You can call the [GetUserUploadFileJob](~~206069~~) operation to query the progress and details of the task.
+        /// </summary>
         [NameInMap("JobKey")]
         [Validation(Required=false)]
         public string JobKey { get; set; }
 
         /// <summary>
-        /// The error code returned.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

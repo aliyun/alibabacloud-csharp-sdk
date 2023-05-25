@@ -10,28 +10,31 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListDataCorrectPreCheckSQLRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **ListDataCorrectPreCheckSQL**.
+        /// The ID of the database. The database can be a physical database or a logical database.
+        /// 
+        /// *   To query the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.
+        /// *   To query the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.
         /// </summary>
         [NameInMap("DbId")]
         [Validation(Required=false)]
         public long? DbId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The ID of the data change ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the data change ticket.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// The error code returned.
+        /// The number of the page to return.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](~~265977~~) operation to query the details of optimization suggestions based on the key.
+        /// The number of entries to return on each page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -10,19 +10,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetUserUploadFileJobRequest : TeaModel {
         /// <summary>
-        /// The method used to upload the file. Valid values:
-        /// 
-        /// *   **URL**
-        /// *   **OSS**
+        /// The key of the file upload task. The key is returned when you call the [CreateUploadFileJob](~~206059~~) or [CreateUploadOSSFileJob](~~206060~~) operation.
         /// </summary>
         [NameInMap("JobKey")]
         [Validation(Required=false)]
         public string JobKey { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// The tenant ID.
         /// 
-        /// >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+        /// > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

@@ -65,21 +65,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResources> Resources { get; set; }
             public class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResources : TeaModel {
                 /// <summary>
-                /// The information about the column.
+                /// The name of the table.
                 /// </summary>
                 [NameInMap("ColumnInfo")]
                 [Validation(Required=false)]
                 public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesColumnInfo ColumnInfo { get; set; }
                 public class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesColumnInfo : TeaModel {
                     /// <summary>
-                    /// The name of the column.
+                    /// The name of the table.
                     /// </summary>
                     [NameInMap("ColumnName")]
                     [Validation(Required=false)]
                     public string ColumnName { get; set; }
 
                     /// <summary>
-                    /// The name of the table.
+                    /// The information about the column.
                     /// </summary>
                     [NameInMap("TableName")]
                     [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public string DbType { get; set; }
 
                     /// <summary>
-                    /// The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+                    /// The nickname of the owner of the database.
                     /// </summary>
                     [NameInMap("EnvType")]
                     [Validation(Required=false)]
@@ -126,14 +126,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public bool? Logic { get; set; }
 
                     /// <summary>
-                    /// The IDs of the owners of the database.
+                    /// test@xxxx:3306[test]
                     /// </summary>
                     [NameInMap("OwnerIds")]
                     [Validation(Required=false)]
                     public List<long?> OwnerIds { get; set; }
 
                     /// <summary>
-                    /// The nicknames of the owners of the database.
+                    /// The ID of the owner of the database.
                     /// </summary>
                     [NameInMap("OwnerNickNames")]
                     [Validation(Required=false)]
@@ -141,6 +141,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
                     /// <summary>
                     /// The name that is used to search for the database.
+                    /// > We recommend that you do not use this parameter for business development. The format of the parameter value may be modified in later versions.
                     /// </summary>
                     [NameInMap("SearchName")]
                     [Validation(Required=false)]
@@ -149,21 +150,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The information about the instance.
+                /// The name of the column.
                 /// </summary>
                 [NameInMap("InstanceInfo")]
                 [Validation(Required=false)]
                 public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesInstanceInfo InstanceInfo { get; set; }
                 public class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesInstanceInfo : TeaModel {
                     /// <summary>
-                    /// The type of the database engine.
+                    /// The name that is used to search for the instance.
                     /// </summary>
                     [NameInMap("DbType")]
                     [Validation(Required=false)]
                     public string DbType { get; set; }
 
                     /// <summary>
-                    /// The ID of the database administrator (DBA) of the instance.
+                    /// The nickname of the owner of the instance.
                     /// </summary>
                     [NameInMap("DbaId")]
                     [Validation(Required=false)]
@@ -177,49 +178,49 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public string DbaNickName { get; set; }
 
                     /// <summary>
-                    /// The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+                    /// The type of the database engine.
                     /// </summary>
                     [NameInMap("EnvType")]
                     [Validation(Required=false)]
                     public string EnvType { get; set; }
 
                     /// <summary>
-                    /// The endpoint of the instance.
+                    /// The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
                     /// </summary>
                     [NameInMap("Host")]
                     [Validation(Required=false)]
                     public string Host { get; set; }
 
                     /// <summary>
-                    /// The ID of the instance.
+                    /// The information about the instance.
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// The IDs of the owners of the instance.
+                    /// The port that is used to connect to the instance.
                     /// </summary>
                     [NameInMap("OwnerIds")]
                     [Validation(Required=false)]
                     public List<long?> OwnerIds { get; set; }
 
                     /// <summary>
-                    /// The nicknames of the owners of the instance.
+                    /// The ID of the owner of the instance.
                     /// </summary>
                     [NameInMap("OwnerNickName")]
                     [Validation(Required=false)]
                     public List<string> OwnerNickName { get; set; }
 
                     /// <summary>
-                    /// The port that is used to connect to the instance.
+                    /// The endpoint of the instance.
                     /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public long? Port { get; set; }
 
                     /// <summary>
-                    /// The name that is used to search for the instance.
+                    /// The ID of the instance.
                     /// </summary>
                     [NameInMap("SearchName")]
                     [Validation(Required=false)]
@@ -228,14 +229,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
                 /// <summary>
-                /// The information about the table.
+                /// The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
                 /// </summary>
                 [NameInMap("TableInfo")]
                 [Validation(Required=false)]
                 public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesTableInfo TableInfo { get; set; }
                 public class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesTableInfo : TeaModel {
                     /// <summary>
-                    /// The name of the table.
+                    /// The information about the table.
                     /// </summary>
                     [NameInMap("TableName")]
                     [Validation(Required=false)]

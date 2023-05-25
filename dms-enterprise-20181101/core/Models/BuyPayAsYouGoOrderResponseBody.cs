@@ -9,17 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class BuyPayAsYouGoOrderResponseBody : TeaModel {
+        /// <summary>
+        /// The error code returned if the request failed.
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// Purchases a pay-as-you-go Data Management (DMS) resource.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// If the purchase is successful, the ID of the purchased instance is returned.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -32,7 +38,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// If the purchase is successful, the ID of the purchased instance is returned.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

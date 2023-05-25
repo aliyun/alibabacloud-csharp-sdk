@@ -10,20 +10,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ExecuteDataCorrectShrinkRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
-        /// </summary>
-        [NameInMap("ActionDetail")]
-        [Validation(Required=false)]
-        public string ActionDetailShrink { get; set; }
-
-        /// <summary>
-        /// The error code.
-        /// </summary>
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public long? OrderId { get; set; }
-
-        /// <summary>
         /// The parameters that are required to perform the data change.
         /// 
         /// ```
@@ -36,6 +22,20 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         ///     "backupData" : true // Specify whether to back up data. 
         ///   }
         /// ```
+        /// </summary>
+        [NameInMap("ActionDetail")]
+        [Validation(Required=false)]
+        public string ActionDetailShrink { get; set; }
+
+        /// <summary>
+        /// The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the ticket.
+        /// </summary>
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public long? OrderId { get; set; }
+
+        /// <summary>
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

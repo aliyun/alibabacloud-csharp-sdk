@@ -10,38 +10,35 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateDataCorrectOrderShrinkRequest : TeaModel {
         /// <summary>
-        /// The ID of the ticket.
+        /// The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.
         /// </summary>
         [NameInMap("AttachmentKey")]
         [Validation(Required=false)]
         public string AttachmentKey { get; set; }
 
         /// <summary>
-        /// Specifies whether the database is a logical database. Valid values:
-        /// 
-        /// *   **true**: The database is a logical database.
-        /// *   **false**: The database is a physical database.
+        /// The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// The databases in which you want to change data.
+        /// The parameters of the ticket.
         /// </summary>
         [NameInMap("Param")]
         [Validation(Required=false)]
         public string ParamShrink { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+        /// The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.
         /// </summary>
         [NameInMap("RelatedUserList")]
         [Validation(Required=false)]
         public string RelatedUserListShrink { get; set; }
 
         /// <summary>
-        /// The estimated number of data rows to be affected by the data change.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

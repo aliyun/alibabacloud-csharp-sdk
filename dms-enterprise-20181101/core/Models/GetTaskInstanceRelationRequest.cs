@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetTaskInstanceRelationRequest : TeaModel {
         /// <summary>
-        /// The ID of the execution record of the task flow. You can call the [ListTaskFlowInstance](~~424689~~) operation to obtain the execution record ID.
+        /// The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.
         /// </summary>
         [NameInMap("DagId")]
         [Validation(Required=false)]
         public long? DagId { get; set; }
 
         /// <summary>
-        /// The business time of the node.
+        /// The ID of the execution record of the task flow. You can call the [ListTaskFlowInstance](~~424689~~) operation to obtain the execution record ID.
         /// </summary>
         [NameInMap("DagInstanceId")]
         [Validation(Required=false)]

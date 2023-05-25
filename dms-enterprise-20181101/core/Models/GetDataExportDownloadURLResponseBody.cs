@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetDataExportDownloadURLResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.
+        /// The details about the download URL of the file that records the export results for the ticket.
         /// </summary>
         [NameInMap("DownloadURLResult")]
         [Validation(Required=false)]
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public bool? HasResult { get; set; }
 
             /// <summary>
-            /// The error code.
+            /// The message that indicates an exception.
             /// </summary>
             [NameInMap("TipMessage")]
             [Validation(Required=false)]
             public string TipMessage { get; set; }
 
             /// <summary>
-            /// The ID of the request.
+            /// The download URL of the file that records the export results for the ticket.
             /// </summary>
             [NameInMap("URL")]
             [Validation(Required=false)]
@@ -42,21 +42,33 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         }
 
+        /// <summary>
+        /// The error code.
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// The error message.
+        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **GetDataExportDownloadURL**.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

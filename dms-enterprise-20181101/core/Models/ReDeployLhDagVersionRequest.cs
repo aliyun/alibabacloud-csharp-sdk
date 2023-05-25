@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ReDeployLhDagVersionRequest : TeaModel {
         /// <summary>
-        /// The ID of the deployment record.
+        /// The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.
         /// </summary>
         [NameInMap("DagId")]
         [Validation(Required=false)]

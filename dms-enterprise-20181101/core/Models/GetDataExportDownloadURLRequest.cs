@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetDataExportDownloadURLRequest : TeaModel {
         /// <summary>
-        /// The details about the download URL of the file that records the export results for the ticket.
+        /// The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

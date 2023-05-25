@@ -91,6 +91,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
                 /// <summary>
                 /// The name that is used to search for the database.
+                /// > We recommend that you do not use this parameter for business development. The format of the parameter value may be modified in later versions.
                 /// </summary>
                 [NameInMap("DbSearchName")]
                 [Validation(Required=false)]

@@ -10,11 +10,27 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
-        /// The alias of the database instance.
+        /// The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
         /// </summary>
         [NameInMap("DbType")]
         [Validation(Required=false)]
         public string DbType { get; set; }
+
+        /// <summary>
+        /// The type of the environment to which the database instance belongs. Valid values:
+        /// 
+        /// *   **product**: production environment
+        /// *   **dev**: development environment
+        /// *   **pre**: staging environment
+        /// *   **test**: test environment
+        /// *   **sit**: system integration testing (SIT) environment
+        /// *   **uat**: user acceptance testing (UAT) environment
+        /// *   **pet**: stress testing environment
+        /// *   **stag**: STAG environment
+        /// </summary>
+        [NameInMap("EnvType")]
+        [Validation(Required=false)]
+        public string EnvType { get; set; }
 
         /// <summary>
         /// The source of the database instance. Valid values:
@@ -24,16 +40,19 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// *   **ECS_OWN**: a self-managed database that is deployed on an Elastic Compute Service (ECS) instance
         /// *   **VPC_IDC**: a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)
         /// </summary>
-        [NameInMap("EnvType")]
-        [Validation(Required=false)]
-        public string EnvType { get; set; }
-
-        /// <summary>
-        /// The timeout period for querying data in the database instance.
-        /// </summary>
         [NameInMap("InstanceSource")]
         [Validation(Required=false)]
         public string InstanceSource { get; set; }
+
+        /// <summary>
+        /// The status of the database instance. Valid values:
+        /// 
+        /// *   **NORMAL**: normal
+        /// *   **DISABLE**: disabled
+        /// </summary>
+        [NameInMap("InstanceState")]
+        [Validation(Required=false)]
+        public string InstanceState { get; set; }
 
         /// <summary>
         /// The network type of the database instance. Valid values:
@@ -41,40 +60,33 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// *   **CLASSIC**: classic network
         /// *   **VPC**: VPC
         /// </summary>
-        [NameInMap("InstanceState")]
-        [Validation(Required=false)]
-        public string InstanceState { get; set; }
-
-        /// <summary>
-        /// The status of the database instance.
-        /// </summary>
         [NameInMap("NetType")]
         [Validation(Required=false)]
         public string NetType { get; set; }
 
         /// <summary>
-        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+        /// The number of the page to return.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// Indicates whether the lock-free schema change feature is enabled for the database instance.
+        /// The number of entries to return on each page. The number cannot exceed 100.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **ListInstances**.
+        /// The keyword that is used to search for database instances.
         /// </summary>
         [NameInMap("SearchKey")]
         [Validation(Required=false)]
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// The ID of the owner for the database instance.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

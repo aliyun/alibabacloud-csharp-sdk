@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListTasksInTaskFlowResponseBody : TeaModel {
         /// <summary>
-        /// The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -24,21 +24,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **ListTasksInTaskFlow**.
+        /// The ID of the request. You can use the ID to locate logs and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The tasks in the task flow.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The advanced configuration for the node.
+        /// The tasks in the task flow.
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
@@ -48,50 +51,57 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListTasksInTaskFlowResponseBodyTasksTask> Task { get; set; }
             public class ListTasksInTaskFlowResponseBodyTasksTask : TeaModel {
+                /// <summary>
+                /// The position of the node on the Directed Acyclic Graph (DAG).
+                /// </summary>
                 [NameInMap("GraphParam")]
                 [Validation(Required=false)]
                 public string GraphParam { get; set; }
 
                 /// <summary>
-                /// The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+                /// The advanced configuration for the node.
                 /// </summary>
                 [NameInMap("NodeConfig")]
                 [Validation(Required=false)]
                 public string NodeConfig { get; set; }
 
                 /// <summary>
-                /// The time variables configured for the node.
+                /// The configuration for the node.
                 /// </summary>
                 [NameInMap("NodeContent")]
                 [Validation(Required=false)]
                 public string NodeContent { get; set; }
 
+                /// <summary>
+                /// The ID of the node.
+                /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// The ID of the tenant.
-                /// 
-                /// >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [View information about the current tenant](~~181330~~).
+                /// The name of the node.
                 /// </summary>
                 [NameInMap("NodeName")]
                 [Validation(Required=false)]
                 public string NodeName { get; set; }
 
+                /// <summary>
+                /// The output variables for the task.
+                /// </summary>
                 [NameInMap("NodeOutput")]
                 [Validation(Required=false)]
                 public string NodeOutput { get; set; }
 
                 /// <summary>
-                /// The ID of the node.
+                /// The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
                 /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// The configuration for the node.
+                /// The time variables configured for the node.
                 /// </summary>
                 [NameInMap("TimeVariables")]
                 [Validation(Required=false)]

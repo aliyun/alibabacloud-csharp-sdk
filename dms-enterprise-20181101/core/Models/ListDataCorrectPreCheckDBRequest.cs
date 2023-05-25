@@ -10,28 +10,32 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListDataCorrectPreCheckDBRequest : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// The ID of the ticket for the data change.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **ListDataCorrectPreCheckDB**.
+        /// The number of the page to return.
+        /// 
+        /// Valid values: an integer that is greater than 0.
+        /// 
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The number of entries to return on each page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The information about the databases that are involved in the precheck.
+        /// The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the ID of the tenant.
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

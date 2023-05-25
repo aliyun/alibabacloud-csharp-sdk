@@ -10,30 +10,39 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ModifyDesensitizationStrategyResponseBody : TeaModel {
         /// <summary>
-        /// ModifyDesensitizationStrategy
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// WB01220505
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// Modifies the masking rule bound to a specified field.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The returned result.
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public bool? Result { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

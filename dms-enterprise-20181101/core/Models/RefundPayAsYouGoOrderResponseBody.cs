@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class RefundPayAsYouGoOrderResponseBody : TeaModel {
+        /// <summary>
+        /// The error code returned if the request failed.
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// The error message returned if the request failed.
+        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
@@ -25,7 +31,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Unsubscribes from a pay-as-you-go Data Management (DMS) resource.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
