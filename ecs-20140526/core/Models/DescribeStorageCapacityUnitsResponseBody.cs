@@ -126,14 +126,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag> Tag { get; set; }
                     public class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the SCU.
+                        /// The key of tag N.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value of the SCU.
+                        /// The value of tag N.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]

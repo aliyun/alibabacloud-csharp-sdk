@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifySecurityGroupRuleRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -24,44 +24,44 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The destination IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.
+        /// The destination IPv4 CIDR block. IPv4 CIDR blocks and addresses are supported.
         /// 
-        /// This parameter is empty by default.
+        /// By default, this parameter is left empty.
         /// </summary>
         [NameInMap("DestCidrIp")]
         [Validation(Required=false)]
         public string DestCidrIp { get; set; }
 
         /// <summary>
-        /// The transport layer protocol of the security group rule. The values of this parameter are case-insensitive. Valid values:
+        /// The transport layer protocol of the security group rule. The values of this parameter are not case-sensitive. Valid values:
         /// 
         /// *   ICMP
         /// *   GRE
         /// *   TCP
         /// *   UDP
-        /// *   ALL
+        /// *   ALL: All protocols are supported.
         /// </summary>
         [NameInMap("IpProtocol")]
         [Validation(Required=false)]
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// The destination IPv6 CIDR block. CIDR blocks and IPv6 addresses are supported.
+        /// The destination IPv6 CIDR block. IPv6 CIDR blocks and addresses are supported.
         /// 
-        /// > Only the IP addresses of the VPC type are supported. You cannot specify both the Ipv6DestCidrIp parameter and the `DestCidrIp` parameter.
+        /// > Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6DestCidrIp and `DestCidrIp`.
         /// 
-        /// This parameter is empty by default.
+        /// By default, this parameter is left empty.
         /// </summary>
         [NameInMap("Ipv6DestCidrIp")]
         [Validation(Required=false)]
         public string Ipv6DestCidrIp { get; set; }
 
         /// <summary>
-        /// The source IPv6 CIDR block to which you want to control access. CIDR blocks and IPv6 addresses are supported.
+        /// The source IPv6 CIDR block to which you want to control access. IPv6 CIDR blocks and addresses are supported.
         /// 
-        /// > Only the IP addresses of the Virtual Private Cloud (VPC) type are supported. You cannot specify both the Ipv6SourceCidrIp parameter and the `SourceCidrIp` parameter.
+        /// > Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6SourceCidrIp and `SourceCidrIp`.
         /// 
-        /// This parameter is empty by default.
+        /// By default, this parameter is left empty.
         /// </summary>
         [NameInMap("Ipv6SourceCidrIp")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// You cannot modify this parameter when you modify a security group rule by specifying its ID.\
-        /// You can add a new rule that meets your requirements and delete the original rule.
+        /// You can add a new rule that meets your business requirements and delete the original rule.
         /// </summary>
         [NameInMap("NicType")]
         [Validation(Required=false)]
@@ -96,12 +96,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// The range of source ports that correspond to the transport layer protocol. Valid values:
+        /// The range of destination ports that correspond to the transport layer protocol. Valid values:
         /// 
-        /// *   When the IpProtocol parameter is set to tcp or udp, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
-        /// *   If the IpProtocol parameter is set to icmp, the port number range is -1/-1, which indicates all ports.
-        /// *   If the IpProtocol parameter is set to gre, the port number range is -1/-1, which indicates all ports.
-        /// *   If the IpProtocol parameter is set to all, the port number range is -1/-1, which indicates all ports.
+        /// *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
+        /// *   If you set IpProtocol to ICMP, the port number range is -1/-1.
+        /// *   If you set IpProtocol to GRE, the port number range is -1/-1.
+        /// *   If you set IpProtocol to ALL, the port number range is -1/-1.
         /// </summary>
         [NameInMap("PortRange")]
         [Validation(Required=false)]
@@ -132,22 +132,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the security group.
+        /// The security group ID.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the security group rule.\
-        /// This parameter is required when you modify a security group rule based on the ID of the security group rule.
+        /// The security group rule ID.\
+        /// This parameter is required when you modify a security group rule based on the security group rule ID.
         /// </summary>
         [NameInMap("SecurityGroupRuleId")]
         [Validation(Required=false)]
         public string SecurityGroupRuleId { get; set; }
 
         /// <summary>
-        /// The source IPv4 CIDR block to which you want to control access. CIDR blocks and IPv4 addresses are supported.
+        /// The source IPv4 CIDR block to which you want to control access. IPv4 CIDR blocks and addresses are supported.
         /// 
         /// By default, this parameter is left empty.
         /// </summary>
@@ -156,30 +156,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SourceCidrIp { get; set; }
 
         /// <summary>
-        /// The ID of the source security group. At least one of `SourceGroupId` and `SourceCidrIp` must be specified.
+        /// The source security group ID. You must specify either `SourceGroupId` or `SourceCidrIp` or specify both of them.
         /// 
-        /// *   If `SourceGroupId` is specified but `SourceCidrIp` is not specified, the `NicType` parameter must be set to intranet.
-        /// *   If both `SourceGroupId` and `SourceCidrIp` are specified, `SourceCidrIp` takes precedence.
+        /// *   If `SourceGroupId` is specified but `SourceCidrIp` is not specified, the value of `NicType` must be set to intranet.
+        /// *   If both `SourceGroupId` and `SourceCidrIp` are specified, the value of `SourceCidrIp` prevails by default.
         /// </summary>
         [NameInMap("SourceGroupId")]
         [Validation(Required=false)]
         public string SourceGroupId { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud account that manages the source security group when you set a security group rule across accounts.
+        /// The Alibaba Cloud account that manages the source security group when you configure a security group rule across accounts.
         /// 
         /// *   If both `SourceGroupOwnerId` and `SourceGroupOwnerAccount` are empty, access permissions are configured for another security group managed by your account.
-        /// *   If `SourceCidrIp` is specified, the `SourceGroupOwnerAccount` parameter is ignored.
+        /// *   If `SourceCidrIp` is specified, `SourceGroupOwnerAccount` is ignored.
         /// </summary>
         [NameInMap("SourceGroupOwnerAccount")]
         [Validation(Required=false)]
         public string SourceGroupOwnerAccount { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud account that manages the source security group when you set a security group rule across accounts.
+        /// The ID of the Alibaba Cloud account that manages the source security group when you configure a security group rule across accounts.
         /// 
         /// *   If both `SourceGroupOwnerId` and `SourceGroupOwnerAccount` are empty, access permissions are configured for another security group managed by your account.
-        /// *   If `SourceCidrIp` is specified, the `SourceGroupOwnerId` parameter is ignored.
+        /// *   If `SourceCidrIp` is specified, `SourceGroupOwnerId` is ignored.
         /// </summary>
         [NameInMap("SourceGroupOwnerId")]
         [Validation(Required=false)]
@@ -188,10 +188,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The range of source ports that correspond to the transport layer protocol. Valid values:
         /// 
-        /// *   When the IpProtocol parameter is set to tcp or udp, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
-        /// *   If the IpProtocol parameter is set to icmp, the port number range is -1/-1, which indicates all ports.
-        /// *   If the IpProtocol parameter is set to gre, the port number range is -1/-1, which indicates all ports.
-        /// *   If the IpProtocol parameter is set to all, the port number range is -1/-1, which indicates all ports.
+        /// *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
+        /// *   If you set IpProtocol to ICMP, the port number range is -1/-1.
+        /// *   If you set IpProtocol to GRE, the port number range is -1/-1.
+        /// *   If you set IpProtocol to ALL, the port number range is -1/-1.
         /// </summary>
         [NameInMap("SourcePortRange")]
         [Validation(Required=false)]
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The ID of the source prefix list to which you want to control access. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.
         /// 
-        /// If you specify the `SourceCidrIp`, `Ipv6SourceCidrIp`, or `SourceGroupId` parameter, this parameter is ignored.
+        /// If you specify `SourceCidrIp`, `Ipv6SourceCidrIp`, or `SourceGroupId`, this parameter is ignored.
         /// </summary>
         [NameInMap("SourcePrefixListId")]
         [Validation(Required=false)]

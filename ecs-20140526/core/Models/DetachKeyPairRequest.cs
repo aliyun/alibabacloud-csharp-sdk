@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// The names of SSH key pairs.
+        /// The name of the SSH key pair.
         /// </summary>
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]

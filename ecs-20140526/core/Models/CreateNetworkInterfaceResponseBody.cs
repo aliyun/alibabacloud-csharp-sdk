@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// > This parameter is in invitational preview and is unavailable for general users.
+        /// > This parameter is in invitational preview and is unavailable.
         /// </summary>
         [NameInMap("Ipv4PrefixSets")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet> Ipv4PrefixSet { get; set; }
             public class CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet : TeaModel {
                 /// <summary>
-                /// > This parameter is in invitational preview and is unavailable for general users.
+                /// > This parameter is in invitational preview and is unavailable.
                 /// </summary>
                 [NameInMap("Ipv4Prefix")]
                 [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// > This parameter is in invitational preview and is unavailable for general users.
+        /// > This parameter is in invitational preview and is unavailable.
         /// </summary>
         [NameInMap("Ipv6PrefixSets")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet> Ipv6PrefixSet { get; set; }
             public class CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet : TeaModel {
                 /// <summary>
-                /// > This parameter is in invitational preview and is unavailable for general users.
+                /// > This parameter is in invitational preview and is unavailable.
                 /// </summary>
                 [NameInMap("Ipv6Prefix")]
                 [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The IPv6 addresses of the ENI.
+        /// The IPv6 addresses assigned to the ENI.
         /// </summary>
         [NameInMap("Ipv6Sets")]
         [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MacAddress { get; set; }
 
         /// <summary>
-        /// The ID of the ENI.
+        /// The ENI ID.
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// Details about the private IP addresses of the ENI.
+        /// Details about the private IP addresses.
         /// </summary>
         [NameInMap("PrivateIpSets")]
         [Validation(Required=false)]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? Primary { get; set; }
 
                 /// <summary>
-                /// The private IP address of the ENI.
+                /// The private IP address of the instance to which the ENI is attached.
                 /// </summary>
                 [NameInMap("PrivateIpAddress")]
                 [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -206,14 +206,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<CreateNetworkInterfaceResponseBodyTagsTag> Tag { get; set; }
             public class CreateNetworkInterfaceResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// The tag key of the ENI.
+                /// The tag key.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The tag value of the ENI.
+                /// The tag value.
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The zone ID of the ENI.
+        /// The ID of the zone in which the ENI resides.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

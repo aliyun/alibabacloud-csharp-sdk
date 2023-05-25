@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CancelSimulatedSystemEventsRequest : TeaModel {
         /// <summary>
-        /// The IDs of system events. You can specify up to 100 event IDs in a single request.
+        /// The IDs of simulated system events. You can specify up to 100 event IDs in a single request.
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

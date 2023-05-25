@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeClassicLinkInstancesRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance. You can specify up to 100 instance IDs in a single request. Separate the instance IDs with commas (,).
+        /// The instance ID. You can specify up to 100 instance IDs in a single request. Separate the instance IDs with commas (,).
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1.
+        /// The page number. Pages start from page 1.
         /// 
         /// Default value: 1.
         /// </summary>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 1 to 100.
+        /// The number of entries per page. Valid values: 1 to 100.
         /// 
         /// Default value: 10.
         /// </summary>

@@ -22,23 +22,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AllocationType { get; set; }
 
         /// <summary>
-        /// The instance type of the reserved instance. For more information about the valid values, see [Instance families](~~25378~~).
+        /// The instance type. For more information, see [Instance families](~~25378~~).
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The instance family of the reserved instance. For more information about the valid values, see [Instance families](~~25378~~).
+        /// The instance family. For more information, see [Instance families](~~25378~~).
         /// </summary>
         [NameInMap("InstanceTypeFamily")]
         [Validation(Required=false)]
         public string InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// The reason why the reserved instance is locked. Valid values:
+        /// The locked mode of the instance. Valid values:
         /// 
-        /// *   financial: You have an overdue payment in your account or the reserved instance has expired.
+        /// *   financial: Your account has one or more overdue payments or the reserved instance has expired.
         /// *   security: The reserved instance is locked for security reasons.
         /// </summary>
         [NameInMap("LockReason")]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LockReason { get; set; }
 
         /// <summary>
-        /// The payment option of the reserved instance. Valid values:
+        /// The payment option for the reserved instance. Valid values:
         /// 
         /// *   No Upfront
         /// *   Partial Upfront
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1.
+        /// The page number to return. Pages start from page 1.
         /// 
         /// Default value: 1.
         /// </summary>
@@ -83,18 +83,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The IDs of the reserved instances. Valid values of N: 1 to 100.
+        /// </summary>
         [NameInMap("ReservedInstanceId")]
         [Validation(Required=false)]
         public List<string> ReservedInstanceId { get; set; }
 
         /// <summary>
-        /// The name of the reserved instance.
+        /// The reserved instance name.
         /// </summary>
         [NameInMap("ReservedInstanceName")]
         [Validation(Required=false)]
@@ -109,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The scope of the reserved instance. Valid values:
+        /// The scope of reserved instance N. Valid values:
         /// 
         /// *   Region: regional
         /// *   Zone: zonal
@@ -120,25 +123,36 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Scope { get; set; }
 
+        /// <summary>
+        /// The status of reserved instance N. Valid values of N: 1 to 100. Valid values:
+        /// 
+        /// *   Creating
+        /// *   Active
+        /// *   Expired
+        /// *   Updating
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public List<string> Status { get; set; }
 
+        /// <summary>
+        /// The tags list.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeReservedInstancesRequestTag> Tag { get; set; }
         public class DescribeReservedInstancesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N of the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length. It cannot start with aliyun or acs: or contain http:// or https://.
+            /// The key of tag N of the reserved instance. Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length. It cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
             /// 
-            /// If a single tag is specified to query resources, up to 1,000 resources that are bound with this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that are bound with all these tags can be displayed in the response. To query more than 1,000 resources that are bound with specified tags, call the [ListTagResources](~~110425~~) operation.
+            /// Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](~~110425~~) operation.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N of the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.
+            /// The value of tag N that belongs to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain [http:// or https://.](http://https://。)
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -147,7 +161,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The zone ID of the reserved instance. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+        /// The zone ID of the reserved instance is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string AliyunId { get; set; }
 
+                [NameInMap("SharedTime")]
+                [Validation(Required=false)]
+                public string SharedTime { get; set; }
+
             }
 
         }

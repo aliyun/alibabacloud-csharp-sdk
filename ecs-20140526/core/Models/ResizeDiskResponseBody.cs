@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The ID of the order.
         /// 
-        /// >  This parameter is returned only when subscription disks are resized.
+        /// > This parameter is returned only when you resize subscription disks.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

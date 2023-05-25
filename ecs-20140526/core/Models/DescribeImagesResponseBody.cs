@@ -32,26 +32,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Architecture { get; set; }
 
                 /// <summary>
-                /// The new boot mode of the image. Valid values:
+                /// The boot mode of the image. Valid values:
                 /// 
                 /// *   BIOS
                 /// *   UEFI
                 /// 
-                /// > You need to be aware of the boot modes supported by the specified image. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances that use this image can start as expected.
+                /// > When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image. We recommend that you familiarize yourself with the boot modes supported by the specified image to ensure that instances that use this image can be started as expected.
                 /// </summary>
                 [NameInMap("BootMode")]
                 [Validation(Required=false)]
                 public string BootMode { get; set; }
 
                 /// <summary>
-                /// The time when the image was created.
+                /// The image creation time.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description of the image.
+                /// The image description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -90,11 +90,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public string RiskCode { get; set; }
 
                             /// <summary>
-                            /// Indicates the severity of the risk that is detected on the check item of the imported custom image. If the system detects a risk on the check item, this parameter is returned. If the system does not detect a risk on the check item, this parameter is not returned.
+                            /// The severity level of the risk that is detected on the check item of the imported custom image. If the system detects a risk on the check item, this parameter is returned. If the system does not detect a risk on the check item, this parameter is not returned.
                             /// 
                             /// Valid values:
                             /// 
-                            /// *   High: The check item is a high-risk item that may affect the startup of the instance. We strongly recommended that you fix this item at your earliest convenience.
+                            /// *   High: The check item is a high-risk item that may affect the startup of the instance and mustbe fixed at your earliest convenience.
                             /// *   Medium: The check item is a medium-risk item that may affect the startup performance or configurations of the instance. We recommend that you fix this item.
                             /// </summary>
                             [NameInMap("RiskLevel")]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The state of the image check task. Valid values:
+                    /// The status of the image check task. Valid values:
                     /// 
                     /// *   Processing: The image check task is in progress.
                     /// *   Finished: The image check task is completed.
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The mappings between disks and snapshots that belong to the image.
+                /// The mappings between the disks and snapshots in the image.
                 /// </summary>
                 [NameInMap("DiskDeviceMappings")]
                 [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string Device { get; set; }
 
                         /// <summary>
-                        /// The format of the image.
+                        /// The image format.
                         /// </summary>
                         [NameInMap("Format")]
                         [Validation(Required=false)]
@@ -173,28 +173,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string Progress { get; set; }
 
                         /// <summary>
-                        /// The amount of remaining time required for an image copy task. Unit: seconds.
+                        /// The remaining amount of time required for an image copy task. Unit: seconds.
                         /// </summary>
                         [NameInMap("RemainTime")]
                         [Validation(Required=false)]
                         public int? RemainTime { get; set; }
 
                         /// <summary>
-                        /// The size of the cloud disk.
+                        /// The disk size.
                         /// </summary>
                         [NameInMap("Size")]
                         [Validation(Required=false)]
                         public string Size { get; set; }
 
                         /// <summary>
-                        /// The ID of the snapshot.
+                        /// The snapshot ID.
                         /// </summary>
                         [NameInMap("SnapshotId")]
                         [Validation(Required=false)]
                         public string SnapshotId { get; set; }
 
                         /// <summary>
-                        /// The type of the image.
+                        /// The image type.
                         /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
@@ -205,17 +205,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The attributes of the image.
+                /// The image attributes.
                 /// </summary>
                 [NameInMap("Features")]
                 [Validation(Required=false)]
                 public DescribeImagesResponseBodyImagesImageFeatures Features { get; set; }
                 public class DescribeImagesResponseBodyImagesImageFeatures : TeaModel {
                     /// <summary>
-                    /// Indicates whether the image supports Non-Volatile Memory Express (NVMe). Valid values:
+                    /// Indicates whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:
                     /// 
-                    /// *   supported: The image supports NVMe. Instances created from this image also support NVMe.
-                    /// *   unsupported: The image does not support NVMe. Instances created from this image do not support NVMe.
+                    /// *   supported: The image supports the NVMe protocol. Instances created from this image support NVMe.
+                    /// *   unsupported: The image does not support the NVMe protocol. Instances created from this image do not support the NVMe protocol.
                     /// </summary>
                     [NameInMap("NvmeSupport")]
                     [Validation(Required=false)]
@@ -224,32 +224,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The name of the image family.
+                /// The image family name.
                 /// </summary>
                 [NameInMap("ImageFamily")]
                 [Validation(Required=false)]
                 public string ImageFamily { get; set; }
 
                 /// <summary>
-                /// The ID of the image.
+                /// The image ID.
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// The name of the image.
+                /// The image name.
                 /// </summary>
                 [NameInMap("ImageName")]
                 [Validation(Required=false)]
                 public string ImageName { get; set; }
 
                 /// <summary>
-                /// The source of the image. Valid values:
+                /// The image source. Valid values:
                 /// 
-                /// *   system: public images provided by Alibaba Cloud.
-                /// *   self: your custom images.
-                /// *   others: shared images from other Alibaba Cloud accounts or community images published by other Alibaba Cloud accounts.
+                /// *   system: public images provided by Alibaba Cloud
+                /// *   self: your custom images
+                /// *   others: shared images from other Alibaba Cloud accounts, or community images published by other Alibaba Cloud accounts
                 /// *   marketplace: Alibaba Cloud Marketplace images.
                 /// </summary>
                 [NameInMap("ImageOwnerAlias")]
@@ -257,14 +257,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ImageOwnerAlias { get; set; }
 
                 /// <summary>
-                /// The ID of the Alibaba Cloud account to which the image belongs. This parameter is valid only when you query shared images or community images.
+                /// The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only when you query shared images or community images.
                 /// </summary>
                 [NameInMap("ImageOwnerId")]
                 [Validation(Required=false)]
                 public long? ImageOwnerId { get; set; }
 
                 /// <summary>
-                /// The version of the image.
+                /// The image version.
                 /// </summary>
                 [NameInMap("ImageVersion")]
                 [Validation(Required=false)]
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string IsSelfShared { get; set; }
 
                 /// <summary>
-                /// Indicates whether you have subscribed to the image that corresponds to the specified product code.
+                /// Indicates whether the Terms of Service of the image service that corresponds to the product code are accepted.
                 /// </summary>
                 [NameInMap("IsSubscribed")]
                 [Validation(Required=false)]
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string OSNameEn { get; set; }
 
                 /// <summary>
-                /// The OS type of the image. Valid values:
+                /// The type of the operating system. Valid values:
                 /// 
                 /// *   windows
                 /// *   linux
@@ -378,14 +378,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The size of the image. Unit: GiB.
+                /// The image size. Unit: GiB.
                 /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public int? Size { get; set; }
 
                 /// <summary>
-                /// The state of the image. Valid values:
+                /// The image status. Valid values:
                 /// 
                 /// *   UnAvailable: The image is unavailable.
                 /// *   Available: The image is available.
@@ -397,14 +397,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The name of the supplier that certified the community image.
+                /// The name of the provider that published the community image.
                 /// </summary>
                 [NameInMap("SupplierName")]
                 [Validation(Required=false)]
                 public string SupplierName { get; set; }
 
                 /// <summary>
-                /// The tags of the image.
+                /// The image tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -415,14 +415,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeImagesResponseBodyImagesImageTagsTag> Tag { get; set; }
                     public class DescribeImagesResponseBodyImagesImageTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the image.
+                        /// The key of tag N of the image.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value of the image.
+                        /// The value of tag N of the image.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -433,10 +433,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// Indicates whether the image has been used to create ECS instances. Valid values:
+                /// Indicates whether the image was used to create ECS instances. Valid values:
                 /// 
-                /// *   instance: The image has been used to create one or more ECS instances.
-                /// *   none: The image has not been used to create ECS instances.
+                /// *   instance: The image was used to create one or more ECS instances.
+                /// *   none: The image was not used to create ECS instances.
                 /// </summary>
                 [NameInMap("Usage")]
                 [Validation(Required=false)]
@@ -447,14 +447,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number returned.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -468,7 +468,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

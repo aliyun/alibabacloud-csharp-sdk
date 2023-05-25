@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeLaunchTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// Details about the launch templates.
+        /// The information about the launch templates.
         /// </summary>
         [NameInMap("LaunchTemplateSets")]
         [Validation(Required=false)]
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag> Tag { get; set; }
                     public class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the launch template.
+                        /// The key of tag N of the launch template.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value of the launch template.
+                        /// The value of tag N of the launch template.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]

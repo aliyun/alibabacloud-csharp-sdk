@@ -681,10 +681,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        /// <summary>
+        /// 镜像相关属性信息。
+        /// </summary>
         [NameInMap("ImageOptions")]
         [Validation(Required=false)]
         public RunInstancesRequestImageOptions ImageOptions { get; set; }
         public class RunInstancesRequestImageOptions : TeaModel {
+            /// <summary>
+            /// 使用该镜像的实例是否支持使用ecs-user用户登录。可能值：
+            /// 
+            /// - true：是
+            /// 
+            /// - false：否
+            /// </summary>
             [NameInMap("LoginAsNonRoot")]
             [Validation(Required=false)]
             public bool? LoginAsNonRoot { get; set; }
@@ -904,6 +914,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public long? Ipv6AddressCount { get; set; }
 
+            /// <summary>
+            /// 网卡指定的物理网卡索引。
+            /// 
+            /// 您需要注意：
+            /// - 只有特定实例规格支持指定物理网卡索引。
+            /// - NetworkInterface.N.InstanceType取值为Primary时，对于支持物理网卡的实例规格，如果设置此参数，只能设置为0。
+            /// - NetworkInterface.N.InstanceType取值为Secondary或者空值，对于支持物理网卡的实例规格，此参数可以依据实例规格设置。更多信息，请参见[实例规格族](~~25378~~)。
+            /// </summary>
             [NameInMap("NetworkCardIndex")]
             [Validation(Required=false)]
             public int? NetworkCardIndex { get; set; }
@@ -1030,10 +1048,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? NetworkInterfaceQueueNumber { get; set; }
 
+        /// <summary>
+        /// 网络相关属性参数。
+        /// </summary>
         [NameInMap("NetworkOptions")]
         [Validation(Required=false)]
         public RunInstancesRequestNetworkOptions NetworkOptions { get; set; }
         public class RunInstancesRequestNetworkOptions : TeaModel {
+            /// <summary>
+            /// 实例是否开启Jumbo frame特性。参数取值范围：
+            /// 
+            /// - false：不开启Jumbo frame, 该实例下的所有网卡（包括主网卡及辅助网卡）MTU取值为1500。
+            /// 
+            /// - true：开启Jumbo frame, 该实例下的所有网卡（包括主网卡及辅助网卡）的MTU取值为8500。
+            /// 
+            /// 默认值：true。
+            /// 
+            /// >只有八代以上部分实例规格支持开启Jumbo frame特性，更多信息，请参见[ECS实例MTU](~~200512~~)。
+            /// </summary>
             [NameInMap("EnableJumboFrame")]
             [Validation(Required=false)]
             public bool? EnableJumboFrame { get; set; }

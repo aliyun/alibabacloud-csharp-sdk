@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRenewalPriceResponseBody : TeaModel {
         /// <summary>
-        /// Details about the prices and discount rules.
+        /// Details about the prices and promotion rules.
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]

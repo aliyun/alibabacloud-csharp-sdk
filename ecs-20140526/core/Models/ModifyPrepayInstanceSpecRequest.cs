@@ -14,10 +14,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyPrepayInstanceSpecRequestSystemDisk SystemDisk { get; set; }
         public class ModifyPrepayInstanceSpecRequestSystemDisk : TeaModel {
             /// <summary>
-            /// The new category of the system disk. This parameter is valid only if you upgrade an instance from a retired instance type to an available instance type or if you upgrade a non-I/O optimized instance to an I/O optimized instance. For more information, see [Retired instance types](~~55263~~) and [Overview of instance families](~~25378~~). Valid values:
+            /// The new category of the system disk. This parameter is applicable only when you upgrade an instance from a retired instance type to a currently available instance type or when you upgrade a non-I/O optimized instance to an I/O optimized instance. For more information, see [Retired instance types](~~55263~~) and [Instance families](~~25378~~). Valid values:
             /// 
-            /// *   cloud_efficiency: ultra disk
-            /// *   cloud_ssd: standard SSD
+            /// *   cloud_efficiency: ultra disk.
+            /// *   cloud_ssd: standard SSD.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         ///     **
         /// 
-        ///     **Note** Make sure that your Alibaba Cloud account has sufficient balance. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the `AutoPay` parameter to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.
+        ///     **Make sure that your payment account has sufficient balance. Otherwise, your order becomes invalid and is canceled.** If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.````
         /// 
         /// *   false: An order is generated but no payment is made.
         /// 
@@ -45,24 +45,36 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. This value allows only ASCII characters and is up to 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// >该参数暂未开放使用。
+        /// </summary>
         [NameInMap("Disk")]
         [Validation(Required=false)]
         public List<ModifyPrepayInstanceSpecRequestDisk> Disk { get; set; }
         public class ModifyPrepayInstanceSpecRequestDisk : TeaModel {
+            /// <summary>
+            /// >该参数暂未开放使用。
+            /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
 
+            /// <summary>
+            /// >该参数暂未开放使用。
+            /// </summary>
             [NameInMap("DiskId")]
             [Validation(Required=false)]
             public string DiskId { get; set; }
 
+            /// <summary>
+            /// >该参数暂未开放使用。
+            /// </summary>
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
@@ -77,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the instance
+        /// The instance ID.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -95,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// Default value: false.
         /// 
-        /// When the `MigrateAcrossZone` parameter is set to `true` and you upgrade the instance based on the returned information, take note of the following items:
+        /// When you set `MigrateAcrossZone` to `true` and you upgrade the instance based on the returned information, take note of the following items:
         /// 
         /// Instances of the classic network type:
         /// 
@@ -108,14 +120,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? MigrateAcrossZone { get; set; }
 
+        /// <summary>
+        /// >该参数暂未开放使用。
+        /// </summary>
         [NameInMap("ModifyMode")]
         [Validation(Required=false)]
         public string ModifyMode { get; set; }
 
         /// <summary>
-        /// The operation type. Valid values:
+        /// The type of the change to the instance. Valid values:
         /// 
-        /// >  This parameter is optional. The system can automatically determine whether the operation is an upgrade or a downgrade. If you want to specify this parameter, you can refer to the following valid values of the parameter.
+        /// >  This parameter is optional. The system can automatically determine whether the instance change is an upgrade or a downgrade. If you want to specify this parameter, refer to the following valid values of the parameter.
         /// 
         /// *   upgrade: upgrades the instance type. Make sure that the balance in your account is sufficient.
         /// *   downgrade: downgrades the instance type. When the new instance type specified by the `InstanceType` parameter has lower specifications than the current instance type, set `OperatorType` to downgrade.
@@ -144,19 +159,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to restart the instance immediately after the instance type is changed. Valid values:
         /// 
-        /// *   true
-        /// *   false
+        /// *   true: restart the instance immediately after the instance type is changed.
+        /// *   false: does not restart the instance immediately after the instance type is changed.
         /// 
         /// Default value: false.
         /// 
-        /// >  If the instance is in the **Stopping** state, the instance status remains unchanged and no operations are performed regardless of whether you set the `RebootWhenFinished` parameter to true.
+        /// >  If the instance is in the **Stopping** state, the instance status remains unchanged and no operations are performed after the instance type is change regardless of whether you set the `RebootWhenFinished` parameter to true.
         /// </summary>
         [NameInMap("RebootWhenFinished")]
         [Validation(Required=false)]
         public bool? RebootWhenFinished { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

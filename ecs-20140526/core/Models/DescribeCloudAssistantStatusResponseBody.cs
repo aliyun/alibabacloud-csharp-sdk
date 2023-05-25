@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus> InstanceCloudAssistantStatus { get; set; }
             public class DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus : TeaModel {
                 /// <summary>
-                /// The number of tasks that Cloud Assistant was running on the instance.
+                /// The number of tasks that were run by Cloud Assistant on the instance.
                 /// </summary>
                 [NameInMap("ActiveTaskCount")]
                 [Validation(Required=false)]
@@ -38,28 +38,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CloudAssistantStatus { get; set; }
 
                 /// <summary>
-                /// The version number of the Cloud Assistant client. This parameter is empty if the Cloud Assistant client is not installed or is not running.
+                /// The version number of the Cloud Assistant client. If the Cloud Assistant client is not installed or is not running, this parameter is left empty.
                 /// </summary>
                 [NameInMap("CloudAssistantVersion")]
                 [Validation(Required=false)]
                 public string CloudAssistantVersion { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The number of tasks that Cloud Assistant completed on the instance.
+                /// The number of tasks that were completed by Cloud Assistant on the instance.
                 /// </summary>
                 [NameInMap("InvocationCount")]
                 [Validation(Required=false)]
                 public long? InvocationCount { get; set; }
 
                 /// <summary>
-                /// The most recent heartbeat time of Cloud Assistant. The value is updated once every minute.
+                /// The most recent heartbeat time value of Cloud Assistant. The value is updated once every minute.
                 /// </summary>
                 [NameInMap("LastHeartbeatTime")]
                 [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string OSType { get; set; }
 
                 /// <summary>
-                /// Indicates whether Cloud Assistant supports Session Manager on the instance. If Cloud Assistant does not support Session Manager on the instance, an early Cloud Assistant version may be installed on the instance or Session Manager may not be supported in the specified region.
+                /// Indicates whether Cloud Assistant supports Session Manager on the instance. If Cloud Assistant does not support Session Manager, the Cloud Assistant running on the instance may be of an early version or Session Manager may not be supported in the specified region.
                 /// </summary>
                 [NameInMap("SupportSessionManager")]
                 [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

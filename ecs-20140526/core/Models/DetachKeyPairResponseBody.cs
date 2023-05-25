@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string FailCount { get; set; }
 
         /// <summary>
-        /// The names of the key pairs.
+        /// The name of the key pair.
         /// </summary>
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DetachKeyPairResponseBodyResultsResult> Result { get; set; }
             public class DetachKeyPairResponseBodyResultsResult : TeaModel {
                 /// <summary>
-                /// The operation status code returned. 200 indicates that the operation was successful.
+                /// The operation status code that is returned. 200 indicates that the operation is successful.
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The result of the operation. For example, when the value of `Code` is 200, the value of `Message` is `successful`.
+                /// The result of the operation. For example, if the value of `Code` is 200, the value of `Message` is `successful`.
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// Indicates whether the operation was successful.
+                /// Indicates whether the operation is successful.
                 /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The total number of instances from which you attempted to unbind the SSH key pair.
+        /// The total number of instances from which you want to unbind the SSH key pair.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

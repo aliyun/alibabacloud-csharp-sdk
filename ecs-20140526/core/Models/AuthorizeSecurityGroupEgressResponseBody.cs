@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AuthorizeSecurityGroupEgressResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// GROUP_AUTH_NO_VPC
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The direction in which the security group rule is applied. Valid values:
         /// 
-        /// *   egress: outbound
-        /// *   ingress: inbound
-        /// *   all: outbound and inbound
+        /// *   egress: outbound.
+        /// *   ingress: inbound.
+        /// *   all: outbound and inbound.
         /// 
         /// Default value: all.
         /// </summary>
@@ -23,18 +23,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// The network interface type of the security group rule.
+        /// The network interface card (NIC) type of the security group rule.
         /// 
-        /// *   Default value for rules of security groups in the classic network: internet. Valid values for rules of security groups in the classic network:
+        /// *   Valid values for rules of security groups in the classic network:
         /// 
-        ///     *   internet
+        ///     *   internet (default)
         ///     *   intranet
         /// 
-        ///     > You can query security group rules of only one network interface type in a single call. To query security group rules of both network interface types, call the operation twice.
+        ///     **
         /// 
-        /// *   When the security group is in a virtual private cloud (VPC), set the value to intranet. This is also the default value.
+        ///     **Note**You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.
         /// 
-        ///     > If you set this parameter to internet or leave this parameter empty, the intranet value is automatically used.
+        /// *   If the security group is in a virtual private cloud (VPC), set the value to intranet. This is also the default value.
+        /// 
+        ///     **
+        /// 
+        ///     **Note**If you set this parameter to internet or leave this parameter empty, the value of intranet is automatically used.
         /// </summary>
         [NameInMap("NicType")]
         [Validation(Required=false)]

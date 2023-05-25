@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token used to start the next query. Set the value to the NextToken value obtained from the response to the previous request.
+        /// The token used to start the query. Set the value to the NextToken value obtained from the response to the preceding request.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

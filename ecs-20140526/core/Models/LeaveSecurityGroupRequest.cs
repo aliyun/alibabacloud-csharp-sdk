@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class LeaveSecurityGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// 
-        /// > If this parameter is specified, the `NetworkInterfaceId` parameter cannot be specified.
+        /// > If you configure this parameter, you cannot configure `NetworkInterfaceId`.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the ENI.
+        /// The ENI ID.
         /// 
-        /// > If this parameter is specified, the `InstanceId` parameter cannot be specified.
+        /// > If you configure this parameter, you cannot configure `InstanceId`.
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// 
         /// *   If you want to remove an instance from a security group, you do not need to specify a region ID.
         /// *   If you want to remove an ENI from a security group, you must specify the ID of the region in which the ENI resides.
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the security group.
+        /// The security group ID.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

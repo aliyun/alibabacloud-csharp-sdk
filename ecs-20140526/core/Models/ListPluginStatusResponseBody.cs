@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<ListPluginStatusResponseBodyInstancePluginStatusSetInstancePluginStatus> InstancePluginStatus { get; set; }
             public class ListPluginStatusResponseBodyInstancePluginStatusSetInstancePluginStatus : TeaModel {
                 /// <summary>
-                /// The ID of the ECS instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// Details about the Cloud Assistant plug-in.
+                /// The states of the Cloud Assistant plug-ins.
                 /// </summary>
                 [NameInMap("PluginStatusSet")]
                 [Validation(Required=false)]
@@ -62,20 +62,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         /// <summary>
                         /// The state of the Cloud Assistant plug-in. Valid values:
                         /// 
-                        /// * NotInstalled: The plug-in is not installed.
-                        /// * Installed: The one-time plug-in is installed.
-                        /// * Running: The long-running plug-in is running.
-                        /// * Stopped: The long-running plug-in is not running.
-                        /// * Crashed: The plug-in is abnormal.
-                        /// * Removed: The plug-in is uninstalled.
-                        /// * Unknown: The state of the plug-in is unknown.
+                        /// *   NotInstalled
+                        /// *   Installed
+                        /// *   Running
+                        /// *   Stopped
+                        /// *   Crashed
+                        /// *   Removed
+                        /// *   Unknown
                         /// </summary>
                         [NameInMap("PluginStatus")]
                         [Validation(Required=false)]
                         public string PluginStatus { get; set; }
 
                         /// <summary>
-                        /// The version of the plug-in
+                        /// The version of the plug-in.
                         /// </summary>
                         [NameInMap("PluginVersion")]
                         [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

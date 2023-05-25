@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDedicatedHostsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the dedicated hosts.
+        /// The details of the dedicated hosts.
         /// </summary>
         [NameInMap("DedicatedHosts")]
         [Validation(Required=false)]
@@ -31,24 +31,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The policy used to migrate the instances deployed on the dedicated host when the dedicated host fails. Valid values:
+                /// The policy that is used to migrate the instances deployed on the dedicated host when the dedicated host fails. Valid values:
                 /// 
                 /// *   Migrate: The instances are migrated to another physical server. Instances that are not in the Stopped state when the dedicated host fails are restarted after migration.
-                /// *   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical server and restarted.
+                /// *   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.
                 /// 
-                /// If the dedicated host has cloud disks attached, the default value is Migrate. If the dedicated host has local disks attached, the default value is Stop.
+                /// If cloud disks are attached to the dedicated host, the default value of this parameter is Migrate. If local disks are attched to the dedicated host, the default value of this parameter is Stop.
                 /// </summary>
                 [NameInMap("ActionOnMaintenance")]
                 [Validation(Required=false)]
                 public string ActionOnMaintenance { get; set; }
 
                 /// <summary>
-                /// Indicates whether the dedicated host was added to the resource pool for automatic deployment. Valid values:
+                /// Indicates whether the dedicated host is added to the resource pool for automatic deployment. Valid values:
                 /// 
-                /// *   on: The dedicated host was added to the resource pool for automatic deployment.
-                /// *   off: The dedicated host was not added to the resource pool for automatic deployment.
+                /// *   on: The dedicated host is added to the resource pool for automatic deployment.
+                /// *   off: The dedicated host is not added to the resource pool for automatic deployment.
                 /// 
-                /// For more information about automatic deployment, see the "[Automatic deployment](~~118938~~)" section in the Functions and features topic.
+                /// For more information about automatic deployment, see the "Automatic deployment" section in [Functions and features](~~118938~~).
                 /// </summary>
                 [NameInMap("AutoPlacement")]
                 [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity Capacity { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity : TeaModel {
                     /// <summary>
-                    /// The amount of available space on the local disks. Unit: GiB.
+                    /// The available space of the local disks. Unit: GiB.
                     /// </summary>
                     [NameInMap("AvailableLocalStorage")]
                     [Validation(Required=false)]
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// Details about the ECS instances that were created on the dedicated host.
+                /// The ECS instances that are created on the dedicated host.
                 /// </summary>
                 [NameInMap("Instances")]
                 [Validation(Required=false)]
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance> Instance { get; set; }
                     public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance : TeaModel {
                         /// <summary>
-                        /// The ID of the ECS instance created on the dedicated host.
+                        /// The ID of the ECS instance that is created on the dedicated host.
                         /// </summary>
                         [NameInMap("InstanceId")]
                         [Validation(Required=false)]
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public long? InstanceOwnerId { get; set; }
 
                         /// <summary>
-                        /// The instance type of the ECS instance created on the dedicated host.
+                        /// The instance type of the ECS instance that is created on the dedicated host.
                         /// </summary>
                         [NameInMap("InstanceType")]
                         [Validation(Required=false)]
@@ -314,14 +314,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes NetworkAttributes { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes : TeaModel {
                     /// <summary>
-                    /// The timeout period of the UDP session that was established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Valid value: 60.
+                    /// The timeout period of the UDP session that is established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Valid value: 60.
                     /// </summary>
                     [NameInMap("SlbUdpTimeout")]
                     [Validation(Required=false)]
                     public int? SlbUdpTimeout { get; set; }
 
                     /// <summary>
-                    /// The timeout period of the UDP session that was established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid value: 60.
+                    /// The timeout period of the UDP session that is established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid value: 60.
                     /// </summary>
                     [NameInMap("UdpTimeout")]
                     [Validation(Required=false)]
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The reasons why the resources of the dedicated host were locked.
+                /// The reasons why the resources of the dedicated host are locked.
                 /// </summary>
                 [NameInMap("OperationLocks")]
                 [Validation(Required=false)]
@@ -341,10 +341,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock> OperationLock { get; set; }
                     public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock : TeaModel {
                         /// <summary>
-                        /// The reason why the dedicated host was locked. Valid values:
+                        /// The reason why the dedicated host is locked. Valid values:
                         /// 
-                        /// - financial: The dedicated host was locked due to overdue payments.
-                        /// - security: The dedicated host was locked due to security reasons.
+                        /// *   financial: The dedicated host is locked due to overdue payments.
+                        /// *   security: The dedicated host is locked due to security reasons.
                         /// </summary>
                         [NameInMap("LockReason")]
                         [Validation(Required=false)]
@@ -393,18 +393,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? Sockets { get; set; }
 
                 /// <summary>
-                /// The service state of the dedicated host. Valid values:
+                /// The service status of the dedicated host. Valid values:
                 /// 
-                /// *   Available: The dedicated host is running normally.
-                /// *   UnderAssessment: The dedicated host is at risk, which may cause issues to ECS instances on the dedicated host.
-                /// *   PermanentFailure: The dedicated host has permanent failures and is unusable.
+                /// *   Available: The dedicated host is running as expected.
+                /// *   UnderAssessment: The dedicated host is available. However, the dedicated host has potential risks that may cause the ECS instances on the dedicated host to fail.
+                /// *   PermanentFailure: The dedicated host has permanent failures and cannot be used.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The custom ECS instance families supported by the dedicated host.
+                /// The custom ECS instance families that are supported by the dedicated host.
                 /// </summary>
                 [NameInMap("SupportedCustomInstanceTypeFamilies")]
                 [Validation(Required=false)]
@@ -417,7 +417,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ECS instance families supported by the dedicated host.
+                /// The ECS instance families that are supported by the dedicated host.
                 /// </summary>
                 [NameInMap("SupportedInstanceTypeFamilies")]
                 [Validation(Required=false)]
@@ -430,7 +430,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ECS instance types supported by the dedicated host.
+                /// The ECS instance types that are supported by the dedicated host.
                 /// </summary>
                 [NameInMap("SupportedInstanceTypesList")]
                 [Validation(Required=false)]
@@ -454,14 +454,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag> Tag { get; set; }
                     public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the dedicated host.
+                        /// The key of tag N of the dedicated host.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value of the dedicated host.
+                        /// The value of tag N of the dedicated host.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]

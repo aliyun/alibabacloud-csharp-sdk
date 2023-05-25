@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which you want to assign the resource.
+        /// The ID of the resource group to which you want to add the instance.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the resource. The value of this parameter varies based on the resource type. For example, when ResourceType is set to instance, the ResourceId refers to InstanceId.
+        /// The ID of the resource. For example, if you set ResourceType to instance, set this parameter to the ID of the instance.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// The type of the ECS resource. Valid values:
         /// 
         /// *   instance: instance
-        /// *   disk: Elastic Block Storage device
+        /// *   disk: Elastic Block Storage (EBS) device
         /// *   snapshot: snapshot
         /// *   image: image
         /// *   securitygroup: security group

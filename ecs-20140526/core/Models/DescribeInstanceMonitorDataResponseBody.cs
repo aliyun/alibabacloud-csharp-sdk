@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceMonitorDataResponseBody : TeaModel {
         /// <summary>
-        /// The monitoring data about the instance.
+        /// The monitoring data of the instance.
         /// </summary>
         [NameInMap("MonitorData")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData> InstanceMonitorData { get; set; }
             public class DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData : TeaModel {
                 /// <summary>
-                /// The read bandwidth of the disks (system disk and data disks). Unit: Byte/s.
+                /// The read bandwidth of the cloud disks (system disk and data disks). Unit: Byte/s.
                 /// </summary>
                 [NameInMap("BPSRead")]
                 [Validation(Required=false)]
                 public int? BPSRead { get; set; }
 
                 /// <summary>
-                /// The write bandwidth of the disks (system disk and data disks). Unit: Byte/s.
+                /// The write bandwidth of the cloud disks (system disk and data disks). Unit: Byte/s.
                 /// </summary>
                 [NameInMap("BPSWrite")]
                 [Validation(Required=false)]
@@ -63,21 +63,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public float? CPUCreditUsage { get; set; }
 
                 /// <summary>
-                /// The unpaid excess credits.
+                /// The unpaid overdrawn CPU credits.
                 /// </summary>
                 [NameInMap("CPUNotpaidSurplusCreditUsage")]
                 [Validation(Required=false)]
                 public float? CPUNotpaidSurplusCreditUsage { get; set; }
 
                 /// <summary>
-                /// The number of read I/O operations per second on the disks (system disk and data disks).
+                /// The number of read I/O operations per second on the cloud disks (system disk and data disks).
                 /// </summary>
                 [NameInMap("IOPSRead")]
                 [Validation(Required=false)]
                 public int? IOPSRead { get; set; }
 
                 /// <summary>
-                /// The number of write I/O operations per second on the disks (system disk and data disks).
+                /// The number of write I/O operations per second on the cloud disks (system disk and data disks).
                 /// </summary>
                 [NameInMap("IOPSWrite")]
                 [Validation(Required=false)]
@@ -98,14 +98,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? InternetBandwidth { get; set; }
 
                 /// <summary>
-                /// The public data traffic received by the instance during the period specified by the `Period` parameter, which starts from the time specified by the `TimeStamp` parameter. Unit: Kbit/s.
+                /// The public data traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.
                 /// </summary>
                 [NameInMap("InternetRX")]
                 [Validation(Required=false)]
                 public int? InternetRX { get; set; }
 
                 /// <summary>
-                /// The public data traffic sent by the instance during the period specified by the `Period` parameter, which starts from the time specified by the `TimeStamp` parameter. Unit: Kbit/s.
+                /// The public data traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.
                 /// </summary>
                 [NameInMap("InternetTX")]
                 [Validation(Required=false)]
@@ -119,14 +119,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? IntranetBandwidth { get; set; }
 
                 /// <summary>
-                /// The internal data traffic received by the instance during the period specified by the `Period` parameter, which starts from the time specified by the `TimeStamp` parameter. Unit: Kbit/s.
+                /// The internal data traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.
                 /// </summary>
                 [NameInMap("IntranetRX")]
                 [Validation(Required=false)]
                 public int? IntranetRX { get; set; }
 
                 /// <summary>
-                /// The internal data traffic sent by the instance during the period specified by the `Period` parameter, which starts from the time specified by the `TimeStamp` parameter. Unit: Kbit/s.
+                /// The internal data traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.
                 /// </summary>
                 [NameInMap("IntranetTX")]
                 [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

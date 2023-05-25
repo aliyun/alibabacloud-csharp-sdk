@@ -19,17 +19,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// The auto-renewal period for the instance.
+        /// The auto-renewal period of the instance.
         /// 
         /// *   Valid values of `Duration` when `PeriodUnit` is set to `Year`: 1, 2, 3, 4, and 5.
-        /// *   Valid values of `Duration` when `PeriodUnit` is set to `Month` : 1, 2, 3, 6, 12, 24, 36, 48, and 60.
+        /// *   Valid values of `Duration` when `PeriodUnit` is set to `Month`: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
         /// <summary>
-        /// The ID of the instance You can specify IDs of up to 100 subscription instances. Separate the instance IDs with commas (,).
+        /// The ID of the instance. You can specify up to 100 subscription instance IDs. Separate the instance IDs with commas (,).
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The unit of the renewal period (`Duration`). Default value: Month. Valid values:
+        /// The unit of the renewal period (`Duration`). Valid values:
         /// 
-        /// *   Month
+        /// *   Month (default)
         /// *   Year
         /// </summary>
         [NameInMap("PeriodUnit")]
@@ -54,20 +54,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The auto-renewal state of the instance. Valid values:
+        /// The auto-renewal status of the instance. Valid values:
         /// 
         /// *   AutoRenewal: Auto-renewal is enabled for the instance.
         /// *   Normal: Auto-renewal is disabled for the instance.
-        /// *   NotRenewal: The instance is not renewed. The system no longer sends an expiration notification. Notifications for renewal are sent three days before the expiration time of the instance. You can change the value of this parameter from NotRenewal to `Normal` for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.
+        /// *   NotRenewal: The instance is not renewed. The system no longer sends an expiration notification but sends only a renewal notification three days before the instance expires. You can change the value of this parameter from NotRenewal to `Normal` for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.
         /// 
-        /// > `RenewalStatus` takes precedence over `AutoRenew`. If you do not specify `RenewalStatus`, the `AutoRenew` parameter is used by default.
+        /// > `RenewalStatus` takes precedence over `AutoRenew`. If you do not specify `RenewalStatus`, `AutoRenew` is used by default.
         /// </summary>
         [NameInMap("RenewalStatus")]
         [Validation(Required=false)]

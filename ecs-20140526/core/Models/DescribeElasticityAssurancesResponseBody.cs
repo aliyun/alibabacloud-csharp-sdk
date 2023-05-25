@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeElasticityAssurancesResponseBody : TeaModel {
         /// <summary>
-        /// Details about the elasticity assurances.
+        /// An array that consists of the details about the elasticity assurances.
         /// </summary>
         [NameInMap("ElasticityAssuranceSet")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem> ElasticityAssuranceItem { get; set; }
             public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem : TeaModel {
                 /// <summary>
-                /// Details about the allocated resources.
+                /// An array that consists of the details about the allocated resources.
                 /// </summary>
                 [NameInMap("AllocatedResources")]
                 [Validation(Required=false)]
@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource> AllocatedResource { get; set; }
                     public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource : TeaModel {
                         /// <summary>
-                        /// The instance type.
+                        /// The type of the instance.
                         /// </summary>
                         [NameInMap("InstanceType")]
                         [Validation(Required=false)]
                         public string InstanceType { get; set; }
 
                         /// <summary>
-                        /// The total number of instances for which capacity of an instance type is reserved.
+                        /// The total number of instances of an instance type for which capacity is reserved.
                         /// </summary>
                         [NameInMap("TotalAmount")]
                         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public int? UsedAmount { get; set; }
 
                         /// <summary>
-                        /// The zone ID.
+                        /// The ID of the zone in which the instance is located.
                         /// </summary>
                         [NameInMap("zoneId")]
                         [Validation(Required=false)]
@@ -78,14 +78,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// The billing method of the instances to be created by using the elasticity assurance. Set the value to PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.
+                /// The billing method of the instance. Set the value to PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.
                 /// </summary>
                 [NameInMap("InstanceChargeType")]
                 [Validation(Required=false)]
                 public string InstanceChargeType { get; set; }
 
                 /// <summary>
-                /// >  This parameter is unavailable.
+                /// > This parameter is unavailable for public use.
                 /// </summary>
                 [NameInMap("LatestStartTime")]
                 [Validation(Required=false)]
@@ -101,8 +101,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The type of the private pool associated with the elasticity assurance. Valid values:
                 /// 
-                /// - Open: open private pool
-                /// - Target: targeted private pool
+                /// *   Open: open private pool
+                /// *   Target: targeted private pool
                 /// </summary>
                 [NameInMap("PrivatePoolOptionsMatchCriteria")]
                 [Validation(Required=false)]
@@ -116,14 +116,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string PrivatePoolOptionsName { get; set; }
 
                 /// <summary>
-                /// The region ID of the elasticity assurance.
+                /// The ID of the region to which the elasticity assurance belongs.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the elasticity assurance belongs.
+                /// The ID of the resource group to which the elasticity assurance is assigned.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -139,8 +139,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// Indicates when the elasticity assurance takes effect. Valid values:
                 /// 
-                /// - Now: The elasticity assurance takes effect as soon as it is created.
-                /// - Later: The elasticity assurance takes effect at the specified time.
+                /// *   Now: The elasticity assurance takes effect as soon as it is created.
+                /// *   Later: The elasticity assurance takes effect at the specified time.
                 /// </summary>
                 [NameInMap("StartTimeType")]
                 [Validation(Required=false)]
@@ -149,17 +149,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The state of the elasticity assurance. Valid values:
                 /// 
-                /// - Preparing: The elasticity assurance is being prepared.
-                /// - Prepared: The elasticity assurance is to take effect.
-                /// - Active: The elasticity assurance is in effect.
-                /// - Released: The elasticity assurance is released.
+                /// *   Preparing: The elasticity assurance is being prepared.
+                /// *   Prepared: The elasticity assurance has not taken effect.
+                /// *   Active: The elasticity assurance is in effect.
+                /// *   Released: The elasticity assurance is released.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tags of the elasticity assurance.
+                /// The tags of the elasticity assurances.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string TotalAssuranceTimes { get; set; }
 
                 /// <summary>
-                /// >  This parameter is unavailable.
+                /// > This parameter is unavailable for public use.
                 /// </summary>
                 [NameInMap("UsedAssuranceTimes")]
                 [Validation(Required=false)]

@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyReservedInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// The new description of the reserved instance. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
-        /// 
-        /// This parameter is empty by default.
+        /// The error code.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -27,21 +25,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the reserved instance.
+        /// The ID of the reserved instance.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the reserved instance.
+        /// The new name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
         /// </summary>
         [NameInMap("ReservedInstanceId")]
         [Validation(Required=false)]
         public string ReservedInstanceId { get; set; }
 
         /// <summary>
-        /// The new name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The new description of the reserved instance. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
+        /// 
+        /// This parameter is empty by default.
         /// </summary>
         [NameInMap("ReservedInstanceName")]
         [Validation(Required=false)]

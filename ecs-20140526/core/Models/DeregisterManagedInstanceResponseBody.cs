@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? InvocationCount { get; set; }
 
             /// <summary>
-            /// The last Cloud Assistant task execution time.
+            /// The time when the Cloud Assistant task was last executed.
             /// </summary>
             [NameInMap("LastInvokedTime")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

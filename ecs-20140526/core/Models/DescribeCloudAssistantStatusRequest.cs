@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeCloudAssistantStatusRequest : TeaModel {
         /// <summary>
-        /// The IDs of instances.
+        /// The IDs of instances to be queried.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number to return.
         /// 
         /// Pages start from page 1.
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. This parameter does not take effect if you specified the **InstanceId** parameter. Maximum value: 50.
+        /// The number of entries to return on each page. If you specify the **InstanceId** parameter, this parameter does not take effect. Maximum value: 50.
         /// 
         /// Default value: 10.
         /// </summary>

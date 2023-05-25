@@ -9,37 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageSupportInstanceTypesRequest : TeaModel {
-        /// <summary>
-        /// The scenario in which the instance type is used. Default value: CreateEcs. Valid values:
-        /// 
-        /// *   CreateEcs: instance creation
-        /// *   Upgrade: instance type upgrade
-        /// *   Downgrade: instance type downgrade
-        /// *   RenewDowngrade: renewal and configuration downgrade
-        /// </summary>
         [NameInMap("ActionType")]
         [Validation(Required=false)]
         public string ActionType { get; set; }
 
         /// <summary>
-        /// The list of filters to querying resources.
+        /// The filters used to filter instance types.
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeImageSupportInstanceTypesRequestFilter> Filter { get; set; }
         public class DescribeImageSupportInstanceTypesRequestFilter : TeaModel {
             /// <summary>
-            /// The key of filter. Only the image ID can be used to filter instance types. Valid values:
+            /// The key of filter N. Only the image ID can be used to filter instance types. Valid values:
             /// 
-            /// * imagId: image ID
-            /// * filter: image ID
+            /// *   imagId: image ID
+            /// *   filter: image ID
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of filter.
+            /// The value of filter N.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

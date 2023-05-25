@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StopInstancesRequest : TeaModel {
         /// <summary>
-        /// The batch operation mode. Valid values:
+        /// Specifies the batch operation mode. Valid values:
         /// 
-        /// *   AllTogether: In this mode, if all instances are stopped, a success message is returned. If an instance fails the verification, all instances fail to stop and an error message is returned.
+        /// *   AllTogether: In this mode, a success message is returned if all specified instances are stopped. If one or more of the specified instances fail the check when you set the DryRun parameter to false, none of the specified instances can be stopped and an error message is returned.
         /// *   SuccessFirst: In this mode, each instance is separately stopped. The response contains the operation results for each instance.
         /// 
         /// Default value: AllTogether.
@@ -22,13 +22,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string BatchOptimization { get; set; }
 
         /// <summary>
-        /// Specifies whether to check the validity of the request without actually making the request. Valid values:
+        /// Specifies whether to perform only a dry run, without performing the actual request. Valid Values:
         /// 
-        /// *   true: The validity of the request is checked, but the request is not made. Check items include the request format, instance status, and whether the required parameters are specified. If the check fails, the corresponding error message is returned. If the check succeeds, `DRYRUN.SUCCESS` is returned.
+        /// *   true: performs a dry run, but the request is not made. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request passes the dry run, `DRYRUN.SUCCESS` is returned. Otherwise, an error message is returned.
         /// 
-        ///     > If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the check succeeds.
+        /// > If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.
         /// 
-        /// *   false: The validity of the request is checked, and the request is made if the check succeeds.
+        /// *   false: performs a dry run and sends the request. If the request passes the dry run, the operation is performed.
         /// 
         /// Default value: false.
         /// </summary>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to forcibly stop the instance. Valid values:
         /// 
-        /// *   true: forcibly stops the instance. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage in the instance will be lost.
+        /// *   true: forcibly stops the instance. This operation is equivalent to the power-off operation in common scenarios. Cache data that is not written to storage devices on the instance is lost.
         /// *   false: normally stops the instance.
         /// 
         /// Default value: false.
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? ForceStop { get; set; }
 
         /// <summary>
-        /// The list of instance ID.
+        /// The IDs of instances.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The stop mode of the pay-as-you-go instance. Valid values:
         /// 
-        /// *   StopCharging: economical mode. For information about how `StopCharging` takes effect, see the "Prerequisites" section in [Economical mode](~~63353~~).
-        /// *   KeepCharging: standard mode. After the instances are stopped in standard mode, you continue to be charged for them.
+        /// *   StopCharging: economical mode. For information about the conditions on which `StopCharging` takes effect, see the "Conditions for enabling economical mode" section in [Economical mode](~~63353~~).
+        /// *   KeepCharging: standard mode. You continue to be charged for instances that are stopped in standard mode.
         /// 
-        /// Default value: If the prerequisites required for enabling the economical mode are met and you have enabled this mode in the ECS console, the default value is `StopCharging`. For more information, see "Enable the economical mode" in [Economical mode](~~63353#default~~). Otherwise, the default value is `KeepCharging`.
+        /// Default value: If the conditions for enabling the economical mode are met and you have enabled this mode in the ECS console, the default value is [StopCharging](~~63353#default~~). For more information, see the "Enable economical mode" section in `Economical mode`. Otherwise, the default value is `KeepCharging`.
         /// </summary>
         [NameInMap("StoppedMode")]
         [Validation(Required=false)]

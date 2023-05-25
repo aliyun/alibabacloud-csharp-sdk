@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeReservedInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The returned page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance> ReservedInstance { get; set; }
             public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance : TeaModel {
                 /// <summary>
-                /// Indicates the sharing status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:
+                /// Indicates the allocation status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:
                 /// 
                 /// *   allocated: The reserved instance is allocated to another account.
                 /// *   beAllocated: The reserved instance is allocated by another account.
@@ -52,21 +52,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string AllocationStatus { get; set; }
 
                 /// <summary>
-                /// The time when the reserved instance was created.
+                /// The creation time.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description of the reserved instance.
+                /// The description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The time when the reserved instance expires.
+                /// The expiration time.
                 /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// The payment option of the reserved instance.
+                /// The payment options for the reserved instance.
                 /// </summary>
                 [NameInMap("OfferingType")]
                 [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock> OperationLock { get; set; }
                     public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock : TeaModel {
                         /// <summary>
-                        /// The reason why the reserved instance was locked.
+                        /// The reason why the instance is locked.
                         /// </summary>
                         [NameInMap("LockReason")]
                         [Validation(Required=false)]
@@ -116,66 +116,66 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The operating system of the reserved instance. Valid values:
+                /// The operating system of the image used by the instance. Valid values:
                 /// 
-                /// - Windows: Windows Server operating systems
-                /// - Linux: Linux and Unix-like operating systems
+                /// *   Windows: Windows Server operating system
+                /// *   Linux: Linux and UNIX-like operating system
                 /// </summary>
                 [NameInMap("Platform")]
                 [Validation(Required=false)]
                 public string Platform { get; set; }
 
                 /// <summary>
-                /// The region ID of the reserved instance.
+                /// The ID of the region where the instance resides.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the reserved instance.
+                /// The reserved instance ID.
                 /// </summary>
                 [NameInMap("ReservedInstanceId")]
                 [Validation(Required=false)]
                 public string ReservedInstanceId { get; set; }
 
                 /// <summary>
-                /// The name of the reserved instance.
+                /// The name.
                 /// </summary>
                 [NameInMap("ReservedInstanceName")]
                 [Validation(Required=false)]
                 public string ReservedInstanceName { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The scope of the reserved instance.
+                /// Indicates range.
                 /// </summary>
                 [NameInMap("Scope")]
                 [Validation(Required=false)]
                 public string Scope { get; set; }
 
                 /// <summary>
-                /// The time when the reserved instance took effect.
+                /// The validation time.
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// The status of the reserved instance.
+                /// The status.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// Details about the tags of the reserved instance.
+                /// Details about the reserved instance tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -186,14 +186,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag> Tag { get; set; }
                     public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the reserved instance.
+                        /// The key of the reserved instance tag N.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value of the reserved instance.
+                        /// The value of the reserved instance tag N.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The zone ID of the reserved instance.
+                /// The zone ID.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

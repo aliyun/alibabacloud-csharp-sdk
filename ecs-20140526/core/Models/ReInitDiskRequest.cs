@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// The name of the key pair.
+        /// The name of the key pair. This parameter is empty by default.
         /// 
         /// > The parameter is applicable only to Linux instances. You can bind an SSH key pair to an instance as the logon credential when you re-initialize the system disk of the instance. After the SSH key pair is bound, the username and password-based logon method is disabled for the instance.
         /// </summary>
@@ -66,8 +66,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to use Security Center for free after the system disk is re-initialized. Valid values:
         /// 
-        /// *   Active: uses Security Center for free after the system disk is re-initialized. This value is applicable only to public images.
-        /// *   Deactive: does not use Security Center for free after the system disk is re-initialized. This value is applicable to all images.
+        /// *   Active: Security Center is activated for free after the system disk is replaced. This value is applicable to only public images.
+        /// *   Deactive: Security Center is not activated after the system disk is replaced. This value is applicable to all images.
         /// 
         /// Default value: Deactive.
         /// </summary>

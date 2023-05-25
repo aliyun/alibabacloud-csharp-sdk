@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The currency unit.
                 /// 
-                /// Alibaba Cloud China site (aliyun.com): CNY
+                /// Alibaba Cloud China site (aliyun.com): CNY.
                 /// 
-                /// Alibaba Cloud International site (alibabacloud.com): USD
+                /// Alibaba Cloud International site (alibabacloud.com): USD.
                 /// </summary>
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// Details about the price.
                 /// 
-                /// > This parameter is in invitational preview and unavailable.
+                /// > This parameter is in invitational preview and is unavailable for public use.
                 /// </summary>
                 [NameInMap("DetailInfos")]
                 [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public float? OriginalPrice { get; set; }
 
                         /// <summary>
-                        /// The name of the resource.
+                        /// The resource name.
                         /// </summary>
                         [NameInMap("Resource")]
                         [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public float? ReservedInstanceHourPrice { get; set; }
 
                 /// <summary>
-                /// The transaction price, which is equal to the original price minus the discount.
+                /// The transaction price of the order. The transaction price is equal to the original price minus the discount.
                 /// </summary>
                 [NameInMap("TradePrice")]
                 [Validation(Required=false)]
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// The ID of the promotion rule.
+                    /// The ID of the pricing rule.
                     /// </summary>
                     [NameInMap("RuleId")]
                     [Validation(Required=false)]
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

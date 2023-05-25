@@ -21,18 +21,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress> OperationProgress { get; set; }
             public class DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress : TeaModel {
                 /// <summary>
-                /// The error code. This parameter is empty when the operation was successful.
+                /// The error code. This parameter is empty when the operation is successful.
                 /// 
-                /// For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).
+                /// For information about error codes and error messages, visit the [API error center](https://error-center.aliyun.com/status/product/Ecs).
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// The error message. This parameter is empty when the operation was successful.
+                /// The error message. This parameter is empty when the operation is successful.
                 /// 
-                /// For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).
+                /// For information about error codes and error messages, visit the [API error center](https://error-center.aliyun.com/status/product/Ecs).
                 /// </summary>
                 [NameInMap("ErrorMsg")]
                 [Validation(Required=false)]

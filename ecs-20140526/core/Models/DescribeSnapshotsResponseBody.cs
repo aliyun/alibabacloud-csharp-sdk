@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// The token used to start the next query.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSnapshotsResponseBodySnapshotsSnapshot> Snapshot { get; set; }
             public class DescribeSnapshotsResponseBodySnapshotsSnapshot : TeaModel {
                 /// <summary>
-                /// The category of the snapshot.
+                /// The snapshot type.
                 /// 
                 /// >  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.
                 /// </summary>
@@ -79,10 +79,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? Encrypted { get; set; }
 
                 /// <summary>
-                /// Indicates whether the instant access feature was enabled. Valid values:
+                /// Indicates whether the instant access feature is enabled. Valid values:
                 /// 
-                /// *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-                /// *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.
+                /// *   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
+                /// *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
                 /// </summary>
                 [NameInMap("InstantAccess")]
                 [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The validity period of the instant access feature. The instant access feature is automatically disabled when the specified period expires.
                 /// 
-                /// By default, the value of this parameter is the same as that of `RetentionDays`.
+                /// By default, the value of this parameter is the same as the value of the `RetentionDays` parameter.
                 /// </summary>
                 [NameInMap("InstantAccessRetentionDays")]
                 [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ProductCode { get; set; }
 
                 /// <summary>
-                /// The progress of the snapshot creation task. Unit: percent (%).
+                /// The progress of the snapshot creation task in percentage.
                 /// </summary>
                 [NameInMap("Progress")]
                 [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? RetentionDays { get; set; }
 
                 /// <summary>
-                /// The ID of the snapshot.
+                /// The snapshot ID.
                 /// </summary>
                 [NameInMap("SnapshotId")]
                 [Validation(Required=false)]
@@ -170,9 +170,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The type of snapshot. Valid values:
                 /// 
-                /// *   auto or timer: automatic snapshot
-                /// *   user: manual snapshot
-                /// *   all: all snapshot types
+                /// *   auto or timer: automatic snapshot.
+                /// *   user: manual snapshot.
+                /// *   all: all snapshot types.
                 /// </summary>
                 [NameInMap("SnapshotType")]
                 [Validation(Required=false)]
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string SourceStorageType { get; set; }
 
                 /// <summary>
-                /// The state of the snapshot. Valid values:
+                /// The snapshot status. Valid values:
                 /// 
                 /// *   progressing
                 /// *   accomplished

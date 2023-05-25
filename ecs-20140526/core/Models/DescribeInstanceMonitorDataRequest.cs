@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceMonitorDataRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. If the value of seconds (`ss`) is not `00`, the time is rounded up to the next minute.
+        /// The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (`ss`) is not `00`, the time is rounded up to the next minute.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The interval at which to retrieve monitored data. Unit: seconds. Valid values:
+        /// The interval at which to retrieve monitoring data. Unit: seconds. Valid values:
         /// 
         /// *   60
         /// *   600

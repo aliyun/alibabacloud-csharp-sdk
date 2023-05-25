@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ExportImageRequest : TeaModel {
         /// <summary>
-        /// The format in which to export the custom image. Valid values:
+        /// The format in which you want to export the custom image. Valid values:
         /// 
         /// *   raw
         /// *   vhd
@@ -25,21 +25,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageFormat { get; set; }
 
         /// <summary>
-        /// The ID of the custom image.
+        /// The custom image ID.
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The OSS bucket to which to export the custom image.
+        /// The OSS bucket in which you want to store the exported custom image.
         /// </summary>
         [NameInMap("OSSBucket")]
         [Validation(Required=false)]
         public string OSSBucket { get; set; }
 
         /// <summary>
-        /// The prefix of the object as which to store the custom image in the OSS bucket. The prefix must be 1 to 30 characters in length and can contain digits and letters.
+        /// The prefix for the name of the OSS object in which you want to store the exported custom image. The prefix must be 1 to 30 characters in length and can contain digits and letters.
         /// </summary>
         [NameInMap("OSSPrefix")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The name of the RAM role to use to export the custom image.
+        /// The name of the RAM role that you want to use to export the custom image.
         /// </summary>
         [NameInMap("RoleName")]
         [Validation(Required=false)]

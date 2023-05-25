@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteInstanceRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to forcefully release the instance in the **Running** (`Running`) state. Valid values:
+        /// Specifies whether to forcefully release the instance in the `Running` state. Valid values:****
         /// 
-        /// *   true: forcefully releases the instance in the **Running** (`Running`) state. When the Force parameter is set to true, this operation is equivalent to the power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.
-        /// *   false: normally releases the instance. This value is valid only for instances in the **Stopped** (`Stopped`) state.
+        /// *   true: forcefully releases the instance in the `Running` state.**** This operation is equivalent to performing a hard shut-down. Cache data that is not written to persistent storage will be lost.
+        /// *   false: normally releases the instance. This value is valid only for instances in the `Stopped` state.****
         /// 
         /// Default value: false.
         /// </summary>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// The ID of the instance that you want to release.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to release the expired subscription instance.
+        /// Specifies whether to release an expired subscription instance.
         /// 
         /// Default value: false.
         /// </summary>

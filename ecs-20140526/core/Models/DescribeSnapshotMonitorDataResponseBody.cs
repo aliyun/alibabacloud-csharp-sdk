@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint> DataPoint { get; set; }
             public class DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint : TeaModel {
                 /// <summary>
-                /// The total size of the snapshots. Unit: bytes.
+                /// The snapshot size. Unit: bytes.
                 /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public long? Size { get; set; }
 
                 /// <summary>
-                /// The timestamp that corresponds to a snapshot size.
+                /// The timestamp that corresponds to the snapshot size.
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

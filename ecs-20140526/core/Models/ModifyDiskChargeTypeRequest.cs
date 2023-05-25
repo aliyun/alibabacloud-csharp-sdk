@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiskChargeTypeRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to automatically complete the payment. Valid values:
+        /// Specifies whether to enable automatic payment. Valid values:
         /// 
-        /// *   true: The payment is automatically completed. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled.
+        /// *   true (default): The payment is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled.
         /// *   false: An order is generated but no payment is made. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.
         /// </summary>
         [NameInMap("AutoPay")]
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The new billing method of the disk. Default value: PrePaid. Valid values:
+        /// The new billing method of the disk. Valid values:
         /// 
-        /// *   PrePaid: changes the billing method from pay-as-you-go to subscription.
-        /// *   PostPaid: changes the billing method from subscription to pay-as-you-go.
+        /// *   PrePaid (default): subscription.
+        /// *   PostPaid: pay-as-you-go.
         /// </summary>
         [NameInMap("DiskChargeType")]
         [Validation(Required=false)]

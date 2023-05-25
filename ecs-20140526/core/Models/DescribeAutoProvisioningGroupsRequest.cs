@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAutoProvisioningGroupsRequest : TeaModel {
         /// <summary>
-        /// The IDs of auto provisioning groups. You can specify up to 20 auto provisioning group IDs.
+        /// The ID of the auto provisioning group. You can specify up to 20 IDs.
         /// </summary>
         [NameInMap("AutoProvisioningGroupId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoProvisioningGroupName { get; set; }
 
         /// <summary>
-        /// The statuses of auto provisioning groups.
+        /// The status of the auto provisioning group.
         /// </summary>
         [NameInMap("AutoProvisioningGroupStatus")]
         [Validation(Required=false)]

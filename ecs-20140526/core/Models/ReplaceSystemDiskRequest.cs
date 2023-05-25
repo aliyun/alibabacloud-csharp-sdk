@@ -37,28 +37,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Architecture { get; set; }
 
         /// <summary>
-        /// This parameter is unavailable for public use.
+        /// This parameter is not available for public use.
         /// </summary>
         [NameInMap("Arn")]
         [Validation(Required=false)]
         public List<ReplaceSystemDiskRequestArn> Arn { get; set; }
         public class ReplaceSystemDiskRequestArn : TeaModel {
             /// <summary>
-            /// > This parameter is unavailable for public use.
+            /// > This parameter is unavailable.
             /// </summary>
             [NameInMap("AssumeRoleFor")]
             [Validation(Required=false)]
             public long? AssumeRoleFor { get; set; }
 
             /// <summary>
-            /// > This parameter is unavailable for public use.
+            /// > This parameter is not available for public use.
             /// </summary>
             [NameInMap("RoleType")]
             [Validation(Required=false)]
             public string RoleType { get; set; }
 
             /// <summary>
-            /// > This parameter is unavailable for public use.
+            /// > This parameter is not available for public use.
             /// </summary>
             [NameInMap("Rolearn")]
             [Validation(Required=false)]
@@ -67,27 +67,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among the requests. The **ClientToken** value can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the disk.
+        /// The disk ID.
         /// 
         /// If the `ImageId` parameter is not specified, this parameter is required.
         /// 
-        /// If the DiskId parameter is specified, the `Platform` and `Architecture` parameters are required. The specified values of `Platform` and `Architecture` must be consistent with those of `Platform` and `Architecture` of the instance.
+        /// If the DiskId parameter is specified, the `Platform` and `Architecture` parameters are required. The specified values of `Platform` and `Architecture` must be consistent with those of `Platform` and `Architecture` parameters of the instance.
         /// 
-        /// > This feature is in invitational preview. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm).
+        /// > This feature is available to select users. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm).
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
         /// <summary>
-        /// > This parameter is unavailable for public use.
+        /// > This parameter is not available for public use.
         /// </summary>
         [NameInMap("EncryptAlgorithm")]
         [Validation(Required=false)]
@@ -96,17 +96,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to encrypt the disk. Valid values:
         /// 
-        /// *   true
-        /// *   false
+        /// *   true: encrypts the disk.
+        /// *   false: does not encrypt the disk.
         /// 
-        /// Default value: false.
+        /// Default value: false
         /// </summary>
         [NameInMap("Encrypted")]
         [Validation(Required=false)]
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// The ID of the image.
+        /// The ID of the image to be used to replace the system disk.
         /// 
         /// If the `DiskId` parameter is not specified, this parameter is required.
         /// </summary>
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the Key Management Service (KMS) key to use for the system disk.
+        /// The ID of the KMS key that you want to use for the system disk.
         /// </summary>
         [NameInMap("KMSKeyId")]
         [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The name of the key pair.
         /// 
-        /// > This parameter is applicable only to Linux instances. You can bind an SSH key pair to the instance as a logon credential. After the SSH key pair is bound, the username and password-based logon method is disabled for the instance.
+        /// > This parameter is applicable only to Linux instances. You can bind an SSH key pair to the instance as a logon credential. After you bind the SSH key pair, the username and password logon method is disabled for the instance.
         /// </summary>
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
@@ -146,15 +146,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to reset the password for the instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
+        /// Specifies whether to reset the password for the instance. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
         /// 
         ///     ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/
         /// 
-        /// The password of a Windows instance cannot start with a forward slash (/).
+        /// The passwords of Windows instances cannot start with a forward slash (/).
         /// 
         /// This parameter is empty by default, which indicates that the current password remains unchanged.
         /// 
-        /// > If the `Password` parameter is specified, we recommend that you send requests over HTTPS to prevent password leaks.
+        /// > If you specify `Password`, we recommend that you send requests over HTTPS to prevent password leaks.
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
@@ -163,9 +163,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to use the preset password of the image.
         /// 
-        /// Default value: false.
+        /// Default value: false
         /// 
-        /// > If the PasswordInherit parameter is specified, you must leave the Password parameter empty and make sure that the selected image has a preset password.
+        /// > If the PasswordInherit parameter is specified, you must leave the Password parameter empty. Before you use this parameter, make sure that a password is preset for the image.
         /// </summary>
         [NameInMap("PasswordInherit")]
         [Validation(Required=false)]
@@ -192,8 +192,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to use Security Center Basic after the system disk is replaced. Valid values:
         /// 
-        /// *   Active: uses Security Center Basic after the system disk is replaced. This value is applicable to only public images.
-        /// *   Deactive: does not use Security Center Basic after the system disk is replaced. This value is applicable to all images.
+        /// *   Active: uses Security Center Basic after the system disk is re-initialized. This value is applicable only to public images.
+        /// *   Deactive: does not use Security Center Basic after the system disk is re-initialized. This value is applicable to all images.
         /// 
         /// Default value: Deactive.
         /// </summary>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityEnhancementStrategy { get; set; }
 
         /// <summary>
-        /// Specifies whether to use the system configurations for virtual machines provided by Alibaba Cloud (Windows: NTP and KMS. Linux: NTP and YUM).
+        /// Specifies whether to use the system configurations for virtual machines provided by Alibaba Cloud. System configurations for Windows: NTP and KMS. System configurations for Linux: NTP and YUM.
         /// 
         /// > This parameter takes effect only when you attach a system disk whose device name is /dev/xvda.
         /// </summary>

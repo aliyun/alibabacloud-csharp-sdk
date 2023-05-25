@@ -28,42 +28,42 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CommandContent { get; set; }
 
                 /// <summary>
-                /// The description of the command.
+                /// The command description.
                 /// </summary>
                 [NameInMap("CommandDescription")]
                 [Validation(Required=false)]
                 public string CommandDescription { get; set; }
 
                 /// <summary>
-                /// The ID of the command.
+                /// The command ID.
                 /// </summary>
                 [NameInMap("CommandId")]
                 [Validation(Required=false)]
                 public string CommandId { get; set; }
 
                 /// <summary>
-                /// The name of the command.
+                /// The command name.
                 /// </summary>
                 [NameInMap("CommandName")]
                 [Validation(Required=false)]
                 public string CommandName { get; set; }
 
                 /// <summary>
-                /// The type of the command.
+                /// The command type.
                 /// </summary>
                 [NameInMap("CommandType")]
                 [Validation(Required=false)]
                 public string CommandType { get; set; }
 
                 /// <summary>
-                /// The ID of the container.
+                /// The container ID.
                 /// </summary>
                 [NameInMap("ContainerId")]
                 [Validation(Required=false)]
                 public string ContainerId { get; set; }
 
                 /// <summary>
-                /// The name of the container.
+                /// The container name.
                 /// </summary>
                 [NameInMap("ContainerName")]
                 [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InvocationStatus { get; set; }
 
                 /// <summary>
-                /// The ID of the command task.
+                /// The command task ID.
                 /// </summary>
                 [NameInMap("InvokeId")]
                 [Validation(Required=false)]
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         /// <summary>
                         /// The code that indicates why the command failed to be sent or run. Valid values:
                         /// 
-                        /// *   If this parameter is empty, the execution is normal.
+                        /// *   If this parameter is empty, the command is run normally.
                         /// *   InstanceNotExists: The instance does not exist or was released.
                         /// *   InstanceReleased: The instance was released while the command was being run.
                         /// *   InstanceNotRunning: The instance was not in the Running state while the command started to be run.
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string FinishTime { get; set; }
 
                         /// <summary>
-                        /// The ID of the instance.
+                        /// The instance ID
                         /// </summary>
                         [NameInMap("InstanceId")]
                         [Validation(Required=false)]
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string InvocationStatus { get; set; }
 
                         /// <summary>
-                        /// The output of the command.
+                        /// The command output.
                         /// </summary>
                         [NameInMap("Output")]
                         [Validation(Required=false)]
@@ -341,12 +341,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Parameters { get; set; }
 
                 /// <summary>
-                /// The execution mode of the command. Valid values:
+                /// Indicates the execution mode of the command. Valid values:
                 /// 
-                /// *   Once: The command is immediately run.
+                /// *   Once: immediately runs the command.
                 /// *   Period: The command is run on a schedule.
                 /// *   NextRebootOnly: The command is automatically run the next time the instance starts.
-                /// *   EveryReboot: The command is automatically run every time the instance starts.
+                /// *   EveryReboot: automatically runs the command every time the instance starts.
                 /// </summary>
                 [NameInMap("RepeatMode")]
                 [Validation(Required=false)]
@@ -423,14 +423,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries returned on each page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeCapacityReservationsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the capacity reservations.
+        /// Details of the capacity reservations.
         /// </summary>
         [NameInMap("CapacityReservationSet")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem> CapacityReservationItem { get; set; }
             public class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem : TeaModel {
                 /// <summary>
-                /// Details about the allocated resources.
+                /// Details of the allocated resources.
                 /// </summary>
                 [NameInMap("AllocatedResources")]
                 [Validation(Required=false)]
@@ -81,27 +81,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// The release mode of the capacity reservation. Valid values:
                 /// 
                 /// *   Limited: The capacity reservation is automatically released at the specified time.
-                /// *   Unlimited: The capacity reservation is manually released. You can release it at anytime.
+                /// *   Unlimited: The capacity reservation is manually released. You can release the capacity reservation anytime.
                 /// </summary>
                 [NameInMap("EndTimeType")]
                 [Validation(Required=false)]
                 public string EndTimeType { get; set; }
 
                 /// <summary>
-                /// The billing method of instances to be created by using the capacity reservation. Valid values:
+                /// The billing method of instances in the capacity reservation. Valid values:
                 /// 
-                /// *   PostPaid: pay-as-you-go
-                /// *   PrePaid: subscription
+                /// *   PostPaid: pay-as-you-go.
+                /// *   PrePaid: subscription.
                 /// </summary>
                 [NameInMap("InstanceChargeType")]
                 [Validation(Required=false)]
                 public string InstanceChargeType { get; set; }
 
                 /// <summary>
-                /// The operating system type of instances to be created by using the capacity reservation. Valid values:
+                /// The operating system type of the instances. Valid values:
                 /// 
-                /// *   windows
-                /// *   linux
+                /// *   windows: Windows operating systems.
+                /// *   linux: Linux operating systems.
                 /// </summary>
                 [NameInMap("Platform")]
                 [Validation(Required=false)]
@@ -115,10 +115,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string PrivatePoolOptionsId { get; set; }
 
                 /// <summary>
-                /// The type of the private pool associated with the capacity reservation. Valid values:
+                /// The type of the private pool generated after the capacity reservation takes effect. Valid values:
                 /// 
-                /// *   Open: open private pool
-                /// *   Target: targeted private pool
+                /// *   Open: open private pool.
+                /// *   Target: targeted private pool.
                 /// </summary>
                 [NameInMap("PrivatePoolOptionsMatchCriteria")]
                 [Validation(Required=false)]
@@ -169,8 +169,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The mode in which the capacity reservation takes effect. Valid values:
                 /// 
-                /// - Now: The capacity reservation takes effect as soon as it is created.
-                /// - Later: The capacity reservation takes effect at the specified time.
+                /// *   Now: The capacity reservation takes effect as soon as it is created.
+                /// *   Later: The capacity reservation takes effect at the specified time.
                 /// </summary>
                 [NameInMap("StartTimeType")]
                 [Validation(Required=false)]
@@ -201,14 +201,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTagsTag> Tag { get; set; }
                     public class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key of the capacity reservation.
+                        /// The key of the tag.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value of the capacity reservation.
+                        /// The value of the tag.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// >  This parameter is currently in invitational preview and unavailable for general users.
+                /// > This parameter is in invitational preview and is not publicly available.
                 /// </summary>
                 [NameInMap("TimeSlot")]
                 [Validation(Required=false)]
@@ -237,14 +237,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token used to start the next query.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

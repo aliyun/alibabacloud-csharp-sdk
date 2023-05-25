@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DisableActivationResponseBodyActivation Activation { get; set; }
         public class DisableActivationResponseBodyActivation : TeaModel {
             /// <summary>
-            /// The ID of the activation code.
+            /// The activation code ID.
             /// </summary>
             [NameInMap("ActivationId")]
             [Validation(Required=false)]
@@ -59,21 +59,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? InstanceCount { get; set; }
 
             /// <summary>
-            /// The default instance name prefix.
+            /// The default prefix of the instance name.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The IP addresses of hosts that are allowed to use the activation code.
+            /// The IP addresses of the hosts that can use the activation code.
             /// </summary>
             [NameInMap("IpAddressRange")]
             [Validation(Required=false)]
             public string IpAddressRange { get; set; }
 
             /// <summary>
-            /// The number of instances that were registered.
+            /// The number of registered instances.
             /// </summary>
             [NameInMap("RegisteredCount")]
             [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

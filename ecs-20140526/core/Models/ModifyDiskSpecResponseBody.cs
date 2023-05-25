@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiskSpecResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the order.
+        /// The order ID.
         /// 
-        /// >  This parameter is returned only when the category of a subscription disk or the performance level of a subscription ESSD is modified.
+        /// > This parameter is returned only when the category of a subscription cloud disk or the performance level of a subscription cloud disk is modified.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The task ID of changing the disk category.
         /// 
-        /// >  If you only modify the performance level of an ESSD, this parameter is not returned.
+        /// > If you modify only the performance level of an ESSD, this parameter is not returned.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

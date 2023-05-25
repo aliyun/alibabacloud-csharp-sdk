@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The allocation type. Valid values:
         /// 
-        /// *   Normal: queries SCUs within the current Alibaba Cloud account.
+        /// *   Normal: queries SCUs that belong to the current Alibaba Cloud account.
         /// *   Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.
         /// 
         /// Default value: Normal.
@@ -81,35 +81,40 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The statuses of SCUs.
+        /// The state of SCUs. You can specify 1 to 4 types of state. Valid values:
+        /// 
+        /// *   Creating: The SCUs are being created.
+        /// *   Active: The SCUs are in effect.
+        /// *   Expired: The SCUs have expired.
+        /// *   Pending: The SCUs have not taken effect.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// The IDs of the SCUs. You can enter at most 100 SCU IDs.
+        /// One or multiple SCU IDs. You can specify 1 to 100 SCU IDs.
         /// </summary>
         [NameInMap("StorageCapacityUnitId")]
         [Validation(Required=false)]
         public List<string> StorageCapacityUnitId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The tags of the SCUs.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeStorageCapacityUnitsRequestTag> Tag { get; set; }
         public class DescribeStorageCapacityUnitsRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N of the SCU. N indicates that you can set multiple tag keys to query. Valid values of N: 1 to 20.
+            /// The key of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. Valid values of N: 1 to 20.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N of the SCU. N indicates that you can set multiple tag values to query and corresponds to N of `Tag.N.Key`. Valid values of N: 1 to 20.
+            /// The value of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. The value of N must coincide with `Tag.N.Key`. Valid values of N: 1 to 20.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

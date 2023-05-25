@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The name of reserved instance N. Valid values of N: 1 to 100.
             /// 
-            /// The name must be 2 to 128 characters in length. It must start with a letter but cannot start with [http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)
+            /// The name must be 2 to 128 characters in length. It must start with a letter but cannot start with [http:// or https://. It can contain letters, digits, colons (.), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)
             /// </summary>
             [NameInMap("ReservedInstanceName")]
             [Validation(Required=false)]
@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The scope of reserved instance N. Valid values:
             /// 
-            /// *   Region: regional.
-            /// *   Zone: zonal.
+            /// *   Region
+            /// *   Zone
             /// 
             /// Valid values of N: 1 to 100.
             /// 
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// 
             /// This parameter is required when `Scope` is set to `Zone`.
             /// 
-            /// You can call the [DescribeZones](~~25609~~) operation to query the most recent list of zones.
+            /// You can call the [DescribeZones](~~25609~~) operation to query the most recent zone list.
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]

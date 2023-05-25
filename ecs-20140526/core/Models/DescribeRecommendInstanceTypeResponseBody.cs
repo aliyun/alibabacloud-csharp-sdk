@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRecommendInstanceTypeResponseBody : TeaModel {
         /// <summary>
-        /// Details about the recommended instance types.
+        /// The details of the recommended instance types.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ZoneId { get; set; }
 
                 /// <summary>
-                /// Details about zones where the instance types resides.
+                /// The details of the zones where the instance types resides.
                 /// </summary>
                 [NameInMap("Zones")]
                 [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZonesZone> Zone { get; set; }
                     public class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZonesZone : TeaModel {
                         /// <summary>
-                        /// Details about network types of instance types.
+                        /// The details of network types of instance types.
                         /// </summary>
                         [NameInMap("NetworkTypes")]
                         [Validation(Required=false)]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// The ID of the zone in which the instance type is available.
+                        /// The ID of the zone where the instance type is available.
                         /// </summary>
                         [NameInMap("ZoneNo")]
                         [Validation(Required=false)]

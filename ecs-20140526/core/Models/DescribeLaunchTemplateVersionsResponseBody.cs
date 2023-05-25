@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeLaunchTemplateVersionsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the launch template versions.
+        /// Details of the launch template versions.
         /// </summary>
         [NameInMap("LaunchTemplateVersionSets")]
         [Validation(Required=false)]
@@ -21,21 +21,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSet> LaunchTemplateVersionSet { get; set; }
             public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSet : TeaModel {
                 /// <summary>
-                /// The time when the launch template version was created.
+                /// The time when the launch template was created.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The creator of the launch template version.
+                /// The creator of the launch template.
                 /// </summary>
                 [NameInMap("CreatedBy")]
                 [Validation(Required=false)]
                 public string CreatedBy { get; set; }
 
                 /// <summary>
-                /// Indicates whether the launch template version is the default version.
+                /// Indicates whether the launch template is of the default version.
                 /// </summary>
                 [NameInMap("DefaultVersion")]
                 [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The automatic release time of the instance.
+                    /// The automatic release time.
                     /// </summary>
                     [NameInMap("AutoReleaseTime")]
                     [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public string AutoSnapshotPolicyId { get; set; }
 
                             /// <summary>
-                            /// Indicates whether to enable the performance burst feature for the data disk. Valid values:
+                            /// Indicates whether the performance burst feature is enabled. Valid values:
                             /// 
                             /// *   true
                             /// *   false
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             /// <summary>
                             /// The device name of the data disk.
                             /// 
-                            /// > This parameter will be deprecated in the future. To ensure future compatibility, we recommend that you do not use this parameter.
+                            /// > This parameter will be removed in the future. To ensure future compatibility, we recommend that you do not use this parameter.
                             /// </summary>
                             [NameInMap("Device")]
                             [Validation(Required=false)]
@@ -178,23 +178,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public string Encrypted { get; set; }
 
                             /// <summary>
-                            /// The performance level of ESSD to use as the data disk. This parameter is returned only when `Category` is set to cloud_essd. Valid values:
+                            /// The performance level of the ESSD used as the data disk. This parameter is returned only if `Category` is set to cloud_essd. Valid values:
                             /// 
-                            /// *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-                            /// *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+                            /// *   PL0: A single ESSD can provide up to 10,000 random read/write IOPS.
+                            /// *   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.
                             /// *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-                            /// *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+                            /// *   PL3: A single ESSD can deliver up to 1 million random read/write IOPS.
                             /// </summary>
                             [NameInMap("PerformanceLevel")]
                             [Validation(Required=false)]
                             public string PerformanceLevel { get; set; }
 
                             /// <summary>
-                            /// The provisioned read/write IOPS of the ESSD AutoPL disk to use as the data disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
+                            /// The provisioned read/write IOPS of the ESSD AutoPL disk used as the data disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
                             /// 
                             /// Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
                             /// 
-                            /// > This parameter is available only if you set the DiskCategory parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
+                            /// > This parameter is available only if you set the Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
                             /// </summary>
                             [NameInMap("ProvisionedIops")]
                             [Validation(Required=false)]
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public int? Size { get; set; }
 
                             /// <summary>
-                            /// The ID of the snapshot to use to create the data disk.
+                            /// The ID of the snapshot used to create the data disk.
                             /// </summary>
                             [NameInMap("SnapshotId")]
                             [Validation(Required=false)]
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// Specifies whether to enable the operating system configuration of the instance.
+                    /// Indicates whether the operating system configuration is enabled for the instance.
                     /// </summary>
                     [NameInMap("EnableVmOsConfig")]
                     [Validation(Required=false)]
@@ -256,10 +256,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// The source of the image. Valid values:
                     /// 
-                    /// *   system: public images provided by Alibaba Cloud
-                    /// *   self: custom images that you create
-                    /// *   others: shared images from other Alibaba Cloud accounts
-                    /// *   marketplace: Alibaba Cloud Marketplace images
+                    /// *   system: a public image of Alibaba Cloud.
+                    /// *   self: a custom image that you created.
+                    /// *   others: a shared image from another Alibaba Cloud account.
+                    /// *   marketplace: an Alibaba Cloud Marketplace image.
                     /// </summary>
                     [NameInMap("ImageOwnerAlias")]
                     [Validation(Required=false)]
@@ -268,15 +268,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// The billing method of the instance. Valid values:
                     /// 
-                    /// *   PrePaid: subscription
-                    /// *   PostPaid: pay-as-you-go
+                    /// *   PrePaid: subscription.
+                    /// *   PostPaid: pay-as-you-go.
                     /// </summary>
                     [NameInMap("InstanceChargeType")]
                     [Validation(Required=false)]
                     public string InstanceChargeType { get; set; }
 
                     /// <summary>
-                    /// The name of the instance.
+                    /// The instance name.
                     /// </summary>
                     [NameInMap("InstanceName")]
                     [Validation(Required=false)]
@@ -318,14 +318,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string IoOptimized { get; set; }
 
                     /// <summary>
-                    /// The number of IPv6 addresses to assign to the instance.
+                    /// The number of IPv6 addresses assigned to the instance.
                     /// </summary>
                     [NameInMap("Ipv6AddressCount")]
                     [Validation(Required=false)]
                     public int? Ipv6AddressCount { get; set; }
 
                     /// <summary>
-                    /// The name of the key pair. This parameter is empty by default.
+                    /// The name of the key pair.
                     /// </summary>
                     [NameInMap("KeyPairName")]
                     [Validation(Required=false)]
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public string Description { get; set; }
 
                             /// <summary>
-                            /// The instance type of the instance.
+                            /// The instance type.
                             /// </summary>
                             [NameInMap("InstanceType")]
                             [Validation(Required=false)]
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public string PrimaryIpAddress { get; set; }
 
                             /// <summary>
-                            /// The ID of the security group to which to assign the secondary ENI. The security group and the ENI must belong to the same VPC.
+                            /// The IDs of the security groups to which the secondary ENI is assigned. The security group and the ENI must belong to the same VPC.
                             /// 
                             /// > The SecurityGroupId and SecurityGroupIds parameters are mutually exclusive in the response.
                             /// </summary>
@@ -390,7 +390,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public string SecurityGroupId { get; set; }
 
                             /// <summary>
-                            /// The IDs of the security groups to which to assign the secondary ENI.
+                            /// The IDs of the security groups to which the secondary ENI is assigned.
                             /// 
                             /// > The SecurityGroupId and SecurityGroupIds parameters are mutually exclusive in the response.
                             /// </summary>
@@ -405,7 +405,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             }
 
                             /// <summary>
-                            /// The ID of the vSwitch to which to connect the secondary ENI.
+                            /// The ID of the vSwitch to which the ENI is connected.
                             /// </summary>
                             [NameInMap("VSwitchId")]
                             [Validation(Required=false)]
@@ -418,36 +418,36 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// The network type. Valid values:
                     /// 
-                    /// *   classic: classic network
-                    /// *   vpc: VPC
+                    /// *   classic
+                    /// *   vpc
                     /// </summary>
                     [NameInMap("NetworkType")]
                     [Validation(Required=false)]
                     public string NetworkType { get; set; }
 
                     /// <summary>
-                    /// Indicates whether to use the password preset in the image.
+                    /// Indicates whether the preset password of the image is used.
                     /// </summary>
                     [NameInMap("PasswordInherit")]
                     [Validation(Required=false)]
                     public bool? PasswordInherit { get; set; }
 
                     /// <summary>
-                    /// The subscription duration of the resource.
+                    /// The subscription period of the resource.
                     /// </summary>
                     [NameInMap("Period")]
                     [Validation(Required=false)]
                     public int? Period { get; set; }
 
                     /// <summary>
-                    /// The private IP address to assign to the instance.
+                    /// The private IP address assigned to the instance.
                     /// </summary>
                     [NameInMap("PrivateIpAddress")]
                     [Validation(Required=false)]
                     public string PrivateIpAddress { get; set; }
 
                     /// <summary>
-                    /// The name of the instance Resource Access Management (RAM) role.
+                    /// The name of the RAM role that is assigned to the instance.
                     /// </summary>
                     [NameInMap("RamRoleName")]
                     [Validation(Required=false)]
@@ -461,14 +461,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string ResourceGroupId { get; set; }
 
                     /// <summary>
-                    /// Indicates whether security hardening is enabled.
+                    /// Indicates whether security hardening was enabled.
                     /// </summary>
                     [NameInMap("SecurityEnhancementStrategy")]
                     [Validation(Required=false)]
                     public string SecurityEnhancementStrategy { get; set; }
 
                     /// <summary>
-                    /// The ID of the security group to which to assign the instance.
+                    /// The ID of the security group to which the instance belongs.
                     /// 
                     /// > `The SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.
                     /// </summary>
@@ -477,7 +477,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string SecurityGroupId { get; set; }
 
                     /// <summary>
-                    /// The IDs of the security groups to which to assign the instance.
+                    /// The IDs of the security groups to which the instance belongs.
                     /// 
                     /// > `The SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.
                     /// </summary>
@@ -492,12 +492,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The retention period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
+                    /// The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
                     /// 
                     /// Take note of the following items:
                     /// 
-                    /// *   The following protection periods are in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.
-                    /// *   If this parameter is set to 0, no protection period is configured for the preemptible instance.
+                    /// *   The following protection periods are in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to specify one of these values, submit a ticket.
+                    /// *   A value of 0 indicates that no protection period is specified for the preemptible instance.
                     /// </summary>
                     [NameInMap("SpotDuration")]
                     [Validation(Required=false)]
@@ -513,16 +513,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// The bidding policy for the pay-as-you-go instance. Valid values:
                     /// 
-                    /// *   NoSpot: The instance is created as a regular pay-as-you-go instance.
-                    /// *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-                    /// *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
+                    /// *   NoSpot: The instance is a regular pay-as-you-go instance.
+                    /// *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
+                    /// *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
                     /// </summary>
                     [NameInMap("SpotStrategy")]
                     [Validation(Required=false)]
                     public string SpotStrategy { get; set; }
 
                     /// <summary>
-                    /// The tags to add to the instance.
+                    /// The tags of the instance.
                     /// </summary>
                     [NameInMap("Tags")]
                     [Validation(Required=false)]
@@ -533,14 +533,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public List<DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTagsInstanceTag> InstanceTag { get; set; }
                         public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTagsInstanceTag : TeaModel {
                             /// <summary>
-                            /// The tag key of the instance.
+                            /// The tag key.
                             /// </summary>
                             [NameInMap("Key")]
                             [Validation(Required=false)]
                             public string Key { get; set; }
 
                             /// <summary>
-                            /// The tag value of the instance.
+                            /// The tag value.
                             /// </summary>
                             [NameInMap("Value")]
                             [Validation(Required=false)]
@@ -558,7 +558,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string UserData { get; set; }
 
                     /// <summary>
-                    /// The ID of the vSwitch to which to connect the instance.
+                    /// The ID of the vSwitch to which the instance is connected.
                     /// </summary>
                     [NameInMap("VSwitchId")]
                     [Validation(Required=false)]
@@ -572,7 +572,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string VpcId { get; set; }
 
                     /// <summary>
-                    /// The ID of the zone.
+                    /// The zone ID.
                     /// </summary>
                     [NameInMap("ZoneId")]
                     [Validation(Required=false)]
@@ -581,21 +581,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ID of the template.
+                /// The ID of the launch template.
                 /// </summary>
                 [NameInMap("LaunchTemplateId")]
                 [Validation(Required=false)]
                 public string LaunchTemplateId { get; set; }
 
                 /// <summary>
-                /// The name of the launch template version.
+                /// The name of the launch template.
                 /// </summary>
                 [NameInMap("LaunchTemplateName")]
                 [Validation(Required=false)]
                 public string LaunchTemplateName { get; set; }
 
                 /// <summary>
-                /// The time when the launch template version was modified.
+                /// The time when the launch template was modified.
                 /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
@@ -609,7 +609,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string VersionDescription { get; set; }
 
                 /// <summary>
-                /// The number of the launch template version.
+                /// The version number of the launch template.
                 /// </summary>
                 [NameInMap("VersionNumber")]
                 [Validation(Required=false)]

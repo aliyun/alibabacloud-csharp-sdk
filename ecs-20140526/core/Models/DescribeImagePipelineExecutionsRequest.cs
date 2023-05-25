@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelineExecutionsRequest : TeaModel {
         /// <summary>
-        /// The ID of the image build task.
+        /// The ID of the image creation task.
         /// </summary>
         [NameInMap("ExecutionId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImagePipelineId { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page. Valid values: 1 to 500.
+        /// The number of entries per page. Valid values: 1 to 500.
         /// 
         /// Default value: 50.
         /// </summary>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The query token. Set the value to the `NextToken` value that was returned when you last called the DescribeImagePipelineExecutions operation. Leave this parameter empty when you call this operation for the first time.
+        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the image build task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -63,38 +63,38 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The status of the image build task. You can specify multiple values at the same time. Separate the values with commas (,). Example format: `BUILDING,DISTRIBUTING`. Valid values: 
+        /// The status of the image creation task. You can specify multiple values at the same time. Separate the values with commas (,). Example: `BUILDING,DISTRIBUTING`. Valid values:
         /// 
-        /// - BUILDING: The image is being built.
-        /// - DISTRIBUTING: The image is being distributed.
-        /// - RELEASING: The image is being recycled.
-        /// - SUCCESS: The image is built.
-        /// - FAILED: The image fails to be built.
-        /// - CANCELLING: The image build task is being canceled.
-        /// - CANCELLED: The image build task is canceled.
+        /// *   BUILDING
+        /// *   DISTRIBUTING
+        /// *   RELEASING
+        /// *   SUCCESS
+        /// *   FAILED
+        /// *   CANCELLING
+        /// *   CANCELLED
         /// 
-        /// >  You cannot query the image build tasks in all status by leaving this parameter empty.
+        /// > If you want to query the image creation tasks in all states, specify all values.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// > This parameter is deprecated.
+        /// > This parameter is unavailable.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeImagePipelineExecutionsRequestTag> Tag { get; set; }
         public class DescribeImagePipelineExecutionsRequestTag : TeaModel {
             /// <summary>
-            /// > This parameter is deprecated.
+            /// > This parameter is unavailable.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// > This parameter is deprecated.
+            /// > This parameter is unavailable.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

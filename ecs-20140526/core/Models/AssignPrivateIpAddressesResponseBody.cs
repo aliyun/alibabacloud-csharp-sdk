@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// The ID of the ENI.
+            /// The ENI ID.
             /// </summary>
             [NameInMap("NetworkInterfaceId")]
             [Validation(Required=false)]

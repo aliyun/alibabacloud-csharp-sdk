@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The number of the instances to which the instance RAM role failed to be attached.
+        /// The number of instances to which the instance RAM role failed to be attached.
         /// </summary>
         [NameInMap("FailCount")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RamRoleName { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

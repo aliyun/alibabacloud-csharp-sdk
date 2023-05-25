@@ -29,14 +29,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   true: publishes the custom image as a community image.
         /// *   false: unpublishes a community image. The unpublish operation takes effect only on community images.
         /// 
-        /// Default value: false
+        /// Default value: false.
         /// </summary>
         [NameInMap("IsPublic")]
         [Validation(Required=false)]
         public bool? IsPublic { get; set; }
 
         /// <summary>
-        /// > This parameter is in invitational preview and is unavailable to general users.
+        /// > This parameter is in invitational preview and is not publicly available.
         /// </summary>
         [NameInMap("LaunchPermission")]
         [Validation(Required=false)]

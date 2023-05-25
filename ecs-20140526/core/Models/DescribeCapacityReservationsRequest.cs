@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The billing method of instances to be created by using the capacity reservation. Valid values:
+        /// The billing method of the instance. Valid values:
         /// 
-        /// *   PostPaid: pay-as-you-go
-        /// *   PrePaid: subscription
+        /// *   PostPaid: pay-as-you-go.
+        /// *   PrePaid: subscription.
         /// 
         /// Default value: PostPaid.
         /// </summary>
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page.
+        /// The number of entries per page.
         /// 
-        /// Maximum value: 100.
+        /// Valid values: 1 to 100
         /// 
         /// Default value: 10.
         /// </summary>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token used to start the next query. Set the value to the NextToken value obtained from the response to the previous request.
+        /// The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of the NextToken parameter.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -68,11 +68,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The operating system type of instances to be created by using the capacity reservation. Valid values:
+        /// The operating system of the instance. Valid values:
         /// 
-        /// *   windows: Windows operating systems
-        /// *   linux: Linux operating systems
-        /// *   all: all operating system types
+        /// *   windows: Windows operating systems.
+        /// *   linux: Linux operating systems.
+        /// *   all: all operating system types.
         /// 
         /// Default value: all.
         /// </summary>
@@ -88,9 +88,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the capacity reservation belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.  
+        /// The ID of the resource group to which the capacity reservation belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
         /// 
-        /// >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+        /// > Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -128,16 +128,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeCapacityReservationsRequestTag> Tag { get; set; }
         public class DescribeCapacityReservationsRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N of the capacity reservation. Valid values of N: 1 to 20.
+            /// The key of tag N. Valid values of N: 1 to 20.
             /// 
-            /// If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+            /// If you specify a single tag to query resources, up to 1,000 resources with this tag are returned in the response. If you specify multiple tags to query resources, up to 1,000 resources with all these tags are returned in the response. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N of the capacity reservation. Valid values of N: 1 to 20.
+            /// The value of tag N. Valid values of N: 1 to 20.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

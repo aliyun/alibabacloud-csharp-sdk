@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// IPv6 address N to assign to the ENI. Valid values of N: 1 to 10.
+        /// The IPv6 addresses that you want to assign to the ENI. You can specify up to 10 IPv6 addresses.
         /// 
         /// Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*
         /// 
@@ -25,30 +25,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv6Address { get; set; }
 
         /// <summary>
-        /// The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.
+        /// The number of IPv6 addresses that you want to generate at random for the ENI. Valid values: 1 to 10.
         /// 
-        /// >  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.
+        /// > You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.
         /// </summary>
         [NameInMap("Ipv6AddressCount")]
         [Validation(Required=false)]
         public int? Ipv6AddressCount { get; set; }
 
         /// <summary>
-        /// > 该参数正在邀测中，暂未开放使用。
+        /// > This parameter is in invitational preview and is unavailable for general users.
         /// </summary>
         [NameInMap("Ipv6Prefix")]
         [Validation(Required=false)]
         public List<string> Ipv6Prefix { get; set; }
 
         /// <summary>
-        /// > 该参数正在邀测中，暂未开放使用。
+        /// > This parameter is in invitational preview and is unavailable for general users.
         /// </summary>
         [NameInMap("Ipv6PrefixCount")]
         [Validation(Required=false)]
         public int? Ipv6PrefixCount { get; set; }
 
         /// <summary>
-        /// The ID of the ENI.
+        /// The ENI ID.
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]

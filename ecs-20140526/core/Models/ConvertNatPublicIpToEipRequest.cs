@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ConvertNatPublicIpToEipRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance whose public IP address you want to convert to an EIP.
+        /// The ID of the instance whose public IP address you want to convert into an EIP.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// The performance mode of the burstable instance. Valid values:
+        /// The performance mode of burstable instances. Valid values:
         /// 
-        /// *   Standard: standard mode
-        /// *   Unlimited: unlimited mode
+        /// *   Standard: standard mode.
+        /// *   Unlimited: unlimited mode.
         /// 
         /// For more information about the performance modes of burstable instances, see [Burstable instances](~~59977~~).
         /// </summary>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The release protection attribute of the instance. This parameter specifies whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance.
         /// 
-        /// > This parameter is applicable to only pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.
+        /// > This parameter is applicable to only pay-as-you-go instances and can protect instances against manual releases, but not against automatic releases.
         /// </summary>
         [NameInMap("DeletionProtection")]
         [Validation(Required=false)]
@@ -39,6 +39,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// 实例MTU是否开启Jumbo frame通信模式，取值范围：
+        /// 
+        /// -true：开启。
+        /// 
+        /// -false：不开启。
+        /// 
+        /// 目前仅部分规格支持开启Jumbo frame，更多详情，请参见[ECS实例MTU](~~200512~~)。
+        /// </summary>
         [NameInMap("EnableJumboFrame")]
         [Validation(Required=false)]
         public bool? EnableJumboFrame { get; set; }
@@ -46,8 +55,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The hostname of the instance. Take note of the following items:
         /// 
-        /// *   When you modify the hostname of an instance, the instance must not be in the Creating (Pending) or Starting (Starting) state. Otherwise, the new hostname and the configurations in `/etc/hosts` cannot take effect. You can call the [DescribeInstances](~~25506~~) operation to query the state of the instance.
-        /// *   After the hostname is modified, you must call the [RebootInstance](~~25502~~) operation to restart the instance for the new hostname to take effect.
+        /// *   When you modify the an instance hostname, the instance cannot be in the Pending or Starting state. Otherwise, the new hostname and the configurations in `/etc/hosts` cannot take effect. You can call the [DescribeInstances](~~25506~~) operation to query the state of the instance.
+        /// *   After the hostname is modified, you must call the [RebootInstance](~~25502~~) operation for the new hostname to take effect.
         /// 
         /// The following limits apply to the hostnames of instances that run different operating systems:
         /// 
@@ -59,14 +68,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// The instance name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (.), underscores (\_), and hyphens (-).
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
@@ -88,41 +97,41 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
+        /// The instance password. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:
         /// 
         ///     ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/
         /// 
-        /// The password of a Windows instance cannot start with a forward slash (/).
+        /// The passwords of Windows instances cannot start with a forward slash (/).
         /// 
-        /// > If the `Password` parameter is specified, we recommend that you send requests over HTTPS to prevent password leaks.
+        /// > If you specify `Password`, we recommend that you send requests over HTTPS to prevent password leaks.
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// > This parameter is in invitational preview and unavailable for general users.
+        /// > This parameter is available to select users and unavailable for general users.
         /// </summary>
         [NameInMap("Recyclable")]
         [Validation(Required=false)]
         public bool? Recyclable { get; set; }
 
         /// <summary>
-        /// > This parameter is in invitational preview and unavailable for general users.
+        /// > This parameter is available to select users and unavailable for general users.
         /// </summary>
         [NameInMap("RemoteConnectionOptions")]
         [Validation(Required=false)]
         public ModifyInstanceAttributeRequestRemoteConnectionOptions RemoteConnectionOptions { get; set; }
         public class ModifyInstanceAttributeRequestRemoteConnectionOptions : TeaModel {
             /// <summary>
-            /// > This parameter is in invitational preview and unavailable for general users.
+            /// > This parameter is available to select users and unavailable for general users.
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
             public string Password { get; set; }
 
             /// <summary>
-            /// > This parameter is in invitational preview and unavailable for general users.
+            /// > This parameter is available to select users and unavailable for general users.
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -144,9 +153,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   All security group IDs must be unique.
         /// *   The instance is moved from the current security groups to the replacement security groups. If you want the instance to remain in the current security groups, you must add the IDs of the current security groups to the list.
         /// *   You can move the instance to security groups of a different type. However, the list cannot contain the IDs of both basic and advanced security groups.
-        /// *   The specified security group and instance must belong to the same virtual private cloud (VPC).
+        /// *   The specified security group and instance must belong to the same VPC.
         /// *   The valid values of N are based on the maximum number of security groups to which the instance can belong. For more information, see [Limits](~~25412#SecurityGroupQuota1~~).
-        /// *   New security groups become valid for corresponding instances after a short latency.
+        /// *   New security groups may take a moment to become valid.
         /// </summary>
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
@@ -155,7 +164,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The user data of the instance. User data must be encoded in Base64.
         /// 
-        /// The size of the user data cannot exceed 16 KB before it is encoded in Base64. We recommend that you do not pass in confidential information such as passwords and private keys in the plaintext format. If you must pass in confidential information, we recommend that you encrypt and Base64-encode the information before you pass it in. Then you can decode and decrypt the information in the same way within the instance.
+        /// The size of the user data must be no greater than 16 KB before it is encoded in Base64. We recommend that you do not pass in confidential information such as passwords and private keys in the plaintext format. If you must pass in confidential information, we recommend that you encrypt and Base64-encode the information before it is passed in. This allows you to decode and decrypt the information in the same way within the instance.
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

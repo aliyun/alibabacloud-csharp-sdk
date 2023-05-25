@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AttachNetworkInterfaceRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// 网卡指定的物理网卡索引。
+        /// The index of the network interface controller (NIC).
         /// 
-        /// >NetworkCardIndex 取值与实例规格族有关。如果实例规格不支持NetworkCard则不能指定；如果支持，取值请参见[实例规格族](~~25378~~)。
+        /// > The value of this parameter varies based on the instance family of the specified instance. If the instance type of the specified instance does not support NICs, leave this parameter empty. If the instance type of the specified instance supports NICs, set this parameter to a valid value. For information about the valid values of this parameter, see [Instance families](~~25378~~).
         /// </summary>
         [NameInMap("NetworkCardIndex")]
         [Validation(Required=false)]
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The ID of the trunk ENI.
         /// 
-        /// > This parameter is unavailable for use.
+        /// > This parameter is unavailable.
         /// </summary>
         [NameInMap("TrunkNetworkInstanceId")]
         [Validation(Required=false)]
         public string TrunkNetworkInstanceId { get; set; }
 
         /// <summary>
-        /// > This parameter is no longer used.
+        /// > This parameter is no longer supported.
         /// </summary>
         [NameInMap("WaitForNetworkConfigurationReady")]
         [Validation(Required=false)]

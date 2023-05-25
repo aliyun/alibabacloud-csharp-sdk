@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? DefaultVersionNumber { get; set; }
 
         /// <summary>
-        /// The ID of the launch template. You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.
+        /// The ID of the launch template. You must configure LaunchTemplateId or LaunchTemplateName to specify a launch template.
         /// </summary>
         [NameInMap("LaunchTemplateId")]
         [Validation(Required=false)]
         public string LaunchTemplateId { get; set; }
 
         /// <summary>
-        /// The name of the launch template. You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.
+        /// The name of the launch template. You must configure LaunchTemplateId or LaunchTemplateName to specify a launch template.
         /// </summary>
         [NameInMap("LaunchTemplateName")]
         [Validation(Required=false)]

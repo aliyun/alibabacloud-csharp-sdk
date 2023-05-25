@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotLinksResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about the snapshot chains.
+        /// The details about the snapshot chains.
         /// </summary>
         [NameInMap("SnapshotLinks")]
         [Validation(Required=false)]
@@ -42,16 +42,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink> SnapshotLink { get; set; }
             public class DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink : TeaModel {
                 /// <summary>
-                /// The category of the snapshot.
+                /// The type of the snapshot.
                 /// 
-                /// > This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.
+                /// > This parameter will be removed in the future. We recommend that you configure `InstantAccess` to ensure compatibility.
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -65,10 +65,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the instant access feature was enabled. Valid values:
+                /// Indicates whether the instant access feature is enabled. Valid values:
                 /// 
-                /// *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-                /// *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.
+                /// *   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
+                /// *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
                 /// </summary>
                 [NameInMap("InstantAccess")]
                 [Validation(Required=false)]
@@ -82,14 +82,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the snapshot chain.
+                /// The snapshot chain IDs.
                 /// </summary>
                 [NameInMap("SnapshotLinkId")]
                 [Validation(Required=false)]
                 public string SnapshotLinkId { get; set; }
 
                 /// <summary>
-                /// The ID of the source disk. This parameter is retained even if the source disk is deleted.
+                /// The source disk ID. This parameter is retained even if the source disk is deleted.
                 /// </summary>
                 [NameInMap("SourceDiskId")]
                 [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The total number of snapshot chains.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

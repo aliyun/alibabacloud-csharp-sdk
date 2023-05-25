@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// The access control policy of the security group. Valid values:
         /// 
         /// *   Accept: All instances in the security group can communicate with each other.
-        /// *   drop: All instances in the security group are isolated from each other.
+        /// *   Drop: All instances in the security group are isolated from each other.
         /// </summary>
         [NameInMap("InnerAccessPolicy")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSecurityGroupAttributeResponseBodyPermissionsPermission> Permission { get; set; }
             public class DescribeSecurityGroupAttributeResponseBodyPermissionsPermission : TeaModel {
                 /// <summary>
-                /// The time when the security group rule was created. The time is displayed in UTC.
+                /// The time at which the security group rule was created. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The destination CIDR blocks for outbound access control.
+                /// The destination CIDR block for outbound access control.
                 /// </summary>
                 [NameInMap("DestCidrIp")]
                 [Validation(Required=false)]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Ipv6SourceCidrIp { get; set; }
 
                 /// <summary>
-                /// The type of the network.
+                /// The network type.
                 /// </summary>
                 [NameInMap("NicType")]
                 [Validation(Required=false)]
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string SourceGroupOwnerAccount { get; set; }
 
                 /// <summary>
-                /// The source port number range.
+                /// The source port range.
                 /// </summary>
                 [NameInMap("SourcePortRange")]
                 [Validation(Required=false)]
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The region ID of the security group.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

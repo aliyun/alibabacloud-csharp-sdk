@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The billing method of the instances to be created by using the elasticity assurance. Set the value to PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.  
+        /// The billing method of the instance. Set the value to PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.
         /// 
         /// Default value: PostPaid.
         /// </summary>
@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The instance type to which the elasticity assurance applies.
+        /// The instance types.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page.
+        /// The number of entries to return on each page.
         /// 
         /// Maximum value: 100.
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token used to start the next query. Set the value to the NextToken value obtained from the response to the previous request.
+        /// The token used to start the query. Set the value to the NextToken value obtained from the response to the previous request.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -65,23 +65,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// >  This parameter is deprecated.
+        /// > This parameter is no longer used.
         /// </summary>
         [NameInMap("Platform")]
         [Validation(Required=false)]
         public string Platform { get; set; }
 
         /// <summary>
-        /// The region ID of the elasticity assurance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The ID of the region to which the elasticity assurance belongs. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the elasticity assurance belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.  
+        /// The ID of the resource group to which the snapshot belongs. When you use this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.
         /// 
-        /// >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+        /// > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -96,13 +96,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The state of the elasticity assurance. Valid values:
+        /// The state of the elasticity assurance to query. Valid values:
         /// 
-        /// - All: All states.
-        /// - Preparing: The elasticity assurance is being prepared.
-        /// - Prepared: The elasticity assurance is to take effect.
-        /// - Active: The elasticity assurance is in effect.
-        /// - Released: The elasticity assurance is released.
+        /// *   All: Queries the elasticity assurances in all states.
+        /// *   Preparing: The elasticity assurance is being prepared.
+        /// *   Prepared: Queries the elasticity assurances that have not taken effect.
+        /// *   Active: Queries the elasticity assurances that are in effect.
+        /// *   Released: Queries the elasticity assurances that are released.
         /// 
         /// Default value: Active.
         /// </summary>
@@ -111,23 +111,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// The tags that you want to query resources. You can specify a maximum of 20 tags.
+        /// The tags to use for the query.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeElasticityAssurancesRequestTag> Tag { get; set; }
         public class DescribeElasticityAssurancesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag of the elasticity assurance. You can specify multiple tag keys to query.
+            /// The key of the tag N. N is the identifier for the tag, which you can use to set and query the tag. Valid values of N: 1 to 20.
             /// 
-            /// If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+            /// If a single tag is specified to query resources, up to 1,000 resources with this tag are returned. If multiple tags are specified to query resources, up to 1,000 resources with all these tags are returned. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag of the elasticity assurance.
+            /// The value of a tag N. N is the identifier for the tag, which you can use to set and query the tag. Valid values of N: 1 to 20.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

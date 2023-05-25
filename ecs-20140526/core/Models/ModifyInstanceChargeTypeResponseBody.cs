@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance> FeeOfInstance { get; set; }
             public class ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance : TeaModel {
                 /// <summary>
-                /// The unit of currency used on the bill.
+                /// The unit of currency for the bill.
                 /// 
                 /// Alibaba Cloud China site (aliyun.com): CNY.
                 /// 
@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// The cost value.
+                /// The charged amount.
                 /// </summary>
                 [NameInMap("Fee")]
                 [Validation(Required=false)]
                 public string Fee { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the order.
+        /// The order ID.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

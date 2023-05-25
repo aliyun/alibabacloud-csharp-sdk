@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotMonitorDataRequest : TeaModel {
         /// <summary>
-        /// The type of the snapshot. Valid values:
+        /// The snapshot type. Valid values:
         /// 
         /// *   Standard: normal snapshot
         /// *   Flash: local snapshot
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   600
         /// *   3600
         /// 
-        /// Default value: 60
+        /// Default value: 60.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

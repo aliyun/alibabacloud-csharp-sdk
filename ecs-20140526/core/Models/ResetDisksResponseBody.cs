@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ResetDisksResponseBody : TeaModel {
         /// <summary>
-        /// The information about the rollback operations on one or more disks.
+        /// Details about the rollback operation.
         /// </summary>
         [NameInMap("OperationProgressSet")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<ResetDisksResponseBodyOperationProgressSetOperationProgress> OperationProgress { get; set; }
             public class ResetDisksResponseBodyOperationProgressSetOperationProgress : TeaModel {
                 /// <summary>
-                /// The error code that is returned if the request failed. This parameter is empty if the operation is successful.
+                /// The error code that is returned if the request failed. This parameter is empty if the request is successful.
                 /// 
                 /// For information about error codes and error messages, see [Service error codes](https://error-center.alibabacloud.com/status/product/Ecs).
                 /// </summary>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// The error message that is returned if the request failed. This parameter is empty if the operation is successful.
+                /// The error message that is returned if the request failed. This parameter is empty if the request is successful.
                 /// 
                 /// For information about error codes and error messages, see [Service error codes](https://error-center.alibabacloud.com/status/product/Ecs).
                 /// </summary>
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ErrorMsg { get; set; }
 
                 /// <summary>
-                /// Indicates whether the operation is successful. If the operation is successful, Success is returned. If the operation failed, an error code and an error message are returned.
+                /// Indicates whether the request is successful. If the request is successful, Success is returned. If the request failed, an error code and an error message are returned.
                 /// </summary>
                 [NameInMap("OperationStatus")]
                 [Validation(Required=false)]
                 public string OperationStatus { get; set; }
 
                 /// <summary>
-                /// The information about the resources.
+                /// Details about the resources.
                 /// </summary>
                 [NameInMap("RelatedItemSet")]
                 [Validation(Required=false)]
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem> RelatedItem { get; set; }
                     public class ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem : TeaModel {
                         /// <summary>
-                        /// The name of the resource.
+                        /// The resource name.
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// The ID of the resource.
+                        /// The resource ID.
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]

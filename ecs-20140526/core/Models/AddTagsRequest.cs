@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the resource on which you want to add or overwrite tags. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource. When ResourceType is set to instance, this parameter can be interpreted as InstanceId.
+        /// The ID of the resource. When the resources are instances, this parameter can be interpreted as InstanceId.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   reservedinstance: reserved instance
         /// *   snapshotpolicy: automatic snapshot policy
         /// 
-        /// All these values are lowercase.
+        /// All values must be lowercase.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

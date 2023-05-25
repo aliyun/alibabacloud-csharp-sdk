@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceHistoryEventsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the instance system events.
+        /// Details about historical system events of the instance.
         /// </summary>
         [NameInMap("InstanceSystemEventSet")]
         [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string HostType { get; set; }
 
                     /// <summary>
-                    /// Details about the inactive cloud disks or local disks that have been released and must be cleared.
+                    /// Details about the inactive disks that have been released and must be cleared.
                     /// </summary>
                     [NameInMap("InactiveDisks")]
                     [Validation(Required=false)]
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             /// *   cloud: basic disk
                             /// *   cloud_efficiency: ultra disk
                             /// *   cloud_ssd: standard SSD
-                            /// *   cloud_essd: enhanced SSD (ESSD) cloud_auto: ESSD AutoPL disk
+                            /// *   cloud_essd: enhanced SSD (ESSD)
                             /// *   local_ssd_pro: I/O-intensive local disk.
                             /// *   local_hdd_pro: throughput-intensive local disk
                             /// *   ephemeral: retired local disk
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The scheduled start time of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                /// The start time of the scheduled execution of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("NotBefore")]
                 [Validation(Required=false)]
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Reason { get; set; }
 
                 /// <summary>
-                /// The type of the resource. Valid values:
+                /// The type of a resource. Valid values:
                 /// 
                 /// *   instance: ECS instance
                 /// *   ddh: dedicated host

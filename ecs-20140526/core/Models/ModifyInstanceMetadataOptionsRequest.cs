@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Specifies whether to enable the access channel for instance metadata. Valid values:
         /// 
-        /// *   enabled: enables the access channel for instance metadata.
-        /// *   disabled: disables the access channel for instance metadata.
+        /// *   enabled
+        /// *   disabled
         /// 
         /// Default value: enabled.
         /// 
@@ -24,17 +24,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string HttpEndpoint { get; set; }
 
         /// <summary>
-        /// > This parameter is in invitational preview and is unavailable to general users.
+        /// > This parameter is in invitational preview and is not publicly available.
         /// </summary>
         [NameInMap("HttpPutResponseHopLimit")]
         [Validation(Required=false)]
         public int? HttpPutResponseHopLimit { get; set; }
 
         /// <summary>
-        /// Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:
+        /// Specifies whether to forcibly use the security hardening mode (IMDSv2) to access instance metadata. Valid values:
         /// 
-        /// *   optional: does not forcefully use the security-enhanced mode (IMDSv2).
-        /// *   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
+        /// *   optional: does not forcibly use the security hardening mode (IMDSv2).
+        /// *   required: forcibly uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
         /// 
         /// Default value: optional.
         /// 
@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// > This parameter is in invitational preview and is not publicly available.
+        /// </summary>
         [NameInMap("InstanceMetadataTags")]
         [Validation(Required=false)]
         public string InstanceMetadataTags { get; set; }
@@ -60,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

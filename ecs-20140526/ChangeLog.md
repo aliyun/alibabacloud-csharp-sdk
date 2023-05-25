@@ -1,3 +1,6 @@
+2023-05-25 Version: 3.0.6
+- DescribeDemands add PrivatePoolId.
+
 2023-04-17 Version: 3.0.5
 - Add ModifyDiskDeployment.
 

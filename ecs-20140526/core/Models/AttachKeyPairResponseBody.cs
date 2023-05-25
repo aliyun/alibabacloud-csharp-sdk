@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AttachKeyPairResponseBody : TeaModel {
         /// <summary>
-        /// The number of instances to which the key pair fails to be attached.
+        /// The number of instances to which the key pair fails to be bound.
         /// </summary>
         [NameInMap("FailCount")]
         [Validation(Required=false)]
         public string FailCount { get; set; }
 
         /// <summary>
-        /// The name of the key pair.
+        /// The names of the key pairs.
         /// </summary>
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// Indicates whether the operation was successful.
+                /// Indicates whether the request was successful.
                 /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The total number of instances to which the SSH key pair is attached.
+        /// The total number of instances to which the SSH key pair is bound.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

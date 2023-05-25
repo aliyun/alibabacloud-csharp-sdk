@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyCapacityReservationRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class ModifyCapacityReservationRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// The ID of the capacity reservation.
+            /// The capacity reservation ID.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+            /// The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The description of the capacity reservation. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+        /// The description of the capacity reservation. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -46,17 +46,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The release mode of the capacity reservation. Valid values:
         /// 
-        /// *   Limited: The capacity reservation is released at the specified time. You must also specify the `EndTime` parameter.
-        /// *   Unlimited: You must manually release the capacity reservation. You can release capacity reservations at any time.
+        /// *   Limited: The capacity reservation is automatically released at the specified point in time. If you configure this parameter, you must also configure `EndTime`.
+        /// *   Unlimited: The capacity reservation must be manually released. You can release it anytime.
         /// </summary>
         [NameInMap("EndTimeType")]
         [Validation(Required=false)]
         public string EndTimeType { get; set; }
 
         /// <summary>
-        /// The total number of instances reserved by the capacity reservation. Valid values: the number of created instances to 1000.
+        /// The total number of instances for which capacity is reserved. Valid values: the number of used instances to 1000.
         /// 
-        /// >  When you increase the number of instances reserved, the increase may fail due to insufficient resources.
+        /// > When you increase the number of instances, the increase may fail due to insufficient resources.
         /// </summary>
         [NameInMap("InstanceAmount")]
         [Validation(Required=false)]
@@ -71,12 +71,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The operating system type of the instance reserved. Valid values:
+        /// The operating system of the image used by the instance. Valid values:
         /// 
-        /// *   Windows: Windows Server operating systems
-        /// *   Linux: Linux and Unix-like operating systems
+        /// *   Windows
+        /// *   Linux
         /// 
-        /// >  This parameter is unavailable.
+        /// > This parameter is unavailable.
         /// </summary>
         [NameInMap("Platform")]
         [Validation(Required=false)]
@@ -98,9 +98,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The effective mode of the capacity reservation. The capacity reservation can be set only to take effect immediately. You do not need to pass in a value for the parameter.
+        /// The mode in which the capacity reservation takes effect. Only immediate capacity reservations are supported. You do not need to specify a value for this parameter.
         /// 
-        /// >  The capacity reservation takes effect immediately when this parameter is left empty.
+        /// > If you do not specify a value for this parameter, the capacity reservation immediately takes effect.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

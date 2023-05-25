@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Valid values:
+        /// Specifies whether to check the validity of the request without actually making the request. Valid values:
         /// 
-        /// *   true: performs a dry run. The system checks the required parameters, request format, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   false: performs a dry run and sends the request. If the request passes the dry run, the operation is performed.
+        /// *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   false: performs a dry run and performs the actual request. If the request passes the dry run, the rollback operation is performed.
         /// 
-        /// Default value: false.
+        /// Default value: false
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]

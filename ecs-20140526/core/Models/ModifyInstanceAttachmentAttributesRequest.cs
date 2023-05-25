@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// The match mode of the private pool. Valid values:
             /// 
             /// *   Open: open private pool. The system matches the instance with open private pools.
-            /// *   Target: specified private pool. You must use `PrivatePoolOptions.Id` to specify the ID of a private pool.
+            /// *   Target: specified private pool. You must set the `PrivatePoolOptions.Id` parameter to specify the ID of a private pool.
             /// *   None: no private pool. The instance starts normally without using private pools.
             /// </summary>
             [NameInMap("MatchCriteria")]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the private pool. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+        /// The region ID of the private pool. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

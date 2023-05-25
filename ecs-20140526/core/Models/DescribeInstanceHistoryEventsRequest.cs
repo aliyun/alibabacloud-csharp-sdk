@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeInstanceHistoryEventsRequestEventPublishTime EventPublishTime { get; set; }
         public class DescribeInstanceHistoryEventsRequestEventPublishTime : TeaModel {
             /// <summary>
-            /// The end of the time range in which to query published system events. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// The end time of the query for published system events. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
             /// </summary>
             [NameInMap("End")]
             [Validation(Required=false)]
             public string End { get; set; }
 
             /// <summary>
-            /// The beginning of the time range in which to query published system events. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// The start time of the query for published system events. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
             /// </summary>
             [NameInMap("Start")]
             [Validation(Required=false)]
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeInstanceHistoryEventsRequestNotBefore NotBefore { get; set; }
         public class DescribeInstanceHistoryEventsRequestNotBefore : TeaModel {
             /// <summary>
-            /// The end time of the scheduled execution period for the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+            /// The end time of the scheduled execution of the system event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
             /// </summary>
             [NameInMap("End")]
             [Validation(Required=false)]
             public string End { get; set; }
 
             /// <summary>
-            /// The start time of the scheduled execution period for the system event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// The start time of the scheduled execution of the system event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
             /// </summary>
             [NameInMap("Start")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EventCycleStatus { get; set; }
 
         /// <summary>
-        /// The ID of system event N. Valid values of N: 1 to 100. Specify multiple event IDs in the repeated list form.
+        /// An array that consists of the IDs of system events. Valid values of N: 1 to 100. Specify multiple event IDs in the repeated list form.
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
@@ -77,15 +77,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
         /// *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
         /// *   SystemFailure.Reboot: The instance is restarted due to a system failure.
-        /// *   SystemFailure.Redeploy: The instance is redeployed due to a system failure.
+        /// *   SystemFailure.Redeploy: The instance is redeployed due to a system error.
         /// *   SystemFailure.Delete: The instance is released due to an instance creation failure.
-        /// *   InstanceFailure.Reboot: The instance is restarted due to an instance failure.
+        /// *   InstanceFailure.Reboot: The instance is restarted due to an instance error.
         /// *   InstanceExpiration.Stop: The instance is stopped due to subscription expiration.
         /// *   InstanceExpiration.Delete: The instance is released due to subscription expiration.
         /// *   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.
         /// *   AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.
         /// 
-        /// > For more information, see [Overview](~~66574~~). The values of this parameter are applicable only to instance system events, but not to disk system events.
+        /// > For more information, see [Overview](~~66574~~). The values of this parameter are applicable only to instance-level system events, but not to disk-level system events.
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImpactLevel { get; set; }
 
         /// <summary>
-        /// The lifecycle state of system event N. Valid values of N: 1 to 7. Specify multiple states in the repeated list form. Valid values:
+        /// An array that consists of the lifecycle states of system events. Valid values of N: 1 to 7. Specify multiple states in the repeated list form. Valid values:
         /// 
         /// *   Scheduled
         /// *   Avoided
@@ -118,10 +118,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
         /// *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
-        /// *   SystemFailure.Reboot: The instance is restarted due to a system failure.
-        /// *   SystemFailure.Redeploy: The instance is redeployed due to a system failure.
+        /// *   SystemFailure.Reboot: The instance is restarted due to a system error.
+        /// *   SystemFailure.Redeploy: The instance is redeployed due to a system error.
         /// *   SystemFailure.Delete: The instance is released due to an instance creation failure.
-        /// *   InstanceFailure.Reboot: The instance is restarted due to an instance failure.
+        /// *   InstanceFailure.Reboot: The instance is restarted due to an instance error.
         /// *   InstanceExpiration.Stop: The instance is stopped due to subscription expiration.
         /// *   InstanceExpiration.Delete: The instance is released due to subscription expiration.
         /// *   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags that are supported by system events.
+        /// An array that consists of the tags that are supported by system events.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

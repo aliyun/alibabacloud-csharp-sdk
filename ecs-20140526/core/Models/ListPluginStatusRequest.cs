@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ListPluginStatusRequest : TeaModel {
         /// <summary>
-        /// The IDs of ECS instances. You can specify up to 50 instance IDs in each request.
+        /// The instance IDs. You can specify up to 50 instance IDs in a request. Valid values of N: 1 to 50.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -19,11 +19,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.
         /// 
-        /// * If this parameter is not specified, the states of all Cloud Assistant plug-ins that are installed on the specified ECS instances are queried.
+        /// *   If this parameter is not specified, the states of all Cloud Assistant plug-ins that are installed on the specified ECS instances are queried.
         /// 
-        ///     > If this parameter is not specified, only a single instance ID can be specified.
+        ///     **
         /// 
-        /// * If this parameter is specified, the state of the specified Cloud Assistant plug-in is queried.
+        ///     **Note**If this parameter is not specified, only a single instance ID can be specified.
+        /// 
+        /// *   If this parameter is specified, the state of the specified Cloud Assistant plug-in is queried.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number of the returned page.
         /// 
         /// *   Pages start from page 1.
         /// *   Default value: 1.
@@ -50,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The number of entries to return on each page.
         /// 
-        /// *   Maximum value: 50.
+        /// *   Valid values: 1 to 50.
         /// *   Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the ECS instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

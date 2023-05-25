@@ -16,8 +16,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// The type of the private pool to generate after the capacity reservation takes effect. Valid values:
             /// 
-            /// *   Open: open private pool.
-            /// *   Target: targeted private pool.
+            /// *   Open: open private pool
+            /// *   Target: targeted private pool
             /// 
             /// Default value: Open.
             /// </summary>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MatchCriteria { get; set; }
 
             /// <summary>
-            /// The name of the capacity reservation. The description must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+            /// The capacity reservation name. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -60,22 +60,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The release mode of the capacity reservation. Valid values:
         /// 
-        /// *   Limited: The capacity reservation is automatically released at the specified time. If you specify this parameter, you must also specify the `EndTime` parameter.
-        /// *   Unlimited: The capacity reservation must be manually released. You can release it anytime.
+        /// *   Limited: The capacity reservation is automatically released at a specified time. If you specify this parameter, you must specify the `EndTime` parameter.
+        /// *   Unlimited: The capacity reservation is manually released. The capacity reservation can be released anytime.
         /// </summary>
         [NameInMap("EndTimeType")]
         [Validation(Required=false)]
         public string EndTimeType { get; set; }
 
         /// <summary>
-        /// The total number of instances for which to reserve the capacity of an instance type.
+        /// The total number of instances for which the capacity of an instance type is reserved.
         /// </summary>
         [NameInMap("InstanceAmount")]
         [Validation(Required=false)]
         public int? InstanceAmount { get; set; }
 
         /// <summary>
-        /// The instance type. A capacity reservation can be created to reserve the capacity of only a single instance type. You can call the [DescribeInstanceTypes](~~25620~~) operation to query the instance types provided by ECS.
+        /// The instance type. You can create a capacity reservation to reserve the capacity of only one instance type. You can call the [DescribeInstanceTypes](~~25620~~) operation to query the instance types provided by ECS.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -90,28 +90,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The operating system of the image used by the instance. This parameter corresponds to the `Platform` parameter of regional reserved instances. If the operating system of a capacity reservation matches that of a regional reserved instance, the regional reserved instance can be applied to offset bills of the unused capacity of the capacity reservation. Valid values:
+        /// The operating system of the image used by the instance. This parameter corresponds to the `Platform` parameter of regional reserved instances. If the operating system of a capacity reservation matches the operating system of a regional reserved instance, you can apply the regional reserved instance to offset fees of the unused capacity of the capacity reservation. Valid values:
         /// 
-        /// *   Windows: Windows Server operating system.
-        /// *   Linux: Linux and UNIX-like operating system.
+        /// *   Windows: Windows Server operating system
+        /// *   Linux: Linux and UNIX-like operating system
         /// 
         /// Default value: Linux.
         /// 
-        /// > This parameter is unavailable for public use.
+        /// > This parameter is unavailable.
         /// </summary>
         [NameInMap("Platform")]
         [Validation(Required=false)]
         public string Platform { get; set; }
 
         /// <summary>
-        /// The ID of the region in which to create the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+        /// The ID of the region in which to create the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which to assign the capacity reservation.
+        /// The ID of the resource group to which you want to assign the capacity reservation.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -126,9 +126,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The time when the capacity reservation takes effect. The CreateCapacityReservation operation can be called to create only immediate capacity reservations.
+        /// The mode in which the capacity reservation takes effect. You can call the CreateCapacityReservation operation to create only immediate capacity reservations.
         /// 
-        /// >  If you do not specify this parameter, the capacity reservation takes effect immediately.
+        /// > If you do not specify this parameter, the capacity reservation immediately takes effect.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -142,14 +142,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<CreateCapacityReservationRequestTag> Tag { get; set; }
         public class CreateCapacityReservationRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N to add to the capacity reservation. Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
+            /// The key of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
+            /// The value of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the zone in which to create the capacity reservation. A capacity reservation can reserve resources within only a single zone.
+        /// The ID of the zone in which you want to create the capacity reservation. A capacity reservation can reserve resources within only one zone.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

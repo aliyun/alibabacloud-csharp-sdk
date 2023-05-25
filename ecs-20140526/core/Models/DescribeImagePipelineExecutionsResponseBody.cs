@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelineExecutionsResponseBody : TeaModel {
         /// <summary>
-        /// Details of the image build task.
+        /// The details of the image creation task.
         /// </summary>
         [NameInMap("ImagePipelineExecution")]
         [Validation(Required=false)]
@@ -21,21 +21,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet> ImagePipelineExecutionSet { get; set; }
             public class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet : TeaModel {
                 /// <summary>
-                /// The time when the image build task was created.
+                /// The time when the image creation task was created.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The ID of the image build task.
+                /// The ID of the image creation task.
                 /// </summary>
                 [NameInMap("ExecutionId")]
                 [Validation(Required=false)]
                 public string ExecutionId { get; set; }
 
                 /// <summary>
-                /// The ID of the image to be created by using the image build task.
+                /// The ID of the image.
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ImagePipelineId { get; set; }
 
                 /// <summary>
-                /// The execution result of the image build task.
+                /// The data that is returned.
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// The last time when the image build task was updated.
+                /// The last modification time of the image creation task.
                 /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
@@ -70,22 +70,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The status of the image build task. Valid values:
+                /// The status of the image creation task. Valid values:
                 /// 
-                /// *   BUILDING: The image was being built.
-                /// *   DISTRIBUTING: The image was being distributed.
-                /// *   RELEASING: The image was being recycled.
-                /// *   SUCCESS: The image was built.
-                /// *   FAILED: The image failed to be built.
-                /// *   CANCELLING: The image build task was being canceled.
-                /// *   CANCELLED: The image build task was cancelled.
+                /// *   BUILDING
+                /// *   DISTRIBUTING
+                /// *   RELEASING
+                /// *   SUCCESS
+                /// *   FAILED
+                /// *   CANCELLING
+                /// *   CANCELED
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The list of tag key-value pairs.
+                /// > This parameter is unavailable.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -96,14 +96,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag> Tag { get; set; }
                     public class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the tag.
+                        /// > This parameter is unavailable.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The value of the tag.
+                        /// > This parameter is unavailable.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -118,14 +118,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The maximum number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The query token returned in this call. For information about how to use this return value, see the Description section in this topic.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. For information about how to use the returned value, see the "Usage notes" section in this topic.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

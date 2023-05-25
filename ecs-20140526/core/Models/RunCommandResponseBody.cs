@@ -9,22 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RunCommandResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the command.
-        /// </summary>
         [NameInMap("CommandId")]
         [Validation(Required=false)]
         public string CommandId { get; set; }
 
-        /// <summary>
-        /// The ID of the command execution.
-        /// </summary>
         [NameInMap("InvokeId")]
         [Validation(Required=false)]
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// 58928
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

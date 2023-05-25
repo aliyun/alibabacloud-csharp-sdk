@@ -10,31 +10,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DetachDiskRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to automatically release the system disk when the instance from which the system disk is to be detached is released. Valid values:
+        /// Specifies whether to release the system disk when the instance from which you want to detach the system disk is released. Valid values:
         /// 
-        /// *   true: The system disk is released when the instance is released.
-        /// *   false: The system disk is not released when the instance is released. The system disk is retained as a pay-as-you-go data disk.
+        /// *   true: releases the system disk when the instance is released.
+        /// *   false: does not release the system disk when the instance is released. The system disk is retained as a pay-as-you-go data disk.
         /// 
         /// Default value: true.
         /// 
-        /// Take note of the following items:
+        /// If you specify this parameter, take note of the following items:
         /// 
-        /// *   This parameter cannot be set for disks for which the multi-attach feature is enabled.
-        /// *   If a data disk is to be detached, the default value is `false`.
+        /// *   You cannot specify this parameter for disks for which the multi-attach feature is enabled.
+        /// *   If you detach a data disk, the default value of this parameter is `false`.
         /// </summary>
         [NameInMap("DeleteWithInstance")]
         [Validation(Required=false)]
         public bool? DeleteWithInstance { get; set; }
 
         /// <summary>
-        /// The ID of the disk to be detached.
+        /// The ID of the disk that you want to detach.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
         /// <summary>
-        /// The ID of the ECS instance from which to detach the disk.
+        /// The ID of the ECS instance from which you want to detach the disk.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
