@@ -141,23 +141,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 [Validation(Required=false)]
                 public string GmtStartTime { get; set; }
 
-                /// <summary>
-                /// Pod Ip
-                /// </summary>
                 [NameInMap("Ip")]
                 [Validation(Required=false)]
                 public string Ip { get; set; }
 
-                /// <summary>
-                /// Pod Id
-                /// </summary>
                 [NameInMap("PodId")]
                 [Validation(Required=false)]
                 public string PodId { get; set; }
 
-                /// <summary>
-                /// Pod UId
-                /// </summary>
                 [NameInMap("PodUid")]
                 [Validation(Required=false)]
                 public string PodUid { get; set; }
@@ -188,9 +179,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [Validation(Required=false)]
             public string PodId { get; set; }
 
-            /// <summary>
-            /// Pod UId
-            /// </summary>
             [NameInMap("PodUid")]
             [Validation(Required=false)]
             public string PodUid { get; set; }

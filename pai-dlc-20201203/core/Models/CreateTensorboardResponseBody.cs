@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class CreateTensorboardResponseBody : TeaModel {
-        /// <summary>
-        /// DataSourceId
-        /// </summary>
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
@@ -24,9 +21,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// Tensorboard id
-        /// </summary>
         [NameInMap("TensorboardId")]
         [Validation(Required=false)]
         public string TensorboardId { get; set; }

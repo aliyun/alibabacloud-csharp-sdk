@@ -17,9 +17,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        /// <summary>
-        /// JobId
-        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
@@ -56,9 +53,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        /// <summary>
-        /// TensorboardId
-        /// </summary>
         [NameInMap("TensorboardId")]
         [Validation(Required=false)]
         public string TensorboardId { get; set; }

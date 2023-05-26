@@ -612,11 +612,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return await DeleteTensorboardWithOptionsAsync(TensorboardId, request, headers, runtime);
         }
 
-        public GetJobResponse GetJobWithOptions(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetJobResponse GetJobWithOptions(string JobId, GetJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedDetail))
+            {
+                query["NeedDetail"] = request.NeedDetail;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -633,11 +640,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return TeaModel.ToObject<GetJobResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GetJobResponse> GetJobWithOptionsAsync(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetJobResponse> GetJobWithOptionsAsync(string JobId, GetJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedDetail))
+            {
+                query["NeedDetail"] = request.NeedDetail;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -654,18 +668,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             return TeaModel.ToObject<GetJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetJobResponse GetJob(string JobId)
+        public GetJobResponse GetJob(string JobId, GetJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetJobWithOptions(JobId, headers, runtime);
+            return GetJobWithOptions(JobId, request, headers, runtime);
         }
 
-        public async Task<GetJobResponse> GetJobAsync(string JobId)
+        public async Task<GetJobResponse> GetJobAsync(string JobId, GetJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetJobWithOptionsAsync(JobId, headers, runtime);
+            return await GetJobWithOptionsAsync(JobId, request, headers, runtime);
         }
 
         public GetJobEventsResponse GetJobEventsWithOptions(string JobId, GetJobEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
