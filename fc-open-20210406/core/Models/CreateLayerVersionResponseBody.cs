@@ -10,28 +10,25 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class CreateLayerVersionResponseBody : TeaModel {
         /// <summary>
-        /// The access mode of the layer.
+        /// Creates a layer version.
         /// </summary>
         [NameInMap("acl")]
         [Validation(Required=false)]
         public int? Acl { get; set; }
 
-        /// <summary>
-        /// The name of the layer.
-        /// </summary>
         [NameInMap("arn")]
         [Validation(Required=false)]
         public string Arn { get; set; }
 
         /// <summary>
-        /// The information about the layer code package.
+        /// The access mode of the layer.
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public OutputCodeLocation Code { get; set; }
 
         /// <summary>
-        /// The checksum of the layer code package.
+        /// Example 1
         /// </summary>
         [NameInMap("codeChecksum")]
         [Validation(Required=false)]
@@ -45,35 +42,35 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public long? Codesize { get; set; }
 
         /// <summary>
-        /// The list of runtime environments that are supported by the layer.
+        /// Luoni
         /// </summary>
         [NameInMap("compatibleRuntime")]
         [Validation(Required=false)]
         public List<string> CompatibleRuntime { get; set; }
 
         /// <summary>
-        /// The time when the layer version was created. The time follows the **yyyy-MM-ddTHH:mm:ssZ** format.
+        /// Creates a layer version.
         /// </summary>
         [NameInMap("createTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// The description of the layer version.
+        /// The name of the layer.
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the layer.
+        /// The list of runtime environments that are supported by the layer.
         /// </summary>
         [NameInMap("layerName")]
         [Validation(Required=false)]
         public string LayerName { get; set; }
 
         /// <summary>
-        /// The version of the layer.
+        /// The time when the layer version was created. The time follows the **yyyy-MM-ddTHH:mm:ssZ** format.
         /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]

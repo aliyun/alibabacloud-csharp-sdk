@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class ListStatefulAsyncInvocationFunctionsResponseBody : TeaModel {
         /// <summary>
-        /// The details of returned data.
+        /// The trace ID of the request for Function Compute API.
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<AsyncConfigMeta> Data { get; set; }
 
         /// <summary>
-        /// The token used to obtain more results. If this parameter is left empty, all the results are returned.
+        /// 2022-01-28 18:04:38
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]

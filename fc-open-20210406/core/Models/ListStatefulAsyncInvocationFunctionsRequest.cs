@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class ListStatefulAsyncInvocationFunctionsRequest : TeaModel {
         /// <summary>
-        /// The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
+        /// The latest version of Function Compute API.
         /// </summary>
         [NameInMap("limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// The starting position of the query. If this parameter is left empty, the query starts from the beginning. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
+        /// Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]

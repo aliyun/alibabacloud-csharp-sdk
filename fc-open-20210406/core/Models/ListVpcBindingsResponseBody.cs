@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class ListVpcBindingsResponseBody : TeaModel {
-        /// <summary>
-        /// The IDs of bound VPCs.
-        /// </summary>
         [NameInMap("vpcIds")]
         [Validation(Required=false)]
         public List<string> VpcIds { get; set; }

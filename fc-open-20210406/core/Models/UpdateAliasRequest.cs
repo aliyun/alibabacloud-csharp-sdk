@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class UpdateAliasRequest : TeaModel {
         /// <summary>
-        /// The canary release version to which the alias points and the weight of the canary release version.
+        /// The additional version to which the alias points and the weight of the additional version.
         /// 
-        /// *   The canary release version takes effect only when the function is invoked.
+        /// *   The additional version takes effect only when the function is invoked.
         /// *   The value consists of a version number and a specific weight. For example, 2:0.05 indicates that when a function is invoked, Version 2 is the canary release version, 5% of the traffic is distributed to the canary release version, and 95% of the traffic is distributed to the major version.
         /// </summary>
         [NameInMap("additionalVersionWeight")]

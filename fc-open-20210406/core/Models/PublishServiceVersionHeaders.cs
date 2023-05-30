@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string XFcDate { get; set; }
 
         /// <summary>
-        /// The trace ID of the invocation request of Function Compute.
+        /// 2020-12-1210:00:00
         /// </summary>
         [NameInMap("X-Fc-Trace-Id")]
         [Validation(Required=false)]

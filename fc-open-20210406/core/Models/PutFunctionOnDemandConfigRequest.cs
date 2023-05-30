@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class PutFunctionOnDemandConfigRequest : TeaModel {
         /// <summary>
-        /// The maximum number of on-demand instances. For more information, see [Instance scaling limits](~~185038~~).
+        /// The maximum number of instances.
         /// </summary>
         [NameInMap("maximumInstanceCount")]
         [Validation(Required=false)]
         public long? MaximumInstanceCount { get; set; }
 
         /// <summary>
-        /// The alias of the service or LATEST.
+        /// The trace ID of the request for Function Compute API, which is also the unique ID of the request.
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]

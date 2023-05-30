@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class CreateAliasRequest : TeaModel {
         /// <summary>
-        /// The canary release version to which the alias points and the weight of the canary release version.
+        /// The additional version to which the alias points and the weight of the additional version.
         /// 
-        /// *   The canary release version takes effect only when the function is invoked.
+        /// *   The additional version takes effect only when the function is invoked.
         /// *   The value consists of a version number and a specific weight. For example, 2:0.05 indicates that when a function is invoked, Version 2 is the canary release version, 5% of the traffic is distributed to the canary release version, and 95% of the traffic is distributed to the major version.
         /// </summary>
         [NameInMap("additionalVersionWeight")]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public Dictionary<string, float?> AdditionalVersionWeight { get; set; }
 
         /// <summary>
-        /// The name of the alias.  The name contains only letters, digits, hyphens (-), and underscores (\_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).  The name cannot be **LATEST**.
+        /// The name of the alias. The name can contain letters, digits, underscores (\_), and hyphens (-) only. The name cannot start with a digit or a hyphen (-). The name must be 1 to 128 characters in length. The name cannot be set to **LATEST**
         /// </summary>
         [NameInMap("aliasName")]
         [Validation(Required=false)]

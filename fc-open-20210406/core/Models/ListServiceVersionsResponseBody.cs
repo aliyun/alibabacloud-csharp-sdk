@@ -10,52 +10,47 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class ListServiceVersionsResponseBody : TeaModel {
         /// <summary>
-        /// The order in which the returned versions are sorted. Valid values:
-        ///   - **FORWARD**: in ascending order. 
-        ///   - **BACKWARD**: in descending order. This is the default value.
+        /// The information about the version.
         /// </summary>
         [NameInMap("direction")]
         [Validation(Required=false)]
         public string Direction { get; set; }
 
         /// <summary>
-        /// The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
+        /// $.parameters[9].schema.description
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The list of versions.
+        /// $.parameters[9].schema.enumValueTitles
         /// </summary>
         [NameInMap("versions")]
         [Validation(Required=false)]
         public List<ListServiceVersionsResponseBodyVersions> Versions { get; set; }
         public class ListServiceVersionsResponseBodyVersions : TeaModel {
             /// <summary>
-            /// The time when the service version was created.
+            /// $.parameters[10].schema.enumValueTitles
             /// </summary>
             [NameInMap("createdTime")]
             [Validation(Required=false)]
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// The description of the service version.
+            /// Queries all the versions of a service.
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The time when the service version was last modified.
+            /// Xiaoqi
             /// </summary>
             [NameInMap("lastModifiedTime")]
             [Validation(Required=false)]
             public string LastModifiedTime { get; set; }
 
-            /// <summary>
-            /// The version of the service.
-            /// </summary>
             [NameInMap("versionId")]
             [Validation(Required=false)]
             public string VersionId { get; set; }

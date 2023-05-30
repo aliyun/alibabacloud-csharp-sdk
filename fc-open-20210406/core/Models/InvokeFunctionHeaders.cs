@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string XFcLogType { get; set; }
 
+        [NameInMap("X-Fc-Stateful-Async-Invocation-Enable")]
+        [Validation(Required=false)]
+        public string XFcStatefulAsyncInvocationEnable { get; set; }
+
         /// <summary>
         /// The ID of the asynchronous task. You must enable the asynchronous task feature in advance.
         /// 

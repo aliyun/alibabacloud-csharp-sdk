@@ -14,21 +14,21 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// The ID of your Alibaba Cloud account.
+        /// The name of the service.
         /// </summary>
         [NameInMap("X-Fc-Account-Id")]
         [Validation(Required=false)]
         public string XFcAccountId { get; set; }
 
         /// <summary>
-        /// The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+        /// The creation time.
         /// </summary>
         [NameInMap("X-Fc-Date")]
         [Validation(Required=false)]
         public string XFcDate { get; set; }
 
         /// <summary>
-        /// The trace ID of the invocation request of Function Compute.
+        /// The maximum number of retries allowed after an asynchronous invocation fails. Default value: 3. Valid values: 0 to 8.
         /// </summary>
         [NameInMap("X-Fc-Trace-Id")]
         [Validation(Required=false)]

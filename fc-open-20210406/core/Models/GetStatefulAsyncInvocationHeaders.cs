@@ -14,48 +14,42 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// The ID of your Alibaba Cloud account.
+        /// The list of events that trigger the asynchronous task.
         /// </summary>
         [NameInMap("X-Fc-Account-Id")]
         [Validation(Required=false)]
         public string XFcAccountId { get; set; }
 
         /// <summary>
-        /// The CRC-64 value of the function code package. This value is used to check data integrity. The value is automatically calculated by the tool.
+        /// The structure of the asynchronous task.
         /// </summary>
         [NameInMap("X-Fc-Code-Checksum")]
         [Validation(Required=false)]
         public string XFcCodeChecksum { get; set; }
 
         /// <summary>
-        /// The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+        /// Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.
         /// </summary>
         [NameInMap("X-Fc-Date")]
         [Validation(Required=false)]
         public string XFcDate { get; set; }
 
         /// <summary>
-        /// The invocation method. 
-        /// 
-        /// - **Sync**: synchronous invocation 
-        /// - **Async**: asynchronous invocation
+        /// StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
         /// </summary>
         [NameInMap("X-Fc-Invocation-Type")]
         [Validation(Required=false)]
         public string XFcInvocationType { get; set; }
 
         /// <summary>
-        /// The method used to return logs. Valid values: 
-        /// 
-        /// - **Tail**: returns the last 4 KB of logs that are generated for the current request. 
-        /// - **None**: does not return logs for the current request. This is the default value.
+        /// The latest version of Function Compute API.
         /// </summary>
         [NameInMap("X-Fc-Log-Type")]
         [Validation(Required=false)]
         public string XFcLogType { get; set; }
 
         /// <summary>
-        /// The trace ID of the invocation request of Function Compute.
+        /// You can search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
         /// </summary>
         [NameInMap("X-Fc-Trace-Id")]
         [Validation(Required=false)]

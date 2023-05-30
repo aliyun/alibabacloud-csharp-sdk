@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public string XFcAccountId { get; set; }
 
         /// <summary>
-        /// The start time when the function is invoked. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+        /// The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
         /// </summary>
         [NameInMap("X-Fc-Date")]
         [Validation(Required=false)]

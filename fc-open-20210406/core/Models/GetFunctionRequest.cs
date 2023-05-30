@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class GetFunctionRequest : TeaModel {
         /// <summary>
-        /// The version or alias of the service.
+        /// The ID of your Alibaba Cloud account.
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]

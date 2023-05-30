@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class PublishServiceVersionResponseBody : TeaModel {
         /// <summary>
-        /// The time when the service version was created.
+        /// The returned data.
         /// </summary>
         [NameInMap("createdTime")]
         [Validation(Required=false)]
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// The description of the service version.
+        /// The creation time.
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The time when the service version was last modified.
+        /// The description of the service version.
         /// </summary>
         [NameInMap("lastModifiedTime")]
         [Validation(Required=false)]
         public string LastModifiedTime { get; set; }
 
         /// <summary>
-        /// The version of the service.
+        /// The last update time.
         /// </summary>
         [NameInMap("versionId")]
         [Validation(Required=false)]

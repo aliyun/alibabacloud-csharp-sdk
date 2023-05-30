@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// The ID of your Alibaba Cloud account.
+        /// Queries the available instances of a function.
         /// </summary>
         [NameInMap("X-Fc-Account-Id")]
         [Validation(Required=false)]

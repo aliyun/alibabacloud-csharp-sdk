@@ -11,15 +11,16 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
     public class UntagResourceRequest : TeaModel {
         /// <summary>
         /// Specifies whether to remove all tags. This parameter takes effect only when no tag key is specified. Valid values:
-        ///   - **true**: removes all tags. 
-        ///   - **false**: does not remove all tags.
+        /// 
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("all")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
         /// <summary>
-        /// The ARN of the resource. 
+        /// The Alibaba Cloud Resource Name (ARN) of the resource.
         /// 
         /// > You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource. You can manage tags only for services for top level resources.
         /// </summary>

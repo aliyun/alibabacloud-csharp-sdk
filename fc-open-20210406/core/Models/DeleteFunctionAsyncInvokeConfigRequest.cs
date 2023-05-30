@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class DeleteFunctionAsyncInvokeConfigRequest : TeaModel {
         /// <summary>
-        /// The qualifier.
+        /// Deletes the asynchronous invocation configurations of a function in a service.
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]

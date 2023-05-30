@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class ListEventSourcesRequest : TeaModel {
         /// <summary>
-        /// The version or alias of the service.
+        /// $.parameters[7].schema.example
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]

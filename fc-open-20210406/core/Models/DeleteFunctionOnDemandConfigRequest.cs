@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class DeleteFunctionOnDemandConfigRequest : TeaModel {
         /// <summary>
-        /// The alias of the service or LATEST.
+        /// Deletes the on-demand configuration of a function.
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]

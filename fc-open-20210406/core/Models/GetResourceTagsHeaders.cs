@@ -14,21 +14,24 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// The ID of your Alibaba Cloud account.
+        /// The Alibaba Cloud Resource Name (ARN) of the resource. 
+        /// > **Note:** You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource. You can manage tags only for services for top level resources.
         /// </summary>
         [NameInMap("X-Fc-Account-Id")]
         [Validation(Required=false)]
         public string XFcAccountId { get; set; }
 
         /// <summary>
-        /// The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+        /// The tag dictionary. Valid values:
+        /// - **key**: the key of the tag. 
+        /// - **value**: the value of the tag.
         /// </summary>
         [NameInMap("X-Fc-Date")]
         [Validation(Required=false)]
         public string XFcDate { get; set; }
 
         /// <summary>
-        /// The custom request ID.
+        /// Example 1
         /// </summary>
         [NameInMap("X-Fc-Trace-Id")]
         [Validation(Required=false)]

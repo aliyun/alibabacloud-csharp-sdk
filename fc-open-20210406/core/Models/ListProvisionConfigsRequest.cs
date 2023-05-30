@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class ListProvisionConfigsRequest : TeaModel {
         /// <summary>
-        /// The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
+        /// Queries provisioned instances.
         /// </summary>
         [NameInMap("limit")]
         [Validation(Required=false)]
         public long? Limit { get; set; }
 
         /// <summary>
-        /// The token used to obtain more results. You do not need to provide this parameter in the first call. The tokens for subsequent queries are obtained from the returned results.
+        /// Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The qualifier of the service to which resources belong. The qualifier must be aliasName and used together with the serviceName parameter.
+        /// The token used to obtain more results.
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]
         public string Qualifier { get; set; }
 
         /// <summary>
-        /// The name of the service to which resources belong.
+        /// It is a tool used to manage and configure Alibaba Cloud resources. After simple installation and configuration, you can use Alibaba Cloud CLI to manage multiple Alibaba Cloud services and migrate your data and business to the cloud with ease.
         /// </summary>
         [NameInMap("serviceName")]
         [Validation(Required=false)]

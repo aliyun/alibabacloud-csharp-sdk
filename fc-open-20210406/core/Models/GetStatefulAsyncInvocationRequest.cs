@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
     public class GetStatefulAsyncInvocationRequest : TeaModel {
         /// <summary>
-        /// The version or alias of the service to which the asynchronous task belongs.
+        /// The ID of the instance that is used to run the asynchronous task.
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]
