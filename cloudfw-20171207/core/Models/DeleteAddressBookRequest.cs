@@ -33,6 +33,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SourceIp { get; set; }
 
     }

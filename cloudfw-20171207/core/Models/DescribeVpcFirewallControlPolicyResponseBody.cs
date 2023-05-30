@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallControlPolicyResponseBody : TeaModel {
         /// <summary>
-        /// The details of the access control policies.
+        /// The information about the access control policies.
         /// </summary>
         [NameInMap("Policys")]
         [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DestPortGroup { get; set; }
 
             /// <summary>
-            /// The ports in the destination port address book of the access control policy.
+            /// An array that consists of the ports in the destination port address book of the access control policy.
             /// </summary>
             [NameInMap("DestPortGroupPorts")]
             [Validation(Required=false)]
@@ -106,14 +106,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// 
             /// *   If **DestinationType** is set to `net`, the value of this parameter is a CIDR block.
             /// *   If **DestinationType** is set to `domain`, the value of this parameter is a domain name.
-            /// *   If **DestinationType** is set to `group`, the value of this parameter is the name of an address book name.
+            /// *   If **DestinationType** is set to `group`, the value of this parameter is an address book name.
             /// </summary>
             [NameInMap("Destination")]
             [Validation(Required=false)]
             public string Destination { get; set; }
 
             /// <summary>
-            /// The CIDR blocks in the destination address book of the access control policy.
+            /// An array that consists of the CIDR blocks in the destination address book of the access control policy.
             /// </summary>
             [NameInMap("DestinationGroupCidrs")]
             [Validation(Required=false)]
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// The CIDR blocks in the source address book of the access control policy.
+            /// An array that consists of the CIDR blocks in the source address book of the access control policy.
             /// </summary>
             [NameInMap("SourceGroupCidrs")]
             [Validation(Required=false)]
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of the access control policies that are returned.
+        /// The total number of access control policies returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

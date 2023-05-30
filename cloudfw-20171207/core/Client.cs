@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the AddControlPolicy operation to create an access control policy to allow, deny, or monitor traffic that passes through Cloud Firewall.
+          * You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the AddControlPolicy operation to create an access control policy to allow, deny, or monitor traffic that passes through Cloud Firewall.
+          * You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -415,7 +415,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the AddControlPolicy operation to create an access control policy to allow, deny, or monitor traffic that passes through Cloud Firewall.
+          * You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -429,7 +429,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the AddControlPolicy operation to create an access control policy to allow, deny, or monitor traffic that passes through Cloud Firewall.
+          * You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -676,6 +676,302 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchCopyVpcFirewallControlPolicyWithOptionsAsync(request, runtime);
+        }
+
+        public CreateTrFirewallV2Response CreateTrFirewallV2WithOptions(CreateTrFirewallV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
+            {
+                query["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallDescription))
+            {
+                query["FirewallDescription"] = request.FirewallDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallName))
+            {
+                query["FirewallName"] = request.FirewallName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallSubnetCidr))
+            {
+                query["FirewallSubnetCidr"] = request.FirewallSubnetCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVpcCidr))
+            {
+                query["FirewallVpcCidr"] = request.FirewallVpcCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVpcId))
+            {
+                query["FirewallVpcId"] = request.FirewallVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVswitchId))
+            {
+                query["FirewallVswitchId"] = request.FirewallVswitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteMode))
+            {
+                query["RouteMode"] = request.RouteMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrAttachmentMasterCidr))
+            {
+                query["TrAttachmentMasterCidr"] = request.TrAttachmentMasterCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrAttachmentSlaveCidr))
+            {
+                query["TrAttachmentSlaveCidr"] = request.TrAttachmentSlaveCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
+            {
+                query["TransitRouterId"] = request.TransitRouterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTrFirewallV2",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTrFirewallV2Response>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateTrFirewallV2Response> CreateTrFirewallV2WithOptionsAsync(CreateTrFirewallV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
+            {
+                query["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallDescription))
+            {
+                query["FirewallDescription"] = request.FirewallDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallName))
+            {
+                query["FirewallName"] = request.FirewallName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallSubnetCidr))
+            {
+                query["FirewallSubnetCidr"] = request.FirewallSubnetCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVpcCidr))
+            {
+                query["FirewallVpcCidr"] = request.FirewallVpcCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVpcId))
+            {
+                query["FirewallVpcId"] = request.FirewallVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVswitchId))
+            {
+                query["FirewallVswitchId"] = request.FirewallVswitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteMode))
+            {
+                query["RouteMode"] = request.RouteMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrAttachmentMasterCidr))
+            {
+                query["TrAttachmentMasterCidr"] = request.TrAttachmentMasterCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrAttachmentSlaveCidr))
+            {
+                query["TrAttachmentSlaveCidr"] = request.TrAttachmentSlaveCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
+            {
+                query["TransitRouterId"] = request.TransitRouterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTrFirewallV2",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTrFirewallV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateTrFirewallV2Response CreateTrFirewallV2(CreateTrFirewallV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateTrFirewallV2WithOptions(request, runtime);
+        }
+
+        public async Task<CreateTrFirewallV2Response> CreateTrFirewallV2Async(CreateTrFirewallV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateTrFirewallV2WithOptionsAsync(request, runtime);
+        }
+
+        public CreateTrFirewallV2RoutePolicyResponse CreateTrFirewallV2RoutePolicyWithOptions(CreateTrFirewallV2RoutePolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateTrFirewallV2RoutePolicyShrinkRequest request = new CreateTrFirewallV2RoutePolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DestCandidateList))
+            {
+                request.DestCandidateListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DestCandidateList, "DestCandidateList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SrcCandidateList))
+            {
+                request.SrcCandidateListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SrcCandidateList, "SrcCandidateList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestCandidateListShrink))
+            {
+                query["DestCandidateList"] = request.DestCandidateListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyDescription))
+            {
+                query["PolicyDescription"] = request.PolicyDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                query["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                query["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCandidateListShrink))
+            {
+                query["SrcCandidateList"] = request.SrcCandidateListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTrFirewallV2RoutePolicy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTrFirewallV2RoutePolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateTrFirewallV2RoutePolicyResponse> CreateTrFirewallV2RoutePolicyWithOptionsAsync(CreateTrFirewallV2RoutePolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateTrFirewallV2RoutePolicyShrinkRequest request = new CreateTrFirewallV2RoutePolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DestCandidateList))
+            {
+                request.DestCandidateListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DestCandidateList, "DestCandidateList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SrcCandidateList))
+            {
+                request.SrcCandidateListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SrcCandidateList, "SrcCandidateList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestCandidateListShrink))
+            {
+                query["DestCandidateList"] = request.DestCandidateListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyDescription))
+            {
+                query["PolicyDescription"] = request.PolicyDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                query["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                query["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCandidateListShrink))
+            {
+                query["SrcCandidateList"] = request.SrcCandidateListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTrFirewallV2RoutePolicy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTrFirewallV2RoutePolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateTrFirewallV2RoutePolicyResponse CreateTrFirewallV2RoutePolicy(CreateTrFirewallV2RoutePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateTrFirewallV2RoutePolicyWithOptions(request, runtime);
+        }
+
+        public async Task<CreateTrFirewallV2RoutePolicyResponse> CreateTrFirewallV2RoutePolicyAsync(CreateTrFirewallV2RoutePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateTrFirewallV2RoutePolicyWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -1466,6 +1762,88 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await DeleteControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        public DeleteFirewallV2RoutePoliciesResponse DeleteFirewallV2RoutePoliciesWithOptions(DeleteFirewallV2RoutePoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrFirewallRoutePolicyId))
+            {
+                query["TrFirewallRoutePolicyId"] = request.TrFirewallRoutePolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFirewallV2RoutePolicies",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFirewallV2RoutePoliciesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteFirewallV2RoutePoliciesResponse> DeleteFirewallV2RoutePoliciesWithOptionsAsync(DeleteFirewallV2RoutePoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrFirewallRoutePolicyId))
+            {
+                query["TrFirewallRoutePolicyId"] = request.TrFirewallRoutePolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFirewallV2RoutePolicies",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFirewallV2RoutePoliciesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteFirewallV2RoutePoliciesResponse DeleteFirewallV2RoutePolicies(DeleteFirewallV2RoutePoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteFirewallV2RoutePoliciesWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteFirewallV2RoutePoliciesResponse> DeleteFirewallV2RoutePoliciesAsync(DeleteFirewallV2RoutePoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteFirewallV2RoutePoliciesWithOptionsAsync(request, runtime);
+        }
+
         /**
           * You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. 
           * ## Limits
@@ -1564,6 +1942,80 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteInstanceMembersWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteTrFirewallV2Response DeleteTrFirewallV2WithOptions(DeleteTrFirewallV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTrFirewallV2",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTrFirewallV2Response>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteTrFirewallV2Response> DeleteTrFirewallV2WithOptionsAsync(DeleteTrFirewallV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTrFirewallV2",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTrFirewallV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteTrFirewallV2Response DeleteTrFirewallV2(DeleteTrFirewallV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteTrFirewallV2WithOptions(request, runtime);
+        }
+
+        public async Task<DeleteTrFirewallV2Response> DeleteTrFirewallV2Async(DeleteTrFirewallV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteTrFirewallV2WithOptionsAsync(request, runtime);
         }
 
         /**
@@ -2055,7 +2507,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall. 
+          * You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -2139,7 +2591,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall. 
+          * You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -2223,7 +2675,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall. 
+          * You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -2237,7 +2689,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall. 
+          * You can call the DescribeAssetList operation to query the assets that are protected by Cloud Firewall.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -2708,6 +3160,144 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceMembersWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeInternetTrafficTrendResponse DescribeInternetTrafficTrendWithOptions(DescribeInternetTrafficTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCode))
+            {
+                query["SourceCode"] = request.SourceCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcPrivateIP))
+            {
+                query["SrcPrivateIP"] = request.SrcPrivateIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcPublicIP))
+            {
+                query["SrcPublicIP"] = request.SrcPublicIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficType))
+            {
+                query["TrafficType"] = request.TrafficType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInternetTrafficTrend",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInternetTrafficTrendResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeInternetTrafficTrendResponse> DescribeInternetTrafficTrendWithOptionsAsync(DescribeInternetTrafficTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCode))
+            {
+                query["SourceCode"] = request.SourceCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcPrivateIP))
+            {
+                query["SrcPrivateIP"] = request.SrcPrivateIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcPublicIP))
+            {
+                query["SrcPublicIP"] = request.SrcPublicIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficType))
+            {
+                query["TrafficType"] = request.TrafficType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInternetTrafficTrend",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInternetTrafficTrendResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeInternetTrafficTrendResponse DescribeInternetTrafficTrend(DescribeInternetTrafficTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInternetTrafficTrendWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeInternetTrafficTrendResponse> DescribeInternetTrafficTrendAsync(DescribeInternetTrafficTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInternetTrafficTrendWithOptionsAsync(request, runtime);
         }
 
         public DescribeInvadeEventListResponse DescribeInvadeEventListWithOptions(DescribeInvadeEventListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3728,6 +4318,496 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await DescribeRiskEventGroupWithOptionsAsync(request, runtime);
         }
 
+        public DescribeTrFirewallPolicyBackUpAssociationListResponse DescribeTrFirewallPolicyBackUpAssociationListWithOptions(DescribeTrFirewallPolicyBackUpAssociationListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrFirewallRoutePolicyId))
+            {
+                query["TrFirewallRoutePolicyId"] = request.TrFirewallRoutePolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrFirewallPolicyBackUpAssociationList",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrFirewallPolicyBackUpAssociationListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeTrFirewallPolicyBackUpAssociationListResponse> DescribeTrFirewallPolicyBackUpAssociationListWithOptionsAsync(DescribeTrFirewallPolicyBackUpAssociationListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrFirewallRoutePolicyId))
+            {
+                query["TrFirewallRoutePolicyId"] = request.TrFirewallRoutePolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrFirewallPolicyBackUpAssociationList",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrFirewallPolicyBackUpAssociationListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeTrFirewallPolicyBackUpAssociationListResponse DescribeTrFirewallPolicyBackUpAssociationList(DescribeTrFirewallPolicyBackUpAssociationListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTrFirewallPolicyBackUpAssociationListWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeTrFirewallPolicyBackUpAssociationListResponse> DescribeTrFirewallPolicyBackUpAssociationListAsync(DescribeTrFirewallPolicyBackUpAssociationListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTrFirewallPolicyBackUpAssociationListWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeTrFirewallV2RoutePolicyListResponse DescribeTrFirewallV2RoutePolicyListWithOptions(DescribeTrFirewallV2RoutePolicyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrFirewallV2RoutePolicyList",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrFirewallV2RoutePolicyListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeTrFirewallV2RoutePolicyListResponse> DescribeTrFirewallV2RoutePolicyListWithOptionsAsync(DescribeTrFirewallV2RoutePolicyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrFirewallV2RoutePolicyList",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrFirewallV2RoutePolicyListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeTrFirewallV2RoutePolicyListResponse DescribeTrFirewallV2RoutePolicyList(DescribeTrFirewallV2RoutePolicyListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTrFirewallV2RoutePolicyListWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeTrFirewallV2RoutePolicyListResponse> DescribeTrFirewallV2RoutePolicyListAsync(DescribeTrFirewallV2RoutePolicyListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTrFirewallV2RoutePolicyListWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeTrFirewallsV2DetailResponse DescribeTrFirewallsV2DetailWithOptions(DescribeTrFirewallsV2DetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrFirewallsV2Detail",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrFirewallsV2DetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeTrFirewallsV2DetailResponse> DescribeTrFirewallsV2DetailWithOptionsAsync(DescribeTrFirewallsV2DetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrFirewallsV2Detail",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrFirewallsV2DetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeTrFirewallsV2DetailResponse DescribeTrFirewallsV2Detail(DescribeTrFirewallsV2DetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTrFirewallsV2DetailWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeTrFirewallsV2DetailResponse> DescribeTrFirewallsV2DetailAsync(DescribeTrFirewallsV2DetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTrFirewallsV2DetailWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeTrFirewallsV2ListResponse DescribeTrFirewallsV2ListWithOptions(DescribeTrFirewallsV2ListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
+            {
+                query["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallName))
+            {
+                query["FirewallName"] = request.FirewallName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallSwitchStatus))
+            {
+                query["FirewallSwitchStatus"] = request.FirewallSwitchStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteMode))
+            {
+                query["RouteMode"] = request.RouteMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
+            {
+                query["TransitRouterId"] = request.TransitRouterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrFirewallsV2List",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrFirewallsV2ListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeTrFirewallsV2ListResponse> DescribeTrFirewallsV2ListWithOptionsAsync(DescribeTrFirewallsV2ListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
+            {
+                query["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallName))
+            {
+                query["FirewallName"] = request.FirewallName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallSwitchStatus))
+            {
+                query["FirewallSwitchStatus"] = request.FirewallSwitchStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteMode))
+            {
+                query["RouteMode"] = request.RouteMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
+            {
+                query["TransitRouterId"] = request.TransitRouterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrFirewallsV2List",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrFirewallsV2ListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeTrFirewallsV2ListResponse DescribeTrFirewallsV2List(DescribeTrFirewallsV2ListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTrFirewallsV2ListWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeTrFirewallsV2ListResponse> DescribeTrFirewallsV2ListAsync(DescribeTrFirewallsV2ListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTrFirewallsV2ListWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeTrFirewallsV2RouteListResponse DescribeTrFirewallsV2RouteListWithOptions(DescribeTrFirewallsV2RouteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrFirewallRoutePolicyId))
+            {
+                query["TrFirewallRoutePolicyId"] = request.TrFirewallRoutePolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrFirewallsV2RouteList",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrFirewallsV2RouteListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeTrFirewallsV2RouteListResponse> DescribeTrFirewallsV2RouteListWithOptionsAsync(DescribeTrFirewallsV2RouteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrFirewallRoutePolicyId))
+            {
+                query["TrFirewallRoutePolicyId"] = request.TrFirewallRoutePolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrFirewallsV2RouteList",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrFirewallsV2RouteListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeTrFirewallsV2RouteListResponse DescribeTrFirewallsV2RouteList(DescribeTrFirewallsV2RouteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTrFirewallsV2RouteListWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeTrFirewallsV2RouteListResponse> DescribeTrFirewallsV2RouteListAsync(DescribeTrFirewallsV2RouteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTrFirewallsV2RouteListWithOptionsAsync(request, runtime);
+        }
+
         public DescribeUserAssetIPTrafficInfoResponse DescribeUserAssetIPTrafficInfoWithOptions(DescribeUserAssetIPTrafficInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4247,7 +5327,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeVpcFirewallControlPolicy operation to query the details of all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
+          * You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeVpcFirewallControlPolicyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4325,7 +5407,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeVpcFirewallControlPolicy operation to query the details of all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
+          * You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeVpcFirewallControlPolicyRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4403,7 +5487,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeVpcFirewallControlPolicy operation to query the details of all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
+          * You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeVpcFirewallControlPolicyRequest
           * @return DescribeVpcFirewallControlPolicyResponse
@@ -4415,7 +5501,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the DescribeVpcFirewallControlPolicy operation to query the details of all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
+          * You can call the DescribeVpcFirewallControlPolicy operation to query the information about all access control policies that are created for a specified VPC firewall. Different access control policies are used when a VPC firewall is used to protect traffic between two VPCs that are connected by using a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.
+          * ## Limits
+          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeVpcFirewallControlPolicyRequest
           * @return DescribeVpcFirewallControlPolicyResponse
@@ -4672,8 +5760,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /**
           * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-          * ## Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * ### Limits
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeVpcFirewallListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4752,8 +5840,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /**
           * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-          * ## Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * ### Limits
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeVpcFirewallListRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4832,8 +5920,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /**
           * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-          * ## Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * ### Limits
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeVpcFirewallListRequest
           * @return DescribeVpcFirewallListResponse
@@ -4846,8 +5934,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /**
           * You can call the DescribeVpcFirewallList operation to query the details about VPC firewalls by page. Each VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit.
-          * ## Limits
-          * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+          * ### Limits
+          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
           * @param request DescribeVpcFirewallListRequest
           * @return DescribeVpcFirewallListResponse
@@ -5684,6 +6772,104 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await ModifyControlPolicyPositionWithOptionsAsync(request, runtime);
         }
 
+        public ModifyFirewallV2RoutePolicySwitchResponse ModifyFirewallV2RoutePolicySwitchWithOptions(ModifyFirewallV2RoutePolicySwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShouldRecover))
+            {
+                query["ShouldRecover"] = request.ShouldRecover;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrFirewallRoutePolicyId))
+            {
+                query["TrFirewallRoutePolicyId"] = request.TrFirewallRoutePolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrFirewallRoutePolicySwitchStatus))
+            {
+                query["TrFirewallRoutePolicySwitchStatus"] = request.TrFirewallRoutePolicySwitchStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyFirewallV2RoutePolicySwitch",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyFirewallV2RoutePolicySwitchResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyFirewallV2RoutePolicySwitchResponse> ModifyFirewallV2RoutePolicySwitchWithOptionsAsync(ModifyFirewallV2RoutePolicySwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShouldRecover))
+            {
+                query["ShouldRecover"] = request.ShouldRecover;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrFirewallRoutePolicyId))
+            {
+                query["TrFirewallRoutePolicyId"] = request.TrFirewallRoutePolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrFirewallRoutePolicySwitchStatus))
+            {
+                query["TrFirewallRoutePolicySwitchStatus"] = request.TrFirewallRoutePolicySwitchStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyFirewallV2RoutePolicySwitch",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyFirewallV2RoutePolicySwitchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyFirewallV2RoutePolicySwitchResponse ModifyFirewallV2RoutePolicySwitch(ModifyFirewallV2RoutePolicySwitchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyFirewallV2RoutePolicySwitchWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyFirewallV2RoutePolicySwitchResponse> ModifyFirewallV2RoutePolicySwitchAsync(ModifyFirewallV2RoutePolicySwitchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyFirewallV2RoutePolicySwitchWithOptionsAsync(request, runtime);
+        }
+
         /**
           * You can call the ModifyInstanceMemberAttributes operation to update the information about members in Cloud Firewall.  
           * ## Limits
@@ -5898,6 +7084,206 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyPolicyAdvancedConfigWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyTrFirewallV2ConfigurationResponse ModifyTrFirewallV2ConfigurationWithOptions(ModifyTrFirewallV2ConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallName))
+            {
+                query["FirewallName"] = request.FirewallName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyTrFirewallV2Configuration",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyTrFirewallV2ConfigurationResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyTrFirewallV2ConfigurationResponse> ModifyTrFirewallV2ConfigurationWithOptionsAsync(ModifyTrFirewallV2ConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallName))
+            {
+                query["FirewallName"] = request.FirewallName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyTrFirewallV2Configuration",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyTrFirewallV2ConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyTrFirewallV2ConfigurationResponse ModifyTrFirewallV2Configuration(ModifyTrFirewallV2ConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyTrFirewallV2ConfigurationWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyTrFirewallV2ConfigurationResponse> ModifyTrFirewallV2ConfigurationAsync(ModifyTrFirewallV2ConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyTrFirewallV2ConfigurationWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyTrFirewallV2RoutePolicyScopeResponse ModifyTrFirewallV2RoutePolicyScopeWithOptions(ModifyTrFirewallV2RoutePolicyScopeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyTrFirewallV2RoutePolicyScopeShrinkRequest request = new ModifyTrFirewallV2RoutePolicyScopeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DestCandidateList))
+            {
+                request.DestCandidateListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DestCandidateList, "DestCandidateList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SrcCandidateList))
+            {
+                request.SrcCandidateListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SrcCandidateList, "SrcCandidateList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestCandidateListShrink))
+            {
+                query["DestCandidateList"] = request.DestCandidateListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCandidateListShrink))
+            {
+                query["SrcCandidateList"] = request.SrcCandidateListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrFirewallRoutePolicyId))
+            {
+                query["TrFirewallRoutePolicyId"] = request.TrFirewallRoutePolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyTrFirewallV2RoutePolicyScope",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyTrFirewallV2RoutePolicyScopeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyTrFirewallV2RoutePolicyScopeResponse> ModifyTrFirewallV2RoutePolicyScopeWithOptionsAsync(ModifyTrFirewallV2RoutePolicyScopeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyTrFirewallV2RoutePolicyScopeShrinkRequest request = new ModifyTrFirewallV2RoutePolicyScopeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DestCandidateList))
+            {
+                request.DestCandidateListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DestCandidateList, "DestCandidateList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SrcCandidateList))
+            {
+                request.SrcCandidateListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SrcCandidateList, "SrcCandidateList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestCandidateListShrink))
+            {
+                query["DestCandidateList"] = request.DestCandidateListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcCandidateListShrink))
+            {
+                query["SrcCandidateList"] = request.SrcCandidateListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrFirewallRoutePolicyId))
+            {
+                query["TrFirewallRoutePolicyId"] = request.TrFirewallRoutePolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyTrFirewallV2RoutePolicyScope",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyTrFirewallV2RoutePolicyScopeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyTrFirewallV2RoutePolicyScopeResponse ModifyTrFirewallV2RoutePolicyScope(ModifyTrFirewallV2RoutePolicyScopeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyTrFirewallV2RoutePolicyScopeWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyTrFirewallV2RoutePolicyScopeResponse> ModifyTrFirewallV2RoutePolicyScopeAsync(ModifyTrFirewallV2RoutePolicyScopeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyTrFirewallV2RoutePolicyScopeWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -6293,7 +7679,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specific policy group. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit.  
+          * You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -6385,7 +7771,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specific policy group. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit.  
+          * You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -6477,7 +7863,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specific policy group. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit.  
+          * You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *
@@ -6491,7 +7877,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         }
 
         /**
-          * You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specific policy group. Different access control policies are used for the VPC firewall that is used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewall that is used to protect each Express Connect circuit.  
+          * You can call the ModifyVpcFirewallControlPolicy operation to modify the configurations of an access control policy that is created for a VPC firewall in a specified policy group. Different access control policies are used for the VPC firewalls that are used to protect each Cloud Enterprise Network (CEN) instance and the VPC firewalls that are used to protect each Express Connect circuit.
           * ## Limits
           * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
           *

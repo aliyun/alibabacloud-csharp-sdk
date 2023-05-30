@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// An array that consists of the details about the VPC firewalls.
+        /// An array that consists of the details about the VPC firewall.
         /// </summary>
         [NameInMap("VpcFirewalls")]
         [Validation(Required=false)]

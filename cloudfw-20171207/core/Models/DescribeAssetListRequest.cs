@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The UID of the member that is added in Cloud Firewall.
+        /// The UID of the member that is added to Cloud Firewall.
         /// </summary>
         [NameInMap("MemberUid")]
         [Validation(Required=false)]
@@ -55,9 +55,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region in which Cloud Firewall is supported.
+        /// The region ID of your Cloud Firewall.
         /// 
-        /// >  For more information about the regions in which Cloud Firewall is supported, see [Supported regions](~~195657~~).
+        /// > For more information about the regions, see [Supported regions](~~195657~~).
         /// </summary>
         [NameInMap("RegionNo")]
         [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **EcsPublicIP**: the public IP address of an ECS instance
         /// *   **EIP**: the EIP
         /// *   **EniEIP**: the EIP of an elastic network interface (ENI)
-        /// *   **NatEIP**: the EIP of a Network Address Translation (NAT) gateway
+        /// *   **NatEIP**: the EIP of a NAT gateway
         /// *   **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance
         /// *   **SlbPublicIP**: the public IP address of an SLB instance
         /// *   **NatPublicIP**: the public IP address of a NAT gateway
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The instance ID or the IP address of the asset.
+        /// The instance ID or IP address of the asset.
         /// </summary>
         [NameInMap("SearchItem")]
         [Validation(Required=false)]
@@ -93,9 +93,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// The status of the security group policy. Valid values:
         /// 
         /// *   **pass**: delivered
-        /// 
         /// *   **block**: undelivered
-        /// 
         /// *   **unsupport**: unsupported
         /// 
         /// > If you do not specify this parameter, the assets on which security group policies in all states take effect are queried.
@@ -112,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// *   **closed**: The firewall is disabled.
         /// *   **closing**: The firewall is being disabled.
         /// 
-        /// >  If you do not specify this parameter, the assets that are configured for firewalls in all states are queried.
+        /// > If you do not specify this parameter, the assets that are configured for firewalls in all states are queried.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -129,7 +127,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// The edition of Cloud Firewall. Valid values:
         /// 
         /// *   **buy**: a paid edition (default)
-        /// *   **free**: a free edition
+        /// *   **free**: Free Edition
         /// </summary>
         [NameInMap("UserType")]
         [Validation(Required=false)]

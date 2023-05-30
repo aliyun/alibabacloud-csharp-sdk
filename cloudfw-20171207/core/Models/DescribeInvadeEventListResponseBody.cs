@@ -33,17 +33,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// The type of the affected asset. Valid values:
             /// 
-            /// * **BastionHostIP**: the egress IP address of a bastion host
-            /// * **BastionHostIngressIP**: the ingress IP address of a bastion host
-            /// * **EcsEIP**: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance
-            /// * **EcsPublicIP**: the public IP address of an ECS instance
-            /// * **EIP**: the EIP
-            /// * **EniEIP**: the EIP of an elastic network interface (ENI)
-            /// * **NatEIP**: the EIP of a NAT gateway
-            /// * **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance
-            /// * **SlbPublicIP**: the public IP address of an SLB instance
-            /// * **NatPublicIP**: the public IP address of a NAT gateway
-            /// * **HAVIP**: the high-availability virtual IP address (HAVIP)
+            /// *   **BastionHostIP**: the egress IP address of a bastion host
+            /// *   **BastionHostIngressIP**: the ingress IP address of a bastion host
+            /// *   **EcsEIP**: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance
+            /// *   **EcsPublicIP**: the public IP address of an ECS instance
+            /// *   **EIP**: the EIP
+            /// *   **EniEIP**: the EIP of an elastic network interface (ENI)
+            /// *   **NatEIP**: the EIP of a NAT gateway
+            /// *   **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance
+            /// *   **SlbPublicIP**: the public IP address of an SLB instance
+            /// *   **NatPublicIP**: the public IP address of a NAT gateway
+            /// *   **HAVIP**: the high-availability virtual IP address (HAVIP)
             /// </summary>
             [NameInMap("AssetsType")]
             [Validation(Required=false)]
@@ -138,17 +138,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// The type of the affected asset. Valid values:
             /// 
-            /// * **BastionHostIP**: the egress IP address of a bastion host
-            /// * **BastionHostIngressIP**: the ingress IP address of a bastion host
-            /// * **EcsEIP**: the EIP of an ECS instance
-            /// * **EcsPublicIP**: the public IP address of an ECS instance
-            /// * **EIP**: the EIP
-            /// * **EniEIP**: the EIP of an ENI
-            /// * **NatEIP**: the EIP of a NAT gateway
-            /// * **SlbEIP**: the EIP of an SLB instance
-            /// * **SlbPublicIP**: the public IP address of an SLB instance
-            /// * **NatPublicIP**: the public IP address of a NAT gateway
-            /// * **HAVIP**: the HAVIP
+            /// *   **BastionHostIP**: the egress IP address of a bastion host
+            /// *   **BastionHostIngressIP**: the ingress IP address of a bastion host
+            /// *   **EcsEIP**: the EIP of an ECS instance
+            /// *   **EcsPublicIP**: the public IP address of an ECS instance
+            /// *   **EIP**: the EIP
+            /// *   **EniEIP**: the EIP of an ENI
+            /// *   **NatEIP**: the EIP of a NAT gateway
+            /// *   **SlbEIP**: the EIP of an SLB instance
+            /// *   **SlbPublicIP**: the public IP address of an SLB instance
+            /// *   **NatPublicIP**: the public IP address of a NAT gateway
+            /// *   **HAVIP**: the HAVIP
             /// </summary>
             [NameInMap("PublicIpType")]
             [Validation(Required=false)]
@@ -168,21 +168,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// The ratio of high-risk events.
+        /// The percentage of high-risk events.
         /// </summary>
         [NameInMap("HighLevelPercent")]
         [Validation(Required=false)]
         public int? HighLevelPercent { get; set; }
 
         /// <summary>
-        /// The ratio of low-risk events.
+        /// The percentage of low-risk events.
         /// </summary>
         [NameInMap("LowLevelPercent")]
         [Validation(Required=false)]
         public int? LowLevelPercent { get; set; }
 
         /// <summary>
-        /// The ratio of medium-risk events.
+        /// The percentage of medium-risk events.
         /// </summary>
         [NameInMap("MiddleLevelPercent")]
         [Validation(Required=false)]

@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// The number of the page to return.
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// Default value: 1.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+        /// The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query ends at the current time.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -68,10 +68,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventUuid { get; set; }
 
         /// <summary>
-        /// Specifies whether to ignore the breach awareness event. Valid values:
+        /// Specifies whether the breach awareness event is ignored. Valid values:
         /// 
-        /// *   **true**: ignores the breach awareness event.
-        /// *   **false**: does not ignore the breach awareness event.
+        /// *   **true**: The breach awareness event is ignored.
+        /// *   **false**: The breach awareness event is not ignored.
         /// </summary>
         [NameInMap("IsIgnore")]
         [Validation(Required=false)]
@@ -104,14 +104,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The list of process statuses.
+        /// The handling status of breach awareness events.
         /// </summary>
         [NameInMap("ProcessStatusList")]
         [Validation(Required=false)]
         public List<int?> ProcessStatusList { get; set; }
 
         /// <summary>
-        /// The list of risk levels.
+        /// The risk levels.
         /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
@@ -122,10 +122,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+        /// The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query starts from 30 days before the current time.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -19,21 +19,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// The UID of the Alibaba Cloud account.
             /// 
-            /// >  The value of this parameter indicates the management account to which the member is added.
+            /// > The value of this parameter indicates the management account to which the member is added.
             /// </summary>
             [NameInMap("AliUid")]
             [Validation(Required=false)]
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// The instance ID of the asset that is bound to Cloud Firewall.
+            /// The instance ID of the asset.
             /// </summary>
             [NameInMap("BindInstanceId")]
             [Validation(Required=false)]
             public string BindInstanceId { get; set; }
 
             /// <summary>
-            /// The instance name of the asset that is bound to Cloud Firewall.
+            /// The instance name of the asset.
             /// </summary>
             [NameInMap("BindInstanceName")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? IpVersion { get; set; }
 
             /// <summary>
-            /// The UID of the member that is added in Cloud Firewall.
+            /// The UID of the member that is added to Cloud Firewall.
             /// </summary>
             [NameInMap("MemberUid")]
             [Validation(Required=false)]
@@ -90,8 +90,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// The remarks of the asset. Valid values:
             /// 
-            /// *   **REGION\_NOT\_SUPPORT**: The region is not supported.
-            /// *   **NETWORK\_NOT\_SUPPORT**: The network is not supported.
+            /// *   **REGION_NOT_SUPPORT**: The region is not supported.
+            /// *   **NETWORK_NOT_SUPPORT**: The network is not supported.
             /// </summary>
             [NameInMap("Note")]
             [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// *   **middle**: medium
             /// *   **hight**: high
             /// 
-            /// >  The value of this parameter is returned only when the UserType parameter is set to free.
+            /// > The value of this parameter is returned only when the UserType parameter is set to free.
             /// </summary>
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SgStatus { get; set; }
 
             /// <summary>
-            /// The time when the status of the security group was last checked. The value is a UNIX timestamp. Unit: seconds.
+            /// The time when the status of the security group policy was last checked. The value is a UNIX timestamp. Unit: seconds.
             /// </summary>
             [NameInMap("SgStatusTime")]
             [Validation(Required=false)]
