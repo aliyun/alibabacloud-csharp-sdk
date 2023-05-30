@@ -10487,13 +10487,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return await InvoiceSearchWithOptionsAsync(request, headers, runtime);
         }
 
-        public IsvRuleSaveResponse IsvRuleSaveWithOptions(IsvRuleSaveRequest request, IsvRuleSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public IsvRuleSaveResponse IsvRuleSaveWithOptions(IsvRuleSaveRequest tmpReq, IsvRuleSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            IsvRuleSaveShrinkRequest request = new IsvRuleSaveShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BookuserList))
+            {
+                request.BookuserListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BookuserList, "bookuser_list", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BookType))
             {
                 body["book_type"] = request.BookType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BookuserListShrink))
+            {
+                body["bookuser_list"] = request.BookuserListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -10532,13 +10542,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             return TeaModel.ToObject<IsvRuleSaveResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<IsvRuleSaveResponse> IsvRuleSaveWithOptionsAsync(IsvRuleSaveRequest request, IsvRuleSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<IsvRuleSaveResponse> IsvRuleSaveWithOptionsAsync(IsvRuleSaveRequest tmpReq, IsvRuleSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            IsvRuleSaveShrinkRequest request = new IsvRuleSaveShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BookuserList))
+            {
+                request.BookuserListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BookuserList, "bookuser_list", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BookType))
             {
                 body["book_type"] = request.BookType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BookuserListShrink))
+            {
+                body["bookuser_list"] = request.BookuserListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {

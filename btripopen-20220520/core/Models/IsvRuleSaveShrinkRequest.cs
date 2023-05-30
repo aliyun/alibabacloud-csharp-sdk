@@ -8,24 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class IsvRuleSaveRequest : TeaModel {
+    public class IsvRuleSaveShrinkRequest : TeaModel {
         [NameInMap("book_type")]
         [Validation(Required=false)]
         public string BookType { get; set; }
 
         [NameInMap("bookuser_list")]
         [Validation(Required=false)]
-        public List<IsvRuleSaveRequestBookuserList> BookuserList { get; set; }
-        public class IsvRuleSaveRequestBookuserList : TeaModel {
-            [NameInMap("entity_id")]
-            [Validation(Required=false)]
-            public string EntityId { get; set; }
-
-            [NameInMap("entity_type")]
-            [Validation(Required=false)]
-            public int? EntityType { get; set; }
-
-        }
+        public string BookuserListShrink { get; set; }
 
         [NameInMap("status")]
         [Validation(Required=false)]
