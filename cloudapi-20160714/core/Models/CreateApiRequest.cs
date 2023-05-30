@@ -63,9 +63,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string BackendId { get; set; }
 
-        /// <summary>
-        /// The parameters of the API.
-        /// </summary>
         [NameInMap("ConstantParameters")]
         [Validation(Required=false)]
         public string ConstantParameters { get; set; }
@@ -85,18 +82,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public bool? DisableInternet { get; set; }
 
-        /// <summary>
-        /// The sample error codes returned by the backend service.
-        /// 
-        /// For more information, see [ErrorCodeSample](~~44392~~).
-        /// </summary>
         [NameInMap("ErrorCodeSamples")]
         [Validation(Required=false)]
         public string ErrorCodeSamples { get; set; }
 
-        /// <summary>
-        /// The sample error response from the backend service.
-        /// </summary>
         [NameInMap("FailResultSample")]
         [Validation(Required=false)]
         public string FailResultSample { get; set; }
@@ -132,11 +121,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string RequestConfig { get; set; }
 
-        /// <summary>
-        /// The parameters of API requests sent by the consumer to API Gateway.
-        /// 
-        /// For more information, see [RequestParameter](~~43986~~).
-        /// </summary>
         [NameInMap("RequestParameters")]
         [Validation(Required=false)]
         public string RequestParameters { get; set; }
@@ -148,16 +132,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string ResultBodyModel { get; set; }
 
-        /// <summary>
-        /// The return description of the API.
-        /// </summary>
         [NameInMap("ResultDescriptions")]
         [Validation(Required=false)]
         public string ResultDescriptions { get; set; }
 
-        /// <summary>
-        /// The sample response from the backend service.
-        /// </summary>
         [NameInMap("ResultSample")]
         [Validation(Required=false)]
         public string ResultSample { get; set; }
@@ -182,27 +160,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string ServiceConfig { get; set; }
 
-        /// <summary>
-        /// The parameters of API requests sent by API Gateway to the backend service.
-        /// 
-        /// For more information, see [ServiceParameter](~~43988~~).
-        /// </summary>
         [NameInMap("ServiceParameters")]
         [Validation(Required=false)]
         public string ServiceParameters { get; set; }
 
-        /// <summary>
-        /// The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.
-        /// 
-        /// For more information, see [ServiceParameterMap](~~43989~~).
-        /// </summary>
         [NameInMap("ServiceParametersMap")]
         [Validation(Required=false)]
         public string ServiceParametersMap { get; set; }
 
-        /// <summary>
-        /// The common parameters of APIs in JSON format.
-        /// </summary>
         [NameInMap("SystemParameters")]
         [Validation(Required=false)]
         public string SystemParameters { get; set; }
