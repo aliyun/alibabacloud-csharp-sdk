@@ -10,18 +10,11 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class CreateSecretShrinkRequest : TeaModel {
         /// <summary>
-        /// The ID of the dedicated KMS instance.
+        /// The version number of the secret.
         /// </summary>
         [NameInMap("DKMSInstanceId")]
         [Validation(Required=false)]
         public string DKMSInstanceId { get; set; }
-
-        /// <summary>
-        /// The description of the secret.
-        /// </summary>
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
 
         /// <summary>
         /// Specifies whether to enable automatic rotation. Valid values:
@@ -31,20 +24,50 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// 
         /// >  This parameter is valid if you set the SecretType parameter to Rds, RAMCredentials, or ECS.
         /// </summary>
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        /// <summary>
+        /// Indicates whether automatic rotation is enabled. Valid values:
+        /// 
+        /// *   Enabled: indicates that automatic rotation is enabled.
+        /// *   Disabled: indicates that automatic rotation is disabled.
+        /// *   Invalid: indicates that the status of automatic rotation is abnormal. In this case, Secrets Manager cannot automatically rotate the secret.
+        /// 
+        /// >  This parameter is returned if you set the SecretType parameter to Rds, RAMCredentials, or ECS.
+        /// </summary>
         [NameInMap("EnableAutomaticRotation")]
         [Validation(Required=false)]
         public bool? EnableAutomaticRotation { get; set; }
 
         /// <summary>
-        /// The ID of the CMK that is used to encrypt the secret value.
-        /// 
-        /// If the DKMSInstanceId parameter is empty, Secrets Manager uses a CMK that is created by Dedicated KMS to encrypt and protect secrets. If the DKMSInstanceId parameter is not empty, specify the CMK of the dedicated KMS instance to encrypt and protect secrets.
-        /// 
-        /// >  The CMK must be a symmetric CMK.
+        /// The description of the secret.
         /// </summary>
         [NameInMap("EncryptionKeyId")]
         [Validation(Required=false)]
         public string EncryptionKeyId { get; set; }
+
+        /// <summary>
+        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// </summary>
+        [NameInMap("ExtendedConfig")]
+        [Validation(Required=false)]
+        public string ExtendedConfigShrink { get; set; }
+
+        /// <summary>
+        /// The name of the secret.
+        /// </summary>
+        [NameInMap("RotationInterval")]
+        [Validation(Required=false)]
+        public string RotationInterval { get; set; }
+
+        /// <summary>
+        /// The tags of the secret.
+        /// </summary>
+        [NameInMap("SecretData")]
+        [Validation(Required=false)]
+        public string SecretData { get; set; }
 
         /// <summary>
         /// The extended configuration of the secret. This parameter specifies the properties of the secret of the specific type. The description can be up to 1,024 characters in length.
@@ -83,22 +106,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// 
         /// >  This parameter is required if you set the SecretType parameter to Rds, RAMCredentials, or ECS.
         /// </summary>
-        [NameInMap("ExtendedConfig")]
+        [NameInMap("SecretDataType")]
         [Validation(Required=false)]
-        public string ExtendedConfigShrink { get; set; }
-
-        /// <summary>
-        /// The interval for automatic rotation. Valid values: 6 hours to 8,760 hours (365 days).
-        /// 
-        /// The value is in the `integer[unit]` format.
-        /// 
-        /// The unit can be d (day), h (hour), m (minute), or s (second). For example, both 7d and 604800s indicate a seven-day interval.
-        /// 
-        /// >  This parameter is required if you set the EnableAutomaticRotation parameter to true. This parameter is ignored if you set the EnableAutomaticRotation parameter to false or if the EnableAutomaticRotation parameter is not configured.
-        /// </summary>
-        [NameInMap("RotationInterval")]
-        [Validation(Required=false)]
-        public string RotationInterval { get; set; }
+        public string SecretDataType { get; set; }
 
         /// <summary>
         /// The value of the secret that you want to create. Secrets Manager encrypts the secret value and stores the encrypted value in the initial version.
@@ -114,9 +124,29 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         ///     *   `{"UserName":"","Password": ""}`: In the format, `UserName` specifies the username that is used to log on to the ECS instance, and `Password` specifies the password that is used to log on to the ECS instance.
         ///     *   `{"UserName":"","PublicKey": "", "PrivateKey": ""}`: In the format, `PublicKey` indicates the SSH public key that is used to log on to the ECS instance, and `PrivateKey` specifies the SSH private key that is used to log on to the ECS instance.
         /// </summary>
-        [NameInMap("SecretData")]
+        [NameInMap("SecretName")]
         [Validation(Required=false)]
-        public string SecretData { get; set; }
+        public string SecretName { get; set; }
+
+        /// <summary>
+        /// The ID of the dedicated KMS instance.
+        /// </summary>
+        [NameInMap("SecretType")]
+        [Validation(Required=false)]
+        public string SecretType { get; set; }
+
+        /// <summary>
+        /// The interval for automatic rotation. Valid values: 6 hours to 8,760 hours (365 days).
+        /// 
+        /// The value is in the `integer[unit]` format.
+        /// 
+        /// The unit can be d (day), h (hour), m (minute), or s (second). For example, both 7d and 604800s indicate a seven-day interval.
+        /// 
+        /// >  This parameter is required if you set the EnableAutomaticRotation parameter to true. This parameter is ignored if you set the EnableAutomaticRotation parameter to false or if the EnableAutomaticRotation parameter is not configured.
+        /// </summary>
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public string Tags { get; set; }
 
         /// <summary>
         /// The type of the secret value. Valid values:
@@ -125,45 +155,6 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// *   binary
         /// 
         /// >  If you set the SecretType parameter to Rds, RAMCredentials, or ECS, the SecretDataType parameter must be set to text.
-        /// </summary>
-        [NameInMap("SecretDataType")]
-        [Validation(Required=false)]
-        public string SecretDataType { get; set; }
-
-        /// <summary>
-        /// The name of the secret.
-        /// 
-        /// The value must be 1 to 64 characters in length and can contain letters, digits, underscores (\_), forward slashes (/), plus signs (+), equal signs (=), periods (.), hyphens (-), and at signs (@). The following list describes the name requirements for different types of secrets:
-        /// 
-        /// *   If the SecretType parameter is set to Generic or Rds, the name cannot start with `acs/`.
-        /// *   If the SecretType parameter is set to RAMCredentials, set the SecretName parameter to `$Auto`. In this case, KMS automatically generates a secret name that starts with `acs/ram/user/`. The name includes the display name of RAM user.
-        /// *   If the SecretType parameter is set to ECS, the name must start with `acs/ecs/`.
-        /// </summary>
-        [NameInMap("SecretName")]
-        [Validation(Required=false)]
-        public string SecretName { get; set; }
-
-        /// <summary>
-        /// The type of the secret. Valid values:
-        /// 
-        /// *   Generic: specifies a generic secret.
-        /// *   Rds: specifies a managed ApsaraDB RDS secret.
-        /// *   RAMCredentials: specifies a managed RAM secret.
-        /// *   ECS: specifies a managed ECS secret.
-        /// </summary>
-        [NameInMap("SecretType")]
-        [Validation(Required=false)]
-        public string SecretType { get; set; }
-
-        /// <summary>
-        /// The tags of the secret.
-        /// </summary>
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string Tags { get; set; }
-
-        /// <summary>
-        /// The initial version number. Version numbers are unique in each secret.
         /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]

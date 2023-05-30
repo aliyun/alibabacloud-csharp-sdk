@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
-    public class UntagResourceResponseBody : TeaModel {
+    public class TagResourcesResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

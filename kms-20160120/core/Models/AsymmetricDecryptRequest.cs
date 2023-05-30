@@ -22,9 +22,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// The ciphertext that you want to decrypt.
         /// 
-        /// > 
-        /// *   The value is encoded in Base64.
-        /// *   You can call the [AsymmetricEncrypt](~~148131~~) operation to generate the ciphertext.
+        /// > * The value is encoded in Base64.
+        /// > * You can call the [AsymmetricEncrypt](~~148131~~) operation to generate the ciphertext.
         /// </summary>
         [NameInMap("CiphertextBlob")]
         [Validation(Required=false)]

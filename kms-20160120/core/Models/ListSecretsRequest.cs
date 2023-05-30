@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ListSecretsRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to return the resource tags of the secret. Valid values:
+        /// The number of entries to return on each page.
         /// 
-        /// *   true: returns the resource tags.
-        /// *   false: does not return the resource tags. This is the default value.
+        /// Valid values: 1 to 100.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("FetchTags")]
         [Validation(Required=false)]
         public string FetchTags { get; set; }
+
+        /// <summary>
+        /// The number of entries returned per page.
+        /// </summary>
+        [NameInMap("Filters")]
+        [Validation(Required=false)]
+        public string Filters { get; set; }
 
         /// <summary>
         /// The secret filter. The filter consists of one or more key-value pairs. You can specify one key-value pair or leave this parameter empty. If you use one tag key or tag value to filter resources, up to 4,000 resources can be queried. If you want to query more than 4,000 resources, call the [ListResourceTags](~~120090~~) operation.
@@ -52,27 +60,12 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// 
         /// The logical relationship between values of the Values field in a key-value pair is OR. Example: `[ {"Key":"SecretName", "Values":["sec1","sec2"]}]`. In this example, the semantics are `SecretName=sec 1 OR SecretName=sec 2`.
         /// </summary>
-        [NameInMap("Filters")]
-        [Validation(Required=false)]
-        public string Filters { get; set; }
-
-        /// <summary>
-        /// The number of the page to return.
-        /// 
-        /// Pages start from page 1.
-        /// 
-        /// Default value: 1.
-        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
-        /// 
-        /// Valid values: 1 to 100.
-        /// 
-        /// Default value: 10.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -16,9 +16,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             /// <summary>
             /// The custom data in the extended configuration of the secret.
             /// 
-            /// > 
-            /// *   If this parameter is specified, the existing extended configuration of the secret is updated.
-            /// *   This parameter is unavailable for generic secrets.
+            /// > *   If this parameter is specified, the existing extended configuration of the secret is updated.
+            /// > *   This parameter is unavailable for generic secrets.
             /// </summary>
             [NameInMap("CustomData")]
             [Validation(Required=false)]

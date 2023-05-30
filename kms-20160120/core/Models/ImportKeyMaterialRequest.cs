@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ImportKeyMaterialRequest : TeaModel {
         /// <summary>
-        /// Use** GetParametersForImport** the Returned public key and the base64-encoded key material.
+        /// Use **GetParametersForImport** the Returned public key and the base64-encoded key material.
         /// </summary>
         [NameInMap("EncryptedKeyMaterial")]
         [Validation(Required=false)]
         public string EncryptedKeyMaterial { get; set; }
 
         /// <summary>
-        /// By calling** GetParametersForImport** the import token.
+        /// By calling **GetParametersForImport** the import token.
         /// </summary>
         [NameInMap("ImportToken")]
         [Validation(Required=false)]
