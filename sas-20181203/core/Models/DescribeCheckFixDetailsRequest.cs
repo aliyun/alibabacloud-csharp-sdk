@@ -10,24 +10,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckFixDetailsRequest : TeaModel {
         /// <summary>
-        /// Indicates whether the rule is optional. Valid values:
+        /// The ID of the risk item.
         /// 
-        /// *   **1**: yes
-        /// *   **0**: no
+        /// >  You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the IDs of risk items.
         /// </summary>
         [NameInMap("CheckIds")]
         [Validation(Required=false)]
         public string CheckIds { get; set; }
 
         /// <summary>
-        /// The description of the rule.
+        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// 
+        /// *   **zh**: Chinese
+        /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The default value of the rule.
+        /// The ID of the baseline.
+        /// 
+        /// >  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of baselines.
         /// </summary>
         [NameInMap("RiskId")]
         [Validation(Required=false)]

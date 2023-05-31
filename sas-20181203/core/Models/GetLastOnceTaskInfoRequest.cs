@@ -10,21 +10,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetLastOnceTaskInfoRequest : TeaModel {
         /// <summary>
-        /// The number of tasks that have been completed.
+        /// The source of the task.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
 
         /// <summary>
-        /// The ID of the latest scan task.
+        /// The name of the task. Valid values:
+        /// 
+        /// *   **CLIENT\_PROBLEM_CHECK**: client diagnosis task
+        /// *   **CLIENT\_DEV_OPS**: O\&M task of Cloud Assistant
+        /// *   **ASSETS_COLLECTION**: asset collection task
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The type of the task. Valid values:
+        /// 
+        /// *   **CLIENT\_PROBLEM_CHECK**: client diagnosis task
+        /// *   **CLIENT\_DEV_OPS**: O\&M task of Cloud Assistant
+        /// *   **ASSETS\_COLLECTION**: asset collection task
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

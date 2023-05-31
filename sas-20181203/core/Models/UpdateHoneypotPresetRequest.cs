@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateHoneypotPresetRequest : TeaModel {
+        /// <summary>
+        /// The name of the image that is used for the honeypot.
+        /// </summary>
         [NameInMap("HoneypotImageName")]
         [Validation(Required=false)]
         public string HoneypotImageName { get; set; }
 
+        /// <summary>
+        /// The ID of the honeypot template.
+        /// 
+        /// > You can call the [ListHoneypotPreset](~~ListHoneypotPreset~~) operation to query the IDs of honeypot templates.
+        /// </summary>
         [NameInMap("HoneypotPresetId")]
         [Validation(Required=false)]
         public string HoneypotPresetId { get; set; }
@@ -21,10 +29,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The custom configurations of the honeypot template. The value is a JSON string that contains the following fields:
+        /// 
+        /// *   **portrait_option**: Social Source Tracing
+        /// *   **burp**: Burp-specific Defense
+        /// *   **trojan_git**: Git-specific Defense
+        /// </summary>
         [NameInMap("Meta")]
         [Validation(Required=false)]
         public string Meta { get; set; }
 
+        /// <summary>
+        /// The custom name of the honeypot template.
+        /// </summary>
         [NameInMap("PresetName")]
         [Validation(Required=false)]
         public string PresetName { get; set; }

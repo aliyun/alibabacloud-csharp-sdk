@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckResultResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the check items.
+        /// The check items.
         /// </summary>
         [NameInMap("Checks")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CheckId { get; set; }
 
             /// <summary>
-            /// An array that consists of the check policies.
+            /// The check policies.
             /// </summary>
             [NameInMap("CheckPolicies")]
             [Validation(Required=false)]
@@ -84,29 +84,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// The asset subtype of the cloud service. Valid values:
             /// 
-            /// *   If the **InstanceType** parameter is set to **ECS**, this parameter supports the following valid values:
+            /// *   If **InstanceType** is set to **ECS**, this parameter supports the following valid values:
             /// 
             ///     *   **INSTANCE**
             ///     *   **DISK**
             ///     *   **SECURITY_GROUP**
             /// 
-            /// *   If the **InstanceType** parameter is set to **ACR**, this parameter supports the following valid values:
+            /// *   If **InstanceType** is set to **ACR**, this parameter supports the following valid values:
             /// 
             ///     *   **REPOSITORY_ENTERPRISE**
             ///     *   **REPOSITORY_PERSON**
             /// 
-            /// *   If the **InstanceType** parameter is set to **RAM**, this parameter supports the following valid values:
+            /// *   If **InstanceType** is set to **RAM**, this parameter supports the following valid values:
             /// 
             ///     *   **ALIAS**
             ///     *   **USER**
             ///     *   **POLICY**
             ///     *   **GROUP**
             /// 
-            /// *   If the **InstanceType** parameter is set to **WAF**, this parameter supports the following valid values:
+            /// *   If **InstanceType** is set to **WAF**, this parameter supports the following valid values:
             /// 
             ///     *   **DOMAIN**
             /// 
-            /// *   If the **InstanceType** parameter is set to other values, this parameter supports the following valid values:
+            /// *   If **InstanceType** is set to other values, this parameter supports the following valid values:
             /// 
             ///     *   **INSTANCE**
             /// </summary>
@@ -220,14 +220,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// The page number.
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// The number of entries per page.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSecurityEventOperationsRequest : TeaModel {
         /// <summary>
-        /// The value of the field that can be used in the whitelist rule.
+        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// 
+        /// *   **zh**: Chinese
+        /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -21,20 +24,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The field that can be used in the whitelist rule.
+        /// The ID of the alert event that you want to handle.
         /// </summary>
         [NameInMap("SecurityEventId")]
         [Validation(Required=false)]
         public long? SecurityEventId { get; set; }
 
         /// <summary>
-        /// The operation that is supported in the whitelist rule. Valid values:
-        /// 
-        /// *   **contains**: contains
-        /// *   **notContains**: does not contain
-        /// *   **regex**: regular expression
-        /// *   **strEqual**: equals
-        /// *   **strNotEqual**: does not equal
+        /// The source IP address of the request.
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

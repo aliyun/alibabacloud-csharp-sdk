@@ -37,6 +37,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? AsapCount { get; set; }
 
+            /// <summary>
+            /// 是否可支持修复。取值：
+            /// - **yes**：支持修复
+            /// - **no**： 不支持修复
+            /// </summary>
             [NameInMap("CanFix")]
             [Validation(Required=false)]
             public string CanFix { get; set; }

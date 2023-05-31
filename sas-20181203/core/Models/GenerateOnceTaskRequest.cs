@@ -10,33 +10,36 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GenerateOnceTaskRequest : TeaModel {
         /// <summary>
-        /// The collection time.
+        /// The additional information.
         /// </summary>
         [NameInMap("Param")]
         [Validation(Required=false)]
         public string Param { get; set; }
 
         /// <summary>
-        /// The total number of scan tasks.
+        /// The source of the scan task.
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
 
         /// <summary>
-        /// The ID of the last scan task.
+        /// The name of the scan task. Valid values:
+        /// 
+        /// *   **CLIENT\_PROBLEM_CHECK**: a client diagnosis task
+        /// *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
+        /// *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
-        /// Indicates whether you can create more scan tasks. Valid values:
+        /// The type of the scan task. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
-        /// 
-        /// > By default, a maximum of 10 scan tasks can be running at the same time. If 10 image scan tasks are running, you cannot create a scan task by calling this operation. You must wait for at least one of the 10 existing scan tasks to complete before you can create a scan task.
+        /// *   **CLIENT\_PROBLEM_CHECK**: a client diagnosis task
+        /// *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
+        /// *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListClusterCnnfStatusDetailRequest : TeaModel {
         /// <summary>
-        /// An array that consists of the protection status of the container firewall.
+        /// An array that consists of the ID of the cluster.
         /// </summary>
         [NameInMap("ClusterIds")]
         [Validation(Required=false)]

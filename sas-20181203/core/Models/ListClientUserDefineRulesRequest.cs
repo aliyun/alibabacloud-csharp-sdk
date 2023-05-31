@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListClientUserDefineRulesRequest : TeaModel {
+        /// <summary>
+        /// The number of the page to return.
+        /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// The name of the rule.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The number of entries to return on each page.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The types of rules.
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public List<int?> Type { get; set; }

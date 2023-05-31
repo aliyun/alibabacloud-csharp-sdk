@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateHoneypotProbeRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether address resolution protocol (ARP) is enabled for the check type.
+        /// </summary>
         [NameInMap("Arp")]
         [Validation(Required=false)]
         public bool? Arp { get; set; }
 
+        /// <summary>
+        /// The name of the probe.
+        /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
@@ -21,14 +27,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// Specifies whether ping is enabled for the check type.
+        /// </summary>
         [NameInMap("Ping")]
         [Validation(Required=false)]
         public bool? Ping { get; set; }
 
+        /// <summary>
+        /// The ID of the probe.
+        /// 
+        /// > You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+        /// </summary>
         [NameInMap("ProbeId")]
         [Validation(Required=false)]
         public string ProbeId { get; set; }
 
+        /// <summary>
+        /// The IP addresses that are monitored.
+        /// </summary>
         [NameInMap("ServiceIpList")]
         [Validation(Required=false)]
         public List<string> ServiceIpList { get; set; }

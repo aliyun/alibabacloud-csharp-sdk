@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CheckIds { get; set; }
 
         /// <summary>
-        /// The UUIDs of servers on which you want to verify risk items.
+        /// The IDs of risk items that you want to verify. Separate multiple IDs with commas (,).
         /// </summary>
         [NameInMap("RiskIds")]
         [Validation(Required=false)]
         public string RiskIds { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The UUIDs of servers on which you want to verify risk items.
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

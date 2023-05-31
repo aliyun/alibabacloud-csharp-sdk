@@ -9,16 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ChangeCheckCustomConfigResponseBody : TeaModel {
+        /// <summary>
+        /// An array that consists of the invalid custom configuration items of the check item.
+        /// </summary>
         [NameInMap("IllegalCustomConfigs")]
         [Validation(Required=false)]
         public List<ChangeCheckCustomConfigResponseBodyIllegalCustomConfigs> IllegalCustomConfigs { get; set; }
         public class ChangeCheckCustomConfigResponseBodyIllegalCustomConfigs : TeaModel {
+            /// <summary>
+            /// The name of the custom configuration item. The name of a custom configuration item is unique in a check item.
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
         }
 
+        /// <summary>
+        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

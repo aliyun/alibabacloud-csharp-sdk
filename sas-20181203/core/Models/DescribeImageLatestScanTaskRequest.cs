@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageLatestScanTaskRequest : TeaModel {
+        /// <summary>
+        /// The digest value of the image.
+        /// </summary>
         [NameInMap("Digest")]
         [Validation(Required=false)]
         public string Digest { get; set; }

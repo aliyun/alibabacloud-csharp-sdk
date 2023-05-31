@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertySoftwareItemResponseBody : TeaModel {
         /// <summary>
-        /// 10
+        /// The pagination information.
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribePropertySoftwareItemResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertySoftwareItemResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// Queries information about all software assets.
+            /// The number of entries returned on the current page.
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// The page number of the returned page.
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The ID of the request.
+            /// The number of entries returned per page.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// true
+            /// The total number of entries returned.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -47,16 +47,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// DescribePropertySoftwareItem
+        /// An array that consists of the software assets returned.
         /// </summary>
         [NameInMap("PropertyItems")]
         [Validation(Required=false)]
         public List<DescribePropertySoftwareItemResponseBodyPropertyItems> PropertyItems { get; set; }
         public class DescribePropertySoftwareItemResponseBodyPropertyItems : TeaModel {
+            /// <summary>
+            /// The number of servers on which the software is installed.
+            /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
+            /// <summary>
+            /// The name of the software.
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -64,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The name of the software.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

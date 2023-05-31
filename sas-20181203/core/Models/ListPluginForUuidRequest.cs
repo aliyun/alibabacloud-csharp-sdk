@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListPluginForUuidRequest : TeaModel {
         /// <summary>
-        /// An array that consists of the information about the plug-ins.
+        /// The plug-in types.
         /// </summary>
         [NameInMap("Types")]
         [Validation(Required=false)]
         public List<string> Types { get; set; }
 
         /// <summary>
-        /// The configurations of the plug-in.
+        /// The UUID of the server.
+        /// 
+        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

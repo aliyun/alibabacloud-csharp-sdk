@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulTargetStatisticsRequest : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// The type of the vulnerability. Valid values:
+        /// 
+        /// *   **cve**: Linux software vulnerability
+        /// *   **sys**: Windows system vulnerability
+        /// *   **cms**: Web-CMS vulnerability
+        /// *   **emg**: urgent vulnerability
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

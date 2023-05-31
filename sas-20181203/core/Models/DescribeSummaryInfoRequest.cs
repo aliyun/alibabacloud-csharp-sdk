@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSummaryInfoRequest : TeaModel {
         /// <summary>
-        /// 192.168.XX.XX
+        /// The language of the content within the request and response. Valid values:
+        /// 
+        /// *   **zh**: Chinese
+        /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

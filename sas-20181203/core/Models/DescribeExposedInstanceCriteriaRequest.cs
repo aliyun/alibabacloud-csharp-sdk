@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedInstanceCriteriaRequest : TeaModel {
         /// <summary>
-        /// DescribeExposedInstanceCriteria
+        /// The value of the search condition. Fuzzy match is supported.
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyPortDetailResponseBody : TeaModel {
         /// <summary>
-        /// 192.168.XX.XX
+        /// The pagination information.
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribePropertyPortDetailResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertyPortDetailResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The UUID of the server.
+            /// The number of entries returned on the current page.
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// An array that consists of the fingerprints of the ports.
+            /// The page number of the returned page.
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The ID of the server process that listens on the port.
+            /// The number of entries returned per page. Default value: **10**.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The name of the server process.
+            /// The total number of entries returned.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -47,91 +47,91 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// Specifies whether fuzzy search by port number is supported. If you want to use fuzzy search, set the parameter to **1**. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
+        /// An array that consists of the fingerprints of the ports.
         /// </summary>
         [NameInMap("Propertys")]
         [Validation(Required=false)]
         public List<DescribePropertyPortDetailResponseBodyPropertys> Propertys { get; set; }
         public class DescribePropertyPortDetailResponseBodyPropertys : TeaModel {
             /// <summary>
-            /// The pagination information.
+            /// The IP address that is bound to the listening port.
             /// </summary>
             [NameInMap("BindIp")]
             [Validation(Required=false)]
             public string BindIp { get; set; }
 
             /// <summary>
-            /// Queries the fingerprints of ports on a specified server.
+            /// The timestamp of the last fingerprint collection. Unit: milliseconds.
             /// </summary>
             [NameInMap("CreateTimestamp")]
             [Validation(Required=false)]
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// The IP address of the network interface controller (NIC) that is bound to the listening port.
+            /// The ID of the server.
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The UUID of the server.
+            /// The name of the server.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// The public IP address of the server.
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// The number of the page to return. Default value: **1**.
+            /// The private IP address of the server.
             /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// The ID of the server.
+            /// The IP address of the network interface controller (NIC) that is bound to the listening port.
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// 10
+            /// The ID of the server process that listens on the port.
             /// </summary>
             [NameInMap("Pid")]
             [Validation(Required=false)]
             public string Pid { get; set; }
 
             /// <summary>
-            /// The name of the server.
+            /// The listening port.
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public string Port { get; set; }
 
             /// <summary>
-            /// sshd
+            /// The name of the server process.
             /// </summary>
             [NameInMap("ProcName")]
             [Validation(Required=false)]
             public string ProcName { get; set; }
 
             /// <summary>
-            /// The ID of the request, which is used to locate and troubleshoot issues.
+            /// The network protocol that is used by the listening port.
             /// </summary>
             [NameInMap("Proto")]
             [Validation(Required=false)]
             public string Proto { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: **10**.
+            /// The UUID of the server.
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// 0.0.XX.XX
+        /// The ID of the request, which is used to locate and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

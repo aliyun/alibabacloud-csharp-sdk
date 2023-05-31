@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeInstanceRebootStatusRequest : TeaModel {
         /// <summary>
-        /// Queries the status of the servers that you restart.
+        /// The UUIDs of the servers that you restart. Separate multiple UUIDs with commas (,).
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

@@ -14,21 +14,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The code that indicates the handling result of the alert event.
+        /// The IDs of the alert events.
+        /// 
+        /// >  You must specify at least one of the TaskId and SecurityEventIds parameters.
         /// </summary>
         [NameInMap("SecurityEventIds")]
         [Validation(Required=false)]
         public List<string> SecurityEventIds { get; set; }
 
         /// <summary>
-        /// An array consisting of the status of the alert events handled by the task.
+        /// The source IP address of the request.
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The information about the task that handles the alert events.
+        /// The ID of the task that handles the alert events.
+        /// 
+        /// >  You must specify at least one of the TaskId and SecurityEventIds parameters.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

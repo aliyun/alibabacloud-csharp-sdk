@@ -9,10 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DisableCustomBlockRecordRequest : TeaModel {
+        /// <summary>
+        /// The IP address that is specified in the policy.
+        /// 
+        /// > You can call the [DescribeCustomBlockRecords](~~DescribeCustomBlockRecords~~) operation to query the IP address.
+        /// </summary>
         [NameInMap("BlockIp")]
         [Validation(Required=false)]
         public string BlockIp { get; set; }
 
+        /// <summary>
+        /// The traffic direction that is specified in the policy. Valid values:
+        /// 
+        /// *   **in**: inbound
+        /// *   **out**: outbound
+        /// </summary>
         [NameInMap("Bound")]
         [Validation(Required=false)]
         public string Bound { get; set; }

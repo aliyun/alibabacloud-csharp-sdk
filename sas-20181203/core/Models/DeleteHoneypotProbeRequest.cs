@@ -19,6 +19,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The ID of the probe.
+        /// 
+        /// > You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+        /// </summary>
         [NameInMap("ProbeId")]
         [Validation(Required=false)]
         public string ProbeId { get; set; }

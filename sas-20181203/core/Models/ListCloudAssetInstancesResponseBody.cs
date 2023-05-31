@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCloudAssetInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The details of the cloud asset.
+        /// An array that consists of the details of the cloud assets.
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<ListCloudAssetInstancesResponseBodyInstances> Instances { get; set; }
         public class ListCloudAssetInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// Indicates whether risks are detected on the cloud asset. Valid values:
+            /// Indicates whether alerts are generated for the cloud asset. Valid values:
             /// 
             /// *   **YES**
             /// *   **NO**
@@ -25,20 +25,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("AlarmStatus")]
             [Validation(Required=false)]
             public string AlarmStatus { get; set; }
-
-            /// <summary>
-            /// The instance ID of the cloud asset.
-            /// </summary>
-            [NameInMap("AssetSubType")]
-            [Validation(Required=false)]
-            public string AssetSubType { get; set; }
-
-            /// <summary>
-            /// The security information about the cloud asset.
-            /// </summary>
-            [NameInMap("AssetSubTypeName")]
-            [Validation(Required=false)]
-            public string AssetSubTypeName { get; set; }
 
             /// <summary>
             /// The subtype of the cloud asset. The subtype of the cloud service. Valid values:
@@ -99,71 +85,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **27**: Elasticsearch
             ///     * **0**: instance
             /// </summary>
-            [NameInMap("AssetType")]
+            [NameInMap("AssetSubType")]
             [Validation(Required=false)]
-            public int? AssetType { get; set; }
+            public string AssetSubType { get; set; }
 
             /// <summary>
             /// The subtype name of the cloud asset.
             /// </summary>
-            [NameInMap("AssetTypeName")]
+            [NameInMap("AssetSubTypeName")]
             [Validation(Required=false)]
-            public string AssetTypeName { get; set; }
-
-            /// <summary>
-            /// The public IP address of the instance.
-            /// </summary>
-            [NameInMap("CreatedTime")]
-            [Validation(Required=false)]
-            public long? CreatedTime { get; set; }
-
-            /// <summary>
-            /// The instance name of the cloud asset.
-            /// </summary>
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            /// <summary>
-            /// The time when the instance was created.
-            /// </summary>
-            [NameInMap("InstanceName")]
-            [Validation(Required=false)]
-            public string InstanceName { get; set; }
-
-            /// <summary>
-            /// Indicates whether alerts are generated for the cloud asset. Valid values:
-            /// 
-            /// *   **YES**
-            /// *   **NO**
-            /// </summary>
-            [NameInMap("InternetIp")]
-            [Validation(Required=false)]
-            public string InternetIp { get; set; }
-
-            /// <summary>
-            /// The type of the cloud asset by source. Valid values:
-            /// 
-            /// *   **0**: an asset provided by Alibaba Cloud
-            /// *   **1**: a third-party cloud asset
-            /// *   **2**: an asset in a data center
-            /// *   **3**, **4**, **5**, and **7**: other cloud asset
-            /// *   **8**: a lightweight asset
-            /// </summary>
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-            /// <summary>
-            /// The type name of the cloud asset.
-            /// </summary>
-            [NameInMap("RiskStatus")]
-            [Validation(Required=false)]
-            public string RiskStatus { get; set; }
-
-            [NameInMap("SecurityInfo")]
-            [Validation(Required=false)]
-            public string SecurityInfo { get; set; }
+            public string AssetSubTypeName { get; set; }
 
             /// <summary>
             /// The type of the asset. Valid values:
@@ -193,6 +124,78 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// *   **26**: PolarDB-X
             /// *   **27**: Elasticsearch
             /// </summary>
+            [NameInMap("AssetType")]
+            [Validation(Required=false)]
+            public int? AssetType { get; set; }
+
+            /// <summary>
+            /// The type name of the cloud asset.
+            /// </summary>
+            [NameInMap("AssetTypeName")]
+            [Validation(Required=false)]
+            public string AssetTypeName { get; set; }
+
+            /// <summary>
+            /// The time when the instance was created.
+            /// </summary>
+            [NameInMap("CreatedTime")]
+            [Validation(Required=false)]
+            public long? CreatedTime { get; set; }
+
+            /// <summary>
+            /// The instance ID of the cloud asset.
+            /// </summary>
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            /// <summary>
+            /// The instance name of the cloud asset.
+            /// </summary>
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+
+            /// <summary>
+            /// The public IP address of the instance.
+            /// </summary>
+            [NameInMap("InternetIp")]
+            [Validation(Required=false)]
+            public string InternetIp { get; set; }
+
+            /// <summary>
+            /// The region ID of the cloud asset.
+            /// </summary>
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
+            /// <summary>
+            /// Indicates whether risks are detected on the cloud asset. Valid values:
+            /// 
+            /// *   **YES**
+            /// *   **NO**
+            /// </summary>
+            [NameInMap("RiskStatus")]
+            [Validation(Required=false)]
+            public string RiskStatus { get; set; }
+
+            /// <summary>
+            /// The security information about the cloud asset.
+            /// </summary>
+            [NameInMap("SecurityInfo")]
+            [Validation(Required=false)]
+            public string SecurityInfo { get; set; }
+
+            /// <summary>
+            /// The type of the cloud asset by source. Valid values:
+            /// 
+            /// *   **0**: an asset provided by Alibaba Cloud
+            /// *   **1**: a third-party cloud asset
+            /// *   **2**: an asset in a data center
+            /// *   **3**, **4**, **5**, and **7**: other cloud asset
+            /// *   **8**: a lightweight asset
+            /// </summary>
             [NameInMap("Vendor")]
             [Validation(Required=false)]
             public int? Vendor { get; set; }
@@ -200,35 +203,35 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The pagination information.
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListCloudAssetInstancesResponseBodyPageInfo PageInfo { get; set; }
         public class ListCloudAssetInstancesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// An array that consists of the details of the cloud assets.
+            /// The number of entries returned on the current page.
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// The page number of the returned page.
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The total number of cloud assets.
+            /// The number of entries returned per page.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// The total number of cloud assets.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -237,14 +240,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The pagination information.
+        /// The ID of the request, which is used to locate and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// Indicates whether the request was successful. Valid values:
+        /// 
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

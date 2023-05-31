@@ -23,51 +23,57 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AuthVersion { get; set; }
 
         /// <summary>
-        /// The shortage in the quota for cores of servers that can be protected.
+        /// Specifies whether to automatically bind servers to Security Center. Valid values:
+        /// 
+        /// *   **0**: no
+        /// *   **1**: yes
         /// </summary>
         [NameInMap("AutoBind")]
         [Validation(Required=false)]
         public int? AutoBind { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// The UUIDs of the servers that you want to bind to Security Center.
+        /// 
+        /// >  You must specify at least one of the **Bind** and **UnBind** parameters.
         /// </summary>
         [NameInMap("Bind")]
         [Validation(Required=false)]
         public List<string> Bind { get; set; }
 
         /// <summary>
-        /// The UUID of the server that you want to bind to Security Center.
+        /// Specifies whether to bind all servers to Security Center. Default value: **false**. Valid values:
         /// 
-        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+        /// *   **true**: yes
+        /// *   **false**: no
         /// </summary>
         [NameInMap("BindAll")]
         [Validation(Required=false)]
         public bool? BindAll { get; set; }
 
         /// <summary>
-        /// The status code that indicates the result. Valid values:
+        /// The search conditions that are used to filter servers. The value of this parameter is in the JSON format and is case-sensitive.
         /// 
-        /// *   **0**: The servers are bound to or unbound from Security Center.
-        /// *   **1**: The values that you specified for the parameters are invalid.
-        /// *   **2**: The quota for servers that can be protected is insufficient.
-        /// *   **3**: The quota for cores of servers that can be protected is insufficient.
+        /// >  A search condition can be an instance ID, instance name, virtual private cloud (VPC) ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.
         /// </summary>
         [NameInMap("Criteria")]
         [Validation(Required=false)]
         public string Criteria { get; set; }
 
         /// <summary>
-        /// The search conditions that are used to filter servers. The value of this parameter is in the JSON format and is case-sensitive.
+        /// The logical relationship among multiple search conditions. Valid values:
         /// 
-        /// >  A search condition can be an instance ID, instance name, virtual private cloud (VPC) ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.
+        /// *   **OR**: Search conditions are evaluated by using a logical **OR**.
+        /// *   **AND**: Search conditions are evaluated by using a logical **AND**.
         /// </summary>
         [NameInMap("LogicalExp")]
         [Validation(Required=false)]
         public string LogicalExp { get; set; }
 
         /// <summary>
-        /// Binds servers to Security Center or unbinds servers from Security Center.
+        /// The UUIDs of the servers that you want to unbind from Security Center.
+        /// 
+        /// >  You must specify at least one of the **Bind** and **UnBind** parameters.
         /// </summary>
         [NameInMap("UnBind")]
         [Validation(Required=false)]

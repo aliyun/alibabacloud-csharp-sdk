@@ -19,13 +19,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The type of the domain asset. Valid values:
-        /// 
-        /// *   **0**: an Elastic Compute Service (ECS) instance
-        /// *   **1**: a Server Load Balancer (SLB) instance
-        /// *   **2**: a Network Address Translation (NAT) gateway
-        /// *   **3**: an ApsaraDB RDS instance
-        /// *   **4**: an ApsaraDB for MongoDB instance
+        /// The source IP address of the request.
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

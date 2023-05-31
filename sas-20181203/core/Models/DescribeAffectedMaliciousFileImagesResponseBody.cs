@@ -10,61 +10,77 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAffectedMaliciousFileImagesResponseBody : TeaModel {
         /// <summary>
-        /// The region ID of the image repository.
+        /// An array consisting of the images that have malicious image samples.
         /// </summary>
         [NameInMap("AffectedMaliciousFileImagesResponse")]
         [Validation(Required=false)]
         public List<DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse> AffectedMaliciousFileImagesResponse { get; set; }
         public class DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse : TeaModel {
+            /// <summary>
+            /// The ID of the cluster.
+            /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
+            /// <summary>
+            /// The name of the cluster.
+            /// </summary>
             [NameInMap("ClusterName")]
             [Validation(Required=false)]
             public string ClusterName { get; set; }
 
+            /// <summary>
+            /// The ID of the container.
+            /// </summary>
             [NameInMap("ContainerId")]
             [Validation(Required=false)]
             public string ContainerId { get; set; }
 
             /// <summary>
-            /// The name of the cluster.
+            /// The image digest.
             /// </summary>
             [NameInMap("Digest")]
             [Validation(Required=false)]
             public string Digest { get; set; }
 
+            /// <summary>
+            /// The URL to download the malicious image sample.
+            /// </summary>
             [NameInMap("DownloadUrl")]
             [Validation(Required=false)]
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: **20**.
+            /// The path to the image file.
             /// </summary>
             [NameInMap("FilePath")]
             [Validation(Required=false)]
             public string FilePath { get; set; }
 
             /// <summary>
-            /// The ID of the container.
+            /// The timestamp of the first scan.
             /// </summary>
             [NameInMap("FirstScanTimestamp")]
             [Validation(Required=false)]
             public long? FirstScanTimestamp { get; set; }
 
+            /// <summary>
+            /// The text that is highlighted.
+            /// </summary>
             [NameInMap("HighLight")]
             [Validation(Required=false)]
             public string HighLight { get; set; }
 
+            /// <summary>
+            /// The name of the image.
+            /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
             public string Image { get; set; }
 
             /// <summary>
-            /// The namespace to which the image repository belongs.
-            /// 
-            /// >  Fuzzy match is supported.
+            /// The UUID of the image.
             /// </summary>
             [NameInMap("ImageUuid")]
             [Validation(Required=false)]
@@ -83,89 +99,100 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// Queries the details of malicious image samples.
+            /// The timestamp of the last scan.
             /// </summary>
             [NameInMap("LatestScanTimestamp")]
             [Validation(Required=false)]
             public long? LatestScanTimestamp { get; set; }
 
             /// <summary>
-            /// The ID of the image repository.
-            /// 
-            /// >  You can call the [ListRepository](~~145293~~) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.
+            /// The timestamp of the last verification.
             /// </summary>
             [NameInMap("LatestVerifyTimestamp")]
             [Validation(Required=false)]
             public long? LatestVerifyTimestamp { get; set; }
 
             /// <summary>
-            /// The pod.
+            /// The image layer.
             /// </summary>
             [NameInMap("Layer")]
             [Validation(Required=false)]
             public string Layer { get; set; }
 
+            /// <summary>
+            /// The severity of the malicious image sample. Valid values:
+            /// 
+            /// *   **serious**
+            /// *   **suspicious**
+            /// *   **remind**
+            /// </summary>
             [NameInMap("Level")]
             [Validation(Required=false)]
             public string Level { get; set; }
 
             /// <summary>
-            /// The pod.
+            /// The MD5 hash value of the malicious image sample.
             /// </summary>
             [NameInMap("MaliciousMd5")]
             [Validation(Required=false)]
             public string MaliciousMd5 { get; set; }
 
             /// <summary>
-            /// The namespace.
+            /// The namespace to which the image repository belongs.
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
+            /// <summary>
+            /// The pod.
+            /// </summary>
             [NameInMap("Pod")]
             [Validation(Required=false)]
             public string Pod { get; set; }
 
             /// <summary>
-            /// The ID of the request, which is used to locate and troubleshoot issues.
+            /// The ID of the image repository.
             /// </summary>
             [NameInMap("RepoId")]
             [Validation(Required=false)]
             public string RepoId { get; set; }
 
             /// <summary>
-            /// The timestamp of the last verification.
+            /// The ID of the container image.
             /// </summary>
             [NameInMap("RepoInstanceId")]
             [Validation(Required=false)]
             public string RepoInstanceId { get; set; }
 
             /// <summary>
-            /// DescribeAffectedMaliciousFileImages
+            /// The name of the image repository.
             /// </summary>
             [NameInMap("RepoName")]
             [Validation(Required=false)]
             public string RepoName { get; set; }
 
             /// <summary>
-            /// The pagination information.
+            /// The region ID of the image repository.
             /// </summary>
             [NameInMap("RepoRegionId")]
             [Validation(Required=false)]
             public string RepoRegionId { get; set; }
 
             /// <summary>
-            /// The name of the image repository.
+            /// The handling status of the malicious image sample. Valid values:
             /// 
-            /// >  Fuzzy match is supported.
+            /// *   **0**: unhandled
+            /// *   **1**: handled
+            /// *   **2**: verifying
+            /// *   **3**: added to the whitelist
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// The UUID of the image.
+            /// The tag that is added to the image.
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
@@ -190,35 +217,35 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the container image.
+        /// The pagination information.
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeAffectedMaliciousFileImagesResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeAffectedMaliciousFileImagesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The URL to download the malicious image sample.
+            /// The number of images that have malicious image samples returned on the current page.
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The image digest.
+            /// The page number of the returned page. Pages start from page **1**. Default value: **1**.
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The tag that is added to the image.
+            /// The number of entries returned per page. Default value: **20**.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The types of the assets that you want to scan.
+            /// The total number of images that have malicious image samples.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -227,9 +254,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The ID of the container image.
-        /// 
-        /// >  You can call the [ListRepository](~~145293~~) operation to query the IDs of container images from the value of the **InstanceId** response parameter.
+        /// The ID of the request, which is used to locate and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

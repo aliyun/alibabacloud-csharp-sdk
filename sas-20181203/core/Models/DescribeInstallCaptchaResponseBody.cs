@@ -10,21 +10,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeInstallCaptchaResponseBody : TeaModel {
         /// <summary>
-        /// Queries the verification code for you to manually install the Security Center agent.
+        /// The installation verification code for you to manually install the Security Center agent.
         /// </summary>
         [NameInMap("CaptchaCode")]
         [Validation(Required=false)]
         public string CaptchaCode { get; set; }
 
         /// <summary>
-        /// The source IP address of the request.
+        /// The validity period of the installation verification code.
+        /// 
+        /// >  The installation verification code is valid only within the validity period. An expired installation verification code cannot be used to install the agent.
         /// </summary>
         [NameInMap("Deadline")]
         [Validation(Required=false)]
         public string Deadline { get; set; }
 
         /// <summary>
-        /// 192.168.XX.XX
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

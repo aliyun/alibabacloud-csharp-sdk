@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CheckKey { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// The asset type of the cloud service. Valid values:
+        /// The asset type of the cloud services. Valid values:
         /// 
         /// *   **ECS**: Elastic Compute Service (ECS)
         /// *   **SLB**: Server Load Balancer (SLB)
@@ -71,12 +71,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The region ID of the instance. Valid values:
+        /// 
+        /// *   **cn-hangzhou**: International
+        /// *   **ap-southeast-1**: Singapore
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -117,7 +123,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<long?> StandardIds { get; set; }
 
         /// <summary>
-        /// The status of check items. Separate multiple status with commas (,). Valid values:
+        /// The statuses of check items. Separate multiple statuses with commas (,). Valid values:
         /// 
         /// *   **PASS**
         /// *   **NOT_PASS**
@@ -129,12 +135,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> Statuses { get; set; }
 
+        /// <summary>
+        /// The types of check standards.
+        /// </summary>
         [NameInMap("Types")]
         [Validation(Required=false)]
         public List<string> Types { get; set; }
 
         /// <summary>
-        /// The cloud service provider. Valid values:
+        /// The cloud service providers. Valid value:
         /// 
         /// *   **ALIYUN**: Alibaba Cloud
         /// </summary>

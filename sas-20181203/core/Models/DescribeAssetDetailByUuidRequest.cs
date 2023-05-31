@@ -10,21 +10,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAssetDetailByUuidRequest : TeaModel {
         /// <summary>
-        /// The operating system version of the server.
+        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// 
+        /// *   **zh**: Chinese
+        /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The details of the CPU.
+        /// The source IP address of the request.
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The public IP address of the server.
+        /// The UUID of the server to query.
+        /// 
+        /// >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

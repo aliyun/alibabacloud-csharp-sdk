@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperationCancelIgnoreSuspEventRequest : TeaModel {
         /// <summary>
-        /// OperationCancelIgnoreSuspEvent
+        /// The IDs of alert events.
         /// </summary>
         [NameInMap("SecurityEventIds")]
         [Validation(Required=false)]

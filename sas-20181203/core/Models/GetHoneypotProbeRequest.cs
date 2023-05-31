@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The ID of the probe.
+        /// </summary>
         [NameInMap("ProbeId")]
         [Validation(Required=false)]
         public string ProbeId { get; set; }

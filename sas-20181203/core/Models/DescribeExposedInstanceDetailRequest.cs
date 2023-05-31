@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedInstanceDetailRequest : TeaModel {
         /// <summary>
-        /// The server group to which the server belongs.
+        /// The UUID of the server that is exposed on the Internet.
+        /// 
+        /// >  You can call the [DescribeExposedInstanceList](~~DescribeExposedInstanceList~~) operation to query the UUIDs of servers.
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

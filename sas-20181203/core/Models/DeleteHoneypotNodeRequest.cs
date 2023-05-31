@@ -14,7 +14,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// Deletes a specified management node.
+        /// The ID of the management node.
+        /// 
+        /// > You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

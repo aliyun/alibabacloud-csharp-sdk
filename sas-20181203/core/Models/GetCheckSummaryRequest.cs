@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckSummaryRequest : TeaModel {
+        /// <summary>
+        /// The language of the content within the request and response. Valid values:
+        /// 
+        /// *   **zh**: Chinese
+        /// *   **en**: English
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// The account ID of the resource directory.
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public string ResourceDirectoryAccountId { get; set; }

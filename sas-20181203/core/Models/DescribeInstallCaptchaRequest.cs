@@ -10,23 +10,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeInstallCaptchaRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The validity period of the installation verification code. If this parameter is not specified, the validity period is 1 hour.
+        /// 
+        /// >  The installation verification code is valid only within the validity period. An expired installation verification code cannot be used to install the agent.
         /// </summary>
         [NameInMap("Deadline")]
         [Validation(Required=false)]
         public string Deadline { get; set; }
 
         /// <summary>
-        /// The validity period of the installation verification code. If this parameter is not specified, the validity period is 1 hour.
+        /// The language of the content within the request and response. Valid values:
         /// 
-        /// >  The installation verification code is valid only within the validity period. An expired installation verification code cannot be used to install the agent.
+        /// *   **zh**: Chinese
+        /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// zh
+        /// The source IP address of the request.
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

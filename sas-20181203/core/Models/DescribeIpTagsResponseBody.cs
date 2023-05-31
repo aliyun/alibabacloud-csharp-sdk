@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeIpTagsResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The tags that are added to the IP address.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }

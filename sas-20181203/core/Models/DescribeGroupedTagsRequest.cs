@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedTagsRequest : TeaModel {
         /// <summary>
-        /// ecs
+        /// The type of the asset to query. If you do not specify this parameter, the tags of all asset types are queried. Valid values:
+        /// 
+        /// *   **ecs**: server
+        /// *   **cloud_product**: Alibaba Cloud service
         /// </summary>
         [NameInMap("MachineTypes")]
         [Validation(Required=false)]

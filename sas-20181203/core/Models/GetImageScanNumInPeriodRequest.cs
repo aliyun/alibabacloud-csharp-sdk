@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetImageScanNumInPeriodRequest : TeaModel {
+        /// <summary>
+        /// The number of days.
+        /// </summary>
         [NameInMap("PastDay")]
         [Validation(Required=false)]
         public string PastDay { get; set; }

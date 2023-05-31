@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListHoneypotNodeRequest : TeaModel {
         /// <summary>
-        /// The allowed CIDR block.
+        /// The number of the page to return.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+        /// The ID of the management node.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NodeName { get; set; }
 
         /// <summary>
-        /// The time when the management node was created.
+        /// The number of entries to return on each page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

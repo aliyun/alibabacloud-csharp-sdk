@@ -10,21 +10,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckWarningDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// The ID of the alert that is triggered by the check item.
+        /// 
+        /// >  To query the details about a specified check item, you must provide the ID of the alert that is triggered by the check item. You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of alerts.
         /// </summary>
         [NameInMap("CheckWarningId")]
         [Validation(Required=false)]
         public long? CheckWarningId { get; set; }
 
         /// <summary>
-        /// The ID of the check item.
+        /// The language of the content within the request and the response. Valid values:
+        /// 
+        /// *   **zh**: Chinese
+        /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The additional information about the risk item.
+        /// The source IP address of the request.
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

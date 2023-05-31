@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeUniBackupPolicyDetailRequest : TeaModel {
         /// <summary>
-        /// $.parameters[2].schema.enumValueTitles
+        /// The ID of the anti-ransomware policy.
+        /// 
+        /// > You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

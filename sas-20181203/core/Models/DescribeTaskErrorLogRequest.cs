@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeTaskErrorLogRequest : TeaModel {
+        /// <summary>
+        /// The ID of the task.
+        /// 
+        /// >  You can call the DescribeImageFixTask operation to query the IDs of tasks.
+        /// </summary>
         [NameInMap("BuildTaskId")]
         [Validation(Required=false)]
         public string BuildTaskId { get; set; }

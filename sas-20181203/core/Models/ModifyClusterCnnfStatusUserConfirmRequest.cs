@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyClusterCnnfStatusUserConfirmRequest : TeaModel {
+        /// <summary>
+        /// The IDs of the clusters.
+        /// </summary>
         [NameInMap("ClusterIds")]
         [Validation(Required=false)]
         public List<string> ClusterIds { get; set; }
 
+        /// <summary>
+        /// Specifies whether to fix the blocking status of the cluster. Valid values:
+        /// 
+        /// *   true: yes
+        /// *   fasle: no
+        /// </summary>
         [NameInMap("UserConfirm")]
         [Validation(Required=false)]
         public bool? UserConfirm { get; set; }

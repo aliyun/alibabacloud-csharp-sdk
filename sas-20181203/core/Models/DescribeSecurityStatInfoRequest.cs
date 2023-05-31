@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSecurityStatInfoRequest : TeaModel {
         /// <summary>
-        /// The numbers of low-risk unfixed vulnerabilities at all points in time.
+        /// The language of the content within the request and response. Default value: **zh**. Valid values:
+        /// 
+        /// *   **zh**: Chinese
+        /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The number of **high-risk** unfixed vulnerabilities at each point in time.
+        /// The ID of the account that is added to the resource directory as a member for multi-account control. You can use this parameter to query the security status of the account.
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public string ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// The total number of baseline risk items on the current day.
+        /// The source IP address of the request.
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

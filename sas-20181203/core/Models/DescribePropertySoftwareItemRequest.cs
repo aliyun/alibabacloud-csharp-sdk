@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertySoftwareItemRequest : TeaModel {
         /// <summary>
-        /// The name of the software that you want to query.
+        /// The number of the page to return.
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The number of servers on which the software is installed.
+        /// Specifies whether to forcefully refresh the data that you want to query.
         /// </summary>
         [NameInMap("ForceFlush")]
         [Validation(Required=false)]
         public bool? ForceFlush { get; set; }
 
         /// <summary>
-        /// The pagination information.
+        /// The name of the software that you want to query.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// 1
+        /// The number of entries to return on each page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

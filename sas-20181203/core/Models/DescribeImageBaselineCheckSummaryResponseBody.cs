@@ -10,66 +10,93 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageBaselineCheckSummaryResponseBody : TeaModel {
         /// <summary>
-        /// The name of the baseline.
+        /// An array that consists of the check results of image baselines.
         /// </summary>
         [NameInMap("BaselineResultSummary")]
         [Validation(Required=false)]
         public List<DescribeImageBaselineCheckSummaryResponseBodyBaselineResultSummary> BaselineResultSummary { get; set; }
         public class DescribeImageBaselineCheckSummaryResponseBodyBaselineResultSummary : TeaModel {
+            /// <summary>
+            /// The category of the baseline.
+            /// </summary>
             [NameInMap("BaselineClassAlias")]
             [Validation(Required=false)]
             public string BaselineClassAlias { get; set; }
 
+            /// <summary>
+            /// The keyword of the baseline category.
+            /// </summary>
             [NameInMap("BaselineClassKey")]
             [Validation(Required=false)]
             public string BaselineClassKey { get; set; }
 
+            /// <summary>
+            /// The name of the baseline.
+            /// </summary>
             [NameInMap("BaselineNameAlias")]
             [Validation(Required=false)]
             public string BaselineNameAlias { get; set; }
 
+            /// <summary>
+            /// The keyword of the baseline name.
+            /// </summary>
             [NameInMap("BaselineNameKey")]
             [Validation(Required=false)]
             public string BaselineNameKey { get; set; }
 
             /// <summary>
-            /// The ID of the request, which is used to locate and troubleshoot issues.
+            /// The severity of the image baseline. Valid values:
+            /// 
+            /// *   **high**
+            /// *   **medium**
+            /// *   **low**
             /// </summary>
             [NameInMap("BaselineNameLevel")]
             [Validation(Required=false)]
             public string BaselineNameLevel { get; set; }
 
+            /// <summary>
+            /// The timestamp when the first scan was performed. Unit: milliseconds.
+            /// </summary>
             [NameInMap("FirstScanTime")]
             [Validation(Required=false)]
             public long? FirstScanTime { get; set; }
 
             /// <summary>
-            /// DescribeImageBaselineCheckSummary
+            /// The number of images on which **high** baseline risks are detected.
             /// </summary>
             [NameInMap("HighRiskImage")]
             [Validation(Required=false)]
             public int? HighRiskImage { get; set; }
 
             /// <summary>
-            /// Queries the check results of image baselines that are included in an image scan task.
+            /// The timestamp when the last scan was performed. Unit: milliseconds.
             /// </summary>
             [NameInMap("LastScanTime")]
             [Validation(Required=false)]
             public long? LastScanTime { get; set; }
 
+            /// <summary>
+            /// The number of images on which **low** baseline risks are detected.
+            /// </summary>
             [NameInMap("LowRiskImage")]
             [Validation(Required=false)]
             public int? LowRiskImage { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: **20**.
+            /// The number of images on which **medium** baseline risks are detected.
             /// </summary>
             [NameInMap("MiddleRiskImage")]
             [Validation(Required=false)]
             public int? MiddleRiskImage { get; set; }
 
             /// <summary>
-            /// The number of entries to return on each page. Default value: **20**.
+            /// The status of the baseline risks. Valid values:
+            /// 
+            /// *   **0**: unfixed
+            /// *   **1**: fixed
+            /// *   **2**: pending verification
+            /// *   **3**: fixing failed
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -78,40 +105,35 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The search condition for the image baseline.
+        /// The pagination information.
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeImageBaselineCheckSummaryResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeImageBaselineCheckSummaryResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// The pagination information.
+            /// The number of entries returned on the current page.
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The type of the search condition. Valid values:
-            /// 
-            /// *   **BaselineNameAlias**: baseline name
-            /// *   **BaselineClassAlias**: baseline category
+            /// The page number of the returned page.
             /// </summary>
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// The ID of the container cluster.
-            /// 
-            /// >  You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of container clusters.
+            /// The number of entries returned per page. Default value: **20**.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The number of entries returned on the current page.
+            /// The total number of entries returned.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -120,7 +142,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// The types of the assets that you want to scan.
+        /// The ID of the request, which is used to locate and troubleshoot issues.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

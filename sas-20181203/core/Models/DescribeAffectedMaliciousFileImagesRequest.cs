@@ -10,10 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAffectedMaliciousFileImagesRequest : TeaModel {
         /// <summary>
-        /// The language of the content within the request and the response. Valid values:
+        /// The ID of the container cluster.
         /// 
-        /// *   **zh**: Chinese
-        /// *   **en**: English
+        /// >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -27,7 +26,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// The total number of images that have malicious image samples.
+        /// The ID of the container.
         /// </summary>
         [NameInMap("ContainerId")]
         [Validation(Required=false)]
@@ -41,41 +40,115 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// An array consisting of the images that have malicious image samples.
+        /// The name of the container image.
         /// </summary>
         [NameInMap("Image")]
         [Validation(Required=false)]
         public string Image { get; set; }
 
         /// <summary>
-        /// The severity of the malicious image sample. Separate multiple severities with commas (,). Valid values: serious suspicious remind
+        /// The image digest.
         /// </summary>
         [NameInMap("ImageDigest")]
         [Validation(Required=false)]
         public string ImageDigest { get; set; }
 
         /// <summary>
-        /// The text that is highlighted.
+        /// The image layer.
         /// </summary>
         [NameInMap("ImageLayer")]
         [Validation(Required=false)]
         public string ImageLayer { get; set; }
 
         /// <summary>
-        /// The timestamp of the last scan.
+        /// The tag that is added to the image.
         /// </summary>
         [NameInMap("ImageTag")]
         [Validation(Required=false)]
         public string ImageTag { get; set; }
 
         /// <summary>
-        /// The ID of the container cluster.
+        /// The language of the content within the request and the response. Valid values:
         /// 
-        /// >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+        /// *   **zh**: Chinese
+        /// *   **en**: English
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
+
+        /// <summary>
+        /// The severity of the malicious image sample. Separate multiple severities with commas (,). Valid values: serious suspicious remind
+        /// </summary>
+        [NameInMap("Levels")]
+        [Validation(Required=false)]
+        public string Levels { get; set; }
+
+        /// <summary>
+        /// The MD5 hash value of the malicious image sample.
+        /// 
+        /// >  You can call the [DescribeGroupedMaliciousFiles](~~DescribeGroupedMaliciousFiles~~) operation to query the MD5 hash values of malicious image samples.
+        /// </summary>
+        [NameInMap("MaliciousMd5")]
+        [Validation(Required=false)]
+        public string MaliciousMd5 { get; set; }
+
+        /// <summary>
+        /// The namespace.
+        /// </summary>
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
+
+        /// <summary>
+        /// The number of entries to return on each page. Default value: **20**.
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
+
+        /// <summary>
+        /// The pod.
+        /// </summary>
+        [NameInMap("Pod")]
+        [Validation(Required=false)]
+        public string Pod { get; set; }
+
+        /// <summary>
+        /// The ID of the image repository.
+        /// 
+        /// >  You can call the [ListRepository](~~ListRepository~~) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.
+        /// </summary>
+        [NameInMap("RepoId")]
+        [Validation(Required=false)]
+        public string RepoId { get; set; }
+
+        /// <summary>
+        /// The ID of the container image.
+        /// 
+        /// >  You can call the [ListRepository](~~ListRepository~~) operation to query the IDs of container images from the value of the **InstanceId** response parameter.
+        /// </summary>
+        [NameInMap("RepoInstanceId")]
+        [Validation(Required=false)]
+        public string RepoInstanceId { get; set; }
+
+        /// <summary>
+        /// The name of the image repository.
+        /// 
+        /// >  Fuzzy match is supported.
+        /// </summary>
+        [NameInMap("RepoName")]
+        [Validation(Required=false)]
+        public string RepoName { get; set; }
+
+        /// <summary>
+        /// The namespace to which the image repository belongs.
+        /// 
+        /// >  Fuzzy match is supported.
+        /// </summary>
+        [NameInMap("RepoNamespace")]
+        [Validation(Required=false)]
+        public string RepoNamespace { get; set; }
 
         /// <summary>
         /// The region ID of the image repository. Valid values:
@@ -94,83 +167,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **eu-west-1**: UK (London)
         /// *   **ap-south-1**: India (Mumbai)
         /// </summary>
-        [NameInMap("Levels")]
-        [Validation(Required=false)]
-        public string Levels { get; set; }
-
-        /// <summary>
-        /// The timestamp of the first scan.
-        /// </summary>
-        [NameInMap("MaliciousMd5")]
-        [Validation(Required=false)]
-        public string MaliciousMd5 { get; set; }
-
-        /// <summary>
-        /// The namespace to which the image repository belongs.
-        /// </summary>
-        [NameInMap("Namespace")]
-        [Validation(Required=false)]
-        public string Namespace { get; set; }
-
-        /// <summary>
-        /// The name of the image.
-        /// </summary>
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public string PageSize { get; set; }
-
-        /// <summary>
-        /// The image layer.
-        /// </summary>
-        [NameInMap("Pod")]
-        [Validation(Required=false)]
-        public string Pod { get; set; }
-
-        /// <summary>
-        /// The type of the asset that you want to scan. Valid values:
-        /// 
-        /// *   **container**
-        /// *   **image**
-        /// </summary>
-        [NameInMap("RepoId")]
-        [Validation(Required=false)]
-        public string RepoId { get; set; }
-
-        /// <summary>
-        /// The ID of the container.
-        /// </summary>
-        [NameInMap("RepoInstanceId")]
-        [Validation(Required=false)]
-        public string RepoInstanceId { get; set; }
-
-        /// <summary>
-        /// The number of images that have malicious image samples returned on the current page.
-        /// </summary>
-        [NameInMap("RepoName")]
-        [Validation(Required=false)]
-        public string RepoName { get; set; }
-
-        /// <summary>
-        /// The image digest.
-        /// </summary>
-        [NameInMap("RepoNamespace")]
-        [Validation(Required=false)]
-        public string RepoNamespace { get; set; }
-
-        /// <summary>
-        /// The number of entries to return on each page. Default value: **20**.
-        /// </summary>
         [NameInMap("RepoRegionId")]
         [Validation(Required=false)]
         public string RepoRegionId { get; set; }
 
         /// <summary>
-        /// The handling status of the malicious image sample. Valid values:
-        /// 
-        /// *   **0**: unhandled
-        /// *   **1**: handled
-        /// *   **2**: verifying
-        /// *   **3**: added to the whitelist
+        /// The types of the assets that you want to scan.
         /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]

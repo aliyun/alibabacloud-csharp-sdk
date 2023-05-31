@@ -84,6 +84,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? RaspDefend { get; set; }
 
+            [NameInMap("Related")]
+            [Validation(Required=false)]
+            public string Related { get; set; }
+
             /// <summary>
             /// The tag that is added to the vulnerability. Valid values:
             /// 
