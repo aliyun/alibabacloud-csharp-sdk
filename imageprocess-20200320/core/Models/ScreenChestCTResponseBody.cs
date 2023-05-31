@@ -175,6 +175,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [Validation(Required=false)]
                 public string ResultURL { get; set; }
 
+                [NameInMap("SeriesInstanceUid")]
+                [Validation(Required=false)]
+                public string SeriesInstanceUid { get; set; }
+
                 [NameInMap("Spacing")]
                 [Validation(Required=false)]
                 public List<float?> Spacing { get; set; }
@@ -300,6 +304,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [NameInMap("Origin")]
                 [Validation(Required=false)]
                 public List<float?> Origin { get; set; }
+
+                [NameInMap("SeriesInstanceUid")]
+                [Validation(Required=false)]
+                public string SeriesInstanceUid { get; set; }
 
                 [NameInMap("Spacing")]
                 [Validation(Required=false)]
@@ -561,6 +569,116 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [Validation(Required=false)]
             public Dictionary<string, object> NestedUrlList { get; set; }
 
+            [NameInMap("PredictCVD")]
+            [Validation(Required=false)]
+            public ScreenChestCTResponseBodyDataPredictCVD PredictCVD { get; set; }
+            public class ScreenChestCTResponseBodyDataPredictCVD : TeaModel {
+                [NameInMap("Lesion")]
+                [Validation(Required=false)]
+                public ScreenChestCTResponseBodyDataPredictCVDLesion Lesion { get; set; }
+                public class ScreenChestCTResponseBodyDataPredictCVDLesion : TeaModel {
+                    [NameInMap("CVDProbability")]
+                    [Validation(Required=false)]
+                    public double? CVDProbability { get; set; }
+
+                    [NameInMap("FeatureScore")]
+                    [Validation(Required=false)]
+                    public ScreenChestCTResponseBodyDataPredictCVDLesionFeatureScore FeatureScore { get; set; }
+                    public class ScreenChestCTResponseBodyDataPredictCVDLesionFeatureScore : TeaModel {
+                        [NameInMap("AortaCalciumScore")]
+                        [Validation(Required=false)]
+                        public List<double?> AortaCalciumScore { get; set; }
+
+                        [NameInMap("AortaCalciumVolume")]
+                        [Validation(Required=false)]
+                        public List<double?> AortaCalciumVolume { get; set; }
+
+                        [NameInMap("AscAoMaxDiam")]
+                        [Validation(Required=false)]
+                        public List<double?> AscAoMaxDiam { get; set; }
+
+                        [NameInMap("AscendAortaLength")]
+                        [Validation(Required=false)]
+                        public List<double?> AscendAortaLength { get; set; }
+
+                        [NameInMap("CardioThoracicRatio")]
+                        [Validation(Required=false)]
+                        public List<double?> CardioThoracicRatio { get; set; }
+
+                        [NameInMap("CoronaryCalciumVol")]
+                        [Validation(Required=false)]
+                        public List<double?> CoronaryCalciumVol { get; set; }
+
+                        [NameInMap("DeepFeature")]
+                        [Validation(Required=false)]
+                        public List<double?> DeepFeature { get; set; }
+
+                        [NameInMap("EatHUMean")]
+                        [Validation(Required=false)]
+                        public List<double?> EatHUMean { get; set; }
+
+                        [NameInMap("EatHUSTD")]
+                        [Validation(Required=false)]
+                        public List<double?> EatHUSTD { get; set; }
+
+                        [NameInMap("EatVolume")]
+                        [Validation(Required=false)]
+                        public List<double?> EatVolume { get; set; }
+
+                        [NameInMap("LeftLungLowattRatio")]
+                        [Validation(Required=false)]
+                        public List<double?> LeftLungLowattRatio { get; set; }
+
+                        [NameInMap("MyoEpiRatio")]
+                        [Validation(Required=false)]
+                        public List<double?> MyoEpiRatio { get; set; }
+
+                        [NameInMap("RightLungLowattRatio")]
+                        [Validation(Required=false)]
+                        public List<double?> RightLungLowattRatio { get; set; }
+
+                    }
+
+                    [NameInMap("ResultURL")]
+                    [Validation(Required=false)]
+                    public List<string> ResultURL { get; set; }
+
+                }
+
+                [NameInMap("SeriesInstanceUid")]
+                [Validation(Required=false)]
+                public string SeriesInstanceUid { get; set; }
+
+            }
+
+            [NameInMap("ScreenCRC")]
+            [Validation(Required=false)]
+            public ScreenChestCTResponseBodyDataScreenCRC ScreenCRC { get; set; }
+            public class ScreenChestCTResponseBodyDataScreenCRC : TeaModel {
+                [NameInMap("Lesion")]
+                [Validation(Required=false)]
+                public ScreenChestCTResponseBodyDataScreenCRCLesion Lesion { get; set; }
+                public class ScreenChestCTResponseBodyDataScreenCRCLesion : TeaModel {
+                    [NameInMap("ColorectumVolume")]
+                    [Validation(Required=false)]
+                    public string ColorectumVolume { get; set; }
+
+                    [NameInMap("Mask")]
+                    [Validation(Required=false)]
+                    public string Mask { get; set; }
+
+                    [NameInMap("Probabilities")]
+                    [Validation(Required=false)]
+                    public List<string> Probabilities { get; set; }
+
+                }
+
+                [NameInMap("SeriesInstanceUid")]
+                [Validation(Required=false)]
+                public string SeriesInstanceUid { get; set; }
+
+            }
+
             [NameInMap("ScreenEc")]
             [Validation(Required=false)]
             public ScreenChestCTResponseBodyDataScreenEc ScreenEc { get; set; }
@@ -588,6 +706,118 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                     [NameInMap("Possibilities")]
                     [Validation(Required=false)]
                     public List<string> Possibilities { get; set; }
+
+                }
+
+                [NameInMap("SeriesInstanceUid")]
+                [Validation(Required=false)]
+                public string SeriesInstanceUid { get; set; }
+
+            }
+
+            [NameInMap("ScreenGC")]
+            [Validation(Required=false)]
+            public ScreenChestCTResponseBodyDataScreenGC ScreenGC { get; set; }
+            public class ScreenChestCTResponseBodyDataScreenGC : TeaModel {
+                [NameInMap("Lesion")]
+                [Validation(Required=false)]
+                public ScreenChestCTResponseBodyDataScreenGCLesion Lesion { get; set; }
+                public class ScreenChestCTResponseBodyDataScreenGCLesion : TeaModel {
+                    [NameInMap("GCVolume")]
+                    [Validation(Required=false)]
+                    public string GCVolume { get; set; }
+
+                    [NameInMap("Mask")]
+                    [Validation(Required=false)]
+                    public string Mask { get; set; }
+
+                    [NameInMap("NonGCVolume")]
+                    [Validation(Required=false)]
+                    public string NonGCVolume { get; set; }
+
+                    [NameInMap("Probabilities")]
+                    [Validation(Required=false)]
+                    public List<string> Probabilities { get; set; }
+
+                    [NameInMap("StomachVolume")]
+                    [Validation(Required=false)]
+                    public string StomachVolume { get; set; }
+
+                }
+
+                [NameInMap("SeriesInstanceUid")]
+                [Validation(Required=false)]
+                public string SeriesInstanceUid { get; set; }
+
+            }
+
+            [NameInMap("ScreenLC")]
+            [Validation(Required=false)]
+            public ScreenChestCTResponseBodyDataScreenLC ScreenLC { get; set; }
+            public class ScreenChestCTResponseBodyDataScreenLC : TeaModel {
+                [NameInMap("Lesion")]
+                [Validation(Required=false)]
+                public ScreenChestCTResponseBodyDataScreenLCLesion Lesion { get; set; }
+                public class ScreenChestCTResponseBodyDataScreenLCLesion : TeaModel {
+                    [NameInMap("LesionList")]
+                    [Validation(Required=false)]
+                    public List<ScreenChestCTResponseBodyDataScreenLCLesionLesionList> LesionList { get; set; }
+                    public class ScreenChestCTResponseBodyDataScreenLCLesionLesionList : TeaModel {
+                        [NameInMap("Diameter")]
+                        [Validation(Required=false)]
+                        public List<float?> Diameter { get; set; }
+
+                        [NameInMap("KeySlice")]
+                        [Validation(Required=false)]
+                        public long? KeySlice { get; set; }
+
+                        [NameInMap("Malignancy")]
+                        [Validation(Required=false)]
+                        public float? Malignancy { get; set; }
+
+                        [NameInMap("RecistEndpoints")]
+                        [Validation(Required=false)]
+                        public List<float?> RecistEndpoints { get; set; }
+
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                        [NameInMap("Volume")]
+                        [Validation(Required=false)]
+                        public float? Volume { get; set; }
+
+                    }
+
+                    [NameInMap("LiverVolume")]
+                    [Validation(Required=false)]
+                    public string LiverVolume { get; set; }
+
+                    [NameInMap("Mask")]
+                    [Validation(Required=false)]
+                    public string Mask { get; set; }
+
+                    [NameInMap("PatientLevelResult")]
+                    [Validation(Required=false)]
+                    public ScreenChestCTResponseBodyDataScreenLCLesionPatientLevelResult PatientLevelResult { get; set; }
+                    public class ScreenChestCTResponseBodyDataScreenLCLesionPatientLevelResult : TeaModel {
+                        [NameInMap("BenignNonCystProb")]
+                        [Validation(Required=false)]
+                        public string BenignNonCystProb { get; set; }
+
+                        [NameInMap("CystProb")]
+                        [Validation(Required=false)]
+                        public string CystProb { get; set; }
+
+                        [NameInMap("HCCProb")]
+                        [Validation(Required=false)]
+                        public string HCCProb { get; set; }
+
+                        [NameInMap("MalignantNonHCCProb")]
+                        [Validation(Required=false)]
+                        public string MalignantNonHCCProb { get; set; }
+
+                    }
 
                 }
 

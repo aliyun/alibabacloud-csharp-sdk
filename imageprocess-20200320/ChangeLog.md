@@ -1,3 +1,10 @@
+2023-05-31 Version: 2.0.27
+- Release ScreenGC.
+- Release ScreenLC.
+- Release PredictCVD.
+- Release ScreenCRC.
+- Update  ScreenChestCT.
+
 2023-04-27 Version: 2.0.26
 - Release ChestCT.
 

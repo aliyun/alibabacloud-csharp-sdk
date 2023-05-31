@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 
         }
 
+        /// <summary>
+        /// 提交异步任务后的提示信息。
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
