@@ -337,6 +337,80 @@ namespace AlibabaCloud.SDK.Ens20171110
             return await AddNetworkInterfaceToInstanceWithOptionsAsync(request, runtime);
         }
 
+        public AddSnatIpForSnatEntryResponse AddSnatIpForSnatEntryWithOptions(AddSnatIpForSnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatEntryId))
+            {
+                query["SnatEntryId"] = request.SnatEntryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatIp))
+            {
+                query["SnatIp"] = request.SnatIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddSnatIpForSnatEntry",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddSnatIpForSnatEntryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AddSnatIpForSnatEntryResponse> AddSnatIpForSnatEntryWithOptionsAsync(AddSnatIpForSnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatEntryId))
+            {
+                query["SnatEntryId"] = request.SnatEntryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatIp))
+            {
+                query["SnatIp"] = request.SnatIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddSnatIpForSnatEntry",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddSnatIpForSnatEntryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AddSnatIpForSnatEntryResponse AddSnatIpForSnatEntry(AddSnatIpForSnatEntryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddSnatIpForSnatEntryWithOptions(request, runtime);
+        }
+
+        public async Task<AddSnatIpForSnatEntryResponse> AddSnatIpForSnatEntryAsync(AddSnatIpForSnatEntryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddSnatIpForSnatEntryWithOptionsAsync(request, runtime);
+        }
+
         public AssignPrivateIpAddressesResponse AssignPrivateIpAddressesWithOptions(AssignPrivateIpAddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5591,6 +5665,80 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSnatEntryWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteSnatIpForSnatEntryResponse DeleteSnatIpForSnatEntryWithOptions(DeleteSnatIpForSnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatEntryId))
+            {
+                query["SnatEntryId"] = request.SnatEntryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatIp))
+            {
+                query["SnatIp"] = request.SnatIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSnatIpForSnatEntry",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSnatIpForSnatEntryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteSnatIpForSnatEntryResponse> DeleteSnatIpForSnatEntryWithOptionsAsync(DeleteSnatIpForSnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatEntryId))
+            {
+                query["SnatEntryId"] = request.SnatEntryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatIp))
+            {
+                query["SnatIp"] = request.SnatIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSnatIpForSnatEntry",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSnatIpForSnatEntryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteSnatIpForSnatEntryResponse DeleteSnatIpForSnatEntry(DeleteSnatIpForSnatEntryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSnatIpForSnatEntryWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteSnatIpForSnatEntryResponse> DeleteSnatIpForSnatEntryAsync(DeleteSnatIpForSnatEntryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSnatIpForSnatEntryWithOptionsAsync(request, runtime);
         }
 
         public DeleteVSwitchResponse DeleteVSwitchWithOptions(DeleteVSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -12141,6 +12289,64 @@ namespace AlibabaCloud.SDK.Ens20171110
             return await DescribeServcieScheduleWithOptionsAsync(request, runtime);
         }
 
+        public DescribeSnatAttributeResponse DescribeSnatAttributeWithOptions(DescribeSnatAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSnatAttribute",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSnatAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeSnatAttributeResponse> DescribeSnatAttributeWithOptionsAsync(DescribeSnatAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSnatAttribute",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSnatAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeSnatAttributeResponse DescribeSnatAttribute(DescribeSnatAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSnatAttributeWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeSnatAttributeResponse> DescribeSnatAttributeAsync(DescribeSnatAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSnatAttributeWithOptionsAsync(request, runtime);
+        }
+
         public DescribeSnatTableEntriesResponse DescribeSnatTableEntriesWithOptions(DescribeSnatTableEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18585,6 +18791,80 @@ namespace AlibabaCloud.SDK.Ens20171110
             return await StartLoadBalancerListenerWithOptionsAsync(request, runtime);
         }
 
+        public StartSnatIpForSnatEntryResponse StartSnatIpForSnatEntryWithOptions(StartSnatIpForSnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatEntryId))
+            {
+                query["SnatEntryId"] = request.SnatEntryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatIp))
+            {
+                query["SnatIp"] = request.SnatIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartSnatIpForSnatEntry",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartSnatIpForSnatEntryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StartSnatIpForSnatEntryResponse> StartSnatIpForSnatEntryWithOptionsAsync(StartSnatIpForSnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatEntryId))
+            {
+                query["SnatEntryId"] = request.SnatEntryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatIp))
+            {
+                query["SnatIp"] = request.SnatIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartSnatIpForSnatEntry",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartSnatIpForSnatEntryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public StartSnatIpForSnatEntryResponse StartSnatIpForSnatEntry(StartSnatIpForSnatEntryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartSnatIpForSnatEntryWithOptions(request, runtime);
+        }
+
+        public async Task<StartSnatIpForSnatEntryResponse> StartSnatIpForSnatEntryAsync(StartSnatIpForSnatEntryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartSnatIpForSnatEntryWithOptionsAsync(request, runtime);
+        }
+
         public StopEpnInstanceResponse StopEpnInstanceWithOptions(StopEpnInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18891,6 +19171,80 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopLoadBalancerListenerWithOptionsAsync(request, runtime);
+        }
+
+        public StopSnatIpForSnatEntryResponse StopSnatIpForSnatEntryWithOptions(StopSnatIpForSnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatEntryId))
+            {
+                query["SnatEntryId"] = request.SnatEntryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatIp))
+            {
+                query["SnatIp"] = request.SnatIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopSnatIpForSnatEntry",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopSnatIpForSnatEntryResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<StopSnatIpForSnatEntryResponse> StopSnatIpForSnatEntryWithOptionsAsync(StopSnatIpForSnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatEntryId))
+            {
+                query["SnatEntryId"] = request.SnatEntryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatIp))
+            {
+                query["SnatIp"] = request.SnatIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopSnatIpForSnatEntry",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopSnatIpForSnatEntryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public StopSnatIpForSnatEntryResponse StopSnatIpForSnatEntry(StopSnatIpForSnatEntryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopSnatIpForSnatEntryWithOptions(request, runtime);
+        }
+
+        public async Task<StopSnatIpForSnatEntryResponse> StopSnatIpForSnatEntryAsync(StopSnatIpForSnatEntryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopSnatIpForSnatEntryWithOptionsAsync(request, runtime);
         }
 
         public UnAssociateEnsEipAddressResponse UnAssociateEnsEipAddressWithOptions(UnAssociateEnsEipAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
