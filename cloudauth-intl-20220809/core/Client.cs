@@ -37,6 +37,136 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public CardOcrResponse CardOcrWithOptions(CardOcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdFaceQuality))
+            {
+                query["IdFaceQuality"] = request.IdFaceQuality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureBase64))
+            {
+                query["IdOcrPictureBase64"] = request.IdOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureUrl))
+            {
+                query["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ocr))
+            {
+                query["Ocr"] = request.Ocr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spoof))
+            {
+                query["Spoof"] = request.Spoof;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CardOcr",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CardOcrResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CardOcrResponse> CardOcrWithOptionsAsync(CardOcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdFaceQuality))
+            {
+                query["IdFaceQuality"] = request.IdFaceQuality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureBase64))
+            {
+                query["IdOcrPictureBase64"] = request.IdOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureUrl))
+            {
+                query["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ocr))
+            {
+                query["Ocr"] = request.Ocr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spoof))
+            {
+                query["Spoof"] = request.Spoof;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CardOcr",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CardOcrResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CardOcrResponse CardOcr(CardOcrRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CardOcrWithOptions(request, runtime);
+        }
+
+        public async Task<CardOcrResponse> CardOcrAsync(CardOcrRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CardOcrWithOptionsAsync(request, runtime);
+        }
+
         public CheckResultResponse CheckResultWithOptions(CheckResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
