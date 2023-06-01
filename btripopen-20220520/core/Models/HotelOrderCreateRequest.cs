@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string DisOrderId { get; set; }
 
+        [NameInMap("extra")]
+        [Validation(Required=false)]
+        public string Extra { get; set; }
+
         [NameInMap("invoice_info")]
         [Validation(Required=false)]
         public HotelOrderCreateRequestInvoiceInfo InvoiceInfo { get; set; }
@@ -200,6 +204,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("need_check")]
                 [Validation(Required=false)]
                 public bool? NeedCheck { get; set; }
+
+                [NameInMap("promotion_code")]
+                [Validation(Required=false)]
+                public string PromotionCode { get; set; }
 
                 [NameInMap("promotion_id")]
                 [Validation(Required=false)]

@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? MinPrice { get; set; }
 
+                [NameInMap("original_min_price")]
+                [Validation(Required=false)]
+                public double? OriginalMinPrice { get; set; }
+
                 [NameInMap("score")]
                 [Validation(Required=false)]
                 public string Score { get; set; }

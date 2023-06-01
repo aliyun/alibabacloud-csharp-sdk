@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public bool? NeedCheck { get; set; }
 
+                    [NameInMap("promotion_code")]
+                    [Validation(Required=false)]
+                    public string PromotionCode { get; set; }
+
                     [NameInMap("promotion_id")]
                     [Validation(Required=false)]
                     public string PromotionId { get; set; }
@@ -81,6 +85,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Board { get; set; }
 
+                [NameInMap("discount_price")]
+                [Validation(Required=false)]
+                public string DiscountPrice { get; set; }
+
                 [NameInMap("price")]
                 [Validation(Required=false)]
                 public long? Price { get; set; }
@@ -92,6 +100,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("room_count")]
                 [Validation(Required=false)]
                 public int? RoomCount { get; set; }
+
+                [NameInMap("rounding_discount_price")]
+                [Validation(Required=false)]
+                public string RoundingDiscountPrice { get; set; }
+
+                [NameInMap("rounding_price")]
+                [Validation(Required=false)]
+                public string RoundingPrice { get; set; }
 
                 [NameInMap("service_fee")]
                 [Validation(Required=false)]

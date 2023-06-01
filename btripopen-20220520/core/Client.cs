@@ -8057,6 +8057,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["dis_order_id"] = request.DisOrderId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extra))
+            {
+                body["extra"] = request.Extra;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceInfoShrink))
             {
                 body["invoice_info"] = request.InvoiceInfoShrink;
@@ -8187,6 +8191,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisOrderId))
             {
                 body["dis_order_id"] = request.DisOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extra))
+            {
+                body["extra"] = request.Extra;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceInfoShrink))
             {

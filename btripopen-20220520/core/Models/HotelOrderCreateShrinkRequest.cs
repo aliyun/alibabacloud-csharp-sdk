@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string DisOrderId { get; set; }
 
+        [NameInMap("extra")]
+        [Validation(Required=false)]
+        public string Extra { get; set; }
+
         [NameInMap("invoice_info")]
         [Validation(Required=false)]
         public string InvoiceInfoShrink { get; set; }
