@@ -65,6 +65,11 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
 
             }
 
+            /// <summary>
+            /// 标记该数据是否出账。
+            /// - true：正常出账。
+            /// - false：不出账，例如在空间停服的情况下，用量数据不用于出账。
+            /// </summary>
             [NameInMap("EffectiveBillFlag")]
             [Validation(Required=false)]
             public bool? EffectiveBillFlag { get; set; }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string AccessControlAllowOrigin { get; set; }
 
+        [NameInMap("AccessOriginControl")]
+        [Validation(Required=false)]
+        public bool? AccessOriginControl { get; set; }
+
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

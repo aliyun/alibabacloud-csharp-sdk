@@ -5045,6 +5045,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615
             {
                 body["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                body["Interval"] = request.Interval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpaceId))
             {
                 body["SpaceId"] = request.SpaceId;
@@ -5079,6 +5083,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                body["Interval"] = request.Interval;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpaceId))
             {
@@ -5865,6 +5873,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615
             {
                 body["AccessControlAllowOrigin"] = request.AccessControlAllowOrigin;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessOriginControl))
+            {
+                body["AccessOriginControl"] = request.AccessOriginControl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
             {
                 body["DomainName"] = request.DomainName;
@@ -5903,6 +5915,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessControlAllowOrigin))
             {
                 body["AccessControlAllowOrigin"] = request.AccessControlAllowOrigin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessOriginControl))
+            {
+                body["AccessOriginControl"] = request.AccessOriginControl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
             {

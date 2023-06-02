@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("Interval")]
+        [Validation(Required=false)]
+        public int? Interval { get; set; }
+
         [NameInMap("SpaceId")]
         [Validation(Required=false)]
         public string SpaceId { get; set; }
