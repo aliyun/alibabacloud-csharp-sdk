@@ -175,6 +175,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string Phone { get; set; }
 
+            [NameInMap("room_no")]
+            [Validation(Required=false)]
+            public string RoomNo { get; set; }
+
             [NameInMap("staff_no")]
             [Validation(Required=false)]
             public string StaffNo { get; set; }
