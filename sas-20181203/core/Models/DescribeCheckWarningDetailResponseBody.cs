@@ -16,6 +16,46 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Advice { get; set; }
 
+        [NameInMap("CheckDetailAssetInfo")]
+        [Validation(Required=false)]
+        public List<Dictionary<string, string>> CheckDetailAssetInfo { get; set; }
+
+        [NameInMap("CheckDetailColumns")]
+        [Validation(Required=false)]
+        public List<DescribeCheckWarningDetailResponseBodyCheckDetailColumns> CheckDetailColumns { get; set; }
+        public class DescribeCheckWarningDetailResponseBodyCheckDetailColumns : TeaModel {
+            [NameInMap("Grids")]
+            [Validation(Required=false)]
+            public List<DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids> Grids { get; set; }
+            public class DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("ShowName")]
+                [Validation(Required=false)]
+                public string ShowName { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("ShowName")]
+            [Validation(Required=false)]
+            public string ShowName { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
         /// <summary>
         /// The ID of the check item.
         /// </summary>
