@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.ResourceManager20161111.Models
             [NameInMap("MultipleRolesAllowed")]
             [Validation(Required=false)]
             public bool? MultipleRolesAllowed { get; set; }
+
             [NameInMap("RoleDescriptions")]
             [Validation(Required=false)]
             public GetServiceLinkedRoleTemplateResponseBodyServiceLinkedRoleTemplateRoleDescriptions RoleDescriptions { get; set; }
@@ -39,16 +40,20 @@ namespace AlibabaCloud.SDK.ResourceManager20161111.Models
                 }
 
             }
+
             [NameInMap("RoleNamePrefix")]
             [Validation(Required=false)]
             public string RoleNamePrefix { get; set; }
+
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
+
             [NameInMap("SystemPolicyName")]
             [Validation(Required=false)]
             public string SystemPolicyName { get; set; }
-        };
+
+        }
 
     }
 

@@ -29,14 +29,33 @@ namespace AlibabaCloud.SDK.ResourceManager20161111.Models
             [Validation(Required=false)]
             public List<QueryResourceResponseBodyResourcesResource> Resource { get; set; }
             public class QueryResourceResponseBodyResourcesResource : TeaModel {
+                [NameInMap("CreateDate")]
+                [Validation(Required=false)]
                 public string CreateDate { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("ResourceId")]
+                [Validation(Required=false)]
                 public string ResourceId { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
                 public string ResourceType { get; set; }
+
+                [NameInMap("Service")]
+                [Validation(Required=false)]
                 public string Service { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -17,10 +17,17 @@ namespace AlibabaCloud.SDK.ResourceManager20161111.Models
             [Validation(Required=false)]
             public List<ListTrustedServiceStatusResponseBodyEnabledServicePrincipalsEnabledServicePrincipal> EnabledServicePrincipal { get; set; }
             public class ListTrustedServiceStatusResponseBodyEnabledServicePrincipalsEnabledServicePrincipal : TeaModel {
+                [NameInMap("EnableTime")]
+                [Validation(Required=false)]
                 public string EnableTime { get; set; }
+
+                [NameInMap("ServicePrincipal")]
+                [Validation(Required=false)]
                 public string ServicePrincipal { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

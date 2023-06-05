@@ -20,28 +20,36 @@ namespace AlibabaCloud.SDK.ResourceManager20161111.Models
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public string Arn { get; set; }
+
             [NameInMap("AssumeRolePolicyDocument")]
             [Validation(Required=false)]
             public string AssumeRolePolicyDocument { get; set; }
+
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
             [NameInMap("IsServiceLinkedRole")]
             [Validation(Required=false)]
             public bool? IsServiceLinkedRole { get; set; }
+
             [NameInMap("RoleId")]
             [Validation(Required=false)]
             public string RoleId { get; set; }
+
             [NameInMap("RoleName")]
             [Validation(Required=false)]
             public string RoleName { get; set; }
+
             [NameInMap("RolePrincipalName")]
             [Validation(Required=false)]
             public string RolePrincipalName { get; set; }
-        };
+
+        }
 
     }
 

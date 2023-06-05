@@ -16,6 +16,7 @@ namespace AlibabaCloud.SDK.ResourceManager20161111.Models
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+
             [NameInMap("RoleUsages")]
             [Validation(Required=false)]
             public GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsages RoleUsages { get; set; }
@@ -35,12 +36,14 @@ namespace AlibabaCloud.SDK.ResourceManager20161111.Models
                         [NameInMap("Resource")]
                         [Validation(Required=false)]
                         public List<string> Resource { get; set; }
-                    };
+
+                    }
 
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

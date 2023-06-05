@@ -16,16 +16,20 @@ namespace AlibabaCloud.SDK.ResourceManager20161111.Models
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
+
             [NameInMap("IsDefaultVersion")]
             [Validation(Required=false)]
             public bool? IsDefaultVersion { get; set; }
+
             [NameInMap("PolicyDocument")]
             [Validation(Required=false)]
             public string PolicyDocument { get; set; }
+
             [NameInMap("VersionId")]
             [Validation(Required=false)]
             public string VersionId { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
