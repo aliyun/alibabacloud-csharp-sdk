@@ -37,10 +37,104 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public ExpireLoginTokenResponse ExpireLoginTokenWithOptions(ExpireLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                body["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginToken))
+            {
+                body["LoginToken"] = request.LoginToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                body["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExpireLoginToken",
+                Version = "2021-02-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExpireLoginTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ExpireLoginTokenResponse> ExpireLoginTokenWithOptionsAsync(ExpireLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                body["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginToken))
+            {
+                body["LoginToken"] = request.LoginToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                body["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExpireLoginToken",
+                Version = "2021-02-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExpireLoginTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ExpireLoginTokenResponse ExpireLoginToken(ExpireLoginTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExpireLoginTokenWithOptions(request, runtime);
+        }
+
+        public async Task<ExpireLoginTokenResponse> ExpireLoginTokenAsync(ExpireLoginTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExpireLoginTokenWithOptionsAsync(request, runtime);
+        }
+
         public GetAuthCodeResponse GetAuthCodeWithOptions(GetAuthCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateUser))
+            {
+                body["AutoCreateUser"] = request.AutoCreateUser;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
             {
                 body["EndUserId"] = request.EndUserId;
@@ -76,6 +170,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateUser))
+            {
+                body["AutoCreateUser"] = request.AutoCreateUser;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
             {
                 body["EndUserId"] = request.EndUserId;
