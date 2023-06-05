@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateDataSourceRequest : TeaModel {
         /// <summary>
+        /// The ID of the data source that you want to update. You can call the [ListDataSources](~~211431~~) operation to obtain the ID.
+        /// </summary>
+        [NameInMap("Content")]
+        [Validation(Required=false)]
+        public string Content { get; set; }
+
+        /// <summary>
+        /// Indicates whether the data source is updated.
+        /// </summary>
+        [NameInMap("DataSourceId")]
+        [Validation(Required=false)]
+        public long? DataSourceId { get; set; }
+
+        /// <summary>
         /// The details about the data source that you want to update.
         /// 
         /// You are not allowed to change the type of the data source. For example, you are not allowed to change the data source type from MaxCompute to mysql.
@@ -223,36 +237,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///                                 
         /// ```
         /// </summary>
-        [NameInMap("Content")]
-        [Validation(Required=false)]
-        public string Content { get; set; }
-
-        /// <summary>
-        /// The ID of the data source that you want to update. You can call the [ListDataSources](~~211431~~) operation to obtain the ID.
-        /// </summary>
-        [NameInMap("DataSourceId")]
-        [Validation(Required=false)]
-        public long? DataSourceId { get; set; }
-
-        /// <summary>
-        /// The description of the data source.
-        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The environment in which the data source runs. Valid values:
-        /// 
-        /// *   0: development environment
-        /// *   1: production environment
+        /// The status of the data source. The parameter is deprecated. Do not use this parameter.
         /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public int? EnvType { get; set; }
 
         /// <summary>
-        /// The status of the data source. The parameter is deprecated. Do not use this parameter.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

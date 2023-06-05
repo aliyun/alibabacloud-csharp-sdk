@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetNodeRequest : TeaModel {
         /// <summary>
-        /// The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the node ID.
+        /// The interval at which the node is rerun after the node fails to run.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// The environment of the workspace. Valid values: PROD and DEV.
+        /// The priority of the node. Valid values: 1, 3, 5, 7, and 8.
         /// </summary>
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]

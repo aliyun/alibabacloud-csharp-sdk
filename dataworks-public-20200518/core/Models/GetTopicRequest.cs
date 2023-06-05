@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetTopicRequest : TeaModel {
         /// <summary>
-        /// The ID of the event. You can call the [listTopics](~~173973~~) operation to query the event ID.
+        /// The ID of the request. You can troubleshoot issues based on the ID.
         /// </summary>
         [NameInMap("TopicId")]
         [Validation(Required=false)]

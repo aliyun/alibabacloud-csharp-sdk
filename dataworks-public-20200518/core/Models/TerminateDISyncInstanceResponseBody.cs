@@ -10,24 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class TerminateDISyncInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The result of the operation.
+        /// Indicates whether the real-time synchronization node is terminated. Valid values:
+        /// 
+        /// *   success
+        /// *   fail
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public TerminateDISyncInstanceResponseBodyData Data { get; set; }
         public class TerminateDISyncInstanceResponseBodyData : TeaModel {
-            /// <summary>
-            /// The reason why the real-time synchronization node fails to be terminated. If the real-time synchronization node is terminated, this parameter is left empty.
-            /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// Indicates whether the real-time synchronization node is terminated. Valid values:
-            /// 
-            /// *   success
-            /// *   fail
+            /// The reason why the real-time synchronization node fails to be terminated. If the real-time synchronization node is terminated, this parameter is left empty.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -36,17 +33,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request. You can query logs and troubleshoot issues based on the ID.
+        /// The result of the operation.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// 
-        /// *   true: The request is successful.
-        /// *   false: The request fails.
+        /// The ID of the request. You can query logs and troubleshoot issues based on the ID.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,77 +10,74 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListEnabledExtensionsForProjectResponseBody : TeaModel {
         /// <summary>
-        /// The details of the extension.
+        /// The unique code of the extension.
         /// </summary>
         [NameInMap("Extensions")]
         [Validation(Required=false)]
         public List<ListEnabledExtensionsForProjectResponseBodyExtensions> Extensions { get; set; }
         public class ListEnabledExtensionsForProjectResponseBodyExtensions : TeaModel {
             /// <summary>
-            /// The creator of the extension.
+            /// The modifier of the extension.
             /// </summary>
             [NameInMap("CreateUser")]
             [Validation(Required=false)]
             public string CreateUser { get; set; }
 
             /// <summary>
-            /// The unique code of the extension.
+            /// The name of the extension.
             /// </summary>
             [NameInMap("ExtensionCode")]
             [Validation(Required=false)]
             public string ExtensionCode { get; set; }
 
             /// <summary>
-            /// The description of the extension.
+            /// The owner ID.
             /// </summary>
             [NameInMap("ExtensionDesc")]
             [Validation(Required=false)]
             public string ExtensionDesc { get; set; }
 
             /// <summary>
-            /// The name of the extension.
+            /// The ID of the tenant.
             /// </summary>
             [NameInMap("ExtensionName")]
             [Validation(Required=false)]
             public string ExtensionName { get; set; }
 
             /// <summary>
-            /// The time when the extension was created.
+            /// The timestamp when extension was modified.
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
-            /// <summary>
-            /// The timestamp when extension was modified.
-            /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// The modifier of the extension.
+            /// The description of the extension.
             /// </summary>
             [NameInMap("ModifyUser")]
             [Validation(Required=false)]
             public string ModifyUser { get; set; }
 
             /// <summary>
-            /// The owner ID.
+            /// The parameter settings of the extension. For more information, see [Configure extension parameters](~~405354~~).
             /// </summary>
             [NameInMap("Owner")]
             [Validation(Required=false)]
             public string Owner { get; set; }
 
             /// <summary>
-            /// The parameter settings of the extension. For more information, see [Configure extension parameters](~~405354~~).
+            /// The time when the extension was created.
             /// </summary>
             [NameInMap("ParameterSetting")]
             [Validation(Required=false)]
             public string ParameterSetting { get; set; }
 
             /// <summary>
-            /// The ID of the tenant.
+            /// The creator of the extension.
             /// </summary>
             [NameInMap("TenantId")]
             [Validation(Required=false)]
@@ -89,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The details of the extension.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

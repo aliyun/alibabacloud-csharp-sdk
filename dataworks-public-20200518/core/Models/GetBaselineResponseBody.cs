@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
+            [NameInMap("NodeIds")]
+            [Validation(Required=false)]
+            public List<long?> NodeIds { get; set; }
+
             [NameInMap("OverTimeSettings")]
             [Validation(Required=false)]
             public List<GetBaselineResponseBodyDataOverTimeSettings> OverTimeSettings { get; set; }
@@ -127,19 +131,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
 
-            [NameInMap("TaskIds")]
-            [Validation(Required=false)]
-            public List<long?> TaskIds { get; set; }
-
         }
-
-        [NameInMap("DynamicErrorCode")]
-        [Validation(Required=false)]
-        public string DynamicErrorCode { get; set; }
-
-        [NameInMap("DynamicErrorMessage")]
-        [Validation(Required=false)]
-        public string DynamicErrorMessage { get; set; }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

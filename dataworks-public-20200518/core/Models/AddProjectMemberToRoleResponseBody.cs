@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class AddProjectMemberToRoleResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the request. You can use the ID to search for logs and troubleshoot issues based on the logs.
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

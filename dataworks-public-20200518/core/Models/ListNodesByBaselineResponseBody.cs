@@ -10,36 +10,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodesByBaselineResponseBody : TeaModel {
         /// <summary>
-        /// The nodes in the baseline.
+        /// The name of the node.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListNodesByBaselineResponseBodyData> Data { get; set; }
         public class ListNodesByBaselineResponseBodyData : TeaModel {
-            /// <summary>
-            /// The ID of the node.
-            /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public long? NodeId { get; set; }
 
             /// <summary>
-            /// The name of the node.
+            /// The ID of the workspace to which the node belongs.
             /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]
             public string NodeName { get; set; }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account used by the node owner.
+            /// The ID of the node.
             /// </summary>
             [NameInMap("Owner")]
             [Validation(Required=false)]
             public string Owner { get; set; }
 
-            /// <summary>
-            /// The ID of the workspace to which the node belongs.
-            /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
@@ -47,35 +41,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code returned.
+        /// The nodes in the baseline.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// Indicates whether the request is successful.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The error message returned.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can use the ID to troubleshoot issues.
+        /// The error code returned.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// The ID of the Alibaba Cloud account used by the node owner.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

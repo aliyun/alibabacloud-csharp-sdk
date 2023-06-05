@@ -10,92 +10,86 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTablePartitionResponseBody : TeaModel {
         /// <summary>
-        /// The business data returned.
+        /// The number of entries returned per page. Default value: 10. Maximum value: 100.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetMetaTablePartitionResponseBodyData Data { get; set; }
         public class GetMetaTablePartitionResponseBodyData : TeaModel {
             /// <summary>
-            /// The list of partitions.
+            /// The size of the partition. Unit: bytes.
             /// </summary>
             [NameInMap("DataEntityList")]
             [Validation(Required=false)]
             public List<GetMetaTablePartitionResponseBodyDataDataEntityList> DataEntityList { get; set; }
             public class GetMetaTablePartitionResponseBodyDataDataEntityList : TeaModel {
                 /// <summary>
-                /// The comment.
+                /// The time when the partition was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// The time when the partition was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+                /// The type of the partition.
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The size of the partition. Unit: bytes.
+                /// The comment.
                 /// </summary>
                 [NameInMap("DataSize")]
                 [Validation(Required=false)]
                 public long? DataSize { get; set; }
 
                 /// <summary>
-                /// The time when the partition was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+                /// The number of entries in the partition.
                 /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
                 public long? ModifiedTime { get; set; }
 
                 /// <summary>
-                /// The GUID of the partition.
+                /// The GUID of the metatable.
                 /// </summary>
                 [NameInMap("PartitionGuid")]
                 [Validation(Required=false)]
                 public string PartitionGuid { get; set; }
 
-                /// <summary>
-                /// The location of the Hive partition.
-                /// </summary>
                 [NameInMap("PartitionLocation")]
                 [Validation(Required=false)]
                 public string PartitionLocation { get; set; }
 
                 /// <summary>
-                /// The name of the partition.
+                /// The time when the partition was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
                 /// </summary>
                 [NameInMap("PartitionName")]
                 [Validation(Required=false)]
                 public string PartitionName { get; set; }
 
                 /// <summary>
-                /// The path of the partition.
+                /// The name of the partition.
                 /// </summary>
                 [NameInMap("PartitionPath")]
                 [Validation(Required=false)]
                 public string PartitionPath { get; set; }
 
                 /// <summary>
-                /// The type of the partition.
+                /// The location of the Hive partition.
                 /// </summary>
                 [NameInMap("PartitionType")]
                 [Validation(Required=false)]
                 public string PartitionType { get; set; }
 
                 /// <summary>
-                /// The number of entries in the partition.
+                /// The GUID of the partition.
                 /// </summary>
                 [NameInMap("RecordCount")]
                 [Validation(Required=false)]
                 public long? RecordCount { get; set; }
 
-                /// <summary>
-                /// The GUID of the metatable.
-                /// </summary>
                 [NameInMap("TableGuid")]
                 [Validation(Required=false)]
                 public string TableGuid { get; set; }
@@ -103,21 +97,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// The total number of partitions.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page. Default value: 10. Maximum value: 100.
+            /// The list of partitions.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of partitions.
+            /// The path of the partition.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -126,35 +120,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code returned.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The error code returned.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// The business data returned.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

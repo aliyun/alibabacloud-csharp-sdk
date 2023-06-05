@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListExtensionsRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// The number of entries to return on each page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// Id of the request
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

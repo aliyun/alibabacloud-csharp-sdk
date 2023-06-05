@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class OfflineNodeRequest : TeaModel {
         /// <summary>
-        /// The ID of the node. You can call the [ListNodes](~~173979~~) operation to obtain the ID.
+        /// The ID of the DataWorks workspace. You can call the [ListProjects](~~178393~~) operation to obtain the ID.
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace. You can call the [ListProjects](~~178393~~) operation to obtain the ID.
+        /// The ID of the request. You can use the ID to locate logs and troubleshoot issues.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

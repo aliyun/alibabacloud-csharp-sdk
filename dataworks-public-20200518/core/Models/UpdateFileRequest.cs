@@ -155,6 +155,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string FileName { get; set; }
 
+        [NameInMap("IgnoreParentSkipRunningProperty")]
+        [Validation(Required=false)]
+        public bool? IgnoreParentSkipRunningProperty { get; set; }
+
         /// <summary>
         /// The output name of the parent file on which the current file depends. If you specify multiple output names, separate them with commas (,).
         /// 

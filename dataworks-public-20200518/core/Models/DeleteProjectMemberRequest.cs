@@ -10,15 +10,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteProjectMemberRequest : TeaModel {
         /// <summary>
-        /// The ID of the DataWorks workspace.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
-        /// <summary>
-        /// The ID of the user.
-        /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }

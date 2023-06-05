@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetProjectRequest : TeaModel {
         /// <summary>
-        /// The ID of the DataWorks workspace. You can call the [ListProjects](~~178393~~) operation to obtain the ID.
+        /// The ID of the request. You can use the ID to locate logs and troubleshoot issues.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteMetaCollectionRequest : TeaModel {
         /// <summary>
-        /// The unique identifier of the collection.
+        /// The ID of the request. You can use the ID to query logs and troubleshoot issues.
         /// </summary>
         [NameInMap("QualifiedName")]
         [Validation(Required=false)]

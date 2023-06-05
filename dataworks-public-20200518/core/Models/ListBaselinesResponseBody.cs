@@ -83,14 +83,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         }
 
-        [NameInMap("DynamicErrorCode")]
-        [Validation(Required=false)]
-        public string DynamicErrorCode { get; set; }
-
-        [NameInMap("DynamicErrorMessage")]
-        [Validation(Required=false)]
-        public string DynamicErrorMessage { get; set; }
-
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }

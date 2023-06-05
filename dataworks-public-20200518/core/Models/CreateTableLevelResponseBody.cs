@@ -10,42 +10,39 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateTableLevelResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned.
+        /// Indicates whether the request is successful.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The error code returned.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
-        /// <summary>
-        /// The ID of the table level.
-        /// </summary>
         [NameInMap("LevelId")]
         [Validation(Required=false)]
         public long? LevelId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// 1AAE721C-F9EC-5923-BAFC-99802C4E0F21
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// The ID of the table level.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

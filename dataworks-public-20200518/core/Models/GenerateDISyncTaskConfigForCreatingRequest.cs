@@ -10,20 +10,33 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GenerateDISyncTaskConfigForCreatingRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.
+        /// Indicates whether the request is successful. Valid values:
+        /// 
+        /// *   true: The request is successful.
+        /// *   false: The request fails.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+        /// The type of the object that you want to create in Data Integration in asynchronous mode. Valid values:
         /// 
-        /// This parameter specifies the DataWorks workspace to which the operation is applied.
+        /// *   DI_REALTIME: real-time synchronization node
+        /// *   DI_SOLUTION: synchronization solution
+        /// 
+        /// DataWorks allows you to create real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
+
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.
+        /// </summary>
+        [NameInMap("TaskParam")]
+        [Validation(Required=false)]
+        public string TaskParam { get; set; }
 
         /// <summary>
         /// The script for the real-time synchronization node or synchronization solution in Data Integration.
@@ -212,18 +225,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// ]
         /// 
         /// }
-        /// </summary>
-        [NameInMap("TaskParam")]
-        [Validation(Required=false)]
-        public string TaskParam { get; set; }
-
-        /// <summary>
-        /// The type of the object that you want to create in Data Integration in asynchronous mode. Valid values:
-        /// 
-        /// *   DI_REALTIME: real-time synchronization node
-        /// *   DI_SOLUTION: synchronization solution
-        /// 
-        /// DataWorks allows you to create real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

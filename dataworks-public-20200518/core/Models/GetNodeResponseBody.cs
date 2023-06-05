@@ -17,49 +17,49 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetNodeResponseBodyData Data { get; set; }
         public class GetNodeResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the baseline.
+            /// The description of the node.
             /// </summary>
             [NameInMap("BaselineId")]
             [Validation(Required=false)]
             public long? BaselineId { get; set; }
 
             /// <summary>
-            /// The ID of the workflow.
+            /// The operation that you want to perform. Set the value to **GetNode**.
             /// </summary>
             [NameInMap("BusinessId")]
             [Validation(Required=false)]
             public long? BusinessId { get; set; }
 
             /// <summary>
-            /// The connection string.
+            /// The environment of the workspace. Valid values: PROD and DEV.
             /// </summary>
             [NameInMap("Connection")]
             [Validation(Required=false)]
             public string Connection { get; set; }
 
             /// <summary>
-            /// The CRON expression returned.
+            /// The environment of the workspace. Valid values: PROD and DEV.
             /// </summary>
             [NameInMap("CronExpress")]
             [Validation(Required=false)]
             public string CronExpress { get; set; }
 
             /// <summary>
-            /// The description of the node.
+            /// The name of the resource group.
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The table and partition filter expression in Data Quality that are associated with the node.
+            /// The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the node ID.
             /// </summary>
             [NameInMap("DqcDescription")]
             [Validation(Required=false)]
             public string DqcDescription { get; set; }
 
             /// <summary>
-            /// Indicates whether the node is associated with Data Quality. Valid values: 0 and 1. A value of 0 indicates that the node is associated with Data Quality. A value of 1 indicates that the node is not associated with Data Quality.
+            /// The error message returned.
             /// </summary>
             [NameInMap("DqcType")]
             [Validation(Required=false)]
@@ -70,70 +70,75 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? FileType { get; set; }
 
             /// <summary>
-            /// The ID of the node.
+            /// The HTTP status code returned.
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public long? NodeId { get; set; }
 
             /// <summary>
-            /// The name of the node.
+            /// The scheduling type of the node. Valid values:
+            /// 
+            /// *   NORMAL: The node is an auto triggered node.
+            /// *   MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.
+            /// *   PAUSE: The node is a paused node.
+            /// *   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.
             /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]
             public string NodeName { get; set; }
 
             /// <summary>
-            /// The ID of the owner of the node.
+            /// The ID of the node.
             /// </summary>
             [NameInMap("OwnerId")]
             [Validation(Required=false)]
             public string OwnerId { get; set; }
 
             /// <summary>
-            /// Other parameters.
+            /// The CRON expression returned.
             /// </summary>
             [NameInMap("ParamValues")]
             [Validation(Required=false)]
             public string ParamValues { get; set; }
 
             /// <summary>
-            /// The priority of the node. Valid values: 1, 3, 5, 7, and 8.
+            /// The HTTP status code returned.
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
             /// <summary>
-            /// The type of the node.
+            /// The ID of the owner of the node.
             /// </summary>
             [NameInMap("ProgramType")]
             [Validation(Required=false)]
             public string ProgramType { get; set; }
 
             /// <summary>
-            /// The ID of the workspace.
+            /// Indicates whether the node can be rerun.
             /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// The ID of the workflow to which the node belongs.
+            /// Indicates whether the node is associated with Data Quality. Valid values: 0 and 1. A value of 0 indicates that the node is associated with Data Quality. A value of 1 indicates that the node is not associated with Data Quality.
             /// </summary>
             [NameInMap("RelatedFlowId")]
             [Validation(Required=false)]
             public long? RelatedFlowId { get; set; }
 
             /// <summary>
-            /// The interval at which the node is rerun after the node fails to run.
+            /// The ID of the workflow to which the node belongs.
             /// </summary>
             [NameInMap("RepeatInterval")]
             [Validation(Required=false)]
             public long? RepeatInterval { get; set; }
 
             /// <summary>
-            /// Indicates whether the node can be rerun.
+            /// The type of the node.
             /// </summary>
             [NameInMap("Repeatability")]
             [Validation(Required=false)]
@@ -144,19 +149,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ResGroupIdentifier { get; set; }
 
             /// <summary>
-            /// The name of the resource group.
+            /// The ID of the request. You can use the ID to locate logs and troubleshoot issues.
             /// </summary>
             [NameInMap("ResGroupName")]
             [Validation(Required=false)]
             public string ResGroupName { get; set; }
 
             /// <summary>
-            /// The scheduling type of the node. Valid values:
-            /// 
-            /// *   NORMAL: The node is an auto triggered node.
-            /// *   MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.
-            /// *   PAUSE: The node is a paused node.
-            /// *   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.
+            /// The ID of the workspace.
             /// </summary>
             [NameInMap("SchedulerType")]
             [Validation(Required=false)]
@@ -165,35 +165,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The error code returned.
+        /// The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the node ID.
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// The connection string.
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// The operation that you want to perform. Set the value to **GetNode**.
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+        /// Other parameters.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// The ID of the workflow.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

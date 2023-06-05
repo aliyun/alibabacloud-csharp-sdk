@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class AddProjectMemberToRoleRequest : TeaModel {
         /// <summary>
-        /// The client token. It is a field with the idempotence property. We recommend that you use a universally unique identifier (UUID). This parameter is used to uniquely identify the API operation call.
+        /// The ID of the request. You can use the ID to search for logs and troubleshoot issues based on the logs.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the DataWorks workspace. You can call the [ListProjects](~~178393~~) operation to query the ID.
+        /// The ID of your Alibaba Cloud account. To view the ID, log on to [the DataWorks console](https://workbench.data.aliyun.com/console) and move the pointer over the profile picture in the upper-right corner.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// The code of the role that you want to assign to a member of a DataWorks workspace. You can call the [ListProjectRoles](~~178228~~) operation to query the code of all roles in a DataWorks workspace.
+        /// The client token. It is a field with the idempotence property. We recommend that you use a universally unique identifier (UUID). This parameter is used to uniquely identify the API operation call.
         /// </summary>
         [NameInMap("RoleCode")]
         [Validation(Required=false)]
         public string RoleCode { get; set; }
 
         /// <summary>
-        /// The ID of your Alibaba Cloud account. To view the ID, log on to [the DataWorks console](https://workbench.data.aliyun.com/console) and move the pointer over the profile picture in the upper-right corner.
+        /// The region of the workspace. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

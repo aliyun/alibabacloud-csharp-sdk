@@ -10,26 +10,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeployDISyncTaskResponseBody : TeaModel {
         /// <summary>
-        /// The result of deploying the real-time synchronization node or data synchronization solution.
+        /// Indicates whether the real-time synchronization node or data synchronization solution is deployed. Valid values:
+        /// 
+        /// *   success: The real-time synchronization node or data synchronization solution is deployed.
+        /// *   fail: The real-time synchronization node or data synchronization solution fails to be deployed.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeployDISyncTaskResponseBodyData Data { get; set; }
         public class DeployDISyncTaskResponseBodyData : TeaModel {
-            /// <summary>
-            /// The cause of the failure to deploy the real-time synchronization node or data synchronization solution.
-            /// 
-            /// If the real-time synchronization node or data synchronization solution is deployed, the value null is returned.
-            /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// Indicates whether the real-time synchronization node or data synchronization solution is deployed. Valid values:
+            /// The cause of the failure to deploy the real-time synchronization node or data synchronization solution.
             /// 
-            /// *   success: The real-time synchronization node or data synchronization solution is deployed.
-            /// *   fail: The real-time synchronization node or data synchronization solution fails to be deployed.
+            /// If the real-time synchronization node or data synchronization solution is deployed, the value null is returned.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -38,17 +35,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// The ID of the request. You can query logs and troubleshoot issues based on the ID.
+        /// The result of deploying the real-time synchronization node or data synchronization solution.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
-        /// 
-        /// *   true: The request is successful.
-        /// *   false: The request fails.
+        /// The ID of the request. You can query logs and troubleshoot issues based on the ID.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

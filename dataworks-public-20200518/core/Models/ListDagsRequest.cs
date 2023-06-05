@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDagsRequest : TeaModel {
         /// <summary>
-        /// The sequence number that uniquely identifies the data backfill operation. You can call the [GetDag](~~189753~~) operation to obtain the sequence number.
+        /// The environment of the workspace. Valid values: PROD and DEV. PROD indicates the production environment. DEV indicates the development environment.
         /// </summary>
         [NameInMap("OpSeq")]
         [Validation(Required=false)]
         public long? OpSeq { get; set; }
 
         /// <summary>
-        /// The environment of the workspace. Valid values: PROD and DEV. PROD indicates the production environment. DEV indicates the development environment.
+        /// The HTTP status code returned.
         /// </summary>
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]

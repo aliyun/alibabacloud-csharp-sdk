@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListProjectRolesRequest : TeaModel {
         /// <summary>
-        /// Dataworks ID of the workspace.
+        /// Dataworks ID of the region where the workspace is located.
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
