@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     [Validation(Required=false)]
                     public string EncryptType { get; set; }
 
+                    [NameInMap("KeyServiceType")]
+                    [Validation(Required=false)]
+                    public string KeyServiceType { get; set; }
+
                 }
 
                 [NameInMap("ImageWatermarks")]
