@@ -327,7 +327,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 [NameInMap("room_no")]
                 [Validation(Required=false)]
-                public string RoomNo { get; set; }
+                public int? RoomNo { get; set; }
 
                 [NameInMap("selected")]
                 [Validation(Required=false)]
