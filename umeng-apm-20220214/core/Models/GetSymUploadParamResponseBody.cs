@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
         [Validation(Required=false)]
         public long? Code { get; set; }
 
+        /// <summary>
+        /// data
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetSymUploadParamResponseBodyData Data { get; set; }
@@ -51,6 +54,9 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// traceId
+        /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]
         public string TraceId { get; set; }

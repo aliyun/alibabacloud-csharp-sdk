@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
 {
-    public class GetStatTrendRequest : TeaModel {
+    public class GetLaunchTrendRequest : TeaModel {
         [NameInMap("appVersion")]
         [Validation(Required=false)]
         public string AppVersion { get; set; }
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
-        [NameInMap("type")]
+        [NameInMap("timeUnit")]
         [Validation(Required=false)]
-        public int? Type { get; set; }
+        public string TimeUnit { get; set; }
 
     }
 
