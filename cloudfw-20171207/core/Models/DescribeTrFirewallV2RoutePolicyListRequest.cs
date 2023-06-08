@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("PolicyId")]
+        [Validation(Required=false)]
+        public string PolicyId { get; set; }
+
     }
 
 }
