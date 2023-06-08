@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public int? DomainQuota { get; set; }
 
+        [NameInMap("IgnoreParamsQuota")]
+        [Validation(Required=false)]
+        public int? IgnoreParamsQuota { get; set; }
+
+        [NameInMap("IgnoreParamsRemain")]
+        [Validation(Required=false)]
+        public int? IgnoreParamsRemain { get; set; }
+
         [NameInMap("PreloadQuota")]
         [Validation(Required=false)]
         public int? PreloadQuota { get; set; }

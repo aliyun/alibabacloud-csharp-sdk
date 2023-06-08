@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnTagResourcesResponseBody : TeaModel {
+        /// <summary>
+        /// >  You can call this operation up to 10 times per second per account.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Queries the tags of one or more resources.
+        /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<DescribeDcdnTagResourcesResponseBodyTagResources> TagResources { get; set; }

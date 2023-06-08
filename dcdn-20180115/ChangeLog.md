@@ -1,3 +1,6 @@
+2023-06-08 Version: 1.0.26
+- Update DeleteDcdnSpecificStagingConfig.
+
 2022-11-17 Version: 1.0.25
 - Update DescribeRDDomainConfig.
 

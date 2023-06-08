@@ -9,13 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnAclFieldsRequest : TeaModel {
+        /// <summary>
+        /// The access language. Default value: en. Valid values:
+        /// 
+        /// *   **en**: English
+        /// *   **zh**: Chinese
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
 
     }
 

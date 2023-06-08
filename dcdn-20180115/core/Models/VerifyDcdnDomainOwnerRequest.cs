@@ -9,14 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class VerifyDcdnDomainOwnerRequest : TeaModel {
+        /// <summary>
+        /// The domain name of which you want to verify the ownership. You can specify only one domain name in each call.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
+        /// <summary>
+        /// The verification method. Valid values:
+        /// 
+        /// *   **dnsCheck**: by DNS record
+        /// *   **fileCheck**: by verification file
+        /// </summary>
         [NameInMap("VerifyType")]
         [Validation(Required=false)]
         public string VerifyType { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class BatchCreateDcdnWafRulesResponseBody : TeaModel {
+        /// <summary>
+        /// Creates Web Application Firewall (WAF) protection rules.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

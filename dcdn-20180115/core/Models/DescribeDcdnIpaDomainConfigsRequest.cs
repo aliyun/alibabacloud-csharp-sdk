@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnIpaDomainConfigsRequest : TeaModel {
+        /// <summary>
+        /// The accelerated domain name. Separate multiple domain names with commas (,).
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// The name of the feature. Set the value to protogw, which indicates IP Application Accelerator (IPA).
+        /// </summary>
         [NameInMap("FunctionNames")]
         [Validation(Required=false)]
         public string FunctionNames { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class BatchSetDcdnIpaDomainConfigsRequest : TeaModel {
+        /// <summary>
+        /// The domain names accelerated by IPA. Separate multiple domain names with commas (,).
+        /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]
         public string DomainNames { get; set; }
 
+        /// <summary>
+        /// The list of features. `[{"functionArgs":[{"argName":"parameter name","argValue":"parameter value"}],"functionName":"feature name"}]`
+        /// </summary>
         [NameInMap("Functions")]
         [Validation(Required=false)]
         public string Functions { get; set; }

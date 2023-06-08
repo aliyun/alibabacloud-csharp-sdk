@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string DomainNames { get; set; }
 
+        /// <summary>
+        /// [](~~410622~~)
+        /// </summary>
         [NameInMap("FunctionNames")]
         [Validation(Required=false)]
         public string FunctionNames { get; set; }

@@ -9,10 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class SetRoutineSubdomainRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
+        /// <summary>
+        /// The parameters of the subdomain.
+        /// 
+        /// The parameters are in the following format:
+        /// 
+        ///     Subdomains: [
+        ///         "subdomain-test"
+        ///     ]
+        /// </summary>
         [NameInMap("Subdomains")]
         [Validation(Required=false)]
         public Dictionary<string, object> Subdomains { get; set; }

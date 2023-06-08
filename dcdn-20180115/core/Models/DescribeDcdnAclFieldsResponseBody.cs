@@ -9,16 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnAclFieldsResponseBody : TeaModel {
+        /// <summary>
+        /// Details about the rules.
+        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public List<DescribeDcdnAclFieldsResponseBodyContent> Content { get; set; }
         public class DescribeDcdnAclFieldsResponseBodyContent : TeaModel {
+            /// <summary>
+            /// The rules and policies that were configured. The JSON string is decoded.
+            /// </summary>
             [NameInMap("Fields")]
             [Validation(Required=false)]
             public string Fields { get; set; }
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

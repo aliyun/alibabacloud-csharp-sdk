@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnCertificateListRequest : TeaModel {
+        /// <summary>
+        /// The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+        /// 
+        /// By default, this operation queries the certificates of all accelerated domain names.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafDomainDetailResponseBody : TeaModel {
+        /// <summary>
+        /// The IDs of the protection policies. Multiple IDs are separated by commas (,).
+        /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public DescribeDcdnWafDomainDetailResponseBodyDomain Domain { get; set; }
@@ -25,6 +28,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 [Validation(Required=false)]
                 public long? PolicyId { get; set; }
 
+                [NameInMap("PolicyIds")]
+                [Validation(Required=false)]
+                public string PolicyIds { get; set; }
+
             }
 
             [NameInMap("DomainName")]
@@ -33,6 +40,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         }
 
+        /// <summary>
+        /// The type of the protection policy. Valid values:
+        /// 
+        /// *   waf_group: basic web protection
+        /// *   custom_acl: custom protection
+        /// *   whitelist: IP address whitelist
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,13 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafScenesRequest : TeaModel {
+        /// <summary>
+        /// The total number of protection rules that were configured in this type of the policy.
+        /// </summary>
         [NameInMap("DefenseScenes")]
         [Validation(Required=false)]
         public string DefenseScenes { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
 
     }
 

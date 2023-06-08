@@ -17,6 +17,22 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule> DataModule { get; set; }
             public class DescribeDcdnDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule : TeaModel {
+                [NameInMap("DynamicTrafficValue")]
+                [Validation(Required=false)]
+                public string DynamicTrafficValue { get; set; }
+
+                [NameInMap("DynamicValue")]
+                [Validation(Required=false)]
+                public string DynamicValue { get; set; }
+
+                [NameInMap("StaticTrafficValue")]
+                [Validation(Required=false)]
+                public string StaticTrafficValue { get; set; }
+
+                [NameInMap("StaticValue")]
+                [Validation(Required=false)]
+                public string StaticValue { get; set; }
+
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }

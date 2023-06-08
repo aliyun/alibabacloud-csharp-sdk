@@ -9,14 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnSecFuncInfoRequest : TeaModel {
+        /// <summary>
+        /// The language. Valid values: en and zh. Default value: en.
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
+        /// <summary>
+        /// The type of the drop-down list. Valid values: RobotRuleName and RobotObject.
+        /// </summary>
         [NameInMap("SecFuncType")]
         [Validation(Required=false)]
         public string SecFuncType { get; set; }

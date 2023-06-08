@@ -9,10 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnRefreshTaskByIdRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
+        /// <summary>
+        /// The ID of the task that you want to query. The following signature algorithms require different message digest algorithms:
+        /// 
+        /// *   Perform the [RefreshDcdnObjectCaches](~~130620~~) operation to query refresh task IDs.
+        /// *   Perform the [PreloadDcdnObjectCaches](~~130636~~) operation to query prefetch task IDs.
+        /// 
+        /// > You can specify at most 10 task IDs in each call. Separate IDs with commas (,).
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

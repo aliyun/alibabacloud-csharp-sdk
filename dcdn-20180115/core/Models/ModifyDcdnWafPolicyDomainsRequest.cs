@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string BindDomains { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("Method")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public int? Method { get; set; }
 
         [NameInMap("PolicyId")]
         [Validation(Required=false)]

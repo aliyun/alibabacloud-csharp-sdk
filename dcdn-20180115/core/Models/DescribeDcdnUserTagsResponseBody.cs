@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserTagsResponseBody : TeaModel {
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The key of the returned tag.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeDcdnUserTagsResponseBodyTags> Tags { get; set; }
         public class DescribeDcdnUserTagsResponseBodyTags : TeaModel {
+            /// <summary>
+            /// The value of the returned tag.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
