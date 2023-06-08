@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnSMCertificateDetailRequest : TeaModel {
+        /// <summary>
+        /// The ID of the certificate.
+        /// </summary>
         [NameInMap("CertIdentifier")]
         [Validation(Required=false)]
         public string CertIdentifier { get; set; }

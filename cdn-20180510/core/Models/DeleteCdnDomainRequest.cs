@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DeleteCdnDomainRequest : TeaModel {
+        /// <summary>
+        /// The accelerated domain name that you want to remove. You can specify only one domain name in each call.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
@@ -20,10 +23,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
 
     }
 

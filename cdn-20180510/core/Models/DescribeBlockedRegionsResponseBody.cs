@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeBlockedRegionsResponseBody : TeaModel {
+        /// <summary>
+        /// The information returned.
+        /// </summary>
         [NameInMap("InfoList")]
         [Validation(Required=false)]
         public DescribeBlockedRegionsResponseBodyInfoList InfoList { get; set; }
@@ -17,14 +20,23 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeBlockedRegionsResponseBodyInfoListInfoItem> InfoItem { get; set; }
             public class DescribeBlockedRegionsResponseBodyInfoListInfoItem : TeaModel {
+                /// <summary>
+                /// The district to which the country or region belongs.
+                /// </summary>
                 [NameInMap("Continent")]
                 [Validation(Required=false)]
                 public string Continent { get; set; }
 
+                /// <summary>
+                /// The abbreviation of the name of the country or region.
+                /// </summary>
                 [NameInMap("CountriesAndRegions")]
                 [Validation(Required=false)]
                 public string CountriesAndRegions { get; set; }
 
+                /// <summary>
+                /// The name of the country or region.
+                /// </summary>
                 [NameInMap("CountriesAndRegionsName")]
                 [Validation(Required=false)]
                 public string CountriesAndRegionsName { get; set; }
@@ -33,6 +45,9 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

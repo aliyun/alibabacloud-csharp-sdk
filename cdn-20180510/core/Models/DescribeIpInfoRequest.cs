@@ -9,17 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeIpInfoRequest : TeaModel {
+        /// <summary>
+        /// The IP address that you want to query. You can specify only one IP address in each request.
+        /// </summary>
         [NameInMap("IP")]
         [Validation(Required=false)]
         public string IP { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
 
     }
 

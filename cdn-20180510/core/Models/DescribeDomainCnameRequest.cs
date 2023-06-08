@@ -8,18 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
-    public class SetDomainGreenManagerConfigRequest : TeaModel {
+    public class DescribeDomainCnameRequest : TeaModel {
+        /// <summary>
+        /// The accelerated domain name that you want to query. Separate multiple domain names with commas (,). This parameter cannot be left empty.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
-
-        [NameInMap("Enable")]
-        [Validation(Required=false)]
-        public string Enable { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
 
     }
 

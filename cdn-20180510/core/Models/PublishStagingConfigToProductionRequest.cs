@@ -9,13 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class PublishStagingConfigToProductionRequest : TeaModel {
+        /// <summary>
+        /// The accelerated domain name. You can specify only one domain name in each call.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
 
     }
 

@@ -8,11 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
-    public class DescribeIllegalUrlExportTaskRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
+    public class DescribePreloadDetailByIdRequest : TeaModel {
+        /// <summary>
+        /// Queries the details of a preload task by task ID. You can query one task ID at a time.
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

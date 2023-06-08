@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
-    public class SetErrorPageConfigResponse : TeaModel {
+    public class DescribeDomainCnameResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public SetErrorPageConfigResponseBody Body { get; set; }
+        public DescribeDomainCnameResponseBody Body { get; set; }
 
     }
 

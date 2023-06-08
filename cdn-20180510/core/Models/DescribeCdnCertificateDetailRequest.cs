@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnCertificateDetailRequest : TeaModel {
+        /// <summary>
+        /// The ID of the SSL certificate. You can query only one certificate at a time.
+        /// </summary>
         [NameInMap("CertName")]
         [Validation(Required=false)]
         public string CertName { get; set; }

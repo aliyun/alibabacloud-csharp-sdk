@@ -9,13 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnDeliverListRequest : TeaModel {
+        /// <summary>
+        /// The ID of the tracking task that you want to query. If you do not specify an ID, all tracking tasks are queried.
+        /// </summary>
         [NameInMap("DeliverId")]
         [Validation(Required=false)]
         public long? DeliverId { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
 
     }
 

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnSMCertificateListResponseBody : TeaModel {
+        /// <summary>
+        /// The type of the certificate information.
+        /// </summary>
         [NameInMap("CertificateListModel")]
         [Validation(Required=false)]
         public DescribeCdnSMCertificateListResponseBodyCertificateListModel CertificateListModel { get; set; }
         public class DescribeCdnSMCertificateListResponseBodyCertificateListModel : TeaModel {
+            /// <summary>
+            /// The list of certificates.
+            /// </summary>
             [NameInMap("CertList")]
             [Validation(Required=false)]
             public DescribeCdnSMCertificateListResponseBodyCertificateListModelCertList CertList { get; set; }
@@ -21,18 +27,30 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 [Validation(Required=false)]
                 public List<DescribeCdnSMCertificateListResponseBodyCertificateListModelCertListCert> Cert { get; set; }
                 public class DescribeCdnSMCertificateListResponseBodyCertificateListModelCertListCert : TeaModel {
+                    /// <summary>
+                    /// The ID of the certificate.
+                    /// </summary>
                     [NameInMap("CertIdentifier")]
                     [Validation(Required=false)]
                     public string CertIdentifier { get; set; }
 
+                    /// <summary>
+                    /// The name of the certificate.
+                    /// </summary>
                     [NameInMap("CertName")]
                     [Validation(Required=false)]
                     public string CertName { get; set; }
 
+                    /// <summary>
+                    /// The common name of the certificate.
+                    /// </summary>
                     [NameInMap("Common")]
                     [Validation(Required=false)]
                     public string Common { get; set; }
 
+                    /// <summary>
+                    /// The certificate authority (CA) that issued the certificate.
+                    /// </summary>
                     [NameInMap("Issuer")]
                     [Validation(Required=false)]
                     public string Issuer { get; set; }
@@ -41,12 +59,18 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
             }
 
+            /// <summary>
+            /// The number of certificates that are returned.
+            /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class ListUserCustomLogConfigResponseBody : TeaModel {
+        /// <summary>
+        /// The list of log configuration IDs.
+        /// </summary>
         [NameInMap("ConfigIds")]
         [Validation(Required=false)]
         public ListUserCustomLogConfigResponseBodyConfigIds ConfigIds { get; set; }
@@ -19,6 +22,9 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

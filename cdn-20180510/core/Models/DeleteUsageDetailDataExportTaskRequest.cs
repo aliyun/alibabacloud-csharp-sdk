@@ -9,10 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DeleteUsageDetailDataExportTaskRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
+        /// <summary>
+        /// The ID of the task. You can call the [DescribeUserUsageDataExportTask](~~91062~~) operation to query tasks.
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

@@ -8,16 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
-    public class BatchSetCdnDomainServerCertificateRequest : TeaModel {
+    public class SetCdnDomainSSLCertificateRequest : TeaModel {
         /// <summary>
-        /// The name of the certificate.
+        /// The ID of the certificate.
+        /// </summary>
+        [NameInMap("CertId")]
+        [Validation(Required=false)]
+        public long? CertId { get; set; }
+
+        /// <summary>
+        /// The name of the SSL certificate. You can specify only one certificate name.
         /// </summary>
         [NameInMap("CertName")]
         [Validation(Required=false)]
         public string CertName { get; set; }
 
         /// <summary>
-        /// The type of the certificate. Valid values:
+        /// The region ID of the certificate. Valid values: **cn-hangzhou** and **ap-southeast-1**. Default value: **cn-hangzhou**.
+        /// </summary>
+        [NameInMap("CertRegion")]
+        [Validation(Required=false)]
+        public string CertRegion { get; set; }
+
+        /// <summary>
+        /// The type of the certificate.
         /// 
         /// *   **upload**: a user-uploaded SSL certificate.
         /// *   **cas**: a certificate that is acquired through Certificate Management Service.
@@ -27,31 +41,15 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public string CertType { get; set; }
 
         /// <summary>
-        /// The accelerated domain name to which the SSL certificate belongs. The type of request supported by the accelerated domain name must be HTTPS. You can specify multiple accelerated domain names and separate them with commas (,).
-        /// 
-        /// >You can configure up to 10 domain names at a time.
+        /// The accelerated domain name for which you want to configure the SSL certificate. The type of request supported by the domain name must be HTTPS. You can specify only one domain name in each request.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        /// <summary>
-        /// Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.
-        /// </summary>
-        [NameInMap("ForceSet")]
-        [Validation(Required=false)]
-        public string ForceSet { get; set; }
-
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        /// <summary>
-        /// The ID of the region.
-        /// </summary>
-        [NameInMap("Region")]
-        [Validation(Required=false)]
-        public string Region { get; set; }
 
         /// <summary>
         /// The private key. Specify the private key only if you want to enable the SSL certificate.
@@ -61,10 +59,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public string SSLPri { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the SSL certificate. Default value: off. Valid values:
+        /// Specifies whether to enable the SSL certificate.
         /// 
-        /// *   **on** ：enables the SSL certificate.
-        /// *   **off**：disables the SSL certificate
+        /// *   **on**
+        /// *   **off**
         /// </summary>
         [NameInMap("SSLProtocol")]
         [Validation(Required=false)]

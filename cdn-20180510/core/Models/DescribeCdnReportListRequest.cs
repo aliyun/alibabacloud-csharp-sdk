@@ -9,10 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnReportListRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
+        /// <summary>
+        /// The ID of the operations report that you want to query. If you do not specify an ID, all operations reports are queried.
+        /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]
         public long? ReportId { get; set; }

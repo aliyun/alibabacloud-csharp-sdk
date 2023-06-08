@@ -9,17 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnDomainStagingConfigRequest : TeaModel {
+        /// <summary>
+        /// The accelerated domain name. You can specify only one domain name in each request.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// The list of feature names. Separate multiple values with commas (,). For more information, see [A list of features](~~388460~~).
+        /// </summary>
         [NameInMap("FunctionNames")]
         [Validation(Required=false)]
         public string FunctionNames { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
 
     }
 

@@ -1,3 +1,6 @@
+2023-06-08 Version: 1.1.8
+- Update Error Message.
+
 2022-11-17 Version: 1.1.7
 - Update BatchDescribeCdnIpInfo.
 

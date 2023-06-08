@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
-    public class DescribeRealtimeLogAuthorizedRequest : TeaModel {
-        [NameInMap("OwnerId")]
+    public class SetCdnDomainSSLCertificateResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string RequestId { get; set; }
 
     }
 
