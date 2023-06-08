@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.Adcp20220101.Models
         [Validation(Required=false)]
         public bool? ArgoServerEnabled { get; set; }
 
+        [NameInMap("ArmsEnabled")]
+        [Validation(Required=false)]
+        public bool? ArmsEnabled { get; set; }
+
         /// <summary>
         /// Specifies whether to enable the audit logging feature. Valid values:
         /// 
