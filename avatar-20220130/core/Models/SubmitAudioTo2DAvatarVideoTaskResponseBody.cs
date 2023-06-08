@@ -8,15 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Avatar20220130.Models
 {
-    public class SubmitTextToSignVideoTaskResponseBody : TeaModel {
+    public class SubmitAudioTo2DAvatarVideoTaskResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public SubmitTextToSignVideoTaskResponseBodyData Data { get; set; }
-        public class SubmitTextToSignVideoTaskResponseBodyData : TeaModel {
+        public SubmitAudioTo2DAvatarVideoTaskResponseBodyData Data { get; set; }
+        public class SubmitAudioTo2DAvatarVideoTaskResponseBodyData : TeaModel {
             [NameInMap("TaskUuid")]
             [Validation(Required=false)]
             public string TaskUuid { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Avatar20220130.Models
 {
-    public class SubmitTextToSignVideoTaskResponse : TeaModel {
+    public class QueryAvatarResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public SubmitTextToSignVideoTaskResponseBody Body { get; set; }
+        public QueryAvatarResponseBody Body { get; set; }
 
     }
 

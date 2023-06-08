@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
         [Validation(Required=false)]
         public SubmitTextTo2DAvatarVideoTaskRequestVideoInfo VideoInfo { get; set; }
         public class SubmitTextTo2DAvatarVideoTaskRequestVideoInfo : TeaModel {
+            [NameInMap("AlphaFormat")]
+            [Validation(Required=false)]
+            public int? AlphaFormat { get; set; }
+
             [NameInMap("BackgroundImageUrl")]
             [Validation(Required=false)]
             public string BackgroundImageUrl { get; set; }
@@ -78,6 +82,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
             [NameInMap("IsSubtitles")]
             [Validation(Required=false)]
             public bool? IsSubtitles { get; set; }
+
+            [NameInMap("Resolution")]
+            [Validation(Required=false)]
+            public int? Resolution { get; set; }
 
         }
 

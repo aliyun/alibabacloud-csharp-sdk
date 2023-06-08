@@ -8,22 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Avatar20220130.Models
 {
-    public class SubmitTextToSignVideoTaskShrinkRequest : TeaModel {
+    public class SubmitAudioTo2DAvatarVideoTaskShrinkRequest : TeaModel {
         [NameInMap("App")]
         [Validation(Required=false)]
         public string AppShrink { get; set; }
+
+        [NameInMap("AvatarInfo")]
+        [Validation(Required=false)]
+        public string AvatarInfoShrink { get; set; }
 
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public long? TenantId { get; set; }
 
-        [NameInMap("Text")]
-        [Validation(Required=false)]
-        public string Text { get; set; }
-
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
+
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public string Url { get; set; }
 
         [NameInMap("VideoInfo")]
         [Validation(Required=false)]
