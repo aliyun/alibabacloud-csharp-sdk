@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
-    public class CardOcrResponseBody : TeaModel {
+    public class DocOcrResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -26,12 +26,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public CardOcrResponseBodyResult Result { get; set; }
-        public class CardOcrResponseBodyResult : TeaModel {
-            [NameInMap("ExtCardInfo")]
-            [Validation(Required=false)]
-            public string ExtCardInfo { get; set; }
-
+        public DocOcrResponseBodyResult Result { get; set; }
+        public class DocOcrResponseBodyResult : TeaModel {
             [NameInMap("ExtIdInfo")]
             [Validation(Required=false)]
             public string ExtIdInfo { get; set; }

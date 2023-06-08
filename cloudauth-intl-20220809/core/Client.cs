@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          * @deprecated : CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.
+          *
+          * @param request CardOcrRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CardOcrResponse
+         */
+        // Deprecated
         public CardOcrResponse CardOcrWithOptions(CardOcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -96,6 +104,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             return TeaModel.ToObject<CardOcrResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.
+          *
+          * @param request CardOcrRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CardOcrResponse
+         */
+        // Deprecated
         public async Task<CardOcrResponse> CardOcrWithOptionsAsync(CardOcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -155,12 +171,26 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             return TeaModel.ToObject<CardOcrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated : CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.
+          *
+          * @param request CardOcrRequest
+          * @return CardOcrResponse
+         */
+        // Deprecated
         public CardOcrResponse CardOcr(CardOcrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CardOcrWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated : CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.
+          *
+          * @param request CardOcrRequest
+          * @return CardOcrResponse
+         */
+        // Deprecated
         public async Task<CardOcrResponse> CardOcrAsync(CardOcrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -713,6 +743,136 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTransactionsListWithOptionsAsync(request, runtime);
+        }
+
+        public DocOcrResponse DocOcrWithOptions(DocOcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdFaceQuality))
+            {
+                query["IdFaceQuality"] = request.IdFaceQuality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureBase64))
+            {
+                query["IdOcrPictureBase64"] = request.IdOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureUrl))
+            {
+                query["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ocr))
+            {
+                query["Ocr"] = request.Ocr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spoof))
+            {
+                query["Spoof"] = request.Spoof;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DocOcr",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DocOcrResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DocOcrResponse> DocOcrWithOptionsAsync(DocOcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdFaceQuality))
+            {
+                query["IdFaceQuality"] = request.IdFaceQuality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureBase64))
+            {
+                query["IdOcrPictureBase64"] = request.IdOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureUrl))
+            {
+                query["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ocr))
+            {
+                query["Ocr"] = request.Ocr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spoof))
+            {
+                query["Spoof"] = request.Spoof;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DocOcr",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DocOcrResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DocOcrResponse DocOcr(DocOcrRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DocOcrWithOptions(request, runtime);
+        }
+
+        public async Task<DocOcrResponse> DocOcrAsync(DocOcrRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DocOcrWithOptionsAsync(request, runtime);
         }
 
         public FaceCompareResponse FaceCompareWithOptions(FaceCompareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
