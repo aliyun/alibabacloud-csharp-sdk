@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 [NameInMap("max_booking_num")]
                 [Validation(Required=false)]
-                public string MaxBookingNum { get; set; }
+                public int? MaxBookingNum { get; set; }
 
                 [NameInMap("price")]
                 [Validation(Required=false)]
