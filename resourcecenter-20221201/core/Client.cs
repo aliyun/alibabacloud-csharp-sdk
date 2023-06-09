@@ -133,6 +133,13 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
             return await DisableResourceCenterWithOptionsAsync(runtime);
         }
 
+        /**
+          * If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see [Resource Directory overview](~~200506~~).
+          *
+          * @param request EnableMultiAccountResourceCenterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableMultiAccountResourceCenterResponse
+         */
         public EnableMultiAccountResourceCenterResponse EnableMultiAccountResourceCenterWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -151,6 +158,13 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
             return TeaModel.ToObject<EnableMultiAccountResourceCenterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see [Resource Directory overview](~~200506~~).
+          *
+          * @param request EnableMultiAccountResourceCenterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return EnableMultiAccountResourceCenterResponse
+         */
         public async Task<EnableMultiAccountResourceCenterResponse> EnableMultiAccountResourceCenterWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -169,12 +183,22 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
             return TeaModel.ToObject<EnableMultiAccountResourceCenterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see [Resource Directory overview](~~200506~~).
+          *
+          * @return EnableMultiAccountResourceCenterResponse
+         */
         public EnableMultiAccountResourceCenterResponse EnableMultiAccountResourceCenter()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableMultiAccountResourceCenterWithOptions(runtime);
         }
 
+        /**
+          * If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see [Resource Directory overview](~~200506~~).
+          *
+          * @return EnableMultiAccountResourceCenterResponse
+         */
         public async Task<EnableMultiAccountResourceCenterResponse> EnableMultiAccountResourceCenterAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -495,6 +519,80 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetResourceConfigurationWithOptionsAsync(request, runtime);
+        }
+
+        public GetResourceCountsResponse GetResourceCountsWithOptions(GetResourceCountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByKey))
+            {
+                query["GroupByKey"] = request.GroupByKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceCounts",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceCountsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetResourceCountsResponse> GetResourceCountsWithOptionsAsync(GetResourceCountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByKey))
+            {
+                query["GroupByKey"] = request.GroupByKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceCounts",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceCountsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetResourceCountsResponse GetResourceCounts(GetResourceCountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetResourceCountsWithOptions(request, runtime);
+        }
+
+        public async Task<GetResourceCountsResponse> GetResourceCountsAsync(GetResourceCountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetResourceCountsWithOptionsAsync(request, runtime);
         }
 
         public ListMultiAccountResourceGroupsResponse ListMultiAccountResourceGroupsWithOptions(ListMultiAccountResourceGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

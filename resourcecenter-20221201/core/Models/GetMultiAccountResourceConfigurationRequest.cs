@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class GetMultiAccountResourceConfigurationRequest : TeaModel {
+        /// <summary>
+        /// The ID of the management account or member of the resource directory.
+        /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource.
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
+        /// <summary>
+        /// The region ID of the resource.
+        /// </summary>
         [NameInMap("ResourceRegionId")]
         [Validation(Required=false)]
         public string ResourceRegionId { get; set; }
 
+        /// <summary>
+        /// The type of the resource.
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
