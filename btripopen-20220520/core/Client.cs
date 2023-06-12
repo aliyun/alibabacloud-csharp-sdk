@@ -6909,6 +6909,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["sub_corp_id_list"] = request.SubCorpIdListShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncGroup))
+            {
+                body["sync_group"] = request.SyncGroup;
+            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -6971,6 +6975,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCorpIdListShrink))
             {
                 body["sub_corp_id_list"] = request.SubCorpIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncGroup))
+            {
+                body["sync_group"] = request.SyncGroup;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))

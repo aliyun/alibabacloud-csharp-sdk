@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<string> SubCorpIdList { get; set; }
 
+        [NameInMap("sync_group")]
+        [Validation(Required=false)]
+        public bool? SyncGroup { get; set; }
+
     }
 
 }
