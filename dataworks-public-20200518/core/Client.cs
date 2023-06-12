@@ -5800,6 +5800,88 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await DeleteFromMetaCategoryWithOptionsAsync(request, runtime);
         }
 
+        public DeleteLineageRelationResponse DeleteLineageRelationWithOptions(DeleteLineageRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestEntityQualifiedName))
+            {
+                query["DestEntityQualifiedName"] = request.DestEntityQualifiedName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationshipGuid))
+            {
+                query["RelationshipGuid"] = request.RelationshipGuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcEntityQualifiedName))
+            {
+                query["SrcEntityQualifiedName"] = request.SrcEntityQualifiedName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLineageRelation",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLineageRelationResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteLineageRelationResponse> DeleteLineageRelationWithOptionsAsync(DeleteLineageRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestEntityQualifiedName))
+            {
+                query["DestEntityQualifiedName"] = request.DestEntityQualifiedName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationshipGuid))
+            {
+                query["RelationshipGuid"] = request.RelationshipGuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcEntityQualifiedName))
+            {
+                query["SrcEntityQualifiedName"] = request.SrcEntityQualifiedName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLineageRelation",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLineageRelationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteLineageRelationResponse DeleteLineageRelation(DeleteLineageRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteLineageRelationWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteLineageRelationResponse> DeleteLineageRelationAsync(DeleteLineageRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteLineageRelationWithOptionsAsync(request, runtime);
+        }
+
         public DeleteMetaCategoryResponse DeleteMetaCategoryWithOptions(DeleteMetaCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16452,6 +16534,104 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await ListInstancesWithOptionsAsync(request, runtime);
         }
 
+        public ListLineageResponse ListLineageWithOptions(ListLineageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityQualifiedName))
+            {
+                query["EntityQualifiedName"] = request.EntityQualifiedName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLineage",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLineageResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListLineageResponse> ListLineageWithOptionsAsync(ListLineageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityQualifiedName))
+            {
+                query["EntityQualifiedName"] = request.EntityQualifiedName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLineage",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLineageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListLineageResponse ListLineage(ListLineageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListLineageWithOptions(request, runtime);
+        }
+
+        public async Task<ListLineageResponse> ListLineageAsync(ListLineageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListLineageWithOptionsAsync(request, runtime);
+        }
+
         public ListManualDagInstancesResponse ListManualDagInstancesWithOptions(ListManualDagInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19592,6 +19772,84 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryPublicModelEngineWithOptionsAsync(request, runtime);
+        }
+
+        public RegisterLineageRelationResponse RegisterLineageRelationWithOptions(RegisterLineageRelationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RegisterLineageRelationShrinkRequest request = new RegisterLineageRelationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LineageRelationRegisterVO))
+            {
+                request.LineageRelationRegisterVOShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LineageRelationRegisterVO, "LineageRelationRegisterVO", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineageRelationRegisterVOShrink))
+            {
+                body["LineageRelationRegisterVO"] = request.LineageRelationRegisterVOShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RegisterLineageRelation",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RegisterLineageRelationResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<RegisterLineageRelationResponse> RegisterLineageRelationWithOptionsAsync(RegisterLineageRelationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RegisterLineageRelationShrinkRequest request = new RegisterLineageRelationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LineageRelationRegisterVO))
+            {
+                request.LineageRelationRegisterVOShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LineageRelationRegisterVO, "LineageRelationRegisterVO", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineageRelationRegisterVOShrink))
+            {
+                body["LineageRelationRegisterVO"] = request.LineageRelationRegisterVOShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RegisterLineageRelation",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RegisterLineageRelationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public RegisterLineageRelationResponse RegisterLineageRelation(RegisterLineageRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RegisterLineageRelationWithOptions(request, runtime);
+        }
+
+        public async Task<RegisterLineageRelationResponse> RegisterLineageRelationAsync(RegisterLineageRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RegisterLineageRelationWithOptionsAsync(request, runtime);
         }
 
         public RemoveProjectMemberFromRoleResponse RemoveProjectMemberFromRoleWithOptions(RemoveProjectMemberFromRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
