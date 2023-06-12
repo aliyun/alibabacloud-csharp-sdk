@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public List<ListTagsForPrivateAccessPolicyResponseBodyPolicesTags> Tags { get; set; }
             public class ListTagsForPrivateAccessPolicyResponseBodyPolicesTags : TeaModel {
+                /// <summary>
+                /// 内网访问标签创建时间。
+                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }

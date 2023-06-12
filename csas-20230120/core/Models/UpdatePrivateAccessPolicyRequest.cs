@@ -63,6 +63,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// 内网访问标签ID集合。一条策略最多支持100个内网访问标签ID。
+        /// </summary>
         [NameInMap("TagIds")]
         [Validation(Required=false)]
         public List<string> TagIds { get; set; }
@@ -71,6 +74,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<string> UserGroupIds { get; set; }
 
+        /// <summary>
+        /// 内网访问策略的用户组类型。取值：
+        /// - **Normal**：普通用户组。
+        /// - **Custom**：自定义用户组。
+        /// </summary>
         [NameInMap("UserGroupMode")]
         [Validation(Required=false)]
         public string UserGroupMode { get; set; }

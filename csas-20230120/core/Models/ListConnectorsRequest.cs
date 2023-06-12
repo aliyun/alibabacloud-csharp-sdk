@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("SwitchStatus")]
+        [Validation(Required=false)]
+        public string SwitchStatus { get; set; }
+
     }
 
 }

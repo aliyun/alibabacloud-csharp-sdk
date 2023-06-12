@@ -521,19 +521,14 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await CreatePrivateAccessTagWithOptionsAsync(request, runtime);
         }
 
-        public CreateUserGroupResponse CreateUserGroupWithOptions(CreateUserGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateUserGroupResponse CreateUserGroupWithOptions(CreateUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            CreateUserGroupShrinkRequest request = new CreateUserGroupShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Attributes))
-            {
-                request.AttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attributes, "Attributes", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttributesShrink))
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
             {
-                body["Attributes"] = request.AttributesShrink;
+                bodyFlat["Attributes"] = request.Attributes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -543,6 +538,11 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["Name"] = request.Name;
             }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -562,19 +562,14 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<CreateUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateUserGroupResponse> CreateUserGroupWithOptionsAsync(CreateUserGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateUserGroupResponse> CreateUserGroupWithOptionsAsync(CreateUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            CreateUserGroupShrinkRequest request = new CreateUserGroupShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Attributes))
-            {
-                request.AttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attributes, "Attributes", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttributesShrink))
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
             {
-                body["Attributes"] = request.AttributesShrink;
+                bodyFlat["Attributes"] = request.Attributes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -584,6 +579,11 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["Name"] = request.Name;
             }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1139,15 +1139,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await GetUserGroupWithOptionsAsync(request, runtime);
         }
 
-        public ListApplicationsForPrivateAccessPolicyResponse ListApplicationsForPrivateAccessPolicyWithOptions(ListApplicationsForPrivateAccessPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListApplicationsForPrivateAccessPolicyResponse ListApplicationsForPrivateAccessPolicyWithOptions(ListApplicationsForPrivateAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListApplicationsForPrivateAccessPolicyShrinkRequest request = new ListApplicationsForPrivateAccessPolicyShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PolicyIds))
-            {
-                request.PolicyIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PolicyIds, "PolicyIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1168,15 +1162,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<ListApplicationsForPrivateAccessPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListApplicationsForPrivateAccessPolicyResponse> ListApplicationsForPrivateAccessPolicyWithOptionsAsync(ListApplicationsForPrivateAccessPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListApplicationsForPrivateAccessPolicyResponse> ListApplicationsForPrivateAccessPolicyWithOptionsAsync(ListApplicationsForPrivateAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListApplicationsForPrivateAccessPolicyShrinkRequest request = new ListApplicationsForPrivateAccessPolicyShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PolicyIds))
-            {
-                request.PolicyIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PolicyIds, "PolicyIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1209,15 +1197,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await ListApplicationsForPrivateAccessPolicyWithOptionsAsync(request, runtime);
         }
 
-        public ListApplicationsForPrivateAccessTagResponse ListApplicationsForPrivateAccessTagWithOptions(ListApplicationsForPrivateAccessTagRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListApplicationsForPrivateAccessTagResponse ListApplicationsForPrivateAccessTagWithOptions(ListApplicationsForPrivateAccessTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListApplicationsForPrivateAccessTagShrinkRequest request = new ListApplicationsForPrivateAccessTagShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
-            {
-                request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1238,15 +1220,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<ListApplicationsForPrivateAccessTagResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListApplicationsForPrivateAccessTagResponse> ListApplicationsForPrivateAccessTagWithOptionsAsync(ListApplicationsForPrivateAccessTagRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListApplicationsForPrivateAccessTagResponse> ListApplicationsForPrivateAccessTagWithOptionsAsync(ListApplicationsForPrivateAccessTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListApplicationsForPrivateAccessTagShrinkRequest request = new ListApplicationsForPrivateAccessTagShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
-            {
-                request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1279,15 +1255,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await ListApplicationsForPrivateAccessTagWithOptionsAsync(request, runtime);
         }
 
-        public ListConnectorsResponse ListConnectorsWithOptions(ListConnectorsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListConnectorsResponse ListConnectorsWithOptions(ListConnectorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListConnectorsShrinkRequest request = new ListConnectorsShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConnectorIds))
-            {
-                request.ConnectorIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConnectorIds, "ConnectorIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1308,15 +1278,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<ListConnectorsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListConnectorsResponse> ListConnectorsWithOptionsAsync(ListConnectorsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListConnectorsResponse> ListConnectorsWithOptionsAsync(ListConnectorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListConnectorsShrinkRequest request = new ListConnectorsShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConnectorIds))
-            {
-                request.ConnectorIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConnectorIds, "ConnectorIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1349,15 +1313,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await ListConnectorsWithOptionsAsync(request, runtime);
         }
 
-        public ListPolicesForPrivateAccessApplicationResponse ListPolicesForPrivateAccessApplicationWithOptions(ListPolicesForPrivateAccessApplicationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListPolicesForPrivateAccessApplicationResponse ListPolicesForPrivateAccessApplicationWithOptions(ListPolicesForPrivateAccessApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListPolicesForPrivateAccessApplicationShrinkRequest request = new ListPolicesForPrivateAccessApplicationShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApplicationIds))
-            {
-                request.ApplicationIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApplicationIds, "ApplicationIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1378,15 +1336,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<ListPolicesForPrivateAccessApplicationResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListPolicesForPrivateAccessApplicationResponse> ListPolicesForPrivateAccessApplicationWithOptionsAsync(ListPolicesForPrivateAccessApplicationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListPolicesForPrivateAccessApplicationResponse> ListPolicesForPrivateAccessApplicationWithOptionsAsync(ListPolicesForPrivateAccessApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListPolicesForPrivateAccessApplicationShrinkRequest request = new ListPolicesForPrivateAccessApplicationShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApplicationIds))
-            {
-                request.ApplicationIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApplicationIds, "ApplicationIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1419,15 +1371,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await ListPolicesForPrivateAccessApplicationWithOptionsAsync(request, runtime);
         }
 
-        public ListPolicesForPrivateAccessTagResponse ListPolicesForPrivateAccessTagWithOptions(ListPolicesForPrivateAccessTagRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListPolicesForPrivateAccessTagResponse ListPolicesForPrivateAccessTagWithOptions(ListPolicesForPrivateAccessTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListPolicesForPrivateAccessTagShrinkRequest request = new ListPolicesForPrivateAccessTagShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
-            {
-                request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1448,15 +1394,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<ListPolicesForPrivateAccessTagResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListPolicesForPrivateAccessTagResponse> ListPolicesForPrivateAccessTagWithOptionsAsync(ListPolicesForPrivateAccessTagRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListPolicesForPrivateAccessTagResponse> ListPolicesForPrivateAccessTagWithOptionsAsync(ListPolicesForPrivateAccessTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListPolicesForPrivateAccessTagShrinkRequest request = new ListPolicesForPrivateAccessTagShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
-            {
-                request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1489,15 +1429,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await ListPolicesForPrivateAccessTagWithOptionsAsync(request, runtime);
         }
 
-        public ListPolicesForUserGroupResponse ListPolicesForUserGroupWithOptions(ListPolicesForUserGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListPolicesForUserGroupResponse ListPolicesForUserGroupWithOptions(ListPolicesForUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListPolicesForUserGroupShrinkRequest request = new ListPolicesForUserGroupShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserGroupIds))
-            {
-                request.UserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserGroupIds, "UserGroupIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1518,15 +1452,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<ListPolicesForUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListPolicesForUserGroupResponse> ListPolicesForUserGroupWithOptionsAsync(ListPolicesForUserGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListPolicesForUserGroupResponse> ListPolicesForUserGroupWithOptionsAsync(ListPolicesForUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListPolicesForUserGroupShrinkRequest request = new ListPolicesForUserGroupShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserGroupIds))
-            {
-                request.UserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserGroupIds, "UserGroupIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1559,15 +1487,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await ListPolicesForUserGroupWithOptionsAsync(request, runtime);
         }
 
-        public ListPrivateAccessApplicationsResponse ListPrivateAccessApplicationsWithOptions(ListPrivateAccessApplicationsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListPrivateAccessApplicationsResponse ListPrivateAccessApplicationsWithOptions(ListPrivateAccessApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListPrivateAccessApplicationsShrinkRequest request = new ListPrivateAccessApplicationsShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApplicationIds))
-            {
-                request.ApplicationIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApplicationIds, "ApplicationIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1588,15 +1510,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<ListPrivateAccessApplicationsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListPrivateAccessApplicationsResponse> ListPrivateAccessApplicationsWithOptionsAsync(ListPrivateAccessApplicationsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListPrivateAccessApplicationsResponse> ListPrivateAccessApplicationsWithOptionsAsync(ListPrivateAccessApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListPrivateAccessApplicationsShrinkRequest request = new ListPrivateAccessApplicationsShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApplicationIds))
-            {
-                request.ApplicationIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApplicationIds, "ApplicationIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1629,15 +1545,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await ListPrivateAccessApplicationsWithOptionsAsync(request, runtime);
         }
 
-        public ListPrivateAccessPolicesResponse ListPrivateAccessPolicesWithOptions(ListPrivateAccessPolicesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListPrivateAccessPolicesResponse ListPrivateAccessPolicesWithOptions(ListPrivateAccessPolicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListPrivateAccessPolicesShrinkRequest request = new ListPrivateAccessPolicesShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PolicyIds))
-            {
-                request.PolicyIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PolicyIds, "PolicyIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1658,15 +1568,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<ListPrivateAccessPolicesResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListPrivateAccessPolicesResponse> ListPrivateAccessPolicesWithOptionsAsync(ListPrivateAccessPolicesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListPrivateAccessPolicesResponse> ListPrivateAccessPolicesWithOptionsAsync(ListPrivateAccessPolicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListPrivateAccessPolicesShrinkRequest request = new ListPrivateAccessPolicesShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PolicyIds))
-            {
-                request.PolicyIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PolicyIds, "PolicyIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1699,15 +1603,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await ListPrivateAccessPolicesWithOptionsAsync(request, runtime);
         }
 
-        public ListPrivateAccessTagsResponse ListPrivateAccessTagsWithOptions(ListPrivateAccessTagsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListPrivateAccessTagsResponse ListPrivateAccessTagsWithOptions(ListPrivateAccessTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListPrivateAccessTagsShrinkRequest request = new ListPrivateAccessTagsShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
-            {
-                request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1728,15 +1626,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<ListPrivateAccessTagsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListPrivateAccessTagsResponse> ListPrivateAccessTagsWithOptionsAsync(ListPrivateAccessTagsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListPrivateAccessTagsResponse> ListPrivateAccessTagsWithOptionsAsync(ListPrivateAccessTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListPrivateAccessTagsShrinkRequest request = new ListPrivateAccessTagsShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagIds))
-            {
-                request.TagIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagIds, "TagIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1769,15 +1661,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await ListPrivateAccessTagsWithOptionsAsync(request, runtime);
         }
 
-        public ListTagsForPrivateAccessApplicationResponse ListTagsForPrivateAccessApplicationWithOptions(ListTagsForPrivateAccessApplicationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListTagsForPrivateAccessApplicationResponse ListTagsForPrivateAccessApplicationWithOptions(ListTagsForPrivateAccessApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListTagsForPrivateAccessApplicationShrinkRequest request = new ListTagsForPrivateAccessApplicationShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApplicationIds))
-            {
-                request.ApplicationIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApplicationIds, "ApplicationIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1798,15 +1684,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<ListTagsForPrivateAccessApplicationResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListTagsForPrivateAccessApplicationResponse> ListTagsForPrivateAccessApplicationWithOptionsAsync(ListTagsForPrivateAccessApplicationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListTagsForPrivateAccessApplicationResponse> ListTagsForPrivateAccessApplicationWithOptionsAsync(ListTagsForPrivateAccessApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListTagsForPrivateAccessApplicationShrinkRequest request = new ListTagsForPrivateAccessApplicationShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApplicationIds))
-            {
-                request.ApplicationIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApplicationIds, "ApplicationIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1839,15 +1719,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await ListTagsForPrivateAccessApplicationWithOptionsAsync(request, runtime);
         }
 
-        public ListTagsForPrivateAccessPolicyResponse ListTagsForPrivateAccessPolicyWithOptions(ListTagsForPrivateAccessPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListTagsForPrivateAccessPolicyResponse ListTagsForPrivateAccessPolicyWithOptions(ListTagsForPrivateAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListTagsForPrivateAccessPolicyShrinkRequest request = new ListTagsForPrivateAccessPolicyShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PolicyIds))
-            {
-                request.PolicyIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PolicyIds, "PolicyIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1868,15 +1742,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<ListTagsForPrivateAccessPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListTagsForPrivateAccessPolicyResponse> ListTagsForPrivateAccessPolicyWithOptionsAsync(ListTagsForPrivateAccessPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListTagsForPrivateAccessPolicyResponse> ListTagsForPrivateAccessPolicyWithOptionsAsync(ListTagsForPrivateAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListTagsForPrivateAccessPolicyShrinkRequest request = new ListTagsForPrivateAccessPolicyShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PolicyIds))
-            {
-                request.PolicyIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PolicyIds, "PolicyIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1909,15 +1777,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await ListTagsForPrivateAccessPolicyWithOptionsAsync(request, runtime);
         }
 
-        public ListUserGroupsResponse ListUserGroupsWithOptions(ListUserGroupsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListUserGroupsResponse ListUserGroupsWithOptions(ListUserGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListUserGroupsShrinkRequest request = new ListUserGroupsShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserGroupIds))
-            {
-                request.UserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserGroupIds, "UserGroupIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1938,15 +1800,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<ListUserGroupsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListUserGroupsResponse> ListUserGroupsWithOptionsAsync(ListUserGroupsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListUserGroupsResponse> ListUserGroupsWithOptionsAsync(ListUserGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListUserGroupsShrinkRequest request = new ListUserGroupsShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserGroupIds))
-            {
-                request.UserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserGroupIds, "UserGroupIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1979,15 +1835,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await ListUserGroupsWithOptionsAsync(request, runtime);
         }
 
-        public ListUserGroupsForPrivateAccessPolicyResponse ListUserGroupsForPrivateAccessPolicyWithOptions(ListUserGroupsForPrivateAccessPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListUserGroupsForPrivateAccessPolicyResponse ListUserGroupsForPrivateAccessPolicyWithOptions(ListUserGroupsForPrivateAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListUserGroupsForPrivateAccessPolicyShrinkRequest request = new ListUserGroupsForPrivateAccessPolicyShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PolicyIds))
-            {
-                request.PolicyIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PolicyIds, "PolicyIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2008,15 +1858,9 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<ListUserGroupsForPrivateAccessPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListUserGroupsForPrivateAccessPolicyResponse> ListUserGroupsForPrivateAccessPolicyWithOptionsAsync(ListUserGroupsForPrivateAccessPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListUserGroupsForPrivateAccessPolicyResponse> ListUserGroupsForPrivateAccessPolicyWithOptionsAsync(ListUserGroupsForPrivateAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            ListUserGroupsForPrivateAccessPolicyShrinkRequest request = new ListUserGroupsForPrivateAccessPolicyShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PolicyIds))
-            {
-                request.PolicyIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PolicyIds, "PolicyIds", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2389,19 +2233,14 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await UpdatePrivateAccessPolicyWithOptionsAsync(request, runtime);
         }
 
-        public UpdateUserGroupResponse UpdateUserGroupWithOptions(UpdateUserGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateUserGroupResponse UpdateUserGroupWithOptions(UpdateUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            UpdateUserGroupShrinkRequest request = new UpdateUserGroupShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Attributes))
-            {
-                request.AttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attributes, "Attributes", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttributesShrink))
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
             {
-                body["Attributes"] = request.AttributesShrink;
+                bodyFlat["Attributes"] = request.Attributes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -2415,6 +2254,11 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["UserGroupId"] = request.UserGroupId;
             }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -2434,19 +2278,14 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<UpdateUserGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UpdateUserGroupResponse> UpdateUserGroupWithOptionsAsync(UpdateUserGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateUserGroupResponse> UpdateUserGroupWithOptionsAsync(UpdateUserGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            UpdateUserGroupShrinkRequest request = new UpdateUserGroupShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Attributes))
-            {
-                request.AttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attributes, "Attributes", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttributesShrink))
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
             {
-                body["Attributes"] = request.AttributesShrink;
+                bodyFlat["Attributes"] = request.Attributes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -2460,6 +2299,11 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["UserGroupId"] = request.UserGroupId;
             }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),

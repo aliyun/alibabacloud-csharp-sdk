@@ -43,6 +43,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
                 }
 
+                /// <summary>
+                /// 用户组创建时间。
+                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }

@@ -41,6 +41,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string TagId { get; set; }
 
+        /// <summary>
+        /// 用户组ID。取值来源：
+        /// - [ListUserGroups](~~ListUserGroups~~)：批量查询用户组。
+        /// - [CreateUserGroup](~~CreateUserGroup~~)：创建用户组。
+        /// </summary>
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]
         public string UserGroupId { get; set; }
