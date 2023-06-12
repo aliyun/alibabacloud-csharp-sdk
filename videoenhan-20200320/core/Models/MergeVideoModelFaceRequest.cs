@@ -13,6 +13,24 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public string FaceImageURL { get; set; }
 
+        [NameInMap("MergeInfos")]
+        [Validation(Required=false)]
+        public List<MergeVideoModelFaceRequestMergeInfos> MergeInfos { get; set; }
+        public class MergeVideoModelFaceRequestMergeInfos : TeaModel {
+            [NameInMap("ImageURL")]
+            [Validation(Required=false)]
+            public string ImageURL { get; set; }
+
+            [NameInMap("TemplateFaceID")]
+            [Validation(Required=false)]
+            public string TemplateFaceID { get; set; }
+
+            [NameInMap("TemplateFaceURL")]
+            [Validation(Required=false)]
+            public string TemplateFaceURL { get; set; }
+
+        }
+
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }

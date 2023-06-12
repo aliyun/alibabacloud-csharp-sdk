@@ -529,6 +529,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoScene))
+            {
+                body["VideoScene"] = request.VideoScene;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoURL))
             {
                 body["VideoURL"] = request.VideoURL;
@@ -556,6 +560,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoScene))
+            {
+                body["VideoScene"] = request.VideoScene;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoURL))
             {
                 body["VideoURL"] = request.VideoURL;
@@ -3797,6 +3805,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             {
                 body["FaceImageURL"] = request.FaceImageURL;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeInfos))
+            {
+                body["MergeInfos"] = request.MergeInfos;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 body["TemplateId"] = request.TemplateId;
@@ -3827,6 +3839,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceImageURL))
             {
                 body["FaceImageURL"] = request.FaceImageURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeInfos))
+            {
+                body["MergeInfos"] = request.MergeInfos;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {

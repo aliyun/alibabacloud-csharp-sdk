@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class AddFaceVideoTemplateRequest : TeaModel {
+        [NameInMap("VideoScene")]
+        [Validation(Required=false)]
+        public string VideoScene { get; set; }
+
         [NameInMap("VideoURL")]
         [Validation(Required=false)]
         public string VideoURL { get; set; }

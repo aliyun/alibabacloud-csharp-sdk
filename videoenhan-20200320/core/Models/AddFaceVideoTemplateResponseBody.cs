@@ -13,6 +13,20 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public AddFaceVideoTemplateResponseBodyDate Date { get; set; }
         public class AddFaceVideoTemplateResponseBodyDate : TeaModel {
+            [NameInMap("FaceInfos")]
+            [Validation(Required=false)]
+            public List<AddFaceVideoTemplateResponseBodyDateFaceInfos> FaceInfos { get; set; }
+            public class AddFaceVideoTemplateResponseBodyDateFaceInfos : TeaModel {
+                [NameInMap("TemplateFaceID")]
+                [Validation(Required=false)]
+                public string TemplateFaceID { get; set; }
+
+                [NameInMap("TemplateFaceURL")]
+                [Validation(Required=false)]
+                public string TemplateFaceURL { get; set; }
+
+            }
+
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
