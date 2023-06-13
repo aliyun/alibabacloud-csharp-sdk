@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string Resolution { get; set; }
 
+        [NameInMap("ServerName")]
+        [Validation(Required=false)]
+        public string ServerName { get; set; }
+
         [NameInMap("ServerType")]
         [Validation(Required=false)]
         public string ServerType { get; set; }

@@ -127,6 +127,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public RunInstancesRequestSystemDisk SystemDisk { get; set; }
         public class RunInstancesRequestSystemDisk : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
             [NameInMap("Size")]
             [Validation(Required=false)]
             public long? Size { get; set; }

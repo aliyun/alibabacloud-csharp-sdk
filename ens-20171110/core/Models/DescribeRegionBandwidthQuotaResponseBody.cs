@@ -15,8 +15,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public class DescribeRegionBandwidthQuotaResponseBodyBandwidthQuota : TeaModel {
             [NameInMap("BandwidthInfo")]
             [Validation(Required=false)]
-            public DescribeRegionBandwidthQuotaResponseBodyBandwidthQuotaBandwidthInfo BandwidthInfo { get; set; }
+            public List<DescribeRegionBandwidthQuotaResponseBodyBandwidthQuotaBandwidthInfo> BandwidthInfo { get; set; }
             public class DescribeRegionBandwidthQuotaResponseBodyBandwidthQuotaBandwidthInfo : TeaModel {
+                [NameInMap("Isp")]
+                [Validation(Required=false)]
+                public string Isp { get; set; }
+
                 [NameInMap("MonthAverageQuota")]
                 [Validation(Required=false)]
                 public long? MonthAverageQuota { get; set; }
