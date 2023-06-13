@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class CreateFirewallRuleResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the firewall rule.
+        /// </summary>
         [NameInMap("FirewallId")]
         [Validation(Required=false)]
         public string FirewallId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
