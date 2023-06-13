@@ -1488,6 +1488,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             {
                 query["FileUrl"] = request.FileUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StructureType))
+            {
+                query["StructureType"] = request.StructureType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1522,6 +1526,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
             {
                 query["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StructureType))
+            {
+                query["StructureType"] = request.StructureType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

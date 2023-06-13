@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public Stream FileUrlObject { get; set; }
 
+        [NameInMap("StructureType")]
+        [Validation(Required=false)]
+        public string StructureType { get; set; }
+
     }
 
 }
