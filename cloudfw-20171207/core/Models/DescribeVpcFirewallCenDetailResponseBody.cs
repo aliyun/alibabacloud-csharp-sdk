@@ -27,6 +27,36 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string FirewallSwitchStatus { get; set; }
 
+        [NameInMap("FirewallVpc")]
+        [Validation(Required=false)]
+        public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc FirewallVpc { get; set; }
+        public class DescribeVpcFirewallCenDetailResponseBodyFirewallVpc : TeaModel {
+            [NameInMap("AllowConfiguration")]
+            [Validation(Required=false)]
+            public int? AllowConfiguration { get; set; }
+
+            [NameInMap("VpcCidr")]
+            [Validation(Required=false)]
+            public string VpcCidr { get; set; }
+
+            [NameInMap("VpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
+
+            [NameInMap("VswitchCidr")]
+            [Validation(Required=false)]
+            public string VswitchCidr { get; set; }
+
+            [NameInMap("VswitchId")]
+            [Validation(Required=false)]
+            public string VswitchId { get; set; }
+
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
+        }
+
         /// <summary>
         /// The details about the VPC.
         /// </summary>
@@ -75,6 +105,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [NameInMap("EniPrivateIpAddress")]
                 [Validation(Required=false)]
                 public string EniPrivateIpAddress { get; set; }
+
+                [NameInMap("EniVSwitchId")]
+                [Validation(Required=false)]
+                public string EniVSwitchId { get; set; }
 
             }
 

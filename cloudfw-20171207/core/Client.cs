@@ -995,6 +995,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["FirewallSwitch"] = request.FirewallSwitch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVSwitchCidrBlock))
+            {
+                query["FirewallVSwitchCidrBlock"] = request.FirewallVSwitchCidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVpcCidrBlock))
+            {
+                query["FirewallVpcCidrBlock"] = request.FirewallVpcCidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVpcZoneId))
+            {
+                query["FirewallVpcZoneId"] = request.FirewallVpcZoneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -1058,6 +1070,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallSwitch))
             {
                 query["FirewallSwitch"] = request.FirewallSwitch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVSwitchCidrBlock))
+            {
+                query["FirewallVSwitchCidrBlock"] = request.FirewallVSwitchCidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVpcCidrBlock))
+            {
+                query["FirewallVpcCidrBlock"] = request.FirewallVpcCidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVpcZoneId))
+            {
+                query["FirewallVpcZoneId"] = request.FirewallVpcZoneId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {

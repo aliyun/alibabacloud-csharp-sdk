@@ -63,6 +63,32 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string PrecheckStatus { get; set; }
 
+            [NameInMap("ProtectedResource")]
+            [Validation(Required=false)]
+            public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource ProtectedResource { get; set; }
+            public class DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsProtectedResource : TeaModel {
+                [NameInMap("Count")]
+                [Validation(Required=false)]
+                public int? Count { get; set; }
+
+                [NameInMap("PeerTrList")]
+                [Validation(Required=false)]
+                public List<string> PeerTrList { get; set; }
+
+                [NameInMap("VbrList")]
+                [Validation(Required=false)]
+                public List<string> VbrList { get; set; }
+
+                [NameInMap("VpcList")]
+                [Validation(Required=false)]
+                public List<string> VpcList { get; set; }
+
+                [NameInMap("VpnList")]
+                [Validation(Required=false)]
+                public List<string> VpnList { get; set; }
+
+            }
+
             [NameInMap("RegionNo")]
             [Validation(Required=false)]
             public string RegionNo { get; set; }
@@ -82,6 +108,32 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("TransitRouterId")]
             [Validation(Required=false)]
             public string TransitRouterId { get; set; }
+
+            [NameInMap("UnprotectedResource")]
+            [Validation(Required=false)]
+            public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource UnprotectedResource { get; set; }
+            public class DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsUnprotectedResource : TeaModel {
+                [NameInMap("Count")]
+                [Validation(Required=false)]
+                public int? Count { get; set; }
+
+                [NameInMap("PeerTrList")]
+                [Validation(Required=false)]
+                public List<string> PeerTrList { get; set; }
+
+                [NameInMap("VbrList")]
+                [Validation(Required=false)]
+                public List<string> VbrList { get; set; }
+
+                [NameInMap("VpcList")]
+                [Validation(Required=false)]
+                public List<string> VpcList { get; set; }
+
+                [NameInMap("VpnList")]
+                [Validation(Required=false)]
+                public List<string> VpnList { get; set; }
+
+            }
 
             [NameInMap("VpcFirewallName")]
             [Validation(Required=false)]

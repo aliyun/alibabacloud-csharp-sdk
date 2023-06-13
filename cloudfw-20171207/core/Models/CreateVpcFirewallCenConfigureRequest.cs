@@ -26,6 +26,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string FirewallSwitch { get; set; }
 
+        [NameInMap("FirewallVSwitchCidrBlock")]
+        [Validation(Required=false)]
+        public string FirewallVSwitchCidrBlock { get; set; }
+
+        [NameInMap("FirewallVpcCidrBlock")]
+        [Validation(Required=false)]
+        public string FirewallVpcCidrBlock { get; set; }
+
+        [NameInMap("FirewallVpcZoneId")]
+        [Validation(Required=false)]
+        public string FirewallVpcZoneId { get; set; }
+
         /// <summary>
         /// The language of the content within the request and response. Valid values:
         /// 
