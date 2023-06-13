@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        [NameInMap("StreamExtension")]
+        [Validation(Required=false)]
+        public string StreamExtensionShrink { get; set; }
+
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public long? TenantId { get; set; }

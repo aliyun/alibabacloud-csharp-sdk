@@ -17,6 +17,24 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        [NameInMap("StreamExtension")]
+        [Validation(Required=false)]
+        public SendMessageRequestStreamExtension StreamExtension { get; set; }
+        public class SendMessageRequestStreamExtension : TeaModel {
+            [NameInMap("Index")]
+            [Validation(Required=false)]
+            public int? Index { get; set; }
+
+            [NameInMap("IsStream")]
+            [Validation(Required=false)]
+            public bool? IsStream { get; set; }
+
+            [NameInMap("Position")]
+            [Validation(Required=false)]
+            public string Position { get; set; }
+
+        }
+
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public long? TenantId { get; set; }

@@ -836,6 +836,10 @@ namespace AlibabaCloud.SDK.Avatar20220130
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SendMessageShrinkRequest request = new SendMessageShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StreamExtension))
+            {
+                request.StreamExtensionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StreamExtension, "StreamExtension", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TextRequest))
             {
                 request.TextRequestShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TextRequest, "TextRequest", "json");
@@ -852,6 +856,10 @@ namespace AlibabaCloud.SDK.Avatar20220130
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamExtensionShrink))
+            {
+                query["StreamExtension"] = request.StreamExtensionShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -889,6 +897,10 @@ namespace AlibabaCloud.SDK.Avatar20220130
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SendMessageShrinkRequest request = new SendMessageShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StreamExtension))
+            {
+                request.StreamExtensionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StreamExtension, "StreamExtension", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TextRequest))
             {
                 request.TextRequestShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TextRequest, "TextRequest", "json");
@@ -905,6 +917,10 @@ namespace AlibabaCloud.SDK.Avatar20220130
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamExtensionShrink))
+            {
+                query["StreamExtension"] = request.StreamExtensionShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
