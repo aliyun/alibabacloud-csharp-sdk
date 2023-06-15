@@ -9,10 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDedicatedHostGroupsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the dedicated cluster.
+        /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
         public string DedicatedHostGroupId { get; set; }
 
+        /// <summary>
+        /// The image based on which the hosts in the dedicated clusters are created. Valid values:
+        /// 
+        /// *   **WindowsWithMssqlStdLicense**: a Windows image, which contains the licenses of the SQL Server Standard Edition
+        /// *   **WindowsWithMssqlEntLisence**: a Windows image, which contains the licenses of the SQL Server Enterprise Edition
+        /// *   **WindowsWithMssqlWebLisence**: a Windows image, which contains the licenses of the SQL Server Web Edition
+        /// *   **AliLinux**: a Linux image
+        /// </summary>
         [NameInMap("ImageCategory")]
         [Validation(Required=false)]
         public string ImageCategory { get; set; }
@@ -21,6 +32,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the dedicated clusters. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

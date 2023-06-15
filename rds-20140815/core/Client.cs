@@ -85,6 +85,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call the ActivateMigrationTargetInstance operation, make sure that a cloud migration task is created by calling the [CreateCloudMigrationTask](~~411690~~) operation. In addition, make sure that the value that is returned for the **MigrateStage** parameter from the call of the [DescribeCloudMigrationResult](~~412150~~) operation is **increment**.
+          *
+          * @param request ActivateMigrationTargetInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ActivateMigrationTargetInstanceResponse
+         */
         public ActivateMigrationTargetInstanceResponse ActivateMigrationTargetInstanceWithOptions(ActivateMigrationTargetInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -128,6 +136,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ActivateMigrationTargetInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call the ActivateMigrationTargetInstance operation, make sure that a cloud migration task is created by calling the [CreateCloudMigrationTask](~~411690~~) operation. In addition, make sure that the value that is returned for the **MigrateStage** parameter from the call of the [DescribeCloudMigrationResult](~~412150~~) operation is **increment**.
+          *
+          * @param request ActivateMigrationTargetInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ActivateMigrationTargetInstanceResponse
+         */
         public async Task<ActivateMigrationTargetInstanceResponse> ActivateMigrationTargetInstanceWithOptionsAsync(ActivateMigrationTargetInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -171,18 +187,44 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ActivateMigrationTargetInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call the ActivateMigrationTargetInstance operation, make sure that a cloud migration task is created by calling the [CreateCloudMigrationTask](~~411690~~) operation. In addition, make sure that the value that is returned for the **MigrateStage** parameter from the call of the [DescribeCloudMigrationResult](~~412150~~) operation is **increment**.
+          *
+          * @param request ActivateMigrationTargetInstanceRequest
+          * @return ActivateMigrationTargetInstanceResponse
+         */
         public ActivateMigrationTargetInstanceResponse ActivateMigrationTargetInstance(ActivateMigrationTargetInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ActivateMigrationTargetInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call the ActivateMigrationTargetInstance operation, make sure that a cloud migration task is created by calling the [CreateCloudMigrationTask](~~411690~~) operation. In addition, make sure that the value that is returned for the **MigrateStage** parameter from the call of the [DescribeCloudMigrationResult](~~412150~~) operation is **increment**.
+          *
+          * @param request ActivateMigrationTargetInstanceRequest
+          * @return ActivateMigrationTargetInstanceResponse
+         */
         public async Task<ActivateMigrationTargetInstanceResponse> ActivateMigrationTargetInstanceAsync(ActivateMigrationTargetInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ActivateMigrationTargetInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation has the following limits:
+          * *   Each tag consists of a TagKey and a TagValue. The TagKey is required, and the TagValue is optional.
+          * *   The values of TagKey and TagValue cannot start with aliyun.
+          * *   The values of TagKey and TagValue are not case-sensitive.
+          * *   The maximum length of a TagKey is 64 characters, and the maximum length of a TagValue is 128 characters.
+          * *   Each instance can be bound to a maximum of 10 tags. Each tag that is bound to the same instance must have a unique TagKey. If you bind a new tag to the instance and the TagKey of the new tag is the same as that of an existing tag, the new tag overwrites the existing tag.
+          *
+          * @param request AddTagsToResourceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddTagsToResourceResponse
+         */
         public AddTagsToResourceResponse AddTagsToResourceWithOptions(AddTagsToResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -246,6 +288,18 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<AddTagsToResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation has the following limits:
+          * *   Each tag consists of a TagKey and a TagValue. The TagKey is required, and the TagValue is optional.
+          * *   The values of TagKey and TagValue cannot start with aliyun.
+          * *   The values of TagKey and TagValue are not case-sensitive.
+          * *   The maximum length of a TagKey is 64 characters, and the maximum length of a TagValue is 128 characters.
+          * *   Each instance can be bound to a maximum of 10 tags. Each tag that is bound to the same instance must have a unique TagKey. If you bind a new tag to the instance and the TagKey of the new tag is the same as that of an existing tag, the new tag overwrites the existing tag.
+          *
+          * @param request AddTagsToResourceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddTagsToResourceResponse
+         */
         public async Task<AddTagsToResourceResponse> AddTagsToResourceWithOptionsAsync(AddTagsToResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -309,18 +363,48 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<AddTagsToResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation has the following limits:
+          * *   Each tag consists of a TagKey and a TagValue. The TagKey is required, and the TagValue is optional.
+          * *   The values of TagKey and TagValue cannot start with aliyun.
+          * *   The values of TagKey and TagValue are not case-sensitive.
+          * *   The maximum length of a TagKey is 64 characters, and the maximum length of a TagValue is 128 characters.
+          * *   Each instance can be bound to a maximum of 10 tags. Each tag that is bound to the same instance must have a unique TagKey. If you bind a new tag to the instance and the TagKey of the new tag is the same as that of an existing tag, the new tag overwrites the existing tag.
+          *
+          * @param request AddTagsToResourceRequest
+          * @return AddTagsToResourceResponse
+         */
         public AddTagsToResourceResponse AddTagsToResource(AddTagsToResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddTagsToResourceWithOptions(request, runtime);
         }
 
+        /**
+          * This operation has the following limits:
+          * *   Each tag consists of a TagKey and a TagValue. The TagKey is required, and the TagValue is optional.
+          * *   The values of TagKey and TagValue cannot start with aliyun.
+          * *   The values of TagKey and TagValue are not case-sensitive.
+          * *   The maximum length of a TagKey is 64 characters, and the maximum length of a TagValue is 128 characters.
+          * *   Each instance can be bound to a maximum of 10 tags. Each tag that is bound to the same instance must have a unique TagKey. If you bind a new tag to the instance and the TagKey of the new tag is the same as that of an existing tag, the new tag overwrites the existing tag.
+          *
+          * @param request AddTagsToResourceRequest
+          * @return AddTagsToResourceResponse
+         */
         public async Task<AddTagsToResourceResponse> AddTagsToResourceAsync(AddTagsToResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddTagsToResourceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ###
+          * You can apply for only one public endpoint for an instance.
+          *
+          * @param request AllocateInstancePublicConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AllocateInstancePublicConnectionResponse
+         */
         public AllocateInstancePublicConnectionResponse AllocateInstancePublicConnectionWithOptions(AllocateInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -380,6 +464,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<AllocateInstancePublicConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ###
+          * You can apply for only one public endpoint for an instance.
+          *
+          * @param request AllocateInstancePublicConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AllocateInstancePublicConnectionResponse
+         */
         public async Task<AllocateInstancePublicConnectionResponse> AllocateInstancePublicConnectionWithOptionsAsync(AllocateInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -439,18 +531,48 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<AllocateInstancePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ###
+          * You can apply for only one public endpoint for an instance.
+          *
+          * @param request AllocateInstancePublicConnectionRequest
+          * @return AllocateInstancePublicConnectionResponse
+         */
         public AllocateInstancePublicConnectionResponse AllocateInstancePublicConnection(AllocateInstancePublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AllocateInstancePublicConnectionWithOptions(request, runtime);
         }
 
+        /**
+          * ###
+          * You can apply for only one public endpoint for an instance.
+          *
+          * @param request AllocateInstancePublicConnectionRequest
+          * @return AllocateInstancePublicConnectionResponse
+         */
         public async Task<AllocateInstancePublicConnectionResponse> AllocateInstancePublicConnectionAsync(AllocateInstancePublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AllocateInstancePublicConnectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If read-only instances are attached to a primary ApsaraDB RDS for SQL Server instance, you can call this operation to apply for a unified read-only routing endpoint for the primary instance. After you apply for a read-only routing endpoint for a primary instance, the existing endpoints of the primary instance and its read-only instances remain valid. In addition, you can still apply for internal and public endpoints.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   If the instance runs MySQL, the instance uses a shared proxy.
+          * *   The instance is in the Running state.
+          * *   Read-only instances are attached to the primary instance.
+          * *   The instance does not have an ongoing Data Transmission Service (DTS) migration task.
+          * *   The instance runs one of the following database versions and RDS editions:
+          *     *   SQL Server (cluster edition)
+          *     *   MySQL 5.7 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.6
+          *
+          * @param request AllocateReadWriteSplittingConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AllocateReadWriteSplittingConnectionResponse
+         */
         public AllocateReadWriteSplittingConnectionResponse AllocateReadWriteSplittingConnectionWithOptions(AllocateReadWriteSplittingConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -518,6 +640,22 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<AllocateReadWriteSplittingConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If read-only instances are attached to a primary ApsaraDB RDS for SQL Server instance, you can call this operation to apply for a unified read-only routing endpoint for the primary instance. After you apply for a read-only routing endpoint for a primary instance, the existing endpoints of the primary instance and its read-only instances remain valid. In addition, you can still apply for internal and public endpoints.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   If the instance runs MySQL, the instance uses a shared proxy.
+          * *   The instance is in the Running state.
+          * *   Read-only instances are attached to the primary instance.
+          * *   The instance does not have an ongoing Data Transmission Service (DTS) migration task.
+          * *   The instance runs one of the following database versions and RDS editions:
+          *     *   SQL Server (cluster edition)
+          *     *   MySQL 5.7 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.6
+          *
+          * @param request AllocateReadWriteSplittingConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AllocateReadWriteSplittingConnectionResponse
+         */
         public async Task<AllocateReadWriteSplittingConnectionResponse> AllocateReadWriteSplittingConnectionWithOptionsAsync(AllocateReadWriteSplittingConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -585,18 +723,61 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<AllocateReadWriteSplittingConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If read-only instances are attached to a primary ApsaraDB RDS for SQL Server instance, you can call this operation to apply for a unified read-only routing endpoint for the primary instance. After you apply for a read-only routing endpoint for a primary instance, the existing endpoints of the primary instance and its read-only instances remain valid. In addition, you can still apply for internal and public endpoints.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   If the instance runs MySQL, the instance uses a shared proxy.
+          * *   The instance is in the Running state.
+          * *   Read-only instances are attached to the primary instance.
+          * *   The instance does not have an ongoing Data Transmission Service (DTS) migration task.
+          * *   The instance runs one of the following database versions and RDS editions:
+          *     *   SQL Server (cluster edition)
+          *     *   MySQL 5.7 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.6
+          *
+          * @param request AllocateReadWriteSplittingConnectionRequest
+          * @return AllocateReadWriteSplittingConnectionResponse
+         */
         public AllocateReadWriteSplittingConnectionResponse AllocateReadWriteSplittingConnection(AllocateReadWriteSplittingConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AllocateReadWriteSplittingConnectionWithOptions(request, runtime);
         }
 
+        /**
+          * If read-only instances are attached to a primary ApsaraDB RDS for SQL Server instance, you can call this operation to apply for a unified read-only routing endpoint for the primary instance. After you apply for a read-only routing endpoint for a primary instance, the existing endpoints of the primary instance and its read-only instances remain valid. In addition, you can still apply for internal and public endpoints.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   If the instance runs MySQL, the instance uses a shared proxy.
+          * *   The instance is in the Running state.
+          * *   Read-only instances are attached to the primary instance.
+          * *   The instance does not have an ongoing Data Transmission Service (DTS) migration task.
+          * *   The instance runs one of the following database versions and RDS editions:
+          *     *   SQL Server (cluster edition)
+          *     *   MySQL 5.7 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.6
+          *
+          * @param request AllocateReadWriteSplittingConnectionRequest
+          * @return AllocateReadWriteSplittingConnectionResponse
+         */
         public async Task<AllocateReadWriteSplittingConnectionResponse> AllocateReadWriteSplittingConnectionAsync(AllocateReadWriteSplittingConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AllocateReadWriteSplittingConnectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * When the [read/write splitting](~~51073~~) feature is enabled, this operation is used to calculate system-assigned read weights. For more information about custom read weights, see [DescribeDBInstanceNetInfo](~~26237~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.
+          * *   The instance must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 5.7 on RDS High-availability Edition (with local SSDs)
+          *     *   MySQL 5.6
+          *     *   SQL Server on RDS Cluster Edition
+          *
+          * @param request CalculateDBInstanceWeightRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CalculateDBInstanceWeightResponse
+         */
         public CalculateDBInstanceWeightResponse CalculateDBInstanceWeightWithOptions(CalculateDBInstanceWeightRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -628,6 +809,19 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CalculateDBInstanceWeightResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * When the [read/write splitting](~~51073~~) feature is enabled, this operation is used to calculate system-assigned read weights. For more information about custom read weights, see [DescribeDBInstanceNetInfo](~~26237~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.
+          * *   The instance must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 5.7 on RDS High-availability Edition (with local SSDs)
+          *     *   MySQL 5.6
+          *     *   SQL Server on RDS Cluster Edition
+          *
+          * @param request CalculateDBInstanceWeightRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CalculateDBInstanceWeightResponse
+         */
         public async Task<CalculateDBInstanceWeightResponse> CalculateDBInstanceWeightWithOptionsAsync(CalculateDBInstanceWeightRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -659,18 +853,50 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CalculateDBInstanceWeightResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * When the [read/write splitting](~~51073~~) feature is enabled, this operation is used to calculate system-assigned read weights. For more information about custom read weights, see [DescribeDBInstanceNetInfo](~~26237~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.
+          * *   The instance must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 5.7 on RDS High-availability Edition (with local SSDs)
+          *     *   MySQL 5.6
+          *     *   SQL Server on RDS Cluster Edition
+          *
+          * @param request CalculateDBInstanceWeightRequest
+          * @return CalculateDBInstanceWeightResponse
+         */
         public CalculateDBInstanceWeightResponse CalculateDBInstanceWeight(CalculateDBInstanceWeightRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CalculateDBInstanceWeightWithOptions(request, runtime);
         }
 
+        /**
+          * When the [read/write splitting](~~51073~~) feature is enabled, this operation is used to calculate system-assigned read weights. For more information about custom read weights, see [DescribeDBInstanceNetInfo](~~26237~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.
+          * *   The instance must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 5.7 on RDS High-availability Edition (with local SSDs)
+          *     *   MySQL 5.6
+          *     *   SQL Server on RDS Cluster Edition
+          *
+          * @param request CalculateDBInstanceWeightRequest
+          * @return CalculateDBInstanceWeightResponse
+         */
         public async Task<CalculateDBInstanceWeightResponse> CalculateDBInstanceWeightAsync(CalculateDBInstanceWeightRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CalculateDBInstanceWeightWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see [ImportDatabaseBetweenInstances](~~26301~~).
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request CancelImportRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CancelImportResponse
+         */
         public CancelImportResponse CancelImportWithOptions(CancelImportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -718,6 +944,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CancelImportResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see [ImportDatabaseBetweenInstances](~~26301~~).
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request CancelImportRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CancelImportResponse
+         */
         public async Task<CancelImportResponse> CancelImportWithOptionsAsync(CancelImportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -765,12 +999,26 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CancelImportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see [ImportDatabaseBetweenInstances](~~26301~~).
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request CancelImportRequest
+          * @return CancelImportResponse
+         */
         public CancelImportResponse CancelImport(CancelImportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelImportWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see [ImportDatabaseBetweenInstances](~~26301~~).
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request CancelImportRequest
+          * @return CancelImportResponse
+         */
         public async Task<CancelImportResponse> CancelImportAsync(CancelImportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1013,6 +1261,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await CheckCloudResourceAuthorizedWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the source instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request CheckCreateDdrDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CheckCreateDdrDBInstanceResponse
+         */
         public CheckCreateDdrDBInstanceResponse CheckCreateDdrDBInstanceWithOptions(CheckCreateDdrDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1088,6 +1346,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CheckCreateDdrDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the source instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request CheckCreateDdrDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CheckCreateDdrDBInstanceResponse
+         */
         public async Task<CheckCreateDdrDBInstanceResponse> CheckCreateDdrDBInstanceWithOptionsAsync(CheckCreateDdrDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1163,12 +1431,30 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CheckCreateDdrDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the source instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request CheckCreateDdrDBInstanceRequest
+          * @return CheckCreateDdrDBInstanceResponse
+         */
         public CheckCreateDdrDBInstanceResponse CheckCreateDdrDBInstance(CheckCreateDdrDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckCreateDdrDBInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the source instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request CheckCreateDdrDBInstanceRequest
+          * @return CheckCreateDdrDBInstanceResponse
+         */
         public async Task<CheckCreateDdrDBInstanceResponse> CheckCreateDdrDBInstanceAsync(CheckCreateDdrDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1485,16 +1771,35 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await CheckServiceLinkedRoleWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The original instance is in the Running state.
+          * *   The original instance does not have ongoing migration tasks.
+          * *   The log backup feature is enabled for the original instance to support point-in-time recovery.
+          * *   If you want to clone the original instance by using backup sets, the original instance must have at least one backup set.
+          * > ApsaraDB RDS allows you to create a cloned instance by using the credentials of your RAM user. Make sure that your RAM user is granted the permissions that are required to clone an instance. For more information, see [Use RAM to manage ApsaraDB RDS permissions](~~58932~~).
+          * Take note of the following information:
+          * *   The new instance has the same IP address whitelist, SQL Explorer (SQL Audit), alert threshold, backup, and parameter settings as the original instance.
+          * *   The data and account information of the new instance is the same as that indicated by the backup set or point in time used for restoration of the original instance.
+          *
+          * @param tmpReq CloneDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CloneDBInstanceResponse
+         */
         public CloneDBInstanceResponse CloneDBInstanceWithOptions(CloneDBInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CloneDBInstanceShrinkRequest request = new CloneDBInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfig))
             {
-                request.ServerlessConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfig.ToMap(), "ServerlessConfig", "json");
+                request.ServerlessConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfig, "ServerlessConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupId))
             {
                 query["BackupId"] = request.BackupId;
@@ -1502,6 +1807,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupType))
             {
                 query["BackupType"] = request.BackupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BpeEnabled))
+            {
+                query["BpeEnabled"] = request.BpeEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BurstingEnabled))
+            {
+                query["BurstingEnabled"] = request.BurstingEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
@@ -1590,6 +1903,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
                 query["ZoneId"] = request.ZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneIdSlave1))
+            {
+                query["ZoneIdSlave1"] = request.ZoneIdSlave1;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneIdSlave2))
+            {
+                query["ZoneIdSlave2"] = request.ZoneIdSlave2;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1610,16 +1931,35 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CloneDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The original instance is in the Running state.
+          * *   The original instance does not have ongoing migration tasks.
+          * *   The log backup feature is enabled for the original instance to support point-in-time recovery.
+          * *   If you want to clone the original instance by using backup sets, the original instance must have at least one backup set.
+          * > ApsaraDB RDS allows you to create a cloned instance by using the credentials of your RAM user. Make sure that your RAM user is granted the permissions that are required to clone an instance. For more information, see [Use RAM to manage ApsaraDB RDS permissions](~~58932~~).
+          * Take note of the following information:
+          * *   The new instance has the same IP address whitelist, SQL Explorer (SQL Audit), alert threshold, backup, and parameter settings as the original instance.
+          * *   The data and account information of the new instance is the same as that indicated by the backup set or point in time used for restoration of the original instance.
+          *
+          * @param tmpReq CloneDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CloneDBInstanceResponse
+         */
         public async Task<CloneDBInstanceResponse> CloneDBInstanceWithOptionsAsync(CloneDBInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CloneDBInstanceShrinkRequest request = new CloneDBInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfig))
             {
-                request.ServerlessConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfig.ToMap(), "ServerlessConfig", "json");
+                request.ServerlessConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfig, "ServerlessConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupId))
             {
                 query["BackupId"] = request.BackupId;
@@ -1627,6 +1967,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupType))
             {
                 query["BackupType"] = request.BackupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BpeEnabled))
+            {
+                query["BpeEnabled"] = request.BpeEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BurstingEnabled))
+            {
+                query["BurstingEnabled"] = request.BurstingEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
@@ -1716,6 +2064,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["ZoneId"] = request.ZoneId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneIdSlave1))
+            {
+                query["ZoneIdSlave1"] = request.ZoneIdSlave1;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneIdSlave2))
+            {
+                query["ZoneIdSlave2"] = request.ZoneIdSlave2;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1735,18 +2091,54 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CloneDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The original instance is in the Running state.
+          * *   The original instance does not have ongoing migration tasks.
+          * *   The log backup feature is enabled for the original instance to support point-in-time recovery.
+          * *   If you want to clone the original instance by using backup sets, the original instance must have at least one backup set.
+          * > ApsaraDB RDS allows you to create a cloned instance by using the credentials of your RAM user. Make sure that your RAM user is granted the permissions that are required to clone an instance. For more information, see [Use RAM to manage ApsaraDB RDS permissions](~~58932~~).
+          * Take note of the following information:
+          * *   The new instance has the same IP address whitelist, SQL Explorer (SQL Audit), alert threshold, backup, and parameter settings as the original instance.
+          * *   The data and account information of the new instance is the same as that indicated by the backup set or point in time used for restoration of the original instance.
+          *
+          * @param request CloneDBInstanceRequest
+          * @return CloneDBInstanceResponse
+         */
         public CloneDBInstanceResponse CloneDBInstance(CloneDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CloneDBInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The original instance is in the Running state.
+          * *   The original instance does not have ongoing migration tasks.
+          * *   The log backup feature is enabled for the original instance to support point-in-time recovery.
+          * *   If you want to clone the original instance by using backup sets, the original instance must have at least one backup set.
+          * > ApsaraDB RDS allows you to create a cloned instance by using the credentials of your RAM user. Make sure that your RAM user is granted the permissions that are required to clone an instance. For more information, see [Use RAM to manage ApsaraDB RDS permissions](~~58932~~).
+          * Take note of the following information:
+          * *   The new instance has the same IP address whitelist, SQL Explorer (SQL Audit), alert threshold, backup, and parameter settings as the original instance.
+          * *   The data and account information of the new instance is the same as that indicated by the backup set or point in time used for restoration of the original instance.
+          *
+          * @param request CloneDBInstanceRequest
+          * @return CloneDBInstanceResponse
+         */
         public async Task<CloneDBInstanceResponse> CloneDBInstanceAsync(CloneDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CloneDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to an instance. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > This operation is supported only when your instance runs MySQL or PostgreSQL.
+          *
+          * @param request CloneParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CloneParameterGroupResponse
+         */
         public CloneParameterGroupResponse CloneParameterGroupWithOptions(CloneParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1802,6 +2194,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CloneParameterGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to an instance. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > This operation is supported only when your instance runs MySQL or PostgreSQL.
+          *
+          * @param request CloneParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CloneParameterGroupResponse
+         */
         public async Task<CloneParameterGroupResponse> CloneParameterGroupWithOptionsAsync(CloneParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1857,18 +2257,39 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CloneParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to an instance. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > This operation is supported only when your instance runs MySQL or PostgreSQL.
+          *
+          * @param request CloneParameterGroupRequest
+          * @return CloneParameterGroupResponse
+         */
         public CloneParameterGroupResponse CloneParameterGroup(CloneParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CloneParameterGroupWithOptions(request, runtime);
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to an instance. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > This operation is supported only when your instance runs MySQL or PostgreSQL.
+          *
+          * @param request CloneParameterGroupRequest
+          * @return CloneParameterGroupResponse
+         */
         public async Task<CloneParameterGroupResponse> CloneParameterGroupAsync(CloneParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CloneParameterGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After you call the QueryNotify operation to query notifications for an instance, you can call this operation to mark the notifications as confirmed. For more information, see [Query notifications for an ApsaraDB RDS instance](~~427959~~).
+          *
+          * @param tmpReq ConfirmNotifyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ConfirmNotifyResponse
+         */
         public ConfirmNotifyResponse ConfirmNotifyWithOptions(ConfirmNotifyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1906,6 +2327,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ConfirmNotifyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After you call the QueryNotify operation to query notifications for an instance, you can call this operation to mark the notifications as confirmed. For more information, see [Query notifications for an ApsaraDB RDS instance](~~427959~~).
+          *
+          * @param tmpReq ConfirmNotifyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ConfirmNotifyResponse
+         */
         public async Task<ConfirmNotifyResponse> ConfirmNotifyWithOptionsAsync(ConfirmNotifyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1943,18 +2371,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ConfirmNotifyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After you call the QueryNotify operation to query notifications for an instance, you can call this operation to mark the notifications as confirmed. For more information, see [Query notifications for an ApsaraDB RDS instance](~~427959~~).
+          *
+          * @param request ConfirmNotifyRequest
+          * @return ConfirmNotifyResponse
+         */
         public ConfirmNotifyResponse ConfirmNotify(ConfirmNotifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConfirmNotifyWithOptions(request, runtime);
         }
 
+        /**
+          * After you call the QueryNotify operation to query notifications for an instance, you can call this operation to mark the notifications as confirmed. For more information, see [Query notifications for an ApsaraDB RDS instance](~~427959~~).
+          *
+          * @param request ConfirmNotifyRequest
+          * @return ConfirmNotifyResponse
+         */
         public async Task<ConfirmNotifyResponse> ConfirmNotifyAsync(ConfirmNotifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfirmNotifyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request CopyDatabaseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CopyDatabaseResponse
+         */
         public CopyDatabaseResponse CopyDatabaseWithOptions(CopyDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1990,6 +2437,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CopyDatabaseResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request CopyDatabaseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CopyDatabaseResponse
+         */
         public async Task<CopyDatabaseResponse> CopyDatabaseWithOptionsAsync(CopyDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2025,18 +2479,44 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CopyDatabaseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request CopyDatabaseRequest
+          * @return CopyDatabaseResponse
+         */
         public CopyDatabaseResponse CopyDatabase(CopyDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CopyDatabaseWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request CopyDatabaseRequest
+          * @return CopyDatabaseResponse
+         */
         public async Task<CopyDatabaseResponse> CopyDatabaseAsync(CopyDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CopyDatabaseWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can also call this operation to restore specific databases to an existing instance by point in time or backup set. For more information, see [Restore the data of an ApsaraDB RDS for SQL Server instance](~~95722~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The source and destination instances belong to the same account.
+          * *   The source and destination instances run the same version of database engine.
+          * *   The source and destination instances reside in the same region and use the same network type. The instances can reside in different zones.
+          * *   The source and destination instances do not have databases whose names are the same.
+          * *   The available storage of the destination instance is larger than the total size of the databases that you want to replicate from the source instance.
+          * > This operation is supported only for instances that run SQL Server 2012 and later.
+          *
+          * @param request CopyDatabaseBetweenInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CopyDatabaseBetweenInstancesResponse
+         */
         public CopyDatabaseBetweenInstancesResponse CopyDatabaseBetweenInstancesWithOptions(CopyDatabaseBetweenInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2088,6 +2568,20 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CopyDatabaseBetweenInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can also call this operation to restore specific databases to an existing instance by point in time or backup set. For more information, see [Restore the data of an ApsaraDB RDS for SQL Server instance](~~95722~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The source and destination instances belong to the same account.
+          * *   The source and destination instances run the same version of database engine.
+          * *   The source and destination instances reside in the same region and use the same network type. The instances can reside in different zones.
+          * *   The source and destination instances do not have databases whose names are the same.
+          * *   The available storage of the destination instance is larger than the total size of the databases that you want to replicate from the source instance.
+          * > This operation is supported only for instances that run SQL Server 2012 and later.
+          *
+          * @param request CopyDatabaseBetweenInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CopyDatabaseBetweenInstancesResponse
+         */
         public async Task<CopyDatabaseBetweenInstancesResponse> CopyDatabaseBetweenInstancesWithOptionsAsync(CopyDatabaseBetweenInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2139,18 +2633,57 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CopyDatabaseBetweenInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can also call this operation to restore specific databases to an existing instance by point in time or backup set. For more information, see [Restore the data of an ApsaraDB RDS for SQL Server instance](~~95722~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The source and destination instances belong to the same account.
+          * *   The source and destination instances run the same version of database engine.
+          * *   The source and destination instances reside in the same region and use the same network type. The instances can reside in different zones.
+          * *   The source and destination instances do not have databases whose names are the same.
+          * *   The available storage of the destination instance is larger than the total size of the databases that you want to replicate from the source instance.
+          * > This operation is supported only for instances that run SQL Server 2012 and later.
+          *
+          * @param request CopyDatabaseBetweenInstancesRequest
+          * @return CopyDatabaseBetweenInstancesResponse
+         */
         public CopyDatabaseBetweenInstancesResponse CopyDatabaseBetweenInstances(CopyDatabaseBetweenInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CopyDatabaseBetweenInstancesWithOptions(request, runtime);
         }
 
+        /**
+          * You can also call this operation to restore specific databases to an existing instance by point in time or backup set. For more information, see [Restore the data of an ApsaraDB RDS for SQL Server instance](~~95722~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The source and destination instances belong to the same account.
+          * *   The source and destination instances run the same version of database engine.
+          * *   The source and destination instances reside in the same region and use the same network type. The instances can reside in different zones.
+          * *   The source and destination instances do not have databases whose names are the same.
+          * *   The available storage of the destination instance is larger than the total size of the databases that you want to replicate from the source instance.
+          * > This operation is supported only for instances that run SQL Server 2012 and later.
+          *
+          * @param request CopyDatabaseBetweenInstancesRequest
+          * @return CopyDatabaseBetweenInstancesResponse
+         */
         public async Task<CopyDatabaseBetweenInstancesResponse> CopyDatabaseBetweenInstancesAsync(CopyDatabaseBetweenInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CopyDatabaseBetweenInstancesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The database is in the Running state.
+          * *   The number of accounts that are created on the instance does not exceed the upper limit. For more information, see [Limits](~~41872~~).
+          * > 
+          * *   This operation is supported for instances that run MySQL, MariaDB, PostgreSQL, and SQL Server. However, if the instance runs SQL Server 2017 or SQL Server 2019 on RDS Cluster Edition, this operation is not supported.
+          * *   You can create multiple privileged accounts and standard accounts on an instance that runs PostgreSQL.
+          *
+          * @param request CreateAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAccountResponse
+         */
         public CreateAccountResponse CreateAccountWithOptions(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2210,6 +2743,19 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The database is in the Running state.
+          * *   The number of accounts that are created on the instance does not exceed the upper limit. For more information, see [Limits](~~41872~~).
+          * > 
+          * *   This operation is supported for instances that run MySQL, MariaDB, PostgreSQL, and SQL Server. However, if the instance runs SQL Server 2017 or SQL Server 2019 on RDS Cluster Edition, this operation is not supported.
+          * *   You can create multiple privileged accounts and standard accounts on an instance that runs PostgreSQL.
+          *
+          * @param request CreateAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAccountResponse
+         */
         public async Task<CreateAccountResponse> CreateAccountWithOptionsAsync(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2269,18 +2815,53 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The database is in the Running state.
+          * *   The number of accounts that are created on the instance does not exceed the upper limit. For more information, see [Limits](~~41872~~).
+          * > 
+          * *   This operation is supported for instances that run MySQL, MariaDB, PostgreSQL, and SQL Server. However, if the instance runs SQL Server 2017 or SQL Server 2019 on RDS Cluster Edition, this operation is not supported.
+          * *   You can create multiple privileged accounts and standard accounts on an instance that runs PostgreSQL.
+          *
+          * @param request CreateAccountRequest
+          * @return CreateAccountResponse
+         */
         public CreateAccountResponse CreateAccount(CreateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateAccountWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The database is in the Running state.
+          * *   The number of accounts that are created on the instance does not exceed the upper limit. For more information, see [Limits](~~41872~~).
+          * > 
+          * *   This operation is supported for instances that run MySQL, MariaDB, PostgreSQL, and SQL Server. However, if the instance runs SQL Server 2017 or SQL Server 2019 on RDS Cluster Edition, this operation is not supported.
+          * *   You can create multiple privileged accounts and standard accounts on an instance that runs PostgreSQL.
+          *
+          * @param request CreateAccountRequest
+          * @return CreateAccountResponse
+         */
         public async Task<CreateAccountResponse> CreateAccountAsync(CreateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAccountWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also use an operation of Database Backup (DBS) to create a backup set. For more information, see [List of operations by function of DBS](~~437245~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The original instance is in the Running state.
+          * *   The instance does not have ongoing backup tasks.
+          * *   The number of backup files that are created per day for an instance cannot exceed 20.
+          *
+          * @param request CreateBackupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateBackupResponse
+         */
         public CreateBackupResponse CreateBackupWithOptions(CreateBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2332,6 +2913,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateBackupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also use an operation of Database Backup (DBS) to create a backup set. For more information, see [List of operations by function of DBS](~~437245~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The original instance is in the Running state.
+          * *   The instance does not have ongoing backup tasks.
+          * *   The number of backup files that are created per day for an instance cannot exceed 20.
+          *
+          * @param request CreateBackupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateBackupResponse
+         */
         public async Task<CreateBackupResponse> CreateBackupWithOptionsAsync(CreateBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2383,18 +2975,61 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateBackupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also use an operation of Database Backup (DBS) to create a backup set. For more information, see [List of operations by function of DBS](~~437245~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The original instance is in the Running state.
+          * *   The instance does not have ongoing backup tasks.
+          * *   The number of backup files that are created per day for an instance cannot exceed 20.
+          *
+          * @param request CreateBackupRequest
+          * @return CreateBackupResponse
+         */
         public CreateBackupResponse CreateBackup(CreateBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateBackupWithOptions(request, runtime);
         }
 
+        /**
+          * This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also use an operation of Database Backup (DBS) to create a backup set. For more information, see [List of operations by function of DBS](~~437245~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The original instance is in the Running state.
+          * *   The instance does not have ongoing backup tasks.
+          * *   The number of backup files that are created per day for an instance cannot exceed 20.
+          *
+          * @param request CreateBackupRequest
+          * @return CreateBackupResponse
+         */
         public async Task<CreateBackupResponse> CreateBackupAsync(CreateBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateBackupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * The RDS instance meets the following requirements:
+          * * The RDS instance and the self-managed PostgreSQL instance run the same PostgreSQL version, which can be PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15.
+          * * The RDS instance is a primary instance. Read-only RDS instances do not support cloud migration.
+          * * The RDS instance uses cloud disks.
+          * * The RDS instance is empty. The available storage of the RDS instance is greater than or equal to the size of the data in the self-managed PostgreSQL instance.
+          * The self-managed PostgreSQL instance meets the following requirements:
+          * * Network configurations
+          * |Migration source|Network configuration|
+          * |:---|---|
+          * |Self-managed ECS-based PostgreSQL Database|If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, the ECS instance and the RDS instance must reside in the same virtual private cloud (VPC). If the ECS instance and the RDS instance reside in different VPCs, use Cloud Enterprise Network (CEN) to connect the VPCs. For more information, see [What is CEN?](~~181681~~)|
+          * |Self-managed PostgreSQL database in a data center (within the same VPC as the destination database)|The data center is able to communicate with the VPC to which the destination RDS instance belongs. For more information, see [Connect a data center to a VPC](~~97768~~).|
+          * * If the self-managed PostgreSQL instance resides on an ECS instance, an ECS security group is configured. For more information, see [(Optional) Configure an ECS security group on a self-managed PostgreSQL instance](~~369726~~).
+          * * The configurations that are described in [Configure a self-managed PostgreSQL instance to listen to remote connections](~~369727~~) are complete.
+          * * The configurations that are described in [Create an account for cloud migration on a self-managed PostgreSQL instance](~~369500~~) are complete.
+          * * The configurations that are described in [Update the pg\\_hba.conf file of a self-managed PostgreSQL instance](~~369728~~) are complete.
+          * * The configurations that are described in [Configure the firewall of the server on which a self-managed PostgreSQL instance resides](~~369729~~) are complete.
+          *
+          * @param request CreateCloudMigrationPrecheckTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCloudMigrationPrecheckTaskResponse
+         */
         public CreateCloudMigrationPrecheckTaskResponse CreateCloudMigrationPrecheckTaskWithOptions(CreateCloudMigrationPrecheckTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2450,6 +3085,29 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateCloudMigrationPrecheckTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * The RDS instance meets the following requirements:
+          * * The RDS instance and the self-managed PostgreSQL instance run the same PostgreSQL version, which can be PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15.
+          * * The RDS instance is a primary instance. Read-only RDS instances do not support cloud migration.
+          * * The RDS instance uses cloud disks.
+          * * The RDS instance is empty. The available storage of the RDS instance is greater than or equal to the size of the data in the self-managed PostgreSQL instance.
+          * The self-managed PostgreSQL instance meets the following requirements:
+          * * Network configurations
+          * |Migration source|Network configuration|
+          * |:---|---|
+          * |Self-managed ECS-based PostgreSQL Database|If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, the ECS instance and the RDS instance must reside in the same virtual private cloud (VPC). If the ECS instance and the RDS instance reside in different VPCs, use Cloud Enterprise Network (CEN) to connect the VPCs. For more information, see [What is CEN?](~~181681~~)|
+          * |Self-managed PostgreSQL database in a data center (within the same VPC as the destination database)|The data center is able to communicate with the VPC to which the destination RDS instance belongs. For more information, see [Connect a data center to a VPC](~~97768~~).|
+          * * If the self-managed PostgreSQL instance resides on an ECS instance, an ECS security group is configured. For more information, see [(Optional) Configure an ECS security group on a self-managed PostgreSQL instance](~~369726~~).
+          * * The configurations that are described in [Configure a self-managed PostgreSQL instance to listen to remote connections](~~369727~~) are complete.
+          * * The configurations that are described in [Create an account for cloud migration on a self-managed PostgreSQL instance](~~369500~~) are complete.
+          * * The configurations that are described in [Update the pg\\_hba.conf file of a self-managed PostgreSQL instance](~~369728~~) are complete.
+          * * The configurations that are described in [Configure the firewall of the server on which a self-managed PostgreSQL instance resides](~~369729~~) are complete.
+          *
+          * @param request CreateCloudMigrationPrecheckTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCloudMigrationPrecheckTaskResponse
+         */
         public async Task<CreateCloudMigrationPrecheckTaskResponse> CreateCloudMigrationPrecheckTaskWithOptionsAsync(CreateCloudMigrationPrecheckTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2505,18 +3163,70 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateCloudMigrationPrecheckTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * The RDS instance meets the following requirements:
+          * * The RDS instance and the self-managed PostgreSQL instance run the same PostgreSQL version, which can be PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15.
+          * * The RDS instance is a primary instance. Read-only RDS instances do not support cloud migration.
+          * * The RDS instance uses cloud disks.
+          * * The RDS instance is empty. The available storage of the RDS instance is greater than or equal to the size of the data in the self-managed PostgreSQL instance.
+          * The self-managed PostgreSQL instance meets the following requirements:
+          * * Network configurations
+          * |Migration source|Network configuration|
+          * |:---|---|
+          * |Self-managed ECS-based PostgreSQL Database|If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, the ECS instance and the RDS instance must reside in the same virtual private cloud (VPC). If the ECS instance and the RDS instance reside in different VPCs, use Cloud Enterprise Network (CEN) to connect the VPCs. For more information, see [What is CEN?](~~181681~~)|
+          * |Self-managed PostgreSQL database in a data center (within the same VPC as the destination database)|The data center is able to communicate with the VPC to which the destination RDS instance belongs. For more information, see [Connect a data center to a VPC](~~97768~~).|
+          * * If the self-managed PostgreSQL instance resides on an ECS instance, an ECS security group is configured. For more information, see [(Optional) Configure an ECS security group on a self-managed PostgreSQL instance](~~369726~~).
+          * * The configurations that are described in [Configure a self-managed PostgreSQL instance to listen to remote connections](~~369727~~) are complete.
+          * * The configurations that are described in [Create an account for cloud migration on a self-managed PostgreSQL instance](~~369500~~) are complete.
+          * * The configurations that are described in [Update the pg\\_hba.conf file of a self-managed PostgreSQL instance](~~369728~~) are complete.
+          * * The configurations that are described in [Configure the firewall of the server on which a self-managed PostgreSQL instance resides](~~369729~~) are complete.
+          *
+          * @param request CreateCloudMigrationPrecheckTaskRequest
+          * @return CreateCloudMigrationPrecheckTaskResponse
+         */
         public CreateCloudMigrationPrecheckTaskResponse CreateCloudMigrationPrecheckTask(CreateCloudMigrationPrecheckTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCloudMigrationPrecheckTaskWithOptions(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * The RDS instance meets the following requirements:
+          * * The RDS instance and the self-managed PostgreSQL instance run the same PostgreSQL version, which can be PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15.
+          * * The RDS instance is a primary instance. Read-only RDS instances do not support cloud migration.
+          * * The RDS instance uses cloud disks.
+          * * The RDS instance is empty. The available storage of the RDS instance is greater than or equal to the size of the data in the self-managed PostgreSQL instance.
+          * The self-managed PostgreSQL instance meets the following requirements:
+          * * Network configurations
+          * |Migration source|Network configuration|
+          * |:---|---|
+          * |Self-managed ECS-based PostgreSQL Database|If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, the ECS instance and the RDS instance must reside in the same virtual private cloud (VPC). If the ECS instance and the RDS instance reside in different VPCs, use Cloud Enterprise Network (CEN) to connect the VPCs. For more information, see [What is CEN?](~~181681~~)|
+          * |Self-managed PostgreSQL database in a data center (within the same VPC as the destination database)|The data center is able to communicate with the VPC to which the destination RDS instance belongs. For more information, see [Connect a data center to a VPC](~~97768~~).|
+          * * If the self-managed PostgreSQL instance resides on an ECS instance, an ECS security group is configured. For more information, see [(Optional) Configure an ECS security group on a self-managed PostgreSQL instance](~~369726~~).
+          * * The configurations that are described in [Configure a self-managed PostgreSQL instance to listen to remote connections](~~369727~~) are complete.
+          * * The configurations that are described in [Create an account for cloud migration on a self-managed PostgreSQL instance](~~369500~~) are complete.
+          * * The configurations that are described in [Update the pg\\_hba.conf file of a self-managed PostgreSQL instance](~~369728~~) are complete.
+          * * The configurations that are described in [Configure the firewall of the server on which a self-managed PostgreSQL instance resides](~~369729~~) are complete.
+          *
+          * @param request CreateCloudMigrationPrecheckTaskRequest
+          * @return CreateCloudMigrationPrecheckTaskResponse
+         */
         public async Task<CreateCloudMigrationPrecheckTaskResponse> CreateCloudMigrationPrecheckTaskAsync(CreateCloudMigrationPrecheckTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCloudMigrationPrecheckTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call this operation, make sure that the ApsaraDB RDS for PostgreSQL instance passes the cloud migration assessment.
+          *
+          * @param request CreateCloudMigrationTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCloudMigrationTaskResponse
+         */
         public CreateCloudMigrationTaskResponse CreateCloudMigrationTaskWithOptions(CreateCloudMigrationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2572,6 +3282,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateCloudMigrationTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call this operation, make sure that the ApsaraDB RDS for PostgreSQL instance passes the cloud migration assessment.
+          *
+          * @param request CreateCloudMigrationTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateCloudMigrationTaskResponse
+         */
         public async Task<CreateCloudMigrationTaskResponse> CreateCloudMigrationTaskWithOptionsAsync(CreateCloudMigrationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2627,31 +3345,57 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateCloudMigrationTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call this operation, make sure that the ApsaraDB RDS for PostgreSQL instance passes the cloud migration assessment.
+          *
+          * @param request CreateCloudMigrationTaskRequest
+          * @return CreateCloudMigrationTaskResponse
+         */
         public CreateCloudMigrationTaskResponse CreateCloudMigrationTask(CreateCloudMigrationTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCloudMigrationTaskWithOptions(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call this operation, make sure that the ApsaraDB RDS for PostgreSQL instance passes the cloud migration assessment.
+          *
+          * @param request CreateCloudMigrationTaskRequest
+          * @return CreateCloudMigrationTaskResponse
+         */
         public async Task<CreateCloudMigrationTaskResponse> CreateCloudMigrationTaskAsync(CreateCloudMigrationTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCloudMigrationTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * For more information about ApsaraDB RDS instance types, see [Primary ApsaraDB RDS instance types](~~26312~~).
+          *
+          * @param tmpReq CreateDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBInstanceResponse
+         */
         public CreateDBInstanceResponse CreateDBInstanceWithOptions(CreateDBInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateDBInstanceShrinkRequest request = new CreateDBInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfig))
             {
-                request.ServerlessConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfig.ToMap(), "ServerlessConfig", "json");
+                request.ServerlessConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfig, "ServerlessConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
             {
                 query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
@@ -2660,6 +3404,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BabelfishConfig))
             {
                 query["BabelfishConfig"] = request.BabelfishConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BpeEnabled))
+            {
+                query["BpeEnabled"] = request.BpeEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BurstingEnabled))
+            {
+                query["BurstingEnabled"] = request.BurstingEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessInfo))
             {
@@ -2752,6 +3504,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
                 query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
@@ -2864,19 +3620,31 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * For more information about ApsaraDB RDS instance types, see [Primary ApsaraDB RDS instance types](~~26312~~).
+          *
+          * @param tmpReq CreateDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBInstanceResponse
+         */
         public async Task<CreateDBInstanceResponse> CreateDBInstanceWithOptionsAsync(CreateDBInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateDBInstanceShrinkRequest request = new CreateDBInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfig.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfig))
             {
-                request.ServerlessConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfig.ToMap(), "ServerlessConfig", "json");
+                request.ServerlessConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfig, "ServerlessConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
             {
                 query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
@@ -2885,6 +3653,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BabelfishConfig))
             {
                 query["BabelfishConfig"] = request.BabelfishConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BpeEnabled))
+            {
+                query["BpeEnabled"] = request.BpeEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BurstingEnabled))
+            {
+                query["BurstingEnabled"] = request.BurstingEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessInfo))
             {
@@ -2977,6 +3753,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
                 query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
@@ -3089,18 +3869,42 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * For more information about ApsaraDB RDS instance types, see [Primary ApsaraDB RDS instance types](~~26312~~).
+          *
+          * @param request CreateDBInstanceRequest
+          * @return CreateDBInstanceResponse
+         */
         public CreateDBInstanceResponse CreateDBInstance(CreateDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDBInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * For more information about ApsaraDB RDS instance types, see [Primary ApsaraDB RDS instance types](~~26312~~).
+          *
+          * @param request CreateDBInstanceRequest
+          * @return CreateDBInstanceResponse
+         */
         public async Task<CreateDBInstanceResponse> CreateDBInstanceAsync(CreateDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   Each type of endpoint can contain an internal endpoint and an external endpoint. When you create any type of endpoint, an internal endpoint is automatically created for the endpoint.
+          * *   If the instance runs MySQL, you must specify VPCId, VSwitchId, and NodeItems.
+          *
+          * @param tmpReq CreateDBInstanceEndpointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBInstanceEndpointResponse
+         */
         public CreateDBInstanceEndpointResponse CreateDBInstanceEndpointWithOptions(CreateDBInstanceEndpointRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3174,6 +3978,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateDBInstanceEndpointResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   Each type of endpoint can contain an internal endpoint and an external endpoint. When you create any type of endpoint, an internal endpoint is automatically created for the endpoint.
+          * *   If the instance runs MySQL, you must specify VPCId, VSwitchId, and NodeItems.
+          *
+          * @param tmpReq CreateDBInstanceEndpointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBInstanceEndpointResponse
+         */
         public async Task<CreateDBInstanceEndpointResponse> CreateDBInstanceEndpointWithOptionsAsync(CreateDBInstanceEndpointRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3247,18 +4061,46 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateDBInstanceEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   Each type of endpoint can contain an internal endpoint and an external endpoint. When you create any type of endpoint, an internal endpoint is automatically created for the endpoint.
+          * *   If the instance runs MySQL, you must specify VPCId, VSwitchId, and NodeItems.
+          *
+          * @param request CreateDBInstanceEndpointRequest
+          * @return CreateDBInstanceEndpointResponse
+         */
         public CreateDBInstanceEndpointResponse CreateDBInstanceEndpoint(CreateDBInstanceEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDBInstanceEndpointWithOptions(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   Each type of endpoint can contain an internal endpoint and an external endpoint. When you create any type of endpoint, an internal endpoint is automatically created for the endpoint.
+          * *   If the instance runs MySQL, you must specify VPCId, VSwitchId, and NodeItems.
+          *
+          * @param request CreateDBInstanceEndpointRequest
+          * @return CreateDBInstanceEndpointResponse
+         */
         public async Task<CreateDBInstanceEndpointResponse> CreateDBInstanceEndpointAsync(CreateDBInstanceEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDBInstanceEndpointWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   You can create a public endpoint of an endpoint type only when no public endpoint is created for this endpoint type.
+          * *   The node weights and other configurations are the same as those of the internal endpoint of this endpoint type. Only one public endpoint and one internal endpoint can be created for each endpoint type.
+          *
+          * @param request CreateDBInstanceEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBInstanceEndpointAddressResponse
+         */
         public CreateDBInstanceEndpointAddressResponse CreateDBInstanceEndpointAddressWithOptions(CreateDBInstanceEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3310,6 +4152,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateDBInstanceEndpointAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   You can create a public endpoint of an endpoint type only when no public endpoint is created for this endpoint type.
+          * *   The node weights and other configurations are the same as those of the internal endpoint of this endpoint type. Only one public endpoint and one internal endpoint can be created for each endpoint type.
+          *
+          * @param request CreateDBInstanceEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBInstanceEndpointAddressResponse
+         */
         public async Task<CreateDBInstanceEndpointAddressResponse> CreateDBInstanceEndpointAddressWithOptionsAsync(CreateDBInstanceEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3361,18 +4213,458 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateDBInstanceEndpointAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   You can create a public endpoint of an endpoint type only when no public endpoint is created for this endpoint type.
+          * *   The node weights and other configurations are the same as those of the internal endpoint of this endpoint type. Only one public endpoint and one internal endpoint can be created for each endpoint type.
+          *
+          * @param request CreateDBInstanceEndpointAddressRequest
+          * @return CreateDBInstanceEndpointAddressResponse
+         */
         public CreateDBInstanceEndpointAddressResponse CreateDBInstanceEndpointAddress(CreateDBInstanceEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDBInstanceEndpointAddressWithOptions(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   You can create a public endpoint of an endpoint type only when no public endpoint is created for this endpoint type.
+          * *   The node weights and other configurations are the same as those of the internal endpoint of this endpoint type. Only one public endpoint and one internal endpoint can be created for each endpoint type.
+          *
+          * @param request CreateDBInstanceEndpointAddressRequest
+          * @return CreateDBInstanceEndpointAddressResponse
+         */
         public async Task<CreateDBInstanceEndpointAddressResponse> CreateDBInstanceEndpointAddressAsync(CreateDBInstanceEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDBInstanceEndpointAddressWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * **Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Pricing, billable items, and billing methods](~~45020~~).**
+          * You can call this operation only for instances that are moved to the recycle bin. For more information about instances that can be moved to the recycle bin, see [Recycle bin](~~96065~~).
+          *
+          * @param request CreateDBInstanceForRebuildRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBInstanceForRebuildResponse
+         */
+        public CreateDBInstanceForRebuildResponse CreateDBInstanceForRebuildWithOptions(CreateDBInstanceForRebuildRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceDescription))
+            {
+                query["DBInstanceDescription"] = request.DBInstanceDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceNetType))
+            {
+                query["DBInstanceNetType"] = request.DBInstanceNetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceNetworkType))
+            {
+                query["InstanceNetworkType"] = request.InstanceNetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPList))
+            {
+                query["SecurityIPList"] = request.SecurityIPList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
+            {
+                query["VPCId"] = request.VPCId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneIdSlave1))
+            {
+                query["ZoneIdSlave1"] = request.ZoneIdSlave1;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneIdSlave2))
+            {
+                query["ZoneIdSlave2"] = request.ZoneIdSlave2;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDBInstanceForRebuild",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDBInstanceForRebuildResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * **Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Pricing, billable items, and billing methods](~~45020~~).**
+          * You can call this operation only for instances that are moved to the recycle bin. For more information about instances that can be moved to the recycle bin, see [Recycle bin](~~96065~~).
+          *
+          * @param request CreateDBInstanceForRebuildRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBInstanceForRebuildResponse
+         */
+        public async Task<CreateDBInstanceForRebuildResponse> CreateDBInstanceForRebuildWithOptionsAsync(CreateDBInstanceForRebuildRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceDescription))
+            {
+                query["DBInstanceDescription"] = request.DBInstanceDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceNetType))
+            {
+                query["DBInstanceNetType"] = request.DBInstanceNetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceNetworkType))
+            {
+                query["InstanceNetworkType"] = request.InstanceNetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPList))
+            {
+                query["SecurityIPList"] = request.SecurityIPList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
+            {
+                query["VPCId"] = request.VPCId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneIdSlave1))
+            {
+                query["ZoneIdSlave1"] = request.ZoneIdSlave1;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneIdSlave2))
+            {
+                query["ZoneIdSlave2"] = request.ZoneIdSlave2;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDBInstanceForRebuild",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDBInstanceForRebuildResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * **Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Pricing, billable items, and billing methods](~~45020~~).**
+          * You can call this operation only for instances that are moved to the recycle bin. For more information about instances that can be moved to the recycle bin, see [Recycle bin](~~96065~~).
+          *
+          * @param request CreateDBInstanceForRebuildRequest
+          * @return CreateDBInstanceForRebuildResponse
+         */
+        public CreateDBInstanceForRebuildResponse CreateDBInstanceForRebuild(CreateDBInstanceForRebuildRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDBInstanceForRebuildWithOptions(request, runtime);
+        }
+
+        /**
+          * **Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Pricing, billable items, and billing methods](~~45020~~).**
+          * You can call this operation only for instances that are moved to the recycle bin. For more information about instances that can be moved to the recycle bin, see [Recycle bin](~~96065~~).
+          *
+          * @param request CreateDBInstanceForRebuildRequest
+          * @return CreateDBInstanceForRebuildResponse
+         */
+        public async Task<CreateDBInstanceForRebuildResponse> CreateDBInstanceForRebuildAsync(CreateDBInstanceForRebuildRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDBInstanceForRebuildWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * ## Background information
+          * This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition. These RDS instances are referred to as RDS clusters.
+          *
+          * @param tmpReq CreateDBNodesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBNodesResponse
+         */
+        public CreateDBNodesResponse CreateDBNodesWithOptions(CreateDBNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDBNodesShrinkRequest request = new CreateDBNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DBNode))
+            {
+                request.DBNodeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DBNode, "DBNode", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeShrink))
+            {
+                query["DBNode"] = request.DBNodeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDBNodes",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDBNodesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * ## Background information
+          * This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition. These RDS instances are referred to as RDS clusters.
+          *
+          * @param tmpReq CreateDBNodesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBNodesResponse
+         */
+        public async Task<CreateDBNodesResponse> CreateDBNodesWithOptionsAsync(CreateDBNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDBNodesShrinkRequest request = new CreateDBNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DBNode))
+            {
+                request.DBNodeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DBNode, "DBNode", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeShrink))
+            {
+                query["DBNode"] = request.DBNodeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDBNodes",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDBNodesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * ## Background information
+          * This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition. These RDS instances are referred to as RDS clusters.
+          *
+          * @param request CreateDBNodesRequest
+          * @return CreateDBNodesResponse
+         */
+        public CreateDBNodesResponse CreateDBNodes(CreateDBNodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDBNodesWithOptions(request, runtime);
+        }
+
+        /**
+          * ## Background information
+          * This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition. These RDS instances are referred to as RDS clusters.
+          *
+          * @param request CreateDBNodesRequest
+          * @return CreateDBNodesResponse
+         */
+        public async Task<CreateDBNodesResponse> CreateDBNodesAsync(CreateDBNodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDBNodesWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * After you enable the dedicated proxy feature for an ApsaraDB RDS for MySQL instance or enable the database proxy feature for an ApsaraDB RDS for PostgreSQL instance, a default proxy endpoint is created. You can call this operation to create proxy endpoints of different network types. For more information, see [Activate and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance](~~418272~~) and [What are database proxies?](~~138705~~)
+          * > 
+          * *   The following network types are supported for ApsaraDB RDS for MySQL instances that use local disks: virtual private cloud (VPC), Classic, and Public.
+          * *   The following network types are supported for instances that use cloud disks: VPC and Public. If you want to create a proxy endpoint of the public network type, you must configure IP address whitelists for the instance and its read-only instances to ensure connectivity between the client and the instance. You can call the [ModifySecurityIps](~~26242~~) operation to configure an IP address whitelist for an instance.
+          *
+          * @param request CreateDBProxyEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBProxyEndpointAddressResponse
+         */
         public CreateDBProxyEndpointAddressResponse CreateDBProxyEndpointAddressWithOptions(CreateDBProxyEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3440,6 +4732,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateDBProxyEndpointAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After you enable the dedicated proxy feature for an ApsaraDB RDS for MySQL instance or enable the database proxy feature for an ApsaraDB RDS for PostgreSQL instance, a default proxy endpoint is created. You can call this operation to create proxy endpoints of different network types. For more information, see [Activate and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance](~~418272~~) and [What are database proxies?](~~138705~~)
+          * > 
+          * *   The following network types are supported for ApsaraDB RDS for MySQL instances that use local disks: virtual private cloud (VPC), Classic, and Public.
+          * *   The following network types are supported for instances that use cloud disks: VPC and Public. If you want to create a proxy endpoint of the public network type, you must configure IP address whitelists for the instance and its read-only instances to ensure connectivity between the client and the instance. You can call the [ModifySecurityIps](~~26242~~) operation to configure an IP address whitelist for an instance.
+          *
+          * @param request CreateDBProxyEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDBProxyEndpointAddressResponse
+         */
         public async Task<CreateDBProxyEndpointAddressResponse> CreateDBProxyEndpointAddressWithOptionsAsync(CreateDBProxyEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3507,18 +4809,48 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateDBProxyEndpointAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After you enable the dedicated proxy feature for an ApsaraDB RDS for MySQL instance or enable the database proxy feature for an ApsaraDB RDS for PostgreSQL instance, a default proxy endpoint is created. You can call this operation to create proxy endpoints of different network types. For more information, see [Activate and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance](~~418272~~) and [What are database proxies?](~~138705~~)
+          * > 
+          * *   The following network types are supported for ApsaraDB RDS for MySQL instances that use local disks: virtual private cloud (VPC), Classic, and Public.
+          * *   The following network types are supported for instances that use cloud disks: VPC and Public. If you want to create a proxy endpoint of the public network type, you must configure IP address whitelists for the instance and its read-only instances to ensure connectivity between the client and the instance. You can call the [ModifySecurityIps](~~26242~~) operation to configure an IP address whitelist for an instance.
+          *
+          * @param request CreateDBProxyEndpointAddressRequest
+          * @return CreateDBProxyEndpointAddressResponse
+         */
         public CreateDBProxyEndpointAddressResponse CreateDBProxyEndpointAddress(CreateDBProxyEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDBProxyEndpointAddressWithOptions(request, runtime);
         }
 
+        /**
+          * After you enable the dedicated proxy feature for an ApsaraDB RDS for MySQL instance or enable the database proxy feature for an ApsaraDB RDS for PostgreSQL instance, a default proxy endpoint is created. You can call this operation to create proxy endpoints of different network types. For more information, see [Activate and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance](~~418272~~) and [What are database proxies?](~~138705~~)
+          * > 
+          * *   The following network types are supported for ApsaraDB RDS for MySQL instances that use local disks: virtual private cloud (VPC), Classic, and Public.
+          * *   The following network types are supported for instances that use cloud disks: VPC and Public. If you want to create a proxy endpoint of the public network type, you must configure IP address whitelists for the instance and its read-only instances to ensure connectivity between the client and the instance. You can call the [ModifySecurityIps](~~26242~~) operation to configure an IP address whitelist for an instance.
+          *
+          * @param request CreateDBProxyEndpointAddressRequest
+          * @return CreateDBProxyEndpointAddressResponse
+         */
         public async Task<CreateDBProxyEndpointAddressResponse> CreateDBProxyEndpointAddressAsync(CreateDBProxyEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDBProxyEndpointAddressWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you want to perform data management tasks such as data change and schema design, use Data Management (DMS). For more information, see [List of operations by function of DMS](~~97965~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The maximum number of databases that can be created on an instance is not reached. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the maximum number of databases that can be created on an instance.
+          * *   The instance is not a read-only instance.
+          * > This operation is not supported for instances that run PostgreSQL with local SSDs or SQL Server 2017 (cluster edition). You can execute the CREATE DATABASE statement to create a database.
+          *
+          * @param request CreateDatabaseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDatabaseResponse
+         */
         public CreateDatabaseResponse CreateDatabaseWithOptions(CreateDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3578,6 +4910,18 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateDatabaseResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you want to perform data management tasks such as data change and schema design, use Data Management (DMS). For more information, see [List of operations by function of DMS](~~97965~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The maximum number of databases that can be created on an instance is not reached. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the maximum number of databases that can be created on an instance.
+          * *   The instance is not a read-only instance.
+          * > This operation is not supported for instances that run PostgreSQL with local SSDs or SQL Server 2017 (cluster edition). You can execute the CREATE DATABASE statement to create a database.
+          *
+          * @param request CreateDatabaseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDatabaseResponse
+         */
         public async Task<CreateDatabaseResponse> CreateDatabaseWithOptionsAsync(CreateDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3637,18 +4981,51 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateDatabaseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you want to perform data management tasks such as data change and schema design, use Data Management (DMS). For more information, see [List of operations by function of DMS](~~97965~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The maximum number of databases that can be created on an instance is not reached. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the maximum number of databases that can be created on an instance.
+          * *   The instance is not a read-only instance.
+          * > This operation is not supported for instances that run PostgreSQL with local SSDs or SQL Server 2017 (cluster edition). You can execute the CREATE DATABASE statement to create a database.
+          *
+          * @param request CreateDatabaseRequest
+          * @return CreateDatabaseResponse
+         */
         public CreateDatabaseResponse CreateDatabase(CreateDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDatabaseWithOptions(request, runtime);
         }
 
+        /**
+          * If you want to perform data management tasks such as data change and schema design, use Data Management (DMS). For more information, see [List of operations by function of DMS](~~97965~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The maximum number of databases that can be created on an instance is not reached. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the maximum number of databases that can be created on an instance.
+          * *   The instance is not a read-only instance.
+          * > This operation is not supported for instances that run PostgreSQL with local SSDs or SQL Server 2017 (cluster edition). You can execute the CREATE DATABASE statement to create a database.
+          *
+          * @param request CreateDatabaseRequest
+          * @return CreateDatabaseResponse
+         */
         public async Task<CreateDatabaseResponse> CreateDatabaseAsync(CreateDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDatabaseWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, you can call the [CheckCreateDdrDBInstance](~~121721~~) operation to check whether the data of the source instance can be restored from a cross-region backup set.
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request CreateDdrInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDdrInstanceResponse
+         */
         public CreateDdrInstanceResponse CreateDdrInstanceWithOptions(CreateDdrInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3792,6 +5169,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateDdrInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, you can call the [CheckCreateDdrDBInstance](~~121721~~) operation to check whether the data of the source instance can be restored from a cross-region backup set.
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request CreateDdrInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDdrInstanceResponse
+         */
         public async Task<CreateDdrInstanceResponse> CreateDdrInstanceWithOptionsAsync(CreateDdrInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3935,18 +5323,46 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateDdrInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, you can call the [CheckCreateDdrDBInstance](~~121721~~) operation to check whether the data of the source instance can be restored from a cross-region backup set.
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request CreateDdrInstanceRequest
+          * @return CreateDdrInstanceResponse
+         */
         public CreateDdrInstanceResponse CreateDdrInstance(CreateDdrInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDdrInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, you can call the [CheckCreateDdrDBInstance](~~121721~~) operation to check whether the data of the source instance can be restored from a cross-region backup set.
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request CreateDdrInstanceRequest
+          * @return CreateDdrInstanceResponse
+         */
         public async Task<CreateDdrInstanceResponse> CreateDdrInstanceAsync(CreateDdrInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDdrInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > This operation is no longer maintained. You can use the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
+          * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.
+          *
+          * @param request CreateDiagnosticReportRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDiagnosticReportResponse
+         */
         public CreateDiagnosticReportResponse CreateDiagnosticReportWithOptions(CreateDiagnosticReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3982,6 +5398,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateDiagnosticReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > This operation is no longer maintained. You can use the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
+          * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.
+          *
+          * @param request CreateDiagnosticReportRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDiagnosticReportResponse
+         */
         public async Task<CreateDiagnosticReportResponse> CreateDiagnosticReportWithOptionsAsync(CreateDiagnosticReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4017,18 +5441,44 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateDiagnosticReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > This operation is no longer maintained. You can use the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
+          * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.
+          *
+          * @param request CreateDiagnosticReportRequest
+          * @return CreateDiagnosticReportResponse
+         */
         public CreateDiagnosticReportResponse CreateDiagnosticReport(CreateDiagnosticReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDiagnosticReportWithOptions(request, runtime);
         }
 
+        /**
+          * > This operation is no longer maintained. You can use the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
+          * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.
+          *
+          * @param request CreateDiagnosticReportRequest
+          * @return CreateDiagnosticReportResponse
+         */
         public async Task<CreateDiagnosticReportResponse> CreateDiagnosticReportAsync(CreateDiagnosticReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDiagnosticReportWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### Prerequisites
+          * *   Your Alibaba Cloud account is used.
+          * *   The balance in your Alibaba Cloud account is greater than or equal to USD 100.
+          * *   A primary ApsaraDB RDS for MySQL instance is created, and the instance is not running as a node in a global active database cluster. You can call the [CreateDBInstance](~~26228~~) operation to create an instance.
+          * > You must create a primary ApsaraDB RDS for MySQL instance in one of the following regions: China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu).
+          * For more information, see [Create and release an ApsaraDB RDS global active database cluster](~~328592~~).
+          *
+          * @param request CreateGADInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateGADInstanceResponse
+         */
         public CreateGADInstanceResponse CreateGADInstanceWithOptions(CreateGADInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4088,6 +5538,18 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateGADInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### Prerequisites
+          * *   Your Alibaba Cloud account is used.
+          * *   The balance in your Alibaba Cloud account is greater than or equal to USD 100.
+          * *   A primary ApsaraDB RDS for MySQL instance is created, and the instance is not running as a node in a global active database cluster. You can call the [CreateDBInstance](~~26228~~) operation to create an instance.
+          * > You must create a primary ApsaraDB RDS for MySQL instance in one of the following regions: China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu).
+          * For more information, see [Create and release an ApsaraDB RDS global active database cluster](~~328592~~).
+          *
+          * @param request CreateGADInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateGADInstanceResponse
+         */
         public async Task<CreateGADInstanceResponse> CreateGADInstanceWithOptionsAsync(CreateGADInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4147,18 +5609,49 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateGADInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Prerequisites
+          * *   Your Alibaba Cloud account is used.
+          * *   The balance in your Alibaba Cloud account is greater than or equal to USD 100.
+          * *   A primary ApsaraDB RDS for MySQL instance is created, and the instance is not running as a node in a global active database cluster. You can call the [CreateDBInstance](~~26228~~) operation to create an instance.
+          * > You must create a primary ApsaraDB RDS for MySQL instance in one of the following regions: China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu).
+          * For more information, see [Create and release an ApsaraDB RDS global active database cluster](~~328592~~).
+          *
+          * @param request CreateGADInstanceRequest
+          * @return CreateGADInstanceResponse
+         */
         public CreateGADInstanceResponse CreateGADInstance(CreateGADInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateGADInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * ### Prerequisites
+          * *   Your Alibaba Cloud account is used.
+          * *   The balance in your Alibaba Cloud account is greater than or equal to USD 100.
+          * *   A primary ApsaraDB RDS for MySQL instance is created, and the instance is not running as a node in a global active database cluster. You can call the [CreateDBInstance](~~26228~~) operation to create an instance.
+          * > You must create a primary ApsaraDB RDS for MySQL instance in one of the following regions: China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu).
+          * For more information, see [Create and release an ApsaraDB RDS global active database cluster](~~328592~~).
+          *
+          * @param request CreateGADInstanceRequest
+          * @return CreateGADInstanceResponse
+         */
         public async Task<CreateGADInstanceResponse> CreateGADInstanceAsync(CreateGADInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateGADInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * An ApsaraDB RDS global active database cluster is created. You can call the [CreateGADInstance](~~336893~~) operation to create a global active database cluster.
+          * For more information, see [Add unit nodes to or move unit nodes from an ApsaraDB RDS global active database cluster](~~331851~~).
+          *
+          * @param request CreateGadInstanceMemberRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateGadInstanceMemberResponse
+         */
         public CreateGadInstanceMemberResponse CreateGadInstanceMemberWithOptions(CreateGadInstanceMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4210,6 +5703,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateGadInstanceMemberResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * An ApsaraDB RDS global active database cluster is created. You can call the [CreateGADInstance](~~336893~~) operation to create a global active database cluster.
+          * For more information, see [Add unit nodes to or move unit nodes from an ApsaraDB RDS global active database cluster](~~331851~~).
+          *
+          * @param request CreateGadInstanceMemberRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateGadInstanceMemberResponse
+         */
         public async Task<CreateGadInstanceMemberResponse> CreateGadInstanceMemberWithOptionsAsync(CreateGadInstanceMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4261,12 +5763,28 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateGadInstanceMemberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * An ApsaraDB RDS global active database cluster is created. You can call the [CreateGADInstance](~~336893~~) operation to create a global active database cluster.
+          * For more information, see [Add unit nodes to or move unit nodes from an ApsaraDB RDS global active database cluster](~~331851~~).
+          *
+          * @param request CreateGadInstanceMemberRequest
+          * @return CreateGadInstanceMemberResponse
+         */
         public CreateGadInstanceMemberResponse CreateGadInstanceMember(CreateGadInstanceMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateGadInstanceMemberWithOptions(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * An ApsaraDB RDS global active database cluster is created. You can call the [CreateGADInstance](~~336893~~) operation to create a global active database cluster.
+          * For more information, see [Add unit nodes to or move unit nodes from an ApsaraDB RDS global active database cluster](~~331851~~).
+          *
+          * @param request CreateGadInstanceMemberRequest
+          * @return CreateGadInstanceMemberResponse
+         */
         public async Task<CreateGadInstanceMemberResponse> CreateGadInstanceMemberAsync(CreateGadInstanceMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4419,6 +5937,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await CreateMigrateTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is used to migrate backup data to the cloud. Before you call this operation, make sure that you understand the descriptions in [Migrate the full backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2008 R2](~~95737~~), [Migrate the full backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017, or SQL Server 2019](~~95738~~), and [Migrate the incremental backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017, or SQL Server 2019](~~95736~~).
+          *
+          * @param request CreateOnlineDatabaseTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOnlineDatabaseTaskResponse
+         */
         public CreateOnlineDatabaseTaskResponse CreateOnlineDatabaseTaskWithOptions(CreateOnlineDatabaseTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4478,6 +6003,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateOnlineDatabaseTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is used to migrate backup data to the cloud. Before you call this operation, make sure that you understand the descriptions in [Migrate the full backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2008 R2](~~95737~~), [Migrate the full backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017, or SQL Server 2019](~~95738~~), and [Migrate the incremental backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017, or SQL Server 2019](~~95736~~).
+          *
+          * @param request CreateOnlineDatabaseTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateOnlineDatabaseTaskResponse
+         */
         public async Task<CreateOnlineDatabaseTaskResponse> CreateOnlineDatabaseTaskWithOptionsAsync(CreateOnlineDatabaseTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4537,18 +6069,38 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateOnlineDatabaseTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is used to migrate backup data to the cloud. Before you call this operation, make sure that you understand the descriptions in [Migrate the full backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2008 R2](~~95737~~), [Migrate the full backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017, or SQL Server 2019](~~95738~~), and [Migrate the incremental backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017, or SQL Server 2019](~~95736~~).
+          *
+          * @param request CreateOnlineDatabaseTaskRequest
+          * @return CreateOnlineDatabaseTaskResponse
+         */
         public CreateOnlineDatabaseTaskResponse CreateOnlineDatabaseTask(CreateOnlineDatabaseTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateOnlineDatabaseTaskWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is used to migrate backup data to the cloud. Before you call this operation, make sure that you understand the descriptions in [Migrate the full backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2008 R2](~~95737~~), [Migrate the full backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017, or SQL Server 2019](~~95738~~), and [Migrate the incremental backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017, or SQL Server 2019](~~95736~~).
+          *
+          * @param request CreateOnlineDatabaseTaskRequest
+          * @return CreateOnlineDatabaseTaskResponse
+         */
         public async Task<CreateOnlineDatabaseTaskResponse> CreateOnlineDatabaseTaskAsync(CreateOnlineDatabaseTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateOnlineDatabaseTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to an instance. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) and [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > This operation is supported only when your instance runs MySQL or PostgreSQL.
+          *
+          * @param request CreateParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateParameterGroupResponse
+         */
         public CreateParameterGroupResponse CreateParameterGroupWithOptions(CreateParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4608,6 +6160,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateParameterGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to an instance. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) and [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > This operation is supported only when your instance runs MySQL or PostgreSQL.
+          *
+          * @param request CreateParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateParameterGroupResponse
+         */
         public async Task<CreateParameterGroupResponse> CreateParameterGroupWithOptionsAsync(CreateParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4667,25 +6227,67 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to an instance. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) and [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > This operation is supported only when your instance runs MySQL or PostgreSQL.
+          *
+          * @param request CreateParameterGroupRequest
+          * @return CreateParameterGroupResponse
+         */
         public CreateParameterGroupResponse CreateParameterGroup(CreateParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateParameterGroupWithOptions(request, runtime);
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to an instance. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) and [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > This operation is supported only when your instance runs MySQL or PostgreSQL.
+          *
+          * @param request CreateParameterGroupRequest
+          * @return CreateParameterGroupResponse
+         */
         public async Task<CreateParameterGroupResponse> CreateParameterGroupAsync(CreateParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateParameterGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * **Before you call this operation, take note of the following limits:**
+          * *   The primary instance cannot belong to a dedicated cluster and must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 8.0 on RDS High-availability Edition or RDS Enterprise Edition.
+          *     *   MySQL 5.7 on RDS High-availability Edition or RDS Enterprise Edition.
+          *     *   MySQL 5.6.
+          *     *   SQL Server 2017 on RDS Cluster Edition.
+          *     *   PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15 on RDS High-availability Edition. If the primary instance runs PostgreSQL 10, the instance must use local disks and must be a dedicated instance that provides at least 8 cores and 32 GB of memory.
+          * *   If the primary instance runs MySQL, you can create up to 10 read-only instances.
+          * *   If the primary instance runs SQL Server, you can create up to seven read-only instances.
+          * *   If the primary instance runs PostgreSQL with local disks, you can create up to five read-only instances. If the primary instance runs PostgreSQL with cloud disks, you can create up to 32 read-only instances.
+          *
+          * @param request CreateReadOnlyDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateReadOnlyDBInstanceResponse
+         */
         public CreateReadOnlyDBInstanceResponse CreateReadOnlyDBInstanceWithOptions(CreateReadOnlyDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BpeEnabled))
+            {
+                query["BpeEnabled"] = request.BpeEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BurstingEnabled))
+            {
+                query["BurstingEnabled"] = request.BurstingEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
@@ -4822,13 +6424,41 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateReadOnlyDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * **Before you call this operation, take note of the following limits:**
+          * *   The primary instance cannot belong to a dedicated cluster and must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 8.0 on RDS High-availability Edition or RDS Enterprise Edition.
+          *     *   MySQL 5.7 on RDS High-availability Edition or RDS Enterprise Edition.
+          *     *   MySQL 5.6.
+          *     *   SQL Server 2017 on RDS Cluster Edition.
+          *     *   PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15 on RDS High-availability Edition. If the primary instance runs PostgreSQL 10, the instance must use local disks and must be a dedicated instance that provides at least 8 cores and 32 GB of memory.
+          * *   If the primary instance runs MySQL, you can create up to 10 read-only instances.
+          * *   If the primary instance runs SQL Server, you can create up to seven read-only instances.
+          * *   If the primary instance runs PostgreSQL with local disks, you can create up to five read-only instances. If the primary instance runs PostgreSQL with cloud disks, you can create up to 32 read-only instances.
+          *
+          * @param request CreateReadOnlyDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateReadOnlyDBInstanceResponse
+         */
         public async Task<CreateReadOnlyDBInstanceResponse> CreateReadOnlyDBInstanceWithOptionsAsync(CreateReadOnlyDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BpeEnabled))
+            {
+                query["BpeEnabled"] = request.BpeEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BurstingEnabled))
+            {
+                query["BurstingEnabled"] = request.BurstingEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
@@ -4965,12 +6595,42 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateReadOnlyDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * **Before you call this operation, take note of the following limits:**
+          * *   The primary instance cannot belong to a dedicated cluster and must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 8.0 on RDS High-availability Edition or RDS Enterprise Edition.
+          *     *   MySQL 5.7 on RDS High-availability Edition or RDS Enterprise Edition.
+          *     *   MySQL 5.6.
+          *     *   SQL Server 2017 on RDS Cluster Edition.
+          *     *   PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15 on RDS High-availability Edition. If the primary instance runs PostgreSQL 10, the instance must use local disks and must be a dedicated instance that provides at least 8 cores and 32 GB of memory.
+          * *   If the primary instance runs MySQL, you can create up to 10 read-only instances.
+          * *   If the primary instance runs SQL Server, you can create up to seven read-only instances.
+          * *   If the primary instance runs PostgreSQL with local disks, you can create up to five read-only instances. If the primary instance runs PostgreSQL with cloud disks, you can create up to 32 read-only instances.
+          *
+          * @param request CreateReadOnlyDBInstanceRequest
+          * @return CreateReadOnlyDBInstanceResponse
+         */
         public CreateReadOnlyDBInstanceResponse CreateReadOnlyDBInstance(CreateReadOnlyDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateReadOnlyDBInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * **Before you call this operation, take note of the following limits:**
+          * *   The primary instance cannot belong to a dedicated cluster and must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 8.0 on RDS High-availability Edition or RDS Enterprise Edition.
+          *     *   MySQL 5.7 on RDS High-availability Edition or RDS Enterprise Edition.
+          *     *   MySQL 5.6.
+          *     *   SQL Server 2017 on RDS Cluster Edition.
+          *     *   PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15 on RDS High-availability Edition. If the primary instance runs PostgreSQL 10, the instance must use local disks and must be a dedicated instance that provides at least 8 cores and 32 GB of memory.
+          * *   If the primary instance runs MySQL, you can create up to 10 read-only instances.
+          * *   If the primary instance runs SQL Server, you can create up to seven read-only instances.
+          * *   If the primary instance runs PostgreSQL with local disks, you can create up to five read-only instances. If the primary instance runs PostgreSQL with cloud disks, you can create up to 32 read-only instances.
+          *
+          * @param request CreateReadOnlyDBInstanceRequest
+          * @return CreateReadOnlyDBInstanceResponse
+         */
         public async Task<CreateReadOnlyDBInstanceResponse> CreateReadOnlyDBInstanceAsync(CreateReadOnlyDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5139,6 +6799,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await CreateSecretWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS supports the following service-linked roles:
+          * *   The AliyunServiceRoleForRdsPgsqlOnEcs role is used for ApsaraDB RDS for PostgreSQL instances.
+          * *   The AliyunServiceRoleForRDSProxyOnEcs role is used for the database proxy feature of ApsaraDB RDS instances.
+          *
+          * @param request CreateServiceLinkedRoleRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateServiceLinkedRoleResponse
+         */
         public CreateServiceLinkedRoleResponse CreateServiceLinkedRoleWithOptions(CreateServiceLinkedRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5182,6 +6851,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateServiceLinkedRoleResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS supports the following service-linked roles:
+          * *   The AliyunServiceRoleForRdsPgsqlOnEcs role is used for ApsaraDB RDS for PostgreSQL instances.
+          * *   The AliyunServiceRoleForRDSProxyOnEcs role is used for the database proxy feature of ApsaraDB RDS instances.
+          *
+          * @param request CreateServiceLinkedRoleRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateServiceLinkedRoleResponse
+         */
         public async Task<CreateServiceLinkedRoleResponse> CreateServiceLinkedRoleWithOptionsAsync(CreateServiceLinkedRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5225,18 +6903,47 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateServiceLinkedRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS supports the following service-linked roles:
+          * *   The AliyunServiceRoleForRdsPgsqlOnEcs role is used for ApsaraDB RDS for PostgreSQL instances.
+          * *   The AliyunServiceRoleForRDSProxyOnEcs role is used for the database proxy feature of ApsaraDB RDS instances.
+          *
+          * @param request CreateServiceLinkedRoleRequest
+          * @return CreateServiceLinkedRoleResponse
+         */
         public CreateServiceLinkedRoleResponse CreateServiceLinkedRole(CreateServiceLinkedRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateServiceLinkedRoleWithOptions(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS supports the following service-linked roles:
+          * *   The AliyunServiceRoleForRdsPgsqlOnEcs role is used for ApsaraDB RDS for PostgreSQL instances.
+          * *   The AliyunServiceRoleForRDSProxyOnEcs role is used for the database proxy feature of ApsaraDB RDS instances.
+          *
+          * @param request CreateServiceLinkedRoleRequest
+          * @return CreateServiceLinkedRoleResponse
+         */
         public async Task<CreateServiceLinkedRoleResponse> CreateServiceLinkedRoleAsync(CreateServiceLinkedRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateServiceLinkedRoleWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can create a temporary instance based on a backup file or a point in time within the past seven days.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   Your instance runs SQL Server 2008 R2.
+          * *   Your instance is in the Running state.
+          * *   Your instance does not have ongoing migration tasks.
+          * *   The last creation of a backup file is completed.
+          * > After a temporary instance is created, the temporary instance inherits the data in the backup file.
+          *
+          * @param request CreateTempDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTempDBInstanceResponse
+         */
         public CreateTempDBInstanceResponse CreateTempDBInstanceWithOptions(CreateTempDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5292,6 +6999,19 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateTempDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can create a temporary instance based on a backup file or a point in time within the past seven days.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   Your instance runs SQL Server 2008 R2.
+          * *   Your instance is in the Running state.
+          * *   Your instance does not have ongoing migration tasks.
+          * *   The last creation of a backup file is completed.
+          * > After a temporary instance is created, the temporary instance inherits the data in the backup file.
+          *
+          * @param request CreateTempDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateTempDBInstanceResponse
+         */
         public async Task<CreateTempDBInstanceResponse> CreateTempDBInstanceWithOptionsAsync(CreateTempDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5347,18 +7067,49 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<CreateTempDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can create a temporary instance based on a backup file or a point in time within the past seven days.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   Your instance runs SQL Server 2008 R2.
+          * *   Your instance is in the Running state.
+          * *   Your instance does not have ongoing migration tasks.
+          * *   The last creation of a backup file is completed.
+          * > After a temporary instance is created, the temporary instance inherits the data in the backup file.
+          *
+          * @param request CreateTempDBInstanceRequest
+          * @return CreateTempDBInstanceResponse
+         */
         public CreateTempDBInstanceResponse CreateTempDBInstance(CreateTempDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTempDBInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * You can create a temporary instance based on a backup file or a point in time within the past seven days.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   Your instance runs SQL Server 2008 R2.
+          * *   Your instance is in the Running state.
+          * *   Your instance does not have ongoing migration tasks.
+          * *   The last creation of a backup file is completed.
+          * > After a temporary instance is created, the temporary instance inherits the data in the backup file.
+          *
+          * @param request CreateTempDBInstanceRequest
+          * @return CreateTempDBInstanceResponse
+         */
         public async Task<CreateTempDBInstanceResponse> CreateTempDBInstanceAsync(CreateTempDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTempDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is available only for ApsaraDB RDS for SQL Server instances.
+          *
+          * @param request DeleteADSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteADSettingResponse
+         */
         public DeleteADSettingResponse DeleteADSettingWithOptions(DeleteADSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5406,6 +7157,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteADSettingResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only for ApsaraDB RDS for SQL Server instances.
+          *
+          * @param request DeleteADSettingRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteADSettingResponse
+         */
         public async Task<DeleteADSettingResponse> DeleteADSettingWithOptionsAsync(DeleteADSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5453,18 +7211,40 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteADSettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only for ApsaraDB RDS for SQL Server instances.
+          *
+          * @param request DeleteADSettingRequest
+          * @return DeleteADSettingResponse
+         */
         public DeleteADSettingResponse DeleteADSetting(DeleteADSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteADSettingWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is available only for ApsaraDB RDS for SQL Server instances.
+          *
+          * @param request DeleteADSettingRequest
+          * @return DeleteADSettingResponse
+         */
         public async Task<DeleteADSettingResponse> DeleteADSettingAsync(DeleteADSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteADSettingWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance is in the Running state. If the instance is not in the Running state, the operation fails.
+          * > 
+          * *   This operation is not supported for instances that run SQL Server 2017 EE, PostgreSQL with local SSDs.
+          * *   If you want to delete an account from an instance that runs PostgreSQL with standard SSDs or enhanced SSDs (ESSDs) and the account has permissions on specific objects such as databases and tables, this operation reports the "`Some objects depend on account`" error. Before you can delete the account, you must remove the permissions from the account.
+          *
+          * @param request DeleteAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAccountResponse
+         */
         public DeleteAccountResponse DeleteAccountWithOptions(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5512,6 +7292,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance is in the Running state. If the instance is not in the Running state, the operation fails.
+          * > 
+          * *   This operation is not supported for instances that run SQL Server 2017 EE, PostgreSQL with local SSDs.
+          * *   If you want to delete an account from an instance that runs PostgreSQL with standard SSDs or enhanced SSDs (ESSDs) and the account has permissions on specific objects such as databases and tables, this operation reports the "`Some objects depend on account`" error. Before you can delete the account, you must remove the permissions from the account.
+          *
+          * @param request DeleteAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteAccountResponse
+         */
         public async Task<DeleteAccountResponse> DeleteAccountWithOptionsAsync(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5559,18 +7349,48 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance is in the Running state. If the instance is not in the Running state, the operation fails.
+          * > 
+          * *   This operation is not supported for instances that run SQL Server 2017 EE, PostgreSQL with local SSDs.
+          * *   If you want to delete an account from an instance that runs PostgreSQL with standard SSDs or enhanced SSDs (ESSDs) and the account has permissions on specific objects such as databases and tables, this operation reports the "`Some objects depend on account`" error. Before you can delete the account, you must remove the permissions from the account.
+          *
+          * @param request DeleteAccountRequest
+          * @return DeleteAccountResponse
+         */
         public DeleteAccountResponse DeleteAccount(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAccountWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance is in the Running state. If the instance is not in the Running state, the operation fails.
+          * > 
+          * *   This operation is not supported for instances that run SQL Server 2017 EE, PostgreSQL with local SSDs.
+          * *   If you want to delete an account from an instance that runs PostgreSQL with standard SSDs or enhanced SSDs (ESSDs) and the account has permissions on specific objects such as databases and tables, this operation reports the "`Some objects depend on account`" error. Before you can delete the account, you must remove the permissions from the account.
+          *
+          * @param request DeleteAccountRequest
+          * @return DeleteAccountResponse
+         */
         public async Task<DeleteAccountResponse> DeleteAccountAsync(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAccountWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Backup sets of only the instance itself are deleted. Backup sets of the associated instances such as read-only, disaster recovery, and cloned instances are not deleted.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance runs PostgreSQL or MySQL on RDS High-availability.
+          * *   If the log backup feature is disabled, instances cannot be restored by point in time. You can delete data backup sets that are retained for more than seven days.
+          * *   If the log backup feature is enabled and the log backup retention period is shorter than the data backup retention period, you can delete the data backup files that are retained for a period longer than the log backup retention period.
+          *
+          * @param request DeleteBackupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteBackupResponse
+         */
         public DeleteBackupResponse DeleteBackupWithOptions(DeleteBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5618,6 +7438,18 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteBackupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Backup sets of only the instance itself are deleted. Backup sets of the associated instances such as read-only, disaster recovery, and cloned instances are not deleted.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance runs PostgreSQL or MySQL on RDS High-availability.
+          * *   If the log backup feature is disabled, instances cannot be restored by point in time. You can delete data backup sets that are retained for more than seven days.
+          * *   If the log backup feature is enabled and the log backup retention period is shorter than the data backup retention period, you can delete the data backup files that are retained for a period longer than the log backup retention period.
+          *
+          * @param request DeleteBackupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteBackupResponse
+         */
         public async Task<DeleteBackupResponse> DeleteBackupWithOptionsAsync(DeleteBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5665,18 +7497,47 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteBackupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Backup sets of only the instance itself are deleted. Backup sets of the associated instances such as read-only, disaster recovery, and cloned instances are not deleted.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance runs PostgreSQL or MySQL on RDS High-availability.
+          * *   If the log backup feature is disabled, instances cannot be restored by point in time. You can delete data backup sets that are retained for more than seven days.
+          * *   If the log backup feature is enabled and the log backup retention period is shorter than the data backup retention period, you can delete the data backup files that are retained for a period longer than the log backup retention period.
+          *
+          * @param request DeleteBackupRequest
+          * @return DeleteBackupResponse
+         */
         public DeleteBackupResponse DeleteBackup(DeleteBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteBackupWithOptions(request, runtime);
         }
 
+        /**
+          * Backup sets of only the instance itself are deleted. Backup sets of the associated instances such as read-only, disaster recovery, and cloned instances are not deleted.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance runs PostgreSQL or MySQL on RDS High-availability.
+          * *   If the log backup feature is disabled, instances cannot be restored by point in time. You can delete data backup sets that are retained for more than seven days.
+          * *   If the log backup feature is enabled and the log backup retention period is shorter than the data backup retention period, you can delete the data backup files that are retained for a period longer than the log backup retention period.
+          *
+          * @param request DeleteBackupRequest
+          * @return DeleteBackupResponse
+         */
         public async Task<DeleteBackupResponse> DeleteBackupAsync(DeleteBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteBackupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is available for users whose accounts are added to the whitelist of an ApsaraDB RDS for SQL Server instance. If your account is not added to the whitelist of the instance, you can join the Database Backup (DBS) DingTalk group whose ID is 35585947 and contact the on-duty engineer to add your account to the whitelist.
+          *
+          * @param request DeleteBackupFileRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteBackupFileResponse
+         */
         public DeleteBackupFileResponse DeleteBackupFileWithOptions(DeleteBackupFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5732,6 +7593,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteBackupFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is available for users whose accounts are added to the whitelist of an ApsaraDB RDS for SQL Server instance. If your account is not added to the whitelist of the instance, you can join the Database Backup (DBS) DingTalk group whose ID is 35585947 and contact the on-duty engineer to add your account to the whitelist.
+          *
+          * @param request DeleteBackupFileRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteBackupFileResponse
+         */
         public async Task<DeleteBackupFileResponse> DeleteBackupFileWithOptionsAsync(DeleteBackupFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5787,12 +7655,24 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteBackupFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is available for users whose accounts are added to the whitelist of an ApsaraDB RDS for SQL Server instance. If your account is not added to the whitelist of the instance, you can join the Database Backup (DBS) DingTalk group whose ID is 35585947 and contact the on-duty engineer to add your account to the whitelist.
+          *
+          * @param request DeleteBackupFileRequest
+          * @return DeleteBackupFileResponse
+         */
         public DeleteBackupFileResponse DeleteBackupFile(DeleteBackupFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteBackupFileWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is available for users whose accounts are added to the whitelist of an ApsaraDB RDS for SQL Server instance. If your account is not added to the whitelist of the instance, you can join the Database Backup (DBS) DingTalk group whose ID is 35585947 and contact the on-duty engineer to add your account to the whitelist.
+          *
+          * @param request DeleteBackupFileRequest
+          * @return DeleteBackupFileResponse
+         */
         public async Task<DeleteBackupFileResponse> DeleteBackupFileAsync(DeleteBackupFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5995,6 +7875,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DeleteDBInstanceEndpointWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   You can delete only the public endpoint of each endpoint type from the instance. If you want to delete an internal endpoint of any endpoint type, you can delete the type of endpoint.
+          *
+          * @param request DeleteDBInstanceEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDBInstanceEndpointAddressResponse
+         */
         public DeleteDBInstanceEndpointAddressResponse DeleteDBInstanceEndpointAddressWithOptions(DeleteDBInstanceEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6040,6 +7929,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteDBInstanceEndpointAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   You can delete only the public endpoint of each endpoint type from the instance. If you want to delete an internal endpoint of any endpoint type, you can delete the type of endpoint.
+          *
+          * @param request DeleteDBInstanceEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDBInstanceEndpointAddressResponse
+         */
         public async Task<DeleteDBInstanceEndpointAddressResponse> DeleteDBInstanceEndpointAddressWithOptionsAsync(DeleteDBInstanceEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6085,16 +7983,188 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteDBInstanceEndpointAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   You can delete only the public endpoint of each endpoint type from the instance. If you want to delete an internal endpoint of any endpoint type, you can delete the type of endpoint.
+          *
+          * @param request DeleteDBInstanceEndpointAddressRequest
+          * @return DeleteDBInstanceEndpointAddressResponse
+         */
         public DeleteDBInstanceEndpointAddressResponse DeleteDBInstanceEndpointAddress(DeleteDBInstanceEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDBInstanceEndpointAddressWithOptions(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   You can delete only the public endpoint of each endpoint type from the instance. If you want to delete an internal endpoint of any endpoint type, you can delete the type of endpoint.
+          *
+          * @param request DeleteDBInstanceEndpointAddressRequest
+          * @return DeleteDBInstanceEndpointAddressResponse
+         */
         public async Task<DeleteDBInstanceEndpointAddressResponse> DeleteDBInstanceEndpointAddressAsync(DeleteDBInstanceEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDBInstanceEndpointAddressWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * ## Background information
+          * This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition. These RDS instances are referred to as RDS clusters.
+          *
+          * @param tmpReq DeleteDBNodesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDBNodesResponse
+         */
+        public DeleteDBNodesResponse DeleteDBNodesWithOptions(DeleteDBNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteDBNodesShrinkRequest request = new DeleteDBNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DBNodeId))
+            {
+                request.DBNodeIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DBNodeId, "DBNodeId", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeIdShrink))
+            {
+                query["DBNodeId"] = request.DBNodeIdShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDBNodes",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDBNodesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * ## Background information
+          * This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition. These RDS instances are referred to as RDS clusters.
+          *
+          * @param tmpReq DeleteDBNodesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDBNodesResponse
+         */
+        public async Task<DeleteDBNodesResponse> DeleteDBNodesWithOptionsAsync(DeleteDBNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteDBNodesShrinkRequest request = new DeleteDBNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DBNodeId))
+            {
+                request.DBNodeIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DBNodeId, "DBNodeId", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeIdShrink))
+            {
+                query["DBNodeId"] = request.DBNodeIdShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDBNodes",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDBNodesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * ## Background information
+          * This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition. These RDS instances are referred to as RDS clusters.
+          *
+          * @param request DeleteDBNodesRequest
+          * @return DeleteDBNodesResponse
+         */
+        public DeleteDBNodesResponse DeleteDBNodes(DeleteDBNodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDBNodesWithOptions(request, runtime);
+        }
+
+        /**
+          * ## Background information
+          * This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition. These RDS instances are referred to as RDS clusters.
+          *
+          * @param request DeleteDBNodesRequest
+          * @return DeleteDBNodesResponse
+         */
+        public async Task<DeleteDBNodesResponse> DeleteDBNodesAsync(DeleteDBNodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDBNodesWithOptionsAsync(request, runtime);
         }
 
         public DeleteDBProxyEndpointAddressResponse DeleteDBProxyEndpointAddressWithOptions(DeleteDBProxyEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6203,6 +8273,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DeleteDBProxyEndpointAddressWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance is a primary instance.
+          * *   The instance runs MySQL, SQL Server, or MariaDB.
+          * > This operation is not supported for instances that run PostgreSQL. You can execute the DROP DATABASE statement to drop a database from an ApsaraDB RDS for PostgreSQL instance.
+          *
+          * @param request DeleteDatabaseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDatabaseResponse
+         */
         public DeleteDatabaseResponse DeleteDatabaseWithOptions(DeleteDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6238,6 +8319,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteDatabaseResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance is a primary instance.
+          * *   The instance runs MySQL, SQL Server, or MariaDB.
+          * > This operation is not supported for instances that run PostgreSQL. You can execute the DROP DATABASE statement to drop a database from an ApsaraDB RDS for PostgreSQL instance.
+          *
+          * @param request DeleteDatabaseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDatabaseResponse
+         */
         public async Task<DeleteDatabaseResponse> DeleteDatabaseWithOptionsAsync(DeleteDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6273,18 +8365,47 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteDatabaseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance is a primary instance.
+          * *   The instance runs MySQL, SQL Server, or MariaDB.
+          * > This operation is not supported for instances that run PostgreSQL. You can execute the DROP DATABASE statement to drop a database from an ApsaraDB RDS for PostgreSQL instance.
+          *
+          * @param request DeleteDatabaseRequest
+          * @return DeleteDatabaseResponse
+         */
         public DeleteDatabaseResponse DeleteDatabase(DeleteDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDatabaseWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance is a primary instance.
+          * *   The instance runs MySQL, SQL Server, or MariaDB.
+          * > This operation is not supported for instances that run PostgreSQL. You can execute the DROP DATABASE statement to drop a database from an ApsaraDB RDS for PostgreSQL instance.
+          *
+          * @param request DeleteDatabaseRequest
+          * @return DeleteDatabaseResponse
+         */
         public async Task<DeleteDatabaseResponse> DeleteDatabaseAsync(DeleteDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDatabaseWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Precautions
+          * *   A global active database cluster cannot be restored after it is deleted. Proceed with caution when you delete a global active database cluster.
+          * *   If you delete a global active database cluster, the system removes all nodes and Data Transmission Service (DTS) synchronization tasks from the cluster. However, the system does not release the ApsaraDB RDS for MySQL instances that run as nodes in the cluster. If you no longer need the ApsaraDB RDS for MySQL instances, you can call the [DeleteDBInstance](~~26229~~) to delete the instances one after another.
+          *
+          * @param request DeleteGadInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteGadInstanceResponse
+         */
         public DeleteGadInstanceResponse DeleteGadInstanceWithOptions(DeleteGadInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6316,6 +8437,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteGadInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Precautions
+          * *   A global active database cluster cannot be restored after it is deleted. Proceed with caution when you delete a global active database cluster.
+          * *   If you delete a global active database cluster, the system removes all nodes and Data Transmission Service (DTS) synchronization tasks from the cluster. However, the system does not release the ApsaraDB RDS for MySQL instances that run as nodes in the cluster. If you no longer need the ApsaraDB RDS for MySQL instances, you can call the [DeleteDBInstance](~~26229~~) to delete the instances one after another.
+          *
+          * @param request DeleteGadInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteGadInstanceResponse
+         */
         public async Task<DeleteGadInstanceResponse> DeleteGadInstanceWithOptionsAsync(DeleteGadInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6347,18 +8477,44 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteGadInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Precautions
+          * *   A global active database cluster cannot be restored after it is deleted. Proceed with caution when you delete a global active database cluster.
+          * *   If you delete a global active database cluster, the system removes all nodes and Data Transmission Service (DTS) synchronization tasks from the cluster. However, the system does not release the ApsaraDB RDS for MySQL instances that run as nodes in the cluster. If you no longer need the ApsaraDB RDS for MySQL instances, you can call the [DeleteDBInstance](~~26229~~) to delete the instances one after another.
+          *
+          * @param request DeleteGadInstanceRequest
+          * @return DeleteGadInstanceResponse
+         */
         public DeleteGadInstanceResponse DeleteGadInstance(DeleteGadInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteGadInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * ## Precautions
+          * *   A global active database cluster cannot be restored after it is deleted. Proceed with caution when you delete a global active database cluster.
+          * *   If you delete a global active database cluster, the system removes all nodes and Data Transmission Service (DTS) synchronization tasks from the cluster. However, the system does not release the ApsaraDB RDS for MySQL instances that run as nodes in the cluster. If you no longer need the ApsaraDB RDS for MySQL instances, you can call the [DeleteDBInstance](~~26229~~) to delete the instances one after another.
+          *
+          * @param request DeleteGadInstanceRequest
+          * @return DeleteGadInstanceResponse
+         */
         public async Task<DeleteGadInstanceResponse> DeleteGadInstanceAsync(DeleteGadInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteGadInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can apply a parameter template to an instance to manage a number of parameters at a time. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > 
+          * *   If you delete a parameter template, the instances to which the parameter template is applied are not affected.
+          * *   Before you can delete a parameter template in ApsaraDB RDS for PostgreSQL, you must apply another parameter template to the ApsaraDB RDS for PostgreSQL instances to which the parameter template is applied. You can call the [DescribeParameterGroup](~~144842~~) operation to query the instances to which a parameter template is applied.
+          *
+          * @param request DeleteParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteParameterGroupResponse
+         */
         public DeleteParameterGroupResponse DeleteParameterGroupWithOptions(DeleteParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6402,6 +8558,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteParameterGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can apply a parameter template to an instance to manage a number of parameters at a time. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > 
+          * *   If you delete a parameter template, the instances to which the parameter template is applied are not affected.
+          * *   Before you can delete a parameter template in ApsaraDB RDS for PostgreSQL, you must apply another parameter template to the ApsaraDB RDS for PostgreSQL instances to which the parameter template is applied. You can call the [DescribeParameterGroup](~~144842~~) operation to query the instances to which a parameter template is applied.
+          *
+          * @param request DeleteParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteParameterGroupResponse
+         */
         public async Task<DeleteParameterGroupResponse> DeleteParameterGroupWithOptionsAsync(DeleteParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6445,12 +8611,30 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can apply a parameter template to an instance to manage a number of parameters at a time. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > 
+          * *   If you delete a parameter template, the instances to which the parameter template is applied are not affected.
+          * *   Before you can delete a parameter template in ApsaraDB RDS for PostgreSQL, you must apply another parameter template to the ApsaraDB RDS for PostgreSQL instances to which the parameter template is applied. You can call the [DescribeParameterGroup](~~144842~~) operation to query the instances to which a parameter template is applied.
+          *
+          * @param request DeleteParameterGroupRequest
+          * @return DeleteParameterGroupResponse
+         */
         public DeleteParameterGroupResponse DeleteParameterGroup(DeleteParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteParameterGroupWithOptions(request, runtime);
         }
 
+        /**
+          * You can apply a parameter template to an instance to manage a number of parameters at a time. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > 
+          * *   If you delete a parameter template, the instances to which the parameter template is applied are not affected.
+          * *   Before you can delete a parameter template in ApsaraDB RDS for PostgreSQL, you must apply another parameter template to the ApsaraDB RDS for PostgreSQL instances to which the parameter template is applied. You can call the [DescribeParameterGroup](~~144842~~) operation to query the instances to which a parameter template is applied.
+          *
+          * @param request DeleteParameterGroupRequest
+          * @return DeleteParameterGroupResponse
+         */
         public async Task<DeleteParameterGroupResponse> DeleteParameterGroupAsync(DeleteParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6587,6 +8771,175 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DeleteSecretWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   This operation is available only for ApsaraDB RDS for PostgreSQL instances.
+          * *   A replication slot can be deleted only when SlotStatus is **INACTIVE**. You can call the DescribeSlots operation to query the status of a replication slot.
+          *
+          * @param request DeleteSlotRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteSlotResponse
+         */
+        public DeleteSlotResponse DeleteSlotWithOptions(DeleteSlotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlotName))
+            {
+                query["SlotName"] = request.SlotName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlotStatus))
+            {
+                query["SlotStatus"] = request.SlotStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSlot",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSlotResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * *   This operation is available only for ApsaraDB RDS for PostgreSQL instances.
+          * *   A replication slot can be deleted only when SlotStatus is **INACTIVE**. You can call the DescribeSlots operation to query the status of a replication slot.
+          *
+          * @param request DeleteSlotRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteSlotResponse
+         */
+        public async Task<DeleteSlotResponse> DeleteSlotWithOptionsAsync(DeleteSlotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlotName))
+            {
+                query["SlotName"] = request.SlotName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlotStatus))
+            {
+                query["SlotStatus"] = request.SlotStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSlot",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSlotResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * *   This operation is available only for ApsaraDB RDS for PostgreSQL instances.
+          * *   A replication slot can be deleted only when SlotStatus is **INACTIVE**. You can call the DescribeSlots operation to query the status of a replication slot.
+          *
+          * @param request DeleteSlotRequest
+          * @return DeleteSlotResponse
+         */
+        public DeleteSlotResponse DeleteSlot(DeleteSlotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSlotWithOptions(request, runtime);
+        }
+
+        /**
+          * *   This operation is available only for ApsaraDB RDS for PostgreSQL instances.
+          * *   A replication slot can be deleted only when SlotStatus is **INACTIVE**. You can call the DescribeSlots operation to query the status of a replication slot.
+          *
+          * @param request DeleteSlotRequest
+          * @return DeleteSlotResponse
+         */
+        public async Task<DeleteSlotResponse> DeleteSlotAsync(DeleteSlotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSlotWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * > 
+          * *   A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * *   This operation deletes full backup files only from the ApsaraDB RDS console. This operation does not affect the full backup files that are stored as objects in Object Storage Service (OSS) buckets. After you call this operation to delete a full backup file, you can call the [ImportUserBackupFile](~~260266~~) operation to reimport the full backup file.
+          *
+          * @param request DeleteUserBackupFileRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteUserBackupFileResponse
+         */
         public DeleteUserBackupFileResponse DeleteUserBackupFileWithOptions(DeleteUserBackupFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6630,6 +8983,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteUserBackupFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > 
+          * *   A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * *   This operation deletes full backup files only from the ApsaraDB RDS console. This operation does not affect the full backup files that are stored as objects in Object Storage Service (OSS) buckets. After you call this operation to delete a full backup file, you can call the [ImportUserBackupFile](~~260266~~) operation to reimport the full backup file.
+          *
+          * @param request DeleteUserBackupFileRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteUserBackupFileResponse
+         */
         public async Task<DeleteUserBackupFileResponse> DeleteUserBackupFileWithOptionsAsync(DeleteUserBackupFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6673,18 +9035,41 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteUserBackupFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > 
+          * *   A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * *   This operation deletes full backup files only from the ApsaraDB RDS console. This operation does not affect the full backup files that are stored as objects in Object Storage Service (OSS) buckets. After you call this operation to delete a full backup file, you can call the [ImportUserBackupFile](~~260266~~) operation to reimport the full backup file.
+          *
+          * @param request DeleteUserBackupFileRequest
+          * @return DeleteUserBackupFileResponse
+         */
         public DeleteUserBackupFileResponse DeleteUserBackupFile(DeleteUserBackupFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteUserBackupFileWithOptions(request, runtime);
         }
 
+        /**
+          * > 
+          * *   A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * *   This operation deletes full backup files only from the ApsaraDB RDS console. This operation does not affect the full backup files that are stored as objects in Object Storage Service (OSS) buckets. After you call this operation to delete a full backup file, you can call the [ImportUserBackupFile](~~260266~~) operation to reimport the full backup file.
+          *
+          * @param request DeleteUserBackupFileRequest
+          * @return DeleteUserBackupFileResponse
+         */
         public async Task<DeleteUserBackupFileResponse> DeleteUserBackupFileAsync(DeleteUserBackupFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserBackupFileWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is suitable only for the instances that run MySQL or SQL Server. For more information about how to run a migration task, see [ImportDatabaseBetweenInstances](~~26301~~).
+          *
+          * @param request DescibeImportsFromDatabaseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescibeImportsFromDatabaseResponse
+         */
         public DescibeImportsFromDatabaseResponse DescibeImportsFromDatabaseWithOptions(DescibeImportsFromDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6756,6 +9141,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescibeImportsFromDatabaseResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is suitable only for the instances that run MySQL or SQL Server. For more information about how to run a migration task, see [ImportDatabaseBetweenInstances](~~26301~~).
+          *
+          * @param request DescibeImportsFromDatabaseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescibeImportsFromDatabaseResponse
+         */
         public async Task<DescibeImportsFromDatabaseResponse> DescibeImportsFromDatabaseWithOptionsAsync(DescibeImportsFromDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6827,18 +9219,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescibeImportsFromDatabaseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is suitable only for the instances that run MySQL or SQL Server. For more information about how to run a migration task, see [ImportDatabaseBetweenInstances](~~26301~~).
+          *
+          * @param request DescibeImportsFromDatabaseRequest
+          * @return DescibeImportsFromDatabaseResponse
+         */
         public DescibeImportsFromDatabaseResponse DescibeImportsFromDatabase(DescibeImportsFromDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescibeImportsFromDatabaseWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is suitable only for the instances that run MySQL or SQL Server. For more information about how to run a migration task, see [ImportDatabaseBetweenInstances](~~26301~~).
+          *
+          * @param request DescibeImportsFromDatabaseRequest
+          * @return DescibeImportsFromDatabaseResponse
+         */
         public async Task<DescibeImportsFromDatabaseResponse> DescibeImportsFromDatabaseAsync(DescibeImportsFromDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescibeImportsFromDatabaseWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is available only for ApsaraDB RDS for SQL Server instances.
+          *
+          * @param request DescribeADInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeADInfoResponse
+         */
         public DescribeADInfoResponse DescribeADInfoWithOptions(DescribeADInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6886,6 +9297,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeADInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only for ApsaraDB RDS for SQL Server instances.
+          *
+          * @param request DescribeADInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeADInfoResponse
+         */
         public async Task<DescribeADInfoResponse> DescribeADInfoWithOptionsAsync(DescribeADInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6933,18 +9351,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeADInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only for ApsaraDB RDS for SQL Server instances.
+          *
+          * @param request DescribeADInfoRequest
+          * @return DescribeADInfoResponse
+         */
         public DescribeADInfoResponse DescribeADInfo(DescribeADInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeADInfoWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is available only for ApsaraDB RDS for SQL Server instances.
+          *
+          * @param request DescribeADInfoRequest
+          * @return DescribeADInfoResponse
+         */
         public async Task<DescribeADInfoResponse> DescribeADInfoAsync(DescribeADInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeADInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request DescribeAccountsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAccountsResponse
+         */
         public DescribeAccountsResponse DescribeAccountsWithOptions(DescribeAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6992,6 +9429,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeAccountsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request DescribeAccountsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAccountsResponse
+         */
         public async Task<DescribeAccountsResponse> DescribeAccountsWithOptionsAsync(DescribeAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7039,18 +9483,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeAccountsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request DescribeAccountsRequest
+          * @return DescribeAccountsResponse
+         */
         public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAccountsWithOptions(request, runtime);
         }
 
+        /**
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request DescribeAccountsRequest
+          * @return DescribeAccountsResponse
+         */
         public async Task<DescribeAccountsResponse> DescribeAccountsAsync(DescribeAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAccountsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The event history feature enables you to view the events that occurred in a region over a specific time range. The events include instance creation and parameter reconfiguration. For more information, see [Event history](~~129759~~).
+          *
+          * @param request DescribeActionEventPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeActionEventPolicyResponse
+         */
         public DescribeActionEventPolicyResponse DescribeActionEventPolicyWithOptions(DescribeActionEventPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7090,6 +9553,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeActionEventPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The event history feature enables you to view the events that occurred in a region over a specific time range. The events include instance creation and parameter reconfiguration. For more information, see [Event history](~~129759~~).
+          *
+          * @param request DescribeActionEventPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeActionEventPolicyResponse
+         */
         public async Task<DescribeActionEventPolicyResponse> DescribeActionEventPolicyWithOptionsAsync(DescribeActionEventPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7129,16 +9599,240 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeActionEventPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The event history feature enables you to view the events that occurred in a region over a specific time range. The events include instance creation and parameter reconfiguration. For more information, see [Event history](~~129759~~).
+          *
+          * @param request DescribeActionEventPolicyRequest
+          * @return DescribeActionEventPolicyResponse
+         */
         public DescribeActionEventPolicyResponse DescribeActionEventPolicy(DescribeActionEventPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeActionEventPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * The event history feature enables you to view the events that occurred in a region over a specific time range. The events include instance creation and parameter reconfiguration. For more information, see [Event history](~~129759~~).
+          *
+          * @param request DescribeActionEventPolicyRequest
+          * @return DescribeActionEventPolicyResponse
+         */
         public async Task<DescribeActionEventPolicyResponse> DescribeActionEventPolicyAsync(DescribeActionEventPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeActionEventPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * After you call this operation and obtain the information about a specific O\\&M task, you can call the [ModifyActiveOperationTask](~~611454~~) operation to modify the scheduled switching time of the O\\&M task. You can also view the task and modify the scheduled switching time on the Task Center page of the ApsaraDB RDS console.
+          *
+          * @param request DescribeActiveOperationTasksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeActiveOperationTasksResponse
+         */
+        public DescribeActiveOperationTasksResponse DescribeActiveOperationTasksWithOptions(DescribeActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowCancel))
+            {
+                query["AllowCancel"] = request.AllowCancel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowChange))
+            {
+                query["AllowChange"] = request.AllowChange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeLevel))
+            {
+                query["ChangeLevel"] = request.ChangeLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsName))
+            {
+                query["InsName"] = request.InsName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            {
+                query["ProductId"] = request.ProductId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeActiveOperationTasks",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * After you call this operation and obtain the information about a specific O\\&M task, you can call the [ModifyActiveOperationTask](~~611454~~) operation to modify the scheduled switching time of the O\\&M task. You can also view the task and modify the scheduled switching time on the Task Center page of the ApsaraDB RDS console.
+          *
+          * @param request DescribeActiveOperationTasksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeActiveOperationTasksResponse
+         */
+        public async Task<DescribeActiveOperationTasksResponse> DescribeActiveOperationTasksWithOptionsAsync(DescribeActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowCancel))
+            {
+                query["AllowCancel"] = request.AllowCancel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowChange))
+            {
+                query["AllowChange"] = request.AllowChange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeLevel))
+            {
+                query["ChangeLevel"] = request.ChangeLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsName))
+            {
+                query["InsName"] = request.InsName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            {
+                query["ProductId"] = request.ProductId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeActiveOperationTasks",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * After you call this operation and obtain the information about a specific O\\&M task, you can call the [ModifyActiveOperationTask](~~611454~~) operation to modify the scheduled switching time of the O\\&M task. You can also view the task and modify the scheduled switching time on the Task Center page of the ApsaraDB RDS console.
+          *
+          * @param request DescribeActiveOperationTasksRequest
+          * @return DescribeActiveOperationTasksResponse
+         */
+        public DescribeActiveOperationTasksResponse DescribeActiveOperationTasks(DescribeActiveOperationTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeActiveOperationTasksWithOptions(request, runtime);
+        }
+
+        /**
+          * After you call this operation and obtain the information about a specific O\\&M task, you can call the [ModifyActiveOperationTask](~~611454~~) operation to modify the scheduled switching time of the O\\&M task. You can also view the task and modify the scheduled switching time on the Task Center page of the ApsaraDB RDS console.
+          *
+          * @param request DescribeActiveOperationTasksRequest
+          * @return DescribeActiveOperationTasksResponse
+         */
+        public async Task<DescribeActiveOperationTasksResponse> DescribeActiveOperationTasksAsync(DescribeActiveOperationTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeActiveOperationTasksWithOptionsAsync(request, runtime);
         }
 
         public DescribeAnalyticdbByPrimaryDBInstanceResponse DescribeAnalyticdbByPrimaryDBInstanceWithOptions(DescribeAnalyticdbByPrimaryDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7385,6 +10079,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeAvailableClassesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request DescribeAvailableCrossRegionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAvailableCrossRegionResponse
+         */
         public DescribeAvailableCrossRegionResponse DescribeAvailableCrossRegionWithOptions(DescribeAvailableCrossRegionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7424,6 +10128,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeAvailableCrossRegionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request DescribeAvailableCrossRegionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAvailableCrossRegionResponse
+         */
         public async Task<DescribeAvailableCrossRegionResponse> DescribeAvailableCrossRegionWithOptionsAsync(DescribeAvailableCrossRegionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7463,18 +10177,45 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeAvailableCrossRegionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request DescribeAvailableCrossRegionRequest
+          * @return DescribeAvailableCrossRegionResponse
+         */
         public DescribeAvailableCrossRegionResponse DescribeAvailableCrossRegion(DescribeAvailableCrossRegionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAvailableCrossRegionWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request DescribeAvailableCrossRegionRequest
+          * @return DescribeAvailableCrossRegionResponse
+         */
         public async Task<DescribeAvailableCrossRegionResponse> DescribeAvailableCrossRegionAsync(DescribeAvailableCrossRegionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAvailableCrossRegionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### Prerequisites
+          * The instance runs PostgreSQL.
+          * For more information, see [View the Enhanced Monitoring metrics of an ApsaraDB RDS for PostgreSQL instance](~~299200~~).
+          *
+          * @param request DescribeAvailableMetricsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAvailableMetricsResponse
+         */
         public DescribeAvailableMetricsResponse DescribeAvailableMetricsWithOptions(DescribeAvailableMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7510,6 +10251,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeAvailableMetricsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### Prerequisites
+          * The instance runs PostgreSQL.
+          * For more information, see [View the Enhanced Monitoring metrics of an ApsaraDB RDS for PostgreSQL instance](~~299200~~).
+          *
+          * @param request DescribeAvailableMetricsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAvailableMetricsResponse
+         */
         public async Task<DescribeAvailableMetricsResponse> DescribeAvailableMetricsWithOptionsAsync(DescribeAvailableMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7545,18 +10295,44 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeAvailableMetricsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Prerequisites
+          * The instance runs PostgreSQL.
+          * For more information, see [View the Enhanced Monitoring metrics of an ApsaraDB RDS for PostgreSQL instance](~~299200~~).
+          *
+          * @param request DescribeAvailableMetricsRequest
+          * @return DescribeAvailableMetricsResponse
+         */
         public DescribeAvailableMetricsResponse DescribeAvailableMetrics(DescribeAvailableMetricsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAvailableMetricsWithOptions(request, runtime);
         }
 
+        /**
+          * ### Prerequisites
+          * The instance runs PostgreSQL.
+          * For more information, see [View the Enhanced Monitoring metrics of an ApsaraDB RDS for PostgreSQL instance](~~299200~~).
+          *
+          * @param request DescribeAvailableMetricsRequest
+          * @return DescribeAvailableMetricsResponse
+         */
         public async Task<DescribeAvailableMetricsResponse> DescribeAvailableMetricsAsync(DescribeAvailableMetricsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAvailableMetricsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To query the time range to which you can restore data by using a common backup file, see [DescribeBackups](~~26273~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request DescribeAvailableRecoveryTimeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAvailableRecoveryTimeResponse
+         */
         public DescribeAvailableRecoveryTimeResponse DescribeAvailableRecoveryTimeWithOptions(DescribeAvailableRecoveryTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7608,6 +10384,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeAvailableRecoveryTimeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To query the time range to which you can restore data by using a common backup file, see [DescribeBackups](~~26273~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request DescribeAvailableRecoveryTimeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAvailableRecoveryTimeResponse
+         */
         public async Task<DescribeAvailableRecoveryTimeResponse> DescribeAvailableRecoveryTimeWithOptionsAsync(DescribeAvailableRecoveryTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7659,12 +10445,30 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeAvailableRecoveryTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To query the time range to which you can restore data by using a common backup file, see [DescribeBackups](~~26273~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request DescribeAvailableRecoveryTimeRequest
+          * @return DescribeAvailableRecoveryTimeResponse
+         */
         public DescribeAvailableRecoveryTimeResponse DescribeAvailableRecoveryTime(DescribeAvailableRecoveryTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAvailableRecoveryTimeWithOptions(request, runtime);
         }
 
+        /**
+          * To query the time range to which you can restore data by using a common backup file, see [DescribeBackups](~~26273~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request DescribeAvailableRecoveryTimeRequest
+          * @return DescribeAvailableRecoveryTimeResponse
+         */
         public async Task<DescribeAvailableRecoveryTimeResponse> DescribeAvailableRecoveryTimeAsync(DescribeAvailableRecoveryTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7801,6 +10605,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeAvailableZonesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > This operation is phased out.
+          *
+          * @param request DescribeBackupDatabaseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeBackupDatabaseResponse
+         */
         public DescribeBackupDatabaseResponse DescribeBackupDatabaseWithOptions(DescribeBackupDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7844,6 +10655,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeBackupDatabaseResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > This operation is phased out.
+          *
+          * @param request DescribeBackupDatabaseRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeBackupDatabaseResponse
+         */
         public async Task<DescribeBackupDatabaseResponse> DescribeBackupDatabaseWithOptionsAsync(DescribeBackupDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7887,12 +10705,24 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeBackupDatabaseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > This operation is phased out.
+          *
+          * @param request DescribeBackupDatabaseRequest
+          * @return DescribeBackupDatabaseResponse
+         */
         public DescribeBackupDatabaseResponse DescribeBackupDatabase(DescribeBackupDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackupDatabaseWithOptions(request, runtime);
         }
 
+        /**
+          * > This operation is phased out.
+          *
+          * @param request DescribeBackupDatabaseRequest
+          * @return DescribeBackupDatabaseResponse
+         */
         public async Task<DescribeBackupDatabaseResponse> DescribeBackupDatabaseAsync(DescribeBackupDatabaseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8159,6 +10989,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeBackupTasksWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > A backup set can be used to restore data only when **BackupStatus** of the backup set is **Success**.
+          *
+          * @param request DescribeBackupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeBackupsResponse
+         */
         public DescribeBackupsResponse DescribeBackupsWithOptions(DescribeBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8226,6 +11063,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeBackupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > A backup set can be used to restore data only when **BackupStatus** of the backup set is **Success**.
+          *
+          * @param request DescribeBackupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeBackupsResponse
+         */
         public async Task<DescribeBackupsResponse> DescribeBackupsWithOptionsAsync(DescribeBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8293,18 +11137,40 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeBackupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > A backup set can be used to restore data only when **BackupStatus** of the backup set is **Success**.
+          *
+          * @param request DescribeBackupsRequest
+          * @return DescribeBackupsResponse
+         */
         public DescribeBackupsResponse DescribeBackups(DescribeBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackupsWithOptions(request, runtime);
         }
 
+        /**
+          * > A backup set can be used to restore data only when **BackupStatus** of the backup set is **Success**.
+          *
+          * @param request DescribeBackupsRequest
+          * @return DescribeBackupsResponse
+         */
         public async Task<DescribeBackupsResponse> DescribeBackupsAsync(DescribeBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBackupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   If the return value of the **DownloadLink** parameter is NULL, ApsaraDB RDS does not provide a URL for you to download binary log files.
+          * *   If the return value of the **DownloadLink** parameter is not NULL, ApsaraDB RDS provides a URL for you to download binary log files. The expiration time of the URL is specified by the **LinkExpiredTime** parameter. You must download the binary log files before the expiration time.
+          * *   Each binary log file that is returned by this operation contains the log entries that are generated over the time range specified by the StartTime and EndTime parameters.
+          * > This operation is not supported for instances that run SQL Server.
+          *
+          * @param request DescribeBinlogFilesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeBinlogFilesResponse
+         */
         public DescribeBinlogFilesResponse DescribeBinlogFilesWithOptions(DescribeBinlogFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8364,6 +11230,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeBinlogFilesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   If the return value of the **DownloadLink** parameter is NULL, ApsaraDB RDS does not provide a URL for you to download binary log files.
+          * *   If the return value of the **DownloadLink** parameter is not NULL, ApsaraDB RDS provides a URL for you to download binary log files. The expiration time of the URL is specified by the **LinkExpiredTime** parameter. You must download the binary log files before the expiration time.
+          * *   Each binary log file that is returned by this operation contains the log entries that are generated over the time range specified by the StartTime and EndTime parameters.
+          * > This operation is not supported for instances that run SQL Server.
+          *
+          * @param request DescribeBinlogFilesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeBinlogFilesResponse
+         */
         public async Task<DescribeBinlogFilesResponse> DescribeBinlogFilesWithOptionsAsync(DescribeBinlogFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8423,12 +11299,30 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeBinlogFilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   If the return value of the **DownloadLink** parameter is NULL, ApsaraDB RDS does not provide a URL for you to download binary log files.
+          * *   If the return value of the **DownloadLink** parameter is not NULL, ApsaraDB RDS provides a URL for you to download binary log files. The expiration time of the URL is specified by the **LinkExpiredTime** parameter. You must download the binary log files before the expiration time.
+          * *   Each binary log file that is returned by this operation contains the log entries that are generated over the time range specified by the StartTime and EndTime parameters.
+          * > This operation is not supported for instances that run SQL Server.
+          *
+          * @param request DescribeBinlogFilesRequest
+          * @return DescribeBinlogFilesResponse
+         */
         public DescribeBinlogFilesResponse DescribeBinlogFiles(DescribeBinlogFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBinlogFilesWithOptions(request, runtime);
         }
 
+        /**
+          * *   If the return value of the **DownloadLink** parameter is NULL, ApsaraDB RDS does not provide a URL for you to download binary log files.
+          * *   If the return value of the **DownloadLink** parameter is not NULL, ApsaraDB RDS provides a URL for you to download binary log files. The expiration time of the URL is specified by the **LinkExpiredTime** parameter. You must download the binary log files before the expiration time.
+          * *   Each binary log file that is returned by this operation contains the log entries that are generated over the time range specified by the StartTime and EndTime parameters.
+          * > This operation is not supported for instances that run SQL Server.
+          *
+          * @param request DescribeBinlogFilesRequest
+          * @return DescribeBinlogFilesResponse
+         */
         public async Task<DescribeBinlogFilesResponse> DescribeBinlogFilesAsync(DescribeBinlogFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8541,6 +11435,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeCharacterSetNameWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call the DescribeCloudMigrationPrecheckResult operation, make sure that the CreateCloudMigrationPrecheckTask operation is called to create a cloud migration assessment task for the ApsaraDB RDS for PostgreSQL instance.
+          *
+          * @param request DescribeCloudMigrationPrecheckResultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCloudMigrationPrecheckResultResponse
+         */
         public DescribeCloudMigrationPrecheckResultResponse DescribeCloudMigrationPrecheckResultWithOptions(DescribeCloudMigrationPrecheckResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8596,6 +11498,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeCloudMigrationPrecheckResultResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call the DescribeCloudMigrationPrecheckResult operation, make sure that the CreateCloudMigrationPrecheckTask operation is called to create a cloud migration assessment task for the ApsaraDB RDS for PostgreSQL instance.
+          *
+          * @param request DescribeCloudMigrationPrecheckResultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCloudMigrationPrecheckResultResponse
+         */
         public async Task<DescribeCloudMigrationPrecheckResultResponse> DescribeCloudMigrationPrecheckResultWithOptionsAsync(DescribeCloudMigrationPrecheckResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8651,18 +11561,40 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeCloudMigrationPrecheckResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call the DescribeCloudMigrationPrecheckResult operation, make sure that the CreateCloudMigrationPrecheckTask operation is called to create a cloud migration assessment task for the ApsaraDB RDS for PostgreSQL instance.
+          *
+          * @param request DescribeCloudMigrationPrecheckResultRequest
+          * @return DescribeCloudMigrationPrecheckResultResponse
+         */
         public DescribeCloudMigrationPrecheckResultResponse DescribeCloudMigrationPrecheckResult(DescribeCloudMigrationPrecheckResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCloudMigrationPrecheckResultWithOptions(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call the DescribeCloudMigrationPrecheckResult operation, make sure that the CreateCloudMigrationPrecheckTask operation is called to create a cloud migration assessment task for the ApsaraDB RDS for PostgreSQL instance.
+          *
+          * @param request DescribeCloudMigrationPrecheckResultRequest
+          * @return DescribeCloudMigrationPrecheckResultResponse
+         */
         public async Task<DescribeCloudMigrationPrecheckResultResponse> DescribeCloudMigrationPrecheckResultAsync(DescribeCloudMigrationPrecheckResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCloudMigrationPrecheckResultWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call the DescribeCloudMigrationResult operation, make sure that cloud migration tasks are created by calling the [CreateCloudMigrationTask](~~411690~~) operation.
+          *
+          * @param request DescribeCloudMigrationResultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCloudMigrationResultResponse
+         */
         public DescribeCloudMigrationResultResponse DescribeCloudMigrationResultWithOptions(DescribeCloudMigrationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8718,6 +11650,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeCloudMigrationResultResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call the DescribeCloudMigrationResult operation, make sure that cloud migration tasks are created by calling the [CreateCloudMigrationTask](~~411690~~) operation.
+          *
+          * @param request DescribeCloudMigrationResultRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCloudMigrationResultResponse
+         */
         public async Task<DescribeCloudMigrationResultResponse> DescribeCloudMigrationResultWithOptionsAsync(DescribeCloudMigrationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8773,18 +11713,39 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeCloudMigrationResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call the DescribeCloudMigrationResult operation, make sure that cloud migration tasks are created by calling the [CreateCloudMigrationTask](~~411690~~) operation.
+          *
+          * @param request DescribeCloudMigrationResultRequest
+          * @return DescribeCloudMigrationResultResponse
+         */
         public DescribeCloudMigrationResultResponse DescribeCloudMigrationResult(DescribeCloudMigrationResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCloudMigrationResultWithOptions(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call the DescribeCloudMigrationResult operation, make sure that cloud migration tasks are created by calling the [CreateCloudMigrationTask](~~411690~~) operation.
+          *
+          * @param request DescribeCloudMigrationResultRequest
+          * @return DescribeCloudMigrationResultResponse
+         */
         public async Task<DescribeCloudMigrationResultResponse> DescribeCloudMigrationResultAsync(DescribeCloudMigrationResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCloudMigrationResultWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  This operation is supported only for instances that run SQL Server 2012 or later.
+          *
+          * @param request DescribeCollationTimeZonesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCollationTimeZonesResponse
+         */
         public DescribeCollationTimeZonesResponse DescribeCollationTimeZonesWithOptions(DescribeCollationTimeZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8820,6 +11781,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeCollationTimeZonesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is supported only for instances that run SQL Server 2012 or later.
+          *
+          * @param request DescribeCollationTimeZonesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCollationTimeZonesResponse
+         */
         public async Task<DescribeCollationTimeZonesResponse> DescribeCollationTimeZonesWithOptionsAsync(DescribeCollationTimeZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8855,18 +11823,41 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeCollationTimeZonesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is supported only for instances that run SQL Server 2012 or later.
+          *
+          * @param request DescribeCollationTimeZonesRequest
+          * @return DescribeCollationTimeZonesResponse
+         */
         public DescribeCollationTimeZonesResponse DescribeCollationTimeZones(DescribeCollationTimeZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCollationTimeZonesWithOptions(request, runtime);
         }
 
+        /**
+          * >  This operation is supported only for instances that run SQL Server 2012 or later.
+          *
+          * @param request DescribeCollationTimeZonesRequest
+          * @return DescribeCollationTimeZonesResponse
+         */
         public async Task<DescribeCollationTimeZonesResponse> DescribeCollationTimeZonesAsync(DescribeCollationTimeZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCollationTimeZonesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS for MySQL instances support cross-region backup and restoration. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~) and [Restore the data of an ApsaraDB RDS for MySQL instance across regions](~~120875~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request DescribeCrossBackupMetaListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCrossBackupMetaListResponse
+         */
         public DescribeCrossBackupMetaListResponse DescribeCrossBackupMetaListWithOptions(DescribeCrossBackupMetaListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8930,6 +11921,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeCrossBackupMetaListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS for MySQL instances support cross-region backup and restoration. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~) and [Restore the data of an ApsaraDB RDS for MySQL instance across regions](~~120875~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request DescribeCrossBackupMetaListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCrossBackupMetaListResponse
+         */
         public async Task<DescribeCrossBackupMetaListResponse> DescribeCrossBackupMetaListWithOptionsAsync(DescribeCrossBackupMetaListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8993,18 +11995,48 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeCrossBackupMetaListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS for MySQL instances support cross-region backup and restoration. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~) and [Restore the data of an ApsaraDB RDS for MySQL instance across regions](~~120875~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request DescribeCrossBackupMetaListRequest
+          * @return DescribeCrossBackupMetaListResponse
+         */
         public DescribeCrossBackupMetaListResponse DescribeCrossBackupMetaList(DescribeCrossBackupMetaListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCrossBackupMetaListWithOptions(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS for MySQL instances support cross-region backup and restoration. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~) and [Restore the data of an ApsaraDB RDS for MySQL instance across regions](~~120875~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request DescribeCrossBackupMetaListRequest
+          * @return DescribeCrossBackupMetaListResponse
+         */
         public async Task<DescribeCrossBackupMetaListResponse> DescribeCrossBackupMetaListAsync(DescribeCrossBackupMetaListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCrossBackupMetaListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request DescribeCrossRegionBackupDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCrossRegionBackupDBInstanceResponse
+         */
         public DescribeCrossRegionBackupDBInstanceResponse DescribeCrossRegionBackupDBInstanceWithOptions(DescribeCrossRegionBackupDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9056,6 +12088,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeCrossRegionBackupDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request DescribeCrossRegionBackupDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCrossRegionBackupDBInstanceResponse
+         */
         public async Task<DescribeCrossRegionBackupDBInstanceResponse> DescribeCrossRegionBackupDBInstanceWithOptionsAsync(DescribeCrossRegionBackupDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9107,18 +12149,47 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeCrossRegionBackupDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request DescribeCrossRegionBackupDBInstanceRequest
+          * @return DescribeCrossRegionBackupDBInstanceResponse
+         */
         public DescribeCrossRegionBackupDBInstanceResponse DescribeCrossRegionBackupDBInstance(DescribeCrossRegionBackupDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCrossRegionBackupDBInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request DescribeCrossRegionBackupDBInstanceRequest
+          * @return DescribeCrossRegionBackupDBInstanceResponse
+         */
         public async Task<DescribeCrossRegionBackupDBInstanceResponse> DescribeCrossRegionBackupDBInstanceAsync(DescribeCrossRegionBackupDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCrossRegionBackupDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about how to query the cross-region log backup files of an RDS instance, see [DescribeCrossRegionLogBackupFiles](~~121734~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request DescribeCrossRegionBackupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCrossRegionBackupsResponse
+         */
         public DescribeCrossRegionBackupsResponse DescribeCrossRegionBackupsWithOptions(DescribeCrossRegionBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9194,6 +12265,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeCrossRegionBackupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about how to query the cross-region log backup files of an RDS instance, see [DescribeCrossRegionLogBackupFiles](~~121734~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request DescribeCrossRegionBackupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCrossRegionBackupsResponse
+         */
         public async Task<DescribeCrossRegionBackupsResponse> DescribeCrossRegionBackupsWithOptionsAsync(DescribeCrossRegionBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9269,18 +12351,49 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeCrossRegionBackupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about how to query the cross-region log backup files of an RDS instance, see [DescribeCrossRegionLogBackupFiles](~~121734~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request DescribeCrossRegionBackupsRequest
+          * @return DescribeCrossRegionBackupsResponse
+         */
         public DescribeCrossRegionBackupsResponse DescribeCrossRegionBackups(DescribeCrossRegionBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCrossRegionBackupsWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about how to query the cross-region log backup files of an RDS instance, see [DescribeCrossRegionLogBackupFiles](~~121734~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Back up an ApsaraDB RDS for PostgreSQL instance across regions](~~206671~~).
+          *
+          * @param request DescribeCrossRegionBackupsRequest
+          * @return DescribeCrossRegionBackupsResponse
+         */
         public async Task<DescribeCrossRegionBackupsResponse> DescribeCrossRegionBackupsAsync(DescribeCrossRegionBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCrossRegionBackupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information about how to query the cross-region data backup files of an RDS instance, see [DescribeCrossRegionBackups](~~121733~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engine versions and RDS editions:
+          * *   MySQL 8.0 on RDS High-availability Edition (with local SSDs)
+          * *   MySQL 5.7 on RDS High-availability Edition (with local SSDs)
+          * *   MySQL 5.6
+          *
+          * @param request DescribeCrossRegionLogBackupFilesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCrossRegionLogBackupFilesResponse
+         */
         public DescribeCrossRegionLogBackupFilesResponse DescribeCrossRegionLogBackupFilesWithOptions(DescribeCrossRegionLogBackupFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9344,6 +12457,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeCrossRegionLogBackupFilesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information about how to query the cross-region data backup files of an RDS instance, see [DescribeCrossRegionBackups](~~121733~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engine versions and RDS editions:
+          * *   MySQL 8.0 on RDS High-availability Edition (with local SSDs)
+          * *   MySQL 5.7 on RDS High-availability Edition (with local SSDs)
+          * *   MySQL 5.6
+          *
+          * @param request DescribeCrossRegionLogBackupFilesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeCrossRegionLogBackupFilesResponse
+         */
         public async Task<DescribeCrossRegionLogBackupFilesResponse> DescribeCrossRegionLogBackupFilesWithOptionsAsync(DescribeCrossRegionLogBackupFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9407,12 +12531,32 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeCrossRegionLogBackupFilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information about how to query the cross-region data backup files of an RDS instance, see [DescribeCrossRegionBackups](~~121733~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engine versions and RDS editions:
+          * *   MySQL 8.0 on RDS High-availability Edition (with local SSDs)
+          * *   MySQL 5.7 on RDS High-availability Edition (with local SSDs)
+          * *   MySQL 5.6
+          *
+          * @param request DescribeCrossRegionLogBackupFilesRequest
+          * @return DescribeCrossRegionLogBackupFilesResponse
+         */
         public DescribeCrossRegionLogBackupFilesResponse DescribeCrossRegionLogBackupFiles(DescribeCrossRegionLogBackupFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCrossRegionLogBackupFilesWithOptions(request, runtime);
         }
 
+        /**
+          * For more information about how to query the cross-region data backup files of an RDS instance, see [DescribeCrossRegionBackups](~~121733~~).
+          * Before you call this operation, make sure that the instance runs one of the following database engine versions and RDS editions:
+          * *   MySQL 8.0 on RDS High-availability Edition (with local SSDs)
+          * *   MySQL 5.7 on RDS High-availability Edition (with local SSDs)
+          * *   MySQL 5.6
+          *
+          * @param request DescribeCrossRegionLogBackupFilesRequest
+          * @return DescribeCrossRegionLogBackupFilesResponse
+         */
         public async Task<DescribeCrossRegionLogBackupFilesResponse> DescribeCrossRegionLogBackupFilesAsync(DescribeCrossRegionLogBackupFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9639,6 +12783,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeDBInstanceByTagsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeDBInstanceDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceDetailResponse
+         */
         public DescribeDBInstanceDetailResponse DescribeDBInstanceDetailWithOptions(DescribeDBInstanceDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9690,6 +12841,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeDBInstanceDetailRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceDetailResponse
+         */
         public async Task<DescribeDBInstanceDetailResponse> DescribeDBInstanceDetailWithOptionsAsync(DescribeDBInstanceDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9741,12 +12899,24 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeDBInstanceDetailRequest
+          * @return DescribeDBInstanceDetailResponse
+         */
         public DescribeDBInstanceDetailResponse DescribeDBInstanceDetail(DescribeDBInstanceDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceDetailWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeDBInstanceDetailRequest
+          * @return DescribeDBInstanceDetailResponse
+         */
         public async Task<DescribeDBInstanceDetailResponse> DescribeDBInstanceDetailAsync(DescribeDBInstanceDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9883,6 +13053,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeDBInstanceEncryptionKeyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * *   An ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition is created. The instance is referred to as a cluster.
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          *
+          * @param request DescribeDBInstanceEndpointsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceEndpointsResponse
+         */
         public DescribeDBInstanceEndpointsResponse DescribeDBInstanceEndpointsWithOptions(DescribeDBInstanceEndpointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9922,6 +13101,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceEndpointsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * *   An ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition is created. The instance is referred to as a cluster.
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          *
+          * @param request DescribeDBInstanceEndpointsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceEndpointsResponse
+         */
         public async Task<DescribeDBInstanceEndpointsResponse> DescribeDBInstanceEndpointsWithOptionsAsync(DescribeDBInstanceEndpointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9961,12 +13149,28 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceEndpointsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * *   An ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition is created. The instance is referred to as a cluster.
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          *
+          * @param request DescribeDBInstanceEndpointsRequest
+          * @return DescribeDBInstanceEndpointsResponse
+         */
         public DescribeDBInstanceEndpointsResponse DescribeDBInstanceEndpoints(DescribeDBInstanceEndpointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceEndpointsWithOptions(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * *   An ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition is created. The instance is referred to as a cluster.
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          *
+          * @param request DescribeDBInstanceEndpointsRequest
+          * @return DescribeDBInstanceEndpointsResponse
+         */
         public async Task<DescribeDBInstanceEndpointsResponse> DescribeDBInstanceEndpointsAsync(DescribeDBInstanceEndpointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10161,6 +13365,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeDBInstanceIPArrayListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS instances are deployed based on ECS instances. This operation is used to query the hostname of the ECS instance where an ApsaraDB RDS instance resides. The hostname is required when you [configure a distributed transaction whitelist](~~124321~~).
+          * This operation is applicable to instances that run one of the following SQL Server versions on RDS High-availability Edition: SQL Server 2012 SE, SQL Server 2012 EE, SQL Server 2014 SE, SQL Server 2016 SE, SQL Server 2016 EE, and SQL Server 2017 SE.
+          *
+          * @param request DescribeDBInstanceIpHostnameRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceIpHostnameResponse
+         */
         public DescribeDBInstanceIpHostnameResponse DescribeDBInstanceIpHostnameWithOptions(DescribeDBInstanceIpHostnameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10212,6 +13424,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceIpHostnameResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS instances are deployed based on ECS instances. This operation is used to query the hostname of the ECS instance where an ApsaraDB RDS instance resides. The hostname is required when you [configure a distributed transaction whitelist](~~124321~~).
+          * This operation is applicable to instances that run one of the following SQL Server versions on RDS High-availability Edition: SQL Server 2012 SE, SQL Server 2012 EE, SQL Server 2014 SE, SQL Server 2016 SE, SQL Server 2016 EE, and SQL Server 2017 SE.
+          *
+          * @param request DescribeDBInstanceIpHostnameRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceIpHostnameResponse
+         */
         public async Task<DescribeDBInstanceIpHostnameResponse> DescribeDBInstanceIpHostnameWithOptionsAsync(DescribeDBInstanceIpHostnameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10263,18 +13483,41 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceIpHostnameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS instances are deployed based on ECS instances. This operation is used to query the hostname of the ECS instance where an ApsaraDB RDS instance resides. The hostname is required when you [configure a distributed transaction whitelist](~~124321~~).
+          * This operation is applicable to instances that run one of the following SQL Server versions on RDS High-availability Edition: SQL Server 2012 SE, SQL Server 2012 EE, SQL Server 2014 SE, SQL Server 2016 SE, SQL Server 2016 EE, and SQL Server 2017 SE.
+          *
+          * @param request DescribeDBInstanceIpHostnameRequest
+          * @return DescribeDBInstanceIpHostnameResponse
+         */
         public DescribeDBInstanceIpHostnameResponse DescribeDBInstanceIpHostname(DescribeDBInstanceIpHostnameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceIpHostnameWithOptions(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS instances are deployed based on ECS instances. This operation is used to query the hostname of the ECS instance where an ApsaraDB RDS instance resides. The hostname is required when you [configure a distributed transaction whitelist](~~124321~~).
+          * This operation is applicable to instances that run one of the following SQL Server versions on RDS High-availability Edition: SQL Server 2012 SE, SQL Server 2012 EE, SQL Server 2014 SE, SQL Server 2016 SE, SQL Server 2016 EE, and SQL Server 2017 SE.
+          *
+          * @param request DescribeDBInstanceIpHostnameRequest
+          * @return DescribeDBInstanceIpHostnameResponse
+         */
         public async Task<DescribeDBInstanceIpHostnameResponse> DescribeDBInstanceIpHostnameAsync(DescribeDBInstanceIpHostnameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceIpHostnameWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### Prerequisites
+          * The instance runs PostgreSQL.
+          * For more information, see [View the Enhanced Monitoring metrics of an ApsaraDB RDS for PostgreSQL instance](~~299200~~).
+          *
+          * @param request DescribeDBInstanceMetricsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceMetricsResponse
+         */
         public DescribeDBInstanceMetricsResponse DescribeDBInstanceMetricsWithOptions(DescribeDBInstanceMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10310,6 +13553,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceMetricsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### Prerequisites
+          * The instance runs PostgreSQL.
+          * For more information, see [View the Enhanced Monitoring metrics of an ApsaraDB RDS for PostgreSQL instance](~~299200~~).
+          *
+          * @param request DescribeDBInstanceMetricsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceMetricsResponse
+         */
         public async Task<DescribeDBInstanceMetricsResponse> DescribeDBInstanceMetricsWithOptionsAsync(DescribeDBInstanceMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10345,18 +13597,41 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceMetricsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Prerequisites
+          * The instance runs PostgreSQL.
+          * For more information, see [View the Enhanced Monitoring metrics of an ApsaraDB RDS for PostgreSQL instance](~~299200~~).
+          *
+          * @param request DescribeDBInstanceMetricsRequest
+          * @return DescribeDBInstanceMetricsResponse
+         */
         public DescribeDBInstanceMetricsResponse DescribeDBInstanceMetrics(DescribeDBInstanceMetricsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceMetricsWithOptions(request, runtime);
         }
 
+        /**
+          * ### Prerequisites
+          * The instance runs PostgreSQL.
+          * For more information, see [View the Enhanced Monitoring metrics of an ApsaraDB RDS for PostgreSQL instance](~~299200~~).
+          *
+          * @param request DescribeDBInstanceMetricsRequest
+          * @return DescribeDBInstanceMetricsResponse
+         */
         public async Task<DescribeDBInstanceMetricsResponse> DescribeDBInstanceMetricsAsync(DescribeDBInstanceMetricsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceMetricsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  This operation is not supported for RDS instances that run PostgreSQL. The monitoring frequency of such an instance varies based on the query time range. For more information, see [Query performance metrics](~~26280~~).
+          *
+          * @param request DescribeDBInstanceMonitorRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceMonitorResponse
+         */
         public DescribeDBInstanceMonitorResponse DescribeDBInstanceMonitorWithOptions(DescribeDBInstanceMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10404,6 +13679,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceMonitorResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is not supported for RDS instances that run PostgreSQL. The monitoring frequency of such an instance varies based on the query time range. For more information, see [Query performance metrics](~~26280~~).
+          *
+          * @param request DescribeDBInstanceMonitorRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceMonitorResponse
+         */
         public async Task<DescribeDBInstanceMonitorResponse> DescribeDBInstanceMonitorWithOptionsAsync(DescribeDBInstanceMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10451,12 +13733,24 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceMonitorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is not supported for RDS instances that run PostgreSQL. The monitoring frequency of such an instance varies based on the query time range. For more information, see [Query performance metrics](~~26280~~).
+          *
+          * @param request DescribeDBInstanceMonitorRequest
+          * @return DescribeDBInstanceMonitorResponse
+         */
         public DescribeDBInstanceMonitorResponse DescribeDBInstanceMonitor(DescribeDBInstanceMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceMonitorWithOptions(request, runtime);
         }
 
+        /**
+          * >  This operation is not supported for RDS instances that run PostgreSQL. The monitoring frequency of such an instance varies based on the query time range. For more information, see [Query performance metrics](~~26280~~).
+          *
+          * @param request DescribeDBInstanceMonitorRequest
+          * @return DescribeDBInstanceMonitorResponse
+         */
         public async Task<DescribeDBInstanceMonitorResponse> DescribeDBInstanceMonitorAsync(DescribeDBInstanceMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10715,6 +14009,40 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeDBInstanceNetInfoForChannelWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can query the performance of an instance over a specific time range based on its performance metrics. Performance metrics are generated by using one of the following methods based on the database engine and version, RDS edition, [monitoring frequency](~~26200~~) ([ModifyDBInstanceMonitor](~~26282~~)), and query time range:
+          * *   For instances that do not run MySQL on RDS High-availability Edition with standard SSDs or enhanced SSDs (ESSDs) and those that do not run MariaDB:
+          *     *   5-second monitoring frequency
+          *         *   If the query time range is greater than seven days, performance metrics are collected at 1-day intervals.
+          *         *   If the query time range is greater than one day but less than or equal to seven days, performance metrics are collected at 1-hour intervals.
+          *         *   If the query time range is greater than or equal to an hour but less than or equal to one day, performance metrics are collected at 1-minute intervals.
+          *         *   If the query time range is less than an hour, performance metrics are collected at 5-second intervals.
+          *     *   60-second monitoring frequency
+          *         *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
+          *         *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *         *   If the query time range is less than or equal to seven days, performance metrics are collected at 1-minute intervals.
+          *     *   300-second monitoring frequency
+          *         *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
+          *         *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *         *   If the query time range is less than or equal to seven days, performance metrics are collected at 5-minute intervals.
+          * *   For instances that are running MySQL on RDS High-availability Edition with standard SSDs or ESSDs and those that are running MariaDB:
+          *     *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
+          *     *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *     *   If the query time range is less than or equal to seven days, performance metrics are collected at 1-minute intervals.
+          * *   For instances that run PostgreSQL with local SSDs, standard SSDs, or ESSDs:
+          *     *   If the query time range is less than or equal to an hour, performance metrics are collected at 5-second intervals.
+          *     *   If the query time range is less than or equal to 2 hours, performance metrics are collected at 10-second intervals.
+          *     *   If the query time range is less than or equal to 6 hours, performance metrics are collected at 30-second intervals.
+          *     *   If the query time range is less than or equal to 12 hours, performance metrics are collected at 1-minute intervals.
+          *     *   If the query time range is less than or equal to one day, performance metrics are collected at 2-minute intervals.
+          *     *   If the query time range is less than or equal to five days, performance metrics are collected at 10-minute intervals.
+          *     *   If the query time range is less than or equal to 15 days, performance metrics are collected at 30-minute intervals.
+          *     *   If the query time range is less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *
+          * @param request DescribeDBInstancePerformanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstancePerformanceResponse
+         */
         public DescribeDBInstancePerformanceResponse DescribeDBInstancePerformanceWithOptions(DescribeDBInstancePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10762,6 +14090,40 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancePerformanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can query the performance of an instance over a specific time range based on its performance metrics. Performance metrics are generated by using one of the following methods based on the database engine and version, RDS edition, [monitoring frequency](~~26200~~) ([ModifyDBInstanceMonitor](~~26282~~)), and query time range:
+          * *   For instances that do not run MySQL on RDS High-availability Edition with standard SSDs or enhanced SSDs (ESSDs) and those that do not run MariaDB:
+          *     *   5-second monitoring frequency
+          *         *   If the query time range is greater than seven days, performance metrics are collected at 1-day intervals.
+          *         *   If the query time range is greater than one day but less than or equal to seven days, performance metrics are collected at 1-hour intervals.
+          *         *   If the query time range is greater than or equal to an hour but less than or equal to one day, performance metrics are collected at 1-minute intervals.
+          *         *   If the query time range is less than an hour, performance metrics are collected at 5-second intervals.
+          *     *   60-second monitoring frequency
+          *         *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
+          *         *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *         *   If the query time range is less than or equal to seven days, performance metrics are collected at 1-minute intervals.
+          *     *   300-second monitoring frequency
+          *         *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
+          *         *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *         *   If the query time range is less than or equal to seven days, performance metrics are collected at 5-minute intervals.
+          * *   For instances that are running MySQL on RDS High-availability Edition with standard SSDs or ESSDs and those that are running MariaDB:
+          *     *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
+          *     *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *     *   If the query time range is less than or equal to seven days, performance metrics are collected at 1-minute intervals.
+          * *   For instances that run PostgreSQL with local SSDs, standard SSDs, or ESSDs:
+          *     *   If the query time range is less than or equal to an hour, performance metrics are collected at 5-second intervals.
+          *     *   If the query time range is less than or equal to 2 hours, performance metrics are collected at 10-second intervals.
+          *     *   If the query time range is less than or equal to 6 hours, performance metrics are collected at 30-second intervals.
+          *     *   If the query time range is less than or equal to 12 hours, performance metrics are collected at 1-minute intervals.
+          *     *   If the query time range is less than or equal to one day, performance metrics are collected at 2-minute intervals.
+          *     *   If the query time range is less than or equal to five days, performance metrics are collected at 10-minute intervals.
+          *     *   If the query time range is less than or equal to 15 days, performance metrics are collected at 30-minute intervals.
+          *     *   If the query time range is less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *
+          * @param request DescribeDBInstancePerformanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstancePerformanceResponse
+         */
         public async Task<DescribeDBInstancePerformanceResponse> DescribeDBInstancePerformanceWithOptionsAsync(DescribeDBInstancePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10809,18 +14171,92 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancePerformanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can query the performance of an instance over a specific time range based on its performance metrics. Performance metrics are generated by using one of the following methods based on the database engine and version, RDS edition, [monitoring frequency](~~26200~~) ([ModifyDBInstanceMonitor](~~26282~~)), and query time range:
+          * *   For instances that do not run MySQL on RDS High-availability Edition with standard SSDs or enhanced SSDs (ESSDs) and those that do not run MariaDB:
+          *     *   5-second monitoring frequency
+          *         *   If the query time range is greater than seven days, performance metrics are collected at 1-day intervals.
+          *         *   If the query time range is greater than one day but less than or equal to seven days, performance metrics are collected at 1-hour intervals.
+          *         *   If the query time range is greater than or equal to an hour but less than or equal to one day, performance metrics are collected at 1-minute intervals.
+          *         *   If the query time range is less than an hour, performance metrics are collected at 5-second intervals.
+          *     *   60-second monitoring frequency
+          *         *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
+          *         *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *         *   If the query time range is less than or equal to seven days, performance metrics are collected at 1-minute intervals.
+          *     *   300-second monitoring frequency
+          *         *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
+          *         *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *         *   If the query time range is less than or equal to seven days, performance metrics are collected at 5-minute intervals.
+          * *   For instances that are running MySQL on RDS High-availability Edition with standard SSDs or ESSDs and those that are running MariaDB:
+          *     *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
+          *     *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *     *   If the query time range is less than or equal to seven days, performance metrics are collected at 1-minute intervals.
+          * *   For instances that run PostgreSQL with local SSDs, standard SSDs, or ESSDs:
+          *     *   If the query time range is less than or equal to an hour, performance metrics are collected at 5-second intervals.
+          *     *   If the query time range is less than or equal to 2 hours, performance metrics are collected at 10-second intervals.
+          *     *   If the query time range is less than or equal to 6 hours, performance metrics are collected at 30-second intervals.
+          *     *   If the query time range is less than or equal to 12 hours, performance metrics are collected at 1-minute intervals.
+          *     *   If the query time range is less than or equal to one day, performance metrics are collected at 2-minute intervals.
+          *     *   If the query time range is less than or equal to five days, performance metrics are collected at 10-minute intervals.
+          *     *   If the query time range is less than or equal to 15 days, performance metrics are collected at 30-minute intervals.
+          *     *   If the query time range is less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *
+          * @param request DescribeDBInstancePerformanceRequest
+          * @return DescribeDBInstancePerformanceResponse
+         */
         public DescribeDBInstancePerformanceResponse DescribeDBInstancePerformance(DescribeDBInstancePerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstancePerformanceWithOptions(request, runtime);
         }
 
+        /**
+          * You can query the performance of an instance over a specific time range based on its performance metrics. Performance metrics are generated by using one of the following methods based on the database engine and version, RDS edition, [monitoring frequency](~~26200~~) ([ModifyDBInstanceMonitor](~~26282~~)), and query time range:
+          * *   For instances that do not run MySQL on RDS High-availability Edition with standard SSDs or enhanced SSDs (ESSDs) and those that do not run MariaDB:
+          *     *   5-second monitoring frequency
+          *         *   If the query time range is greater than seven days, performance metrics are collected at 1-day intervals.
+          *         *   If the query time range is greater than one day but less than or equal to seven days, performance metrics are collected at 1-hour intervals.
+          *         *   If the query time range is greater than or equal to an hour but less than or equal to one day, performance metrics are collected at 1-minute intervals.
+          *         *   If the query time range is less than an hour, performance metrics are collected at 5-second intervals.
+          *     *   60-second monitoring frequency
+          *         *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
+          *         *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *         *   If the query time range is less than or equal to seven days, performance metrics are collected at 1-minute intervals.
+          *     *   300-second monitoring frequency
+          *         *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
+          *         *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *         *   If the query time range is less than or equal to seven days, performance metrics are collected at 5-minute intervals.
+          * *   For instances that are running MySQL on RDS High-availability Edition with standard SSDs or ESSDs and those that are running MariaDB:
+          *     *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
+          *     *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *     *   If the query time range is less than or equal to seven days, performance metrics are collected at 1-minute intervals.
+          * *   For instances that run PostgreSQL with local SSDs, standard SSDs, or ESSDs:
+          *     *   If the query time range is less than or equal to an hour, performance metrics are collected at 5-second intervals.
+          *     *   If the query time range is less than or equal to 2 hours, performance metrics are collected at 10-second intervals.
+          *     *   If the query time range is less than or equal to 6 hours, performance metrics are collected at 30-second intervals.
+          *     *   If the query time range is less than or equal to 12 hours, performance metrics are collected at 1-minute intervals.
+          *     *   If the query time range is less than or equal to one day, performance metrics are collected at 2-minute intervals.
+          *     *   If the query time range is less than or equal to five days, performance metrics are collected at 10-minute intervals.
+          *     *   If the query time range is less than or equal to 15 days, performance metrics are collected at 30-minute intervals.
+          *     *   If the query time range is less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
+          *
+          * @param request DescribeDBInstancePerformanceRequest
+          * @return DescribeDBInstancePerformanceResponse
+         */
         public async Task<DescribeDBInstancePerformanceResponse> DescribeDBInstancePerformanceAsync(DescribeDBInstancePerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstancePerformanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeDBInstancePromoteActivityRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstancePromoteActivityResponse
+         */
+        // Deprecated
         public DescribeDBInstancePromoteActivityResponse DescribeDBInstancePromoteActivityWithOptions(DescribeDBInstancePromoteActivityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10868,6 +14304,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancePromoteActivityResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeDBInstancePromoteActivityRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstancePromoteActivityResponse
+         */
+        // Deprecated
         public async Task<DescribeDBInstancePromoteActivityResponse> DescribeDBInstancePromoteActivityWithOptionsAsync(DescribeDBInstancePromoteActivityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10915,18 +14359,42 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancePromoteActivityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeDBInstancePromoteActivityRequest
+          * @return DescribeDBInstancePromoteActivityResponse
+         */
+        // Deprecated
         public DescribeDBInstancePromoteActivityResponse DescribeDBInstancePromoteActivity(DescribeDBInstancePromoteActivityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstancePromoteActivityWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeDBInstancePromoteActivityRequest
+          * @return DescribeDBInstancePromoteActivityResponse
+         */
+        // Deprecated
         public async Task<DescribeDBInstancePromoteActivityResponse> DescribeDBInstancePromoteActivityAsync(DescribeDBInstancePromoteActivityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstancePromoteActivityWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is used to query the original settings of shared proxies rather than the latest settings of dedicated proxies. For more information about how to query the settings of dedicated proxies, see [DescribeDBProxy](~~141055~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The shared proxy feature must be enabled for the primary instance.
+          * *   The read/write splitting feature must be enabled for the primary instance.
+          *
+          * @param request DescribeDBInstanceProxyConfigurationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceProxyConfigurationResponse
+         */
         public DescribeDBInstanceProxyConfigurationResponse DescribeDBInstanceProxyConfigurationWithOptions(DescribeDBInstanceProxyConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10966,6 +14434,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceProxyConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is used to query the original settings of shared proxies rather than the latest settings of dedicated proxies. For more information about how to query the settings of dedicated proxies, see [DescribeDBProxy](~~141055~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The shared proxy feature must be enabled for the primary instance.
+          * *   The read/write splitting feature must be enabled for the primary instance.
+          *
+          * @param request DescribeDBInstanceProxyConfigurationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceProxyConfigurationResponse
+         */
         public async Task<DescribeDBInstanceProxyConfigurationResponse> DescribeDBInstanceProxyConfigurationWithOptionsAsync(DescribeDBInstanceProxyConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11005,18 +14483,46 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceProxyConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is used to query the original settings of shared proxies rather than the latest settings of dedicated proxies. For more information about how to query the settings of dedicated proxies, see [DescribeDBProxy](~~141055~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The shared proxy feature must be enabled for the primary instance.
+          * *   The read/write splitting feature must be enabled for the primary instance.
+          *
+          * @param request DescribeDBInstanceProxyConfigurationRequest
+          * @return DescribeDBInstanceProxyConfigurationResponse
+         */
         public DescribeDBInstanceProxyConfigurationResponse DescribeDBInstanceProxyConfiguration(DescribeDBInstanceProxyConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceProxyConfigurationWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is used to query the original settings of shared proxies rather than the latest settings of dedicated proxies. For more information about how to query the settings of dedicated proxies, see [DescribeDBProxy](~~141055~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The shared proxy feature must be enabled for the primary instance.
+          * *   The read/write splitting feature must be enabled for the primary instance.
+          *
+          * @param request DescribeDBInstanceProxyConfigurationRequest
+          * @return DescribeDBInstanceProxyConfigurationResponse
+         */
         public async Task<DescribeDBInstanceProxyConfigurationResponse> DescribeDBInstanceProxyConfigurationAsync(DescribeDBInstanceProxyConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceProxyConfigurationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that your instance is one of the following instances:
+          * *   ApsaraDB RDS for MySQL instances that do not run RDS Basic Edition
+          * *   ApsaraDB RDS for SQL Server instances
+          * *   ApsaraDB RDS for PostgreSQL instances that use cloud disks
+          *
+          * @param request DescribeDBInstanceSSLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceSSLResponse
+         */
         public DescribeDBInstanceSSLResponse DescribeDBInstanceSSLWithOptions(DescribeDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11060,6 +14566,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceSSLResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that your instance is one of the following instances:
+          * *   ApsaraDB RDS for MySQL instances that do not run RDS Basic Edition
+          * *   ApsaraDB RDS for SQL Server instances
+          * *   ApsaraDB RDS for PostgreSQL instances that use cloud disks
+          *
+          * @param request DescribeDBInstanceSSLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceSSLResponse
+         */
         public async Task<DescribeDBInstanceSSLResponse> DescribeDBInstanceSSLWithOptionsAsync(DescribeDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11103,18 +14619,44 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that your instance is one of the following instances:
+          * *   ApsaraDB RDS for MySQL instances that do not run RDS Basic Edition
+          * *   ApsaraDB RDS for SQL Server instances
+          * *   ApsaraDB RDS for PostgreSQL instances that use cloud disks
+          *
+          * @param request DescribeDBInstanceSSLRequest
+          * @return DescribeDBInstanceSSLResponse
+         */
         public DescribeDBInstanceSSLResponse DescribeDBInstanceSSL(DescribeDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceSSLWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that your instance is one of the following instances:
+          * *   ApsaraDB RDS for MySQL instances that do not run RDS Basic Edition
+          * *   ApsaraDB RDS for SQL Server instances
+          * *   ApsaraDB RDS for PostgreSQL instances that use cloud disks
+          *
+          * @param request DescribeDBInstanceSSLRequest
+          * @return DescribeDBInstanceSSLResponse
+         */
         public async Task<DescribeDBInstanceSSLResponse> DescribeDBInstanceSSLAsync(DescribeDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceSSLWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is used to view the [Transparent Data Encryption (TDE)](~~96121~~) configuration of an instance.
+          * The TDE feature is enabled for the instance by calling the [ModifyDBInstanceTDE](~~26256~~) operation.
+          *
+          * @param request DescribeDBInstanceTDERequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceTDEResponse
+         */
         public DescribeDBInstanceTDEResponse DescribeDBInstanceTDEWithOptions(DescribeDBInstanceTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11158,6 +14700,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceTDEResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is used to view the [Transparent Data Encryption (TDE)](~~96121~~) configuration of an instance.
+          * The TDE feature is enabled for the instance by calling the [ModifyDBInstanceTDE](~~26256~~) operation.
+          *
+          * @param request DescribeDBInstanceTDERequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstanceTDEResponse
+         */
         public async Task<DescribeDBInstanceTDEResponse> DescribeDBInstanceTDEWithOptionsAsync(DescribeDBInstanceTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11201,22 +14751,51 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstanceTDEResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is used to view the [Transparent Data Encryption (TDE)](~~96121~~) configuration of an instance.
+          * The TDE feature is enabled for the instance by calling the [ModifyDBInstanceTDE](~~26256~~) operation.
+          *
+          * @param request DescribeDBInstanceTDERequest
+          * @return DescribeDBInstanceTDEResponse
+         */
         public DescribeDBInstanceTDEResponse DescribeDBInstanceTDE(DescribeDBInstanceTDERequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceTDEWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is used to view the [Transparent Data Encryption (TDE)](~~96121~~) configuration of an instance.
+          * The TDE feature is enabled for the instance by calling the [ModifyDBInstanceTDE](~~26256~~) operation.
+          *
+          * @param request DescribeDBInstanceTDERequest
+          * @return DescribeDBInstanceTDEResponse
+         */
         public async Task<DescribeDBInstanceTDEResponse> DescribeDBInstanceTDEAsync(DescribeDBInstanceTDERequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceTDEWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can use one of the following methods to check the response:
+          * *   Method 1: Use **MaxResults** to specify the number of entries per page. Then, use **NextToken** to specify the token that is used to display the next page. **NextToken** is set to the value that is returned from the most recent call of the **DescribeDBInstances** operation for **NextToken**.
+          *     > The first time you call the DescribeDBInstances operation to perform a paged query, you need only to specify **MaxResults**. In this case, the operation returns the data of the first page and the value of **NextToken**.
+          * *   Method 2: Use **PageSize** to specify the number of entries per page. Then, use **PageNumber** to display the next page.
+          * > You can use only one of the preceding methods. If a large number of entries are returned, we recommend that you use Method 1 to increase the query speed.
+          *
+          * @param request DescribeDBInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstancesResponse
+         */
         public DescribeDBInstancesResponse DescribeDBInstancesWithOptions(DescribeDBInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -11264,6 +14843,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expired))
             {
                 query["Expired"] = request.Expired;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceLevel))
             {
@@ -11360,10 +14943,25 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can use one of the following methods to check the response:
+          * *   Method 1: Use **MaxResults** to specify the number of entries per page. Then, use **NextToken** to specify the token that is used to display the next page. **NextToken** is set to the value that is returned from the most recent call of the **DescribeDBInstances** operation for **NextToken**.
+          *     > The first time you call the DescribeDBInstances operation to perform a paged query, you need only to specify **MaxResults**. In this case, the operation returns the data of the first page and the value of **NextToken**.
+          * *   Method 2: Use **PageSize** to specify the number of entries per page. Then, use **PageNumber** to display the next page.
+          * > You can use only one of the preceding methods. If a large number of entries are returned, we recommend that you use Method 1 to increase the query speed.
+          *
+          * @param request DescribeDBInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstancesResponse
+         */
         public async Task<DescribeDBInstancesResponse> DescribeDBInstancesWithOptionsAsync(DescribeDBInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -11411,6 +15009,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expired))
             {
                 query["Expired"] = request.Expired;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceLevel))
             {
@@ -11507,18 +15109,45 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can use one of the following methods to check the response:
+          * *   Method 1: Use **MaxResults** to specify the number of entries per page. Then, use **NextToken** to specify the token that is used to display the next page. **NextToken** is set to the value that is returned from the most recent call of the **DescribeDBInstances** operation for **NextToken**.
+          *     > The first time you call the DescribeDBInstances operation to perform a paged query, you need only to specify **MaxResults**. In this case, the operation returns the data of the first page and the value of **NextToken**.
+          * *   Method 2: Use **PageSize** to specify the number of entries per page. Then, use **PageNumber** to display the next page.
+          * > You can use only one of the preceding methods. If a large number of entries are returned, we recommend that you use Method 1 to increase the query speed.
+          *
+          * @param request DescribeDBInstancesRequest
+          * @return DescribeDBInstancesResponse
+         */
         public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstancesWithOptions(request, runtime);
         }
 
+        /**
+          * You can use one of the following methods to check the response:
+          * *   Method 1: Use **MaxResults** to specify the number of entries per page. Then, use **NextToken** to specify the token that is used to display the next page. **NextToken** is set to the value that is returned from the most recent call of the **DescribeDBInstances** operation for **NextToken**.
+          *     > The first time you call the DescribeDBInstances operation to perform a paged query, you need only to specify **MaxResults**. In this case, the operation returns the data of the first page and the value of **NextToken**.
+          * *   Method 2: Use **PageSize** to specify the number of entries per page. Then, use **PageNumber** to display the next page.
+          * > You can use only one of the preceding methods. If a large number of entries are returned, we recommend that you use Method 1 to increase the query speed.
+          *
+          * @param request DescribeDBInstancesRequest
+          * @return DescribeDBInstancesResponse
+         */
         public async Task<DescribeDBInstancesResponse> DescribeDBInstancesAsync(DescribeDBInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstancesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is no longer available. You can call the DescribeDBInstanceAttribute operation to query information about an instance.
+          *
+          * @param request DescribeDBInstancesAsCsvRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstancesAsCsvResponse
+         */
         public DescribeDBInstancesAsCsvResponse DescribeDBInstancesAsCsvWithOptions(DescribeDBInstancesAsCsvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11566,6 +15195,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancesAsCsvResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is no longer available. You can call the DescribeDBInstanceAttribute operation to query information about an instance.
+          *
+          * @param request DescribeDBInstancesAsCsvRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstancesAsCsvResponse
+         */
         public async Task<DescribeDBInstancesAsCsvResponse> DescribeDBInstancesAsCsvWithOptionsAsync(DescribeDBInstancesAsCsvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11613,18 +15249,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancesAsCsvResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is no longer available. You can call the DescribeDBInstanceAttribute operation to query information about an instance.
+          *
+          * @param request DescribeDBInstancesAsCsvRequest
+          * @return DescribeDBInstancesAsCsvResponse
+         */
         public DescribeDBInstancesAsCsvResponse DescribeDBInstancesAsCsv(DescribeDBInstancesAsCsvRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstancesAsCsvWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is no longer available. You can call the DescribeDBInstanceAttribute operation to query information about an instance.
+          *
+          * @param request DescribeDBInstancesAsCsvRequest
+          * @return DescribeDBInstancesAsCsvResponse
+         */
         public async Task<DescribeDBInstancesAsCsvResponse> DescribeDBInstancesAsCsvAsync(DescribeDBInstancesAsCsvRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstancesAsCsvWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > This operation is available only for subscription instances.
+          *
+          * @param request DescribeDBInstancesByExpireTimeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstancesByExpireTimeResponse
+         */
         public DescribeDBInstancesByExpireTimeResponse DescribeDBInstancesByExpireTimeWithOptions(DescribeDBInstancesByExpireTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11692,6 +15347,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancesByExpireTimeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > This operation is available only for subscription instances.
+          *
+          * @param request DescribeDBInstancesByExpireTimeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstancesByExpireTimeResponse
+         */
         public async Task<DescribeDBInstancesByExpireTimeResponse> DescribeDBInstancesByExpireTimeWithOptionsAsync(DescribeDBInstancesByExpireTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11759,18 +15421,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancesByExpireTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > This operation is available only for subscription instances.
+          *
+          * @param request DescribeDBInstancesByExpireTimeRequest
+          * @return DescribeDBInstancesByExpireTimeResponse
+         */
         public DescribeDBInstancesByExpireTimeResponse DescribeDBInstancesByExpireTime(DescribeDBInstancesByExpireTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstancesByExpireTimeWithOptions(request, runtime);
         }
 
+        /**
+          * > This operation is available only for subscription instances.
+          *
+          * @param request DescribeDBInstancesByExpireTimeRequest
+          * @return DescribeDBInstancesByExpireTimeResponse
+         */
         public async Task<DescribeDBInstancesByExpireTimeResponse> DescribeDBInstancesByExpireTimeAsync(DescribeDBInstancesByExpireTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstancesByExpireTimeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeDBInstancesByPerformanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstancesByPerformanceResponse
+         */
         public DescribeDBInstancesByPerformanceResponse DescribeDBInstancesByPerformanceWithOptions(DescribeDBInstancesByPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11854,6 +15535,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancesByPerformanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeDBInstancesByPerformanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstancesByPerformanceResponse
+         */
         public async Task<DescribeDBInstancesByPerformanceResponse> DescribeDBInstancesByPerformanceWithOptionsAsync(DescribeDBInstancesByPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11937,18 +15625,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancesByPerformanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeDBInstancesByPerformanceRequest
+          * @return DescribeDBInstancesByPerformanceResponse
+         */
         public DescribeDBInstancesByPerformanceResponse DescribeDBInstancesByPerformance(DescribeDBInstancesByPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstancesByPerformanceWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeDBInstancesByPerformanceRequest
+          * @return DescribeDBInstancesByPerformanceResponse
+         */
         public async Task<DescribeDBInstancesByPerformanceResponse> DescribeDBInstancesByPerformanceAsync(DescribeDBInstancesByPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstancesByPerformanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeDBInstancesForCloneRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstancesForCloneResponse
+         */
         public DescribeDBInstancesForCloneResponse DescribeDBInstancesForCloneWithOptions(DescribeDBInstancesForCloneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12076,6 +15783,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancesForCloneResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeDBInstancesForCloneRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBInstancesForCloneResponse
+         */
         public async Task<DescribeDBInstancesForCloneResponse> DescribeDBInstancesForCloneWithOptionsAsync(DescribeDBInstancesForCloneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12203,18 +15917,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancesForCloneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeDBInstancesForCloneRequest
+          * @return DescribeDBInstancesForCloneResponse
+         */
         public DescribeDBInstancesForCloneResponse DescribeDBInstancesForClone(DescribeDBInstancesForCloneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstancesForCloneWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeDBInstancesForCloneRequest
+          * @return DescribeDBInstancesForCloneResponse
+         */
         public async Task<DescribeDBInstancesForCloneResponse> DescribeDBInstancesForCloneAsync(DescribeDBInstancesForCloneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstancesForCloneWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you purchase or upgrade an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance, you can call the DescribeDBMiniEngineVersions operation to query the minor engine versions that are available for the instance.
+          *
+          * @param request DescribeDBMiniEngineVersionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBMiniEngineVersionsResponse
+         */
         public DescribeDBMiniEngineVersionsResponse DescribeDBMiniEngineVersionsWithOptions(DescribeDBMiniEngineVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12274,6 +16007,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBMiniEngineVersionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you purchase or upgrade an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance, you can call the DescribeDBMiniEngineVersions operation to query the minor engine versions that are available for the instance.
+          *
+          * @param request DescribeDBMiniEngineVersionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBMiniEngineVersionsResponse
+         */
         public async Task<DescribeDBMiniEngineVersionsResponse> DescribeDBMiniEngineVersionsWithOptionsAsync(DescribeDBMiniEngineVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12333,18 +16073,39 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBMiniEngineVersionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you purchase or upgrade an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance, you can call the DescribeDBMiniEngineVersions operation to query the minor engine versions that are available for the instance.
+          *
+          * @param request DescribeDBMiniEngineVersionsRequest
+          * @return DescribeDBMiniEngineVersionsResponse
+         */
         public DescribeDBMiniEngineVersionsResponse DescribeDBMiniEngineVersions(DescribeDBMiniEngineVersionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBMiniEngineVersionsWithOptions(request, runtime);
         }
 
+        /**
+          * Before you purchase or upgrade an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance, you can call the DescribeDBMiniEngineVersions operation to query the minor engine versions that are available for the instance.
+          *
+          * @param request DescribeDBMiniEngineVersionsRequest
+          * @return DescribeDBMiniEngineVersionsResponse
+         */
         public async Task<DescribeDBMiniEngineVersionsResponse> DescribeDBMiniEngineVersionsAsync(DescribeDBMiniEngineVersionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBMiniEngineVersionsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call the ModifyDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request DescribeDBProxyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBProxyResponse
+         */
         public DescribeDBProxyResponse DescribeDBProxyWithOptions(DescribeDBProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12400,6 +16161,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBProxyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call the ModifyDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request DescribeDBProxyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBProxyResponse
+         */
         public async Task<DescribeDBProxyResponse> DescribeDBProxyWithOptionsAsync(DescribeDBProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12455,18 +16225,43 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBProxyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call the ModifyDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request DescribeDBProxyRequest
+          * @return DescribeDBProxyResponse
+         */
         public DescribeDBProxyResponse DescribeDBProxy(DescribeDBProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBProxyWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call the ModifyDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request DescribeDBProxyRequest
+          * @return DescribeDBProxyResponse
+         */
         public async Task<DescribeDBProxyResponse> DescribeDBProxyAsync(DescribeDBProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBProxyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call the DescribeDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request DescribeDBProxyEndpointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBProxyEndpointResponse
+         */
         public DescribeDBProxyEndpointResponse DescribeDBProxyEndpointWithOptions(DescribeDBProxyEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12526,6 +16321,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBProxyEndpointResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call the DescribeDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request DescribeDBProxyEndpointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBProxyEndpointResponse
+         */
         public async Task<DescribeDBProxyEndpointResponse> DescribeDBProxyEndpointWithOptionsAsync(DescribeDBProxyEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12585,18 +16389,43 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBProxyEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call the DescribeDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request DescribeDBProxyEndpointRequest
+          * @return DescribeDBProxyEndpointResponse
+         */
         public DescribeDBProxyEndpointResponse DescribeDBProxyEndpoint(DescribeDBProxyEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBProxyEndpointWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call the DescribeDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request DescribeDBProxyEndpointRequest
+          * @return DescribeDBProxyEndpointResponse
+         */
         public async Task<DescribeDBProxyEndpointResponse> DescribeDBProxyEndpointAsync(DescribeDBProxyEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBProxyEndpointWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call the DescribeDBProxyPerformance operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request DescribeDBProxyPerformanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBProxyPerformanceResponse
+         */
         public DescribeDBProxyPerformanceResponse DescribeDBProxyPerformanceWithOptions(DescribeDBProxyPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12664,6 +16493,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBProxyPerformanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call the DescribeDBProxyPerformance operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request DescribeDBProxyPerformanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDBProxyPerformanceResponse
+         */
         public async Task<DescribeDBProxyPerformanceResponse> DescribeDBProxyPerformanceWithOptionsAsync(DescribeDBProxyPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12731,18 +16569,42 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBProxyPerformanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call the DescribeDBProxyPerformance operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request DescribeDBProxyPerformanceRequest
+          * @return DescribeDBProxyPerformanceResponse
+         */
         public DescribeDBProxyPerformanceResponse DescribeDBProxyPerformance(DescribeDBProxyPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBProxyPerformanceWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call the DescribeDBProxyPerformance operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request DescribeDBProxyPerformanceRequest
+          * @return DescribeDBProxyPerformanceResponse
+         */
         public async Task<DescribeDBProxyPerformanceResponse> DescribeDBProxyPerformanceAsync(DescribeDBProxyPerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBProxyPerformanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information, see [Configure a distributed transaction whitelist](~~124321~~).
+          * This operation is applicable to instances that run one of the following SQL Server versions on RDS High-Availability Edition: SQL Server 2012 SE, SQL Server 2012 EE, SQL Server 2014 SE, SQL Server 2016 SE, SQL Server 2016 EE, and SQL Server 2017 SE.
+          *
+          * @param request DescribeDTCSecurityIpHostsForSQLServerRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDTCSecurityIpHostsForSQLServerResponse
+         */
         public DescribeDTCSecurityIpHostsForSQLServerResponse DescribeDTCSecurityIpHostsForSQLServerWithOptions(DescribeDTCSecurityIpHostsForSQLServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12798,6 +16660,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDTCSecurityIpHostsForSQLServerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information, see [Configure a distributed transaction whitelist](~~124321~~).
+          * This operation is applicable to instances that run one of the following SQL Server versions on RDS High-Availability Edition: SQL Server 2012 SE, SQL Server 2012 EE, SQL Server 2014 SE, SQL Server 2016 SE, SQL Server 2016 EE, and SQL Server 2017 SE.
+          *
+          * @param request DescribeDTCSecurityIpHostsForSQLServerRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDTCSecurityIpHostsForSQLServerResponse
+         */
         public async Task<DescribeDTCSecurityIpHostsForSQLServerResponse> DescribeDTCSecurityIpHostsForSQLServerWithOptionsAsync(DescribeDTCSecurityIpHostsForSQLServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12853,18 +16723,39 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDTCSecurityIpHostsForSQLServerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information, see [Configure a distributed transaction whitelist](~~124321~~).
+          * This operation is applicable to instances that run one of the following SQL Server versions on RDS High-Availability Edition: SQL Server 2012 SE, SQL Server 2012 EE, SQL Server 2014 SE, SQL Server 2016 SE, SQL Server 2016 EE, and SQL Server 2017 SE.
+          *
+          * @param request DescribeDTCSecurityIpHostsForSQLServerRequest
+          * @return DescribeDTCSecurityIpHostsForSQLServerResponse
+         */
         public DescribeDTCSecurityIpHostsForSQLServerResponse DescribeDTCSecurityIpHostsForSQLServer(DescribeDTCSecurityIpHostsForSQLServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDTCSecurityIpHostsForSQLServerWithOptions(request, runtime);
         }
 
+        /**
+          * For more information, see [Configure a distributed transaction whitelist](~~124321~~).
+          * This operation is applicable to instances that run one of the following SQL Server versions on RDS High-Availability Edition: SQL Server 2012 SE, SQL Server 2012 EE, SQL Server 2014 SE, SQL Server 2016 SE, SQL Server 2016 EE, and SQL Server 2017 SE.
+          *
+          * @param request DescribeDTCSecurityIpHostsForSQLServerRequest
+          * @return DescribeDTCSecurityIpHostsForSQLServerResponse
+         */
         public async Task<DescribeDTCSecurityIpHostsForSQLServerResponse> DescribeDTCSecurityIpHostsForSQLServerAsync(DescribeDTCSecurityIpHostsForSQLServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDTCSecurityIpHostsForSQLServerWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  If the specified request parameters are invalid, no database information is returned.
+          *
+          * @param request DescribeDatabasesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDatabasesResponse
+         */
         public DescribeDatabasesResponse DescribeDatabasesWithOptions(DescribeDatabasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12928,6 +16819,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDatabasesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  If the specified request parameters are invalid, no database information is returned.
+          *
+          * @param request DescribeDatabasesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDatabasesResponse
+         */
         public async Task<DescribeDatabasesResponse> DescribeDatabasesWithOptionsAsync(DescribeDatabasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12991,18 +16889,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDatabasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  If the specified request parameters are invalid, no database information is returned.
+          *
+          * @param request DescribeDatabasesRequest
+          * @return DescribeDatabasesResponse
+         */
         public DescribeDatabasesResponse DescribeDatabases(DescribeDatabasesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDatabasesWithOptions(request, runtime);
         }
 
+        /**
+          * >  If the specified request parameters are invalid, no database information is returned.
+          *
+          * @param request DescribeDatabasesRequest
+          * @return DescribeDatabasesResponse
+         */
         public async Task<DescribeDatabasesResponse> DescribeDatabasesAsync(DescribeDatabasesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDatabasesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request DescribeDedicatedHostGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDedicatedHostGroupsResponse
+         */
         public DescribeDedicatedHostGroupsResponse DescribeDedicatedHostGroupsWithOptions(DescribeDedicatedHostGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13050,6 +16967,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDedicatedHostGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request DescribeDedicatedHostGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDedicatedHostGroupsResponse
+         */
         public async Task<DescribeDedicatedHostGroupsResponse> DescribeDedicatedHostGroupsWithOptionsAsync(DescribeDedicatedHostGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13097,18 +17021,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDedicatedHostGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request DescribeDedicatedHostGroupsRequest
+          * @return DescribeDedicatedHostGroupsResponse
+         */
         public DescribeDedicatedHostGroupsResponse DescribeDedicatedHostGroups(DescribeDedicatedHostGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDedicatedHostGroupsWithOptions(request, runtime);
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request DescribeDedicatedHostGroupsRequest
+          * @return DescribeDedicatedHostGroupsResponse
+         */
         public async Task<DescribeDedicatedHostGroupsResponse> DescribeDedicatedHostGroupsAsync(DescribeDedicatedHostGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDedicatedHostGroupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request DescribeDedicatedHostsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDedicatedHostsResponse
+         */
         public DescribeDedicatedHostsResponse DescribeDedicatedHostsWithOptions(DescribeDedicatedHostsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13176,6 +17119,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDedicatedHostsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request DescribeDedicatedHostsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDedicatedHostsResponse
+         */
         public async Task<DescribeDedicatedHostsResponse> DescribeDedicatedHostsWithOptionsAsync(DescribeDedicatedHostsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13243,18 +17193,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDedicatedHostsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request DescribeDedicatedHostsRequest
+          * @return DescribeDedicatedHostsResponse
+         */
         public DescribeDedicatedHostsResponse DescribeDedicatedHosts(DescribeDedicatedHostsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDedicatedHostsWithOptions(request, runtime);
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request DescribeDedicatedHostsRequest
+          * @return DescribeDedicatedHostsResponse
+         */
         public async Task<DescribeDedicatedHostsResponse> DescribeDedicatedHostsAsync(DescribeDedicatedHostsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDedicatedHostsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is supported for instances that run MySQL with local SSDs. For more information about how to retain the data backup files of an instance after the instance is released, see [Configure automatic backup](~~98818~~).
+          *
+          * @param request DescribeDetachedBackupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDetachedBackupsResponse
+         */
         public DescribeDetachedBackupsResponse DescribeDetachedBackupsWithOptions(DescribeDetachedBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13322,6 +17291,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDetachedBackupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported for instances that run MySQL with local SSDs. For more information about how to retain the data backup files of an instance after the instance is released, see [Configure automatic backup](~~98818~~).
+          *
+          * @param request DescribeDetachedBackupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDetachedBackupsResponse
+         */
         public async Task<DescribeDetachedBackupsResponse> DescribeDetachedBackupsWithOptionsAsync(DescribeDetachedBackupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13389,18 +17365,39 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDetachedBackupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported for instances that run MySQL with local SSDs. For more information about how to retain the data backup files of an instance after the instance is released, see [Configure automatic backup](~~98818~~).
+          *
+          * @param request DescribeDetachedBackupsRequest
+          * @return DescribeDetachedBackupsResponse
+         */
         public DescribeDetachedBackupsResponse DescribeDetachedBackups(DescribeDetachedBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDetachedBackupsWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is supported for instances that run MySQL with local SSDs. For more information about how to retain the data backup files of an instance after the instance is released, see [Configure automatic backup](~~98818~~).
+          *
+          * @param request DescribeDetachedBackupsRequest
+          * @return DescribeDetachedBackupsResponse
+         */
         public async Task<DescribeDetachedBackupsResponse> DescribeDetachedBackupsAsync(DescribeDetachedBackupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDetachedBackupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > This operation is no longer maintained. You can use the [DescribeDiagnosticReportList](~~443006~~) operation of Database Autonomy Service (DAS) to query a list of diagnostic reports.
+          * *   The returned diagnosis reports include data collection time, data generation time, and download URLs. The system retains the reports for 15 days.
+          * *   This operation is not suitable for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request DescribeDiagnosticReportListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDiagnosticReportListResponse
+         */
         public DescribeDiagnosticReportListResponse DescribeDiagnosticReportListWithOptions(DescribeDiagnosticReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13432,6 +17429,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDiagnosticReportListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > This operation is no longer maintained. You can use the [DescribeDiagnosticReportList](~~443006~~) operation of Database Autonomy Service (DAS) to query a list of diagnostic reports.
+          * *   The returned diagnosis reports include data collection time, data generation time, and download URLs. The system retains the reports for 15 days.
+          * *   This operation is not suitable for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request DescribeDiagnosticReportListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeDiagnosticReportListResponse
+         */
         public async Task<DescribeDiagnosticReportListResponse> DescribeDiagnosticReportListWithOptionsAsync(DescribeDiagnosticReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13463,18 +17469,41 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDiagnosticReportListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > This operation is no longer maintained. You can use the [DescribeDiagnosticReportList](~~443006~~) operation of Database Autonomy Service (DAS) to query a list of diagnostic reports.
+          * *   The returned diagnosis reports include data collection time, data generation time, and download URLs. The system retains the reports for 15 days.
+          * *   This operation is not suitable for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request DescribeDiagnosticReportListRequest
+          * @return DescribeDiagnosticReportListResponse
+         */
         public DescribeDiagnosticReportListResponse DescribeDiagnosticReportList(DescribeDiagnosticReportListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDiagnosticReportListWithOptions(request, runtime);
         }
 
+        /**
+          * > This operation is no longer maintained. You can use the [DescribeDiagnosticReportList](~~443006~~) operation of Database Autonomy Service (DAS) to query a list of diagnostic reports.
+          * *   The returned diagnosis reports include data collection time, data generation time, and download URLs. The system retains the reports for 15 days.
+          * *   This operation is not suitable for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request DescribeDiagnosticReportListRequest
+          * @return DescribeDiagnosticReportListResponse
+         */
         public async Task<DescribeDiagnosticReportListResponse> DescribeDiagnosticReportListAsync(DescribeDiagnosticReportListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDiagnosticReportListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Error logs contain the time when they were generated and the error messages.
+          *
+          * @param request DescribeErrorLogsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeErrorLogsResponse
+         */
         public DescribeErrorLogsResponse DescribeErrorLogsWithOptions(DescribeErrorLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13534,6 +17563,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeErrorLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Error logs contain the time when they were generated and the error messages.
+          *
+          * @param request DescribeErrorLogsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeErrorLogsResponse
+         */
         public async Task<DescribeErrorLogsResponse> DescribeErrorLogsWithOptionsAsync(DescribeErrorLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13593,18 +17629,38 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeErrorLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Error logs contain the time when they were generated and the error messages.
+          *
+          * @param request DescribeErrorLogsRequest
+          * @return DescribeErrorLogsResponse
+         */
         public DescribeErrorLogsResponse DescribeErrorLogs(DescribeErrorLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeErrorLogsWithOptions(request, runtime);
         }
 
+        /**
+          * Error logs contain the time when they were generated and the error messages.
+          *
+          * @param request DescribeErrorLogsRequest
+          * @return DescribeErrorLogsResponse
+         */
         public async Task<DescribeErrorLogsResponse> DescribeErrorLogsAsync(DescribeErrorLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeErrorLogsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The event history feature enables you to view the events that occurred within a region over a specific time range. Historical events include instance creation and parameter modification. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+          * Before you call this operation, make sure that the event history feature is enabled. Otherwise, this operation fails.
+          *
+          * @param request DescribeEventsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeEventsResponse
+         */
         public DescribeEventsResponse DescribeEventsWithOptions(DescribeEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13660,6 +17716,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeEventsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The event history feature enables you to view the events that occurred within a region over a specific time range. Historical events include instance creation and parameter modification. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+          * Before you call this operation, make sure that the event history feature is enabled. Otherwise, this operation fails.
+          *
+          * @param request DescribeEventsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeEventsResponse
+         */
         public async Task<DescribeEventsResponse> DescribeEventsWithOptionsAsync(DescribeEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13715,12 +17779,26 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The event history feature enables you to view the events that occurred within a region over a specific time range. Historical events include instance creation and parameter modification. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+          * Before you call this operation, make sure that the event history feature is enabled. Otherwise, this operation fails.
+          *
+          * @param request DescribeEventsRequest
+          * @return DescribeEventsResponse
+         */
         public DescribeEventsResponse DescribeEvents(DescribeEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeEventsWithOptions(request, runtime);
         }
 
+        /**
+          * The event history feature enables you to view the events that occurred within a region over a specific time range. Historical events include instance creation and parameter modification. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+          * Before you call this operation, make sure that the event history feature is enabled. Otherwise, this operation fails.
+          *
+          * @param request DescribeEventsRequest
+          * @return DescribeEventsResponse
+         */
         public async Task<DescribeEventsResponse> DescribeEventsAsync(DescribeEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13809,6 +17887,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeGadInstancesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * By default, Alibaba Cloud uses persistent connections to check the availability of an instance. For more information, see [What is availability detection?](~~207467~~)
+          *
+          * @param request DescribeHADiagnoseConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHADiagnoseConfigResponse
+         */
         public DescribeHADiagnoseConfigResponse DescribeHADiagnoseConfigWithOptions(DescribeHADiagnoseConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13852,6 +17937,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeHADiagnoseConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * By default, Alibaba Cloud uses persistent connections to check the availability of an instance. For more information, see [What is availability detection?](~~207467~~)
+          *
+          * @param request DescribeHADiagnoseConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHADiagnoseConfigResponse
+         */
         public async Task<DescribeHADiagnoseConfigResponse> DescribeHADiagnoseConfigWithOptionsAsync(DescribeHADiagnoseConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13895,18 +17987,38 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeHADiagnoseConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * By default, Alibaba Cloud uses persistent connections to check the availability of an instance. For more information, see [What is availability detection?](~~207467~~)
+          *
+          * @param request DescribeHADiagnoseConfigRequest
+          * @return DescribeHADiagnoseConfigResponse
+         */
         public DescribeHADiagnoseConfigResponse DescribeHADiagnoseConfig(DescribeHADiagnoseConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHADiagnoseConfigWithOptions(request, runtime);
         }
 
+        /**
+          * By default, Alibaba Cloud uses persistent connections to check the availability of an instance. For more information, see [What is availability detection?](~~207467~~)
+          *
+          * @param request DescribeHADiagnoseConfigRequest
+          * @return DescribeHADiagnoseConfigResponse
+         */
         public async Task<DescribeHADiagnoseConfigResponse> DescribeHADiagnoseConfigAsync(DescribeHADiagnoseConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHADiagnoseConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After a primary/secondary switchover is complete, the primary instance is demoted to the secondary instance and the secondary instance is promoted to primary. For more information, see [Switch workloads over between primary and secondary ApsaraDB RDS instances](~~96054~~).
+          * When you call this operation, you must make sure that the instance runs RDS High-availability Edition, RDS Enterprise Edition, and RDS Cluster Edition. RDS Cluster Edition is supported for ApsaraDB RDS for MySQL and ApsaraDB RDS for SQL Server.
+          *
+          * @param request DescribeHASwitchConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHASwitchConfigResponse
+         */
         public DescribeHASwitchConfigResponse DescribeHASwitchConfigWithOptions(DescribeHASwitchConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13950,6 +18062,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeHASwitchConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After a primary/secondary switchover is complete, the primary instance is demoted to the secondary instance and the secondary instance is promoted to primary. For more information, see [Switch workloads over between primary and secondary ApsaraDB RDS instances](~~96054~~).
+          * When you call this operation, you must make sure that the instance runs RDS High-availability Edition, RDS Enterprise Edition, and RDS Cluster Edition. RDS Cluster Edition is supported for ApsaraDB RDS for MySQL and ApsaraDB RDS for SQL Server.
+          *
+          * @param request DescribeHASwitchConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeHASwitchConfigResponse
+         */
         public async Task<DescribeHASwitchConfigResponse> DescribeHASwitchConfigWithOptionsAsync(DescribeHASwitchConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13993,16 +18113,346 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeHASwitchConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After a primary/secondary switchover is complete, the primary instance is demoted to the secondary instance and the secondary instance is promoted to primary. For more information, see [Switch workloads over between primary and secondary ApsaraDB RDS instances](~~96054~~).
+          * When you call this operation, you must make sure that the instance runs RDS High-availability Edition, RDS Enterprise Edition, and RDS Cluster Edition. RDS Cluster Edition is supported for ApsaraDB RDS for MySQL and ApsaraDB RDS for SQL Server.
+          *
+          * @param request DescribeHASwitchConfigRequest
+          * @return DescribeHASwitchConfigResponse
+         */
         public DescribeHASwitchConfigResponse DescribeHASwitchConfig(DescribeHASwitchConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHASwitchConfigWithOptions(request, runtime);
         }
 
+        /**
+          * After a primary/secondary switchover is complete, the primary instance is demoted to the secondary instance and the secondary instance is promoted to primary. For more information, see [Switch workloads over between primary and secondary ApsaraDB RDS instances](~~96054~~).
+          * When you call this operation, you must make sure that the instance runs RDS High-availability Edition, RDS Enterprise Edition, and RDS Cluster Edition. RDS Cluster Edition is supported for ApsaraDB RDS for MySQL and ApsaraDB RDS for SQL Server.
+          *
+          * @param request DescribeHASwitchConfigRequest
+          * @return DescribeHASwitchConfigResponse
+         */
         public async Task<DescribeHASwitchConfigResponse> DescribeHASwitchConfigAsync(DescribeHASwitchConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHASwitchConfigWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeHistoryTasksResponse DescribeHistoryTasksWithOptions(DescribeHistoryTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromExecTime))
+            {
+                query["FromExecTime"] = request.FromExecTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromStartTime))
+            {
+                query["FromStartTime"] = request.FromStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToExecTime))
+            {
+                query["ToExecTime"] = request.ToExecTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToStartTime))
+            {
+                query["ToStartTime"] = request.ToStartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHistoryTasks",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHistoryTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeHistoryTasksResponse> DescribeHistoryTasksWithOptionsAsync(DescribeHistoryTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromExecTime))
+            {
+                query["FromExecTime"] = request.FromExecTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromStartTime))
+            {
+                query["FromStartTime"] = request.FromStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToExecTime))
+            {
+                query["ToExecTime"] = request.ToExecTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToStartTime))
+            {
+                query["ToStartTime"] = request.ToStartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHistoryTasks",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHistoryTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeHistoryTasksResponse DescribeHistoryTasks(DescribeHistoryTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHistoryTasksWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeHistoryTasksResponse> DescribeHistoryTasksAsync(DescribeHistoryTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHistoryTasksWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeHostWebShellResponse DescribeHostWebShellWithOptions(DescribeHostWebShellRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
+            {
+                query["AccountName"] = request.AccountName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountPassword))
+            {
+                query["AccountPassword"] = request.AccountPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostName))
+            {
+                query["HostName"] = request.HostName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionID))
+            {
+                query["RegionID"] = request.RegionID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHostWebShell",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHostWebShellResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeHostWebShellResponse> DescribeHostWebShellWithOptionsAsync(DescribeHostWebShellRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
+            {
+                query["AccountName"] = request.AccountName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountPassword))
+            {
+                query["AccountPassword"] = request.AccountPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostName))
+            {
+                query["HostName"] = request.HostName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionID))
+            {
+                query["RegionID"] = request.RegionID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHostWebShell",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHostWebShellResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeHostWebShellResponse DescribeHostWebShell(DescribeHostWebShellRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHostWebShellWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeHostWebShellResponse> DescribeHostWebShellAsync(DescribeHostWebShellRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHostWebShellWithOptionsAsync(request, runtime);
         }
 
         public DescribeInstanceAutoRenewalAttributeResponse DescribeInstanceAutoRenewalAttributeWithOptions(DescribeInstanceAutoRenewalAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -14143,6 +18593,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeInstanceAutoRenewalAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request DescribeInstanceCrossBackupPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstanceCrossBackupPolicyResponse
+         */
         public DescribeInstanceCrossBackupPolicyResponse DescribeInstanceCrossBackupPolicyWithOptions(DescribeInstanceCrossBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14186,6 +18646,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeInstanceCrossBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request DescribeInstanceCrossBackupPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeInstanceCrossBackupPolicyResponse
+         */
         public async Task<DescribeInstanceCrossBackupPolicyResponse> DescribeInstanceCrossBackupPolicyWithOptionsAsync(DescribeInstanceCrossBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14229,12 +18699,30 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeInstanceCrossBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request DescribeInstanceCrossBackupPolicyRequest
+          * @return DescribeInstanceCrossBackupPolicyResponse
+         */
         public DescribeInstanceCrossBackupPolicyResponse DescribeInstanceCrossBackupPolicy(DescribeInstanceCrossBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeInstanceCrossBackupPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request DescribeInstanceCrossBackupPolicyRequest
+          * @return DescribeInstanceCrossBackupPolicyResponse
+         */
         public async Task<DescribeInstanceCrossBackupPolicyResponse> DescribeInstanceCrossBackupPolicyAsync(DescribeInstanceCrossBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14575,6 +19063,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeLogBackupFilesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call the [RestoreTable](~~131510~~) operation to restore individual databases or tables of an ApsaraDB RDS for MySQL instance, you can call this operation to query the information about the databases and tables that can be restored. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+          * > This operation is supported only when the instance runs MySQL 8.0, MySQL 5.7, or MySQL 5.6 on RDS High-availability Edition with local disks.
+          *
+          * @param request DescribeMetaListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeMetaListResponse
+         */
         public DescribeMetaListResponse DescribeMetaListWithOptions(DescribeMetaListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14650,6 +19146,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeMetaListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call the [RestoreTable](~~131510~~) operation to restore individual databases or tables of an ApsaraDB RDS for MySQL instance, you can call this operation to query the information about the databases and tables that can be restored. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+          * > This operation is supported only when the instance runs MySQL 8.0, MySQL 5.7, or MySQL 5.6 on RDS High-availability Edition with local disks.
+          *
+          * @param request DescribeMetaListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeMetaListResponse
+         */
         public async Task<DescribeMetaListResponse> DescribeMetaListWithOptionsAsync(DescribeMetaListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14725,12 +19229,26 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeMetaListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call the [RestoreTable](~~131510~~) operation to restore individual databases or tables of an ApsaraDB RDS for MySQL instance, you can call this operation to query the information about the databases and tables that can be restored. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+          * > This operation is supported only when the instance runs MySQL 8.0, MySQL 5.7, or MySQL 5.6 on RDS High-availability Edition with local disks.
+          *
+          * @param request DescribeMetaListRequest
+          * @return DescribeMetaListResponse
+         */
         public DescribeMetaListResponse DescribeMetaList(DescribeMetaListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeMetaListWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call the [RestoreTable](~~131510~~) operation to restore individual databases or tables of an ApsaraDB RDS for MySQL instance, you can call this operation to query the information about the databases and tables that can be restored. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+          * > This operation is supported only when the instance runs MySQL 8.0, MySQL 5.7, or MySQL 5.6 on RDS High-availability Edition with local disks.
+          *
+          * @param request DescribeMetaListRequest
+          * @return DescribeMetaListResponse
+         */
         public async Task<DescribeMetaListResponse> DescribeMetaListAsync(DescribeMetaListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14843,6 +19361,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeMigrateTaskByIdWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation allows you to query the migration tasks that are created for the instance over the last week.
+          * > 
+          * *   This operation is supported only for migration tasks that are created to migrate full backup files.
+          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request DescribeMigrateTasksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeMigrateTasksResponse
+         */
         public DescribeMigrateTasksResponse DescribeMigrateTasksWithOptions(DescribeMigrateTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14902,6 +19430,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeMigrateTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation allows you to query the migration tasks that are created for the instance over the last week.
+          * > 
+          * *   This operation is supported only for migration tasks that are created to migrate full backup files.
+          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request DescribeMigrateTasksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeMigrateTasksResponse
+         */
         public async Task<DescribeMigrateTasksResponse> DescribeMigrateTasksWithOptionsAsync(DescribeMigrateTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14961,12 +19499,30 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeMigrateTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation allows you to query the migration tasks that are created for the instance over the last week.
+          * > 
+          * *   This operation is supported only for migration tasks that are created to migrate full backup files.
+          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request DescribeMigrateTasksRequest
+          * @return DescribeMigrateTasksResponse
+         */
         public DescribeMigrateTasksResponse DescribeMigrateTasks(DescribeMigrateTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeMigrateTasksWithOptions(request, runtime);
         }
 
+        /**
+          * This operation allows you to query the migration tasks that are created for the instance over the last week.
+          * > 
+          * *   This operation is supported only for migration tasks that are created to migrate full backup files.
+          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          *
+          * @param request DescribeMigrateTasksRequest
+          * @return DescribeMigrateTasksResponse
+         */
         public async Task<DescribeMigrateTasksResponse> DescribeMigrateTasksAsync(DescribeMigrateTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15233,6 +19789,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeModifyParameterLogWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * >  This operation is not supported for instances that run SQL Server 2017 EE or SQL Server 2019 EE.
+          *
+          * @param request DescribeOssDownloadsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeOssDownloadsResponse
+         */
         public DescribeOssDownloadsResponse DescribeOssDownloadsWithOptions(DescribeOssDownloadsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15280,6 +19843,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeOssDownloadsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is not supported for instances that run SQL Server 2017 EE or SQL Server 2019 EE.
+          *
+          * @param request DescribeOssDownloadsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeOssDownloadsResponse
+         */
         public async Task<DescribeOssDownloadsResponse> DescribeOssDownloadsWithOptionsAsync(DescribeOssDownloadsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15327,12 +19897,24 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeOssDownloadsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * >  This operation is not supported for instances that run SQL Server 2017 EE or SQL Server 2019 EE.
+          *
+          * @param request DescribeOssDownloadsRequest
+          * @return DescribeOssDownloadsResponse
+         */
         public DescribeOssDownloadsResponse DescribeOssDownloads(DescribeOssDownloadsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeOssDownloadsWithOptions(request, runtime);
         }
 
+        /**
+          * >  This operation is not supported for instances that run SQL Server 2017 EE or SQL Server 2019 EE.
+          *
+          * @param request DescribeOssDownloadsRequest
+          * @return DescribeOssDownloadsResponse
+         */
         public async Task<DescribeOssDownloadsResponse> DescribeOssDownloadsAsync(DescribeOssDownloadsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15453,6 +20035,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribePGHbaConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to instances. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * >  You can apply parameter templates only to ApsaraDB RDS for MySQL instances and ApsaraDB RDS for PostgreSQL instances.
+          *
+          * @param request DescribeParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParameterGroupResponse
+         */
         public DescribeParameterGroupResponse DescribeParameterGroupWithOptions(DescribeParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15496,6 +20086,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeParameterGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to instances. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * >  You can apply parameter templates only to ApsaraDB RDS for MySQL instances and ApsaraDB RDS for PostgreSQL instances.
+          *
+          * @param request DescribeParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParameterGroupResponse
+         */
         public async Task<DescribeParameterGroupResponse> DescribeParameterGroupWithOptionsAsync(DescribeParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15539,18 +20137,40 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to instances. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * >  You can apply parameter templates only to ApsaraDB RDS for MySQL instances and ApsaraDB RDS for PostgreSQL instances.
+          *
+          * @param request DescribeParameterGroupRequest
+          * @return DescribeParameterGroupResponse
+         */
         public DescribeParameterGroupResponse DescribeParameterGroup(DescribeParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeParameterGroupWithOptions(request, runtime);
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to instances. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * >  You can apply parameter templates only to ApsaraDB RDS for MySQL instances and ApsaraDB RDS for PostgreSQL instances.
+          *
+          * @param request DescribeParameterGroupRequest
+          * @return DescribeParameterGroupResponse
+         */
         public async Task<DescribeParameterGroupResponse> DescribeParameterGroupAsync(DescribeParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeParameterGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to instances. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * >  You can apply parameter templates only to ApsaraDB RDS for MySQL instances and ApsaraDB RDS for PostgreSQL instances.
+          *
+          * @param request DescribeParameterGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParameterGroupsResponse
+         */
         public DescribeParameterGroupsResponse DescribeParameterGroupsWithOptions(DescribeParameterGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15594,6 +20214,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeParameterGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to instances. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * >  You can apply parameter templates only to ApsaraDB RDS for MySQL instances and ApsaraDB RDS for PostgreSQL instances.
+          *
+          * @param request DescribeParameterGroupsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParameterGroupsResponse
+         */
         public async Task<DescribeParameterGroupsResponse> DescribeParameterGroupsWithOptionsAsync(DescribeParameterGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15637,18 +20265,43 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeParameterGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to instances. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * >  You can apply parameter templates only to ApsaraDB RDS for MySQL instances and ApsaraDB RDS for PostgreSQL instances.
+          *
+          * @param request DescribeParameterGroupsRequest
+          * @return DescribeParameterGroupsResponse
+         */
         public DescribeParameterGroupsResponse DescribeParameterGroups(DescribeParameterGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeParameterGroupsWithOptions(request, runtime);
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to instances. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * >  You can apply parameter templates only to ApsaraDB RDS for MySQL instances and ApsaraDB RDS for PostgreSQL instances.
+          *
+          * @param request DescribeParameterGroupsRequest
+          * @return DescribeParameterGroupsResponse
+         */
         public async Task<DescribeParameterGroupsResponse> DescribeParameterGroupsAsync(DescribeParameterGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeParameterGroupsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL 5.5, 5.6, 5.7, and 8.0
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL 9.4, 10, 11, and 12
+          * *   MariaDB 10.3
+          *
+          * @param request DescribeParameterTemplatesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParameterTemplatesResponse
+         */
         public DescribeParameterTemplatesResponse DescribeParameterTemplatesWithOptions(DescribeParameterTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15712,6 +20365,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeParameterTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL 5.5, 5.6, 5.7, and 8.0
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL 9.4, 10, 11, and 12
+          * *   MariaDB 10.3
+          *
+          * @param request DescribeParameterTemplatesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParameterTemplatesResponse
+         */
         public async Task<DescribeParameterTemplatesResponse> DescribeParameterTemplatesWithOptionsAsync(DescribeParameterTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15775,18 +20439,49 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeParameterTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL 5.5, 5.6, 5.7, and 8.0
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL 9.4, 10, 11, and 12
+          * *   MariaDB 10.3
+          *
+          * @param request DescribeParameterTemplatesRequest
+          * @return DescribeParameterTemplatesResponse
+         */
         public DescribeParameterTemplatesResponse DescribeParameterTemplates(DescribeParameterTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeParameterTemplatesWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL 5.5, 5.6, 5.7, and 8.0
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL 9.4, 10, 11, and 12
+          * *   MariaDB 10.3
+          *
+          * @param request DescribeParameterTemplatesRequest
+          * @return DescribeParameterTemplatesResponse
+         */
         public async Task<DescribeParameterTemplatesResponse> DescribeParameterTemplatesAsync(DescribeParameterTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeParameterTemplatesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL 5.5, MySQL 5.6, MySQL 5.7, or MySQL 8.0
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15
+          * *   MariaDB 10.3
+          *
+          * @param request DescribeParametersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParametersResponse
+         */
         public DescribeParametersResponse DescribeParametersWithOptions(DescribeParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15834,6 +20529,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeParametersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL 5.5, MySQL 5.6, MySQL 5.7, or MySQL 8.0
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15
+          * *   MariaDB 10.3
+          *
+          * @param request DescribeParametersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeParametersResponse
+         */
         public async Task<DescribeParametersResponse> DescribeParametersWithOptionsAsync(DescribeParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15881,12 +20587,32 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL 5.5, MySQL 5.6, MySQL 5.7, or MySQL 8.0
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15
+          * *   MariaDB 10.3
+          *
+          * @param request DescribeParametersRequest
+          * @return DescribeParametersResponse
+         */
         public DescribeParametersResponse DescribeParameters(DescribeParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeParametersWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL 5.5, MySQL 5.6, MySQL 5.7, or MySQL 8.0
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15
+          * *   MariaDB 10.3
+          *
+          * @param request DescribeParametersRequest
+          * @return DescribeParametersResponse
+         */
         public async Task<DescribeParametersResponse> DescribeParametersAsync(DescribeParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16131,6 +20857,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribePriceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeRdsResourceSettingsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRdsResourceSettingsResponse
+         */
+        // Deprecated
         public DescribeRdsResourceSettingsResponse DescribeRdsResourceSettingsWithOptions(DescribeRdsResourceSettingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16170,6 +20904,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeRdsResourceSettingsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeRdsResourceSettingsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRdsResourceSettingsResponse
+         */
+        // Deprecated
         public async Task<DescribeRdsResourceSettingsResponse> DescribeRdsResourceSettingsWithOptionsAsync(DescribeRdsResourceSettingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16209,18 +20951,41 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeRdsResourceSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeRdsResourceSettingsRequest
+          * @return DescribeRdsResourceSettingsResponse
+         */
+        // Deprecated
         public DescribeRdsResourceSettingsResponse DescribeRdsResourceSettings(DescribeRdsResourceSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRdsResourceSettingsWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeRdsResourceSettingsRequest
+          * @return DescribeRdsResourceSettingsResponse
+         */
+        // Deprecated
         public async Task<DescribeRdsResourceSettingsResponse> DescribeRdsResourceSettingsAsync(DescribeRdsResourceSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRdsResourceSettingsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The primary instance must run the MySQL or PostgreSQL database engine.
+          * *   The primary instance must be attached with a read-only instance.
+          *
+          * @param request DescribeReadDBInstanceDelayRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeReadDBInstanceDelayResponse
+         */
         public DescribeReadDBInstanceDelayResponse DescribeReadDBInstanceDelayWithOptions(DescribeReadDBInstanceDelayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16276,6 +21041,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeReadDBInstanceDelayResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The primary instance must run the MySQL or PostgreSQL database engine.
+          * *   The primary instance must be attached with a read-only instance.
+          *
+          * @param request DescribeReadDBInstanceDelayRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeReadDBInstanceDelayResponse
+         */
         public async Task<DescribeReadDBInstanceDelayResponse> DescribeReadDBInstanceDelayWithOptionsAsync(DescribeReadDBInstanceDelayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16331,12 +21105,28 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeReadDBInstanceDelayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The primary instance must run the MySQL or PostgreSQL database engine.
+          * *   The primary instance must be attached with a read-only instance.
+          *
+          * @param request DescribeReadDBInstanceDelayRequest
+          * @return DescribeReadDBInstanceDelayResponse
+         */
         public DescribeReadDBInstanceDelayResponse DescribeReadDBInstanceDelay(DescribeReadDBInstanceDelayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeReadDBInstanceDelayWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The primary instance must run the MySQL or PostgreSQL database engine.
+          * *   The primary instance must be attached with a read-only instance.
+          *
+          * @param request DescribeReadDBInstanceDelayRequest
+          * @return DescribeReadDBInstanceDelayResponse
+         */
         public async Task<DescribeReadDBInstanceDelayResponse> DescribeReadDBInstanceDelayAsync(DescribeReadDBInstanceDelayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16441,6 +21231,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeRegionInfosWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call the [CreateDBInstance](~~26228~~) operation to create an RDS instance, you can call the DescribeRegions operation to query the available regions and zones.
+          * >  If a zone supports the multi-zone deployment method, the value of the ZoneId parameter for the zone contains an MAZ part. Examples: cn-hangzhou-MAZ6(b,f) and cn-hangzhou-MAZ5(b,e,f).
+          *
+          * @param request DescribeRegionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRegionsResponse
+         */
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16472,6 +21270,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call the [CreateDBInstance](~~26228~~) operation to create an RDS instance, you can call the DescribeRegions operation to query the available regions and zones.
+          * >  If a zone supports the multi-zone deployment method, the value of the ZoneId parameter for the zone contains an MAZ part. Examples: cn-hangzhou-MAZ6(b,f) and cn-hangzhou-MAZ5(b,e,f).
+          *
+          * @param request DescribeRegionsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRegionsResponse
+         */
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16503,18 +21309,39 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call the [CreateDBInstance](~~26228~~) operation to create an RDS instance, you can call the DescribeRegions operation to query the available regions and zones.
+          * >  If a zone supports the multi-zone deployment method, the value of the ZoneId parameter for the zone contains an MAZ part. Examples: cn-hangzhou-MAZ6(b,f) and cn-hangzhou-MAZ5(b,e,f).
+          *
+          * @param request DescribeRegionsRequest
+          * @return DescribeRegionsResponse
+         */
         public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRegionsWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call the [CreateDBInstance](~~26228~~) operation to create an RDS instance, you can call the DescribeRegions operation to query the available regions and zones.
+          * >  If a zone supports the multi-zone deployment method, the value of the ZoneId parameter for the zone contains an MAZ part. Examples: cn-hangzhou-MAZ6(b,f) and cn-hangzhou-MAZ5(b,e,f).
+          *
+          * @param request DescribeRegionsRequest
+          * @return DescribeRegionsResponse
+         */
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is supported only for subscription instances.
+          *
+          * @param request DescribeRenewalPriceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRenewalPriceResponse
+         */
         public DescribeRenewalPriceResponse DescribeRenewalPriceWithOptions(DescribeRenewalPriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16594,6 +21421,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeRenewalPriceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported only for subscription instances.
+          *
+          * @param request DescribeRenewalPriceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeRenewalPriceResponse
+         */
         public async Task<DescribeRenewalPriceResponse> DescribeRenewalPriceWithOptionsAsync(DescribeRenewalPriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16673,12 +21507,24 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeRenewalPriceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported only for subscription instances.
+          *
+          * @param request DescribeRenewalPriceRequest
+          * @return DescribeRenewalPriceResponse
+         */
         public DescribeRenewalPriceResponse DescribeRenewalPrice(DescribeRenewalPriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRenewalPriceWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is supported only for subscription instances.
+          *
+          * @param request DescribeRenewalPriceRequest
+          * @return DescribeRenewalPriceResponse
+         */
         public async Task<DescribeRenewalPriceResponse> DescribeRenewalPriceAsync(DescribeRenewalPriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16791,6 +21637,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeResourceUsageWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is applicable to the following database engine versions:
+          * *   MySQL
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL
+          *
+          * @param request DescribeSQLCollectorPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSQLCollectorPolicyResponse
+         */
         public DescribeSQLCollectorPolicyResponse DescribeSQLCollectorPolicyWithOptions(DescribeSQLCollectorPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16842,6 +21698,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeSQLCollectorPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is applicable to the following database engine versions:
+          * *   MySQL
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL
+          *
+          * @param request DescribeSQLCollectorPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSQLCollectorPolicyResponse
+         */
         public async Task<DescribeSQLCollectorPolicyResponse> DescribeSQLCollectorPolicyWithOptionsAsync(DescribeSQLCollectorPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16893,18 +21759,44 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeSQLCollectorPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is applicable to the following database engine versions:
+          * *   MySQL
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL
+          *
+          * @param request DescribeSQLCollectorPolicyRequest
+          * @return DescribeSQLCollectorPolicyResponse
+         */
         public DescribeSQLCollectorPolicyResponse DescribeSQLCollectorPolicy(DescribeSQLCollectorPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSQLCollectorPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is applicable to the following database engine versions:
+          * *   MySQL
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL
+          *
+          * @param request DescribeSQLCollectorPolicyRequest
+          * @return DescribeSQLCollectorPolicyResponse
+         */
         public async Task<DescribeSQLCollectorPolicyResponse> DescribeSQLCollectorPolicyAsync(DescribeSQLCollectorPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSQLCollectorPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The SQL explorer feature must be enabled for the instance.
+          * The instance must run MySQL. For more information, see [SQL Explorer](~~96123~~).
+          *
+          * @param request DescribeSQLCollectorRetentionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSQLCollectorRetentionResponse
+         */
         public DescribeSQLCollectorRetentionResponse DescribeSQLCollectorRetentionWithOptions(DescribeSQLCollectorRetentionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16956,6 +21848,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeSQLCollectorRetentionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The SQL explorer feature must be enabled for the instance.
+          * The instance must run MySQL. For more information, see [SQL Explorer](~~96123~~).
+          *
+          * @param request DescribeSQLCollectorRetentionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSQLCollectorRetentionResponse
+         */
         public async Task<DescribeSQLCollectorRetentionResponse> DescribeSQLCollectorRetentionWithOptionsAsync(DescribeSQLCollectorRetentionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17007,18 +21907,43 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeSQLCollectorRetentionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The SQL explorer feature must be enabled for the instance.
+          * The instance must run MySQL. For more information, see [SQL Explorer](~~96123~~).
+          *
+          * @param request DescribeSQLCollectorRetentionRequest
+          * @return DescribeSQLCollectorRetentionResponse
+         */
         public DescribeSQLCollectorRetentionResponse DescribeSQLCollectorRetention(DescribeSQLCollectorRetentionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSQLCollectorRetentionWithOptions(request, runtime);
         }
 
+        /**
+          * The SQL explorer feature must be enabled for the instance.
+          * The instance must run MySQL. For more information, see [SQL Explorer](~~96123~~).
+          *
+          * @param request DescribeSQLCollectorRetentionRequest
+          * @return DescribeSQLCollectorRetentionResponse
+         */
         public async Task<DescribeSQLCollectorRetentionResponse> DescribeSQLCollectorRetentionAsync(DescribeSQLCollectorRetentionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSQLCollectorRetentionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL
+          * >  The DescribeSQLLogFiles operation cannot be used to query the audit log files that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
+          *
+          * @param request DescribeSQLLogFilesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSQLLogFilesResponse
+         */
         public DescribeSQLLogFilesResponse DescribeSQLLogFilesWithOptions(DescribeSQLLogFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17074,6 +21999,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeSQLLogFilesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL
+          * >  The DescribeSQLLogFiles operation cannot be used to query the audit log files that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
+          *
+          * @param request DescribeSQLLogFilesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSQLLogFilesResponse
+         */
         public async Task<DescribeSQLLogFilesResponse> DescribeSQLLogFilesWithOptionsAsync(DescribeSQLLogFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17129,18 +22065,52 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeSQLLogFilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL
+          * >  The DescribeSQLLogFiles operation cannot be used to query the audit log files that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
+          *
+          * @param request DescribeSQLLogFilesRequest
+          * @return DescribeSQLLogFilesResponse
+         */
         public DescribeSQLLogFilesResponse DescribeSQLLogFiles(DescribeSQLLogFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSQLLogFilesWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server 2008 R2
+          * *   PostgreSQL
+          * >  The DescribeSQLLogFiles operation cannot be used to query the audit log files that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
+          *
+          * @param request DescribeSQLLogFilesRequest
+          * @return DescribeSQLLogFilesResponse
+         */
         public async Task<DescribeSQLLogFilesResponse> DescribeSQLLogFilesAsync(DescribeSQLLogFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSQLLogFilesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          * > 
+          * *   You can call this operation up to 1,000 times per minute per account. The calls initiated by using both your Alibaba Cloud account and RAM users within your Alibaba Cloud account are counted.
+          * *   This operation cannot be used to query the logs that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
+          * *   When you call this operation and set the **Form** parameter to **File** to generate an audit file, a maximum of 1 million log entries can be recorded in the audit file, and you cannot filter log entries by keyword.
+          *
+          * @param request DescribeSQLLogRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSQLLogRecordsResponse
+         */
         public DescribeSQLLogRecordsResponse DescribeSQLLogRecordsWithOptions(DescribeSQLLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17224,6 +22194,20 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeSQLLogRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          * > 
+          * *   You can call this operation up to 1,000 times per minute per account. The calls initiated by using both your Alibaba Cloud account and RAM users within your Alibaba Cloud account are counted.
+          * *   This operation cannot be used to query the logs that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
+          * *   When you call this operation and set the **Form** parameter to **File** to generate an audit file, a maximum of 1 million log entries can be recorded in the audit file, and you cannot filter log entries by keyword.
+          *
+          * @param request DescribeSQLLogRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSQLLogRecordsResponse
+         */
         public async Task<DescribeSQLLogRecordsResponse> DescribeSQLLogRecordsWithOptionsAsync(DescribeSQLLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17307,12 +22291,38 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeSQLLogRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          * > 
+          * *   You can call this operation up to 1,000 times per minute per account. The calls initiated by using both your Alibaba Cloud account and RAM users within your Alibaba Cloud account are counted.
+          * *   This operation cannot be used to query the logs that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
+          * *   When you call this operation and set the **Form** parameter to **File** to generate an audit file, a maximum of 1 million log entries can be recorded in the audit file, and you cannot filter log entries by keyword.
+          *
+          * @param request DescribeSQLLogRecordsRequest
+          * @return DescribeSQLLogRecordsResponse
+         */
         public DescribeSQLLogRecordsResponse DescribeSQLLogRecords(DescribeSQLLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSQLLogRecordsWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          * > 
+          * *   You can call this operation up to 1,000 times per minute per account. The calls initiated by using both your Alibaba Cloud account and RAM users within your Alibaba Cloud account are counted.
+          * *   This operation cannot be used to query the logs that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
+          * *   When you call this operation and set the **Form** parameter to **File** to generate an audit file, a maximum of 1 million log entries can be recorded in the audit file, and you cannot filter log entries by keyword.
+          *
+          * @param request DescribeSQLLogRecordsRequest
+          * @return DescribeSQLLogRecordsResponse
+         */
         public async Task<DescribeSQLLogRecordsResponse> DescribeSQLLogRecordsAsync(DescribeSQLLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17595,6 +22605,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeSecretsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          *
+          * @param request DescribeSecurityGroupConfigurationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSecurityGroupConfigurationResponse
+         */
         public DescribeSecurityGroupConfigurationResponse DescribeSecurityGroupConfigurationWithOptions(DescribeSecurityGroupConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17634,6 +22651,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeSecurityGroupConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          *
+          * @param request DescribeSecurityGroupConfigurationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSecurityGroupConfigurationResponse
+         */
         public async Task<DescribeSecurityGroupConfigurationResponse> DescribeSecurityGroupConfigurationWithOptionsAsync(DescribeSecurityGroupConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17673,18 +22697,177 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeSecurityGroupConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          *
+          * @param request DescribeSecurityGroupConfigurationRequest
+          * @return DescribeSecurityGroupConfigurationResponse
+         */
         public DescribeSecurityGroupConfigurationResponse DescribeSecurityGroupConfiguration(DescribeSecurityGroupConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSecurityGroupConfigurationWithOptions(request, runtime);
         }
 
+        /**
+          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          *
+          * @param request DescribeSecurityGroupConfigurationRequest
+          * @return DescribeSecurityGroupConfigurationResponse
+         */
         public async Task<DescribeSecurityGroupConfigurationResponse> DescribeSecurityGroupConfigurationAsync(DescribeSecurityGroupConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSecurityGroupConfigurationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is available only for ApsaraDB RDS for PostgreSQL instances.
+          *
+          * @param request DescribeSlotsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSlotsResponse
+         */
+        public DescribeSlotsResponse DescribeSlotsWithOptions(DescribeSlotsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSlots",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSlotsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * This operation is available only for ApsaraDB RDS for PostgreSQL instances.
+          *
+          * @param request DescribeSlotsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSlotsResponse
+         */
+        public async Task<DescribeSlotsResponse> DescribeSlotsWithOptionsAsync(DescribeSlotsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSlots",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSlotsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * This operation is available only for ApsaraDB RDS for PostgreSQL instances.
+          *
+          * @param request DescribeSlotsRequest
+          * @return DescribeSlotsResponse
+         */
+        public DescribeSlotsResponse DescribeSlots(DescribeSlotsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSlotsWithOptions(request, runtime);
+        }
+
+        /**
+          * This operation is available only for ApsaraDB RDS for PostgreSQL instances.
+          *
+          * @param request DescribeSlotsRequest
+          * @return DescribeSlotsResponse
+         */
+        public async Task<DescribeSlotsResponse> DescribeSlotsAsync(DescribeSlotsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSlotsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * The unique ID of the SQL statement.
+          *
+          * @param request DescribeSlowLogRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSlowLogRecordsResponse
+         */
         public DescribeSlowLogRecordsResponse DescribeSlowLogRecordsWithOptions(DescribeSlowLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17700,6 +22883,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -17752,6 +22939,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeSlowLogRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The unique ID of the SQL statement.
+          *
+          * @param request DescribeSlowLogRecordsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSlowLogRecordsResponse
+         */
         public async Task<DescribeSlowLogRecordsResponse> DescribeSlowLogRecordsWithOptionsAsync(DescribeSlowLogRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17767,6 +22961,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -17819,18 +23017,41 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeSlowLogRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The unique ID of the SQL statement.
+          *
+          * @param request DescribeSlowLogRecordsRequest
+          * @return DescribeSlowLogRecordsResponse
+         */
         public DescribeSlowLogRecordsResponse DescribeSlowLogRecords(DescribeSlowLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSlowLogRecordsWithOptions(request, runtime);
         }
 
+        /**
+          * The unique ID of the SQL statement.
+          *
+          * @param request DescribeSlowLogRecordsRequest
+          * @return DescribeSlowLogRecordsResponse
+         */
         public async Task<DescribeSlowLogRecordsResponse> DescribeSlowLogRecordsAsync(DescribeSlowLogRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSlowLogRecordsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engine versions:
+          * *   All MySQL versions except MySQL 5.7 that is used with RDS Basic edition
+          * *   SQL Server 2008 R2
+          * *   MariaDB 10.3
+          * >  Slow query logs are not collected in real time and may show a latency of 6 hours to 8 hours.
+          *
+          * @param request DescribeSlowLogsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSlowLogsResponse
+         */
         public DescribeSlowLogsResponse DescribeSlowLogsWithOptions(DescribeSlowLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17898,6 +23119,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeSlowLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engine versions:
+          * *   All MySQL versions except MySQL 5.7 that is used with RDS Basic edition
+          * *   SQL Server 2008 R2
+          * *   MariaDB 10.3
+          * >  Slow query logs are not collected in real time and may show a latency of 6 hours to 8 hours.
+          *
+          * @param request DescribeSlowLogsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSlowLogsResponse
+         */
         public async Task<DescribeSlowLogsResponse> DescribeSlowLogsWithOptionsAsync(DescribeSlowLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17965,18 +23197,147 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeSlowLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engine versions:
+          * *   All MySQL versions except MySQL 5.7 that is used with RDS Basic edition
+          * *   SQL Server 2008 R2
+          * *   MariaDB 10.3
+          * >  Slow query logs are not collected in real time and may show a latency of 6 hours to 8 hours.
+          *
+          * @param request DescribeSlowLogsRequest
+          * @return DescribeSlowLogsResponse
+         */
         public DescribeSlowLogsResponse DescribeSlowLogs(DescribeSlowLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSlowLogsWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engine versions:
+          * *   All MySQL versions except MySQL 5.7 that is used with RDS Basic edition
+          * *   SQL Server 2008 R2
+          * *   MariaDB 10.3
+          * >  Slow query logs are not collected in real time and may show a latency of 6 hours to 8 hours.
+          *
+          * @param request DescribeSlowLogsRequest
+          * @return DescribeSlowLogsResponse
+         */
         public async Task<DescribeSlowLogsResponse> DescribeSlowLogsAsync(DescribeSlowLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSlowLogsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is supported only for instances that run SQL Server.
+          *
+          * @param request DescribeSupportOnlineResizeDiskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSupportOnlineResizeDiskResponse
+         */
+        public DescribeSupportOnlineResizeDiskResponse DescribeSupportOnlineResizeDiskWithOptions(DescribeSupportOnlineResizeDiskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSupportOnlineResizeDisk",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSupportOnlineResizeDiskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * This operation is supported only for instances that run SQL Server.
+          *
+          * @param request DescribeSupportOnlineResizeDiskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeSupportOnlineResizeDiskResponse
+         */
+        public async Task<DescribeSupportOnlineResizeDiskResponse> DescribeSupportOnlineResizeDiskWithOptionsAsync(DescribeSupportOnlineResizeDiskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSupportOnlineResizeDisk",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSupportOnlineResizeDiskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * This operation is supported only for instances that run SQL Server.
+          *
+          * @param request DescribeSupportOnlineResizeDiskRequest
+          * @return DescribeSupportOnlineResizeDiskResponse
+         */
+        public DescribeSupportOnlineResizeDiskResponse DescribeSupportOnlineResizeDisk(DescribeSupportOnlineResizeDiskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSupportOnlineResizeDiskWithOptions(request, runtime);
+        }
+
+        /**
+          * This operation is supported only for instances that run SQL Server.
+          *
+          * @param request DescribeSupportOnlineResizeDiskRequest
+          * @return DescribeSupportOnlineResizeDiskResponse
+         */
+        public async Task<DescribeSupportOnlineResizeDiskResponse> DescribeSupportOnlineResizeDiskAsync(DescribeSupportOnlineResizeDiskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSupportOnlineResizeDiskWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   If an instance ID is specified, all tags that are added to this instance are queried, and other filter conditions are invalid.
+          * *   If you specify only TagKey, the results that match the specified TagKey are returned. If you specify both TagKey and TagValue, the results that match both the specified TagKey and TagValue are returned.
+          *
+          * @param request DescribeTagsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeTagsResponse
+         */
         public DescribeTagsResponse DescribeTagsWithOptions(DescribeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18040,6 +23401,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeTagsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   If an instance ID is specified, all tags that are added to this instance are queried, and other filter conditions are invalid.
+          * *   If you specify only TagKey, the results that match the specified TagKey are returned. If you specify both TagKey and TagValue, the results that match both the specified TagKey and TagValue are returned.
+          *
+          * @param request DescribeTagsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeTagsResponse
+         */
         public async Task<DescribeTagsResponse> DescribeTagsWithOptionsAsync(DescribeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18103,18 +23473,41 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   If an instance ID is specified, all tags that are added to this instance are queried, and other filter conditions are invalid.
+          * *   If you specify only TagKey, the results that match the specified TagKey are returned. If you specify both TagKey and TagValue, the results that match both the specified TagKey and TagValue are returned.
+          *
+          * @param request DescribeTagsRequest
+          * @return DescribeTagsResponse
+         */
         public DescribeTagsResponse DescribeTags(DescribeTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTagsWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   If an instance ID is specified, all tags that are added to this instance are queried, and other filter conditions are invalid.
+          * *   If you specify only TagKey, the results that match the specified TagKey are returned. If you specify both TagKey and TagValue, the results that match both the specified TagKey and TagValue are returned.
+          *
+          * @param request DescribeTagsRequest
+          * @return DescribeTagsResponse
+         */
         public async Task<DescribeTagsResponse> DescribeTagsAsync(DescribeTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTagsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeTasksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeTasksResponse
+         */
         public DescribeTasksResponse DescribeTasksWithOptions(DescribeTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18182,6 +23575,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeTasksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeTasksResponse
+         */
         public async Task<DescribeTasksResponse> DescribeTasksWithOptionsAsync(DescribeTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18249,18 +23649,38 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeTasksRequest
+          * @return DescribeTasksResponse
+         */
         public DescribeTasksResponse DescribeTasks(DescribeTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTasksWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is phased out.
+          *
+          * @param request DescribeTasksRequest
+          * @return DescribeTasksResponse
+         */
         public async Task<DescribeTasksResponse> DescribeTasksAsync(DescribeTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTasksWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance, you must perform an upgrade check and make sure that the check result is **Success**. You can call this operation to query the upgrade check report.  
+          * If the check result is **Fail**, you must handle the errors that occurred. For more information about how to handle common errors, see [Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance](https://www.alibabacloud.com/help/en/apsaradb-for-rds/latest/introduction-to-the-check-report-of-a-major-engine-version-upgrade-for-an-apsaradb-rds-for-postgresql-instance).
+          *
+          * @param request DescribeUpgradeMajorVersionPrecheckTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeUpgradeMajorVersionPrecheckTaskResponse
+         */
         public DescribeUpgradeMajorVersionPrecheckTaskResponse DescribeUpgradeMajorVersionPrecheckTaskWithOptions(DescribeUpgradeMajorVersionPrecheckTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18320,6 +23740,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeUpgradeMajorVersionPrecheckTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance, you must perform an upgrade check and make sure that the check result is **Success**. You can call this operation to query the upgrade check report.  
+          * If the check result is **Fail**, you must handle the errors that occurred. For more information about how to handle common errors, see [Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance](https://www.alibabacloud.com/help/en/apsaradb-for-rds/latest/introduction-to-the-check-report-of-a-major-engine-version-upgrade-for-an-apsaradb-rds-for-postgresql-instance).
+          *
+          * @param request DescribeUpgradeMajorVersionPrecheckTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeUpgradeMajorVersionPrecheckTaskResponse
+         */
         public async Task<DescribeUpgradeMajorVersionPrecheckTaskResponse> DescribeUpgradeMajorVersionPrecheckTaskWithOptionsAsync(DescribeUpgradeMajorVersionPrecheckTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18379,12 +23807,26 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeUpgradeMajorVersionPrecheckTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance, you must perform an upgrade check and make sure that the check result is **Success**. You can call this operation to query the upgrade check report.  
+          * If the check result is **Fail**, you must handle the errors that occurred. For more information about how to handle common errors, see [Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance](https://www.alibabacloud.com/help/en/apsaradb-for-rds/latest/introduction-to-the-check-report-of-a-major-engine-version-upgrade-for-an-apsaradb-rds-for-postgresql-instance).
+          *
+          * @param request DescribeUpgradeMajorVersionPrecheckTaskRequest
+          * @return DescribeUpgradeMajorVersionPrecheckTaskResponse
+         */
         public DescribeUpgradeMajorVersionPrecheckTaskResponse DescribeUpgradeMajorVersionPrecheckTask(DescribeUpgradeMajorVersionPrecheckTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUpgradeMajorVersionPrecheckTaskWithOptions(request, runtime);
         }
 
+        /**
+          * Before you upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance, you must perform an upgrade check and make sure that the check result is **Success**. You can call this operation to query the upgrade check report.  
+          * If the check result is **Fail**, you must handle the errors that occurred. For more information about how to handle common errors, see [Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance](https://www.alibabacloud.com/help/en/apsaradb-for-rds/latest/introduction-to-the-check-report-of-a-major-engine-version-upgrade-for-an-apsaradb-rds-for-postgresql-instance).
+          *
+          * @param request DescribeUpgradeMajorVersionPrecheckTaskRequest
+          * @return DescribeUpgradeMajorVersionPrecheckTaskResponse
+         */
         public async Task<DescribeUpgradeMajorVersionPrecheckTaskResponse> DescribeUpgradeMajorVersionPrecheckTaskAsync(DescribeUpgradeMajorVersionPrecheckTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18675,6 +24117,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeVSwitchesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The DestroyDBInstance operation is phased out.
+          *
+          * @param request DestroyDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DestroyDBInstanceResponse
+         */
         public DestroyDBInstanceResponse DestroyDBInstanceWithOptions(DestroyDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18722,6 +24171,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DestroyDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The DestroyDBInstance operation is phased out.
+          *
+          * @param request DestroyDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DestroyDBInstanceResponse
+         */
         public async Task<DestroyDBInstanceResponse> DestroyDBInstanceWithOptionsAsync(DestroyDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18769,18 +24225,38 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DestroyDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The DestroyDBInstance operation is phased out.
+          *
+          * @param request DestroyDBInstanceRequest
+          * @return DestroyDBInstanceResponse
+         */
         public DestroyDBInstanceResponse DestroyDBInstance(DestroyDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DestroyDBInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * The DestroyDBInstance operation is phased out.
+          *
+          * @param request DestroyDBInstanceRequest
+          * @return DestroyDBInstanceResponse
+         */
         public async Task<DestroyDBInstanceResponse> DestroyDBInstanceAsync(DestroyDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DestroyDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Precautions
+          * This operation can be used to remove only unit nodes.
+          *
+          * @param request DetachGadInstanceMemberRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DetachGadInstanceMemberResponse
+         */
         public DetachGadInstanceMemberResponse DetachGadInstanceMemberWithOptions(DetachGadInstanceMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18816,6 +24292,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DetachGadInstanceMemberResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Precautions
+          * This operation can be used to remove only unit nodes.
+          *
+          * @param request DetachGadInstanceMemberRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DetachGadInstanceMemberResponse
+         */
         public async Task<DetachGadInstanceMemberResponse> DetachGadInstanceMemberWithOptionsAsync(DetachGadInstanceMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18851,12 +24335,26 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DetachGadInstanceMemberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Precautions
+          * This operation can be used to remove only unit nodes.
+          *
+          * @param request DetachGadInstanceMemberRequest
+          * @return DetachGadInstanceMemberResponse
+         */
         public DetachGadInstanceMemberResponse DetachGadInstanceMember(DetachGadInstanceMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachGadInstanceMemberWithOptions(request, runtime);
         }
 
+        /**
+          * ## Precautions
+          * This operation can be used to remove only unit nodes.
+          *
+          * @param request DetachGadInstanceMemberRequest
+          * @return DetachGadInstanceMemberResponse
+         */
         public async Task<DetachGadInstanceMemberResponse> DetachGadInstanceMemberAsync(DetachGadInstanceMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18929,6 +24427,20 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await GetDBInstanceTopologyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS provides the dedicated proxy feature. You can configure SSL encryption for the dedicated proxy endpoint of an instance. This allows you to ensure the data security of the instance. For more information about the dedicated proxy feature, see [Dedicated proxy](~~138705~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The dedicated proxy feature must be enabled for the instance.
+          * *   The minor engine version that the dedicated proxies of the instance run must be 1.12.8 or later.
+          * *   The minor engine version of the instance must be 20200831 or later, and the instance must run the following MySQL versions and RDS editions:
+          *     *   MySQL 8.0 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.7 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.6 on RDS High-availability Edition with local SSDs
+          *
+          * @param request GetDbProxyInstanceSslRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetDbProxyInstanceSslResponse
+         */
         public GetDbProxyInstanceSslResponse GetDbProxyInstanceSslWithOptions(GetDbProxyInstanceSslRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18968,6 +24480,20 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<GetDbProxyInstanceSslResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS provides the dedicated proxy feature. You can configure SSL encryption for the dedicated proxy endpoint of an instance. This allows you to ensure the data security of the instance. For more information about the dedicated proxy feature, see [Dedicated proxy](~~138705~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The dedicated proxy feature must be enabled for the instance.
+          * *   The minor engine version that the dedicated proxies of the instance run must be 1.12.8 or later.
+          * *   The minor engine version of the instance must be 20200831 or later, and the instance must run the following MySQL versions and RDS editions:
+          *     *   MySQL 8.0 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.7 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.6 on RDS High-availability Edition with local SSDs
+          *
+          * @param request GetDbProxyInstanceSslRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetDbProxyInstanceSslResponse
+         */
         public async Task<GetDbProxyInstanceSslResponse> GetDbProxyInstanceSslWithOptionsAsync(GetDbProxyInstanceSslRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19007,18 +24533,52 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<GetDbProxyInstanceSslResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS provides the dedicated proxy feature. You can configure SSL encryption for the dedicated proxy endpoint of an instance. This allows you to ensure the data security of the instance. For more information about the dedicated proxy feature, see [Dedicated proxy](~~138705~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The dedicated proxy feature must be enabled for the instance.
+          * *   The minor engine version that the dedicated proxies of the instance run must be 1.12.8 or later.
+          * *   The minor engine version of the instance must be 20200831 or later, and the instance must run the following MySQL versions and RDS editions:
+          *     *   MySQL 8.0 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.7 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.6 on RDS High-availability Edition with local SSDs
+          *
+          * @param request GetDbProxyInstanceSslRequest
+          * @return GetDbProxyInstanceSslResponse
+         */
         public GetDbProxyInstanceSslResponse GetDbProxyInstanceSsl(GetDbProxyInstanceSslRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDbProxyInstanceSslWithOptions(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS provides the dedicated proxy feature. You can configure SSL encryption for the dedicated proxy endpoint of an instance. This allows you to ensure the data security of the instance. For more information about the dedicated proxy feature, see [Dedicated proxy](~~138705~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The dedicated proxy feature must be enabled for the instance.
+          * *   The minor engine version that the dedicated proxies of the instance run must be 1.12.8 or later.
+          * *   The minor engine version of the instance must be 20200831 or later, and the instance must run the following MySQL versions and RDS editions:
+          *     *   MySQL 8.0 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.7 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.6 on RDS High-availability Edition with local SSDs
+          *
+          * @param request GetDbProxyInstanceSslRequest
+          * @return GetDbProxyInstanceSslResponse
+         */
         public async Task<GetDbProxyInstanceSslResponse> GetDbProxyInstanceSslAsync(GetDbProxyInstanceSslRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDbProxyInstanceSslWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Each account can be granted permissions on one or more databases. Before you call this operation, make sure that the instance is in the Running state.
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or run PostgreSQL with local disks.
+          *
+          * @param request GrantAccountPrivilegeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GrantAccountPrivilegeResponse
+         */
         public GrantAccountPrivilegeResponse GrantAccountPrivilegeWithOptions(GrantAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19062,6 +24622,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<GrantAccountPrivilegeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Each account can be granted permissions on one or more databases. Before you call this operation, make sure that the instance is in the Running state.
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or run PostgreSQL with local disks.
+          *
+          * @param request GrantAccountPrivilegeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GrantAccountPrivilegeResponse
+         */
         public async Task<GrantAccountPrivilegeResponse> GrantAccountPrivilegeWithOptionsAsync(GrantAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19105,18 +24673,44 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<GrantAccountPrivilegeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Each account can be granted permissions on one or more databases. Before you call this operation, make sure that the instance is in the Running state.
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or run PostgreSQL with local disks.
+          *
+          * @param request GrantAccountPrivilegeRequest
+          * @return GrantAccountPrivilegeResponse
+         */
         public GrantAccountPrivilegeResponse GrantAccountPrivilege(GrantAccountPrivilegeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GrantAccountPrivilegeWithOptions(request, runtime);
         }
 
+        /**
+          * Each account can be granted permissions on one or more databases. Before you call this operation, make sure that the instance is in the Running state.
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or run PostgreSQL with local disks.
+          *
+          * @param request GrantAccountPrivilegeRequest
+          * @return GrantAccountPrivilegeResponse
+         */
         public async Task<GrantAccountPrivilegeResponse> GrantAccountPrivilegeAsync(GrantAccountPrivilegeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GrantAccountPrivilegeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * When you seek help from Alibaba Cloud technical support to troubleshoot instance exceptions, you need to grant permissions to the service account of your instance. The service account is used by Alibaba Cloud technical support to perform operations on the databases of your instance.
+          * This operation is available only when your instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          * For more information, see [Grant permissions to the service account of an ApsaraDB RDS for MySQL instance](~~96102~~), [Grant permissions to the service account of an ApsaraDB RDS for SQL Server instance](~~95693~~), and [Grant permissions to the service account of an ApsaraDB RDS for PostgreSQL instance](~~146887~~).
+          *
+          * @param request GrantOperatorPermissionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GrantOperatorPermissionResponse
+         */
         public GrantOperatorPermissionResponse GrantOperatorPermissionWithOptions(GrantOperatorPermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19168,6 +24762,18 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<GrantOperatorPermissionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * When you seek help from Alibaba Cloud technical support to troubleshoot instance exceptions, you need to grant permissions to the service account of your instance. The service account is used by Alibaba Cloud technical support to perform operations on the databases of your instance.
+          * This operation is available only when your instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          * For more information, see [Grant permissions to the service account of an ApsaraDB RDS for MySQL instance](~~96102~~), [Grant permissions to the service account of an ApsaraDB RDS for SQL Server instance](~~95693~~), and [Grant permissions to the service account of an ApsaraDB RDS for PostgreSQL instance](~~146887~~).
+          *
+          * @param request GrantOperatorPermissionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GrantOperatorPermissionResponse
+         */
         public async Task<GrantOperatorPermissionResponse> GrantOperatorPermissionWithOptionsAsync(GrantOperatorPermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19219,18 +24825,57 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<GrantOperatorPermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * When you seek help from Alibaba Cloud technical support to troubleshoot instance exceptions, you need to grant permissions to the service account of your instance. The service account is used by Alibaba Cloud technical support to perform operations on the databases of your instance.
+          * This operation is available only when your instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          * For more information, see [Grant permissions to the service account of an ApsaraDB RDS for MySQL instance](~~96102~~), [Grant permissions to the service account of an ApsaraDB RDS for SQL Server instance](~~95693~~), and [Grant permissions to the service account of an ApsaraDB RDS for PostgreSQL instance](~~146887~~).
+          *
+          * @param request GrantOperatorPermissionRequest
+          * @return GrantOperatorPermissionResponse
+         */
         public GrantOperatorPermissionResponse GrantOperatorPermission(GrantOperatorPermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GrantOperatorPermissionWithOptions(request, runtime);
         }
 
+        /**
+          * When you seek help from Alibaba Cloud technical support to troubleshoot instance exceptions, you need to grant permissions to the service account of your instance. The service account is used by Alibaba Cloud technical support to perform operations on the databases of your instance.
+          * This operation is available only when your instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          * For more information, see [Grant permissions to the service account of an ApsaraDB RDS for MySQL instance](~~96102~~), [Grant permissions to the service account of an ApsaraDB RDS for SQL Server instance](~~95693~~), and [Grant permissions to the service account of an ApsaraDB RDS for PostgreSQL instance](~~146887~~).
+          *
+          * @param request GrantOperatorPermissionRequest
+          * @return GrantOperatorPermissionResponse
+         */
         public async Task<GrantOperatorPermissionResponse> GrantOperatorPermissionAsync(GrantOperatorPermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GrantOperatorPermissionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
+          * During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
+          * *   The source and destination instances must be created by using the same user credentials.
+          * *   The instance is in the Running state.
+          * *   The source and destination databases must be in the Running state.
+          * *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
+          * > 
+          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          * *   You can migrate the data of multiple databases at a time.
+          *
+          * @param request ImportDatabaseBetweenInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ImportDatabaseBetweenInstancesResponse
+         */
         public ImportDatabaseBetweenInstancesResponse ImportDatabaseBetweenInstancesWithOptions(ImportDatabaseBetweenInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19282,6 +24927,23 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ImportDatabaseBetweenInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
+          * During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
+          * *   The source and destination instances must be created by using the same user credentials.
+          * *   The instance is in the Running state.
+          * *   The source and destination databases must be in the Running state.
+          * *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
+          * > 
+          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          * *   You can migrate the data of multiple databases at a time.
+          *
+          * @param request ImportDatabaseBetweenInstancesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ImportDatabaseBetweenInstancesResponse
+         */
         public async Task<ImportDatabaseBetweenInstancesResponse> ImportDatabaseBetweenInstancesWithOptionsAsync(ImportDatabaseBetweenInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19333,18 +24995,61 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ImportDatabaseBetweenInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
+          * During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
+          * *   The source and destination instances must be created by using the same user credentials.
+          * *   The instance is in the Running state.
+          * *   The source and destination databases must be in the Running state.
+          * *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
+          * > 
+          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          * *   You can migrate the data of multiple databases at a time.
+          *
+          * @param request ImportDatabaseBetweenInstancesRequest
+          * @return ImportDatabaseBetweenInstancesResponse
+         */
         public ImportDatabaseBetweenInstancesResponse ImportDatabaseBetweenInstances(ImportDatabaseBetweenInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ImportDatabaseBetweenInstancesWithOptions(request, runtime);
         }
 
+        /**
+          * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
+          * During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
+          * *   The source and destination instances must be created by using the same user credentials.
+          * *   The instance is in the Running state.
+          * *   The source and destination databases must be in the Running state.
+          * *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
+          * > 
+          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+          * *   You can migrate the data of multiple databases at a time.
+          *
+          * @param request ImportDatabaseBetweenInstancesRequest
+          * @return ImportDatabaseBetweenInstancesResponse
+         */
         public async Task<ImportDatabaseBetweenInstancesResponse> ImportDatabaseBetweenInstancesAsync(ImportDatabaseBetweenInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ImportDatabaseBetweenInstancesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The self-managed MySQL database runs MySQL 5.7 and is backed up by using XtraBackup. The name of the backup file ends with `_qp.xb`. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * *   The full backup file of the self-managed MySQL database is uploaded to an Object Storage Service (OSS) bucket in the region of the ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * > This operation is supported only for MySQL 5.7.
+          *
+          * @param request ImportUserBackupFileRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ImportUserBackupFileResponse
+         */
         public ImportUserBackupFileResponse ImportUserBackupFileWithOptions(ImportUserBackupFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19412,6 +25117,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ImportUserBackupFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The self-managed MySQL database runs MySQL 5.7 and is backed up by using XtraBackup. The name of the backup file ends with `_qp.xb`. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * *   The full backup file of the self-managed MySQL database is uploaded to an Object Storage Service (OSS) bucket in the region of the ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * > This operation is supported only for MySQL 5.7.
+          *
+          * @param request ImportUserBackupFileRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ImportUserBackupFileResponse
+         */
         public async Task<ImportUserBackupFileResponse> ImportUserBackupFileWithOptionsAsync(ImportUserBackupFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19479,12 +25195,32 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ImportUserBackupFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The self-managed MySQL database runs MySQL 5.7 and is backed up by using XtraBackup. The name of the backup file ends with `_qp.xb`. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * *   The full backup file of the self-managed MySQL database is uploaded to an Object Storage Service (OSS) bucket in the region of the ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * > This operation is supported only for MySQL 5.7.
+          *
+          * @param request ImportUserBackupFileRequest
+          * @return ImportUserBackupFileResponse
+         */
         public ImportUserBackupFileResponse ImportUserBackupFile(ImportUserBackupFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ImportUserBackupFileWithOptions(request, runtime);
         }
 
+        /**
+          * > A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The self-managed MySQL database runs MySQL 5.7 and is backed up by using XtraBackup. The name of the backup file ends with `_qp.xb`. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * *   The full backup file of the self-managed MySQL database is uploaded to an Object Storage Service (OSS) bucket in the region of the ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * > This operation is supported only for MySQL 5.7.
+          *
+          * @param request ImportUserBackupFileRequest
+          * @return ImportUserBackupFileResponse
+         */
         public async Task<ImportUserBackupFileResponse> ImportUserBackupFileAsync(ImportUserBackupFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19735,6 +25471,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > 
+          * *   A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * *   Before you call the [CreateDBInstance](~~26228~~) operation to create an ApsaraDB RDS for MySQL instance into which you want to import full backup files, you can call this operation to query the IDs of full backup files.
+          * *   You can call the [ImportUserBackupFile](~~260266~~) operation to import a full backup file into an ApsaraDB RDS for MySQL instance.
+          *
+          * @param request ListUserBackupFilesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListUserBackupFilesResponse
+         */
         public ListUserBackupFilesResponse ListUserBackupFilesWithOptions(ListUserBackupFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19794,6 +25540,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ListUserBackupFilesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > 
+          * *   A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * *   Before you call the [CreateDBInstance](~~26228~~) operation to create an ApsaraDB RDS for MySQL instance into which you want to import full backup files, you can call this operation to query the IDs of full backup files.
+          * *   You can call the [ImportUserBackupFile](~~260266~~) operation to import a full backup file into an ApsaraDB RDS for MySQL instance.
+          *
+          * @param request ListUserBackupFilesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListUserBackupFilesResponse
+         */
         public async Task<ListUserBackupFilesResponse> ListUserBackupFilesWithOptionsAsync(ListUserBackupFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19853,18 +25609,43 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ListUserBackupFilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > 
+          * *   A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * *   Before you call the [CreateDBInstance](~~26228~~) operation to create an ApsaraDB RDS for MySQL instance into which you want to import full backup files, you can call this operation to query the IDs of full backup files.
+          * *   You can call the [ImportUserBackupFile](~~260266~~) operation to import a full backup file into an ApsaraDB RDS for MySQL instance.
+          *
+          * @param request ListUserBackupFilesRequest
+          * @return ListUserBackupFilesResponse
+         */
         public ListUserBackupFilesResponse ListUserBackupFiles(ListUserBackupFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListUserBackupFilesWithOptions(request, runtime);
         }
 
+        /**
+          * > 
+          * *   A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          * *   Before you call the [CreateDBInstance](~~26228~~) operation to create an ApsaraDB RDS for MySQL instance into which you want to import full backup files, you can call this operation to query the IDs of full backup files.
+          * *   You can call the [ImportUserBackupFile](~~260266~~) operation to import a full backup file into an ApsaraDB RDS for MySQL instance.
+          *
+          * @param request ListUserBackupFilesRequest
+          * @return ListUserBackupFilesResponse
+         */
         public async Task<ListUserBackupFilesResponse> ListUserBackupFilesAsync(ListUserBackupFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListUserBackupFilesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You cannot use a locked account to log on to the corresponding instance. You must first unlock the account. For more information, see [Lock and delete an account](~~147649~~).
+          *
+          * @param request LockAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return LockAccountResponse
+         */
         public LockAccountResponse LockAccountWithOptions(LockAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19908,6 +25689,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<LockAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You cannot use a locked account to log on to the corresponding instance. You must first unlock the account. For more information, see [Lock and delete an account](~~147649~~).
+          *
+          * @param request LockAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return LockAccountResponse
+         */
         public async Task<LockAccountResponse> LockAccountWithOptionsAsync(LockAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19951,12 +25739,24 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<LockAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You cannot use a locked account to log on to the corresponding instance. You must first unlock the account. For more information, see [Lock and delete an account](~~147649~~).
+          *
+          * @param request LockAccountRequest
+          * @return LockAccountResponse
+         */
         public LockAccountResponse LockAccount(LockAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return LockAccountWithOptions(request, runtime);
         }
 
+        /**
+          * You cannot use a locked account to log on to the corresponding instance. You must first unlock the account. For more information, see [Lock and delete an account](~~147649~~).
+          *
+          * @param request LockAccountRequest
+          * @return LockAccountResponse
+         */
         public async Task<LockAccountResponse> LockAccountAsync(LockAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20045,6 +25845,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await MigrateConnectionToOtherZoneWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request MigrateDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return MigrateDBInstanceResponse
+         */
         public MigrateDBInstanceResponse MigrateDBInstanceWithOptions(MigrateDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20116,6 +25923,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<MigrateDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request MigrateDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return MigrateDBInstanceResponse
+         */
         public async Task<MigrateDBInstanceResponse> MigrateDBInstanceWithOptionsAsync(MigrateDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20187,18 +26001,41 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<MigrateDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request MigrateDBInstanceRequest
+          * @return MigrateDBInstanceResponse
+         */
         public MigrateDBInstanceResponse MigrateDBInstance(MigrateDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MigrateDBInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request MigrateDBInstanceRequest
+          * @return MigrateDBInstanceResponse
+         */
         public async Task<MigrateDBInstanceResponse> MigrateDBInstanceAsync(MigrateDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MigrateDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   In standard whitelist mode, IP addresses in the whitelist apply to both the classic network and VPCs. To minimize security risks, we recommend that you use the enhanced whitelist mode.
+          * *   In enhanced whitelist mode, IP addresses in the whitelist are divided into VPC IP addresses and IP addresses of the classic network and Internet.
+          * > 
+          * *   You cannot change the whitelist mode from the enhanced whitelist mode to the standard whitelist mode.
+          * *   This operation is not supported for instances that run SQL Server and MariaDB.
+          *
+          * @param request MigrateSecurityIPModeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return MigrateSecurityIPModeResponse
+         */
         public MigrateSecurityIPModeResponse MigrateSecurityIPModeWithOptions(MigrateSecurityIPModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20238,6 +26075,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<MigrateSecurityIPModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   In standard whitelist mode, IP addresses in the whitelist apply to both the classic network and VPCs. To minimize security risks, we recommend that you use the enhanced whitelist mode.
+          * *   In enhanced whitelist mode, IP addresses in the whitelist are divided into VPC IP addresses and IP addresses of the classic network and Internet.
+          * > 
+          * *   You cannot change the whitelist mode from the enhanced whitelist mode to the standard whitelist mode.
+          * *   This operation is not supported for instances that run SQL Server and MariaDB.
+          *
+          * @param request MigrateSecurityIPModeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return MigrateSecurityIPModeResponse
+         */
         public async Task<MigrateSecurityIPModeResponse> MigrateSecurityIPModeWithOptionsAsync(MigrateSecurityIPModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20277,18 +26125,49 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<MigrateSecurityIPModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   In standard whitelist mode, IP addresses in the whitelist apply to both the classic network and VPCs. To minimize security risks, we recommend that you use the enhanced whitelist mode.
+          * *   In enhanced whitelist mode, IP addresses in the whitelist are divided into VPC IP addresses and IP addresses of the classic network and Internet.
+          * > 
+          * *   You cannot change the whitelist mode from the enhanced whitelist mode to the standard whitelist mode.
+          * *   This operation is not supported for instances that run SQL Server and MariaDB.
+          *
+          * @param request MigrateSecurityIPModeRequest
+          * @return MigrateSecurityIPModeResponse
+         */
         public MigrateSecurityIPModeResponse MigrateSecurityIPMode(MigrateSecurityIPModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MigrateSecurityIPModeWithOptions(request, runtime);
         }
 
+        /**
+          * *   In standard whitelist mode, IP addresses in the whitelist apply to both the classic network and VPCs. To minimize security risks, we recommend that you use the enhanced whitelist mode.
+          * *   In enhanced whitelist mode, IP addresses in the whitelist are divided into VPC IP addresses and IP addresses of the classic network and Internet.
+          * > 
+          * *   You cannot change the whitelist mode from the enhanced whitelist mode to the standard whitelist mode.
+          * *   This operation is not supported for instances that run SQL Server and MariaDB.
+          *
+          * @param request MigrateSecurityIPModeRequest
+          * @return MigrateSecurityIPModeResponse
+         */
         public async Task<MigrateSecurityIPModeResponse> MigrateSecurityIPModeAsync(MigrateSecurityIPModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MigrateSecurityIPModeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The prerequisites for this operation vary based on the database engine of the instance. For more information, see the following topics:
+          * *   [RDS MySQL](~~96053~~)
+          * *   [RDS PostgreSQL](~~96746~~)
+          * *   [RDS SQL Server](~~95658~~)
+          * > This operation allows you to migrate an instance across zones in the same region. This operation does not allow you to migrate an instance across zones in different regions. For example, you cannot migrate an instance from a zone in the China (Hangzhou) region to a zone in the China (Qingdao) region.
+          *
+          * @param request MigrateToOtherZoneRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return MigrateToOtherZoneResponse
+         */
         public MigrateToOtherZoneResponse MigrateToOtherZoneWithOptions(MigrateToOtherZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20376,6 +26255,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<MigrateToOtherZoneResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The prerequisites for this operation vary based on the database engine of the instance. For more information, see the following topics:
+          * *   [RDS MySQL](~~96053~~)
+          * *   [RDS PostgreSQL](~~96746~~)
+          * *   [RDS SQL Server](~~95658~~)
+          * > This operation allows you to migrate an instance across zones in the same region. This operation does not allow you to migrate an instance across zones in different regions. For example, you cannot migrate an instance from a zone in the China (Hangzhou) region to a zone in the China (Qingdao) region.
+          *
+          * @param request MigrateToOtherZoneRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return MigrateToOtherZoneResponse
+         */
         public async Task<MigrateToOtherZoneResponse> MigrateToOtherZoneWithOptionsAsync(MigrateToOtherZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20463,18 +26353,45 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<MigrateToOtherZoneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The prerequisites for this operation vary based on the database engine of the instance. For more information, see the following topics:
+          * *   [RDS MySQL](~~96053~~)
+          * *   [RDS PostgreSQL](~~96746~~)
+          * *   [RDS SQL Server](~~95658~~)
+          * > This operation allows you to migrate an instance across zones in the same region. This operation does not allow you to migrate an instance across zones in different regions. For example, you cannot migrate an instance from a zone in the China (Hangzhou) region to a zone in the China (Qingdao) region.
+          *
+          * @param request MigrateToOtherZoneRequest
+          * @return MigrateToOtherZoneResponse
+         */
         public MigrateToOtherZoneResponse MigrateToOtherZone(MigrateToOtherZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MigrateToOtherZoneWithOptions(request, runtime);
         }
 
+        /**
+          * The prerequisites for this operation vary based on the database engine of the instance. For more information, see the following topics:
+          * *   [RDS MySQL](~~96053~~)
+          * *   [RDS PostgreSQL](~~96746~~)
+          * *   [RDS SQL Server](~~95658~~)
+          * > This operation allows you to migrate an instance across zones in the same region. This operation does not allow you to migrate an instance across zones in different regions. For example, you cannot migrate an instance from a zone in the China (Hangzhou) region to a zone in the China (Qingdao) region.
+          *
+          * @param request MigrateToOtherZoneRequest
+          * @return MigrateToOtherZoneResponse
+         */
         public async Task<MigrateToOtherZoneResponse> MigrateToOtherZoneAsync(MigrateToOtherZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MigrateToOtherZoneWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is available only for ApsaraDB RDS for SQL Server instances.
+          *
+          * @param request ModifyADInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyADInfoResponse
+         */
         public ModifyADInfoResponse ModifyADInfoWithOptions(ModifyADInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20538,6 +26455,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyADInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only for ApsaraDB RDS for SQL Server instances.
+          *
+          * @param request ModifyADInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyADInfoResponse
+         */
         public async Task<ModifyADInfoResponse> ModifyADInfoWithOptionsAsync(ModifyADInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20601,18 +26525,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyADInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only for ApsaraDB RDS for SQL Server instances.
+          *
+          * @param request ModifyADInfoRequest
+          * @return ModifyADInfoResponse
+         */
         public ModifyADInfoResponse ModifyADInfo(ModifyADInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyADInfoWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is available only for ApsaraDB RDS for SQL Server instances.
+          *
+          * @param request ModifyADInfoRequest
+          * @return ModifyADInfoResponse
+         */
         public async Task<ModifyADInfoResponse> ModifyADInfoAsync(ModifyADInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyADInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or run PostgreSQL.
+          *
+          * @param request ModifyAccountDescriptionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyAccountDescriptionResponse
+         */
         public ModifyAccountDescriptionResponse ModifyAccountDescriptionWithOptions(ModifyAccountDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20664,6 +26607,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyAccountDescriptionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or run PostgreSQL.
+          *
+          * @param request ModifyAccountDescriptionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyAccountDescriptionResponse
+         */
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescriptionWithOptionsAsync(ModifyAccountDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20715,18 +26665,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyAccountDescriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or run PostgreSQL.
+          *
+          * @param request ModifyAccountDescriptionRequest
+          * @return ModifyAccountDescriptionResponse
+         */
         public ModifyAccountDescriptionResponse ModifyAccountDescription(ModifyAccountDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAccountDescriptionWithOptions(request, runtime);
         }
 
+        /**
+          * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or run PostgreSQL.
+          *
+          * @param request ModifyAccountDescriptionRequest
+          * @return ModifyAccountDescriptionResponse
+         */
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescriptionAsync(ModifyAccountDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAccountDescriptionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The event history feature enables you to view historical events that occurred in a region over a specific time range. These events include instance creation and parameter reconfiguration. For more information, see [Event history](~~129759~~).
+          *
+          * @param request ModifyActionEventPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyActionEventPolicyResponse
+         */
         public ModifyActionEventPolicyResponse ModifyActionEventPolicyWithOptions(ModifyActionEventPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20770,6 +26739,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyActionEventPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The event history feature enables you to view historical events that occurred in a region over a specific time range. These events include instance creation and parameter reconfiguration. For more information, see [Event history](~~129759~~).
+          *
+          * @param request ModifyActionEventPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyActionEventPolicyResponse
+         */
         public async Task<ModifyActionEventPolicyResponse> ModifyActionEventPolicyWithOptionsAsync(ModifyActionEventPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20813,18 +26789,187 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyActionEventPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The event history feature enables you to view historical events that occurred in a region over a specific time range. These events include instance creation and parameter reconfiguration. For more information, see [Event history](~~129759~~).
+          *
+          * @param request ModifyActionEventPolicyRequest
+          * @return ModifyActionEventPolicyResponse
+         */
         public ModifyActionEventPolicyResponse ModifyActionEventPolicy(ModifyActionEventPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyActionEventPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * The event history feature enables you to view historical events that occurred in a region over a specific time range. These events include instance creation and parameter reconfiguration. For more information, see [Event history](~~129759~~).
+          *
+          * @param request ModifyActionEventPolicyRequest
+          * @return ModifyActionEventPolicyResponse
+         */
         public async Task<ModifyActionEventPolicyResponse> ModifyActionEventPolicyAsync(ModifyActionEventPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyActionEventPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * O\\&M tasks such as instance migration and version upgrades are notified by text message, phone call, email, internal message, or in the ApsaraDB RDS console. You can call this operation to change the scheduled switching time. You can also view the task and change the switching time on the Task Center page.
+          *
+          * @param request ModifyActiveOperationTasksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyActiveOperationTasksResponse
+         */
+        public ModifyActiveOperationTasksResponse ModifyActiveOperationTasksWithOptions(ModifyActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
+            {
+                query["Ids"] = request.Ids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImmediateStart))
+            {
+                query["ImmediateStart"] = request.ImmediateStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTime))
+            {
+                query["SwitchTime"] = request.SwitchTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyActiveOperationTasks",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * O\\&M tasks such as instance migration and version upgrades are notified by text message, phone call, email, internal message, or in the ApsaraDB RDS console. You can call this operation to change the scheduled switching time. You can also view the task and change the switching time on the Task Center page.
+          *
+          * @param request ModifyActiveOperationTasksRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyActiveOperationTasksResponse
+         */
+        public async Task<ModifyActiveOperationTasksResponse> ModifyActiveOperationTasksWithOptionsAsync(ModifyActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
+            {
+                query["Ids"] = request.Ids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImmediateStart))
+            {
+                query["ImmediateStart"] = request.ImmediateStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTime))
+            {
+                query["SwitchTime"] = request.SwitchTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyActiveOperationTasks",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * O\\&M tasks such as instance migration and version upgrades are notified by text message, phone call, email, internal message, or in the ApsaraDB RDS console. You can call this operation to change the scheduled switching time. You can also view the task and change the switching time on the Task Center page.
+          *
+          * @param request ModifyActiveOperationTasksRequest
+          * @return ModifyActiveOperationTasksResponse
+         */
+        public ModifyActiveOperationTasksResponse ModifyActiveOperationTasks(ModifyActiveOperationTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyActiveOperationTasksWithOptions(request, runtime);
+        }
+
+        /**
+          * O\\&M tasks such as instance migration and version upgrades are notified by text message, phone call, email, internal message, or in the ApsaraDB RDS console. You can call this operation to change the scheduled switching time. You can also view the task and change the switching time on the Task Center page.
+          *
+          * @param request ModifyActiveOperationTasksRequest
+          * @return ModifyActiveOperationTasksResponse
+         */
+        public async Task<ModifyActiveOperationTasksResponse> ModifyActiveOperationTasksAsync(ModifyActiveOperationTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyActiveOperationTasksWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is not a read-only instance.
+          * *   The instance is in the Running state.
+          *
+          * @param request ModifyBackupPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyBackupPolicyResponse
+         */
         public ModifyBackupPolicyResponse ModifyBackupPolicyWithOptions(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20952,6 +27097,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is not a read-only instance.
+          * *   The instance is in the Running state.
+          *
+          * @param request ModifyBackupPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyBackupPolicyResponse
+         */
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyWithOptionsAsync(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21079,18 +27233,41 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is not a read-only instance.
+          * *   The instance is in the Running state.
+          *
+          * @param request ModifyBackupPolicyRequest
+          * @return ModifyBackupPolicyResponse
+         */
         public ModifyBackupPolicyResponse ModifyBackupPolicy(ModifyBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyBackupPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is not a read-only instance.
+          * *   The instance is in the Running state.
+          *
+          * @param request ModifyBackupPolicyRequest
+          * @return ModifyBackupPolicyResponse
+         */
         public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyAsync(ModifyBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyBackupPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > This operation is phased out.
+          *
+          * @param request ModifyCollationTimeZoneRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyCollationTimeZoneResponse
+         */
         public ModifyCollationTimeZoneResponse ModifyCollationTimeZoneWithOptions(ModifyCollationTimeZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21138,6 +27315,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyCollationTimeZoneResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > This operation is phased out.
+          *
+          * @param request ModifyCollationTimeZoneRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyCollationTimeZoneResponse
+         */
         public async Task<ModifyCollationTimeZoneResponse> ModifyCollationTimeZoneWithOptionsAsync(ModifyCollationTimeZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21185,18 +27369,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyCollationTimeZoneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > This operation is phased out.
+          *
+          * @param request ModifyCollationTimeZoneRequest
+          * @return ModifyCollationTimeZoneResponse
+         */
         public ModifyCollationTimeZoneResponse ModifyCollationTimeZone(ModifyCollationTimeZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyCollationTimeZoneWithOptions(request, runtime);
         }
 
+        /**
+          * > This operation is phased out.
+          *
+          * @param request ModifyCollationTimeZoneRequest
+          * @return ModifyCollationTimeZoneResponse
+         */
         public async Task<ModifyCollationTimeZoneResponse> ModifyCollationTimeZoneAsync(ModifyCollationTimeZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyCollationTimeZoneWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > This operation is not applicable to instances that run PostgreSQL.
+          *
+          * @param request ModifyDBDescriptionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBDescriptionResponse
+         */
         public ModifyDBDescriptionResponse ModifyDBDescriptionWithOptions(ModifyDBDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21248,6 +27451,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBDescriptionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > This operation is not applicable to instances that run PostgreSQL.
+          *
+          * @param request ModifyDBDescriptionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBDescriptionResponse
+         */
         public async Task<ModifyDBDescriptionResponse> ModifyDBDescriptionWithOptionsAsync(ModifyDBDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21299,18 +27509,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBDescriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > This operation is not applicable to instances that run PostgreSQL.
+          *
+          * @param request ModifyDBDescriptionRequest
+          * @return ModifyDBDescriptionResponse
+         */
         public ModifyDBDescriptionResponse ModifyDBDescription(ModifyDBDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBDescriptionWithOptions(request, runtime);
         }
 
+        /**
+          * > This operation is not applicable to instances that run PostgreSQL.
+          *
+          * @param request ModifyDBDescriptionRequest
+          * @return ModifyDBDescriptionResponse
+         */
         public async Task<ModifyDBDescriptionResponse> ModifyDBDescriptionAsync(ModifyDBDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBDescriptionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is supported only for instances that run MySQL.
+          *
+          * @param request ModifyDBInstanceAutoUpgradeMinorVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceAutoUpgradeMinorVersionResponse
+         */
         public ModifyDBInstanceAutoUpgradeMinorVersionResponse ModifyDBInstanceAutoUpgradeMinorVersionWithOptions(ModifyDBInstanceAutoUpgradeMinorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21358,6 +27587,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceAutoUpgradeMinorVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported only for instances that run MySQL.
+          *
+          * @param request ModifyDBInstanceAutoUpgradeMinorVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceAutoUpgradeMinorVersionResponse
+         */
         public async Task<ModifyDBInstanceAutoUpgradeMinorVersionResponse> ModifyDBInstanceAutoUpgradeMinorVersionWithOptionsAsync(ModifyDBInstanceAutoUpgradeMinorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21405,18 +27641,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceAutoUpgradeMinorVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported only for instances that run MySQL.
+          *
+          * @param request ModifyDBInstanceAutoUpgradeMinorVersionRequest
+          * @return ModifyDBInstanceAutoUpgradeMinorVersionResponse
+         */
         public ModifyDBInstanceAutoUpgradeMinorVersionResponse ModifyDBInstanceAutoUpgradeMinorVersion(ModifyDBInstanceAutoUpgradeMinorVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceAutoUpgradeMinorVersionWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is supported only for instances that run MySQL.
+          *
+          * @param request ModifyDBInstanceAutoUpgradeMinorVersionRequest
+          * @return ModifyDBInstanceAutoUpgradeMinorVersionResponse
+         */
         public async Task<ModifyDBInstanceAutoUpgradeMinorVersionResponse> ModifyDBInstanceAutoUpgradeMinorVersionAsync(ModifyDBInstanceAutoUpgradeMinorVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceAutoUpgradeMinorVersionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The API has been taken offline
+          *
+          * @param request ModifyDBInstanceConnectionModeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceConnectionModeResponse
+         */
         public ModifyDBInstanceConnectionModeResponse ModifyDBInstanceConnectionModeWithOptions(ModifyDBInstanceConnectionModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21464,6 +27719,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceConnectionModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The API has been taken offline
+          *
+          * @param request ModifyDBInstanceConnectionModeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceConnectionModeResponse
+         */
         public async Task<ModifyDBInstanceConnectionModeResponse> ModifyDBInstanceConnectionModeWithOptionsAsync(ModifyDBInstanceConnectionModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21511,18 +27773,40 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceConnectionModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The API has been taken offline
+          *
+          * @param request ModifyDBInstanceConnectionModeRequest
+          * @return ModifyDBInstanceConnectionModeResponse
+         */
         public ModifyDBInstanceConnectionModeResponse ModifyDBInstanceConnectionMode(ModifyDBInstanceConnectionModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceConnectionModeWithOptions(request, runtime);
         }
 
+        /**
+          * > The API has been taken offline
+          *
+          * @param request ModifyDBInstanceConnectionModeRequest
+          * @return ModifyDBInstanceConnectionModeResponse
+         */
         public async Task<ModifyDBInstanceConnectionModeResponse> ModifyDBInstanceConnectionModeAsync(ModifyDBInstanceConnectionModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceConnectionModeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS provides the internal and public endpoints. ApsaraDB RDS also allows hybrid access by using both a virtual private cloud (VPC) endpoint and a classic network endpoint.
+          * > 
+          * *   You can change only the prefix of an endpoint.
+          * *   The read/write splitting endpoint cannot be changed.
+          *
+          * @param request ModifyDBInstanceConnectionStringRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceConnectionStringResponse
+         */
         public ModifyDBInstanceConnectionStringResponse ModifyDBInstanceConnectionStringWithOptions(ModifyDBInstanceConnectionStringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21586,6 +27870,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS provides the internal and public endpoints. ApsaraDB RDS also allows hybrid access by using both a virtual private cloud (VPC) endpoint and a classic network endpoint.
+          * > 
+          * *   You can change only the prefix of an endpoint.
+          * *   The read/write splitting endpoint cannot be changed.
+          *
+          * @param request ModifyDBInstanceConnectionStringRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceConnectionStringResponse
+         */
         public async Task<ModifyDBInstanceConnectionStringResponse> ModifyDBInstanceConnectionStringWithOptionsAsync(ModifyDBInstanceConnectionStringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21649,12 +27943,30 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS provides the internal and public endpoints. ApsaraDB RDS also allows hybrid access by using both a virtual private cloud (VPC) endpoint and a classic network endpoint.
+          * > 
+          * *   You can change only the prefix of an endpoint.
+          * *   The read/write splitting endpoint cannot be changed.
+          *
+          * @param request ModifyDBInstanceConnectionStringRequest
+          * @return ModifyDBInstanceConnectionStringResponse
+         */
         public ModifyDBInstanceConnectionStringResponse ModifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceConnectionStringWithOptions(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS provides the internal and public endpoints. ApsaraDB RDS also allows hybrid access by using both a virtual private cloud (VPC) endpoint and a classic network endpoint.
+          * > 
+          * *   You can change only the prefix of an endpoint.
+          * *   The read/write splitting endpoint cannot be changed.
+          *
+          * @param request ModifyDBInstanceConnectionStringRequest
+          * @return ModifyDBInstanceConnectionStringResponse
+         */
         public async Task<ModifyDBInstanceConnectionStringResponse> ModifyDBInstanceConnectionStringAsync(ModifyDBInstanceConnectionStringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21759,6 +28071,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await ModifyDBInstanceDelayedReplicationTimeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * For more information, see [Enable or disable the release protection feature for an ApsaraDB RDS for MySQL instance](~~414512~~).
+          *
+          * @param request ModifyDBInstanceDeletionProtectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceDeletionProtectionResponse
+         */
         public ModifyDBInstanceDeletionProtectionResponse ModifyDBInstanceDeletionProtectionWithOptions(ModifyDBInstanceDeletionProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21810,6 +28129,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceDeletionProtectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * For more information, see [Enable or disable the release protection feature for an ApsaraDB RDS for MySQL instance](~~414512~~).
+          *
+          * @param request ModifyDBInstanceDeletionProtectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceDeletionProtectionResponse
+         */
         public async Task<ModifyDBInstanceDeletionProtectionResponse> ModifyDBInstanceDeletionProtectionWithOptionsAsync(ModifyDBInstanceDeletionProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21861,12 +28187,24 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceDeletionProtectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * For more information, see [Enable or disable the release protection feature for an ApsaraDB RDS for MySQL instance](~~414512~~).
+          *
+          * @param request ModifyDBInstanceDeletionProtectionRequest
+          * @return ModifyDBInstanceDeletionProtectionResponse
+         */
         public ModifyDBInstanceDeletionProtectionResponse ModifyDBInstanceDeletionProtection(ModifyDBInstanceDeletionProtectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceDeletionProtectionWithOptions(request, runtime);
         }
 
+        /**
+          * For more information, see [Enable or disable the release protection feature for an ApsaraDB RDS for MySQL instance](~~414512~~).
+          *
+          * @param request ModifyDBInstanceDeletionProtectionRequest
+          * @return ModifyDBInstanceDeletionProtectionResponse
+         */
         public async Task<ModifyDBInstanceDeletionProtectionResponse> ModifyDBInstanceDeletionProtectionAsync(ModifyDBInstanceDeletionProtectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21979,6 +28317,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await ModifyDBInstanceDescriptionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   When you modify information about the endpoint of an instance, you can modify the settings only of common parameters of the endpoint, such as the weight and description. This operation is called to manage an endpoint.
+          *
+          * @param tmpReq ModifyDBInstanceEndpointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceEndpointResponse
+         */
         public ModifyDBInstanceEndpointResponse ModifyDBInstanceEndpointWithOptions(ModifyDBInstanceEndpointRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -22032,6 +28379,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceEndpointResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   When you modify information about the endpoint of an instance, you can modify the settings only of common parameters of the endpoint, such as the weight and description. This operation is called to manage an endpoint.
+          *
+          * @param tmpReq ModifyDBInstanceEndpointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceEndpointResponse
+         */
         public async Task<ModifyDBInstanceEndpointResponse> ModifyDBInstanceEndpointWithOptionsAsync(ModifyDBInstanceEndpointRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -22085,18 +28441,44 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   When you modify information about the endpoint of an instance, you can modify the settings only of common parameters of the endpoint, such as the weight and description. This operation is called to manage an endpoint.
+          *
+          * @param request ModifyDBInstanceEndpointRequest
+          * @return ModifyDBInstanceEndpointResponse
+         */
         public ModifyDBInstanceEndpointResponse ModifyDBInstanceEndpoint(ModifyDBInstanceEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceEndpointWithOptions(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   When you modify information about the endpoint of an instance, you can modify the settings only of common parameters of the endpoint, such as the weight and description. This operation is called to manage an endpoint.
+          *
+          * @param request ModifyDBInstanceEndpointRequest
+          * @return ModifyDBInstanceEndpointResponse
+         */
         public async Task<ModifyDBInstanceEndpointResponse> ModifyDBInstanceEndpointAsync(ModifyDBInstanceEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceEndpointWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   You can modify the following information about the endpoint of an instance: the public and internal endpoints, the public and internal ports, and the virtual private cloud (VPC), vSwitch, and IP address of the internal endpoint.
+          * *   The VPC and vSwitch must be modified at the same time. If you specify the VPC, vSwitch, and IP address of the internal endpoint, you do not need to specify the endpoint and port. If you specify the endpoint and port of the internal endpoint, you do not need to specify the VPC, vSwitch, and IP address.
+          *
+          * @param request ModifyDBInstanceEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceEndpointAddressResponse
+         */
         public ModifyDBInstanceEndpointAddressResponse ModifyDBInstanceEndpointAddressWithOptions(ModifyDBInstanceEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22160,6 +28542,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceEndpointAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   You can modify the following information about the endpoint of an instance: the public and internal endpoints, the public and internal ports, and the virtual private cloud (VPC), vSwitch, and IP address of the internal endpoint.
+          * *   The VPC and vSwitch must be modified at the same time. If you specify the VPC, vSwitch, and IP address of the internal endpoint, you do not need to specify the endpoint and port. If you specify the endpoint and port of the internal endpoint, you do not need to specify the VPC, vSwitch, and IP address.
+          *
+          * @param request ModifyDBInstanceEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceEndpointAddressResponse
+         */
         public async Task<ModifyDBInstanceEndpointAddressResponse> ModifyDBInstanceEndpointAddressWithOptionsAsync(ModifyDBInstanceEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22223,12 +28615,30 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceEndpointAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   You can modify the following information about the endpoint of an instance: the public and internal endpoints, the public and internal ports, and the virtual private cloud (VPC), vSwitch, and IP address of the internal endpoint.
+          * *   The VPC and vSwitch must be modified at the same time. If you specify the VPC, vSwitch, and IP address of the internal endpoint, you do not need to specify the endpoint and port. If you specify the endpoint and port of the internal endpoint, you do not need to specify the VPC, vSwitch, and IP address.
+          *
+          * @param request ModifyDBInstanceEndpointAddressRequest
+          * @return ModifyDBInstanceEndpointAddressResponse
+         */
         public ModifyDBInstanceEndpointAddressResponse ModifyDBInstanceEndpointAddress(ModifyDBInstanceEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceEndpointAddressWithOptions(request, runtime);
         }
 
+        /**
+          * ## Background information
+          * *   This operation is suitable only for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+          * *   You can modify the following information about the endpoint of an instance: the public and internal endpoints, the public and internal ports, and the virtual private cloud (VPC), vSwitch, and IP address of the internal endpoint.
+          * *   The VPC and vSwitch must be modified at the same time. If you specify the VPC, vSwitch, and IP address of the internal endpoint, you do not need to specify the endpoint and port. If you specify the endpoint and port of the internal endpoint, you do not need to specify the VPC, vSwitch, and IP address.
+          *
+          * @param request ModifyDBInstanceEndpointAddressRequest
+          * @return ModifyDBInstanceEndpointAddressResponse
+         */
         public async Task<ModifyDBInstanceEndpointAddressResponse> ModifyDBInstanceEndpointAddressAsync(ModifyDBInstanceEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -22349,6 +28759,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await ModifyDBInstanceHAConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can set the maintenance time to a period of time during off-peak hours. Alibaba Cloud performs routine maintenance within the maintenance time to minimize impacts on your business.
+          *
+          * @param request ModifyDBInstanceMaintainTimeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceMaintainTimeResponse
+         */
         public ModifyDBInstanceMaintainTimeResponse ModifyDBInstanceMaintainTimeWithOptions(ModifyDBInstanceMaintainTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22400,6 +28817,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceMaintainTimeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can set the maintenance time to a period of time during off-peak hours. Alibaba Cloud performs routine maintenance within the maintenance time to minimize impacts on your business.
+          *
+          * @param request ModifyDBInstanceMaintainTimeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceMaintainTimeResponse
+         */
         public async Task<ModifyDBInstanceMaintainTimeResponse> ModifyDBInstanceMaintainTimeWithOptionsAsync(ModifyDBInstanceMaintainTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22451,18 +28875,39 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceMaintainTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can set the maintenance time to a period of time during off-peak hours. Alibaba Cloud performs routine maintenance within the maintenance time to minimize impacts on your business.
+          *
+          * @param request ModifyDBInstanceMaintainTimeRequest
+          * @return ModifyDBInstanceMaintainTimeResponse
+         */
         public ModifyDBInstanceMaintainTimeResponse ModifyDBInstanceMaintainTime(ModifyDBInstanceMaintainTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceMaintainTimeWithOptions(request, runtime);
         }
 
+        /**
+          * You can set the maintenance time to a period of time during off-peak hours. Alibaba Cloud performs routine maintenance within the maintenance time to minimize impacts on your business.
+          *
+          * @param request ModifyDBInstanceMaintainTimeRequest
+          * @return ModifyDBInstanceMaintainTimeResponse
+         */
         public async Task<ModifyDBInstanceMaintainTimeResponse> ModifyDBInstanceMaintainTimeAsync(ModifyDBInstanceMaintainTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceMaintainTimeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call this operation, make sure that the instance runs PostgreSQL.
+          * For more information, see [View the Enhanced Monitoring metrics of an ApsaraDB RDS for PostgreSQL instance](~~299200~~).
+          *
+          * @param request ModifyDBInstanceMetricsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceMetricsResponse
+         */
         public ModifyDBInstanceMetricsResponse ModifyDBInstanceMetricsWithOptions(ModifyDBInstanceMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22502,6 +28947,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceMetricsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call this operation, make sure that the instance runs PostgreSQL.
+          * For more information, see [View the Enhanced Monitoring metrics of an ApsaraDB RDS for PostgreSQL instance](~~299200~~).
+          *
+          * @param request ModifyDBInstanceMetricsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceMetricsResponse
+         */
         public async Task<ModifyDBInstanceMetricsResponse> ModifyDBInstanceMetricsWithOptionsAsync(ModifyDBInstanceMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22541,18 +28995,44 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceMetricsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call this operation, make sure that the instance runs PostgreSQL.
+          * For more information, see [View the Enhanced Monitoring metrics of an ApsaraDB RDS for PostgreSQL instance](~~299200~~).
+          *
+          * @param request ModifyDBInstanceMetricsRequest
+          * @return ModifyDBInstanceMetricsResponse
+         */
         public ModifyDBInstanceMetricsResponse ModifyDBInstanceMetrics(ModifyDBInstanceMetricsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceMetricsWithOptions(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * Before you call this operation, make sure that the instance runs PostgreSQL.
+          * For more information, see [View the Enhanced Monitoring metrics of an ApsaraDB RDS for PostgreSQL instance](~~299200~~).
+          *
+          * @param request ModifyDBInstanceMetricsRequest
+          * @return ModifyDBInstanceMetricsResponse
+         */
         public async Task<ModifyDBInstanceMetricsResponse> ModifyDBInstanceMetricsAsync(ModifyDBInstanceMetricsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceMetricsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * Alibaba Cloud provides different monitoring frequencies for different instances. For more information, see [Set monitoring frequencies](~~26200~~).
+          * > * If your want to set the monitoring frequency to every few seconds, you are charged additional fees. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * > * This operation is not supported for ApsaraDB RDS for PostgreSQL instances. The monitoring frequency of an ApsaraDB RDS for PostgreSQL instance varies based on the query time range. For more information, see [Query performance metrics](~~26280~~).
+          *
+          * @param request ModifyDBInstanceMonitorRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceMonitorResponse
+         */
         public ModifyDBInstanceMonitorResponse ModifyDBInstanceMonitorWithOptions(ModifyDBInstanceMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22604,6 +29084,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceMonitorResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * Alibaba Cloud provides different monitoring frequencies for different instances. For more information, see [Set monitoring frequencies](~~26200~~).
+          * > * If your want to set the monitoring frequency to every few seconds, you are charged additional fees. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * > * This operation is not supported for ApsaraDB RDS for PostgreSQL instances. The monitoring frequency of an ApsaraDB RDS for PostgreSQL instance varies based on the query time range. For more information, see [Query performance metrics](~~26280~~).
+          *
+          * @param request ModifyDBInstanceMonitorRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceMonitorResponse
+         */
         public async Task<ModifyDBInstanceMonitorResponse> ModifyDBInstanceMonitorWithOptionsAsync(ModifyDBInstanceMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22655,18 +29145,43 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceMonitorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * Alibaba Cloud provides different monitoring frequencies for different instances. For more information, see [Set monitoring frequencies](~~26200~~).
+          * > * If your want to set the monitoring frequency to every few seconds, you are charged additional fees. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * > * This operation is not supported for ApsaraDB RDS for PostgreSQL instances. The monitoring frequency of an ApsaraDB RDS for PostgreSQL instance varies based on the query time range. For more information, see [Query performance metrics](~~26280~~).
+          *
+          * @param request ModifyDBInstanceMonitorRequest
+          * @return ModifyDBInstanceMonitorResponse
+         */
         public ModifyDBInstanceMonitorResponse ModifyDBInstanceMonitor(ModifyDBInstanceMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceMonitorWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * Alibaba Cloud provides different monitoring frequencies for different instances. For more information, see [Set monitoring frequencies](~~26200~~).
+          * > * If your want to set the monitoring frequency to every few seconds, you are charged additional fees. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * > * This operation is not supported for ApsaraDB RDS for PostgreSQL instances. The monitoring frequency of an ApsaraDB RDS for PostgreSQL instance varies based on the query time range. For more information, see [Query performance metrics](~~26280~~).
+          *
+          * @param request ModifyDBInstanceMonitorRequest
+          * @return ModifyDBInstanceMonitorResponse
+         */
         public async Task<ModifyDBInstanceMonitorResponse> ModifyDBInstanceMonitorAsync(ModifyDBInstanceMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceMonitorWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * When an ApsaraDB for RDS instance is in the hybrid access mode, which uses both a VPC endpoint and a classic network endpoint, this operation is used to extend the expiration time of the classic network endpoint.
+          *
+          * @param request ModifyDBInstanceNetworkExpireTimeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceNetworkExpireTimeResponse
+         */
         public ModifyDBInstanceNetworkExpireTimeResponse ModifyDBInstanceNetworkExpireTimeWithOptions(ModifyDBInstanceNetworkExpireTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22718,6 +29233,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceNetworkExpireTimeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * When an ApsaraDB for RDS instance is in the hybrid access mode, which uses both a VPC endpoint and a classic network endpoint, this operation is used to extend the expiration time of the classic network endpoint.
+          *
+          * @param request ModifyDBInstanceNetworkExpireTimeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceNetworkExpireTimeResponse
+         */
         public async Task<ModifyDBInstanceNetworkExpireTimeResponse> ModifyDBInstanceNetworkExpireTimeWithOptionsAsync(ModifyDBInstanceNetworkExpireTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22769,18 +29291,38 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceNetworkExpireTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * When an ApsaraDB for RDS instance is in the hybrid access mode, which uses both a VPC endpoint and a classic network endpoint, this operation is used to extend the expiration time of the classic network endpoint.
+          *
+          * @param request ModifyDBInstanceNetworkExpireTimeRequest
+          * @return ModifyDBInstanceNetworkExpireTimeResponse
+         */
         public ModifyDBInstanceNetworkExpireTimeResponse ModifyDBInstanceNetworkExpireTime(ModifyDBInstanceNetworkExpireTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceNetworkExpireTimeWithOptions(request, runtime);
         }
 
+        /**
+          * When an ApsaraDB for RDS instance is in the hybrid access mode, which uses both a VPC endpoint and a classic network endpoint, this operation is used to extend the expiration time of the classic network endpoint.
+          *
+          * @param request ModifyDBInstanceNetworkExpireTimeRequest
+          * @return ModifyDBInstanceNetworkExpireTimeResponse
+         */
         public async Task<ModifyDBInstanceNetworkExpireTimeResponse> ModifyDBInstanceNetworkExpireTimeAsync(ModifyDBInstanceNetworkExpireTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceNetworkExpireTimeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * The network type of the instance is classic network.
+          *
+          * @param request ModifyDBInstanceNetworkTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceNetworkTypeResponse
+         */
         public ModifyDBInstanceNetworkTypeResponse ModifyDBInstanceNetworkTypeWithOptions(ModifyDBInstanceNetworkTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22856,6 +29398,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceNetworkTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * The network type of the instance is classic network.
+          *
+          * @param request ModifyDBInstanceNetworkTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceNetworkTypeResponse
+         */
         public async Task<ModifyDBInstanceNetworkTypeResponse> ModifyDBInstanceNetworkTypeWithOptionsAsync(ModifyDBInstanceNetworkTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22931,18 +29481,46 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceNetworkTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * The network type of the instance is classic network.
+          *
+          * @param request ModifyDBInstanceNetworkTypeRequest
+          * @return ModifyDBInstanceNetworkTypeResponse
+         */
         public ModifyDBInstanceNetworkTypeResponse ModifyDBInstanceNetworkType(ModifyDBInstanceNetworkTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceNetworkTypeWithOptions(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * The network type of the instance is classic network.
+          *
+          * @param request ModifyDBInstanceNetworkTypeRequest
+          * @return ModifyDBInstanceNetworkTypeResponse
+         */
         public async Task<ModifyDBInstanceNetworkTypeResponse> ModifyDBInstanceNetworkTypeAsync(ModifyDBInstanceNetworkTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceNetworkTypeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is used to change only the billing method of an instance from pay-as-you-go to subscription.
+          * The following requirements must be met:
+          * *   The instance belongs to the current account.
+          * *   The instance uses one of the most recent instance types. For more information, see [Instance types](~~26312~~).
+          *     **
+          *     **Note**You cannot change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription. If you want to change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription, you must change the instance type of the instance to one of the most recent instance types. Then, you can change the billing method of the instance from pay-as-you-go to subscription. To change the instance type of an instance, you can change the instance specifications of the instance. For more information, see [Change the specifications of an ApsaraDB RDS instance](~~96061~~).
+          * *   The instance uses the pay-as-you-go billing method and is in the Running state.
+          * *   Your Alibaba Cloud account has no unpaid orders for the instance for which you want to change the billing method.
+          *
+          * @param request ModifyDBInstancePayTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstancePayTypeResponse
+         */
         public ModifyDBInstancePayTypeResponse ModifyDBInstancePayTypeWithOptions(ModifyDBInstancePayTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22986,6 +29564,20 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstancePayTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is used to change only the billing method of an instance from pay-as-you-go to subscription.
+          * The following requirements must be met:
+          * *   The instance belongs to the current account.
+          * *   The instance uses one of the most recent instance types. For more information, see [Instance types](~~26312~~).
+          *     **
+          *     **Note**You cannot change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription. If you want to change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription, you must change the instance type of the instance to one of the most recent instance types. Then, you can change the billing method of the instance from pay-as-you-go to subscription. To change the instance type of an instance, you can change the instance specifications of the instance. For more information, see [Change the specifications of an ApsaraDB RDS instance](~~96061~~).
+          * *   The instance uses the pay-as-you-go billing method and is in the Running state.
+          * *   Your Alibaba Cloud account has no unpaid orders for the instance for which you want to change the billing method.
+          *
+          * @param request ModifyDBInstancePayTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstancePayTypeResponse
+         */
         public async Task<ModifyDBInstancePayTypeResponse> ModifyDBInstancePayTypeWithOptionsAsync(ModifyDBInstancePayTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23029,18 +29621,51 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstancePayTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is used to change only the billing method of an instance from pay-as-you-go to subscription.
+          * The following requirements must be met:
+          * *   The instance belongs to the current account.
+          * *   The instance uses one of the most recent instance types. For more information, see [Instance types](~~26312~~).
+          *     **
+          *     **Note**You cannot change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription. If you want to change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription, you must change the instance type of the instance to one of the most recent instance types. Then, you can change the billing method of the instance from pay-as-you-go to subscription. To change the instance type of an instance, you can change the instance specifications of the instance. For more information, see [Change the specifications of an ApsaraDB RDS instance](~~96061~~).
+          * *   The instance uses the pay-as-you-go billing method and is in the Running state.
+          * *   Your Alibaba Cloud account has no unpaid orders for the instance for which you want to change the billing method.
+          *
+          * @param request ModifyDBInstancePayTypeRequest
+          * @return ModifyDBInstancePayTypeResponse
+         */
         public ModifyDBInstancePayTypeResponse ModifyDBInstancePayType(ModifyDBInstancePayTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstancePayTypeWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is used to change only the billing method of an instance from pay-as-you-go to subscription.
+          * The following requirements must be met:
+          * *   The instance belongs to the current account.
+          * *   The instance uses one of the most recent instance types. For more information, see [Instance types](~~26312~~).
+          *     **
+          *     **Note**You cannot change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription. If you want to change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription, you must change the instance type of the instance to one of the most recent instance types. Then, you can change the billing method of the instance from pay-as-you-go to subscription. To change the instance type of an instance, you can change the instance specifications of the instance. For more information, see [Change the specifications of an ApsaraDB RDS instance](~~96061~~).
+          * *   The instance uses the pay-as-you-go billing method and is in the Running state.
+          * *   Your Alibaba Cloud account has no unpaid orders for the instance for which you want to change the billing method.
+          *
+          * @param request ModifyDBInstancePayTypeRequest
+          * @return ModifyDBInstancePayTypeResponse
+         */
         public async Task<ModifyDBInstancePayTypeResponse> ModifyDBInstancePayTypeAsync(ModifyDBInstancePayTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstancePayTypeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > This operation is phased out.
+          *
+          * @param request ModifyDBInstanceProxyConfigurationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceProxyConfigurationResponse
+         */
         public ModifyDBInstanceProxyConfigurationResponse ModifyDBInstanceProxyConfigurationWithOptions(ModifyDBInstanceProxyConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23088,6 +29713,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceProxyConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > This operation is phased out.
+          *
+          * @param request ModifyDBInstanceProxyConfigurationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceProxyConfigurationResponse
+         */
         public async Task<ModifyDBInstanceProxyConfigurationResponse> ModifyDBInstanceProxyConfigurationWithOptionsAsync(ModifyDBInstanceProxyConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23135,18 +29767,43 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceProxyConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > This operation is phased out.
+          *
+          * @param request ModifyDBInstanceProxyConfigurationRequest
+          * @return ModifyDBInstanceProxyConfigurationResponse
+         */
         public ModifyDBInstanceProxyConfigurationResponse ModifyDBInstanceProxyConfiguration(ModifyDBInstanceProxyConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceProxyConfigurationWithOptions(request, runtime);
         }
 
+        /**
+          * > This operation is phased out.
+          *
+          * @param request ModifyDBInstanceProxyConfigurationRequest
+          * @return ModifyDBInstanceProxyConfigurationResponse
+         */
         public async Task<ModifyDBInstanceProxyConfigurationResponse> ModifyDBInstanceProxyConfigurationAsync(ModifyDBInstanceProxyConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceProxyConfigurationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is used to configure SSL encryption for an instance. For more information, see [](~~32474~~).
+          * > 
+          * *   Before you call this operation, make sure that your instance is one of the following instances:
+          *     *   ApsaraDB RDS for MySQL instances that do not run RDS Basic Edition
+          *     *   ApsaraDB RDS for SQL Server instances
+          *     *   ApsaraDB RDS for PostgreSQL instances that use cloud disks
+          * *   SSL encryption is not supported for the connections to the read/write splitting endpoint of an instance.
+          *
+          * @param request ModifyDBInstanceSSLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceSSLResponse
+         */
         public ModifyDBInstanceSSLResponse ModifyDBInstanceSSLWithOptions(ModifyDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23234,6 +29891,19 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceSSLResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is used to configure SSL encryption for an instance. For more information, see [](~~32474~~).
+          * > 
+          * *   Before you call this operation, make sure that your instance is one of the following instances:
+          *     *   ApsaraDB RDS for MySQL instances that do not run RDS Basic Edition
+          *     *   ApsaraDB RDS for SQL Server instances
+          *     *   ApsaraDB RDS for PostgreSQL instances that use cloud disks
+          * *   SSL encryption is not supported for the connections to the read/write splitting endpoint of an instance.
+          *
+          * @param request ModifyDBInstanceSSLRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceSSLResponse
+         */
         public async Task<ModifyDBInstanceSSLResponse> ModifyDBInstanceSSLWithOptionsAsync(ModifyDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23321,28 +29991,69 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is used to configure SSL encryption for an instance. For more information, see [](~~32474~~).
+          * > 
+          * *   Before you call this operation, make sure that your instance is one of the following instances:
+          *     *   ApsaraDB RDS for MySQL instances that do not run RDS Basic Edition
+          *     *   ApsaraDB RDS for SQL Server instances
+          *     *   ApsaraDB RDS for PostgreSQL instances that use cloud disks
+          * *   SSL encryption is not supported for the connections to the read/write splitting endpoint of an instance.
+          *
+          * @param request ModifyDBInstanceSSLRequest
+          * @return ModifyDBInstanceSSLResponse
+         */
         public ModifyDBInstanceSSLResponse ModifyDBInstanceSSL(ModifyDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceSSLWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is used to configure SSL encryption for an instance. For more information, see [](~~32474~~).
+          * > 
+          * *   Before you call this operation, make sure that your instance is one of the following instances:
+          *     *   ApsaraDB RDS for MySQL instances that do not run RDS Basic Edition
+          *     *   ApsaraDB RDS for SQL Server instances
+          *     *   ApsaraDB RDS for PostgreSQL instances that use cloud disks
+          * *   SSL encryption is not supported for the connections to the read/write splitting endpoint of an instance.
+          *
+          * @param request ModifyDBInstanceSSLRequest
+          * @return ModifyDBInstanceSSLResponse
+         */
         public async Task<ModifyDBInstanceSSLResponse> ModifyDBInstanceSSLAsync(ModifyDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceSSLWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance has no ongoing backup tasks.
+          * *   At least one of DBInstanceClass and DBInstanceStorage is specified in the request.
+          * *   If you want to decrease the storage capacity, the new storage capacity that you specify must be greater than or equal to 1.1 times the used storage.
+          * *   The instance is a primary instance or read-only instance.
+          * > If you want to upgrade the RDS edition of the instance, you must select an instance type that supports the new RDS edition. For example, if you want to upgrade the RDS edition of the instance from RDS Basic Edition to RDS High-availability Edition, you must select an instance type that supports RDS High-availability Edition.
+          *
+          * @param tmpReq ModifyDBInstanceSpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceSpecResponse
+         */
         public ModifyDBInstanceSpecResponse ModifyDBInstanceSpecWithOptions(ModifyDBInstanceSpecRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyDBInstanceSpecShrinkRequest request = new ModifyDBInstanceSpecShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfiguration.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfiguration))
             {
-                request.ServerlessConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfiguration.ToMap(), "ServerlessConfiguration", "json");
+                request.ServerlessConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfiguration, "ServerlessConfiguration", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BurstingEnabled))
+            {
+                query["BurstingEnabled"] = request.BurstingEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
                 query["Category"] = request.Category;
@@ -23442,16 +30153,33 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceSpecResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance has no ongoing backup tasks.
+          * *   At least one of DBInstanceClass and DBInstanceStorage is specified in the request.
+          * *   If you want to decrease the storage capacity, the new storage capacity that you specify must be greater than or equal to 1.1 times the used storage.
+          * *   The instance is a primary instance or read-only instance.
+          * > If you want to upgrade the RDS edition of the instance, you must select an instance type that supports the new RDS edition. For example, if you want to upgrade the RDS edition of the instance from RDS Basic Edition to RDS High-availability Edition, you must select an instance type that supports RDS High-availability Edition.
+          *
+          * @param tmpReq ModifyDBInstanceSpecRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceSpecResponse
+         */
         public async Task<ModifyDBInstanceSpecResponse> ModifyDBInstanceSpecWithOptionsAsync(ModifyDBInstanceSpecRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyDBInstanceSpecShrinkRequest request = new ModifyDBInstanceSpecShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfiguration.ToMap()))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfiguration))
             {
-                request.ServerlessConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfiguration.ToMap(), "ServerlessConfiguration", "json");
+                request.ServerlessConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfiguration, "ServerlessConfiguration", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BurstingEnabled))
+            {
+                query["BurstingEnabled"] = request.BurstingEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
                 query["Category"] = request.Category;
@@ -23551,18 +30279,57 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance has no ongoing backup tasks.
+          * *   At least one of DBInstanceClass and DBInstanceStorage is specified in the request.
+          * *   If you want to decrease the storage capacity, the new storage capacity that you specify must be greater than or equal to 1.1 times the used storage.
+          * *   The instance is a primary instance or read-only instance.
+          * > If you want to upgrade the RDS edition of the instance, you must select an instance type that supports the new RDS edition. For example, if you want to upgrade the RDS edition of the instance from RDS Basic Edition to RDS High-availability Edition, you must select an instance type that supports RDS High-availability Edition.
+          *
+          * @param request ModifyDBInstanceSpecRequest
+          * @return ModifyDBInstanceSpecResponse
+         */
         public ModifyDBInstanceSpecResponse ModifyDBInstanceSpec(ModifyDBInstanceSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceSpecWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance has no ongoing backup tasks.
+          * *   At least one of DBInstanceClass and DBInstanceStorage is specified in the request.
+          * *   If you want to decrease the storage capacity, the new storage capacity that you specify must be greater than or equal to 1.1 times the used storage.
+          * *   The instance is a primary instance or read-only instance.
+          * > If you want to upgrade the RDS edition of the instance, you must select an instance type that supports the new RDS edition. For example, if you want to upgrade the RDS edition of the instance from RDS Basic Edition to RDS High-availability Edition, you must select an instance type that supports RDS High-availability Edition.
+          *
+          * @param request ModifyDBInstanceSpecRequest
+          * @return ModifyDBInstanceSpecResponse
+         */
         public async Task<ModifyDBInstanceSpecResponse> ModifyDBInstanceSpecAsync(ModifyDBInstanceSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceSpecWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * TDE can perform real-time I/O encryption and decryption on data files. TDE encrypts data before the data is written to a disk, and decrypts data before the data is read from a disk and written to the memory. For more information, see [Configure TDE for an ApsaraDB RDS for MySQL instance](~~96121~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   Key Management Service (KMS) is activated. If KMS is not activated, you can activate KMS when you enable TDE.
+          * *   The instance must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 8.0 (with a minor engine version of 20191015 or later) on RDS High-availability Edition with local disks
+          *     *   MySQL 5.7 (with a minor engine version of 20191015 or later) on RDS High-availability Edition with local disks
+          *     *   MySQL 5.6
+          *     *   SQL Server 2019 SE or an Enterprise Edition of SQL Server
+          *     *   PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, PostgreSQL 15 with cloud disks and a minor engine version of 20221030 or later
+          *
+          * @param request ModifyDBInstanceTDERequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceTDEResponse
+         */
         public ModifyDBInstanceTDEResponse ModifyDBInstanceTDEWithOptions(ModifyDBInstanceTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23638,6 +30405,21 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceTDEResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * TDE can perform real-time I/O encryption and decryption on data files. TDE encrypts data before the data is written to a disk, and decrypts data before the data is read from a disk and written to the memory. For more information, see [Configure TDE for an ApsaraDB RDS for MySQL instance](~~96121~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   Key Management Service (KMS) is activated. If KMS is not activated, you can activate KMS when you enable TDE.
+          * *   The instance must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 8.0 (with a minor engine version of 20191015 or later) on RDS High-availability Edition with local disks
+          *     *   MySQL 5.7 (with a minor engine version of 20191015 or later) on RDS High-availability Edition with local disks
+          *     *   MySQL 5.6
+          *     *   SQL Server 2019 SE or an Enterprise Edition of SQL Server
+          *     *   PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, PostgreSQL 15 with cloud disks and a minor engine version of 20221030 or later
+          *
+          * @param request ModifyDBInstanceTDERequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBInstanceTDEResponse
+         */
         public async Task<ModifyDBInstanceTDEResponse> ModifyDBInstanceTDEWithOptionsAsync(ModifyDBInstanceTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23713,18 +30495,66 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBInstanceTDEResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * TDE can perform real-time I/O encryption and decryption on data files. TDE encrypts data before the data is written to a disk, and decrypts data before the data is read from a disk and written to the memory. For more information, see [Configure TDE for an ApsaraDB RDS for MySQL instance](~~96121~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   Key Management Service (KMS) is activated. If KMS is not activated, you can activate KMS when you enable TDE.
+          * *   The instance must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 8.0 (with a minor engine version of 20191015 or later) on RDS High-availability Edition with local disks
+          *     *   MySQL 5.7 (with a minor engine version of 20191015 or later) on RDS High-availability Edition with local disks
+          *     *   MySQL 5.6
+          *     *   SQL Server 2019 SE or an Enterprise Edition of SQL Server
+          *     *   PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, PostgreSQL 15 with cloud disks and a minor engine version of 20221030 or later
+          *
+          * @param request ModifyDBInstanceTDERequest
+          * @return ModifyDBInstanceTDEResponse
+         */
         public ModifyDBInstanceTDEResponse ModifyDBInstanceTDE(ModifyDBInstanceTDERequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceTDEWithOptions(request, runtime);
         }
 
+        /**
+          * TDE can perform real-time I/O encryption and decryption on data files. TDE encrypts data before the data is written to a disk, and decrypts data before the data is read from a disk and written to the memory. For more information, see [Configure TDE for an ApsaraDB RDS for MySQL instance](~~96121~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   Key Management Service (KMS) is activated. If KMS is not activated, you can activate KMS when you enable TDE.
+          * *   The instance must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 8.0 (with a minor engine version of 20191015 or later) on RDS High-availability Edition with local disks
+          *     *   MySQL 5.7 (with a minor engine version of 20191015 or later) on RDS High-availability Edition with local disks
+          *     *   MySQL 5.6
+          *     *   SQL Server 2019 SE or an Enterprise Edition of SQL Server
+          *     *   PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, PostgreSQL 15 with cloud disks and a minor engine version of 20221030 or later
+          *
+          * @param request ModifyDBInstanceTDERequest
+          * @return ModifyDBInstanceTDEResponse
+         */
         public async Task<ModifyDBInstanceTDEResponse> ModifyDBInstanceTDEAsync(ModifyDBInstanceTDERequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceTDEWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          * Before you call this operation, make sure that the following requirements are met:
+          * If the instance runs MySQL, the instance must run one of the following MySQL versions and RDS editions:
+          * *   MySQL 8.0 with a minor engine version of 20191204 or later on RDS Enterprise Edition
+          * *   MySQL 8.0 with a minor engine version of 20190915 or later on RDS High-availability Edition
+          * *   MySQL 5.7 with a minor engine version of 20191128 or later on RDS Enterprise Edition
+          * *   MySQL 5.7 with a minor engine version of 20190925 or later on RDS High-availability Edition
+          * *   MySQL 5.6 with a minor engine version of 20200229 or later on RDS High-availability Edition
+          * If the instance runs PostgreSQL, the instance must meet the following requirements:
+          * *   The instance runs PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15.
+          * *   The instance uses cloud disks.
+          * *   The instance runs RDS High-availability Edition.
+          * *   The instance is a primary instance.
+          *
+          * @param request ModifyDBProxyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBProxyResponse
+         */
         public ModifyDBProxyResponse ModifyDBProxyWithOptions(ModifyDBProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23800,6 +30630,26 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBProxyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          * Before you call this operation, make sure that the following requirements are met:
+          * If the instance runs MySQL, the instance must run one of the following MySQL versions and RDS editions:
+          * *   MySQL 8.0 with a minor engine version of 20191204 or later on RDS Enterprise Edition
+          * *   MySQL 8.0 with a minor engine version of 20190915 or later on RDS High-availability Edition
+          * *   MySQL 5.7 with a minor engine version of 20191128 or later on RDS Enterprise Edition
+          * *   MySQL 5.7 with a minor engine version of 20190925 or later on RDS High-availability Edition
+          * *   MySQL 5.6 with a minor engine version of 20200229 or later on RDS High-availability Edition
+          * If the instance runs PostgreSQL, the instance must meet the following requirements:
+          * *   The instance runs PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15.
+          * *   The instance uses cloud disks.
+          * *   The instance runs RDS High-availability Edition.
+          * *   The instance is a primary instance.
+          *
+          * @param request ModifyDBProxyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBProxyResponse
+         */
         public async Task<ModifyDBProxyResponse> ModifyDBProxyWithOptionsAsync(ModifyDBProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23875,18 +30725,65 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBProxyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          * Before you call this operation, make sure that the following requirements are met:
+          * If the instance runs MySQL, the instance must run one of the following MySQL versions and RDS editions:
+          * *   MySQL 8.0 with a minor engine version of 20191204 or later on RDS Enterprise Edition
+          * *   MySQL 8.0 with a minor engine version of 20190915 or later on RDS High-availability Edition
+          * *   MySQL 5.7 with a minor engine version of 20191128 or later on RDS Enterprise Edition
+          * *   MySQL 5.7 with a minor engine version of 20190925 or later on RDS High-availability Edition
+          * *   MySQL 5.6 with a minor engine version of 20200229 or later on RDS High-availability Edition
+          * If the instance runs PostgreSQL, the instance must meet the following requirements:
+          * *   The instance runs PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15.
+          * *   The instance uses cloud disks.
+          * *   The instance runs RDS High-availability Edition.
+          * *   The instance is a primary instance.
+          *
+          * @param request ModifyDBProxyRequest
+          * @return ModifyDBProxyResponse
+         */
         public ModifyDBProxyResponse ModifyDBProxy(ModifyDBProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBProxyWithOptions(request, runtime);
         }
 
+        /**
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          * Before you call this operation, make sure that the following requirements are met:
+          * If the instance runs MySQL, the instance must run one of the following MySQL versions and RDS editions:
+          * *   MySQL 8.0 with a minor engine version of 20191204 or later on RDS Enterprise Edition
+          * *   MySQL 8.0 with a minor engine version of 20190915 or later on RDS High-availability Edition
+          * *   MySQL 5.7 with a minor engine version of 20191128 or later on RDS Enterprise Edition
+          * *   MySQL 5.7 with a minor engine version of 20190925 or later on RDS High-availability Edition
+          * *   MySQL 5.6 with a minor engine version of 20200229 or later on RDS High-availability Edition
+          * If the instance runs PostgreSQL, the instance must meet the following requirements:
+          * *   The instance runs PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, PostgreSQL 13, PostgreSQL 14, or PostgreSQL 15.
+          * *   The instance uses cloud disks.
+          * *   The instance runs RDS High-availability Edition.
+          * *   The instance is a primary instance.
+          *
+          * @param request ModifyDBProxyRequest
+          * @return ModifyDBProxyResponse
+         */
         public async Task<ModifyDBProxyResponse> ModifyDBProxyAsync(ModifyDBProxyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBProxyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call the ModifyDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request ModifyDBProxyEndpointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBProxyEndpointResponse
+         */
         public ModifyDBProxyEndpointResponse ModifyDBProxyEndpointWithOptions(ModifyDBProxyEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23974,6 +30871,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBProxyEndpointResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call the ModifyDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request ModifyDBProxyEndpointRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBProxyEndpointResponse
+         */
         public async Task<ModifyDBProxyEndpointResponse> ModifyDBProxyEndpointWithOptionsAsync(ModifyDBProxyEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24061,18 +30967,41 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBProxyEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call the ModifyDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request ModifyDBProxyEndpointRequest
+          * @return ModifyDBProxyEndpointResponse
+         */
         public ModifyDBProxyEndpointResponse ModifyDBProxyEndpoint(ModifyDBProxyEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBProxyEndpointWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call the ModifyDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request ModifyDBProxyEndpointRequest
+          * @return ModifyDBProxyEndpointResponse
+         */
         public async Task<ModifyDBProxyEndpointResponse> ModifyDBProxyEndpointAsync(ModifyDBProxyEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBProxyEndpointWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After you enable the database proxy feature, a default proxy endpoint is generated. The proxy terminal feature is bound to the default proxy endpoint. You can create, modify, or delete a proxy endpoint.
+          *
+          * @param request ModifyDBProxyEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBProxyEndpointAddressResponse
+         */
         public ModifyDBProxyEndpointAddressResponse ModifyDBProxyEndpointAddressWithOptions(ModifyDBProxyEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24136,6 +31065,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBProxyEndpointAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After you enable the database proxy feature, a default proxy endpoint is generated. The proxy terminal feature is bound to the default proxy endpoint. You can create, modify, or delete a proxy endpoint.
+          *
+          * @param request ModifyDBProxyEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBProxyEndpointAddressResponse
+         */
         public async Task<ModifyDBProxyEndpointAddressResponse> ModifyDBProxyEndpointAddressWithOptionsAsync(ModifyDBProxyEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24199,18 +31135,39 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBProxyEndpointAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After you enable the database proxy feature, a default proxy endpoint is generated. The proxy terminal feature is bound to the default proxy endpoint. You can create, modify, or delete a proxy endpoint.
+          *
+          * @param request ModifyDBProxyEndpointAddressRequest
+          * @return ModifyDBProxyEndpointAddressResponse
+         */
         public ModifyDBProxyEndpointAddressResponse ModifyDBProxyEndpointAddress(ModifyDBProxyEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBProxyEndpointAddressWithOptions(request, runtime);
         }
 
+        /**
+          * After you enable the database proxy feature, a default proxy endpoint is generated. The proxy terminal feature is bound to the default proxy endpoint. You can create, modify, or delete a proxy endpoint.
+          *
+          * @param request ModifyDBProxyEndpointAddressRequest
+          * @return ModifyDBProxyEndpointAddressResponse
+         */
         public async Task<ModifyDBProxyEndpointAddressResponse> ModifyDBProxyEndpointAddressAsync(ModifyDBProxyEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBProxyEndpointAddressWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call the ModifyDBProxyInstance operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request ModifyDBProxyInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBProxyInstanceResponse
+         */
         public ModifyDBProxyInstanceResponse ModifyDBProxyInstanceWithOptions(ModifyDBProxyInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24278,6 +31235,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBProxyInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call the ModifyDBProxyInstance operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request ModifyDBProxyInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDBProxyInstanceResponse
+         */
         public async Task<ModifyDBProxyInstanceResponse> ModifyDBProxyInstanceWithOptionsAsync(ModifyDBProxyInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24345,18 +31311,42 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDBProxyInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call the ModifyDBProxyInstance operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request ModifyDBProxyInstanceRequest
+          * @return ModifyDBProxyInstanceResponse
+         */
         public ModifyDBProxyInstanceResponse ModifyDBProxyInstance(ModifyDBProxyInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBProxyInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call the ModifyDBProxyInstance operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request ModifyDBProxyInstanceRequest
+          * @return ModifyDBProxyInstanceResponse
+         */
         public async Task<ModifyDBProxyInstanceResponse> ModifyDBProxyInstanceAsync(ModifyDBProxyInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBProxyInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Distributed transaction whitelists allow for distributed transactions between an Elastic Compute Service (ECS) instance and an RDS instance. For more information, see [Configure a distributed transaction whitelist](~~124321~~).
+          * This operation is applicable to instances that run one of the following SQL Server versions in the RDS High-Availability Edition: 2012 SE, 2012 EE, 2014 SE, 2016 SE, 2016 EE, and 2017 SE.
+          *
+          * @param request ModifyDTCSecurityIpHostsForSQLServerRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDTCSecurityIpHostsForSQLServerResponse
+         */
         public ModifyDTCSecurityIpHostsForSQLServerResponse ModifyDTCSecurityIpHostsForSQLServerWithOptions(ModifyDTCSecurityIpHostsForSQLServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24416,6 +31406,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDTCSecurityIpHostsForSQLServerResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Distributed transaction whitelists allow for distributed transactions between an Elastic Compute Service (ECS) instance and an RDS instance. For more information, see [Configure a distributed transaction whitelist](~~124321~~).
+          * This operation is applicable to instances that run one of the following SQL Server versions in the RDS High-Availability Edition: 2012 SE, 2012 EE, 2014 SE, 2016 SE, 2016 EE, and 2017 SE.
+          *
+          * @param request ModifyDTCSecurityIpHostsForSQLServerRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDTCSecurityIpHostsForSQLServerResponse
+         */
         public async Task<ModifyDTCSecurityIpHostsForSQLServerResponse> ModifyDTCSecurityIpHostsForSQLServerWithOptionsAsync(ModifyDTCSecurityIpHostsForSQLServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24475,18 +31473,40 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDTCSecurityIpHostsForSQLServerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Distributed transaction whitelists allow for distributed transactions between an Elastic Compute Service (ECS) instance and an RDS instance. For more information, see [Configure a distributed transaction whitelist](~~124321~~).
+          * This operation is applicable to instances that run one of the following SQL Server versions in the RDS High-Availability Edition: 2012 SE, 2012 EE, 2014 SE, 2016 SE, 2016 EE, and 2017 SE.
+          *
+          * @param request ModifyDTCSecurityIpHostsForSQLServerRequest
+          * @return ModifyDTCSecurityIpHostsForSQLServerResponse
+         */
         public ModifyDTCSecurityIpHostsForSQLServerResponse ModifyDTCSecurityIpHostsForSQLServer(ModifyDTCSecurityIpHostsForSQLServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDTCSecurityIpHostsForSQLServerWithOptions(request, runtime);
         }
 
+        /**
+          * Distributed transaction whitelists allow for distributed transactions between an Elastic Compute Service (ECS) instance and an RDS instance. For more information, see [Configure a distributed transaction whitelist](~~124321~~).
+          * This operation is applicable to instances that run one of the following SQL Server versions in the RDS High-Availability Edition: 2012 SE, 2012 EE, 2014 SE, 2016 SE, 2016 EE, and 2017 SE.
+          *
+          * @param request ModifyDTCSecurityIpHostsForSQLServerRequest
+          * @return ModifyDTCSecurityIpHostsForSQLServerResponse
+         */
         public async Task<ModifyDTCSecurityIpHostsForSQLServerResponse> ModifyDTCSecurityIpHostsForSQLServerAsync(ModifyDTCSecurityIpHostsForSQLServerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDTCSecurityIpHostsForSQLServerWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is supported for ApsaraDB RDS for MySQL instances that run RDS High-availability Edition and use standard SSDs or enhanced SSDs (ESSDs) and ApsaraDB RDS for PostgreSQL instances that use standard SSDs or ESSDs. If the available storage reaches the specified threshold, ApsaraDB RDS increases the storage capacity of the instance to meet your storage requirements. In most cases, no transient connections occur during the expansion process. For more information, see [Configure automatic storage expansion for an ApsaraDB RDS for MySQL instance](~~173826~~) and [Configure automatic storage expansion for an ApsaraDB RDS for PostgreSQL instance](~~432496~~).
+          * >  If an automatic storage expansion is triggered, ApsaraDB RDS increases the storage capacity based on the larger value between 15% of the purchased storage capacity and 5 GB.
+          *
+          * @param request ModifyDasInstanceConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDasInstanceConfigResponse
+         */
         public ModifyDasInstanceConfigResponse ModifyDasInstanceConfigWithOptions(ModifyDasInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24542,6 +31562,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDasInstanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported for ApsaraDB RDS for MySQL instances that run RDS High-availability Edition and use standard SSDs or enhanced SSDs (ESSDs) and ApsaraDB RDS for PostgreSQL instances that use standard SSDs or ESSDs. If the available storage reaches the specified threshold, ApsaraDB RDS increases the storage capacity of the instance to meet your storage requirements. In most cases, no transient connections occur during the expansion process. For more information, see [Configure automatic storage expansion for an ApsaraDB RDS for MySQL instance](~~173826~~) and [Configure automatic storage expansion for an ApsaraDB RDS for PostgreSQL instance](~~432496~~).
+          * >  If an automatic storage expansion is triggered, ApsaraDB RDS increases the storage capacity based on the larger value between 15% of the purchased storage capacity and 5 GB.
+          *
+          * @param request ModifyDasInstanceConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDasInstanceConfigResponse
+         */
         public async Task<ModifyDasInstanceConfigResponse> ModifyDasInstanceConfigWithOptionsAsync(ModifyDasInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24597,18 +31625,47 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDasInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is supported for ApsaraDB RDS for MySQL instances that run RDS High-availability Edition and use standard SSDs or enhanced SSDs (ESSDs) and ApsaraDB RDS for PostgreSQL instances that use standard SSDs or ESSDs. If the available storage reaches the specified threshold, ApsaraDB RDS increases the storage capacity of the instance to meet your storage requirements. In most cases, no transient connections occur during the expansion process. For more information, see [Configure automatic storage expansion for an ApsaraDB RDS for MySQL instance](~~173826~~) and [Configure automatic storage expansion for an ApsaraDB RDS for PostgreSQL instance](~~432496~~).
+          * >  If an automatic storage expansion is triggered, ApsaraDB RDS increases the storage capacity based on the larger value between 15% of the purchased storage capacity and 5 GB.
+          *
+          * @param request ModifyDasInstanceConfigRequest
+          * @return ModifyDasInstanceConfigResponse
+         */
         public ModifyDasInstanceConfigResponse ModifyDasInstanceConfig(ModifyDasInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDasInstanceConfigWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is supported for ApsaraDB RDS for MySQL instances that run RDS High-availability Edition and use standard SSDs or enhanced SSDs (ESSDs) and ApsaraDB RDS for PostgreSQL instances that use standard SSDs or ESSDs. If the available storage reaches the specified threshold, ApsaraDB RDS increases the storage capacity of the instance to meet your storage requirements. In most cases, no transient connections occur during the expansion process. For more information, see [Configure automatic storage expansion for an ApsaraDB RDS for MySQL instance](~~173826~~) and [Configure automatic storage expansion for an ApsaraDB RDS for PostgreSQL instance](~~432496~~).
+          * >  If an automatic storage expansion is triggered, ApsaraDB RDS increases the storage capacity based on the larger value between 15% of the purchased storage capacity and 5 GB.
+          *
+          * @param request ModifyDasInstanceConfigRequest
+          * @return ModifyDasInstanceConfigResponse
+         */
         public async Task<ModifyDasInstanceConfigResponse> ModifyDasInstanceConfigAsync(ModifyDasInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDasInstanceConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The system provides the dedicated proxy feature. You can configure SSL encryption for the dedicated proxy endpoint of an instance. This allows you to ensure the data security of the instance. For more information about the dedicated proxy feature, see [Dedicated proxy](~~138705~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The dedicated proxy feature is enabled for the instance.
+          * *   The minor engine version that the dedicated proxies of the instance run is 1.12.8 or later.
+          * *   Your RDS instance runs one of the following MySQL versions:
+          *     *   MySQL 8.0 on RDS High-availability Edition with local disks. The minor engine version is 20200831 or later.
+          *     *   MySQL 5.7 on RDS High-availability Edition with local disks. The minor engine version is 20200831 or later.
+          *     *   MySQL 5.6 on RDS High-availability Edition with local disks. The minor engine version is 20200831 or later.
+          * > Calling this operation causes your instance to restart. Proceed with caution.
+          *
+          * @param request ModifyDbProxyInstanceSslRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDbProxyInstanceSslResponse
+         */
         public ModifyDbProxyInstanceSslResponse ModifyDbProxyInstanceSslWithOptions(ModifyDbProxyInstanceSslRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24660,6 +31717,21 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDbProxyInstanceSslResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The system provides the dedicated proxy feature. You can configure SSL encryption for the dedicated proxy endpoint of an instance. This allows you to ensure the data security of the instance. For more information about the dedicated proxy feature, see [Dedicated proxy](~~138705~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The dedicated proxy feature is enabled for the instance.
+          * *   The minor engine version that the dedicated proxies of the instance run is 1.12.8 or later.
+          * *   Your RDS instance runs one of the following MySQL versions:
+          *     *   MySQL 8.0 on RDS High-availability Edition with local disks. The minor engine version is 20200831 or later.
+          *     *   MySQL 5.7 on RDS High-availability Edition with local disks. The minor engine version is 20200831 or later.
+          *     *   MySQL 5.6 on RDS High-availability Edition with local disks. The minor engine version is 20200831 or later.
+          * > Calling this operation causes your instance to restart. Proceed with caution.
+          *
+          * @param request ModifyDbProxyInstanceSslRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyDbProxyInstanceSslResponse
+         */
         public async Task<ModifyDbProxyInstanceSslResponse> ModifyDbProxyInstanceSslWithOptionsAsync(ModifyDbProxyInstanceSslRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24711,18 +31783,53 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyDbProxyInstanceSslResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The system provides the dedicated proxy feature. You can configure SSL encryption for the dedicated proxy endpoint of an instance. This allows you to ensure the data security of the instance. For more information about the dedicated proxy feature, see [Dedicated proxy](~~138705~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The dedicated proxy feature is enabled for the instance.
+          * *   The minor engine version that the dedicated proxies of the instance run is 1.12.8 or later.
+          * *   Your RDS instance runs one of the following MySQL versions:
+          *     *   MySQL 8.0 on RDS High-availability Edition with local disks. The minor engine version is 20200831 or later.
+          *     *   MySQL 5.7 on RDS High-availability Edition with local disks. The minor engine version is 20200831 or later.
+          *     *   MySQL 5.6 on RDS High-availability Edition with local disks. The minor engine version is 20200831 or later.
+          * > Calling this operation causes your instance to restart. Proceed with caution.
+          *
+          * @param request ModifyDbProxyInstanceSslRequest
+          * @return ModifyDbProxyInstanceSslResponse
+         */
         public ModifyDbProxyInstanceSslResponse ModifyDbProxyInstanceSsl(ModifyDbProxyInstanceSslRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDbProxyInstanceSslWithOptions(request, runtime);
         }
 
+        /**
+          * The system provides the dedicated proxy feature. You can configure SSL encryption for the dedicated proxy endpoint of an instance. This allows you to ensure the data security of the instance. For more information about the dedicated proxy feature, see [Dedicated proxy](~~138705~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The dedicated proxy feature is enabled for the instance.
+          * *   The minor engine version that the dedicated proxies of the instance run is 1.12.8 or later.
+          * *   Your RDS instance runs one of the following MySQL versions:
+          *     *   MySQL 8.0 on RDS High-availability Edition with local disks. The minor engine version is 20200831 or later.
+          *     *   MySQL 5.7 on RDS High-availability Edition with local disks. The minor engine version is 20200831 or later.
+          *     *   MySQL 5.6 on RDS High-availability Edition with local disks. The minor engine version is 20200831 or later.
+          * > Calling this operation causes your instance to restart. Proceed with caution.
+          *
+          * @param request ModifyDbProxyInstanceSslRequest
+          * @return ModifyDbProxyInstanceSslResponse
+         */
         public async Task<ModifyDbProxyInstanceSslResponse> ModifyDbProxyInstanceSslAsync(ModifyDbProxyInstanceSslRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDbProxyInstanceSslWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * By default, Alibaba Cloud uses persistent connections to check the availability of an instance. For more information, see [What is availability detection?](~~207467~~)
+          *
+          * @param request ModifyHADiagnoseConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyHADiagnoseConfigResponse
+         */
         public ModifyHADiagnoseConfigResponse ModifyHADiagnoseConfigWithOptions(ModifyHADiagnoseConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24770,6 +31877,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyHADiagnoseConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * By default, Alibaba Cloud uses persistent connections to check the availability of an instance. For more information, see [What is availability detection?](~~207467~~)
+          *
+          * @param request ModifyHADiagnoseConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyHADiagnoseConfigResponse
+         */
         public async Task<ModifyHADiagnoseConfigResponse> ModifyHADiagnoseConfigWithOptionsAsync(ModifyHADiagnoseConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24817,18 +31931,38 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyHADiagnoseConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * By default, Alibaba Cloud uses persistent connections to check the availability of an instance. For more information, see [What is availability detection?](~~207467~~)
+          *
+          * @param request ModifyHADiagnoseConfigRequest
+          * @return ModifyHADiagnoseConfigResponse
+         */
         public ModifyHADiagnoseConfigResponse ModifyHADiagnoseConfig(ModifyHADiagnoseConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHADiagnoseConfigWithOptions(request, runtime);
         }
 
+        /**
+          * By default, Alibaba Cloud uses persistent connections to check the availability of an instance. For more information, see [What is availability detection?](~~207467~~)
+          *
+          * @param request ModifyHADiagnoseConfigRequest
+          * @return ModifyHADiagnoseConfigResponse
+         */
         public async Task<ModifyHADiagnoseConfigResponse> ModifyHADiagnoseConfigAsync(ModifyHADiagnoseConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHADiagnoseConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After a switchover is complete, the original primary RDS instance runs as the secondary RDS instance. For more information, see [Switch workloads over between primary and secondary ApsaraDB RDS for MySQL instances](~~96054~~).
+          * Before you call this operation, make sure that the instance does not run the RDS Basic Edition.
+          *
+          * @param request ModifyHASwitchConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyHASwitchConfigResponse
+         */
         public ModifyHASwitchConfigResponse ModifyHASwitchConfigWithOptions(ModifyHASwitchConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24880,6 +32014,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyHASwitchConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After a switchover is complete, the original primary RDS instance runs as the secondary RDS instance. For more information, see [Switch workloads over between primary and secondary ApsaraDB RDS for MySQL instances](~~96054~~).
+          * Before you call this operation, make sure that the instance does not run the RDS Basic Edition.
+          *
+          * @param request ModifyHASwitchConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyHASwitchConfigResponse
+         */
         public async Task<ModifyHASwitchConfigResponse> ModifyHASwitchConfigWithOptionsAsync(ModifyHASwitchConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24931,18 +32073,39 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyHASwitchConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After a switchover is complete, the original primary RDS instance runs as the secondary RDS instance. For more information, see [Switch workloads over between primary and secondary ApsaraDB RDS for MySQL instances](~~96054~~).
+          * Before you call this operation, make sure that the instance does not run the RDS Basic Edition.
+          *
+          * @param request ModifyHASwitchConfigRequest
+          * @return ModifyHASwitchConfigResponse
+         */
         public ModifyHASwitchConfigResponse ModifyHASwitchConfig(ModifyHASwitchConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHASwitchConfigWithOptions(request, runtime);
         }
 
+        /**
+          * After a switchover is complete, the original primary RDS instance runs as the secondary RDS instance. For more information, see [Switch workloads over between primary and secondary ApsaraDB RDS for MySQL instances](~~96054~~).
+          * Before you call this operation, make sure that the instance does not run the RDS Basic Edition.
+          *
+          * @param request ModifyHASwitchConfigRequest
+          * @return ModifyHASwitchConfigResponse
+         */
         public async Task<ModifyHASwitchConfigResponse> ModifyHASwitchConfigAsync(ModifyHASwitchConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHASwitchConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you enable auto-renewal for your instance, you do not need to manually renew your subscription or be concerned about business interruptions caused by subscription expiration. For more information, see [Configure auto-renewal](~~96049~~).
+          *
+          * @param request ModifyInstanceAutoRenewalAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceAutoRenewalAttributeResponse
+         */
         public ModifyInstanceAutoRenewalAttributeResponse ModifyInstanceAutoRenewalAttributeWithOptions(ModifyInstanceAutoRenewalAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25002,6 +32165,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyInstanceAutoRenewalAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you enable auto-renewal for your instance, you do not need to manually renew your subscription or be concerned about business interruptions caused by subscription expiration. For more information, see [Configure auto-renewal](~~96049~~).
+          *
+          * @param request ModifyInstanceAutoRenewalAttributeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceAutoRenewalAttributeResponse
+         */
         public async Task<ModifyInstanceAutoRenewalAttributeResponse> ModifyInstanceAutoRenewalAttributeWithOptionsAsync(ModifyInstanceAutoRenewalAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25061,18 +32231,40 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyInstanceAutoRenewalAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you enable auto-renewal for your instance, you do not need to manually renew your subscription or be concerned about business interruptions caused by subscription expiration. For more information, see [Configure auto-renewal](~~96049~~).
+          *
+          * @param request ModifyInstanceAutoRenewalAttributeRequest
+          * @return ModifyInstanceAutoRenewalAttributeResponse
+         */
         public ModifyInstanceAutoRenewalAttributeResponse ModifyInstanceAutoRenewalAttribute(ModifyInstanceAutoRenewalAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceAutoRenewalAttributeWithOptions(request, runtime);
         }
 
+        /**
+          * If you enable auto-renewal for your instance, you do not need to manually renew your subscription or be concerned about business interruptions caused by subscription expiration. For more information, see [Configure auto-renewal](~~96049~~).
+          *
+          * @param request ModifyInstanceAutoRenewalAttributeRequest
+          * @return ModifyInstanceAutoRenewalAttributeResponse
+         */
         public async Task<ModifyInstanceAutoRenewalAttributeResponse> ModifyInstanceAutoRenewalAttributeAsync(ModifyInstanceAutoRenewalAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceAutoRenewalAttributeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request ModifyInstanceCrossBackupPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceCrossBackupPolicyResponse
+         */
         public ModifyInstanceCrossBackupPolicyResponse ModifyInstanceCrossBackupPolicyWithOptions(ModifyInstanceCrossBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25140,6 +32332,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyInstanceCrossBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request ModifyInstanceCrossBackupPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyInstanceCrossBackupPolicyResponse
+         */
         public async Task<ModifyInstanceCrossBackupPolicyResponse> ModifyInstanceCrossBackupPolicyWithOptionsAsync(ModifyInstanceCrossBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25207,18 +32409,44 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyInstanceCrossBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request ModifyInstanceCrossBackupPolicyRequest
+          * @return ModifyInstanceCrossBackupPolicyResponse
+         */
         public ModifyInstanceCrossBackupPolicyResponse ModifyInstanceCrossBackupPolicy(ModifyInstanceCrossBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceCrossBackupPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+          * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
+          * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+          *
+          * @param request ModifyInstanceCrossBackupPolicyRequest
+          * @return ModifyInstanceCrossBackupPolicyResponse
+         */
         public async Task<ModifyInstanceCrossBackupPolicyResponse> ModifyInstanceCrossBackupPolicyAsync(ModifyInstanceCrossBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceCrossBackupPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS for PostgreSQL allows you to modify the pg_hba.conf file based on your business requirements. For more information, see [Introduction to the pg_hba.conf file](https://www.postgresql.org/docs/11/auth-pg-hba-conf.html).
+          * You can modify the information of the Active Directory (AD) domain controller in the pg_hba.conf file of an instance. Then, you can connect the instance to a self-managed AD domain. For more information, see [Connect an ApsaraDB RDS for PostgreSQL instance to a self-managed AD domain](~~349288~~).
+          *
+          * @param request ModifyPGHbaConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyPGHbaConfigResponse
+         */
         public ModifyPGHbaConfigResponse ModifyPGHbaConfigWithOptions(ModifyPGHbaConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25274,6 +32502,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyPGHbaConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS for PostgreSQL allows you to modify the pg_hba.conf file based on your business requirements. For more information, see [Introduction to the pg_hba.conf file](https://www.postgresql.org/docs/11/auth-pg-hba-conf.html).
+          * You can modify the information of the Active Directory (AD) domain controller in the pg_hba.conf file of an instance. Then, you can connect the instance to a self-managed AD domain. For more information, see [Connect an ApsaraDB RDS for PostgreSQL instance to a self-managed AD domain](~~349288~~).
+          *
+          * @param request ModifyPGHbaConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyPGHbaConfigResponse
+         */
         public async Task<ModifyPGHbaConfigResponse> ModifyPGHbaConfigWithOptionsAsync(ModifyPGHbaConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25329,18 +32565,40 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyPGHbaConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS for PostgreSQL allows you to modify the pg_hba.conf file based on your business requirements. For more information, see [Introduction to the pg_hba.conf file](https://www.postgresql.org/docs/11/auth-pg-hba-conf.html).
+          * You can modify the information of the Active Directory (AD) domain controller in the pg_hba.conf file of an instance. Then, you can connect the instance to a self-managed AD domain. For more information, see [Connect an ApsaraDB RDS for PostgreSQL instance to a self-managed AD domain](~~349288~~).
+          *
+          * @param request ModifyPGHbaConfigRequest
+          * @return ModifyPGHbaConfigResponse
+         */
         public ModifyPGHbaConfigResponse ModifyPGHbaConfig(ModifyPGHbaConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyPGHbaConfigWithOptions(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS for PostgreSQL allows you to modify the pg_hba.conf file based on your business requirements. For more information, see [Introduction to the pg_hba.conf file](https://www.postgresql.org/docs/11/auth-pg-hba-conf.html).
+          * You can modify the information of the Active Directory (AD) domain controller in the pg_hba.conf file of an instance. Then, you can connect the instance to a self-managed AD domain. For more information, see [Connect an ApsaraDB RDS for PostgreSQL instance to a self-managed AD domain](~~349288~~).
+          *
+          * @param request ModifyPGHbaConfigRequest
+          * @return ModifyPGHbaConfigResponse
+         */
         public async Task<ModifyPGHbaConfigResponse> ModifyPGHbaConfigAsync(ModifyPGHbaConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyPGHbaConfigWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can modify the parameters directly or by using a parameter template. After you submit the parameter modification request, ApsaraDB RDS starts a task to apply the new parameter values to the instance. If a new parameter value takes effect only after the instance restarts, ApsaraDB RDS restarts the instance. For information about configurable parameters, see [Configure the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~).
+          * > Before the system runs a parameter modification task, the system checks whether the parameters exist, whether they are configurable, and whether the new parameter values are valid.
+          *
+          * @param request ModifyParameterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyParameterResponse
+         */
         public ModifyParameterResponse ModifyParameterWithOptions(ModifyParameterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25408,6 +32666,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyParameterResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can modify the parameters directly or by using a parameter template. After you submit the parameter modification request, ApsaraDB RDS starts a task to apply the new parameter values to the instance. If a new parameter value takes effect only after the instance restarts, ApsaraDB RDS restarts the instance. For information about configurable parameters, see [Configure the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~).
+          * > Before the system runs a parameter modification task, the system checks whether the parameters exist, whether they are configurable, and whether the new parameter values are valid.
+          *
+          * @param request ModifyParameterRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyParameterResponse
+         */
         public async Task<ModifyParameterResponse> ModifyParameterWithOptionsAsync(ModifyParameterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25475,18 +32741,40 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyParameterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can modify the parameters directly or by using a parameter template. After you submit the parameter modification request, ApsaraDB RDS starts a task to apply the new parameter values to the instance. If a new parameter value takes effect only after the instance restarts, ApsaraDB RDS restarts the instance. For information about configurable parameters, see [Configure the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~).
+          * > Before the system runs a parameter modification task, the system checks whether the parameters exist, whether they are configurable, and whether the new parameter values are valid.
+          *
+          * @param request ModifyParameterRequest
+          * @return ModifyParameterResponse
+         */
         public ModifyParameterResponse ModifyParameter(ModifyParameterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyParameterWithOptions(request, runtime);
         }
 
+        /**
+          * You can modify the parameters directly or by using a parameter template. After you submit the parameter modification request, ApsaraDB RDS starts a task to apply the new parameter values to the instance. If a new parameter value takes effect only after the instance restarts, ApsaraDB RDS restarts the instance. For information about configurable parameters, see [Configure the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~).
+          * > Before the system runs a parameter modification task, the system checks whether the parameters exist, whether they are configurable, and whether the new parameter values are valid.
+          *
+          * @param request ModifyParameterRequest
+          * @return ModifyParameterResponse
+         */
         public async Task<ModifyParameterResponse> ModifyParameterAsync(ModifyParameterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyParameterWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to an instance. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > This operation is supported only when your instance runs MySQL or PostgreSQL.
+          *
+          * @param request ModifyParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyParameterGroupResponse
+         */
         public ModifyParameterGroupResponse ModifyParameterGroupWithOptions(ModifyParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25546,6 +32834,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyParameterGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to an instance. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > This operation is supported only when your instance runs MySQL or PostgreSQL.
+          *
+          * @param request ModifyParameterGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyParameterGroupResponse
+         */
         public async Task<ModifyParameterGroupResponse> ModifyParameterGroupWithOptionsAsync(ModifyParameterGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25605,18 +32901,45 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to an instance. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > This operation is supported only when your instance runs MySQL or PostgreSQL.
+          *
+          * @param request ModifyParameterGroupRequest
+          * @return ModifyParameterGroupResponse
+         */
         public ModifyParameterGroupResponse ModifyParameterGroup(ModifyParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyParameterGroupWithOptions(request, runtime);
         }
 
+        /**
+          * You can configure a number of parameters at a time by using a parameter template and then apply the parameter template to an instance. For more information, see [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](~~130565~~) or [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](~~457176~~).
+          * > This operation is supported only when your instance runs MySQL or PostgreSQL.
+          *
+          * @param request ModifyParameterGroupRequest
+          * @return ModifyParameterGroupResponse
+         */
         public async Task<ModifyParameterGroupResponse> ModifyParameterGroupAsync(ModifyParameterGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyParameterGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.
+          * *   The read/write splitting feature is enabled for your ApsaraDB RDS for MySQL instance.
+          * *   The instance must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 5.7 on RDS High-availability Edition (with local disks)
+          *     *   MySQL 5.6
+          *     *   SQL Server on RDS Cluster Edition
+          *
+          * @param request ModifyReadWriteSplittingConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyReadWriteSplittingConnectionResponse
+         */
         public ModifyReadWriteSplittingConnectionResponse ModifyReadWriteSplittingConnectionWithOptions(ModifyReadWriteSplittingConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25680,6 +33003,19 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyReadWriteSplittingConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.
+          * *   The read/write splitting feature is enabled for your ApsaraDB RDS for MySQL instance.
+          * *   The instance must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 5.7 on RDS High-availability Edition (with local disks)
+          *     *   MySQL 5.6
+          *     *   SQL Server on RDS Cluster Edition
+          *
+          * @param request ModifyReadWriteSplittingConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyReadWriteSplittingConnectionResponse
+         */
         public async Task<ModifyReadWriteSplittingConnectionResponse> ModifyReadWriteSplittingConnectionWithOptionsAsync(ModifyReadWriteSplittingConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25743,18 +33079,49 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyReadWriteSplittingConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.
+          * *   The read/write splitting feature is enabled for your ApsaraDB RDS for MySQL instance.
+          * *   The instance must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 5.7 on RDS High-availability Edition (with local disks)
+          *     *   MySQL 5.6
+          *     *   SQL Server on RDS Cluster Edition
+          *
+          * @param request ModifyReadWriteSplittingConnectionRequest
+          * @return ModifyReadWriteSplittingConnectionResponse
+         */
         public ModifyReadWriteSplittingConnectionResponse ModifyReadWriteSplittingConnection(ModifyReadWriteSplittingConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyReadWriteSplittingConnectionWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.
+          * *   The read/write splitting feature is enabled for your ApsaraDB RDS for MySQL instance.
+          * *   The instance must run one of the following database engine versions and RDS editions:
+          *     *   MySQL 5.7 on RDS High-availability Edition (with local disks)
+          *     *   MySQL 5.6
+          *     *   SQL Server on RDS Cluster Edition
+          *
+          * @param request ModifyReadWriteSplittingConnectionRequest
+          * @return ModifyReadWriteSplittingConnectionResponse
+         */
         public async Task<ModifyReadWriteSplittingConnectionResponse> ModifyReadWriteSplittingConnectionAsync(ModifyReadWriteSplittingConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyReadWriteSplittingConnectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can specify the latency at which your primary RDS instance replicates data to a read-only instance. For more information, see [Set a replication delay for an RDS MySQL read-only instance](~~96056~~).
+          *
+          * @param request ModifyReadonlyInstanceDelayReplicationTimeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyReadonlyInstanceDelayReplicationTimeResponse
+         */
         public ModifyReadonlyInstanceDelayReplicationTimeResponse ModifyReadonlyInstanceDelayReplicationTimeWithOptions(ModifyReadonlyInstanceDelayReplicationTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25798,6 +33165,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyReadonlyInstanceDelayReplicationTimeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can specify the latency at which your primary RDS instance replicates data to a read-only instance. For more information, see [Set a replication delay for an RDS MySQL read-only instance](~~96056~~).
+          *
+          * @param request ModifyReadonlyInstanceDelayReplicationTimeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyReadonlyInstanceDelayReplicationTimeResponse
+         */
         public async Task<ModifyReadonlyInstanceDelayReplicationTimeResponse> ModifyReadonlyInstanceDelayReplicationTimeWithOptionsAsync(ModifyReadonlyInstanceDelayReplicationTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25841,18 +33215,37 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyReadonlyInstanceDelayReplicationTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can specify the latency at which your primary RDS instance replicates data to a read-only instance. For more information, see [Set a replication delay for an RDS MySQL read-only instance](~~96056~~).
+          *
+          * @param request ModifyReadonlyInstanceDelayReplicationTimeRequest
+          * @return ModifyReadonlyInstanceDelayReplicationTimeResponse
+         */
         public ModifyReadonlyInstanceDelayReplicationTimeResponse ModifyReadonlyInstanceDelayReplicationTime(ModifyReadonlyInstanceDelayReplicationTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyReadonlyInstanceDelayReplicationTimeWithOptions(request, runtime);
         }
 
+        /**
+          * You can specify the latency at which your primary RDS instance replicates data to a read-only instance. For more information, see [Set a replication delay for an RDS MySQL read-only instance](~~96056~~).
+          *
+          * @param request ModifyReadonlyInstanceDelayReplicationTimeRequest
+          * @return ModifyReadonlyInstanceDelayReplicationTimeResponse
+         */
         public async Task<ModifyReadonlyInstanceDelayReplicationTimeResponse> ModifyReadonlyInstanceDelayReplicationTimeAsync(ModifyReadonlyInstanceDelayReplicationTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyReadonlyInstanceDelayReplicationTimeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Resource Management enables you to build an organizational structure for resources based on your business needs. You can use a resource directory, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
+          *
+          * @param request ModifyResourceGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyResourceGroupResponse
+         */
         public ModifyResourceGroupResponse ModifyResourceGroupWithOptions(ModifyResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25904,6 +33297,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Resource Management enables you to build an organizational structure for resources based on your business needs. You can use a resource directory, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
+          *
+          * @param request ModifyResourceGroupRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyResourceGroupResponse
+         */
         public async Task<ModifyResourceGroupResponse> ModifyResourceGroupWithOptionsAsync(ModifyResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25955,18 +33355,41 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifyResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Resource Management enables you to build an organizational structure for resources based on your business needs. You can use a resource directory, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
+          *
+          * @param request ModifyResourceGroupRequest
+          * @return ModifyResourceGroupResponse
+         */
         public ModifyResourceGroupResponse ModifyResourceGroup(ModifyResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyResourceGroupWithOptions(request, runtime);
         }
 
+        /**
+          * Resource Management enables you to build an organizational structure for resources based on your business needs. You can use a resource directory, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
+          *
+          * @param request ModifyResourceGroupRequest
+          * @return ModifyResourceGroupResponse
+         */
         public async Task<ModifyResourceGroupResponse> ModifyResourceGroupAsync(ModifyResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          * > If you call this operation by using the credentials of a RAM user, the RAM user must have the read and write permissions such as AliyunRDSFullAccess on the instance. If the RAM user does not have the read and write permissions on the instance, the system displays a message stating that you do not have the permissions to call this operation. For more information about how to grant permissions to a RAM user, see [Use RAM to manage ApsaraDB RDS permissions](~~58932~~).
+          *
+          * @param request ModifySQLCollectorPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifySQLCollectorPolicyResponse
+         */
         public ModifySQLCollectorPolicyResponse ModifySQLCollectorPolicyWithOptions(ModifySQLCollectorPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26018,6 +33441,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifySQLCollectorPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          * > If you call this operation by using the credentials of a RAM user, the RAM user must have the read and write permissions such as AliyunRDSFullAccess on the instance. If the RAM user does not have the read and write permissions on the instance, the system displays a message stating that you do not have the permissions to call this operation. For more information about how to grant permissions to a RAM user, see [Use RAM to manage ApsaraDB RDS permissions](~~58932~~).
+          *
+          * @param request ModifySQLCollectorPolicyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifySQLCollectorPolicyResponse
+         */
         public async Task<ModifySQLCollectorPolicyResponse> ModifySQLCollectorPolicyWithOptionsAsync(ModifySQLCollectorPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26069,18 +33503,47 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifySQLCollectorPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          * > If you call this operation by using the credentials of a RAM user, the RAM user must have the read and write permissions such as AliyunRDSFullAccess on the instance. If the RAM user does not have the read and write permissions on the instance, the system displays a message stating that you do not have the permissions to call this operation. For more information about how to grant permissions to a RAM user, see [Use RAM to manage ApsaraDB RDS permissions](~~58932~~).
+          *
+          * @param request ModifySQLCollectorPolicyRequest
+          * @return ModifySQLCollectorPolicyResponse
+         */
         public ModifySQLCollectorPolicyResponse ModifySQLCollectorPolicy(ModifySQLCollectorPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySQLCollectorPolicyWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          * > If you call this operation by using the credentials of a RAM user, the RAM user must have the read and write permissions such as AliyunRDSFullAccess on the instance. If the RAM user does not have the read and write permissions on the instance, the system displays a message stating that you do not have the permissions to call this operation. For more information about how to grant permissions to a RAM user, see [Use RAM to manage ApsaraDB RDS permissions](~~58932~~).
+          *
+          * @param request ModifySQLCollectorPolicyRequest
+          * @return ModifySQLCollectorPolicyResponse
+         */
         public async Task<ModifySQLCollectorPolicyResponse> ModifySQLCollectorPolicyAsync(ModifySQLCollectorPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySQLCollectorPolicyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The SQL explorer must be enabled for the instance.
+          * The instance must run MySQL. For more information, see [SQL Explorer](~~96123~~).
+          * >  After you shorten the log backup retention period, log backpack files that are stored longer than the specified log backup retention period are immediately deleted.
+          *
+          * @param request ModifySQLCollectorRetentionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifySQLCollectorRetentionResponse
+         */
         public ModifySQLCollectorRetentionResponse ModifySQLCollectorRetentionWithOptions(ModifySQLCollectorRetentionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26136,6 +33599,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifySQLCollectorRetentionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The SQL explorer must be enabled for the instance.
+          * The instance must run MySQL. For more information, see [SQL Explorer](~~96123~~).
+          * >  After you shorten the log backup retention period, log backpack files that are stored longer than the specified log backup retention period are immediately deleted.
+          *
+          * @param request ModifySQLCollectorRetentionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifySQLCollectorRetentionResponse
+         */
         public async Task<ModifySQLCollectorRetentionResponse> ModifySQLCollectorRetentionWithOptionsAsync(ModifySQLCollectorRetentionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26191,18 +33663,41 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifySQLCollectorRetentionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The SQL explorer must be enabled for the instance.
+          * The instance must run MySQL. For more information, see [SQL Explorer](~~96123~~).
+          * >  After you shorten the log backup retention period, log backpack files that are stored longer than the specified log backup retention period are immediately deleted.
+          *
+          * @param request ModifySQLCollectorRetentionRequest
+          * @return ModifySQLCollectorRetentionResponse
+         */
         public ModifySQLCollectorRetentionResponse ModifySQLCollectorRetention(ModifySQLCollectorRetentionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySQLCollectorRetentionWithOptions(request, runtime);
         }
 
+        /**
+          * The SQL explorer must be enabled for the instance.
+          * The instance must run MySQL. For more information, see [SQL Explorer](~~96123~~).
+          * >  After you shorten the log backup retention period, log backpack files that are stored longer than the specified log backup retention period are immediately deleted.
+          *
+          * @param request ModifySQLCollectorRetentionRequest
+          * @return ModifySQLCollectorRetentionResponse
+         */
         public async Task<ModifySQLCollectorRetentionResponse> ModifySQLCollectorRetentionAsync(ModifySQLCollectorRetentionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySQLCollectorRetentionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          *
+          * @param request ModifySecurityGroupConfigurationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifySecurityGroupConfigurationResponse
+         */
         public ModifySecurityGroupConfigurationResponse ModifySecurityGroupConfigurationWithOptions(ModifySecurityGroupConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26246,6 +33741,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifySecurityGroupConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          *
+          * @param request ModifySecurityGroupConfigurationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifySecurityGroupConfigurationResponse
+         */
         public async Task<ModifySecurityGroupConfigurationResponse> ModifySecurityGroupConfigurationWithOptionsAsync(ModifySecurityGroupConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26289,18 +33791,38 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifySecurityGroupConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          *
+          * @param request ModifySecurityGroupConfigurationRequest
+          * @return ModifySecurityGroupConfigurationResponse
+         */
         public ModifySecurityGroupConfigurationResponse ModifySecurityGroupConfiguration(ModifySecurityGroupConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySecurityGroupConfigurationWithOptions(request, runtime);
         }
 
+        /**
+          * After an RDS instance is added to an ECS security group, all ECS instances in the security group can access the RDS instance. For more information, see [Configure a whitelist for an RDS instance](~~96118~~).
+          *
+          * @param request ModifySecurityGroupConfigurationRequest
+          * @return ModifySecurityGroupConfigurationResponse
+         */
         public async Task<ModifySecurityGroupConfigurationResponse> ModifySecurityGroupConfigurationAsync(ModifySecurityGroupConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySecurityGroupConfigurationWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * An IP address whitelist contains the IP addresses and CIDR blocks that are granted access to the instance. For more information about how to configure an IP address whitelist, see [Configure an IP address whitelist for an ApsaraDB RDS instance](~~96118~~).
+          * > Before you call this operation, make sure that the instance is in the Running state. If the instance is not in the Running state, the operation fails.
+          *
+          * @param request ModifySecurityIpsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifySecurityIpsResponse
+         */
         public ModifySecurityIpsResponse ModifySecurityIpsWithOptions(ModifySecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26360,6 +33882,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifySecurityIpsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * An IP address whitelist contains the IP addresses and CIDR blocks that are granted access to the instance. For more information about how to configure an IP address whitelist, see [Configure an IP address whitelist for an ApsaraDB RDS instance](~~96118~~).
+          * > Before you call this operation, make sure that the instance is in the Running state. If the instance is not in the Running state, the operation fails.
+          *
+          * @param request ModifySecurityIpsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifySecurityIpsResponse
+         */
         public async Task<ModifySecurityIpsResponse> ModifySecurityIpsWithOptionsAsync(ModifySecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26419,18 +33949,44 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ModifySecurityIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * An IP address whitelist contains the IP addresses and CIDR blocks that are granted access to the instance. For more information about how to configure an IP address whitelist, see [Configure an IP address whitelist for an ApsaraDB RDS instance](~~96118~~).
+          * > Before you call this operation, make sure that the instance is in the Running state. If the instance is not in the Running state, the operation fails.
+          *
+          * @param request ModifySecurityIpsRequest
+          * @return ModifySecurityIpsResponse
+         */
         public ModifySecurityIpsResponse ModifySecurityIps(ModifySecurityIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySecurityIpsWithOptions(request, runtime);
         }
 
+        /**
+          * An IP address whitelist contains the IP addresses and CIDR blocks that are granted access to the instance. For more information about how to configure an IP address whitelist, see [Configure an IP address whitelist for an ApsaraDB RDS instance](~~96118~~).
+          * > Before you call this operation, make sure that the instance is in the Running state. If the instance is not in the Running state, the operation fails.
+          *
+          * @param request ModifySecurityIpsRequest
+          * @return ModifySecurityIpsResponse
+         */
         public async Task<ModifySecurityIpsResponse> ModifySecurityIpsAsync(ModifySecurityIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySecurityIpsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS automatically uploads log backup files to Object Storage Service (OSS) buckets. If the remaining storage of an instance is insufficient, you can upload the log backup files of the instance to OSS buckets. After you upload the log backup files of an instance, ApsaraDB RDS deletes these files from the instance to release storage. This operation is called to upload log backup files from an instance to OSS buckets and then delete these files from the instance. If the instance runs SQL Server, transaction log backup files are compressed before they are uploaded. For more information about log backups, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~) or [Back up an ApsaraDB RDS for SQL Server instance](~~95717~~).
+          * > 
+          * *   This operation is available only for instances that run MySQL or SQL Server.
+          * *   When you upload log backup files, the data restoration feature is not affected.
+          * *   This operation is called to release storage. The backup storage usage is not reduced.
+          * *   The OSS buckets to which log backup files are uploaded are provided by ApsaraDB RDS. You do not need to purchase these OSS buckets. In addition, you cannot access these OSS buckets.
+          *
+          * @param request PurgeDBInstanceLogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PurgeDBInstanceLogResponse
+         */
         public PurgeDBInstanceLogResponse PurgeDBInstanceLogWithOptions(PurgeDBInstanceLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26478,6 +34034,18 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<PurgeDBInstanceLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS automatically uploads log backup files to Object Storage Service (OSS) buckets. If the remaining storage of an instance is insufficient, you can upload the log backup files of the instance to OSS buckets. After you upload the log backup files of an instance, ApsaraDB RDS deletes these files from the instance to release storage. This operation is called to upload log backup files from an instance to OSS buckets and then delete these files from the instance. If the instance runs SQL Server, transaction log backup files are compressed before they are uploaded. For more information about log backups, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~) or [Back up an ApsaraDB RDS for SQL Server instance](~~95717~~).
+          * > 
+          * *   This operation is available only for instances that run MySQL or SQL Server.
+          * *   When you upload log backup files, the data restoration feature is not affected.
+          * *   This operation is called to release storage. The backup storage usage is not reduced.
+          * *   The OSS buckets to which log backup files are uploaded are provided by ApsaraDB RDS. You do not need to purchase these OSS buckets. In addition, you cannot access these OSS buckets.
+          *
+          * @param request PurgeDBInstanceLogRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PurgeDBInstanceLogResponse
+         */
         public async Task<PurgeDBInstanceLogResponse> PurgeDBInstanceLogWithOptionsAsync(PurgeDBInstanceLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26525,18 +34093,48 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<PurgeDBInstanceLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS automatically uploads log backup files to Object Storage Service (OSS) buckets. If the remaining storage of an instance is insufficient, you can upload the log backup files of the instance to OSS buckets. After you upload the log backup files of an instance, ApsaraDB RDS deletes these files from the instance to release storage. This operation is called to upload log backup files from an instance to OSS buckets and then delete these files from the instance. If the instance runs SQL Server, transaction log backup files are compressed before they are uploaded. For more information about log backups, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~) or [Back up an ApsaraDB RDS for SQL Server instance](~~95717~~).
+          * > 
+          * *   This operation is available only for instances that run MySQL or SQL Server.
+          * *   When you upload log backup files, the data restoration feature is not affected.
+          * *   This operation is called to release storage. The backup storage usage is not reduced.
+          * *   The OSS buckets to which log backup files are uploaded are provided by ApsaraDB RDS. You do not need to purchase these OSS buckets. In addition, you cannot access these OSS buckets.
+          *
+          * @param request PurgeDBInstanceLogRequest
+          * @return PurgeDBInstanceLogResponse
+         */
         public PurgeDBInstanceLogResponse PurgeDBInstanceLog(PurgeDBInstanceLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PurgeDBInstanceLogWithOptions(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS automatically uploads log backup files to Object Storage Service (OSS) buckets. If the remaining storage of an instance is insufficient, you can upload the log backup files of the instance to OSS buckets. After you upload the log backup files of an instance, ApsaraDB RDS deletes these files from the instance to release storage. This operation is called to upload log backup files from an instance to OSS buckets and then delete these files from the instance. If the instance runs SQL Server, transaction log backup files are compressed before they are uploaded. For more information about log backups, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~) or [Back up an ApsaraDB RDS for SQL Server instance](~~95717~~).
+          * > 
+          * *   This operation is available only for instances that run MySQL or SQL Server.
+          * *   When you upload log backup files, the data restoration feature is not affected.
+          * *   This operation is called to release storage. The backup storage usage is not reduced.
+          * *   The OSS buckets to which log backup files are uploaded are provided by ApsaraDB RDS. You do not need to purchase these OSS buckets. In addition, you cannot access these OSS buckets.
+          *
+          * @param request PurgeDBInstanceLogRequest
+          * @return PurgeDBInstanceLogResponse
+         */
         public async Task<PurgeDBInstanceLogResponse> PurgeDBInstanceLogAsync(PurgeDBInstanceLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PurgeDBInstanceLogWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The notifications are highlighted at the top of the ApsaraDB RDS console. The notifications include renewal reminders and reminders of instance creation failures.
+          * After you call this operation to query notifications, you can call the [ConfirmNotify](~~428005~~) operation to mark the notifications as confirmed, which means that you understand the content of the notifications.
+          *
+          * @param request QueryNotifyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryNotifyResponse
+         */
         public QueryNotifyResponse QueryNotifyWithOptions(QueryNotifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26580,6 +34178,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<QueryNotifyResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The notifications are highlighted at the top of the ApsaraDB RDS console. The notifications include renewal reminders and reminders of instance creation failures.
+          * After you call this operation to query notifications, you can call the [ConfirmNotify](~~428005~~) operation to mark the notifications as confirmed, which means that you understand the content of the notifications.
+          *
+          * @param request QueryNotifyRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryNotifyResponse
+         */
         public async Task<QueryNotifyResponse> QueryNotifyWithOptionsAsync(QueryNotifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26623,18 +34229,39 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<QueryNotifyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The notifications are highlighted at the top of the ApsaraDB RDS console. The notifications include renewal reminders and reminders of instance creation failures.
+          * After you call this operation to query notifications, you can call the [ConfirmNotify](~~428005~~) operation to mark the notifications as confirmed, which means that you understand the content of the notifications.
+          *
+          * @param request QueryNotifyRequest
+          * @return QueryNotifyResponse
+         */
         public QueryNotifyResponse QueryNotify(QueryNotifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryNotifyWithOptions(request, runtime);
         }
 
+        /**
+          * The notifications are highlighted at the top of the ApsaraDB RDS console. The notifications include renewal reminders and reminders of instance creation failures.
+          * After you call this operation to query notifications, you can call the [ConfirmNotify](~~428005~~) operation to mark the notifications as confirmed, which means that you understand the content of the notifications.
+          *
+          * @param request QueryNotifyRequest
+          * @return QueryNotifyResponse
+         */
         public async Task<QueryNotifyResponse> QueryNotifyAsync(QueryNotifyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryNotifyWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request RebuildDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RebuildDBInstanceResponse
+         */
         public RebuildDBInstanceResponse RebuildDBInstanceWithOptions(RebuildDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26690,6 +34317,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RebuildDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request RebuildDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RebuildDBInstanceResponse
+         */
         public async Task<RebuildDBInstanceResponse> RebuildDBInstanceWithOptionsAsync(RebuildDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26745,18 +34379,38 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RebuildDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request RebuildDBInstanceRequest
+          * @return RebuildDBInstanceResponse
+         */
         public RebuildDBInstanceResponse RebuildDBInstance(RebuildDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RebuildDBInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+          *
+          * @param request RebuildDBInstanceRequest
+          * @return RebuildDBInstanceResponse
+         */
         public async Task<RebuildDBInstanceResponse> RebuildDBInstanceAsync(RebuildDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RebuildDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * A disaster recovery instance is created.
+          *
+          * @param request ReceiveDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReceiveDBInstanceResponse
+         */
         public ReceiveDBInstanceResponse ReceiveDBInstanceWithOptions(ReceiveDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26804,6 +34458,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ReceiveDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * A disaster recovery instance is created.
+          *
+          * @param request ReceiveDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReceiveDBInstanceResponse
+         */
         public async Task<ReceiveDBInstanceResponse> ReceiveDBInstanceWithOptionsAsync(ReceiveDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26851,18 +34513,43 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ReceiveDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Prerequisites
+          * A disaster recovery instance is created.
+          *
+          * @param request ReceiveDBInstanceRequest
+          * @return ReceiveDBInstanceResponse
+         */
         public ReceiveDBInstanceResponse ReceiveDBInstance(ReceiveDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReceiveDBInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * ## Prerequisites
+          * A disaster recovery instance is created.
+          *
+          * @param request ReceiveDBInstanceRequest
+          * @return ReceiveDBInstanceResponse
+         */
         public async Task<ReceiveDBInstanceResponse> ReceiveDBInstanceAsync(ReceiveDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReceiveDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to restore databases to a new instance or an existing instance. If you want to restore databases to an existing instance, we recommend that you call the [Copy databases](~~88810~~) operation.
+          * If you want to restore databases to a new instance, you must create an instance and then restore specific or all databases to the new instance.
+          * *   If you specify the name of a database, only the specified database is restored to the new instance.
+          * *   If you do not specify the name of a database, all databases are restored to the new instance.
+          * > This operation is supported only for instances that run SQL Server 2012 or later.
+          *
+          * @param request RecoveryDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RecoveryDBInstanceResponse
+         */
         public RecoveryDBInstanceResponse RecoveryDBInstanceWithOptions(RecoveryDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26950,6 +34637,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RecoveryDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to restore databases to a new instance or an existing instance. If you want to restore databases to an existing instance, we recommend that you call the [Copy databases](~~88810~~) operation.
+          * If you want to restore databases to a new instance, you must create an instance and then restore specific or all databases to the new instance.
+          * *   If you specify the name of a database, only the specified database is restored to the new instance.
+          * *   If you do not specify the name of a database, all databases are restored to the new instance.
+          * > This operation is supported only for instances that run SQL Server 2012 or later.
+          *
+          * @param request RecoveryDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RecoveryDBInstanceResponse
+         */
         public async Task<RecoveryDBInstanceResponse> RecoveryDBInstanceWithOptionsAsync(RecoveryDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27037,12 +34735,32 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RecoveryDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to restore databases to a new instance or an existing instance. If you want to restore databases to an existing instance, we recommend that you call the [Copy databases](~~88810~~) operation.
+          * If you want to restore databases to a new instance, you must create an instance and then restore specific or all databases to the new instance.
+          * *   If you specify the name of a database, only the specified database is restored to the new instance.
+          * *   If you do not specify the name of a database, all databases are restored to the new instance.
+          * > This operation is supported only for instances that run SQL Server 2012 or later.
+          *
+          * @param request RecoveryDBInstanceRequest
+          * @return RecoveryDBInstanceResponse
+         */
         public RecoveryDBInstanceResponse RecoveryDBInstance(RecoveryDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RecoveryDBInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to restore databases to a new instance or an existing instance. If you want to restore databases to an existing instance, we recommend that you call the [Copy databases](~~88810~~) operation.
+          * If you want to restore databases to a new instance, you must create an instance and then restore specific or all databases to the new instance.
+          * *   If you specify the name of a database, only the specified database is restored to the new instance.
+          * *   If you do not specify the name of a database, all databases are restored to the new instance.
+          * > This operation is supported only for instances that run SQL Server 2012 or later.
+          *
+          * @param request RecoveryDBInstanceRequest
+          * @return RecoveryDBInstanceResponse
+         */
         public async Task<RecoveryDBInstanceResponse> RecoveryDBInstanceAsync(RecoveryDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -27163,6 +34881,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await ReleaseInstanceConnectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To ensure data security, you can release the public endpoint when you do not need to access the database from the Internet.
+          *
+          * @param request ReleaseInstancePublicConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReleaseInstancePublicConnectionResponse
+         */
         public ReleaseInstancePublicConnectionResponse ReleaseInstancePublicConnectionWithOptions(ReleaseInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27210,6 +34935,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To ensure data security, you can release the public endpoint when you do not need to access the database from the Internet.
+          *
+          * @param request ReleaseInstancePublicConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReleaseInstancePublicConnectionResponse
+         */
         public async Task<ReleaseInstancePublicConnectionResponse> ReleaseInstancePublicConnectionWithOptionsAsync(ReleaseInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27257,18 +34989,43 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To ensure data security, you can release the public endpoint when you do not need to access the database from the Internet.
+          *
+          * @param request ReleaseInstancePublicConnectionRequest
+          * @return ReleaseInstancePublicConnectionResponse
+         */
         public ReleaseInstancePublicConnectionResponse ReleaseInstancePublicConnection(ReleaseInstancePublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseInstancePublicConnectionWithOptions(request, runtime);
         }
 
+        /**
+          * To ensure data security, you can release the public endpoint when you do not need to access the database from the Internet.
+          *
+          * @param request ReleaseInstancePublicConnectionRequest
+          * @return ReleaseInstancePublicConnectionResponse
+         */
         public async Task<ReleaseInstancePublicConnectionResponse> ReleaseInstancePublicConnectionAsync(ReleaseInstancePublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleaseInstancePublicConnectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   If the instance runs MySQL, the instance uses a shared proxy.
+          * *   The read/write splitting feature is enabled for the instance.
+          * *   The instance runs one of the following database versions and RDS editions:
+          *     *   MySQL 5.7 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.6
+          *     *   SQL Server (cluster edition)
+          *
+          * @param request ReleaseReadWriteSplittingConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReleaseReadWriteSplittingConnectionResponse
+         */
         public ReleaseReadWriteSplittingConnectionResponse ReleaseReadWriteSplittingConnectionWithOptions(ReleaseReadWriteSplittingConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27312,6 +35069,19 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ReleaseReadWriteSplittingConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   If the instance runs MySQL, the instance uses a shared proxy.
+          * *   The read/write splitting feature is enabled for the instance.
+          * *   The instance runs one of the following database versions and RDS editions:
+          *     *   MySQL 5.7 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.6
+          *     *   SQL Server (cluster edition)
+          *
+          * @param request ReleaseReadWriteSplittingConnectionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReleaseReadWriteSplittingConnectionResponse
+         */
         public async Task<ReleaseReadWriteSplittingConnectionResponse> ReleaseReadWriteSplittingConnectionWithOptionsAsync(ReleaseReadWriteSplittingConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27355,18 +35125,53 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ReleaseReadWriteSplittingConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   If the instance runs MySQL, the instance uses a shared proxy.
+          * *   The read/write splitting feature is enabled for the instance.
+          * *   The instance runs one of the following database versions and RDS editions:
+          *     *   MySQL 5.7 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.6
+          *     *   SQL Server (cluster edition)
+          *
+          * @param request ReleaseReadWriteSplittingConnectionRequest
+          * @return ReleaseReadWriteSplittingConnectionResponse
+         */
         public ReleaseReadWriteSplittingConnectionResponse ReleaseReadWriteSplittingConnection(ReleaseReadWriteSplittingConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseReadWriteSplittingConnectionWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   If the instance runs MySQL, the instance uses a shared proxy.
+          * *   The read/write splitting feature is enabled for the instance.
+          * *   The instance runs one of the following database versions and RDS editions:
+          *     *   MySQL 5.7 on RDS High-availability Edition with local SSDs
+          *     *   MySQL 5.6
+          *     *   SQL Server (cluster edition)
+          *
+          * @param request ReleaseReadWriteSplittingConnectionRequest
+          * @return ReleaseReadWriteSplittingConnectionResponse
+         */
         public async Task<ReleaseReadWriteSplittingConnectionResponse> ReleaseReadWriteSplittingConnectionAsync(ReleaseReadWriteSplittingConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleaseReadWriteSplittingConnectionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation has the following limits:
+          * *   A maximum of 10 tags can be unbound in a single request.
+          * *   If a tag is unbound from all of the instances to which the tag has been bound, the tag is automatically deleted.
+          * *   If you specify only a TagKey, all tags that match the TagKey condition are unbound.
+          * *   You must specify at least a TagKey or a set of a TagKey and a TagValue.
+          *
+          * @param request RemoveTagsFromResourceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveTagsFromResourceResponse
+         */
         public RemoveTagsFromResourceResponse RemoveTagsFromResourceWithOptions(RemoveTagsFromResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27430,6 +35235,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RemoveTagsFromResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation has the following limits:
+          * *   A maximum of 10 tags can be unbound in a single request.
+          * *   If a tag is unbound from all of the instances to which the tag has been bound, the tag is automatically deleted.
+          * *   If you specify only a TagKey, all tags that match the TagKey condition are unbound.
+          * *   You must specify at least a TagKey or a set of a TagKey and a TagValue.
+          *
+          * @param request RemoveTagsFromResourceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveTagsFromResourceResponse
+         */
         public async Task<RemoveTagsFromResourceResponse> RemoveTagsFromResourceWithOptionsAsync(RemoveTagsFromResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27493,18 +35309,50 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RemoveTagsFromResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation has the following limits:
+          * *   A maximum of 10 tags can be unbound in a single request.
+          * *   If a tag is unbound from all of the instances to which the tag has been bound, the tag is automatically deleted.
+          * *   If you specify only a TagKey, all tags that match the TagKey condition are unbound.
+          * *   You must specify at least a TagKey or a set of a TagKey and a TagValue.
+          *
+          * @param request RemoveTagsFromResourceRequest
+          * @return RemoveTagsFromResourceResponse
+         */
         public RemoveTagsFromResourceResponse RemoveTagsFromResource(RemoveTagsFromResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveTagsFromResourceWithOptions(request, runtime);
         }
 
+        /**
+          * This operation has the following limits:
+          * *   A maximum of 10 tags can be unbound in a single request.
+          * *   If a tag is unbound from all of the instances to which the tag has been bound, the tag is automatically deleted.
+          * *   If you specify only a TagKey, all tags that match the TagKey condition are unbound.
+          * *   You must specify at least a TagKey or a set of a TagKey and a TagValue.
+          *
+          * @param request RemoveTagsFromResourceRequest
+          * @return RemoveTagsFromResourceResponse
+         */
         public async Task<RemoveTagsFromResourceResponse> RemoveTagsFromResourceAsync(RemoveTagsFromResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveTagsFromResourceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is a subscription instance.
+          * *   Your account supports credit card payments or balance payments.
+          *     **
+          *     **Note**By default, coupons available for your account are preferentially used for payment.
+          *
+          * @param request RenewInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RenewInstanceResponse
+         */
         public RenewInstanceResponse RenewInstanceWithOptions(RenewInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27560,6 +35408,18 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RenewInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is a subscription instance.
+          * *   Your account supports credit card payments or balance payments.
+          *     **
+          *     **Note**By default, coupons available for your account are preferentially used for payment.
+          *
+          * @param request RenewInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RenewInstanceResponse
+         */
         public async Task<RenewInstanceResponse> RenewInstanceWithOptionsAsync(RenewInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27615,100 +35475,48 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RenewInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is a subscription instance.
+          * *   Your account supports credit card payments or balance payments.
+          *     **
+          *     **Note**By default, coupons available for your account are preferentially used for payment.
+          *
+          * @param request RenewInstanceRequest
+          * @return RenewInstanceResponse
+         */
         public RenewInstanceResponse RenewInstance(RenewInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RenewInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is a subscription instance.
+          * *   Your account supports credit card payments or balance payments.
+          *     **
+          *     **Note**By default, coupons available for your account are preferentially used for payment.
+          *
+          * @param request RenewInstanceRequest
+          * @return RenewInstanceResponse
+         */
         public async Task<RenewInstanceResponse> RenewInstanceAsync(RenewInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RenewInstanceWithOptionsAsync(request, runtime);
         }
 
-        public RequestServiceOfCloudDBAResponse RequestServiceOfCloudDBAWithOptions(RequestServiceOfCloudDBARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
-            {
-                query["DBInstanceId"] = request.DBInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRequestParam))
-            {
-                query["ServiceRequestParam"] = request.ServiceRequestParam;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRequestType))
-            {
-                query["ServiceRequestType"] = request.ServiceRequestType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RequestServiceOfCloudDBA",
-                Version = "2014-08-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<RequestServiceOfCloudDBAResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<RequestServiceOfCloudDBAResponse> RequestServiceOfCloudDBAWithOptionsAsync(RequestServiceOfCloudDBARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
-            {
-                query["DBInstanceId"] = request.DBInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRequestParam))
-            {
-                query["ServiceRequestParam"] = request.ServiceRequestParam;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRequestType))
-            {
-                query["ServiceRequestType"] = request.ServiceRequestType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RequestServiceOfCloudDBA",
-                Version = "2014-08-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<RequestServiceOfCloudDBAResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public RequestServiceOfCloudDBAResponse RequestServiceOfCloudDBA(RequestServiceOfCloudDBARequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return RequestServiceOfCloudDBAWithOptions(request, runtime);
-        }
-
-        public async Task<RequestServiceOfCloudDBAResponse> RequestServiceOfCloudDBAAsync(RequestServiceOfCloudDBARequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await RequestServiceOfCloudDBAWithOptionsAsync(request, runtime);
-        }
-
+        /**
+          * **
+          * **This operation is not supported for instances that run SQL Server 2008 R2 because they do not have privileged accounts.
+          *
+          * @param request ResetAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResetAccountResponse
+         */
         public ResetAccountResponse ResetAccountWithOptions(ResetAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27760,6 +35568,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ResetAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * **
+          * **This operation is not supported for instances that run SQL Server 2008 R2 because they do not have privileged accounts.
+          *
+          * @param request ResetAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResetAccountResponse
+         */
         public async Task<ResetAccountResponse> ResetAccountWithOptionsAsync(ResetAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27811,18 +35627,40 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ResetAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * **
+          * **This operation is not supported for instances that run SQL Server 2008 R2 because they do not have privileged accounts.
+          *
+          * @param request ResetAccountRequest
+          * @return ResetAccountResponse
+         */
         public ResetAccountResponse ResetAccount(ResetAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetAccountWithOptions(request, runtime);
         }
 
+        /**
+          * **
+          * **This operation is not supported for instances that run SQL Server 2008 R2 because they do not have privileged accounts.
+          *
+          * @param request ResetAccountRequest
+          * @return ResetAccountResponse
+         */
         public async Task<ResetAccountResponse> ResetAccountAsync(ResetAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetAccountWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance is in the Running state.
+          * > If the instance runs SQL Server 2017 on RDS Cluster Edition or runs PostgreSQL, you cannot call this operation to reset the passwords of accounts that are created by using SQL statements.
+          *
+          * @param request ResetAccountPasswordRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResetAccountPasswordResponse
+         */
         public ResetAccountPasswordResponse ResetAccountPasswordWithOptions(ResetAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27874,6 +35712,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ResetAccountPasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance is in the Running state.
+          * > If the instance runs SQL Server 2017 on RDS Cluster Edition or runs PostgreSQL, you cannot call this operation to reset the passwords of accounts that are created by using SQL statements.
+          *
+          * @param request ResetAccountPasswordRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ResetAccountPasswordResponse
+         */
         public async Task<ResetAccountPasswordResponse> ResetAccountPasswordWithOptionsAsync(ResetAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27925,18 +35771,42 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<ResetAccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the instance is in the Running state.
+          * > If the instance runs SQL Server 2017 on RDS Cluster Edition or runs PostgreSQL, you cannot call this operation to reset the passwords of accounts that are created by using SQL statements.
+          *
+          * @param request ResetAccountPasswordRequest
+          * @return ResetAccountPasswordResponse
+         */
         public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetAccountPasswordWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the instance is in the Running state.
+          * > If the instance runs SQL Server 2017 on RDS Cluster Edition or runs PostgreSQL, you cannot call this operation to reset the passwords of accounts that are created by using SQL statements.
+          *
+          * @param request ResetAccountPasswordRequest
+          * @return ResetAccountPasswordResponse
+         */
         public async Task<ResetAccountPasswordResponse> ResetAccountPasswordAsync(ResetAccountPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetAccountPasswordWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If a large number of transactions need to be submitted or rolled back, the restart process may be delayed for a minute.\\
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance does not have ongoing backup tasks.
+          *
+          * @param request RestartDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RestartDBInstanceResponse
+         */
         public RestartDBInstanceResponse RestartDBInstanceWithOptions(RestartDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27984,6 +35854,16 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RestartDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If a large number of transactions need to be submitted or rolled back, the restart process may be delayed for a minute.\\
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance does not have ongoing backup tasks.
+          *
+          * @param request RestartDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RestartDBInstanceResponse
+         */
         public async Task<RestartDBInstanceResponse> RestartDBInstanceWithOptionsAsync(RestartDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28031,12 +35911,30 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RestartDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If a large number of transactions need to be submitted or rolled back, the restart process may be delayed for a minute.\\
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance does not have ongoing backup tasks.
+          *
+          * @param request RestartDBInstanceRequest
+          * @return RestartDBInstanceResponse
+         */
         public RestartDBInstanceResponse RestartDBInstance(RestartDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RestartDBInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * If a large number of transactions need to be submitted or rolled back, the restart process may be delayed for a minute.\\
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance does not have ongoing backup tasks.
+          *
+          * @param request RestartDBInstanceRequest
+          * @return RestartDBInstanceResponse
+         */
         public async Task<RestartDBInstanceResponse> RestartDBInstanceAsync(RestartDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -28205,6 +36103,20 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await RestoreDdrTableWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS for MySQL supports the restoration of individual databases and tables. If you delete databases or tables from an instance, you can restore the databases or tables by using a backup file. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance does not have ongoing migration tasks.
+          * *   If you want to restore data to a specific point in time, make sure that the log backup feature is enabled for the instance. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
+          * *   The restoration of individual databases or tables is enabled, and new backups are created. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+          * *   The names that you want to use for the restored tables do not exist in the instance.
+          * > This operation is supported only for instances that run MySQL.
+          *
+          * @param request RestoreTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RestoreTableResponse
+         */
         public RestoreTableResponse RestoreTableWithOptions(RestoreTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28268,6 +36180,20 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RestoreTableResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS for MySQL supports the restoration of individual databases and tables. If you delete databases or tables from an instance, you can restore the databases or tables by using a backup file. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance does not have ongoing migration tasks.
+          * *   If you want to restore data to a specific point in time, make sure that the log backup feature is enabled for the instance. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
+          * *   The restoration of individual databases or tables is enabled, and new backups are created. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+          * *   The names that you want to use for the restored tables do not exist in the instance.
+          * > This operation is supported only for instances that run MySQL.
+          *
+          * @param request RestoreTableRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RestoreTableResponse
+         */
         public async Task<RestoreTableResponse> RestoreTableWithOptionsAsync(RestoreTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28331,18 +36257,56 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RestoreTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS for MySQL supports the restoration of individual databases and tables. If you delete databases or tables from an instance, you can restore the databases or tables by using a backup file. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance does not have ongoing migration tasks.
+          * *   If you want to restore data to a specific point in time, make sure that the log backup feature is enabled for the instance. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
+          * *   The restoration of individual databases or tables is enabled, and new backups are created. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+          * *   The names that you want to use for the restored tables do not exist in the instance.
+          * > This operation is supported only for instances that run MySQL.
+          *
+          * @param request RestoreTableRequest
+          * @return RestoreTableResponse
+         */
         public RestoreTableResponse RestoreTable(RestoreTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RestoreTableWithOptions(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS for MySQL supports the restoration of individual databases and tables. If you delete databases or tables from an instance, you can restore the databases or tables by using a backup file. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance does not have ongoing migration tasks.
+          * *   If you want to restore data to a specific point in time, make sure that the log backup feature is enabled for the instance. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
+          * *   The restoration of individual databases or tables is enabled, and new backups are created. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+          * *   The names that you want to use for the restored tables do not exist in the instance.
+          * > This operation is supported only for instances that run MySQL.
+          *
+          * @param request RestoreTableRequest
+          * @return RestoreTableResponse
+         */
         public async Task<RestoreTableResponse> RestoreTableAsync(RestoreTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RestoreTableWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The database is in the Running state.
+          * > 
+          * *   The permissions that can be revoked include SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, REFERENCES, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, and TRIGGER.
+          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or PostgreSQL.
+          *
+          * @param request RevokeAccountPrivilegeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RevokeAccountPrivilegeResponse
+         */
         public RevokeAccountPrivilegeResponse RevokeAccountPrivilegeWithOptions(RevokeAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28394,6 +36358,18 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RevokeAccountPrivilegeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The database is in the Running state.
+          * > 
+          * *   The permissions that can be revoked include SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, REFERENCES, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, and TRIGGER.
+          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or PostgreSQL.
+          *
+          * @param request RevokeAccountPrivilegeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RevokeAccountPrivilegeResponse
+         */
         public async Task<RevokeAccountPrivilegeResponse> RevokeAccountPrivilegeWithOptionsAsync(RevokeAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28445,18 +36421,51 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RevokeAccountPrivilegeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The database is in the Running state.
+          * > 
+          * *   The permissions that can be revoked include SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, REFERENCES, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, and TRIGGER.
+          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or PostgreSQL.
+          *
+          * @param request RevokeAccountPrivilegeRequest
+          * @return RevokeAccountPrivilegeResponse
+         */
         public RevokeAccountPrivilegeResponse RevokeAccountPrivilege(RevokeAccountPrivilegeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RevokeAccountPrivilegeWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The database is in the Running state.
+          * > 
+          * *   The permissions that can be revoked include SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, REFERENCES, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, and TRIGGER.
+          * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or PostgreSQL.
+          *
+          * @param request RevokeAccountPrivilegeRequest
+          * @return RevokeAccountPrivilegeResponse
+         */
         public async Task<RevokeAccountPrivilegeResponse> RevokeAccountPrivilegeAsync(RevokeAccountPrivilegeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RevokeAccountPrivilegeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * After Alibaba Cloud technical support resolves the issues on your instance, you can revoke permissions from the service account of your instance.
+          * This operation is available only when your instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          *
+          * @param request RevokeOperatorPermissionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RevokeOperatorPermissionResponse
+         */
         public RevokeOperatorPermissionResponse RevokeOperatorPermissionWithOptions(RevokeOperatorPermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28500,6 +36509,17 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RevokeOperatorPermissionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * After Alibaba Cloud technical support resolves the issues on your instance, you can revoke permissions from the service account of your instance.
+          * This operation is available only when your instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          *
+          * @param request RevokeOperatorPermissionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RevokeOperatorPermissionResponse
+         */
         public async Task<RevokeOperatorPermissionResponse> RevokeOperatorPermissionWithOptionsAsync(RevokeOperatorPermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28543,12 +36563,32 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<RevokeOperatorPermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * After Alibaba Cloud technical support resolves the issues on your instance, you can revoke permissions from the service account of your instance.
+          * This operation is available only when your instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          *
+          * @param request RevokeOperatorPermissionRequest
+          * @return RevokeOperatorPermissionResponse
+         */
         public RevokeOperatorPermissionResponse RevokeOperatorPermission(RevokeOperatorPermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RevokeOperatorPermissionWithOptions(request, runtime);
         }
 
+        /**
+          * After Alibaba Cloud technical support resolves the issues on your instance, you can revoke permissions from the service account of your instance.
+          * This operation is available only when your instance runs one of the following database engines:
+          * *   MySQL
+          * *   SQL Server
+          * *   PostgreSQL
+          *
+          * @param request RevokeOperatorPermissionRequest
+          * @return RevokeOperatorPermissionResponse
+         */
         public async Task<RevokeOperatorPermissionResponse> RevokeOperatorPermissionAsync(RevokeOperatorPermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -28749,6 +36789,20 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await StartDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * *   You cannot stop a serverless ApsaraDB RDS for MySQL instance because serverless instances support the automatic start and stop feature. For more information, see [Configure a serverless instance](~~421557~~).
+          * *   For more information about how to stop an ApsaraDB RDS for MySQL instance, see [Suspend an instance](~~427093~~).
+          * *   For more information about how to stop an ApsaraDB RDS for PostgreSQL instance, see [Suspend an instance](~~452314~~).
+          * *   For more information about how to stop a ApsaraDB RDS for SQL Server instance, see [Suspend an instance](~~462504~~).
+          * *   The following list describes the usage notes when you stop an instance that is created in a dedicated cluster:
+          *     *   After you stop an instance, the computing resources of the instance are released. However, the data of the instance is retained. The retained data can be used to start the instance.
+          *     *   When you stop an instance, all the read-only instances that are attached to the instance are stopped at the same time.
+          *     *   After you stop an instance, the storage resources of the instance are still retained. You do not need to pay extra fees for the storage of the retained data.
+          *
+          * @param request StopDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StopDBInstanceResponse
+         */
         public StopDBInstanceResponse StopDBInstanceWithOptions(StopDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28792,6 +36846,20 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<StopDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   You cannot stop a serverless ApsaraDB RDS for MySQL instance because serverless instances support the automatic start and stop feature. For more information, see [Configure a serverless instance](~~421557~~).
+          * *   For more information about how to stop an ApsaraDB RDS for MySQL instance, see [Suspend an instance](~~427093~~).
+          * *   For more information about how to stop an ApsaraDB RDS for PostgreSQL instance, see [Suspend an instance](~~452314~~).
+          * *   For more information about how to stop a ApsaraDB RDS for SQL Server instance, see [Suspend an instance](~~462504~~).
+          * *   The following list describes the usage notes when you stop an instance that is created in a dedicated cluster:
+          *     *   After you stop an instance, the computing resources of the instance are released. However, the data of the instance is retained. The retained data can be used to start the instance.
+          *     *   When you stop an instance, all the read-only instances that are attached to the instance are stopped at the same time.
+          *     *   After you stop an instance, the storage resources of the instance are still retained. You do not need to pay extra fees for the storage of the retained data.
+          *
+          * @param request StopDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return StopDBInstanceResponse
+         */
         public async Task<StopDBInstanceResponse> StopDBInstanceWithOptionsAsync(StopDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28835,18 +36903,51 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<StopDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * *   You cannot stop a serverless ApsaraDB RDS for MySQL instance because serverless instances support the automatic start and stop feature. For more information, see [Configure a serverless instance](~~421557~~).
+          * *   For more information about how to stop an ApsaraDB RDS for MySQL instance, see [Suspend an instance](~~427093~~).
+          * *   For more information about how to stop an ApsaraDB RDS for PostgreSQL instance, see [Suspend an instance](~~452314~~).
+          * *   For more information about how to stop a ApsaraDB RDS for SQL Server instance, see [Suspend an instance](~~462504~~).
+          * *   The following list describes the usage notes when you stop an instance that is created in a dedicated cluster:
+          *     *   After you stop an instance, the computing resources of the instance are released. However, the data of the instance is retained. The retained data can be used to start the instance.
+          *     *   When you stop an instance, all the read-only instances that are attached to the instance are stopped at the same time.
+          *     *   After you stop an instance, the storage resources of the instance are still retained. You do not need to pay extra fees for the storage of the retained data.
+          *
+          * @param request StopDBInstanceRequest
+          * @return StopDBInstanceResponse
+         */
         public StopDBInstanceResponse StopDBInstance(StopDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StopDBInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * *   You cannot stop a serverless ApsaraDB RDS for MySQL instance because serverless instances support the automatic start and stop feature. For more information, see [Configure a serverless instance](~~421557~~).
+          * *   For more information about how to stop an ApsaraDB RDS for MySQL instance, see [Suspend an instance](~~427093~~).
+          * *   For more information about how to stop an ApsaraDB RDS for PostgreSQL instance, see [Suspend an instance](~~452314~~).
+          * *   For more information about how to stop a ApsaraDB RDS for SQL Server instance, see [Suspend an instance](~~462504~~).
+          * *   The following list describes the usage notes when you stop an instance that is created in a dedicated cluster:
+          *     *   After you stop an instance, the computing resources of the instance are released. However, the data of the instance is retained. The retained data can be used to start the instance.
+          *     *   When you stop an instance, all the read-only instances that are attached to the instance are stopped at the same time.
+          *     *   After you stop an instance, the storage resources of the instance are still retained. You do not need to pay extra fees for the storage of the retained data.
+          *
+          * @param request StopDBInstanceRequest
+          * @return StopDBInstanceResponse
+         */
         public async Task<StopDBInstanceResponse> StopDBInstanceAsync(StopDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation switches workloads over between the primary and secondary instances that do not run RDS Basic Edition. After the switchover, the secondary instance serves as the primary instance.
+          *
+          * @param request SwitchDBInstanceHARequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SwitchDBInstanceHAResponse
+         */
         public SwitchDBInstanceHAResponse SwitchDBInstanceHAWithOptions(SwitchDBInstanceHARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28902,6 +37003,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<SwitchDBInstanceHAResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation switches workloads over between the primary and secondary instances that do not run RDS Basic Edition. After the switchover, the secondary instance serves as the primary instance.
+          *
+          * @param request SwitchDBInstanceHARequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SwitchDBInstanceHAResponse
+         */
         public async Task<SwitchDBInstanceHAResponse> SwitchDBInstanceHAWithOptionsAsync(SwitchDBInstanceHARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -28957,18 +37065,42 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<SwitchDBInstanceHAResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation switches workloads over between the primary and secondary instances that do not run RDS Basic Edition. After the switchover, the secondary instance serves as the primary instance.
+          *
+          * @param request SwitchDBInstanceHARequest
+          * @return SwitchDBInstanceHAResponse
+         */
         public SwitchDBInstanceHAResponse SwitchDBInstanceHA(SwitchDBInstanceHARequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SwitchDBInstanceHAWithOptions(request, runtime);
         }
 
+        /**
+          * This operation switches workloads over between the primary and secondary instances that do not run RDS Basic Edition. After the switchover, the secondary instance serves as the primary instance.
+          *
+          * @param request SwitchDBInstanceHARequest
+          * @return SwitchDBInstanceHAResponse
+         */
         public async Task<SwitchDBInstanceHAResponse> SwitchDBInstanceHAAsync(SwitchDBInstanceHARequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SwitchDBInstanceHAWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * To save endpoint resources, you can call this operation to switch an instance between its internal and public endpoints. After the endpoint that is used to connect to the instance is changed, you must update the endpoint information in the code of your application and restart the application.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is connected by using its internal or public endpoint.
+          * *   The instance is in the Running state.
+          * *   The number of times that you have switched the instance between its internal and public endpoints within the last 24 hours does not reach 20.
+          * *   The instance resides in the classic network.
+          *
+          * @param request SwitchDBInstanceNetTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SwitchDBInstanceNetTypeResponse
+         */
         public SwitchDBInstanceNetTypeResponse SwitchDBInstanceNetTypeWithOptions(SwitchDBInstanceNetTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29028,6 +37160,18 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<SwitchDBInstanceNetTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * To save endpoint resources, you can call this operation to switch an instance between its internal and public endpoints. After the endpoint that is used to connect to the instance is changed, you must update the endpoint information in the code of your application and restart the application.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is connected by using its internal or public endpoint.
+          * *   The instance is in the Running state.
+          * *   The number of times that you have switched the instance between its internal and public endpoints within the last 24 hours does not reach 20.
+          * *   The instance resides in the classic network.
+          *
+          * @param request SwitchDBInstanceNetTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SwitchDBInstanceNetTypeResponse
+         */
         public async Task<SwitchDBInstanceNetTypeResponse> SwitchDBInstanceNetTypeWithOptionsAsync(SwitchDBInstanceNetTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29087,18 +37231,52 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<SwitchDBInstanceNetTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * To save endpoint resources, you can call this operation to switch an instance between its internal and public endpoints. After the endpoint that is used to connect to the instance is changed, you must update the endpoint information in the code of your application and restart the application.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is connected by using its internal or public endpoint.
+          * *   The instance is in the Running state.
+          * *   The number of times that you have switched the instance between its internal and public endpoints within the last 24 hours does not reach 20.
+          * *   The instance resides in the classic network.
+          *
+          * @param request SwitchDBInstanceNetTypeRequest
+          * @return SwitchDBInstanceNetTypeResponse
+         */
         public SwitchDBInstanceNetTypeResponse SwitchDBInstanceNetType(SwitchDBInstanceNetTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SwitchDBInstanceNetTypeWithOptions(request, runtime);
         }
 
+        /**
+          * To save endpoint resources, you can call this operation to switch an instance between its internal and public endpoints. After the endpoint that is used to connect to the instance is changed, you must update the endpoint information in the code of your application and restart the application.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is connected by using its internal or public endpoint.
+          * *   The instance is in the Running state.
+          * *   The number of times that you have switched the instance between its internal and public endpoints within the last 24 hours does not reach 20.
+          * *   The instance resides in the classic network.
+          *
+          * @param request SwitchDBInstanceNetTypeRequest
+          * @return SwitchDBInstanceNetTypeResponse
+         */
         public async Task<SwitchDBInstanceNetTypeResponse> SwitchDBInstanceNetTypeAsync(SwitchDBInstanceNetTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SwitchDBInstanceNetTypeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * The instance must run one of the following database engines:
+          * *   MySQL with local SSDs, standard SSDs, or enhanced ESSDs (ESSDs)
+          * *   SQL Server with standard SSDs or ESSDs
+          * *   MariaDB with standard SSDs or ESSDs
+          * *   PostgreSQL with standard SSDs or ESSDs
+          * For more information about the impact of VPC and vSwitch changes, see [Switch an ApsaraDB RDS for MySQL instance to a new VPC and a new vSwitch](~~137567~~).
+          *
+          * @param request SwitchDBInstanceVpcRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SwitchDBInstanceVpcResponse
+         */
         public SwitchDBInstanceVpcResponse SwitchDBInstanceVpcWithOptions(SwitchDBInstanceVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29142,6 +37320,18 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<SwitchDBInstanceVpcResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * The instance must run one of the following database engines:
+          * *   MySQL with local SSDs, standard SSDs, or enhanced ESSDs (ESSDs)
+          * *   SQL Server with standard SSDs or ESSDs
+          * *   MariaDB with standard SSDs or ESSDs
+          * *   PostgreSQL with standard SSDs or ESSDs
+          * For more information about the impact of VPC and vSwitch changes, see [Switch an ApsaraDB RDS for MySQL instance to a new VPC and a new vSwitch](~~137567~~).
+          *
+          * @param request SwitchDBInstanceVpcRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SwitchDBInstanceVpcResponse
+         */
         public async Task<SwitchDBInstanceVpcResponse> SwitchDBInstanceVpcWithOptionsAsync(SwitchDBInstanceVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29185,12 +37375,34 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<SwitchDBInstanceVpcResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * The instance must run one of the following database engines:
+          * *   MySQL with local SSDs, standard SSDs, or enhanced ESSDs (ESSDs)
+          * *   SQL Server with standard SSDs or ESSDs
+          * *   MariaDB with standard SSDs or ESSDs
+          * *   PostgreSQL with standard SSDs or ESSDs
+          * For more information about the impact of VPC and vSwitch changes, see [Switch an ApsaraDB RDS for MySQL instance to a new VPC and a new vSwitch](~~137567~~).
+          *
+          * @param request SwitchDBInstanceVpcRequest
+          * @return SwitchDBInstanceVpcResponse
+         */
         public SwitchDBInstanceVpcResponse SwitchDBInstanceVpc(SwitchDBInstanceVpcRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SwitchDBInstanceVpcWithOptions(request, runtime);
         }
 
+        /**
+          * The instance must run one of the following database engines:
+          * *   MySQL with local SSDs, standard SSDs, or enhanced ESSDs (ESSDs)
+          * *   SQL Server with standard SSDs or ESSDs
+          * *   MariaDB with standard SSDs or ESSDs
+          * *   PostgreSQL with standard SSDs or ESSDs
+          * For more information about the impact of VPC and vSwitch changes, see [Switch an ApsaraDB RDS for MySQL instance to a new VPC and a new vSwitch](~~137567~~).
+          *
+          * @param request SwitchDBInstanceVpcRequest
+          * @return SwitchDBInstanceVpcResponse
+         */
         public async Task<SwitchDBInstanceVpcResponse> SwitchDBInstanceVpcAsync(SwitchDBInstanceVpcRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -29295,6 +37507,18 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await SwitchGuardToMasterInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter these instances by tag.
+          * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
+          * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
+          * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
+          * *   You can add up to 20 tags to an instance.
+          * *   You can add tags to up to 50 instances in each call.
+          *
+          * @param request TagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29346,6 +37570,18 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter these instances by tag.
+          * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
+          * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
+          * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
+          * *   You can add up to 20 tags to an instance.
+          * *   You can add tags to up to 50 instances in each call.
+          *
+          * @param request TagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29397,12 +37633,34 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter these instances by tag.
+          * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
+          * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
+          * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
+          * *   You can add up to 20 tags to an instance.
+          * *   You can add tags to up to 50 instances in each call.
+          *
+          * @param request TagResourcesRequest
+          * @return TagResourcesResponse
+         */
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
+        /**
+          * If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter these instances by tag.
+          * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
+          * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
+          * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
+          * *   You can add up to 20 tags to an instance.
+          * *   You can add tags to up to 50 instances in each call.
+          *
+          * @param request TagResourcesRequest
+          * @return TagResourcesResponse
+         */
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -29507,6 +37765,21 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await TerminateMigrateTaskWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > 
+          * *   If you change the billing method of an instance from subscription to pay-as-you-go, a refund may be provided. The refund amount is equal to the remaining subscription fee deducted by an amount of service fee. For more information, see [Switch an ApsaraDB RDS for MySQL instance from subscription to pay-as-you-go](~~161875~~).
+          * *   If the balance of your Alibaba Cloud account is insufficient, you cannot change the billing method of an instance from pay-as-you-go to subscription.
+          * *   This operation is not supported for instances whose specification change orders are not completed.
+          * *   This operation is not supported for instances that are created in dedicated clusters.
+          * ApsaraDB RDS supports the following two billing methods:
+          * *   Subscription: A subscription instance is an instance for which you pay an upfront fee. For long-term use, the subscription billing method is more cost-effective than the pay-as-you-go billing method. You are offered lower prices for longer subscription durations.
+          * *   Pay-as-you-go: A pay-as-you-go instance is an instance for which you are charged per hour based on your resource usage. The hourly fee is calculated based on the instance type that you specify in the purchase order and is deducted from the balance of your Alibaba Cloud account. We recommend that you select the pay-as-you-go billing method for short-term use. If you no longer need your pay-as-you-go instance, you can release the instance to reduce costs.
+          * For more information about the billing methods, see [Pricing, billable items, and billing methods](~~45020~~).
+          *
+          * @param request TransformDBInstancePayTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TransformDBInstancePayTypeResponse
+         */
         public TransformDBInstancePayTypeResponse TransformDBInstancePayTypeWithOptions(TransformDBInstancePayTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29574,6 +37847,21 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<TransformDBInstancePayTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > 
+          * *   If you change the billing method of an instance from subscription to pay-as-you-go, a refund may be provided. The refund amount is equal to the remaining subscription fee deducted by an amount of service fee. For more information, see [Switch an ApsaraDB RDS for MySQL instance from subscription to pay-as-you-go](~~161875~~).
+          * *   If the balance of your Alibaba Cloud account is insufficient, you cannot change the billing method of an instance from pay-as-you-go to subscription.
+          * *   This operation is not supported for instances whose specification change orders are not completed.
+          * *   This operation is not supported for instances that are created in dedicated clusters.
+          * ApsaraDB RDS supports the following two billing methods:
+          * *   Subscription: A subscription instance is an instance for which you pay an upfront fee. For long-term use, the subscription billing method is more cost-effective than the pay-as-you-go billing method. You are offered lower prices for longer subscription durations.
+          * *   Pay-as-you-go: A pay-as-you-go instance is an instance for which you are charged per hour based on your resource usage. The hourly fee is calculated based on the instance type that you specify in the purchase order and is deducted from the balance of your Alibaba Cloud account. We recommend that you select the pay-as-you-go billing method for short-term use. If you no longer need your pay-as-you-go instance, you can release the instance to reduce costs.
+          * For more information about the billing methods, see [Pricing, billable items, and billing methods](~~45020~~).
+          *
+          * @param request TransformDBInstancePayTypeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return TransformDBInstancePayTypeResponse
+         */
         public async Task<TransformDBInstancePayTypeResponse> TransformDBInstancePayTypeWithOptionsAsync(TransformDBInstancePayTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29641,18 +37929,53 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<TransformDBInstancePayTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > 
+          * *   If you change the billing method of an instance from subscription to pay-as-you-go, a refund may be provided. The refund amount is equal to the remaining subscription fee deducted by an amount of service fee. For more information, see [Switch an ApsaraDB RDS for MySQL instance from subscription to pay-as-you-go](~~161875~~).
+          * *   If the balance of your Alibaba Cloud account is insufficient, you cannot change the billing method of an instance from pay-as-you-go to subscription.
+          * *   This operation is not supported for instances whose specification change orders are not completed.
+          * *   This operation is not supported for instances that are created in dedicated clusters.
+          * ApsaraDB RDS supports the following two billing methods:
+          * *   Subscription: A subscription instance is an instance for which you pay an upfront fee. For long-term use, the subscription billing method is more cost-effective than the pay-as-you-go billing method. You are offered lower prices for longer subscription durations.
+          * *   Pay-as-you-go: A pay-as-you-go instance is an instance for which you are charged per hour based on your resource usage. The hourly fee is calculated based on the instance type that you specify in the purchase order and is deducted from the balance of your Alibaba Cloud account. We recommend that you select the pay-as-you-go billing method for short-term use. If you no longer need your pay-as-you-go instance, you can release the instance to reduce costs.
+          * For more information about the billing methods, see [Pricing, billable items, and billing methods](~~45020~~).
+          *
+          * @param request TransformDBInstancePayTypeRequest
+          * @return TransformDBInstancePayTypeResponse
+         */
         public TransformDBInstancePayTypeResponse TransformDBInstancePayType(TransformDBInstancePayTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TransformDBInstancePayTypeWithOptions(request, runtime);
         }
 
+        /**
+          * > 
+          * *   If you change the billing method of an instance from subscription to pay-as-you-go, a refund may be provided. The refund amount is equal to the remaining subscription fee deducted by an amount of service fee. For more information, see [Switch an ApsaraDB RDS for MySQL instance from subscription to pay-as-you-go](~~161875~~).
+          * *   If the balance of your Alibaba Cloud account is insufficient, you cannot change the billing method of an instance from pay-as-you-go to subscription.
+          * *   This operation is not supported for instances whose specification change orders are not completed.
+          * *   This operation is not supported for instances that are created in dedicated clusters.
+          * ApsaraDB RDS supports the following two billing methods:
+          * *   Subscription: A subscription instance is an instance for which you pay an upfront fee. For long-term use, the subscription billing method is more cost-effective than the pay-as-you-go billing method. You are offered lower prices for longer subscription durations.
+          * *   Pay-as-you-go: A pay-as-you-go instance is an instance for which you are charged per hour based on your resource usage. The hourly fee is calculated based on the instance type that you specify in the purchase order and is deducted from the balance of your Alibaba Cloud account. We recommend that you select the pay-as-you-go billing method for short-term use. If you no longer need your pay-as-you-go instance, you can release the instance to reduce costs.
+          * For more information about the billing methods, see [Pricing, billable items, and billing methods](~~45020~~).
+          *
+          * @param request TransformDBInstancePayTypeRequest
+          * @return TransformDBInstancePayTypeResponse
+         */
         public async Task<TransformDBInstancePayTypeResponse> TransformDBInstancePayTypeAsync(TransformDBInstancePayTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TransformDBInstancePayTypeWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You cannot use a locked account to log on to the corresponding instance. You must first unlock the account. For more information, see [Unlock and delete an account](~~147649~~).
+          *
+          * @param request UnlockAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnlockAccountResponse
+         */
         public UnlockAccountResponse UnlockAccountWithOptions(UnlockAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29696,6 +38019,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UnlockAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You cannot use a locked account to log on to the corresponding instance. You must first unlock the account. For more information, see [Unlock and delete an account](~~147649~~).
+          *
+          * @param request UnlockAccountRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnlockAccountResponse
+         */
         public async Task<UnlockAccountResponse> UnlockAccountWithOptionsAsync(UnlockAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29739,18 +38069,38 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UnlockAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You cannot use a locked account to log on to the corresponding instance. You must first unlock the account. For more information, see [Unlock and delete an account](~~147649~~).
+          *
+          * @param request UnlockAccountRequest
+          * @return UnlockAccountResponse
+         */
         public UnlockAccountResponse UnlockAccount(UnlockAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnlockAccountWithOptions(request, runtime);
         }
 
+        /**
+          * You cannot use a locked account to log on to the corresponding instance. You must first unlock the account. For more information, see [Unlock and delete an account](~~147649~~).
+          *
+          * @param request UnlockAccountRequest
+          * @return UnlockAccountResponse
+         */
         public async Task<UnlockAccountResponse> UnlockAccountAsync(UnlockAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnlockAccountWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > *   You can remove up to 20 tags at a time.
+          * > *   If a tag is removed from an instance and is not added to other instances, the tag is automatically deleted.
+          *
+          * @param request UntagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29806,6 +38156,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > *   You can remove up to 20 tags at a time.
+          * > *   If a tag is removed from an instance and is not added to other instances, the tag is automatically deleted.
+          *
+          * @param request UntagResourcesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29861,18 +38219,39 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > *   You can remove up to 20 tags at a time.
+          * > *   If a tag is removed from an instance and is not added to other instances, the tag is automatically deleted.
+          *
+          * @param request UntagResourcesRequest
+          * @return UntagResourcesResponse
+         */
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
+        /**
+          * > *   You can remove up to 20 tags at a time.
+          * > *   If a tag is removed from an instance and is not added to other instances, the tag is automatically deleted.
+          *
+          * @param request UntagResourcesRequest
+          * @return UntagResourcesResponse
+         */
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          *
+          * @param request UpdateUserBackupFileRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateUserBackupFileResponse
+         */
         public UpdateUserBackupFileResponse UpdateUserBackupFileWithOptions(UpdateUserBackupFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29924,6 +38303,13 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UpdateUserBackupFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          *
+          * @param request UpdateUserBackupFileRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateUserBackupFileResponse
+         */
         public async Task<UpdateUserBackupFileResponse> UpdateUserBackupFileWithOptionsAsync(UpdateUserBackupFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -29975,18 +38361,45 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UpdateUserBackupFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          *
+          * @param request UpdateUserBackupFileRequest
+          * @return UpdateUserBackupFileResponse
+         */
         public UpdateUserBackupFileResponse UpdateUserBackupFile(UpdateUserBackupFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateUserBackupFileWithOptions(request, runtime);
         }
 
+        /**
+          * > A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
+          *
+          * @param request UpdateUserBackupFileRequest
+          * @return UpdateUserBackupFileResponse
+         */
         public async Task<UpdateUserBackupFileResponse> UpdateUserBackupFileAsync(UpdateUserBackupFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateUserBackupFileWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * > The fee that you must pay after the upgrade varies based on the instance types and storage types of the original instance and the new instance.
+          * If the instance is a primary instance to which read-only instances or disaster recovery instances are attached, you must upgrade the major engine versions of the read-only instances or disaster recovery instances before you upgrade the major engine version of the primary instance.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance runs one of the following database versions:
+          *     *   MySQL 5.7
+          *     *   MySQL 5.6
+          *     *   MySQL 5.5
+          * You can call the [UpgradeDBInstanceMajorVersion](~~330972~~) operation to upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance.
+          *
+          * @param request UpgradeDBInstanceEngineVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeDBInstanceEngineVersionResponse
+         */
         public UpgradeDBInstanceEngineVersionResponse UpgradeDBInstanceEngineVersionWithOptions(UpgradeDBInstanceEngineVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30042,6 +38455,21 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UpgradeDBInstanceEngineVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > The fee that you must pay after the upgrade varies based on the instance types and storage types of the original instance and the new instance.
+          * If the instance is a primary instance to which read-only instances or disaster recovery instances are attached, you must upgrade the major engine versions of the read-only instances or disaster recovery instances before you upgrade the major engine version of the primary instance.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance runs one of the following database versions:
+          *     *   MySQL 5.7
+          *     *   MySQL 5.6
+          *     *   MySQL 5.5
+          * You can call the [UpgradeDBInstanceMajorVersion](~~330972~~) operation to upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance.
+          *
+          * @param request UpgradeDBInstanceEngineVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeDBInstanceEngineVersionResponse
+         */
         public async Task<UpgradeDBInstanceEngineVersionResponse> UpgradeDBInstanceEngineVersionWithOptionsAsync(UpgradeDBInstanceEngineVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30097,18 +38525,54 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UpgradeDBInstanceEngineVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * > The fee that you must pay after the upgrade varies based on the instance types and storage types of the original instance and the new instance.
+          * If the instance is a primary instance to which read-only instances or disaster recovery instances are attached, you must upgrade the major engine versions of the read-only instances or disaster recovery instances before you upgrade the major engine version of the primary instance.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance runs one of the following database versions:
+          *     *   MySQL 5.7
+          *     *   MySQL 5.6
+          *     *   MySQL 5.5
+          * You can call the [UpgradeDBInstanceMajorVersion](~~330972~~) operation to upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance.
+          *
+          * @param request UpgradeDBInstanceEngineVersionRequest
+          * @return UpgradeDBInstanceEngineVersionResponse
+         */
         public UpgradeDBInstanceEngineVersionResponse UpgradeDBInstanceEngineVersion(UpgradeDBInstanceEngineVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeDBInstanceEngineVersionWithOptions(request, runtime);
         }
 
+        /**
+          * > The fee that you must pay after the upgrade varies based on the instance types and storage types of the original instance and the new instance.
+          * If the instance is a primary instance to which read-only instances or disaster recovery instances are attached, you must upgrade the major engine versions of the read-only instances or disaster recovery instances before you upgrade the major engine version of the primary instance.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The instance is in the Running state.
+          * *   The instance runs one of the following database versions:
+          *     *   MySQL 5.7
+          *     *   MySQL 5.6
+          *     *   MySQL 5.5
+          * You can call the [UpgradeDBInstanceMajorVersion](~~330972~~) operation to upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance.
+          *
+          * @param request UpgradeDBInstanceEngineVersionRequest
+          * @return UpgradeDBInstanceEngineVersionResponse
+         */
         public async Task<UpgradeDBInstanceEngineVersionResponse> UpgradeDBInstanceEngineVersionAsync(UpgradeDBInstanceEngineVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeDBInstanceEngineVersionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * An update to the minor engine version enhances performance, introduces new features, and fixes known bugs. For more information, see [Update the minor engine version of an ApsaraDB RDS for MySQL instance](~~96059~~), [Update the minor engine version of an ApsaraDB RDS for SQL Server instance](~~213582~~), and [Update the minor engine version of an ApsaraDB RDS for PostgreSQL instance](~~146895~~).
+          * > This operation is supported for instances that run MySQL, SQL Server, or PostgreSQL.
+          *
+          * @param request UpgradeDBInstanceKernelVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeDBInstanceKernelVersionResponse
+         */
         public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersionWithOptions(UpgradeDBInstanceKernelVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30160,6 +38624,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UpgradeDBInstanceKernelVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * An update to the minor engine version enhances performance, introduces new features, and fixes known bugs. For more information, see [Update the minor engine version of an ApsaraDB RDS for MySQL instance](~~96059~~), [Update the minor engine version of an ApsaraDB RDS for SQL Server instance](~~213582~~), and [Update the minor engine version of an ApsaraDB RDS for PostgreSQL instance](~~146895~~).
+          * > This operation is supported for instances that run MySQL, SQL Server, or PostgreSQL.
+          *
+          * @param request UpgradeDBInstanceKernelVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeDBInstanceKernelVersionResponse
+         */
         public async Task<UpgradeDBInstanceKernelVersionResponse> UpgradeDBInstanceKernelVersionWithOptionsAsync(UpgradeDBInstanceKernelVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30211,18 +38683,46 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UpgradeDBInstanceKernelVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * An update to the minor engine version enhances performance, introduces new features, and fixes known bugs. For more information, see [Update the minor engine version of an ApsaraDB RDS for MySQL instance](~~96059~~), [Update the minor engine version of an ApsaraDB RDS for SQL Server instance](~~213582~~), and [Update the minor engine version of an ApsaraDB RDS for PostgreSQL instance](~~146895~~).
+          * > This operation is supported for instances that run MySQL, SQL Server, or PostgreSQL.
+          *
+          * @param request UpgradeDBInstanceKernelVersionRequest
+          * @return UpgradeDBInstanceKernelVersionResponse
+         */
         public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeDBInstanceKernelVersionWithOptions(request, runtime);
         }
 
+        /**
+          * An update to the minor engine version enhances performance, introduces new features, and fixes known bugs. For more information, see [Update the minor engine version of an ApsaraDB RDS for MySQL instance](~~96059~~), [Update the minor engine version of an ApsaraDB RDS for SQL Server instance](~~213582~~), and [Update the minor engine version of an ApsaraDB RDS for PostgreSQL instance](~~146895~~).
+          * > This operation is supported for instances that run MySQL, SQL Server, or PostgreSQL.
+          *
+          * @param request UpgradeDBInstanceKernelVersionRequest
+          * @return UpgradeDBInstanceKernelVersionResponse
+         */
         public async Task<UpgradeDBInstanceKernelVersionResponse> UpgradeDBInstanceKernelVersionAsync(UpgradeDBInstanceKernelVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeDBInstanceKernelVersionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * During an upgrade, ApsaraDB RDS retains the original instance and creates an instance that runs the new major engine version. You are **charged** for the new instance based on the **pay-as-you-go** billing method after the instance is created. The new instance **does not inherit the discounts that are offered to the original instance**. Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraDB RDS. You can decide whether to upgrade the major engine version based on your business requirements. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * Before you upgrade the major engine version, you must call the [UpgradeDBInstanceMajorVersionPrecheck](~~330050~~) operation to perform an upgrade check and then call the [DescribeUpgradeMajorVersionPrecheckTask](~~330088~~) operation to query the upgrade check report. You can call the UpgradeDBInstanceMajorVersion operation only when the check result is **Success**.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The original instance runs PostgreSQL 14, PostgreSQL 13, PostgreSQL 12, PostgreSQL 11, PostgreSQL 10, or PostgreSQL 9.4.
+          * *   The instance runs RDS High-availability Edition or RDS Basic Edition.
+          * *   The instance resides in a virtual private cloud (VPC). If the instance resides in the classic network, you must migrate the instance to a VPC before you call this operation. For more information about how to view or change the network type of an instance, see [Change the network type of an ApsaraDB RDS for PostgreSQL instance](~~96761~~).
+          * *   The instance is not a read-only instance and is not created in a dedicated cluster.
+          * An upgrade causes impacts such as a transient connection that lasts a few minutes. We recommend that you perform an upgrade during off-peak hours. Before you perform an upgrade, we recommend that you read the description in [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~).
+          *
+          * @param request UpgradeDBInstanceMajorVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeDBInstanceMajorVersionResponse
+         */
         public UpgradeDBInstanceMajorVersionResponse UpgradeDBInstanceMajorVersionWithOptions(UpgradeDBInstanceMajorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30326,6 +38826,20 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UpgradeDBInstanceMajorVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * During an upgrade, ApsaraDB RDS retains the original instance and creates an instance that runs the new major engine version. You are **charged** for the new instance based on the **pay-as-you-go** billing method after the instance is created. The new instance **does not inherit the discounts that are offered to the original instance**. Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraDB RDS. You can decide whether to upgrade the major engine version based on your business requirements. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * Before you upgrade the major engine version, you must call the [UpgradeDBInstanceMajorVersionPrecheck](~~330050~~) operation to perform an upgrade check and then call the [DescribeUpgradeMajorVersionPrecheckTask](~~330088~~) operation to query the upgrade check report. You can call the UpgradeDBInstanceMajorVersion operation only when the check result is **Success**.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The original instance runs PostgreSQL 14, PostgreSQL 13, PostgreSQL 12, PostgreSQL 11, PostgreSQL 10, or PostgreSQL 9.4.
+          * *   The instance runs RDS High-availability Edition or RDS Basic Edition.
+          * *   The instance resides in a virtual private cloud (VPC). If the instance resides in the classic network, you must migrate the instance to a VPC before you call this operation. For more information about how to view or change the network type of an instance, see [Change the network type of an ApsaraDB RDS for PostgreSQL instance](~~96761~~).
+          * *   The instance is not a read-only instance and is not created in a dedicated cluster.
+          * An upgrade causes impacts such as a transient connection that lasts a few minutes. We recommend that you perform an upgrade during off-peak hours. Before you perform an upgrade, we recommend that you read the description in [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~).
+          *
+          * @param request UpgradeDBInstanceMajorVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeDBInstanceMajorVersionResponse
+         */
         public async Task<UpgradeDBInstanceMajorVersionResponse> UpgradeDBInstanceMajorVersionWithOptionsAsync(UpgradeDBInstanceMajorVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30429,18 +38943,53 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UpgradeDBInstanceMajorVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * During an upgrade, ApsaraDB RDS retains the original instance and creates an instance that runs the new major engine version. You are **charged** for the new instance based on the **pay-as-you-go** billing method after the instance is created. The new instance **does not inherit the discounts that are offered to the original instance**. Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraDB RDS. You can decide whether to upgrade the major engine version based on your business requirements. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * Before you upgrade the major engine version, you must call the [UpgradeDBInstanceMajorVersionPrecheck](~~330050~~) operation to perform an upgrade check and then call the [DescribeUpgradeMajorVersionPrecheckTask](~~330088~~) operation to query the upgrade check report. You can call the UpgradeDBInstanceMajorVersion operation only when the check result is **Success**.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The original instance runs PostgreSQL 14, PostgreSQL 13, PostgreSQL 12, PostgreSQL 11, PostgreSQL 10, or PostgreSQL 9.4.
+          * *   The instance runs RDS High-availability Edition or RDS Basic Edition.
+          * *   The instance resides in a virtual private cloud (VPC). If the instance resides in the classic network, you must migrate the instance to a VPC before you call this operation. For more information about how to view or change the network type of an instance, see [Change the network type of an ApsaraDB RDS for PostgreSQL instance](~~96761~~).
+          * *   The instance is not a read-only instance and is not created in a dedicated cluster.
+          * An upgrade causes impacts such as a transient connection that lasts a few minutes. We recommend that you perform an upgrade during off-peak hours. Before you perform an upgrade, we recommend that you read the description in [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~).
+          *
+          * @param request UpgradeDBInstanceMajorVersionRequest
+          * @return UpgradeDBInstanceMajorVersionResponse
+         */
         public UpgradeDBInstanceMajorVersionResponse UpgradeDBInstanceMajorVersion(UpgradeDBInstanceMajorVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeDBInstanceMajorVersionWithOptions(request, runtime);
         }
 
+        /**
+          * During an upgrade, ApsaraDB RDS retains the original instance and creates an instance that runs the new major engine version. You are **charged** for the new instance based on the **pay-as-you-go** billing method after the instance is created. The new instance **does not inherit the discounts that are offered to the original instance**. Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraDB RDS. You can decide whether to upgrade the major engine version based on your business requirements. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
+          * Before you upgrade the major engine version, you must call the [UpgradeDBInstanceMajorVersionPrecheck](~~330050~~) operation to perform an upgrade check and then call the [DescribeUpgradeMajorVersionPrecheckTask](~~330088~~) operation to query the upgrade check report. You can call the UpgradeDBInstanceMajorVersion operation only when the check result is **Success**.
+          * Before you call this operation, make sure that the following requirements are met:
+          * *   The original instance runs PostgreSQL 14, PostgreSQL 13, PostgreSQL 12, PostgreSQL 11, PostgreSQL 10, or PostgreSQL 9.4.
+          * *   The instance runs RDS High-availability Edition or RDS Basic Edition.
+          * *   The instance resides in a virtual private cloud (VPC). If the instance resides in the classic network, you must migrate the instance to a VPC before you call this operation. For more information about how to view or change the network type of an instance, see [Change the network type of an ApsaraDB RDS for PostgreSQL instance](~~96761~~).
+          * *   The instance is not a read-only instance and is not created in a dedicated cluster.
+          * An upgrade causes impacts such as a transient connection that lasts a few minutes. We recommend that you perform an upgrade during off-peak hours. Before you perform an upgrade, we recommend that you read the description in [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~).
+          *
+          * @param request UpgradeDBInstanceMajorVersionRequest
+          * @return UpgradeDBInstanceMajorVersionResponse
+         */
         public async Task<UpgradeDBInstanceMajorVersionResponse> UpgradeDBInstanceMajorVersionAsync(UpgradeDBInstanceMajorVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeDBInstanceMajorVersionWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS for PostgreSQL provides the major version upgrade feature. You can use this feature to upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance.
+          * Before you perform an upgrade, you must perform an upgrade check and make sure that the check result is **Success**. You can call this operation to perform an upgrade check.
+          * An upgrade brings impacts, such as a transient connection that lasts a few minutes. We recommend that you perform an upgrade during off-peak hours. Before you perform an upgrade, we recommend that you read [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~).
+          *
+          * @param request UpgradeDBInstanceMajorVersionPrecheckRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeDBInstanceMajorVersionPrecheckResponse
+         */
         public UpgradeDBInstanceMajorVersionPrecheckResponse UpgradeDBInstanceMajorVersionPrecheckWithOptions(UpgradeDBInstanceMajorVersionPrecheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30476,6 +39025,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UpgradeDBInstanceMajorVersionPrecheckResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS for PostgreSQL provides the major version upgrade feature. You can use this feature to upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance.
+          * Before you perform an upgrade, you must perform an upgrade check and make sure that the check result is **Success**. You can call this operation to perform an upgrade check.
+          * An upgrade brings impacts, such as a transient connection that lasts a few minutes. We recommend that you perform an upgrade during off-peak hours. Before you perform an upgrade, we recommend that you read [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~).
+          *
+          * @param request UpgradeDBInstanceMajorVersionPrecheckRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeDBInstanceMajorVersionPrecheckResponse
+         */
         public async Task<UpgradeDBInstanceMajorVersionPrecheckResponse> UpgradeDBInstanceMajorVersionPrecheckWithOptionsAsync(UpgradeDBInstanceMajorVersionPrecheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30511,18 +39069,43 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UpgradeDBInstanceMajorVersionPrecheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ApsaraDB RDS for PostgreSQL provides the major version upgrade feature. You can use this feature to upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance.
+          * Before you perform an upgrade, you must perform an upgrade check and make sure that the check result is **Success**. You can call this operation to perform an upgrade check.
+          * An upgrade brings impacts, such as a transient connection that lasts a few minutes. We recommend that you perform an upgrade during off-peak hours. Before you perform an upgrade, we recommend that you read [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~).
+          *
+          * @param request UpgradeDBInstanceMajorVersionPrecheckRequest
+          * @return UpgradeDBInstanceMajorVersionPrecheckResponse
+         */
         public UpgradeDBInstanceMajorVersionPrecheckResponse UpgradeDBInstanceMajorVersionPrecheck(UpgradeDBInstanceMajorVersionPrecheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeDBInstanceMajorVersionPrecheckWithOptions(request, runtime);
         }
 
+        /**
+          * ApsaraDB RDS for PostgreSQL provides the major version upgrade feature. You can use this feature to upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance.
+          * Before you perform an upgrade, you must perform an upgrade check and make sure that the check result is **Success**. You can call this operation to perform an upgrade check.
+          * An upgrade brings impacts, such as a transient connection that lasts a few minutes. We recommend that you perform an upgrade during off-peak hours. Before you perform an upgrade, we recommend that you read [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~).
+          *
+          * @param request UpgradeDBInstanceMajorVersionPrecheckRequest
+          * @return UpgradeDBInstanceMajorVersionPrecheckResponse
+         */
         public async Task<UpgradeDBInstanceMajorVersionPrecheckResponse> UpgradeDBInstanceMajorVersionPrecheckAsync(UpgradeDBInstanceMajorVersionPrecheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeDBInstanceMajorVersionPrecheckWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call the ModifyDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request UpgradeDBProxyInstanceKernelVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeDBProxyInstanceKernelVersionResponse
+         */
         public UpgradeDBProxyInstanceKernelVersionResponse UpgradeDBProxyInstanceKernelVersionWithOptions(UpgradeDBProxyInstanceKernelVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30574,6 +39157,15 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UpgradeDBProxyInstanceKernelVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call the ModifyDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request UpgradeDBProxyInstanceKernelVersionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpgradeDBProxyInstanceKernelVersionResponse
+         */
         public async Task<UpgradeDBProxyInstanceKernelVersionResponse> UpgradeDBProxyInstanceKernelVersionWithOptionsAsync(UpgradeDBProxyInstanceKernelVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30625,12 +39217,28 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<UpgradeDBProxyInstanceKernelVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call the ModifyDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request UpgradeDBProxyInstanceKernelVersionRequest
+          * @return UpgradeDBProxyInstanceKernelVersionResponse
+         */
         public UpgradeDBProxyInstanceKernelVersionResponse UpgradeDBProxyInstanceKernelVersion(UpgradeDBProxyInstanceKernelVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeDBProxyInstanceKernelVersionWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call the ModifyDBProxyEndpoint operation, make sure that the [ModifyDBProxy](~~141054~~) operation is called to enable the database proxy feature for the instance.
+          * *   The dedicated proxy feature of ApsaraDB RDS for MySQL provides capabilities such as read/write splitting and short-lived connection optimization. For more information, see [What are database proxies?](~~138705~~)
+          * *   The database proxy feature of ApsaraDB RDS for PostgreSQL supports read/write splitting. For more information, see [What are database proxies?](~~412194~~)
+          *
+          * @param request UpgradeDBProxyInstanceKernelVersionRequest
+          * @return UpgradeDBProxyInstanceKernelVersionResponse
+         */
         public async Task<UpgradeDBProxyInstanceKernelVersionResponse> UpgradeDBProxyInstanceKernelVersionAsync(UpgradeDBProxyInstanceKernelVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

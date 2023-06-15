@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RevokeAccountPrivilegeRequest : TeaModel {
+        /// <summary>
+        /// The name of the account.
+        /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The name of the database. You can revoke all permissions of the account on this database. Separate multiple databases with commas (,).
+        /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
         public string DBName { get; set; }

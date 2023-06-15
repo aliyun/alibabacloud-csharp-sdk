@@ -9,14 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class StartDBInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the migration task.
+        /// 
+        /// > This parameter is returned only for the instances that are created in dedicated clusters.
+        /// </summary>
         [NameInMap("MigrationId")]
         [Validation(Required=false)]
         public int? MigrationId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the task.
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public int? TaskId { get; set; }

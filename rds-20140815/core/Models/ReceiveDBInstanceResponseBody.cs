@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ReceiveDBInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the disaster recovery instance after the switchover.
+        /// </summary>
         [NameInMap("GuardDBInstanceId")]
         [Validation(Required=false)]
         public string GuardDBInstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

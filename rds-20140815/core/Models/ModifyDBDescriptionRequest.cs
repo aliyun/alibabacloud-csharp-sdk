@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBDescriptionRequest : TeaModel {
+        /// <summary>
+        /// The description of the database.
+        /// </summary>
         [NameInMap("DBDescription")]
         [Validation(Required=false)]
         public string DBDescription { get; set; }
 
+        /// <summary>
+        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The name of the database.
+        /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
         public string DBName { get; set; }

@@ -9,14 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ResetAccountPasswordRequest : TeaModel {
+        /// <summary>
+        /// The username of the account.
+        /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        /// <summary>
+        /// The new password.
+        /// 
+        /// > 
+        /// 
+        /// *   The value must be 8 to 32 characters in length.
+        /// 
+        /// *   The value must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.
+        /// *   The following special characters are supported: ! @ # $ & % ^ \* ( ) \_ + - =
+        /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }

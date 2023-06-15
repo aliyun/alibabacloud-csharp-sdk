@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeReadDBInstanceDelayRequest : TeaModel {
+        /// <summary>
+        /// The ID of the primary instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the read-only instance.
+        /// </summary>
         [NameInMap("ReadInstanceId")]
         [Validation(Required=false)]
         public string ReadInstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the global active database clusters that you want to query reside. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

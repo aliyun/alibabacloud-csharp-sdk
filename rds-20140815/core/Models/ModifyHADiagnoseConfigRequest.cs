@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyHADiagnoseConfigRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -29,6 +35,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The availability check method of the instance. Valid values:
+        /// 
+        /// *   **SHORT**: Alibaba Cloud uses short-lived connections to check the availability of the instance.
+        /// *   **LONG**: Alibaba Cloud uses persistent connections to check the availability of the instance.
+        /// </summary>
         [NameInMap("TcpConnectionType")]
         [Validation(Required=false)]
         public string TcpConnectionType { get; set; }

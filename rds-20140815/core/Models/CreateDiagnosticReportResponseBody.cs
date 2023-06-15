@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateDiagnosticReportResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the diagnostic report.
+        /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]
         public string ReportId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

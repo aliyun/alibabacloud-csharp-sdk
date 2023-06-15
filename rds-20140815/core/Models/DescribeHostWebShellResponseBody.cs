@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class RequestServiceOfCloudDBAResponseBody : TeaModel {
-        [NameInMap("AttrData")]
+    public class DescribeHostWebShellResponseBody : TeaModel {
+        [NameInMap("LoginUrl")]
         [Validation(Required=false)]
-        public string AttrData { get; set; }
-
-        [NameInMap("ListData")]
-        [Validation(Required=false)]
-        public string ListData { get; set; }
+        public string LoginUrl { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

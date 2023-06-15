@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifySQLCollectorRetentionRequest : TeaModel {
+        /// <summary>
+        /// The log backup retention period that is allowed by the SQL explorer on the instance. Valid values:
+        /// 
+        /// *   **30:** 30 days
+        /// *   **180:** 180 days
+        /// *   **365:** one year
+        /// *   **1095:** three years
+        /// *   **1825:** five years
+        /// </summary>
         [NameInMap("ConfigValue")]
         [Validation(Required=false)]
         public string ConfigValue { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -25,6 +37,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the instance belongs.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

@@ -9,14 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeBackupPolicyRequest : TeaModel {
+        /// <summary>
+        /// The backup type. Valid values:
+        /// 
+        /// *   **DataBackupPolicy**: data backup
+        /// *   **LogBackupPolicy**: log backup
+        /// </summary>
         [NameInMap("BackupPolicyMode")]
         [Validation(Required=false)]
         public string BackupPolicyMode { get; set; }
 
+        /// <summary>
+        /// The method that is used to compress backup data. Valid values:
+        /// 
+        /// *   **0**: Backup data is not compressed.
+        /// *   **1**: Backup data is compressed by using zlib.
+        /// *   **2**: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.
+        /// *   **4**: Backup data is compressed by using QuickLZ and can be used to restore individual databases and tables.
+        /// *   **8**: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables. This value is available only when the instance runs MySQL 8.0.
+        /// </summary>
         [NameInMap("CompressType")]
         [Validation(Required=false)]
         public string CompressType { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -29,6 +47,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The policy that is used to retain archived backup files if the instance is released. Valid values:
+        /// 
+        /// *   **None**: No archived backup files are retained.
+        /// *   **Lastest**: Only the last archived backup file is retained.
+        /// *   **All**: All archived backup files are retained.
+        /// </summary>
         [NameInMap("ReleasedKeepPolicy")]
         [Validation(Required=false)]
         public string ReleasedKeepPolicy { get; set; }

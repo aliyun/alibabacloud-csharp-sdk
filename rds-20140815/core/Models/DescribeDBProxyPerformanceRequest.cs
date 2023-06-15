@@ -9,22 +9,51 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyPerformanceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// An internal parameter. You do not need to specify this parameter.
+        /// </summary>
         [NameInMap("DBProxyEngineType")]
         [Validation(Required=false)]
         public string DBProxyEngineType { get; set; }
 
+        /// <summary>
+        /// The type of proxy that is enabled on the instance. Set the value to **DedicatedProxy**.
+        /// </summary>
         [NameInMap("DBProxyInstanceType")]
         [Validation(Required=false)]
         public string DBProxyInstanceType { get; set; }
 
+        /// <summary>
+        /// The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// The performance metrics that you want to query.
+        /// 
+        /// If the instance runs MySQL, you can query only the **Maxscale_CpuUsage** performance metric, which indicates the CPU utilization of the instance.
+        /// 
+        /// If the instance runs PostgreSQL, you can query the following performance metrics:
+        /// 
+        /// *   **Maxscale_TotalConns**: the number of connections per second
+        /// *   **Maxscale_CurrentConns**: the number of connections that are established
+        /// *   **Maxscale_DownFlows**: outbound traffic
+        /// *   **Maxscale_UpFlows**: inbound traffic
+        /// *   **Maxscale_QPS**: QPS
+        /// *   **Maxscale_MemUsage**: memory usage
+        /// *   **Maxscale_CpuUsage**: CPU utilization
+        /// 
+        /// If you want to query more than one performance metric, separate the performance metrics with commas (,). You can specify up to six performance metrics in a single request.
+        /// </summary>
         [NameInMap("MetricsName")]
         [Validation(Required=false)]
         public string MetricsName { get; set; }
@@ -33,6 +62,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the instance resides. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -45,6 +77,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }

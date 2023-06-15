@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeMetaListResponseBody : TeaModel {
+        /// <summary>
+        /// The name of the instance.
+        /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        /// <summary>
+        /// An array consisting of the information about the databases and tables whose data is included in the backup set.
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeMetaListResponseBodyItems Items { get; set; }
@@ -21,14 +27,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeMetaListResponseBodyItemsMeta> Meta { get; set; }
             public class DescribeMetaListResponseBodyItemsMeta : TeaModel {
+                /// <summary>
+                /// The name of the database.
+                /// </summary>
                 [NameInMap("Database")]
                 [Validation(Required=false)]
                 public string Database { get; set; }
 
+                /// <summary>
+                /// The size of the table. Unit: KB.
+                /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public string Size { get; set; }
 
+                /// <summary>
+                /// The name of the table.
+                /// </summary>
                 [NameInMap("Tables")]
                 [Validation(Required=false)]
                 public string Tables { get; set; }
@@ -37,22 +52,37 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// The page number of the returned page.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries returned per page.
+        /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of pages returned.
+        /// </summary>
         [NameInMap("TotalPageCount")]
         [Validation(Required=false)]
         public int? TotalPageCount { get; set; }
 
+        /// <summary>
+        /// The total number of returned entries.
+        /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
         public int? TotalRecordCount { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableCrossRegionResponseBody : TeaModel {
+        /// <summary>
+        /// An array that consists of destination regions for cross-region backups.
+        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public DescribeAvailableCrossRegionResponseBodyRegions Regions { get; set; }
@@ -19,6 +22,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

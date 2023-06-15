@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceMonitorRequest : TeaModel {
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -25,6 +31,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The monitoring frequency that you want to use. Valid values:
+        /// 
+        /// *   **5**
+        /// *   **10**
+        /// *   **60**
+        /// *   **300**
+        /// 
+        /// Unit: seconds.
+        /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }

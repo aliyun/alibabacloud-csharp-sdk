@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribePGHbaConfigRequest : TeaModel {
+        /// <summary>
+        /// This parameter is reserved. You do not need to specify this parameter.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

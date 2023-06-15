@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteBackupRequest : TeaModel {
+        /// <summary>
+        /// The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query backup set IDs. Separate multiple values with commas (,). You can specify a maximum of 100 values in a single request.
+        /// 
+        /// > After you call the [DescribeBackups](~~26273~~) operation, the returned backup sets whose **StoreStatus** is **Enabled** can be deleted.
+        /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }

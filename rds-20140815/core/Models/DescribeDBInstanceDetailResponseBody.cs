@@ -9,22 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceDetailResponseBody : TeaModel {
+        /// <summary>
+        /// Indicates whether the instance is in the active state.
+        /// </summary>
         [NameInMap("ActivationState")]
         [Validation(Required=false)]
         public string ActivationState { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The type of the license.
+        /// </summary>
         [NameInMap("LicenseType")]
         [Validation(Required=false)]
         public string LicenseType { get; set; }
 
+        /// <summary>
+        /// The region ID of the instance.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

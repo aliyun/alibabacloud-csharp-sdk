@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceEncryptionKeyRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the custom key.
+        /// </summary>
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
         public string EncryptionKey { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -41,6 +50,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// The ID of the destination region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("TargetRegionId")]
         [Validation(Required=false)]
         public string TargetRegionId { get; set; }

@@ -9,10 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceConnectionModeRequest : TeaModel {
+        /// <summary>
+        /// The connection mode of the instance. Valid values:
+        /// 
+        /// *   **Standard**: standard mode
+        /// *   **Safe**: database proxy mode
+        /// 
+        /// The system automatically assigns a connection mode to the instance.
+        /// 
+        /// >  SQL Server 2012, SQL Server 2016, and SQL Server 2017 support only the standard mode.
+        /// </summary>
         [NameInMap("ConnectionMode")]
         [Validation(Required=false)]
         public string ConnectionMode { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }

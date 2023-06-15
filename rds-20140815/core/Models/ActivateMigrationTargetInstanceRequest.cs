@@ -12,10 +12,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ActivateMigrationTargetInstanceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the destination instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.
+        /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        /// <summary>
+        /// Specifies whether to forcefully perform a switchover. Set the value to 1. The value 1 specifies a forceful switchover.
+        /// </summary>
         [NameInMap("ForceSwitch")]
         [Validation(Required=false)]
         public string ForceSwitch { get; set; }
@@ -24,10 +30,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// A reserved parameter. This parameter does not take effect.
+        /// </summary>
         [NameInMap("SwitchTime")]
         [Validation(Required=false)]
         public string SwitchTime { get; set; }
 
+        /// <summary>
+        /// The time when you want to perform the switchover.
+        /// 
+        /// Set the value to 0. The value 0 specifies an immediate switchover.
+        /// </summary>
         [NameInMap("SwitchTimeMode")]
         [Validation(Required=false)]
         public string SwitchTimeMode { get; set; }

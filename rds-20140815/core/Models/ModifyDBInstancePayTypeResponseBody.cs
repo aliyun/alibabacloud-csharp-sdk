@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstancePayTypeResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the order.
+        /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }

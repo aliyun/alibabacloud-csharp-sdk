@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class MigrateConnectionToOtherZoneResponseBody : TeaModel {
+        /// <summary>
+        /// The error code.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// The error message.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

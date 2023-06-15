@@ -9,22 +9,43 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceConnectionStringRequest : TeaModel {
+        /// <summary>
+        /// The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.
+        /// 
+        /// > This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).
+        /// </summary>
         [NameInMap("BabelfishPort")]
         [Validation(Required=false)]
         public string BabelfishPort { get; set; }
 
+        /// <summary>
+        /// The prefix of the endpoint after the change. Only the prefix of the value of **CurrentConnectionString** can be changed.
+        /// 
+        /// > The value must be 8 to 64 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following special characters: ! # % ^ & \* = + | {} ; : \" " ,<> / ?
+        /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
         public string ConnectionStringPrefix { get; set; }
 
+        /// <summary>
+        /// The endpoint of the instance. It can be an internal endpoint, a public endpoint, or a classic network endpoint in hybrid access mode.
+        /// 
+        /// > The read/write splitting endpoint cannot be changed.
+        /// </summary>
         [NameInMap("CurrentConnectionString")]
         [Validation(Required=false)]
         public string CurrentConnectionString { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.
+        /// </summary>
         [NameInMap("GeneralGroupName")]
         [Validation(Required=false)]
         public string GeneralGroupName { get; set; }
@@ -37,6 +58,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The port number after the change.
+        /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public string Port { get; set; }

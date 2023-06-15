@@ -9,50 +9,99 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeVSwitchesResponseBody : TeaModel {
+        /// <summary>
+        /// The page number of the returned page.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries returned on each page. The value of this parameter is the same as the value of the **PageSize** parameter in the request parameters.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of returned entries.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// The details about the vSwitches.
+        /// </summary>
         [NameInMap("VSwitchs")]
         [Validation(Required=false)]
         public List<DescribeVSwitchesResponseBodyVSwitchs> VSwitchs { get; set; }
         public class DescribeVSwitchesResponseBodyVSwitchs : TeaModel {
+            /// <summary>
+            /// 交换机中可用的IP地址数量。
+            /// </summary>
+            [NameInMap("AvailableIpAddressCount")]
+            [Validation(Required=false)]
+            public string AvailableIpAddressCount { get; set; }
+
+            /// <summary>
+            /// The CIDR blocks of the vSwitches.
+            /// </summary>
             [NameInMap("CidrBlock")]
             [Validation(Required=false)]
             public string CidrBlock { get; set; }
 
+            /// <summary>
+            /// The descriptions of the vSwitches.
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// Indicates whether the vSwitch is the default vSwitch. Valid values:
+            /// 
+            /// *   **true**: The vSwitch is the default vSwitch.
+            /// *   **false**: The vSwitch is not the default vSwitch.
+            /// </summary>
             [NameInMap("IsDefault")]
             [Validation(Required=false)]
             public bool? IsDefault { get; set; }
 
+            /// <summary>
+            /// The ID of the zone to which the vSwitches belong.
+            /// </summary>
             [NameInMap("IzNo")]
             [Validation(Required=false)]
             public string IzNo { get; set; }
 
+            /// <summary>
+            /// The status of a vSwitch. Valid values:
+            /// 
+            /// *   **Pending**: The vSwitch is being configured.
+            /// *   **Available**: The vSwitch is available.
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// The ID of the vSwitch.
+            /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
+            /// <summary>
+            /// The name of the vSwitch.
+            /// </summary>
             [NameInMap("VSwitchName")]
             [Validation(Required=false)]
             public string VSwitchName { get; set; }

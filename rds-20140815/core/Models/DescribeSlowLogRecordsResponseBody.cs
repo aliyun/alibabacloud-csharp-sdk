@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string Engine { get; set; }
 
+        /// <summary>
+        /// An array that consists of the information about each slow query log.
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeSlowLogRecordsResponseBodyItems Items { get; set; }

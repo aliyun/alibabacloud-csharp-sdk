@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceNetInfoResponseBody : TeaModel {
+        /// <summary>
+        /// Details of the endpoints of the instance.
+        /// </summary>
         [NameInMap("DBInstanceNetInfos")]
         [Validation(Required=false)]
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfos DBInstanceNetInfos { get; set; }
@@ -17,18 +20,35 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo> DBInstanceNetInfo { get; set; }
             public class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo : TeaModel {
+                /// <summary>
+                /// The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.
+                /// 
+                /// > This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).
+                /// </summary>
                 [NameInMap("BabelfishPort")]
                 [Validation(Required=false)]
                 public string BabelfishPort { get; set; }
 
+                /// <summary>
+                /// The endpoint of the instance.
+                /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
+                /// <summary>
+                /// The type of the endpoint. Valid values:
+                /// 
+                /// *   **Normal**: regular endpoint
+                /// *   **ReadWriteSplitting**: read/write splitting endpoint
+                /// </summary>
                 [NameInMap("ConnectionStringType")]
                 [Validation(Required=false)]
                 public string ConnectionStringType { get; set; }
 
+                /// <summary>
+                /// Details of the weight. This parameter is returned only when the read/write splitting feature is enabled for the instance.
+                /// </summary>
                 [NameInMap("DBInstanceWeights")]
                 [Validation(Required=false)]
                 public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeights DBInstanceWeights { get; set; }
@@ -37,22 +57,43 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     [Validation(Required=false)]
                     public List<DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight> DBInstanceWeight { get; set; }
                     public class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight : TeaModel {
+                        /// <summary>
+                        /// The availability of the instance. Valid values:
+                        /// 
+                        /// *   **Unavailable**
+                        /// *   **Available**
+                        /// </summary>
                         [NameInMap("Availability")]
                         [Validation(Required=false)]
                         public string Availability { get; set; }
 
+                        /// <summary>
+                        /// The ID of the instance.
+                        /// </summary>
                         [NameInMap("DBInstanceId")]
                         [Validation(Required=false)]
                         public string DBInstanceId { get; set; }
 
+                        /// <summary>
+                        /// The database engine of the instance. Valid values:
+                        /// 
+                        /// *   **Master**: primary instance
+                        /// *   **Readonly**: read-only instance
+                        /// </summary>
                         [NameInMap("DBInstanceType")]
                         [Validation(Required=false)]
                         public string DBInstanceType { get; set; }
 
+                        /// <summary>
+                        /// A deprecated parameter.
+                        /// </summary>
                         [NameInMap("Role")]
                         [Validation(Required=false)]
                         public string Role { get; set; }
 
+                        /// <summary>
+                        /// The weight of the instance.
+                        /// </summary>
                         [NameInMap("Weight")]
                         [Validation(Required=false)]
                         public string Weight { get; set; }
@@ -61,30 +102,63 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
                 }
 
+                /// <summary>
+                /// The policy that is used to assign read weights. This parameter is returned only for a read/write splitting endpoint. Valid values:
+                /// 
+                /// *   **Standard**: The system automatically assigns read weights to the instance and its read-only instances based on the specifications of these instances.
+                /// *   **Custom**: You must manually allocate read weights to the instance and its read-only instances.
+                /// </summary>
                 [NameInMap("DistributionType")]
                 [Validation(Required=false)]
                 public string DistributionType { get; set; }
 
+                /// <summary>
+                /// The remaining validity period of the instance of the classic network in hybrid access mode. Unit: seconds.
+                /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
 
+                /// <summary>
+                /// The IP address of the endpoint.
+                /// </summary>
                 [NameInMap("IPAddress")]
                 [Validation(Required=false)]
                 public string IPAddress { get; set; }
 
+                /// <summary>
+                /// The type of the network.
+                /// 
+                /// *   Valid values when the instance resides in the classic network:
+                /// *   **Inner:**: internal network
+                /// *   **Public**: Internet
+                /// *   Valid values when the instance resides in a VPC:
+                /// *   **Private**: internal network
+                /// *   **Public**: Internet
+                /// </summary>
                 [NameInMap("IPType")]
                 [Validation(Required=false)]
                 public string IPType { get; set; }
 
+                /// <summary>
+                /// The latency threshold. This parameter is returned only for a read/write splitting endpoint. Unit: seconds.
+                /// 
+                /// > If the latency on a read-only instance exceeds the specified threshold, the system no longer forwards read requests to the read-only instance.
+                /// </summary>
                 [NameInMap("MaxDelayTime")]
                 [Validation(Required=false)]
                 public string MaxDelayTime { get; set; }
 
+                /// <summary>
+                /// The port that is used to connect to the instance.
+                /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
+                /// <summary>
+                /// An array that consists of the details about the IP address whitelists.
+                /// </summary>
                 [NameInMap("SecurityIPGroups")]
                 [Validation(Required=false)]
                 public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroups SecurityIPGroups { get; set; }
@@ -93,10 +167,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     [Validation(Required=false)]
                     public List<DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroupsSecurityIPGroup> SecurityIPGroup { get; set; }
                     public class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroupsSecurityIPGroup : TeaModel {
+                        /// <summary>
+                        /// The name of the IP address whitelist.
+                        /// </summary>
                         [NameInMap("SecurityIPGroupName")]
                         [Validation(Required=false)]
                         public string SecurityIPGroupName { get; set; }
 
+                        /// <summary>
+                        /// The IP addresses contained in the IP address whitelist.
+                        /// </summary>
                         [NameInMap("SecurityIPs")]
                         [Validation(Required=false)]
                         public string SecurityIPs { get; set; }
@@ -105,14 +185,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
                 }
 
+                /// <summary>
+                /// Indicates whether the IP version can be updated. Valid values:
+                /// 
+                /// *   **Enable**: The IP version can be updated.
+                /// *   **Disabled**: The IP version cannot be updated.
+                /// 
+                /// > The IP version can be updated from IPv4 to IPv6.
+                /// </summary>
                 [NameInMap("Upgradeable")]
                 [Validation(Required=false)]
                 public string Upgradeable { get; set; }
 
+                /// <summary>
+                /// The ID of the VPC.
+                /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
                 public string VPCId { get; set; }
 
+                /// <summary>
+                /// The ID of the vSwitch.
+                /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
@@ -121,14 +215,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// The network type of the instance. Valid values:
+        /// 
+        /// *   **Classic**: classic network
+        /// *   **VPC**: virtual private cloud (VPC)
+        /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
         public string InstanceNetworkType { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The whitelist mode of the instance. Valid values:
+        /// 
+        /// *   **normal**: standard whitelist mode
+        /// *   **safety**: enhanced whitelist mode
+        /// </summary>
         [NameInMap("SecurityIPMode")]
         [Validation(Required=false)]
         public string SecurityIPMode { get; set; }

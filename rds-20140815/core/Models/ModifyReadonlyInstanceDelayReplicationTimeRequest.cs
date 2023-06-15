@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyReadonlyInstanceDelayReplicationTimeRequest : TeaModel {
+        /// <summary>
+        /// The ID of the read-only instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The latency at which to replicate data from the primary instance to the read-only instance. Unit: seconds.
+        /// </summary>
         [NameInMap("ReadSQLReplicationTime")]
         [Validation(Required=false)]
         public string ReadSQLReplicationTime { get; set; }

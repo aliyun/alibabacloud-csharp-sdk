@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListTagResourcesRequest : TeaModel {
+        /// <summary>
+        /// The token required to obtain more results. This parameter is not required in the first query. If a query does not return all results, in the next query, you can specify the token returned from the previous query to obtain more results.
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -17,10 +20,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The IDs of resources. You can specify up to 50 resource IDs.
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
@@ -33,18 +42,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The type of the resource. Set the value to **INSTANCE**.
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// The tags to query resources. You can specify up to 20 tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
+            /// <summary>
+            /// The key of the tag. You can query N tag keys at a time. Valid values of N: **1** to **20**. The value of this parameter cannot be an empty string.
+            /// 
+            /// >  You must specify at least one of the **ResourceId.N** and **Tag.N.Key** parameters.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value that is associated with the specified tag key. You can specify N tag values at a time. Valid values of N: **1** to **20**. This parameter can be an empty string.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

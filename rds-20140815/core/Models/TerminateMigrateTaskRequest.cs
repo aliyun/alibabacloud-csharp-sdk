@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class TerminateMigrateTaskRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the migration task. You can call the [DescribeMigrateTasks](~~64563~~) operation to query the ID of the migration task.
+        /// </summary>
         [NameInMap("MigrateTaskId")]
         [Validation(Required=false)]
         public string MigrateTaskId { get; set; }

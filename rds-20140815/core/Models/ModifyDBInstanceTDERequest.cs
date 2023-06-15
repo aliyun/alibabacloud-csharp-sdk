@@ -9,22 +9,58 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceTDERequest : TeaModel {
+        /// <summary>
+        /// The file that contains the certificate.\
+        /// Format:
+        /// 
+        /// *   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)
+        /// *   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)
+        /// 
+        /// > 
+        /// 
+        /// *   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
+        /// 
+        /// *   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("Certificate")]
         [Validation(Required=false)]
         public string Certificate { get; set; }
 
+        /// <summary>
+        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The name of the database for which you want to enable TDE. You can specify up to 50 database names in a single request. If you specify multiple database names, separate the database names with commas (,).
+        /// 
+        /// > This parameter is available and must be specified only when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
+        /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]
         public string DBName { get; set; }
 
+        /// <summary>
+        /// The ID of the custom key.
+        /// 
+        /// > This parameter is available when the instance runs MySQL or PostgreSQL.
+        /// </summary>
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
         public string EncryptionKey { get; set; }
 
+        /// <summary>
+        /// Specifies whether to replace the key. Valid values:
+        /// 
+        /// *   **true**: replaces the key.
+        /// *   **false**: does not replace the key.
+        /// 
+        /// Default value: **false**
+        /// 
+        /// > This parameter is available only when the instance runs PostgreSQL.
+        /// </summary>
         [NameInMap("IsRotate")]
         [Validation(Required=false)]
         public bool? IsRotate { get; set; }
@@ -37,10 +73,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The password of the certificate.
+        /// 
+        /// > This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
+        /// </summary>
         [NameInMap("PassWord")]
         [Validation(Required=false)]
         public string PassWord { get; set; }
 
+        /// <summary>
+        /// The file that contains the private key of the certificate.\
+        /// Format:
+        /// 
+        /// *   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)
+        /// *   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)
+        /// 
+        /// > 
+        /// 
+        /// *   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
+        /// 
+        /// *   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("PrivateKey")]
         [Validation(Required=false)]
         public string PrivateKey { get; set; }
@@ -53,10 +107,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](~~93689~~).
+        /// 
+        /// > This parameter is available when the instance runs MySQL or PostgreSQL.
+        /// </summary>
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
+        /// <summary>
+        /// The status of TDE. Valid values:
+        /// 
+        /// *   **Enabled**
+        /// *   **Disabled**
+        /// </summary>
         [NameInMap("TDEStatus")]
         [Validation(Required=false)]
         public string TDEStatus { get; set; }

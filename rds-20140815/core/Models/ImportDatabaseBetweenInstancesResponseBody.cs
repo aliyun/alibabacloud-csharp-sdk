@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ImportDatabaseBetweenInstancesResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the import task.
+        /// </summary>
         [NameInMap("ImportId")]
         [Validation(Required=false)]
         public string ImportId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

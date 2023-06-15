@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RebuildDBInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// The serial number of the task in the rebuild task queue. When the serial number becomes 0, the system starts to rebuild the secondary instance.
+        /// </summary>
         [NameInMap("MigrationId")]
         [Validation(Required=false)]
         public int? MigrationId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the task.
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public int? TaskId { get; set; }

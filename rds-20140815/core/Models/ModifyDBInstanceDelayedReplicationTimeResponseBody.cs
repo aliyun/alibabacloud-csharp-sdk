@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceDelayedReplicationTimeResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The replication latency of the read-only instance. Unit: seconds.
+        /// </summary>
         [NameInMap("ReadSQLReplicationTime")]
         [Validation(Required=false)]
         public string ReadSQLReplicationTime { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the task.
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

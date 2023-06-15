@@ -9,22 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyCollationTimeZoneResponseBody : TeaModel {
+        /// <summary>
+        /// The character set collation of the instance.
+        /// </summary>
         [NameInMap("Collation")]
         [Validation(Required=false)]
         public string Collation { get; set; }
 
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the task.
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
+        /// <summary>
+        /// The time zone of the instance.
+        /// </summary>
         [NameInMap("Timezone")]
         [Validation(Required=false)]
         public string Timezone { get; set; }

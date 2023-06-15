@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CancelImportRequest : TeaModel {
+        /// <summary>
+        /// The ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the migration task.
+        /// 
+        /// > This parameter is returned when the migration task is started. For more information, see [ImportDatabaseBetweenInstances](~~26301~~).
+        /// </summary>
         [NameInMap("ImportId")]
         [Validation(Required=false)]
         public int? ImportId { get; set; }

@@ -9,26 +9,64 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class MigrateToOtherZoneRequest : TeaModel {
+        /// <summary>
+        /// The RDS edition of the instance. Valid values:
+        /// 
+        /// *   **Basic**: RDS Basic Edition
+        /// *   **HighAvailability**: RDS High-availability Edition
+        /// *   **AlwaysOn**: RDS Cluster Edition
+        /// *   **Finance**: RDS Enterprise Edition
+        /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
+        /// <summary>
+        /// The new instance type of the instance. You can change the instance type of the instance. You cannot change the storage type of the instance. If you set **IsModifySpec** to **true**, you must specify at least one of DBInstanceClass and **DBInstanceStorage**.
+        /// 
+        /// For more information about instance types, see [Primary ApsaraDB RDS for MySQL instance types](~~276975~~).
+        /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
+        /// <summary>
+        /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The new storage capacity of the instance. If you set **IsModifySpec** to **true**, you must specify at least one of DBInstanceStorage and **DBInstanceClass**.
+        /// 
+        /// Unit: GB. The available storage capacity range varies based on the instance type of the instance. For more information, see [Primary ApsaraDB RDS for MySQL instance types](~~276975~~).
+        /// </summary>
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
         public long? DBInstanceStorage { get; set; }
 
+        /// <summary>
+        /// The time when you want to migrate the instance. Valid values:
+        /// 
+        /// *   **Immediate**: The instance is immediately migrated. This is the default value.
+        /// *   **MaintainTime**: The instance is migrated during the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~26249~~).
+        /// *   **ScheduleTime**: The instance is migrated at the point in time that you specify.
+        /// 
+        /// > If you set this parameter to **ScheduleTime**, you must also specify **SwitchTime**.
+        /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
+        /// <summary>
+        /// Specifies whether to change the specifications of the instance during the cross-zone migration. Valid values:
+        /// 
+        /// *   **true**: You want to change the specifications of the instance during the cross-zone migration. If you set this parameter to **true**, you must specify at least one of **DBInstanceClass** and **DBInstanceStorage**.
+        /// *   **false** (default): You do not want to change the specifications of the instance during the cross-zone migration.
+        /// 
+        /// > This parameter applies only to instances that run MySQL.
+        /// </summary>
         [NameInMap("IsModifySpec")]
         [Validation(Required=false)]
         public string IsModifySpec { get; set; }
@@ -49,26 +87,56 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The migration time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+        /// 
+        /// > This parameter is used with **EffectiveTime**. You must specify this parameter only when **EffectiveTime** is set to **ScheduleTime**.
+        /// </summary>
         [NameInMap("SwitchTime")]
         [Validation(Required=false)]
         public string SwitchTime { get; set; }
 
+        /// <summary>
+        /// The ID of the virtual private cloud (VPC) to which the instance belongs. Do not change the VPC of the instance when you migrate the instance across zones.
+        /// 
+        /// *   This parameter must be specified when the instance resides in a VPC.
+        /// *   If the instance runs SQL Server, you can change the VPC of the instance.
+        /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
         public string VPCId { get; set; }
 
+        /// <summary>
+        /// The ID of the vSwitch.
+        /// 
+        /// *   This parameter must be specified when the instance resides in a VPC. You can call the [DescribeVSwitches](~~35748~~) operation to query the vSwitch ID.
+        /// *   If the instance runs PostgreSQL or SQL Server and a secondary zone is specified for the instance, you can specify multiple vSwitch IDs, each of which corresponds to a zone. Separate the vSwitch IDs with commas (,).
+        /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
+        /// <summary>
+        /// The ID of the destination zone. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.
+        /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
 
+        /// <summary>
+        /// The zone ID of the secondary instance.
+        /// 
+        /// > If the instance does not run RDS Basic Edition, you must specify this parameter.
+        /// </summary>
         [NameInMap("ZoneIdSlave1")]
         [Validation(Required=false)]
         public string ZoneIdSlave1 { get; set; }
 
+        /// <summary>
+        /// The zone ID of the logger instance.
+        /// 
+        /// > This parameter is available only when the instance runs RDS Enterprise Edition.
+        /// </summary>
         [NameInMap("ZoneIdSlave2")]
         [Validation(Required=false)]
         public string ZoneIdSlave2 { get; set; }
