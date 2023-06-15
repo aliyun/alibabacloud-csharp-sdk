@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? Type { get; set; }
 
+        [NameInMap("unit_type")]
+        [Validation(Required=false)]
+        public int? UnitType { get; set; }
+
     }
 
 }

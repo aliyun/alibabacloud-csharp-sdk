@@ -9727,6 +9727,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["type"] = request.Type;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnitType))
+            {
+                body["unit_type"] = request.UnitType;
+            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -9791,6 +9795,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 body["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnitType))
+            {
+                body["unit_type"] = request.UnitType;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -9959,6 +9967,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["type"] = request.Type;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnitType))
+            {
+                body["unit_type"] = request.UnitType;
+            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -10023,6 +10035,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 body["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnitType))
+            {
+                body["unit_type"] = request.UnitType;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
