@@ -49,6 +49,40 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ExpenseCity { get; set; }
 
+                [NameInMap("expense_compositions")]
+                [Validation(Required=false)]
+                public List<QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions> ExpenseCompositions { get; set; }
+                public class QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions : TeaModel {
+                    [NameInMap("bill_settlement_id")]
+                    [Validation(Required=false)]
+                    public long? BillSettlementId { get; set; }
+
+                    [NameInMap("fee_type")]
+                    [Validation(Required=false)]
+                    public string FeeType { get; set; }
+
+                    [NameInMap("remark")]
+                    [Validation(Required=false)]
+                    public string Remark { get; set; }
+
+                    [NameInMap("remind_tag_list")]
+                    [Validation(Required=false)]
+                    public List<string> RemindTagList { get; set; }
+
+                    [NameInMap("settlement_amount")]
+                    [Validation(Required=false)]
+                    public string SettlementAmount { get; set; }
+
+                    [NameInMap("settlement_time")]
+                    [Validation(Required=false)]
+                    public string SettlementTime { get; set; }
+
+                    [NameInMap("voucher_type")]
+                    [Validation(Required=false)]
+                    public int? VoucherType { get; set; }
+
+                }
+
                 [NameInMap("expense_time")]
                 [Validation(Required=false)]
                 public string ExpenseTime { get; set; }
