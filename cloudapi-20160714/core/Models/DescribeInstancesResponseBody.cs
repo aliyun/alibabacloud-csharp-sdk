@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string ClassicEgressAddress { get; set; }
 
+                [NameInMap("ConnectCidrBlocks")]
+                [Validation(Required=false)]
+                public string ConnectCidrBlocks { get; set; }
+
                 /// <summary>
                 /// VPC融合类型专享实例联通的用户VPC ID
                 /// </summary>
@@ -149,6 +153,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [NameInMap("IntranetSegments")]
                 [Validation(Required=false)]
                 public string IntranetSegments { get; set; }
+
+                [NameInMap("MaintainEndTime")]
+                [Validation(Required=false)]
+                public string MaintainEndTime { get; set; }
+
+                [NameInMap("MaintainStartTime")]
+                [Validation(Required=false)]
+                public string MaintainStartTime { get; set; }
 
                 /// <summary>
                 /// VPC融合类型专享实例连通的用户VPC内的网络信息

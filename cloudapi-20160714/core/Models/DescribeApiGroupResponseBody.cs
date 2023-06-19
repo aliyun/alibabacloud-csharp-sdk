@@ -276,6 +276,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string Ipv6Status { get; set; }
 
+        [NameInMap("MigrationError")]
+        [Validation(Required=false)]
+        public string MigrationError { get; set; }
+
+        [NameInMap("MigrationStatus")]
+        [Validation(Required=false)]
+        public string MigrationStatus { get; set; }
+
         /// <summary>
         /// The last modification time (UTC) of the API group.
         /// </summary>

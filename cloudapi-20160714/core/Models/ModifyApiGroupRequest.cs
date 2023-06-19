@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        [NameInMap("SupportSSE")]
+        [Validation(Required=false)]
+        public string SupportSSE { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ModifyApiGroupRequestTag> Tag { get; set; }

@@ -25,6 +25,62 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig BackendConfig { get; set; }
                 public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig : TeaModel {
+                    [NameInMap("DiscoveryConfig")]
+                    [Validation(Required=false)]
+                    public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig DiscoveryConfig { get; set; }
+                    public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig : TeaModel {
+                        [NameInMap("NacosConfig")]
+                        [Validation(Required=false)]
+                        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig NacosConfig { get; set; }
+                        public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig : TeaModel {
+                            [NameInMap("AccessKey")]
+                            [Validation(Required=false)]
+                            public string AccessKey { get; set; }
+
+                            [NameInMap("AuthType")]
+                            [Validation(Required=false)]
+                            public string AuthType { get; set; }
+
+                            [NameInMap("Clusters")]
+                            [Validation(Required=false)]
+                            public string Clusters { get; set; }
+
+                            [NameInMap("GroupName")]
+                            [Validation(Required=false)]
+                            public string GroupName { get; set; }
+
+                            [NameInMap("Namespace")]
+                            [Validation(Required=false)]
+                            public string Namespace { get; set; }
+
+                            [NameInMap("Password")]
+                            [Validation(Required=false)]
+                            public string Password { get; set; }
+
+                            [NameInMap("SecretKey")]
+                            [Validation(Required=false)]
+                            public string SecretKey { get; set; }
+
+                            [NameInMap("ServerAddress")]
+                            [Validation(Required=false)]
+                            public string ServerAddress { get; set; }
+
+                            [NameInMap("ServiceName")]
+                            [Validation(Required=false)]
+                            public string ServiceName { get; set; }
+
+                            [NameInMap("UserName")]
+                            [Validation(Required=false)]
+                            public string UserName { get; set; }
+
+                        }
+
+                        [NameInMap("RcType")]
+                        [Validation(Required=false)]
+                        public string RcType { get; set; }
+
+                    }
+
                     [NameInMap("EventBridgeConfig")]
                     [Validation(Required=false)]
                     public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig EventBridgeConfig { get; set; }
