@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=false)]
         public string AppJson { get; set; }
 
+        [NameInMap("AutoRenewal")]
+        [Validation(Required=false)]
+        public string AutoRenewal { get; set; }
+
         [NameInMap("BeganOn")]
         [Validation(Required=false)]
         public long? BeganOn { get; set; }
@@ -57,9 +61,20 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public List<DescribeInstanceResponseBodyModulesModule> Module { get; set; }
             public class DescribeInstanceResponseBodyModulesModule : TeaModel {
+                [NameInMap("Code")]
+                [Validation(Required=false)]
                 public string Code { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Properties")]
+                [Validation(Required=false)]
                 public DescribeInstanceResponseBodyModulesModuleProperties Properties { get; set; }
                 public class DescribeInstanceResponseBodyModulesModuleProperties : TeaModel {
                     [NameInMap("Property")]
@@ -86,15 +101,37 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                             [Validation(Required=false)]
                             public List<DescribeInstanceResponseBodyModulesModulePropertiesPropertyPropertyValuesPropertyValue> PropertyValue { get; set; }
                             public class DescribeInstanceResponseBodyModulesModulePropertiesPropertyPropertyValuesPropertyValue : TeaModel {
+                                [NameInMap("DisplayName")]
+                                [Validation(Required=false)]
                                 public string DisplayName { get; set; }
+
+                                [NameInMap("Max")]
+                                [Validation(Required=false)]
                                 public string Max { get; set; }
+
+                                [NameInMap("Min")]
+                                [Validation(Required=false)]
                                 public string Min { get; set; }
+
+                                [NameInMap("Remark")]
+                                [Validation(Required=false)]
                                 public string Remark { get; set; }
+
+                                [NameInMap("Step")]
+                                [Validation(Required=false)]
                                 public string Step { get; set; }
+
+                                [NameInMap("Type")]
+                                [Validation(Required=false)]
                                 public string Type { get; set; }
+
+                                [NameInMap("Value")]
+                                [Validation(Required=false)]
                                 public string Value { get; set; }
+
                             }
-                        };
+
+                        }
 
                         [NameInMap("ShowType")]
                         [Validation(Required=false)]
@@ -103,8 +140,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("OrderId")]
         [Validation(Required=false)]
@@ -133,7 +172,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [NameInMap("ServiceStatus")]
             [Validation(Required=false)]
             public string ServiceStatus { get; set; }
-        };
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

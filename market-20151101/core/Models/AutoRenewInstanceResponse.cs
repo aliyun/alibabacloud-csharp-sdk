@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Market20151101.Models
 {
-    public class RollbackCurrentProjectNodeResponse : TeaModel {
+    public class AutoRenewInstanceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public RollbackCurrentProjectNodeResponseBody Body { get; set; }
+        public AutoRenewInstanceResponseBody Body { get; set; }
 
     }
 

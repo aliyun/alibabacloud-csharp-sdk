@@ -57,13 +57,29 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public List<DescribeProductResponseBodyProductExtrasProductExtra> ProductExtra { get; set; }
             public class DescribeProductResponseBodyProductExtrasProductExtra : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
                 public string Key { get; set; }
+
+                [NameInMap("Label")]
+                [Validation(Required=false)]
                 public string Label { get; set; }
+
+                [NameInMap("Order")]
+                [Validation(Required=false)]
                 public int? Order { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("Values")]
+                [Validation(Required=false)]
                 public string Values { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("ProductSkus")]
         [Validation(Required=false)]
@@ -73,10 +89,24 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public List<DescribeProductResponseBodyProductSkusProductSku> ProductSku { get; set; }
             public class DescribeProductResponseBodyProductSkusProductSku : TeaModel {
+                [NameInMap("ChargeType")]
+                [Validation(Required=false)]
                 public string ChargeType { get; set; }
+
+                [NameInMap("Code")]
+                [Validation(Required=false)]
                 public string Code { get; set; }
+
+                [NameInMap("Constraints")]
+                [Validation(Required=false)]
                 public string Constraints { get; set; }
+
+                [NameInMap("Hidden")]
+                [Validation(Required=false)]
                 public bool? Hidden { get; set; }
+
+                [NameInMap("Modules")]
+                [Validation(Required=false)]
                 public DescribeProductResponseBodyProductSkusProductSkuModules Modules { get; set; }
                 public class DescribeProductResponseBodyProductSkusProductSkuModules : TeaModel {
                     [NameInMap("Module")]
@@ -103,9 +133,20 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                             [Validation(Required=false)]
                             public List<DescribeProductResponseBodyProductSkusProductSkuModulesModulePropertiesProperty> Property { get; set; }
                             public class DescribeProductResponseBodyProductSkusProductSkuModulesModulePropertiesProperty : TeaModel {
+                                [NameInMap("DisplayUnit")]
+                                [Validation(Required=false)]
                                 public string DisplayUnit { get; set; }
+
+                                [NameInMap("Key")]
+                                [Validation(Required=false)]
                                 public string Key { get; set; }
+
+                                [NameInMap("Name")]
+                                [Validation(Required=false)]
                                 public string Name { get; set; }
+
+                                [NameInMap("PropertyValues")]
+                                [Validation(Required=false)]
                                 public DescribeProductResponseBodyProductSkusProductSkuModulesModulePropertiesPropertyPropertyValues PropertyValues { get; set; }
                                 public class DescribeProductResponseBodyProductSkusProductSkuModulesModulePropertiesPropertyPropertyValues : TeaModel {
                                     [NameInMap("PropertyValue")]
@@ -143,14 +184,25 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                                     }
 
                                 }
+
+                                [NameInMap("ShowType")]
+                                [Validation(Required=false)]
                                 public string ShowType { get; set; }
+
                             }
-                        };
+
+                        }
 
                     }
 
                 }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("OrderPeriods")]
+                [Validation(Required=false)]
                 public DescribeProductResponseBodyProductSkusProductSkuOrderPeriods OrderPeriods { get; set; }
                 public class DescribeProductResponseBodyProductSkusProductSkuOrderPeriods : TeaModel {
                     [NameInMap("OrderPeriod")]
@@ -168,8 +220,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                     }
 
                 }
+
             }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -186,12 +240,15 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [NameInMap("Emails")]
             [Validation(Required=false)]
             public string Emails { get; set; }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
             [NameInMap("Telephones")]
             [Validation(Required=false)]
             public DescribeProductResponseBodyShopInfoTelephones Telephones { get; set; }
@@ -201,6 +258,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 public List<string> Telephone { get; set; }
 
             }
+
             [NameInMap("WangWangs")]
             [Validation(Required=false)]
             public DescribeProductResponseBodyShopInfoWangWangs WangWangs { get; set; }
@@ -220,7 +278,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 }
 
             }
-        };
+
+        }
 
         [NameInMap("ShortDescription")]
         [Validation(Required=false)]

@@ -17,14 +17,33 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public List<DescribePriceResponseBodyCouponsCoupon> Coupon { get; set; }
             public class DescribePriceResponseBodyCouponsCoupon : TeaModel {
+                [NameInMap("CanPromFee")]
+                [Validation(Required=false)]
                 public float? CanPromFee { get; set; }
+
+                [NameInMap("CouponDesc")]
+                [Validation(Required=false)]
                 public string CouponDesc { get; set; }
+
+                [NameInMap("CouponName")]
+                [Validation(Required=false)]
                 public string CouponName { get; set; }
+
+                [NameInMap("CouponOptionCode")]
+                [Validation(Required=false)]
                 public string CouponOptionCode { get; set; }
+
+                [NameInMap("CouponOptionNo")]
+                [Validation(Required=false)]
                 public string CouponOptionNo { get; set; }
+
+                [NameInMap("IsSelected")]
+                [Validation(Required=false)]
                 public bool? IsSelected { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Currency")]
         [Validation(Required=false)]
@@ -74,11 +93,21 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public List<DescribePriceResponseBodyPromotionRulesPromotionRule> PromotionRule { get; set; }
             public class DescribePriceResponseBodyPromotionRulesPromotionRule : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("RuleId")]
+                [Validation(Required=false)]
                 public string RuleId { get; set; }
+
+                [NameInMap("Title")]
+                [Validation(Required=false)]
                 public string Title { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("TradePrice")]
         [Validation(Required=false)]

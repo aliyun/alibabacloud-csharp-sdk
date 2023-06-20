@@ -36,7 +36,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public List<string> InstanceId { get; set; }
-        };
+
+        }
 
         [NameInMap("OrderId")]
         [Validation(Required=false)]
@@ -101,7 +102,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [NameInMap("Telephone")]
             [Validation(Required=false)]
             public List<string> Telephone { get; set; }
-        };
+
+        }
 
         [NameInMap("TotalPrice")]
         [Validation(Required=false)]

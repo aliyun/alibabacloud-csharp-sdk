@@ -16,12 +16,15 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [NameInMap("ActivateTime")]
             [Validation(Required=false)]
             public string ActivateTime { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
+
             [NameInMap("ExtendArray")]
             [Validation(Required=false)]
             public DescribeLicenseResponseBodyLicenseExtendArray ExtendArray { get; set; }
@@ -41,6 +44,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 }
 
             }
+
             [NameInMap("ExtendInfo")]
             [Validation(Required=false)]
             public DescribeLicenseResponseBodyLicenseExtendInfo ExtendInfo { get; set; }
@@ -62,28 +66,36 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 public string Mobile { get; set; }
 
             }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
             [NameInMap("LicenseCode")]
             [Validation(Required=false)]
             public string LicenseCode { get; set; }
+
             [NameInMap("LicenseStatus")]
             [Validation(Required=false)]
             public string LicenseStatus { get; set; }
+
             [NameInMap("ProductCode")]
             [Validation(Required=false)]
             public string ProductCode { get; set; }
+
             [NameInMap("ProductName")]
             [Validation(Required=false)]
             public string ProductName { get; set; }
+
             [NameInMap("ProductSkuId")]
             [Validation(Required=false)]
             public string ProductSkuId { get; set; }
+
             [NameInMap("SupplierName")]
             [Validation(Required=false)]
             public string SupplierName { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

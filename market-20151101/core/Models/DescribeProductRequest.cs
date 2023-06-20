@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeProductRequest : TeaModel {
+        /// <summary>
+        /// AliUid
+        /// </summary>
         [NameInMap("AliUid")]
         [Validation(Required=false)]
         public string AliUid { get; set; }

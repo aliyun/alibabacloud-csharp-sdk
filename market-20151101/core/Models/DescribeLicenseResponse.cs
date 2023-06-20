@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
         public DescribeLicenseResponseBody Body { get; set; }
