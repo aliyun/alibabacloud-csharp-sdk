@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public List<string> OcrDatas { get; set; }
 
+                [NameInMap("RiskWords")]
+                [Validation(Required=false)]
+                public List<string> RiskWords { get; set; }
+
             }
 
         }
