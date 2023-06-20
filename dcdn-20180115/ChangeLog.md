@@ -1,3 +1,6 @@
+2023-06-20 Version: 1.0.27
+- Add DescribeDdosEventMax.
+
 2023-06-08 Version: 1.0.26
 - Update DeleteDcdnSpecificStagingConfig.
 
