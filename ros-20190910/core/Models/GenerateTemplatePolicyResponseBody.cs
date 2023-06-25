@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public List<string> Action { get; set; }
 
+                [NameInMap("Condition")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> Condition { get; set; }
+
                 /// <summary>
                 /// The effect of the statement. Valid values:
                 /// 

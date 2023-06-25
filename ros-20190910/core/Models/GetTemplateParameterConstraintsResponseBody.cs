@@ -93,6 +93,28 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
             }
 
+            [NameInMap("OriginalConstraints")]
+            [Validation(Required=false)]
+            public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints> OriginalConstraints { get; set; }
+            public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints : TeaModel {
+                [NameInMap("AllowedValues")]
+                [Validation(Required=false)]
+                public List<object> AllowedValues { get; set; }
+
+                [NameInMap("PropertyName")]
+                [Validation(Required=false)]
+                public string PropertyName { get; set; }
+
+                [NameInMap("ResourceName")]
+                [Validation(Required=false)]
+                public string ResourceName { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+            }
+
             /// <summary>
             /// The name of the parameter.
             /// </summary>

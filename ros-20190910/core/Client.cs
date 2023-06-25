@@ -3128,6 +3128,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["TemplateScratchId"] = request.TemplateScratchId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3169,6 +3173,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateScratchId))
             {
                 query["TemplateScratchId"] = request.TemplateScratchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3450,7 +3458,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
+          * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
+          * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.
+          * >  In the Examples section, only part of the sample code is provided.
           *
           * @param request GetFeatureDetailsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3488,7 +3498,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
+          * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
+          * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.
+          * >  In the Examples section, only part of the sample code is provided.
           *
           * @param request GetFeatureDetailsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3526,7 +3538,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
+          * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
+          * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.
+          * >  In the Examples section, only part of the sample code is provided.
           *
           * @param request GetFeatureDetailsRequest
           * @return GetFeatureDetailsResponse
@@ -3538,7 +3552,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
+          * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
+          * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.
+          * >  In the Examples section, only part of the sample code is provided.
           *
           * @param request GetFeatureDetailsRequest
           * @return GetFeatureDetailsResponse
@@ -4850,10 +4866,6 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["StackId"] = request.StackId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
-            {
-                query["TemplateBody"] = request.TemplateBody;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
@@ -4874,9 +4886,15 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["TemplateVersion"] = request.TemplateVersion;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
+            {
+                body["TemplateBody"] = request.TemplateBody;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4920,10 +4938,6 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["StackId"] = request.StackId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
-            {
-                query["TemplateBody"] = request.TemplateBody;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
@@ -4944,9 +4958,15 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["TemplateVersion"] = request.TemplateVersion;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
+            {
+                body["TemplateBody"] = request.TemplateBody;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5033,10 +5053,6 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["StackId"] = request.StackId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
-            {
-                query["TemplateBody"] = request.TemplateBody;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
@@ -5049,9 +5065,15 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["TemplateVersion"] = request.TemplateVersion;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
+            {
+                body["TemplateBody"] = request.TemplateBody;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5114,10 +5136,6 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["StackId"] = request.StackId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
-            {
-                query["TemplateBody"] = request.TemplateBody;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
@@ -5130,9 +5148,15 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["TemplateVersion"] = request.TemplateVersion;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
+            {
+                body["TemplateBody"] = request.TemplateBody;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6522,7 +6546,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The ID of the stack.
+          * The ListStackOperationRisks operation is suitable for the following scenarios:
+          * *   You want to detect high risks that may arise in resources when you delete a stack that contains the resources, and query the cause of each risk in a resource.
+          * *   When you create a stack, the creation may fail. In this case, you can call this operation to check which types of permissions that are required to create stacks are missing.
           *
           * @param request ListStackOperationRisksRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6596,7 +6622,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The ID of the stack.
+          * The ListStackOperationRisks operation is suitable for the following scenarios:
+          * *   You want to detect high risks that may arise in resources when you delete a stack that contains the resources, and query the cause of each risk in a resource.
+          * *   When you create a stack, the creation may fail. In this case, you can call this operation to check which types of permissions that are required to create stacks are missing.
           *
           * @param request ListStackOperationRisksRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6670,7 +6698,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The ID of the stack.
+          * The ListStackOperationRisks operation is suitable for the following scenarios:
+          * *   You want to detect high risks that may arise in resources when you delete a stack that contains the resources, and query the cause of each risk in a resource.
+          * *   When you create a stack, the creation may fail. In this case, you can call this operation to check which types of permissions that are required to create stacks are missing.
           *
           * @param request ListStackOperationRisksRequest
           * @return ListStackOperationRisksResponse
@@ -6682,7 +6712,9 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The ID of the stack.
+          * The ListStackOperationRisks operation is suitable for the following scenarios:
+          * *   You want to detect high risks that may arise in resources when you delete a stack that contains the resources, and query the cause of each risk in a resource.
+          * *   When you create a stack, the creation may fail. In this case, you can call this operation to check which types of permissions that are required to create stacks are missing.
           *
           * @param request ListStackOperationRisksRequest
           * @return ListStackOperationRisksResponse
