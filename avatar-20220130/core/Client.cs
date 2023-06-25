@@ -1273,6 +1273,18 @@ namespace AlibabaCloud.SDK.Avatar20220130
             {
                 query["AvatarInfo"] = request.AvatarInfoShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Callback))
+            {
+                query["Callback"] = request.Callback;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                query["CallbackParams"] = request.CallbackParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["TenantId"] = request.TenantId;
@@ -1333,6 +1345,18 @@ namespace AlibabaCloud.SDK.Avatar20220130
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarInfoShrink))
             {
                 query["AvatarInfo"] = request.AvatarInfoShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Callback))
+            {
+                query["Callback"] = request.Callback;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                query["CallbackParams"] = request.CallbackParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -1407,6 +1431,18 @@ namespace AlibabaCloud.SDK.Avatar20220130
             {
                 query["AvatarInfo"] = request.AvatarInfoShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Callback))
+            {
+                query["Callback"] = request.Callback;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                query["CallbackParams"] = request.CallbackParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["TenantId"] = request.TenantId;
@@ -1467,6 +1503,18 @@ namespace AlibabaCloud.SDK.Avatar20220130
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarInfoShrink))
             {
                 query["AvatarInfo"] = request.AvatarInfoShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Callback))
+            {
+                query["Callback"] = request.Callback;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                query["CallbackParams"] = request.CallbackParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -1549,6 +1597,18 @@ namespace AlibabaCloud.SDK.Avatar20220130
             {
                 query["AvatarInfo"] = request.AvatarInfoShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Callback))
+            {
+                query["Callback"] = request.Callback;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                query["CallbackParams"] = request.CallbackParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["TenantId"] = request.TenantId;
@@ -1617,6 +1677,18 @@ namespace AlibabaCloud.SDK.Avatar20220130
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarInfoShrink))
             {
                 query["AvatarInfo"] = request.AvatarInfoShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Callback))
+            {
+                query["Callback"] = request.Callback;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                query["CallbackParams"] = request.CallbackParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
