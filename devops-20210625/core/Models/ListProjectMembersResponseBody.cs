@@ -101,6 +101,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string RealNamePinyin { get; set; }
 
+            /// <summary>
+            /// 角色名称
+            /// </summary>
             [NameInMap("roleName")]
             [Validation(Required=false)]
             public string RoleName { get; set; }

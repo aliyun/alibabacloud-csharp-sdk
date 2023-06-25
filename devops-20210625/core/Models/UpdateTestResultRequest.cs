@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
-    public class ListRepositoryMemberWithInheritedRequest : TeaModel {
-        [NameInMap("accessToken")]
+    public class UpdateTestResultRequest : TeaModel {
+        [NameInMap("executor")]
         [Validation(Required=false)]
-        public string AccessToken { get; set; }
+        public string Executor { get; set; }
 
-        [NameInMap("organizationId")]
+        [NameInMap("status")]
         [Validation(Required=false)]
-        public string OrganizationId { get; set; }
+        public string Status { get; set; }
 
     }
 

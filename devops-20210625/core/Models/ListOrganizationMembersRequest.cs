@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListOrganizationMembersRequest : TeaModel {
+        /// <summary>
+        /// 返回信息中是否包含第三方信息，默认不包含。
+        /// </summary>
+        [NameInMap("containsExternInfo")]
+        [Validation(Required=false)]
+        public bool? ContainsExternInfo { get; set; }
+
         [NameInMap("externUid")]
         [Validation(Required=false)]
         public string ExternUid { get; set; }

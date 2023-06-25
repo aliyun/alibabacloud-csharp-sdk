@@ -1,0 +1,80 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Devops20210625.Models
+{
+    public class DeleteUserKeyResponseBody : TeaModel {
+        [NameInMap("errorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("errorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("result")]
+        [Validation(Required=false)]
+        public DeleteUserKeyResponseBodyResult Result { get; set; }
+        public class DeleteUserKeyResponseBodyResult : TeaModel {
+            [NameInMap("context")]
+            [Validation(Required=false)]
+            public string Context { get; set; }
+
+            [NameInMap("createdAt")]
+            [Validation(Required=false)]
+            public string CreatedAt { get; set; }
+
+            [NameInMap("expireTime")]
+            [Validation(Required=false)]
+            public string ExpireTime { get; set; }
+
+            [NameInMap("fingerPrint")]
+            [Validation(Required=false)]
+            public string FingerPrint { get; set; }
+
+            [NameInMap("id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
+
+            [NameInMap("keyScope")]
+            [Validation(Required=false)]
+            public string KeyScope { get; set; }
+
+            [NameInMap("lastUsedTime")]
+            [Validation(Required=false)]
+            public string LastUsedTime { get; set; }
+
+            [NameInMap("publicKey")]
+            [Validation(Required=false)]
+            public string PublicKey { get; set; }
+
+            [NameInMap("shaContext")]
+            [Validation(Required=false)]
+            public string ShaContext { get; set; }
+
+            [NameInMap("title")]
+            [Validation(Required=false)]
+            public string Title { get; set; }
+
+            [NameInMap("updatedAt")]
+            [Validation(Required=false)]
+            public string UpdatedAt { get; set; }
+
+        }
+
+        [NameInMap("success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+    }
+
+}

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
-    public class ListRepositoryMemberWithInheritedRequest : TeaModel {
+    public class DeleteUserKeyRequest : TeaModel {
         [NameInMap("accessToken")]
         [Validation(Required=false)]
         public string AccessToken { get; set; }

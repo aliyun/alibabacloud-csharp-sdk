@@ -53,9 +53,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
 
-            /// <summary>
-            /// Commit ID
-            /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
@@ -76,6 +73,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public GetFileLastCommitResponseBodyResultSignature Signature { get; set; }
             public class GetFileLastCommitResponseBodyResultSignature : TeaModel {
+                /// <summary>
+                /// GPG密钥ID
+                /// </summary>
                 [NameInMap("gpgKeyId")]
                 [Validation(Required=false)]
                 public string GpgKeyId { get; set; }
