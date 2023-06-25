@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public bool? Hidden { get; set; }
 
+        [NameInMap("image_media_metadata")]
+        [Validation(Required=false)]
+        public ImageMediaMetadata ImageMediaMetadata { get; set; }
+
         [NameInMap("investigation_info")]
         [Validation(Required=false)]
         public FileInvestigationInfo InvestigationInfo { get; set; }
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         [NameInMap("labels")]
         [Validation(Required=false)]
-        public string Labels { get; set; }
+        public List<string> Labels { get; set; }
 
         [NameInMap("local_created_at")]
         [Validation(Required=false)]
@@ -114,6 +118,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [NameInMap("thumbnail")]
         [Validation(Required=false)]
         public string Thumbnail { get; set; }
+
+        [NameInMap("thumbnail_urls")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> ThumbnailUrls { get; set; }
 
         [NameInMap("trashed_at")]
         [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class SystemTag : TeaModel {
+        [NameInMap("centric_score")]
+        [Validation(Required=false)]
+        public float? CentricScore { get; set; }
+
         [NameInMap("confidence")]
         [Validation(Required=false)]
         public float? Confidence { get; set; }
