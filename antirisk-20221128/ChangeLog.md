@@ -1,3 +1,6 @@
+2023-06-26 Version: 1.0.4
+- Add other languages.
+
 2023-04-20 Version: 1.0.3
 - Add realtime risk.
 - Add channel new risk details.
