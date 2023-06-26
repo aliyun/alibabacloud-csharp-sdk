@@ -61,6 +61,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
                 }
 
+                [NameInMap("AdvancedInfo")]
+                [Validation(Required=false)]
+                public DescribeDatabasesResponseBodyDatabasesDatabaseAdvancedInfo AdvancedInfo { get; set; }
+                public class DescribeDatabasesResponseBodyDatabasesDatabaseAdvancedInfo : TeaModel {
+                    [NameInMap("AdvancedDbProperty")]
+                    [Validation(Required=false)]
+                    public List<Dictionary<string, object>> AdvancedDbProperty { get; set; }
+
+                }
+
+                [NameInMap("BasicInfo")]
+                [Validation(Required=false)]
+                public DescribeDatabasesResponseBodyDatabasesDatabaseBasicInfo BasicInfo { get; set; }
+                public class DescribeDatabasesResponseBodyDatabasesDatabaseBasicInfo : TeaModel {
+                    [NameInMap("BasicDbProperty")]
+                    [Validation(Required=false)]
+                    public List<Dictionary<string, object>> BasicDbProperty { get; set; }
+
+                }
+
                 /// <summary>
                 /// The name of the character set.
                 /// </summary>
@@ -151,6 +171,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
+
+                [NameInMap("RuntimeInfo")]
+                [Validation(Required=false)]
+                public DescribeDatabasesResponseBodyDatabasesDatabaseRuntimeInfo RuntimeInfo { get; set; }
+                public class DescribeDatabasesResponseBodyDatabasesDatabaseRuntimeInfo : TeaModel {
+                    [NameInMap("RuntimeDbProperty")]
+                    [Validation(Required=false)]
+                    public List<Dictionary<string, object>> RuntimeDbProperty { get; set; }
+
+                }
 
                 /// <summary>
                 /// The tablespace of the database.

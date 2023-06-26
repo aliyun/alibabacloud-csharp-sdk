@@ -178,6 +178,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string ExpireTime { get; set; }
 
+                [NameInMap("ExportKey")]
+                [Validation(Required=false)]
+                public string ExportKey { get; set; }
+
                 /// <summary>
                 /// The ID of the disaster recovery instance that is attached to the instance.
                 /// </summary>
@@ -275,6 +279,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("SecurityIPList")]
                 [Validation(Required=false)]
                 public string SecurityIPList { get; set; }
+
+                [NameInMap("SlaveZones")]
+                [Validation(Required=false)]
+                public DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttributeSlaveZones SlaveZones { get; set; }
+                public class DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttributeSlaveZones : TeaModel {
+                    [NameInMap("slaveRegion")]
+                    [Validation(Required=false)]
+                    public List<string> SlaveRegion { get; set; }
+
+                }
 
                 /// <summary>
                 /// None.

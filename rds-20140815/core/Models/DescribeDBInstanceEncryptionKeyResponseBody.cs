@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// An array that consists of keys.
+        /// The details about the key.
         /// </summary>
         [NameInMap("EncryptionKeyList")]
         [Validation(Required=false)]
@@ -82,15 +82,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// The status of the key. Valid values:
             /// 
-            /// *   Enabled
-            /// *   Disabled
+            /// *   **Enabled**
+            /// *   **Disabled**
             /// </summary>
             [NameInMap("EncryptionKeyStatus")]
             [Validation(Required=false)]
             public string EncryptionKeyStatus { get; set; }
 
             /// <summary>
-            /// The type of the key.
+            /// The type of the key. Valid values:
+            /// 
+            /// *   **CMK**
+            /// *   **ServiceKey**
             /// </summary>
             [NameInMap("KeyType")]
             [Validation(Required=false)]
@@ -118,7 +121,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Origin { get; set; }
 
             /// <summary>
-            /// The role of the instance that uses the key. Valid values: ***master**: primary instance*. **slave**: read-only instance.
+            /// The role of the instance. Valid values:
+            /// 
+            /// *   **Master**: primary instance
+            /// *   **slave**: read-only instance
             /// </summary>
             [NameInMap("UsedBy")]
             [Validation(Required=false)]
@@ -129,8 +135,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// The status of the key. Valid values:
         /// 
-        /// *   Enabled
-        /// *   Disabled
+        /// *   **Enabled**
+        /// *   **Disabled**
         /// </summary>
         [NameInMap("EncryptionKeyStatus")]
         [Validation(Required=false)]

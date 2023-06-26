@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeSQLLogFilesResponseBodyItemsLogFile> LogFile { get; set; }
             public class DescribeSQLLogFilesResponseBodyItemsLogFile : TeaModel {
                 /// <summary>
-                /// The name of the audit log file.
+                /// The name of the file.
                 /// </summary>
                 [NameInMap("FileID")]
                 [Validation(Required=false)]
                 public string FileID { get; set; }
 
                 /// <summary>
-                /// The download URL of the audit log file. If the audit log file cannot be downloaded, this parameter is null.
+                /// The download URL of the file. If the audit log file cannot be downloaded, this parameter is null.
                 /// </summary>
                 [NameInMap("LogDownloadURL")]
                 [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on the current page.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

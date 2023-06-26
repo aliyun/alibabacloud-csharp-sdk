@@ -9,12 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesAsCsvRequest : TeaModel {
+        [NameInMap("CachedAsync")]
+        [Validation(Required=false)]
+        public bool? CachedAsync { get; set; }
+
         /// <summary>
         /// The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
+
+        [NameInMap("ExportKey")]
+        [Validation(Required=false)]
+        public string ExportKey { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
