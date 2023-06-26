@@ -28,6 +28,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public bool? CancelSuccess { get; set; }
 
+            [NameInMap("code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+
+            [NameInMap("desc")]
+            [Validation(Required=false)]
+            public string Desc { get; set; }
+
             [NameInMap("forfeit_fee")]
             [Validation(Required=false)]
             public long? ForfeitFee { get; set; }
