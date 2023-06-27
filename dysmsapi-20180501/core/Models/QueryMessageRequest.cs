@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 {
     public class QueryMessageRequest : TeaModel {
+        /// <summary>
+        /// The ID of the message.
+        /// </summary>
         [NameInMap("MessageId")]
         [Validation(Required=false)]
         public string MessageId { get; set; }
