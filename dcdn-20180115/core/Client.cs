@@ -14183,7 +14183,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * The ID of the request.
+          * > You can call this operation up to 100 times per second per account.
           *
           * @param request DescribeDcdnUserTagsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14208,7 +14208,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * The ID of the request.
+          * > You can call this operation up to 100 times per second per account.
           *
           * @param request DescribeDcdnUserTagsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14233,7 +14233,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * The ID of the request.
+          * > You can call this operation up to 100 times per second per account.
           *
           * @return DescribeDcdnUserTagsResponse
          */
@@ -14244,7 +14244,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * The ID of the request.
+          * > You can call this operation up to 100 times per second per account.
           *
           * @return DescribeDcdnUserTagsResponse
          */
@@ -19014,6 +19014,122 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetDcdnDomainStagingConfigWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * > You can call this operation up to 10 times per second per account.
+          *
+          * @param request SetDcdnFullDomainsBlockIPRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetDcdnFullDomainsBlockIPResponse
+         */
+        public SetDcdnFullDomainsBlockIPResponse SetDcdnFullDomainsBlockIPWithOptions(SetDcdnFullDomainsBlockIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlockInterval))
+            {
+                body["BlockInterval"] = request.BlockInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPList))
+            {
+                body["IPList"] = request.IPList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationType))
+            {
+                body["OperationType"] = request.OperationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateType))
+            {
+                body["UpdateType"] = request.UpdateType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDcdnFullDomainsBlockIP",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDcdnFullDomainsBlockIPResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * > You can call this operation up to 10 times per second per account.
+          *
+          * @param request SetDcdnFullDomainsBlockIPRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetDcdnFullDomainsBlockIPResponse
+         */
+        public async Task<SetDcdnFullDomainsBlockIPResponse> SetDcdnFullDomainsBlockIPWithOptionsAsync(SetDcdnFullDomainsBlockIPRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlockInterval))
+            {
+                body["BlockInterval"] = request.BlockInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPList))
+            {
+                body["IPList"] = request.IPList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationType))
+            {
+                body["OperationType"] = request.OperationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateType))
+            {
+                body["UpdateType"] = request.UpdateType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDcdnFullDomainsBlockIP",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDcdnFullDomainsBlockIPResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * > You can call this operation up to 10 times per second per account.
+          *
+          * @param request SetDcdnFullDomainsBlockIPRequest
+          * @return SetDcdnFullDomainsBlockIPResponse
+         */
+        public SetDcdnFullDomainsBlockIPResponse SetDcdnFullDomainsBlockIP(SetDcdnFullDomainsBlockIPRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetDcdnFullDomainsBlockIPWithOptions(request, runtime);
+        }
+
+        /**
+          * > You can call this operation up to 10 times per second per account.
+          *
+          * @param request SetDcdnFullDomainsBlockIPRequest
+          * @return SetDcdnFullDomainsBlockIPResponse
+         */
+        public async Task<SetDcdnFullDomainsBlockIPResponse> SetDcdnFullDomainsBlockIPAsync(SetDcdnFullDomainsBlockIPRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetDcdnFullDomainsBlockIPWithOptionsAsync(request, runtime);
         }
 
         /**
