@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public string DomainStatus { get; set; }
 
+            [NameInMap("GlobalResourcePlan")]
+            [Validation(Required=false)]
+            public string GlobalResourcePlan { get; set; }
+
             /// <summary>
             /// The time when the domain name was created.
             /// </summary>

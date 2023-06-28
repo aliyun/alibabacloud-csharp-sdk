@@ -1,3 +1,6 @@
+2023-06-28 Version: 1.1.10
+- Add DescribeDomainPidData.
+
 2023-06-20 Version: 1.1.9
 - Update Error Message.
 

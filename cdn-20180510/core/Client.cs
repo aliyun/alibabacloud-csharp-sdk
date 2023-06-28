@@ -78,6 +78,10 @@ namespace AlibabaCloud.SDK.Cdn20180510
             {
                 query["DomainName"] = request.DomainName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalResourcePlan))
+            {
+                query["GlobalResourcePlan"] = request.GlobalResourcePlan;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -155,6 +159,10 @@ namespace AlibabaCloud.SDK.Cdn20180510
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
             {
                 query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalResourcePlan))
+            {
+                query["GlobalResourcePlan"] = request.GlobalResourcePlan;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {

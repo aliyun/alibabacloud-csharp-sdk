@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        [NameInMap("GlobalResourcePlan")]
+        [Validation(Required=false)]
+        public string GlobalResourcePlan { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
