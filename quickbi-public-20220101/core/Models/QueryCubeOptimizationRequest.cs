@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
-    public class QueryEmbeddedStatusRequest : TeaModel {
-        /// <summary>
-        /// The work ID of the query.
-        /// </summary>
-        [NameInMap("WorksId")]
+    public class QueryCubeOptimizationRequest : TeaModel {
+        [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
-        public string WorksId { get; set; }
+        public string WorkspaceId { get; set; }
 
     }
 

@@ -38,9 +38,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         }
 
         /**
-          * Indicates whether the request is successful. Valid values:
-          * *   true: The request was successful.
-          * *   false: The request failed.
+          * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.\\n
           *
           * @param request AddDataLevelPermissionRuleUsersRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -74,9 +72,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         }
 
         /**
-          * Indicates whether the request is successful. Valid values:
-          * *   true: The request was successful.
-          * *   false: The request failed.
+          * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.\\n
           *
           * @param request AddDataLevelPermissionRuleUsersRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -110,9 +106,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         }
 
         /**
-          * Indicates whether the request is successful. Valid values:
-          * *   true: The request was successful.
-          * *   false: The request failed.
+          * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.\\n
           *
           * @param request AddDataLevelPermissionRuleUsersRequest
           * @return AddDataLevelPermissionRuleUsersResponse
@@ -124,9 +118,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         }
 
         /**
-          * Indicates whether the request is successful. Valid values:
-          * *   true: The request was successful.
-          * *   false: The request failed.
+          * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.\\n
           *
           * @param request AddDataLevelPermissionRuleUsersRequest
           * @return AddDataLevelPermissionRuleUsersResponse
@@ -3523,6 +3515,292 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return await ModifyApiDatasourceParametersWithOptionsAsync(request, runtime);
         }
 
+        public QueryComponentPerformanceResponse QueryComponentPerformanceWithOptions(QueryComponentPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CostTimeAvgMin))
+            {
+                query["CostTimeAvgMin"] = request.CostTimeAvgMin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["ReportId"] = request.ReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryComponentPerformance",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryComponentPerformanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QueryComponentPerformanceResponse> QueryComponentPerformanceWithOptionsAsync(QueryComponentPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CostTimeAvgMin))
+            {
+                query["CostTimeAvgMin"] = request.CostTimeAvgMin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["ReportId"] = request.ReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryComponentPerformance",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryComponentPerformanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QueryComponentPerformanceResponse QueryComponentPerformance(QueryComponentPerformanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryComponentPerformanceWithOptions(request, runtime);
+        }
+
+        public async Task<QueryComponentPerformanceResponse> QueryComponentPerformanceAsync(QueryComponentPerformanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryComponentPerformanceWithOptionsAsync(request, runtime);
+        }
+
+        public QueryCubeOptimizationResponse QueryCubeOptimizationWithOptions(QueryCubeOptimizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCubeOptimization",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCubeOptimizationResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QueryCubeOptimizationResponse> QueryCubeOptimizationWithOptionsAsync(QueryCubeOptimizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCubeOptimization",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCubeOptimizationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QueryCubeOptimizationResponse QueryCubeOptimization(QueryCubeOptimizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryCubeOptimizationWithOptions(request, runtime);
+        }
+
+        public async Task<QueryCubeOptimizationResponse> QueryCubeOptimizationAsync(QueryCubeOptimizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryCubeOptimizationWithOptionsAsync(request, runtime);
+        }
+
+        public QueryCubePerformanceResponse QueryCubePerformanceWithOptions(QueryCubePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CostTimeAvgMin))
+            {
+                query["CostTimeAvgMin"] = request.CostTimeAvgMin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CubeId))
+            {
+                query["CubeId"] = request.CubeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCubePerformance",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCubePerformanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QueryCubePerformanceResponse> QueryCubePerformanceWithOptionsAsync(QueryCubePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CostTimeAvgMin))
+            {
+                query["CostTimeAvgMin"] = request.CostTimeAvgMin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CubeId))
+            {
+                query["CubeId"] = request.CubeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCubePerformance",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCubePerformanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QueryCubePerformanceResponse QueryCubePerformance(QueryCubePerformanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryCubePerformanceWithOptions(request, runtime);
+        }
+
+        public async Task<QueryCubePerformanceResponse> QueryCubePerformanceAsync(QueryCubePerformanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryCubePerformanceWithOptionsAsync(request, runtime);
+        }
+
         /**
           * f4cc43bc3***
           *
@@ -3632,9 +3910,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         }
 
         /**
-          * The execution result of the interface is returned. Valid values:
-          * *   true: The request was successful.
-          * *   false: The request fails.
+          * The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).
           *
           * @param request QueryDatasetDetailInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3668,9 +3944,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         }
 
         /**
-          * The execution result of the interface is returned. Valid values:
-          * *   true: The request was successful.
-          * *   false: The request fails.
+          * The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).
           *
           * @param request QueryDatasetDetailInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3704,9 +3978,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         }
 
         /**
-          * The execution result of the interface is returned. Valid values:
-          * *   true: The request was successful.
-          * *   false: The request fails.
+          * The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).
           *
           * @param request QueryDatasetDetailInfoRequest
           * @return QueryDatasetDetailInfoResponse
@@ -3718,9 +3990,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         }
 
         /**
-          * The execution result of the interface is returned. Valid values:
-          * *   true: The request was successful.
-          * *   false: The request fails.
+          * The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).
           *
           * @param request QueryDatasetDetailInfoRequest
           * @return QueryDatasetDetailInfoResponse
@@ -4237,6 +4507,120 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryReadableResourcesListByUserIdWithOptionsAsync(request, runtime);
+        }
+
+        public QueryReportPerformanceResponse QueryReportPerformanceWithOptions(QueryReportPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CostTimeAvgMin))
+            {
+                query["CostTimeAvgMin"] = request.CostTimeAvgMin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["ReportId"] = request.ReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryReportPerformance",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryReportPerformanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QueryReportPerformanceResponse> QueryReportPerformanceWithOptionsAsync(QueryReportPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CostTimeAvgMin))
+            {
+                query["CostTimeAvgMin"] = request.CostTimeAvgMin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["ReportId"] = request.ReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryReportPerformance",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryReportPerformanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QueryReportPerformanceResponse QueryReportPerformance(QueryReportPerformanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryReportPerformanceWithOptions(request, runtime);
+        }
+
+        public async Task<QueryReportPerformanceResponse> QueryReportPerformanceAsync(QueryReportPerformanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryReportPerformanceWithOptionsAsync(request, runtime);
         }
 
         public QueryShareListResponse QueryShareListWithOptions(QueryShareListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5611,15 +5995,6 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return await SetDataLevelPermissionExtraConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * Indicates whether the request is successful. Valid values:
-          * *   true: The request was successful.
-          * *   false: The request failed.
-          *
-          * @param request SetDataLevelPermissionRuleConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetDataLevelPermissionRuleConfigResponse
-         */
         public SetDataLevelPermissionRuleConfigResponse SetDataLevelPermissionRuleConfigWithOptions(SetDataLevelPermissionRuleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5647,15 +6022,6 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<SetDataLevelPermissionRuleConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * Indicates whether the request is successful. Valid values:
-          * *   true: The request was successful.
-          * *   false: The request failed.
-          *
-          * @param request SetDataLevelPermissionRuleConfigRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SetDataLevelPermissionRuleConfigResponse
-         */
         public async Task<SetDataLevelPermissionRuleConfigResponse> SetDataLevelPermissionRuleConfigWithOptionsAsync(SetDataLevelPermissionRuleConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5683,28 +6049,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<SetDataLevelPermissionRuleConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * Indicates whether the request is successful. Valid values:
-          * *   true: The request was successful.
-          * *   false: The request failed.
-          *
-          * @param request SetDataLevelPermissionRuleConfigRequest
-          * @return SetDataLevelPermissionRuleConfigResponse
-         */
         public SetDataLevelPermissionRuleConfigResponse SetDataLevelPermissionRuleConfig(SetDataLevelPermissionRuleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetDataLevelPermissionRuleConfigWithOptions(request, runtime);
         }
 
-        /**
-          * Indicates whether the request is successful. Valid values:
-          * *   true: The request was successful.
-          * *   false: The request failed.
-          *
-          * @param request SetDataLevelPermissionRuleConfigRequest
-          * @return SetDataLevelPermissionRuleConfigResponse
-         */
         public async Task<SetDataLevelPermissionRuleConfigResponse> SetDataLevelPermissionRuleConfigAsync(SetDataLevelPermissionRuleConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
