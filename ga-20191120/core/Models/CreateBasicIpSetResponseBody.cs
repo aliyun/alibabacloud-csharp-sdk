@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateBasicIpSetResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the acceleration region of the basic GA instance.
+        /// The region ID of the GA instance.
         /// </summary>
         [NameInMap("IpSetId")]
         [Validation(Required=false)]
         public string IpSetId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListAvailableBusiRegionsResponseBody : TeaModel {
         /// <summary>
-        /// Information about the region.
+        /// The information about the regions.
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string LocalName { get; set; }
 
             /// <summary>
-            /// Indicates whether it is a point of presence (PoP). Valid values:
+            /// Indicates whether the region is a point of presence (PoP). Valid values:
             /// 
-            /// *   **true**: It is a PoP.
-            /// *   **false**: It is not a PoP.
+            /// *   **true**: The region is a PoP.
+            /// *   **false**: The region is not a PoP.
             /// </summary>
             [NameInMap("Pop")]
             [Validation(Required=false)]

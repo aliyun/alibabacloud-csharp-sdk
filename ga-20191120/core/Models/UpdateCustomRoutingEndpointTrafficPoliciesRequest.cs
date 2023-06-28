@@ -12,29 +12,34 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the endpoint for which you want to modify the access policies of traffic.
+        /// The ID of the endpoint for which you want to modify the traffic policies.
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
         public string EndpointId { get; set; }
 
+        /// <summary>
+        /// The traffic policies.
+        /// 
+        /// You can specify up to 500 destination IP addresses for each endpoint.
+        /// </summary>
         [NameInMap("PolicyConfigurations")]
         [Validation(Required=false)]
         public List<UpdateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurations> PolicyConfigurations { get; set; }
         public class UpdateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurations : TeaModel {
             /// <summary>
-            /// The IP address of the destination to which to allow traffic.
+            /// The IP address of the destination to which traffic is allowed.
             /// 
-            /// This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**. You can call the [DescribeCustomRoutingEndpoint](~~449386~~) operation to query the access policy of traffic for the specified endpoint.
+            /// This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**. You can call the [DescribeCustomRoutingEndpoint](~~449386~~) operation to query the traffic policy for the specified endpoint.
             /// 
             /// You can specify up to 500 destination IP addresses for each endpoint.
             /// </summary>
@@ -43,22 +48,31 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Address { get; set; }
 
             /// <summary>
-            /// The ID of the access policy of traffic that you want to modify.
+            /// The ID of the traffic policy to modify.
             /// </summary>
             [NameInMap("PolicyId")]
             [Validation(Required=false)]
             public string PolicyId { get; set; }
 
+            /// <summary>
+            /// The port range of the destination to which traffic is allowed. The value of this parameter must fall within the port range of the backend service.
+            /// 
+            /// If you do not specify array, traffic is forwarded to all ports.
+            /// 
+            /// This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**. You can call the [DescribeCustomRoutingEndpoint](~~449386~~) operation to query the traffic policy for the specified endpoint.
+            /// 
+            /// You can specify port ranges for up to 500 traffic destinations in each endpoint and specify up to 10 port ranges for each traffic destination.
+            /// </summary>
             [NameInMap("PortRanges")]
             [Validation(Required=false)]
             public List<UpdateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurationsPortRanges> PortRanges { get; set; }
             public class UpdateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurationsPortRanges : TeaModel {
                 /// <summary>
-                /// The start port of the port range in the destination to which to allow traffic. The specified port must fall within the port range of the specified endpoint group.
+                /// The first port of the destination port range. The specified port must fall within the port range of the specified endpoint group.
                 /// 
                 /// This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**. You can call the [DescribeCustomRoutingEndpoint](~~449386~~) operation to query the access policy of traffic for the specified endpoint.
                 /// 
-                /// If the start port and end port values are empty, traffic on all ports in destinations are allowed.
+                /// If you do not specify FromPort and ToPort, traffic is forwarded to all ports of the destination.
                 /// 
                 /// You can specify port ranges for up to 500 destinations for each endpoint and specify up to 10 start ports for each destination.
                 /// </summary>
@@ -67,13 +81,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public int? FromPort { get; set; }
 
                 /// <summary>
-                /// The end port of the port range in the destination to which to allow traffic. The specified port must fall within the port range of the specified endpoint group.
+                /// The last port of the destination port range. The specified port must fall within the port range of the specified endpoint group.
                 /// 
-                /// This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**. You can call the [DescribeCustomRoutingEndpoint](~~449386~~) operation to query the access policy of traffic for the specified endpoint.
+                /// This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**. You can call the [DescribeCustomRoutingEndpoint](~~449386~~) operation to query the traffic policy for the specified endpoint.
                 /// 
-                /// If the start port and end port values are empty, traffic on all ports in destinations are allowed.
+                /// If you do not specify FromPort and ToPort, traffic is forwarded to all ports of the destination.
                 /// 
-                /// You can specify port ranges for up to 500 destinations for each endpoint and specify up to 10 end ports for each destination.
+                /// You can specify port ranges for up to 500 destinations in each endpoint and specify up to 10 last ports for each destination.
                 /// </summary>
                 [NameInMap("ToPort")]
                 [Validation(Required=false)]
@@ -84,7 +98,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// The IDs of the endpoints to be deleted.
+        /// The IDs of endpoints to be deleted.
         /// 
         /// If you do not set this parameter, all the endpoints in the specified endpoint group are deleted.
         /// 
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<string> EndpointIds { get; set; }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

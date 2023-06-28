@@ -75,14 +75,19 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// The type of cross-border acceleration. This parameter is returned for GA instances whose bandwidth metering method is pay-by-data-transfer.
+        /// The type of cross-border acceleration. This parameter is returned for GA instances whose bandwidth metering method is pay-by-data-transfer (CDT).
         /// 
-        /// **bpgPro** is returned, which indicates BGP (Multi-ISP) Pro lines.
+        /// Only **bpgPro** may be returned, which indicates BGP (Multi-ISP) Pro lines.
         /// </summary>
         [NameInMap("CrossBorderMode")]
         [Validation(Required=false)]
         public string CrossBorderMode { get; set; }
 
+        /// <summary>
+        /// Indicates whether cross-border acceleration is enabled.
+        /// - **true**: yes
+        /// - **false**: no
+        /// </summary>
         [NameInMap("CrossBorderStatus")]
         [Validation(Required=false)]
         public bool? CrossBorderStatus { get; set; }
@@ -276,6 +281,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Value { get; set; }
 
         }
+
+        /// <summary>
+        /// Indicates the upgradable state of the GA instance.
+        /// - **notUpgradable**: The GA instance can not be upgraded
+        /// - **upgradable**: The GA instance can be upgraded
+        /// - **upgradeFailed**: The GA instance has been upgraded and failed
+        /// </summary>
+        [NameInMap("UpgradableStatus")]
+        [Validation(Required=false)]
+        public string UpgradableStatus { get; set; }
 
     }
 

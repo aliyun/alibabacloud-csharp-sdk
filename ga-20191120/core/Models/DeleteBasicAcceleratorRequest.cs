@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the basic GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// The ID of the region to which the basic GA instance belongs. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

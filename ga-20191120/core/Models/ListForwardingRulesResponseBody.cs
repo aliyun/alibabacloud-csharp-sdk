@@ -189,7 +189,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public ListForwardingRulesResponseBodyForwardingRulesRuleConditionsHostConfig HostConfig { get; set; }
                 public class ListForwardingRulesResponseBodyForwardingRulesRuleConditionsHostConfig : TeaModel {
                     /// <summary>
-                    /// The configuration of the domain name.
+                    /// The domain name.
+                    /// 
+                    /// The domain name must be 3 to 128 characters in length, and can contain letters, digits, hyphens (-), and periods (.). Supported wildcard characters are asterisks (\*) and question marks (?).
                     /// 
                     /// >  For GA instances created after July 12, 2022, all forwarding condition types and forwarding action types are supported. We recommend that you use **RuleConditionType** and **RuleConditionValue** to query forwarding conditions.
                     /// </summary>
@@ -209,7 +211,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public ListForwardingRulesResponseBodyForwardingRulesRuleConditionsPathConfig PathConfig { get; set; }
                 public class ListForwardingRulesResponseBodyForwardingRulesRuleConditionsPathConfig : TeaModel {
                     /// <summary>
-                    /// The configuration of the path.
+                    /// The path.
+                    /// 
+                    /// The path must be 1 to 128 characters in length and must start with a forward slash (/). The path can contain only letters, digits, and the following special characters: $ - \_ . + / & ~ @ : \". Supported wildcard characters are asterisks (\*) and question marks (?).
                     /// 
                     /// >  For GA instances created after July 12, 2022, all forwarding condition types and forwarding action types are supported. We recommend that you use **RuleConditionType** and **RuleConditionValue** to query forwarding conditions.
                     /// </summary>

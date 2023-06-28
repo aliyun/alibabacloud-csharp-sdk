@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListEndpointGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The configurations of the endpoint group.
+        /// Configurations of endpoint groups.
         /// </summary>
         [NameInMap("EndpointGroups")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// The configurations of the endpoint.
+            /// Configurations of Endpoints.
             /// </summary>
             [NameInMap("EndpointConfigurations")]
             [Validation(Required=false)]
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// Indicates whether the client IP address preservation feature is enabled. Valid values:
                 /// 
-                /// *   **true**: The client IP address preservation feature is enabled.
-                /// *   **false**: The client IP address preservation feature is disabled.
+                /// *   **true:** The client IP address preservation feature is enabled.
+                /// *   **false:** The client IP address preservation feature is disabled.
                 /// </summary>
                 [NameInMap("EnableClientIPPreservation")]
                 [Validation(Required=false)]
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The protocol that is used to monitor latency. Valid values:
                 /// 
-                /// *   **icmp**: ICMP
-                /// *   **tcp**: TCP
+                /// *   **icmp:** ICMP.
+                /// *   **tcp:** TCP.
                 /// </summary>
                 [NameInMap("ProbeProtocol")]
                 [Validation(Required=false)]
@@ -81,13 +81,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// <summary>
                 /// The type of the endpoint. Valid values:
                 /// 
-                /// *   **Domain**: a custom domain name
-                /// *   **Ip**: a custom IP address
-                /// *   **PublicIp**: a public IP address provided by Alibaba Cloud
-                /// *   **ECS**: an Elastic Compute Service (ECS) instance
-                /// *   **SLB**: a Server Load Balancer (SLB) instance
-                /// *   **ALB**: an Application Load Balancer (ALB) instance
-                /// *   **OSS**: an Object Storage Service (OSS) bucket
+                /// *   **Domain:** a custom domain name.
+                /// *   **Ip:** a custom IP address.
+                /// *   **PublicIp:** a public IP address provided by Alibaba Cloud.
+                /// *   **ECS:** an Elastic Compute Service (ECS) instance.
+                /// *   **SLB:** a Server Load Balancer (SLB) instance.
+                /// *   **ALB:** an Application Load Balancer (ALB) instance.
+                /// *   **OSS:** an Object Storage Service (OSS) bucket.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The ID of an endpoint group.
+            /// The ID of the endpoint group.
             /// </summary>
             [NameInMap("EndpointGroupId")]
             [Validation(Required=false)]
@@ -126,15 +126,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The type of the endpoint group. Valid values:
             /// 
-            /// *   **default**: a default endpoint group
-            /// *   **virtual**: a virtual endpoint group
+            /// *   **default:** a default endpoint group.
+            /// *   **virtual:** a virtual endpoint group.
             /// </summary>
             [NameInMap("EndpointGroupType")]
             [Validation(Required=false)]
             public string EndpointGroupType { get; set; }
 
             /// <summary>
-            /// The endpoint group IP addresses to be confirmed after the GA instance is upgraded.
+            /// The list of endpoint group IP addresses to be confirmed after the GA instance is upgraded.
             /// </summary>
             [NameInMap("EndpointGroupUnconfirmedIpList")]
             [Validation(Required=false)]
@@ -143,15 +143,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The protocol that is used by the backend service. Valid values:
             /// 
-            /// *   **HTTP**: HTTP
-            /// *   **HTTPS**: HTTPS
+            /// *   **HTTP:** HTTP.
+            /// *   **HTTPS:** HTTPS.
             /// </summary>
             [NameInMap("EndpointRequestProtocol")]
             [Validation(Required=false)]
             public string EndpointRequestProtocol { get; set; }
 
             /// <summary>
-            /// The ID of the forwarding rule that is associated with the endpoint group.
+            /// IDs of forwarding rules that are associated with endpoint groups.
             /// </summary>
             [NameInMap("ForwardingRuleIds")]
             [Validation(Required=false)]
@@ -160,8 +160,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// Indicates whether the health check feature is enabled. Valid values:
             /// 
-            /// *   **true**: The health check feature is enabled.
-            /// *   **false**: The health check feature is disabled.
+            /// *   **true:** The health check feature is enabled.
+            /// *   **false:** The health check feature is disabled.
             /// </summary>
             [NameInMap("HealthCheckEnabled")]
             [Validation(Required=false)]
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public int? HealthCheckIntervalSeconds { get; set; }
 
             /// <summary>
-            /// The path to which health check requests are sent.
+            /// The path to which health check probes are sent.
             /// </summary>
             [NameInMap("HealthCheckPath")]
             [Validation(Required=false)]
@@ -189,11 +189,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public int? HealthCheckPort { get; set; }
 
             /// <summary>
-            /// The protocol over which health check requests are sent. Valid values:
+            /// The protocol over which health check probes are sent. Valid values:
             /// 
-            /// *   **tcp**: TCP
-            /// *   **http**: HTTP
-            /// *   **https**: HTTPS
+            /// *   **tcp:** TCP.
+            /// *   **http:** HTTP.
+            /// *   **https:** HTTPS.
             /// </summary>
             [NameInMap("HealthCheckProtocol")]
             [Validation(Required=false)]
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// The mappings between ports.
+            /// Mappings between ports.
             /// </summary>
             [NameInMap("PortOverrides")]
             [Validation(Required=false)]
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 public int? EndpointPort { get; set; }
 
                 /// <summary>
-                /// The listener port.
+                /// The listening port.
                 /// </summary>
                 [NameInMap("ListenerPort")]
                 [Validation(Required=false)]
@@ -239,23 +239,32 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The state of the endpoint group. Valid values:
             /// 
-            /// *   **init**: The endpoint group is being initialized.
-            /// *   **active**: The endpoint group is running normally.
-            /// *   **updating**:The endpoint group is being updated.
-            /// *   **deleteing**: The endpoint group is being deleted.
+            /// *   **init:** The endpoint group is being initialized.
+            /// *   **active:** The endpoint group is running as expected.
+            /// *   **updating:**The endpoint group is being updated.
+            /// *   **deleteing:** The endpoint group is being deleted.
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
 
+            /// <summary>
+            /// Tags of GA instances.
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListEndpointGroupsResponseBodyEndpointGroupsTags> Tags { get; set; }
             public class ListEndpointGroupsResponseBodyEndpointGroupsTags : TeaModel {
+                /// <summary>
+                /// The tag key of the GA instance.
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// The tag value of the GA instance.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -286,7 +295,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries returned on each page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -300,7 +309,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The number of returned entries.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

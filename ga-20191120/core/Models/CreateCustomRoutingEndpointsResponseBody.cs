@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<string> EndpointIds { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The IDs of the endpoints.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

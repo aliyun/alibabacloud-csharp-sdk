@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// >  If you do not set this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** may be different for each API request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// The endpoints that are associated with the basic GA instance.
+        /// The endpoints in the endpoint group.
         /// </summary>
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
@@ -62,10 +62,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string EndpointSubAddress { get; set; }
 
             /// <summary>
-            /// The type of the secondary address of the endpoint. Valid values:
+            /// The secondary address type of the endpoint. Valid values:
             /// 
-            /// *   **primary**: a primary private IP address.
-            /// *   **secondary**: a secondary private IP address.
+            /// *   **primary:** a primary private IP address.
+            /// *   **secondary:** a secondary private IP address.
             /// 
             /// This parameter is required if the endpoint type is **ECS**, **ENI**, or **NLB**. If the endpoint type is **NLB**, only **primary** is supported.
             /// </summary>
@@ -76,10 +76,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The type of the endpoint. Valid values:
             /// 
-            /// *   **ENI**: elastic network interface (ENI).
-            /// *   **SLB**: Classic Load Balancer (CLB) instance.
-            /// *   **ECS**: Elastic Compute Service (ECS) instance.
-            /// *   **NLB**: Network Load Balancer (NLB) instance.
+            /// *   **ENI:** elastic network interface (ENI).
+            /// *   **SLB:** Classic Load Balancer (CLB) instance.
+            /// *   **ECS:** Elastic Compute Service (ECS) instance.
+            /// *   **NLB:** Network Load Balancer (NLB) instance.
             /// 
             /// >  This parameter is required.
             /// </summary>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The name of the endpoint.
             /// 
-            /// The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+            /// The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

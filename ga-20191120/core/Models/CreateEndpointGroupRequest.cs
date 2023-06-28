@@ -36,6 +36,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// The configurations of the endpoint.
+        /// </summary>
         [NameInMap("EndpointConfigurations")]
         [Validation(Required=false)]
         public List<CreateEndpointGroupRequestEndpointConfigurations> EndpointConfigurations { get; set; }
@@ -49,6 +52,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [NameInMap("EnableClientIPPreservation")]
             [Validation(Required=false)]
             public bool? EnableClientIPPreservation { get; set; }
+
+            /// <summary>
+            /// Specifies whether to preserve client IP addresses by using the ProxyProtocol module. Default value: false. Valid values:
+            /// 
+            /// *   **true**: preserves client IP addresses by using the ProxyProtocol module.
+            /// *   **false**: does not preserve client IP addresses by using the ProxyProtocol module.
+            /// </summary>
+            [NameInMap("EnableProxyProtocol")]
+            [Validation(Required=false)]
+            public bool? EnableProxyProtocol { get; set; }
 
             /// <summary>
             /// The IP address or domain name of the endpoint.
@@ -117,9 +130,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// *   **HTTP**
         /// *   **HTTPS**
         /// 
-        /// > 
-        /// *   You can set this parameter only when the listener that is associated with the endpoint group uses **HTTP** or **HTTPS**.
-        /// *   For an **HTTP** listener, the backend service protocol must be **HTTP**.
+        /// > *   You can set this parameter only when the listener that is associated with the endpoint group uses **HTTP** or **HTTPS**.
+        /// >*   For an **HTTP** listener, the backend service protocol must be **HTTP**.
         /// </summary>
         [NameInMap("EndpointRequestProtocol")]
         [Validation(Required=false)]
@@ -183,6 +195,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The mappings between ports.
+        /// </summary>
         [NameInMap("PortOverrides")]
         [Validation(Required=false)]
         public List<CreateEndpointGroupRequestPortOverrides> PortOverrides { get; set; }
@@ -197,9 +212,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The listener port that is mapped to the endpoint port.
             /// 
-            /// > 
-            /// *   Only HTTP and HTTPS listeners support port mappings.
-            /// *   The listener port must be the one used by the current listener.
+            /// > *   Only HTTP and HTTPS listeners support port mappings.
+            /// >*   The listener port must be the one used by the current listener.
             /// </summary>
             [NameInMap("ListenerPort")]
             [Validation(Required=false)]
@@ -214,14 +228,31 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// Tags of GA instances.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateEndpointGroupRequestTag> Tag { get; set; }
         public class CreateEndpointGroupRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key of the GA instance. The tag key cannot be an empty string.
+            /// 
+            /// The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// 
+            /// You can specify up to 20 tag keys.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value of the GA instance. The tag value cannot be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+            /// 
+            /// You can specify up to 20 tag values.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

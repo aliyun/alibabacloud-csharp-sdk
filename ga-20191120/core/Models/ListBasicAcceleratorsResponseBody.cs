@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListBasicAcceleratorsResponseBody : TeaModel {
         /// <summary>
-        /// The information about basic GA instances.
+        /// The basic GA instances.
         /// </summary>
         [NameInMap("Accelerators")]
         [Validation(Required=false)]
@@ -91,6 +91,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// 基础全球加速实例是否开启跨境线路功能。取值：
+            /// 
+            /// - **true**：开启跨境线路功能，可以加速跨境线路。
+            /// 
+            /// - **false**：关闭跨境线路功能，不可以加速跨境线路。
+            /// </summary>
             [NameInMap("CrossBorderStatus")]
             [Validation(Required=false)]
             public bool? CrossBorderStatus { get; set; }

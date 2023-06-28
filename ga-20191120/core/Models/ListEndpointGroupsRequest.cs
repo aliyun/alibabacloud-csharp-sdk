@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// Specifies whether the access logging feature is enabled. Default value: off. Valid values:
         /// 
-        /// *   **on**: The access logging feature is enabled.
-        /// *   **off**: The access logging feature is disabled.
+        /// *   **on:** enables the access logging feature.
+        /// *   **off:** disables the access logging feature.
         /// </summary>
         [NameInMap("AccessLogSwitch")]
         [Validation(Required=false)]
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The type of the endpoint group. Valid values:
         /// 
-        /// *   **default**: a default endpoint group
-        /// *   **virtual**: a virtual endpoint group
+        /// *   **default:** a default endpoint group.
+        /// *   **virtual:** a virtual endpoint group.
         /// *   If you leave this parameter empty, all default and virtual endpoint groups are queried.
         /// </summary>
         [NameInMap("EndpointGroupType")]
@@ -72,14 +72,23 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// Tags of GA instances.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListEndpointGroupsRequestTag> Tag { get; set; }
         public class ListEndpointGroupsRequestTag : TeaModel {
+            /// <summary>
+            /// The tag key of the GA instance.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The tag value of the GA instance.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

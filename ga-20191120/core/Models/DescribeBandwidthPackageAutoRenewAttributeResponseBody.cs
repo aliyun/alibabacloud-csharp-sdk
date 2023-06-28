@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// The auto-renewal duration. Unit: months. Valid values: **1** to **12**.
+        /// The auto-renewal period. Unit: months. Valid values: **1** to **12**.
         /// 
         /// > : This parameter takes effect only if **AutoRenew** is set to **true**.
         /// </summary>

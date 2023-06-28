@@ -27,6 +27,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// Details about the forwarding rules.
+        /// </summary>
         [NameInMap("ForwardingRules")]
         [Validation(Required=false)]
         public List<CreateForwardingRulesRequestForwardingRules> ForwardingRules { get; set; }
@@ -47,6 +50,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
+            /// <summary>
+            /// The forwarding action.
+            /// </summary>
             [NameInMap("RuleActions")]
             [Validation(Required=false)]
             public List<CreateForwardingRulesRequestForwardingRulesRuleActions> RuleActions { get; set; }
@@ -60,10 +66,20 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 [Validation(Required=false)]
                 public CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig ForwardGroupConfig { get; set; }
                 public class CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig : TeaModel {
+                    /// <summary>
+                    /// The information about the endpoint group.
+                    /// 
+                    /// >  For GA instances created after July 12, 2022, all forwarding condition types and forwarding action types are supported. We recommend that you call **RuleActionType** and **RuleActionValue** to query forwarding actions.
+                    /// </summary>
                     [NameInMap("ServerGroupTuples")]
                     [Validation(Required=false)]
                     public List<CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
                     public class CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfigServerGroupTuples : TeaModel {
+                        /// <summary>
+                        /// The ID of the endpoint group.
+                        /// 
+                        /// >  For GA instances created after July 12, 2022, all forwarding condition types and forwarding action types are supported. We recommend that you call **RuleActionType** and **RuleActionValue** to query forwarding actions.
+                        /// </summary>
                         [NameInMap("EndpointGroupId")]
                         [Validation(Required=false)]
                         public string EndpointGroupId { get; set; }
@@ -142,6 +158,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
             }
 
+            /// <summary>
+            /// The forwarding conditions.
+            /// </summary>
             [NameInMap("RuleConditions")]
             [Validation(Required=false)]
             public List<CreateForwardingRulesRequestForwardingRulesRuleConditions> RuleConditions { get; set; }
@@ -155,6 +174,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 [Validation(Required=false)]
                 public CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig HostConfig { get; set; }
                 public class CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig : TeaModel {
+                    /// <summary>
+                    /// The domain name.
+                    /// 
+                    /// The domain name must be 3 to 128 characters in length, and can contain letters, digits, hyphens (-), and periods (.). Supported wildcard characters are asterisks (\*) and question marks (?).
+                    /// 
+                    /// >  For GA instances created after July 12, 2022, all forwarding condition types and forwarding action types are supported. We recommend that you use **RuleConditionType** and **RuleConditionValue** to query forwarding conditions.
+                    /// </summary>
                     [NameInMap("Values")]
                     [Validation(Required=false)]
                     public List<string> Values { get; set; }
@@ -170,6 +196,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 [Validation(Required=false)]
                 public CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig PathConfig { get; set; }
                 public class CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig : TeaModel {
+                    /// <summary>
+                    /// The path.
+                    /// 
+                    /// The path must be 1 to 128 characters in length and must start with a forward slash (/). The path can contain only letters, digits, and the following special characters: $ - \_ . + / & ~ @ : \". Supported wildcard characters are asterisks (\*) and question marks (?).
+                    /// 
+                    /// >  For GA instances created after July 12, 2022, all forwarding condition types and forwarding action types are supported. We recommend that you use **RuleConditionType** and **RuleConditionValue** to query forwarding conditions.
+                    /// </summary>
                     [NameInMap("Values")]
                     [Validation(Required=false)]
                     public List<string> Values { get; set; }

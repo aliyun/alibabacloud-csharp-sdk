@@ -51,6 +51,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 /// *   **basicaccelerator:** a basic GA instance.
                 /// *   **bandwidthpackage:** a bandwidth plan.
                 /// *   **acl:** an ACL.
+                /// *   **endpointgroup:** an EndpointGroup.
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]

@@ -43,6 +43,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string EndpointGroupId { get; set; }
 
+        /// <summary>
+        /// The secondary address of the endpoint.
+        /// 
+        /// This parameter is required when the accelerated IP address is associated with the secondary private IP address of an ECS instance or an ENI.
+        /// 
+        /// *   If the endpoint type is **ECS**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.
+        /// *   If the endpoint type is **ENI**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.
+        /// </summary>
         [NameInMap("EndpointSubAddress")]
         [Validation(Required=false)]
         public string EndpointSubAddress { get; set; }

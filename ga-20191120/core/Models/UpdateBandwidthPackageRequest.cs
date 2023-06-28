@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateBandwidthPackageRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Default value: false. Valid values:
+        /// Specifies whether to enable automatic payment. Valid values:
         /// 
-        /// *   **false**: disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.
+        /// *   **false** (default): disables automatic payment. If you select this option, you must go to Order Center to complete the payment after an order is generated.
         /// *   **true**: enables automatic payment. Payments are automatically completed.
         /// </summary>
         [NameInMap("AutoPay")]
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// Specifies whether to use coupons. Default value: false. Valid values:
+        /// Specifies whether to use coupons. Valid values:
         /// 
-        /// *   **true**: uses coupons.
-        /// *   **false**: does not use coupons.
+        /// *   **true**
+        /// *   **false** (default)
         /// </summary>
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
@@ -48,11 +48,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The type of bandwidth. Valid values:
         /// 
-        /// *   **Basic**: basic
-        /// *   **Enhanced**: enhanced
-        /// *   **Advanced**: premium
+        /// *   **Basic**
+        /// *   **Enhanced**
+        /// *   **Advanced**
         /// 
-        /// >  You can only upgrade **Basic** bandwidth to **Enhanced** bandwidth. You cannot change **Enhanced** bandwidth or **Advanced** bandwidth to another type.
+        /// >  You can upgrade **Basic** bandwidth to **Enhanced** bandwidth. You cannot change **Enhanced** or **Advanced** bandwidth to another type of bandwidth.
         /// </summary>
         [NameInMap("BandwidthType")]
         [Validation(Required=false)]
@@ -68,16 +68,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the bandwidth plan.
-        /// 
-        /// The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+        /// The name of the bandwidth plan. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DeleteForwardingRulesResponseBody : TeaModel {
         /// <summary>
-        /// Details about the forwarding rules.
+        /// The forwarding rules.
         /// </summary>
         [NameInMap("ForwardingRules")]
         [Validation(Required=false)]
         public List<DeleteForwardingRulesResponseBodyForwardingRules> ForwardingRules { get; set; }
         public class DeleteForwardingRulesResponseBodyForwardingRules : TeaModel {
             /// <summary>
-            /// The ID of the forwarding rule.
+            /// The forwarding rule ID.
             /// </summary>
             [NameInMap("ForwardingRuleId")]
             [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable auto-renewal. Valid values:
+        /// Specifies whether to enable auto-renewal for the bandwidth plan. Valid values:
         /// 
         /// *   **true**: enables auto-renewal.
-        /// *   **false** (default): disables auto-renewal.
+        /// *   **false** (default): does not enable auto-renewal.
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// 
         /// Valid values: **1** to **12**. Default value: **1**.
         /// 
-        /// >  This parameter takes effect only if **AutoRenew** is set to **true**.
+        /// >  This parameter is required only if **AutoRenew** is set to **true**.
         /// </summary>
         [NameInMap("AutoRenewDuration")]
         [Validation(Required=false)]
@@ -46,25 +46,27 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// *   **true**: yes
         /// *   **false** (default): no
         /// 
-        /// >  This parameter takes effect only if **AutoPay** is set to **true**.
+        /// >  This parameter is required only if **AutoPay** is set to **true**.
         /// </summary>
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
         public string AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// The bandwidth value of the bandwidth plan. Unit: Mbit/s. Valid values: **2** to **2000**.
+        /// The bandwidth of the bandwidth plan. Unit: Mbit/s.
+        /// 
+        /// Valid values: **2** to **2000**.
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// The type of bandwidth. Valid values:
+        /// The type of the bandwidth. Valid values:
         /// 
-        /// *   **Basic**: standard
-        /// *   **Enhanced**: enhanced
-        /// *   **Advanced**: premium
+        /// *   **Basic**: standard bandwidth
+        /// *   **Enhanced**: enhanced bandwidth
+        /// *   **Advanced**: premium bandwidth
         /// 
         /// If **Type** is set to **Basic**, this parameter is required.
         /// </summary>
@@ -113,9 +115,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must ensure that it is unique among all requests. The ClientToken value contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// >  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** of each API request may be different.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -124,8 +126,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The subscription duration.
         /// 
-        /// *   If the **PricingCycle** parameter is set to **Month**, the valid values of the **Duration** parameter are **1** to **9**.
-        /// *   If the **PricingCycle** parameter is set to **Year**, the valid values of the **Duration** parameter are **1** to **3**.
+        /// *   If the **PricingCycle** parameter is set to **Month**, the valid values for the **Duration** parameter are **1** to **9**.
+        /// *   If the **PricingCycle** parameter is set to **Year**, the valid values for the **Duration** parameter are **1** to **3**.
         /// 
         /// If **ChargeType** is set to **PREPAY**, this parameter is required.
         /// </summary>
@@ -148,7 +150,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The coupon code.
         /// 
-        /// >  This parameter is available only on the international site.
+        /// >  This parameter is only available on the international site (alibabacloud.com).
         /// </summary>
         [NameInMap("PromotionOptionNo")]
         [Validation(Required=false)]
@@ -157,21 +159,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: **30** to **100**.
         /// 
-        /// >  This parameter takes effect only if **BillingType** is set to **PayBY95**.
+        /// >  This parameter is required only if **BillingType** is set to **PayBY95**.
         /// </summary>
         [NameInMap("Ratio")]
         [Validation(Required=false)]
         public int? Ratio { get; set; }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// The ID of the region where the GA instance is deployed. **cn-hangzhou** is returned.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the bandwidth plan belongs.
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -192,7 +194,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The type of bandwidth plan. Valid values:
+        /// The type of the bandwidth plan. Valid values:
         /// 
         /// *   **Basic**: a basic bandwidth plan
         /// *   **CrossDomain**: a cross-region acceleration bandwidth plan

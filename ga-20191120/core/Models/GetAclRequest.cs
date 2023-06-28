@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class GetAclRequest : TeaModel {
         /// <summary>
-        /// The ID of the network ACL.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+        /// The ID of the network ACL.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

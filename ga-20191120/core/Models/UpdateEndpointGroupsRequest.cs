@@ -30,6 +30,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// Terminal node group configuration information.
+        /// </summary>
         [NameInMap("EndpointGroupConfigurations")]
         [Validation(Required=false)]
         public List<UpdateEndpointGroupsRequestEndpointGroupConfigurations> EndpointGroupConfigurations { get; set; }
@@ -54,6 +57,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public bool? EnableClientIPPreservationToa { get; set; }
 
+            /// <summary>
+            /// Terminal node configuration information.
+            /// </summary>
             [NameInMap("EndpointConfigurations")]
             [Validation(Required=false)]
             public List<UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> EndpointConfigurations { get; set; }
@@ -183,6 +189,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string HealthCheckProtocol { get; set; }
 
+            /// <summary>
+            /// The mappings between ports.
+            /// </summary>
             [NameInMap("PortOverrides")]
             [Validation(Required=false)]
             public List<UpdateEndpointGroupsRequestEndpointGroupConfigurationsPortOverrides> PortOverrides { get; set; }

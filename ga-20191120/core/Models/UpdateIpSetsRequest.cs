@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateIpSetsRequest : TeaModel {
+        /// <summary>
+        /// The acceleration regions.
+        /// </summary>
         [NameInMap("IpSets")]
         [Validation(Required=false)]
         public List<UpdateIpSetsRequestIpSets> IpSets { get; set; }
         public class UpdateIpSetsRequestIpSets : TeaModel {
             /// <summary>
-            /// The new bandwidth to be allocated to the acceleration region. Unit: Mbit/s.
+            /// The new bandwidth of the acceleration region. Unit: Mbit/s.
             /// 
             /// You can specify the bandwidth for up to 100 acceleration regions.
             /// </summary>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

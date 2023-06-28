@@ -17,19 +17,19 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ICP filing status of the accelerated domain name.
+        /// The ICP filing status of the accelerated domain name. Valid values:
         /// 
-        /// *   **illegal**: The domain name is illegal.
-        /// *   **inactive**: The domain name has not completed ICP filing.
-        /// *   **active**: The domain name has completed ICP filing.
-        /// *   **unknown**: The ICP filing status is unknown.
+        /// *   **illegal:** The domain name is illegal.
+        /// *   **inactive:** The domain name has not completed ICP filing.
+        /// *   **active:** The domain name has a valid ICP number.
+        /// *   **unknown:** The ICP filing status is unknown.
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

@@ -19,15 +19,15 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// Indicates whether auto-renewal is enabled. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false** (default): no
+        /// *   **true**: enabled
+        /// *   **false** (default): disabled
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// The auto-renewal period. Unit: months.
+        /// The auto-renewal duration. Unit: months.
         /// 
         /// This parameter is returned only if **AutoRenew** is set to **true**.
         /// </summary>
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// Indicates how the GA instance is renewed. Valid values:
         /// 
         /// *   **AutoRenewal**: The GA instance is automatically renewed.
-        /// *   **Normal**: The GA instance is manually renewed.
-        /// *   **NotRenewal**: The GA instance is not renewed after the instance expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer sends notifications to remind you to renew the GA instance.
+        /// *   **Normal**: You must manually renew the GA instance.
+        /// *   **NotRenewal**: The GA instance is not renewed after it expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer sends notifications to remind you to renew the GA instance.
         /// </summary>
         [NameInMap("RenewalStatus")]
         [Validation(Required=false)]

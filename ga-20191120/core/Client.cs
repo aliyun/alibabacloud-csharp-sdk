@@ -459,10 +459,6 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /**
           * When you call this operation, take note of the following items:
-          * *   When you call this operation, the system checks whether the GA instance assumes the service-linked role AliyunServiceRoleForGaAntiDdos. In this case, the following rules apply to the GA instance:
-          *     *   If the GA instance does not assume the service-linked role AliyunServiceRoleForGaAntiDdos, the system automatically creates the service-linked role and attaches the policy AliyunServiceRolePolicyForGaAntiDdos to the service-linked role. This allows GA to access the Anti-DDoS Pro/Premium instance.
-          *     *   If the GA instance assumes the service-linked role AliyunServiceRoleForGaAntiDdos, the system does not create the service-linked role again.
-          *     For more information, see [AliyunServiceRoleForGaAntiDdos](~~186805~~).
           * *   **AttachDdosToAccelerator** is an asynchronous operation. After you call the operation, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) or [ListAccelerators](~~153236~~) operation to query the status of the GA instance.
           *     *   If the GA instance is in the **configuring** state, the Anti-DDoS Pro/Premium instance is being associated with the GA instance. In this case, you can perform only query operations.
           *     *   If the GA instance is in the **active** state, the Anti-DDoS Pro/Premium instance is associated with the GA instance.
@@ -513,10 +509,6 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /**
           * When you call this operation, take note of the following items:
-          * *   When you call this operation, the system checks whether the GA instance assumes the service-linked role AliyunServiceRoleForGaAntiDdos. In this case, the following rules apply to the GA instance:
-          *     *   If the GA instance does not assume the service-linked role AliyunServiceRoleForGaAntiDdos, the system automatically creates the service-linked role and attaches the policy AliyunServiceRolePolicyForGaAntiDdos to the service-linked role. This allows GA to access the Anti-DDoS Pro/Premium instance.
-          *     *   If the GA instance assumes the service-linked role AliyunServiceRoleForGaAntiDdos, the system does not create the service-linked role again.
-          *     For more information, see [AliyunServiceRoleForGaAntiDdos](~~186805~~).
           * *   **AttachDdosToAccelerator** is an asynchronous operation. After you call the operation, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) or [ListAccelerators](~~153236~~) operation to query the status of the GA instance.
           *     *   If the GA instance is in the **configuring** state, the Anti-DDoS Pro/Premium instance is being associated with the GA instance. In this case, you can perform only query operations.
           *     *   If the GA instance is in the **active** state, the Anti-DDoS Pro/Premium instance is associated with the GA instance.
@@ -567,10 +559,6 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /**
           * When you call this operation, take note of the following items:
-          * *   When you call this operation, the system checks whether the GA instance assumes the service-linked role AliyunServiceRoleForGaAntiDdos. In this case, the following rules apply to the GA instance:
-          *     *   If the GA instance does not assume the service-linked role AliyunServiceRoleForGaAntiDdos, the system automatically creates the service-linked role and attaches the policy AliyunServiceRolePolicyForGaAntiDdos to the service-linked role. This allows GA to access the Anti-DDoS Pro/Premium instance.
-          *     *   If the GA instance assumes the service-linked role AliyunServiceRoleForGaAntiDdos, the system does not create the service-linked role again.
-          *     For more information, see [AliyunServiceRoleForGaAntiDdos](~~186805~~).
           * *   **AttachDdosToAccelerator** is an asynchronous operation. After you call the operation, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) or [ListAccelerators](~~153236~~) operation to query the status of the GA instance.
           *     *   If the GA instance is in the **configuring** state, the Anti-DDoS Pro/Premium instance is being associated with the GA instance. In this case, you can perform only query operations.
           *     *   If the GA instance is in the **active** state, the Anti-DDoS Pro/Premium instance is associated with the GA instance.
@@ -587,10 +575,6 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /**
           * When you call this operation, take note of the following items:
-          * *   When you call this operation, the system checks whether the GA instance assumes the service-linked role AliyunServiceRoleForGaAntiDdos. In this case, the following rules apply to the GA instance:
-          *     *   If the GA instance does not assume the service-linked role AliyunServiceRoleForGaAntiDdos, the system automatically creates the service-linked role and attaches the policy AliyunServiceRolePolicyForGaAntiDdos to the service-linked role. This allows GA to access the Anti-DDoS Pro/Premium instance.
-          *     *   If the GA instance assumes the service-linked role AliyunServiceRoleForGaAntiDdos, the system does not create the service-linked role again.
-          *     For more information, see [AliyunServiceRoleForGaAntiDdos](~~186805~~).
           * *   **AttachDdosToAccelerator** is an asynchronous operation. After you call the operation, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) or [ListAccelerators](~~153236~~) operation to query the status of the GA instance.
           *     *   If the GA instance is in the **configuring** state, the Anti-DDoS Pro/Premium instance is being associated with the GA instance. In this case, you can perform only query operations.
           *     *   If the GA instance is in the **active** state, the Anti-DDoS Pro/Premium instance is associated with the GA instance.
@@ -886,7 +870,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **BandwidthPackageRemoveAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the state of the bandwidth plan that you attempt to disassociate.
+          * *   **BandwidthPackageRemoveAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan that you attempt to disassociate.
           *     *   If the bandwidth plan is in the **unbinding** state, it indicates that the bandwidth plan is being disassociated. In this case, you can perform only query operations.
           *     *   If the bandwidth plan is in the **active** state, it indicates that the bandwidth plan is disassociated.
           * *   The **BandwidthPackageRemoveAccelerator** cannot be called repeatedly for the same GA instance.
@@ -931,7 +915,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **BandwidthPackageRemoveAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the state of the bandwidth plan that you attempt to disassociate.
+          * *   **BandwidthPackageRemoveAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan that you attempt to disassociate.
           *     *   If the bandwidth plan is in the **unbinding** state, it indicates that the bandwidth plan is being disassociated. In this case, you can perform only query operations.
           *     *   If the bandwidth plan is in the **active** state, it indicates that the bandwidth plan is disassociated.
           * *   The **BandwidthPackageRemoveAccelerator** cannot be called repeatedly for the same GA instance.
@@ -976,7 +960,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **BandwidthPackageRemoveAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the state of the bandwidth plan that you attempt to disassociate.
+          * *   **BandwidthPackageRemoveAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan that you attempt to disassociate.
           *     *   If the bandwidth plan is in the **unbinding** state, it indicates that the bandwidth plan is being disassociated. In this case, you can perform only query operations.
           *     *   If the bandwidth plan is in the **active** state, it indicates that the bandwidth plan is disassociated.
           * *   The **BandwidthPackageRemoveAccelerator** cannot be called repeatedly for the same GA instance.
@@ -991,7 +975,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **BandwidthPackageRemoveAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the state of the bandwidth plan that you attempt to disassociate.
+          * *   **BandwidthPackageRemoveAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan that you attempt to disassociate.
           *     *   If the bandwidth plan is in the **unbinding** state, it indicates that the bandwidth plan is being disassociated. In this case, you can perform only query operations.
           *     *   If the bandwidth plan is in the **active** state, it indicates that the bandwidth plan is disassociated.
           * *   The **BandwidthPackageRemoveAccelerator** cannot be called repeatedly for the same GA instance.
@@ -1326,9 +1310,17 @@ namespace AlibabaCloud.SDK.Ga20191120
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
                 query["Duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
+            {
+                query["InstanceChargeType"] = request.InstanceChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpSetConfig))
             {
@@ -1418,9 +1410,17 @@ namespace AlibabaCloud.SDK.Ga20191120
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
                 query["Duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
+            {
+                query["InstanceChargeType"] = request.InstanceChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpSetConfig))
             {
@@ -1850,13 +1850,12 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ##
           * To use Global Accelerator (GA) for acceleration, you must purchase a basic bandwidth plan. A basic bandwidth plan supports the following bandwidth types:
           * *   **Basic**: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service is deployed on Alibaba Cloud.
           * *   **Enhanced**: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud.
-          * *   **Premium**: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud. If you want to accelerate data transfer for clients in the Chinese mainland, you must select China (Hong Kong) as the acceleration region.
+          * *   **Premium**: Both the default acceleration region and the default service region are outside the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud. If you want to accelerate data transfer for clients in the Chinese mainland, you must select China (Hong Kong) as the acceleration region.
           * When you call this operation, take note of the following items:
-          * *   The **CreateBandwidthPackage** operation is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan.
+          * *   **CreateBandwidthPackage** is an asynchronous operation. After you send a request, the system returns the ID of a bandwidth plan, but the bandwidth plan is still being created in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan.
           *     *   If the bandwidth plan is in the **init** state, it indicates that the bandwidth plan is being created. In this case, you can perform only query operations.
           *     *   If the bandwidth plan is in the **active** state, it indicates that the bandwidth plan is created.
           * *   The **CreateBandwidthPackage** operation cannot be repeatedly called for the same GA instance within a specific period of time.
@@ -1965,13 +1964,12 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ##
           * To use Global Accelerator (GA) for acceleration, you must purchase a basic bandwidth plan. A basic bandwidth plan supports the following bandwidth types:
           * *   **Basic**: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service is deployed on Alibaba Cloud.
           * *   **Enhanced**: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud.
-          * *   **Premium**: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud. If you want to accelerate data transfer for clients in the Chinese mainland, you must select China (Hong Kong) as the acceleration region.
+          * *   **Premium**: Both the default acceleration region and the default service region are outside the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud. If you want to accelerate data transfer for clients in the Chinese mainland, you must select China (Hong Kong) as the acceleration region.
           * When you call this operation, take note of the following items:
-          * *   The **CreateBandwidthPackage** operation is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan.
+          * *   **CreateBandwidthPackage** is an asynchronous operation. After you send a request, the system returns the ID of a bandwidth plan, but the bandwidth plan is still being created in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan.
           *     *   If the bandwidth plan is in the **init** state, it indicates that the bandwidth plan is being created. In this case, you can perform only query operations.
           *     *   If the bandwidth plan is in the **active** state, it indicates that the bandwidth plan is created.
           * *   The **CreateBandwidthPackage** operation cannot be repeatedly called for the same GA instance within a specific period of time.
@@ -2080,13 +2078,12 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ##
           * To use Global Accelerator (GA) for acceleration, you must purchase a basic bandwidth plan. A basic bandwidth plan supports the following bandwidth types:
           * *   **Basic**: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service is deployed on Alibaba Cloud.
           * *   **Enhanced**: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud.
-          * *   **Premium**: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud. If you want to accelerate data transfer for clients in the Chinese mainland, you must select China (Hong Kong) as the acceleration region.
+          * *   **Premium**: Both the default acceleration region and the default service region are outside the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud. If you want to accelerate data transfer for clients in the Chinese mainland, you must select China (Hong Kong) as the acceleration region.
           * When you call this operation, take note of the following items:
-          * *   The **CreateBandwidthPackage** operation is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan.
+          * *   **CreateBandwidthPackage** is an asynchronous operation. After you send a request, the system returns the ID of a bandwidth plan, but the bandwidth plan is still being created in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan.
           *     *   If the bandwidth plan is in the **init** state, it indicates that the bandwidth plan is being created. In this case, you can perform only query operations.
           *     *   If the bandwidth plan is in the **active** state, it indicates that the bandwidth plan is created.
           * *   The **CreateBandwidthPackage** operation cannot be repeatedly called for the same GA instance within a specific period of time.
@@ -2101,13 +2098,12 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ##
           * To use Global Accelerator (GA) for acceleration, you must purchase a basic bandwidth plan. A basic bandwidth plan supports the following bandwidth types:
           * *   **Basic**: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service is deployed on Alibaba Cloud.
           * *   **Enhanced**: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud.
-          * *   **Premium**: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud. If you want to accelerate data transfer for clients in the Chinese mainland, you must select China (Hong Kong) as the acceleration region.
+          * *   **Premium**: Both the default acceleration region and the default service region are outside the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud. If you want to accelerate data transfer for clients in the Chinese mainland, you must select China (Hong Kong) as the acceleration region.
           * When you call this operation, take note of the following items:
-          * *   The **CreateBandwidthPackage** operation is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan.
+          * *   **CreateBandwidthPackage** is an asynchronous operation. After you send a request, the system returns the ID of a bandwidth plan, but the bandwidth plan is still being created in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan.
           *     *   If the bandwidth plan is in the **init** state, it indicates that the bandwidth plan is being created. In this case, you can perform only query operations.
           *     *   If the bandwidth plan is in the **active** state, it indicates that the bandwidth plan is created.
           * *   The **CreateBandwidthPackage** operation cannot be repeatedly called for the same GA instance within a specific period of time.
@@ -2514,10 +2510,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ## Usage notes
-          * Basic GA instances use high-quality global network bandwidth and the transmission network of Alibaba Cloud to provide users with point-to-point acceleration services. You can use basic GA instances to accelerate content delivery at Layer 3 (IP protocols). For more information, see [Overview of GA instances](~~153127~~).
+          * Basic GA instances leverage the immense bandwidth of Alibaba Cloud\\"s high-quality global network to provide end-to-end acceleration services. You can use basic GA instances to accelerate content delivery at Layer 3 (IP). For more information, see [Overview of GA instances](~~153127~~).
           * **CreateBasicAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicAccelerator](~~353188~~) or [ListBasicAccelerators](~~353189~~) operation to query the status of a basic GA instance:
-          * *   If the basic GA instance is in the **init** state, it indicates the basic GA instance is being created. In this case, you can perform only query operations.
+          * *   If the basic GA instance is in the **init** state, it indicates that the basic GA instance is being created. In this case, you can continue to perform query operations on the GA instance.
           * *   If the basic GA instance is in the **active** state, it indicates that the basic GA instance is created.
           *
           * @param request CreateBasicAcceleratorRequest
@@ -2604,10 +2599,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ## Usage notes
-          * Basic GA instances use high-quality global network bandwidth and the transmission network of Alibaba Cloud to provide users with point-to-point acceleration services. You can use basic GA instances to accelerate content delivery at Layer 3 (IP protocols). For more information, see [Overview of GA instances](~~153127~~).
+          * Basic GA instances leverage the immense bandwidth of Alibaba Cloud\\"s high-quality global network to provide end-to-end acceleration services. You can use basic GA instances to accelerate content delivery at Layer 3 (IP). For more information, see [Overview of GA instances](~~153127~~).
           * **CreateBasicAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicAccelerator](~~353188~~) or [ListBasicAccelerators](~~353189~~) operation to query the status of a basic GA instance:
-          * *   If the basic GA instance is in the **init** state, it indicates the basic GA instance is being created. In this case, you can perform only query operations.
+          * *   If the basic GA instance is in the **init** state, it indicates that the basic GA instance is being created. In this case, you can continue to perform query operations on the GA instance.
           * *   If the basic GA instance is in the **active** state, it indicates that the basic GA instance is created.
           *
           * @param request CreateBasicAcceleratorRequest
@@ -2694,10 +2688,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ## Usage notes
-          * Basic GA instances use high-quality global network bandwidth and the transmission network of Alibaba Cloud to provide users with point-to-point acceleration services. You can use basic GA instances to accelerate content delivery at Layer 3 (IP protocols). For more information, see [Overview of GA instances](~~153127~~).
+          * Basic GA instances leverage the immense bandwidth of Alibaba Cloud\\"s high-quality global network to provide end-to-end acceleration services. You can use basic GA instances to accelerate content delivery at Layer 3 (IP). For more information, see [Overview of GA instances](~~153127~~).
           * **CreateBasicAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicAccelerator](~~353188~~) or [ListBasicAccelerators](~~353189~~) operation to query the status of a basic GA instance:
-          * *   If the basic GA instance is in the **init** state, it indicates the basic GA instance is being created. In this case, you can perform only query operations.
+          * *   If the basic GA instance is in the **init** state, it indicates that the basic GA instance is being created. In this case, you can continue to perform query operations on the GA instance.
           * *   If the basic GA instance is in the **active** state, it indicates that the basic GA instance is created.
           *
           * @param request CreateBasicAcceleratorRequest
@@ -2710,10 +2703,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ## Usage notes
-          * Basic GA instances use high-quality global network bandwidth and the transmission network of Alibaba Cloud to provide users with point-to-point acceleration services. You can use basic GA instances to accelerate content delivery at Layer 3 (IP protocols). For more information, see [Overview of GA instances](~~153127~~).
+          * Basic GA instances leverage the immense bandwidth of Alibaba Cloud\\"s high-quality global network to provide end-to-end acceleration services. You can use basic GA instances to accelerate content delivery at Layer 3 (IP). For more information, see [Overview of GA instances](~~153127~~).
           * **CreateBasicAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicAccelerator](~~353188~~) or [ListBasicAccelerators](~~353189~~) operation to query the status of a basic GA instance:
-          * *   If the basic GA instance is in the **init** state, it indicates the basic GA instance is being created. In this case, you can perform only query operations.
+          * *   If the basic GA instance is in the **init** state, it indicates that the basic GA instance is being created. In this case, you can continue to perform query operations on the GA instance.
           * *   If the basic GA instance is in the **active** state, it indicates that the basic GA instance is created.
           *
           * @param request CreateBasicAcceleratorRequest
@@ -2902,11 +2894,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ##
-          * *   The **CreateBasicEndpointGroup** operation is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicEndpointGroup](~~362984~~) operation to query the status of an endpoint group.
+          * *   **CreateBasicEndpointGroup** is an asynchronous operation. After a request is sent, the system returns an endpoint group ID and runs the task in the background. You can call the [GetBasicEndpointGroup](~~362984~~) operation to query the status of the task.
           *     *   If the endpoint group is in the **init** state, the endpoint is being created. In this case, you can perform only query operations.
           *     *   If the endpoint group is in the **active** state, the endpoint group is created.
-          * *   The **CreateBasicEndpointGroup** operation cannot be repeatedly called for the same basic GA instance within a specific period of time.
+          * *   You cannot call the **CreateBasicEndpointGroup** operation again on the same GA instance before the previous request is completed.
           *
           * @param request CreateBasicEndpointGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2972,11 +2963,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ##
-          * *   The **CreateBasicEndpointGroup** operation is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicEndpointGroup](~~362984~~) operation to query the status of an endpoint group.
+          * *   **CreateBasicEndpointGroup** is an asynchronous operation. After a request is sent, the system returns an endpoint group ID and runs the task in the background. You can call the [GetBasicEndpointGroup](~~362984~~) operation to query the status of the task.
           *     *   If the endpoint group is in the **init** state, the endpoint is being created. In this case, you can perform only query operations.
           *     *   If the endpoint group is in the **active** state, the endpoint group is created.
-          * *   The **CreateBasicEndpointGroup** operation cannot be repeatedly called for the same basic GA instance within a specific period of time.
+          * *   You cannot call the **CreateBasicEndpointGroup** operation again on the same GA instance before the previous request is completed.
           *
           * @param request CreateBasicEndpointGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3042,11 +3032,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ##
-          * *   The **CreateBasicEndpointGroup** operation is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicEndpointGroup](~~362984~~) operation to query the status of an endpoint group.
+          * *   **CreateBasicEndpointGroup** is an asynchronous operation. After a request is sent, the system returns an endpoint group ID and runs the task in the background. You can call the [GetBasicEndpointGroup](~~362984~~) operation to query the status of the task.
           *     *   If the endpoint group is in the **init** state, the endpoint is being created. In this case, you can perform only query operations.
           *     *   If the endpoint group is in the **active** state, the endpoint group is created.
-          * *   The **CreateBasicEndpointGroup** operation cannot be repeatedly called for the same basic GA instance within a specific period of time.
+          * *   You cannot call the **CreateBasicEndpointGroup** operation again on the same GA instance before the previous request is completed.
           *
           * @param request CreateBasicEndpointGroupRequest
           * @return CreateBasicEndpointGroupResponse
@@ -3058,11 +3047,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ##
-          * *   The **CreateBasicEndpointGroup** operation is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicEndpointGroup](~~362984~~) operation to query the status of an endpoint group.
+          * *   **CreateBasicEndpointGroup** is an asynchronous operation. After a request is sent, the system returns an endpoint group ID and runs the task in the background. You can call the [GetBasicEndpointGroup](~~362984~~) operation to query the status of the task.
           *     *   If the endpoint group is in the **init** state, the endpoint is being created. In this case, you can perform only query operations.
           *     *   If the endpoint group is in the **active** state, the endpoint group is created.
-          * *   The **CreateBasicEndpointGroup** operation cannot be repeatedly called for the same basic GA instance within a specific period of time.
+          * *   You cannot call the **CreateBasicEndpointGroup** operation again on the same GA instance before the previous request is completed.
           *
           * @param request CreateBasicEndpointGroupRequest
           * @return CreateBasicEndpointGroupResponse
@@ -3074,9 +3062,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * *   **CreateBasicEndpoints** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [ListBasicEndpoints](~~466831~~) operation to query the status of endpoints. - If one or more endpoints are in the **init** state, the endpoints are being created. In this case, you can perform only query operations. - If all endpoints are in the **active** state, the endpoints are created.
-          * *   The **CreateBasicEndpoints** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          * *   **CreateBasicEndpoints** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [ListBasicEndpoints](~~466831~~) operation to query the status of endpoints. - If one or more endpoints are in the **init** state, it indicates that the endpoints are being created. In this case, you can continue to perform query operations on the endpoints. If all endpoints are in the **active** state, it indicates that the endpoints are created.
+          * *   You cannot call the **CreateBasicEndpoints** operation again on the same GA instance before the previous operation is complete.
           *
           * @param request CreateBasicEndpointsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3126,9 +3113,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * *   **CreateBasicEndpoints** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [ListBasicEndpoints](~~466831~~) operation to query the status of endpoints. - If one or more endpoints are in the **init** state, the endpoints are being created. In this case, you can perform only query operations. - If all endpoints are in the **active** state, the endpoints are created.
-          * *   The **CreateBasicEndpoints** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          * *   **CreateBasicEndpoints** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [ListBasicEndpoints](~~466831~~) operation to query the status of endpoints. - If one or more endpoints are in the **init** state, it indicates that the endpoints are being created. In this case, you can continue to perform query operations on the endpoints. If all endpoints are in the **active** state, it indicates that the endpoints are created.
+          * *   You cannot call the **CreateBasicEndpoints** operation again on the same GA instance before the previous operation is complete.
           *
           * @param request CreateBasicEndpointsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3178,9 +3164,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * *   **CreateBasicEndpoints** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [ListBasicEndpoints](~~466831~~) operation to query the status of endpoints. - If one or more endpoints are in the **init** state, the endpoints are being created. In this case, you can perform only query operations. - If all endpoints are in the **active** state, the endpoints are created.
-          * *   The **CreateBasicEndpoints** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          * *   **CreateBasicEndpoints** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [ListBasicEndpoints](~~466831~~) operation to query the status of endpoints. - If one or more endpoints are in the **init** state, it indicates that the endpoints are being created. In this case, you can continue to perform query operations on the endpoints. If all endpoints are in the **active** state, it indicates that the endpoints are created.
+          * *   You cannot call the **CreateBasicEndpoints** operation again on the same GA instance before the previous operation is complete.
           *
           * @param request CreateBasicEndpointsRequest
           * @return CreateBasicEndpointsResponse
@@ -3192,9 +3177,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * *   **CreateBasicEndpoints** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [ListBasicEndpoints](~~466831~~) operation to query the status of endpoints. - If one or more endpoints are in the **init** state, the endpoints are being created. In this case, you can perform only query operations. - If all endpoints are in the **active** state, the endpoints are created.
-          * *   The **CreateBasicEndpoints** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          * *   **CreateBasicEndpoints** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [ListBasicEndpoints](~~466831~~) operation to query the status of endpoints. - If one or more endpoints are in the **init** state, it indicates that the endpoints are being created. In this case, you can continue to perform query operations on the endpoints. If all endpoints are in the **active** state, it indicates that the endpoints are created.
+          * *   You cannot call the **CreateBasicEndpoints** operation again on the same GA instance before the previous operation is complete.
           *
           * @param request CreateBasicEndpointsRequest
           * @return CreateBasicEndpointsResponse
@@ -3206,12 +3190,12 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * Before you call this operation, take note of the following limits:
-          * *   You can add only one acceleration region for each basic GA instance, and only IPv4 clients can connect to basic GA instances.
-          * *   **CreateBasicIpSet** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of an acceleration region.
+          * Take note of the following limits:
+          * *   You can specify only one acceleration region for each basic GA instance, and only IPv4 clients can connect to basic GA instances.
+          * *   **CreateBasicIpSet** is an asynchronous operation. After you send a request, the system returns an acceleration region ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of the task.
           *     *   If the acceleration region is in the **init** state, the acceleration region is being created. In this case, you can perform only query operations.
           *     *   If the acceleration region is in the **active** state, the acceleration region is created.
-          * *   The **CreateBasicIpSet** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          * *   You cannot call the **CreateBasicIpSet** operation again on the same GA instance before the previous task is completed.
           *
           * @param request CreateBasicIpSetRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3265,12 +3249,12 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * Before you call this operation, take note of the following limits:
-          * *   You can add only one acceleration region for each basic GA instance, and only IPv4 clients can connect to basic GA instances.
-          * *   **CreateBasicIpSet** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of an acceleration region.
+          * Take note of the following limits:
+          * *   You can specify only one acceleration region for each basic GA instance, and only IPv4 clients can connect to basic GA instances.
+          * *   **CreateBasicIpSet** is an asynchronous operation. After you send a request, the system returns an acceleration region ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of the task.
           *     *   If the acceleration region is in the **init** state, the acceleration region is being created. In this case, you can perform only query operations.
           *     *   If the acceleration region is in the **active** state, the acceleration region is created.
-          * *   The **CreateBasicIpSet** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          * *   You cannot call the **CreateBasicIpSet** operation again on the same GA instance before the previous task is completed.
           *
           * @param request CreateBasicIpSetRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3324,12 +3308,12 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * Before you call this operation, take note of the following limits:
-          * *   You can add only one acceleration region for each basic GA instance, and only IPv4 clients can connect to basic GA instances.
-          * *   **CreateBasicIpSet** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of an acceleration region.
+          * Take note of the following limits:
+          * *   You can specify only one acceleration region for each basic GA instance, and only IPv4 clients can connect to basic GA instances.
+          * *   **CreateBasicIpSet** is an asynchronous operation. After you send a request, the system returns an acceleration region ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of the task.
           *     *   If the acceleration region is in the **init** state, the acceleration region is being created. In this case, you can perform only query operations.
           *     *   If the acceleration region is in the **active** state, the acceleration region is created.
-          * *   The **CreateBasicIpSet** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          * *   You cannot call the **CreateBasicIpSet** operation again on the same GA instance before the previous task is completed.
           *
           * @param request CreateBasicIpSetRequest
           * @return CreateBasicIpSetResponse
@@ -3341,12 +3325,12 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * Before you call this operation, take note of the following limits:
-          * *   You can add only one acceleration region for each basic GA instance, and only IPv4 clients can connect to basic GA instances.
-          * *   **CreateBasicIpSet** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of an acceleration region.
+          * Take note of the following limits:
+          * *   You can specify only one acceleration region for each basic GA instance, and only IPv4 clients can connect to basic GA instances.
+          * *   **CreateBasicIpSet** is an asynchronous operation. After you send a request, the system returns an acceleration region ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of the task.
           *     *   If the acceleration region is in the **init** state, the acceleration region is being created. In this case, you can perform only query operations.
           *     *   If the acceleration region is in the **active** state, the acceleration region is created.
-          * *   The **CreateBasicIpSet** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          * *   You cannot call the **CreateBasicIpSet** operation again on the same GA instance before the previous task is completed.
           *
           * @param request CreateBasicIpSetRequest
           * @return CreateBasicIpSetResponse
@@ -3358,19 +3342,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * After you configure a custom routing listener for a Global Accelerator (GA) instance, the GA instance generates a port mapping table based on the listener port range, mapping information (protocols and port ranges) of the associated endpoint groups, and IP addresses of endpoints (vSwitches), and forwards client requests to the specified IP addresses and ports in the vSwitches.
-          * You can call this operation to create mapping configurations for an endpoint group of a custom routing listener. When you call this operation, take note of the following items:
-          * *   **CreateCustomRoutingEndpointGroupDestinations** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of an endpoint group and determine whether mapping configurations are created for the endpoint group.
-          *     *   If the endpoint group is in the **updating** state, it indicates that mapping configurations are being created for the endpoint group. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, it indicates that mapping configurations are created for the endpoint group.
-          * *   The **CreateCustomRoutingEndpointGroupDestinations** operation cannot be called repeatedly for the same GA instance within a specific period of time.
-          * ### Prerequisites
-          * Make sure that the following operations are performed before you call this operation:
-          * *   A standard GA instance is created. For more information, see [CreateAccelerator](~~206786~~).
-          * *   A bandwidth plan is associated with the standard GA instance. For more information, see [BandwidthPackageAddAccelerator](~~153239~~).
-          * *   An application is deployed to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.
-          * *   The permissions to use custom routing listeners are acquired and a custom routing listener is created for the GA instance. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see [CreateListener](~~153253~~).
-          * *   An endpoint group is created for the custom routing listener. For more information, see [CreateCustomRoutingEndpointGroups](~~449363~~).
+          * readAndWrite
           *
           * @param request CreateCustomRoutingEndpointGroupDestinationsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3420,19 +3392,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * After you configure a custom routing listener for a Global Accelerator (GA) instance, the GA instance generates a port mapping table based on the listener port range, mapping information (protocols and port ranges) of the associated endpoint groups, and IP addresses of endpoints (vSwitches), and forwards client requests to the specified IP addresses and ports in the vSwitches.
-          * You can call this operation to create mapping configurations for an endpoint group of a custom routing listener. When you call this operation, take note of the following items:
-          * *   **CreateCustomRoutingEndpointGroupDestinations** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of an endpoint group and determine whether mapping configurations are created for the endpoint group.
-          *     *   If the endpoint group is in the **updating** state, it indicates that mapping configurations are being created for the endpoint group. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, it indicates that mapping configurations are created for the endpoint group.
-          * *   The **CreateCustomRoutingEndpointGroupDestinations** operation cannot be called repeatedly for the same GA instance within a specific period of time.
-          * ### Prerequisites
-          * Make sure that the following operations are performed before you call this operation:
-          * *   A standard GA instance is created. For more information, see [CreateAccelerator](~~206786~~).
-          * *   A bandwidth plan is associated with the standard GA instance. For more information, see [BandwidthPackageAddAccelerator](~~153239~~).
-          * *   An application is deployed to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.
-          * *   The permissions to use custom routing listeners are acquired and a custom routing listener is created for the GA instance. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see [CreateListener](~~153253~~).
-          * *   An endpoint group is created for the custom routing listener. For more information, see [CreateCustomRoutingEndpointGroups](~~449363~~).
+          * readAndWrite
           *
           * @param request CreateCustomRoutingEndpointGroupDestinationsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3482,19 +3442,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * After you configure a custom routing listener for a Global Accelerator (GA) instance, the GA instance generates a port mapping table based on the listener port range, mapping information (protocols and port ranges) of the associated endpoint groups, and IP addresses of endpoints (vSwitches), and forwards client requests to the specified IP addresses and ports in the vSwitches.
-          * You can call this operation to create mapping configurations for an endpoint group of a custom routing listener. When you call this operation, take note of the following items:
-          * *   **CreateCustomRoutingEndpointGroupDestinations** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of an endpoint group and determine whether mapping configurations are created for the endpoint group.
-          *     *   If the endpoint group is in the **updating** state, it indicates that mapping configurations are being created for the endpoint group. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, it indicates that mapping configurations are created for the endpoint group.
-          * *   The **CreateCustomRoutingEndpointGroupDestinations** operation cannot be called repeatedly for the same GA instance within a specific period of time.
-          * ### Prerequisites
-          * Make sure that the following operations are performed before you call this operation:
-          * *   A standard GA instance is created. For more information, see [CreateAccelerator](~~206786~~).
-          * *   A bandwidth plan is associated with the standard GA instance. For more information, see [BandwidthPackageAddAccelerator](~~153239~~).
-          * *   An application is deployed to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.
-          * *   The permissions to use custom routing listeners are acquired and a custom routing listener is created for the GA instance. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see [CreateListener](~~153253~~).
-          * *   An endpoint group is created for the custom routing listener. For more information, see [CreateCustomRoutingEndpointGroups](~~449363~~).
+          * readAndWrite
           *
           * @param request CreateCustomRoutingEndpointGroupDestinationsRequest
           * @return CreateCustomRoutingEndpointGroupDestinationsResponse
@@ -3506,19 +3454,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * After you configure a custom routing listener for a Global Accelerator (GA) instance, the GA instance generates a port mapping table based on the listener port range, mapping information (protocols and port ranges) of the associated endpoint groups, and IP addresses of endpoints (vSwitches), and forwards client requests to the specified IP addresses and ports in the vSwitches.
-          * You can call this operation to create mapping configurations for an endpoint group of a custom routing listener. When you call this operation, take note of the following items:
-          * *   **CreateCustomRoutingEndpointGroupDestinations** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of an endpoint group and determine whether mapping configurations are created for the endpoint group.
-          *     *   If the endpoint group is in the **updating** state, it indicates that mapping configurations are being created for the endpoint group. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, it indicates that mapping configurations are created for the endpoint group.
-          * *   The **CreateCustomRoutingEndpointGroupDestinations** operation cannot be called repeatedly for the same GA instance within a specific period of time.
-          * ### Prerequisites
-          * Make sure that the following operations are performed before you call this operation:
-          * *   A standard GA instance is created. For more information, see [CreateAccelerator](~~206786~~).
-          * *   A bandwidth plan is associated with the standard GA instance. For more information, see [BandwidthPackageAddAccelerator](~~153239~~).
-          * *   An application is deployed to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.
-          * *   The permissions to use custom routing listeners are acquired and a custom routing listener is created for the GA instance. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see [CreateListener](~~153253~~).
-          * *   An endpoint group is created for the custom routing listener. For more information, see [CreateCustomRoutingEndpointGroups](~~449363~~).
+          * readAndWrite
           *
           * @param request CreateCustomRoutingEndpointGroupDestinationsRequest
           * @return CreateCustomRoutingEndpointGroupDestinationsResponse
@@ -3886,19 +3822,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * After you configure a custom routing listener for a Global Accelerator (GA) instance, the instance generates a port mapping table based on the listener port range, the protocols and port ranges of the associated endpoint groups, and the IP addresses of endpoints (vSwitches), and forwards client requests to specified IP addresses and ports in the vSwitches.
-          * This operation is used to create endpoints for custom routing listeners. When you call this operation, take note of the following items:
-          * *   **CreateCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of an endpoint group and determine whether endpoints are created in the endpoint group.
-          *     *   If the endpoint group is in the **updating** state, it indicates that endpoints are being created. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, it indicates that endpoints are created.
-          * *   The **CreateCustomRoutingEndpoints** operation cannot be called repeatedly for the same GA instance within a specific period of time.
-          * ### Prerequisites
-          * The following operations are complete before you call this operation:
-          * *   Create a standard GA instance. For more information, see [CreateAccelerator](~~206786~~).
-          * *   Associate a bandwidth plan with the standard GA instance. For more information, see [BandwidthPackageAddAccelerator](~~153239~~).
-          * *   Deploy an application that serves as the endpoint of the GA instance. The application is used to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.
-          * *   Apply for permissions to use custom routing listeners and create a custom routing listener for the standard GA instance. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see [CreateListener](~~153253~~).
-          * *   Create an endpoint group for the custom routing listener. For more information, see [CreateCustomRoutingEndpointGroups](~~449363~~).
+          * readAndWrite
           *
           * @param request CreateCustomRoutingEndpointsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -3944,19 +3868,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * After you configure a custom routing listener for a Global Accelerator (GA) instance, the instance generates a port mapping table based on the listener port range, the protocols and port ranges of the associated endpoint groups, and the IP addresses of endpoints (vSwitches), and forwards client requests to specified IP addresses and ports in the vSwitches.
-          * This operation is used to create endpoints for custom routing listeners. When you call this operation, take note of the following items:
-          * *   **CreateCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of an endpoint group and determine whether endpoints are created in the endpoint group.
-          *     *   If the endpoint group is in the **updating** state, it indicates that endpoints are being created. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, it indicates that endpoints are created.
-          * *   The **CreateCustomRoutingEndpoints** operation cannot be called repeatedly for the same GA instance within a specific period of time.
-          * ### Prerequisites
-          * The following operations are complete before you call this operation:
-          * *   Create a standard GA instance. For more information, see [CreateAccelerator](~~206786~~).
-          * *   Associate a bandwidth plan with the standard GA instance. For more information, see [BandwidthPackageAddAccelerator](~~153239~~).
-          * *   Deploy an application that serves as the endpoint of the GA instance. The application is used to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.
-          * *   Apply for permissions to use custom routing listeners and create a custom routing listener for the standard GA instance. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see [CreateListener](~~153253~~).
-          * *   Create an endpoint group for the custom routing listener. For more information, see [CreateCustomRoutingEndpointGroups](~~449363~~).
+          * readAndWrite
           *
           * @param request CreateCustomRoutingEndpointsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4002,19 +3914,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * After you configure a custom routing listener for a Global Accelerator (GA) instance, the instance generates a port mapping table based on the listener port range, the protocols and port ranges of the associated endpoint groups, and the IP addresses of endpoints (vSwitches), and forwards client requests to specified IP addresses and ports in the vSwitches.
-          * This operation is used to create endpoints for custom routing listeners. When you call this operation, take note of the following items:
-          * *   **CreateCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of an endpoint group and determine whether endpoints are created in the endpoint group.
-          *     *   If the endpoint group is in the **updating** state, it indicates that endpoints are being created. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, it indicates that endpoints are created.
-          * *   The **CreateCustomRoutingEndpoints** operation cannot be called repeatedly for the same GA instance within a specific period of time.
-          * ### Prerequisites
-          * The following operations are complete before you call this operation:
-          * *   Create a standard GA instance. For more information, see [CreateAccelerator](~~206786~~).
-          * *   Associate a bandwidth plan with the standard GA instance. For more information, see [BandwidthPackageAddAccelerator](~~153239~~).
-          * *   Deploy an application that serves as the endpoint of the GA instance. The application is used to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.
-          * *   Apply for permissions to use custom routing listeners and create a custom routing listener for the standard GA instance. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see [CreateListener](~~153253~~).
-          * *   Create an endpoint group for the custom routing listener. For more information, see [CreateCustomRoutingEndpointGroups](~~449363~~).
+          * readAndWrite
           *
           * @param request CreateCustomRoutingEndpointsRequest
           * @return CreateCustomRoutingEndpointsResponse
@@ -4026,19 +3926,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * After you configure a custom routing listener for a Global Accelerator (GA) instance, the instance generates a port mapping table based on the listener port range, the protocols and port ranges of the associated endpoint groups, and the IP addresses of endpoints (vSwitches), and forwards client requests to specified IP addresses and ports in the vSwitches.
-          * This operation is used to create endpoints for custom routing listeners. When you call this operation, take note of the following items:
-          * *   **CreateCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of an endpoint group and determine whether endpoints are created in the endpoint group.
-          *     *   If the endpoint group is in the **updating** state, it indicates that endpoints are being created. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, it indicates that endpoints are created.
-          * *   The **CreateCustomRoutingEndpoints** operation cannot be called repeatedly for the same GA instance within a specific period of time.
-          * ### Prerequisites
-          * The following operations are complete before you call this operation:
-          * *   Create a standard GA instance. For more information, see [CreateAccelerator](~~206786~~).
-          * *   Associate a bandwidth plan with the standard GA instance. For more information, see [BandwidthPackageAddAccelerator](~~153239~~).
-          * *   Deploy an application that serves as the endpoint of the GA instance. The application is used to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.
-          * *   Apply for permissions to use custom routing listeners and create a custom routing listener for the standard GA instance. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see [CreateListener](~~153253~~).
-          * *   Create an endpoint group for the custom routing listener. For more information, see [CreateCustomRoutingEndpointGroups](~~449363~~).
+          * readAndWrite
           *
           * @param request CreateCustomRoutingEndpointsRequest
           * @return CreateCustomRoutingEndpointsResponse
@@ -4710,11 +4598,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ## Usage notes
-          * *   **CreateIpSets** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of acceleration regions.
+          * *   **CreateIpSets** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of the task.
           *     *   If acceleration regions are in the **init** state, it indicates that the acceleration regions are being created. In this case, you can perform only query operations.
           *     *   If acceleration regions are in the **active** state, it indicates that the acceleration regions are created.
-          * *   The **CreateIpSets** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+          * *   You cannot call the **CreateIpSets** operation again on the same GA instance before the previous operation is completed.
           *
           * @param request CreateIpSetsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4760,11 +4647,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ## Usage notes
-          * *   **CreateIpSets** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of acceleration regions.
+          * *   **CreateIpSets** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of the task.
           *     *   If acceleration regions are in the **init** state, it indicates that the acceleration regions are being created. In this case, you can perform only query operations.
           *     *   If acceleration regions are in the **active** state, it indicates that the acceleration regions are created.
-          * *   The **CreateIpSets** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+          * *   You cannot call the **CreateIpSets** operation again on the same GA instance before the previous operation is completed.
           *
           * @param request CreateIpSetsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4810,11 +4696,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ## Usage notes
-          * *   **CreateIpSets** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of acceleration regions.
+          * *   **CreateIpSets** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of the task.
           *     *   If acceleration regions are in the **init** state, it indicates that the acceleration regions are being created. In this case, you can perform only query operations.
           *     *   If acceleration regions are in the **active** state, it indicates that the acceleration regions are created.
-          * *   The **CreateIpSets** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+          * *   You cannot call the **CreateIpSets** operation again on the same GA instance before the previous operation is completed.
           *
           * @param request CreateIpSetsRequest
           * @return CreateIpSetsResponse
@@ -4826,11 +4711,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ## Usage notes
-          * *   **CreateIpSets** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of acceleration regions.
+          * *   **CreateIpSets** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of the task.
           *     *   If acceleration regions are in the **init** state, it indicates that the acceleration regions are being created. In this case, you can perform only query operations.
           *     *   If acceleration regions are in the **active** state, it indicates that the acceleration regions are created.
-          * *   The **CreateIpSets** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+          * *   You cannot call the **CreateIpSets** operation again on the same GA instance before the previous operation is completed.
           *
           * @param request CreateIpSetsRequest
           * @return CreateIpSetsResponse
@@ -5203,9 +5087,9 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /**
           * *   Subscription GA instances cannot be deleted.
-          * *   GA instances that have bandwidth plans associated cannot be deleted. To delete such GA instances, disassociate the bandwidth plans. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
-          * *   **DeleteAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
-          *     *   If the GA instance is in the **deleting** state, it indicates that the GA instance is being deleted. In this case, you can perform only query operations.
+          * *   GA instances that have bandwidth plans associated cannot be deleted. To delete such GA instances, disassociate the bandwidth plans first. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
+          * *   **DeleteAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can use the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
+          *     *   If the GA instance is in the **deleting** state, the GA instance is being deleted. In this case, you can perform only query operations.
           *     *   If the GA instance cannot be queried, it indicates that the GA instance is deleted.
           *
           * @param request DeleteAcceleratorRequest
@@ -5245,9 +5129,9 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /**
           * *   Subscription GA instances cannot be deleted.
-          * *   GA instances that have bandwidth plans associated cannot be deleted. To delete such GA instances, disassociate the bandwidth plans. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
-          * *   **DeleteAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
-          *     *   If the GA instance is in the **deleting** state, it indicates that the GA instance is being deleted. In this case, you can perform only query operations.
+          * *   GA instances that have bandwidth plans associated cannot be deleted. To delete such GA instances, disassociate the bandwidth plans first. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
+          * *   **DeleteAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can use the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
+          *     *   If the GA instance is in the **deleting** state, the GA instance is being deleted. In this case, you can perform only query operations.
           *     *   If the GA instance cannot be queried, it indicates that the GA instance is deleted.
           *
           * @param request DeleteAcceleratorRequest
@@ -5287,9 +5171,9 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /**
           * *   Subscription GA instances cannot be deleted.
-          * *   GA instances that have bandwidth plans associated cannot be deleted. To delete such GA instances, disassociate the bandwidth plans. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
-          * *   **DeleteAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
-          *     *   If the GA instance is in the **deleting** state, it indicates that the GA instance is being deleted. In this case, you can perform only query operations.
+          * *   GA instances that have bandwidth plans associated cannot be deleted. To delete such GA instances, disassociate the bandwidth plans first. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
+          * *   **DeleteAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can use the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
+          *     *   If the GA instance is in the **deleting** state, the GA instance is being deleted. In this case, you can perform only query operations.
           *     *   If the GA instance cannot be queried, it indicates that the GA instance is deleted.
           *
           * @param request DeleteAcceleratorRequest
@@ -5303,9 +5187,9 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /**
           * *   Subscription GA instances cannot be deleted.
-          * *   GA instances that have bandwidth plans associated cannot be deleted. To delete such GA instances, disassociate the bandwidth plans. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
-          * *   **DeleteAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
-          *     *   If the GA instance is in the **deleting** state, it indicates that the GA instance is being deleted. In this case, you can perform only query operations.
+          * *   GA instances that have bandwidth plans associated cannot be deleted. To delete such GA instances, disassociate the bandwidth plans first. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
+          * *   **DeleteAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can use the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
+          *     *   If the GA instance is in the **deleting** state, the GA instance is being deleted. In this case, you can perform only query operations.
           *     *   If the GA instance cannot be queried, it indicates that the GA instance is deleted.
           *
           * @param request DeleteAcceleratorRequest
@@ -5568,7 +5452,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         /**
           * *   By default, subscription bandwidth plans cannot be deleted. If you want to delete subscription bandwidth plans, contact your account manager.
           * *   Bandwidth plans that are associated with Global Accelerator (GA) instances cannot be deleted. Before you can delete a bandwidth plan that is associated with a GA instance, you must disassociate the bandwidth plan from the GA instance. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
-          * *   **DeleteBandwidthPackage** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan that you want to delete.
+          * *   **DeleteBandwidthPackage** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the task.
           *     *   If the bandwidth plan is in the **deleting** state, it indicates that the bandwidth plan is being deleted. In this case, you can perform only query operations.
           *     *   If the bandwidth plan cannot be found, it indicates that the bandwidth plan is deleted.
           * *   The **DeleteBandwidthPackage** operation cannot be called repeatedly for the same bandwidth plan within a specific period of time.
@@ -5615,7 +5499,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         /**
           * *   By default, subscription bandwidth plans cannot be deleted. If you want to delete subscription bandwidth plans, contact your account manager.
           * *   Bandwidth plans that are associated with Global Accelerator (GA) instances cannot be deleted. Before you can delete a bandwidth plan that is associated with a GA instance, you must disassociate the bandwidth plan from the GA instance. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
-          * *   **DeleteBandwidthPackage** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan that you want to delete.
+          * *   **DeleteBandwidthPackage** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the task.
           *     *   If the bandwidth plan is in the **deleting** state, it indicates that the bandwidth plan is being deleted. In this case, you can perform only query operations.
           *     *   If the bandwidth plan cannot be found, it indicates that the bandwidth plan is deleted.
           * *   The **DeleteBandwidthPackage** operation cannot be called repeatedly for the same bandwidth plan within a specific period of time.
@@ -5662,7 +5546,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         /**
           * *   By default, subscription bandwidth plans cannot be deleted. If you want to delete subscription bandwidth plans, contact your account manager.
           * *   Bandwidth plans that are associated with Global Accelerator (GA) instances cannot be deleted. Before you can delete a bandwidth plan that is associated with a GA instance, you must disassociate the bandwidth plan from the GA instance. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
-          * *   **DeleteBandwidthPackage** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan that you want to delete.
+          * *   **DeleteBandwidthPackage** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the task.
           *     *   If the bandwidth plan is in the **deleting** state, it indicates that the bandwidth plan is being deleted. In this case, you can perform only query operations.
           *     *   If the bandwidth plan cannot be found, it indicates that the bandwidth plan is deleted.
           * *   The **DeleteBandwidthPackage** operation cannot be called repeatedly for the same bandwidth plan within a specific period of time.
@@ -5679,7 +5563,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         /**
           * *   By default, subscription bandwidth plans cannot be deleted. If you want to delete subscription bandwidth plans, contact your account manager.
           * *   Bandwidth plans that are associated with Global Accelerator (GA) instances cannot be deleted. Before you can delete a bandwidth plan that is associated with a GA instance, you must disassociate the bandwidth plan from the GA instance. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
-          * *   **DeleteBandwidthPackage** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan that you want to delete.
+          * *   **DeleteBandwidthPackage** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the task.
           *     *   If the bandwidth plan is in the **deleting** state, it indicates that the bandwidth plan is being deleted. In this case, you can perform only query operations.
           *     *   If the bandwidth plan cannot be found, it indicates that the bandwidth plan is deleted.
           * *   The **DeleteBandwidthPackage** operation cannot be called repeatedly for the same bandwidth plan within a specific period of time.
@@ -6298,10 +6182,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteBasicIpSet** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [GetBasicIpSet](~~362987~~) operation to query the state of an acceleration region.
+          * *   \\*\\*DeleteBasicIpSet\\*\\* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of an acceleration region:
           *     *   If the acceleration region is in the **deleting** state, it indicates that the acceleration region is being deleted. In this case, you can perform only query operations.
           *     *   If the information of the acceleration region is not displayed in the response, it indicates that the acceleration region is deleted.
-          * *   The **DeleteBasicIpSet** cannot be called repeatedly for the same basic GA instance within a specific period of time.
+          * *   The \\*\\*DeleteBasicIpSet\\*\\* operation cannot be called repeatedly for the same basic GA instance within a specific period of time.
           *
           * @param request DeleteBasicIpSetRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6343,10 +6227,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteBasicIpSet** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [GetBasicIpSet](~~362987~~) operation to query the state of an acceleration region.
+          * *   \\*\\*DeleteBasicIpSet\\*\\* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of an acceleration region:
           *     *   If the acceleration region is in the **deleting** state, it indicates that the acceleration region is being deleted. In this case, you can perform only query operations.
           *     *   If the information of the acceleration region is not displayed in the response, it indicates that the acceleration region is deleted.
-          * *   The **DeleteBasicIpSet** cannot be called repeatedly for the same basic GA instance within a specific period of time.
+          * *   The \\*\\*DeleteBasicIpSet\\*\\* operation cannot be called repeatedly for the same basic GA instance within a specific period of time.
           *
           * @param request DeleteBasicIpSetRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6388,10 +6272,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteBasicIpSet** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [GetBasicIpSet](~~362987~~) operation to query the state of an acceleration region.
+          * *   \\*\\*DeleteBasicIpSet\\*\\* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of an acceleration region:
           *     *   If the acceleration region is in the **deleting** state, it indicates that the acceleration region is being deleted. In this case, you can perform only query operations.
           *     *   If the information of the acceleration region is not displayed in the response, it indicates that the acceleration region is deleted.
-          * *   The **DeleteBasicIpSet** cannot be called repeatedly for the same basic GA instance within a specific period of time.
+          * *   The \\*\\*DeleteBasicIpSet\\*\\* operation cannot be called repeatedly for the same basic GA instance within a specific period of time.
           *
           * @param request DeleteBasicIpSetRequest
           * @return DeleteBasicIpSetResponse
@@ -6403,10 +6287,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteBasicIpSet** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [GetBasicIpSet](~~362987~~) operation to query the state of an acceleration region.
+          * *   \\*\\*DeleteBasicIpSet\\*\\* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of an acceleration region:
           *     *   If the acceleration region is in the **deleting** state, it indicates that the acceleration region is being deleted. In this case, you can perform only query operations.
           *     *   If the information of the acceleration region is not displayed in the response, it indicates that the acceleration region is deleted.
-          * *   The **DeleteBasicIpSet** cannot be called repeatedly for the same basic GA instance within a specific period of time.
+          * *   The \\*\\*DeleteBasicIpSet\\*\\* operation cannot be called repeatedly for the same basic GA instance within a specific period of time.
           *
           * @param request DeleteBasicIpSetRequest
           * @return DeleteBasicIpSetResponse
@@ -6418,11 +6302,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * *   **DeleteCustomRoutingEndpointGroupDestinations** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) to query the status of an endpoint group and verify whether mappings are deleted from the endpoint group.
+          * *   **DeleteCustomRoutingEndpointGroupDestinations** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) to query the status of the task.
           *     *   If the endpoint group is in the **updating** state, it indicates that mappings are being deleted from the endpoint group. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state and no information about the mappings that you want to delete is found in the response of the [DescribeCustomRoutingEndpointGroupDestinations](~~449378~~) operation, the mappings are deleted from the endpoint group.
-          * *   The **DeleteCustomRoutingEndpointGroupDestinations** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+          *     *   If the endpoint group is in the **active** state and no information about the mappings that you want to delete is found in the response when you call the [DescribeCustomRoutingEndpointGroupDestinations](~~449378~~) operation, it indicates the mappings are deleted from the endpoint group.
+          * *   You cannot call the **DeleteCustomRoutingEndpointGroupDestinations** operation again on the same Global Accelerator (GA) instance before the previous request is completed.
           *
           * @param request DeleteCustomRoutingEndpointGroupDestinationsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6472,11 +6355,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * *   **DeleteCustomRoutingEndpointGroupDestinations** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) to query the status of an endpoint group and verify whether mappings are deleted from the endpoint group.
+          * *   **DeleteCustomRoutingEndpointGroupDestinations** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) to query the status of the task.
           *     *   If the endpoint group is in the **updating** state, it indicates that mappings are being deleted from the endpoint group. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state and no information about the mappings that you want to delete is found in the response of the [DescribeCustomRoutingEndpointGroupDestinations](~~449378~~) operation, the mappings are deleted from the endpoint group.
-          * *   The **DeleteCustomRoutingEndpointGroupDestinations** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+          *     *   If the endpoint group is in the **active** state and no information about the mappings that you want to delete is found in the response when you call the [DescribeCustomRoutingEndpointGroupDestinations](~~449378~~) operation, it indicates the mappings are deleted from the endpoint group.
+          * *   You cannot call the **DeleteCustomRoutingEndpointGroupDestinations** operation again on the same Global Accelerator (GA) instance before the previous request is completed.
           *
           * @param request DeleteCustomRoutingEndpointGroupDestinationsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6526,11 +6408,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * *   **DeleteCustomRoutingEndpointGroupDestinations** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) to query the status of an endpoint group and verify whether mappings are deleted from the endpoint group.
+          * *   **DeleteCustomRoutingEndpointGroupDestinations** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) to query the status of the task.
           *     *   If the endpoint group is in the **updating** state, it indicates that mappings are being deleted from the endpoint group. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state and no information about the mappings that you want to delete is found in the response of the [DescribeCustomRoutingEndpointGroupDestinations](~~449378~~) operation, the mappings are deleted from the endpoint group.
-          * *   The **DeleteCustomRoutingEndpointGroupDestinations** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+          *     *   If the endpoint group is in the **active** state and no information about the mappings that you want to delete is found in the response when you call the [DescribeCustomRoutingEndpointGroupDestinations](~~449378~~) operation, it indicates the mappings are deleted from the endpoint group.
+          * *   You cannot call the **DeleteCustomRoutingEndpointGroupDestinations** operation again on the same Global Accelerator (GA) instance before the previous request is completed.
           *
           * @param request DeleteCustomRoutingEndpointGroupDestinationsRequest
           * @return DeleteCustomRoutingEndpointGroupDestinationsResponse
@@ -6542,11 +6423,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * *   **DeleteCustomRoutingEndpointGroupDestinations** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) to query the status of an endpoint group and verify whether mappings are deleted from the endpoint group.
+          * *   **DeleteCustomRoutingEndpointGroupDestinations** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) to query the status of the task.
           *     *   If the endpoint group is in the **updating** state, it indicates that mappings are being deleted from the endpoint group. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state and no information about the mappings that you want to delete is found in the response of the [DescribeCustomRoutingEndpointGroupDestinations](~~449378~~) operation, the mappings are deleted from the endpoint group.
-          * *   The **DeleteCustomRoutingEndpointGroupDestinations** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+          *     *   If the endpoint group is in the **active** state and no information about the mappings that you want to delete is found in the response when you call the [DescribeCustomRoutingEndpointGroupDestinations](~~449378~~) operation, it indicates the mappings are deleted from the endpoint group.
+          * *   You cannot call the **DeleteCustomRoutingEndpointGroupDestinations** operation again on the same Global Accelerator (GA) instance before the previous request is completed.
           *
           * @param request DeleteCustomRoutingEndpointGroupDestinationsRequest
           * @return DeleteCustomRoutingEndpointGroupDestinationsResponse
@@ -6822,11 +6702,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * *   **DeleteCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of an endpoint group and check whether endpoints are deleted.
-          *     *   If an endpoint group is in the **updating** state, the endpoints are being deleted. In this case, you can perform only query operations.
-          *     *   If an endpoint group is in the **active** state and the endpoints cannot be found after you call the [DescribeCustomRoutingEndpoint](~~449386~~) operation, the endpoints are deleted.
-          * *   You cannot repeatedly call the **DeleteCustomRoutingEndpoints** operation for the same Global Accelerator (GA) instance within the specified period of time.
+          * *   **DeleteCustomRoutingEndpoints** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) to query the status of the task.
+          *     *   If an endpoint group is in the **updating** state, the endpoint is being deleted. In this case, you can perform only query operations.
+          *     *   If an endpoint group is in the **active** state and the endpoint cannot be found after you call the [DescribeCustomRoutingEndpoint](~~449386~~) operation, the endpoint is deleted.
+          * *   You cannot call the **DeleteCustomRoutingEndpoints** operation again on the same Global Accelerator (GA) instance before the previous task is completed.
           *
           * @param request DeleteCustomRoutingEndpointsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6872,11 +6751,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * *   **DeleteCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of an endpoint group and check whether endpoints are deleted.
-          *     *   If an endpoint group is in the **updating** state, the endpoints are being deleted. In this case, you can perform only query operations.
-          *     *   If an endpoint group is in the **active** state and the endpoints cannot be found after you call the [DescribeCustomRoutingEndpoint](~~449386~~) operation, the endpoints are deleted.
-          * *   You cannot repeatedly call the **DeleteCustomRoutingEndpoints** operation for the same Global Accelerator (GA) instance within the specified period of time.
+          * *   **DeleteCustomRoutingEndpoints** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) to query the status of the task.
+          *     *   If an endpoint group is in the **updating** state, the endpoint is being deleted. In this case, you can perform only query operations.
+          *     *   If an endpoint group is in the **active** state and the endpoint cannot be found after you call the [DescribeCustomRoutingEndpoint](~~449386~~) operation, the endpoint is deleted.
+          * *   You cannot call the **DeleteCustomRoutingEndpoints** operation again on the same Global Accelerator (GA) instance before the previous task is completed.
           *
           * @param request DeleteCustomRoutingEndpointsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6922,11 +6800,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * *   **DeleteCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of an endpoint group and check whether endpoints are deleted.
-          *     *   If an endpoint group is in the **updating** state, the endpoints are being deleted. In this case, you can perform only query operations.
-          *     *   If an endpoint group is in the **active** state and the endpoints cannot be found after you call the [DescribeCustomRoutingEndpoint](~~449386~~) operation, the endpoints are deleted.
-          * *   You cannot repeatedly call the **DeleteCustomRoutingEndpoints** operation for the same Global Accelerator (GA) instance within the specified period of time.
+          * *   **DeleteCustomRoutingEndpoints** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) to query the status of the task.
+          *     *   If an endpoint group is in the **updating** state, the endpoint is being deleted. In this case, you can perform only query operations.
+          *     *   If an endpoint group is in the **active** state and the endpoint cannot be found after you call the [DescribeCustomRoutingEndpoint](~~449386~~) operation, the endpoint is deleted.
+          * *   You cannot call the **DeleteCustomRoutingEndpoints** operation again on the same Global Accelerator (GA) instance before the previous task is completed.
           *
           * @param request DeleteCustomRoutingEndpointsRequest
           * @return DeleteCustomRoutingEndpointsResponse
@@ -6938,11 +6815,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * *   **DeleteCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of an endpoint group and check whether endpoints are deleted.
-          *     *   If an endpoint group is in the **updating** state, the endpoints are being deleted. In this case, you can perform only query operations.
-          *     *   If an endpoint group is in the **active** state and the endpoints cannot be found after you call the [DescribeCustomRoutingEndpoint](~~449386~~) operation, the endpoints are deleted.
-          * *   You cannot repeatedly call the **DeleteCustomRoutingEndpoints** operation for the same Global Accelerator (GA) instance within the specified period of time.
+          * *   **DeleteCustomRoutingEndpoints** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) to query the status of the task.
+          *     *   If an endpoint group is in the **updating** state, the endpoint is being deleted. In this case, you can perform only query operations.
+          *     *   If an endpoint group is in the **active** state and the endpoint cannot be found after you call the [DescribeCustomRoutingEndpoint](~~449386~~) operation, the endpoint is deleted.
+          * *   You cannot call the **DeleteCustomRoutingEndpoints** operation again on the same Global Accelerator (GA) instance before the previous task is completed.
           *
           * @param request DeleteCustomRoutingEndpointsRequest
           * @return DeleteCustomRoutingEndpointsResponse
@@ -7182,9 +7058,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteEndpointGroups** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
-          *     *   If the endpoint group is in the **deleting** state, it indicates that the endpoint group is being deleted. In this case, you can perform only query operations.
-          *     *   If the endpoint group cannot be queried, it indicates that the endpoint group is deleted.
+          * *   **DeleteEndpointGroups** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the status of the task.
+          *     *   If an endpoint group is in the **deleting** state, the endpoint group is being deleted. In this case, you can perform only query operations.
+          *     *   If an endpoint group cannot be queried, the endpoint group is deleted.
           * *   The **DeleteEndpointGroups** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request DeleteEndpointGroupsRequest
@@ -7231,9 +7107,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteEndpointGroups** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
-          *     *   If the endpoint group is in the **deleting** state, it indicates that the endpoint group is being deleted. In this case, you can perform only query operations.
-          *     *   If the endpoint group cannot be queried, it indicates that the endpoint group is deleted.
+          * *   **DeleteEndpointGroups** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the status of the task.
+          *     *   If an endpoint group is in the **deleting** state, the endpoint group is being deleted. In this case, you can perform only query operations.
+          *     *   If an endpoint group cannot be queried, the endpoint group is deleted.
           * *   The **DeleteEndpointGroups** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request DeleteEndpointGroupsRequest
@@ -7280,9 +7156,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteEndpointGroups** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
-          *     *   If the endpoint group is in the **deleting** state, it indicates that the endpoint group is being deleted. In this case, you can perform only query operations.
-          *     *   If the endpoint group cannot be queried, it indicates that the endpoint group is deleted.
+          * *   **DeleteEndpointGroups** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the status of the task.
+          *     *   If an endpoint group is in the **deleting** state, the endpoint group is being deleted. In this case, you can perform only query operations.
+          *     *   If an endpoint group cannot be queried, the endpoint group is deleted.
           * *   The **DeleteEndpointGroups** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request DeleteEndpointGroupsRequest
@@ -7295,9 +7171,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteEndpointGroups** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
-          *     *   If the endpoint group is in the **deleting** state, it indicates that the endpoint group is being deleted. In this case, you can perform only query operations.
-          *     *   If the endpoint group cannot be queried, it indicates that the endpoint group is deleted.
+          * *   **DeleteEndpointGroups** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the status of the task.
+          *     *   If an endpoint group is in the **deleting** state, the endpoint group is being deleted. In this case, you can perform only query operations.
+          *     *   If an endpoint group cannot be queried, the endpoint group is deleted.
           * *   The **DeleteEndpointGroups** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request DeleteEndpointGroupsRequest
@@ -7310,9 +7186,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteForwardingRules** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [ListForwardingRules](~~205817~~) operation to query the state of a forwarding rule.
-          *     *   If the forwarding rule is in the **deleting** state, the forwarding rule is being deleted. In this case, you can perform only query operations.
-          *     *   If the forwarding rule cannot be queried, the forwarding rule is deleted.
+          * *   **DeleteForwardingRules** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListForwardingRules](~~205817~~) operation to query the status of the task.
+          *     *   If a forwarding rule is in the **deleting** state, the forwarding rule is being deleted. In this case, you can perform only query operations.
+          *     *   If a forwarding rule cannot be queried, the forwarding rule is deleted.
           * *   The **DeleteForwardingRules** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request DeleteForwardingRulesRequest
@@ -7363,9 +7239,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteForwardingRules** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [ListForwardingRules](~~205817~~) operation to query the state of a forwarding rule.
-          *     *   If the forwarding rule is in the **deleting** state, the forwarding rule is being deleted. In this case, you can perform only query operations.
-          *     *   If the forwarding rule cannot be queried, the forwarding rule is deleted.
+          * *   **DeleteForwardingRules** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListForwardingRules](~~205817~~) operation to query the status of the task.
+          *     *   If a forwarding rule is in the **deleting** state, the forwarding rule is being deleted. In this case, you can perform only query operations.
+          *     *   If a forwarding rule cannot be queried, the forwarding rule is deleted.
           * *   The **DeleteForwardingRules** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request DeleteForwardingRulesRequest
@@ -7416,9 +7292,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteForwardingRules** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [ListForwardingRules](~~205817~~) operation to query the state of a forwarding rule.
-          *     *   If the forwarding rule is in the **deleting** state, the forwarding rule is being deleted. In this case, you can perform only query operations.
-          *     *   If the forwarding rule cannot be queried, the forwarding rule is deleted.
+          * *   **DeleteForwardingRules** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListForwardingRules](~~205817~~) operation to query the status of the task.
+          *     *   If a forwarding rule is in the **deleting** state, the forwarding rule is being deleted. In this case, you can perform only query operations.
+          *     *   If a forwarding rule cannot be queried, the forwarding rule is deleted.
           * *   The **DeleteForwardingRules** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request DeleteForwardingRulesRequest
@@ -7431,9 +7307,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteForwardingRules** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [ListForwardingRules](~~205817~~) operation to query the state of a forwarding rule.
-          *     *   If the forwarding rule is in the **deleting** state, the forwarding rule is being deleted. In this case, you can perform only query operations.
-          *     *   If the forwarding rule cannot be queried, the forwarding rule is deleted.
+          * *   **DeleteForwardingRules** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListForwardingRules](~~205817~~) operation to query the status of the task.
+          *     *   If a forwarding rule is in the **deleting** state, the forwarding rule is being deleted. In this case, you can perform only query operations.
+          *     *   If a forwarding rule cannot be queried, the forwarding rule is deleted.
           * *   The **DeleteForwardingRules** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request DeleteForwardingRulesRequest
@@ -7686,8 +7562,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of a listener.
-          *     *   If the listener is in the **deleting** state, it indicates that the listener is being deleted. In this case, you can perform only query operations.
+          * *   **DeleteListener** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the state of the listener.
+          *     *   If the listener is in the **deleting** state, it indicates that the listener is being deleted. In this case, you can continue to perform query operations on the listener.
           *     *   If the listener cannot be queried, it indicates that the listener is deleted.
           * *   The **DeleteListener** operation cannot be repeatedly called to delete listeners for the same Global Accelerator (GA) instance within a specific period of time.
           *
@@ -7731,8 +7607,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of a listener.
-          *     *   If the listener is in the **deleting** state, it indicates that the listener is being deleted. In this case, you can perform only query operations.
+          * *   **DeleteListener** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the state of the listener.
+          *     *   If the listener is in the **deleting** state, it indicates that the listener is being deleted. In this case, you can continue to perform query operations on the listener.
           *     *   If the listener cannot be queried, it indicates that the listener is deleted.
           * *   The **DeleteListener** operation cannot be repeatedly called to delete listeners for the same Global Accelerator (GA) instance within a specific period of time.
           *
@@ -7776,8 +7652,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of a listener.
-          *     *   If the listener is in the **deleting** state, it indicates that the listener is being deleted. In this case, you can perform only query operations.
+          * *   **DeleteListener** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the state of the listener.
+          *     *   If the listener is in the **deleting** state, it indicates that the listener is being deleted. In this case, you can continue to perform query operations on the listener.
           *     *   If the listener cannot be queried, it indicates that the listener is deleted.
           * *   The **DeleteListener** operation cannot be repeatedly called to delete listeners for the same Global Accelerator (GA) instance within a specific period of time.
           *
@@ -7791,8 +7667,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **DeleteListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of a listener.
-          *     *   If the listener is in the **deleting** state, it indicates that the listener is being deleted. In this case, you can perform only query operations.
+          * *   **DeleteListener** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the state of the listener.
+          *     *   If the listener is in the **deleting** state, it indicates that the listener is being deleted. In this case, you can continue to perform query operations on the listener.
           *     *   If the listener cannot be queried, it indicates that the listener is deleted.
           * *   The **DeleteListener** operation cannot be repeatedly called to delete listeners for the same Global Accelerator (GA) instance within a specific period of time.
           *
@@ -8087,6 +7963,72 @@ namespace AlibabaCloud.SDK.Ga20191120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAcceleratorAutoRenewAttributeWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeAcceleratorServiceStatusResponse DescribeAcceleratorServiceStatusWithOptions(DescribeAcceleratorServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAcceleratorServiceStatus",
+                Version = "2019-11-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAcceleratorServiceStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeAcceleratorServiceStatusResponse> DescribeAcceleratorServiceStatusWithOptionsAsync(DescribeAcceleratorServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAcceleratorServiceStatus",
+                Version = "2019-11-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAcceleratorServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeAcceleratorServiceStatusResponse DescribeAcceleratorServiceStatus(DescribeAcceleratorServiceStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAcceleratorServiceStatusWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeAcceleratorServiceStatusResponse> DescribeAcceleratorServiceStatusAsync(DescribeAcceleratorServiceStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAcceleratorServiceStatusWithOptionsAsync(request, runtime);
         }
 
         public DescribeApplicationMonitorResponse DescribeApplicationMonitorWithOptions(DescribeApplicationMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -13167,6 +13109,80 @@ namespace AlibabaCloud.SDK.Ga20191120
             return await ListDomainsWithOptionsAsync(request, runtime);
         }
 
+        public ListEndpointGroupIpAddressCidrBlocksResponse ListEndpointGroupIpAddressCidrBlocksWithOptions(ListEndpointGroupIpAddressCidrBlocksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointGroupRegion))
+            {
+                query["EndpointGroupRegion"] = request.EndpointGroupRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEndpointGroupIpAddressCidrBlocks",
+                Version = "2019-11-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEndpointGroupIpAddressCidrBlocksResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListEndpointGroupIpAddressCidrBlocksResponse> ListEndpointGroupIpAddressCidrBlocksWithOptionsAsync(ListEndpointGroupIpAddressCidrBlocksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointGroupRegion))
+            {
+                query["EndpointGroupRegion"] = request.EndpointGroupRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEndpointGroupIpAddressCidrBlocks",
+                Version = "2019-11-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEndpointGroupIpAddressCidrBlocksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListEndpointGroupIpAddressCidrBlocksResponse ListEndpointGroupIpAddressCidrBlocks(ListEndpointGroupIpAddressCidrBlocksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListEndpointGroupIpAddressCidrBlocksWithOptions(request, runtime);
+        }
+
+        public async Task<ListEndpointGroupIpAddressCidrBlocksResponse> ListEndpointGroupIpAddressCidrBlocksAsync(ListEndpointGroupIpAddressCidrBlocksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListEndpointGroupIpAddressCidrBlocksWithOptionsAsync(request, runtime);
+        }
+
         public ListEndpointGroupsResponse ListEndpointGroupsWithOptions(ListEndpointGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14173,11 +14189,148 @@ namespace AlibabaCloud.SDK.Ga20191120
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        public OpenAcceleratorServiceResponse OpenAcceleratorServiceWithOptions(OpenAcceleratorServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenAcceleratorService",
+                Version = "2019-11-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenAcceleratorServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<OpenAcceleratorServiceResponse> OpenAcceleratorServiceWithOptionsAsync(OpenAcceleratorServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenAcceleratorService",
+                Version = "2019-11-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenAcceleratorServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public OpenAcceleratorServiceResponse OpenAcceleratorService(OpenAcceleratorServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OpenAcceleratorServiceWithOptions(request, runtime);
+        }
+
+        public async Task<OpenAcceleratorServiceResponse> OpenAcceleratorServiceAsync(OpenAcceleratorServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OpenAcceleratorServiceWithOptionsAsync(request, runtime);
+        }
+
+        public QueryCrossBorderApprovalStatusResponse QueryCrossBorderApprovalStatusWithOptions(QueryCrossBorderApprovalStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCrossBorderApprovalStatus",
+                Version = "2019-11-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCrossBorderApprovalStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QueryCrossBorderApprovalStatusResponse> QueryCrossBorderApprovalStatusWithOptionsAsync(QueryCrossBorderApprovalStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCrossBorderApprovalStatus",
+                Version = "2019-11-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCrossBorderApprovalStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QueryCrossBorderApprovalStatusResponse QueryCrossBorderApprovalStatus(QueryCrossBorderApprovalStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryCrossBorderApprovalStatusWithOptions(request, runtime);
+        }
+
+        public async Task<QueryCrossBorderApprovalStatusResponse> QueryCrossBorderApprovalStatusAsync(QueryCrossBorderApprovalStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryCrossBorderApprovalStatusWithOptionsAsync(request, runtime);
+        }
+
         /**
-          * *   The **RemoveEntriesFromAcl** operation is asynchronous. After you send a request, the system returns the request ID, but the operation is still being performed in the system background. You can call the [GetAcl](~~258292~~) or [ListAcls](~~258291~~) operation to query the status of an ACL:
-          *     *   If an ACL is in the **configuring** state, the IP entries are being deleted. In this case, you can perform only query operations.
-          *     *   If an ACL is in the **active** state, the IP entries are deleted.
-          * *   You cannot repeatedly call the **RemoveEntriesFromAcl** operation for the same Global Accelerator (GA) instance within the specified period of time.
+          * The operation that you want to perform. Set the value to **RemoveEntriesFromAcl**.
           *
           * @param request RemoveEntriesFromAclRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14227,10 +14380,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   The **RemoveEntriesFromAcl** operation is asynchronous. After you send a request, the system returns the request ID, but the operation is still being performed in the system background. You can call the [GetAcl](~~258292~~) or [ListAcls](~~258291~~) operation to query the status of an ACL:
-          *     *   If an ACL is in the **configuring** state, the IP entries are being deleted. In this case, you can perform only query operations.
-          *     *   If an ACL is in the **active** state, the IP entries are deleted.
-          * *   You cannot repeatedly call the **RemoveEntriesFromAcl** operation for the same Global Accelerator (GA) instance within the specified period of time.
+          * The operation that you want to perform. Set the value to **RemoveEntriesFromAcl**.
           *
           * @param request RemoveEntriesFromAclRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14280,10 +14430,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   The **RemoveEntriesFromAcl** operation is asynchronous. After you send a request, the system returns the request ID, but the operation is still being performed in the system background. You can call the [GetAcl](~~258292~~) or [ListAcls](~~258291~~) operation to query the status of an ACL:
-          *     *   If an ACL is in the **configuring** state, the IP entries are being deleted. In this case, you can perform only query operations.
-          *     *   If an ACL is in the **active** state, the IP entries are deleted.
-          * *   You cannot repeatedly call the **RemoveEntriesFromAcl** operation for the same Global Accelerator (GA) instance within the specified period of time.
+          * The operation that you want to perform. Set the value to **RemoveEntriesFromAcl**.
           *
           * @param request RemoveEntriesFromAclRequest
           * @return RemoveEntriesFromAclResponse
@@ -14295,10 +14442,7 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   The **RemoveEntriesFromAcl** operation is asynchronous. After you send a request, the system returns the request ID, but the operation is still being performed in the system background. You can call the [GetAcl](~~258292~~) or [ListAcls](~~258291~~) operation to query the status of an ACL:
-          *     *   If an ACL is in the **configuring** state, the IP entries are being deleted. In this case, you can perform only query operations.
-          *     *   If an ACL is in the **active** state, the IP entries are deleted.
-          * *   You cannot repeatedly call the **RemoveEntriesFromAcl** operation for the same Global Accelerator (GA) instance within the specified period of time.
+          * The operation that you want to perform. Set the value to **RemoveEntriesFromAcl**.
           *
           * @param request RemoveEntriesFromAclRequest
           * @return RemoveEntriesFromAclResponse
@@ -14980,8 +15124,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * After you modify the specification of a GA instance, you must confirm the modification. The **UpdateAcceleratorConfirm** operation is used to confirm the specification modification to a GA instance. When you call this operation to confirm the specification modification to a GA instance, take note of the following items:
-          * *   **UpdateAcceleratorConfirm** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of the GA instance.
+          * After you modify the specification of a GA instance, you must confirm the modification. The **UpdateAcceleratorConfirm** operation is used to confirm the specification of a GA instance that is modified. When you call this operation to confirm the specification of a GA instance, take note of the following items:
+          * *   **UpdateAcceleratorConfirm** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of a GA instance.
           *     *   If the GA instance is in the **configuring** state, it indicates that the specification of the instance is being modified. In this case, you can perform only query operations.
           *     *   If the GA instance is in the **active** state, it indicates that the specification of the instance is modified.
           * *   The **UpdateAcceleratorConfirm** operation cannot be called repeatedly for the same GA instance within a specific period of time.
@@ -15022,8 +15166,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * After you modify the specification of a GA instance, you must confirm the modification. The **UpdateAcceleratorConfirm** operation is used to confirm the specification modification to a GA instance. When you call this operation to confirm the specification modification to a GA instance, take note of the following items:
-          * *   **UpdateAcceleratorConfirm** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of the GA instance.
+          * After you modify the specification of a GA instance, you must confirm the modification. The **UpdateAcceleratorConfirm** operation is used to confirm the specification of a GA instance that is modified. When you call this operation to confirm the specification of a GA instance, take note of the following items:
+          * *   **UpdateAcceleratorConfirm** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of a GA instance.
           *     *   If the GA instance is in the **configuring** state, it indicates that the specification of the instance is being modified. In this case, you can perform only query operations.
           *     *   If the GA instance is in the **active** state, it indicates that the specification of the instance is modified.
           * *   The **UpdateAcceleratorConfirm** operation cannot be called repeatedly for the same GA instance within a specific period of time.
@@ -15064,8 +15208,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * After you modify the specification of a GA instance, you must confirm the modification. The **UpdateAcceleratorConfirm** operation is used to confirm the specification modification to a GA instance. When you call this operation to confirm the specification modification to a GA instance, take note of the following items:
-          * *   **UpdateAcceleratorConfirm** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of the GA instance.
+          * After you modify the specification of a GA instance, you must confirm the modification. The **UpdateAcceleratorConfirm** operation is used to confirm the specification of a GA instance that is modified. When you call this operation to confirm the specification of a GA instance, take note of the following items:
+          * *   **UpdateAcceleratorConfirm** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of a GA instance.
           *     *   If the GA instance is in the **configuring** state, it indicates that the specification of the instance is being modified. In this case, you can perform only query operations.
           *     *   If the GA instance is in the **active** state, it indicates that the specification of the instance is modified.
           * *   The **UpdateAcceleratorConfirm** operation cannot be called repeatedly for the same GA instance within a specific period of time.
@@ -15080,8 +15224,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * After you modify the specification of a GA instance, you must confirm the modification. The **UpdateAcceleratorConfirm** operation is used to confirm the specification modification to a GA instance. When you call this operation to confirm the specification modification to a GA instance, take note of the following items:
-          * *   **UpdateAcceleratorConfirm** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of the GA instance.
+          * After you modify the specification of a GA instance, you must confirm the modification. The **UpdateAcceleratorConfirm** operation is used to confirm the specification of a GA instance that is modified. When you call this operation to confirm the specification of a GA instance, take note of the following items:
+          * *   **UpdateAcceleratorConfirm** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of a GA instance.
           *     *   If the GA instance is in the **configuring** state, it indicates that the specification of the instance is being modified. In this case, you can perform only query operations.
           *     *   If the GA instance is in the **active** state, it indicates that the specification of the instance is modified.
           * *   The **UpdateAcceleratorConfirm** operation cannot be called repeatedly for the same GA instance within a specific period of time.
@@ -15095,6 +15239,16 @@ namespace AlibabaCloud.SDK.Ga20191120
             return await UpdateAcceleratorConfirmWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### Prerequisites
+          * You can call this operation to change the type of transmission network for a **standard** GA instance whose bandwidth metering method is **pay-by-data-transfer**. Before you call this operation, make sure that the following requirements are met:
+          * *   Cloud Data Transfer (CDT) is activated. When you call the [CreateAccelerator](~~206786~~) operation and set **BandwidthBillingType** to **CDT** to create a **standard** GA instance whose bandwidth metering method is **pay-by-data-transfer**, CDT is automatically activated. The data transfer fees are managed by CDT.
+          * *   If you want to set **CrossBorderMode** to **private**, which specifies cross-border Express Connect circuit as the type of transmission network, make sure that your enterprise account completed real-name verification. For more information, see [Real-name verification](~~52595~~).
+          *
+          * @param request UpdateAcceleratorCrossBorderModeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateAcceleratorCrossBorderModeResponse
+         */
         public UpdateAcceleratorCrossBorderModeResponse UpdateAcceleratorCrossBorderModeWithOptions(UpdateAcceleratorCrossBorderModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15134,6 +15288,16 @@ namespace AlibabaCloud.SDK.Ga20191120
             return TeaModel.ToObject<UpdateAcceleratorCrossBorderModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### Prerequisites
+          * You can call this operation to change the type of transmission network for a **standard** GA instance whose bandwidth metering method is **pay-by-data-transfer**. Before you call this operation, make sure that the following requirements are met:
+          * *   Cloud Data Transfer (CDT) is activated. When you call the [CreateAccelerator](~~206786~~) operation and set **BandwidthBillingType** to **CDT** to create a **standard** GA instance whose bandwidth metering method is **pay-by-data-transfer**, CDT is automatically activated. The data transfer fees are managed by CDT.
+          * *   If you want to set **CrossBorderMode** to **private**, which specifies cross-border Express Connect circuit as the type of transmission network, make sure that your enterprise account completed real-name verification. For more information, see [Real-name verification](~~52595~~).
+          *
+          * @param request UpdateAcceleratorCrossBorderModeRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateAcceleratorCrossBorderModeResponse
+         */
         public async Task<UpdateAcceleratorCrossBorderModeResponse> UpdateAcceleratorCrossBorderModeWithOptionsAsync(UpdateAcceleratorCrossBorderModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15173,12 +15337,30 @@ namespace AlibabaCloud.SDK.Ga20191120
             return TeaModel.ToObject<UpdateAcceleratorCrossBorderModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Prerequisites
+          * You can call this operation to change the type of transmission network for a **standard** GA instance whose bandwidth metering method is **pay-by-data-transfer**. Before you call this operation, make sure that the following requirements are met:
+          * *   Cloud Data Transfer (CDT) is activated. When you call the [CreateAccelerator](~~206786~~) operation and set **BandwidthBillingType** to **CDT** to create a **standard** GA instance whose bandwidth metering method is **pay-by-data-transfer**, CDT is automatically activated. The data transfer fees are managed by CDT.
+          * *   If you want to set **CrossBorderMode** to **private**, which specifies cross-border Express Connect circuit as the type of transmission network, make sure that your enterprise account completed real-name verification. For more information, see [Real-name verification](~~52595~~).
+          *
+          * @param request UpdateAcceleratorCrossBorderModeRequest
+          * @return UpdateAcceleratorCrossBorderModeResponse
+         */
         public UpdateAcceleratorCrossBorderModeResponse UpdateAcceleratorCrossBorderMode(UpdateAcceleratorCrossBorderModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateAcceleratorCrossBorderModeWithOptions(request, runtime);
         }
 
+        /**
+          * ### Prerequisites
+          * You can call this operation to change the type of transmission network for a **standard** GA instance whose bandwidth metering method is **pay-by-data-transfer**. Before you call this operation, make sure that the following requirements are met:
+          * *   Cloud Data Transfer (CDT) is activated. When you call the [CreateAccelerator](~~206786~~) operation and set **BandwidthBillingType** to **CDT** to create a **standard** GA instance whose bandwidth metering method is **pay-by-data-transfer**, CDT is automatically activated. The data transfer fees are managed by CDT.
+          * *   If you want to set **CrossBorderMode** to **private**, which specifies cross-border Express Connect circuit as the type of transmission network, make sure that your enterprise account completed real-name verification. For more information, see [Real-name verification](~~52595~~).
+          *
+          * @param request UpdateAcceleratorCrossBorderModeRequest
+          * @return UpdateAcceleratorCrossBorderModeResponse
+         */
         public async Task<UpdateAcceleratorCrossBorderModeResponse> UpdateAcceleratorCrossBorderModeAsync(UpdateAcceleratorCrossBorderModeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15760,15 +15942,15 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * When you call this operation, take note of the following items:
-          * *   **UpdateBandwidthPackage** is a synchronous operation when it is called to modify the configurations excluding the bandwidth value of a bandwidth plan. The new configurations take effect immediately after the operation is performed.
-          * *   **UpdateBandwidthPackage** is an asynchronous operation when it is called to modify the configurations including the bandwidth value of a bandwidth plan that is not associated with a Global Accelerator (GA) instance. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query whether the bandwidth plan is modified.
-          *     *   If the parameter settings of the bandwidth plan remain unchanged, it indicates that the bandwidth plan is being modified. In this case, you can perform only query operations.
-          *     *   If the parameter settings of the bandwidth plan change, it indicates that the bandwidth plan is modified.
-          * *   **UpdateBandwidthPackage** is an asynchronous operation when it is called to modify the configurations including the bandwidth value of a bandwidth plan that is associated with a GA instance. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of the GA instance and determine whether its associated bandwidth plan is modified.
-          *     *   If the GA instance is in the **configuring** state, it indicates that the bandwidth plan is being modified. In this case, you can perform only query operations.
-          *     *   If the GA instance is in the **active** state, it indicates that the bandwidth plan is modified.
-          * *   The **UpdateBandwidthPackage** operation cannot be called repeatedly for the same bandwidth plan within a specific period of time.
+          * Take note of the following items:
+          * *   **UpdateBandwidthPackage** is a synchronous operation when you call the operation to modify the configuration excluding the bandwidth value of a bandwidth plan. The new configuration immediately takes effect after the operation is performed.
+          * *   **UpdateBandwidthPackage** is an asynchronous operation when you call the operation to modify the configuration including the bandwidth value of a bandwidth plan that is not associated with a Global Accelerator (GA) instance. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the task.
+          *     *   If the parameter values of the bandwidth plan remain unchanged, the bandwidth plan is being modified. In this case, you can perform only query operations.
+          *     *   If the parameter values of the bandwidth plan are changed, the bandwidth plan is modified.
+          * *   **UpdateBandwidthPackage** is an asynchronous operation when you call the operation to modify the configuration including the bandwidth value of a bandwidth plan that is associated with a GA instance. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of the task.
+          *     *   If the GA instance is in the **configuring** state, the bandwidth plan is being modified. In this case, you can perform only query operations.
+          *     *   If the GA instance is in the **active** state, the bandwidth plan is modified.
+          * *   You cannot repeatedly call the **UpdateBandwidthPackage** operation for the same bandwidth plan within a specific period of time.
           *
           * @param request UpdateBandwidthPackageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15830,15 +16012,15 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * When you call this operation, take note of the following items:
-          * *   **UpdateBandwidthPackage** is a synchronous operation when it is called to modify the configurations excluding the bandwidth value of a bandwidth plan. The new configurations take effect immediately after the operation is performed.
-          * *   **UpdateBandwidthPackage** is an asynchronous operation when it is called to modify the configurations including the bandwidth value of a bandwidth plan that is not associated with a Global Accelerator (GA) instance. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query whether the bandwidth plan is modified.
-          *     *   If the parameter settings of the bandwidth plan remain unchanged, it indicates that the bandwidth plan is being modified. In this case, you can perform only query operations.
-          *     *   If the parameter settings of the bandwidth plan change, it indicates that the bandwidth plan is modified.
-          * *   **UpdateBandwidthPackage** is an asynchronous operation when it is called to modify the configurations including the bandwidth value of a bandwidth plan that is associated with a GA instance. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of the GA instance and determine whether its associated bandwidth plan is modified.
-          *     *   If the GA instance is in the **configuring** state, it indicates that the bandwidth plan is being modified. In this case, you can perform only query operations.
-          *     *   If the GA instance is in the **active** state, it indicates that the bandwidth plan is modified.
-          * *   The **UpdateBandwidthPackage** operation cannot be called repeatedly for the same bandwidth plan within a specific period of time.
+          * Take note of the following items:
+          * *   **UpdateBandwidthPackage** is a synchronous operation when you call the operation to modify the configuration excluding the bandwidth value of a bandwidth plan. The new configuration immediately takes effect after the operation is performed.
+          * *   **UpdateBandwidthPackage** is an asynchronous operation when you call the operation to modify the configuration including the bandwidth value of a bandwidth plan that is not associated with a Global Accelerator (GA) instance. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the task.
+          *     *   If the parameter values of the bandwidth plan remain unchanged, the bandwidth plan is being modified. In this case, you can perform only query operations.
+          *     *   If the parameter values of the bandwidth plan are changed, the bandwidth plan is modified.
+          * *   **UpdateBandwidthPackage** is an asynchronous operation when you call the operation to modify the configuration including the bandwidth value of a bandwidth plan that is associated with a GA instance. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of the task.
+          *     *   If the GA instance is in the **configuring** state, the bandwidth plan is being modified. In this case, you can perform only query operations.
+          *     *   If the GA instance is in the **active** state, the bandwidth plan is modified.
+          * *   You cannot repeatedly call the **UpdateBandwidthPackage** operation for the same bandwidth plan within a specific period of time.
           *
           * @param request UpdateBandwidthPackageRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -15900,15 +16082,15 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * When you call this operation, take note of the following items:
-          * *   **UpdateBandwidthPackage** is a synchronous operation when it is called to modify the configurations excluding the bandwidth value of a bandwidth plan. The new configurations take effect immediately after the operation is performed.
-          * *   **UpdateBandwidthPackage** is an asynchronous operation when it is called to modify the configurations including the bandwidth value of a bandwidth plan that is not associated with a Global Accelerator (GA) instance. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query whether the bandwidth plan is modified.
-          *     *   If the parameter settings of the bandwidth plan remain unchanged, it indicates that the bandwidth plan is being modified. In this case, you can perform only query operations.
-          *     *   If the parameter settings of the bandwidth plan change, it indicates that the bandwidth plan is modified.
-          * *   **UpdateBandwidthPackage** is an asynchronous operation when it is called to modify the configurations including the bandwidth value of a bandwidth plan that is associated with a GA instance. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of the GA instance and determine whether its associated bandwidth plan is modified.
-          *     *   If the GA instance is in the **configuring** state, it indicates that the bandwidth plan is being modified. In this case, you can perform only query operations.
-          *     *   If the GA instance is in the **active** state, it indicates that the bandwidth plan is modified.
-          * *   The **UpdateBandwidthPackage** operation cannot be called repeatedly for the same bandwidth plan within a specific period of time.
+          * Take note of the following items:
+          * *   **UpdateBandwidthPackage** is a synchronous operation when you call the operation to modify the configuration excluding the bandwidth value of a bandwidth plan. The new configuration immediately takes effect after the operation is performed.
+          * *   **UpdateBandwidthPackage** is an asynchronous operation when you call the operation to modify the configuration including the bandwidth value of a bandwidth plan that is not associated with a Global Accelerator (GA) instance. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the task.
+          *     *   If the parameter values of the bandwidth plan remain unchanged, the bandwidth plan is being modified. In this case, you can perform only query operations.
+          *     *   If the parameter values of the bandwidth plan are changed, the bandwidth plan is modified.
+          * *   **UpdateBandwidthPackage** is an asynchronous operation when you call the operation to modify the configuration including the bandwidth value of a bandwidth plan that is associated with a GA instance. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of the task.
+          *     *   If the GA instance is in the **configuring** state, the bandwidth plan is being modified. In this case, you can perform only query operations.
+          *     *   If the GA instance is in the **active** state, the bandwidth plan is modified.
+          * *   You cannot repeatedly call the **UpdateBandwidthPackage** operation for the same bandwidth plan within a specific period of time.
           *
           * @param request UpdateBandwidthPackageRequest
           * @return UpdateBandwidthPackageResponse
@@ -15920,15 +16102,15 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * When you call this operation, take note of the following items:
-          * *   **UpdateBandwidthPackage** is a synchronous operation when it is called to modify the configurations excluding the bandwidth value of a bandwidth plan. The new configurations take effect immediately after the operation is performed.
-          * *   **UpdateBandwidthPackage** is an asynchronous operation when it is called to modify the configurations including the bandwidth value of a bandwidth plan that is not associated with a Global Accelerator (GA) instance. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query whether the bandwidth plan is modified.
-          *     *   If the parameter settings of the bandwidth plan remain unchanged, it indicates that the bandwidth plan is being modified. In this case, you can perform only query operations.
-          *     *   If the parameter settings of the bandwidth plan change, it indicates that the bandwidth plan is modified.
-          * *   **UpdateBandwidthPackage** is an asynchronous operation when it is called to modify the configurations including the bandwidth value of a bandwidth plan that is associated with a GA instance. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of the GA instance and determine whether its associated bandwidth plan is modified.
-          *     *   If the GA instance is in the **configuring** state, it indicates that the bandwidth plan is being modified. In this case, you can perform only query operations.
-          *     *   If the GA instance is in the **active** state, it indicates that the bandwidth plan is modified.
-          * *   The **UpdateBandwidthPackage** operation cannot be called repeatedly for the same bandwidth plan within a specific period of time.
+          * Take note of the following items:
+          * *   **UpdateBandwidthPackage** is a synchronous operation when you call the operation to modify the configuration excluding the bandwidth value of a bandwidth plan. The new configuration immediately takes effect after the operation is performed.
+          * *   **UpdateBandwidthPackage** is an asynchronous operation when you call the operation to modify the configuration including the bandwidth value of a bandwidth plan that is not associated with a Global Accelerator (GA) instance. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the task.
+          *     *   If the parameter values of the bandwidth plan remain unchanged, the bandwidth plan is being modified. In this case, you can perform only query operations.
+          *     *   If the parameter values of the bandwidth plan are changed, the bandwidth plan is modified.
+          * *   **UpdateBandwidthPackage** is an asynchronous operation when you call the operation to modify the configuration including the bandwidth value of a bandwidth plan that is associated with a GA instance. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of the task.
+          *     *   If the GA instance is in the **configuring** state, the bandwidth plan is being modified. In this case, you can perform only query operations.
+          *     *   If the GA instance is in the **active** state, the bandwidth plan is modified.
+          * *   You cannot repeatedly call the **UpdateBandwidthPackage** operation for the same bandwidth plan within a specific period of time.
           *
           * @param request UpdateBandwidthPackageRequest
           * @return UpdateBandwidthPackageResponse
@@ -16666,9 +16848,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **UpdateCustomRoutingEndpointTrafficPolicies** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the state of an endpoint group associated with a custom routing listener to check whether access policies of traffic are modified for endpoints in the endpoint group.
-          *     *   If the endpoint group is in the **updating** state, access policies of traffic are being modified for endpoints in the endpoint group. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, access policies of traffic are modified for endpoints in the endpoint group.
+          * *   **UpdateCustomRoutingEndpointTrafficPolicies** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of the task.
+          *     *   If the endpoint group is in the **updating** state, traffic policies are being modified for endpoints in the endpoint group. In this case, you can perform only query operations.
+          *     *   If the endpoint group is in the **active** state, traffic policies are modified for endpoints in the endpoint group.
           * *   The **UpdateCustomRoutingEndpointTrafficPolicies** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request UpdateCustomRoutingEndpointTrafficPoliciesRequest
@@ -16715,9 +16897,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **UpdateCustomRoutingEndpointTrafficPolicies** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the state of an endpoint group associated with a custom routing listener to check whether access policies of traffic are modified for endpoints in the endpoint group.
-          *     *   If the endpoint group is in the **updating** state, access policies of traffic are being modified for endpoints in the endpoint group. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, access policies of traffic are modified for endpoints in the endpoint group.
+          * *   **UpdateCustomRoutingEndpointTrafficPolicies** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of the task.
+          *     *   If the endpoint group is in the **updating** state, traffic policies are being modified for endpoints in the endpoint group. In this case, you can perform only query operations.
+          *     *   If the endpoint group is in the **active** state, traffic policies are modified for endpoints in the endpoint group.
           * *   The **UpdateCustomRoutingEndpointTrafficPolicies** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request UpdateCustomRoutingEndpointTrafficPoliciesRequest
@@ -16764,9 +16946,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **UpdateCustomRoutingEndpointTrafficPolicies** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the state of an endpoint group associated with a custom routing listener to check whether access policies of traffic are modified for endpoints in the endpoint group.
-          *     *   If the endpoint group is in the **updating** state, access policies of traffic are being modified for endpoints in the endpoint group. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, access policies of traffic are modified for endpoints in the endpoint group.
+          * *   **UpdateCustomRoutingEndpointTrafficPolicies** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of the task.
+          *     *   If the endpoint group is in the **updating** state, traffic policies are being modified for endpoints in the endpoint group. In this case, you can perform only query operations.
+          *     *   If the endpoint group is in the **active** state, traffic policies are modified for endpoints in the endpoint group.
           * *   The **UpdateCustomRoutingEndpointTrafficPolicies** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request UpdateCustomRoutingEndpointTrafficPoliciesRequest
@@ -16779,9 +16961,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **UpdateCustomRoutingEndpointTrafficPolicies** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the state of an endpoint group associated with a custom routing listener to check whether access policies of traffic are modified for endpoints in the endpoint group.
-          *     *   If the endpoint group is in the **updating** state, access policies of traffic are being modified for endpoints in the endpoint group. In this case, you can perform only query operations.
-          *     *   If the endpoint group is in the **active** state, access policies of traffic are modified for endpoints in the endpoint group.
+          * *   **UpdateCustomRoutingEndpointTrafficPolicies** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of the task.
+          *     *   If the endpoint group is in the **updating** state, traffic policies are being modified for endpoints in the endpoint group. In this case, you can perform only query operations.
+          *     *   If the endpoint group is in the **active** state, traffic policies are modified for endpoints in the endpoint group.
           * *   The **UpdateCustomRoutingEndpointTrafficPolicies** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
           *
           * @param request UpdateCustomRoutingEndpointTrafficPoliciesRequest
@@ -16922,9 +17104,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * You can call this operation to modify an accelerated domain name. If the new accelerated domain name is hosted in the Chinese mainland, you must obtain an ICP number for the domain name.
-          * You cannot repeatedly call the \\*\\* UpdateDomain\\*\\* operation by using the same Alibaba Cloud account within a specific period of time.
+          * You can call this operation to modify an accelerated domain name. If the new accelerated domain name is hosted in the Chinese mainland, you must obtain an Internet content provider (ICP) number for the domain name.
+          * You cannot call the **UpdateDomain** operation again by using the same Alibaba Cloud account before the previous request is completed.
           *
           * @param request UpdateDomainRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -16966,9 +17147,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * You can call this operation to modify an accelerated domain name. If the new accelerated domain name is hosted in the Chinese mainland, you must obtain an ICP number for the domain name.
-          * You cannot repeatedly call the \\*\\* UpdateDomain\\*\\* operation by using the same Alibaba Cloud account within a specific period of time.
+          * You can call this operation to modify an accelerated domain name. If the new accelerated domain name is hosted in the Chinese mainland, you must obtain an Internet content provider (ICP) number for the domain name.
+          * You cannot call the **UpdateDomain** operation again by using the same Alibaba Cloud account before the previous request is completed.
           *
           * @param request UpdateDomainRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17010,9 +17190,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * You can call this operation to modify an accelerated domain name. If the new accelerated domain name is hosted in the Chinese mainland, you must obtain an ICP number for the domain name.
-          * You cannot repeatedly call the \\*\\* UpdateDomain\\*\\* operation by using the same Alibaba Cloud account within a specific period of time.
+          * You can call this operation to modify an accelerated domain name. If the new accelerated domain name is hosted in the Chinese mainland, you must obtain an Internet content provider (ICP) number for the domain name.
+          * You cannot call the **UpdateDomain** operation again by using the same Alibaba Cloud account before the previous request is completed.
           *
           * @param request UpdateDomainRequest
           * @return UpdateDomainResponse
@@ -17024,9 +17203,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ### Usage notes
-          * You can call this operation to modify an accelerated domain name. If the new accelerated domain name is hosted in the Chinese mainland, you must obtain an ICP number for the domain name.
-          * You cannot repeatedly call the \\*\\* UpdateDomain\\*\\* operation by using the same Alibaba Cloud account within a specific period of time.
+          * You can call this operation to modify an accelerated domain name. If the new accelerated domain name is hosted in the Chinese mainland, you must obtain an Internet content provider (ICP) number for the domain name.
+          * You cannot call the **UpdateDomain** operation again by using the same Alibaba Cloud account before the previous request is completed.
           *
           * @param request UpdateDomainRequest
           * @return UpdateDomainResponse
@@ -17038,8 +17216,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * You can call this operation to obtain and update the ICP filing status of an accelerated domain name.
-          * You cannot repeatedly call the **UpdateDomainState** operation by using the same Alibaba Cloud account within a specific period of time.
+          * You can call this operation to query and update the ICP filing status of an accelerated domain name.
+          * The **UpdateDomainState** operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation with the same Alibaba Cloud account.
           *
           * @param request UpdateDomainStateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17077,8 +17255,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * You can call this operation to obtain and update the ICP filing status of an accelerated domain name.
-          * You cannot repeatedly call the **UpdateDomainState** operation by using the same Alibaba Cloud account within a specific period of time.
+          * You can call this operation to query and update the ICP filing status of an accelerated domain name.
+          * The **UpdateDomainState** operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation with the same Alibaba Cloud account.
           *
           * @param request UpdateDomainStateRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17116,8 +17294,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * You can call this operation to obtain and update the ICP filing status of an accelerated domain name.
-          * You cannot repeatedly call the **UpdateDomainState** operation by using the same Alibaba Cloud account within a specific period of time.
+          * You can call this operation to query and update the ICP filing status of an accelerated domain name.
+          * The **UpdateDomainState** operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation with the same Alibaba Cloud account.
           *
           * @param request UpdateDomainStateRequest
           * @return UpdateDomainStateResponse
@@ -17129,8 +17307,8 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * You can call this operation to obtain and update the ICP filing status of an accelerated domain name.
-          * You cannot repeatedly call the **UpdateDomainState** operation by using the same Alibaba Cloud account within a specific period of time.
+          * You can call this operation to query and update the ICP filing status of an accelerated domain name.
+          * The **UpdateDomainState** operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation with the same Alibaba Cloud account.
           *
           * @param request UpdateDomainStateRequest
           * @return UpdateDomainStateResponse
@@ -17736,11 +17914,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ## Usage notes
           * *   **UpdateIpSet** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of an acceleration region.
-          *     *   If the acceleration region is in the **updating** state, the acceleration region is being modified. In this case, you can perform only query operations.
-          *     *   If the acceleration region is in the **active** state, the acceleration region is modified.
-          * *   The **UpdateIpSet** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          *     *   If the acceleration region is in the **updating** state, it indicates that the acceleration region is being modified. In this case, you can continue to perform query operations on the acceleration regions.
+          *     *   If the acceleration region is in the **active** state, it indicates that the acceleration region is modified.
+          * *   You cannot call the **UpdateIpSet** operation again on the same GA instance before the previous operation is complete.
           *
           * @param request UpdateIpSetRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17786,11 +17963,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ## Usage notes
           * *   **UpdateIpSet** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of an acceleration region.
-          *     *   If the acceleration region is in the **updating** state, the acceleration region is being modified. In this case, you can perform only query operations.
-          *     *   If the acceleration region is in the **active** state, the acceleration region is modified.
-          * *   The **UpdateIpSet** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          *     *   If the acceleration region is in the **updating** state, it indicates that the acceleration region is being modified. In this case, you can continue to perform query operations on the acceleration regions.
+          *     *   If the acceleration region is in the **active** state, it indicates that the acceleration region is modified.
+          * *   You cannot call the **UpdateIpSet** operation again on the same GA instance before the previous operation is complete.
           *
           * @param request UpdateIpSetRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17836,11 +18012,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ## Usage notes
           * *   **UpdateIpSet** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of an acceleration region.
-          *     *   If the acceleration region is in the **updating** state, the acceleration region is being modified. In this case, you can perform only query operations.
-          *     *   If the acceleration region is in the **active** state, the acceleration region is modified.
-          * *   The **UpdateIpSet** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          *     *   If the acceleration region is in the **updating** state, it indicates that the acceleration region is being modified. In this case, you can continue to perform query operations on the acceleration regions.
+          *     *   If the acceleration region is in the **active** state, it indicates that the acceleration region is modified.
+          * *   You cannot call the **UpdateIpSet** operation again on the same GA instance before the previous operation is complete.
           *
           * @param request UpdateIpSetRequest
           * @return UpdateIpSetResponse
@@ -17852,11 +18027,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * ## Usage notes
           * *   **UpdateIpSet** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of an acceleration region.
-          *     *   If the acceleration region is in the **updating** state, the acceleration region is being modified. In this case, you can perform only query operations.
-          *     *   If the acceleration region is in the **active** state, the acceleration region is modified.
-          * *   The **UpdateIpSet** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          *     *   If the acceleration region is in the **updating** state, it indicates that the acceleration region is being modified. In this case, you can continue to perform query operations on the acceleration regions.
+          *     *   If the acceleration region is in the **active** state, it indicates that the acceleration region is modified.
+          * *   You cannot call the **UpdateIpSet** operation again on the same GA instance before the previous operation is complete.
           *
           * @param request UpdateIpSetRequest
           * @return UpdateIpSetResponse
@@ -17868,10 +18042,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **UpdateIpSet** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeIpSet](~~153246~~) operation to query the state of an acceleration region.
-          *     *   If the acceleration region is in the **updating** state, the acceleration region is being modified. In this case, you can perform only query operations.
-          *     *   If the acceleration region is in the **active** state, the acceleration region is modified.
-          * *   The **UpdateIpSet** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          * *   **UpdateIpSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of the task.
+          *     *   If an acceleration region is in the **updating** state, the acceleration region is being modified. In this case, you can perform only query operations.
+          *     *   If an acceleration region is in the **active** state, the acceleration region is modified.
+          * *   You cannot repeatedly call the **UpdateIpSet** operation for the same GA instance within a specific period of time.
           *
           * @param request UpdateIpSetsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17909,10 +18083,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **UpdateIpSet** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeIpSet](~~153246~~) operation to query the state of an acceleration region.
-          *     *   If the acceleration region is in the **updating** state, the acceleration region is being modified. In this case, you can perform only query operations.
-          *     *   If the acceleration region is in the **active** state, the acceleration region is modified.
-          * *   The **UpdateIpSet** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          * *   **UpdateIpSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of the task.
+          *     *   If an acceleration region is in the **updating** state, the acceleration region is being modified. In this case, you can perform only query operations.
+          *     *   If an acceleration region is in the **active** state, the acceleration region is modified.
+          * *   You cannot repeatedly call the **UpdateIpSet** operation for the same GA instance within a specific period of time.
           *
           * @param request UpdateIpSetsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17950,10 +18124,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **UpdateIpSet** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeIpSet](~~153246~~) operation to query the state of an acceleration region.
-          *     *   If the acceleration region is in the **updating** state, the acceleration region is being modified. In this case, you can perform only query operations.
-          *     *   If the acceleration region is in the **active** state, the acceleration region is modified.
-          * *   The **UpdateIpSet** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          * *   **UpdateIpSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of the task.
+          *     *   If an acceleration region is in the **updating** state, the acceleration region is being modified. In this case, you can perform only query operations.
+          *     *   If an acceleration region is in the **active** state, the acceleration region is modified.
+          * *   You cannot repeatedly call the **UpdateIpSet** operation for the same GA instance within a specific period of time.
           *
           * @param request UpdateIpSetsRequest
           * @return UpdateIpSetsResponse
@@ -17965,10 +18139,10 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * *   **UpdateIpSet** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeIpSet](~~153246~~) operation to query the state of an acceleration region.
-          *     *   If the acceleration region is in the **updating** state, the acceleration region is being modified. In this case, you can perform only query operations.
-          *     *   If the acceleration region is in the **active** state, the acceleration region is modified.
-          * *   The **UpdateIpSet** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+          * *   **UpdateIpSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of the task.
+          *     *   If an acceleration region is in the **updating** state, the acceleration region is being modified. In this case, you can perform only query operations.
+          *     *   If an acceleration region is in the **active** state, the acceleration region is modified.
+          * *   You cannot repeatedly call the **UpdateIpSet** operation for the same GA instance within a specific period of time.
           *
           * @param request UpdateIpSetsRequest
           * @return UpdateIpSetsResponse
@@ -17980,9 +18154,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * This operation can be called to modify the configurations such as protocol and ports of a listener to meet your business requirements.
+          * This operation can be called to modify the configurations such as the protocol and ports of a listener to meet your business requirements.
           * When you call this operation, take note of the following items:
-          * *   **UpdateListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of a listener.
+          * *   **UpdateListener** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the status of a listener.
           *     *   If the listener is in the **updating** state, it indicates that its configurations are being modified. In this case, you can perform only query operations.
           *     *   If the listener is in the **active** state, it indicates that its configurations are modified.
           * *   The **UpdateListener** operation cannot be repeatedly called to modify listener configurations for the same GA instance within a specific period of time.
@@ -18067,9 +18241,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * This operation can be called to modify the configurations such as protocol and ports of a listener to meet your business requirements.
+          * This operation can be called to modify the configurations such as the protocol and ports of a listener to meet your business requirements.
           * When you call this operation, take note of the following items:
-          * *   **UpdateListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of a listener.
+          * *   **UpdateListener** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the status of a listener.
           *     *   If the listener is in the **updating** state, it indicates that its configurations are being modified. In this case, you can perform only query operations.
           *     *   If the listener is in the **active** state, it indicates that its configurations are modified.
           * *   The **UpdateListener** operation cannot be repeatedly called to modify listener configurations for the same GA instance within a specific period of time.
@@ -18154,9 +18328,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * This operation can be called to modify the configurations such as protocol and ports of a listener to meet your business requirements.
+          * This operation can be called to modify the configurations such as the protocol and ports of a listener to meet your business requirements.
           * When you call this operation, take note of the following items:
-          * *   **UpdateListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of a listener.
+          * *   **UpdateListener** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the status of a listener.
           *     *   If the listener is in the **updating** state, it indicates that its configurations are being modified. In this case, you can perform only query operations.
           *     *   If the listener is in the **active** state, it indicates that its configurations are modified.
           * *   The **UpdateListener** operation cannot be repeatedly called to modify listener configurations for the same GA instance within a specific period of time.
@@ -18171,9 +18345,9 @@ namespace AlibabaCloud.SDK.Ga20191120
         }
 
         /**
-          * This operation can be called to modify the configurations such as protocol and ports of a listener to meet your business requirements.
+          * This operation can be called to modify the configurations such as the protocol and ports of a listener to meet your business requirements.
           * When you call this operation, take note of the following items:
-          * *   **UpdateListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of a listener.
+          * *   **UpdateListener** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the status of a listener.
           *     *   If the listener is in the **updating** state, it indicates that its configurations are being modified. In this case, you can perform only query operations.
           *     *   If the listener is in the **active** state, it indicates that its configurations are modified.
           * *   The **UpdateListener** operation cannot be repeatedly called to modify listener configurations for the same GA instance within a specific period of time.

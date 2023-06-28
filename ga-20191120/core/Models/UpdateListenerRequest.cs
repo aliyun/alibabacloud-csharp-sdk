@@ -9,23 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateListenerRequest : TeaModel {
+        /// <summary>
+        /// The range of ports that are used by backend servers to receive requests.
+        /// </summary>
         [NameInMap("BackendPorts")]
         [Validation(Required=false)]
         public List<UpdateListenerRequestBackendPorts> BackendPorts { get; set; }
         public class UpdateListenerRequestBackendPorts : TeaModel {
             /// <summary>
-            /// The start port in the range of ports used by the backend server to receive requests.
+            /// The first port in the range of ports that are used by backend servers to receive requests.
             /// 
-            /// >  This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the port over which the backend server provides services. In this case, the start port that is used to receive requests for the backend server must be the same as the end port.
+            /// > This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the service port of the backend servers. In this case, the first port that is used by the backend servers to receive requests must be the same as the last port.
             /// </summary>
             [NameInMap("FromPort")]
             [Validation(Required=false)]
             public int? FromPort { get; set; }
 
             /// <summary>
-            /// The end port in the range of ports used by the backend server to receive requests.
+            /// The last port in the range of ports that are used by backend servers to receive requests.
             /// 
-            /// >  This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the port over which the backend server provides services. In this case, the start port that is used to receive requests for the backend server must be the same as the end port.
+            /// > This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the service port of the backend servers. In this case, the first port that is used by the backend servers to receive requests must be the same as the last port.
             /// </summary>
             [NameInMap("ToPort")]
             [Validation(Required=false)]
@@ -33,6 +36,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         }
 
+        /// <summary>
+        /// The SSL certificate.
+        /// </summary>
         [NameInMap("Certificates")]
         [Validation(Required=false)]
         public List<UpdateListenerRequestCertificates> Certificates { get; set; }
@@ -40,7 +46,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// <summary>
             /// The ID of the SSL certificate.
             /// 
-            /// >  This parameter is required only when you configure an HTTPS listener.
+            /// > This parameter is required only when you configure an HTTPS listener.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -61,18 +67,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
+        /// You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the listener.
-        /// 
-        /// The description can be at most 200 characters in length.
+        /// The description of the listener. The description can be at most 200 characters in length.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -94,31 +98,38 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The listener ports that are used to receive requests and forward the requests to endpoints.
+        /// 
+        /// Valid values: **1** to **65499**.
+        /// 
+        /// The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).
+        /// </summary>
         [NameInMap("PortRanges")]
         [Validation(Required=false)]
         public List<UpdateListenerRequestPortRanges> PortRanges { get; set; }
         public class UpdateListenerRequestPortRanges : TeaModel {
             /// <summary>
-            /// The start port of the listener port range that is used to receive and forward requests to endpoints.
+            /// The first port of the listener port range that is used to receive and forward requests to endpoints.
             /// 
             /// Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
             /// 
-            /// The maximum number of ports that can be configured is subject to the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).
+            /// The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).
             /// 
-            /// >  You can configure only one listener port for an HTTP or HTTPS listener. In this case, the start port is the same as the end port.
+            /// > You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.
             /// </summary>
             [NameInMap("FromPort")]
             [Validation(Required=false)]
             public int? FromPort { get; set; }
 
             /// <summary>
-            /// The end port of the listener port range that is used to receive and forward requests to endpoints.
+            /// The last port of the listener port range that is used to receive and forward requests to endpoints.
             /// 
             /// Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
             /// 
-            /// The maximum number of ports that can be configured is subject to the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).
+            /// The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).
             /// 
-            /// >  You can configure only one listener port for an HTTP or HTTPS listener. In this case, the start port is the same as the end port.
+            /// > You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.
             /// </summary>
             [NameInMap("ToPort")]
             [Validation(Required=false)]
@@ -141,10 +152,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// Specifies whether to reserve client IP addresses. Default value: false. Valid values:
         /// 
-        /// *   **true**: reserves client IP addresses. After client IP addresses are reserved, you can view the source IP addresses of clients over the backend service.
-        /// *   **false**: does not reserve client IP addresses.
+        /// *   **true**: enables client IP preservation. After client IP addresses are reserved, you can view client IP addresses on the endpoints.
+        /// *   **false** (default): disables client IP preservation.
         /// 
-        /// >  This parameter will be discontinued in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the **ProxyProtocol** parameter, see [CreateEndpointGroup](~~153259~~) and [UpdateEndpointGroup](~~153262~~).
+        /// > This parameter will be deprecated in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the **ProxyProtocol** parameter, see [CreateEndpointGroup](~~153259~~) and [UpdateEndpointGroup](~~153262~~).
         /// </summary>
         [NameInMap("ProxyProtocol")]
         [Validation(Required=false)]
@@ -163,17 +174,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// *   **tls_cipher_policy\_1\_0**
         /// 
         ///     *   Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2
-        ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.
+        ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
         /// 
         /// *   **tls_cipher_policy\_1\_1**
         /// 
         ///     *   Supported TLS versions: TLS 1.1 and TLS 1.2
-        ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.
+        ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
         /// 
         /// *   **tls_cipher_policy\_1\_2**
         /// 
         ///     *   Supported TLS version: TLS 1.2
-        ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.
+        ///     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
         /// 
         /// *   **tls_cipher_policy\_1\_2\_strict**
         /// 
@@ -185,74 +196,74 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         ///     *   Supported TLS versions: TLS 1.2 and TLS 1.3
         ///     *   Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
         /// 
-        /// >  You can specify this parameter only for HTTPS listeners.
+        /// > This parameter is available only when you create an HTTPS listener.
         /// </summary>
         [NameInMap("SecurityPolicyId")]
         [Validation(Required=false)]
         public string SecurityPolicyId { get; set; }
 
         /// <summary>
-        /// The configurations of the `XForward` headers.
+        /// The `XForward` headers.
         /// </summary>
         [NameInMap("XForwardedForConfig")]
         [Validation(Required=false)]
         public UpdateListenerRequestXForwardedForConfig XForwardedForConfig { get; set; }
         public class UpdateListenerRequestXForwardedForConfig : TeaModel {
             /// <summary>
-            /// Specifies whether to use the `GA-AP` header to retrieve the information about acceleration regions. Default value: false. Valid values:
+            /// Specifies whether to use the `GA-AP` header to retrieve information about acceleration regions. Valid values:
             /// 
             /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **false** (default): no
             /// 
-            /// >  You can specify this parameter only for HTTP and HTTPS listeners.
+            /// > This parameter is available only when you create an HTTPS or HTTP listener.
             /// </summary>
             [NameInMap("XForwardedForGaApEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForGaApEnabled { get; set; }
 
             /// <summary>
-            /// Specifies whether to use the `GA-ID` header to retrieve the ID of the GA instance. Default value: false. Valid values:
+            /// Specifies whether to use the `GA-ID` header to retrieve the ID of the GA instance. Valid values:
             /// 
             /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **false** (default): no
             /// 
-            /// >  You can specify this parameter only for HTTP and HTTPS listeners.
+            /// > This parameter is available only when you create an HTTPS or HTTP listener.
             /// </summary>
             [NameInMap("XForwardedForGaIdEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForGaIdEnabled { get; set; }
 
             /// <summary>
-            /// Specifies whether to use the `GA-X-Forward-Port` header to retrieve the listener ports of the GA instance. Default value: false. Valid values:
+            /// Specifies whether to use the `GA-X-Forward-Port` header to retrieve the listener ports of the GA instance. Valid values:
             /// 
             /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **false** (default): no
             /// 
-            /// >  You can specify this parameter only for HTTP and HTTPS listeners.
+            /// > This parameter is available only when you create an HTTPS or HTTP listener.
             /// </summary>
             [NameInMap("XForwardedForPortEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForPortEnabled { get; set; }
 
             /// <summary>
-            /// Specifies whether to use the `GA-X-Forward-Proto` header to retrieve the listener protocol of the GA instance. Default value: false. Valid values:
+            /// Specifies whether to use the `GA-X-Forward-Proto` header to retrieve the listener protocol of the GA instance. Valid values:
             /// 
             /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **false** (default): no
             /// 
-            /// >  You can specify this parameter only for HTTP and HTTPS listeners.
+            /// > This parameter is available only when you create an HTTPS or HTTP listener.
             /// </summary>
             [NameInMap("XForwardedForProtoEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForProtoEnabled { get; set; }
 
             /// <summary>
-            /// Specifies whether to use the `X-Real-IP` header to retrieve client IP addresses. Default value: false. Valid values:
+            /// Specifies whether to use the `X-Real-IP` header to retrieve client IP addresses. Valid values:
             /// 
             /// *   **true**: yes
-            /// *   **false**: no
+            /// *   **false** (default): no
             /// 
-            /// >  You can specify this parameter only for HTTP and HTTPS listeners.
+            /// > This parameter is available only when you create an HTTPS or HTTP listener.
             /// </summary>
             [NameInMap("XRealIpEnabled")]
             [Validation(Required=false)]

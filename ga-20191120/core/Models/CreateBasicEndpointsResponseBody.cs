@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// The endpoints that are associated with the basic GA instance.
+        /// The endpoints in the endpoint group.
         /// </summary>
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
@@ -51,12 +51,12 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string EndpointSubAddress { get; set; }
 
             /// <summary>
-            /// The type of endpoint. Valid values:
+            /// The type of the endpoint. Valid values:
             /// 
-            /// *   **ENI**: ENI.
-            /// *   **SLB**: CLB instance.
-            /// *   **ECS**: ECS instance.
-            /// *   **NLB**: NLB instance.
+            /// *   **ENI:** ENI.
+            /// *   **SLB:** CLB instance.
+            /// *   **ECS:** ECS instance.
+            /// *   **NLB:** NLB instance.
             /// </summary>
             [NameInMap("EndpointType")]
             [Validation(Required=false)]

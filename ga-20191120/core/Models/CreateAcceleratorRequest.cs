@@ -55,9 +55,8 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The bandwidth billing method. Valid values:
         /// 
-        /// *   **BandwidthPackage:** billed based on bandwidth plans.
+        /// *   **BandwidthPackage:** billed based on bandwidth plans. This is the default value.
         /// *   **CDT:** billed based on data transfer.
-        /// *   **CDT95:** billed based on the 95th percentile bandwidth. The bills are managed by using Cloud Data Transfer (CDT). This bandwidth billing method is not available by default. Contact your Alibaba Cloud account manager for more information.
         /// </summary>
         [NameInMap("BandwidthBillingType")]
         [Validation(Required=false)]
@@ -74,6 +73,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// The subscription duration of the GA instance.
         /// 
@@ -83,6 +86,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public int? Duration { get; set; }
+
+        [NameInMap("InstanceChargeType")]
+        [Validation(Required=false)]
+        public string InstanceChargeType { get; set; }
 
         /// <summary>
         /// The configurations of the acceleration area.

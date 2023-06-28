@@ -47,6 +47,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public bool? EnableClientIPPreservation { get; set; }
 
             /// <summary>
+            /// Specifies whether to preserve the IP addresses of clients that access the endpoint by using the ProxyProtocol module. Valid values:
+            /// 
+            /// *   **true**
+            /// *   **false** (default)
+            /// </summary>
+            [NameInMap("EnableProxyProtocol")]
+            [Validation(Required=false)]
+            public bool? EnableProxyProtocol { get; set; }
+
+            /// <summary>
             /// The IP address or domain name of the endpoint.
             /// </summary>
             [NameInMap("Endpoint")]

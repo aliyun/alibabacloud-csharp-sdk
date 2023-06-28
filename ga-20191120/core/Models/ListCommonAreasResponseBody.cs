@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<ListCommonAreasResponseBodyAreas> Areas { get; set; }
         public class ListCommonAreasResponseBodyAreas : TeaModel {
             /// <summary>
-            /// The ID of the area.
+            /// The area ID.
             /// </summary>
             [NameInMap("AreaId")]
             [Validation(Required=false)]
             public string AreaId { get; set; }
 
             /// <summary>
-            /// The name of the area.
+            /// The area name.
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public List<ListCommonAreasResponseBodyAreasRegionList> RegionList { get; set; }
             public class ListCommonAreasResponseBodyAreasRegionList : TeaModel {
                 /// <summary>
-                /// The name of the region.
+                /// The region name.
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// The ID of the region
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

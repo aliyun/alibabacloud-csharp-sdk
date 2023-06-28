@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+        /// You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
         /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The address of the endpoint.
+        /// The endpoint address.
         /// </summary>
         [NameInMap("EndpointAddress")]
         [Validation(Required=false)]
@@ -55,21 +55,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         /// <summary>
         /// The secondary address of the endpoint.
         /// 
-        /// This parameter is required when the accelerated IP address is associated with the secondary private IP address of an ECS instance or an ENI.
+        /// You must specify this parameter when the accelerated IP address is associated with the secondary private IP address of an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).
         /// 
-        /// *   If the endpoint type is **ECS**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.
-        /// *   If the endpoint type is **ENI**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.
+        /// *   When the endpoint type is **ECS**, you can set **EndpointSubAddress** to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.
+        /// *   If the endpoint type is **ENI**, you can set **EndpointSubAddress** to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.
         /// </summary>
         [NameInMap("EndpointSubAddress")]
         [Validation(Required=false)]
         public string EndpointSubAddress { get; set; }
 
         /// <summary>
-        /// The type of endpoint. Valid values:
+        /// The type of the endpoint. Valid values:
         /// 
-        /// *   **ENI**: elastic network interface (ENI)
-        /// *   **SLB**: Classic Load Balancer (CLB) instance
-        /// *   **ECS**: Elastic Compute Service (ECS) instance
+        /// *   **ENI**
+        /// *   **SLB**
+        /// *   **ECS**
         /// </summary>
         [NameInMap("EndpointType")]
         [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the region where the basic GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

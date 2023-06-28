@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListIpSetsResponseBody : TeaModel {
         /// <summary>
-        /// Details of the acceleration region.
+        /// Details of the acceleration regions.
         /// </summary>
         [NameInMap("IpSets")]
         [Validation(Required=false)]
         public List<ListIpSetsResponseBodyIpSets> IpSets { get; set; }
         public class ListIpSetsResponseBodyIpSets : TeaModel {
             /// <summary>
-            /// The ID of the region that is accelerated.
+            /// The ID of the acceleration region.
             /// </summary>
             [NameInMap("AccelerateRegionId")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string IpSetId { get; set; }
 
             /// <summary>
-            /// The version of the accelerated IP address. Valid values:
+            /// The version of the IP protocol. Valid values:
             /// 
             /// *   **IPv4**
             /// *   **IPv6**
@@ -54,6 +54,23 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string IpVersion { get; set; }
 
+            /// <summary>
+            /// The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
+            /// 
+            /// *   **BGP**: BGP (Multi-ISP) lines.
+            /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.
+            /// 
+            /// If you are allowed to use single-ISP bandwidth, you can also specify one of the following values:
+            /// 
+            /// *   **ChinaTelecom**: China Telecom (single ISP)
+            /// *   **ChinaUnicom**: China Unicom (single ISP)
+            /// *   **ChinaMobile**: China Mobile (single ISP)
+            /// *   **ChinaTelecom_L2**: China Telecom \_L2 (single ISP)
+            /// *   **ChinaUnicom_L2**: China Unicom \_L2 (single ISP)
+            /// *   **ChinaMobile_L2**: China Mobile \_L2 (single ISP)
+            /// 
+            /// > Different acceleration regions support different single-ISP BGP lines.
+            /// </summary>
             [NameInMap("IspType")]
             [Validation(Required=false)]
             public string IspType { get; set; }
@@ -62,9 +79,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             /// The status of the acceleration region. Valid values:
             /// 
             /// *   **init**: The acceleration region is being initialized.
-            /// *   **active**: The acceleration region is in the running state.
+            /// *   **active**: The acceleration region is running.
             /// *   **updating**: The acceleration region is being configured.
-            /// *   **Deleting**: The acceleration region is being deleted.
+            /// *   **deleting**: The acceleration region is being deleted.
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]

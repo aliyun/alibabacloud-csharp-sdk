@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateIpSetsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the GA instance.
+        /// The GA instance ID.
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public List<CreateIpSetsResponseBodyIpSets> IpSets { get; set; }
         public class CreateIpSetsResponseBodyIpSets : TeaModel {
             /// <summary>
-            /// The ID of the region that requires acceleration.
+            /// The acceleration region ID.
             /// </summary>
             [NameInMap("AccelerateRegionId")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// The ID of the acceleration region.
+            /// The acceleration region ID.
             /// </summary>
             [NameInMap("IpSetId")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

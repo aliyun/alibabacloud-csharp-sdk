@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateAclRequest : TeaModel {
+        /// <summary>
+        /// The ACL entries.
+        /// </summary>
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
         public List<CreateAclRequestAclEntries> AclEntries { get; set; }
         public class CreateAclRequestAclEntries : TeaModel {
             /// <summary>
-            /// The IP address or CIDR block that you want to add to the ACL.
+            /// The IP address(192.168.XX.XX) or CIDR(10.0.XX.XX/24) block that you want to add to the ACL.
             /// 
             /// You can add up to 20 entries in each request.
             /// </summary>
@@ -80,6 +83,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

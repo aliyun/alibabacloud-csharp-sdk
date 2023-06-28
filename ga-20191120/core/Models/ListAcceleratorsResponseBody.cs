@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListAcceleratorsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the GA instances.
+        /// The GA instances.
         /// </summary>
         [NameInMap("Accelerators")]
         [Validation(Required=false)]
@@ -97,6 +97,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string CrossBorderMode { get; set; }
 
+            /// <summary>
+            /// Indicates whether cross-border acceleration is enabled.
+            /// - **true**: yes
+            /// - **false**: no
+            /// </summary>
             [NameInMap("CrossBorderStatus")]
             [Validation(Required=false)]
             public bool? CrossBorderStatus { get; set; }
@@ -280,6 +285,16 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
+            /// <summary>
+            /// Indicates the upgradable state of the GA instance.
+            /// - **notUpgradable**: The GA instance can not be upgraded
+            /// - **upgradable**: The GA instance can be upgraded
+            /// - **upgradeFailed**: The GA instance has been upgraded and failed
+            /// </summary>
+            [NameInMap("UpgradableStatus")]
+            [Validation(Required=false)]
+            public string UpgradableStatus { get; set; }
 
         }
 

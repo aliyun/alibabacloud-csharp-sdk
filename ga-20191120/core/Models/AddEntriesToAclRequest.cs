@@ -12,12 +12,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class AddEntriesToAclRequest : TeaModel {
+        /// <summary>
+        /// The ACL entries.
+        /// </summary>
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
         public List<AddEntriesToAclRequestAclEntries> AclEntries { get; set; }
         public class AddEntriesToAclRequestAclEntries : TeaModel {
             /// <summary>
-            /// The IP address or CIDR block that you want to add to the network ACL.
+            /// The IP address(192.168.XX.XX) or CIDR(10.0.XX.XX/24) block that you want to add to the network ACL.
             /// 
             /// You can add at most 20 entries in each request.
             /// 
