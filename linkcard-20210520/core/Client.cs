@@ -188,6 +188,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520
             {
                 query["Source"] = request.Source;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlInsecurityForce))
+            {
+                query["UrlInsecurityForce"] = request.UrlInsecurityForce;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -234,6 +238,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlInsecurityForce))
+            {
+                query["UrlInsecurityForce"] = request.UrlInsecurityForce;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

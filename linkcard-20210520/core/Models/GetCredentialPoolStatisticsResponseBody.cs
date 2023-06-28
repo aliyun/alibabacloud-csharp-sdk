@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
             [Validation(Required=false)]
             public string EffectiveTotalFlow { get; set; }
 
+            [NameInMap("MonthExceedFee")]
+            [Validation(Required=false)]
+            public long? MonthExceedFee { get; set; }
+
             [NameInMap("MonthFeatureFee")]
             [Validation(Required=false)]
             public long? MonthFeatureFee { get; set; }

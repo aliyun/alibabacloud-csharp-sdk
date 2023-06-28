@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
         [Validation(Required=false)]
         public string Source { get; set; }
 
+        [NameInMap("UrlInsecurityForce")]
+        [Validation(Required=false)]
+        public bool? UrlInsecurityForce { get; set; }
+
     }
 
 }
