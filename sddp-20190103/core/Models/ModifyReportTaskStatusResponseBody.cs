@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class ModifyReportTaskStatusResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

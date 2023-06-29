@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class CreateConfigResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the common alert configuration.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

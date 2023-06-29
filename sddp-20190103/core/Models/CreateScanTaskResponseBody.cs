@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class CreateScanTaskResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the custom scan task.
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public int? Id { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

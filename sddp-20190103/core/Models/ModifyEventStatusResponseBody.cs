@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class ModifyEventStatusResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
