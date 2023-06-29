@@ -433,6 +433,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PGBouncerPort))
+            {
+                query["PGBouncerPort"] = request.PGBouncerPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
             {
                 query["Port"] = request.Port;
@@ -499,6 +503,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PGBouncerPort))
+            {
+                query["PGBouncerPort"] = request.PGBouncerPort;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
             {
@@ -3947,6 +3955,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["PrivateIpAddress"] = request.PrivateIpAddress;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
@@ -4029,6 +4041,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
                 query["PrivateIpAddress"] = request.PrivateIpAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
@@ -4129,6 +4145,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["Port"] = request.Port;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
@@ -4189,6 +4209,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
             {
                 query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
@@ -4537,6 +4561,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -4601,6 +4629,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -15142,12 +15174,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * @deprecated : DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
           * This operation is no longer available. You can call the DescribeDBInstanceAttribute operation to query information about an instance.
           *
           * @param request DescribeDBInstancesAsCsvRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return DescribeDBInstancesAsCsvResponse
          */
+        // Deprecated
         public DescribeDBInstancesAsCsvResponse DescribeDBInstancesAsCsvWithOptions(DescribeDBInstancesAsCsvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15204,12 +15238,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * @deprecated : DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
           * This operation is no longer available. You can call the DescribeDBInstanceAttribute operation to query information about an instance.
           *
           * @param request DescribeDBInstancesAsCsvRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return DescribeDBInstancesAsCsvResponse
          */
+        // Deprecated
         public async Task<DescribeDBInstancesAsCsvResponse> DescribeDBInstancesAsCsvWithOptionsAsync(DescribeDBInstancesAsCsvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15266,11 +15302,13 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * @deprecated : DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
           * This operation is no longer available. You can call the DescribeDBInstanceAttribute operation to query information about an instance.
           *
           * @param request DescribeDBInstancesAsCsvRequest
           * @return DescribeDBInstancesAsCsvResponse
          */
+        // Deprecated
         public DescribeDBInstancesAsCsvResponse DescribeDBInstancesAsCsv(DescribeDBInstancesAsCsvRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15278,11 +15316,13 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * @deprecated : DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
           * This operation is no longer available. You can call the DescribeDBInstanceAttribute operation to query information about an instance.
           *
           * @param request DescribeDBInstancesAsCsvRequest
           * @return DescribeDBInstancesAsCsvResponse
          */
+        // Deprecated
         public async Task<DescribeDBInstancesAsCsvResponse> DescribeDBInstancesAsCsvAsync(DescribeDBInstancesAsCsvRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -27863,6 +27903,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PGBouncerPort))
+            {
+                query["PGBouncerPort"] = request.PGBouncerPort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
             {
                 query["Port"] = request.Port;
@@ -27935,6 +27979,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PGBouncerPort))
+            {
+                query["PGBouncerPort"] = request.PGBouncerPort;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
             {

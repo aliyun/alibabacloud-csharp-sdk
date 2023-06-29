@@ -507,6 +507,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public int? MaxIOPS { get; set; }
 
+                [NameInMap("PGBouncerEnabled")]
+                [Validation(Required=false)]
+                public string PGBouncerEnabled { get; set; }
+
                 /// <summary>
                 /// The billing method of the instance. Valid values:
                 /// 

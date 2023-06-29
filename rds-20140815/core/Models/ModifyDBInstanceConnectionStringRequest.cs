@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("PGBouncerPort")]
+        [Validation(Required=false)]
+        public string PGBouncerPort { get; set; }
+
         /// <summary>
         /// The port number after the change.
         /// </summary>

@@ -59,22 +59,37 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        /// <summary>
+        /// Parameter template information.
+        /// </summary>
         [NameInMap("ParamGroupInfo")]
         [Validation(Required=false)]
         public DescribeParametersResponseBodyParamGroupInfo ParamGroupInfo { get; set; }
         public class DescribeParametersResponseBodyParamGroupInfo : TeaModel {
+            /// <summary>
+            /// Parameter template ID.
+            /// </summary>
             [NameInMap("ParamGroupId")]
             [Validation(Required=false)]
             public string ParamGroupId { get; set; }
 
+            /// <summary>
+            /// Parameter template description.
+            /// </summary>
             [NameInMap("ParameterGroupDesc")]
             [Validation(Required=false)]
             public string ParameterGroupDesc { get; set; }
 
+            /// <summary>
+            /// Parameter template name.
+            /// </summary>
             [NameInMap("ParameterGroupName")]
             [Validation(Required=false)]
             public string ParameterGroupName { get; set; }
 
+            /// <summary>
+            /// Parameter template type.
+            /// </summary>
             [NameInMap("ParameterGroupType")]
             [Validation(Required=false)]
             public string ParameterGroupType { get; set; }

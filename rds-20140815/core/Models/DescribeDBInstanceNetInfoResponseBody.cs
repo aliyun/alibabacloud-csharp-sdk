@@ -149,6 +149,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string MaxDelayTime { get; set; }
 
+                [NameInMap("PGBouncerPort")]
+                [Validation(Required=false)]
+                public string PGBouncerPort { get; set; }
+
                 /// <summary>
                 /// The port that is used to connect to the instance.
                 /// </summary>
