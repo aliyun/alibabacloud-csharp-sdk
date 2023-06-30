@@ -65,9 +65,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public string CreatorNickName { get; set; }
 
-                [NameInMap("CronParam")]
+                [NameInMap("CronBeginDate")]
                 [Validation(Required=false)]
-                public string CronParam { get; set; }
+                public string CronBeginDate { get; set; }
+
+                [NameInMap("CronEndDate")]
+                [Validation(Required=false)]
+                public string CronEndDate { get; set; }
 
                 [NameInMap("CronStr")]
                 [Validation(Required=false)]
@@ -87,6 +91,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [NameInMap("DagName")]
                 [Validation(Required=false)]
                 public string DagName { get; set; }
+
+                [NameInMap("DagOwnerId")]
+                [Validation(Required=false)]
+                public string DagOwnerId { get; set; }
 
                 /// <summary>
                 /// The username of the owner of the task flow.
@@ -137,6 +145,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [NameInMap("ScenarioId")]
                 [Validation(Required=false)]
                 public string ScenarioId { get; set; }
+
+                [NameInMap("ScheduleParam")]
+                [Validation(Required=false)]
+                public string ScheduleParam { get; set; }
 
                 /// <summary>
                 /// The status of the task flow. Valid values:

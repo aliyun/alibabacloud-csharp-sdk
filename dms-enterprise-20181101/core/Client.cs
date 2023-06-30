@@ -1949,6 +1949,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await CreateDataImportOrderWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * This operation is available only for instances that are managed in Security Collaboration mode.
+          *
+          * @param tmpReq CreateDataTrackOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDataTrackOrderResponse
+         */
         public CreateDataTrackOrderResponse CreateDataTrackOrderWithOptions(CreateDataTrackOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1998,6 +2005,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateDataTrackOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only for instances that are managed in Security Collaboration mode.
+          *
+          * @param tmpReq CreateDataTrackOrderRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDataTrackOrderResponse
+         */
         public async Task<CreateDataTrackOrderResponse> CreateDataTrackOrderWithOptionsAsync(CreateDataTrackOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2047,12 +2061,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return TeaModel.ToObject<CreateDataTrackOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * This operation is available only for instances that are managed in Security Collaboration mode.
+          *
+          * @param request CreateDataTrackOrderRequest
+          * @return CreateDataTrackOrderResponse
+         */
         public CreateDataTrackOrderResponse CreateDataTrackOrder(CreateDataTrackOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDataTrackOrderWithOptions(request, runtime);
         }
 
+        /**
+          * This operation is available only for instances that are managed in Security Collaboration mode.
+          *
+          * @param request CreateDataTrackOrderRequest
+          * @return CreateDataTrackOrderResponse
+         */
         public async Task<CreateDataTrackOrderResponse> CreateDataTrackOrderAsync(CreateDataTrackOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
