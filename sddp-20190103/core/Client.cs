@@ -1033,6 +1033,96 @@ namespace AlibabaCloud.SDK.Sddp20190103
             return await DeleteRuleWithOptionsAsync(request, runtime);
         }
 
+        public DescribeCategoryTemplateListResponse DescribeCategoryTemplateListWithOptions(DescribeCategoryTemplateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageScenario))
+            {
+                query["UsageScenario"] = request.UsageScenario;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCategoryTemplateList",
+                Version = "2019-01-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCategoryTemplateListResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeCategoryTemplateListResponse> DescribeCategoryTemplateListWithOptionsAsync(DescribeCategoryTemplateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageScenario))
+            {
+                query["UsageScenario"] = request.UsageScenario;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCategoryTemplateList",
+                Version = "2019-01-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCategoryTemplateListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeCategoryTemplateListResponse DescribeCategoryTemplateList(DescribeCategoryTemplateListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCategoryTemplateListWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeCategoryTemplateListResponse> DescribeCategoryTemplateListAsync(DescribeCategoryTemplateListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCategoryTemplateListWithOptionsAsync(request, runtime);
+        }
+
         /**
           * You can call this operation to query rules in a classification template.
           * # Limits
