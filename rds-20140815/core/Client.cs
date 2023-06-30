@@ -27066,6 +27066,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["BackupPolicyMode"] = request.BackupPolicyMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupPriority))
+            {
+                query["BackupPriority"] = request.BackupPriority;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupRetentionPeriod))
             {
                 query["BackupRetentionPeriod"] = request.BackupRetentionPeriod;
@@ -27201,6 +27205,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupPolicyMode))
             {
                 query["BackupPolicyMode"] = request.BackupPolicyMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupPriority))
+            {
+                query["BackupPriority"] = request.BackupPriority;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupRetentionPeriod))
             {

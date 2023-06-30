@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string BackupMethod { get; set; }
 
+        [NameInMap("BackupPriority")]
+        [Validation(Required=false)]
+        public int? BackupPriority { get; set; }
+
         /// <summary>
         /// The number of days for which data backup files are retained.
         /// </summary>
@@ -210,6 +214,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("SupportModifyBackupPriority")]
+        [Validation(Required=false)]
+        public bool? SupportModifyBackupPriority { get; set; }
 
         /// <summary>
         /// A reserved parameter.

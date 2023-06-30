@@ -117,6 +117,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string BackupPolicyMode { get; set; }
 
+        [NameInMap("BackupPriority")]
+        [Validation(Required=false)]
+        public int? BackupPriority { get; set; }
+
         /// <summary>
         /// The number of days for which you want to retain data backup files. Valid values: **7 to 730**.
         /// 
