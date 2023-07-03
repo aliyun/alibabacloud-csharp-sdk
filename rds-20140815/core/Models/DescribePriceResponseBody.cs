@@ -179,6 +179,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public bool? ShowDiscount { get; set; }
 
+        [NameInMap("TradeMaxRCUAmount")]
+        [Validation(Required=false)]
+        public float? TradeMaxRCUAmount { get; set; }
+
+        [NameInMap("TradeMinRCUAmount")]
+        [Validation(Required=false)]
+        public float? TradeMinRCUAmount { get; set; }
+
     }
 
 }

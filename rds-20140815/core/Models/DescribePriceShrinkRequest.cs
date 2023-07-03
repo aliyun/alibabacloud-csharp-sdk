@@ -164,6 +164,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("ServerlessConfig")]
+        [Validation(Required=false)]
+        public string ServerlessConfigShrink { get; set; }
+
         /// <summary>
         /// The unit that is used to calculate the subscription duration of the instance. If you set the **CommodityCode** parameter to **RDS**, **rds_rordspre_public_cn**, **rds_intl**, or **rds_rordspre_public_intl**, you must also specify this parameter. Valid values:
         /// 
