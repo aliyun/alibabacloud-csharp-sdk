@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Nlp_automl20191111.Models
 {
-    public class RunPreTrainServiceResponseBody : TeaModel {
+    public class RunPreTrainServiceNewResponseBody : TeaModel {
         [NameInMap("BillingCount")]
         [Validation(Required=false)]
         public int? BillingCount { get; set; }

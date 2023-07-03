@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Nlp_automl20191111.Models
 {
-    public class DeleteModelResponse : TeaModel {
+    public class FindUserReport4AlinlpResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=true)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DeleteModelResponseBody Body { get; set; }
+        public FindUserReport4AlinlpResponseBody Body { get; set; }
 
     }
 
