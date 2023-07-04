@@ -17,6 +17,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region where you want to create the IPsec-VPN connection.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -29,6 +34,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the IPsec-VPN connection.
+        /// </summary>
         [NameInMap("VpnConnectionId")]
         [Validation(Required=false)]
         public string VpnConnectionId { get; set; }

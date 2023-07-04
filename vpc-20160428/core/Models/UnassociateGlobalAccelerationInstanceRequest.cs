@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnassociateGlobalAccelerationInstanceRequest : TeaModel {
+        /// <summary>
+        /// The ID of the GA instance.
+        /// </summary>
         [NameInMap("GlobalAccelerationInstanceId")]
         [Validation(Required=false)]
         public string GlobalAccelerationInstanceId { get; set; }
 
+        /// <summary>
+        /// The backend server type. Valid values:
+        /// 
+        /// *   **RemoteEcsInstance**: Elastic Compute Service (ECS) instance
+        /// *   **RemoteSlbInstance**: Server Load Balancer (SLB) instance
+        /// *   **RemoteEniInstance**: elastic network interface (ENI)
+        /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
@@ -25,6 +35,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the GA instance.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

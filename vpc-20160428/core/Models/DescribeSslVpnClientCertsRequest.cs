@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeSslVpnClientCertsRequest : TeaModel {
+        /// <summary>
+        /// The name of the SSL client certificate.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -21,14 +24,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The number of the page to return. Default value: **1**.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The region ID of the SSL client certificates to be queried.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -41,10 +55,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the SSL client certificate.
+        /// </summary>
         [NameInMap("SslVpnClientCertId")]
         [Validation(Required=false)]
         public string SslVpnClientCertId { get; set; }
 
+        /// <summary>
+        /// The ID of the SSL server.
+        /// </summary>
         [NameInMap("SslVpnServerId")]
         [Validation(Required=false)]
         public string SslVpnServerId { get; set; }

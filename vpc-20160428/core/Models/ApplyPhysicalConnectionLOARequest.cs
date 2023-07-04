@@ -9,26 +9,55 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ApplyPhysicalConnectionLOARequest : TeaModel {
+        /// <summary>
+        /// The bandwidth of the Express Connect circuit. Unit: Mbit/s.
+        /// 
+        /// Valid values: **2** to **10240**.
+        /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
+        /// 
+        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The name of the customer company that requires the Express Connect circuit.
+        /// </summary>
         [NameInMap("CompanyName")]
         [Validation(Required=false)]
         public string CompanyName { get; set; }
 
+        /// <summary>
+        /// The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+        /// </summary>
         [NameInMap("ConstructionTime")]
         [Validation(Required=false)]
         public string ConstructionTime { get; set; }
 
+        /// <summary>
+        /// The ID of the Express Connect circuit.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The type of Express Connect circuit. Valid values:
+        /// 
+        /// *   **MSTP**: MSTP line
+        /// *   **MPLSVPN**: MPLSVPN line
+        /// *   **FIBRE**: fiber line
+        /// *   **Other**: other types
+        /// </summary>
         [NameInMap("LineType")]
         [Validation(Required=false)]
         public string LineType { get; set; }
@@ -45,32 +74,60 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public List<ApplyPhysicalConnectionLOARequestPMInfo> PMInfo { get; set; }
         public class ApplyPhysicalConnectionLOARequestPMInfo : TeaModel {
+            /// <summary>
+            /// The ID number of the construction engineer. You can specify the ID number of an ID card or an international passport.
+            /// 
+            /// You can configure information for up to 16 construction engineers.
+            /// </summary>
             [NameInMap("PMCertificateNo")]
             [Validation(Required=false)]
             public string PMCertificateNo { get; set; }
 
+            /// <summary>
+            /// The type of the identity document of the construction engineer. Valid values:
+            /// 
+            /// *   **IDCard**: identity card
+            /// *   **Passport**: international passport
+            /// </summary>
             [NameInMap("PMCertificateType")]
             [Validation(Required=false)]
             public string PMCertificateType { get; set; }
 
+            /// <summary>
+            /// The contact information about the construction engineer.
+            /// </summary>
             [NameInMap("PMContactInfo")]
             [Validation(Required=false)]
             public string PMContactInfo { get; set; }
 
+            /// <summary>
+            /// The gender of the construction engineer.
+            /// </summary>
             [NameInMap("PMGender")]
             [Validation(Required=false)]
             public string PMGender { get; set; }
 
+            /// <summary>
+            /// The name of the construction engineer.
+            /// </summary>
             [NameInMap("PMName")]
             [Validation(Required=false)]
             public string PMName { get; set; }
 
         }
 
+        /// <summary>
+        /// The geographical location where the Express Connect circuit is deployed.
+        /// </summary>
         [NameInMap("PeerLocation")]
         [Validation(Required=false)]
         public string PeerLocation { get; set; }
 
+        /// <summary>
+        /// The region ID of the Express Connect circuit.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -83,6 +140,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The construction company.
+        /// </summary>
         [NameInMap("Si")]
         [Validation(Required=false)]
         public string Si { get; set; }

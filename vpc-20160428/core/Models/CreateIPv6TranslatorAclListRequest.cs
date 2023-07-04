@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIPv6TranslatorAclListRequest : TeaModel {
+        /// <summary>
+        /// The ACL name.
+        /// </summary>
         [NameInMap("AclName")]
         [Validation(Required=false)]
         public string AclName { get; set; }
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

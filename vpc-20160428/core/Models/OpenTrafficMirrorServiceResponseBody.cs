@@ -9,10 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class OpenTrafficMirrorServiceResponseBody : TeaModel {
-        [NameInMap("OrderId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string Code { get; set; }
 
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

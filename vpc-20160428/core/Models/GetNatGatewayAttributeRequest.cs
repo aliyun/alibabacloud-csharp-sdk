@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetNatGatewayAttributeRequest : TeaModel {
+        /// <summary>
+        /// The ID of the NAT gateway.
+        /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
@@ -21,6 +24,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the NAT gateway is deployed.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeNetworkAclAttributesRequest : TeaModel {
+        /// <summary>
+        /// The action to be performed on network traffic that matches the rule. Valid values:
+        /// 
+        /// *   **accept**: allows network traffic.
+        /// *   **drop**: blocks network traffic.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The ID of the inbound rule.
+        /// </summary>
         [NameInMap("NetworkAclId")]
         [Validation(Required=false)]
         public string NetworkAclId { get; set; }
@@ -21,6 +30,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The name of the inbound rule.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

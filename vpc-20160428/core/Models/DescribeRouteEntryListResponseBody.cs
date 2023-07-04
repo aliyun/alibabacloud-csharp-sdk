@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRouteEntryListResponseBody : TeaModel {
+        /// <summary>
+        /// The token that is used for the next query. Valid values:
+        /// 
+        /// *   If **NextToken** is empty, it indicates that no next query is to be sent.
+        /// *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The information about the routes.
+        /// </summary>
         [NameInMap("RouteEntrys")]
         [Validation(Required=false)]
         public DescribeRouteEntryListResponseBodyRouteEntrys RouteEntrys { get; set; }
@@ -25,22 +37,40 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeRouteEntryListResponseBodyRouteEntrysRouteEntry> RouteEntry { get; set; }
             public class DescribeRouteEntryListResponseBodyRouteEntrysRouteEntry : TeaModel {
+                /// <summary>
+                /// The description of the route.
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// The destination CIDR blocks of the route.
+                /// </summary>
                 [NameInMap("DestinationCidrBlock")]
                 [Validation(Required=false)]
                 public string DestinationCidrBlock { get; set; }
 
+                /// <summary>
+                /// The time when the route was modified. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format in UTC.
+                /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
+                /// <summary>
+                /// The IP version. Valid values:
+                /// 
+                /// *   **IPv4**
+                /// *   **IPv6**
+                /// </summary>
                 [NameInMap("IpVersion")]
                 [Validation(Required=false)]
                 public string IpVersion { get; set; }
 
+                /// <summary>
+                /// The information about the next hops.
+                /// </summary>
                 [NameInMap("NextHops")]
                 [Validation(Required=false)]
                 public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHops NextHops { get; set; }
@@ -49,40 +79,89 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public List<DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHopsNextHop> NextHop { get; set; }
                     public class DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHopsNextHop : TeaModel {
+                        /// <summary>
+                        /// Indicates whether the route is available. Valid values:
+                        /// 
+                        /// *   **0**: unavailable
+                        /// *   **1**: available
+                        /// 
+                        /// >  This parameter is returned if the next hop type is set to **RouterInterface**.
+                        /// </summary>
                         [NameInMap("Enabled")]
                         [Validation(Required=false)]
                         public int? Enabled { get; set; }
 
+                        /// <summary>
+                        /// The ID of the next hop.
+                        /// </summary>
                         [NameInMap("NextHopId")]
                         [Validation(Required=false)]
                         public string NextHopId { get; set; }
 
+                        /// <summary>
+                        /// The region ID of the next hop.
+                        /// 
+                        /// >  This parameter is returned if the next hop type is set to **RouterInterface**.
+                        /// </summary>
                         [NameInMap("NextHopRegionId")]
                         [Validation(Required=false)]
                         public string NextHopRegionId { get; set; }
 
+                        /// <summary>
+                        /// The information about the next hop.
+                        /// </summary>
                         [NameInMap("NextHopRelatedInfo")]
                         [Validation(Required=false)]
                         public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHopsNextHopNextHopRelatedInfo NextHopRelatedInfo { get; set; }
                         public class DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHopsNextHopNextHopRelatedInfo : TeaModel {
+                            /// <summary>
+                            /// The ID of the instance associated with the next hop.
+                            /// </summary>
                             [NameInMap("InstanceId")]
                             [Validation(Required=false)]
                             public string InstanceId { get; set; }
 
+                            /// <summary>
+                            /// The type of the instance associated with the next hop. Valid values:
+                            /// 
+                            /// *   **VPC**: a virtual private cloud (VPC)
+                            /// *   **VBR**: a VBR
+                            /// *   **PCONN**: an Express Connect circuit
+                            /// </summary>
                             [NameInMap("InstanceType")]
                             [Validation(Required=false)]
                             public string InstanceType { get; set; }
 
+                            /// <summary>
+                            /// The region ID of the instance associated with the next hop.
+                            /// </summary>
                             [NameInMap("RegionId")]
                             [Validation(Required=false)]
                             public string RegionId { get; set; }
 
                         }
 
+                        /// <summary>
+                        /// The type of the next hop. Valid values:
+                        /// 
+                        /// *   **Instance**: an ECS instance
+                        /// *   **HaVip**: an HAVIP
+                        /// *   **VpnGateway**: a VPN gateway
+                        /// *   **NatGateway**: a NAT gateway
+                        /// *   **NetworkInterface**: a secondary ENI
+                        /// *   **RouterInterface**: a router interface
+                        /// *   **IPv6Gateway**: an IPv6 gateway
+                        /// *   **Attachment**: a transit router
+                        /// </summary>
                         [NameInMap("NextHopType")]
                         [Validation(Required=false)]
                         public string NextHopType { get; set; }
 
+                        /// <summary>
+                        /// The weight of the route.
+                        /// 
+                        /// >  This parameter is returned if the next hop type is set to **RouterInterface**.
+                        /// </summary>
                         [NameInMap("Weight")]
                         [Validation(Required=false)]
                         public int? Weight { get; set; }
@@ -91,26 +170,55 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
+                /// <summary>
+                /// The ID of the route.
+                /// </summary>
                 [NameInMap("RouteEntryId")]
                 [Validation(Required=false)]
                 public string RouteEntryId { get; set; }
 
+                /// <summary>
+                /// The name of the route.
+                /// </summary>
                 [NameInMap("RouteEntryName")]
                 [Validation(Required=false)]
                 public string RouteEntryName { get; set; }
 
+                /// <summary>
+                /// The ID of the route table.
+                /// </summary>
                 [NameInMap("RouteTableId")]
                 [Validation(Required=false)]
                 public string RouteTableId { get; set; }
 
+                /// <summary>
+                /// Indicates whether the route is hosted. If the parameter is empty, the route is not hosted. 
+                /// 
+                /// If the value is set to **TR**, the route is hosted by a transit router.
+                /// </summary>
                 [NameInMap("ServiceType")]
                 [Validation(Required=false)]
                 public string ServiceType { get; set; }
 
+                /// <summary>
+                /// The status of the route. Valid values:
+                /// 
+                /// *   **Pending**: The route is being configured.
+                /// *   **Available**: The route is available.
+                /// *   **Modifying**: The route is being modified.
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// The type of the route. Valid values:
+                /// 
+                /// *   **Custom**: a custom route
+                /// *   **System**: a system route
+                /// *   **BGP**: a BGP route
+                /// *   **CEN**: a CEN route
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }

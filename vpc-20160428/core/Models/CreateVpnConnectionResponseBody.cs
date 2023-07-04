@@ -9,18 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpnConnectionResponseBody : TeaModel {
+        /// <summary>
+        /// The timestamp generated when the IPsec-VPN connection was created. Unit: milliseconds.
+        /// 
+        /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
+        /// <summary>
+        /// The name of the IPsec-VPN connection.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the IPsec-VPN connection.
+        /// </summary>
         [NameInMap("VpnConnectionId")]
         [Validation(Required=false)]
         public string VpnConnectionId { get; set; }

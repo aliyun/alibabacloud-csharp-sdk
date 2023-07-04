@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UntagResourcesForExpressConnectRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to remove all tags from the specified resource. Valid values:
+        /// 
+        /// *   **true**: removes all tags from the specified resource.
+        /// *   **false**: does not remove all tags from the specified resource. This is the default value.
+        /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
@@ -21,6 +27,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the resource.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -37,6 +48,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The type of the resource. Set the value to **PHYSICALCONNECTION**, which indicates the Express Connect circuit.
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }

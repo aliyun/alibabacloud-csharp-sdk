@@ -1,3 +1,7 @@
+2023-07-04 Version: 3.0.0
+- Interface modification with parameter deletion is incompatible.
+- Remove CreateNatIp remove useless parameter NatIpCidrId, must specify NatIpCidr.
+
 2023-03-10 Version: 2.0.10
 - Support create default VPC and create default vSwitch .
 

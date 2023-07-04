@@ -9,18 +9,44 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateRouteEntryRequest : TeaModel {
+        /// <summary>
+        /// The type of next hop of the custom route entry. Valid values:
+        /// 
+        /// *   **Instance**: an Elastic Compute Service (ECS) instance. This is the default value.
+        /// *   **HaVip**: a high-availability virtual IP address (HAVIP).
+        /// *   **RouterInterface**: a router interface.
+        /// *   **NetworkInterface**: an elastic network interface (ENI).
+        /// *   **VpnGateway**: a VPN gateway.
+        /// *   **IPv6Gateway**: an IPv6 gateway.
+        /// *   **NatGateway**: a NAT gateway.
+        /// *   **Attachment**: a transit router.
+        /// *   **VpcPeer**: a VPC peering connection.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The weight of the next hop of the ECMP route entry.
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// The name of the custom route entry that you want to add.
+        /// 
+        /// The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+        /// </summary>
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]
         public string DestinationCidrBlock { get; set; }
 
+        /// <summary>
+        /// The description of the custom route entry.
+        /// 
+        /// The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+        /// </summary>
         [NameInMap("NextHopId")]
         [Validation(Required=false)]
         public string NextHopId { get; set; }
@@ -29,6 +55,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public List<CreateRouteEntryRequestNextHopList> NextHopList { get; set; }
         public class CreateRouteEntryRequestNextHopList : TeaModel {
+            /// <summary>
+            /// The ID of the custom route entry.
+            /// </summary>
             [NameInMap("NextHopId")]
             [Validation(Required=false)]
             public string NextHopId { get; set; }
@@ -37,12 +66,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string NextHopType { get; set; }
 
+            /// <summary>
+            /// The ID of the request.
+            /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]
             public int? Weight { get; set; }
 
         }
 
+        /// <summary>
+        /// The type of next hop of the ECMP route entry. Set the value to **RouterInterface**.
+        /// </summary>
         [NameInMap("NextHopType")]
         [Validation(Required=false)]
         public string NextHopType { get; set; }
@@ -55,6 +90,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the next hop.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -67,10 +105,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the next hop of the ECMP route.
+        /// </summary>
         [NameInMap("RouteEntryName")]
         [Validation(Required=false)]
         public string RouteEntryName { get; set; }
 
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.
+        /// 
+        /// >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]
         public string RouteTableId { get; set; }

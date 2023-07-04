@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListEnhanhcedNatGatewayAvailableZonesRequest : TeaModel {
+        /// <summary>
+        /// The language to display the results. Valid values:
+        /// 
+        /// *   **zh-CN** (default): Chinese
+        /// *   **en-US**: English
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
@@ -21,6 +27,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region that you want to query.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// 
+        /// In this example, zones that support NAT gateways in the UAE (Dubai) region are queried.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

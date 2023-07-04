@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnassociateRouteTableRequest : TeaModel {
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
+        /// 
+        /// >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -21,6 +28,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the virtual private cloud (VPC) to which the route table belongs.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -33,10 +45,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the route table.
+        /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]
         public string RouteTableId { get; set; }
 
+        /// <summary>
+        /// The ID of the vSwitch from which you want to disassociate the route table.
+        /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }

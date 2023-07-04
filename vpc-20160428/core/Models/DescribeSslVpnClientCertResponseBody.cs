@@ -9,50 +9,94 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeSslVpnClientCertResponseBody : TeaModel {
+        /// <summary>
+        /// The CA certificate.
+        /// </summary>
         [NameInMap("CaCert")]
         [Validation(Required=false)]
         public string CaCert { get; set; }
 
+        /// <summary>
+        /// The client certificate.
+        /// </summary>
         [NameInMap("ClientCert")]
         [Validation(Required=false)]
         public string ClientCert { get; set; }
 
+        /// <summary>
+        /// The configuration of the client.
+        /// </summary>
         [NameInMap("ClientConfig")]
         [Validation(Required=false)]
         public string ClientConfig { get; set; }
 
+        /// <summary>
+        /// The key of the client.
+        /// </summary>
         [NameInMap("ClientKey")]
         [Validation(Required=false)]
         public string ClientKey { get; set; }
 
+        /// <summary>
+        /// The timestamp that indicates when the SSL client certificate was created. Unit: milliseconds.
+        /// 
+        /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
+        /// <summary>
+        /// The timestamp that indicates when the SSL client certificate expires. Unit: milliseconds.
+        /// 
+        /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// The name of the SSL client certificate.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the SSL client certificate is created.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the SSL client certificate.
+        /// </summary>
         [NameInMap("SslVpnClientCertId")]
         [Validation(Required=false)]
         public string SslVpnClientCertId { get; set; }
 
+        /// <summary>
+        /// The ID of the SSL server.
+        /// </summary>
         [NameInMap("SslVpnServerId")]
         [Validation(Required=false)]
         public string SslVpnServerId { get; set; }
 
+        /// <summary>
+        /// The status of the SSL client certificate. Valid values:
+        /// 
+        /// *   **expiring-soon**: The certificate expires in one week.
+        /// *   **normal**: The certificate is active.
+        /// *   **expired**: The certificate has expired.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

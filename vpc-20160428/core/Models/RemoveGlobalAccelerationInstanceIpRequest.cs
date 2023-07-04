@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class RemoveGlobalAccelerationInstanceIpRequest : TeaModel {
+        /// <summary>
+        /// The ID of the shared-bandwidth instance.
+        /// </summary>
         [NameInMap("GlobalAccelerationInstanceId")]
         [Validation(Required=false)]
         public string GlobalAccelerationInstanceId { get; set; }
 
+        /// <summary>
+        /// The ID of the EIP.
+        /// 
+        /// To query the EIP ID, call DescribeEipAddresses.
+        /// </summary>
         [NameInMap("IpInstanceId")]
         [Validation(Required=false)]
         public string IpInstanceId { get; set; }
@@ -25,6 +33,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the shared-bandwidth instance is located.
+        /// 
+        /// To query the region ID, call DescribeRegions.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

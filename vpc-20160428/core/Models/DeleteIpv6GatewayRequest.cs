@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteIpv6GatewayRequest : TeaModel {
+        /// <summary>
+        /// The ID of the IPv6 gateway that you want to delete.
+        /// </summary>
         [NameInMap("Ipv6GatewayId")]
         [Validation(Required=false)]
         public string Ipv6GatewayId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the IPv6 gateway. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

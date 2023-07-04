@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRegionsRequest : TeaModel {
+        /// <summary>
+        /// The language of the response. Valid values:
+        /// 
+        /// *   **zh-CN** (default): Chinese
+        /// *   **en-US**: English
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
@@ -21,6 +27,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The service type. Default value: **VPC**.
+        /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }

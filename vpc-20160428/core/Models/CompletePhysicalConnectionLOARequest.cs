@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CompletePhysicalConnectionLOARequest : TeaModel {
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate the value, but you must ensure that it is unique among different requests.
+        /// 
+        /// >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The ID of the Express Connect circuit.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// The circuit code provided by the connectivity provider.
+        /// </summary>
         [NameInMap("LineCode")]
         [Validation(Required=false)]
         public string LineCode { get; set; }
 
+        /// <summary>
+        /// The label of the cable in the data center.
+        /// </summary>
         [NameInMap("LineLabel")]
         [Validation(Required=false)]
         public string LineLabel { get; set; }
@@ -33,6 +49,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the Express Connect circuit.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

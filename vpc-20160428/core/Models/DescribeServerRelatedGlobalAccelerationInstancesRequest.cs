@@ -17,6 +17,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the GA instance.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -29,10 +34,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the backend service instance.
+        /// </summary>
         [NameInMap("ServerId")]
         [Validation(Required=false)]
         public string ServerId { get; set; }
 
+        /// <summary>
+        /// The type of the backend service instance. Valid values:
+        /// 
+        /// *   **EcsInstance** (default): Elastic Compute Service (ECS)
+        /// *   **SlbInstance**: Server Load Balancer (SLB)
+        /// </summary>
         [NameInMap("ServerType")]
         [Validation(Required=false)]
         public string ServerType { get; set; }

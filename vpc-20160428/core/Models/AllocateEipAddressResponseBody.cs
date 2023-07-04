@@ -17,10 +17,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string EipAddress { get; set; }
 
+        /// <summary>
+        /// The ID of the EIP.
+        /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
+        /// <summary>
+        /// The EIP that is allocated. This parameter is returned only when **InstanceChargeType** is set to **PostPaid**.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

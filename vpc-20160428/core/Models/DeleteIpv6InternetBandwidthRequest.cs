@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteIpv6InternetBandwidthRequest : TeaModel {
+        /// <summary>
+        /// The ID of the IPv6 address.
+        /// 
+        /// >  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.
+        /// </summary>
         [NameInMap("Ipv6AddressId")]
         [Validation(Required=false)]
         public string Ipv6AddressId { get; set; }
 
+        /// <summary>
+        /// The ID of the Internet bandwidth that you purchase for the IPv6 gateway.
+        /// 
+        /// >  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.
+        /// </summary>
         [NameInMap("Ipv6InternetBandwidthId")]
         [Validation(Required=false)]
         public string Ipv6InternetBandwidthId { get; set; }
@@ -25,6 +35,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region where the IPv6 gateway is deployed.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

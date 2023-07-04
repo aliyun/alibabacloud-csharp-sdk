@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Bandwidth { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }
@@ -25,6 +28,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The maximum bandwidth of the EIP bandwidth plan. Unit: Mbit/s.
+        /// 
+        /// Valid values: **1** to **1000**.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

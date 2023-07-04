@@ -19,16 +19,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        /// <summary>
+        /// The list of outbound rules.
+        /// </summary>
         [NameInMap("IngressRules")]
         [Validation(Required=false)]
         public List<CreateTrafficMirrorFilterRulesResponseBodyIngressRules> IngressRules { get; set; }
         public class CreateTrafficMirrorFilterRulesResponseBodyIngressRules : TeaModel {
+            /// <summary>
+            /// The ID of the outbound rule.
+            /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
         }
 
+        /// <summary>
+        /// The ID of the inbound rule.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

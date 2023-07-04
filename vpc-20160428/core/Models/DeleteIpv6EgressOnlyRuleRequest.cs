@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteIpv6EgressOnlyRuleRequest : TeaModel {
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate a value, but you must make sure that the value is unique among all requests. The token can contain only ASCII characters.
+        /// 
+        /// >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The ID of the egress-only rule that you want to delete.
+        /// </summary>
         [NameInMap("Ipv6EgressOnlyRuleId")]
         [Validation(Required=false)]
         public string Ipv6EgressOnlyRuleId { get; set; }
@@ -25,6 +35,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the IPv6 gateway.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

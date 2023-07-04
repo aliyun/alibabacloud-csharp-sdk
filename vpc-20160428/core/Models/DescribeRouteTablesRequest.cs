@@ -17,18 +17,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The number of the page to return. Default value: **1**
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// The region ID of the virtual private cloud (VPC) to which the route table belongs.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the route table belongs.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -41,26 +53,53 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the route table that you want to query.
+        /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]
         public string RouteTableId { get; set; }
 
+        /// <summary>
+        /// The name of the route table that you want to query.
+        /// </summary>
         [NameInMap("RouteTableName")]
         [Validation(Required=false)]
         public string RouteTableName { get; set; }
 
+        /// <summary>
+        /// The ID of the vRouter or VBR to which the route table belongs.
+        /// </summary>
         [NameInMap("RouterId")]
         [Validation(Required=false)]
         public string RouterId { get; set; }
 
+        /// <summary>
+        /// The type of the router to which the route table belongs. Valid values:
+        /// 
+        /// *   **VRouter**: a vRouter
+        /// *   **VBR**: a virtual border router (VBR)
+        /// </summary>
         [NameInMap("RouterType")]
         [Validation(Required=false)]
         public string RouterType { get; set; }
 
+        /// <summary>
+        /// The type of route table that you want to query. Valid values:
+        /// 
+        /// *   **System** : a system route table
+        /// *   **Custom**: a custom route table
+        /// *   **BGP**: a Border Gateway Protocol (BGP) route table
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        /// <summary>
+        /// The ID of the vRouter to which the route table belongs.
+        /// 
+        /// After you set this parameter, **RouterType** is automatically set to **VRouter**.
+        /// </summary>
         [NameInMap("VRouterId")]
         [Validation(Required=false)]
         public string VRouterId { get; set; }

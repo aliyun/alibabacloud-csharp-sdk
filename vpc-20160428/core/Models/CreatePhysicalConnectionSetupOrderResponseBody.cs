@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreatePhysicalConnectionSetupOrderResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the order.
+        /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
+        /// <summary>
+        /// The ID of the Express Connect circuit.
+        /// </summary>
         [NameInMap("PhysicalConnectionId")]
         [Validation(Required=false)]
         public string PhysicalConnectionId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

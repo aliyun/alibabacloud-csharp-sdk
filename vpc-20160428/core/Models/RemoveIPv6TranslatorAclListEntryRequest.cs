@@ -9,14 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class RemoveIPv6TranslatorAclListEntryRequest : TeaModel {
+        /// <summary>
+        /// The ID of the ACL entry to be deleted.
+        /// </summary>
         [NameInMap("AclEntryId")]
         [Validation(Required=false)]
         public string AclEntryId { get; set; }
 
+        /// <summary>
+        /// The ID of the ACL to which the ACL entry belongs.
+        /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -29,6 +40,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region of the ACL.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIpv6EgressOnlyRuleResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the egress-only rule.
+        /// </summary>
         [NameInMap("Ipv6EgressRuleId")]
         [Validation(Required=false)]
         public string Ipv6EgressRuleId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

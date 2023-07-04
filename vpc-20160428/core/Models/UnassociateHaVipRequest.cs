@@ -9,18 +9,40 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnassociateHaVipRequest : TeaModel {
+        /// <summary>
+        /// The ID of the HAVIP that you want to disassociate.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
         public string Force { get; set; }
 
+        /// <summary>
+        /// Specifies whether to forcefully disassociate the HAVIP from the ECS instance or ENI. Valid values:
+        /// 
+        /// *   **True**: yes
+        /// *   **False** (default): no
+        /// 
+        /// >  If you set the value to **False**, you cannot disassociate the HAVIP from the primary instance.
+        /// </summary>
         [NameInMap("HaVipId")]
         [Validation(Required=false)]
         public string HaVipId { get; set; }
 
+        /// <summary>
+        /// The type of the instance from which you want to disassociate the HAVIP. Valid values:
+        /// 
+        /// *   **EcsInstance**: an ECS instance
+        /// *   **NetworkInterface**: an ENI
+        /// 
+        /// >  If you want to disassociate the HAVIP from an ENI, this parameter is required.
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -37,6 +59,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the ECS instance or ENI from which you want to disassociate the HAVIP.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

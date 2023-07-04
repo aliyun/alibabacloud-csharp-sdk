@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetNatGatewayConvertStatusRequest : TeaModel {
+        /// <summary>
+        /// The ID of the Internet NAT gateway to be queried.
+        /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region to which the NAT gateway belongs.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

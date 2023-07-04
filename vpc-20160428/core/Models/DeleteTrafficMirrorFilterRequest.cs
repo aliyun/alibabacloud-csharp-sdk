@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteTrafficMirrorFilterRequest : TeaModel {
+        /// <summary>
+        /// The ID of the region to which the mirrored traffic belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -37,6 +43,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// Specifies whether to check the request without performing the operation. Valid values:
+        /// 
+        /// *   **true**: checks the request without performing the operation. The system checks the required parameters, request format, and limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+        /// *   **false** (default): sends the request. After the request passes the check, the operation is performed.
+        /// </summary>
         [NameInMap("TrafficMirrorFilterId")]
         [Validation(Required=false)]
         public string TrafficMirrorFilterId { get; set; }

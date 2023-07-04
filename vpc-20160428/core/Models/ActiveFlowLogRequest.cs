@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ActiveFlowLogRequest : TeaModel {
+        /// <summary>
+        /// The ID of the flow log.
+        /// </summary>
         [NameInMap("FlowLogId")]
         [Validation(Required=false)]
         public string FlowLogId { get; set; }
@@ -21,6 +24,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the region where you want to create the flow log. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

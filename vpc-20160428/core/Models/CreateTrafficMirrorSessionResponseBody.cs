@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the mirrored traffic belongs.
+        /// </summary>
         [NameInMap("TrafficMirrorSessionId")]
         [Validation(Required=false)]
         public string TrafficMirrorSessionId { get; set; }

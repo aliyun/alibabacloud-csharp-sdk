@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateCommonBandwidthPackageResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }

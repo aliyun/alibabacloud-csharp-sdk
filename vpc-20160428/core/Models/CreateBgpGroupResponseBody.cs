@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateBgpGroupResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the BGP group.
+        /// </summary>
         [NameInMap("BgpGroupId")]
         [Validation(Required=false)]
         public string BgpGroupId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

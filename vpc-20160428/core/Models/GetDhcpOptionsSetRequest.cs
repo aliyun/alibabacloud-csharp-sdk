@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetDhcpOptionsSetRequest : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("DhcpOptionsSetId")]
         [Validation(Required=false)]
         public string DhcpOptionsSetId { get; set; }
@@ -21,6 +24,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The status of the DHCP options set. Valid values:
+        /// 
+        /// *   **Available**: available
+        /// *   **InUse**: in use
+        /// *   **Deleted**: deleted
+        /// *   **Pending**: being configured
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

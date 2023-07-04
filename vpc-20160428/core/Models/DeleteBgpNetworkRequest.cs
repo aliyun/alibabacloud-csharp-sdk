@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteBgpNetworkRequest : TeaModel {
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request.
+        /// 
+        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+        /// 
+        /// >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The CIDR block of the virtual private cloud (VPC) or vSwitch that you want to connect to a data center.
+        /// </summary>
         [NameInMap("DstCidrBlock")]
         [Validation(Required=false)]
         public string DstCidrBlock { get; set; }
@@ -25,6 +35,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the BGP group.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -37,6 +52,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the virtual border router (VBR).
+        /// </summary>
         [NameInMap("RouterId")]
         [Validation(Required=false)]
         public string RouterId { get; set; }
