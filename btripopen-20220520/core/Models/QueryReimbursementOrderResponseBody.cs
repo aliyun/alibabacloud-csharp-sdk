@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public long? BillSettlementId { get; set; }
 
+                    [NameInMap("capital_direction")]
+                    [Validation(Required=false)]
+                    public string CapitalDirection { get; set; }
+
                     [NameInMap("fee_type")]
                     [Validation(Required=false)]
                     public string FeeType { get; set; }
