@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         [Validation(Required=false)]
         public long? FailReturn { get; set; }
 
+        [NameInMap("OutId")]
+        [Validation(Required=false)]
+        public string OutId { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }

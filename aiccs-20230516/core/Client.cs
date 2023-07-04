@@ -1107,6 +1107,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             {
                 query["FailReturn"] = request.FailReturn;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -1159,6 +1163,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailReturn))
             {
                 query["FailReturn"] = request.FailReturn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
