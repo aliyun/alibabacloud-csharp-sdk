@@ -1,3 +1,7 @@
+2023-07-04 Version: 1.2.7
+- Support vpc firewall summary info.
+- Support IPS whitelist and IPS config.
+
 2023-06-13 Version: 1.2.6
 - Support DescribeCaptureFileAddr Api for capture task.
 - Support DescribeTaskLimitParam Api for capture task.

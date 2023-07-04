@@ -2922,6 +2922,80 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await DescribeControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        public DescribeDefaultIPSConfigResponse DescribeDefaultIPSConfigWithOptions(DescribeDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDefaultIPSConfig",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDefaultIPSConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDefaultIPSConfigResponse> DescribeDefaultIPSConfigWithOptionsAsync(DescribeDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDefaultIPSConfig",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDefaultIPSConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDefaultIPSConfigResponse DescribeDefaultIPSConfig(DescribeDefaultIPSConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDefaultIPSConfigWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDefaultIPSConfigResponse> DescribeDefaultIPSConfigAsync(DescribeDefaultIPSConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDefaultIPSConfigWithOptionsAsync(request, runtime);
+        }
+
         /**
           * You can call the DescribeDomainResolve operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.  
           * ## Limits
@@ -4898,6 +4972,88 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await DescribeUserAssetIPTrafficInfoWithOptionsAsync(request, runtime);
         }
 
+        public DescribeUserIPSWhitelistResponse DescribeUserIPSWhitelistWithOptions(DescribeUserIPSWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserIPSWhitelist",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserIPSWhitelistResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeUserIPSWhitelistResponse> DescribeUserIPSWhitelistWithOptionsAsync(DescribeUserIPSWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserIPSWhitelist",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserIPSWhitelistResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeUserIPSWhitelistResponse DescribeUserIPSWhitelist(DescribeUserIPSWhitelistRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserIPSWhitelistWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeUserIPSWhitelistResponse> DescribeUserIPSWhitelistAsync(DescribeUserIPSWhitelistRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserIPSWhitelistWithOptionsAsync(request, runtime);
+        }
+
         /**
           * You can call the DescribeVpcFirewallAclGroupList operation to query the information about all policy groups of access control policies that are created for VPC firewalls.
           * ## Limits
@@ -6804,6 +6960,144 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             return await ModifyControlPolicyPositionWithOptionsAsync(request, runtime);
         }
 
+        public ModifyDefaultIPSConfigResponse ModifyDefaultIPSConfigWithOptions(ModifyDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiRules))
+            {
+                query["AiRules"] = request.AiRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BasicRules))
+            {
+                query["BasicRules"] = request.BasicRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CtiRules))
+            {
+                query["CtiRules"] = request.CtiRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAllPatch))
+            {
+                query["EnableAllPatch"] = request.EnableAllPatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDefault))
+            {
+                query["EnableDefault"] = request.EnableDefault;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchRules))
+            {
+                query["PatchRules"] = request.PatchRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleClass))
+            {
+                query["RuleClass"] = request.RuleClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunMode))
+            {
+                query["RunMode"] = request.RunMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDefaultIPSConfig",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDefaultIPSConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyDefaultIPSConfigResponse> ModifyDefaultIPSConfigWithOptionsAsync(ModifyDefaultIPSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiRules))
+            {
+                query["AiRules"] = request.AiRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BasicRules))
+            {
+                query["BasicRules"] = request.BasicRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CtiRules))
+            {
+                query["CtiRules"] = request.CtiRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAllPatch))
+            {
+                query["EnableAllPatch"] = request.EnableAllPatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDefault))
+            {
+                query["EnableDefault"] = request.EnableDefault;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchRules))
+            {
+                query["PatchRules"] = request.PatchRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleClass))
+            {
+                query["RuleClass"] = request.RuleClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunMode))
+            {
+                query["RunMode"] = request.RunMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDefaultIPSConfig",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDefaultIPSConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyDefaultIPSConfigResponse ModifyDefaultIPSConfig(ModifyDefaultIPSConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDefaultIPSConfigWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyDefaultIPSConfigResponse> ModifyDefaultIPSConfigAsync(ModifyDefaultIPSConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDefaultIPSConfigWithOptionsAsync(request, runtime);
+        }
+
         public ModifyFirewallV2RoutePolicySwitchResponse ModifyFirewallV2RoutePolicySwitchWithOptions(ModifyFirewallV2RoutePolicySwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7316,6 +7610,128 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyTrFirewallV2RoutePolicyScopeWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyUserIPSWhitelistResponse ModifyUserIPSWhitelistWithOptions(ModifyUserIPSWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListType))
+            {
+                query["ListType"] = request.ListType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListValue))
+            {
+                query["ListValue"] = request.ListValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteType))
+            {
+                query["WhiteType"] = request.WhiteType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyUserIPSWhitelist",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyUserIPSWhitelistResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyUserIPSWhitelistResponse> ModifyUserIPSWhitelistWithOptionsAsync(ModifyUserIPSWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListType))
+            {
+                query["ListType"] = request.ListType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListValue))
+            {
+                query["ListValue"] = request.ListValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteType))
+            {
+                query["WhiteType"] = request.WhiteType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyUserIPSWhitelist",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyUserIPSWhitelistResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyUserIPSWhitelistResponse ModifyUserIPSWhitelist(ModifyUserIPSWhitelistRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyUserIPSWhitelistWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyUserIPSWhitelistResponse> ModifyUserIPSWhitelistAsync(ModifyUserIPSWhitelistRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyUserIPSWhitelistWithOptionsAsync(request, runtime);
         }
 
         /**

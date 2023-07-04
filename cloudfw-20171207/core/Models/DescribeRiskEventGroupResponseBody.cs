@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeRiskEventGroupResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// An array that consists of the details of the intrusion events.
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public DescribeRiskEventGroupResponseBodyDataListVpcDstInfo VpcDstInfo { get; set; }
             public class DescribeRiskEventGroupResponseBodyDataListVpcDstInfo : TeaModel {
                 /// <summary>
-                /// The ID of instance N on which you want to run the command.
+                /// The ID of the ECS instance.
                 /// </summary>
                 [NameInMap("EcsInstanceId")]
                 [Validation(Required=false)]
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public DescribeRiskEventGroupResponseBodyDataListVpcSrcInfo VpcSrcInfo { get; set; }
             public class DescribeRiskEventGroupResponseBodyDataListVpcSrcInfo : TeaModel {
                 /// <summary>
-                /// The ID of instance N on which you want to run the command.
+                /// The ID of the ECS instance.
                 /// </summary>
                 [NameInMap("EcsInstanceId")]
                 [Validation(Required=false)]
