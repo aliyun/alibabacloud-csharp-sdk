@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PublishFunctionVersionRequest : TeaModel {
-        [NameInMap("request")]
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public PublishVersionInput Request { get; set; }
+        public PublishVersionInput Body { get; set; }
 
     }
 

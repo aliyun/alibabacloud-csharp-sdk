@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class UpdateCustomDomainRequest : TeaModel {
-        [NameInMap("request")]
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public UpdateCustomDomainInput Request { get; set; }
+        public UpdateCustomDomainInput Body { get; set; }
 
     }
 

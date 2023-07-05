@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -403,7 +403,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -434,7 +434,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2236,8 +2236,8 @@ namespace AlibabaCloud.SDK.FC20230330
             {
                 Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Request,
-                Stream = request.Request,
+                Body = request.Body,
+                Stream = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2304,8 +2304,8 @@ namespace AlibabaCloud.SDK.FC20230330
             {
                 Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Request,
-                Stream = request.Request,
+                Body = request.Body,
+                Stream = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3739,7 +3739,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3770,7 +3770,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3833,7 +3833,7 @@ namespace AlibabaCloud.SDK.FC20230330
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3870,7 +3870,7 @@ namespace AlibabaCloud.SDK.FC20230330
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3927,7 +3927,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3958,7 +3958,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4119,7 +4119,7 @@ namespace AlibabaCloud.SDK.FC20230330
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4156,7 +4156,7 @@ namespace AlibabaCloud.SDK.FC20230330
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4213,7 +4213,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4244,7 +4244,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4415,7 +4415,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4446,7 +4446,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4503,7 +4503,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4534,7 +4534,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4591,7 +4591,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4622,7 +4622,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4679,7 +4679,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4710,7 +4710,7 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {

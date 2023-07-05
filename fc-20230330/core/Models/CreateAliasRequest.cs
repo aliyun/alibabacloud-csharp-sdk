@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CreateAliasRequest : TeaModel {
-        [NameInMap("request")]
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public CreateAliasInput Request { get; set; }
+        public CreateAliasInput Body { get; set; }
 
     }
 

@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class TagResourceRequest : TeaModel {
-        [NameInMap("request")]
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public TagResourceInput Request { get; set; }
+        public TagResourceInput Body { get; set; }
 
     }
 

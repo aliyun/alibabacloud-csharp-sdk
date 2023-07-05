@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutProvisionConfigRequest : TeaModel {
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public PutProvisionConfigInput Body { get; set; }
+
         [NameInMap("qualifier")]
         [Validation(Required=false)]
         public string Qualifier { get; set; }
-
-        [NameInMap("request")]
-        [Validation(Required=false)]
-        public PutProvisionConfigInput Request { get; set; }
 
     }
 
