@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class InitializeRequest : TeaModel {
+        [NameInMap("Authorize")]
+        [Validation(Required=false)]
+        public string Authorize { get; set; }
+
         [NameInMap("Crop")]
         [Validation(Required=false)]
         public string Crop { get; set; }
