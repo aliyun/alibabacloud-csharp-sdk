@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceSpecShrinkRequest : TeaModel {
+        [NameInMap("AutoUseCoupon")]
+        [Validation(Required=false)]
+        public bool? AutoUseCoupon { get; set; }
+
         [NameInMap("BurstingEnabled")]
         [Validation(Required=false)]
         public bool? BurstingEnabled { get; set; }

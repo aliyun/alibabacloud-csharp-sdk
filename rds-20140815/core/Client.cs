@@ -17446,6 +17446,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * @deprecated
           * > This operation is no longer maintained. You can use the [DescribeDiagnosticReportList](~~443006~~) operation of Database Autonomy Service (DAS) to query a list of diagnostic reports.
           * *   The returned diagnosis reports include data collection time, data generation time, and download URLs. The system retains the reports for 15 days.
           * *   This operation is not suitable for instances that run SQL Server 2017 on RDS Cluster Edition.
@@ -17454,6 +17455,7 @@ namespace AlibabaCloud.SDK.Rds20140815
           * @param runtime runtime options for this request RuntimeOptions
           * @return DescribeDiagnosticReportListResponse
          */
+        // Deprecated
         public DescribeDiagnosticReportListResponse DescribeDiagnosticReportListWithOptions(DescribeDiagnosticReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17486,6 +17488,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * @deprecated
           * > This operation is no longer maintained. You can use the [DescribeDiagnosticReportList](~~443006~~) operation of Database Autonomy Service (DAS) to query a list of diagnostic reports.
           * *   The returned diagnosis reports include data collection time, data generation time, and download URLs. The system retains the reports for 15 days.
           * *   This operation is not suitable for instances that run SQL Server 2017 on RDS Cluster Edition.
@@ -17494,6 +17497,7 @@ namespace AlibabaCloud.SDK.Rds20140815
           * @param runtime runtime options for this request RuntimeOptions
           * @return DescribeDiagnosticReportListResponse
          */
+        // Deprecated
         public async Task<DescribeDiagnosticReportListResponse> DescribeDiagnosticReportListWithOptionsAsync(DescribeDiagnosticReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17526,6 +17530,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * @deprecated
           * > This operation is no longer maintained. You can use the [DescribeDiagnosticReportList](~~443006~~) operation of Database Autonomy Service (DAS) to query a list of diagnostic reports.
           * *   The returned diagnosis reports include data collection time, data generation time, and download URLs. The system retains the reports for 15 days.
           * *   This operation is not suitable for instances that run SQL Server 2017 on RDS Cluster Edition.
@@ -17533,6 +17538,7 @@ namespace AlibabaCloud.SDK.Rds20140815
           * @param request DescribeDiagnosticReportListRequest
           * @return DescribeDiagnosticReportListResponse
          */
+        // Deprecated
         public DescribeDiagnosticReportListResponse DescribeDiagnosticReportList(DescribeDiagnosticReportListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17540,6 +17546,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
+          * @deprecated
           * > This operation is no longer maintained. You can use the [DescribeDiagnosticReportList](~~443006~~) operation of Database Autonomy Service (DAS) to query a list of diagnostic reports.
           * *   The returned diagnosis reports include data collection time, data generation time, and download URLs. The system retains the reports for 15 days.
           * *   This operation is not suitable for instances that run SQL Server 2017 on RDS Cluster Edition.
@@ -17547,6 +17554,7 @@ namespace AlibabaCloud.SDK.Rds20140815
           * @param request DescribeDiagnosticReportListRequest
           * @return DescribeDiagnosticReportListResponse
          */
+        // Deprecated
         public async Task<DescribeDiagnosticReportListResponse> DescribeDiagnosticReportListAsync(DescribeDiagnosticReportListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -30276,6 +30284,10 @@ namespace AlibabaCloud.SDK.Rds20140815
                 request.ServerlessConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfiguration, "ServerlessConfiguration", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUseCoupon))
+            {
+                query["AutoUseCoupon"] = request.AutoUseCoupon;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BurstingEnabled))
             {
                 query["BurstingEnabled"] = request.BurstingEnabled;
@@ -30402,6 +30414,10 @@ namespace AlibabaCloud.SDK.Rds20140815
                 request.ServerlessConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfiguration, "ServerlessConfiguration", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUseCoupon))
+            {
+                query["AutoUseCoupon"] = request.AutoUseCoupon;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BurstingEnabled))
             {
                 query["BurstingEnabled"] = request.BurstingEnabled;
