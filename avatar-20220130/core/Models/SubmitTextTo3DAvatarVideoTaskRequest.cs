@@ -19,6 +19,28 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
 
         }
 
+        [NameInMap("AudioInfo")]
+        [Validation(Required=false)]
+        public SubmitTextTo3DAvatarVideoTaskRequestAudioInfo AudioInfo { get; set; }
+        public class SubmitTextTo3DAvatarVideoTaskRequestAudioInfo : TeaModel {
+            [NameInMap("PitchRate")]
+            [Validation(Required=false)]
+            public int? PitchRate { get; set; }
+
+            [NameInMap("SpeechRate")]
+            [Validation(Required=false)]
+            public int? SpeechRate { get; set; }
+
+            [NameInMap("Voice")]
+            [Validation(Required=false)]
+            public string Voice { get; set; }
+
+            [NameInMap("Volume")]
+            [Validation(Required=false)]
+            public int? Volume { get; set; }
+
+        }
+
         [NameInMap("AvatarInfo")]
         [Validation(Required=false)]
         public SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo AvatarInfo { get; set; }
@@ -31,11 +53,27 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
             [Validation(Required=false)]
             public string Code { get; set; }
 
+            [NameInMap("IndustryCode")]
+            [Validation(Required=false)]
+            public string IndustryCode { get; set; }
+
             [NameInMap("Locate")]
             [Validation(Required=false)]
             public int? Locate { get; set; }
 
         }
+
+        [NameInMap("Callback")]
+        [Validation(Required=false)]
+        public bool? Callback { get; set; }
+
+        [NameInMap("CallbackParams")]
+        [Validation(Required=false)]
+        public string CallbackParams { get; set; }
+
+        [NameInMap("ExtParams")]
+        [Validation(Required=false)]
+        public string ExtParams { get; set; }
 
         [NameInMap("TenantId")]
         [Validation(Required=false)]

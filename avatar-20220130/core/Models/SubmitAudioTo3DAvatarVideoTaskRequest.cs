@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
             [Validation(Required=false)]
             public string Code { get; set; }
 
+            [NameInMap("IndustryCode")]
+            [Validation(Required=false)]
+            public string IndustryCode { get; set; }
+
             [NameInMap("Locate")]
             [Validation(Required=false)]
             public int? Locate { get; set; }

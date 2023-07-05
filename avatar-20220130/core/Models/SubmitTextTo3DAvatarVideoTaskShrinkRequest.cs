@@ -13,9 +13,25 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
         [Validation(Required=false)]
         public string AppShrink { get; set; }
 
+        [NameInMap("AudioInfo")]
+        [Validation(Required=false)]
+        public string AudioInfoShrink { get; set; }
+
         [NameInMap("AvatarInfo")]
         [Validation(Required=false)]
         public string AvatarInfoShrink { get; set; }
+
+        [NameInMap("Callback")]
+        [Validation(Required=false)]
+        public bool? Callback { get; set; }
+
+        [NameInMap("CallbackParams")]
+        [Validation(Required=false)]
+        public string CallbackParams { get; set; }
+
+        [NameInMap("ExtParams")]
+        [Validation(Required=false)]
+        public string ExtParams { get; set; }
 
         [NameInMap("TenantId")]
         [Validation(Required=false)]

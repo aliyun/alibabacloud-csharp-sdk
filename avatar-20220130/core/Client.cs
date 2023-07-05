@@ -1746,6 +1746,10 @@ namespace AlibabaCloud.SDK.Avatar20220130
             {
                 request.AppShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.App, "App", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AudioInfo))
+            {
+                request.AudioInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AudioInfo, "AudioInfo", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AvatarInfo))
             {
                 request.AvatarInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AvatarInfo, "AvatarInfo", "json");
@@ -1759,9 +1763,25 @@ namespace AlibabaCloud.SDK.Avatar20220130
             {
                 query["App"] = request.AppShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioInfoShrink))
+            {
+                query["AudioInfo"] = request.AudioInfoShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarInfoShrink))
             {
                 query["AvatarInfo"] = request.AvatarInfoShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Callback))
+            {
+                query["Callback"] = request.Callback;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                query["CallbackParams"] = request.CallbackParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -1807,6 +1827,10 @@ namespace AlibabaCloud.SDK.Avatar20220130
             {
                 request.AppShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.App, "App", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AudioInfo))
+            {
+                request.AudioInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AudioInfo, "AudioInfo", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AvatarInfo))
             {
                 request.AvatarInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AvatarInfo, "AvatarInfo", "json");
@@ -1820,9 +1844,25 @@ namespace AlibabaCloud.SDK.Avatar20220130
             {
                 query["App"] = request.AppShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioInfoShrink))
+            {
+                query["AudioInfo"] = request.AudioInfoShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarInfoShrink))
             {
                 query["AvatarInfo"] = request.AvatarInfoShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Callback))
+            {
+                query["Callback"] = request.Callback;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackParams))
+            {
+                query["CallbackParams"] = request.CallbackParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
