@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
-    public class AttachSecurityGroupToVpcEndpointResponseBody : TeaModel {
+    public class TagResourcesResponseBody : TeaModel {
         /// <summary>
         /// The request ID.
         /// </summary>

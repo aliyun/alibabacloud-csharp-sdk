@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,11 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
-    public class AddUserToVpcEndpointServiceRequest : TeaModel {
+    public class TagResourcesRequest : TeaModel {
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
         /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+        /// 
+        /// > If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -32,32 +31,54 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The region ID of the endpoint service. You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+        /// The region ID of the PrivateLink instance.
+        /// 
+        /// You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The endpoint service ID.
+        /// The resource IDs. You can specify up to 20 resource IDs.
         /// </summary>
-        [NameInMap("ServiceId")]
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public string ServiceId { get; set; }
+        public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The whitelist in the format of Aliyun Resource Name (ARN).
+        /// The type of the resource.
         /// </summary>
-        [NameInMap("UserARN")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public string UserARN { get; set; }
+        public string ResourceType { get; set; }
 
         /// <summary>
-        /// The account ID that you want to add to the whitelist.
+        /// The tags that you want to add to the resource.
         /// </summary>
-        [NameInMap("UserId")]
+        [NameInMap("Tag")]
         [Validation(Required=false)]
-        public long? UserId { get; set; }
+        public List<TagResourcesRequestTag> Tag { get; set; }
+        public class TagResourcesRequestTag : TeaModel {
+            /// <summary>
+            /// The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+            /// 
+            /// The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.
+            /// 
+            /// The tag value must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

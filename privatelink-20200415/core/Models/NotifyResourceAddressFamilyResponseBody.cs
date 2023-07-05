@@ -8,10 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
-    public class AttachSecurityGroupToVpcEndpointResponseBody : TeaModel {
-        /// <summary>
-        /// The request ID.
-        /// </summary>
+    public class NotifyResourceAddressFamilyResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

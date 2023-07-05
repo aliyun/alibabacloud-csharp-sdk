@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             [NameInMap("ResourceOwner")]
             [Validation(Required=false)]
             public bool? ResourceOwner { get; set; }
@@ -68,6 +72,20 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListVpcEndpointsResponseBodyEndpointsTags> Tags { get; set; }
+            public class ListVpcEndpointsResponseBodyEndpointsTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             [NameInMap("VpcId")]
             [Validation(Required=false)]
@@ -90,6 +108,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

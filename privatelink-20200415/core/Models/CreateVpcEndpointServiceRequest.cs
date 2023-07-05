@@ -41,7 +41,15 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
         }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("ServiceDescription")]
         [Validation(Required=false)]
@@ -50,6 +58,24 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [NameInMap("ServiceResourceType")]
         [Validation(Required=false)]
         public string ServiceResourceType { get; set; }
+
+        [NameInMap("ServiceSupportIPv6")]
+        [Validation(Required=false)]
+        public bool? ServiceSupportIPv6 { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateVpcEndpointServiceRequestTag> Tag { get; set; }
+        public class CreateVpcEndpointServiceRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         [NameInMap("ZoneAffinityEnabled")]
         [Validation(Required=false)]

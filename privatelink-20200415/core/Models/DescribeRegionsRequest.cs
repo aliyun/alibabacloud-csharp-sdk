@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class DescribeRegionsRequest : TeaModel {
+        /// <summary>
+        /// The list of regions.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

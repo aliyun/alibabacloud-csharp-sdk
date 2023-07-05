@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
+
     }
 
 }

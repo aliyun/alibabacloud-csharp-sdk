@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [Validation(Required=false)]
             public string Payer { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             [NameInMap("ServiceDomain")]
             [Validation(Required=false)]
             public string ServiceDomain { get; set; }
@@ -41,15 +45,41 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
+            [NameInMap("ServiceResourceType")]
+            [Validation(Required=false)]
+            public string ServiceResourceType { get; set; }
+
+            [NameInMap("ServiceSupportIPv6")]
+            [Validation(Required=false)]
+            public bool? ServiceSupportIPv6 { get; set; }
+
             [NameInMap("ServiceType")]
             [Validation(Required=false)]
             public string ServiceType { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListVpcEndpointServicesByEndUserResponseBodyServicesTags> Tags { get; set; }
+            public class ListVpcEndpointServicesByEndUserResponseBodyServicesTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             [NameInMap("Zones")]
             [Validation(Required=false)]
             public List<string> Zones { get; set; }
 
         }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public string TotalCount { get; set; }
 
     }
 

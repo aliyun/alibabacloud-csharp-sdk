@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
@@ -32,6 +36,20 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [NameInMap("ServiceType")]
         [Validation(Required=false)]
         public string ServiceType { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListVpcEndpointServicesByEndUserRequestTag> Tag { get; set; }
+        public class ListVpcEndpointServicesByEndUserRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

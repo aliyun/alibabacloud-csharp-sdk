@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("ServiceBusinessStatus")]
         [Validation(Required=false)]
         public string ServiceBusinessStatus { get; set; }
@@ -44,6 +48,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [NameInMap("ServiceStatus")]
         [Validation(Required=false)]
         public string ServiceStatus { get; set; }
+
+        [NameInMap("ServiceSupportIPv6")]
+        [Validation(Required=false)]
+        public bool? ServiceSupportIPv6 { get; set; }
 
         [NameInMap("ZoneAffinityEnabled")]
         [Validation(Required=false)]
