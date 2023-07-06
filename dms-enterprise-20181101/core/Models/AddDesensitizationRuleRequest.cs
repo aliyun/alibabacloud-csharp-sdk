@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class AddDesensitizationRuleRequest : TeaModel {
+        /// <summary>
+        /// Algorithm parameters.
+        /// </summary>
         [NameInMap("FunctionParams")]
         [Validation(Required=false)]
         public List<Dictionary<string, string>> FunctionParams { get; set; }

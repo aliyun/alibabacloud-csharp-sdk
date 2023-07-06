@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetOpLogRequest : TeaModel {
+        /// <summary>
+        /// DatabaseName.
+        /// </summary>
         [NameInMap("DatabaseName")]
         [Validation(Required=false)]
         public string DatabaseName { get; set; }
@@ -84,6 +87,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
+        /// <summary>
+        /// UserNick.
+        /// </summary>
         [NameInMap("UserNick")]
         [Validation(Required=false)]
         public string UserNick { get; set; }

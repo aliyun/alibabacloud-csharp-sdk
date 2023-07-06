@@ -367,6 +367,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public long? PageSize { get; set; }
 
+                [NameInMap("TempTableNameMap")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> TempTableNameMap { get; set; }
+
             }
 
             [NameInMap("PluginParam")]

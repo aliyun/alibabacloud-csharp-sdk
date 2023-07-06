@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListTaskFlowsByPageRequest : TeaModel {
+        /// <summary>
+        /// Filter condition, task flow ID list.
+        /// </summary>
         [NameInMap("DagIdList")]
         [Validation(Required=false)]
         public List<long?> DagIdList { get; set; }
@@ -27,6 +30,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// Filter condition, application scenario ID.
+        /// </summary>
         [NameInMap("ScenarioId")]
         [Validation(Required=false)]
         public long? ScenarioId { get; set; }

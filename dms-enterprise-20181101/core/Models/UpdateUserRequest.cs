@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string Mobile { get; set; }
 
         /// <summary>
-        /// The roles that the user assumes. For more information about the valid values, see the Request parameters section in the [RegisterUser](~~141565~~) topic.
+        /// The roles that the user assumes. For more information about the valid values, see the Request parameters section in the [UpdateUser](~~465812~~) topic.
         /// </summary>
         [NameInMap("RoleNames")]
         [Validation(Required=false)]

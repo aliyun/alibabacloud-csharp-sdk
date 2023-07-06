@@ -65,22 +65,41 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public string CreatorNickName { get; set; }
 
+                /// <summary>
+                /// The start time of scheduled scheduling. The task flow is not scheduled before this point in time.
+                /// </summary>
                 [NameInMap("CronBeginDate")]
                 [Validation(Required=false)]
                 public string CronBeginDate { get; set; }
 
+                /// <summary>
+                /// The end time of scheduled scheduling. The task flow is not scheduled after this point in time.
+                /// </summary>
                 [NameInMap("CronEndDate")]
                 [Validation(Required=false)]
                 public string CronEndDate { get; set; }
 
+                /// <summary>
+                /// Scheduled Cron.
+                /// </summary>
                 [NameInMap("CronStr")]
                 [Validation(Required=false)]
                 public string CronStr { get; set; }
 
+                /// <summary>
+                /// Whether to enable scheduled scheduling.
+                /// </summary>
                 [NameInMap("CronSwitch")]
                 [Validation(Required=false)]
                 public bool? CronSwitch { get; set; }
 
+                /// <summary>
+                /// Scheduling cycle type. Valid values:
+                /// - **2**: Hourly scheduling
+                /// - **3**: Daily scheduling
+                /// - **4**: Weekly scheduling
+                /// - **5**: Monthly scheduling
+                /// </summary>
                 [NameInMap("CronType")]
                 [Validation(Required=false)]
                 public int? CronType { get; set; }
@@ -92,6 +111,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public string DagName { get; set; }
 
+                /// <summary>
+                /// The user ID of the task flow owner.
+                /// </summary>
                 [NameInMap("DagOwnerId")]
                 [Validation(Required=false)]
                 public string DagOwnerId { get; set; }
@@ -142,10 +164,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public string LatestInstanceTime { get; set; }
 
+                /// <summary>
+                /// The ID of the application scenario.
+                /// </summary>
                 [NameInMap("ScenarioId")]
                 [Validation(Required=false)]
                 public string ScenarioId { get; set; }
 
+                /// <summary>
+                /// Event scheduling configuration, JSON string format.
+                /// </summary>
                 [NameInMap("ScheduleParam")]
                 [Validation(Required=false)]
                 public string ScheduleParam { get; set; }
@@ -161,10 +189,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
+                /// <summary>
+                /// Time zone setting. Default value: East 8(Asia/Shanghai).
+                /// </summary>
                 [NameInMap("TimeZoneId")]
                 [Validation(Required=false)]
                 public string TimeZoneId { get; set; }
 
+                /// <summary>
+                /// The trigger type. Valid values:
+                /// - **0**: Periodic scheduling
+                /// - **1**: Run manually
+                /// </summary>
                 [NameInMap("TriggerType")]
                 [Validation(Required=false)]
                 public int? TriggerType { get; set; }

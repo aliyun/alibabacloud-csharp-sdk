@@ -93,6 +93,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public long? SQLId { get; set; }
 
+            /// <summary>
+            /// SQLName.
+            /// </summary>
             [NameInMap("SQLName")]
             [Validation(Required=false)]
             public string SQLName { get; set; }

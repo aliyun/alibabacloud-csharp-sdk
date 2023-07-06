@@ -47,6 +47,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? DagId { get; set; }
 
+        /// <summary>
+        /// Filter condition, which specifies the list of node IDs in the task flow that do not need to supplement data.
+        /// </summary>
         [NameInMap("FilterNodeIds")]
         [Validation(Required=false)]
         public string FilterNodeIdsShrink { get; set; }

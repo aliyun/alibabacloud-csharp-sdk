@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetDataCronClearConfigResponseBody : TeaModel {
+        /// <summary>
+        /// Data configuration.
+        /// </summary>
         [NameInMap("DataCronClearConfig")]
         [Validation(Required=false)]
         public GetDataCronClearConfigResponseBodyDataCronClearConfig DataCronClearConfig { get; set; }
@@ -78,6 +81,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         }
 
+        /// <summary>
+        /// The error code.
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }

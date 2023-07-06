@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string NickName { get; set; }
 
                 /// <summary>
-                /// 用户ID。
+                /// userId.
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]

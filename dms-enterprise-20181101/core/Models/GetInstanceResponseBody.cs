@@ -191,6 +191,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string SafeRuleId { get; set; }
 
+            /// <summary>
+            /// Whether sensitive data protection is enabled.  Valid values:
+            /// 
+            /// - **true**: Enable.
+            /// 
+            /// - **false**: Close.
+            /// </summary>
             [NameInMap("SellSitd")]
             [Validation(Required=false)]
             public string SellSitd { get; set; }

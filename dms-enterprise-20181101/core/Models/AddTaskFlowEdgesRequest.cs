@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public List<AddTaskFlowEdgesRequestEdges> Edges { get; set; }
         public class AddTaskFlowEdgesRequestEdges : TeaModel {
             /// <summary>
-            /// The error code returned if the request failed.
+            /// The ID of the node where the end node of the edge is located.
             /// </summary>
             [NameInMap("NodeEnd")]
             [Validation(Required=false)]
             public long? NodeEnd { get; set; }
 
             /// <summary>
-            /// The ID of the request. You can use the ID to query logs and troubleshoot issues.
+            /// The ID of the node where the start node of the edge is located.
             /// </summary>
             [NameInMap("NodeFrom")]
             [Validation(Required=false)]

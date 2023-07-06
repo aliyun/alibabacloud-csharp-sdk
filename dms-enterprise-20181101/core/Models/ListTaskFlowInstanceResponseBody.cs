@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public string DagName { get; set; }
 
+                /// <summary>
+                /// The version of the task flow.
+                /// </summary>
                 [NameInMap("DagVersion")]
                 [Validation(Required=false)]
                 public string DagVersion { get; set; }
@@ -104,6 +107,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public int? TriggerType { get; set; }
 
+                /// <summary>
+                /// The time when the execution of the task flow was start. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
+                /// </summary>
                 [NameInMap("startTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
