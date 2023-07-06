@@ -15,15 +15,21 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<DescribePhoneNumberAnalysisResponseBodyData> Data { get; set; }
+        public DescribePhoneNumberAnalysisResponseBodyData Data { get; set; }
         public class DescribePhoneNumberAnalysisResponseBodyData : TeaModel {
-            [NameInMap("Code")]
+            [NameInMap("List")]
             [Validation(Required=false)]
-            public string Code { get; set; }
+            public List<DescribePhoneNumberAnalysisResponseBodyDataList> List { get; set; }
+            public class DescribePhoneNumberAnalysisResponseBodyDataList : TeaModel {
+                [NameInMap("Code")]
+                [Validation(Required=false)]
+                public string Code { get; set; }
 
-            [NameInMap("Number")]
-            [Validation(Required=false)]
-            public string Number { get; set; }
+                [NameInMap("Number")]
+                [Validation(Required=false)]
+                public string Number { get; set; }
+
+            }
 
         }
 
