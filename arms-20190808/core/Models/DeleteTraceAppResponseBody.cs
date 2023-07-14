@@ -9,13 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteTraceAppResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
+        /// <summary>
+        /// The response in JSON format, including the HTTP status code, error code, response message, and trace ID.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
+
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

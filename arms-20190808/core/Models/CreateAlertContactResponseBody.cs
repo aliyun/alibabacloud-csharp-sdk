@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateAlertContactResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ContactId")]
         [Validation(Required=false)]
         public string ContactId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

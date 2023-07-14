@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdateAlertContactGroupRequest : TeaModel {
+        [NameInMap("ContactGroupId")]
+        [Validation(Required=false)]
+        public long? ContactGroupId { get; set; }
+
         [NameInMap("ContactGroupName")]
         [Validation(Required=false)]
         public string ContactGroupName { get; set; }
@@ -20,14 +24,6 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("ProxyUserId")]
-        [Validation(Required=false)]
-        public string ProxyUserId { get; set; }
-
-        [NameInMap("ContactGroupId")]
-        [Validation(Required=false)]
-        public long? ContactGroupId { get; set; }
 
     }
 

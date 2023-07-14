@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteAlertContactGroupRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ProxyUserId")]
-        [Validation(Required=false)]
-        public string ProxyUserId { get; set; }
-
         [NameInMap("ContactGroupId")]
         [Validation(Required=false)]
         public long? ContactGroupId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

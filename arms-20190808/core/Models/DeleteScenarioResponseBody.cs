@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteScenarioResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Indicates whether the request is successful.
+        /// 
+        /// *   `true`: successful
+        /// *   `false`: failed
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public bool? Result { get; set; }

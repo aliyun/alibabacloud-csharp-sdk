@@ -13,29 +13,29 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ContactName { get; set; }
 
-        [NameInMap("PhoneNum")]
+        [NameInMap("DingRobotWebhookUrl")]
         [Validation(Required=false)]
-        public string PhoneNum { get; set; }
+        public string DingRobotWebhookUrl { get; set; }
 
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
 
-        [NameInMap("DingRobotWebhookUrl")]
+        [NameInMap("PhoneNum")]
         [Validation(Required=false)]
-        public string DingRobotWebhookUrl { get; set; }
-
-        [NameInMap("SystemNoc")]
-        [Validation(Required=false)]
-        public bool? SystemNoc { get; set; }
+        public string PhoneNum { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ProxyUserId")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public string ProxyUserId { get; set; }
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("SystemNoc")]
+        [Validation(Required=false)]
+        public bool? SystemNoc { get; set; }
 
     }
 

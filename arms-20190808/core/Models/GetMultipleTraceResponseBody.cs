@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetMultipleTraceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("MultiCallChainInfos")]
         [Validation(Required=false)]
         public List<GetMultipleTraceResponseBodyMultiCallChainInfos> MultiCallChainInfos { get; set; }
@@ -21,35 +17,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public List<GetMultipleTraceResponseBodyMultiCallChainInfosSpans> Spans { get; set; }
             public class GetMultipleTraceResponseBodyMultiCallChainInfosSpans : TeaModel {
-                [NameInMap("OperationName")]
+                [NameInMap("Duration")]
                 [Validation(Required=false)]
-                public string OperationName { get; set; }
+                public long? Duration { get; set; }
 
-                [NameInMap("ResultCode")]
+                [NameInMap("HaveStack")]
                 [Validation(Required=false)]
-                public string ResultCode { get; set; }
-
-                [NameInMap("Timestamp")]
-                [Validation(Required=false)]
-                public long? Timestamp { get; set; }
-
-                [NameInMap("RpcType")]
-                [Validation(Required=false)]
-                public int? RpcType { get; set; }
-
-                [NameInMap("TagEntryList")]
-                [Validation(Required=false)]
-                public List<GetMultipleTraceResponseBodyMultiCallChainInfosSpansTagEntryList> TagEntryList { get; set; }
-                public class GetMultipleTraceResponseBodyMultiCallChainInfosSpansTagEntryList : TeaModel {
-                    [NameInMap("Key")]
-                    [Validation(Required=false)]
-                    public string Key { get; set; }
-
-                    [NameInMap("Value")]
-                    [Validation(Required=false)]
-                    public string Value { get; set; }
-
-                }
+                public bool? HaveStack { get; set; }
 
                 [NameInMap("LogEventList")]
                 [Validation(Required=false)]
@@ -75,25 +49,55 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
                 }
 
-                [NameInMap("HaveStack")]
+                [NameInMap("OperationName")]
                 [Validation(Required=false)]
-                public bool? HaveStack { get; set; }
+                public string OperationName { get; set; }
 
-                [NameInMap("ServiceIp")]
+                [NameInMap("ParentSpanId")]
                 [Validation(Required=false)]
-                public string ServiceIp { get; set; }
+                public string ParentSpanId { get; set; }
 
-                [NameInMap("Duration")]
+                [NameInMap("ResultCode")]
                 [Validation(Required=false)]
-                public long? Duration { get; set; }
+                public string ResultCode { get; set; }
 
                 [NameInMap("RpcId")]
                 [Validation(Required=false)]
                 public string RpcId { get; set; }
 
+                [NameInMap("RpcType")]
+                [Validation(Required=false)]
+                public int? RpcType { get; set; }
+
+                [NameInMap("ServiceIp")]
+                [Validation(Required=false)]
+                public string ServiceIp { get; set; }
+
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
+
+                [NameInMap("SpanId")]
+                [Validation(Required=false)]
+                public string SpanId { get; set; }
+
+                [NameInMap("TagEntryList")]
+                [Validation(Required=false)]
+                public List<GetMultipleTraceResponseBodyMultiCallChainInfosSpansTagEntryList> TagEntryList { get; set; }
+                public class GetMultipleTraceResponseBodyMultiCallChainInfosSpansTagEntryList : TeaModel {
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("Timestamp")]
+                [Validation(Required=false)]
+                public long? Timestamp { get; set; }
 
                 [NameInMap("TraceID")]
                 [Validation(Required=false)]
@@ -106,6 +110,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string TraceID { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

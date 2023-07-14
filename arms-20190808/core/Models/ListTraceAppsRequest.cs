@@ -9,9 +9,42 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListTraceAppsRequest : TeaModel {
+        /// <summary>
+        /// The region ID.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// The resource group ID.
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// The tags.
+        /// </summary>
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<ListTraceAppsRequestTags> Tags { get; set; }
+        public class ListTraceAppsRequestTags : TeaModel {
+            /// <summary>
+            /// The tag key.
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// The tag value.
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

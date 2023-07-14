@@ -9,13 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ConfigAppResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
+        /// <summary>
+        /// The result of turning on or turning off the main switch of the ARMS agent or the main switch status of the ARMS agent.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
+
+        /// <summary>
+        /// The request ID.
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

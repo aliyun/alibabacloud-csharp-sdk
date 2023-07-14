@@ -9,13 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class AddGrafanaResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
+        /// <summary>
+        /// Indicates whether the call was successful.
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
+
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

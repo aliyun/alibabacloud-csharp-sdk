@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ImportAppAlertRulesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

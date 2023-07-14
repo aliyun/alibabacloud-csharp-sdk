@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,17 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class AddGrafanaRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
+        /// <summary>
+        /// The ID of the Container Service for Kubernetes (ACK) cluster.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// The abbreviation of the software that is supported by Application Real-Time Monitoring Service (ARMS). Valid values (case-insensitive): `ASM`, `IoT`, and `Flink`.
+        /// </summary>
         [NameInMap("Integration")]
         [Validation(Required=false)]
         public string Integration { get; set; }
+
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

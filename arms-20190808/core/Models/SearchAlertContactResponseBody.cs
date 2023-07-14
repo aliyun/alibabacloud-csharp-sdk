@@ -17,27 +17,69 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public List<SearchAlertContactResponseBodyPageBeanContacts> Contacts { get; set; }
             public class SearchAlertContactResponseBodyPageBeanContacts : TeaModel {
-                public long? UpdateTime { get; set; }
-                public string DingRobot { get; set; }
-                public string Webhook { get; set; }
-                public string Email { get; set; }
+                [NameInMap("ContactId")]
+                [Validation(Required=false)]
                 public long? ContactId { get; set; }
-                public long? CreateTime { get; set; }
-                public string UserId { get; set; }
+
+                [NameInMap("ContactName")]
+                [Validation(Required=false)]
                 public string ContactName { get; set; }
-                public bool? SystemNoc { get; set; }
+
+                [NameInMap("Content")]
+                [Validation(Required=false)]
+                public string Content { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public long? CreateTime { get; set; }
+
+                [NameInMap("DingRobot")]
+                [Validation(Required=false)]
+                public string DingRobot { get; set; }
+
+                [NameInMap("Email")]
+                [Validation(Required=false)]
+                public string Email { get; set; }
+
+                [NameInMap("Phone")]
+                [Validation(Required=false)]
                 public string Phone { get; set; }
+
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
+                public string ResourceGroupId { get; set; }
+
+                [NameInMap("SystemNoc")]
+                [Validation(Required=false)]
+                public bool? SystemNoc { get; set; }
+
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
+                public long? UpdateTime { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
+                public string UserId { get; set; }
+
+                [NameInMap("Webhook")]
+                [Validation(Required=false)]
+                public string Webhook { get; set; }
+
             }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

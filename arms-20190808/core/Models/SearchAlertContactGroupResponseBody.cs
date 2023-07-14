@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public List<SearchAlertContactGroupResponseBodyContactGroups> ContactGroups { get; set; }
         public class SearchAlertContactGroupResponseBodyContactGroups : TeaModel {
-            [NameInMap("UpdateTime")]
+            [NameInMap("ContactGroupId")]
             [Validation(Required=false)]
-            public long? UpdateTime { get; set; }
+            public long? ContactGroupId { get; set; }
 
             [NameInMap("ContactGroupName")]
             [Validation(Required=false)]
@@ -25,9 +25,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public List<SearchAlertContactGroupResponseBodyContactGroupsContacts> Contacts { get; set; }
             public class SearchAlertContactGroupResponseBodyContactGroupsContacts : TeaModel {
-                [NameInMap("UpdateTime")]
+                [NameInMap("ContactId")]
                 [Validation(Required=false)]
-                public long? UpdateTime { get; set; }
+                public long? ContactId { get; set; }
+
+                [NameInMap("ContactName")]
+                [Validation(Required=false)]
+                public string ContactName { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public long? CreateTime { get; set; }
 
                 [NameInMap("DingRobot")]
                 [Validation(Required=false)]
@@ -37,39 +45,31 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string Email { get; set; }
 
-                [NameInMap("ContactId")]
+                [NameInMap("Phone")]
                 [Validation(Required=false)]
-                public long? ContactId { get; set; }
-
-                [NameInMap("CreateTime")]
-                [Validation(Required=false)]
-                public long? CreateTime { get; set; }
-
-                [NameInMap("UserId")]
-                [Validation(Required=false)]
-                public string UserId { get; set; }
-
-                [NameInMap("ContactName")]
-                [Validation(Required=false)]
-                public string ContactName { get; set; }
+                public string Phone { get; set; }
 
                 [NameInMap("SystemNoc")]
                 [Validation(Required=false)]
                 public bool? SystemNoc { get; set; }
 
-                [NameInMap("Phone")]
+                [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
-                public string Phone { get; set; }
+                public long? UpdateTime { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
+                public string UserId { get; set; }
 
             }
-
-            [NameInMap("ContactGroupId")]
-            [Validation(Required=false)]
-            public long? ContactGroupId { get; set; }
 
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
+
+            [NameInMap("UpdateTime")]
+            [Validation(Required=false)]
+            public long? UpdateTime { get; set; }
 
             [NameInMap("UserId")]
             [Validation(Required=false)]
