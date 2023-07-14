@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public DescribeFaceVerifyResponseBodyResultObject ResultObject { get; set; }
         public class DescribeFaceVerifyResponseBodyResultObject : TeaModel {
+            [NameInMap("DeviceRisk")]
+            [Validation(Required=false)]
+            public string DeviceRisk { get; set; }
+
             [NameInMap("DeviceToken")]
             [Validation(Required=false)]
             public string DeviceToken { get; set; }
