@@ -355,6 +355,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public int? PendingResourceCount { get; set; }
 
+            [NameInMap("StackActionProgress")]
+            [Validation(Required=false)]
+            public float? StackActionProgress { get; set; }
+
+            [NameInMap("StackOperationProgress")]
+            [Validation(Required=false)]
+            public float? StackOperationProgress { get; set; }
+
             /// <summary>
             /// The number of resources that are created.
             /// </summary>
