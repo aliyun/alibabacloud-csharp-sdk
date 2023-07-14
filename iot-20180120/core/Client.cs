@@ -169,6 +169,96 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await AddDataForApiSourceWithOptionsAsync(request, runtime);
         }
 
+        public AddDeviceToSharePromotionResponse AddDeviceToSharePromotionWithOptions(AddDeviceToSharePromotionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceSimpleInfoList))
+            {
+                body["DeviceSimpleInfoList"] = request.DeviceSimpleInfoList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharePromotionActivityId))
+            {
+                body["SharePromotionActivityId"] = request.SharePromotionActivityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTaskCode))
+            {
+                body["ShareTaskCode"] = request.ShareTaskCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDeviceToSharePromotion",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDeviceToSharePromotionResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<AddDeviceToSharePromotionResponse> AddDeviceToSharePromotionWithOptionsAsync(AddDeviceToSharePromotionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceSimpleInfoList))
+            {
+                body["DeviceSimpleInfoList"] = request.DeviceSimpleInfoList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharePromotionActivityId))
+            {
+                body["SharePromotionActivityId"] = request.SharePromotionActivityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTaskCode))
+            {
+                body["ShareTaskCode"] = request.ShareTaskCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDeviceToSharePromotion",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDeviceToSharePromotionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public AddDeviceToSharePromotionResponse AddDeviceToSharePromotion(AddDeviceToSharePromotionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddDeviceToSharePromotionWithOptions(request, runtime);
+        }
+
+        public async Task<AddDeviceToSharePromotionResponse> AddDeviceToSharePromotionAsync(AddDeviceToSharePromotionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddDeviceToSharePromotionWithOptionsAsync(request, runtime);
+        }
+
         public AddShareTaskDeviceResponse AddShareTaskDeviceWithOptions(AddShareTaskDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1323,6 +1413,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await BatchCheckDeviceNamesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request BatchCheckImportDeviceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchCheckImportDeviceResponse
+         */
         public BatchCheckImportDeviceResponse BatchCheckImportDeviceWithOptions(BatchCheckImportDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1360,6 +1459,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<BatchCheckImportDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request BatchCheckImportDeviceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchCheckImportDeviceResponse
+         */
         public async Task<BatchCheckImportDeviceResponse> BatchCheckImportDeviceWithOptionsAsync(BatchCheckImportDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1397,12 +1505,28 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<BatchCheckImportDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request BatchCheckImportDeviceRequest
+          * @return BatchCheckImportDeviceResponse
+         */
         public BatchCheckImportDeviceResponse BatchCheckImportDevice(BatchCheckImportDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchCheckImportDeviceWithOptions(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request BatchCheckImportDeviceRequest
+          * @return BatchCheckImportDeviceResponse
+         */
         public async Task<BatchCheckImportDeviceResponse> BatchCheckImportDeviceAsync(BatchCheckImportDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2917,6 +3041,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await BatchGrayMigrationDeviceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, make sure that an MQTT gateway and the related product are created and the **ProductKey** of the product is obtained. For more information, see [Create an MQTT gateway](~~433804~~).
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request BatchImportDeviceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchImportDeviceResponse
+         */
         public BatchImportDeviceResponse BatchImportDeviceWithOptions(BatchImportDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2954,6 +3089,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<BatchImportDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, make sure that an MQTT gateway and the related product are created and the **ProductKey** of the product is obtained. For more information, see [Create an MQTT gateway](~~433804~~).
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request BatchImportDeviceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchImportDeviceResponse
+         */
         public async Task<BatchImportDeviceResponse> BatchImportDeviceWithOptionsAsync(BatchImportDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2991,12 +3137,32 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<BatchImportDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, make sure that an MQTT gateway and the related product are created and the **ProductKey** of the product is obtained. For more information, see [Create an MQTT gateway](~~433804~~).
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request BatchImportDeviceRequest
+          * @return BatchImportDeviceResponse
+         */
         public BatchImportDeviceResponse BatchImportDevice(BatchImportDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchImportDeviceWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, make sure that an MQTT gateway and the related product are created and the **ProductKey** of the product is obtained. For more information, see [Create an MQTT gateway](~~433804~~).
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request BatchImportDeviceRequest
+          * @return BatchImportDeviceResponse
+         */
         public async Task<BatchImportDeviceResponse> BatchImportDeviceAsync(BatchImportDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4609,6 +4775,19 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await BindGatewayToEdgeInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, make sure that the following steps are complete:
+          * 1.  A license is purchased. For more information, see [Purchase a license](~~427935~~).
+          * 2.  The license is bound to a product. The devices to which you want to bind the license belong to the product. For more information, see [BindLicenseProduct](~~427956~~) or [Bind a license to a product](~~427937~~).
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request BindLicenseDeviceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BindLicenseDeviceResponse
+         */
         public BindLicenseDeviceResponse BindLicenseDeviceWithOptions(BindLicenseDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4654,6 +4833,19 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<BindLicenseDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, make sure that the following steps are complete:
+          * 1.  A license is purchased. For more information, see [Purchase a license](~~427935~~).
+          * 2.  The license is bound to a product. The devices to which you want to bind the license belong to the product. For more information, see [BindLicenseProduct](~~427956~~) or [Bind a license to a product](~~427937~~).
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request BindLicenseDeviceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BindLicenseDeviceResponse
+         */
         public async Task<BindLicenseDeviceResponse> BindLicenseDeviceWithOptionsAsync(BindLicenseDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4699,12 +4891,36 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<BindLicenseDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, make sure that the following steps are complete:
+          * 1.  A license is purchased. For more information, see [Purchase a license](~~427935~~).
+          * 2.  The license is bound to a product. The devices to which you want to bind the license belong to the product. For more information, see [BindLicenseProduct](~~427956~~) or [Bind a license to a product](~~427937~~).
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request BindLicenseDeviceRequest
+          * @return BindLicenseDeviceResponse
+         */
         public BindLicenseDeviceResponse BindLicenseDevice(BindLicenseDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BindLicenseDeviceWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, make sure that the following steps are complete:
+          * 1.  A license is purchased. For more information, see [Purchase a license](~~427935~~).
+          * 2.  The license is bound to a product. The devices to which you want to bind the license belong to the product. For more information, see [BindLicenseProduct](~~427956~~) or [Bind a license to a product](~~427937~~).
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request BindLicenseDeviceRequest
+          * @return BindLicenseDeviceResponse
+         */
         public async Task<BindLicenseDeviceResponse> BindLicenseDeviceAsync(BindLicenseDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6339,6 +6555,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await CopyThingModelWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * You can call this operation to query the shared speeches that were broadcasted six hours ago. For example, if a speech was broadcasted at 07:15, you can query the speech after 13:15.
+          * ## QPS limits
+          * You can call this API operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request CountSpeechBroadcastHourRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CountSpeechBroadcastHourResponse
+         */
         public CountSpeechBroadcastHourResponse CountSpeechBroadcastHourWithOptions(CountSpeechBroadcastHourRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6376,6 +6603,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<CountSpeechBroadcastHourResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * You can call this operation to query the shared speeches that were broadcasted six hours ago. For example, if a speech was broadcasted at 07:15, you can query the speech after 13:15.
+          * ## QPS limits
+          * You can call this API operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request CountSpeechBroadcastHourRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CountSpeechBroadcastHourResponse
+         */
         public async Task<CountSpeechBroadcastHourResponse> CountSpeechBroadcastHourWithOptionsAsync(CountSpeechBroadcastHourRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6413,12 +6651,32 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<CountSpeechBroadcastHourResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * You can call this operation to query the shared speeches that were broadcasted six hours ago. For example, if a speech was broadcasted at 07:15, you can query the speech after 13:15.
+          * ## QPS limits
+          * You can call this API operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request CountSpeechBroadcastHourRequest
+          * @return CountSpeechBroadcastHourResponse
+         */
         public CountSpeechBroadcastHourResponse CountSpeechBroadcastHour(CountSpeechBroadcastHourRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CountSpeechBroadcastHourWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * You can call this operation to query the shared speeches that were broadcasted six hours ago. For example, if a speech was broadcasted at 07:15, you can query the speech after 13:15.
+          * ## QPS limits
+          * You can call this API operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request CountSpeechBroadcastHourRequest
+          * @return CountSpeechBroadcastHourResponse
+         */
         public async Task<CountSpeechBroadcastHourResponse> CountSpeechBroadcastHourAsync(CountSpeechBroadcastHourRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6787,6 +7045,18 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await CreateDataAPIServiceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, perform the following steps: First, create a data source. For information about how to create a data source, see Step 1 to Step 6 in the [Create a data source](~~270932~~) topic. Second, go to the **Data Source** tab on the **Message Forwarding** page of the instance that you want to manage in the IoT Platform console. Then, view and record the ID of the **data source** that you created.
+          * >  If you set Topic to a custom topic for a product or device that uses the open source Message Queuing Telemetry Transport (MQTT) protocol, you must specify ScopeType and ProductKey. If ScopeType is set to DEVICE, you must also specify DeviceName.
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request CreateDataSourceItemRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDataSourceItemResponse
+         */
         public CreateDataSourceItemResponse CreateDataSourceItemWithOptions(CreateDataSourceItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6834,6 +7104,18 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<CreateDataSourceItemResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, perform the following steps: First, create a data source. For information about how to create a data source, see Step 1 to Step 6 in the [Create a data source](~~270932~~) topic. Second, go to the **Data Source** tab on the **Message Forwarding** page of the instance that you want to manage in the IoT Platform console. Then, view and record the ID of the **data source** that you created.
+          * >  If you set Topic to a custom topic for a product or device that uses the open source Message Queuing Telemetry Transport (MQTT) protocol, you must specify ScopeType and ProductKey. If ScopeType is set to DEVICE, you must also specify DeviceName.
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request CreateDataSourceItemRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateDataSourceItemResponse
+         */
         public async Task<CreateDataSourceItemResponse> CreateDataSourceItemWithOptionsAsync(CreateDataSourceItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6881,12 +7163,34 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<CreateDataSourceItemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, perform the following steps: First, create a data source. For information about how to create a data source, see Step 1 to Step 6 in the [Create a data source](~~270932~~) topic. Second, go to the **Data Source** tab on the **Message Forwarding** page of the instance that you want to manage in the IoT Platform console. Then, view and record the ID of the **data source** that you created.
+          * >  If you set Topic to a custom topic for a product or device that uses the open source Message Queuing Telemetry Transport (MQTT) protocol, you must specify ScopeType and ProductKey. If ScopeType is set to DEVICE, you must also specify DeviceName.
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request CreateDataSourceItemRequest
+          * @return CreateDataSourceItemResponse
+         */
         public CreateDataSourceItemResponse CreateDataSourceItem(CreateDataSourceItemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDataSourceItemWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, perform the following steps: First, create a data source. For information about how to create a data source, see Step 1 to Step 6 in the [Create a data source](~~270932~~) topic. Second, go to the **Data Source** tab on the **Message Forwarding** page of the instance that you want to manage in the IoT Platform console. Then, view and record the ID of the **data source** that you created.
+          * >  If you set Topic to a custom topic for a product or device that uses the open source Message Queuing Telemetry Transport (MQTT) protocol, you must specify ScopeType and ProductKey. If ScopeType is set to DEVICE, you must also specify DeviceName.
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request CreateDataSourceItemRequest
+          * @return CreateDataSourceItemResponse
+         */
         public async Task<CreateDataSourceItemResponse> CreateDataSourceItemAsync(CreateDataSourceItemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8727,6 +9031,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await CreateJobWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * You can call this operation to create up to 500 devices.
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request CreateLoRaNodesTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateLoRaNodesTaskResponse
+         */
         public CreateLoRaNodesTaskResponse CreateLoRaNodesTaskWithOptions(CreateLoRaNodesTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8762,6 +9077,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<CreateLoRaNodesTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * You can call this operation to create up to 500 devices.
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request CreateLoRaNodesTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateLoRaNodesTaskResponse
+         */
         public async Task<CreateLoRaNodesTaskResponse> CreateLoRaNodesTaskWithOptionsAsync(CreateLoRaNodesTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8797,12 +9123,32 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<CreateLoRaNodesTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * You can call this operation to create up to 500 devices.
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request CreateLoRaNodesTaskRequest
+          * @return CreateLoRaNodesTaskResponse
+         */
         public CreateLoRaNodesTaskResponse CreateLoRaNodesTask(CreateLoRaNodesTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateLoRaNodesTaskWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * You can call this operation to create up to 500 devices.
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request CreateLoRaNodesTaskRequest
+          * @return CreateLoRaNodesTaskResponse
+         */
         public async Task<CreateLoRaNodesTaskResponse> CreateLoRaNodesTaskAsync(CreateLoRaNodesTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11195,6 +11541,234 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSchedulePeriodWithOptionsAsync(request, runtime);
+        }
+
+        public CreateSharePromotionActivityResponse CreateSharePromotionActivityWithOptions(CreateSharePromotionActivityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharePromotionActivityName))
+            {
+                body["SharePromotionActivityName"] = request.SharePromotionActivityName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSharePromotionActivity",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSharePromotionActivityResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateSharePromotionActivityResponse> CreateSharePromotionActivityWithOptionsAsync(CreateSharePromotionActivityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharePromotionActivityName))
+            {
+                body["SharePromotionActivityName"] = request.SharePromotionActivityName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSharePromotionActivity",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSharePromotionActivityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateSharePromotionActivityResponse CreateSharePromotionActivity(CreateSharePromotionActivityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSharePromotionActivityWithOptions(request, runtime);
+        }
+
+        public async Task<CreateSharePromotionActivityResponse> CreateSharePromotionActivityAsync(CreateSharePromotionActivityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSharePromotionActivityWithOptionsAsync(request, runtime);
+        }
+
+        public CreateSharePromotionSpeechModelResponse CreateSharePromotionSpeechModelWithOptions(CreateSharePromotionSpeechModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioFormat))
+            {
+                body["AudioFormat"] = request.AudioFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                body["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharePromotionActivityId))
+            {
+                body["SharePromotionActivityId"] = request.SharePromotionActivityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTaskCode))
+            {
+                body["ShareTaskCode"] = request.ShareTaskCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechModelType))
+            {
+                body["SpeechModelType"] = request.SpeechModelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechRate))
+            {
+                body["SpeechRate"] = request.SpeechRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                body["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
+            {
+                body["Voice"] = request.Voice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Volume))
+            {
+                body["Volume"] = request.Volume;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSharePromotionSpeechModel",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSharePromotionSpeechModelResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateSharePromotionSpeechModelResponse> CreateSharePromotionSpeechModelWithOptionsAsync(CreateSharePromotionSpeechModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioFormat))
+            {
+                body["AudioFormat"] = request.AudioFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                body["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharePromotionActivityId))
+            {
+                body["SharePromotionActivityId"] = request.SharePromotionActivityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTaskCode))
+            {
+                body["ShareTaskCode"] = request.ShareTaskCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechModelType))
+            {
+                body["SpeechModelType"] = request.SpeechModelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechRate))
+            {
+                body["SpeechRate"] = request.SpeechRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                body["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
+            {
+                body["Voice"] = request.Voice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Volume))
+            {
+                body["Volume"] = request.Volume;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSharePromotionSpeechModel",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSharePromotionSpeechModelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateSharePromotionSpeechModelResponse CreateSharePromotionSpeechModel(CreateSharePromotionSpeechModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSharePromotionSpeechModelWithOptions(request, runtime);
+        }
+
+        public async Task<CreateSharePromotionSpeechModelResponse> CreateSharePromotionSpeechModelAsync(CreateSharePromotionSpeechModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSharePromotionSpeechModelWithOptionsAsync(request, runtime);
         }
 
         public CreateSoundCodeResponse CreateSoundCodeWithOptions(CreateSoundCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -18921,6 +19495,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await GetGatewayBySubDeviceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request GetLoraNodesTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetLoraNodesTaskResponse
+         */
         public GetLoraNodesTaskResponse GetLoraNodesTaskWithOptions(GetLoraNodesTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18952,6 +19535,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<GetLoraNodesTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request GetLoraNodesTaskRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetLoraNodesTaskResponse
+         */
         public async Task<GetLoraNodesTaskResponse> GetLoraNodesTaskWithOptionsAsync(GetLoraNodesTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18983,12 +19575,28 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<GetLoraNodesTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request GetLoraNodesTaskRequest
+          * @return GetLoraNodesTaskResponse
+         */
         public GetLoraNodesTaskResponse GetLoraNodesTask(GetLoraNodesTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetLoraNodesTaskWithOptions(request, runtime);
         }
 
+        /**
+          * ## Limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request GetLoraNodesTaskRequest
+          * @return GetLoraNodesTaskResponse
+         */
         public async Task<GetLoraNodesTaskResponse> GetLoraNodesTaskAsync(GetLoraNodesTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -19819,6 +20427,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await GetSpeechDeviceDetailWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request GetSpeechLicenseDeviceStatisticsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetSpeechLicenseDeviceStatisticsResponse
+         */
         public GetSpeechLicenseDeviceStatisticsResponse GetSpeechLicenseDeviceStatisticsWithOptions(GetSpeechLicenseDeviceStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19846,6 +20463,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<GetSpeechLicenseDeviceStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request GetSpeechLicenseDeviceStatisticsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetSpeechLicenseDeviceStatisticsResponse
+         */
         public async Task<GetSpeechLicenseDeviceStatisticsResponse> GetSpeechLicenseDeviceStatisticsWithOptionsAsync(GetSpeechLicenseDeviceStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19873,12 +20499,28 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<GetSpeechLicenseDeviceStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request GetSpeechLicenseDeviceStatisticsRequest
+          * @return GetSpeechLicenseDeviceStatisticsResponse
+         */
         public GetSpeechLicenseDeviceStatisticsResponse GetSpeechLicenseDeviceStatistics(GetSpeechLicenseDeviceStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetSpeechLicenseDeviceStatisticsWithOptions(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request GetSpeechLicenseDeviceStatisticsRequest
+          * @return GetSpeechLicenseDeviceStatisticsResponse
+         */
         public async Task<GetSpeechLicenseDeviceStatisticsResponse> GetSpeechLicenseDeviceStatisticsAsync(GetSpeechLicenseDeviceStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -20917,6 +21559,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await ImportDTDataWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, make sure that an MQTT gateway and the related product are created and the **ProductKey** of the product is obtained. For more information, see [Create an MQTT gateway](~~433804~~).
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ImportDeviceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ImportDeviceResponse
+         */
         public ImportDeviceResponse ImportDeviceWithOptions(ImportDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20964,6 +21617,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<ImportDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, make sure that an MQTT gateway and the related product are created and the **ProductKey** of the product is obtained. For more information, see [Create an MQTT gateway](~~433804~~).
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ImportDeviceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ImportDeviceResponse
+         */
         public async Task<ImportDeviceResponse> ImportDeviceWithOptionsAsync(ImportDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21011,12 +21675,32 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<ImportDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, make sure that an MQTT gateway and the related product are created and the **ProductKey** of the product is obtained. For more information, see [Create an MQTT gateway](~~433804~~).
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ImportDeviceRequest
+          * @return ImportDeviceResponse
+         */
         public ImportDeviceResponse ImportDevice(ImportDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ImportDeviceWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * Before you call this operation, make sure that an MQTT gateway and the related product are created and the **ProductKey** of the product is obtained. For more information, see [Create an MQTT gateway](~~433804~~).
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ImportDeviceRequest
+          * @return ImportDeviceResponse
+         */
         public async Task<ImportDeviceResponse> ImportDeviceAsync(ImportDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21783,6 +22467,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await ListAnalyticsDataWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ListDataSourceItemRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListDataSourceItemResponse
+         */
         public ListDataSourceItemResponse ListDataSourceItemWithOptions(ListDataSourceItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21826,6 +22519,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<ListDataSourceItemResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ListDataSourceItemRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListDataSourceItemResponse
+         */
         public async Task<ListDataSourceItemResponse> ListDataSourceItemWithOptionsAsync(ListDataSourceItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21869,12 +22571,28 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<ListDataSourceItemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ListDataSourceItemRequest
+          * @return ListDataSourceItemResponse
+         */
         public ListDataSourceItemResponse ListDataSourceItem(ListDataSourceItemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDataSourceItemWithOptions(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ListDataSourceItemRequest
+          * @return ListDataSourceItemResponse
+         */
         public async Task<ListDataSourceItemResponse> ListDataSourceItemAsync(ListDataSourceItemRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -24493,6 +25211,112 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await ListThingTemplatesWithOptionsAsync(request, runtime);
         }
 
+        public ModifyOTAFirmwareResponse ModifyOTAFirmwareWithOptions(ModifyOTAFirmwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirmwareDesc))
+            {
+                query["FirmwareDesc"] = request.FirmwareDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirmwareId))
+            {
+                query["FirmwareId"] = request.FirmwareId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirmwareName))
+            {
+                query["FirmwareName"] = request.FirmwareName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirmwareUdi))
+            {
+                query["FirmwareUdi"] = request.FirmwareUdi;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                query["ProductKey"] = request.ProductKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyOTAFirmware",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyOTAFirmwareResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyOTAFirmwareResponse> ModifyOTAFirmwareWithOptionsAsync(ModifyOTAFirmwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirmwareDesc))
+            {
+                query["FirmwareDesc"] = request.FirmwareDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirmwareId))
+            {
+                query["FirmwareId"] = request.FirmwareId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirmwareName))
+            {
+                query["FirmwareName"] = request.FirmwareName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirmwareUdi))
+            {
+                query["FirmwareUdi"] = request.FirmwareUdi;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                query["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductKey))
+            {
+                query["ProductKey"] = request.ProductKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyOTAFirmware",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyOTAFirmwareResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyOTAFirmwareResponse ModifyOTAFirmware(ModifyOTAFirmwareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyOTAFirmwareWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyOTAFirmwareResponse> ModifyOTAFirmwareAsync(ModifyOTAFirmwareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyOTAFirmwareWithOptionsAsync(request, runtime);
+        }
+
         /**
           * A successful response indicates that the command to add topological relationships is sent to the gateway. It does not indicate that the topological relationships are added.
           * When you develop the gateway, you must subscribe to the topic that is used to send notifications when you add topological relationships. For more information about the topic and message format, see [Manage topological relationships](~~89299~~).
@@ -24773,6 +25597,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await PackageSoundCodeLabelBatchAudioWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request PageQuerySharedSpeechOpenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PageQuerySharedSpeechOpenResponse
+         */
         public PageQuerySharedSpeechOpenResponse PageQuerySharedSpeechOpenWithOptions(PageQuerySharedSpeechOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24828,6 +25661,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<PageQuerySharedSpeechOpenResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request PageQuerySharedSpeechOpenRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PageQuerySharedSpeechOpenResponse
+         */
         public async Task<PageQuerySharedSpeechOpenResponse> PageQuerySharedSpeechOpenWithOptionsAsync(PageQuerySharedSpeechOpenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24883,18 +25725,45 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<PageQuerySharedSpeechOpenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request PageQuerySharedSpeechOpenRequest
+          * @return PageQuerySharedSpeechOpenResponse
+         */
         public PageQuerySharedSpeechOpenResponse PageQuerySharedSpeechOpen(PageQuerySharedSpeechOpenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PageQuerySharedSpeechOpenWithOptions(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request PageQuerySharedSpeechOpenRequest
+          * @return PageQuerySharedSpeechOpenResponse
+         */
         public async Task<PageQuerySharedSpeechOpenResponse> PageQuerySharedSpeechOpenAsync(PageQuerySharedSpeechOpenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PageQuerySharedSpeechOpenWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * You can call this operation to query only shared speech broadcasting data six hours ago. For example, if a shared speech was broadcasted at 07:15, you can query the speech after 13:15.
+          * ## QPS limits
+          * You can call this operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request PageQuerySpeechBroadcastHourRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PageQuerySpeechBroadcastHourResponse
+         */
         public PageQuerySpeechBroadcastHourResponse PageQuerySpeechBroadcastHourWithOptions(PageQuerySpeechBroadcastHourRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24940,6 +25809,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<PageQuerySpeechBroadcastHourResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * You can call this operation to query only shared speech broadcasting data six hours ago. For example, if a shared speech was broadcasted at 07:15, you can query the speech after 13:15.
+          * ## QPS limits
+          * You can call this operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request PageQuerySpeechBroadcastHourRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PageQuerySpeechBroadcastHourResponse
+         */
         public async Task<PageQuerySpeechBroadcastHourResponse> PageQuerySpeechBroadcastHourWithOptionsAsync(PageQuerySpeechBroadcastHourRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24985,18 +25865,49 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<PageQuerySpeechBroadcastHourResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * You can call this operation to query only shared speech broadcasting data six hours ago. For example, if a shared speech was broadcasted at 07:15, you can query the speech after 13:15.
+          * ## QPS limits
+          * You can call this operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request PageQuerySpeechBroadcastHourRequest
+          * @return PageQuerySpeechBroadcastHourResponse
+         */
         public PageQuerySpeechBroadcastHourResponse PageQuerySpeechBroadcastHour(PageQuerySpeechBroadcastHourRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PageQuerySpeechBroadcastHourWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * You can call this operation to query only shared speech broadcasting data six hours ago. For example, if a shared speech was broadcasted at 07:15, you can query the speech after 13:15.
+          * ## QPS limits
+          * You can call this operation up to 100 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request PageQuerySpeechBroadcastHourRequest
+          * @return PageQuerySpeechBroadcastHourResponse
+         */
         public async Task<PageQuerySpeechBroadcastHourResponse> PageQuerySpeechBroadcastHourAsync(PageQuerySpeechBroadcastHourRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PageQuerySpeechBroadcastHourWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Limits
+          * Before you call this operation, a receipt template must be available in the Letter Sending Service console. Otherwise, the request fails.
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request PrintByTemplateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PrintByTemplateResponse
+         */
         public PrintByTemplateResponse PrintByTemplateWithOptions(PrintByTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25048,6 +25959,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<PrintByTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Limits
+          * Before you call this operation, a receipt template must be available in the Letter Sending Service console. Otherwise, the request fails.
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request PrintByTemplateRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PrintByTemplateResponse
+         */
         public async Task<PrintByTemplateResponse> PrintByTemplateWithOptionsAsync(PrintByTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25099,12 +26021,32 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<PrintByTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Limits
+          * Before you call this operation, a receipt template must be available in the Letter Sending Service console. Otherwise, the request fails.
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request PrintByTemplateRequest
+          * @return PrintByTemplateResponse
+         */
         public PrintByTemplateResponse PrintByTemplate(PrintByTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PrintByTemplateWithOptions(request, runtime);
         }
 
+        /**
+          * ## Limits
+          * Before you call this operation, a receipt template must be available in the Letter Sending Service console. Otherwise, the request fails.
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request PrintByTemplateRequest
+          * @return PrintByTemplateResponse
+         */
         public async Task<PrintByTemplateResponse> PrintByTemplateAsync(PrintByTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -25993,6 +26935,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await QueryBatchRegisterDeviceStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryCertUrlByApplyIdRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryCertUrlByApplyIdResponse
+         */
         public QueryCertUrlByApplyIdResponse QueryCertUrlByApplyIdWithOptions(QueryCertUrlByApplyIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26024,6 +26975,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QueryCertUrlByApplyIdResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryCertUrlByApplyIdRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryCertUrlByApplyIdResponse
+         */
         public async Task<QueryCertUrlByApplyIdResponse> QueryCertUrlByApplyIdWithOptionsAsync(QueryCertUrlByApplyIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -26055,12 +27015,28 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QueryCertUrlByApplyIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryCertUrlByApplyIdRequest
+          * @return QueryCertUrlByApplyIdResponse
+         */
         public QueryCertUrlByApplyIdResponse QueryCertUrlByApplyId(QueryCertUrlByApplyIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryCertUrlByApplyIdWithOptions(request, runtime);
         }
 
+        /**
+          * ## Limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryCertUrlByApplyIdRequest
+          * @return QueryCertUrlByApplyIdResponse
+         */
         public async Task<QueryCertUrlByApplyIdResponse> QueryCertUrlByApplyIdAsync(QueryCertUrlByApplyIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -31285,6 +32261,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await QueryDevicesHotStorageDataStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Limits
+          * *   The dynamic group feature is available for public instances and Enterprise Edition instances in the China (Shanghai) region. For more information, see [Manage instances](~~147356~~).
+          * *   Each Alibaba Cloud account can run up to 50 queries per second (QPS).
+          *     **
+          *     **Note**The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryDynamicGroupDevicesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryDynamicGroupDevicesResponse
+         */
         public QueryDynamicGroupDevicesResponse QueryDynamicGroupDevicesWithOptions(QueryDynamicGroupDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -31344,6 +32331,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QueryDynamicGroupDevicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Limits
+          * *   The dynamic group feature is available for public instances and Enterprise Edition instances in the China (Shanghai) region. For more information, see [Manage instances](~~147356~~).
+          * *   Each Alibaba Cloud account can run up to 50 queries per second (QPS).
+          *     **
+          *     **Note**The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryDynamicGroupDevicesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryDynamicGroupDevicesResponse
+         */
         public async Task<QueryDynamicGroupDevicesResponse> QueryDynamicGroupDevicesWithOptionsAsync(QueryDynamicGroupDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -31403,12 +32401,32 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QueryDynamicGroupDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Limits
+          * *   The dynamic group feature is available for public instances and Enterprise Edition instances in the China (Shanghai) region. For more information, see [Manage instances](~~147356~~).
+          * *   Each Alibaba Cloud account can run up to 50 queries per second (QPS).
+          *     **
+          *     **Note**The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryDynamicGroupDevicesRequest
+          * @return QueryDynamicGroupDevicesResponse
+         */
         public QueryDynamicGroupDevicesResponse QueryDynamicGroupDevices(QueryDynamicGroupDevicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryDynamicGroupDevicesWithOptions(request, runtime);
         }
 
+        /**
+          * ## Limits
+          * *   The dynamic group feature is available for public instances and Enterprise Edition instances in the China (Shanghai) region. For more information, see [Manage instances](~~147356~~).
+          * *   Each Alibaba Cloud account can run up to 50 queries per second (QPS).
+          *     **
+          *     **Note**The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryDynamicGroupDevicesRequest
+          * @return QueryDynamicGroupDevicesResponse
+         */
         public async Task<QueryDynamicGroupDevicesResponse> QueryDynamicGroupDevicesAsync(QueryDynamicGroupDevicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -32691,6 +33709,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await QueryEdgeInstanceSceneRuleWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryImportedDeviceByApplyIdRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryImportedDeviceByApplyIdResponse
+         */
         public QueryImportedDeviceByApplyIdResponse QueryImportedDeviceByApplyIdWithOptions(QueryImportedDeviceByApplyIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -32730,6 +33757,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QueryImportedDeviceByApplyIdResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryImportedDeviceByApplyIdRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryImportedDeviceByApplyIdResponse
+         */
         public async Task<QueryImportedDeviceByApplyIdResponse> QueryImportedDeviceByApplyIdWithOptionsAsync(QueryImportedDeviceByApplyIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -32769,12 +33805,28 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QueryImportedDeviceByApplyIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryImportedDeviceByApplyIdRequest
+          * @return QueryImportedDeviceByApplyIdResponse
+         */
         public QueryImportedDeviceByApplyIdResponse QueryImportedDeviceByApplyId(QueryImportedDeviceByApplyIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryImportedDeviceByApplyIdWithOptions(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryImportedDeviceByApplyIdRequest
+          * @return QueryImportedDeviceByApplyIdResponse
+         */
         public async Task<QueryImportedDeviceByApplyIdResponse> QueryImportedDeviceByApplyIdAsync(QueryImportedDeviceByApplyIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -32913,6 +33965,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await QueryJobStatisticsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryLicenseDeviceListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryLicenseDeviceListResponse
+         */
         public QueryLicenseDeviceListResponse QueryLicenseDeviceListWithOptions(QueryLicenseDeviceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -32968,6 +34029,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QueryLicenseDeviceListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryLicenseDeviceListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryLicenseDeviceListResponse
+         */
         public async Task<QueryLicenseDeviceListResponse> QueryLicenseDeviceListWithOptionsAsync(QueryLicenseDeviceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -33023,12 +34093,28 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QueryLicenseDeviceListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryLicenseDeviceListRequest
+          * @return QueryLicenseDeviceListResponse
+         */
         public QueryLicenseDeviceListResponse QueryLicenseDeviceList(QueryLicenseDeviceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryLicenseDeviceListWithOptions(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryLicenseDeviceListRequest
+          * @return QueryLicenseDeviceListResponse
+         */
         public async Task<QueryLicenseDeviceListResponse> QueryLicenseDeviceListAsync(QueryLicenseDeviceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -33627,6 +34713,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await QueryProductWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 30 times per second per account.
+          * >The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryProductCertInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryProductCertInfoResponse
+         */
         public QueryProductCertInfoResponse QueryProductCertInfoWithOptions(QueryProductCertInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -33658,6 +34753,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QueryProductCertInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 30 times per second per account.
+          * >The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryProductCertInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryProductCertInfoResponse
+         */
         public async Task<QueryProductCertInfoResponse> QueryProductCertInfoWithOptionsAsync(QueryProductCertInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -33689,12 +34793,28 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QueryProductCertInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 30 times per second per account.
+          * >The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryProductCertInfoRequest
+          * @return QueryProductCertInfoResponse
+         */
         public QueryProductCertInfoResponse QueryProductCertInfo(QueryProductCertInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryProductCertInfoWithOptions(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 30 times per second per account.
+          * >The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryProductCertInfoRequest
+          * @return QueryProductCertInfoResponse
+         */
         public async Task<QueryProductCertInfoResponse> QueryProductCertInfoAsync(QueryProductCertInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -33949,6 +35069,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await QueryProductTopicWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryProjectShareDeviceListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryProjectShareDeviceListResponse
+         */
         public QueryProjectShareDeviceListResponse QueryProjectShareDeviceListWithOptions(QueryProjectShareDeviceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -33992,6 +35121,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QueryProjectShareDeviceListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryProjectShareDeviceListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryProjectShareDeviceListResponse
+         */
         public async Task<QueryProjectShareDeviceListResponse> QueryProjectShareDeviceListWithOptionsAsync(QueryProjectShareDeviceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -34035,12 +35173,28 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QueryProjectShareDeviceListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryProjectShareDeviceListRequest
+          * @return QueryProjectShareDeviceListResponse
+         */
         public QueryProjectShareDeviceListResponse QueryProjectShareDeviceList(QueryProjectShareDeviceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryProjectShareDeviceListWithOptions(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryProjectShareDeviceListRequest
+          * @return QueryProjectShareDeviceListResponse
+         */
         public async Task<QueryProjectShareDeviceListResponse> QueryProjectShareDeviceListAsync(QueryProjectShareDeviceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -34227,6 +35381,97 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await QuerySchedulePeriodListWithOptionsAsync(request, runtime);
         }
 
+        public QuerySharePromotionActivityAuditResultResponse QuerySharePromotionActivityAuditResultWithOptions(QuerySharePromotionActivityAuditResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharePromotionActivityId))
+            {
+                body["SharePromotionActivityId"] = request.SharePromotionActivityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTaskCode))
+            {
+                body["ShareTaskCode"] = request.ShareTaskCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySharePromotionActivityAuditResult",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySharePromotionActivityAuditResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<QuerySharePromotionActivityAuditResultResponse> QuerySharePromotionActivityAuditResultWithOptionsAsync(QuerySharePromotionActivityAuditResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
+            {
+                body["IotInstanceId"] = request.IotInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharePromotionActivityId))
+            {
+                body["SharePromotionActivityId"] = request.SharePromotionActivityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTaskCode))
+            {
+                body["ShareTaskCode"] = request.ShareTaskCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySharePromotionActivityAuditResult",
+                Version = "2018-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySharePromotionActivityAuditResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public QuerySharePromotionActivityAuditResultResponse QuerySharePromotionActivityAuditResult(QuerySharePromotionActivityAuditResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QuerySharePromotionActivityAuditResultWithOptions(request, runtime);
+        }
+
+        public async Task<QuerySharePromotionActivityAuditResultResponse> QuerySharePromotionActivityAuditResultAsync(QuerySharePromotionActivityAuditResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QuerySharePromotionActivityAuditResultWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryShareTaskDeviceListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryShareTaskDeviceListResponse
+         */
         public QueryShareTaskDeviceListResponse QueryShareTaskDeviceListWithOptions(QueryShareTaskDeviceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -34270,6 +35515,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QueryShareTaskDeviceListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryShareTaskDeviceListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QueryShareTaskDeviceListResponse
+         */
         public async Task<QueryShareTaskDeviceListResponse> QueryShareTaskDeviceListWithOptionsAsync(QueryShareTaskDeviceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -34313,12 +35567,28 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QueryShareTaskDeviceListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryShareTaskDeviceListRequest
+          * @return QueryShareTaskDeviceListResponse
+         */
         public QueryShareTaskDeviceListResponse QueryShareTaskDeviceList(QueryShareTaskDeviceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryShareTaskDeviceListWithOptions(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QueryShareTaskDeviceListRequest
+          * @return QueryShareTaskDeviceListResponse
+         */
         public async Task<QueryShareTaskDeviceListResponse> QueryShareTaskDeviceListAsync(QueryShareTaskDeviceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -35095,6 +36365,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await QuerySpeechLicenseAvailableQuotaWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QuerySpeechLicenseDeviceListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QuerySpeechLicenseDeviceListResponse
+         */
         public QuerySpeechLicenseDeviceListResponse QuerySpeechLicenseDeviceListWithOptions(QuerySpeechLicenseDeviceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -35148,6 +36427,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QuerySpeechLicenseDeviceListResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QuerySpeechLicenseDeviceListRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return QuerySpeechLicenseDeviceListResponse
+         */
         public async Task<QuerySpeechLicenseDeviceListResponse> QuerySpeechLicenseDeviceListWithOptionsAsync(QuerySpeechLicenseDeviceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -35201,12 +36489,28 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<QuerySpeechLicenseDeviceListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QuerySpeechLicenseDeviceListRequest
+          * @return QuerySpeechLicenseDeviceListResponse
+         */
         public QuerySpeechLicenseDeviceListResponse QuerySpeechLicenseDeviceList(QuerySpeechLicenseDeviceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QuerySpeechLicenseDeviceListWithOptions(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to three times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request QuerySpeechLicenseDeviceListRequest
+          * @return QuerySpeechLicenseDeviceListResponse
+         */
         public async Task<QuerySpeechLicenseDeviceListResponse> QuerySpeechLicenseDeviceListAsync(QuerySpeechLicenseDeviceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -37519,6 +38823,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await RRpcWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to five times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ReBindLicenseDeviceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReBindLicenseDeviceResponse
+         */
         public ReBindLicenseDeviceResponse ReBindLicenseDeviceWithOptions(ReBindLicenseDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -37560,6 +38873,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<ReBindLicenseDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to five times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ReBindLicenseDeviceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ReBindLicenseDeviceResponse
+         */
         public async Task<ReBindLicenseDeviceResponse> ReBindLicenseDeviceWithOptionsAsync(ReBindLicenseDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -37601,12 +38923,28 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<ReBindLicenseDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to five times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ReBindLicenseDeviceRequest
+          * @return ReBindLicenseDeviceResponse
+         */
         public ReBindLicenseDeviceResponse ReBindLicenseDevice(ReBindLicenseDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReBindLicenseDeviceWithOptions(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to five times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ReBindLicenseDeviceRequest
+          * @return ReBindLicenseDeviceResponse
+         */
         public async Task<ReBindLicenseDeviceResponse> ReBindLicenseDeviceAsync(ReBindLicenseDeviceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -39873,6 +41211,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await SetEdgeInstanceDriverConfigsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 30 times per second per account.
+          * >The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request SetProductCertInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetProductCertInfoResponse
+         */
         public SetProductCertInfoResponse SetProductCertInfoWithOptions(SetProductCertInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -39908,6 +41255,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<SetProductCertInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 30 times per second per account.
+          * >The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request SetProductCertInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return SetProductCertInfoResponse
+         */
         public async Task<SetProductCertInfoResponse> SetProductCertInfoWithOptionsAsync(SetProductCertInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -39943,12 +41299,28 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<SetProductCertInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 30 times per second per account.
+          * >The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request SetProductCertInfoRequest
+          * @return SetProductCertInfoResponse
+         */
         public SetProductCertInfoResponse SetProductCertInfo(SetProductCertInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetProductCertInfoWithOptions(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 30 times per second per account.
+          * >The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request SetProductCertInfoRequest
+          * @return SetProductCertInfoResponse
+         */
         public async Task<SetProductCertInfoResponse> SetProductCertInfoAsync(SetProductCertInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -40119,6 +41491,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await SetupStudioAppAuthModeOpenWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ShareSpeechByCombinationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ShareSpeechByCombinationResponse
+         */
         public ShareSpeechByCombinationResponse ShareSpeechByCombinationWithOptions(ShareSpeechByCombinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -40170,6 +41551,15 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<ShareSpeechByCombinationResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ShareSpeechByCombinationRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ShareSpeechByCombinationResponse
+         */
         public async Task<ShareSpeechByCombinationResponse> ShareSpeechByCombinationWithOptionsAsync(ShareSpeechByCombinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -40221,12 +41611,28 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<ShareSpeechByCombinationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ShareSpeechByCombinationRequest
+          * @return ShareSpeechByCombinationResponse
+         */
         public ShareSpeechByCombinationResponse ShareSpeechByCombination(ShareSpeechByCombinationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ShareSpeechByCombinationWithOptions(request, runtime);
         }
 
+        /**
+          * ## QPS limits
+          * You can call this API operation up to 50 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request ShareSpeechByCombinationRequest
+          * @return ShareSpeechByCombinationResponse
+         */
         public async Task<ShareSpeechByCombinationResponse> ShareSpeechByCombinationAsync(ShareSpeechByCombinationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -41747,6 +43153,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await UnbindDriverFromEdgeInstanceWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * A license is bound with a product. For more information, see [BindLicenseProduct](~~427956~~) or [Bind a license to a product](~~427937~~).
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request UnbindLicenseProductRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnbindLicenseProductResponse
+         */
         public UnbindLicenseProductResponse UnbindLicenseProductWithOptions(UnbindLicenseProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -41782,6 +43199,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<UnbindLicenseProductResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * A license is bound with a product. For more information, see [BindLicenseProduct](~~427956~~) or [Bind a license to a product](~~427937~~).
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request UnbindLicenseProductRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnbindLicenseProductResponse
+         */
         public async Task<UnbindLicenseProductResponse> UnbindLicenseProductWithOptionsAsync(UnbindLicenseProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -41817,12 +43245,32 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<UnbindLicenseProductResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ## Usage notes
+          * A license is bound with a product. For more information, see [BindLicenseProduct](~~427956~~) or [Bind a license to a product](~~427937~~).
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request UnbindLicenseProductRequest
+          * @return UnbindLicenseProductResponse
+         */
         public UnbindLicenseProductResponse UnbindLicenseProduct(UnbindLicenseProductRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnbindLicenseProductWithOptions(request, runtime);
         }
 
+        /**
+          * ## Usage notes
+          * A license is bound with a product. For more information, see [BindLicenseProduct](~~427956~~) or [Bind a license to a product](~~427937~~).
+          * ## QPS limits
+          * You can call this API operation up to 10 times per second per account.
+          * > The RAM users of an Alibaba Cloud account share the quota of the account.
+          *
+          * @param request UnbindLicenseProductRequest
+          * @return UnbindLicenseProductResponse
+         */
         public async Task<UnbindLicenseProductResponse> UnbindLicenseProductAsync(UnbindLicenseProductRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -45433,6 +46881,12 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await UpdateThingScriptWithOptionsAsync(request, runtime);
         }
 
+        /**
+          *
+          * @param request UpdateTopicConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTopicConfigResponse
+         */
         public UpdateTopicConfigResponse UpdateTopicConfigWithOptions(UpdateTopicConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -45488,6 +46942,12 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<UpdateTopicConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          *
+          * @param request UpdateTopicConfigRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateTopicConfigResponse
+         */
         public async Task<UpdateTopicConfigResponse> UpdateTopicConfigWithOptionsAsync(UpdateTopicConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -45543,12 +47003,22 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<UpdateTopicConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          *
+          * @param request UpdateTopicConfigRequest
+          * @return UpdateTopicConfigResponse
+         */
         public UpdateTopicConfigResponse UpdateTopicConfig(UpdateTopicConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTopicConfigWithOptions(request, runtime);
         }
 
+        /**
+          *
+          * @param request UpdateTopicConfigRequest
+          * @return UpdateTopicConfigResponse
+         */
         public async Task<UpdateTopicConfigResponse> UpdateTopicConfigAsync(UpdateTopicConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
