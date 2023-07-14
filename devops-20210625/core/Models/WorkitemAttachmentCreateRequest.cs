@@ -1,0 +1,22 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Devops20210625.Models
+{
+    public class WorkitemAttachmentCreateRequest : TeaModel {
+        [NameInMap("fileKey")]
+        [Validation(Required=false)]
+        public string FileKey { get; set; }
+
+        [NameInMap("originalFilename")]
+        [Validation(Required=false)]
+        public string OriginalFilename { get; set; }
+
+    }
+
+}
