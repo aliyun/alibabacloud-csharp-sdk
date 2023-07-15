@@ -190,6 +190,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string SwitchTime { get; set; }
 
+            [NameInMap("TaskParams")]
+            [Validation(Required=false)]
+            public string TaskParams { get; set; }
+
             /// <summary>
             /// The type of the task. Valid values:
             /// 

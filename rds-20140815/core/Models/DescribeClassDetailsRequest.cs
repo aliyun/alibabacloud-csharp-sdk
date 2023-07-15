@@ -8,32 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class RestartDBInstanceRequest : TeaModel {
-        /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-        /// </summary>
+    public class DescribeClassDetailsRequest : TeaModel {
+        [NameInMap("ClassCode")]
+        [Validation(Required=false)]
+        public string ClassCode { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        /// <summary>
-        /// The ID of the instance.
-        /// </summary>
-        [NameInMap("DBInstanceId")]
+        [NameInMap("CommodityCode")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
+        public string CommodityCode { get; set; }
 
-        [NameInMap("NodeId")]
+        [NameInMap("Engine")]
         [Validation(Required=false)]
-        public string NodeId { get; set; }
+        public string Engine { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("EngineVersion")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string EngineVersion { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

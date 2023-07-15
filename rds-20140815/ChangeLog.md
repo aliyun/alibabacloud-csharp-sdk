@@ -1,3 +1,6 @@
+2023-07-15 Version: 2.2.6
+- Add error code.
+
 2023-07-07 Version: 2.2.5
 - Add AutoUseCoupon field.
 - Api Offline.
