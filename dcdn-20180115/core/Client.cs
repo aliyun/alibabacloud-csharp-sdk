@@ -18629,12 +18629,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
+          * @deprecated : SetDcdnDomainCertificate is deprecated, please use dcdn::2018-01-15::SetDcdnDomainSSLCertificate instead.
           * The name of the certificate.
           *
           * @param request SetDcdnDomainCertificateRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return SetDcdnDomainCertificateResponse
          */
+        // Deprecated
         public SetDcdnDomainCertificateResponse SetDcdnDomainCertificateWithOptions(SetDcdnDomainCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18699,12 +18701,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
+          * @deprecated : SetDcdnDomainCertificate is deprecated, please use dcdn::2018-01-15::SetDcdnDomainSSLCertificate instead.
           * The name of the certificate.
           *
           * @param request SetDcdnDomainCertificateRequest
           * @param runtime runtime options for this request RuntimeOptions
           * @return SetDcdnDomainCertificateResponse
          */
+        // Deprecated
         public async Task<SetDcdnDomainCertificateResponse> SetDcdnDomainCertificateWithOptionsAsync(SetDcdnDomainCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18769,11 +18773,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
+          * @deprecated : SetDcdnDomainCertificate is deprecated, please use dcdn::2018-01-15::SetDcdnDomainSSLCertificate instead.
           * The name of the certificate.
           *
           * @param request SetDcdnDomainCertificateRequest
           * @return SetDcdnDomainCertificateResponse
          */
+        // Deprecated
         public SetDcdnDomainCertificateResponse SetDcdnDomainCertificate(SetDcdnDomainCertificateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18781,11 +18787,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
+          * @deprecated : SetDcdnDomainCertificate is deprecated, please use dcdn::2018-01-15::SetDcdnDomainSSLCertificate instead.
           * The name of the certificate.
           *
           * @param request SetDcdnDomainCertificateRequest
           * @return SetDcdnDomainCertificateResponse
          */
+        // Deprecated
         public async Task<SetDcdnDomainCertificateResponse> SetDcdnDomainCertificateAsync(SetDcdnDomainCertificateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18914,6 +18922,144 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetDcdnDomainSMCertificateWithOptionsAsync(request, runtime);
+        }
+
+        public SetDcdnDomainSSLCertificateResponse SetDcdnDomainSSLCertificateWithOptions(SetDcdnDomainSSLCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
+            {
+                query["CertName"] = request.CertName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRegion))
+            {
+                query["CertRegion"] = request.CertRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertType))
+            {
+                query["CertType"] = request.CertType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLPri))
+            {
+                query["SSLPri"] = request.SSLPri;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLProtocol))
+            {
+                query["SSLProtocol"] = request.SSLProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLPub))
+            {
+                query["SSLPub"] = request.SSLPub;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDcdnDomainSSLCertificate",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDcdnDomainSSLCertificateResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SetDcdnDomainSSLCertificateResponse> SetDcdnDomainSSLCertificateWithOptionsAsync(SetDcdnDomainSSLCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
+            {
+                query["CertName"] = request.CertName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRegion))
+            {
+                query["CertRegion"] = request.CertRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertType))
+            {
+                query["CertType"] = request.CertType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLPri))
+            {
+                query["SSLPri"] = request.SSLPri;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLProtocol))
+            {
+                query["SSLProtocol"] = request.SSLProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLPub))
+            {
+                query["SSLPub"] = request.SSLPub;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDcdnDomainSSLCertificate",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDcdnDomainSSLCertificateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SetDcdnDomainSSLCertificateResponse SetDcdnDomainSSLCertificate(SetDcdnDomainSSLCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetDcdnDomainSSLCertificateWithOptions(request, runtime);
+        }
+
+        public async Task<SetDcdnDomainSSLCertificateResponse> SetDcdnDomainSSLCertificateAsync(SetDcdnDomainSSLCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetDcdnDomainSSLCertificateWithOptionsAsync(request, runtime);
         }
 
         /**

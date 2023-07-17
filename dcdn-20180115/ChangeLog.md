@@ -1,3 +1,6 @@
+2023-07-17 Version: 1.0.29
+- Add SetDcdnDomainSSLCertificate.
+
 2023-06-28 Version: 1.0.28
 - Add DescribeDdosBpsMax.
 
