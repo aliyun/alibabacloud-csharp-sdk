@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [NameInMap("OrderNo")]
             [Validation(Required=false)]
             public string OrderNo { get; set; }
-        };
+
+        }
 
     }
 

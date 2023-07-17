@@ -28,10 +28,12 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [NameInMap("PicUrl")]
             [Validation(Required=false)]
             public string PicUrl { get; set; }
+
             [NameInMap("StyleCode")]
             [Validation(Required=false)]
             public string StyleCode { get; set; }
-        };
+
+        }
 
     }
 

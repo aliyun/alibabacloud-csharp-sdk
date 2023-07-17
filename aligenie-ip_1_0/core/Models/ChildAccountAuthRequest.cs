@@ -1,0 +1,30 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
+{
+    public class ChildAccountAuthRequest : TeaModel {
+        [NameInMap("Account")]
+        [Validation(Required=false)]
+        public string Account { get; set; }
+
+        [NameInMap("AppKey")]
+        [Validation(Required=false)]
+        public string AppKey { get; set; }
+
+        [NameInMap("HotelId")]
+        [Validation(Required=false)]
+        public string HotelId { get; set; }
+
+        [NameInMap("TbOpenId")]
+        [Validation(Required=false)]
+        public string TbOpenId { get; set; }
+
+    }
+
+}

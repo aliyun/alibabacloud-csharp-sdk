@@ -1,0 +1,22 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
+{
+    public class DeleteCustomQAShrinkRequest : TeaModel {
+        [NameInMap("CustomQAIds")]
+        [Validation(Required=false)]
+        public string CustomQAIdsShrink { get; set; }
+
+        [NameInMap("HotelId")]
+        [Validation(Required=false)]
+        public string HotelId { get; set; }
+
+    }
+
+}

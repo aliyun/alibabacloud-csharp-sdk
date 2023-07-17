@@ -24,19 +24,24 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [NameInMap("HasNext")]
             [Validation(Required=false)]
             public bool? HasNext { get; set; }
+
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
+
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
+
             [NameInMap("TotalPage")]
             [Validation(Required=false)]
             public int? TotalPage { get; set; }
-        };
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

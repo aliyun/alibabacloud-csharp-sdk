@@ -28,18 +28,30 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [NameInMap("BackgroundImage")]
             [Validation(Required=false)]
             public string BackgroundImage { get; set; }
+
             [NameInMap("HotelName")]
             [Validation(Required=false)]
             public string HotelName { get; set; }
+
             [NameInMap("ModeList")]
             [Validation(Required=false)]
             public List<GetHotelHomeBackImageAndModesResponseBodyResultModeList> ModeList { get; set; }
             public class GetHotelHomeBackImageAndModesResponseBodyResultModeList : TeaModel {
+                [NameInMap("CnName")]
+                [Validation(Required=false)]
                 public string CnName { get; set; }
+
+                [NameInMap("Code")]
+                [Validation(Required=false)]
                 public string Code { get; set; }
+
+                [NameInMap("Icon")]
+                [Validation(Required=false)]
                 public string Icon { get; set; }
+
             }
-        };
+
+        }
 
     }
 

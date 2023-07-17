@@ -17,14 +17,25 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [Validation(Required=false)]
             public List<QueryDeviceStatusRequestPayloadLocationDevices> LocationDevices { get; set; }
             public class QueryDeviceStatusRequestPayloadLocationDevices : TeaModel {
+                [NameInMap("DeviceNumber")]
+                [Validation(Required=false)]
                 public string DeviceNumber { get; set; }
+
+                [NameInMap("DeviceType")]
+                [Validation(Required=false)]
                 public string DeviceType { get; set; }
+
+                [NameInMap("Location")]
+                [Validation(Required=false)]
                 public string Location { get; set; }
+
             }
+
             [NameInMap("Properties")]
             [Validation(Required=false)]
             public Dictionary<string, string> Properties { get; set; }
-        };
+
+        }
 
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
@@ -33,19 +44,24 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [NameInMap("EncodeKey")]
             [Validation(Required=false)]
             public string EncodeKey { get; set; }
+
             [NameInMap("EncodeType")]
             [Validation(Required=false)]
             public string EncodeType { get; set; }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
             [NameInMap("IdType")]
             [Validation(Required=false)]
             public string IdType { get; set; }
+
             [NameInMap("OrganizationId")]
             [Validation(Required=false)]
             public string OrganizationId { get; set; }
-        };
+
+        }
 
     }
 

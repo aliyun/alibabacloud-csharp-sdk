@@ -1,0 +1,32 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
+{
+    public class AddOrUpdateScreenSaverRequest : TeaModel {
+        [NameInMap("HotelId")]
+        [Validation(Required=false)]
+        public string HotelId { get; set; }
+
+        [NameInMap("HotelScreenSaver")]
+        [Validation(Required=false)]
+        public AddOrUpdateScreenSaverRequestHotelScreenSaver HotelScreenSaver { get; set; }
+        public class AddOrUpdateScreenSaverRequestHotelScreenSaver : TeaModel {
+            [NameInMap("ScreenSaverPicUrl")]
+            [Validation(Required=false)]
+            public string ScreenSaverPicUrl { get; set; }
+
+            [NameInMap("ScreenSaverStyle")]
+            [Validation(Required=false)]
+            public string ScreenSaverStyle { get; set; }
+
+        }
+
+    }
+
+}

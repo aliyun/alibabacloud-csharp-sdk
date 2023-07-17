@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
     }
 
