@@ -9,12 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListFilesRequest : TeaModel {
+        [NameInMap("ExactFileName")]
+        [Validation(Required=false)]
+        public string ExactFileName { get; set; }
+
         /// <summary>
         /// The path of the files.
         /// </summary>
         [NameInMap("FileFolderPath")]
         [Validation(Required=false)]
         public string FileFolderPath { get; set; }
+
+        [NameInMap("FileIdIn")]
+        [Validation(Required=false)]
+        public string FileIdIn { get; set; }
 
         /// <summary>
         /// The types of the code in the files.
@@ -31,6 +39,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
+
+        [NameInMap("NeedAbsoluteFolderPath")]
+        [Validation(Required=false)]
+        public bool? NeedAbsoluteFolderPath { get; set; }
+
+        [NameInMap("NeedContent")]
+        [Validation(Required=false)]
+        public bool? NeedContent { get; set; }
 
         /// <summary>
         /// The ID of the node that is scheduled. You can call the [ListNodes](~~173979~~) operation to query the ID of the node.

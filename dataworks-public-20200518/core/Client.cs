@@ -2420,6 +2420,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["Content"] = request.Content;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateFolderIfNotExists))
+            {
+                body["CreateFolderIfNotExists"] = request.CreateFolderIfNotExists;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpress))
             {
                 body["CronExpress"] = request.CronExpress;
@@ -2562,6 +2566,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 body["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateFolderIfNotExists))
+            {
+                body["CreateFolderIfNotExists"] = request.CreateFolderIfNotExists;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpress))
             {
@@ -4434,6 +4442,160 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await CreateRemindWithOptionsAsync(request, runtime);
         }
 
+        public CreateResourceFileResponse CreateResourceFileWithOptions(CreateResourceFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileDescription))
+            {
+                body["FileDescription"] = request.FileDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFolderPath))
+            {
+                body["FileFolderPath"] = request.FileFolderPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                body["FileType"] = request.FileType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginResourceName))
+            {
+                body["OriginResourceName"] = request.OriginResourceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegisterToCalcEngine))
+            {
+                body["RegisterToCalcEngine"] = request.RegisterToCalcEngine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceFile))
+            {
+                body["ResourceFile"] = request.ResourceFile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageURL))
+            {
+                body["StorageURL"] = request.StorageURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadMode))
+            {
+                body["UploadMode"] = request.UploadMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateResourceFile",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateResourceFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateResourceFileResponse> CreateResourceFileWithOptionsAsync(CreateResourceFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileDescription))
+            {
+                body["FileDescription"] = request.FileDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFolderPath))
+            {
+                body["FileFolderPath"] = request.FileFolderPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                body["FileType"] = request.FileType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginResourceName))
+            {
+                body["OriginResourceName"] = request.OriginResourceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegisterToCalcEngine))
+            {
+                body["RegisterToCalcEngine"] = request.RegisterToCalcEngine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceFile))
+            {
+                body["ResourceFile"] = request.ResourceFile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageURL))
+            {
+                body["StorageURL"] = request.StorageURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadMode))
+            {
+                body["UploadMode"] = request.UploadMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateResourceFile",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateResourceFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateResourceFileResponse CreateResourceFile(CreateResourceFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateResourceFileWithOptions(request, runtime);
+        }
+
+        public async Task<CreateResourceFileResponse> CreateResourceFileAsync(CreateResourceFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateResourceFileWithOptionsAsync(request, runtime);
+        }
+
         public CreateTableResponse CreateTableWithOptions(CreateTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4848,6 +5010,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["CmdDescription"] = request.CmdDescription;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateFolderIfNotExists))
+            {
+                body["CreateFolderIfNotExists"] = request.CreateFolderIfNotExists;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Example))
             {
                 body["Example"] = request.Example;
@@ -4918,6 +5084,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CmdDescription))
             {
                 body["CmdDescription"] = request.CmdDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateFolderIfNotExists))
+            {
+                body["CreateFolderIfNotExists"] = request.CreateFolderIfNotExists;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Example))
             {
@@ -15862,9 +16032,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExactFileName))
+            {
+                body["ExactFileName"] = request.ExactFileName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFolderPath))
             {
                 body["FileFolderPath"] = request.FileFolderPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileIdIn))
+            {
+                body["FileIdIn"] = request.FileIdIn;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTypes))
             {
@@ -15873,6 +16051,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 body["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedAbsoluteFolderPath))
+            {
+                body["NeedAbsoluteFolderPath"] = request.NeedAbsoluteFolderPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedContent))
+            {
+                body["NeedContent"] = request.NeedContent;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
             {
@@ -15925,9 +16111,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExactFileName))
+            {
+                body["ExactFileName"] = request.ExactFileName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFolderPath))
             {
                 body["FileFolderPath"] = request.FileFolderPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileIdIn))
+            {
+                body["FileIdIn"] = request.FileIdIn;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTypes))
             {
@@ -15936,6 +16130,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 body["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedAbsoluteFolderPath))
+            {
+                body["NeedAbsoluteFolderPath"] = request.NeedAbsoluteFolderPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedContent))
+            {
+                body["NeedContent"] = request.NeedContent;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
             {

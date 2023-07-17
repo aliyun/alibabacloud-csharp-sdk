@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string CmdDescription { get; set; }
 
+        [NameInMap("CreateFolderIfNotExists")]
+        [Validation(Required=false)]
+        public bool? CreateFolderIfNotExists { get; set; }
+
         /// <summary>
         /// The example for calling the function. This parameter corresponds to the Example parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
         /// </summary>

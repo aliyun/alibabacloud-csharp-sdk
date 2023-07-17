@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public List<ListFilesResponseBodyDataFiles> Files { get; set; }
             public class ListFilesResponseBodyDataFiles : TeaModel {
+                [NameInMap("AbsoluteFolderPath")]
+                [Validation(Required=false)]
+                public string AbsoluteFolderPath { get; set; }
+
                 /// <summary>
                 /// Specifies whether the automatic parsing feature is enabled for the file. Valid values:
                 /// 
