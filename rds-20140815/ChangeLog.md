@@ -1,3 +1,6 @@
+2023-07-17 Version: 2.2.8
+- Add TimeOut.
+
 2023-07-16 Version: 2.2.7
 - Add error code.
 
