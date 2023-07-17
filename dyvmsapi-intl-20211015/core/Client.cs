@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi_intl20211015
             {
                 query["CountryId"] = request.CountryId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -143,6 +147,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi_intl20211015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CountryId))
             {
                 query["CountryId"] = request.CountryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -235,6 +243,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi_intl20211015
             {
                 query["CountryId"] = request.CountryId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -301,6 +313,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi_intl20211015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CountryId))
             {
                 query["CountryId"] = request.CountryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -3247,10 +3263,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi_intl20211015
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3281,10 +3293,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi_intl20211015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

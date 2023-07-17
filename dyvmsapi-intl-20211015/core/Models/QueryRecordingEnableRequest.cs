@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi_intl20211015.Models
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
     }
 
 }

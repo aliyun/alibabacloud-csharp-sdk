@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi_intl20211015.Models
         [Validation(Required=false)]
         public string CountryId { get; set; }
 
+        [NameInMap("OutId")]
+        [Validation(Required=false)]
+        public string OutId { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
