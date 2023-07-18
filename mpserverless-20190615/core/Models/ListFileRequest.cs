@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class ListFileRequest : TeaModel {
+        [NameInMap("AuthDelta")]
+        [Validation(Required=false)]
+        public int? AuthDelta { get; set; }
+
         [NameInMap("FileId")]
         [Validation(Required=false)]
         public string FileId { get; set; }

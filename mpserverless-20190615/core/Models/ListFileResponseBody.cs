@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public List<ListFileResponseBodyDataList> DataList { get; set; }
         public class ListFileResponseBodyDataList : TeaModel {
+            [NameInMap("AuthDelta")]
+            [Validation(Required=false)]
+            public int? AuthDelta { get; set; }
+
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
