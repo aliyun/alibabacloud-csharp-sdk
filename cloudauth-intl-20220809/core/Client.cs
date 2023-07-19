@@ -1169,6 +1169,88 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             return await FaceLivenessWithOptionsAsync(request, runtime);
         }
 
+        public FraudResultCallBackResponse FraudResultCallBackWithOptions(FraudResultCallBackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertifyId))
+            {
+                query["CertifyId"] = request.CertifyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultCode))
+            {
+                query["ResultCode"] = request.ResultCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyDeployEnv))
+            {
+                query["VerifyDeployEnv"] = request.VerifyDeployEnv;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FraudResultCallBack",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FraudResultCallBackResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<FraudResultCallBackResponse> FraudResultCallBackWithOptionsAsync(FraudResultCallBackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertifyId))
+            {
+                query["CertifyId"] = request.CertifyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultCode))
+            {
+                query["ResultCode"] = request.ResultCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyDeployEnv))
+            {
+                query["VerifyDeployEnv"] = request.VerifyDeployEnv;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FraudResultCallBack",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FraudResultCallBackResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public FraudResultCallBackResponse FraudResultCallBack(FraudResultCallBackRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return FraudResultCallBackWithOptions(request, runtime);
+        }
+
+        public async Task<FraudResultCallBackResponse> FraudResultCallBackAsync(FraudResultCallBackRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await FraudResultCallBackWithOptionsAsync(request, runtime);
+        }
+
         public InitializeResponse InitializeWithOptions(InitializeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1180,6 +1262,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Crop))
             {
                 query["Crop"] = request.Crop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocScanMode))
+            {
+                query["DocScanMode"] = request.DocScanMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
             {
@@ -1279,6 +1365,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Crop))
             {
                 query["Crop"] = request.Crop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocScanMode))
+            {
+                query["DocScanMode"] = request.DocScanMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
             {

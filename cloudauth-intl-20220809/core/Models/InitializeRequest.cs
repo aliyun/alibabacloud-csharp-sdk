@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string Crop { get; set; }
 
+        [NameInMap("DocScanMode")]
+        [Validation(Required=false)]
+        public string DocScanMode { get; set; }
+
         [NameInMap("DocType")]
         [Validation(Required=false)]
         public string DocType { get; set; }
