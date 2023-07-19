@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyVpcFirewallControlPolicyPositionRequest : TeaModel {
+        [NameInMap("AclUuid")]
+        [Validation(Required=false)]
+        public string AclUuid { get; set; }
+
         /// <summary>
         /// The natural language of the request and response. 
         /// 

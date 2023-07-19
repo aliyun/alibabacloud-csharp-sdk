@@ -41,9 +41,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string FirewallStatus { get; set; }
 
+        [NameInMap("FirewallSubnetCidr")]
+        [Validation(Required=false)]
+        public string FirewallSubnetCidr { get; set; }
+
         [NameInMap("FirewallSwitchStatus")]
         [Validation(Required=false)]
         public string FirewallSwitchStatus { get; set; }
+
+        [NameInMap("FirewallVpcCidr")]
+        [Validation(Required=false)]
+        public string FirewallVpcCidr { get; set; }
 
         [NameInMap("RegionNo")]
         [Validation(Required=false)]
@@ -56,6 +64,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("RouteMode")]
         [Validation(Required=false)]
         public string RouteMode { get; set; }
+
+        [NameInMap("TrAttachmentMasterCidr")]
+        [Validation(Required=false)]
+        public string TrAttachmentMasterCidr { get; set; }
+
+        [NameInMap("TrAttachmentSlaveCidr")]
+        [Validation(Required=false)]
+        public string TrAttachmentSlaveCidr { get; set; }
 
         [NameInMap("TransitRouterId")]
         [Validation(Required=false)]
