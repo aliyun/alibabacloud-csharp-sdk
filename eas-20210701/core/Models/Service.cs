@@ -123,6 +123,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string SafetyLock { get; set; }
 
+        [NameInMap("SecondaryInternetEndpoint")]
+        [Validation(Required=false)]
+        public string SecondaryInternetEndpoint { get; set; }
+
+        [NameInMap("SecondaryIntranetEndpoint")]
+        [Validation(Required=false)]
+        public string SecondaryIntranetEndpoint { get; set; }
+
         [NameInMap("ServiceConfig")]
         [Validation(Required=false)]
         public string ServiceConfig { get; set; }
