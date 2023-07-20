@@ -44,6 +44,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// The ID of the asset group.
+        /// 
+        /// > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
+        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }

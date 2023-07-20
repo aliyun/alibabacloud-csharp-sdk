@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string InstanceCount { get; set; }
 
+            [NameInMap("Os")]
+            [Validation(Required=false)]
+            public string Os { get; set; }
+
             /// <summary>
             /// The number of assets that are at risk.
             /// </summary>

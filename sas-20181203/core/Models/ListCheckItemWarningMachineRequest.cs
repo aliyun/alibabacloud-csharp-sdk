@@ -80,9 +80,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RiskType { get; set; }
 
         /// <summary>
-        /// The status of the check item.
-        /// 
-        /// > Valid values:
+        /// The status of the check item. Valid values:
         /// 
         /// *   1: failed
         /// 

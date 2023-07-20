@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        [NameInMap("CustomParam")]
+        [Validation(Required=false)]
+        public bool? CustomParam { get; set; }
+
         /// <summary>
         /// The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).
         /// </summary>

@@ -200,6 +200,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Remark { get; set; }
 
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
         /// <summary>
         /// The custom sorting field. Default value: **operateTime**. Valid values:
         /// 

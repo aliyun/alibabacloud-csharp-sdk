@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulDetailsResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the details about the vulnerability.
+        /// The details of the vulnerability.
         /// </summary>
         [NameInMap("Cves")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Classify { get; set; }
 
             /// <summary>
-            /// An array that consists of vulnerability types.
+            /// The vulnerability types.
             /// </summary>
             [NameInMap("Classifys")]
             [Validation(Required=false)]
@@ -100,7 +100,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CvssVector { get; set; }
 
             /// <summary>
-            /// The name of the server.
+            /// The instance name of the server.
+            /// 
+            /// > This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
@@ -108,6 +110,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// The public IP address of the server.
+            /// 
+            /// > This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
@@ -115,6 +119,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// The private IP address of the server.
+            /// 
+            /// > This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
             /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]

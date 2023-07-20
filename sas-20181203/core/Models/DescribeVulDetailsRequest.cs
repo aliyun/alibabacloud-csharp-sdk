@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulDetailsRequest : TeaModel {
         /// <summary>
-        /// The name in the **vulnerability introduction**.
+        /// The vulnerability announcement.
         /// </summary>
         [NameInMap("AliasName")]
         [Validation(Required=false)]
@@ -28,10 +28,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// The name of the vulnerability.
+        /// 
+        /// > You can call the [DescribeGroupedVul](~~DescribeGroupedVul~~) or [DescribeVulList](~~DescribeVulList~~) operation to query the names of vulnerabilities.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
         /// The type of the vulnerability. Valid values:

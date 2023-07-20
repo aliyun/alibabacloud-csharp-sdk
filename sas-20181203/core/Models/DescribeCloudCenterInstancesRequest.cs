@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string MachineTypes { get; set; }
 
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// Specifies whether to internationalize the name of the **default** group. Default value: **false**. Valid values:
         /// 
@@ -89,6 +93,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
+        [NameInMap("UseNextToken")]
+        [Validation(Required=false)]
+        public bool? UseNextToken { get; set; }
 
     }
 

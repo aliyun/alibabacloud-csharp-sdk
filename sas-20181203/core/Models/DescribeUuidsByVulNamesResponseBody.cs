@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("VulCount")]
+        [Validation(Required=false)]
+        public int? VulCount { get; set; }
+
     }
 
 }

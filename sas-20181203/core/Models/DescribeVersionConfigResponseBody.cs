@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVersionConfigResponseBody : TeaModel {
+        [NameInMap("AgentlessCapacity")]
+        [Validation(Required=false)]
+        public long? AgentlessCapacity { get; set; }
+
         /// <summary>
         /// Indicates whether the pay-as-you-go billing method is supported.
         /// 
@@ -32,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The quota for the application whitelist feature.
         /// 
-        /// > The quantity of servers that are allowed by the quota is deducted by one each time you apply an application whitelist to a server. After you enable the application whitelist feature, the quota is 20 by default.
+        /// >  The quantity of servers that are allowed by the quota is deducted by one each time you apply an application whitelist to a server. After you enable the application whitelist feature, the quota is 20 by default.
         /// </summary>
         [NameInMap("AppWhiteListAuthCount")]
         [Validation(Required=false)]
@@ -45,6 +49,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? AssetLevel { get; set; }
 
+        [NameInMap("CspmCapacity")]
+        [Validation(Required=false)]
+        public long? CspmCapacity { get; set; }
+
         /// <summary>
         /// The most advanced edition that is used. Valid values:
         /// 
@@ -55,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// *   **7**: Ultimate edition
         /// *   **10**: Value-added Plan edition
         /// 
-        /// > If you purchase the Multi-version edition of Security Center, the value indicates the most advanced edition that is used in the Multi-version edition. If you do not purchase the Multi-version edition of Security Center, the value indicates the edition of Security Center.
+        /// >  If you purchase the Multi-version edition of Security Center, the value indicates the most advanced edition that is used in the Multi-version edition. If you do not purchase the Multi-version edition of Security Center, the value indicates the edition of Security Center.
         /// </summary>
         [NameInMap("HighestVersion")]
         [Validation(Required=false)]
@@ -93,10 +101,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? IsNewContainerVersion { get; set; }
 
         /// <summary>
-        /// Indicates whether Security Center runs the latest version of the Multi-version edition.
+        /// Indicates whether Security Center runs the latest version of the Multi-version edition. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// *   **true**
+        /// *   **false**
         /// </summary>
         [NameInMap("IsNewMultiVersion")]
         [Validation(Required=false)]
@@ -150,24 +158,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? OpenTime { get; set; }
 
+        [NameInMap("RaspCapacity")]
+        [Validation(Required=false)]
+        public long? RaspCapacity { get; set; }
+
         /// <summary>
         /// The timestamp when Security Center is released. Unit: milliseconds. The value of this parameter is seven days after Security Center expires.
         /// 
-        /// > If you do not renew the subscription within seven days after the expiration date, the Value-added Plan, Anti-virus, Advanced, or Enterprise edition is downgraded to the Basic edition. In this case, you can no longer view the existing configurations or statistics such as DDoS alerts. You must purchase the Anti-virus, Advanced, or Enterprise edition to continue using relevant features. For more information, see [Purchase Security Center](~~42308~~).
+        /// > If you do not renew the subscription within seven days after the expiration date, the Value-added Plan, Basic Anti-Virus, Advanced, or Enterprise edition is downgraded to the Basic edition. In this case, you can no longer view the existing configurations or statistics such as DDoS alerts. You must purchase the Anti-virus, Advanced, or Enterprise edition to continue using relevant features. For more information, see [Purchase Security Center](~~42308~~).
         /// </summary>
         [NameInMap("ReleaseTime")]
         [Validation(Required=false)]
         public long? ReleaseTime { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the log analysis feature is purchased. Valid values:
+        /// Indicates whether log analysis is purchased. Valid values:
         /// 
         /// *   **0**: no
         /// *   **1**: yes
@@ -201,7 +213,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ThreatAnalysisCapacity { get; set; }
 
         /// <summary>
-        /// Indicates whether the custom alerting feature is enabled. Valid values:
+        /// Indicates whether the custom alert feature is enabled. Valid values:
         /// 
         /// *   **0**: no
         /// *   **2**: yes
@@ -232,6 +244,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? VmCores { get; set; }
 
+        [NameInMap("VulFixCapacity")]
+        [Validation(Required=false)]
+        public long? VulFixCapacity { get; set; }
+
         /// <summary>
         /// Indicates whether the web tamper proofing feature is enabled. Valid values:
         /// 
@@ -243,9 +259,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? WebLock { get; set; }
 
         /// <summary>
-        /// The quota for the web tamper proofing feature. The quantity of servers that are allowed by the quota is deducted by one each time you enable the web tamper proofing feature for a server. Valid values: 0 to N.
+        /// The quota for the web tamper proofing feature. The quantity of servers that are allowed by the quota is deducted by one each time a server is protected by the web tamper proofing feature. Valid values: 0 to N.
         /// 
-        /// > N indicates the number of servers that you own.
+        /// >  N indicates the number of servers that you own.
         /// </summary>
         [NameInMap("WebLockAuthCount")]
         [Validation(Required=false)]

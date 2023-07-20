@@ -28,6 +28,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("Os")]
+        [Validation(Required=false)]
+        public string Os { get; set; }
+
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
+
         /// <summary>
         /// The UUIDs of the servers on which you want to install the Security Center agent. Separate multiple UUIDs with commas (,).
         /// 

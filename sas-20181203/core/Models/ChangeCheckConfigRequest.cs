@@ -9,6 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ChangeCheckConfigRequest : TeaModel {
+        [NameInMap("AddedCheck")]
+        [Validation(Required=false)]
+        public List<ChangeCheckConfigRequestAddedCheck> AddedCheck { get; set; }
+        public class ChangeCheckConfigRequestAddedCheck : TeaModel {
+            [NameInMap("CheckId")]
+            [Validation(Required=false)]
+            public long? CheckId { get; set; }
+
+            [NameInMap("SectionId")]
+            [Validation(Required=false)]
+            public long? SectionId { get; set; }
+
+        }
+
+        [NameInMap("CycleDays")]
+        [Validation(Required=false)]
+        public List<int?> CycleDays { get; set; }
+
+        [NameInMap("EnableAddCheck")]
+        [Validation(Required=false)]
+        public bool? EnableAddCheck { get; set; }
+
+        [NameInMap("EnableAutoCheck")]
+        [Validation(Required=false)]
+        public bool? EnableAutoCheck { get; set; }
+
         /// <summary>
         /// The end time of the check. The value specifies a point in time in a day. The time period that is specified by the start time and end time must be one of the following time periods:
         /// 
@@ -29,6 +55,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RemovedCheck")]
+        [Validation(Required=false)]
+        public List<ChangeCheckConfigRequestRemovedCheck> RemovedCheck { get; set; }
+        public class ChangeCheckConfigRequestRemovedCheck : TeaModel {
+            [NameInMap("CheckId")]
+            [Validation(Required=false)]
+            public long? CheckId { get; set; }
+
+            [NameInMap("SectionId")]
+            [Validation(Required=false)]
+            public long? SectionId { get; set; }
+
+        }
 
         /// <summary>
         /// An array that consists of the information about the check item.

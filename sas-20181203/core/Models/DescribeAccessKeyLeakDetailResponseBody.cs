@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Source { get; set; }
 
+        [NameInMap("TokenValid")]
+        [Validation(Required=false)]
+        public int? TokenValid { get; set; }
+
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
@@ -88,6 +92,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("WhitelistStatus")]
         [Validation(Required=false)]
         public string WhitelistStatus { get; set; }
+
+        [NameInMap("WhitelistTime")]
+        [Validation(Required=false)]
+        public long? WhitelistTime { get; set; }
 
     }
 

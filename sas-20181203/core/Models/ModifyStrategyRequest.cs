@@ -46,7 +46,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CycleStartTime { get; set; }
 
         /// <summary>
-        /// The time when the baseline check based on the baseline check policy ends.
+        /// The time when the baseline check based on the baseline check policy ends. 
+        /// Format is hh:mm:ss.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -103,7 +104,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// The time when the baseline check based on the baseline check policy starts.
+        /// The time when the baseline check based on the baseline check policy starts. Format is hh:mm:ss.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

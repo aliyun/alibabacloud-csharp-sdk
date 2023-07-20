@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateFileDetectRequest : TeaModel {
+        /// <summary>
+        /// The URL that is used to download the file. You can specify this parameter to trigger file detection without the need to upload the file in advance.
+        /// </summary>
         [NameInMap("DownloadUrl")]
         [Validation(Required=false)]
         public string DownloadUrl { get; set; }
@@ -21,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string HashKey { get; set; }
 
         /// <summary>
-        /// The key of the file that is stored in the Object Storage Service (OSS) bucket. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.
+        /// The key of the file that is stored in the Object Storage Service (OSS) bucket. If you specify the DownloadUrl parameter, you can leave this parameter empty. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.
         /// </summary>
         [NameInMap("OssKey")]
         [Validation(Required=false)]

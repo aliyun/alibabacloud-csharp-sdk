@@ -47,6 +47,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// The ID of the new server group to which the servers belong.
+        /// 
+        /// >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }

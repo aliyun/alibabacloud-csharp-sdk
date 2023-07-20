@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the image repository.
         /// 
-        /// >  You can call the [ListRepository](~~ListRepository~~) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.
+        /// >  You can call the [ListRepository](~~451339~~) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.
         /// </summary>
         [NameInMap("RepoId")]
         [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the container image.
         /// 
-        /// >  You can call the [ListRepository](~~ListRepository~~) operation to query the IDs of container images from the value of the **InstanceId** response parameter.
+        /// >  You can call the [ListRepository](~~451339~~) operation to query the IDs of container images from the value of the **InstanceId** response parameter.
         /// </summary>
         [NameInMap("RepoInstanceId")]
         [Validation(Required=false)]

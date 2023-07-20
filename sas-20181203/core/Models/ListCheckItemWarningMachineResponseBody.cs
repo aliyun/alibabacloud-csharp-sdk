@@ -40,10 +40,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public bool? Bind { get; set; }
 
+            /// <summary>
+            /// The ID of the container.
+            /// </summary>
             [NameInMap("ContainerId")]
             [Validation(Required=false)]
             public string ContainerId { get; set; }
 
+            /// <summary>
+            /// The name of the container.
+            /// </summary>
             [NameInMap("ContainerName")]
             [Validation(Required=false)]
             public string ContainerName { get; set; }
@@ -124,9 +130,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The status of the check item.
-            /// 
-            /// > Valid values:
+            /// The status of the check item. Valid values:
             /// 
             /// *   1: failed
             /// 

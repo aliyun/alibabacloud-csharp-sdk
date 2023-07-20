@@ -68,6 +68,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? CreateTimestamp { get; set; }
 
+            [NameInMap("Exposed")]
+            [Validation(Required=false)]
+            public int? Exposed { get; set; }
+
+            [NameInMap("ExposedDetail")]
+            [Validation(Required=false)]
+            public string ExposedDetail { get; set; }
+
             /// <summary>
             /// The number of baseline risks.
             /// </summary>

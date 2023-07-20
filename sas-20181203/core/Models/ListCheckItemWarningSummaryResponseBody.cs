@@ -61,6 +61,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string CheckType { get; set; }
 
+            /// <summary>
+            /// Checks if the item belongs to the container runtime category.Valid values:
+            /// *   **true**
+            /// *  **false**
+            /// </summary>
             [NameInMap("ContainerCheckItem")]
             [Validation(Required=false)]
             public bool? ContainerCheckItem { get; set; }

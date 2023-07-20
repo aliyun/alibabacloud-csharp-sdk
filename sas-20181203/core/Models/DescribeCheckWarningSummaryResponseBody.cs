@@ -68,6 +68,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public bool? CheckExploit { get; set; }
 
+            /// <summary>
+            /// Indicates  whether the risk item is a container runtime risk item. Valid values:
+            /// 
+            /// *   **true**: yes
+            /// *   **false**: no
+            /// </summary>
             [NameInMap("ContainerRisk")]
             [Validation(Required=false)]
             public bool? ContainerRisk { get; set; }

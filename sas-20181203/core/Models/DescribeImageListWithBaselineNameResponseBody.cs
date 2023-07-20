@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageListWithBaselineNameResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the images returned.
+        /// The timestamp when the last baseline check was performed. Unit: milliseconds.
         /// </summary>
         [NameInMap("ImageInfos")]
         [Validation(Required=false)]
@@ -93,18 +93,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// The instance name of the server.
+            /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
+            /// <summary>
+            /// The public IP address of the server.
+            /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
+            /// <summary>
+            /// The private IP address of the server.
+            /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
+            /// <summary>
+            /// The timestamp when the last baseline check was performed. Unit: milliseconds.
+            /// </summary>
             [NameInMap("LastScanTime")]
             [Validation(Required=false)]
             public long? LastScanTime { get; set; }
@@ -196,14 +208,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Tag { get; set; }
 
+            /// <summary>
+            /// The ID of the asset on which the baseline check is performed.
+            /// </summary>
             [NameInMap("TargetId")]
             [Validation(Required=false)]
             public string TargetId { get; set; }
 
+            /// <summary>
+            /// The name of the asset on which the baseline check is performed.
+            /// </summary>
             [NameInMap("TargetName")]
             [Validation(Required=false)]
             public string TargetName { get; set; }
 
+            /// <summary>
+            /// The type of the asset on which the baseline check is performed. Valid values:
+            /// 
+            /// - ECS_IMAGE: image
+            /// - ECS_SNAPSHOT: snapshot
+            /// </summary>
             [NameInMap("TargetType")]
             [Validation(Required=false)]
             public string TargetType { get; set; }

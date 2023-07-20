@@ -175,6 +175,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("StatusMessage")]
+            [Validation(Required=false)]
+            public string StatusMessage { get; set; }
+
             /// <summary>
             /// The ID of the check task.
             /// </summary>

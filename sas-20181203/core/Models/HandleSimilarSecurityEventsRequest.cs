@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string OperationParams { get; set; }
 
+        [NameInMap("Remark")]
+        [Validation(Required=false)]
+        public string Remark { get; set; }
+
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }

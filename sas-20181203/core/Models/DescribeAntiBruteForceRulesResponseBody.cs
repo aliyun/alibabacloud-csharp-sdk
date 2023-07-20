@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeAntiBruteForceRulesResponseBodyRules> Rules { get; set; }
         public class DescribeAntiBruteForceRulesResponseBodyRules : TeaModel {
-            [NameInMap("CreateTime")]
+            [NameInMap("CreateTimestamp")]
             [Validation(Required=false)]
-            public string CreateTime { get; set; }
+            public long? CreateTimestamp { get; set; }
 
             /// <summary>
             /// Indicates whether the defense rule is the default rule. Valid values:

@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The ID of the region.
         /// 
-        /// > You can call the [ListImageRegistryRegions](~~ListImageRegistryRegions~~) operation to query the IDs of supported regions.
+        /// > You can call the [ListImageRegistryRegion](~~ListImageRegistryRegion~~) operation to query the IDs of supported regions.
         /// </summary>
         [NameInMap("RegistryRegionId")]
         [Validation(Required=false)]
