@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public bool? Portable { get; set; }
 
+                [NameInMap("SerialId")]
+                [Validation(Required=false)]
+                public string SerialId { get; set; }
+
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public int? Size { get; set; }

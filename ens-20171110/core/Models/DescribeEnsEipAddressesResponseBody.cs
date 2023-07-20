@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string IpAddress { get; set; }
 
+                [NameInMap("IpStatus")]
+                [Validation(Required=false)]
+                public string IpStatus { get; set; }
+
                 [NameInMap("Isp")]
                 [Validation(Required=false)]
                 public string Isp { get; set; }
@@ -64,6 +68,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Standby")]
+                [Validation(Required=false)]
+                public bool? Standby { get; set; }
 
                 [NameInMap("Status")]
                 [Validation(Required=false)]

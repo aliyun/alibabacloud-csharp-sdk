@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string CommodityCode { get; set; }
 
+        [NameInMap("CustomAccount")]
+        [Validation(Required=false)]
+        public string CustomAccount { get; set; }
+
         [NameInMap("ModuleCode")]
         [Validation(Required=false)]
         public string ModuleCode { get; set; }

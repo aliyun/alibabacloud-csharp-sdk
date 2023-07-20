@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("Standby")]
+        [Validation(Required=false)]
+        public string Standby { get; set; }
+
     }
 
 }

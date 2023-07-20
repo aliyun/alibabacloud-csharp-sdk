@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
 
+        [NameInMap("StandbyExternalIp")]
+        [Validation(Required=false)]
+        public string StandbyExternalIp { get; set; }
+
     }
 
 }

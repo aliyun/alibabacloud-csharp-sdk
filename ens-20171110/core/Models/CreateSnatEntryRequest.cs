@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string SourceVSwitchId { get; set; }
 
+        [NameInMap("StandbySnatIp")]
+        [Validation(Required=false)]
+        public string StandbySnatIp { get; set; }
+
     }
 
 }

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
+        [NameInMap("Standby")]
+        [Validation(Required=false)]
+        public bool? Standby { get; set; }
+
     }
 
 }

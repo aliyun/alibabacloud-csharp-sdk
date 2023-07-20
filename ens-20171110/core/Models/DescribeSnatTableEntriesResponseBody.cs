@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string SourceCIDR { get; set; }
 
+            [NameInMap("StandbySnatIp")]
+            [Validation(Required=false)]
+            public string StandbySnatIp { get; set; }
+
+            [NameInMap("StandbyStatus")]
+            [Validation(Required=false)]
+            public string StandbyStatus { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }

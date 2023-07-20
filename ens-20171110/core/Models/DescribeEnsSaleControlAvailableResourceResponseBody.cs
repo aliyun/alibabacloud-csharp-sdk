@@ -39,6 +39,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string Area { get; set; }
 
+                [NameInMap("City")]
+                [Validation(Required=false)]
+                public string City { get; set; }
+
+                [NameInMap("Country")]
+                [Validation(Required=false)]
+                public string Country { get; set; }
+
                 [NameInMap("EnsRegionId")]
                 [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
@@ -46,6 +54,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [NameInMap("EnsRegionName")]
                 [Validation(Required=false)]
                 public string EnsRegionName { get; set; }
+
+                [NameInMap("Isp")]
+                [Validation(Required=false)]
+                public string Isp { get; set; }
 
                 [NameInMap("Province")]
                 [Validation(Required=false)]
