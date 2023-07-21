@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public MonthBillGetResponseBodyModuleMonthAccountBillDetail MonthAccountBillDetail { get; set; }
             public class MonthBillGetResponseBodyModuleMonthAccountBillDetail : TeaModel {
+                [NameInMap("billConfirmed")]
+                [Validation(Required=false)]
+                public int? BillConfirmed { get; set; }
+
                 /// <summary>
                 /// 用车金额（单位：元）
                 /// </summary>

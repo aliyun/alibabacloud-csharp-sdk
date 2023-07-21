@@ -163,6 +163,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string LatestCheckOutTime { get; set; }
 
+                [NameInMap("max_booking_num")]
+                [Validation(Required=false)]
+                public int? MaxBookingNum { get; set; }
+
                 [NameInMap("max_occupancy_num")]
                 [Validation(Required=false)]
                 public int? MaxOccupancyNum { get; set; }

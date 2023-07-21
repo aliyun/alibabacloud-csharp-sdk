@@ -41,9 +41,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? CarLevel { get; set; }
 
+                [NameInMap("driver_card")]
+                [Validation(Required=false)]
+                public string DriverCard { get; set; }
+
                 [NameInMap("driver_confirm_time")]
                 [Validation(Required=false)]
                 public long? DriverConfirmTime { get; set; }
+
+                [NameInMap("driver_name")]
+                [Validation(Required=false)]
+                public string DriverName { get; set; }
 
                 [NameInMap("estimate_price")]
                 [Validation(Required=false)]
