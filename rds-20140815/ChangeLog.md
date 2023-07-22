@@ -1,3 +1,7 @@
+2023-07-22 Version: 2.3.2
+- Fix 500 for CreateOrder.
+- Support sts.
+
 2023-07-21 Version: 2.3.1
 - Fix 500 for CreateOrder.
 - Support sts.
