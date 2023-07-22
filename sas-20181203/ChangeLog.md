@@ -1,3 +1,8 @@
+2023-07-22 Version: 2.1.9
+- Support ContainerImageScanNew.
+- Supported rasp-attach for user.
+- Fixed, make SourceIp private.
+
 2023-07-20 Version: 2.1.8
 - Support rd sdk.
 
