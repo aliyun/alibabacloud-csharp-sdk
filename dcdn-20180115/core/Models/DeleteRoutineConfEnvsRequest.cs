@@ -10,16 +10,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DeleteRoutineConfEnvsRequest : TeaModel {
         /// <summary>
-        /// The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
+        /// The custom canary release environments that you want to delete.
         /// </summary>
         [NameInMap("Envs")]
         [Validation(Required=false)]
         public Dictionary<string, object> Envs { get; set; }
 
         /// <summary>
-        /// > 
-        /// *   This operation deletes only custom preset canary release environments. You cannot delete production or staging environments.
-        /// *   You can call this operation up to 100 times per second per account.
+        /// The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

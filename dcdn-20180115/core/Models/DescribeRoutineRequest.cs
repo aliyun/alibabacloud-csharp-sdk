@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeRoutineRequest : TeaModel {
         /// <summary>
-        /// The metadata of the routine. The next table describes the fields.
+        /// The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

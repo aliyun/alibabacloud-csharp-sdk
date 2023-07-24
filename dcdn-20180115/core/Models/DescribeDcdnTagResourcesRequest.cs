@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnTagResourcesRequest : TeaModel {
         /// <summary>
-        /// The tags of the instance.
+        /// The list of resource IDs. You can specify a maximum of 50 resource IDs.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The type of the resource. Set the value to **DOMAIN**.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The tags. You can specify a maximum of 20 tag values.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

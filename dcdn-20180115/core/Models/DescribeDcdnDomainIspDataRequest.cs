@@ -10,21 +10,25 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainIspDataRequest : TeaModel {
         /// <summary>
-        /// The beginning of the time range during which data was queried.
+        /// The accelerated domain name. You can specify only one domain name in each request.
+        /// 
+        /// If you do not specify an accelerated domain name, the data of all accelerated domain names that belong to your account is queried.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The accelerated domain name.
+        /// The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// 
+        /// > The end time must be later than the start time.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -10,39 +10,45 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainRealTimeQpsDataRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query.
-        /// 
-        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-        /// 
-        /// >  The end time must be later than the start time.
+        /// The accelerated domain name. Separate multiple accelerated domain names with commas (,).
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.
+        /// The end of the time range to query.
+        /// 
+        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// 
+        /// > The end time must be later than the start time.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The name of the Internet service provider (ISP).
+        /// 
+        /// You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query ISPs.
         /// </summary>
         [NameInMap("IspNameEn")]
         [Validation(Required=false)]
         public string IspNameEn { get; set; }
 
         /// <summary>
-        /// The list of the data returned.
+        /// The name of the region.
+        /// 
+        /// You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions.
         /// </summary>
         [NameInMap("LocationNameEn")]
         [Validation(Required=false)]
         public string LocationNameEn { get; set; }
 
         /// <summary>
-        /// The QPS data.
+        /// The beginning of the time range to query.
+        /// 
+        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

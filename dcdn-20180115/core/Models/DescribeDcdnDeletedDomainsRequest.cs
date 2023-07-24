@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDeletedDomainsRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The number of the page to return. Valid values: **1** to **100000**. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The page number of the returned page, which is the same as the **PageNumber** parameter in request parameters.
+        /// The number of domain names to return on each page. Valid values: an integer from **1** to **500**. Default value: **20**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

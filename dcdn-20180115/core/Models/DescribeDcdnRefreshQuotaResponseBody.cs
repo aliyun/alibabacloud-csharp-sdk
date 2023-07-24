@@ -10,30 +10,28 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnRefreshQuotaResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The maximum number of URLs that can be blocked.
         /// </summary>
         [NameInMap("BlockQuota")]
         [Validation(Required=false)]
         public string BlockQuota { get; set; }
 
         /// <summary>
-        /// The remaining number of URLs that can be refreshed each day.
+        /// The remaining number of URLs that can be blocked on the current day.
         /// </summary>
         [NameInMap("BlockRemain")]
         [Validation(Required=false)]
         public string BlockRemain { get; set; }
 
         /// <summary>
-        /// > 
-        /// *   You can call the **RefreshDcdnObjectCaches** operation to refresh content and call the **PreloadDcdnObjectCaches** operation to prefetch content.
-        /// *   You can call this operation up to 20 times per second.
+        /// The maximum number of directories that can be refreshed on the current day.
         /// </summary>
         [NameInMap("DirQuota")]
         [Validation(Required=false)]
         public string DirQuota { get; set; }
 
         /// <summary>
-        /// The maximum number of URLs that can be prefetched each day.
+        /// The remaining number of directories that can be refreshed on the current day.
         /// </summary>
         [NameInMap("DirRemain")]
         [Validation(Required=false)]
@@ -48,49 +46,49 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string IgnoreParamsRemain { get; set; }
 
         /// <summary>
-        /// The maximum number of URLs that can be blocked.
+        /// The maximum number of URLs that can be prefetched on the current day.
         /// </summary>
         [NameInMap("PreloadQuota")]
         [Validation(Required=false)]
         public string PreloadQuota { get; set; }
 
         /// <summary>
-        /// The maximum number of directories that can be refreshed each day.
+        /// The remaining number of URLs that can be prefetched on the current day.
         /// </summary>
         [NameInMap("PreloadRemain")]
         [Validation(Required=false)]
         public string PreloadRemain { get; set; }
 
         /// <summary>
-        /// The maximum number of URLs that can be refreshed each day.
+        /// The maximum number of URLs or directories that can be refreshed by using regular expressions on the current day.
         /// </summary>
         [NameInMap("RegexQuota")]
         [Validation(Required=false)]
         public string RegexQuota { get; set; }
 
         /// <summary>
-        /// The remaining number of directories that can be refreshed each day.
+        /// The remaining number of URLs or directories that can be refreshed by using regular expressions on the current day.
         /// </summary>
         [NameInMap("RegexRemain")]
         [Validation(Required=false)]
         public string RegexRemain { get; set; }
 
         /// <summary>
-        /// The maximum number of URLs that can be refreshed each day.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The remaining number of URLs that can be blocked each day.
+        /// The maximum number of URLs that can be refreshed on the current day.
         /// </summary>
         [NameInMap("UrlQuota")]
         [Validation(Required=false)]
         public string UrlQuota { get; set; }
 
         /// <summary>
-        /// The maximum number of URLs or directories that can be refreshed by using regular expressions each day.
+        /// The remaining number of URLs that can be refreshed on the current day.
         /// </summary>
         [NameInMap("UrlRemain")]
         [Validation(Required=false)]

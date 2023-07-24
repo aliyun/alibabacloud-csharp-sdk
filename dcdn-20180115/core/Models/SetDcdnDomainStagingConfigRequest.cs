@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class SetDcdnDomainStagingConfigRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The accelerated domain name. Separate multiple accelerated domain names with commas (,).
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// >  The maximum number of times that users can call this operation per second is 30.
+        /// The list of features. Format: `[{"functionArgs":[{"argName":"parameter key","argValue":"parameter value"},{"argName":"xx","argValue":"xx"}],"functionName": feature name"}]`
+        /// 
+        /// > Separate multiple parameters with commas (,).
         /// </summary>
         [NameInMap("Functions")]
         [Validation(Required=false)]

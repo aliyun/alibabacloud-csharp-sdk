@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserConfigsResponseBody : TeaModel {
         /// <summary>
-        /// >You can call this operation up to 30 times per second per account.
+        /// The user configurations.
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public List<DescribeDcdnUserConfigsResponseBodyConfigs> Configs { get; set; }
         public class DescribeDcdnUserConfigsResponseBodyConfigs : TeaModel {
             /// <summary>
-            /// The configuration returned.
+            /// The name of the configuration.
+            /// 
+            /// The configuration is specified by enterprise users and public service sectors.
             /// </summary>
             [NameInMap("ArgName")]
             [Validation(Required=false)]
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             /// 
             /// *   cc_rule: HTTP flood protection
             /// *   ddos_dispatch: DDoS mitigation
-            /// *   edge_safe: application security on edge nodes
+            /// *   edge_safe: application security on points of presence (POPs)
             /// *   blocked_regions: region blacklist
             /// *   http_acl_policy: precise access control
             /// *   bot_manager: bot traffic management
@@ -39,11 +41,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public string ArgValue { get; set; }
 
             /// <summary>
-            /// The configuration that you want to query. Valid values:
-            /// 
-            /// *   domain_business_control: user configurations
-            /// *   bot_basic: the basic edition of bot traffic management, which supports authorized crawlers and provides threat intelligence
-            /// *   bot_Advance: the advanced edition of bot traffic management, which supports authorized crawlers and AI intelligent protection and provides threat intelligence
+            /// The name of the feature.
             /// </summary>
             [NameInMap("FunctionName")]
             [Validation(Required=false)]
@@ -52,7 +50,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The configuration returned.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

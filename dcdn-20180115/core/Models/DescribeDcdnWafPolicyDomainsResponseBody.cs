@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafPolicyDomainsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the protection policy. You can specify only one ID in each request.
+        /// The accelerated domain names.
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public List<DescribeDcdnWafPolicyDomainsResponseBodyDomains> Domains { get; set; }
         public class DescribeDcdnWafPolicyDomainsResponseBodyDomains : TeaModel {
             /// <summary>
-            /// The accelerated domain name that was protected by the specified protection policy.
+            /// The accelerated domain name that is protected by the specified protection policy.
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
@@ -26,21 +26,21 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// >You can call this operation up to 20 times per second per account.
+        /// The page number of the returned page, which is the same as the PageNumber parameter in request parameters.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The accelerated domain names.
+        /// The number of domain names returned per page, which is the same as the PageSize parameter in request parameters.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The accelerated domain name that was protected by the specified protection policy.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

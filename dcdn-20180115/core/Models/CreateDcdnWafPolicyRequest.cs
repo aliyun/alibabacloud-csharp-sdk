@@ -10,29 +10,41 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class CreateDcdnWafPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the protection policy that you created.
+        /// The type of the WAF protection policy. Valid values:
+        /// 
+        /// *   waf_group: basic web protection
+        /// *   custom_acl: custom protection
+        /// *   whitelist: IP address whitelist
+        /// *   ip_blacklist: IP address blacklist
+        /// *   region_block: region blacklist
+        /// *   bot: bot management
         /// </summary>
         [NameInMap("DefenseScene")]
         [Validation(Required=false)]
         public string DefenseScene { get; set; }
 
         /// <summary>
-        /// The ID of the protection policy that you created.
+        /// The name of the protection policy. The name can be up to 64 characters in length and can contain letters, digits, and underscores (\_).
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// >*   You can call this operation up to 20 times per second per account.
-        /// *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+        /// The status of the protection policy. Valid values:
+        /// 
+        /// *   on: The policy is enabled.
+        /// *   off: The policy is disabled.
         /// </summary>
         [NameInMap("PolicyStatus")]
         [Validation(Required=false)]
         public string PolicyStatus { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// Specifies whether to set the current policy as the default policy. Valid values:
+        /// 
+        /// *   default: sets the current policy as the default policy.
+        /// *   custom: does not set the current policy as the default policy.
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]

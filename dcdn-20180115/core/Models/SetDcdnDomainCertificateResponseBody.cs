@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class SetDcdnDomainCertificateResponseBody : TeaModel {
         /// <summary>
-        /// The private key. This parameter is required only if you enable the SSL certificate.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

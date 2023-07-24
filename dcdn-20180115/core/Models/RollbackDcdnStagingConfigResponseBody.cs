@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class RollbackDcdnStagingConfigResponseBody : TeaModel {
         /// <summary>
-        /// The accelerated domain name. You can specify only one domain name in each call.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

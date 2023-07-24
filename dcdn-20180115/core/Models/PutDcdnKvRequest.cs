@@ -9,22 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class PutDcdnKvRequest : TeaModel {
+        [NameInMap("Expiration")]
+        [Validation(Required=false)]
+        public long? Expiration { get; set; }
+
+        [NameInMap("ExpirationTtl")]
+        [Validation(Required=false)]
+        public long? ExpirationTtl { get; set; }
+
         /// <summary>
-        /// The length of the key.
+        /// The key. The key can be up to 512 characters in length, and cannot contain spaces.
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// The content of the key. The maximum size is 2 MB (2 x 1000 x 1000 bytes).
+        /// The name of the namespace.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The content of the key. If the value exceeds 256 characters in length, the first 100 characters and the last 100 characters are retained and other characters are discarded.
+        /// The value of the key. The maximum size is 2 MB (2 x 1000 x 1000 bytes).
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

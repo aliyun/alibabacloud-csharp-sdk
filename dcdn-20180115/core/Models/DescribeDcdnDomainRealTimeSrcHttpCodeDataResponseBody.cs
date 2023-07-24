@@ -10,28 +10,30 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// The time interval between the data entries returned. Unit: seconds.
         /// </summary>
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// The proportions of HTTP status codes.
+        /// The accelerated domain name.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The time interval between the data entries returned. Unit: seconds.
+        /// The end of the time range during which data was queried.
+        /// 
+        /// The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The proportion of the HTTP status code.
+        /// The proportions of HTTP status codes at each time interval.
         /// </summary>
         [NameInMap("RealTimeSrcHttpCodeData")]
         [Validation(Required=false)]
@@ -42,23 +44,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageData> UsageData { get; set; }
             public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageData : TeaModel {
                 /// <summary>
-                /// The number of HTTP status codes.
+                /// The timestamp of the returned data.
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
                 /// <summary>
-                /// - You can call this operation up to 10 times per second per account.
-                /// - If you do not set the StartTime or EndTime parameter, data collected over the last one hour is queried. If you set both the StartTime and EndTime parameters, data collected within the specified time range is queried.
-                /// 
-                /// **Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
-                /// 
-                /// | Time granularity | Maximum time range per query | Historical data available | Data delay |
-                /// | ---------------- | ---------------------------- | ------------------------- | ---------- |
-                /// | 1 minute | 1 hour | 7 days | 5 minutes |
-                /// | 5 minutes | 3 days | 93 days | 15 minutes |
-                /// | 1 hour | 31 days | 186 days | 4 hours |
+                /// The proportions of the HTTP status codes.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -69,16 +62,22 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                     public List<DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageDataValueRealTimeSrcCodeProportionData> RealTimeSrcCodeProportionData { get; set; }
                     public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageDataValueRealTimeSrcCodeProportionData : TeaModel {
                         /// <summary>
-                        /// Queries the proportions of HTTP status codes returned during back-to-origin routing.
+                        /// The HTTP status code returned.
                         /// </summary>
                         [NameInMap("Code")]
                         [Validation(Required=false)]
                         public string Code { get; set; }
 
+                        /// <summary>
+                        /// The number of HTTP status codes.
+                        /// </summary>
                         [NameInMap("Count")]
                         [Validation(Required=false)]
                         public string Count { get; set; }
 
+                        /// <summary>
+                        /// The proportion of the HTTP status code.
+                        /// </summary>
                         [NameInMap("Proportion")]
                         [Validation(Required=false)]
                         public string Proportion { get; set; }
@@ -92,14 +91,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         }
 
         /// <summary>
-        /// The timestamp of the data returned.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The proportions of HTTP status codes at each time interval.
+        /// The beginning of the time range during which data was queried.
+        /// 
+        /// The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

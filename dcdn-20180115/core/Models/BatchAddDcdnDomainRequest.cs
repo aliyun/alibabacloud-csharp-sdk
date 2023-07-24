@@ -10,34 +10,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class BatchAddDcdnDomainRequest : TeaModel {
         /// <summary>
-        /// The following table describes the fields in the Sources parameter.
-        /// 
-        /// | Field | Type | Required | Description |
-        /// | ----- | ---- | -------- | ----------- |
-        /// | type | String | Yes | The type of the origin server. Valid values: **ipaddr**: the IP address  
-        /// 
-        /// **domain**: the domain name  
-        /// 
-        /// **oss**: the endpoint of an Object Storage Service (OSS) bucket  
-        /// 
-        /// **fc_domain**: the domain name of Function Compute |
-        /// | content | String | Yes | The address of the origin server. You can specify an IP address or a domain name. |
-        /// | port | Integer | No | The port. Valid values: **80**: the default port  
-        /// 
-        /// **443**: the HTTPS port  
-        /// 
-        /// A custom port |
-        /// | priority | String | No | The priority of the origin server if multiple origin servers are specified. Default value: 20. Valid values: **20**: the primary origin server  
-        /// 
-        /// **30**: the secondary origin server |
-        /// | weight | String | No | The weight of the origin server if multiple origin servers are specified. Valid values: 0 to 100. Default value: 10. |
+        /// The URL that is used for health checks.
         /// </summary>
         [NameInMap("CheckUrl")]
         [Validation(Required=false)]
         public string CheckUrl { get; set; }
 
         /// <summary>
-        /// The top-level domain name.
+        /// You can add up to 20 domain names to DCDN for each of your Alibaba Cloud account. If you specify multiple domain names, separate them with commas (,).
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -52,14 +32,18 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the resource group. If you do not specify a value for this parameter, the system uses the ID of the default resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// Adds one or more domain names to Dynamic Route for CDN (DCDN).
+        /// The acceleration region. Default value: domestic. Valid values:
+        /// 
+        /// *   domestic: Chinese mainland
+        /// *   overseas: global (excluding the Chinese mainland)
+        /// *   global: global
         /// </summary>
         [NameInMap("Scope")]
         [Validation(Required=false)]
@@ -70,20 +54,15 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// **Prerequisites**:
-        /// 
-        /// *   The [DCDN service is activated](~~64926~~).
-        /// *   Internet Content Provider (ICP) filing is complete for the accelerated domain names.
-        /// 
-        /// > 
-        /// *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
-        /// *   The maximum number of domain names configured at a time is 50.
-        /// *   The maximum number of times that each user can call this operation per second is 30.
+        /// The information about the addresses of origin servers.
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public string Sources { get; set; }
 
+        /// <summary>
+        /// The top-level domain.
+        /// </summary>
         [NameInMap("TopLevelDomain")]
         [Validation(Required=false)]
         public string TopLevelDomain { get; set; }

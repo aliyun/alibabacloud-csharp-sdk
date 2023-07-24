@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class RollbackDcdnStagingConfigRequest : TeaModel {
         /// <summary>
-        /// >  You can call this operation up to 30 times per second per account.
+        /// The accelerated domain name. You can specify only one domain name in each call.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

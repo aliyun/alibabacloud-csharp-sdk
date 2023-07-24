@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnWafDomainDetailRequest : TeaModel {
         /// <summary>
-        /// The types of the protection policies.
+        /// The accelerated domain name. You can specify only one domain name in each request. Exact match is supported.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

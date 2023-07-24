@@ -10,58 +10,56 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainUsageDataResponseBody : TeaModel {
         /// <summary>
-        /// data.field
+        /// The billable region where the usage data was collected.
         /// </summary>
         [NameInMap("Area")]
         [Validation(Required=false)]
         public string Area { get; set; }
 
         /// <summary>
-        /// data.area
+        /// The time interval between the data entries returned. Unit: seconds.
         /// </summary>
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// The time interval between the data entries to return. Unit: seconds.
-        /// 
-        /// The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.
+        /// The accelerated domain name.
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The accelerated domain name.
+        /// The end of the time range during which data was queried.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The type of the content returned.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The end of the time range during which data was queried.
+        /// The beginning of the time range during which data was queried.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The beginning of the time range during which data was queried.
+        /// The type of the content returned.
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The billable region where the usage data was collected.
+        /// The network traffic that was collected at each interval.
         /// </summary>
         [NameInMap("UsageDataPerInterval")]
         [Validation(Required=false)]
@@ -72,28 +70,30 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainUsageDataResponseBodyUsageDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDcdnDomainUsageDataResponseBodyUsageDataPerIntervalDataModule : TeaModel {
                 /// <summary>
-                /// The time interval between the data entries. Unit: seconds.
+                /// The time of the peak bandwidth value if the **Field** parameter in the request is set to **bps**. Otherwise, this parameter returns the same value as the **TimeStamp** parameter.
                 /// </summary>
                 [NameInMap("PeakTime")]
                 [Validation(Required=false)]
                 public string PeakTime { get; set; }
 
                 /// <summary>
-                /// The network traffic that was collected at each interval.
+                /// The data usage in a specific scenario.
+                /// 
+                /// > SpecialValue indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.
                 /// </summary>
                 [NameInMap("SpecialValue")]
                 [Validation(Required=false)]
                 public string SpecialValue { get; set; }
 
                 /// <summary>
-                /// The ID of the request.
+                /// The timestamp of the returned data.
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
                 /// <summary>
-                /// data.content
+                /// The amount of resource usage.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
