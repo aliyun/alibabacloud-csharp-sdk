@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainUsageDataRequest : TeaModel {
         /// <summary>
-        /// The ID of the billable region. Valid values:
+        /// The billable region. Valid values:
         /// 
         /// *   **CN** (default): inside the Chinese mainland
         /// *   **OverSeas**: outside the Chinese mainland
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// <summary>
         /// The protocol of the data that you want to query. Valid values:
         /// 
-        /// *   **http**: HTTP
-        /// *   **https**: HTTPS
+        /// *   **http:** HTTP
+        /// *   **https:** HTTPS
         /// *   **quic**: QUIC
         /// *   **all** (default): HTTP, HTTPS, and QUIC
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnUserBillPredictionResponseBody : TeaModel {
         /// <summary>
-        /// The billable region.
+        /// The estimated bill data.
         /// </summary>
         [NameInMap("BillPredictionData")]
         [Validation(Required=false)]
@@ -20,14 +20,23 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem> BillPredictionDataItem { get; set; }
             public class DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem : TeaModel {
+                /// <summary>
+                /// The billable region.
+                /// </summary>
                 [NameInMap("Area")]
                 [Validation(Required=false)]
                 public string Area { get; set; }
 
+                /// <summary>
+                /// The time when the value used as the estimated value is generated. This parameter is returned only if the metering method is pay by 95th percentile, pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00, or pay by 4th peak bandwidth per month.
+                /// </summary>
                 [NameInMap("TimeStp")]
                 [Validation(Required=false)]
                 public string TimeStp { get; set; }
 
+                /// <summary>
+                /// The estimated value.
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public float? Value { get; set; }
@@ -35,13 +44,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             }
 
         }
-
-        /// <summary>
-        /// The time when the value used as the estimated value is generated. This parameter is returned only if the metering method is pay by 95th percentile, pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00, or pay by 4th peak bandwidth per month.
-        /// </summary>
-        [NameInMap("BillType")]
-        [Validation(Required=false)]
-        public string BillType { get; set; }
 
         /// <summary>
         /// The metering method.
@@ -60,19 +62,26 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// *   hour_vas: pay by value-added services per hour
         /// *   day_count: pay by daily requests
         /// </summary>
+        [NameInMap("BillType")]
+        [Validation(Required=false)]
+        public string BillType { get; set; }
+
+        /// <summary>
+        /// The end time of the estimation.
+        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The estimated value.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The estimated bill data.
+        /// The start time of the estimation.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
