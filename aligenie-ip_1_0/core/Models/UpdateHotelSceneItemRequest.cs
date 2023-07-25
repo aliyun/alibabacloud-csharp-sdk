@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public UpdateHotelSceneItemRequestUpdateHotelSceneReq UpdateHotelSceneReq { get; set; }
         public class UpdateHotelSceneItemRequestUpdateHotelSceneReq : TeaModel {
+            [NameInMap("DeliveryMethod")]
+            [Validation(Required=false)]
+            public string DeliveryMethod { get; set; }
+
             [NameInMap("DialogueList")]
             [Validation(Required=false)]
             public List<UpdateHotelSceneItemRequestUpdateHotelSceneReqDialogueList> DialogueList { get; set; }
@@ -95,9 +99,21 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("PaymentMethod")]
+            [Validation(Required=false)]
+            public string PaymentMethod { get; set; }
+
             [NameInMap("Price")]
             [Validation(Required=false)]
             public long? Price { get; set; }
+
+            [NameInMap("RobotName")]
+            [Validation(Required=false)]
+            public string RobotName { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]

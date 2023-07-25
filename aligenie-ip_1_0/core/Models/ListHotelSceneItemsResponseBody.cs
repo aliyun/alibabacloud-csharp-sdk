@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
+                [NameInMap("DeliveryMethod")]
+                [Validation(Required=false)]
+                public string DeliveryMethod { get; set; }
+
                 [NameInMap("Icon")]
                 [Validation(Required=false)]
                 public string Icon { get; set; }
@@ -74,9 +78,17 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("PaymentMethod")]
+                [Validation(Required=false)]
+                public string PaymentMethod { get; set; }
+
                 [NameInMap("Price")]
                 [Validation(Required=false)]
                 public long? Price { get; set; }
+
+                [NameInMap("RobotName")]
+                [Validation(Required=false)]
+                public string RobotName { get; set; }
 
                 [NameInMap("Status")]
                 [Validation(Required=false)]
