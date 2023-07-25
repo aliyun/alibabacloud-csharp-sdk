@@ -229,6 +229,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         [Validation(Required=false)]
                         public long? LastDiscountsPrice { get; set; }
 
+                        [NameInMap("last_discounts_rounding_price")]
+                        [Validation(Required=false)]
+                        public long? LastDiscountsRoundingPrice { get; set; }
+
                         [NameInMap("last_num")]
                         [Validation(Required=false)]
                         public int? LastNum { get; set; }
