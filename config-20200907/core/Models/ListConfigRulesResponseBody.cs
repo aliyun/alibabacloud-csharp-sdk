@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                [NameInMap("ResourceTypesScope")]
+                [Validation(Required=false)]
+                public string ResourceTypesScope { get; set; }
+
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
                 public int? RiskLevel { get; set; }

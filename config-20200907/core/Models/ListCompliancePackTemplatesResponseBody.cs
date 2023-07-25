@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResult CompliancePackTemplatesResult { get; set; }
         public class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResult : TeaModel {
             /// <summary>
-            /// The compliance package templates.
+            /// An array that contains the compliance package templates.
             /// </summary>
             [NameInMap("CompliancePackTemplates")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string CompliancePackTemplateName { get; set; }
 
                 /// <summary>
-                /// The information about managed rules in the compliance package.
+                /// An array that contains the managed rules in the compliance package.
                 /// </summary>
                 [NameInMap("ConfigRules")]
                 [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <summary>
                     /// The ID of the regulation.
                     /// 
-                    /// >  This parameter is available only for regulation compliance packages.
+                    /// > This parameter is available only for regulation compliance packages.
                     /// </summary>
                     [NameInMap("ControlId")]
                     [Validation(Required=false)]
@@ -125,11 +125,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string ManagedRuleName { get; set; }
 
                     /// <summary>
+                    /// 规则评估的资源类型。
+                    /// </summary>
+                    [NameInMap("ResourceTypesScope")]
+                    [Validation(Required=false)]
+                    public string ResourceTypesScope { get; set; }
+
+                    /// <summary>
                     /// The risk level of the resources that are not compliant with the managed rule. Valid values:
                     /// 
-                    /// *   1: high risk level
-                    /// *   2: medium risk level
-                    /// *   3: low risk level
+                    /// *   1: high
+                    /// *   2: medium
+                    /// *   3: low
                     /// </summary>
                     [NameInMap("RiskLevel")]
                     [Validation(Required=false)]
@@ -161,9 +168,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// The risk level of the resources that are not compliant with the managed rules in the compliance package. Valid values:
                 /// 
-                /// *   1: high risk level
-                /// *   2: medium risk level
-                /// *   3: low risk level
+                /// *   1: high
+                /// *   2: medium
+                /// *   3: low
                 /// </summary>
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
@@ -172,14 +179,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// The page number.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// The number of entries per page.
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
@@ -195,7 +202,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

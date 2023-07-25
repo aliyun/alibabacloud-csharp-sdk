@@ -31,12 +31,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public GetConfigRuleResponseBodyConfigRuleCompliance Compliance { get; set; }
             public class GetConfigRuleResponseBodyConfigRuleCompliance : TeaModel {
                 /// <summary>
-                /// The statistics of compliance evaluation results based on compliance types. Valid values:
+                /// The statistics on the compliance evaluation results by compliance type. Valid values:
                 /// 
-                /// *   COMPLIANT: The resources are evaluated as compliant.
-                /// *   NON_COMPLIANT: The resources are evaluated as non-compliant.
-                /// *   NOT_APPLICABLE: The rule does not apply to your resources.
-                /// *   INSUFFICIENT_DATA: No resource data is available.
+                /// *   COMPLIANT: The resource was evaluated as compliant.
+                /// *   NON_COMPLIANT: The resource was evaluated as incompliant.
+                /// *   NOT_APPLICABLE: The rule did not apply to your resource.
+                /// *   INSUFFICIENT_DATA: No resource data was available.
                 /// </summary>
                 [NameInMap("ComplianceType")]
                 [Validation(Required=false)]
@@ -127,14 +127,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// The ID of the rule.
+            /// The rule ID.
             /// </summary>
             [NameInMap("ConfigRuleId")]
             [Validation(Required=false)]
             public string ConfigRuleId { get; set; }
 
             /// <summary>
-            /// The name of the monitoring rule.
+            /// The name of the defense rule.
             /// </summary>
             [NameInMap("ConfigRuleName")]
             [Validation(Required=false)]
@@ -143,10 +143,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The status of the rule. Valid values:
             /// 
-            /// *   ACTIVE: The rule is being used to monitor resource configurations.
-            /// *   DELETING: The rule is being deleted.
-            /// *   EVALUATING: The rule is triggered and is being used to monitor resource configurations.
-            /// *   INACTIVE: The rule is disabled and is no longer used to monitor resource configurations.
+            /// *   ACTIVE: The rule was being used to monitor resource configurations.
+            /// *   DELETING: The rule was being deleted.
+            /// *   EVALUATING: The rule was triggered and is being used to monitor resource configurations.
+            /// *   INACTIVE: The rule was disabled.
             /// </summary>
             [NameInMap("ConfigRuleState")]
             [Validation(Required=false)]
@@ -155,8 +155,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The trigger type of the rule. Valid values:
             /// 
-            /// *   ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.
-            /// *   ScheduledNotification: The managed rule is periodically triggered.
+            /// *   ConfigurationItemChangeNotification: The rule was triggered by configuration changes.
+            /// *   ScheduledNotification: The rule was periodically triggered.
             /// </summary>
             [NameInMap("ConfigRuleTriggerTypes")]
             [Validation(Required=false)]
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ExcludeResourceIdsScope { get; set; }
 
             /// <summary>
-            /// The input parameters of the rule.
+            /// The details of the input parameters of the rule.
             /// </summary>
             [NameInMap("InputParameters")]
             [Validation(Required=false)]
@@ -249,14 +249,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The identifier of the managed rule.
+                /// The ID of the managed rule.
                 /// </summary>
                 [NameInMap("Identifier")]
                 [Validation(Required=false)]
                 public string Identifier { get; set; }
 
                 /// <summary>
-                /// The tags of the managed rule.
+                /// The list of rule tags.
                 /// </summary>
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
@@ -284,24 +284,24 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public List<GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails> SourceDetails { get; set; }
                 public class GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails : TeaModel {
                     /// <summary>
-                    /// The event source of the managed rule.
+                    /// The event source.
                     /// 
-                    /// >  Only events related to Cloud Config are supported. The value is fixed to aliyun.config.
+                    /// > Only events related to Cloud Config are supported. The value is fixed to aliyun.config.
                     /// </summary>
                     [NameInMap("EventSource")]
                     [Validation(Required=false)]
                     public string EventSource { get; set; }
 
                     /// <summary>
-                    /// The intervals at which the managed rule is triggered. Valid values:
+                    /// The interval at which the rule was triggered. Valid values:
                     /// 
                     /// *   One_Hour: 1 hour.
                     /// *   Three_Hours: 3 hours.
                     /// *   Six_Hours: 6 hours.
-                    /// *   Twelve_Hours: 12 hours
-                    /// *   TwentyFour_Hours: 24 hours
+                    /// *   Twelve_Hours: 12 hours.
+                    /// *   TwentyFour_Hours: 24 hours.
                     /// 
-                    /// >  This parameter is returned if the managed rule is periodically triggered.
+                    /// > This parameter is returned if the managed rule is periodically triggered.
                     /// </summary>
                     [NameInMap("MaximumExecutionFrequency")]
                     [Validation(Required=false)]
@@ -310,8 +310,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <summary>
                     /// The trigger type of the rule. Valid values:
                     /// 
-                    /// *   ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.
-                    /// *   ScheduledNotification: The managed rule is periodically triggered.
+                    /// *   ConfigurationItemChangeNotification: The rule was triggered by configuration changes.
+                    /// *   ScheduledNotification: The rule was periodically triggered.
                     /// </summary>
                     [NameInMap("MessageType")]
                     [Validation(Required=false)]
@@ -322,15 +322,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// The intervals at which the managed rule is triggered. Valid values:
+            /// The interval at which the rule was triggered. Valid values:
             /// 
             /// *   One_Hour: 1 hour.
             /// *   Three_Hours: 3 hours.
             /// *   Six_Hours: 6 hours.
-            /// *   Twelve_Hours: 12 hours
-            /// *   TwentyFour_Hours: 24 hours
+            /// *   Twelve_Hours: 12 hours.
+            /// *   TwentyFour_Hours: 24 hours.
             /// 
-            /// >  This parameter is returned if the managed rule is periodically triggered.
+            /// > This parameter is returned if the managed rule is periodically triggered.
             /// </summary>
             [NameInMap("MaximumExecutionFrequency")]
             [Validation(Required=false)]
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ResourceGroupIdsScope { get; set; }
 
             /// <summary>
-            /// The type of the resource evaluated by the rule.
+            /// The type of the resource to be evaluated by the rule.
             /// </summary>
             [NameInMap("ResourceTypesScope")]
             [Validation(Required=false)]
@@ -367,9 +367,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The risk level of the resources that are not compliant with the rule. Valid values:
             /// 
-            /// *   1: high risk level
-            /// *   2: medium risk level
-            /// *   3: low risk level
+            /// *   1: high
+            /// *   2: medium
+            /// *   3: low
             /// </summary>
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
@@ -393,7 +393,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public GetConfigRuleResponseBodyConfigRuleSource Source { get; set; }
             public class GetConfigRuleResponseBodyConfigRuleSource : TeaModel {
                 /// <summary>
-                /// The identifier of the rule.
+                /// The identifier of the evaluation rule.
                 /// 
                 /// *   If the rule was created based on a managed rule, the value of this parameter is the name of the managed rule.
                 /// *   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.
@@ -403,41 +403,41 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Identifier { get; set; }
 
                 /// <summary>
-                /// The way in which the rule was created. Valid values:
+                /// The method that is used to create the rule. Valid values:
                 /// 
-                /// *   CUSTOM_FC: The rule is a custom rule.
-                /// *   ALIYUN: The rule was created based on a managed rule of Alibaba Cloud.
+                /// *   CUSTOM_FC: a custom rule.
+                /// *   ALIYUN: a managed rule.
                 /// </summary>
                 [NameInMap("Owner")]
                 [Validation(Required=false)]
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// The details of the source of the rule.
+                /// The details of how the rule was created.
                 /// </summary>
                 [NameInMap("SourceDetails")]
                 [Validation(Required=false)]
                 public List<GetConfigRuleResponseBodyConfigRuleSourceSourceDetails> SourceDetails { get; set; }
                 public class GetConfigRuleResponseBodyConfigRuleSourceSourceDetails : TeaModel {
                     /// <summary>
-                    /// The event source of the managed rule.
+                    /// The event source.
                     /// 
-                    /// >  Only events related to Cloud Config are supported. The value is fixed to aliyun.config.
+                    /// > Only events related to Cloud Config are supported. The value is fixed to aliyun.config.
                     /// </summary>
                     [NameInMap("EventSource")]
                     [Validation(Required=false)]
                     public string EventSource { get; set; }
 
                     /// <summary>
-                    /// The intervals at which the managed rule is triggered. Valid values:
+                    /// The interval at which the rule was triggered. Valid values:
                     /// 
                     /// *   One_Hour: 1 hour.
                     /// *   Three_Hours: 3 hours.
                     /// *   Six_Hours: 6 hours.
-                    /// *   Twelve_Hours: 12 hours
-                    /// *   TwentyFour_Hours: 24 hours
+                    /// *   Twelve_Hours: 12 hours.
+                    /// *   TwentyFour_Hours: 24 hours.
                     /// 
-                    /// >  This parameter is returned if the rule is periodically triggered.
+                    /// > This parameter is returned if the managed rule is periodically triggered.
                     /// </summary>
                     [NameInMap("MaximumExecutionFrequency")]
                     [Validation(Required=false)]
@@ -446,8 +446,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <summary>
                     /// The trigger type of the rule. Valid values:
                     /// 
-                    /// *   ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.
-                    /// *   ScheduledNotification: The managed rule is periodically triggered.
+                    /// *   ConfigurationItemChangeNotification: The rule was triggered by configuration changes.
+                    /// *   ScheduledNotification: The rule was periodically triggered.
                     /// </summary>
                     [NameInMap("MessageType")]
                     [Validation(Required=false)]
@@ -460,16 +460,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule.
             /// 
-            /// >  This parameter applies only to managed rules.
+            /// > This parameter applies only to a managed rule.
             /// </summary>
             [NameInMap("TagKeyLogicScope")]
             [Validation(Required=false)]
             public string TagKeyLogicScope { get; set; }
 
             /// <summary>
-            /// The tag value used to filter resources. The rule applies only to the resources with the specified tag value.
+            /// The tag key used to filter resources. The rule applies only to the resources with the specified tag key.
             /// 
-            /// >  The `TagKeyScope` and `TagValueScope` parameters are returned at the same time.
+            /// > The `TagKeyScope` and `TagValueScope` parameters are returned at the same time.
             /// </summary>
             [NameInMap("TagKeyScope")]
             [Validation(Required=false)]
@@ -478,7 +478,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The tag value used to filter resources. The rule applies only to the resources with the specified tag value.
             /// 
-            /// >  The `TagKeyScope` and `TagValueScope` parameters are returned at the same time.
+            /// > The `TagKeyScope` and `TagValueScope` parameters are returned at the same time.
             /// </summary>
             [NameInMap("TagValueScope")]
             [Validation(Required=false)]
@@ -487,7 +487,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

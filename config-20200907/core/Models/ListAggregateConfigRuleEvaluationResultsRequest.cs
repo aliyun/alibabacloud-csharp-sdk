@@ -28,12 +28,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string CompliancePackId { get; set; }
 
         /// <summary>
-        /// The compliance evaluation result of the resources. Valid values:
+        /// The compliance evaluation results of the resources. Valid values:
         /// 
         /// *   COMPLIANT: The resources are evaluated as compliant.
         /// *   NON_COMPLIANT: The resources are evaluated as non-compliant.
         /// *   NOT_APPLICABLE: The rule does not apply to the resources.
-        /// *   INSUFFICIENT_DATA: No resource data is available.
+        /// *   INSUFFICIENT_DATA: No data is available.
         /// *   IGNORED: The resources are ignored during compliance evaluation.
         /// </summary>
         [NameInMap("ComplianceType")]

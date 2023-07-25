@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The IDs of the destination account groups into which the rules are replicated. Separate multiple account group IDs with commas (,).
         /// 
-        /// >  If you leave this parameter empty, the compliance packages are replicated under the same account group.
+        /// > If you leave this parameter empty, the compliance packages are replicated into the same account group.
         /// </summary>
         [NameInMap("DesAggregatorIds")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string SrcAggregatorId { get; set; }
 
         /// <summary>
-        /// The IDs of the rules. Separate multiple rule IDs with commas (,).
+        /// The rule IDs. Separate multiple rule IDs with commas (,).
         /// </summary>
         [NameInMap("SrcConfigRuleIds")]
         [Validation(Required=false)]

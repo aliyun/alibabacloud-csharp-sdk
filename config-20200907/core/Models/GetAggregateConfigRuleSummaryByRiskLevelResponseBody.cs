@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? NonCompliantCount { get; set; }
 
             /// <summary>
-            /// The risk level of the resources that are not compliant with the rules. Valid values:
+            /// The risk level of the resources that do not comply with the rule. Valid values:
             /// 
-            /// *   1: high risk level.
-            /// *   2: medium risk level.
-            /// *   3: low risk level.
+            /// *   1: high
+            /// *   2: medium
+            /// *   3: low
             /// </summary>
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

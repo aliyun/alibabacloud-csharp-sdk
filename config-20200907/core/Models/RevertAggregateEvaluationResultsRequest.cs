@@ -26,16 +26,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// The resources that are to be reevaluated.
+        /// The resources that you want to re-evaluate.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<RevertAggregateEvaluationResultsRequestResources> Resources { get; set; }
         public class RevertAggregateEvaluationResultsRequestResources : TeaModel {
             /// <summary>
-            /// The ID of the region in which the resource resides.
+            /// The ID of the region where the resource resides.
             /// 
-            /// For more information about how to obtain the ID of a region in which a resource resides, see [ListAggregateDiscoveredResources](~~265983~~).
+            /// For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](~~265983~~).
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -44,23 +44,23 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The ID of the Alibaba Cloud account to which the resource belongs.
             /// 
-            /// >  The value must be the ID of the current management account or the member account in the account group of the management account.
+            /// > You must specify the ID of the current management account or a member account in the account group of the management account.
             /// </summary>
             [NameInMap("ResourceAccountId")]
             [Validation(Required=false)]
             public long? ResourceAccountId { get; set; }
 
             /// <summary>
-            /// The ID of the resource.
+            /// The resource ID.
             /// 
-            /// For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
+            /// For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The type of the resource.
+            /// The type of resource.
             /// 
             /// For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
             /// </summary>

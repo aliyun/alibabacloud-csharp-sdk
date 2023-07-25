@@ -12,14 +12,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// Specifies whether to delete the rules in the compliance package. Valid values:
         /// 
-        /// *   true: deletes the rules.
-        /// *   false: retains the rules. This is the default value.
+        /// *   true: The rules are deleted.
+        /// *   false (default): The rules are not deleted.
         /// </summary>
         [NameInMap("DeleteRule")]
         [Validation(Required=false)]

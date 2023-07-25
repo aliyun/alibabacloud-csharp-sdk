@@ -38,26 +38,26 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string AutomationType { get; set; }
 
                 /// <summary>
-                /// The information about the compliance package.
+                /// The compliance evaluation result.
                 /// </summary>
                 [NameInMap("Compliance")]
                 [Validation(Required=false)]
                 public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCompliance Compliance { get; set; }
                 public class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCompliance : TeaModel {
                     /// <summary>
-                    /// The compliance evaluation result. Valid values:
+                    /// The summary result of the rule compliance evaluation. Valid values:
                     /// 
-                    /// *   COMPLIANT: The resources are evaluated as compliant.
-                    /// *   NON_COMPLIANT: The resources are evaluated as non-compliant.
-                    /// *   NOT_APPLICABLE: The rule does not apply to your resources.
-                    /// *   INSUFFICIENT_DATA: No resource data is available.
+                    /// *   COMPLIANT: The resource was evaluated as compliant.
+                    /// *   NON_COMPLIANT: The resource was evaluated as incompliant.
+                    /// *   NOT_APPLICABLE: The rule did not apply to your resources.
+                    /// *   INSUFFICIENT_DATA: No resource data was available.
                     /// </summary>
                     [NameInMap("ComplianceType")]
                     [Validation(Required=false)]
                     public string ComplianceType { get; set; }
 
                     /// <summary>
-                    /// The number of resources evaluated by the rule.
+                    /// The number of evaluation resources that correspond to the summary result of the rule compliance evaluation.
                     /// </summary>
                     [NameInMap("Count")]
                     [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ConfigRuleArn { get; set; }
 
                 /// <summary>
-                /// The ID of the rule.
+                /// The rule ID.
                 /// </summary>
                 [NameInMap("ConfigRuleId")]
                 [Validation(Required=false)]
@@ -163,19 +163,23 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                [NameInMap("ResourceTypesScope")]
+                [Validation(Required=false)]
+                public string ResourceTypesScope { get; set; }
+
                 /// <summary>
-                /// The risk level of the resources that are not compliant with the rule. Valid values:
+                /// The risk level of the resources that do not comply with the rule. Valid values:
                 /// 
-                /// *   1: high risk level
-                /// *   2: medium risk level
-                /// *   3: low risk level
+                /// *   1: high
+                /// *   2: medium
+                /// *   3: low
                 /// </summary>
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
                 public int? RiskLevel { get; set; }
 
                 /// <summary>
-                /// The ID of the rule.
+                /// The identifier of the rule.
                 /// 
                 /// *   If the rule was created based on a managed rule, the value of this parameter is the name of the managed rule.
                 /// *   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.
@@ -185,17 +189,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string SourceIdentifier { get; set; }
 
                 /// <summary>
-                /// The way in which the rule was created. Valid values:
+                /// The method that is used to create the rule. Valid values:
                 /// 
-                /// *   CUSTOM_FC: The rule is a custom rule.
-                /// *   ALIYUN: The rule is created based on a managed rule of Alibaba Cloud.
+                /// *   CUSTOM_FC: a custom rule.
+                /// *   ALIYUN: a managed rule.
                 /// </summary>
                 [NameInMap("SourceOwner")]
                 [Validation(Required=false)]
                 public string SourceOwner { get; set; }
 
                 /// <summary>
-                /// The tag of the rule.
+                /// The tags of the rule.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -220,7 +224,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// The page number of the returned page.
+            /// The number of the page returned.
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
@@ -243,7 +247,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

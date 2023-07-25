@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class RevertEvaluationResultsShrinkRequest : TeaModel {
         /// <summary>
-        /// The ID of the rule.
+        /// The rule ID.
         /// 
         /// For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// The resources that are to be reevaluated.
+        /// The resources that are to be re-evaluated.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]

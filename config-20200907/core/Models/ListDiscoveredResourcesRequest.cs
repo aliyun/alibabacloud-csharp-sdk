@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListDiscoveredResourcesRequest : TeaModel {
         /// <summary>
-        /// The maximum number of entries to return in a request. Valid values: 1 to 100.
+        /// The maximum number of entries returned for a single request. Valid values: 1 to 100.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to initiate the subsequent request. If the response to the current request is truncated, this token is used to initiate another request and obtain the remaining entries.``
+        /// The `token` that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? ResourceDeleted { get; set; }
 
         /// <summary>
-        /// The ID of the resource.
+        /// The resource ID.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]

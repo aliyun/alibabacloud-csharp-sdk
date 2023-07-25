@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles DiscoveredResourceProfiles { get; set; }
         public class ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles : TeaModel {
             /// <summary>
-            /// The information about the resources.
+            /// The details of the resources.
             /// </summary>
             [NameInMap("DiscoveredResourceProfileList")]
             [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? AccountId { get; set; }
 
                 /// <summary>
-                /// The ID of the zone in which the resource resides.
+                /// The zone.
                 /// </summary>
                 [NameInMap("AvailabilityZone")]
                 [Validation(Required=false)]
                 public string AvailabilityZone { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the resource resides.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public int? ResourceDeleted { get; set; }
 
                 /// <summary>
-                /// The ID of the resource.
+                /// The resource ID.
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
@@ -76,10 +76,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// The status of the resource. The value of this parameter varies based on the resource type and may be left empty. Example:
+                /// The status of the resource. The value of this parameter varies based on the resource type and may be empty. Examples:
                 /// 
                 /// *   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that is in a specific state. In this case, the valid values of this parameter are Running and Stopped.
-                /// *   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.
+                /// *   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.
                 /// </summary>
                 [NameInMap("ResourceStatus")]
                 [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account to which the resources belong.
+            /// The ID of the Alibaba Cloud account to which the resource belongs.
             /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

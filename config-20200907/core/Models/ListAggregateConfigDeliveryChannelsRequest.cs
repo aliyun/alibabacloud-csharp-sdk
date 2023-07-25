@@ -12,14 +12,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The ID of the delivery channel. Separate multiple IDs with commas (,).
+        /// The IDs of the delivery channels. Separate multiple IDs with commas (,).
         /// </summary>
         [NameInMap("DeliveryChannelIds")]
         [Validation(Required=false)]

@@ -12,16 +12,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// You can call the [ListAggregators](~~255797~~) operation to obtain the account group ID.
+        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The ID of the rule. If you want to specify multiple IDs, separate them with commas (,).
+        /// The rule IDs. Separate multiple rule IDs with commas (,).
         /// 
-        /// You can call the [ListAggregateConfigRules](~~264148~~) operation to obtain the rule ID.
+        /// For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
         /// </summary>
         [NameInMap("ConfigRuleIds")]
         [Validation(Required=false)]

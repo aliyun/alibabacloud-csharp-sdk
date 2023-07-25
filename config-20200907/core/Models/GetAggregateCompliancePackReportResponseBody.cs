@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateCompliancePackReportResponseBody : TeaModel {
         /// <summary>
-        /// The information about the compliance evaluation report.
+        /// The compliance evaluation report that is generated based on a compliance package.
         /// </summary>
         [NameInMap("CompliancePackReport")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// 
             /// *   NONE: The compliance evaluation report is not generated.
             /// *   CREATING: The compliance evaluation report is being generated.
-            /// *   COMPLETED: The compliance evaluation report is generated.
+            /// *   COMPLETE: The compliance evaluation report is generated.
             /// </summary>
             [NameInMap("ReportStatus")]
             [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

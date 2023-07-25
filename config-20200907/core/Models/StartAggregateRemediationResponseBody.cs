@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class StartAggregateRemediationResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the call is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The call is successful.
-        /// *   false: The call fails.
+        /// *   true: The request was successful.
+        /// *   false: The request failed.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

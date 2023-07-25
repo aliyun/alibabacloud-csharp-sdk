@@ -24,30 +24,27 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public List<DetachConfigRuleToCompliancePackResponseBodyOperateRuleResultOperateRuleItemList> OperateRuleItemList { get; set; }
             public class DetachConfigRuleToCompliancePackResponseBodyOperateRuleResultOperateRuleItemList : TeaModel {
                 /// <summary>
-                /// The ID of the rule that is removed from the compliance package.
+                /// The rule ID.
                 /// </summary>
                 [NameInMap("ConfigRuleId")]
                 [Validation(Required=false)]
                 public string ConfigRuleId { get; set; }
 
                 /// <summary>
-                /// The error code.
+                /// The error code returned.
                 /// 
                 /// *   This parameter is empty if the rule is removed from the compliance package.
-                /// 
-                /// <!---->
-                /// 
-                /// *   An error code is returned if the rule fails to be removed from the compliance package. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).
+                /// *   An error code is returned if the rule fails to be removed from the compliance package. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// Indicates whether the operation is successful. Valid values:
+                /// Indicates whether the request was successful. Valid values:
                 /// 
-                /// *   true: The operation is successful.
-                /// *   false: The operation fails.
+                /// *   true: The request was successful.
+                /// *   false: The request failed.
                 /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]
@@ -58,7 +55,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

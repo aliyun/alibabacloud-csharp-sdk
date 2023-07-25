@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CopyCompliancePacksResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the compliance packages are successfully replicated. Valid values:
+        /// Indicates whether the compliance packages are replicated. Valid values:
         /// 
         /// *   true
         /// *   false
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public bool? CopyRulesResult { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

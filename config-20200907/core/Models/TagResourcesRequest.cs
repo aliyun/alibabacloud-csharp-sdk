@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// The region ID of the tag.
+        /// The region ID of the tags.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The resource IDs. You can add tags to up to 50 resources.
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Valid values:
+        /// The resource type. Valid values:
         /// 
         /// *   `ACS::Config::Rule`
         /// *   `ACS::Config::AggregateConfigRule`
@@ -34,27 +37,27 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags of the resource.
+        /// The tag value of the resource.
         /// 
-        /// You can specify up to 20 tags.
+        /// You can specify up to 20 tag values.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The tag key of the resource.
+            /// The key of the tag that is added to the resource.
             /// 
-            /// You can specify up to 20 tag keys.
+            /// You can add up to 20 tag keys to a resource.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value of the resource.
+            /// The value of the tag that is added to the resource.
             /// 
-            /// You can specify up to 20 tag values.
+            /// You can add up to 20 tag values to a resource.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

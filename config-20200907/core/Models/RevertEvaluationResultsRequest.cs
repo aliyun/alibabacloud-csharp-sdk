@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class RevertEvaluationResultsRequest : TeaModel {
         /// <summary>
-        /// The ID of the rule.
+        /// The rule ID.
         /// 
         /// For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).
         /// </summary>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// The resources that are to be reevaluated.
+        /// The resources that are to be re-evaluated.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public long? ResourceAccountId { get; set; }
 
             /// <summary>
-            /// The ID of the resource.
+            /// The resource ID.
             /// 
             /// For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](~~169620~~).
             /// </summary>
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The type of the resource.
+            /// The resource type.
             /// 
-            /// For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~169620~~).
+            /// For more information about how to query the type of a resource, see [ListDiscoveredResources](~~169620~~).
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]

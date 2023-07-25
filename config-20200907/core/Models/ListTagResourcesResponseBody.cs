@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The token that determines the start point of the next query.
+        /// The pagination token that is used in the next request to retrieve a new page of results.
         /// 
-        /// >  If this parameter is left empty, no subsequent query exists.
+        /// > If this parameter is left empty, no subsequent query exists.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -37,28 +37,28 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
                 /// <summary>
-                /// The ID of the resource.
+                /// The resource ID.
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The type of the resource.
+                /// The resource type.
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// The tag key.
+                /// A tag key.
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// A tag value.
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]

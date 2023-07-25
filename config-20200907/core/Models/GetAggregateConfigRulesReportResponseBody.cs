@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The status of the compliance evaluation report. Valid values:
             /// 
-            /// *   NONE: The compliance evaluation report is not generated.
-            /// *   CREATING: The compliance evaluation report is being generated.
-            /// *   COMPLETE: The compliance evaluation report is generated.
+            /// *   NONE: The compliance evaluation report was not generated.
+            /// *   CREATING: The compliance evaluation report was being generated.
+            /// *   COMPLETE: The compliance evaluation report was generated.
             /// </summary>
             [NameInMap("ReportStatus")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

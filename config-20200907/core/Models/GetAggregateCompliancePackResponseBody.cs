@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string ParameterValue { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the input parameter is required. Valid values:
+                    /// Indicates whether the input parameter was required. Valid values:
                     /// 
                     /// *   true: required
                     /// *   false: optional
@@ -119,12 +119,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public string ManagedRuleIdentifier { get; set; }
 
+                [NameInMap("ResourceTypesScope")]
+                [Validation(Required=false)]
+                public string ResourceTypesScope { get; set; }
+
                 /// <summary>
-                /// The risk level of the resources that are not compliant with the rule. Valid values:
+                /// The risk level of the resources that were not compliant with the rule. Valid values:
                 /// 
-                /// *   1: high risk level
-                /// *   2: medium risk level
-                /// *   3: low risk level
+                /// *   1: high
+                /// *   2: medium
+                /// *   3: low
                 /// </summary>
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
@@ -149,9 +153,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:
             /// 
-            /// *   1: high risk level
-            /// *   2: medium risk level
-            /// *   3: low risk level
+            /// *   1: high
+            /// *   2: medium
+            /// *   3: low
             /// </summary>
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
@@ -172,7 +176,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ExcludeResourceIdsScope { get; set; }
 
                 /// <summary>
-                /// The ID of the region whose resources are evaluated by using the compliance package.
+                /// The ID of the region whose resources were evaluated by using the compliance package.
                 /// </summary>
                 [NameInMap("RegionIdsScope")]
                 [Validation(Required=false)]
@@ -204,8 +208,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The status of the compliance package. Valid values:
             /// 
-            /// *   ACTIVE: The compliance package is normal.
-            /// *   CREATING: The compliance package is being created.
+            /// *   ACTIVE: The compliance package was normal.
+            /// *   CREATING: The compliance package was being created.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -214,7 +218,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

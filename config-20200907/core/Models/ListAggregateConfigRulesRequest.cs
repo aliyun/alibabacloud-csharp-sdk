@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The compliance evaluation result. Valid values:
         /// 
-        /// *   COMPLIANT: The resources are evaluated as compliant.
-        /// *   NON_COMPLIANT: The resources are evaluated as non-compliant.
-        /// *   NOT_APPLICABLE: The rule does not apply to your resources.
-        /// *   INSUFFICIENT_DATA: No resource data is available.
+        /// *   COMPLIANT: The resource was evaluated as compliant.
+        /// *   NON_COMPLIANT: The resource was evaluated as incompliant.
+        /// *   NOT_APPLICABLE: The rule did not apply to your resources.
+        /// *   INSUFFICIENT_DATA: No resource data was available.
         /// </summary>
         [NameInMap("ComplianceType")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The number of the page to return.
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// Minimum value: 1. Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The number of entries to return on each page.
         /// 
-        /// Valid values: 1 to 100. Minimum value: 1. Default value: 10
+        /// Valid values: 1 to 100. Minimum value: 1. Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -81,11 +81,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceTypes { get; set; }
 
         /// <summary>
-        /// The risk level of the resources that are not compliant with the rule. Valid values:
+        /// The risk level of the resources that do not comply with the rule. Valid values:
         /// 
-        /// *   1: high risk level
-        /// *   2: medium risk level
-        /// *   3: low risk level
+        /// *   1: high
+        /// *   2: medium
+        /// *   3: low
         /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]

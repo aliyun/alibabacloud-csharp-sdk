@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DeleteCompliancePacksResponseBody : TeaModel {
         /// <summary>
-        /// The results of the delete operations.
+        /// The returned result.
         /// </summary>
         [NameInMap("OperateCompliancePacksResult")]
         [Validation(Required=false)]
         public DeleteCompliancePacksResponseBodyOperateCompliancePacksResult OperateCompliancePacksResult { get; set; }
         public class DeleteCompliancePacksResponseBodyOperateCompliancePacksResult : TeaModel {
             /// <summary>
-            /// The result of the delete operation.
+            /// An array that contains compliance packages that are deleted.
             /// </summary>
             [NameInMap("OperateCompliancePacks")]
             [Validation(Required=false)]
@@ -31,20 +31,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string CompliancePackId { get; set; }
 
                 /// <summary>
-                /// The error code.
+                /// The error code returned.
                 /// 
                 /// *   If the compliance package is deleted, no error code is returned.
-                /// *   If the compliance package fails to be deleted, an error code is returned. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).
+                /// *   If the compliance package fails to be deleted, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// Indicates whether the operation is successful. Valid values:
+                /// Indicates whether the request was successful. Valid values:
                 /// 
-                /// *   true: The operation is successful.
-                /// *   false: The operation fails.
+                /// *   true: The request was successful.
+                /// *   false: The request failed.
                 /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

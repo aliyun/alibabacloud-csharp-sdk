@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateResourceComplianceByPackResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The compliance evaluation results of resources monitored by the compliance package.
+        /// The compliance evaluation results returned.
         /// </summary>
         [NameInMap("ResourceComplianceResult")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? NonCompliantCount { get; set; }
 
             /// <summary>
-            /// The total number of monitored resources.
+            /// The total number of resources.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]

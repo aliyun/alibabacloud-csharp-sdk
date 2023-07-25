@@ -10,37 +10,40 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DeleteAggregatorsResponseBody : TeaModel {
         /// <summary>
-        /// The result for the account group.
+        /// The returned result.
         /// </summary>
         [NameInMap("OperateAggregatorsResult")]
         [Validation(Required=false)]
         public DeleteAggregatorsResponseBodyOperateAggregatorsResult OperateAggregatorsResult { get; set; }
         public class DeleteAggregatorsResponseBodyOperateAggregatorsResult : TeaModel {
             /// <summary>
-            /// The error code.
-            /// 
-            /// >  No error code is returned for the account group if the account group is deleted.
+            /// The details of the account group.
             /// </summary>
             [NameInMap("OperateAggregators")]
             [Validation(Required=false)]
             public List<DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators> OperateAggregators { get; set; }
             public class DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators : TeaModel {
+                /// <summary>
+                /// The ID of the account group.
+                /// </summary>
                 [NameInMap("AggregatorId")]
                 [Validation(Required=false)]
                 public string AggregatorId { get; set; }
 
                 /// <summary>
-                /// Indicates whether the delete operation is successful. Valid values:
+                /// The error code returned.
                 /// 
-                /// *   true: The account group is deleted.
-                /// *   false: The account group fails to be deleted.
+                /// > No error code is returned for the account group if the account group is deleted.
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// The ID of the account group.
+                /// Indicates whether the request was successful. Valid values:
+                /// 
+                /// *   true: The request was successful.
+                /// *   false: The request failed.
                 /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The results of the delete operations.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

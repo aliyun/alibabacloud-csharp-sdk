@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class StopConfigurationRecorderResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call was successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The call was successful.
-        /// *   false: The call failed.
+        /// *   true: The request was successful.
+        /// *   false: The request failed.
         /// </summary>
         [NameInMap("StopConfigurationRecorderResult")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

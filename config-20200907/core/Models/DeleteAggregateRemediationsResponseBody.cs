@@ -17,27 +17,27 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<DeleteAggregateRemediationsResponseBodyRemediationDeleteResults> RemediationDeleteResults { get; set; }
         public class DeleteAggregateRemediationsResponseBodyRemediationDeleteResults : TeaModel {
             /// <summary>
-            /// The error code.
+            /// The error code returned.
             /// 
-            /// *   If the remediation setting is deleted, no error code is returned.
-            /// *   If the remediation setting fails to be deleted, an error code is returned. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).
+            /// *   If the remediation template is deleted, no error code is returned.
+            /// *   If the remediation template fails to be deleted, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).
             /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// The ID of the remediation setting.
+            /// The ID of the remediation template.
             /// </summary>
             [NameInMap("RemediationId")]
             [Validation(Required=false)]
             public string RemediationId { get; set; }
 
             /// <summary>
-            /// Indicates whether the call is successful. Valid values:
+            /// Indicates whether the request was successful. Valid values:
             /// 
-            /// *   true: The call is successful.
-            /// *   false: The call fails.
+            /// *   true: The request was successful.
+            /// *   false: The request failed.
             /// </summary>
             [NameInMap("Success")]
             [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

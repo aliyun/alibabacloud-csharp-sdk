@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DeleteAggregatorsRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. ClientToken can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// The ID of the account group. Separate multiple IDs with commas (,).
         /// </summary>
         [NameInMap("AggregatorIds")]
         [Validation(Required=false)]
         public string AggregatorIds { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

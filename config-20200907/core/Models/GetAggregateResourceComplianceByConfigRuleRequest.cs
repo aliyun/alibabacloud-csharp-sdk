@@ -10,6 +10,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateResourceComplianceByConfigRuleRequest : TeaModel {
         /// <summary>
+        /// The ID of the account group.
+        /// 
+        /// For more information about how to query the ID of an account group, see [ListAggregators](~~255797~~).
+        /// </summary>
+        [NameInMap("AggregatorId")]
+        [Validation(Required=false)]
+        public string AggregatorId { get; set; }
+
+        /// <summary>
         /// The compliance evaluation result of the resources. Valid values:
         /// 
         /// *   COMPLIANT: The resources are evaluated as compliant.
@@ -17,19 +26,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// *   NOT_APPLICABLE: The rule does not apply to your resources.
         /// *   INSUFFICIENT_DATA: No resource data is available.
         /// </summary>
-        [NameInMap("AggregatorId")]
-        [Validation(Required=false)]
-        public string AggregatorId { get; set; }
-
-        /// <summary>
-        /// The total number of evaluated resources.
-        /// </summary>
         [NameInMap("ComplianceType")]
         [Validation(Required=false)]
         public string ComplianceType { get; set; }
 
         /// <summary>
-        /// The compliance evaluation results returned.
+        /// The ID of the rule.
+        /// 
+        /// For more information about how to query the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]

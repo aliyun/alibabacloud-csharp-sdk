@@ -24,20 +24,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public List<DeleteAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList> OperateRuleItemList { get; set; }
             public class DeleteAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList : TeaModel {
                 /// <summary>
-                /// The ID of the rule.
+                /// The rule ID.
                 /// </summary>
                 [NameInMap("ConfigRuleId")]
                 [Validation(Required=false)]
                 public string ConfigRuleId { get; set; }
 
                 /// <summary>
-                /// The error code.
+                /// The error code returned.
                 /// 
                 /// *   If the rule is deleted, no error code is returned.
-                /// 
-                /// <!---->
-                /// 
-                /// *   If the rule fails to be deleted, an error code is returned. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).
+                /// *   If the rule fails to be deleted, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
@@ -58,7 +55,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

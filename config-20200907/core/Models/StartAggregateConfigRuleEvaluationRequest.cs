@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// 
         /// For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).
         /// 
-        /// >  You must set either the `CompliancePackId` or `ConfigRuleId` parameter.
+        /// > You must configure either the `CompliancePackId` or `ConfigRuleId` parameter.
         /// </summary>
         [NameInMap("CompliancePackId")]
         [Validation(Required=false)]
         public string CompliancePackId { get; set; }
 
         /// <summary>
-        /// The ID of the rule.
+        /// The rule ID.
         /// 
         /// For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
         /// </summary>
@@ -39,10 +39,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// Specifies whether to re-evaluate the ignored non-compliant resource. Valid values:
+        /// Specifies whether to re-evaluate the ignored incompliant resource. Valid values:
         /// 
-        /// *   true: re-evaluates the ignored non-compliant resource based on the rule.
-        /// *   false: continues to ignore the resource in the compliance evaluation based on the rule.
+        /// *   true: The ignored incompliant resource based on the rule are re-evaluated.
+        /// *   false: The ignored incompliant resource based on the rule are not re-evaluated.
         /// </summary>
         [NameInMap("RevertEvaluation")]
         [Validation(Required=false)]

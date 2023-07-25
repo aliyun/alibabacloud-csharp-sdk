@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregateRemediationsResponseBody : TeaModel {
         /// <summary>
-        /// The remediation settings returned.
+        /// An array that contains remediation templates.
         /// </summary>
         [NameInMap("Remediations")]
         [Validation(Required=false)]
         public List<ListAggregateRemediationsResponseBodyRemediations> Remediations { get; set; }
         public class ListAggregateRemediationsResponseBodyRemediations : TeaModel {
             /// <summary>
-            /// The ID of the Alibaba Cloud account involved.
+            /// The ID of the Alibaba Cloud account to which the resource belongs.
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string AggregatorId { get; set; }
 
             /// <summary>
-            /// The ID of the rule.
+            /// The rule ID.
             /// </summary>
             [NameInMap("ConfigRuleId")]
             [Validation(Required=false)]
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The execution mode of the remediation template. Valid values:
             /// 
-            /// *   NON_EXECUTION: no execution.
-            /// *   AUTO_EXECUTION: automatic execution.
-            /// *   MANUAL_EXECUTION: manual execution.
-            /// *   NOT_CONFIG: not specified.
+            /// *   NON_EXECUTION: The remediation template is not executed.
+            /// *   AUTO_EXECUTION: The remediation template is automatically executed.
+            /// *   MANUAL_EXECUTION: The remediation template is manually executed.
+            /// *   NOT_CONFIG: The execution mode is not specified.
             /// </summary>
             [NameInMap("InvokeType")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string LastSuccessfulInvocationId { get; set; }
 
             /// <summary>
-            /// The timestamp of the last successful execution of the remediation template Unit: milliseconds.
+            /// The timestamp of the last successful execution of the remediation template. Unit: milliseconds.
             /// </summary>
             [NameInMap("LastSuccessfulInvocationTime")]
             [Validation(Required=false)]
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The mode of the last successful execution of the remediation template. Valid values:
             /// 
-            /// *   NON_EXECUTION: no execution.
-            /// *   AUTO_EXECUTION: automatic execution.
-            /// *   MANUAL_EXECUTION: manual execution.
-            /// *   NOT_CONFIG: not specified.
+            /// *   NON_EXECUTION: The remediation template is not executed.
+            /// *   AUTO_EXECUTION: The remediation template is automatically executed.
+            /// *   MANUAL_EXECUTION: The remediation template is manually executed.
+            /// *   NOT_CONFIG: The execution mode is not specified.
             /// </summary>
             [NameInMap("LastSuccessfulInvocationType")]
             [Validation(Required=false)]
@@ -83,14 +83,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string RemediaitonOriginParams { get; set; }
 
             /// <summary>
-            /// The ID of the remediation setting.
+            /// The ID of the remediation template.
             /// </summary>
             [NameInMap("RemediationId")]
             [Validation(Required=false)]
             public string RemediationId { get; set; }
 
             /// <summary>
-            /// The source of remediation. Valid values:
+            /// The source of remediation template. Valid values:
             /// 
             /// *   ALIYUN: official template.
             /// *   CUSTOM: custom template.
@@ -101,17 +101,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string RemediationSourceType { get; set; }
 
             /// <summary>
-            /// The identifier of the remediation template.
+            /// The ID of the remediation template.
             /// </summary>
             [NameInMap("RemediationTemplateId")]
             [Validation(Required=false)]
             public string RemediationTemplateId { get; set; }
 
             /// <summary>
-            /// The type of remediation to perform. Valid values:
+            /// The type of the remediation template. Valid values:
             /// 
-            /// *   OOS: stands for Operation Orchestration Service and indicates official remediation.
-            /// *   FC: stands for Function Compute and indicates custom remediation.
+            /// *   OOS: Operation Orchestration Service (official remediation).
+            /// *   FC: Function Compute (custom remediation).
             /// </summary>
             [NameInMap("RemediationType")]
             [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

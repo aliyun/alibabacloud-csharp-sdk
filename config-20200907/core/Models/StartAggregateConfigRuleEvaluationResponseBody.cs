@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class StartAggregateConfigRuleEvaluationResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the operation is successful. Valid values:
+        /// Indicates whether the involved resources were evaluated. Valid values:
         /// 
-        /// *   true: The operation is successful.
-        /// *   false: The operation fails.
+        /// *   true: The involved resources were evaluated.
+        /// *   false: The involved resources were not evaluated
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]

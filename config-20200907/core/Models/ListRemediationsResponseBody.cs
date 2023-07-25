@@ -9,30 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListRemediationsResponseBody : TeaModel {
+        /// <summary>
+        /// 修正列表的页码。起始值：1。
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
+        /// <summary>
+        /// 分页查询时设置的每页行数。取值范围：1~50。
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The remediation settings returned.
+        /// An array that contains the remediation templates.
         /// </summary>
         [NameInMap("Remediations")]
         [Validation(Required=false)]
         public List<ListRemediationsResponseBodyRemediations> Remediations { get; set; }
         public class ListRemediationsResponseBodyRemediations : TeaModel {
             /// <summary>
-            /// The ID of the Alibaba Cloud account involved.
+            /// The ID of the Alibaba Cloud account to which the resource belongs.
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public long? AccountId { get; set; }
 
             /// <summary>
-            /// The ID of the rule.
+            /// The rule ID.
             /// </summary>
             [NameInMap("ConfigRuleId")]
             [Validation(Required=false)]
@@ -41,10 +47,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The execution mode of the remediation template. Valid values:
             /// 
-            /// *   NON_EXECUTION: no execution.
-            /// *   AUTO_EXECUTION: automatic execution.
-            /// *   MANUAL_EXECUTION: manual execution.
-            /// *   NOT_CONFIG: not specified.
+            /// *   NON_EXECUTION: The remediation template was not executed.
+            /// *   AUTO_EXECUTION: The remediation template was automatically executed.
+            /// *   MANUAL_EXECUTION: The remediation template was manually executed.
+            /// *   NOT_CONFIG: The execution mode was not specified.
             /// </summary>
             [NameInMap("InvokeType")]
             [Validation(Required=false)]
@@ -67,24 +73,24 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// The mode of the last successful execution of the remediation template. Valid values:
             /// 
-            /// *   NON_EXECUTION: no execution.
-            /// *   AUTO_EXECUTION: automatic execution.
-            /// *   MANUAL_EXECUTION: manual execution.
-            /// *   NOT_CONFIG: not specified.
+            /// *   NON_EXECUTION: The remediation template was not executed.
+            /// *   AUTO_EXECUTION: The remediation template was automatically executed.
+            /// *   MANUAL_EXECUTION: The remediation template was manually executed.
+            /// *   NOT_CONFIG: The execution mode was not specified.
             /// </summary>
             [NameInMap("LastSuccessfulInvocationType")]
             [Validation(Required=false)]
             public string LastSuccessfulInvocationType { get; set; }
 
             /// <summary>
-            /// The ID of the remediation setting.
+            /// The ID of the remediation template.
             /// </summary>
             [NameInMap("RemediationId")]
             [Validation(Required=false)]
             public string RemediationId { get; set; }
 
             /// <summary>
-            /// The converted configuration of the remediation template. This parameter is returned only for an OOS remediation template.
+            /// The converted configuration of the remediation template. This parameter is available only for an OOS remediation template.
             /// </summary>
             [NameInMap("RemediationOriginParams")]
             [Validation(Required=false)]
@@ -102,17 +108,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string RemediationSourceType { get; set; }
 
             /// <summary>
-            /// The identifier of the remediation template.
+            /// The ID of the remediation template.
             /// </summary>
             [NameInMap("RemediationTemplateId")]
             [Validation(Required=false)]
             public string RemediationTemplateId { get; set; }
 
             /// <summary>
-            /// The type of remediation to perform. Valid values:
+            /// The type of the remediation template. Valid values:
             /// 
-            /// *   OOS: stands for Operation Orchestration Service and indicates official remediation.
-            /// *   FC: stands for Function Compute and indicates custom remediation.
+            /// *   OOS: Operation Orchestration Service (official remediation)
+            /// *   FC: Function Compute (custom remediation)
             /// </summary>
             [NameInMap("RemediationType")]
             [Validation(Required=false)]
@@ -121,12 +127,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// 修正设置总数。
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public string TotalCount { get; set; }

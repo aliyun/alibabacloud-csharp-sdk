@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// The resources that are to be reevaluated.
+        /// The resources that you want to re-evaluate.
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]

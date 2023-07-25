@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// Specifies whether to remove all tags from the resource. Valid values:
         /// 
         /// *   true: All tags are removed from the resource.
-        /// *   false: Specified tags are removed from the resource.
+        /// *   false (default): The specified tags are removed from the resource.
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -27,16 +27,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource.
+        /// The resource ID.
         /// 
-        /// You can specify up to 50 resources.
+        /// You can remove tags from up to 50 resources at a time.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Valid values:
+        /// The resource type. Valid values:
         /// 
         /// *   `ACS::Config::Rule`
         /// *   `ACS::Config::AggregateConfigRule`
@@ -49,9 +49,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag keys of the resource.
-        /// 
-        /// You can specify up to 20 tag keys.
+        /// The tags of the resource.
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

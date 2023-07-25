@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateAccountComplianceByPackResponseBody : TeaModel {
         /// <summary>
-        /// The compliance evaluation results of member accounts monitored by the compliance package.
+        /// The compliance evaluation results of member accounts for which the compliance package takes effect in an account group.
         /// </summary>
         [NameInMap("AccountComplianceResult")]
         [Validation(Required=false)]
         public GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult AccountComplianceResult { get; set; }
         public class GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult : TeaModel {
             /// <summary>
-            /// The information about the compliance evaluation result of member account.
+            /// The compliance evaluation result of member accounts.
             /// </summary>
             [NameInMap("AccountCompliances")]
             [Validation(Required=false)]
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// The compliance evaluation result. Valid values:
                 /// 
-                /// *   COMPLIANT: The resources of the member accounts are evaluated as compliant.
-                /// *   NON_COMPLIANT: The resources of the member account are evaluated as non-compliant.
-                /// *   NOT_APPLICABLE: The rules do not apply to the resources of the member account.
-                /// *   INSUFFICIENT_DATA: No resource data is available.
+                /// *   COMPLIANT: The resource was evaluated as compliant.
+                /// *   NON_COMPLIANT: The resource was evaluated as incompliant.
+                /// *   NOT_APPLICABLE: The rule did not apply to your resource.
+                /// *   INSUFFICIENT_DATA: No resource data was available.
                 /// </summary>
                 [NameInMap("ComplianceType")]
                 [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? NonCompliantCount { get; set; }
 
             /// <summary>
-            /// The total number of monitored member accounts.
+            /// The total number of member accounts.
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,30 +10,42 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ActiveAggregateConfigRulesResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the operation is successful. Valid values:
-        /// 
-        /// *   true: The operation is successful.
-        /// *   false: The operation fails.
+        /// The returned result.
         /// </summary>
         [NameInMap("OperateRuleResult")]
         [Validation(Required=false)]
         public ActiveAggregateConfigRulesResponseBodyOperateRuleResult OperateRuleResult { get; set; }
         public class ActiveAggregateConfigRulesResponseBodyOperateRuleResult : TeaModel {
             /// <summary>
-            /// The ID of the rule.
+            /// The returned result.
             /// </summary>
             [NameInMap("OperateRuleItemList")]
             [Validation(Required=false)]
             public List<ActiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList> OperateRuleItemList { get; set; }
             public class ActiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList : TeaModel {
+                /// <summary>
+                /// The rule ID.
+                /// </summary>
                 [NameInMap("ConfigRuleId")]
                 [Validation(Required=false)]
                 public string ConfigRuleId { get; set; }
 
+                /// <summary>
+                /// The error code returned.
+                /// 
+                /// *   If the rule is enabled, no error code is returned.
+                /// *   If the rule fails to be enabled, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).
+                /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
+                /// <summary>
+                /// Indicates whether the request was successful. Valid values:
+                /// 
+                /// *   true: The request was successful.
+                /// *   false: The request failed.
+                /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]
                 public bool? Success { get; set; }
@@ -43,10 +55,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The error code returned.
-        /// 
-        /// *   If the rule is enabled, no error code is returned.
-        /// *   If the rule fails to be enabled, an error code is returned. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

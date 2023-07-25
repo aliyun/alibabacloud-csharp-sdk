@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateDeliveryChannelRequest : TeaModel {
         /// <summary>
-        /// The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.
+        /// The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must ensure that the token is unique among different requests.
         /// 
-        /// The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25693~~).
+        /// The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// Specifies whether to deliver resource change logs to the specified destination. If you set this parameter to true, Cloud Config delivers resource change logs to OSS, Log Service, or MNS when the configurations of the resources change. Valid values:
         /// 
         /// *   true
-        /// *   false. This is the default value.
+        /// *   false (default)
         /// 
-        /// >  This parameter is available for delivery channels of the OSS, SLS, or MNS type.
+        /// > This parameter is available for delivery channels of the OSS, SLS, and MNS types.
         /// </summary>
         [NameInMap("ConfigurationItemChangeNotification")]
         [Validation(Required=false)]
@@ -34,16 +34,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// Specifies whether to deliver scheduled resource snapshots to the OSS bucket. If the value of this parameter is true, the scheduled resource snapshots are delivered to the specified OSS bucket at 00:00:00 and 12:00:00 on a daily basis. Valid values:
         /// 
         /// *   true
-        /// *   false. This is the default value.
+        /// *   false (default)
         /// 
-        /// >  This parameter is available only for delivery channels of the OSS type.
+        /// > This parameter is applicable only to delivery channels of the OSS type.
         /// </summary>
         [NameInMap("ConfigurationSnapshot")]
         [Validation(Required=false)]
         public bool? ConfigurationSnapshot { get; set; }
 
         /// <summary>
-        /// The ARN of the role that you want to assign to the delivery channel. Specify an ARN in the following format: `acs:ram::{accountId}:role/aliyunserviceroleforconfig`.
+        /// The ARN of the role that you want to assign to the delivery channel. Specify the ARN in the following format: `acs:ram::{accountId}:role/aliyunserviceroleforconfig`.
         /// </summary>
         [NameInMap("DeliveryChannelAssumeRoleArn")]
         [Validation(Required=false)]
@@ -54,11 +54,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// 
         /// This parameter specifies the lowest risk level and the resource types for the events to which you want to subscribe.
         /// 
-        /// *   The setting of the lowest risk level for the events to which you want to subscribe is in the following format: `{"filterType":"RuleRiskLevel","value":"1","multiple":false}`. The `value` field specifies the lowest risk level for the events to which you want to subscribe. Valid values: 1, 2, and 3, where 1 indicates the high risk leve, 2 indicates the medium risk level, and 3 indicates the low risk level.
+        /// *   The setting of the lowest risk level for the events to which you want to subscribe is in the following format: `{"filterType":"RuleRiskLevel","value":"1","multiple":false}`.
         /// 
-        /// *   The setting of the resource types for the events to which you want to subscribe is in the following format: `{"filterType":"ResourceType","values":["ACS::ACK::Cluster","ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage"],"multiple":true}`. The `values` field specifies the resource types for which you want to subscribe to events. The value of the field is a JSON array.
+        ///     The `value` field indicates the lowest risk level of the events to which you want to subscribe. Valid values: 1, 2, and 3. The value 1 indicates the high risk level, the value 2 indicates the medium risk level, and the value 3 indicates the low risk level.
         /// 
-        ///     Example: `[{"filterType":"ResourceType","values":["ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage","ACS::CDN::Domain","ACS::CEN::CenBandwidthPackage","ACS::CEN::CenInstance","ACS::CEN::Flowlog","ACS::DdosCoo::Instance"],"multiple":true}]`
+        /// *   The setting of the resource types of the events to which you want to subscribe is in the following format: `{"filterType":"ResourceType","values":["ACS::ACK::Cluster","ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage"],"multiple":true}`.
+        /// 
+        ///     The `values` field indicates the resource types of the events to which you want to subscribe. The value of the field is a JSON array. Examples:
+        /// 
+        /// `[{"filterType":"ResourceType","values":["ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage","ACS::CDN::Domain","ACS::CEN::CenBandwidthPackage","ACS::CEN::CenInstance","ACS::CEN::Flowlog","ACS::DdosCoo::Instance"],"multiple":true}]`
         /// </summary>
         [NameInMap("DeliveryChannelCondition")]
         [Validation(Required=false)]
@@ -67,14 +71,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The name of the delivery channel.
         /// 
-        /// >  If you do not configure this parameter, this parameter is left empty.
+        /// > If you do not configure this parameter, this parameter is left empty.
         /// </summary>
         [NameInMap("DeliveryChannelName")]
         [Validation(Required=false)]
         public string DeliveryChannelName { get; set; }
 
         /// <summary>
-        /// The ARN of the delivery destination. Valid values:
+        /// The Alibaba Cloud Resource Name (ARN) of the delivery destination. Valid values:
         /// 
         /// *   `acs:oss:{RegionId}:{accountId}:{bucketName}` if your delivery destination is an OSS bucket. Example: `acs:oss:cn-shanghai:100931896542****:new-bucket`.
         /// *   `acs:mns:{RegionId}:{accountId}:/topics/{topicName}` if your delivery destination is an MNS topic. Example: `acs:mns:cn-shanghai:100931896542****:/topics/topic1`.
@@ -103,12 +107,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// Specifies whether to deliver resource non-compliance events to the specified destination. If you set this parameter to true, Cloud Config delivers resource non-compliance events to Log Service or MNS when resources are considered incompliant. Valid values:
+        /// Specifies whether to deliver resource non-compliance events. If you set this parameter to true, Cloud Config delivers resource non-compliance events to Log Service or MNS when resources are considered non-compliant. Valid values:
         /// 
         /// *   true
-        /// *   false. This is the default value.
+        /// *   false (default)
         /// 
-        /// >  This parameter is applicable only to delivery channels of the SLS or MNS type.
+        /// > This parameter is available only for delivery channels of the SLS or MNS type.
         /// </summary>
         [NameInMap("NonCompliantNotification")]
         [Validation(Required=false)]
@@ -119,7 +123,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// 
         /// If you do not configure this parameter, Cloud Config delivers only summary data.
         /// 
-        /// >  This parameter is available only for delivery channels of the SLS type or MNS type. The upper limit on the storage size of delivery channels of the SLS type is 1 MB, and the upper limit on the storage size of delivery channels of the MNS type is 64 KB.
+        /// > This parameter is available only for delivery channels of the SLS or MNS type. The maximum storage size of delivery channels of the SLS type is 1 MB, and the maximum storage size of delivery channels of the MNS type is 64 KB.
         /// </summary>
         [NameInMap("OversizedDataOSSTargetArn")]
         [Validation(Required=false)]

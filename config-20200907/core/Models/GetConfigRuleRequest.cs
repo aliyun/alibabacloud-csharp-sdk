@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetConfigRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the rule.
+        /// The rule ID.
         /// 
-        /// For more information about how to query the ID of a rule, see [ListConfigRules](~~169607~~).
+        /// For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]

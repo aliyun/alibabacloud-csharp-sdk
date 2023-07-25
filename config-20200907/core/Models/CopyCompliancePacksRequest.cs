@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The IDs of the destination account groups into which the compliance packages are replicated. Separate multiple account group IDs with commas (,).
         /// 
-        /// >  If you leave this parameter empty, the compliance packages are replicated under the same account group.
+        /// > If this parameter is left empty, the compliance packages are replicated to the current account group.
         /// </summary>
         [NameInMap("DesAggregatorIds")]
         [Validation(Required=false)]

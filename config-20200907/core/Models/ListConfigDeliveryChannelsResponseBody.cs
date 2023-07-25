@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public long? AccountId { get; set; }
 
             /// <summary>
-            /// Indicates whether the specified destination receives resource change logs. If the value of this parameter is true, Cloud Config delivers resource change logs to OSS, Log Service, or MNS when the configurations of the resources change. Valid values:
+            /// Indicates whether the specified destination receives resource change logs. If the value of this parameter is true, Cloud Config delivers the resource change logs to OSS, Log Service, or MNS when the configurations of the resources change. Valid values:
             /// 
             /// *   true: The specified destination receives resource change logs.
             /// *   false: The specified destination does not receive resource change logs.
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public bool? ConfigurationItemChangeNotification { get; set; }
 
             /// <summary>
-            /// Indicates whether the specified destination receives scheduled resource snapshots. Cloud Config delivers scheduled resource snapshots to OSS, MNS, or Log Service at `04:00Z` and `16:00Z` every day. The time is displayed in UTC. Valid values:
+            /// Indicates whether the specified destination receives scheduled resource snapshots. Cloud Config delivers scheduled resource snapshots at `04:00Z` and `16:00Z` to OSS, MNS, or Log Service every day. The time is displayed in UTC. Valid values:
             /// 
             /// *   true: The specified destination receives scheduled resource snapshots.
             /// *   false: The specified destination does not receive scheduled resource snapshots.
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public bool? ConfigurationSnapshot { get; set; }
 
             /// <summary>
-            /// The ARN of the role that is assigned to the delivery channel.
+            /// The ARN of the role assumed by the delivery channel.
             /// </summary>
             [NameInMap("DeliveryChannelAssumeRoleArn")]
             [Validation(Required=false)]
@@ -55,15 +55,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// 
             /// *   If the value of the DeliveryChannelType parameter is MNS, take note of the following settings of the lowest risk level and resource types of the events to which you subscribed:
             /// 
-            ///     *   The setting of the lowest risk level of the events to which you subscribed is in the following format: `{"filterType":"RuleRiskLevel","value":"1","multiple":false}`. The `value` field indicates the lowest risk level of the events to which you subscribed. Valid values: 1, 2, and 3, where 1 indicates the high risk level, 2 indicates the medium risk level, and 3 indicates the low risk level.
+            ///     *   The setting of the lowest risk level for the events to which you want to subscribe is in the following format: `{"filterType":"RuleRiskLevel","value":"1","multiple":false}`.
             /// 
-            ///     *   The setting of the resource types of the events to which you subscribed is in the following format: `{"filterType":"ResourceType","values":["ACS::ACK::Cluster","ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage"],"multiple":true}`. The `values` field indicates the resource types of the events to which you subscribed. The value of the field is a JSON array.
+            ///         The `value` field indicates the lowest risk level of the events to which you want to subscribe. Valid values: 1, 2, and 3. The value 1 indicates the high risk level, the value 2 indicates the medium risk level, and the value 3 indicates the low risk level.
             /// 
-            ///         Example: `[{"filterType":"ResourceType","values":["ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage","ACS::CDN::Domain","ACS::CEN::CenBandwidthPackage","ACS::CEN::CenInstance","ACS::CEN::Flowlog","ACS::DdosCoo::Instance"],"multiple":true}]`.
+            ///     *   The setting of the resource types of the events to which you want to subscribe is in the following format: `{"filterType":"ResourceType","values":["ACS::ACK::Cluster","ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage"],"multiple":true}`.
             /// 
-            /// *   If the value of the DeliveryChannelType parameter is SLS, the setting of the resource types of the snapshots that you delivered is in the following format: `{"filterType":"ResourceType","values":["ACS::ACK::Cluster","ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage"],"multiple":true}`. The `values` field indicates the resource types of the snapshots that you delivered. The value of the field is a JSON array.
+            ///         The `values` field indicates the resource types of the events to which you want to subscribe. The value of the field is a JSON array. Examples:
             /// 
-            ///     Example: `[{"filterType":"ResourceType","values":["ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage","ACS::CDN::Domain","ACS::CEN::CenBandwidthPackage","ACS::CEN::CenInstance","ACS::CEN::Flowlog","ACS::DdosCoo::Instance"],"multiple":true}]`.
+            /// `[{"filterType":"ResourceType","values":["ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage","ACS::CDN::Domain","ACS::CEN::CenBandwidthPackage","ACS::CEN::CenInstance","ACS::CEN::Flowlog","ACS::DdosCoo::Instance"],"multiple":true}]`
+            /// 
+            /// *   If you set the DeliveryChannelType parameter to SLS, the setting of the resource types of the snapshots to which you want to deliver is in the following format: `{"filterType":"ResourceType","values":["ACS::ACK::Cluster","ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage"],"multiple":true}`.
+            /// 
+            ///     The `values` field specifies the resource types of the snapshots to which you want to deliver. The value of the field is a JSON array. Examples:
+            /// 
+            /// `[{"filterType":"ResourceType","values":["ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage","ACS::CDN::Domain","ACS::CEN::CenBandwidthPackage","ACS::CEN::CenInstance","ACS::CEN::Flowlog","ACS::DdosCoo::Instance"],"multiple":true}]`
             /// </summary>
             [NameInMap("DeliveryChannelCondition")]
             [Validation(Required=false)]
@@ -106,9 +112,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string DeliveryChannelType { get; set; }
 
             /// <summary>
-            /// The time when Cloud Config delivers scheduled resource snapshots every day.
+            /// The time when Cloud Config delivers scheduled resources snapshots every day.
             /// 
-            /// Format: `HH:mmZ`. The time is displayed in UTC.
+            /// Format: `HH:mmZ`. This time is displayed in UTC.
             /// </summary>
             [NameInMap("DeliverySnapshotTime")]
             [Validation(Required=false)]
@@ -122,7 +128,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// Indicates whether the specified destination receives resource non-compliance events. If the value of this parameter is true, Cloud Config delivers resource non-compliance events to Log Service or MNS when resources are considered non-compliant. Valid values:
+            /// Indicates whether the specified destination receives resource non-compliance events. If the value of this parameter is true, Cloud Config delivers resource non-compliance events to Log Service or MNS when resources are evaluated as non-compliant. Valid values:
             /// 
             /// *   true: The specified destination receives resource non-compliance events.
             /// *   false: The specified destination does not receive resource non-compliance events.
@@ -132,7 +138,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public bool? NonCompliantNotification { get; set; }
 
             /// <summary>
-            /// The ARN of the OSS bucket to which the delivery data is transferred when the size of the data exceeds the specified upper limit of the delivery channel.
+            /// The ARN of the OSS bucket to which you want to transfer the delivery data when the size of the data exceeds the specified upper limit of the delivery channel.
             /// </summary>
             [NameInMap("OversizedDataOSSTargetArn")]
             [Validation(Required=false)]
@@ -151,7 +157,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
