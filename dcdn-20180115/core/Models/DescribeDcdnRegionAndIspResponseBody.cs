@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         }
 
+        /// <summary>
+        /// The list of regions.
+        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public DescribeDcdnRegionAndIspResponseBodyRegions Regions { get; set; }
@@ -37,10 +40,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnRegionAndIspResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeDcdnRegionAndIspResponseBodyRegionsRegion : TeaModel {
+                /// <summary>
+                /// The English name of the region.
+                /// </summary>
                 [NameInMap("NameEn")]
                 [Validation(Required=false)]
                 public string NameEn { get; set; }
 
+                /// <summary>
+                /// The Chinese name of the region.
+                /// </summary>
                 [NameInMap("NameZh")]
                 [Validation(Required=false)]
                 public string NameZh { get; set; }
@@ -49,6 +58,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

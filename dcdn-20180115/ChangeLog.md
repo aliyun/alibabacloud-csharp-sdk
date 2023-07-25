@@ -1,3 +1,6 @@
+2023-07-25 Version: 1.0.31
+- Add DescribeDcdnL2Ips.
+
 2023-07-24 Version: 1.0.30
 - Add SetDcdnDomainCertificate.
 

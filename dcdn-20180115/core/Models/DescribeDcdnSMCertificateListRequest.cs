@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnSMCertificateListRequest : TeaModel {
+        /// <summary>
+        /// The accelerated domain name whose SM certificates you want to query.
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

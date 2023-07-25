@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class OpenDcdnServiceResponseBody : TeaModel {
         /// <summary>
-        /// The metering method of DCDN. Valid values:
-        /// 
-        /// *   **PayByTraffic**: pay-by-traffic
-        /// *   **PayByBandwidth**: pay-by-bandwidth
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

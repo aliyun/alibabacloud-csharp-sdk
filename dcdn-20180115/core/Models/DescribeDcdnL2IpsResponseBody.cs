@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
-    public class CommitStagingRoutineCodeResponseBody : TeaModel {
-        /// <summary>
-        /// The version number of the code.
-        /// </summary>
-        [NameInMap("Content")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Content { get; set; }
-
+    public class DescribeDcdnL2IpsResponseBody : TeaModel {
         /// <summary>
         /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// The CIDR blocks of the POPs.
+        /// </summary>
+        [NameInMap("Vips")]
+        [Validation(Required=false)]
+        public List<string> Vips { get; set; }
 
     }
 

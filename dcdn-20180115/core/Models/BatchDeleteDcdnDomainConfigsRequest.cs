@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class BatchDeleteDcdnDomainConfigsRequest : TeaModel {
+        /// <summary>
+        /// The accelerated domain names whose configurations you want to delete. Separate multiple accelerated domain names with commas (,).
+        /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]
         public string DomainNames { get; set; }
 
         /// <summary>
-        /// [](~~410622~~)
+        /// The names of the features that you want to delete. Separate multiple feature names with commas (,). For more information about feature names, see [Feature settings for a domain name](~~410622~~).
         /// </summary>
         [NameInMap("FunctionNames")]
         [Validation(Required=false)]
