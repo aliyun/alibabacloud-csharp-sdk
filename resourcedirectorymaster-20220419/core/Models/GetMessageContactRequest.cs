@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class GetMessageContactRequest : TeaModel {
+        /// <summary>
+        /// The ID of the contact.
+        /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]
         public string ContactId { get; set; }

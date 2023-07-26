@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class DeleteControlPolicyRequest : TeaModel {
+        /// <summary>
+        /// The ID of the access control policy.
+        /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public string PolicyId { get; set; }

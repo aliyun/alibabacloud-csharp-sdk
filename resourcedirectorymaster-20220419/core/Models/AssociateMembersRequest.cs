@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class AssociateMembersRequest : TeaModel {
+        /// <summary>
+        /// The ID of the contact.
+        /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]
         public string ContactId { get; set; }
 
+        /// <summary>
+        /// The IDs of objects to which you want to bind the contact.
+        /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]
         public List<string> Members { get; set; }
