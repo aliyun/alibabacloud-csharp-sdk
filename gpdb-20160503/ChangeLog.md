@@ -1,3 +1,6 @@
+2023-07-26 Version: 1.0.25
+- Add Cloud Disk Encryption.
+
 2023-01-09 Version: 1.0.24
 - Support Pause and Resume Instance.
 

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListTagResourcesRequest : TeaModel {
+        /// <summary>
+        /// The token used to perform the next query.
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The region ID of the instance. You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of instance N. Valid values of N: 1 to 50.
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
@@ -37,18 +46,39 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The storage mode of the instance. Valid values:
+        /// 
+        /// *   `instance`: reserved storage mode
+        /// *   `ALIYUN::GPDB::INSTANCE`: elastic storage mode
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// The list of tags.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
+            /// <summary>
+            /// The key of tag N. The key must be 1 to 128 characters in length. Valid values of N: 1 to 20.
+            /// 
+            /// You can use `Tag.N.Key and Tag.N.Value` to query AnalyticDB for PostgreSQL instances to which specific tags are bound.
+            /// 
+            /// *   If you specify only `Tag.N.Key`, the instances whose tags contain the specified tag keys are returned.
+            /// *   If you specify only `Tag.N.Value`, `InvalidParameter.TagValue` is returned.
+            /// *   If you specify multiple tag key-value pairs at a time, the instances to which all the specified tags are bound are returned.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of tag N. The value must be 1 to 128 characters in length. Valid values of N: 1 to 20.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceIPArrayListResponseBody : TeaModel {
+        /// <summary>
+        /// Details of the IP address whitelists.
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeDBInstanceIPArrayListResponseBodyItems Items { get; set; }
@@ -17,14 +20,27 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray> DBInstanceIPArray { get; set; }
             public class DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray : TeaModel {
+                /// <summary>
+                /// The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute does not appear in the console.
+                /// </summary>
                 [NameInMap("DBInstanceIPArrayAttribute")]
                 [Validation(Required=false)]
                 public string DBInstanceIPArrayAttribute { get; set; }
 
+                /// <summary>
+                /// The name of the IP address whitelist.
+                /// </summary>
                 [NameInMap("DBInstanceIPArrayName")]
                 [Validation(Required=false)]
                 public string DBInstanceIPArrayName { get; set; }
 
+                /// <summary>
+                /// The IP addresses listed in the whitelist. You can add up to 1,000 IP addresses to the whitelist. Separate multiple IP addresses with commas (,). The IP addresses must use one of the following formats:
+                /// 
+                /// *   0.0.0.0/0
+                /// *   10.23.12.24. This is a standard IP address.
+                /// *   10.23.12.24/24. This is a CIDR block. The value `/24` indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value in the range of `1 to 32`.
+                /// </summary>
                 [NameInMap("SecurityIPList")]
                 [Validation(Required=false)]
                 public string SecurityIPList { get; set; }
@@ -33,6 +49,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

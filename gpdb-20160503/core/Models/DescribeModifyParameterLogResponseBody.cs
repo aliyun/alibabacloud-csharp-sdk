@@ -9,32 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeModifyParameterLogResponseBody : TeaModel {
+        /// <summary>
+        /// Details about the parameter reconfiguration logs.
+        /// </summary>
         [NameInMap("Changelogs")]
         [Validation(Required=false)]
         public List<DescribeModifyParameterLogResponseBodyChangelogs> Changelogs { get; set; }
         public class DescribeModifyParameterLogResponseBodyChangelogs : TeaModel {
+            /// <summary>
+            /// The time when the configuration change takes effect.
+            /// </summary>
             [NameInMap("EffectTime")]
             [Validation(Required=false)]
             public string EffectTime { get; set; }
 
+            /// <summary>
+            /// The name of the parameter.
+            /// </summary>
             [NameInMap("ParameterName")]
             [Validation(Required=false)]
             public string ParameterName { get; set; }
 
+            /// <summary>
+            /// Indicates whether the configuration change takes effect.
+            /// </summary>
             [NameInMap("ParameterValid")]
             [Validation(Required=false)]
             public string ParameterValid { get; set; }
 
+            /// <summary>
+            /// The original value of the parameter.
+            /// </summary>
             [NameInMap("ParameterValueAfter")]
             [Validation(Required=false)]
             public string ParameterValueAfter { get; set; }
 
+            /// <summary>
+            /// The new value of the parameter.
+            /// </summary>
             [NameInMap("ParameterValueBefore")]
             [Validation(Required=false)]
             public string ParameterValueBefore { get; set; }
 
         }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

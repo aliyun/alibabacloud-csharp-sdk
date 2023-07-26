@@ -9,6 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeRegionsRequest : TeaModel {
+        /// <summary>
+        /// The ID of the region.
+        /// 
+        /// >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
