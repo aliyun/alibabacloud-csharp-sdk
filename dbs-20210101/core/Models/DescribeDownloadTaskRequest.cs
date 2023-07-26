@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
 {
     public class DescribeDownloadTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup set generated when you create the download task. You can call the [DescribeBackups](~~26273~~) operation to query the backup set ID. Unit: bytes.
+        /// The ID of the backup set generated when you create a download task. You can call the [DescribeBackups](~~26273~~) operation to query the ID.
         /// </summary>
         [NameInMap("BackupSetId")]
         [Validation(Required=false)]
@@ -39,13 +39,15 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
 
         /// <summary>
         /// The ID of the instance.
+        /// 
+        /// > This parameter is required.
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// The column based on which the entries are sorted. By default, the entries are sorted by the creation time. Set the value to **gmt_create**.
+        /// The column based on which the entries are sorted. By default, the entries are sorted by the time when the download task was created. Set the value to **gmt_create**.
         /// </summary>
         [NameInMap("OrderColumn")]
         [Validation(Required=false)]
@@ -54,8 +56,8 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         /// <summary>
         /// The order in which you want to sort the entries. Valid values:
         /// 
-        /// *   **asc**: sorts the retrieved entries by time in ascending order.
-        /// *   **desc**: sorts the retrieved entries by time in descending order. This is the default value.
+        /// *   **asc**: the ascending order.
+        /// *   **desc**: the descending order. This is the default value.
         /// </summary>
         [NameInMap("OrderDirect")]
         [Validation(Required=false)]
@@ -83,13 +85,14 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The status of the download task. Valid values:
+        /// The state of the download task. Valid values:
         /// 
         /// *   **Initializing**: The download task is being initialized.
         /// *   **queuing**: The download task is queuing.
         /// *   **running**: The download task is running.
         /// *   **failed**: The download task fails.
         /// *   **finished**: The download task is complete.
+        /// *   **expired**: The download task expires.
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

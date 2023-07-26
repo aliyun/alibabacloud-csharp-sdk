@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
 {
     public class DescribeDownloadSupportResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -27,21 +27,21 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// The error code returned if the request fails.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request fails.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -55,10 +55,10 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   **true**: The request is successful.
-        /// *   **false**: The request fails.
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

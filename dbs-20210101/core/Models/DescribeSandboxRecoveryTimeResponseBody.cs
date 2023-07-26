@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
 {
     public class DescribeSandboxRecoveryTimeResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// The error code returned if the request fails.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -47,21 +47,21 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         }
 
         /// <summary>
-        /// The error code.
+        /// The error code returned if the request fails.
         /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned if the request fails.
         /// </summary>
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned if the request fails.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// Indicates whether the request was successful.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

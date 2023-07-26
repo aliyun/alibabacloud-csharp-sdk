@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         [Validation(Required=false)]
         public string RegionCode { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
     }
 
 }

@@ -17,11 +17,11 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         public string BackupSetId { get; set; }
 
         /// <summary>
-        /// Set this parameter if the Download Destination parameter is set to URL.
+        /// The validity period of the URL that is used as the download destination. Take note of the following items:
         /// 
-        /// *   By default, a URL is valid for 2 hours, which is equal to 7,200 seconds.
-        /// *   The valid duration is 5 minutes (300 seconds) to 1 day (86,400 seconds).
-        /// *   Before you set this parameter, convert the time to seconds. For example, if you want to set the validity period of the link to 5 minutes, enter 300.
+        /// *   Default value: 7200. This means that the URL is valid for 2 hours by default.
+        /// *   Valid values: 300 to 86400. Unit: seconds. This means that you can specify a validity period in the range of 5 minutes to 1 day.
+        /// *   Before you specify this parameter, convert the validity period to seconds. For example, if you want to set the validity period of the URL to 5 minutes, enter 300.
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         /// <summary>
         /// The ID of the instance.
         /// 
-        /// >  The **BackupSetId** parameter is required if you specify the **InstanceName** parameter.
+        /// > The **BackupSetId** parameter is required if you specify the **InstanceName** parameter.
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.
+        /// The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.
         /// </summary>
         [NameInMap("RegionCode")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         /// The ID of the download task.
         /// 
         /// *   The **BackupSetId** and **InstanceName** parameters are required if you do not specify the **TaskId** parameter.
-        /// *   You can find the instance and click **Backup and Restoration**. On the **Backup Download** tab, view the **task ID**.
+        /// *   You can go to the instance details page in the Alibaba Cloud Management Console and click **Backup and Restoration** in the left-side navigation pane. On the **Backup Download** tab, view the task ID.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
 {
     public class DescribeDownloadTaskResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// The error code returned if the request fails.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The details of the download tasks.
+        /// The details of the download task.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDownloadTaskResponseBodyData Data { get; set; }
         public class DescribeDownloadTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// The details of the download tasks.
+            /// The details of the download task.
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
@@ -49,21 +49,21 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
                     public string BakSetId { get; set; }
 
                     /// <summary>
-                    /// The details of the databases.
+                    /// The databases.
                     /// </summary>
                     [NameInMap("DbList")]
                     [Validation(Required=false)]
                     public string DbList { get; set; }
 
                     /// <summary>
-                    /// The status of the download task. Valid values:
+                    /// The state of the download task. Valid values:
                     /// 
-                    /// *   **Initializing**: The download task is being initialized.
-                    /// *   **queuing**: The download task is queuing.
-                    /// *   **running**: The download task is running.
-                    /// *   **failed**: The download task fails.
-                    /// *   **finished**: The download task is complete.
-                    /// *   **expired**: The download task expires.
+                    /// *   **Initializing**: The download task was being initialized.
+                    /// *   **queuing**: The download task was queuing.
+                    /// *   **running**: The download task was running.
+                    /// *   **failed**: The download task failed.
+                    /// *   **finished**: The download task was complete.
+                    /// *   **expired**: The download task expired.
                     /// </summary>
                     [NameInMap("DownloadStatus")]
                     [Validation(Required=false)]
@@ -144,20 +144,29 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
             }
 
             /// <summary>
-            /// The extra description of the download task.
+            /// The extra description of the download tasks.
             /// </summary>
             [NameInMap("Extra")]
             [Validation(Required=false)]
             public string Extra { get; set; }
 
+            /// <summary>
+            /// The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.
+            /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
 
+            /// <summary>
+            /// The number of entries returned per page.
+            /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
+            /// <summary>
+            /// The total number of full backup tasks.
+            /// </summary>
             [NameInMap("TotalElements")]
             [Validation(Required=false)]
             public long? TotalElements { get; set; }
@@ -172,21 +181,21 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         }
 
         /// <summary>
-        /// The error code.
+        /// The error code returned if the request fails.
         /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned if the request fails.
         /// </summary>
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned if the request fails.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -200,10 +209,10 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   **true**: The request is successful.
-        /// *   **false**: The request fails.
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

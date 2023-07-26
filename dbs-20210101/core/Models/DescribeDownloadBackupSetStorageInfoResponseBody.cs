@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
 {
     public class DescribeDownloadBackupSetStorageInfoResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The response parameters.
+        /// The returned data.
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDownloadBackupSetStorageInfoResponseBodyData Data { get; set; }
         public class DescribeDownloadBackupSetStorageInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// The expiration time of the URL.
+            /// The validity period of the URL.
             /// 
-            /// >  The return value is in the timestamp format.
+            /// > This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
             /// </summary>
             [NameInMap("ExpirationTime")]
             [Validation(Required=false)]
@@ -49,21 +49,21 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         }
 
         /// <summary>
-        /// The error code.
+        /// The error code returned if the request failed.
         /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// The error message returned if the request failed.
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -79,8 +79,8 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   **true**: the request is successful.
-        /// *   **false**: the request fails.
+        /// *   **true**: The request was successful.
+        /// *   **false**: The request failed.
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

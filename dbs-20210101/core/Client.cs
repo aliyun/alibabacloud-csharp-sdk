@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * For ApsaraDB RDS for MySQL instances that use standard SSDs or enhanced SSDs (ESSDs) and meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request CreateDownloadRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * For ApsaraDB RDS for MySQL instances that use standard SSDs or enhanced SSDs (ESSDs) and meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request CreateDownloadRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * For ApsaraDB RDS for MySQL instances that use standard SSDs or enhanced SSDs (ESSDs) and meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request CreateDownloadRequest
           * @return CreateDownloadResponse
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * For ApsaraDB RDS for MySQL instances that use standard SSDs or enhanced SSDs (ESSDs) and meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request CreateDownloadRequest
           * @return CreateDownloadResponse
@@ -326,7 +326,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Create a sandbox instance for emergency disaster recovery of an ApsaraDB RDS for MySQL database](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request CreateSandboxInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -396,7 +396,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Create a sandbox instance for emergency disaster recovery of an ApsaraDB RDS for MySQL database](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request CreateSandboxInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -466,7 +466,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Create a sandbox instance for emergency disaster recovery of an ApsaraDB RDS for MySQL database](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request CreateSandboxInstanceRequest
           * @return CreateSandboxInstanceResponse
@@ -478,7 +478,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Create a sandbox instance for emergency disaster recovery of an ApsaraDB RDS for MySQL database](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request CreateSandboxInstanceRequest
           * @return CreateSandboxInstanceResponse
@@ -490,7 +490,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DeleteSandboxInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -528,7 +528,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DeleteSandboxInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -566,7 +566,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DeleteSandboxInstanceRequest
           * @return DeleteSandboxInstanceResponse
@@ -578,7 +578,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DeleteSandboxInstanceRequest
           * @return DeleteSandboxInstanceResponse
@@ -600,10 +600,6 @@ namespace AlibabaCloud.SDK.Dbs20210101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
             {
                 query["RegionCode"] = request.RegionCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -635,10 +631,6 @@ namespace AlibabaCloud.SDK.Dbs20210101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
             {
                 query["RegionCode"] = request.RegionCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -683,10 +675,6 @@ namespace AlibabaCloud.SDK.Dbs20210101
             {
                 query["RegionCode"] = request.RegionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -717,10 +705,6 @@ namespace AlibabaCloud.SDK.Dbs20210101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
             {
                 query["RegionCode"] = request.RegionCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -765,10 +749,6 @@ namespace AlibabaCloud.SDK.Dbs20210101
             {
                 query["RegionCode"] = request.RegionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -799,10 +779,6 @@ namespace AlibabaCloud.SDK.Dbs20210101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
             {
                 query["RegionCode"] = request.RegionCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -836,7 +812,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request DescribeDownloadBackupSetStorageInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -886,7 +862,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request DescribeDownloadBackupSetStorageInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -936,7 +912,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request DescribeDownloadBackupSetStorageInfoRequest
           * @return DescribeDownloadBackupSetStorageInfoResponse
@@ -948,7 +924,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request DescribeDownloadBackupSetStorageInfoRequest
           * @return DescribeDownloadBackupSetStorageInfoResponse
@@ -960,7 +936,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request DescribeDownloadSupportRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -998,7 +974,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request DescribeDownloadSupportRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1036,7 +1012,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request DescribeDownloadSupportRequest
           * @return DescribeDownloadSupportResponse
@@ -1048,7 +1024,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request DescribeDownloadSupportRequest
           * @return DescribeDownloadSupportResponse
@@ -1060,7 +1036,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * You can create an advanced download task by point in time or backup set. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request DescribeDownloadTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1138,7 +1114,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * You can create an advanced download task by point in time or backup set. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request DescribeDownloadTaskRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1216,7 +1192,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * You can create an advanced download task by point in time or backup set. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request DescribeDownloadTaskRequest
           * @return DescribeDownloadTaskResponse
@@ -1228,7 +1204,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * You can create an advanced download task by point in time or backup file. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Advanced download](~~98819~~).
+          * You can create an advanced download task by point in time or backup set. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
           *
           * @param request DescribeDownloadTaskRequest
           * @return DescribeDownloadTaskResponse
@@ -1240,7 +1216,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Create a sandbox instance for emergency disaster recovery of an ApsaraDB RDS for MySQL database](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DescribeSandboxBackupSetsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1286,7 +1262,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Create a sandbox instance for emergency disaster recovery of an ApsaraDB RDS for MySQL database](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DescribeSandboxBackupSetsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1332,7 +1308,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Create a sandbox instance for emergency disaster recovery of an ApsaraDB RDS for MySQL database](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DescribeSandboxBackupSetsRequest
           * @return DescribeSandboxBackupSetsResponse
@@ -1344,7 +1320,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Create a sandbox instance for emergency disaster recovery of an ApsaraDB RDS for MySQL database](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DescribeSandboxBackupSetsRequest
           * @return DescribeSandboxBackupSetsResponse
@@ -1356,7 +1332,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DescribeSandboxInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1402,7 +1378,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DescribeSandboxInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1448,7 +1424,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DescribeSandboxInstancesRequest
           * @return DescribeSandboxInstancesResponse
@@ -1460,7 +1436,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DescribeSandboxInstancesRequest
           * @return DescribeSandboxInstancesResponse
@@ -1472,7 +1448,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Create a sandbox instance for emergency disaster recovery of an ApsaraDB RDS for MySQL database](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DescribeSandboxRecoveryTimeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1506,7 +1482,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Create a sandbox instance for emergency disaster recovery of an ApsaraDB RDS for MySQL database](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DescribeSandboxRecoveryTimeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1540,7 +1516,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Create a sandbox instance for emergency disaster recovery of an ApsaraDB RDS for MySQL database](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DescribeSandboxRecoveryTimeRequest
           * @return DescribeSandboxRecoveryTimeResponse
@@ -1552,7 +1528,7 @@ namespace AlibabaCloud.SDK.Dbs20210101
         }
 
         /**
-          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Create a sandbox instance for emergency disaster recovery of an ApsaraDB RDS for MySQL database](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). The API operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+          * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
           *
           * @param request DescribeSandboxRecoveryTimeRequest
           * @return DescribeSandboxRecoveryTimeResponse
@@ -1578,10 +1554,6 @@ namespace AlibabaCloud.SDK.Dbs20210101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
             {
                 query["RegionCode"] = request.RegionCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Retention))
             {
@@ -1621,10 +1593,6 @@ namespace AlibabaCloud.SDK.Dbs20210101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
             {
                 query["RegionCode"] = request.RegionCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Retention))
             {
@@ -1673,10 +1641,6 @@ namespace AlibabaCloud.SDK.Dbs20210101
             {
                 query["RegionCode"] = request.RegionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1707,10 +1671,6 @@ namespace AlibabaCloud.SDK.Dbs20210101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionCode))
             {
                 query["RegionCode"] = request.RegionCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
