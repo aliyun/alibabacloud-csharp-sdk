@@ -29,6 +29,18 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string DefaultDomain { get; set; }
 
+        [NameInMap("DkimAuthStatus")]
+        [Validation(Required=false)]
+        public string DkimAuthStatus { get; set; }
+
+        [NameInMap("DkimPublicKey")]
+        [Validation(Required=false)]
+        public string DkimPublicKey { get; set; }
+
+        [NameInMap("DkimRR")]
+        [Validation(Required=false)]
+        public string DkimRR { get; set; }
+
         [NameInMap("DnsMx")]
         [Validation(Required=false)]
         public string DnsMx { get; set; }
@@ -80,6 +92,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [NameInMap("SpfRecord")]
         [Validation(Required=false)]
         public string SpfRecord { get; set; }
+
+        [NameInMap("SpfRecordV2")]
+        [Validation(Required=false)]
+        public string SpfRecordV2 { get; set; }
 
         [NameInMap("TlDomainName")]
         [Validation(Required=false)]

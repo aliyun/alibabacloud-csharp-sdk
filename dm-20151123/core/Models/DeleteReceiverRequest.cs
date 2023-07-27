@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The ID of the recipient list.
+        /// </summary>
         [NameInMap("ReceiverId")]
         [Validation(Required=false)]
         public string ReceiverId { get; set; }

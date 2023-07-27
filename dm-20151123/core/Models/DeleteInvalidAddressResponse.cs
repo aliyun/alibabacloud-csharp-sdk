@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
-    public class UpdateMailAddressMsgCallBackUrlResponse : TeaModel {
+    public class DeleteInvalidAddressResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public UpdateMailAddressMsgCallBackUrlResponseBody Body { get; set; }
+        public DeleteInvalidAddressResponseBody Body { get; set; }
 
     }
 
