@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-        };
+
+        }
 
     }
 

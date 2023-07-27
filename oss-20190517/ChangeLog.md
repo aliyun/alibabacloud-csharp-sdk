@@ -1,3 +1,6 @@
+2023-07-27 Version: 1.0.7
+- Update client.
+
 2022-08-09 Version: 1.0.6
 - Generated csharp 2019-05-17 for Oss.
 

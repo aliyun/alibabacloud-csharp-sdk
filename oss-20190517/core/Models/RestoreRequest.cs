@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
             [NameInMap("Tier")]
             [Validation(Required=false)]
             public string Tier { get; set; }
-        };
+
+        }
 
     }
 

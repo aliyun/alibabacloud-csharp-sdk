@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
             [NameInMap("ReplicaKmsKeyID")]
             [Validation(Required=false)]
             public string ReplicaKmsKeyID { get; set; }
-        };
+
+        }
 
         [NameInMap("HistoricalObjectReplication")]
         [Validation(Required=false)]

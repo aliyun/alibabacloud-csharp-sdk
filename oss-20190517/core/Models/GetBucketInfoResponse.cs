@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetBucketInfoResponseBody Body { get; set; }
+        public BucketInfo Body { get; set; }
 
     }
 

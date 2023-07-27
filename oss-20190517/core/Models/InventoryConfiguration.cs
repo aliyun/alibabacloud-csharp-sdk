@@ -36,7 +36,8 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
             [NameInMap("Field")]
             [Validation(Required=false)]
             public List<string> Fields { get; set; }
-        };
+
+        }
 
         [NameInMap("Schedule")]
         [Validation(Required=false)]

@@ -24,7 +24,12 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
             [NameInMap("Referer")]
             [Validation(Required=false)]
             public List<string> Referer { get; set; }
-        };
+
+        }
+
+        [NameInMap("TruncatePath")]
+        [Validation(Required=false)]
+        public bool? TruncatePath { get; set; }
 
     }
 

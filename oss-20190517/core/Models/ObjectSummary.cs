@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public Owner Owner { get; set; }
 
+        [NameInMap("ResoreInfo")]
+        [Validation(Required=false)]
+        public string ResoreInfo { get; set; }
+
         [NameInMap("Size")]
         [Validation(Required=false)]
         public long? Size { get; set; }

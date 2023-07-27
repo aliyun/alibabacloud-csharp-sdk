@@ -36,10 +36,12 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
             [NameInMap("HistoricalObject")]
             [Validation(Required=false)]
             public string HistoricalObject { get; set; }
+
             [NameInMap("NewObject")]
             [Validation(Required=false)]
             public string NewObject { get; set; }
-        };
+
+        }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

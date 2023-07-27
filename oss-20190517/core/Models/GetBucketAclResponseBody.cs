@@ -16,7 +16,8 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
             [NameInMap("Grant")]
             [Validation(Required=false)]
             public string Grant { get; set; }
-        };
+
+        }
 
         [NameInMap("Owner")]
         [Validation(Required=false)]

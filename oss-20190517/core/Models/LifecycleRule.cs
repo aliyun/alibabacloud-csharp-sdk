@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
             [NameInMap("CreatedBeforeDate")]
             [Validation(Required=false)]
             public string CreatedBeforeDate { get; set; }
+
             [NameInMap("Days")]
             [Validation(Required=false)]
             public int? Days { get; set; }
-        };
+
+        }
 
         [NameInMap("Expiration")]
         [Validation(Required=false)]
@@ -28,13 +30,36 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
             [NameInMap("CreatedBeforeDate")]
             [Validation(Required=false)]
             public string CreatedBeforeDate { get; set; }
+
             [NameInMap("Days")]
             [Validation(Required=false)]
             public int? Days { get; set; }
+
             [NameInMap("ExpiredObjectDeleteMarker")]
             [Validation(Required=false)]
             public bool? ExpiredObjectDeleteMarker { get; set; }
-        };
+
+        }
+
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public LifecycleRuleFilter Filter { get; set; }
+        public class LifecycleRuleFilter : TeaModel {
+            [NameInMap("Not")]
+            [Validation(Required=false)]
+            public LifecycleRuleFilterNot Not { get; set; }
+            public class LifecycleRuleFilterNot : TeaModel {
+                [NameInMap("Prefix")]
+                [Validation(Required=false)]
+                public string Prefix { get; set; }
+
+                [NameInMap("Tag")]
+                [Validation(Required=false)]
+                public Tag Tag { get; set; }
+
+            }
+
+        }
 
         [NameInMap("ID")]
         [Validation(Required=false)]
@@ -47,15 +72,28 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
             [NameInMap("NoncurrentDays")]
             [Validation(Required=false)]
             public int? NoncurrentDays { get; set; }
-        };
+
+        }
 
         [NameInMap("NoncurrentVersionTransition")]
         [Validation(Required=false)]
         public List<LifecycleRuleNoncurrentVersionTransition> NoncurrentVersionTransition { get; set; }
         public class LifecycleRuleNoncurrentVersionTransition : TeaModel {
+            [NameInMap("AllowSmallFile")]
+            [Validation(Required=false)]
+            public bool? AllowSmallFile { get; set; }
+
+            [NameInMap("IsAccessTime")]
+            [Validation(Required=false)]
+            public bool? IsAccessTime { get; set; }
+
             [NameInMap("NoncurrentDays")]
             [Validation(Required=false)]
             public int? NoncurrentDays { get; set; }
+
+            [NameInMap("ReturnToStdWhenVisit")]
+            [Validation(Required=false)]
+            public bool? ReturnToStdWhenVisit { get; set; }
 
             [NameInMap("StorageClass")]
             [Validation(Required=false)]
@@ -73,22 +111,16 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<LifecycleRuleTag> Tag { get; set; }
-        public class LifecycleRuleTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public List<Tag> Tag { get; set; }
 
         [NameInMap("Transition")]
         [Validation(Required=false)]
         public List<LifecycleRuleLifecycleTransition> LifecycleTransition { get; set; }
         public class LifecycleRuleLifecycleTransition : TeaModel {
+            [NameInMap("AllowSmallFile")]
+            [Validation(Required=false)]
+            public bool? AllowSmallFile { get; set; }
+
             [NameInMap("CreatedBeforeDate")]
             [Validation(Required=false)]
             public string CreatedBeforeDate { get; set; }
@@ -96,6 +128,14 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
             [NameInMap("Days")]
             [Validation(Required=false)]
             public int? Days { get; set; }
+
+            [NameInMap("IsAccessTime")]
+            [Validation(Required=false)]
+            public bool? IsAccessTime { get; set; }
+
+            [NameInMap("ReturnToStdWhenVisit")]
+            [Validation(Required=false)]
+            public bool? ReturnToStdWhenVisit { get; set; }
 
             [NameInMap("StorageClass")]
             [Validation(Required=false)]

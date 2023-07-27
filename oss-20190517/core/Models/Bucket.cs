@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("StorageClass")]
         [Validation(Required=false)]
         public string StorageClass { get; set; }

@@ -9,36 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
     public class ListBucketsResponseBody : TeaModel {
-        [NameInMap("Buckets")]
+        [NameInMap("buckets")]
         [Validation(Required=false)]
-        public ListBucketsResponseBodyBuckets Buckets { get; set; }
-        public class ListBucketsResponseBodyBuckets : TeaModel {
-            [NameInMap("Bucket")]
-            [Validation(Required=false)]
-            public List<Bucket> Buckets { get; set; }
-        };
+        public List<Bucket> Buckets { get; set; }
 
-        [NameInMap("IsTruncated")]
+        [NameInMap("isTruncated")]
         [Validation(Required=false)]
         public bool? IsTruncated { get; set; }
 
-        [NameInMap("Marker")]
+        [NameInMap("marker")]
         [Validation(Required=false)]
         public string Marker { get; set; }
 
-        [NameInMap("MaxKeys")]
+        [NameInMap("maxKeys")]
         [Validation(Required=false)]
         public long? MaxKeys { get; set; }
 
-        [NameInMap("NextMarker")]
+        [NameInMap("nextMarker")]
         [Validation(Required=false)]
         public string NextMarker { get; set; }
 
-        [NameInMap("Owner")]
+        [NameInMap("owner")]
         [Validation(Required=false)]
         public Owner Owner { get; set; }
 
-        [NameInMap("Prefix")]
+        [NameInMap("prefix")]
         [Validation(Required=false)]
         public string Prefix { get; set; }
 

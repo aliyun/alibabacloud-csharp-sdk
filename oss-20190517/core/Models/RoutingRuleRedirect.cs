@@ -36,20 +36,30 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
             [NameInMap("Pass")]
             [Validation(Required=false)]
             public List<string> Pass { get; set; }
+
             [NameInMap("PassAll")]
             [Validation(Required=false)]
             public bool? PassAll { get; set; }
+
             [NameInMap("Remove")]
             [Validation(Required=false)]
             public List<string> Remove { get; set; }
+
             [NameInMap("Set")]
             [Validation(Required=false)]
             public List<RoutingRuleRedirectMirrorHeadersSet> Set { get; set; }
             public class RoutingRuleRedirectMirrorHeadersSet : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
                 public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
                 public string Value { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("MirrorPassQueryString")]
         [Validation(Required=false)]

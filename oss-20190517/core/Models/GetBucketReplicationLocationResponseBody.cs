@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
             [NameInMap("LocationTransferType")]
             [Validation(Required=false)]
             public List<LocationTransferType> LocationTransferTypes { get; set; }
-        };
+
+        }
 
     }
 

@@ -9,7 +9,7 @@ using Tea;
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
     public class CreateSelectObjectMetaRequest : TeaModel {
-        [NameInMap("body")]
+        [NameInMap("SelectMetaRequest")]
         [Validation(Required=false)]
         public SelectMetaRequest SelectMetaRequest { get; set; }
 

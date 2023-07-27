@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
             [NameInMap("RoutingRule")]
             [Validation(Required=false)]
             public List<RoutingRule> RoutingRule { get; set; }
-        };
+
+        }
 
     }
 

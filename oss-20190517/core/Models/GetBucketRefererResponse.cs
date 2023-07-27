@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetBucketRefererResponseBody Body { get; set; }
+        public RefererConfiguration Body { get; set; }
 
     }
 

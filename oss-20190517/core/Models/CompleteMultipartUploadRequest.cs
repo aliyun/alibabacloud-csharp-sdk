@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
     public class CompleteMultipartUploadRequest : TeaModel {
-        [NameInMap("completeMultipartUpload")]
+        [NameInMap("CompleteMultipartUpload")]
         [Validation(Required=false)]
-        public CompleteMultipartUpload CompleteMultipartUpload { get; set; }
+        public CompleteMultipartUpload Body { get; set; }
 
         [NameInMap("encoding-type")]
         [Validation(Required=false)]

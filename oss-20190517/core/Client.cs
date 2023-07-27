@@ -25,20 +25,6 @@ namespace AlibabaCloud.SDK.Oss20190517
         }
 
 
-        public AbortBucketWormResponse AbortBucketWorm(string bucket)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return AbortBucketWormWithOptions(bucket, headers, runtime);
-        }
-
-        public async Task<AbortBucketWormResponse> AbortBucketWormAsync(string bucket)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await AbortBucketWormWithOptionsAsync(bucket, headers, runtime);
-        }
-
         public AbortBucketWormResponse AbortBucketWormWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -87,18 +73,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<AbortBucketWormResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public AbortMultipartUploadResponse AbortMultipartUpload(string bucket, string key, AbortMultipartUploadRequest request)
+        public AbortBucketWormResponse AbortBucketWorm(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return AbortMultipartUploadWithOptions(bucket, key, request, headers, runtime);
+            return AbortBucketWormWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<AbortMultipartUploadResponse> AbortMultipartUploadAsync(string bucket, string key, AbortMultipartUploadRequest request)
+        public async Task<AbortBucketWormResponse> AbortBucketWormAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await AbortMultipartUploadWithOptionsAsync(bucket, key, request, headers, runtime);
+            return await AbortBucketWormWithOptionsAsync(bucket, headers, runtime);
         }
 
         public AbortMultipartUploadResponse AbortMultipartUploadWithOptions(string bucket, string key, AbortMultipartUploadRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -163,18 +149,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<AbortMultipartUploadResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public AppendObjectResponse AppendObject(string bucket, string key, AppendObjectRequest request)
+        public AbortMultipartUploadResponse AbortMultipartUpload(string bucket, string key, AbortMultipartUploadRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            AppendObjectHeaders headers = new AppendObjectHeaders();
-            return AppendObjectWithOptions(bucket, key, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AbortMultipartUploadWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<AppendObjectResponse> AppendObjectAsync(string bucket, string key, AppendObjectRequest request)
+        public async Task<AbortMultipartUploadResponse> AbortMultipartUploadAsync(string bucket, string key, AbortMultipartUploadRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            AppendObjectHeaders headers = new AppendObjectHeaders();
-            return await AppendObjectWithOptionsAsync(bucket, key, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AbortMultipartUploadWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public AppendObjectResponse AppendObjectWithOptions(string bucket, string key, AppendObjectRequest request, AppendObjectHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -325,18 +311,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<AppendObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public CompleteBucketWormResponse CompleteBucketWorm(string bucket, CompleteBucketWormRequest request)
+        public AppendObjectResponse AppendObject(string bucket, string key, AppendObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CompleteBucketWormWithOptions(bucket, request, headers, runtime);
+            AppendObjectHeaders headers = new AppendObjectHeaders();
+            return AppendObjectWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<CompleteBucketWormResponse> CompleteBucketWormAsync(string bucket, CompleteBucketWormRequest request)
+        public async Task<AppendObjectResponse> AppendObjectAsync(string bucket, string key, AppendObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CompleteBucketWormWithOptionsAsync(bucket, request, headers, runtime);
+            AppendObjectHeaders headers = new AppendObjectHeaders();
+            return await AppendObjectWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public CompleteBucketWormResponse CompleteBucketWormWithOptions(string bucket, CompleteBucketWormRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -401,18 +387,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<CompleteBucketWormResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public CompleteMultipartUploadResponse CompleteMultipartUpload(string bucket, string key, CompleteMultipartUploadRequest request)
+        public CompleteBucketWormResponse CompleteBucketWorm(string bucket, CompleteBucketWormRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            CompleteMultipartUploadHeaders headers = new CompleteMultipartUploadHeaders();
-            return CompleteMultipartUploadWithOptions(bucket, key, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CompleteBucketWormWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<CompleteMultipartUploadResponse> CompleteMultipartUploadAsync(string bucket, string key, CompleteMultipartUploadRequest request)
+        public async Task<CompleteBucketWormResponse> CompleteBucketWormAsync(string bucket, CompleteBucketWormRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            CompleteMultipartUploadHeaders headers = new CompleteMultipartUploadHeaders();
-            return await CompleteMultipartUploadWithOptionsAsync(bucket, key, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CompleteBucketWormWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public CompleteMultipartUploadResponse CompleteMultipartUploadWithOptions(string bucket, string key, CompleteMultipartUploadRequest request, CompleteMultipartUploadHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -428,11 +414,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadId))
             {
                 query["uploadId"] = request.UploadId;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompleteMultipartUpload.ToMap()))
-            {
-                body["completeMultipartUpload"] = request.CompleteMultipartUpload;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -452,7 +433,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 HostMap = hostMap,
                 Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -483,11 +464,6 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 query["uploadId"] = request.UploadId;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompleteMultipartUpload.ToMap()))
-            {
-                body["completeMultipartUpload"] = request.CompleteMultipartUpload;
-            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -506,7 +482,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 HostMap = hostMap,
                 Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -523,18 +499,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<CompleteMultipartUploadResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public CopyObjectResponse CopyObject(string bucket, string key)
+        public CompleteMultipartUploadResponse CompleteMultipartUpload(string bucket, string key, CompleteMultipartUploadRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            CopyObjectHeaders headers = new CopyObjectHeaders();
-            return CopyObjectWithOptions(bucket, key, headers, runtime);
+            CompleteMultipartUploadHeaders headers = new CompleteMultipartUploadHeaders();
+            return CompleteMultipartUploadWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<CopyObjectResponse> CopyObjectAsync(string bucket, string key)
+        public async Task<CompleteMultipartUploadResponse> CompleteMultipartUploadAsync(string bucket, string key, CompleteMultipartUploadRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            CopyObjectHeaders headers = new CopyObjectHeaders();
-            return await CopyObjectWithOptionsAsync(bucket, key, headers, runtime);
+            CompleteMultipartUploadHeaders headers = new CompleteMultipartUploadHeaders();
+            return await CompleteMultipartUploadWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public CopyObjectResponse CopyObjectWithOptions(string bucket, string key, CopyObjectHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -707,18 +683,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<CopyObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public CreateSelectObjectMetaResponse CreateSelectObjectMeta(string bucket, string key, CreateSelectObjectMetaRequest request)
+        public CopyObjectResponse CopyObject(string bucket, string key)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateSelectObjectMetaWithOptions(bucket, key, request, headers, runtime);
+            CopyObjectHeaders headers = new CopyObjectHeaders();
+            return CopyObjectWithOptions(bucket, key, headers, runtime);
         }
 
-        public async Task<CreateSelectObjectMetaResponse> CreateSelectObjectMetaAsync(string bucket, string key, CreateSelectObjectMetaRequest request)
+        public async Task<CopyObjectResponse> CopyObjectAsync(string bucket, string key)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateSelectObjectMetaWithOptionsAsync(bucket, key, request, headers, runtime);
+            CopyObjectHeaders headers = new CopyObjectHeaders();
+            return await CopyObjectWithOptionsAsync(bucket, key, headers, runtime);
         }
 
         public CreateSelectObjectMetaResponse CreateSelectObjectMetaWithOptions(string bucket, string key, CreateSelectObjectMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -730,7 +706,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.SelectMetaRequest.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.SelectMetaRequest),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -756,7 +732,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.SelectMetaRequest.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.SelectMetaRequest),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -773,18 +749,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<CreateSelectObjectMetaResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteBucketResponse DeleteBucket(string bucket)
+        public CreateSelectObjectMetaResponse CreateSelectObjectMeta(string bucket, string key, CreateSelectObjectMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteBucketWithOptions(bucket, headers, runtime);
+            return CreateSelectObjectMetaWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<DeleteBucketResponse> DeleteBucketAsync(string bucket)
+        public async Task<CreateSelectObjectMetaResponse> CreateSelectObjectMetaAsync(string bucket, string key, CreateSelectObjectMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteBucketWithOptionsAsync(bucket, headers, runtime);
+            return await CreateSelectObjectMetaWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public DeleteBucketResponse DeleteBucketWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -835,18 +811,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteBucketResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteBucketCorsResponse DeleteBucketCors(string bucket)
+        public DeleteBucketResponse DeleteBucket(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteBucketCorsWithOptions(bucket, headers, runtime);
+            return DeleteBucketWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<DeleteBucketCorsResponse> DeleteBucketCorsAsync(string bucket)
+        public async Task<DeleteBucketResponse> DeleteBucketAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteBucketCorsWithOptionsAsync(bucket, headers, runtime);
+            return await DeleteBucketWithOptionsAsync(bucket, headers, runtime);
         }
 
         public DeleteBucketCorsResponse DeleteBucketCorsWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -897,18 +873,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteBucketCorsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteBucketEncryptionResponse DeleteBucketEncryption(string bucket)
+        public DeleteBucketCorsResponse DeleteBucketCors(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteBucketEncryptionWithOptions(bucket, headers, runtime);
+            return DeleteBucketCorsWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<DeleteBucketEncryptionResponse> DeleteBucketEncryptionAsync(string bucket)
+        public async Task<DeleteBucketCorsResponse> DeleteBucketCorsAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteBucketEncryptionWithOptionsAsync(bucket, headers, runtime);
+            return await DeleteBucketCorsWithOptionsAsync(bucket, headers, runtime);
         }
 
         public DeleteBucketEncryptionResponse DeleteBucketEncryptionWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -959,18 +935,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteBucketEncryptionResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteBucketInventoryResponse DeleteBucketInventory(string bucket, DeleteBucketInventoryRequest request)
+        public DeleteBucketEncryptionResponse DeleteBucketEncryption(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteBucketInventoryWithOptions(bucket, request, headers, runtime);
+            return DeleteBucketEncryptionWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<DeleteBucketInventoryResponse> DeleteBucketInventoryAsync(string bucket, DeleteBucketInventoryRequest request)
+        public async Task<DeleteBucketEncryptionResponse> DeleteBucketEncryptionAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteBucketInventoryWithOptionsAsync(bucket, request, headers, runtime);
+            return await DeleteBucketEncryptionWithOptionsAsync(bucket, headers, runtime);
         }
 
         public DeleteBucketInventoryResponse DeleteBucketInventoryWithOptions(string bucket, DeleteBucketInventoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1035,18 +1011,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteBucketInventoryResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteBucketLifecycleResponse DeleteBucketLifecycle(string bucket)
+        public DeleteBucketInventoryResponse DeleteBucketInventory(string bucket, DeleteBucketInventoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteBucketLifecycleWithOptions(bucket, headers, runtime);
+            return DeleteBucketInventoryWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<DeleteBucketLifecycleResponse> DeleteBucketLifecycleAsync(string bucket)
+        public async Task<DeleteBucketInventoryResponse> DeleteBucketInventoryAsync(string bucket, DeleteBucketInventoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteBucketLifecycleWithOptionsAsync(bucket, headers, runtime);
+            return await DeleteBucketInventoryWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public DeleteBucketLifecycleResponse DeleteBucketLifecycleWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1097,18 +1073,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteBucketLifecycleResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteBucketLoggingResponse DeleteBucketLogging(string bucket)
+        public DeleteBucketLifecycleResponse DeleteBucketLifecycle(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteBucketLoggingWithOptions(bucket, headers, runtime);
+            return DeleteBucketLifecycleWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<DeleteBucketLoggingResponse> DeleteBucketLoggingAsync(string bucket)
+        public async Task<DeleteBucketLifecycleResponse> DeleteBucketLifecycleAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteBucketLoggingWithOptionsAsync(bucket, headers, runtime);
+            return await DeleteBucketLifecycleWithOptionsAsync(bucket, headers, runtime);
         }
 
         public DeleteBucketLoggingResponse DeleteBucketLoggingWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1159,18 +1135,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteBucketLoggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteBucketPolicyResponse DeleteBucketPolicy(string bucket)
+        public DeleteBucketLoggingResponse DeleteBucketLogging(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteBucketPolicyWithOptions(bucket, headers, runtime);
+            return DeleteBucketLoggingWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<DeleteBucketPolicyResponse> DeleteBucketPolicyAsync(string bucket)
+        public async Task<DeleteBucketLoggingResponse> DeleteBucketLoggingAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteBucketPolicyWithOptionsAsync(bucket, headers, runtime);
+            return await DeleteBucketLoggingWithOptionsAsync(bucket, headers, runtime);
         }
 
         public DeleteBucketPolicyResponse DeleteBucketPolicyWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1221,18 +1197,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteBucketPolicyResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteBucketReplicationResponse DeleteBucketReplication(string bucket, DeleteBucketReplicationRequest request)
+        public DeleteBucketPolicyResponse DeleteBucketPolicy(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteBucketReplicationWithOptions(bucket, request, headers, runtime);
+            return DeleteBucketPolicyWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<DeleteBucketReplicationResponse> DeleteBucketReplicationAsync(string bucket, DeleteBucketReplicationRequest request)
+        public async Task<DeleteBucketPolicyResponse> DeleteBucketPolicyAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteBucketReplicationWithOptionsAsync(bucket, request, headers, runtime);
+            return await DeleteBucketPolicyWithOptionsAsync(bucket, headers, runtime);
         }
 
         public DeleteBucketReplicationResponse DeleteBucketReplicationWithOptions(string bucket, DeleteBucketReplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1244,7 +1220,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1270,7 +1246,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1287,18 +1263,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteBucketReplicationResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteBucketTagsResponse DeleteBucketTags(string bucket)
+        public DeleteBucketReplicationResponse DeleteBucketReplication(string bucket, DeleteBucketReplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteBucketTagsWithOptions(bucket, headers, runtime);
+            return DeleteBucketReplicationWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<DeleteBucketTagsResponse> DeleteBucketTagsAsync(string bucket)
+        public async Task<DeleteBucketReplicationResponse> DeleteBucketReplicationAsync(string bucket, DeleteBucketReplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteBucketTagsWithOptionsAsync(bucket, headers, runtime);
+            return await DeleteBucketReplicationWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public DeleteBucketTagsResponse DeleteBucketTagsWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1349,18 +1325,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteBucketTagsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteBucketWebsiteResponse DeleteBucketWebsite(string bucket)
+        public DeleteBucketTagsResponse DeleteBucketTags(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteBucketWebsiteWithOptions(bucket, headers, runtime);
+            return DeleteBucketTagsWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<DeleteBucketWebsiteResponse> DeleteBucketWebsiteAsync(string bucket)
+        public async Task<DeleteBucketTagsResponse> DeleteBucketTagsAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteBucketWebsiteWithOptionsAsync(bucket, headers, runtime);
+            return await DeleteBucketTagsWithOptionsAsync(bucket, headers, runtime);
         }
 
         public DeleteBucketWebsiteResponse DeleteBucketWebsiteWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1411,18 +1387,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteBucketWebsiteResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteLiveChannelResponse DeleteLiveChannel(string bucket, string channel)
+        public DeleteBucketWebsiteResponse DeleteBucketWebsite(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteLiveChannelWithOptions(bucket, channel, headers, runtime);
+            return DeleteBucketWebsiteWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<DeleteLiveChannelResponse> DeleteLiveChannelAsync(string bucket, string channel)
+        public async Task<DeleteBucketWebsiteResponse> DeleteBucketWebsiteAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteLiveChannelWithOptionsAsync(bucket, channel, headers, runtime);
+            return await DeleteBucketWebsiteWithOptionsAsync(bucket, headers, runtime);
         }
 
         public DeleteLiveChannelResponse DeleteLiveChannelWithOptions(string bucket, string channel, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1473,21 +1449,21 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteLiveChannelResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteMultipleObjectsResponse DeleteMultipleObjects(string bucket, DeleteMultipleObjectsRequest request)
+        public DeleteLiveChannelResponse DeleteLiveChannel(string bucket, string channel)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteMultipleObjectsWithOptions(bucket, request, headers, runtime);
+            return DeleteLiveChannelWithOptions(bucket, channel, headers, runtime);
         }
 
-        public async Task<DeleteMultipleObjectsResponse> DeleteMultipleObjectsAsync(string bucket, DeleteMultipleObjectsRequest request)
+        public async Task<DeleteLiveChannelResponse> DeleteLiveChannelAsync(string bucket, string channel)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteMultipleObjectsWithOptionsAsync(bucket, request, headers, runtime);
+            return await DeleteLiveChannelWithOptionsAsync(bucket, channel, headers, runtime);
         }
 
-        public DeleteMultipleObjectsResponse DeleteMultipleObjectsWithOptions(string bucket, DeleteMultipleObjectsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteMultipleObjectsResponse DeleteMultipleObjectsWithOptions(string bucket, DeleteMultipleObjectsRequest request, DeleteMultipleObjectsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -1497,12 +1473,21 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 query["encoding-type"] = request.EncodingType;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.ContentMd5))
+            {
+                realHeaders["content-md5"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.ContentMd5);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Delete.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Delete),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1519,7 +1504,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteMultipleObjectsResponse>(Execute(params_, req, runtime));
         }
 
-        public async Task<DeleteMultipleObjectsResponse> DeleteMultipleObjectsWithOptionsAsync(string bucket, DeleteMultipleObjectsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteMultipleObjectsResponse> DeleteMultipleObjectsWithOptionsAsync(string bucket, DeleteMultipleObjectsRequest request, DeleteMultipleObjectsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -1529,12 +1514,21 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 query["encoding-type"] = request.EncodingType;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.ContentMd5))
+            {
+                realHeaders["content-md5"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.ContentMd5);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Delete.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Delete),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1551,18 +1545,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteMultipleObjectsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteObjectResponse DeleteObject(string bucket, string key, DeleteObjectRequest request)
+        public DeleteMultipleObjectsResponse DeleteMultipleObjects(string bucket, DeleteMultipleObjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteObjectWithOptions(bucket, key, request, headers, runtime);
+            DeleteMultipleObjectsHeaders headers = new DeleteMultipleObjectsHeaders();
+            return DeleteMultipleObjectsWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<DeleteObjectResponse> DeleteObjectAsync(string bucket, string key, DeleteObjectRequest request)
+        public async Task<DeleteMultipleObjectsResponse> DeleteMultipleObjectsAsync(string bucket, DeleteMultipleObjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteObjectWithOptionsAsync(bucket, key, request, headers, runtime);
+            DeleteMultipleObjectsHeaders headers = new DeleteMultipleObjectsHeaders();
+            return await DeleteMultipleObjectsWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public DeleteObjectResponse DeleteObjectWithOptions(string bucket, string key, DeleteObjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1627,18 +1621,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DeleteObjectTaggingResponse DeleteObjectTagging(string bucket, string key, DeleteObjectTaggingRequest request)
+        public DeleteObjectResponse DeleteObject(string bucket, string key, DeleteObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteObjectTaggingWithOptions(bucket, key, request, headers, runtime);
+            return DeleteObjectWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<DeleteObjectTaggingResponse> DeleteObjectTaggingAsync(string bucket, string key, DeleteObjectTaggingRequest request)
+        public async Task<DeleteObjectResponse> DeleteObjectAsync(string bucket, string key, DeleteObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteObjectTaggingWithOptionsAsync(bucket, key, request, headers, runtime);
+            return await DeleteObjectWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public DeleteObjectTaggingResponse DeleteObjectTaggingWithOptions(string bucket, string key, DeleteObjectTaggingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1703,18 +1697,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DeleteObjectTaggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
+        public DeleteObjectTaggingResponse DeleteObjectTagging(string bucket, string key, DeleteObjectTaggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeRegionsWithOptions(request, headers, runtime);
+            return DeleteObjectTaggingWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
+        public async Task<DeleteObjectTaggingResponse> DeleteObjectTaggingAsync(string bucket, string key, DeleteObjectTaggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeRegionsWithOptionsAsync(request, headers, runtime);
+            return await DeleteObjectTaggingWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1773,18 +1767,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<DescribeRegionsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ExtendBucketWormResponse ExtendBucketWorm(string bucket, ExtendBucketWormRequest request)
+        public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ExtendBucketWormWithOptions(bucket, request, headers, runtime);
+            return DescribeRegionsWithOptions(request, headers, runtime);
         }
 
-        public async Task<ExtendBucketWormResponse> ExtendBucketWormAsync(string bucket, ExtendBucketWormRequest request)
+        public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ExtendBucketWormWithOptionsAsync(bucket, request, headers, runtime);
+            return await DescribeRegionsWithOptionsAsync(request, headers, runtime);
         }
 
         public ExtendBucketWormResponse ExtendBucketWormWithOptions(string bucket, ExtendBucketWormRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1797,17 +1791,12 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 query["wormId"] = request.WormId;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendWormConfiguration.ToMap()))
-            {
-                body["extendWormConfiguration"] = request.ExtendWormConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1834,17 +1823,12 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 query["wormId"] = request.WormId;
             }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendWormConfiguration.ToMap()))
-            {
-                body["extendWormConfiguration"] = request.ExtendWormConfiguration;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1861,18 +1845,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<ExtendBucketWormResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketAclResponse GetBucketAcl(string bucket)
+        public ExtendBucketWormResponse ExtendBucketWorm(string bucket, ExtendBucketWormRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketAclWithOptions(bucket, headers, runtime);
+            return ExtendBucketWormWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<GetBucketAclResponse> GetBucketAclAsync(string bucket)
+        public async Task<ExtendBucketWormResponse> ExtendBucketWormAsync(string bucket, ExtendBucketWormRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketAclWithOptionsAsync(bucket, headers, runtime);
+            return await ExtendBucketWormWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public GetBucketAclResponse GetBucketAclWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1923,18 +1907,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketAclResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketCorsResponse GetBucketCors(string bucket)
+        public GetBucketAclResponse GetBucketAcl(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketCorsWithOptions(bucket, headers, runtime);
+            return GetBucketAclWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketCorsResponse> GetBucketCorsAsync(string bucket)
+        public async Task<GetBucketAclResponse> GetBucketAclAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketCorsWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketAclWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketCorsResponse GetBucketCorsWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1985,18 +1969,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketCorsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketEncryptionResponse GetBucketEncryption(string bucket)
+        public GetBucketCorsResponse GetBucketCors(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketEncryptionWithOptions(bucket, headers, runtime);
+            return GetBucketCorsWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketEncryptionResponse> GetBucketEncryptionAsync(string bucket)
+        public async Task<GetBucketCorsResponse> GetBucketCorsAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketEncryptionWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketCorsWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketEncryptionResponse GetBucketEncryptionWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2047,18 +2031,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketEncryptionResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketInfoResponse GetBucketInfo(string bucket)
+        public GetBucketEncryptionResponse GetBucketEncryption(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketInfoWithOptions(bucket, headers, runtime);
+            return GetBucketEncryptionWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketInfoResponse> GetBucketInfoAsync(string bucket)
+        public async Task<GetBucketEncryptionResponse> GetBucketEncryptionAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketInfoWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketEncryptionWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketInfoResponse GetBucketInfoWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2109,18 +2093,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketInfoResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketInventoryResponse GetBucketInventory(string bucket, GetBucketInventoryRequest request)
+        public GetBucketInfoResponse GetBucketInfo(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketInventoryWithOptions(bucket, request, headers, runtime);
+            return GetBucketInfoWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketInventoryResponse> GetBucketInventoryAsync(string bucket, GetBucketInventoryRequest request)
+        public async Task<GetBucketInfoResponse> GetBucketInfoAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketInventoryWithOptionsAsync(bucket, request, headers, runtime);
+            return await GetBucketInfoWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketInventoryResponse GetBucketInventoryWithOptions(string bucket, GetBucketInventoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2185,18 +2169,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketInventoryResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketLifecycleResponse GetBucketLifecycle(string bucket)
+        public GetBucketInventoryResponse GetBucketInventory(string bucket, GetBucketInventoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketLifecycleWithOptions(bucket, headers, runtime);
+            return GetBucketInventoryWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<GetBucketLifecycleResponse> GetBucketLifecycleAsync(string bucket)
+        public async Task<GetBucketInventoryResponse> GetBucketInventoryAsync(string bucket, GetBucketInventoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketLifecycleWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketInventoryWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public GetBucketLifecycleResponse GetBucketLifecycleWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2247,18 +2231,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketLifecycleResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketLocationResponse GetBucketLocation(string bucket)
+        public GetBucketLifecycleResponse GetBucketLifecycle(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketLocationWithOptions(bucket, headers, runtime);
+            return GetBucketLifecycleWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketLocationResponse> GetBucketLocationAsync(string bucket)
+        public async Task<GetBucketLifecycleResponse> GetBucketLifecycleAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketLocationWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketLifecycleWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketLocationResponse GetBucketLocationWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2309,18 +2293,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketLocationResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketLoggingResponse GetBucketLogging(string bucket)
+        public GetBucketLocationResponse GetBucketLocation(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketLoggingWithOptions(bucket, headers, runtime);
+            return GetBucketLocationWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketLoggingResponse> GetBucketLoggingAsync(string bucket)
+        public async Task<GetBucketLocationResponse> GetBucketLocationAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketLoggingWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketLocationWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketLoggingResponse GetBucketLoggingWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2371,18 +2355,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketLoggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketPolicyResponse GetBucketPolicy(string bucket)
+        public GetBucketLoggingResponse GetBucketLogging(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketPolicyWithOptions(bucket, headers, runtime);
+            return GetBucketLoggingWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketPolicyResponse> GetBucketPolicyAsync(string bucket)
+        public async Task<GetBucketLoggingResponse> GetBucketLoggingAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketPolicyWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketLoggingWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketPolicyResponse GetBucketPolicyWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2433,18 +2417,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketPolicyResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketRefererResponse GetBucketReferer(string bucket)
+        public GetBucketPolicyResponse GetBucketPolicy(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketRefererWithOptions(bucket, headers, runtime);
+            return GetBucketPolicyWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketRefererResponse> GetBucketRefererAsync(string bucket)
+        public async Task<GetBucketPolicyResponse> GetBucketPolicyAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketRefererWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketPolicyWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketRefererResponse GetBucketRefererWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2466,7 +2450,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetBucketRefererResponse>(Execute(params_, req, runtime));
         }
@@ -2490,23 +2474,23 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetBucketRefererResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketReplicationResponse GetBucketReplication(string bucket)
+        public GetBucketRefererResponse GetBucketReferer(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketReplicationWithOptions(bucket, headers, runtime);
+            return GetBucketRefererWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketReplicationResponse> GetBucketReplicationAsync(string bucket)
+        public async Task<GetBucketRefererResponse> GetBucketRefererAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketReplicationWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketRefererWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketReplicationResponse GetBucketReplicationWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2557,18 +2541,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketReplicationResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketReplicationLocationResponse GetBucketReplicationLocation(string bucket)
+        public GetBucketReplicationResponse GetBucketReplication(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketReplicationLocationWithOptions(bucket, headers, runtime);
+            return GetBucketReplicationWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketReplicationLocationResponse> GetBucketReplicationLocationAsync(string bucket)
+        public async Task<GetBucketReplicationResponse> GetBucketReplicationAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketReplicationLocationWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketReplicationWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketReplicationLocationResponse GetBucketReplicationLocationWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2619,18 +2603,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketReplicationLocationResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketReplicationProgressResponse GetBucketReplicationProgress(string bucket, GetBucketReplicationProgressRequest request)
+        public GetBucketReplicationLocationResponse GetBucketReplicationLocation(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketReplicationProgressWithOptions(bucket, request, headers, runtime);
+            return GetBucketReplicationLocationWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketReplicationProgressResponse> GetBucketReplicationProgressAsync(string bucket, GetBucketReplicationProgressRequest request)
+        public async Task<GetBucketReplicationLocationResponse> GetBucketReplicationLocationAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketReplicationProgressWithOptionsAsync(bucket, request, headers, runtime);
+            return await GetBucketReplicationLocationWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketReplicationProgressResponse GetBucketReplicationProgressWithOptions(string bucket, GetBucketReplicationProgressRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2695,18 +2679,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketReplicationProgressResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketRequestPaymentResponse GetBucketRequestPayment(string bucket)
+        public GetBucketReplicationProgressResponse GetBucketReplicationProgress(string bucket, GetBucketReplicationProgressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketRequestPaymentWithOptions(bucket, headers, runtime);
+            return GetBucketReplicationProgressWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<GetBucketRequestPaymentResponse> GetBucketRequestPaymentAsync(string bucket)
+        public async Task<GetBucketReplicationProgressResponse> GetBucketReplicationProgressAsync(string bucket, GetBucketReplicationProgressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketRequestPaymentWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketReplicationProgressWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public GetBucketRequestPaymentResponse GetBucketRequestPaymentWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2757,18 +2741,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketRequestPaymentResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketTagsResponse GetBucketTags(string bucket)
+        public GetBucketRequestPaymentResponse GetBucketRequestPayment(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketTagsWithOptions(bucket, headers, runtime);
+            return GetBucketRequestPaymentWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketTagsResponse> GetBucketTagsAsync(string bucket)
+        public async Task<GetBucketRequestPaymentResponse> GetBucketRequestPaymentAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketTagsWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketRequestPaymentWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketTagsResponse GetBucketTagsWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2819,18 +2803,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketTagsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketTransferAccelerationResponse GetBucketTransferAcceleration(string bucket)
+        public GetBucketTagsResponse GetBucketTags(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketTransferAccelerationWithOptions(bucket, headers, runtime);
+            return GetBucketTagsWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketTransferAccelerationResponse> GetBucketTransferAccelerationAsync(string bucket)
+        public async Task<GetBucketTagsResponse> GetBucketTagsAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketTransferAccelerationWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketTagsWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketTransferAccelerationResponse GetBucketTransferAccelerationWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2881,18 +2865,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketTransferAccelerationResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketVersioningResponse GetBucketVersioning(string bucket)
+        public GetBucketTransferAccelerationResponse GetBucketTransferAcceleration(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketVersioningWithOptions(bucket, headers, runtime);
+            return GetBucketTransferAccelerationWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketVersioningResponse> GetBucketVersioningAsync(string bucket)
+        public async Task<GetBucketTransferAccelerationResponse> GetBucketTransferAccelerationAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketVersioningWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketTransferAccelerationWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketVersioningResponse GetBucketVersioningWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2943,18 +2927,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketVersioningResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketWebsiteResponse GetBucketWebsite(string bucket)
+        public GetBucketVersioningResponse GetBucketVersioning(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketWebsiteWithOptions(bucket, headers, runtime);
+            return GetBucketVersioningWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketWebsiteResponse> GetBucketWebsiteAsync(string bucket)
+        public async Task<GetBucketVersioningResponse> GetBucketVersioningAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketWebsiteWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketVersioningWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketWebsiteResponse GetBucketWebsiteWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3005,18 +2989,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketWebsiteResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetBucketWormResponse GetBucketWorm(string bucket)
+        public GetBucketWebsiteResponse GetBucketWebsite(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetBucketWormWithOptions(bucket, headers, runtime);
+            return GetBucketWebsiteWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetBucketWormResponse> GetBucketWormAsync(string bucket)
+        public async Task<GetBucketWebsiteResponse> GetBucketWebsiteAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetBucketWormWithOptionsAsync(bucket, headers, runtime);
+            return await GetBucketWebsiteWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetBucketWormResponse GetBucketWormWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3067,18 +3051,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetBucketWormResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetLiveChannelHistoryResponse GetLiveChannelHistory(string bucket, string channel)
+        public GetBucketWormResponse GetBucketWorm(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetLiveChannelHistoryWithOptions(bucket, channel, headers, runtime);
+            return GetBucketWormWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<GetLiveChannelHistoryResponse> GetLiveChannelHistoryAsync(string bucket, string channel)
+        public async Task<GetBucketWormResponse> GetBucketWormAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetLiveChannelHistoryWithOptionsAsync(bucket, channel, headers, runtime);
+            return await GetBucketWormWithOptionsAsync(bucket, headers, runtime);
         }
 
         public GetLiveChannelHistoryResponse GetLiveChannelHistoryWithOptions(string bucket, string channel, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3129,18 +3113,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetLiveChannelHistoryResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetLiveChannelInfoResponse GetLiveChannelInfo(string bucket, string channel)
+        public GetLiveChannelHistoryResponse GetLiveChannelHistory(string bucket, string channel)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetLiveChannelInfoWithOptions(bucket, channel, headers, runtime);
+            return GetLiveChannelHistoryWithOptions(bucket, channel, headers, runtime);
         }
 
-        public async Task<GetLiveChannelInfoResponse> GetLiveChannelInfoAsync(string bucket, string channel)
+        public async Task<GetLiveChannelHistoryResponse> GetLiveChannelHistoryAsync(string bucket, string channel)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetLiveChannelInfoWithOptionsAsync(bucket, channel, headers, runtime);
+            return await GetLiveChannelHistoryWithOptionsAsync(bucket, channel, headers, runtime);
         }
 
         public GetLiveChannelInfoResponse GetLiveChannelInfoWithOptions(string bucket, string channel, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3191,18 +3175,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetLiveChannelInfoResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetLiveChannelStatResponse GetLiveChannelStat(string bucket, string channel)
+        public GetLiveChannelInfoResponse GetLiveChannelInfo(string bucket, string channel)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetLiveChannelStatWithOptions(bucket, channel, headers, runtime);
+            return GetLiveChannelInfoWithOptions(bucket, channel, headers, runtime);
         }
 
-        public async Task<GetLiveChannelStatResponse> GetLiveChannelStatAsync(string bucket, string channel)
+        public async Task<GetLiveChannelInfoResponse> GetLiveChannelInfoAsync(string bucket, string channel)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetLiveChannelStatWithOptionsAsync(bucket, channel, headers, runtime);
+            return await GetLiveChannelInfoWithOptionsAsync(bucket, channel, headers, runtime);
         }
 
         public GetLiveChannelStatResponse GetLiveChannelStatWithOptions(string bucket, string channel, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3253,20 +3237,33 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetLiveChannelStatResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetObjectResponse GetObject(string bucket, string key, GetObjectRequest request)
+        public GetLiveChannelStatResponse GetLiveChannelStat(string bucket, string channel)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            GetObjectHeaders headers = new GetObjectHeaders();
-            return GetObjectWithOptions(bucket, key, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetLiveChannelStatWithOptions(bucket, channel, headers, runtime);
         }
 
-        public async Task<GetObjectResponse> GetObjectAsync(string bucket, string key, GetObjectRequest request)
+        public async Task<GetLiveChannelStatResponse> GetLiveChannelStatAsync(string bucket, string channel)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            GetObjectHeaders headers = new GetObjectHeaders();
-            return await GetObjectWithOptionsAsync(bucket, key, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetLiveChannelStatWithOptionsAsync(bucket, channel, headers, runtime);
         }
 
+        /**
+          * **Usage notes**
+          * - By default, the GetObject operation supports access over HTTP and HTTPS. To impose a limit on access to a bucket only over HTTPS, configure a bucket policy for the bucket to specify the access method. For more information, see [Configure bucket policies to authorize other users to access OSS resources](~~85111~~).
+          * - If the storage class of the object that you want to query is Archive, you must send a RestoreObject request to restore the object before you call the GetObject operation.
+          * **Versioning**
+          * By default, only the current version of an object is returned after GetObject is called. 
+          * If the version ID of the object is specified in the request, OSS returns the specified version of the object. If the version ID is set to null in the request, OSS returns the version of the object whose version ID is null.
+          *
+          * @param request GetObjectRequest
+          * @param headers GetObjectHeaders
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetObjectResponse
+         */
         public GetObjectResponse GetObjectWithOptions(string bucket, string key, GetObjectRequest request, GetObjectHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3347,6 +3344,19 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetObjectResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * **Usage notes**
+          * - By default, the GetObject operation supports access over HTTP and HTTPS. To impose a limit on access to a bucket only over HTTPS, configure a bucket policy for the bucket to specify the access method. For more information, see [Configure bucket policies to authorize other users to access OSS resources](~~85111~~).
+          * - If the storage class of the object that you want to query is Archive, you must send a RestoreObject request to restore the object before you call the GetObject operation.
+          * **Versioning**
+          * By default, only the current version of an object is returned after GetObject is called. 
+          * If the version ID of the object is specified in the request, OSS returns the specified version of the object. If the version ID is set to null in the request, OSS returns the version of the object whose version ID is null.
+          *
+          * @param request GetObjectRequest
+          * @param headers GetObjectHeaders
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetObjectResponse
+         */
         public async Task<GetObjectResponse> GetObjectWithOptionsAsync(string bucket, string key, GetObjectRequest request, GetObjectHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3427,18 +3437,40 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetObjectAclResponse GetObjectAcl(string bucket, string key, GetObjectAclRequest request)
+        /**
+          * **Usage notes**
+          * - By default, the GetObject operation supports access over HTTP and HTTPS. To impose a limit on access to a bucket only over HTTPS, configure a bucket policy for the bucket to specify the access method. For more information, see [Configure bucket policies to authorize other users to access OSS resources](~~85111~~).
+          * - If the storage class of the object that you want to query is Archive, you must send a RestoreObject request to restore the object before you call the GetObject operation.
+          * **Versioning**
+          * By default, only the current version of an object is returned after GetObject is called. 
+          * If the version ID of the object is specified in the request, OSS returns the specified version of the object. If the version ID is set to null in the request, OSS returns the version of the object whose version ID is null.
+          *
+          * @param request GetObjectRequest
+          * @return GetObjectResponse
+         */
+        public GetObjectResponse GetObject(string bucket, string key, GetObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetObjectAclWithOptions(bucket, key, request, headers, runtime);
+            GetObjectHeaders headers = new GetObjectHeaders();
+            return GetObjectWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<GetObjectAclResponse> GetObjectAclAsync(string bucket, string key, GetObjectAclRequest request)
+        /**
+          * **Usage notes**
+          * - By default, the GetObject operation supports access over HTTP and HTTPS. To impose a limit on access to a bucket only over HTTPS, configure a bucket policy for the bucket to specify the access method. For more information, see [Configure bucket policies to authorize other users to access OSS resources](~~85111~~).
+          * - If the storage class of the object that you want to query is Archive, you must send a RestoreObject request to restore the object before you call the GetObject operation.
+          * **Versioning**
+          * By default, only the current version of an object is returned after GetObject is called. 
+          * If the version ID of the object is specified in the request, OSS returns the specified version of the object. If the version ID is set to null in the request, OSS returns the version of the object whose version ID is null.
+          *
+          * @param request GetObjectRequest
+          * @return GetObjectResponse
+         */
+        public async Task<GetObjectResponse> GetObjectAsync(string bucket, string key, GetObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetObjectAclWithOptionsAsync(bucket, key, request, headers, runtime);
+            GetObjectHeaders headers = new GetObjectHeaders();
+            return await GetObjectWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public GetObjectAclResponse GetObjectAclWithOptions(string bucket, string key, GetObjectAclRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3503,18 +3535,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetObjectAclResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetObjectMetaResponse GetObjectMeta(string bucket, string key, GetObjectMetaRequest request)
+        public GetObjectAclResponse GetObjectAcl(string bucket, string key, GetObjectAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetObjectMetaWithOptions(bucket, key, request, headers, runtime);
+            return GetObjectAclWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<GetObjectMetaResponse> GetObjectMetaAsync(string bucket, string key, GetObjectMetaRequest request)
+        public async Task<GetObjectAclResponse> GetObjectAclAsync(string bucket, string key, GetObjectAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetObjectMetaWithOptionsAsync(bucket, key, request, headers, runtime);
+            return await GetObjectAclWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public GetObjectMetaResponse GetObjectMetaWithOptions(string bucket, string key, GetObjectMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3579,18 +3611,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetObjectMetaResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetObjectTaggingResponse GetObjectTagging(string bucket, string key, GetObjectTaggingRequest request)
+        public GetObjectMetaResponse GetObjectMeta(string bucket, string key, GetObjectMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetObjectTaggingWithOptions(bucket, key, request, headers, runtime);
+            return GetObjectMetaWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<GetObjectTaggingResponse> GetObjectTaggingAsync(string bucket, string key, GetObjectTaggingRequest request)
+        public async Task<GetObjectMetaResponse> GetObjectMetaAsync(string bucket, string key, GetObjectMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetObjectTaggingWithOptionsAsync(bucket, key, request, headers, runtime);
+            return await GetObjectMetaWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public GetObjectTaggingResponse GetObjectTaggingWithOptions(string bucket, string key, GetObjectTaggingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3655,18 +3687,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetObjectTaggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetSymlinkResponse GetSymlink(string bucket, string key, GetSymlinkRequest request)
+        public GetObjectTaggingResponse GetObjectTagging(string bucket, string key, GetObjectTaggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetSymlinkWithOptions(bucket, key, request, headers, runtime);
+            return GetObjectTaggingWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<GetSymlinkResponse> GetSymlinkAsync(string bucket, string key, GetSymlinkRequest request)
+        public async Task<GetObjectTaggingResponse> GetObjectTaggingAsync(string bucket, string key, GetObjectTaggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetSymlinkWithOptionsAsync(bucket, key, request, headers, runtime);
+            return await GetObjectTaggingWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public GetSymlinkResponse GetSymlinkWithOptions(string bucket, string key, GetSymlinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3731,18 +3763,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetSymlinkResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public GetVodPlaylistResponse GetVodPlaylist(string bucket, string channel, GetVodPlaylistRequest request)
+        public GetSymlinkResponse GetSymlink(string bucket, string key, GetSymlinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetVodPlaylistWithOptions(bucket, channel, request, headers, runtime);
+            return GetSymlinkWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<GetVodPlaylistResponse> GetVodPlaylistAsync(string bucket, string channel, GetVodPlaylistRequest request)
+        public async Task<GetSymlinkResponse> GetSymlinkAsync(string bucket, string key, GetSymlinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetVodPlaylistWithOptionsAsync(bucket, channel, request, headers, runtime);
+            return await GetSymlinkWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public GetVodPlaylistResponse GetVodPlaylistWithOptions(string bucket, string channel, GetVodPlaylistRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3815,20 +3847,29 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<GetVodPlaylistResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public HeadObjectResponse HeadObject(string bucket, string key, HeadObjectRequest request)
+        public GetVodPlaylistResponse GetVodPlaylist(string bucket, string channel, GetVodPlaylistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            HeadObjectHeaders headers = new HeadObjectHeaders();
-            return HeadObjectWithOptions(bucket, key, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetVodPlaylistWithOptions(bucket, channel, request, headers, runtime);
         }
 
-        public async Task<HeadObjectResponse> HeadObjectAsync(string bucket, string key, HeadObjectRequest request)
+        public async Task<GetVodPlaylistResponse> GetVodPlaylistAsync(string bucket, string channel, GetVodPlaylistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            HeadObjectHeaders headers = new HeadObjectHeaders();
-            return await HeadObjectWithOptionsAsync(bucket, key, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetVodPlaylistWithOptionsAsync(bucket, channel, request, headers, runtime);
         }
 
+        /**
+          * - When you call this operation, the object content is not returned in the results. 
+          * - By default, you can call the HeadObject operation to query the metadata of the object of the current version. If the current version of the object is a delete marker, OSS returns 404 Not Found. If you specify a version ID in the request, OSS returns the metadata of the object of the specified version.
+          *
+          * @param request HeadObjectRequest
+          * @param headers HeadObjectHeaders
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return HeadObjectResponse
+         */
         public HeadObjectResponse HeadObjectWithOptions(string bucket, string key, HeadObjectRequest request, HeadObjectHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3881,6 +3922,15 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<HeadObjectResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * - When you call this operation, the object content is not returned in the results. 
+          * - By default, you can call the HeadObject operation to query the metadata of the object of the current version. If the current version of the object is a delete marker, OSS returns 404 Not Found. If you specify a version ID in the request, OSS returns the metadata of the object of the specified version.
+          *
+          * @param request HeadObjectRequest
+          * @param headers HeadObjectHeaders
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return HeadObjectResponse
+         */
         public async Task<HeadObjectResponse> HeadObjectWithOptionsAsync(string bucket, string key, HeadObjectRequest request, HeadObjectHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3933,18 +3983,32 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<HeadObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public InitiateBucketWormResponse InitiateBucketWorm(string bucket, InitiateBucketWormRequest request)
+        /**
+          * - When you call this operation, the object content is not returned in the results. 
+          * - By default, you can call the HeadObject operation to query the metadata of the object of the current version. If the current version of the object is a delete marker, OSS returns 404 Not Found. If you specify a version ID in the request, OSS returns the metadata of the object of the specified version.
+          *
+          * @param request HeadObjectRequest
+          * @return HeadObjectResponse
+         */
+        public HeadObjectResponse HeadObject(string bucket, string key, HeadObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return InitiateBucketWormWithOptions(bucket, request, headers, runtime);
+            HeadObjectHeaders headers = new HeadObjectHeaders();
+            return HeadObjectWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<InitiateBucketWormResponse> InitiateBucketWormAsync(string bucket, InitiateBucketWormRequest request)
+        /**
+          * - When you call this operation, the object content is not returned in the results. 
+          * - By default, you can call the HeadObject operation to query the metadata of the object of the current version. If the current version of the object is a delete marker, OSS returns 404 Not Found. If you specify a version ID in the request, OSS returns the metadata of the object of the specified version.
+          *
+          * @param request HeadObjectRequest
+          * @return HeadObjectResponse
+         */
+        public async Task<HeadObjectResponse> HeadObjectAsync(string bucket, string key, HeadObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await InitiateBucketWormWithOptionsAsync(bucket, request, headers, runtime);
+            HeadObjectHeaders headers = new HeadObjectHeaders();
+            return await HeadObjectWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public InitiateBucketWormResponse InitiateBucketWormWithOptions(string bucket, InitiateBucketWormRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3956,7 +4020,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.InitiateWormConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.InitiateWormConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3982,7 +4046,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.InitiateWormConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.InitiateWormConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3999,20 +4063,30 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<InitiateBucketWormResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public InitiateMultipartUploadResponse InitiateMultipartUpload(string bucket, string key, InitiateMultipartUploadRequest request)
+        public InitiateBucketWormResponse InitiateBucketWorm(string bucket, InitiateBucketWormRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            InitiateMultipartUploadHeaders headers = new InitiateMultipartUploadHeaders();
-            return InitiateMultipartUploadWithOptions(bucket, key, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return InitiateBucketWormWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<InitiateMultipartUploadResponse> InitiateMultipartUploadAsync(string bucket, string key, InitiateMultipartUploadRequest request)
+        public async Task<InitiateBucketWormResponse> InitiateBucketWormAsync(string bucket, InitiateBucketWormRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            InitiateMultipartUploadHeaders headers = new InitiateMultipartUploadHeaders();
-            return await InitiateMultipartUploadWithOptionsAsync(bucket, key, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await InitiateBucketWormWithOptionsAsync(bucket, request, headers, runtime);
         }
 
+        /**
+          * - When you call the InitiateMultipartUpload operation, OSS creates and returns a unique upload ID to identify the multipart upload task. You can initiate operations such as stopping or querying the multipart upload task by using this upload ID.
+          * - When you initiate a multipart upload request to upload an object, the existing object that has the same name is not affected.
+          * - If you want to calculate the signature for authentication when you call this operation, you must add `?uploads` to `CanonicalizedResource`.
+          *
+          * @param request InitiateMultipartUploadRequest
+          * @param headers InitiateMultipartUploadHeaders
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InitiateMultipartUploadResponse
+         */
         public InitiateMultipartUploadResponse InitiateMultipartUploadWithOptions(string bucket, string key, InitiateMultipartUploadRequest request, InitiateMultipartUploadHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4089,6 +4163,16 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<InitiateMultipartUploadResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * - When you call the InitiateMultipartUpload operation, OSS creates and returns a unique upload ID to identify the multipart upload task. You can initiate operations such as stopping or querying the multipart upload task by using this upload ID.
+          * - When you initiate a multipart upload request to upload an object, the existing object that has the same name is not affected.
+          * - If you want to calculate the signature for authentication when you call this operation, you must add `?uploads` to `CanonicalizedResource`.
+          *
+          * @param request InitiateMultipartUploadRequest
+          * @param headers InitiateMultipartUploadHeaders
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return InitiateMultipartUploadResponse
+         */
         public async Task<InitiateMultipartUploadResponse> InitiateMultipartUploadWithOptionsAsync(string bucket, string key, InitiateMultipartUploadRequest request, InitiateMultipartUploadHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4165,18 +4249,34 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<InitiateMultipartUploadResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListBucketInventoryResponse ListBucketInventory(string bucket, ListBucketInventoryRequest request)
+        /**
+          * - When you call the InitiateMultipartUpload operation, OSS creates and returns a unique upload ID to identify the multipart upload task. You can initiate operations such as stopping or querying the multipart upload task by using this upload ID.
+          * - When you initiate a multipart upload request to upload an object, the existing object that has the same name is not affected.
+          * - If you want to calculate the signature for authentication when you call this operation, you must add `?uploads` to `CanonicalizedResource`.
+          *
+          * @param request InitiateMultipartUploadRequest
+          * @return InitiateMultipartUploadResponse
+         */
+        public InitiateMultipartUploadResponse InitiateMultipartUpload(string bucket, string key, InitiateMultipartUploadRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListBucketInventoryWithOptions(bucket, request, headers, runtime);
+            InitiateMultipartUploadHeaders headers = new InitiateMultipartUploadHeaders();
+            return InitiateMultipartUploadWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<ListBucketInventoryResponse> ListBucketInventoryAsync(string bucket, ListBucketInventoryRequest request)
+        /**
+          * - When you call the InitiateMultipartUpload operation, OSS creates and returns a unique upload ID to identify the multipart upload task. You can initiate operations such as stopping or querying the multipart upload task by using this upload ID.
+          * - When you initiate a multipart upload request to upload an object, the existing object that has the same name is not affected.
+          * - If you want to calculate the signature for authentication when you call this operation, you must add `?uploads` to `CanonicalizedResource`.
+          *
+          * @param request InitiateMultipartUploadRequest
+          * @return InitiateMultipartUploadResponse
+         */
+        public async Task<InitiateMultipartUploadResponse> InitiateMultipartUploadAsync(string bucket, string key, InitiateMultipartUploadRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListBucketInventoryWithOptionsAsync(bucket, request, headers, runtime);
+            InitiateMultipartUploadHeaders headers = new InitiateMultipartUploadHeaders();
+            return await InitiateMultipartUploadWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public ListBucketInventoryResponse ListBucketInventoryWithOptions(string bucket, ListBucketInventoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4241,21 +4341,21 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<ListBucketInventoryResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListBucketsResponse ListBuckets(ListBucketsRequest request)
+        public ListBucketInventoryResponse ListBucketInventory(string bucket, ListBucketInventoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListBucketsWithOptions(request, headers, runtime);
+            return ListBucketInventoryWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<ListBucketsResponse> ListBucketsAsync(ListBucketsRequest request)
+        public async Task<ListBucketInventoryResponse> ListBucketInventoryAsync(string bucket, ListBucketInventoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListBucketsWithOptionsAsync(request, headers, runtime);
+            return await ListBucketInventoryWithOptionsAsync(bucket, request, headers, runtime);
         }
 
-        public ListBucketsResponse ListBucketsWithOptions(ListBucketsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListBucketsResponse ListBucketsWithOptions(ListBucketsRequest request, ListBucketsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4271,9 +4371,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 query["prefix"] = request.Prefix;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssResourceGroupId))
+            {
+                realHeaders["x-oss-resource-group-id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssResourceGroupId);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4291,7 +4400,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<ListBucketsResponse>(Execute(params_, req, runtime));
         }
 
-        public async Task<ListBucketsResponse> ListBucketsWithOptionsAsync(ListBucketsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListBucketsResponse> ListBucketsWithOptionsAsync(ListBucketsRequest request, ListBucketsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
@@ -4307,9 +4416,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 query["prefix"] = request.Prefix;
             }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssResourceGroupId))
+            {
+                realHeaders["x-oss-resource-group-id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssResourceGroupId);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Headers = headers,
+                Headers = realHeaders,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4327,18 +4445,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<ListBucketsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListLiveChannelResponse ListLiveChannel(string bucket, ListLiveChannelRequest request)
+        public ListBucketsResponse ListBuckets(ListBucketsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListLiveChannelWithOptions(bucket, request, headers, runtime);
+            ListBucketsHeaders headers = new ListBucketsHeaders();
+            return ListBucketsWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListLiveChannelResponse> ListLiveChannelAsync(string bucket, ListLiveChannelRequest request)
+        public async Task<ListBucketsResponse> ListBucketsAsync(ListBucketsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListLiveChannelWithOptionsAsync(bucket, request, headers, runtime);
+            ListBucketsHeaders headers = new ListBucketsHeaders();
+            return await ListBucketsWithOptionsAsync(request, headers, runtime);
         }
 
         public ListLiveChannelResponse ListLiveChannelWithOptions(string bucket, ListLiveChannelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4419,18 +4537,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<ListLiveChannelResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListMultipartUploadsResponse ListMultipartUploads(string bucket, ListMultipartUploadsRequest request)
+        public ListLiveChannelResponse ListLiveChannel(string bucket, ListLiveChannelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListMultipartUploadsWithOptions(bucket, request, headers, runtime);
+            return ListLiveChannelWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<ListMultipartUploadsResponse> ListMultipartUploadsAsync(string bucket, ListMultipartUploadsRequest request)
+        public async Task<ListLiveChannelResponse> ListLiveChannelAsync(string bucket, ListLiveChannelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListMultipartUploadsWithOptionsAsync(bucket, request, headers, runtime);
+            return await ListLiveChannelWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public ListMultipartUploadsResponse ListMultipartUploadsWithOptions(string bucket, ListMultipartUploadsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4535,18 +4653,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<ListMultipartUploadsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListObjectVersionsResponse ListObjectVersions(string bucket, ListObjectVersionsRequest request)
+        public ListMultipartUploadsResponse ListMultipartUploads(string bucket, ListMultipartUploadsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListObjectVersionsWithOptions(bucket, request, headers, runtime);
+            return ListMultipartUploadsWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<ListObjectVersionsResponse> ListObjectVersionsAsync(string bucket, ListObjectVersionsRequest request)
+        public async Task<ListMultipartUploadsResponse> ListMultipartUploadsAsync(string bucket, ListMultipartUploadsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListObjectVersionsWithOptionsAsync(bucket, request, headers, runtime);
+            return await ListMultipartUploadsWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public ListObjectVersionsResponse ListObjectVersionsWithOptions(string bucket, ListObjectVersionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4651,18 +4769,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<ListObjectVersionsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListObjectsResponse ListObjects(string bucket, ListObjectsRequest request)
+        public ListObjectVersionsResponse ListObjectVersions(string bucket, ListObjectVersionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListObjectsWithOptions(bucket, request, headers, runtime);
+            return ListObjectVersionsWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<ListObjectsResponse> ListObjectsAsync(string bucket, ListObjectsRequest request)
+        public async Task<ListObjectVersionsResponse> ListObjectVersionsAsync(string bucket, ListObjectVersionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListObjectsWithOptionsAsync(bucket, request, headers, runtime);
+            return await ListObjectVersionsWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public ListObjectsResponse ListObjectsWithOptions(string bucket, ListObjectsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4759,18 +4877,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<ListObjectsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListObjectsV2Response ListObjectsV2(string bucket, ListObjectsV2Request request)
+        public ListObjectsResponse ListObjects(string bucket, ListObjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListObjectsV2WithOptions(bucket, request, headers, runtime);
+            return ListObjectsWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<ListObjectsV2Response> ListObjectsV2Async(string bucket, ListObjectsV2Request request)
+        public async Task<ListObjectsResponse> ListObjectsAsync(string bucket, ListObjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListObjectsV2WithOptionsAsync(bucket, request, headers, runtime);
+            return await ListObjectsWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public ListObjectsV2Response ListObjectsV2WithOptions(string bucket, ListObjectsV2Request request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4883,18 +5001,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<ListObjectsV2Response>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListPartsResponse ListParts(string bucket, string key, ListPartsRequest request)
+        public ListObjectsV2Response ListObjectsV2(string bucket, ListObjectsV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListPartsWithOptions(bucket, key, request, headers, runtime);
+            return ListObjectsV2WithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<ListPartsResponse> ListPartsAsync(string bucket, string key, ListPartsRequest request)
+        public async Task<ListObjectsV2Response> ListObjectsV2Async(string bucket, ListObjectsV2Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListPartsWithOptionsAsync(bucket, key, request, headers, runtime);
+            return await ListObjectsV2WithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public ListPartsResponse ListPartsWithOptions(string bucket, string key, ListPartsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4995,18 +5113,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<ListPartsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public OptionObjectResponse OptionObject(string bucket, string key)
+        public ListPartsResponse ListParts(string bucket, string key, ListPartsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            OptionObjectHeaders headers = new OptionObjectHeaders();
-            return OptionObjectWithOptions(bucket, key, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListPartsWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<OptionObjectResponse> OptionObjectAsync(string bucket, string key)
+        public async Task<ListPartsResponse> ListPartsAsync(string bucket, string key, ListPartsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            OptionObjectHeaders headers = new OptionObjectHeaders();
-            return await OptionObjectWithOptionsAsync(bucket, key, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListPartsWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public OptionObjectResponse OptionObjectWithOptions(string bucket, string key, OptionObjectHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5091,20 +5209,48 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<OptionObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PostObjectResponse PostObject(string bucket)
+        public OptionObjectResponse OptionObject(string bucket, string key)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PostObjectWithOptions(bucket, headers, runtime);
+            OptionObjectHeaders headers = new OptionObjectHeaders();
+            return OptionObjectWithOptions(bucket, key, headers, runtime);
         }
 
-        public async Task<PostObjectResponse> PostObjectAsync(string bucket)
+        public async Task<OptionObjectResponse> OptionObjectAsync(string bucket, string key)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PostObjectWithOptionsAsync(bucket, headers, runtime);
+            OptionObjectHeaders headers = new OptionObjectHeaders();
+            return await OptionObjectWithOptionsAsync(bucket, key, headers, runtime);
         }
 
+        /**
+          * - 
+          *   The object that is uploaded by calling the PostObject operation cannot be
+          *   larger than 5 GB in size.
+          * - 
+          *   To initiate a PostObject request to a bucket, you must have write permissions
+          *   on the bucket. If the ACL of the bucket to which you want to initiate a
+          *   PostObject request is public-read-write, you do not need to sign the
+          *   PostObject request. In other cases, Object Storage Service (OSS) verifies the
+          *   signature information contained in the request.
+          * - 
+          *   Unlike the PutObject operation, the PostObject operation uses an AccessKey
+          *   secret to calculate the signature for the policy form field. The calculated
+          *   signature string is used as the value of the Signature form field. OSS checks
+          *   this value to verify the validity of the signature.
+          * - 
+          *   The URL of the submitted form is the domain name of the bucket. You do not
+          *   need to specify the object that you want to upload in the URL. In other words,
+          *   the request line is in the format of `POST T/ HTTP/1.1` instead of `POST
+          *   /ObjectName HTTP/1.1`.
+          * - 
+          *   OSS does not check the signature information that is contained in headers or
+          *   URLs in PostObject requests.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PostObjectResponse
+         */
         public PostObjectResponse PostObjectWithOptions(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -5129,6 +5275,34 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PostObjectResponse>(Execute(params_, req, runtime));
         }
 
+        /**
+          * - 
+          *   The object that is uploaded by calling the PostObject operation cannot be
+          *   larger than 5 GB in size.
+          * - 
+          *   To initiate a PostObject request to a bucket, you must have write permissions
+          *   on the bucket. If the ACL of the bucket to which you want to initiate a
+          *   PostObject request is public-read-write, you do not need to sign the
+          *   PostObject request. In other cases, Object Storage Service (OSS) verifies the
+          *   signature information contained in the request.
+          * - 
+          *   Unlike the PutObject operation, the PostObject operation uses an AccessKey
+          *   secret to calculate the signature for the policy form field. The calculated
+          *   signature string is used as the value of the Signature form field. OSS checks
+          *   this value to verify the validity of the signature.
+          * - 
+          *   The URL of the submitted form is the domain name of the bucket. You do not
+          *   need to specify the object that you want to upload in the URL. In other words,
+          *   the request line is in the format of `POST T/ HTTP/1.1` instead of `POST
+          *   /ObjectName HTTP/1.1`.
+          * - 
+          *   OSS does not check the signature information that is contained in headers or
+          *   URLs in PostObject requests.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return PostObjectResponse
+         */
         public async Task<PostObjectResponse> PostObjectWithOptionsAsync(string bucket, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
@@ -5153,18 +5327,70 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PostObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PostVodPlaylistResponse PostVodPlaylist(string bucket, string channel, string playlist, PostVodPlaylistRequest request)
+        /**
+          * - 
+          *   The object that is uploaded by calling the PostObject operation cannot be
+          *   larger than 5 GB in size.
+          * - 
+          *   To initiate a PostObject request to a bucket, you must have write permissions
+          *   on the bucket. If the ACL of the bucket to which you want to initiate a
+          *   PostObject request is public-read-write, you do not need to sign the
+          *   PostObject request. In other cases, Object Storage Service (OSS) verifies the
+          *   signature information contained in the request.
+          * - 
+          *   Unlike the PutObject operation, the PostObject operation uses an AccessKey
+          *   secret to calculate the signature for the policy form field. The calculated
+          *   signature string is used as the value of the Signature form field. OSS checks
+          *   this value to verify the validity of the signature.
+          * - 
+          *   The URL of the submitted form is the domain name of the bucket. You do not
+          *   need to specify the object that you want to upload in the URL. In other words,
+          *   the request line is in the format of `POST T/ HTTP/1.1` instead of `POST
+          *   /ObjectName HTTP/1.1`.
+          * - 
+          *   OSS does not check the signature information that is contained in headers or
+          *   URLs in PostObject requests.
+          *
+          * @return PostObjectResponse
+         */
+        public PostObjectResponse PostObject(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PostVodPlaylistWithOptions(bucket, channel, playlist, request, headers, runtime);
+            return PostObjectWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<PostVodPlaylistResponse> PostVodPlaylistAsync(string bucket, string channel, string playlist, PostVodPlaylistRequest request)
+        /**
+          * - 
+          *   The object that is uploaded by calling the PostObject operation cannot be
+          *   larger than 5 GB in size.
+          * - 
+          *   To initiate a PostObject request to a bucket, you must have write permissions
+          *   on the bucket. If the ACL of the bucket to which you want to initiate a
+          *   PostObject request is public-read-write, you do not need to sign the
+          *   PostObject request. In other cases, Object Storage Service (OSS) verifies the
+          *   signature information contained in the request.
+          * - 
+          *   Unlike the PutObject operation, the PostObject operation uses an AccessKey
+          *   secret to calculate the signature for the policy form field. The calculated
+          *   signature string is used as the value of the Signature form field. OSS checks
+          *   this value to verify the validity of the signature.
+          * - 
+          *   The URL of the submitted form is the domain name of the bucket. You do not
+          *   need to specify the object that you want to upload in the URL. In other words,
+          *   the request line is in the format of `POST T/ HTTP/1.1` instead of `POST
+          *   /ObjectName HTTP/1.1`.
+          * - 
+          *   OSS does not check the signature information that is contained in headers or
+          *   URLs in PostObject requests.
+          *
+          * @return PostObjectResponse
+         */
+        public async Task<PostObjectResponse> PostObjectAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PostVodPlaylistWithOptionsAsync(bucket, channel, playlist, request, headers, runtime);
+            return await PostObjectWithOptionsAsync(bucket, headers, runtime);
         }
 
         public PostVodPlaylistResponse PostVodPlaylistWithOptions(string bucket, string channel, string playlist, PostVodPlaylistRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5237,18 +5463,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PostVodPlaylistResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutBucketResponse PutBucket(string bucket, PutBucketRequest request)
+        public PostVodPlaylistResponse PostVodPlaylist(string bucket, string channel, string playlist, PostVodPlaylistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            PutBucketHeaders headers = new PutBucketHeaders();
-            return PutBucketWithOptions(bucket, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PostVodPlaylistWithOptions(bucket, channel, playlist, request, headers, runtime);
         }
 
-        public async Task<PutBucketResponse> PutBucketAsync(string bucket, PutBucketRequest request)
+        public async Task<PostVodPlaylistResponse> PostVodPlaylistAsync(string bucket, string channel, string playlist, PostVodPlaylistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            PutBucketHeaders headers = new PutBucketHeaders();
-            return await PutBucketWithOptionsAsync(bucket, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PostVodPlaylistWithOptionsAsync(bucket, channel, playlist, request, headers, runtime);
         }
 
         public PutBucketResponse PutBucketWithOptions(string bucket, PutBucketRequest request, PutBucketHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5265,11 +5491,15 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 realHeaders["x-oss-acl"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Acl);
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssResourceGroupId))
+            {
+                realHeaders["x-oss-resource-group-id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssResourceGroupId);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = realHeaders,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.CreateBucketConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.CreateBucketConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5300,11 +5530,15 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 realHeaders["x-oss-acl"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Acl);
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssResourceGroupId))
+            {
+                realHeaders["x-oss-resource-group-id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssResourceGroupId);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = realHeaders,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.CreateBucketConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.CreateBucketConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5321,18 +5555,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutBucketResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutBucketAclResponse PutBucketAcl(string bucket)
+        public PutBucketResponse PutBucket(string bucket, PutBucketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            PutBucketAclHeaders headers = new PutBucketAclHeaders();
-            return PutBucketAclWithOptions(bucket, headers, runtime);
+            PutBucketHeaders headers = new PutBucketHeaders();
+            return PutBucketWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<PutBucketAclResponse> PutBucketAclAsync(string bucket)
+        public async Task<PutBucketResponse> PutBucketAsync(string bucket, PutBucketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            PutBucketAclHeaders headers = new PutBucketAclHeaders();
-            return await PutBucketAclWithOptionsAsync(bucket, headers, runtime);
+            PutBucketHeaders headers = new PutBucketHeaders();
+            return await PutBucketWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public PutBucketAclResponse PutBucketAclWithOptions(string bucket, PutBucketAclHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5401,18 +5635,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutBucketAclResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutBucketCorsResponse PutBucketCors(string bucket, PutBucketCorsRequest request)
+        public PutBucketAclResponse PutBucketAcl(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutBucketCorsWithOptions(bucket, request, headers, runtime);
+            PutBucketAclHeaders headers = new PutBucketAclHeaders();
+            return PutBucketAclWithOptions(bucket, headers, runtime);
         }
 
-        public async Task<PutBucketCorsResponse> PutBucketCorsAsync(string bucket, PutBucketCorsRequest request)
+        public async Task<PutBucketAclResponse> PutBucketAclAsync(string bucket)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutBucketCorsWithOptionsAsync(bucket, request, headers, runtime);
+            PutBucketAclHeaders headers = new PutBucketAclHeaders();
+            return await PutBucketAclWithOptionsAsync(bucket, headers, runtime);
         }
 
         public PutBucketCorsResponse PutBucketCorsWithOptions(string bucket, PutBucketCorsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5424,7 +5658,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.CORSConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.CORSConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5450,7 +5684,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.CORSConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.CORSConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5467,18 +5701,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutBucketCorsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutBucketEncryptionResponse PutBucketEncryption(string bucket, PutBucketEncryptionRequest request)
+        public PutBucketCorsResponse PutBucketCors(string bucket, PutBucketCorsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutBucketEncryptionWithOptions(bucket, request, headers, runtime);
+            return PutBucketCorsWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<PutBucketEncryptionResponse> PutBucketEncryptionAsync(string bucket, PutBucketEncryptionRequest request)
+        public async Task<PutBucketCorsResponse> PutBucketCorsAsync(string bucket, PutBucketCorsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutBucketEncryptionWithOptionsAsync(bucket, request, headers, runtime);
+            return await PutBucketCorsWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public PutBucketEncryptionResponse PutBucketEncryptionWithOptions(string bucket, PutBucketEncryptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5490,7 +5724,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.ServerSideEncryptionRule.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.ServerSideEncryptionRule),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5516,7 +5750,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.ServerSideEncryptionRule.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.ServerSideEncryptionRule),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5533,18 +5767,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutBucketEncryptionResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutBucketInventoryResponse PutBucketInventory(string bucket, PutBucketInventoryRequest request)
+        public PutBucketEncryptionResponse PutBucketEncryption(string bucket, PutBucketEncryptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutBucketInventoryWithOptions(bucket, request, headers, runtime);
+            return PutBucketEncryptionWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<PutBucketInventoryResponse> PutBucketInventoryAsync(string bucket, PutBucketInventoryRequest request)
+        public async Task<PutBucketEncryptionResponse> PutBucketEncryptionAsync(string bucket, PutBucketEncryptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutBucketInventoryWithOptionsAsync(bucket, request, headers, runtime);
+            return await PutBucketEncryptionWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public PutBucketInventoryResponse PutBucketInventoryWithOptions(string bucket, PutBucketInventoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5562,7 +5796,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.InventoryConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.InventoryConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5594,7 +5828,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.InventoryConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.InventoryConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5611,18 +5845,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutBucketInventoryResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutBucketLifecycleResponse PutBucketLifecycle(string bucket, PutBucketLifecycleRequest request)
+        public PutBucketInventoryResponse PutBucketInventory(string bucket, PutBucketInventoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutBucketLifecycleWithOptions(bucket, request, headers, runtime);
+            return PutBucketInventoryWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<PutBucketLifecycleResponse> PutBucketLifecycleAsync(string bucket, PutBucketLifecycleRequest request)
+        public async Task<PutBucketInventoryResponse> PutBucketInventoryAsync(string bucket, PutBucketInventoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutBucketLifecycleWithOptionsAsync(bucket, request, headers, runtime);
+            return await PutBucketInventoryWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public PutBucketLifecycleResponse PutBucketLifecycleWithOptions(string bucket, PutBucketLifecycleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5634,7 +5868,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.LifecycleConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.LifecycleConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5660,7 +5894,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.LifecycleConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.LifecycleConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5677,18 +5911,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutBucketLifecycleResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutBucketLoggingResponse PutBucketLogging(string bucket, PutBucketLoggingRequest request)
+        public PutBucketLifecycleResponse PutBucketLifecycle(string bucket, PutBucketLifecycleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutBucketLoggingWithOptions(bucket, request, headers, runtime);
+            return PutBucketLifecycleWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<PutBucketLoggingResponse> PutBucketLoggingAsync(string bucket, PutBucketLoggingRequest request)
+        public async Task<PutBucketLifecycleResponse> PutBucketLifecycleAsync(string bucket, PutBucketLifecycleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutBucketLoggingWithOptionsAsync(bucket, request, headers, runtime);
+            return await PutBucketLifecycleWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public PutBucketLoggingResponse PutBucketLoggingWithOptions(string bucket, PutBucketLoggingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5700,7 +5934,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.BucketLoggingStatus.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.BucketLoggingStatus),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5726,7 +5960,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.BucketLoggingStatus.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.BucketLoggingStatus),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5743,18 +5977,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutBucketLoggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutBucketPolicyResponse PutBucketPolicy(string bucket, PutBucketPolicyRequest request)
+        public PutBucketLoggingResponse PutBucketLogging(string bucket, PutBucketLoggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutBucketPolicyWithOptions(bucket, request, headers, runtime);
+            return PutBucketLoggingWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<PutBucketPolicyResponse> PutBucketPolicyAsync(string bucket, PutBucketPolicyRequest request)
+        public async Task<PutBucketLoggingResponse> PutBucketLoggingAsync(string bucket, PutBucketLoggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutBucketPolicyWithOptionsAsync(bucket, request, headers, runtime);
+            return await PutBucketLoggingWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public PutBucketPolicyResponse PutBucketPolicyWithOptions(string bucket, PutBucketPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5809,18 +6043,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutBucketPolicyResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutBucketRefererResponse PutBucketReferer(string bucket, PutBucketRefererRequest request)
+        public PutBucketPolicyResponse PutBucketPolicy(string bucket, PutBucketPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutBucketRefererWithOptions(bucket, request, headers, runtime);
+            return PutBucketPolicyWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<PutBucketRefererResponse> PutBucketRefererAsync(string bucket, PutBucketRefererRequest request)
+        public async Task<PutBucketPolicyResponse> PutBucketPolicyAsync(string bucket, PutBucketPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutBucketRefererWithOptionsAsync(bucket, request, headers, runtime);
+            return await PutBucketPolicyWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public PutBucketRefererResponse PutBucketRefererWithOptions(string bucket, PutBucketRefererRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5832,7 +6066,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RefererConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RefererConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5858,7 +6092,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RefererConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RefererConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5875,18 +6109,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutBucketRefererResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutBucketReplicationResponse PutBucketReplication(string bucket, PutBucketReplicationRequest request)
+        public PutBucketRefererResponse PutBucketReferer(string bucket, PutBucketRefererRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutBucketReplicationWithOptions(bucket, request, headers, runtime);
+            return PutBucketRefererWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<PutBucketReplicationResponse> PutBucketReplicationAsync(string bucket, PutBucketReplicationRequest request)
+        public async Task<PutBucketRefererResponse> PutBucketRefererAsync(string bucket, PutBucketRefererRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutBucketReplicationWithOptionsAsync(bucket, request, headers, runtime);
+            return await PutBucketRefererWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public PutBucketReplicationResponse PutBucketReplicationWithOptions(string bucket, PutBucketReplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5898,7 +6132,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.ReplicationConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.ReplicationConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5924,7 +6158,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.ReplicationConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.ReplicationConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5941,18 +6175,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutBucketReplicationResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutBucketRequestPaymentResponse PutBucketRequestPayment(string bucket, PutBucketRequestPaymentRequest request)
+        public PutBucketReplicationResponse PutBucketReplication(string bucket, PutBucketReplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutBucketRequestPaymentWithOptions(bucket, request, headers, runtime);
+            return PutBucketReplicationWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<PutBucketRequestPaymentResponse> PutBucketRequestPaymentAsync(string bucket, PutBucketRequestPaymentRequest request)
+        public async Task<PutBucketReplicationResponse> PutBucketReplicationAsync(string bucket, PutBucketReplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutBucketRequestPaymentWithOptionsAsync(bucket, request, headers, runtime);
+            return await PutBucketReplicationWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public PutBucketRequestPaymentResponse PutBucketRequestPaymentWithOptions(string bucket, PutBucketRequestPaymentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5964,7 +6198,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RequestPaymentConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RequestPaymentConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5990,7 +6224,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RequestPaymentConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RequestPaymentConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6007,18 +6241,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutBucketRequestPaymentResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutBucketTagsResponse PutBucketTags(string bucket, PutBucketTagsRequest request)
+        public PutBucketRequestPaymentResponse PutBucketRequestPayment(string bucket, PutBucketRequestPaymentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutBucketTagsWithOptions(bucket, request, headers, runtime);
+            return PutBucketRequestPaymentWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<PutBucketTagsResponse> PutBucketTagsAsync(string bucket, PutBucketTagsRequest request)
+        public async Task<PutBucketRequestPaymentResponse> PutBucketRequestPaymentAsync(string bucket, PutBucketRequestPaymentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutBucketTagsWithOptionsAsync(bucket, request, headers, runtime);
+            return await PutBucketRequestPaymentWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public PutBucketTagsResponse PutBucketTagsWithOptions(string bucket, PutBucketTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6030,7 +6264,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Tagging.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Tagging),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6056,7 +6290,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Tagging.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Tagging),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6073,18 +6307,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutBucketTagsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutBucketTransferAccelerationResponse PutBucketTransferAcceleration(string bucket, PutBucketTransferAccelerationRequest request)
+        public PutBucketTagsResponse PutBucketTags(string bucket, PutBucketTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutBucketTransferAccelerationWithOptions(bucket, request, headers, runtime);
+            return PutBucketTagsWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<PutBucketTransferAccelerationResponse> PutBucketTransferAccelerationAsync(string bucket, PutBucketTransferAccelerationRequest request)
+        public async Task<PutBucketTagsResponse> PutBucketTagsAsync(string bucket, PutBucketTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutBucketTransferAccelerationWithOptionsAsync(bucket, request, headers, runtime);
+            return await PutBucketTagsWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public PutBucketTransferAccelerationResponse PutBucketTransferAccelerationWithOptions(string bucket, PutBucketTransferAccelerationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6096,7 +6330,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.TransferAccelerationConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.TransferAccelerationConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6122,7 +6356,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.TransferAccelerationConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.TransferAccelerationConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6139,18 +6373,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutBucketTransferAccelerationResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutBucketVersioningResponse PutBucketVersioning(string bucket, PutBucketVersioningRequest request)
+        public PutBucketTransferAccelerationResponse PutBucketTransferAcceleration(string bucket, PutBucketTransferAccelerationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutBucketVersioningWithOptions(bucket, request, headers, runtime);
+            return PutBucketTransferAccelerationWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<PutBucketVersioningResponse> PutBucketVersioningAsync(string bucket, PutBucketVersioningRequest request)
+        public async Task<PutBucketTransferAccelerationResponse> PutBucketTransferAccelerationAsync(string bucket, PutBucketTransferAccelerationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutBucketVersioningWithOptionsAsync(bucket, request, headers, runtime);
+            return await PutBucketTransferAccelerationWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public PutBucketVersioningResponse PutBucketVersioningWithOptions(string bucket, PutBucketVersioningRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6162,7 +6396,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.VersioningConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.VersioningConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6188,7 +6422,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.VersioningConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.VersioningConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6205,18 +6439,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutBucketVersioningResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutBucketWebsiteResponse PutBucketWebsite(string bucket, PutBucketWebsiteRequest request)
+        public PutBucketVersioningResponse PutBucketVersioning(string bucket, PutBucketVersioningRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutBucketWebsiteWithOptions(bucket, request, headers, runtime);
+            return PutBucketVersioningWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<PutBucketWebsiteResponse> PutBucketWebsiteAsync(string bucket, PutBucketWebsiteRequest request)
+        public async Task<PutBucketVersioningResponse> PutBucketVersioningAsync(string bucket, PutBucketVersioningRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutBucketWebsiteWithOptionsAsync(bucket, request, headers, runtime);
+            return await PutBucketVersioningWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public PutBucketWebsiteResponse PutBucketWebsiteWithOptions(string bucket, PutBucketWebsiteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6228,7 +6462,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.WebsiteConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.WebsiteConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6254,7 +6488,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.WebsiteConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.WebsiteConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6271,18 +6505,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutBucketWebsiteResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutLiveChannelResponse PutLiveChannel(string bucket, string channel, PutLiveChannelRequest request)
+        public PutBucketWebsiteResponse PutBucketWebsite(string bucket, PutBucketWebsiteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutLiveChannelWithOptions(bucket, channel, request, headers, runtime);
+            return PutBucketWebsiteWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<PutLiveChannelResponse> PutLiveChannelAsync(string bucket, string channel, PutLiveChannelRequest request)
+        public async Task<PutBucketWebsiteResponse> PutBucketWebsiteAsync(string bucket, PutBucketWebsiteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutLiveChannelWithOptionsAsync(bucket, channel, request, headers, runtime);
+            return await PutBucketWebsiteWithOptionsAsync(bucket, request, headers, runtime);
         }
 
         public PutLiveChannelResponse PutLiveChannelWithOptions(string bucket, string channel, PutLiveChannelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6294,7 +6528,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.LiveChannelConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.LiveChannelConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6320,7 +6554,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.LiveChannelConfiguration.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.LiveChannelConfiguration),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6337,18 +6571,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutLiveChannelResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutLiveChannelStatusResponse PutLiveChannelStatus(string bucket, string channel, PutLiveChannelStatusRequest request)
+        public PutLiveChannelResponse PutLiveChannel(string bucket, string channel, PutLiveChannelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutLiveChannelStatusWithOptions(bucket, channel, request, headers, runtime);
+            return PutLiveChannelWithOptions(bucket, channel, request, headers, runtime);
         }
 
-        public async Task<PutLiveChannelStatusResponse> PutLiveChannelStatusAsync(string bucket, string channel, PutLiveChannelStatusRequest request)
+        public async Task<PutLiveChannelResponse> PutLiveChannelAsync(string bucket, string channel, PutLiveChannelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutLiveChannelStatusWithOptionsAsync(bucket, channel, request, headers, runtime);
+            return await PutLiveChannelWithOptionsAsync(bucket, channel, request, headers, runtime);
         }
 
         public PutLiveChannelStatusResponse PutLiveChannelStatusWithOptions(string bucket, string channel, PutLiveChannelStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6413,18 +6647,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutLiveChannelStatusResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutObjectResponse PutObject(string bucket, string key, PutObjectRequest request)
+        public PutLiveChannelStatusResponse PutLiveChannelStatus(string bucket, string channel, PutLiveChannelStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            PutObjectHeaders headers = new PutObjectHeaders();
-            return PutObjectWithOptions(bucket, key, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PutLiveChannelStatusWithOptions(bucket, channel, request, headers, runtime);
         }
 
-        public async Task<PutObjectResponse> PutObjectAsync(string bucket, string key, PutObjectRequest request)
+        public async Task<PutLiveChannelStatusResponse> PutLiveChannelStatusAsync(string bucket, string channel, PutLiveChannelStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            PutObjectHeaders headers = new PutObjectHeaders();
-            return await PutObjectWithOptionsAsync(bucket, key, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PutLiveChannelStatusWithOptionsAsync(bucket, channel, request, headers, runtime);
         }
 
         public PutObjectResponse PutObjectWithOptions(string bucket, string key, PutObjectRequest request, PutObjectHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6555,18 +6789,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutObjectAclResponse PutObjectAcl(string bucket, string key, PutObjectAclRequest request)
+        public PutObjectResponse PutObject(string bucket, string key, PutObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            PutObjectAclHeaders headers = new PutObjectAclHeaders();
-            return PutObjectAclWithOptions(bucket, key, request, headers, runtime);
+            PutObjectHeaders headers = new PutObjectHeaders();
+            return PutObjectWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<PutObjectAclResponse> PutObjectAclAsync(string bucket, string key, PutObjectAclRequest request)
+        public async Task<PutObjectResponse> PutObjectAsync(string bucket, string key, PutObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            PutObjectAclHeaders headers = new PutObjectAclHeaders();
-            return await PutObjectAclWithOptionsAsync(bucket, key, request, headers, runtime);
+            PutObjectHeaders headers = new PutObjectHeaders();
+            return await PutObjectWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public PutObjectAclResponse PutObjectAclWithOptions(string bucket, string key, PutObjectAclRequest request, PutObjectAclHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6649,18 +6883,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutObjectAclResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutObjectTaggingResponse PutObjectTagging(string bucket, string key, PutObjectTaggingRequest request)
+        public PutObjectAclResponse PutObjectAcl(string bucket, string key, PutObjectAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PutObjectTaggingWithOptions(bucket, key, request, headers, runtime);
+            PutObjectAclHeaders headers = new PutObjectAclHeaders();
+            return PutObjectAclWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<PutObjectTaggingResponse> PutObjectTaggingAsync(string bucket, string key, PutObjectTaggingRequest request)
+        public async Task<PutObjectAclResponse> PutObjectAclAsync(string bucket, string key, PutObjectAclRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PutObjectTaggingWithOptionsAsync(bucket, key, request, headers, runtime);
+            PutObjectAclHeaders headers = new PutObjectAclHeaders();
+            return await PutObjectAclWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public PutObjectTaggingResponse PutObjectTaggingWithOptions(string bucket, string key, PutObjectTaggingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6678,7 +6912,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Tagging.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Tagging),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6710,7 +6944,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Tagging.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Tagging),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6727,18 +6961,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutObjectTaggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public PutSymlinkResponse PutSymlink(string bucket, string key)
+        public PutObjectTaggingResponse PutObjectTagging(string bucket, string key, PutObjectTaggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            PutSymlinkHeaders headers = new PutSymlinkHeaders();
-            return PutSymlinkWithOptions(bucket, key, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PutObjectTaggingWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<PutSymlinkResponse> PutSymlinkAsync(string bucket, string key)
+        public async Task<PutObjectTaggingResponse> PutObjectTaggingAsync(string bucket, string key, PutObjectTaggingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            PutSymlinkHeaders headers = new PutSymlinkHeaders();
-            return await PutSymlinkWithOptionsAsync(bucket, key, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PutObjectTaggingWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public PutSymlinkResponse PutSymlinkWithOptions(string bucket, string key, PutSymlinkHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6831,18 +7065,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<PutSymlinkResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public RestoreObjectResponse RestoreObject(string bucket, string key, RestoreObjectRequest request)
+        public PutSymlinkResponse PutSymlink(string bucket, string key)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RestoreObjectWithOptions(bucket, key, request, headers, runtime);
+            PutSymlinkHeaders headers = new PutSymlinkHeaders();
+            return PutSymlinkWithOptions(bucket, key, headers, runtime);
         }
 
-        public async Task<RestoreObjectResponse> RestoreObjectAsync(string bucket, string key, RestoreObjectRequest request)
+        public async Task<PutSymlinkResponse> PutSymlinkAsync(string bucket, string key)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RestoreObjectWithOptionsAsync(bucket, key, request, headers, runtime);
+            PutSymlinkHeaders headers = new PutSymlinkHeaders();
+            return await PutSymlinkWithOptionsAsync(bucket, key, headers, runtime);
         }
 
         public RestoreObjectResponse RestoreObjectWithOptions(string bucket, string key, RestoreObjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6860,7 +7094,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RestoreRequest.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RestoreRequest),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6892,7 +7126,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RestoreRequest.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.RestoreRequest),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6909,18 +7143,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<RestoreObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public SelectObjectResponse SelectObject(string bucket, string key, SelectObjectRequest request)
+        public RestoreObjectResponse RestoreObject(string bucket, string key, RestoreObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SelectObjectWithOptions(bucket, key, request, headers, runtime);
+            return RestoreObjectWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<SelectObjectResponse> SelectObjectAsync(string bucket, string key, SelectObjectRequest request)
+        public async Task<RestoreObjectResponse> RestoreObjectAsync(string bucket, string key, RestoreObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SelectObjectWithOptionsAsync(bucket, key, request, headers, runtime);
+            return await RestoreObjectWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public SelectObjectResponse SelectObjectWithOptions(string bucket, string key, SelectObjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6932,7 +7166,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.SelectRequest.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.SelectRequest),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6958,7 +7192,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 HostMap = hostMap,
                 Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.SelectRequest.ToMap()),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.SelectRequest),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6975,18 +7209,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<SelectObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public UploadPartResponse UploadPart(string bucket, string key, UploadPartRequest request)
+        public SelectObjectResponse SelectObject(string bucket, string key, SelectObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UploadPartWithOptions(bucket, key, request, headers, runtime);
+            return SelectObjectWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<UploadPartResponse> UploadPartAsync(string bucket, string key, UploadPartRequest request)
+        public async Task<SelectObjectResponse> SelectObjectAsync(string bucket, string key, SelectObjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UploadPartWithOptionsAsync(bucket, key, request, headers, runtime);
+            return await SelectObjectWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public UploadPartResponse UploadPartWithOptions(string bucket, string key, UploadPartRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7063,18 +7297,18 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<UploadPartResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public UploadPartCopyResponse UploadPartCopy(string bucket, string key, UploadPartCopyRequest request)
+        public UploadPartResponse UploadPart(string bucket, string key, UploadPartRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            UploadPartCopyHeaders headers = new UploadPartCopyHeaders();
-            return UploadPartCopyWithOptions(bucket, key, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UploadPartWithOptions(bucket, key, request, headers, runtime);
         }
 
-        public async Task<UploadPartCopyResponse> UploadPartCopyAsync(string bucket, string key, UploadPartCopyRequest request)
+        public async Task<UploadPartResponse> UploadPartAsync(string bucket, string key, UploadPartRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            UploadPartCopyHeaders headers = new UploadPartCopyHeaders();
-            return await UploadPartCopyWithOptionsAsync(bucket, key, request, headers, runtime);
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UploadPartWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
         public UploadPartCopyResponse UploadPartCopyWithOptions(string bucket, string key, UploadPartCopyRequest request, UploadPartCopyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7203,6 +7437,20 @@ namespace AlibabaCloud.SDK.Oss20190517
                 BodyType = "xml",
             };
             return TeaModel.ToObject<UploadPartCopyResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public UploadPartCopyResponse UploadPartCopy(string bucket, string key, UploadPartCopyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UploadPartCopyHeaders headers = new UploadPartCopyHeaders();
+            return UploadPartCopyWithOptions(bucket, key, request, headers, runtime);
+        }
+
+        public async Task<UploadPartCopyResponse> UploadPartCopyAsync(string bucket, string key, UploadPartCopyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UploadPartCopyHeaders headers = new UploadPartCopyHeaders();
+            return await UploadPartCopyWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
     }

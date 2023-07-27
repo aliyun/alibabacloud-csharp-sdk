@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public string Acl { get; set; }
 
+        [NameInMap("x-oss-resource-group-id")]
+        [Validation(Required=false)]
+        public string XOssResourceGroupId { get; set; }
+
     }
 
 }
