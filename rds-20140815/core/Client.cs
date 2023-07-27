@@ -31626,6 +31626,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["SwitchTime"] = request.SwitchTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetMinorVersion))
+            {
+                query["TargetMinorVersion"] = request.TargetMinorVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
                 query["UsedTime"] = request.UsedTime;
@@ -31755,6 +31759,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTime))
             {
                 query["SwitchTime"] = request.SwitchTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetMinorVersion))
+            {
+                query["TargetMinorVersion"] = request.TargetMinorVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
