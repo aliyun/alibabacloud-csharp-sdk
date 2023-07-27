@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [Validation(Required=false)]
             public List<string> Domains { get; set; }
 
+            [NameInMap("GatewayCRName")]
+            [Validation(Required=false)]
+            public string GatewayCRName { get; set; }
+
             /// <summary>
             /// The namespace in which the ASM gateway resides.
             /// </summary>

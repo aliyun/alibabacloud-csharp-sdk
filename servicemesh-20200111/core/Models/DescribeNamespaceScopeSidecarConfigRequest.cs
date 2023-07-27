@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeNamespaceScopeSidecarConfigRequest : TeaModel {
         /// <summary>
-        /// The name of the namespace.
+        /// The namespace.
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

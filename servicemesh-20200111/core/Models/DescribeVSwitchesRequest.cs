@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeVSwitchesRequest : TeaModel {
         /// <summary>
-        /// The maximum number of entries returned on a single page.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The list of the queried vSwitches.
+        /// The VPC ID.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

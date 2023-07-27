@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string IstioGatewayName { get; set; }
 
         /// <summary>
-        /// The routing rules.
+        /// The ASM instance ID.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

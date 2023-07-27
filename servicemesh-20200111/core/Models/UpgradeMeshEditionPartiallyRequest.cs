@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class UpgradeMeshEditionPartiallyRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to upgrade the ASM gateways for the ASM instance. Valid values:
+        /// 
+        /// *   `true`
+        /// *   `false`
+        /// </summary>
         [NameInMap("ASMGatewayContinue")]
         [Validation(Required=false)]
         public bool? ASMGatewayContinue { get; set; }
@@ -18,16 +24,31 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string ExpectedVersion { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// 执行升级检查。如果该值设置为true，则只会执行升级检查，并不会实际升级。
+        /// </summary>
+        [NameInMap("PreCheck")]
+        [Validation(Required=false)]
+        public bool? PreCheck { get; set; }
+
+        /// <summary>
+        /// The ASM instance ID.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
+        /// <summary>
+        /// *   ``
+        /// *   ``
+        /// </summary>
         [NameInMap("SwitchToPro")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? SwitchToPro { get; set; }
 
+        /// <summary>
+        /// Specifies the ASM gateways to be upgraded. Separate multiple ASM gateways with commas (,).
+        /// </summary>
         [NameInMap("UpgradeGatewayRecords")]
         [Validation(Required=false)]
         public string UpgradeGatewayRecords { get; set; }

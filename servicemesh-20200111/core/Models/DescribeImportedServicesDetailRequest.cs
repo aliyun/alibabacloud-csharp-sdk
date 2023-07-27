@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeImportedServicesDetailRequest : TeaModel {
         /// <summary>
-        /// The name of the ASM gateway.
+        /// The name of the service.
         /// </summary>
         [NameInMap("ASMGatewayName")]
         [Validation(Required=false)]
         public string ASMGatewayName { get; set; }
 
         /// <summary>
-        /// The ID of the ASM instance.
+        /// The details of the services.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

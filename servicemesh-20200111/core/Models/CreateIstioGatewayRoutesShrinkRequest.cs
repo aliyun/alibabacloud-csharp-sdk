@@ -9,26 +9,48 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class CreateIstioGatewayRoutesShrinkRequest : TeaModel {
+        /// <summary>
+        /// The description of the routing rule.
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// The information about the routing rule to be created for the ASM gateway.
+        /// </summary>
         [NameInMap("GatewayRoute")]
         [Validation(Required=false)]
         public string GatewayRouteShrink { get; set; }
 
+        /// <summary>
+        /// The name of the ASM gateway.
+        /// </summary>
         [NameInMap("IstioGatewayName")]
         [Validation(Required=false)]
         public string IstioGatewayName { get; set; }
 
+        /// <summary>
+        /// The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.
+        /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public int? Priority { get; set; }
 
+        /// <summary>
+        /// The ASM instance ID.
+        /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
+        /// <summary>
+        /// The status of the routing rule. Valid values:
+        /// 
+        /// *   `0`: The routing rule is valid.
+        /// *   `1`: The routing rule is invalid.
+        /// *   `2`: An error occurs during the creation or update of the routing rule.
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }

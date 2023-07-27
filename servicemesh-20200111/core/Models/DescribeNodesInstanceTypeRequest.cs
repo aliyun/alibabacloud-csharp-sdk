@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeNodesInstanceTypeRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the Alibaba Cloud Service Mesh (ASM) instance.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

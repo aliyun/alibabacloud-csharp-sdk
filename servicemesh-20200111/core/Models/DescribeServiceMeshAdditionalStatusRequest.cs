@@ -10,20 +10,17 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeServiceMeshAdditionalStatusRequest : TeaModel {
         /// <summary>
-        /// The check result of the SLB instance. Valid values:
+        /// The check mode of the ASM instance. Valid values:
         /// 
-        /// *   `exist`: The SLB instance exists.
-        /// *   `not_exist`: The SLB instance does not exist.
-        /// *   `conflict`: Conflicts are detected.
-        /// *   `failed`: The check fails.
-        /// *   `time_out`: The check times out.
+        /// *   `normal`: checks the Server Load Balancer (SLB) instances created for exposing the API server and Istio Pilot, audit logs, and installation of Logtail for clusters on the data plane.
+        /// *   `full`: checks control plane logs, access logs, security groups, and the elastic IP addresses (EIPs) of the API server in addition to the check items in normal mode.
         /// </summary>
         [NameInMap("CheckMode")]
         [Validation(Required=false)]
         public string CheckMode { get; set; }
 
         /// <summary>
-        /// The check results of the SLB instances created for exposing the API server.
+        /// The ID of the ASM instance.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

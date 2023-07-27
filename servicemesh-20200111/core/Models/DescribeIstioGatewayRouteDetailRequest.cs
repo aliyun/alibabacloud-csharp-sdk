@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeIstioGatewayRouteDetailRequest : TeaModel {
         /// <summary>
-        /// The fixed duration for request delay.
+        /// The name of the ASM gateway.
         /// </summary>
         [NameInMap("IstioGatewayName")]
         [Validation(Required=false)]
         public string IstioGatewayName { get; set; }
 
         /// <summary>
-        /// The duration for request delay is expressed as 2 raised to the power of x. You must specify the value of x.
+        /// The name of the routing rule.
         /// </summary>
         [NameInMap("RouteName")]
         [Validation(Required=false)]
         public string RouteName { get; set; }
 
         /// <summary>
-        /// The duration to delay a request.
+        /// The ASM instance ID.
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

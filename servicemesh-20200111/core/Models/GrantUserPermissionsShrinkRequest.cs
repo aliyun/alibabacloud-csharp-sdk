@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
-    public class GrantUserPermissionsRequest : TeaModel {
+    public class GrantUserPermissionsShrinkRequest : TeaModel {
         /// <summary>
         /// The permissions that are granted to an entity. The content is a string that consists of JSON arrays. You must specify all permissions that you want to grant to an entity. You can add or remove permissions by modifying the content. Field definition of the sample code:
         /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         /// </summary>
         [NameInMap("SubAccountUserIds")]
         [Validation(Required=false)]
-        public List<string> SubAccountUserIds { get; set; }
+        public string SubAccountUserIdsShrink { get; set; }
 
     }
 

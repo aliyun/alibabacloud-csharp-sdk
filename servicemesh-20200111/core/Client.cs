@@ -120,6 +120,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await AddClusterIntoServiceMeshWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request AddVMIntoServiceMeshRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddVMIntoServiceMeshResponse
+         */
+        // Deprecated
         public AddVMIntoServiceMeshResponse AddVMIntoServiceMeshWithOptions(AddVMIntoServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -151,6 +159,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<AddVMIntoServiceMeshResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request AddVMIntoServiceMeshRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return AddVMIntoServiceMeshResponse
+         */
+        // Deprecated
         public async Task<AddVMIntoServiceMeshResponse> AddVMIntoServiceMeshWithOptionsAsync(AddVMIntoServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -182,12 +198,26 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<AddVMIntoServiceMeshResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request AddVMIntoServiceMeshRequest
+          * @return AddVMIntoServiceMeshResponse
+         */
+        // Deprecated
         public AddVMIntoServiceMeshResponse AddVMIntoServiceMesh(AddVMIntoServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddVMIntoServiceMeshWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request AddVMIntoServiceMeshRequest
+          * @return AddVMIntoServiceMeshResponse
+         */
+        // Deprecated
         public async Task<AddVMIntoServiceMeshResponse> AddVMIntoServiceMeshAsync(AddVMIntoServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2946,64 +2976,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await DescribeImportedServicesDetailWithOptionsAsync(request, runtime);
         }
 
-        public DescribeIngressGatewaysResponse DescribeIngressGatewaysWithOptions(DescribeIngressGatewaysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeIngressGateways",
-                Version = "2020-01-11",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeIngressGatewaysResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeIngressGatewaysResponse> DescribeIngressGatewaysWithOptionsAsync(DescribeIngressGatewaysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeIngressGateways",
-                Version = "2020-01-11",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeIngressGatewaysResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeIngressGatewaysResponse DescribeIngressGateways(DescribeIngressGatewaysRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeIngressGatewaysWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeIngressGatewaysResponse> DescribeIngressGatewaysAsync(DescribeIngressGatewaysRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeIngressGatewaysWithOptionsAsync(request, runtime);
-        }
-
         public DescribeIstioGatewayDomainsResponse DescribeIstioGatewayDomainsWithOptions(DescribeIstioGatewayDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4030,6 +4002,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await DescribeServiceMeshUpgradeStatusWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeServiceMeshVMsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeServiceMeshVMsResponse
+         */
+        // Deprecated
         public DescribeServiceMeshVMsResponse DescribeServiceMeshVMsWithOptions(DescribeServiceMeshVMsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4057,6 +4037,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshVMsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeServiceMeshVMsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeServiceMeshVMsResponse
+         */
+        // Deprecated
         public async Task<DescribeServiceMeshVMsResponse> DescribeServiceMeshVMsWithOptionsAsync(DescribeServiceMeshVMsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4084,12 +4072,26 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshVMsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeServiceMeshVMsRequest
+          * @return DescribeServiceMeshVMsResponse
+         */
+        // Deprecated
         public DescribeServiceMeshVMsResponse DescribeServiceMeshVMs(DescribeServiceMeshVMsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeServiceMeshVMsWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeServiceMeshVMsRequest
+          * @return DescribeServiceMeshVMsResponse
+         */
+        // Deprecated
         public async Task<DescribeServiceMeshVMsResponse> DescribeServiceMeshVMsAsync(DescribeServiceMeshVMsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4342,6 +4344,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await DescribeUsersWithPermissionsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeVMsInServiceMeshRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVMsInServiceMeshResponse
+         */
+        // Deprecated
         public DescribeVMsInServiceMeshResponse DescribeVMsInServiceMeshWithOptions(DescribeVMsInServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4369,6 +4379,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeVMsInServiceMeshResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeVMsInServiceMeshRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeVMsInServiceMeshResponse
+         */
+        // Deprecated
         public async Task<DescribeVMsInServiceMeshResponse> DescribeVMsInServiceMeshWithOptionsAsync(DescribeVMsInServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4396,12 +4414,26 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeVMsInServiceMeshResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeVMsInServiceMeshRequest
+          * @return DescribeVMsInServiceMeshResponse
+         */
+        // Deprecated
         public DescribeVMsInServiceMeshResponse DescribeVMsInServiceMesh(DescribeVMsInServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVMsInServiceMeshWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request DescribeVMsInServiceMeshRequest
+          * @return DescribeVMsInServiceMeshResponse
+         */
+        // Deprecated
         public async Task<DescribeVMsInServiceMeshResponse> DescribeVMsInServiceMeshAsync(DescribeVMsInServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5248,6 +5280,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await GetSwimLaneListWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetVmAppMeshInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetVmAppMeshInfoResponse
+         */
+        // Deprecated
         public GetVmAppMeshInfoResponse GetVmAppMeshInfoWithOptions(GetVmAppMeshInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5271,6 +5311,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetVmAppMeshInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetVmAppMeshInfoRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetVmAppMeshInfoResponse
+         */
+        // Deprecated
         public async Task<GetVmAppMeshInfoResponse> GetVmAppMeshInfoWithOptionsAsync(GetVmAppMeshInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5294,18 +5342,40 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetVmAppMeshInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetVmAppMeshInfoRequest
+          * @return GetVmAppMeshInfoResponse
+         */
+        // Deprecated
         public GetVmAppMeshInfoResponse GetVmAppMeshInfo(GetVmAppMeshInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetVmAppMeshInfoWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetVmAppMeshInfoRequest
+          * @return GetVmAppMeshInfoResponse
+         */
+        // Deprecated
         public async Task<GetVmAppMeshInfoResponse> GetVmAppMeshInfoAsync(GetVmAppMeshInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetVmAppMeshInfoWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetVmMetaRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetVmMetaResponse
+         */
+        // Deprecated
         public GetVmMetaResponse GetVmMetaWithOptions(GetVmMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5329,6 +5399,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetVmMetaResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetVmMetaRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetVmMetaResponse
+         */
+        // Deprecated
         public async Task<GetVmMetaResponse> GetVmMetaWithOptionsAsync(GetVmMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5352,21 +5430,41 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetVmMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetVmMetaRequest
+          * @return GetVmMetaResponse
+         */
+        // Deprecated
         public GetVmMetaResponse GetVmMeta(GetVmMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetVmMetaWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request GetVmMetaRequest
+          * @return GetVmMetaResponse
+         */
+        // Deprecated
         public async Task<GetVmMetaResponse> GetVmMetaAsync(GetVmMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetVmMetaWithOptionsAsync(request, runtime);
         }
 
-        public GrantUserPermissionsResponse GrantUserPermissionsWithOptions(GrantUserPermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GrantUserPermissionsResponse GrantUserPermissionsWithOptions(GrantUserPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GrantUserPermissionsShrinkRequest request = new GrantUserPermissionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubAccountUserIds))
+            {
+                request.SubAccountUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubAccountUserIds, "SubAccountUserIds", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Permissions))
             {
@@ -5375,6 +5473,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubAccountUserId))
             {
                 body["SubAccountUserId"] = request.SubAccountUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubAccountUserIdsShrink))
+            {
+                body["SubAccountUserIds"] = request.SubAccountUserIdsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5395,9 +5497,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GrantUserPermissionsResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<GrantUserPermissionsResponse> GrantUserPermissionsWithOptionsAsync(GrantUserPermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GrantUserPermissionsResponse> GrantUserPermissionsWithOptionsAsync(GrantUserPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GrantUserPermissionsShrinkRequest request = new GrantUserPermissionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubAccountUserIds))
+            {
+                request.SubAccountUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubAccountUserIds, "SubAccountUserIds", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Permissions))
             {
@@ -5406,6 +5514,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubAccountUserId))
             {
                 body["SubAccountUserId"] = request.SubAccountUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubAccountUserIdsShrink))
+            {
+                body["SubAccountUserIds"] = request.SubAccountUserIdsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5776,6 +5888,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await RemoveClusterFromServiceMeshWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request RemoveVMFromServiceMeshRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveVMFromServiceMeshResponse
+         */
+        // Deprecated
         public RemoveVMFromServiceMeshResponse RemoveVMFromServiceMeshWithOptions(RemoveVMFromServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5807,6 +5927,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<RemoveVMFromServiceMeshResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request RemoveVMFromServiceMeshRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveVMFromServiceMeshResponse
+         */
+        // Deprecated
         public async Task<RemoveVMFromServiceMeshResponse> RemoveVMFromServiceMeshWithOptionsAsync(RemoveVMFromServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5838,12 +5966,26 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<RemoveVMFromServiceMeshResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request RemoveVMFromServiceMeshRequest
+          * @return RemoveVMFromServiceMeshResponse
+         */
+        // Deprecated
         public RemoveVMFromServiceMeshResponse RemoveVMFromServiceMesh(RemoveVMFromServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveVMFromServiceMeshWithOptions(request, runtime);
         }
 
+        /**
+          * @deprecated
+          *
+          * @param request RemoveVMFromServiceMeshRequest
+          * @return RemoveVMFromServiceMeshResponse
+         */
+        // Deprecated
         public async Task<RemoveVMFromServiceMeshResponse> RemoveVMFromServiceMeshAsync(RemoveVMFromServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6300,6 +6442,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["EnableSidecarSetInjection"] = request.EnableSidecarSetInjection;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IstioRev))
+            {
+                body["IstioRev"] = request.IstioRev;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 body["Namespace"] = request.Namespace;
@@ -6338,6 +6484,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSidecarSetInjection))
             {
                 body["EnableSidecarSetInjection"] = request.EnableSidecarSetInjection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IstioRev))
+            {
+                body["IstioRev"] = request.IstioRev;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
@@ -6782,6 +6932,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["KialiEnabled"] = request.KialiEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KialiServiceAnnotations))
+            {
+                body["KialiServiceAnnotations"] = request.KialiServiceAnnotations;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lifecycle))
             {
                 body["Lifecycle"] = request.Lifecycle;
@@ -7188,6 +7342,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KialiEnabled))
             {
                 body["KialiEnabled"] = request.KialiEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KialiServiceAnnotations))
+            {
+                body["KialiServiceAnnotations"] = request.KialiServiceAnnotations;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lifecycle))
             {
@@ -7974,6 +8132,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["ExpectedVersion"] = request.ExpectedVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreCheck))
+            {
+                body["PreCheck"] = request.PreCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
                 body["ServiceMeshId"] = request.ServiceMeshId;
@@ -8016,6 +8178,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedVersion))
             {
                 body["ExpectedVersion"] = request.ExpectedVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreCheck))
+            {
+                body["PreCheck"] = request.PreCheck;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
@@ -8064,6 +8230,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreCheck))
+            {
+                query["PreCheck"] = request.PreCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
                 query["ServiceMeshId"] = request.ServiceMeshId;
@@ -8091,6 +8261,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreCheck))
+            {
+                query["PreCheck"] = request.PreCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
                 query["ServiceMeshId"] = request.ServiceMeshId;

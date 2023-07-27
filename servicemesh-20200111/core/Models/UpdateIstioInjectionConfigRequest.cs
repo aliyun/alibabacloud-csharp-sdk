@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public bool? EnableSidecarSetInjection { get; set; }
 
+        [NameInMap("IstioRev")]
+        [Validation(Required=false)]
+        public string IstioRev { get; set; }
+
         /// <summary>
         /// The namespace for which you want to modify the sidecar injection setting.
         /// </summary>
