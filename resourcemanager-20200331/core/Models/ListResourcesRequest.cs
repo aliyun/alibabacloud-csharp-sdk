@@ -57,6 +57,20 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        [NameInMap("ResourceTypes")]
+        [Validation(Required=false)]
+        public List<ListResourcesRequestResourceTypes> ResourceTypes { get; set; }
+        public class ListResourcesRequestResourceTypes : TeaModel {
+            [NameInMap("ResourceType")]
+            [Validation(Required=false)]
+            public string ResourceType { get; set; }
+
+            [NameInMap("Service")]
+            [Validation(Required=false)]
+            public string Service { get; set; }
+
+        }
+
         /// <summary>
         /// The ID of the Alibaba Cloud service.
         /// 

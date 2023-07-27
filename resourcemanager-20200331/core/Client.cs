@@ -6167,6 +6167,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             {
                 query["ResourceType"] = request.ResourceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypes))
+            {
+                query["ResourceTypes"] = request.ResourceTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
             {
                 query["Service"] = request.Service;
@@ -6225,6 +6229,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
                 query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypes))
+            {
+                query["ResourceTypes"] = request.ResourceTypes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
             {
