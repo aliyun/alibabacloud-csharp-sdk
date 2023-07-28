@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetParameterResponseBody : TeaModel {
+        /// <summary>
+        /// The description of the common parameter.
+        /// </summary>
         [NameInMap("Parameter")]
         [Validation(Required=false)]
         public GetParameterResponseBodyParameter Parameter { get; set; }
@@ -49,28 +52,46 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string ShareType { get; set; }
 
+            /// <summary>
+            /// The ID of the request.
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public Dictionary<string, object> Tags { get; set; }
 
+            /// <summary>
+            /// The region ID of the resource.
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// The value of the common parameter.
+            /// </summary>
             [NameInMap("UpdatedBy")]
             [Validation(Required=false)]
             public string UpdatedBy { get; set; }
 
+            /// <summary>
+            /// The information of the common parameter.
+            /// </summary>
             [NameInMap("UpdatedDate")]
             [Validation(Required=false)]
             public string UpdatedDate { get; set; }
 
+            /// <summary>
+            /// Queries a common parameter and its value.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
 
         }
 
+        /// <summary>
+        /// The user who updated the common parameter.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

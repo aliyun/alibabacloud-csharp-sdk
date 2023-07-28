@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
-    public class CreatePatchBaselineRequest : TeaModel {
+    public class CreatePatchBaselineShrinkRequest : TeaModel {
         /// <summary>
         /// The rules of scanning and installing patches for the specified operating system.
         /// </summary>
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         [NameInMap("ApprovedPatches")]
         [Validation(Required=false)]
-        public List<string> ApprovedPatches { get; set; }
+        public string ApprovedPatchesShrink { get; set; }
 
         [NameInMap("ApprovedPatchesEnableNonSecurity")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         [NameInMap("RejectedPatches")]
         [Validation(Required=false)]
-        public List<string> RejectedPatches { get; set; }
+        public string RejectedPatchesShrink { get; set; }
 
         [NameInMap("RejectedPatchesAction")]
         [Validation(Required=false)]
@@ -78,21 +78,11 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         [NameInMap("Sources")]
         [Validation(Required=false)]
-        public List<string> Sources { get; set; }
+        public string SourcesShrink { get; set; }
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
-        public List<CreatePatchBaselineRequestTags> Tags { get; set; }
-        public class CreatePatchBaselineRequestTags : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagsShrink { get; set; }
 
     }
 

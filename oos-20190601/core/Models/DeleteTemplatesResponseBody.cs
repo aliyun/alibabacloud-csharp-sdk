@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class DeleteTemplatesResponseBody : TeaModel {
+        /// <summary>
+        /// Deletes multiple templates.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

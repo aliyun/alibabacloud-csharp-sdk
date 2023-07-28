@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
-    public class ListPatchBaselinesRequest : TeaModel {
+    public class ListPatchBaselinesShrinkRequest : TeaModel {
         [NameInMap("ApprovedPatches")]
         [Validation(Required=false)]
-        public List<string> ApprovedPatches { get; set; }
+        public string ApprovedPatchesShrink { get; set; }
 
         [NameInMap("ApprovedPatchesEnableNonSecurity")]
         [Validation(Required=false)]
@@ -69,21 +69,11 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         [NameInMap("Sources")]
         [Validation(Required=false)]
-        public List<string> Sources { get; set; }
+        public string SourcesShrink { get; set; }
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
-        public List<ListPatchBaselinesRequestTags> Tags { get; set; }
-        public class ListPatchBaselinesRequestTags : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagsShrink { get; set; }
 
     }
 

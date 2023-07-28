@@ -13,10 +13,16 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public bool? All { get; set; }
 
+        /// <summary>
+        /// Specifies whether to delete all tags. This parameter takes effect only when the TagKeys parameter is not specified. Valid values: true and false. Default value: false. The TagKeys parameter is required when this parameter is set to false.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// You can call this operation to delete tags that are attached to one or more resources.
+        /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public Dictionary<string, object> ResourceIds { get; set; }

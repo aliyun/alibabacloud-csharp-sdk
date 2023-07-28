@@ -8,10 +8,21 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
-    public class CreateApplicationShrinkRequest : TeaModel {
-        [NameInMap("AlarmConfig")]
+    public class UpdatePatchBaselineShrinkRequest : TeaModel {
+        /// <summary>
+        /// The rules of scanning and installing patches for the specified operating system.
+        /// </summary>
+        [NameInMap("ApprovalRules")]
         [Validation(Required=false)]
-        public string AlarmConfigShrink { get; set; }
+        public string ApprovalRules { get; set; }
+
+        [NameInMap("ApprovedPatches")]
+        [Validation(Required=false)]
+        public string ApprovedPatchesShrink { get; set; }
+
+        [NameInMap("ApprovedPatchesEnableNonSecurity")]
+        [Validation(Required=false)]
+        public bool? ApprovedPatchesEnableNonSecurity { get; set; }
 
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
@@ -21,36 +32,38 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the application.
+        /// The description of the patch baseline.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The application name.
+        /// The name of the patch baseline.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The region ID. Set the value to cn-hangzhou.
+        /// The ID of the region.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// The ID of the resource group.
-        /// </summary>
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("RejectedPatches")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string RejectedPatchesShrink { get; set; }
 
-        /// <summary>
-        /// The tags.
-        /// </summary>
+        [NameInMap("RejectedPatchesAction")]
+        [Validation(Required=false)]
+        public string RejectedPatchesAction { get; set; }
+
+        [NameInMap("Sources")]
+        [Validation(Required=false)]
+        public string SourcesShrink { get; set; }
+
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }

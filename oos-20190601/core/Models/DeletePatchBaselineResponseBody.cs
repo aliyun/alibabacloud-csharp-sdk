@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class DeletePatchBaselineResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

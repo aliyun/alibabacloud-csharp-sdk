@@ -296,11 +296,19 @@ namespace AlibabaCloud.SDK.Oos20190601
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateApplicationShrinkRequest request = new CreateApplicationShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AlarmConfig))
+            {
+                request.AlarmConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AlarmConfig, "AlarmConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmConfigShrink))
+            {
+                query["AlarmConfig"] = request.AlarmConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -349,11 +357,19 @@ namespace AlibabaCloud.SDK.Oos20190601
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateApplicationShrinkRequest request = new CreateApplicationShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AlarmConfig))
+            {
+                request.AlarmConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AlarmConfig, "AlarmConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmConfigShrink))
+            {
+                query["AlarmConfig"] = request.AlarmConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -855,13 +871,39 @@ namespace AlibabaCloud.SDK.Oos20190601
             return await CreateParameterWithOptionsAsync(request, runtime);
         }
 
-        public CreatePatchBaselineResponse CreatePatchBaselineWithOptions(CreatePatchBaselineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreatePatchBaselineResponse CreatePatchBaselineWithOptions(CreatePatchBaselineRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePatchBaselineShrinkRequest request = new CreatePatchBaselineShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApprovedPatches))
+            {
+                request.ApprovedPatchesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApprovedPatches, "ApprovedPatches", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RejectedPatches))
+            {
+                request.RejectedPatchesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RejectedPatches, "RejectedPatches", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
+            {
+                request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalRules))
             {
                 query["ApprovalRules"] = request.ApprovalRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovedPatchesShrink))
+            {
+                query["ApprovedPatches"] = request.ApprovedPatchesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovedPatchesEnableNonSecurity))
+            {
+                query["ApprovedPatchesEnableNonSecurity"] = request.ApprovedPatchesEnableNonSecurity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -882,6 +924,22 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RejectedPatchesShrink))
+            {
+                query["RejectedPatches"] = request.RejectedPatchesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RejectedPatchesAction))
+            {
+                query["RejectedPatchesAction"] = request.RejectedPatchesAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcesShrink))
+            {
+                query["Sources"] = request.SourcesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -902,13 +960,39 @@ namespace AlibabaCloud.SDK.Oos20190601
             return TeaModel.ToObject<CreatePatchBaselineResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreatePatchBaselineResponse> CreatePatchBaselineWithOptionsAsync(CreatePatchBaselineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreatePatchBaselineResponse> CreatePatchBaselineWithOptionsAsync(CreatePatchBaselineRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePatchBaselineShrinkRequest request = new CreatePatchBaselineShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApprovedPatches))
+            {
+                request.ApprovedPatchesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApprovedPatches, "ApprovedPatches", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RejectedPatches))
+            {
+                request.RejectedPatchesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RejectedPatches, "RejectedPatches", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
+            {
+                request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalRules))
             {
                 query["ApprovalRules"] = request.ApprovalRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovedPatchesShrink))
+            {
+                query["ApprovedPatches"] = request.ApprovedPatchesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovedPatchesEnableNonSecurity))
+            {
+                query["ApprovedPatchesEnableNonSecurity"] = request.ApprovedPatchesEnableNonSecurity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -929,6 +1013,22 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RejectedPatchesShrink))
+            {
+                query["RejectedPatches"] = request.RejectedPatchesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RejectedPatchesAction))
+            {
+                query["RejectedPatchesAction"] = request.RejectedPatchesAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcesShrink))
+            {
+                query["Sources"] = request.SourcesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2269,6 +2369,10 @@ namespace AlibabaCloud.SDK.Oos20190601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRole))
+            {
+                query["RamRole"] = request.RamRole;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2304,6 +2408,10 @@ namespace AlibabaCloud.SDK.Oos20190601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRole))
+            {
+                query["RamRole"] = request.RamRole;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3621,10 +3729,6 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
-            {
-                query["Product"] = request.Product;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3679,10 +3783,6 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
-            {
-                query["Product"] = request.Product;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3741,6 +3841,10 @@ namespace AlibabaCloud.SDK.Oos20190601
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationType))
+            {
+                query["ApplicationType"] = request.ApplicationType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -3794,6 +3898,10 @@ namespace AlibabaCloud.SDK.Oos20190601
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationType))
+            {
+                query["ApplicationType"] = request.ApplicationType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -3849,6 +3957,13 @@ namespace AlibabaCloud.SDK.Oos20190601
             return await ListApplicationsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request ListExecutionLogsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListExecutionLogsResponse
+         */
         public ListExecutionLogsResponse ListExecutionLogsWithOptions(ListExecutionLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3896,6 +4011,13 @@ namespace AlibabaCloud.SDK.Oos20190601
             return TeaModel.ToObject<ListExecutionLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request ListExecutionLogsRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListExecutionLogsResponse
+         */
         public async Task<ListExecutionLogsResponse> ListExecutionLogsWithOptionsAsync(ListExecutionLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3943,12 +4065,24 @@ namespace AlibabaCloud.SDK.Oos20190601
             return TeaModel.ToObject<ListExecutionLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ****
+          *
+          * @param request ListExecutionLogsRequest
+          * @return ListExecutionLogsResponse
+         */
         public ListExecutionLogsResponse ListExecutionLogs(ListExecutionLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListExecutionLogsWithOptions(request, runtime);
         }
 
+        /**
+          * ****
+          *
+          * @param request ListExecutionLogsRequest
+          * @return ListExecutionLogsResponse
+         */
         public async Task<ListExecutionLogsResponse> ListExecutionLogsAsync(ListExecutionLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4039,9 +4173,21 @@ namespace AlibabaCloud.SDK.Oos20190601
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Categories))
+            {
+                query["Categories"] = request.Categories;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
                 query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Depth))
+            {
+                query["Depth"] = request.Depth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDateAfter))
             {
@@ -4156,9 +4302,21 @@ namespace AlibabaCloud.SDK.Oos20190601
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Categories))
+            {
+                query["Categories"] = request.Categories;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
                 query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Depth))
+            {
+                query["Depth"] = request.Depth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDateAfter))
             {
@@ -4831,6 +4989,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareType))
+            {
+                query["ShareType"] = request.ShareType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
             {
                 query["SortField"] = request.SortField;
@@ -4904,6 +5066,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareType))
+            {
+                query["ShareType"] = request.ShareType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
             {
                 query["SortField"] = request.SortField;
@@ -4951,10 +5117,32 @@ namespace AlibabaCloud.SDK.Oos20190601
             return await ListParametersWithOptionsAsync(request, runtime);
         }
 
-        public ListPatchBaselinesResponse ListPatchBaselinesWithOptions(ListPatchBaselinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListPatchBaselinesResponse ListPatchBaselinesWithOptions(ListPatchBaselinesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListPatchBaselinesShrinkRequest request = new ListPatchBaselinesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApprovedPatches))
+            {
+                request.ApprovedPatchesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApprovedPatches, "ApprovedPatches", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
+            {
+                request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovedPatchesShrink))
+            {
+                query["ApprovedPatches"] = request.ApprovedPatchesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovedPatchesEnableNonSecurity))
+            {
+                query["ApprovedPatchesEnableNonSecurity"] = request.ApprovedPatchesEnableNonSecurity;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -4978,6 +5166,14 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareType))
             {
                 query["ShareType"] = request.ShareType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcesShrink))
+            {
+                query["Sources"] = request.SourcesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4998,10 +5194,32 @@ namespace AlibabaCloud.SDK.Oos20190601
             return TeaModel.ToObject<ListPatchBaselinesResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListPatchBaselinesResponse> ListPatchBaselinesWithOptionsAsync(ListPatchBaselinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListPatchBaselinesResponse> ListPatchBaselinesWithOptionsAsync(ListPatchBaselinesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListPatchBaselinesShrinkRequest request = new ListPatchBaselinesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApprovedPatches))
+            {
+                request.ApprovedPatchesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApprovedPatches, "ApprovedPatches", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
+            {
+                request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovedPatchesShrink))
+            {
+                query["ApprovedPatches"] = request.ApprovedPatchesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovedPatchesEnableNonSecurity))
+            {
+                query["ApprovedPatchesEnableNonSecurity"] = request.ApprovedPatchesEnableNonSecurity;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -5025,6 +5243,14 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareType))
             {
                 query["ShareType"] = request.ShareType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcesShrink))
+            {
+                query["Sources"] = request.SourcesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5253,6 +5479,13 @@ namespace AlibabaCloud.SDK.Oos20190601
             return await ListSecretParameterVersionsWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you have the permission to manage Key Management Service (KMS) secrets.
+          *
+          * @param tmpReq ListSecretParametersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListSecretParametersResponse
+         */
         public ListSecretParametersResponse ListSecretParametersWithOptions(ListSecretParametersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5322,6 +5555,13 @@ namespace AlibabaCloud.SDK.Oos20190601
             return TeaModel.ToObject<ListSecretParametersResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you have the permission to manage Key Management Service (KMS) secrets.
+          *
+          * @param tmpReq ListSecretParametersRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListSecretParametersResponse
+         */
         public async Task<ListSecretParametersResponse> ListSecretParametersWithOptionsAsync(ListSecretParametersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5391,12 +5631,24 @@ namespace AlibabaCloud.SDK.Oos20190601
             return TeaModel.ToObject<ListSecretParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * Before you call this operation, make sure that you have the permission to manage Key Management Service (KMS) secrets.
+          *
+          * @param request ListSecretParametersRequest
+          * @return ListSecretParametersResponse
+         */
         public ListSecretParametersResponse ListSecretParameters(ListSecretParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSecretParametersWithOptions(request, runtime);
         }
 
+        /**
+          * Before you call this operation, make sure that you have the permission to manage Key Management Service (KMS) secrets.
+          *
+          * @param request ListSecretParametersRequest
+          * @return ListSecretParametersResponse
+         */
         public async Task<ListSecretParametersResponse> ListSecretParametersAsync(ListSecretParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6325,6 +6577,16 @@ namespace AlibabaCloud.SDK.Oos20190601
             return await ListTemplatesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * You can call this operation to notify an execution in the following scenarios:
+          * *   If a template contains a special task, such as an approval task, the Operation Orchestration Service (OOS) execution engine sets the execution state to Waiting when the approval task is being run. You can call this operation to specify whether to continue the execution.
+          * *   If you perform debugging in the debug mode, you can call this operation to notify the execution of the subsequent operations after the execution is created or a task is complete.
+          * *   If a high-risk operation task waits for approval, you can call this operation to specify whether to continue the execution.
+          *
+          * @param request NotifyExecutionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return NotifyExecutionResponse
+         */
         public NotifyExecutionResponse NotifyExecutionWithOptions(NotifyExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6388,6 +6650,16 @@ namespace AlibabaCloud.SDK.Oos20190601
             return TeaModel.ToObject<NotifyExecutionResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to notify an execution in the following scenarios:
+          * *   If a template contains a special task, such as an approval task, the Operation Orchestration Service (OOS) execution engine sets the execution state to Waiting when the approval task is being run. You can call this operation to specify whether to continue the execution.
+          * *   If you perform debugging in the debug mode, you can call this operation to notify the execution of the subsequent operations after the execution is created or a task is complete.
+          * *   If a high-risk operation task waits for approval, you can call this operation to specify whether to continue the execution.
+          *
+          * @param request NotifyExecutionRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return NotifyExecutionResponse
+         */
         public async Task<NotifyExecutionResponse> NotifyExecutionWithOptionsAsync(NotifyExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6451,12 +6723,30 @@ namespace AlibabaCloud.SDK.Oos20190601
             return TeaModel.ToObject<NotifyExecutionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to notify an execution in the following scenarios:
+          * *   If a template contains a special task, such as an approval task, the Operation Orchestration Service (OOS) execution engine sets the execution state to Waiting when the approval task is being run. You can call this operation to specify whether to continue the execution.
+          * *   If you perform debugging in the debug mode, you can call this operation to notify the execution of the subsequent operations after the execution is created or a task is complete.
+          * *   If a high-risk operation task waits for approval, you can call this operation to specify whether to continue the execution.
+          *
+          * @param request NotifyExecutionRequest
+          * @return NotifyExecutionResponse
+         */
         public NotifyExecutionResponse NotifyExecution(NotifyExecutionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return NotifyExecutionWithOptions(request, runtime);
         }
 
+        /**
+          * You can call this operation to notify an execution in the following scenarios:
+          * *   If a template contains a special task, such as an approval task, the Operation Orchestration Service (OOS) execution engine sets the execution state to Waiting when the approval task is being run. You can call this operation to specify whether to continue the execution.
+          * *   If you perform debugging in the debug mode, you can call this operation to notify the execution of the subsequent operations after the execution is created or a task is complete.
+          * *   If a high-risk operation task waits for approval, you can call this operation to specify whether to continue the execution.
+          *
+          * @param request NotifyExecutionRequest
+          * @return NotifyExecutionResponse
+         */
         public async Task<NotifyExecutionResponse> NotifyExecutionAsync(NotifyExecutionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7262,11 +7552,23 @@ namespace AlibabaCloud.SDK.Oos20190601
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateApplicationShrinkRequest request = new UpdateApplicationShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AlarmConfig))
+            {
+                request.AlarmConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AlarmConfig, "AlarmConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmConfigShrink))
+            {
+                query["AlarmConfig"] = request.AlarmConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteAlarmRulesBeforeUpdate))
+            {
+                query["DeleteAlarmRulesBeforeUpdate"] = request.DeleteAlarmRulesBeforeUpdate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -7307,11 +7609,23 @@ namespace AlibabaCloud.SDK.Oos20190601
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateApplicationShrinkRequest request = new UpdateApplicationShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AlarmConfig))
+            {
+                request.AlarmConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AlarmConfig, "AlarmConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmConfigShrink))
+            {
+                query["AlarmConfig"] = request.AlarmConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteAlarmRulesBeforeUpdate))
+            {
+                query["DeleteAlarmRulesBeforeUpdate"] = request.DeleteAlarmRulesBeforeUpdate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -7457,6 +7771,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutionId))
             {
                 query["ExecutionId"] = request.ExecutionId;
@@ -7495,6 +7813,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutionId))
             {
@@ -7835,13 +8157,39 @@ namespace AlibabaCloud.SDK.Oos20190601
             return await UpdateParameterWithOptionsAsync(request, runtime);
         }
 
-        public UpdatePatchBaselineResponse UpdatePatchBaselineWithOptions(UpdatePatchBaselineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdatePatchBaselineResponse UpdatePatchBaselineWithOptions(UpdatePatchBaselineRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdatePatchBaselineShrinkRequest request = new UpdatePatchBaselineShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApprovedPatches))
+            {
+                request.ApprovedPatchesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApprovedPatches, "ApprovedPatches", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RejectedPatches))
+            {
+                request.RejectedPatchesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RejectedPatches, "RejectedPatches", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
+            {
+                request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalRules))
             {
                 query["ApprovalRules"] = request.ApprovalRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovedPatchesShrink))
+            {
+                query["ApprovedPatches"] = request.ApprovedPatchesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovedPatchesEnableNonSecurity))
+            {
+                query["ApprovedPatchesEnableNonSecurity"] = request.ApprovedPatchesEnableNonSecurity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -7858,6 +8206,22 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RejectedPatchesShrink))
+            {
+                query["RejectedPatches"] = request.RejectedPatchesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RejectedPatchesAction))
+            {
+                query["RejectedPatchesAction"] = request.RejectedPatchesAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcesShrink))
+            {
+                query["Sources"] = request.SourcesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7878,13 +8242,39 @@ namespace AlibabaCloud.SDK.Oos20190601
             return TeaModel.ToObject<UpdatePatchBaselineResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UpdatePatchBaselineResponse> UpdatePatchBaselineWithOptionsAsync(UpdatePatchBaselineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdatePatchBaselineResponse> UpdatePatchBaselineWithOptionsAsync(UpdatePatchBaselineRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdatePatchBaselineShrinkRequest request = new UpdatePatchBaselineShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApprovedPatches))
+            {
+                request.ApprovedPatchesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApprovedPatches, "ApprovedPatches", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RejectedPatches))
+            {
+                request.RejectedPatchesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RejectedPatches, "RejectedPatches", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
+            {
+                request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalRules))
             {
                 query["ApprovalRules"] = request.ApprovalRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovedPatchesShrink))
+            {
+                query["ApprovedPatches"] = request.ApprovedPatchesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovedPatchesEnableNonSecurity))
+            {
+                query["ApprovedPatchesEnableNonSecurity"] = request.ApprovedPatchesEnableNonSecurity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -7901,6 +8291,22 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RejectedPatchesShrink))
+            {
+                query["RejectedPatches"] = request.RejectedPatchesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RejectedPatchesAction))
+            {
+                query["RejectedPatchesAction"] = request.RejectedPatchesAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcesShrink))
+            {
+                query["Sources"] = request.SourcesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

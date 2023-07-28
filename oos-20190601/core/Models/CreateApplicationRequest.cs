@@ -9,26 +9,62 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class CreateApplicationRequest : TeaModel {
+        [NameInMap("AlarmConfig")]
+        [Validation(Required=false)]
+        public CreateApplicationRequestAlarmConfig AlarmConfig { get; set; }
+        public class CreateApplicationRequestAlarmConfig : TeaModel {
+            [NameInMap("ContactGroups")]
+            [Validation(Required=false)]
+            public List<string> ContactGroups { get; set; }
+
+            [NameInMap("HealthCheckUrl")]
+            [Validation(Required=false)]
+            public string HealthCheckUrl { get; set; }
+
+            [NameInMap("TemplateIds")]
+            [Validation(Required=false)]
+            public List<string> TemplateIds { get; set; }
+
+        }
+
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request.
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// The description of the application.
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// The application name.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The region ID. Set the value to cn-hangzhou.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The tags.
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public Dictionary<string, object> Tags { get; set; }

@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("ShareType")]
+        [Validation(Required=false)]
+        public string ShareType { get; set; }
+
         [NameInMap("SortField")]
         [Validation(Required=false)]
         public string SortField { get; set; }

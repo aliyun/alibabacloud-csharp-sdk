@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class DeletePatchBaselineRequest : TeaModel {
+        /// <summary>
+        /// The name of the patch baseline.
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The ID of the region.
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string ShareType { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> Tags { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
