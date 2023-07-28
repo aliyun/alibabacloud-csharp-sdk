@@ -23,6 +23,13 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         }
 
         /// <summary>
+        /// 回调地址
+        /// </summary>
+        [NameInMap("CallbackUrl")]
+        [Validation(Required=false)]
+        public string CallbackUrl { get; set; }
+
+        /// <summary>
         /// 并发数
         /// </summary>
         [NameInMap("MaxConcurrency")]

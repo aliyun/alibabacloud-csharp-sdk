@@ -23,6 +23,13 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         }
 
         /// <summary>
+        /// 回调地址
+        /// </summary>
+        [NameInMap("CallbackUrl")]
+        [Validation(Required=false)]
+        public string CallbackUrl { get; set; }
+
+        /// <summary>
         /// 并发数
         /// </summary>
         [NameInMap("MaxConcurrency")]
@@ -119,7 +126,7 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
             public List<string> IntentTags { get; set; }
 
             /// <summary>
-            /// 重呼条件
+            /// 短信模板ID
             /// </summary>
             [NameInMap("SmsTemplateId")]
             [Validation(Required=false)]

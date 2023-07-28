@@ -181,6 +181,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             {
                 query["CallTimeList"] = request.CallTimeListShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
+            {
+                query["CallbackUrl"] = request.CallbackUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrency))
             {
                 query["MaxConcurrency"] = request.MaxConcurrency;
@@ -297,6 +301,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeListShrink))
             {
                 query["CallTimeList"] = request.CallTimeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
+            {
+                query["CallbackUrl"] = request.CallbackUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrency))
             {
@@ -869,6 +877,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             {
                 query["CallTimeList"] = request.CallTimeListShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
+            {
+                query["CallbackUrl"] = request.CallbackUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrency))
             {
                 query["MaxConcurrency"] = request.MaxConcurrency;
@@ -985,6 +997,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeListShrink))
             {
                 query["CallTimeList"] = request.CallTimeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
+            {
+                query["CallbackUrl"] = request.CallbackUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrency))
             {
