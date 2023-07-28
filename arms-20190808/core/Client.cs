@@ -13247,7 +13247,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * Queries alert rules.
+          * The current operation is no longer maintained. You can call the GetAlertRules operation of Alert Management (New) to query existing alert rules.
           *
           * @param request SearchAlertRulesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13321,7 +13321,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * Queries alert rules.
+          * The current operation is no longer maintained. You can call the GetAlertRules operation of Alert Management (New) to query existing alert rules.
           *
           * @param request SearchAlertRulesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13395,7 +13395,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * Queries alert rules.
+          * The current operation is no longer maintained. You can call the GetAlertRules operation of Alert Management (New) to query existing alert rules.
           *
           * @param request SearchAlertRulesRequest
           * @return SearchAlertRulesResponse
@@ -13407,7 +13407,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         }
 
         /**
-          * Queries alert rules.
+          * The current operation is no longer maintained. You can call the GetAlertRules operation of Alert Management (New) to query existing alert rules.
           *
           * @param request SearchAlertRulesRequest
           * @return SearchAlertRulesResponse
