@@ -21,10 +21,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public List<RemoveTagsRequestTag> Tag { get; set; }
         public class RemoveTagsRequestTag : TeaModel {
+            /// <summary>
+            /// Indicates whether the call was successful. Valid values:
+            /// 
+            /// *   true: The call was successful.
+            /// *   false: The call failed.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of the tag.
+            /// 
+            /// >  The `Tag.N.Key` and `Tag.N.Value` parameters must be used in pairs.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

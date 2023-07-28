@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteExporterOutputRequest : TeaModel {
+        /// <summary>
+        /// The name of the configuration set.
+        /// </summary>
         [NameInMap("DestName")]
         [Validation(Required=false)]
         public string DestName { get; set; }

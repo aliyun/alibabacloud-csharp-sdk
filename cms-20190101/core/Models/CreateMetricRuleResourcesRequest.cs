@@ -9,14 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMetricRuleResourcesRequest : TeaModel {
+        /// <summary>
+        /// The resources to be associated with the alert rule. The value is a JSON array.
+        /// 
+        /// >  You can add up to 100 resources each time. An alert rule can be associated with up to 3,000 resources.
+        /// </summary>
         [NameInMap("Overwrite")]
         [Validation(Required=false)]
         public string Overwrite { get; set; }
 
+        /// <summary>
+        /// The HTTP status code.
+        /// 
+        /// >  The status code 200 indicates that the call was successful.
+        /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public string Resources { get; set; }
 
+        /// <summary>
+        /// Specifies whether to overwrite the existing data. Valid values:
+        /// 
+        /// *   true: The resources submitted this time will overwrite the previous associated resources.
+        /// *   false: The resources submitted this time will not overwrite the previous associated resources. The associated resources after submission include the previous associated resources and the resources submitted this time.
+        /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public string RuleId { get; set; }

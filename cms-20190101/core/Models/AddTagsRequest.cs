@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -24,10 +21,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public List<AddTagsRequestTag> Tag { get; set; }
         public class AddTagsRequestTag : TeaModel {
+            /// <summary>
+            /// The HTTP status code.
+            /// 
+            /// >  The status code 200 indicates that the call was successful.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The ID of the request.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

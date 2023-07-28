@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyHostAvailabilityResponseBody : TeaModel {
+        /// <summary>
+        /// The alert threshold. Valid values of N: 1 to 21.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// For more information about common request parameters, see [Common parameters](~~199331~~).
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }

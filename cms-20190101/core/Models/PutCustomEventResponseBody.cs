@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutCustomEventResponseBody : TeaModel {
+        /// <summary>
+        /// The operation that you want to perform. Set the value to **PutCustomEvent**.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }

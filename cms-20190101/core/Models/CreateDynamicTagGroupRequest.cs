@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public List<CreateDynamicTagGroupRequestMatchExpress> MatchExpress { get; set; }
         public class CreateDynamicTagGroupRequestMatchExpress : TeaModel {
+            [NameInMap("TagName")]
+            [Validation(Required=false)]
+            public string TagName { get; set; }
+
             [NameInMap("TagValue")]
             [Validation(Required=false)]
             public string TagValue { get; set; }

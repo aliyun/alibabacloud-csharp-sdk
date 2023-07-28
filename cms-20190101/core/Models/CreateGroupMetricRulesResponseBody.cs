@@ -29,13 +29,29 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<CreateGroupMetricRulesResponseBodyResourcesAlertResult> AlertResult { get; set; }
             public class CreateGroupMetricRulesResponseBodyResourcesAlertResult : TeaModel {
+                [NameInMap("Code")]
+                [Validation(Required=false)]
                 public int? Code { get; set; }
+
+                [NameInMap("Message")]
+                [Validation(Required=false)]
                 public string Message { get; set; }
+
+                [NameInMap("RuleId")]
+                [Validation(Required=false)]
                 public string RuleId { get; set; }
+
+                [NameInMap("RuleName")]
+                [Validation(Required=false)]
                 public string RuleName { get; set; }
+
+                [NameInMap("Success")]
+                [Validation(Required=false)]
                 public bool? Success { get; set; }
+
             }
-        };
+
+        }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

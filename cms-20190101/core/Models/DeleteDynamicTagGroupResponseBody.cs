@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteDynamicTagGroupResponseBody : TeaModel {
+        /// <summary>
+        /// The operation that you want to perform. Set the value to **DeleteDynamicTagGroup**.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }

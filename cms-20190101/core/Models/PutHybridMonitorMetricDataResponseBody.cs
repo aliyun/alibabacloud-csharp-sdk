@@ -10,29 +10,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutHybridMonitorMetricDataResponseBody : TeaModel {
         /// <summary>
-        /// 返回code
+        /// The details of the invalid parameters.
+        /// 
+        /// If the request parameters that you set are invalid, the details of the invalid parameters are displayed.
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// 不合法的指标信息
+        /// For more information about common request parameters, see [Common parameters](~~199331~~).
         /// </summary>
         [NameInMap("ErrorDetail")]
         [Validation(Required=false)]
         public List<PutHybridMonitorMetricDataResponseBodyErrorDetail> ErrorDetail { get; set; }
         public class PutHybridMonitorMetricDataResponseBodyErrorDetail : TeaModel {
-            /// <summary>
-            /// 错误信息
-            /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
-            /// <summary>
-            /// 错误数据在上报列表中的序号，从0开始
-            /// </summary>
             [NameInMap("Index")]
             [Validation(Required=false)]
             public long? Index { get; set; }
@@ -40,7 +36,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// 请求的requestId
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

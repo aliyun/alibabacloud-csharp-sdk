@@ -18,17 +18,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<CreateGroupMetricRulesRequestGroupMetricRules> GroupMetricRules { get; set; }
         public class CreateGroupMetricRulesRequestGroupMetricRules : TeaModel {
             [NameInMap("Escalations")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public CreateGroupMetricRulesRequestGroupMetricRulesEscalations Escalations { get; set; }
             public class CreateGroupMetricRulesRequestGroupMetricRulesEscalations : TeaModel {
                 [NameInMap("Critical")]
-                [Validation(Required=true)]
+                [Validation(Required=false)]
                 public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsCritical Critical { get; set; }
                 public class CreateGroupMetricRulesRequestGroupMetricRulesEscalationsCritical : TeaModel {
                     [NameInMap("ComparisonOperator")]
                     [Validation(Required=false)]
                     public string ComparisonOperator { get; set; }
 
+                    [NameInMap("N")]
+                    [Validation(Required=false)]
+                    public string N { get; set; }
+
                     [NameInMap("PreCondition")]
                     [Validation(Required=false)]
                     public string PreCondition { get; set; }
@@ -46,14 +50,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public int? Times { get; set; }
 
                 }
+
                 [NameInMap("Info")]
-                [Validation(Required=true)]
+                [Validation(Required=false)]
                 public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsInfo Info { get; set; }
                 public class CreateGroupMetricRulesRequestGroupMetricRulesEscalationsInfo : TeaModel {
                     [NameInMap("ComparisonOperator")]
                     [Validation(Required=false)]
                     public string ComparisonOperator { get; set; }
 
+                    [NameInMap("N")]
+                    [Validation(Required=false)]
+                    public string N { get; set; }
+
                     [NameInMap("PreCondition")]
                     [Validation(Required=false)]
                     public string PreCondition { get; set; }
@@ -71,14 +80,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public int? Times { get; set; }
 
                 }
+
                 [NameInMap("Warn")]
-                [Validation(Required=true)]
+                [Validation(Required=false)]
                 public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsWarn Warn { get; set; }
                 public class CreateGroupMetricRulesRequestGroupMetricRulesEscalationsWarn : TeaModel {
                     [NameInMap("ComparisonOperator")]
                     [Validation(Required=false)]
                     public string ComparisonOperator { get; set; }
 
+                    [NameInMap("N")]
+                    [Validation(Required=false)]
+                    public string N { get; set; }
+
                     [NameInMap("PreCondition")]
                     [Validation(Required=false)]
                     public string PreCondition { get; set; }
@@ -96,7 +110,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public int? Times { get; set; }
 
                 }
-            };
+
+            }
 
             [NameInMap("Category")]
             [Validation(Required=false)]

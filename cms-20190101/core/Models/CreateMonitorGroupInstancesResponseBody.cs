@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMonitorGroupInstancesResponseBody : TeaModel {
+        /// <summary>
+        /// For more information about common request parameters, see [Common parameters](~~199331~~).
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }

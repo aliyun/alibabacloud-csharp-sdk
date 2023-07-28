@@ -1,3 +1,6 @@
+2023-07-28 Version: 2.0.5
+- Add batch create once task.
+
 2022-06-10 Version: 2.0.4
 - Release C api.
 

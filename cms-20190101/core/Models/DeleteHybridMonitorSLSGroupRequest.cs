@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("SLSGroupName")]
         [Validation(Required=false)]
         public string SLSGroupName { get; set; }

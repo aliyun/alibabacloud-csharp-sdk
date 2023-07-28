@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class InstallMonitoringAgentRequest : TeaModel {
+        /// <summary>
+        /// The HTTP status code.
+        /// 
+        /// >  The status code 200 indicates that the call was successful.
+        /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }
 
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("InstallCommand")]
         [Validation(Required=false)]
         public string InstallCommand { get; set; }

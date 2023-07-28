@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteSiteMonitorsResponseBody : TeaModel {
+        /// <summary>
+        /// The information about the site monitoring tasks that were deleted.
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -20,12 +23,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [NameInMap("count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
-        };
 
+        }
+
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// Deletes one or more site monitoring tasks.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

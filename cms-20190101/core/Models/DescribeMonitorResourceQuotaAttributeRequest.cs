@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of the instance to be monitored.
+        /// </summary>
         [NameInMap("ShowUsed")]
         [Validation(Required=false)]
         public bool? ShowUsed { get; set; }
