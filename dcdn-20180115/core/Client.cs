@@ -735,9 +735,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   You can specify up to 50 domain names in each request.
-          * *   You can call this operation up to 30 times per second per account.
+          * > - You can specify up to 50 domain names in each request.
+          * > - You can call this operation up to 30 times per second per account.
           *
           * @param request BatchDeleteDcdnDomainConfigsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -787,9 +786,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   You can specify up to 50 domain names in each request.
-          * *   You can call this operation up to 30 times per second per account.
+          * > - You can specify up to 50 domain names in each request.
+          * > - You can call this operation up to 30 times per second per account.
           *
           * @param request BatchDeleteDcdnDomainConfigsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -839,9 +837,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   You can specify up to 50 domain names in each request.
-          * *   You can call this operation up to 30 times per second per account.
+          * > - You can specify up to 50 domain names in each request.
+          * > - You can call this operation up to 30 times per second per account.
           *
           * @param request BatchDeleteDcdnDomainConfigsRequest
           * @return BatchDeleteDcdnDomainConfigsResponse
@@ -853,9 +850,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * > 
-          * *   You can specify up to 50 domain names in each request.
-          * *   You can call this operation up to 30 times per second per account.
+          * > - You can specify up to 50 domain names in each request.
+          * > - You can call this operation up to 30 times per second per account.
           *
           * @param request BatchDeleteDcdnDomainConfigsRequest
           * @return BatchDeleteDcdnDomainConfigsResponse
@@ -967,7 +963,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * ## Usage notes
           * You can call this operation up to 20 times per second per account.
           *
           * @param request BatchModifyDcdnWafRulesRequest
@@ -1006,7 +1001,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * ## Usage notes
           * You can call this operation up to 20 times per second per account.
           *
           * @param request BatchModifyDcdnWafRulesRequest
@@ -1045,7 +1039,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * ## Usage notes
           * You can call this operation up to 20 times per second per account.
           *
           * @param request BatchModifyDcdnWafRulesRequest
@@ -1058,7 +1051,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * ## Usage notes
           * You can call this operation up to 20 times per second per account.
           *
           * @param request BatchModifyDcdnWafRulesRequest
@@ -1592,6 +1584,246 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchSetDcdnWafDomainConfigsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * > 
+          * *   If an accelerated domain name is in invalid state or your account has an overdue payment, the accelerated domain name cannot be enabled.
+          * *   You can specify up to 50 domain names in each request.
+          * *   You can call this operation up to 30 times per second per account.
+          *
+          * @param request BatchStartDcdnDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchStartDcdnDomainResponse
+         */
+        public BatchStartDcdnDomainResponse BatchStartDcdnDomainWithOptions(BatchStartDcdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainNames))
+            {
+                query["DomainNames"] = request.DomainNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchStartDcdnDomain",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchStartDcdnDomainResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * > 
+          * *   If an accelerated domain name is in invalid state or your account has an overdue payment, the accelerated domain name cannot be enabled.
+          * *   You can specify up to 50 domain names in each request.
+          * *   You can call this operation up to 30 times per second per account.
+          *
+          * @param request BatchStartDcdnDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchStartDcdnDomainResponse
+         */
+        public async Task<BatchStartDcdnDomainResponse> BatchStartDcdnDomainWithOptionsAsync(BatchStartDcdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainNames))
+            {
+                query["DomainNames"] = request.DomainNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchStartDcdnDomain",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchStartDcdnDomainResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * > 
+          * *   If an accelerated domain name is in invalid state or your account has an overdue payment, the accelerated domain name cannot be enabled.
+          * *   You can specify up to 50 domain names in each request.
+          * *   You can call this operation up to 30 times per second per account.
+          *
+          * @param request BatchStartDcdnDomainRequest
+          * @return BatchStartDcdnDomainResponse
+         */
+        public BatchStartDcdnDomainResponse BatchStartDcdnDomain(BatchStartDcdnDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchStartDcdnDomainWithOptions(request, runtime);
+        }
+
+        /**
+          * > 
+          * *   If an accelerated domain name is in invalid state or your account has an overdue payment, the accelerated domain name cannot be enabled.
+          * *   You can specify up to 50 domain names in each request.
+          * *   You can call this operation up to 30 times per second per account.
+          *
+          * @param request BatchStartDcdnDomainRequest
+          * @return BatchStartDcdnDomainResponse
+         */
+        public async Task<BatchStartDcdnDomainResponse> BatchStartDcdnDomainAsync(BatchStartDcdnDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchStartDcdnDomainWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * > 
+          * *   After an accelerated domain name is disabled, Dynamic Content Delivery Network (DCDN) retains the domain name information. The system automatically reroutes all requests that are destined for the accelerated domain name to the origin.
+          * *   You can specify up to 50 domain names in each request.
+          * *   You can call this operation up to 30 times per second per account.
+          *
+          * @param request BatchStopDcdnDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchStopDcdnDomainResponse
+         */
+        public BatchStopDcdnDomainResponse BatchStopDcdnDomainWithOptions(BatchStopDcdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainNames))
+            {
+                query["DomainNames"] = request.DomainNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchStopDcdnDomain",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchStopDcdnDomainResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * > 
+          * *   After an accelerated domain name is disabled, Dynamic Content Delivery Network (DCDN) retains the domain name information. The system automatically reroutes all requests that are destined for the accelerated domain name to the origin.
+          * *   You can specify up to 50 domain names in each request.
+          * *   You can call this operation up to 30 times per second per account.
+          *
+          * @param request BatchStopDcdnDomainRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return BatchStopDcdnDomainResponse
+         */
+        public async Task<BatchStopDcdnDomainResponse> BatchStopDcdnDomainWithOptionsAsync(BatchStopDcdnDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainNames))
+            {
+                query["DomainNames"] = request.DomainNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchStopDcdnDomain",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchStopDcdnDomainResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * > 
+          * *   After an accelerated domain name is disabled, Dynamic Content Delivery Network (DCDN) retains the domain name information. The system automatically reroutes all requests that are destined for the accelerated domain name to the origin.
+          * *   You can specify up to 50 domain names in each request.
+          * *   You can call this operation up to 30 times per second per account.
+          *
+          * @param request BatchStopDcdnDomainRequest
+          * @return BatchStopDcdnDomainResponse
+         */
+        public BatchStopDcdnDomainResponse BatchStopDcdnDomain(BatchStopDcdnDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchStopDcdnDomainWithOptions(request, runtime);
+        }
+
+        /**
+          * > 
+          * *   After an accelerated domain name is disabled, Dynamic Content Delivery Network (DCDN) retains the domain name information. The system automatically reroutes all requests that are destined for the accelerated domain name to the origin.
+          * *   You can specify up to 50 domain names in each request.
+          * *   You can call this operation up to 30 times per second per account.
+          *
+          * @param request BatchStopDcdnDomainRequest
+          * @return BatchStopDcdnDomainResponse
+         */
+        public async Task<BatchStopDcdnDomainResponse> BatchStopDcdnDomainAsync(BatchStopDcdnDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchStopDcdnDomainWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -3042,6 +3274,72 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDcdnKvWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteDcdnKvNamespaceResponse DeleteDcdnKvNamespaceWithOptions(DeleteDcdnKvNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDcdnKvNamespace",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDcdnKvNamespaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteDcdnKvNamespaceResponse> DeleteDcdnKvNamespaceWithOptionsAsync(DeleteDcdnKvNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDcdnKvNamespace",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDcdnKvNamespaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteDcdnKvNamespaceResponse DeleteDcdnKvNamespace(DeleteDcdnKvNamespaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDcdnKvNamespaceWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteDcdnKvNamespaceResponse> DeleteDcdnKvNamespaceAsync(DeleteDcdnKvNamespaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDcdnKvNamespaceWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -7831,11 +8129,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
-          * *   You can call this operation up to 10 times per second per account.
-          * *   The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-          * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. | Time granularity | Maximum time range per query | Historical data available | Data delay | |---------------|--------| | 1 minute | 1 hour | 7 days | 5 minutes | | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
+          * * You can call this operation up to 10 times per second per account.
+          * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+          * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+          * **Time granularity**
+          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+          * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+          * |----|------|-----|--------|
+          * | 1 minute | 1 hour | 7 days | 5 minutes |
+          * | 5 minutes | 3 days | 93 days | 15 minutes |
+          * | 1 hour | 31 days | 186 days | 4 hours |
           *
           * @param request DescribeDcdnDomainRealTimeByteHitRateDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7865,11 +8168,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
-          * *   You can call this operation up to 10 times per second per account.
-          * *   The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-          * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. | Time granularity | Maximum time range per query | Historical data available | Data delay | |---------------|--------| | 1 minute | 1 hour | 7 days | 5 minutes | | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
+          * * You can call this operation up to 10 times per second per account.
+          * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+          * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+          * **Time granularity**
+          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+          * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+          * |----|------|-----|--------|
+          * | 1 minute | 1 hour | 7 days | 5 minutes |
+          * | 5 minutes | 3 days | 93 days | 15 minutes |
+          * | 1 hour | 31 days | 186 days | 4 hours |
           *
           * @param request DescribeDcdnDomainRealTimeByteHitRateDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -7899,11 +8207,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
-          * *   You can call this operation up to 10 times per second per account.
-          * *   The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-          * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. | Time granularity | Maximum time range per query | Historical data available | Data delay | |---------------|--------| | 1 minute | 1 hour | 7 days | 5 minutes | | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
+          * * You can call this operation up to 10 times per second per account.
+          * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+          * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+          * **Time granularity**
+          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+          * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+          * |----|------|-----|--------|
+          * | 1 minute | 1 hour | 7 days | 5 minutes |
+          * | 5 minutes | 3 days | 93 days | 15 minutes |
+          * | 1 hour | 31 days | 186 days | 4 hours |
           *
           * @param request DescribeDcdnDomainRealTimeByteHitRateDataRequest
           * @return DescribeDcdnDomainRealTimeByteHitRateDataResponse
@@ -7915,11 +8228,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * # Usage notes
-          * *   You can call this operation up to 10 times per second per account.
-          * *   The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-          * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. | Time granularity | Maximum time range per query | Historical data available | Data delay | |---------------|--------| | 1 minute | 1 hour | 7 days | 5 minutes | | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
+          * * You can call this operation up to 10 times per second per account.
+          * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+          * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+          * **Time granularity**
+          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+          * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+          * |----|------|-----|--------|
+          * | 1 minute | 1 hour | 7 days | 5 minutes |
+          * | 5 minutes | 3 days | 93 days | 15 minutes |
+          * | 1 hour | 31 days | 186 days | 4 hours |
           *
           * @param request DescribeDcdnDomainRealTimeByteHitRateDataRequest
           * @return DescribeDcdnDomainRealTimeByteHitRateDataResponse
@@ -8387,10 +8705,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * *   You can call this operation up to 10 times per second per account.
           * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. | Time granularity | Maximum time range per query | Historical data available | Data delay | |---------------|--------| | 1 minute | 1 hour | 7 days | 5 minutes | | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
+          * **Time granularity**
+          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+          * | Time granularity | Maximum time range per query | Historical data available | Data delay | 
+          * |-----|-----|-----|--------| 
+          * | 1 minute | 1 hour | 7 days | 5 minutes | 
+          * | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
           *
           * @param request DescribeDcdnDomainRealTimeSrcBpsDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8432,10 +8754,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * *   You can call this operation up to 10 times per second per account.
           * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. | Time granularity | Maximum time range per query | Historical data available | Data delay | |---------------|--------| | 1 minute | 1 hour | 7 days | 5 minutes | | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
+          * **Time granularity**
+          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+          * | Time granularity | Maximum time range per query | Historical data available | Data delay | 
+          * |-----|-----|-----|--------| 
+          * | 1 minute | 1 hour | 7 days | 5 minutes | 
+          * | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
           *
           * @param request DescribeDcdnDomainRealTimeSrcBpsDataRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -8477,10 +8803,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * *   You can call this operation up to 10 times per second per account.
           * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. | Time granularity | Maximum time range per query | Historical data available | Data delay | |---------------|--------| | 1 minute | 1 hour | 7 days | 5 minutes | | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
+          * **Time granularity**
+          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+          * | Time granularity | Maximum time range per query | Historical data available | Data delay | 
+          * |-----|-----|-----|--------| 
+          * | 1 minute | 1 hour | 7 days | 5 minutes | 
+          * | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
           *
           * @param request DescribeDcdnDomainRealTimeSrcBpsDataRequest
           * @return DescribeDcdnDomainRealTimeSrcBpsDataResponse
@@ -8492,10 +8822,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         }
 
         /**
-          * #
           * *   You can call this operation up to 10 times per second per account.
           * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the parameters, the request returns the data collected within the specified time range.
-          * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. | Time granularity | Maximum time range per query | Historical data available | Data delay | |---------------|--------| | 1 minute | 1 hour | 7 days | 5 minutes | | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
+          * **Time granularity**
+          * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+          * | Time granularity | Maximum time range per query | Historical data available | Data delay | 
+          * |-----|-----|-----|--------| 
+          * | 1 minute | 1 hour | 7 days | 5 minutes | 
+          * | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
           *
           * @param request DescribeDcdnDomainRealTimeSrcBpsDataRequest
           * @return DescribeDcdnDomainRealTimeSrcBpsDataResponse
@@ -11304,6 +11638,160 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDcdnIpaUserDomainsWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeDcdnKvAccountResponse DescribeDcdnKvAccountWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnKvAccount",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnKvAccountResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDcdnKvAccountResponse> DescribeDcdnKvAccountWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnKvAccount",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnKvAccountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDcdnKvAccountResponse DescribeDcdnKvAccount()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDcdnKvAccountWithOptions(runtime);
+        }
+
+        public async Task<DescribeDcdnKvAccountResponse> DescribeDcdnKvAccountAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDcdnKvAccountWithOptionsAsync(runtime);
+        }
+
+        public DescribeDcdnKvAccountStatusResponse DescribeDcdnKvAccountStatusWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnKvAccountStatus",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnKvAccountStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDcdnKvAccountStatusResponse> DescribeDcdnKvAccountStatusWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnKvAccountStatus",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnKvAccountStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDcdnKvAccountStatusResponse DescribeDcdnKvAccountStatus()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDcdnKvAccountStatusWithOptions(runtime);
+        }
+
+        public async Task<DescribeDcdnKvAccountStatusResponse> DescribeDcdnKvAccountStatusAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDcdnKvAccountStatusWithOptionsAsync(runtime);
+        }
+
+        public DescribeDcdnKvNamespaceResponse DescribeDcdnKvNamespaceWithOptions(DescribeDcdnKvNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnKvNamespace",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnKvNamespaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeDcdnKvNamespaceResponse> DescribeDcdnKvNamespaceWithOptionsAsync(DescribeDcdnKvNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDcdnKvNamespace",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDcdnKvNamespaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeDcdnKvNamespaceResponse DescribeDcdnKvNamespace(DescribeDcdnKvNamespaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDcdnKvNamespaceWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDcdnKvNamespaceResponse> DescribeDcdnKvNamespaceAsync(DescribeDcdnKvNamespaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDcdnKvNamespaceWithOptionsAsync(request, runtime);
         }
 
         public DescribeDcdnL2IpsResponse DescribeDcdnL2IpsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -17546,6 +18034,64 @@ namespace AlibabaCloud.SDK.Dcdn20180115
             return await GetDcdnKvWithOptionsAsync(request, runtime);
         }
 
+        public ListDcdnKvResponse ListDcdnKvWithOptions(ListDcdnKvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDcdnKv",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDcdnKvResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListDcdnKvResponse> ListDcdnKvWithOptionsAsync(ListDcdnKvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDcdnKv",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDcdnKvResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListDcdnKvResponse ListDcdnKv(ListDcdnKvRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDcdnKvWithOptions(request, runtime);
+        }
+
+        public async Task<ListDcdnKvResponse> ListDcdnKvAsync(ListDcdnKvRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDcdnKvWithOptionsAsync(request, runtime);
+        }
+
         /**
           * > You can call this operation up to 100 times per second per account.
           *
@@ -17760,6 +18306,88 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDCdnDomainSchdmByPropertyWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyDcdnWafGroupResponse ModifyDcdnWafGroupWithOptions(ModifyDcdnWafGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
+            {
+                body["Rules"] = request.Rules;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDcdnWafGroup",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDcdnWafGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ModifyDcdnWafGroupResponse> ModifyDcdnWafGroupWithOptionsAsync(ModifyDcdnWafGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
+            {
+                body["Rules"] = request.Rules;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDcdnWafGroup",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDcdnWafGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ModifyDcdnWafGroupResponse ModifyDcdnWafGroup(ModifyDcdnWafGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDcdnWafGroupWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyDcdnWafGroupResponse> ModifyDcdnWafGroupAsync(ModifyDcdnWafGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDcdnWafGroupWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -18742,6 +19370,80 @@ namespace AlibabaCloud.SDK.Dcdn20180115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PutDcdnKvWithOptionsAsync(request, runtime);
+        }
+
+        public PutDcdnKvNamespaceResponse PutDcdnKvNamespaceWithOptions(PutDcdnKvNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutDcdnKvNamespace",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutDcdnKvNamespaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<PutDcdnKvNamespaceResponse> PutDcdnKvNamespaceWithOptionsAsync(PutDcdnKvNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutDcdnKvNamespace",
+                Version = "2018-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutDcdnKvNamespaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public PutDcdnKvNamespaceResponse PutDcdnKvNamespace(PutDcdnKvNamespaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PutDcdnKvNamespaceWithOptions(request, runtime);
+        }
+
+        public async Task<PutDcdnKvNamespaceResponse> PutDcdnKvNamespaceAsync(PutDcdnKvNamespaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PutDcdnKvNamespaceWithOptionsAsync(request, runtime);
         }
 
         /**

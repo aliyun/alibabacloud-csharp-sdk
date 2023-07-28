@@ -1,3 +1,6 @@
+2023-07-28 Version: 1.0.32
+- Add DescribeDcdnKvNamespace.
+
 2023-07-25 Version: 1.0.31
 - Add DescribeDcdnL2Ips.
 
