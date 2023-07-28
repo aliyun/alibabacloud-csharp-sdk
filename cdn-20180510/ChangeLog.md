@@ -1,3 +1,6 @@
+2023-07-28 Version: 1.1.12
+- Add ListTagResources.
+
 2023-07-24 Version: 1.1.11
 - Add BlockObjectCaches.
 
