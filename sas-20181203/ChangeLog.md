@@ -1,3 +1,6 @@
+2023-07-29 Version: 2.2.0
+- Supported Standard config.
+
 2023-07-22 Version: 2.1.9
 - Support ContainerImageScanNew.
 - Supported rasp-attach for user.

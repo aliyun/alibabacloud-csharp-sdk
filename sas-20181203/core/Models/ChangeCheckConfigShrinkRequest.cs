@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class ChangeCheckConfigRequest : TeaModel {
+    public class ChangeCheckConfigShrinkRequest : TeaModel {
         [NameInMap("AddedCheck")]
         [Validation(Required=false)]
-        public List<ChangeCheckConfigRequestAddedCheck> AddedCheck { get; set; }
-        public class ChangeCheckConfigRequestAddedCheck : TeaModel {
+        public List<ChangeCheckConfigShrinkRequestAddedCheck> AddedCheck { get; set; }
+        public class ChangeCheckConfigShrinkRequestAddedCheck : TeaModel {
             [NameInMap("CheckId")]
             [Validation(Required=false)]
             public long? CheckId { get; set; }
@@ -25,31 +25,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         [NameInMap("ConfigRequirementIds")]
         [Validation(Required=false)]
-        public ChangeCheckConfigRequestConfigRequirementIds ConfigRequirementIds { get; set; }
-        public class ChangeCheckConfigRequestConfigRequirementIds : TeaModel {
-            [NameInMap("AddIds")]
-            [Validation(Required=false)]
-            public List<long?> AddIds { get; set; }
-
-            [NameInMap("RemoveIds")]
-            [Validation(Required=false)]
-            public List<long?> RemoveIds { get; set; }
-
-        }
+        public string ConfigRequirementIdsShrink { get; set; }
 
         [NameInMap("ConfigStandardIds")]
         [Validation(Required=false)]
-        public ChangeCheckConfigRequestConfigStandardIds ConfigStandardIds { get; set; }
-        public class ChangeCheckConfigRequestConfigStandardIds : TeaModel {
-            [NameInMap("AddIds")]
-            [Validation(Required=false)]
-            public List<long?> AddIds { get; set; }
-
-            [NameInMap("RemoveIds")]
-            [Validation(Required=false)]
-            public List<long?> RemoveIds { get; set; }
-
-        }
+        public string ConfigStandardIdsShrink { get; set; }
 
         [NameInMap("CycleDays")]
         [Validation(Required=false)]
@@ -86,8 +66,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         [NameInMap("RemovedCheck")]
         [Validation(Required=false)]
-        public List<ChangeCheckConfigRequestRemovedCheck> RemovedCheck { get; set; }
-        public class ChangeCheckConfigRequestRemovedCheck : TeaModel {
+        public List<ChangeCheckConfigShrinkRequestRemovedCheck> RemovedCheck { get; set; }
+        public class ChangeCheckConfigShrinkRequestRemovedCheck : TeaModel {
             [NameInMap("CheckId")]
             [Validation(Required=false)]
             public long? CheckId { get; set; }
