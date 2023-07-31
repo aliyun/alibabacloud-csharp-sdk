@@ -23,6 +23,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         [NameInMap("StageRouteModel")]
         [Validation(Required=false)]
+        [Obsolete]
         public string StageRouteModel { get; set; }
 
         [NameInMap("SupportRoute")]

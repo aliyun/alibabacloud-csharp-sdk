@@ -194,50 +194,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         }
 
-        [NameInMap("ResultDescriptions")]
-        [Validation(Required=false)]
-        public DescribeApiDocResponseBodyResultDescriptions ResultDescriptions { get; set; }
-        public class DescribeApiDocResponseBodyResultDescriptions : TeaModel {
-            [NameInMap("ResultDescription")]
-            [Validation(Required=false)]
-            public List<DescribeApiDocResponseBodyResultDescriptionsResultDescription> ResultDescription { get; set; }
-            public class DescribeApiDocResponseBodyResultDescriptionsResultDescription : TeaModel {
-                [NameInMap("Description")]
-                [Validation(Required=false)]
-                public string Description { get; set; }
-
-                [NameInMap("HasChild")]
-                [Validation(Required=false)]
-                public bool? HasChild { get; set; }
-
-                [NameInMap("Id")]
-                [Validation(Required=false)]
-                public string Id { get; set; }
-
-                [NameInMap("Key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
-                [NameInMap("Mandatory")]
-                [Validation(Required=false)]
-                public bool? Mandatory { get; set; }
-
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-
-                [NameInMap("Pid")]
-                [Validation(Required=false)]
-                public string Pid { get; set; }
-
-                [NameInMap("Type")]
-                [Validation(Required=false)]
-                public string Type { get; set; }
-
-            }
-
-        }
-
         [NameInMap("ResultSample")]
         [Validation(Required=false)]
         public string ResultSample { get; set; }

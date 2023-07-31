@@ -27,13 +27,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string BillingStatus { get; set; }
 
         /// <summary>
-        /// The VPC second-level domain name.
-        /// </summary>
-        [NameInMap("ClassicVpcSubDomain")]
-        [Validation(Required=false)]
-        public string ClassicVpcSubDomain { get; set; }
-
-        /// <summary>
         /// The products on Alibaba Cloud Marketplace.
         /// </summary>
         [NameInMap("CloudMarketCommodity")]
@@ -173,10 +166,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string WildcardDomainPatterns { get; set; }
 
-                [NameInMap("WssEnable")]
-                [Validation(Required=false)]
-                public string WssEnable { get; set; }
-
             }
 
         }
@@ -263,13 +252,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The VIP list of the instance.
-        /// </summary>
-        [NameInMap("InstanceVipList")]
-        [Validation(Required=false)]
-        public string InstanceVipList { get; set; }
-
-        /// <summary>
         /// The IPv6 status.
         /// </summary>
         [NameInMap("Ipv6Status")]
@@ -311,13 +293,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// The RPC mode.
-        /// </summary>
-        [NameInMap("RpcPattern")]
-        [Validation(Required=false)]
-        public string RpcPattern { get; set; }
 
         /// <summary>
         /// The runtime environment information.

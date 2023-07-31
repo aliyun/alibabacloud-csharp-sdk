@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Extend")]
+        [Validation(Required=false)]
+        public string Extend { get; set; }
+
         [NameInMap("ModifiedTime")]
         [Validation(Required=false)]
         public string ModifiedTime { get; set; }

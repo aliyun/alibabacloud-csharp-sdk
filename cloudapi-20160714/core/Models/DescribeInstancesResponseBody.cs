@@ -181,13 +181,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         public string CidrBlock { get; set; }
 
                         /// <summary>
-                        /// 弹性网卡ID
-                        /// </summary>
-                        [NameInMap("NetworkInterfaceId")]
-                        [Validation(Required=false)]
-                        public string NetworkInterfaceId { get; set; }
-
-                        /// <summary>
                         /// 安全组的ID，同一个安全组内的服务可以互相访问。
                         /// </summary>
                         [NameInMap("SecurityGroupId")]
@@ -231,10 +224,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [NameInMap("UserVswitchId")]
                 [Validation(Required=false)]
                 public string UserVswitchId { get; set; }
-
-                [NameInMap("VipTypeList")]
-                [Validation(Required=false)]
-                public string VipTypeList { get; set; }
 
                 [NameInMap("VpcEgressAddress")]
                 [Validation(Required=false)]

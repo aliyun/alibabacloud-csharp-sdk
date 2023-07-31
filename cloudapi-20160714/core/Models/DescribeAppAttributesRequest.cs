@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public bool? EnableTagAuth { get; set; }
 
+        [NameInMap("Extend")]
+        [Validation(Required=false)]
+        public string Extend { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }

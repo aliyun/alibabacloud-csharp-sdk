@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiRequest : TeaModel {
         /// <summary>
-        /// Description
+        /// The ID of the API.
         /// </summary>
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
         /// <summary>
-        /// System parameters sent by API Gateway to the backend service
+        /// The ID of the API.
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

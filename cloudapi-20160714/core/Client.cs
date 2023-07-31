@@ -1416,6 +1416,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extend))
+            {
+                query["Extend"] = request.Extend;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
@@ -1466,6 +1470,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extend))
+            {
+                query["Extend"] = request.Extend;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
@@ -5077,7 +5085,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-          * The ID of the public key.
+          * *   This operation is intended for API providers.
           *
           * @param request DescribeApiRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5119,7 +5127,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-          * The ID of the public key.
+          * *   This operation is intended for API providers.
           *
           * @param request DescribeApiRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5161,7 +5169,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-          * The ID of the public key.
+          * *   This operation is intended for API providers.
           *
           * @param request DescribeApiRequest
           * @return DescribeApiResponse
@@ -5173,7 +5181,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         }
 
         /**
-          * The ID of the public key.
+          * *   This operation is intended for API providers.
           *
           * @param request DescribeApiRequest
           * @return DescribeApiResponse
@@ -7556,6 +7564,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["EnableTagAuth"] = request.EnableTagAuth;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extend))
+            {
+                query["Extend"] = request.Extend;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -7618,6 +7630,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableTagAuth))
             {
                 query["EnableTagAuth"] = request.EnableTagAuth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extend))
+            {
+                query["Extend"] = request.Extend;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -14366,6 +14382,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extend))
+            {
+                query["Extend"] = request.Extend;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
@@ -14408,6 +14428,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extend))
+            {
+                query["Extend"] = request.Extend;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
