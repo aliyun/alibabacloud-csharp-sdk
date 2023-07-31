@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of stack group operations.
+        /// The stack group operations.
         /// </summary>
         [NameInMap("StackGroupOperations")]
         [Validation(Required=false)]
         public List<ListStackGroupOperationsResponseBodyStackGroupOperations> StackGroupOperations { get; set; }
         public class ListStackGroupOperationsResponseBodyStackGroupOperations : TeaModel {
             /// <summary>
-            /// The operation that was performed.
+            /// The operation type.
             /// 
             /// Valid values:
             /// 
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string OperationDescription { get; set; }
 
             /// <summary>
-            /// The ID of the operation.
+            /// The operation ID.
             /// </summary>
             [NameInMap("OperationId")]
             [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string StackGroupName { get; set; }
 
             /// <summary>
-            /// The status of the operation.
+            /// The state of the operation.
             /// 
             /// Valid values:
             /// 

@@ -40,6 +40,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string AutoDeploymentShrink { get; set; }
 
+        /// <summary>
+        /// The option for the stack group. You can specify up to one option.
+        /// </summary>
         [NameInMap("Capabilities")]
         [Validation(Required=false)]
         public List<string> Capabilities { get; set; }
@@ -184,9 +187,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// *   SELF_MANAGED: the self-managed permission model. This is the default value. If you use the self-managed model for the stack group, you must create RAM roles for the administrator and execution accounts, and establish a trust relationship between the accounts to deploy stacks within the execution account.
         /// *   SERVICE_MANAGED: the service-managed permission model. If you use the service-managed model for the stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.
         /// 
-        /// > 
-        /// *   If stack instances have been created in the stack group, you cannot switch the permission mode of the stack group.
-        /// *   If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Step 1: (Optional) Create a delegated administrator account](~~308253~~) and [Step 2: Enable trusted access](~~298229~~).
+        /// >- If stack instances have been created in the stack group, you cannot switch the permission mode of the stack group.
+        /// >- If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Step 1: (Optional) Create a delegated administrator account](~~308253~~) and [Step 2: Enable trusted access](~~298229~~).
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the stacks.
+        /// The stacks.
         /// </summary>
         [NameInMap("StackInstances")]
         [Validation(Required=false)]
         public List<ListStackInstancesResponseBodyStackInstances> StackInstances { get; set; }
         public class ListStackInstancesResponseBodyStackInstances : TeaModel {
             /// <summary>
-            /// The ID of the account to which the stack belongs.
+            /// The ID of the destination account to which the stack belongs.
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The time when the last successful drift detection was performed on the stack.
             /// 
-            /// >  This parameter is returned only if drift detection is performed on the stack group.
+            /// > This parameter is returned only if drift detection is performed on the stack group.
             /// </summary>
             [NameInMap("DriftDetectionTime")]
             [Validation(Required=false)]
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The ID of the folder in the resource directory.
             /// 
-            /// >  This parameter is returned only if the stack group is granted service-managed permissions.
+            /// > This parameter is returned only if the stack group is granted service-managed permissions.
             /// </summary>
             [NameInMap("RdFolderId")]
             [Validation(Required=false)]
             public string RdFolderId { get; set; }
 
             /// <summary>
-            /// The ID of the region to which the stack belongs.
+            /// The region ID of the stack.
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// *   NOT_CHECKED: No successful drift detection is performed on the stack.
             /// *   IN_SYNC: The stack is being synchronized.
             /// 
-            /// >  This parameter is returned only if drift detection is performed on the stack group.
+            /// > This parameter is returned only if drift detection is performed on the stack group.
             /// </summary>
             [NameInMap("StackDriftStatus")]
             [Validation(Required=false)]
@@ -99,9 +99,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string StackGroupName { get; set; }
 
             /// <summary>
-            /// The ID of the stack.
+            /// The stack ID.
             /// 
-            /// >  This parameter is returned only if the stack is in the CURRENT state.
+            /// > This parameter is returned only if the stack is in the CURRENT state.
             /// </summary>
             [NameInMap("StackId")]
             [Validation(Required=false)]
@@ -112,22 +112,22 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// 
             /// Valid values:
             /// 
-            /// *   CURRENT: The stack is up to date with the stack group.
+            /// *   CURRENT: The stack is up-to-date with the stack group.
             /// 
-            /// *   OUTDATED: The stack is not up to date with the stack group. Stacks are in the OUTDATED state due to the following possible reasons:
+            /// *   OUTDATED: The stack is not up-to-date with the stack group. Stacks are in the OUTDATED state due to the following possible reasons:
             /// 
             ///     *   When the CreateStackInstances operation is called to create stacks, the stacks fail to be created.
             ///     *   When the UpdateStackInstances or UpdateStackGroup operation is called to update stacks, the stacks fail to be updated, or only specific stacks are updated.
-            ///     *   The creation or update operation is not completed.
+            ///     *   The creation or update operation is not complete.
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The reason why the stack is in the OUTDATED state.
+            /// The reason why the stack instance is in the OUTDATED state.
             /// 
-            /// >  This parameter is returned only if the stack is in the OUTDATED state.
+            /// > This parameter is returned only if the stack instance is in the OUTDATED state.
             /// </summary>
             [NameInMap("StatusReason")]
             [Validation(Required=false)]

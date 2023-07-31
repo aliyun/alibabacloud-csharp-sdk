@@ -398,12 +398,13 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
+          * ### Limits
           * You can create and execute change sets to update running stacks. For more information about change sets, see [Overview](~~156038~~).
-          * ## Limits
-          * - A stack can contain up to 20 change sets.
-          * - Change sets reflect only the changes of stacks. Change sets do not reflect whether stacks are updated.
-          * - You cannot use change sets to check the following items: whether the upper limit of your account is reached, whether to update resources that cannot be updated, and whether your account is not granted the required permissions to modify resources. These items may cause stack updates to fail. If stacks fail to be updated, Resource Orchestration Service (ROS) attempts to roll back the resources to the original status.
-          * This topic provides an example on how to create a change set. In this example, a change set named `MyChangeSet` is created in the `China (Hangzhou)` region. The change set is used to change the template body of a stack to `{"ROSTemplateFormatVersion":"2015-09-01"}`. The ID of the stack is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****`.
+          * ### Usage notes
+          * *   A stack can contain up to 20 change sets.
+          * *   Change sets reflect only the changes of stacks. Change sets do not reflect whether stacks are updated.
+          * *   You cannot use change sets to check the following items: whether the upper limit of your Alibaba Cloud account is reached, whether resources that cannot be updated are updated, and whether your Alibaba Cloud account has permissions to modify resources. These items may cause stack updates to fail. If stacks fail to be updated, Resource Orchestration Service (ROS) rolls back the resources to the original status.
+          * In this topic, a change set named `MyChangeSet` is created in the `China (Hangzhou)` region. In this example, the template of the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is updated to `{"ROSTemplateFormatVersion":"2015-09-01"}`.
           *
           * @param request CreateChangeSetRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -533,12 +534,13 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
+          * ### Limits
           * You can create and execute change sets to update running stacks. For more information about change sets, see [Overview](~~156038~~).
-          * ## Limits
-          * - A stack can contain up to 20 change sets.
-          * - Change sets reflect only the changes of stacks. Change sets do not reflect whether stacks are updated.
-          * - You cannot use change sets to check the following items: whether the upper limit of your account is reached, whether to update resources that cannot be updated, and whether your account is not granted the required permissions to modify resources. These items may cause stack updates to fail. If stacks fail to be updated, Resource Orchestration Service (ROS) attempts to roll back the resources to the original status.
-          * This topic provides an example on how to create a change set. In this example, a change set named `MyChangeSet` is created in the `China (Hangzhou)` region. The change set is used to change the template body of a stack to `{"ROSTemplateFormatVersion":"2015-09-01"}`. The ID of the stack is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****`.
+          * ### Usage notes
+          * *   A stack can contain up to 20 change sets.
+          * *   Change sets reflect only the changes of stacks. Change sets do not reflect whether stacks are updated.
+          * *   You cannot use change sets to check the following items: whether the upper limit of your Alibaba Cloud account is reached, whether resources that cannot be updated are updated, and whether your Alibaba Cloud account has permissions to modify resources. These items may cause stack updates to fail. If stacks fail to be updated, Resource Orchestration Service (ROS) rolls back the resources to the original status.
+          * In this topic, a change set named `MyChangeSet` is created in the `China (Hangzhou)` region. In this example, the template of the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is updated to `{"ROSTemplateFormatVersion":"2015-09-01"}`.
           *
           * @param request CreateChangeSetRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -668,12 +670,13 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
+          * ### Limits
           * You can create and execute change sets to update running stacks. For more information about change sets, see [Overview](~~156038~~).
-          * ## Limits
-          * - A stack can contain up to 20 change sets.
-          * - Change sets reflect only the changes of stacks. Change sets do not reflect whether stacks are updated.
-          * - You cannot use change sets to check the following items: whether the upper limit of your account is reached, whether to update resources that cannot be updated, and whether your account is not granted the required permissions to modify resources. These items may cause stack updates to fail. If stacks fail to be updated, Resource Orchestration Service (ROS) attempts to roll back the resources to the original status.
-          * This topic provides an example on how to create a change set. In this example, a change set named `MyChangeSet` is created in the `China (Hangzhou)` region. The change set is used to change the template body of a stack to `{"ROSTemplateFormatVersion":"2015-09-01"}`. The ID of the stack is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****`.
+          * ### Usage notes
+          * *   A stack can contain up to 20 change sets.
+          * *   Change sets reflect only the changes of stacks. Change sets do not reflect whether stacks are updated.
+          * *   You cannot use change sets to check the following items: whether the upper limit of your Alibaba Cloud account is reached, whether resources that cannot be updated are updated, and whether your Alibaba Cloud account has permissions to modify resources. These items may cause stack updates to fail. If stacks fail to be updated, Resource Orchestration Service (ROS) rolls back the resources to the original status.
+          * In this topic, a change set named `MyChangeSet` is created in the `China (Hangzhou)` region. In this example, the template of the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is updated to `{"ROSTemplateFormatVersion":"2015-09-01"}`.
           *
           * @param request CreateChangeSetRequest
           * @return CreateChangeSetResponse
@@ -685,12 +688,13 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
+          * ### Limits
           * You can create and execute change sets to update running stacks. For more information about change sets, see [Overview](~~156038~~).
-          * ## Limits
-          * - A stack can contain up to 20 change sets.
-          * - Change sets reflect only the changes of stacks. Change sets do not reflect whether stacks are updated.
-          * - You cannot use change sets to check the following items: whether the upper limit of your account is reached, whether to update resources that cannot be updated, and whether your account is not granted the required permissions to modify resources. These items may cause stack updates to fail. If stacks fail to be updated, Resource Orchestration Service (ROS) attempts to roll back the resources to the original status.
-          * This topic provides an example on how to create a change set. In this example, a change set named `MyChangeSet` is created in the `China (Hangzhou)` region. The change set is used to change the template body of a stack to `{"ROSTemplateFormatVersion":"2015-09-01"}`. The ID of the stack is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****`.
+          * ### Usage notes
+          * *   A stack can contain up to 20 change sets.
+          * *   Change sets reflect only the changes of stacks. Change sets do not reflect whether stacks are updated.
+          * *   You cannot use change sets to check the following items: whether the upper limit of your Alibaba Cloud account is reached, whether resources that cannot be updated are updated, and whether your Alibaba Cloud account has permissions to modify resources. These items may cause stack updates to fail. If stacks fail to be updated, Resource Orchestration Service (ROS) rolls back the resources to the original status.
+          * In this topic, a change set named `MyChangeSet` is created in the `China (Hangzhou)` region. In this example, the template of the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is updated to `{"ROSTemplateFormatVersion":"2015-09-01"}`.
           *
           * @param request CreateChangeSetRequest
           * @return CreateChangeSetResponse
@@ -702,22 +706,11 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * | Error code | Error message | HTTPS status code | Description |
-          * | ---------- | ------------- | ----------------- | ----------- |
-          * | CircularDependency | Circular Dependency Found: {reason}. | 400 | The error message returned because the template contains circular dependencies. reason indicates the cause of the error. |
-          * | InvalidSchema | {reason}. | 400 | The error message returned because the format of the template is invalid. reason indicates the cause of the error. |
-          * | InvalidTemplateAttribute | The Referenced Attribute ({resource} {name}) is incorrect. | 400 | The error message returned because the resource property that is referenced in the Outputs section of the template is invalid. resource indicates the resource name. name indicates the property name. |
-          * | InvalidTemplatePropertyType | The specified value type of ({resource} {section}) is incorrect. | 400 | The error message returned because the type of the resource property that is defined in a section of the template is invalid. resource indicates the resource name. section indicates the section name. |
-          * | InvalidTemplateReference | The specified reference "{name}" (in {referencer}) is incorrect. | 400 | The error message returned because the template contains an invalid reference. name indicates the reference name. referencer indicates the referencer name. |
-          * | InvalidTemplateSection | The template section is invalid: {section}. | 400 | The error message returned because the template contains an invalid section. section indicates the section name. |
-          * | InvalidTemplateVersion | The template version is invalid: {reason}. | 400 | The error message returned because the template version is invalid. reason indicates the cause of the error. |
-          * | StackValidationFailed | {reason}. | 400 | The error message returned because the stack failed to be validated. reason indicates the cause of the error. |
-          * | UnknownUserParameter | The Parameter ({name}) was not defined in template. | 400 | The error message returned because the specified parameter is not defined in the template. name indicates the parameter name. |
-          * | UserParameterMissing | The Parameter {name} was not provided. | 400 | The error message returned because no value is specified for the specified parameter that is defined in the template. name indicates the parameter name. |
-          * | ActionInProgress | Stack {name} already has an action ({action}) in progress. | 409 | The error message returned because the stack is being changed. name indicates the name or ID of the stack. action indicates the change operation. |
-          * | StackExists | The Stack ({name}) already exists. | 409 | The error message returned because a stack that has the same name already exists. name indicates the stack name. |
-          * | TemplateNotFound | The Template ({ ID }) could not be found. | 404 | The error message returned because the specified template does not exist. ID indicates the template ID. |
-          * | TemplateNotFound | The Template { ID } with version { version } could not be found. | 404 | The error message returned because the specified template or template version does not exist. ID indicates the template ID. version indicates the template version. |
+          * A stack is a collection of ROS resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see [Overview](~~172973~~).\\
+          * When you call the operation, take note of the following limits:
+          * *   You can create up to 200 stacks within an Alibaba Cloud account.
+          * *   You can create up to 200 resources in a stack.
+          * This topic provides an example on how to create a stack named `MyStack` in the China (Hangzhou) region by using a template. In this example, `TemplateBody` is set to `{"ROSTemplateFormatVersion":"2015-09-01"}`.
           *
           * @param request CreateStackRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -835,22 +828,11 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * | Error code | Error message | HTTPS status code | Description |
-          * | ---------- | ------------- | ----------------- | ----------- |
-          * | CircularDependency | Circular Dependency Found: {reason}. | 400 | The error message returned because the template contains circular dependencies. reason indicates the cause of the error. |
-          * | InvalidSchema | {reason}. | 400 | The error message returned because the format of the template is invalid. reason indicates the cause of the error. |
-          * | InvalidTemplateAttribute | The Referenced Attribute ({resource} {name}) is incorrect. | 400 | The error message returned because the resource property that is referenced in the Outputs section of the template is invalid. resource indicates the resource name. name indicates the property name. |
-          * | InvalidTemplatePropertyType | The specified value type of ({resource} {section}) is incorrect. | 400 | The error message returned because the type of the resource property that is defined in a section of the template is invalid. resource indicates the resource name. section indicates the section name. |
-          * | InvalidTemplateReference | The specified reference "{name}" (in {referencer}) is incorrect. | 400 | The error message returned because the template contains an invalid reference. name indicates the reference name. referencer indicates the referencer name. |
-          * | InvalidTemplateSection | The template section is invalid: {section}. | 400 | The error message returned because the template contains an invalid section. section indicates the section name. |
-          * | InvalidTemplateVersion | The template version is invalid: {reason}. | 400 | The error message returned because the template version is invalid. reason indicates the cause of the error. |
-          * | StackValidationFailed | {reason}. | 400 | The error message returned because the stack failed to be validated. reason indicates the cause of the error. |
-          * | UnknownUserParameter | The Parameter ({name}) was not defined in template. | 400 | The error message returned because the specified parameter is not defined in the template. name indicates the parameter name. |
-          * | UserParameterMissing | The Parameter {name} was not provided. | 400 | The error message returned because no value is specified for the specified parameter that is defined in the template. name indicates the parameter name. |
-          * | ActionInProgress | Stack {name} already has an action ({action}) in progress. | 409 | The error message returned because the stack is being changed. name indicates the name or ID of the stack. action indicates the change operation. |
-          * | StackExists | The Stack ({name}) already exists. | 409 | The error message returned because a stack that has the same name already exists. name indicates the stack name. |
-          * | TemplateNotFound | The Template ({ ID }) could not be found. | 404 | The error message returned because the specified template does not exist. ID indicates the template ID. |
-          * | TemplateNotFound | The Template { ID } with version { version } could not be found. | 404 | The error message returned because the specified template or template version does not exist. ID indicates the template ID. version indicates the template version. |
+          * A stack is a collection of ROS resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see [Overview](~~172973~~).\\
+          * When you call the operation, take note of the following limits:
+          * *   You can create up to 200 stacks within an Alibaba Cloud account.
+          * *   You can create up to 200 resources in a stack.
+          * This topic provides an example on how to create a stack named `MyStack` in the China (Hangzhou) region by using a template. In this example, `TemplateBody` is set to `{"ROSTemplateFormatVersion":"2015-09-01"}`.
           *
           * @param request CreateStackRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -968,22 +950,11 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * | Error code | Error message | HTTPS status code | Description |
-          * | ---------- | ------------- | ----------------- | ----------- |
-          * | CircularDependency | Circular Dependency Found: {reason}. | 400 | The error message returned because the template contains circular dependencies. reason indicates the cause of the error. |
-          * | InvalidSchema | {reason}. | 400 | The error message returned because the format of the template is invalid. reason indicates the cause of the error. |
-          * | InvalidTemplateAttribute | The Referenced Attribute ({resource} {name}) is incorrect. | 400 | The error message returned because the resource property that is referenced in the Outputs section of the template is invalid. resource indicates the resource name. name indicates the property name. |
-          * | InvalidTemplatePropertyType | The specified value type of ({resource} {section}) is incorrect. | 400 | The error message returned because the type of the resource property that is defined in a section of the template is invalid. resource indicates the resource name. section indicates the section name. |
-          * | InvalidTemplateReference | The specified reference "{name}" (in {referencer}) is incorrect. | 400 | The error message returned because the template contains an invalid reference. name indicates the reference name. referencer indicates the referencer name. |
-          * | InvalidTemplateSection | The template section is invalid: {section}. | 400 | The error message returned because the template contains an invalid section. section indicates the section name. |
-          * | InvalidTemplateVersion | The template version is invalid: {reason}. | 400 | The error message returned because the template version is invalid. reason indicates the cause of the error. |
-          * | StackValidationFailed | {reason}. | 400 | The error message returned because the stack failed to be validated. reason indicates the cause of the error. |
-          * | UnknownUserParameter | The Parameter ({name}) was not defined in template. | 400 | The error message returned because the specified parameter is not defined in the template. name indicates the parameter name. |
-          * | UserParameterMissing | The Parameter {name} was not provided. | 400 | The error message returned because no value is specified for the specified parameter that is defined in the template. name indicates the parameter name. |
-          * | ActionInProgress | Stack {name} already has an action ({action}) in progress. | 409 | The error message returned because the stack is being changed. name indicates the name or ID of the stack. action indicates the change operation. |
-          * | StackExists | The Stack ({name}) already exists. | 409 | The error message returned because a stack that has the same name already exists. name indicates the stack name. |
-          * | TemplateNotFound | The Template ({ ID }) could not be found. | 404 | The error message returned because the specified template does not exist. ID indicates the template ID. |
-          * | TemplateNotFound | The Template { ID } with version { version } could not be found. | 404 | The error message returned because the specified template or template version does not exist. ID indicates the template ID. version indicates the template version. |
+          * A stack is a collection of ROS resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see [Overview](~~172973~~).\\
+          * When you call the operation, take note of the following limits:
+          * *   You can create up to 200 stacks within an Alibaba Cloud account.
+          * *   You can create up to 200 resources in a stack.
+          * This topic provides an example on how to create a stack named `MyStack` in the China (Hangzhou) region by using a template. In this example, `TemplateBody` is set to `{"ROSTemplateFormatVersion":"2015-09-01"}`.
           *
           * @param request CreateStackRequest
           * @return CreateStackResponse
@@ -995,22 +966,11 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * | Error code | Error message | HTTPS status code | Description |
-          * | ---------- | ------------- | ----------------- | ----------- |
-          * | CircularDependency | Circular Dependency Found: {reason}. | 400 | The error message returned because the template contains circular dependencies. reason indicates the cause of the error. |
-          * | InvalidSchema | {reason}. | 400 | The error message returned because the format of the template is invalid. reason indicates the cause of the error. |
-          * | InvalidTemplateAttribute | The Referenced Attribute ({resource} {name}) is incorrect. | 400 | The error message returned because the resource property that is referenced in the Outputs section of the template is invalid. resource indicates the resource name. name indicates the property name. |
-          * | InvalidTemplatePropertyType | The specified value type of ({resource} {section}) is incorrect. | 400 | The error message returned because the type of the resource property that is defined in a section of the template is invalid. resource indicates the resource name. section indicates the section name. |
-          * | InvalidTemplateReference | The specified reference "{name}" (in {referencer}) is incorrect. | 400 | The error message returned because the template contains an invalid reference. name indicates the reference name. referencer indicates the referencer name. |
-          * | InvalidTemplateSection | The template section is invalid: {section}. | 400 | The error message returned because the template contains an invalid section. section indicates the section name. |
-          * | InvalidTemplateVersion | The template version is invalid: {reason}. | 400 | The error message returned because the template version is invalid. reason indicates the cause of the error. |
-          * | StackValidationFailed | {reason}. | 400 | The error message returned because the stack failed to be validated. reason indicates the cause of the error. |
-          * | UnknownUserParameter | The Parameter ({name}) was not defined in template. | 400 | The error message returned because the specified parameter is not defined in the template. name indicates the parameter name. |
-          * | UserParameterMissing | The Parameter {name} was not provided. | 400 | The error message returned because no value is specified for the specified parameter that is defined in the template. name indicates the parameter name. |
-          * | ActionInProgress | Stack {name} already has an action ({action}) in progress. | 409 | The error message returned because the stack is being changed. name indicates the name or ID of the stack. action indicates the change operation. |
-          * | StackExists | The Stack ({name}) already exists. | 409 | The error message returned because a stack that has the same name already exists. name indicates the stack name. |
-          * | TemplateNotFound | The Template ({ ID }) could not be found. | 404 | The error message returned because the specified template does not exist. ID indicates the template ID. |
-          * | TemplateNotFound | The Template { ID } with version { version } could not be found. | 404 | The error message returned because the specified template or template version does not exist. ID indicates the template ID. version indicates the template version. |
+          * A stack is a collection of ROS resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see [Overview](~~172973~~).\\
+          * When you call the operation, take note of the following limits:
+          * *   You can create up to 200 stacks within an Alibaba Cloud account.
+          * *   You can create up to 200 resources in a stack.
+          * This topic provides an example on how to create a stack named `MyStack` in the China (Hangzhou) region by using a template. In this example, `TemplateBody` is set to `{"ROSTemplateFormatVersion":"2015-09-01"}`.
           *
           * @param request CreateStackRequest
           * @return CreateStackResponse
@@ -4840,7 +4800,56 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The operation that you want to perform. Set the value to GetTemplateEstimateCost.
+          * ###
+          * *   For more information about the resources that support price inquiry in Resource Orchestration Service (ROS) templates, see the "**Resource types that support price inquiry**" section of the [Estimate resource prices](~~203165~~) topic.
+          * *   For more information about the resources that support price inquiry in Terraform templates, see the "**ROS resources supported by Terraform**" section of the [ROS features and resources supported by Terraform](~~184389~~) topic.
+          * The following sample code provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create based on a template. In this example, the following template is used:
+          *     {
+          *       "ROSTemplateFormatVersion": "2015-09-01",
+          *       "Parameters": {
+          *         "Isp": {
+          *           "Type": "String",
+          *           "Default": "BGP"
+          *         },
+          *         "Name": {
+          *           "Type": "String",
+          *           "Default": "test"
+          *         },
+          *         "Netmode": {
+          *           "Type": "String",
+          *           "Default": "public"
+          *         },
+          *         "Bandwidth": {
+          *           "Type": "Number",
+          *           "Default": 5
+          *         }
+          *       },
+          *       "Resources": {
+          *         "NewEip": {
+          *           "Type": "ALIYUN::VPC::EIP",
+          *           "Properties": {
+          *             "InstanceChargeType": "Prepaid",
+          *             "PricingCycle": "Month",
+          *             "Isp": {
+          *               "Ref": "Isp"
+          *             },
+          *             "Period": 1,
+          *             "DeletionProtection": false,
+          *             "AutoPay": false,
+          *             "Name": {
+          *               "Ref": "Name"
+          *             },
+          *             "InternetChargeType": "PayByTraffic",
+          *             "Netmode": {
+          *               "Ref": "Netmode"
+          *             },
+          *             "Bandwidth": {
+          *               "Ref": "Bandwidth"
+          *             }
+          *           }
+          *         }
+          *       }
+          *     }
           *
           * @param request GetTemplateEstimateCostRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4912,7 +4921,56 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The operation that you want to perform. Set the value to GetTemplateEstimateCost.
+          * ###
+          * *   For more information about the resources that support price inquiry in Resource Orchestration Service (ROS) templates, see the "**Resource types that support price inquiry**" section of the [Estimate resource prices](~~203165~~) topic.
+          * *   For more information about the resources that support price inquiry in Terraform templates, see the "**ROS resources supported by Terraform**" section of the [ROS features and resources supported by Terraform](~~184389~~) topic.
+          * The following sample code provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create based on a template. In this example, the following template is used:
+          *     {
+          *       "ROSTemplateFormatVersion": "2015-09-01",
+          *       "Parameters": {
+          *         "Isp": {
+          *           "Type": "String",
+          *           "Default": "BGP"
+          *         },
+          *         "Name": {
+          *           "Type": "String",
+          *           "Default": "test"
+          *         },
+          *         "Netmode": {
+          *           "Type": "String",
+          *           "Default": "public"
+          *         },
+          *         "Bandwidth": {
+          *           "Type": "Number",
+          *           "Default": 5
+          *         }
+          *       },
+          *       "Resources": {
+          *         "NewEip": {
+          *           "Type": "ALIYUN::VPC::EIP",
+          *           "Properties": {
+          *             "InstanceChargeType": "Prepaid",
+          *             "PricingCycle": "Month",
+          *             "Isp": {
+          *               "Ref": "Isp"
+          *             },
+          *             "Period": 1,
+          *             "DeletionProtection": false,
+          *             "AutoPay": false,
+          *             "Name": {
+          *               "Ref": "Name"
+          *             },
+          *             "InternetChargeType": "PayByTraffic",
+          *             "Netmode": {
+          *               "Ref": "Netmode"
+          *             },
+          *             "Bandwidth": {
+          *               "Ref": "Bandwidth"
+          *             }
+          *           }
+          *         }
+          *       }
+          *     }
           *
           * @param request GetTemplateEstimateCostRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4984,7 +5042,56 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The operation that you want to perform. Set the value to GetTemplateEstimateCost.
+          * ###
+          * *   For more information about the resources that support price inquiry in Resource Orchestration Service (ROS) templates, see the "**Resource types that support price inquiry**" section of the [Estimate resource prices](~~203165~~) topic.
+          * *   For more information about the resources that support price inquiry in Terraform templates, see the "**ROS resources supported by Terraform**" section of the [ROS features and resources supported by Terraform](~~184389~~) topic.
+          * The following sample code provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create based on a template. In this example, the following template is used:
+          *     {
+          *       "ROSTemplateFormatVersion": "2015-09-01",
+          *       "Parameters": {
+          *         "Isp": {
+          *           "Type": "String",
+          *           "Default": "BGP"
+          *         },
+          *         "Name": {
+          *           "Type": "String",
+          *           "Default": "test"
+          *         },
+          *         "Netmode": {
+          *           "Type": "String",
+          *           "Default": "public"
+          *         },
+          *         "Bandwidth": {
+          *           "Type": "Number",
+          *           "Default": 5
+          *         }
+          *       },
+          *       "Resources": {
+          *         "NewEip": {
+          *           "Type": "ALIYUN::VPC::EIP",
+          *           "Properties": {
+          *             "InstanceChargeType": "Prepaid",
+          *             "PricingCycle": "Month",
+          *             "Isp": {
+          *               "Ref": "Isp"
+          *             },
+          *             "Period": 1,
+          *             "DeletionProtection": false,
+          *             "AutoPay": false,
+          *             "Name": {
+          *               "Ref": "Name"
+          *             },
+          *             "InternetChargeType": "PayByTraffic",
+          *             "Netmode": {
+          *               "Ref": "Netmode"
+          *             },
+          *             "Bandwidth": {
+          *               "Ref": "Bandwidth"
+          *             }
+          *           }
+          *         }
+          *       }
+          *     }
           *
           * @param request GetTemplateEstimateCostRequest
           * @return GetTemplateEstimateCostResponse
@@ -4996,7 +5103,56 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * The operation that you want to perform. Set the value to GetTemplateEstimateCost.
+          * ###
+          * *   For more information about the resources that support price inquiry in Resource Orchestration Service (ROS) templates, see the "**Resource types that support price inquiry**" section of the [Estimate resource prices](~~203165~~) topic.
+          * *   For more information about the resources that support price inquiry in Terraform templates, see the "**ROS resources supported by Terraform**" section of the [ROS features and resources supported by Terraform](~~184389~~) topic.
+          * The following sample code provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create based on a template. In this example, the following template is used:
+          *     {
+          *       "ROSTemplateFormatVersion": "2015-09-01",
+          *       "Parameters": {
+          *         "Isp": {
+          *           "Type": "String",
+          *           "Default": "BGP"
+          *         },
+          *         "Name": {
+          *           "Type": "String",
+          *           "Default": "test"
+          *         },
+          *         "Netmode": {
+          *           "Type": "String",
+          *           "Default": "public"
+          *         },
+          *         "Bandwidth": {
+          *           "Type": "Number",
+          *           "Default": 5
+          *         }
+          *       },
+          *       "Resources": {
+          *         "NewEip": {
+          *           "Type": "ALIYUN::VPC::EIP",
+          *           "Properties": {
+          *             "InstanceChargeType": "Prepaid",
+          *             "PricingCycle": "Month",
+          *             "Isp": {
+          *               "Ref": "Isp"
+          *             },
+          *             "Period": 1,
+          *             "DeletionProtection": false,
+          *             "AutoPay": false,
+          *             "Name": {
+          *               "Ref": "Name"
+          *             },
+          *             "InternetChargeType": "PayByTraffic",
+          *             "Netmode": {
+          *               "Ref": "Netmode"
+          *             },
+          *             "Bandwidth": {
+          *               "Ref": "Bandwidth"
+          *             }
+          *           }
+          *         }
+          *       }
+          *     }
           *
           * @param request GetTemplateEstimateCostRequest
           * @return GetTemplateEstimateCostResponse
@@ -5314,7 +5470,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this topic, the details about the `ts-7f7a704cf71c49a6****` scenario in the China (Hangzhou) region are queried. The source node data is displayed.
+          * In this example, the details of the scenario whose ID is `ts-7f7a704cf71c49a6****` is queried. In the response, the source node data is displayed.
           *
           * @param request GetTemplateScratchRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5356,7 +5512,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this topic, the details about the `ts-7f7a704cf71c49a6****` scenario in the China (Hangzhou) region are queried. The source node data is displayed.
+          * In this example, the details of the scenario whose ID is `ts-7f7a704cf71c49a6****` is queried. In the response, the source node data is displayed.
           *
           * @param request GetTemplateScratchRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -5398,7 +5554,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this topic, the details about the `ts-7f7a704cf71c49a6****` scenario in the China (Hangzhou) region are queried. The source node data is displayed.
+          * In this example, the details of the scenario whose ID is `ts-7f7a704cf71c49a6****` is queried. In the response, the source node data is displayed.
           *
           * @param request GetTemplateScratchRequest
           * @return GetTemplateScratchResponse
@@ -5410,7 +5566,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this topic, the details about the `ts-7f7a704cf71c49a6****` scenario in the China (Hangzhou) region are queried. The source node data is displayed.
+          * In this example, the details of the scenario whose ID is `ts-7f7a704cf71c49a6****` is queried. In the response, the source node data is displayed.
           *
           * @param request GetTemplateScratchRequest
           * @return GetTemplateScratchResponse
@@ -6282,7 +6438,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * For more information about common request parameters, see [Common parameters](~~131957~~).
+          * In this example, the list of stack groups that are in the ACTIVE state and deployed in the China (Hangzhou) region is queried.
           *
           * @param request ListStackGroupsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6336,7 +6492,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * For more information about common request parameters, see [Common parameters](~~131957~~).
+          * In this example, the list of stack groups that are in the ACTIVE state and deployed in the China (Hangzhou) region is queried.
           *
           * @param request ListStackGroupsRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6390,7 +6546,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * For more information about common request parameters, see [Common parameters](~~131957~~).
+          * In this example, the list of stack groups that are in the ACTIVE state and deployed in the China (Hangzhou) region is queried.
           *
           * @param request ListStackGroupsRequest
           * @return ListStackGroupsResponse
@@ -6402,7 +6558,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * For more information about common request parameters, see [Common parameters](~~131957~~).
+          * In this example, the list of stack groups that are in the ACTIVE state and deployed in the China (Hangzhou) region is queried.
           *
           * @param request ListStackGroupsRequest
           * @return ListStackGroupsResponse
@@ -6414,7 +6570,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this example, the stacks that are deployed in a stack group named `MyStackGroup` are queried. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+          * In this example, the list of stack instances that are associated with a stack group named `MyStackGroup` is queried. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
           *
           * @param request ListStackInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6468,7 +6624,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this example, the stacks that are deployed in a stack group named `MyStackGroup` are queried. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+          * In this example, the list of stack instances that are associated with a stack group named `MyStackGroup` is queried. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
           *
           * @param request ListStackInstancesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -6522,7 +6678,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this example, the stacks that are deployed in a stack group named `MyStackGroup` are queried. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+          * In this example, the list of stack instances that are associated with a stack group named `MyStackGroup` is queried. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
           *
           * @param request ListStackInstancesRequest
           * @return ListStackInstancesResponse
@@ -6534,7 +6690,7 @@ namespace AlibabaCloud.SDK.ROS20190910
         }
 
         /**
-          * In this example, the stacks that are deployed in a stack group named `MyStackGroup` are queried. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+          * In this example, the list of stack instances that are associated with a stack group named `MyStackGroup` is queried. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
           *
           * @param request ListStackInstancesRequest
           * @return ListStackInstancesResponse
@@ -9149,6 +9305,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRunOptions))
+            {
+                query["DryRunOptions"] = request.DryRunOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parallelism))
             {
                 query["Parallelism"] = request.Parallelism;
@@ -9265,6 +9425,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRunOptions))
+            {
+                query["DryRunOptions"] = request.DryRunOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parallelism))
             {
@@ -10366,6 +10530,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["TemplateURL"] = request.TemplateURL;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateInfoOptions))
+            {
+                query["UpdateInfoOptions"] = request.UpdateInfoOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidationOption))
             {
                 query["ValidationOption"] = request.ValidationOption;
@@ -10417,6 +10585,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateURL))
             {
                 query["TemplateURL"] = request.TemplateURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateInfoOptions))
+            {
+                query["UpdateInfoOptions"] = request.UpdateInfoOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidationOption))
             {

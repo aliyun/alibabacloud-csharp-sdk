@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetTemplateScratchRequest : TeaModel {
         /// <summary>
-        /// The ID of the region where the scenario is created.
+        /// The region ID of the scenario.
         /// 
         /// You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
         /// </summary>
@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// 
         /// *   Source: displays only the data of source nodes.
         /// *   Provisions: displays only the data of new nodes.
-        /// *   All: displays all data.
+        /// *   All: displays the data of all nodes.
         /// 
         /// For more information about source nodes and new nodes, see [Overview](~~352074~~).
         /// 
-        /// >  If you do not set this parameter, the node data is not displayed.
+        /// > If you do not specify this parameter, the node data is not displayed.
         /// </summary>
         [NameInMap("ShowDataOption")]
         [Validation(Required=false)]

@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        [NameInMap("DryRunOptions")]
+        [Validation(Required=false)]
+        public List<string> DryRunOptions { get; set; }
+
         /// <summary>
         /// The maximum number of concurrent operations that can be performed on resources.
         /// 

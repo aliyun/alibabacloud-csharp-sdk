@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public List<string> ParametersCauseInterruptionIfModified { get; set; }
 
+            [NameInMap("ParametersCauseReplacementIfModified")]
+            [Validation(Required=false)]
+            public List<string> ParametersCauseReplacementIfModified { get; set; }
+
             /// <summary>
             /// The parameters that can be modified under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values of the parameters determine whether validation errors are caused.
             /// </summary>
@@ -51,6 +55,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("ParametersConditionallyCauseInterruptionIfModified")]
             [Validation(Required=false)]
             public List<string> ParametersConditionallyCauseInterruptionIfModified { get; set; }
+
+            [NameInMap("ParametersConditionallyCauseReplacementIfModified")]
+            [Validation(Required=false)]
+            public List<string> ParametersConditionallyCauseReplacementIfModified { get; set; }
 
             /// <summary>
             /// The parameters that cannot be modified. If you change only values of the parameters in a stack template and use the template to update the stack, validation errors are caused.
@@ -76,6 +84,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("ParametersUncertainlyCauseInterruptionIfModified")]
             [Validation(Required=false)]
             public List<string> ParametersUncertainlyCauseInterruptionIfModified { get; set; }
+
+            [NameInMap("ParametersUncertainlyCauseReplacementIfModified")]
+            [Validation(Required=false)]
+            public List<string> ParametersUncertainlyCauseReplacementIfModified { get; set; }
 
         }
 

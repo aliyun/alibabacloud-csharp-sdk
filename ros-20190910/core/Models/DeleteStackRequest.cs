@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DeleteStackRequest : TeaModel {
+        /// <summary>
+        /// The options for deleting the stack.
+        /// </summary>
         [NameInMap("DeleteOptions")]
         [Validation(Required=false)]
         public List<string> DeleteOptions { get; set; }

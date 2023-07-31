@@ -42,16 +42,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The status code of the scenario that fails to be created.
             /// 
-            /// >  This parameter is returned only if you set the Status parameter to GENERATE_FAILED.
+            /// > This parameter is returned only if you set Status to GENERATE_FAILED.
             /// </summary>
             [NameInMap("FailedCode")]
             [Validation(Required=false)]
             public string FailedCode { get; set; }
 
             /// <summary>
-            /// The policy based on which the logical ID is generated. Default value: LongTypePrefixAndIndexSuffix. Valid values:
+            /// The policy based on which the logical ID is generated. Valid values:
             /// 
-            /// *   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix
+            /// *   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix
             /// *   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix
             /// *   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix
             /// </summary>
@@ -60,21 +60,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string LogicalIdStrategy { get; set; }
 
             /// <summary>
-            /// The parameters that are configured for the scenario.
+            /// The preference parameters of the scenario.
             /// </summary>
             [NameInMap("PreferenceParameters")]
             [Validation(Required=false)]
             public List<GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters> PreferenceParameters { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters : TeaModel {
                 /// <summary>
-                /// The parameter name.
+                /// The key of the parameter.
                 /// </summary>
                 [NameInMap("ParameterKey")]
                 [Validation(Required=false)]
                 public string ParameterKey { get; set; }
 
                 /// <summary>
-                /// The parameter value.
+                /// The value of the parameter.
                 /// </summary>
                 [NameInMap("ParameterValue")]
                 [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The filter for resource types.
+                /// The resource types.
                 /// </summary>
                 [NameInMap("ResourceTypeFilter")]
                 [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The source resource.
+            /// The source resources.
             /// </summary>
             [NameInMap("SourceResources")]
             [Validation(Required=false)]
@@ -136,14 +136,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public GetTemplateScratchResponseBodyTemplateScratchSourceTag SourceTag { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchSourceTag : TeaModel {
                 /// <summary>
-                /// The resource tags.
+                /// The source tags.
                 /// </summary>
                 [NameInMap("ResourceTags")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> ResourceTags { get; set; }
 
                 /// <summary>
-                /// The filter for resource types.
+                /// The resource types.
                 /// </summary>
                 [NameInMap("ResourceTypeFilter")]
                 [Validation(Required=false)]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The preset information about the stack.
+            /// The preset information of the stack.
             /// </summary>
             [NameInMap("StackProvision")]
             [Validation(Required=false)]
@@ -181,14 +181,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The list of stacks that are associated with the scenario.
+            /// The stacks that are associated with the scenario.
             /// </summary>
             [NameInMap("Stacks")]
             [Validation(Required=false)]
             public List<GetTemplateScratchResponseBodyTemplateScratchStacks> Stacks { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchStacks : TeaModel {
                 /// <summary>
-                /// The ID of the region to which the stack belongs.
+                /// The region ID of the stack.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The status of the scenario. Valid values:
+            /// The state of the scenario. Valid values:
             /// 
             /// *   GENERATE_IN_PROGRESS: The scenario is being created.
             /// *   GENERATE_COMPLETE: The scenario is created.
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// The reason why the scenario fails to be created.
             /// 
-            /// >  This parameter is returned only if you set the Status parameter to GENERATE_FAILED.
+            /// > This parameter is returned only if you set Status to GENERATE_FAILED.
             /// </summary>
             [NameInMap("StatusReason")]
             [Validation(Required=false)]

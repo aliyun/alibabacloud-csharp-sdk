@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string TemplateURL { get; set; }
 
+        [NameInMap("UpdateInfoOptions")]
+        [Validation(Required=false)]
+        public List<string> UpdateInfoOptions { get; set; }
+
         /// <summary>
         /// The DataSource resource types.
         /// </summary>

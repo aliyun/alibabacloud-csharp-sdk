@@ -59,6 +59,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The stack ID.
+        /// 
+        /// This parameter is used to query the estimated price in a configuration change scenario.
+        /// 
+        /// Assume that the specified stack contains only one Elastic Compute Service (ECS) instance and the instance type is ecs.s6-c1m2.large. You downgrade the instance type to ecs.s6-c1m1.small and specify a new ApsaraDB RDS instance in the template that is used for the price inquiry. The queried result is the sum of the downgrade refund of the ECS instance and the price of the new ApsaraDB RDS instance.
+        /// </summary>
         [NameInMap("StackId")]
         [Validation(Required=false)]
         public string StackId { get; set; }
@@ -83,10 +90,18 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        /// <summary>
+        /// The ID of the scenario.
+        /// </summary>
         [NameInMap("TemplateScratchId")]
         [Validation(Required=false)]
         public string TemplateScratchId { get; set; }
 
+        /// <summary>
+        /// The region ID of the scenario. The default value is the same as the value of the RegionId parameter.
+        /// 
+        /// You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+        /// </summary>
         [NameInMap("TemplateScratchRegionId")]
         [Validation(Required=false)]
         public string TemplateScratchRegionId { get; set; }

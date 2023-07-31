@@ -179,6 +179,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public List<string> ParametersCauseInterruptionIfModified { get; set; }
 
+            [NameInMap("ParametersCauseReplacementIfModified")]
+            [Validation(Required=false)]
+            public List<string> ParametersCauseReplacementIfModified { get; set; }
+
             [NameInMap("ParametersConditionallyAllowedToBeModified")]
             [Validation(Required=false)]
             public List<string> ParametersConditionallyAllowedToBeModified { get; set; }
@@ -186,6 +190,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("ParametersConditionallyCauseInterruptionIfModified")]
             [Validation(Required=false)]
             public List<string> ParametersConditionallyCauseInterruptionIfModified { get; set; }
+
+            [NameInMap("ParametersConditionallyCauseReplacementIfModified")]
+            [Validation(Required=false)]
+            public List<string> ParametersConditionallyCauseReplacementIfModified { get; set; }
 
             [NameInMap("ParametersNotAllowedToBeModified")]
             [Validation(Required=false)]
@@ -198,6 +206,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("ParametersUncertainlyCauseInterruptionIfModified")]
             [Validation(Required=false)]
             public List<string> ParametersUncertainlyCauseInterruptionIfModified { get; set; }
+
+            [NameInMap("ParametersUncertainlyCauseReplacementIfModified")]
+            [Validation(Required=false)]
+            public List<string> ParametersUncertainlyCauseReplacementIfModified { get; set; }
 
         }
 

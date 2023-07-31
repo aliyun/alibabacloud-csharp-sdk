@@ -9,43 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStackGroupsResponseBody : TeaModel {
+        /// <summary>
+        /// The page number of the returned page.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the stack group.
+        /// The stack groups.
         /// </summary>
         [NameInMap("StackGroups")]
         [Validation(Required=false)]
         public List<ListStackGroupsResponseBodyStackGroups> StackGroups { get; set; }
         public class ListStackGroupsResponseBodyStackGroups : TeaModel {
             /// <summary>
-            /// Indicates whether automatic deployment is enabled.
-            /// 
-            /// Valid values:
-            /// 
-            /// *   true: Automatic deployment is enabled. If you add a member to the folder to which the stack group belongs after you enable automatic deployment, ROS automatically adds the stacks in the stack group to the specified region of the member. If you delete the member from the folder, ROS automatically deletes the stacks in the stack group from the specified region of the member.
-            /// *   false: Automatic deployment is disabled. After you disable automatic deployment, the stacks remain unchanged when you change the member in the folder.
+            /// The information about automatic deployment settings.
             /// </summary>
             [NameInMap("AutoDeployment")]
             [Validation(Required=false)]
             public ListStackGroupsResponseBodyStackGroupsAutoDeployment AutoDeployment { get; set; }
             public class ListStackGroupsResponseBodyStackGroupsAutoDeployment : TeaModel {
+                /// <summary>
+                /// Indicates whether automatic deployment is enabled.
+                /// 
+                /// Valid values:
+                /// 
+                /// *   true: Automatic deployment is enabled. If you add a member to the folder to which the stack group belongs after automatic deployment is enabled, Resource Orchestration Service (ROS) automatically adds the stack instances in the stack group to the specified region of the member. If you delete the member from the folder, ROS automatically deletes the stack instances in the stack group from the specified region of the member.
+                /// *   false: Automatic deployment is disabled. After you disable automatic deployment, the stack instances remain unchanged when you change the member in the folder.
+                /// </summary>
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
                 /// <summary>
                 /// Indicates whether the stacks within a member are retained when you delete the member from the folder.
                 /// 
@@ -54,14 +64,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// *   true
                 /// *   false
                 /// 
-                /// >  This parameter is returned only if the Enabled parameter is set to true.
-                /// </summary>
-                [NameInMap("Enabled")]
-                [Validation(Required=false)]
-                public bool? Enabled { get; set; }
-
-                /// <summary>
-                /// The total number of stack groups.
+                /// > This parameter is returned only if Enabled is set to true.
                 /// </summary>
                 [NameInMap("RetainStacksOnAccountRemoval")]
                 [Validation(Required=false)]
@@ -70,7 +73,42 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// The state of the stack group on which the last successful drift detection was performed.
+            /// The description of the stack group.
+            /// </summary>
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            /// <summary>
+            /// The time when the most recent successful drift detection was performed on the stack group.
+            /// </summary>
+            [NameInMap("DriftDetectionTime")]
+            [Validation(Required=false)]
+            public string DriftDetectionTime { get; set; }
+
+            /// <summary>
+            /// The permission model of the stack group.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   SELF_MANAGED
+            /// *   SERVICE_MANAGED
+            /// 
+            /// > For more information about the permission models of stack groups, see [Overview](~~154578~~).
+            /// </summary>
+            [NameInMap("PermissionModel")]
+            [Validation(Required=false)]
+            public string PermissionModel { get; set; }
+
+            /// <summary>
+            /// The ID of the resource group.
+            /// </summary>
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            /// <summary>
+            /// The drift state of the stack group on which the most recent successful drift detection was performed.
             /// 
             /// Valid values:
             /// 
@@ -78,44 +116,23 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// *   NOT_CHECKED: No drift detection is performed on the stack group.
             /// *   IN_SYNC: No drifts are detected on the stack group.
             /// </summary>
-            [NameInMap("Description")]
+            [NameInMap("StackGroupDriftStatus")]
             [Validation(Required=false)]
-            public string Description { get; set; }
+            public string StackGroupDriftStatus { get; set; }
 
             /// <summary>
-            /// The description of the stack group.
+            /// The ID of the stack group.
             /// </summary>
-            [NameInMap("DriftDetectionTime")]
+            [NameInMap("StackGroupId")]
             [Validation(Required=false)]
-            public string DriftDetectionTime { get; set; }
-
-            /// <summary>
-            /// The information about automatic deployment settings.
-            /// </summary>
-            [NameInMap("PermissionModel")]
-            [Validation(Required=false)]
-            public string PermissionModel { get; set; }
-
-            /// <summary>
-            /// The permission model.
-            /// 
-            /// Valid values:
-            /// 
-            /// *   SELF_MANAGED: self-managed permission model
-            /// *   SERVICE_MANAGED: service-managed permission model
-            /// 
-            /// >  For more information about the permission models of stack groups, see [Overview](~~154578~~).
-            /// </summary>
-            [NameInMap("ResourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
+            public string StackGroupId { get; set; }
 
             /// <summary>
             /// The name of the stack group.
             /// </summary>
-            [NameInMap("StackGroupDriftStatus")]
+            [NameInMap("StackGroupName")]
             [Validation(Required=false)]
-            public string StackGroupDriftStatus { get; set; }
+            public string StackGroupName { get; set; }
 
             /// <summary>
             /// The state of the stack group.
@@ -125,40 +142,26 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// *   ACTIVE
             /// *   DELETED
             /// </summary>
-            [NameInMap("StackGroupId")]
-            [Validation(Required=false)]
-            public string StackGroupId { get; set; }
-
-            /// <summary>
-            /// The tags that are added to the stack group.
-            /// </summary>
-            [NameInMap("StackGroupName")]
-            [Validation(Required=false)]
-            public string StackGroupName { get; set; }
-
-            /// <summary>
-            /// The time when the last successful drift detection was performed on the stack group.
-            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The key of the tag that is added to the stack group.
+            /// The tags that are added to the stack group.
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListStackGroupsResponseBodyStackGroupsTags> Tags { get; set; }
             public class ListStackGroupsResponseBodyStackGroupsTags : TeaModel {
                 /// <summary>
-                /// The value of the tag that is added to the stack group.
+                /// The key of the tag that is added to the stack group.
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The value of the tag that is added to the stack group.
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -169,7 +172,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The total number of stack groups.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
