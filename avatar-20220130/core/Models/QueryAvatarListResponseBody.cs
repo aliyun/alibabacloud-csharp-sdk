@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
                 [Validation(Required=false)]
                 public string Image { get; set; }
 
+                [NameInMap("MakeFailReason")]
+                [Validation(Required=false)]
+                public string MakeFailReason { get; set; }
+
+                [NameInMap("MakeStatus")]
+                [Validation(Required=false)]
+                public string MakeStatus { get; set; }
+
                 [NameInMap("ModelType")]
                 [Validation(Required=false)]
                 public string ModelType { get; set; }

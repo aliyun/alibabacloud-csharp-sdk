@@ -1,3 +1,6 @@
+2023-07-31 Version: 1.0.27
+-2d create
+
 2023-07-05 Version: 1.0.26
 -offline add voice and industrycode
 
