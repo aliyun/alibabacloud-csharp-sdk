@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string AuthId { get; set; }
 
+        [NameInMap("Birthday")]
+        [Validation(Required=false)]
+        public string Birthday { get; set; }
+
         [NameInMap("CallbackToken")]
         [Validation(Required=false)]
         public string CallbackToken { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [NameInMap("CertifyId")]
         [Validation(Required=false)]
         public string CertifyId { get; set; }
+
+        [NameInMap("CertifyUrlStyle")]
+        [Validation(Required=false)]
+        public string CertifyUrlStyle { get; set; }
 
         [NameInMap("CertifyUrlType")]
         [Validation(Required=false)]
@@ -69,6 +77,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string Mobile { get; set; }
 
+        [NameInMap("Mode")]
+        [Validation(Required=false)]
+        public string Mode { get; set; }
+
         [NameInMap("Model")]
         [Validation(Required=false)]
         public string Model { get; set; }
@@ -93,6 +105,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
+        [NameInMap("ReadImg")]
+        [Validation(Required=false)]
+        public string ReadImg { get; set; }
+
         [NameInMap("ReturnUrl")]
         [Validation(Required=false)]
         public string ReturnUrl { get; set; }
@@ -108,6 +124,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
+
+        [NameInMap("ValidityDate")]
+        [Validation(Required=false)]
+        public string ValidityDate { get; set; }
 
         [NameInMap("VoluntaryCustomizedContent")]
         [Validation(Required=false)]
