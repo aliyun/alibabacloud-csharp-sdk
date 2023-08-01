@@ -53,10 +53,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                [NameInMap("tbUserId")]
-                [Validation(Required=false)]
-                public string TbUserId { get; set; }
-
                 [NameInMap("username")]
                 [Validation(Required=false)]
                 public string Username { get; set; }
@@ -90,10 +86,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
-
-                [NameInMap("tbUserId")]
-                [Validation(Required=false)]
-                public string TbUserId { get; set; }
 
                 [NameInMap("username")]
                 [Validation(Required=false)]
@@ -144,10 +136,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
-
-                    [NameInMap("tbUserId")]
-                    [Validation(Required=false)]
-                    public string TbUserId { get; set; }
 
                     [NameInMap("username")]
                     [Validation(Required=false)]

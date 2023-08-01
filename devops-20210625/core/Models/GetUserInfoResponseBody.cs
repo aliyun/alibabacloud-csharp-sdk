@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string Email { get; set; }
 
-            [NameInMap("externUid")]
-            [Validation(Required=false)]
-            public string ExternUid { get; set; }
-
             [NameInMap("id")]
             [Validation(Required=false)]
             public long? Id { get; set; }

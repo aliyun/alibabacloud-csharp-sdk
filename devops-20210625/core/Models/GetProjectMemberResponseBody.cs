@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string AvatarUrl { get; set; }
 
-            [NameInMap("externUserId")]
-            [Validation(Required=false)]
-            public string ExternUserId { get; set; }
-
             [NameInMap("id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
