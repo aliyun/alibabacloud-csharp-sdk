@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class ListLogStoresResponseBody : TeaModel {
+    public class ListConfigResponseBody : TeaModel {
+        [NameInMap("configs")]
+        [Validation(Required=false)]
+        public List<LogtailConfig> Configs { get; set; }
+
         [NameInMap("count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
-
-        [NameInMap("logstores")]
-        [Validation(Required=false)]
-        public List<string> Logstores { get; set; }
 
         [NameInMap("total")]
         [Validation(Required=false)]
