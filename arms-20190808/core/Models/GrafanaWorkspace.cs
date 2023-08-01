@@ -69,6 +69,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string PersonalDomainPrefix { get; set; }
 
+        [NameInMap("privateDomain")]
+        [Validation(Required=false)]
+        public string PrivateDomain { get; set; }
+
+        [NameInMap("privateIp")]
+        [Validation(Required=false)]
+        public string PrivateIp { get; set; }
+
         [NameInMap("protocol")]
         [Validation(Required=false)]
         public string Protocol { get; set; }

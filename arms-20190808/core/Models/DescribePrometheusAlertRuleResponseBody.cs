@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribePrometheusAlertRuleResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public long? Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         [NameInMap("PrometheusAlertRule")]
         [Validation(Required=false)]
         public DescribePrometheusAlertRuleResponseBodyPrometheusAlertRule PrometheusAlertRule { get; set; }
@@ -86,6 +94,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

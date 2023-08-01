@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeletePrometheusAlertRuleResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public long? Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
