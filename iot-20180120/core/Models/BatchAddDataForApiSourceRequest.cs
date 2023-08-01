@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 
         [NameInMap("ContentList")]
         [Validation(Required=false)]
-        public Dictionary<string, object> ContentList { get; set; }
+        public string ContentList { get; set; }
 
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]

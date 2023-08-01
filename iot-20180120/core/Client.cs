@@ -631,23 +631,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await AttachParserDataSourceWithOptionsAsync(request, runtime);
         }
 
-        public BatchAddDataForApiSourceResponse BatchAddDataForApiSourceWithOptions(BatchAddDataForApiSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public BatchAddDataForApiSourceResponse BatchAddDataForApiSourceWithOptions(BatchAddDataForApiSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            BatchAddDataForApiSourceShrinkRequest request = new BatchAddDataForApiSourceShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ContentList))
-            {
-                request.ContentListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ContentList, "ContentList", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
             {
                 query["ApiId"] = request.ApiId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentListShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentList))
             {
-                query["ContentList"] = request.ContentListShrink;
+                query["ContentList"] = request.ContentList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {
@@ -672,23 +666,17 @@ namespace AlibabaCloud.SDK.Iot20180120
             return TeaModel.ToObject<BatchAddDataForApiSourceResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<BatchAddDataForApiSourceResponse> BatchAddDataForApiSourceWithOptionsAsync(BatchAddDataForApiSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<BatchAddDataForApiSourceResponse> BatchAddDataForApiSourceWithOptionsAsync(BatchAddDataForApiSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            BatchAddDataForApiSourceShrinkRequest request = new BatchAddDataForApiSourceShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ContentList))
-            {
-                request.ContentListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ContentList, "ContentList", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
             {
                 query["ApiId"] = request.ApiId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentListShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentList))
             {
-                query["ContentList"] = request.ContentListShrink;
+                query["ContentList"] = request.ContentList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IotInstanceId))
             {

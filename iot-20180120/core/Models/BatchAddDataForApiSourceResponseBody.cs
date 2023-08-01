@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Data { get; set; }
-
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
