@@ -3597,6 +3597,72 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             return await GenerateUserAccessTokenWithOptionsAsync(request, runtime);
         }
 
+        public GetAgentInfoResponse GetAgentInfoWithOptions(GetAgentInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentInfo",
+                Version = "2022-04-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetAgentInfoResponse> GetAgentInfoWithOptionsAsync(GetAgentInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentInfo",
+                Version = "2022-04-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetAgentInfoResponse GetAgentInfo(GetAgentInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgentInfoWithOptions(request, runtime);
+        }
+
+        public async Task<GetAgentInfoResponse> GetAgentInfoAsync(GetAgentInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgentInfoWithOptionsAsync(request, runtime);
+        }
+
         public GetAsyncResultResponse GetAsyncResultWithOptions(GetAsyncResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4765,6 +4831,154 @@ namespace AlibabaCloud.SDK.Chatbot20220408
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListLgfWithOptionsAsync(request, runtime);
+        }
+
+        public ListSaasInfoResponse ListSaasInfoWithOptions(ListSaasInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaasGroupCodes))
+            {
+                query["SaasGroupCodes"] = request.SaasGroupCodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaasName))
+            {
+                query["SaasName"] = request.SaasName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSaasInfo",
+                Version = "2022-04-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSaasInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListSaasInfoResponse> ListSaasInfoWithOptionsAsync(ListSaasInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaasGroupCodes))
+            {
+                query["SaasGroupCodes"] = request.SaasGroupCodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaasName))
+            {
+                query["SaasName"] = request.SaasName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSaasInfo",
+                Version = "2022-04-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSaasInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListSaasInfoResponse ListSaasInfo(ListSaasInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListSaasInfoWithOptions(request, runtime);
+        }
+
+        public async Task<ListSaasInfoResponse> ListSaasInfoAsync(ListSaasInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListSaasInfoWithOptionsAsync(request, runtime);
+        }
+
+        public ListSaasPermissionGroupInfosResponse ListSaasPermissionGroupInfosWithOptions(ListSaasPermissionGroupInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSaasPermissionGroupInfos",
+                Version = "2022-04-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSaasPermissionGroupInfosResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListSaasPermissionGroupInfosResponse> ListSaasPermissionGroupInfosWithOptionsAsync(ListSaasPermissionGroupInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSaasPermissionGroupInfos",
+                Version = "2022-04-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSaasPermissionGroupInfosResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListSaasPermissionGroupInfosResponse ListSaasPermissionGroupInfos(ListSaasPermissionGroupInfosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListSaasPermissionGroupInfosWithOptions(request, runtime);
+        }
+
+        public async Task<ListSaasPermissionGroupInfosResponse> ListSaasPermissionGroupInfosAsync(ListSaasPermissionGroupInfosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListSaasPermissionGroupInfosWithOptionsAsync(request, runtime);
         }
 
         public ListSimQuestionResponse ListSimQuestionWithOptions(ListSimQuestionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
