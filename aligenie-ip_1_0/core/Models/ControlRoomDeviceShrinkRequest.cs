@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string Cmd { get; set; }
 
+        [NameInMap("DeviceIndex")]
+        [Validation(Required=false)]
+        public int? DeviceIndex { get; set; }
+
         [NameInMap("DeviceNumber")]
         [Validation(Required=false)]
         public string DeviceNumber { get; set; }

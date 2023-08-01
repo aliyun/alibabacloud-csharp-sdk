@@ -33,9 +33,53 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                 [Validation(Required=false)]
                 public string ConnectType { get; set; }
 
+                [NameInMap("DN")]
+                [Validation(Required=false)]
+                public string DN { get; set; }
+
                 [NameInMap("DeviceName")]
                 [Validation(Required=false)]
                 public string DeviceName { get; set; }
+
+                [NameInMap("DeviceStatus")]
+                [Validation(Required=false)]
+                public string DeviceStatus { get; set; }
+
+                [NameInMap("MultiKeySwitchExt")]
+                [Validation(Required=false)]
+                public QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExt MultiKeySwitchExt { get; set; }
+                public class QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExt : TeaModel {
+                    [NameInMap("SwitchList")]
+                    [Validation(Required=false)]
+                    public List<QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList> SwitchList { get; set; }
+                    public class QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList : TeaModel {
+                        [NameInMap("Category")]
+                        [Validation(Required=false)]
+                        public string Category { get; set; }
+
+                        [NameInMap("DeviceIndex")]
+                        [Validation(Required=false)]
+                        public int? DeviceIndex { get; set; }
+
+                        [NameInMap("DeviceName")]
+                        [Validation(Required=false)]
+                        public string DeviceName { get; set; }
+
+                        [NameInMap("DeviceStatus")]
+                        [Validation(Required=false)]
+                        public string DeviceStatus { get; set; }
+
+                        [NameInMap("ElementCode")]
+                        [Validation(Required=false)]
+                        public string ElementCode { get; set; }
+
+                        [NameInMap("Location")]
+                        [Validation(Required=false)]
+                        public string Location { get; set; }
+
+                    }
+
+                }
 
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -44,6 +88,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                 [NameInMap("Number")]
                 [Validation(Required=false)]
                 public string Number { get; set; }
+
+                [NameInMap("PK")]
+                [Validation(Required=false)]
+                public string PK { get; set; }
 
             }
 

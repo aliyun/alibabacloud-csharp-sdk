@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                 [Validation(Required=false)]
                 public string DeviceName { get; set; }
 
+                [NameInMap("Dn")]
+                [Validation(Required=false)]
+                public string Dn { get; set; }
+
                 [NameInMap("InfraredId")]
                 [Validation(Required=false)]
                 public string InfraredId { get; set; }
@@ -53,6 +57,34 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                 [Validation(Required=false)]
                 public string InfraredVersion { get; set; }
 
+                [NameInMap("MultiKeySwitchExt")]
+                [Validation(Required=false)]
+                public ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExt MultiKeySwitchExt { get; set; }
+                public class ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExt : TeaModel {
+                    [NameInMap("SwitchList")]
+                    [Validation(Required=false)]
+                    public List<ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList> SwitchList { get; set; }
+                    public class ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList : TeaModel {
+                        [NameInMap("Category")]
+                        [Validation(Required=false)]
+                        public string Category { get; set; }
+
+                        [NameInMap("DeviceIndex")]
+                        [Validation(Required=false)]
+                        public int? DeviceIndex { get; set; }
+
+                        [NameInMap("DeviceName")]
+                        [Validation(Required=false)]
+                        public string DeviceName { get; set; }
+
+                        [NameInMap("Location")]
+                        [Validation(Required=false)]
+                        public string Location { get; set; }
+
+                    }
+
+                }
+
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -60,6 +92,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                 [NameInMap("Number")]
                 [Validation(Required=false)]
                 public string Number { get; set; }
+
+                [NameInMap("Pk")]
+                [Validation(Required=false)]
+                public string Pk { get; set; }
 
                 [NameInMap("Province")]
                 [Validation(Required=false)]
