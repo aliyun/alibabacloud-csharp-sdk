@@ -401,6 +401,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string DepTime { get; set; }
 
+                [NameInMap("from_city_ad_code")]
+                [Validation(Required=false)]
+                public string FromCityAdCode { get; set; }
+
                 [NameInMap("from_station_name")]
                 [Validation(Required=false)]
                 public string FromStationName { get; set; }
@@ -408,6 +412,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("run_time")]
                 [Validation(Required=false)]
                 public long? RunTime { get; set; }
+
+                [NameInMap("to_city_ad_code")]
+                [Validation(Required=false)]
+                public string ToCityAdCode { get; set; }
 
                 [NameInMap("to_station_name")]
                 [Validation(Required=false)]

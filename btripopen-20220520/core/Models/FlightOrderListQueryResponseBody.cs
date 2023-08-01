@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ArrCity { get; set; }
 
+            [NameInMap("arr_city_ad_code")]
+            [Validation(Required=false)]
+            public string ArrCityAdCode { get; set; }
+
             [NameInMap("btrip_title")]
             [Validation(Required=false)]
             public string BtripTitle { get; set; }
@@ -82,6 +86,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("dep_city")]
             [Validation(Required=false)]
             public string DepCity { get; set; }
+
+            [NameInMap("dep_city_ad_code")]
+            [Validation(Required=false)]
+            public string DepCityAdCode { get; set; }
 
             [NameInMap("dep_date")]
             [Validation(Required=false)]

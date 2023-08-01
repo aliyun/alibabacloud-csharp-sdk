@@ -221,6 +221,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyListQueryResponseBodyModuleListTravelerList> TravelerList { get; set; }
             public class ApplyListQueryResponseBodyModuleListTravelerList : TeaModel {
+                [NameInMap("job_no")]
+                [Validation(Required=false)]
+                public string JobNo { get; set; }
+
                 [NameInMap("user_id")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }

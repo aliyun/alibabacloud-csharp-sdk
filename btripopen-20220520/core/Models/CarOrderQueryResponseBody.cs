@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string FromAddress { get; set; }
 
+                [NameInMap("from_city_ad_code")]
+                [Validation(Required=false)]
+                public string FromCityAdCode { get; set; }
+
                 [NameInMap("from_city_name")]
                 [Validation(Required=false)]
                 public string FromCityName { get; set; }
@@ -85,6 +89,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string RealFromAddress { get; set; }
 
+                [NameInMap("real_from_city_ad_code")]
+                [Validation(Required=false)]
+                public string RealFromCityAdCode { get; set; }
+
                 [NameInMap("real_from_city_name")]
                 [Validation(Required=false)]
                 public string RealFromCityName { get; set; }
@@ -92,6 +100,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("real_to_address")]
                 [Validation(Required=false)]
                 public string RealToAddress { get; set; }
+
+                [NameInMap("real_to_city_ad_code")]
+                [Validation(Required=false)]
+                public string RealToCityAdCode { get; set; }
 
                 [NameInMap("real_to_city_name")]
                 [Validation(Required=false)]
@@ -112,6 +124,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("to_address")]
                 [Validation(Required=false)]
                 public string ToAddress { get; set; }
+
+                [NameInMap("to_city_ad_code")]
+                [Validation(Required=false)]
+                public string ToCityAdCode { get; set; }
 
                 [NameInMap("to_city_name")]
                 [Validation(Required=false)]

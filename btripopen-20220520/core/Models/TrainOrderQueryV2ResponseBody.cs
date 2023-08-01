@@ -357,6 +357,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string DepTime { get; set; }
 
+                    [NameInMap("from_city_ad_code")]
+                    [Validation(Required=false)]
+                    public string FromCityAdCode { get; set; }
+
                     [NameInMap("from_city_name")]
                     [Validation(Required=false)]
                     public string FromCityName { get; set; }
@@ -375,6 +379,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [NameInMap("run_time")]
                     [Validation(Required=false)]
                     public long? RunTime { get; set; }
+
+                    [NameInMap("to_city_ad_code")]
+                    [Validation(Required=false)]
+                    public string ToCityAdCode { get; set; }
 
                     [NameInMap("to_city_name")]
                     [Validation(Required=false)]
@@ -488,6 +496,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string EndTime { get; set; }
 
+                    [NameInMap("from_city_ad_code")]
+                    [Validation(Required=false)]
+                    public string FromCityAdCode { get; set; }
+
                     [NameInMap("from_city_name")]
                     [Validation(Required=false)]
                     public string FromCityName { get; set; }
@@ -499,6 +511,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [NameInMap("middle_city")]
                     [Validation(Required=false)]
                     public string MiddleCity { get; set; }
+
+                    [NameInMap("middle_city_ad_code")]
+                    [Validation(Required=false)]
+                    public string MiddleCityAdCode { get; set; }
 
                     [NameInMap("middle_date")]
                     [Validation(Required=false)]
@@ -515,6 +531,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [NameInMap("start_time")]
                     [Validation(Required=false)]
                     public string StartTime { get; set; }
+
+                    [NameInMap("to_city_ad_code")]
+                    [Validation(Required=false)]
+                    public string ToCityAdCode { get; set; }
 
                     [NameInMap("to_city_name")]
                     [Validation(Required=false)]

@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string City { get; set; }
 
+            [NameInMap("city_ad_code")]
+            [Validation(Required=false)]
+            public string CityAdCode { get; set; }
+
             [NameInMap("contact_name")]
             [Validation(Required=false)]
             public string ContactName { get; set; }
