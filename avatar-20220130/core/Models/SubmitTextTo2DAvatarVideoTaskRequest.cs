@@ -93,11 +93,16 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
 
             [NameInMap("IsSubtitles")]
             [Validation(Required=false)]
+            [Obsolete]
             public bool? IsSubtitles { get; set; }
 
             [NameInMap("Resolution")]
             [Validation(Required=false)]
             public int? Resolution { get; set; }
+
+            [NameInMap("SubtitleEmbedded")]
+            [Validation(Required=false)]
+            public bool? SubtitleEmbedded { get; set; }
 
         }
 

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
             [Validation(Required=false)]
             public GetVideoTaskInfoResponseBodyDataTaskResult TaskResult { get; set; }
             public class GetVideoTaskInfoResponseBodyDataTaskResult : TeaModel {
+                [NameInMap("AlphaUrl")]
+                [Validation(Required=false)]
+                public string AlphaUrl { get; set; }
+
                 [NameInMap("FailCode")]
                 [Validation(Required=false)]
                 public string FailCode { get; set; }

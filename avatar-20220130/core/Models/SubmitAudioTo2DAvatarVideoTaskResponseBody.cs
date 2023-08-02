@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Avatar20220130.Models
 
         [NameInMap("Success")]
         [Validation(Required=false)]
-        public string Success { get; set; }
+        public bool? Success { get; set; }
 
     }
 
