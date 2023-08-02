@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 [Validation(Required=false)]
                 public string Sandbox { get; set; }
 
+                [NameInMap("Scene")]
+                [Validation(Required=false)]
+                public string Scene { get; set; }
+
                 /// <summary>
                 /// The information about the origin server.
                 /// </summary>

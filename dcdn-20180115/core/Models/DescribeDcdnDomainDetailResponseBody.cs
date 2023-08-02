@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public string SSLPub { get; set; }
 
+            [NameInMap("Scene")]
+            [Validation(Required=false)]
+            public string Scene { get; set; }
+
             /// <summary>
             /// The acceleration region. Default value: domestic. Valid values:
             /// 

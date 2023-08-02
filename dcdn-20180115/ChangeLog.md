@@ -1,3 +1,6 @@
+2023-08-02 Version: 1.0.33
+- Update DescribeDcdnUserDomains.
+
 2023-07-28 Version: 1.0.32
 - Add DescribeDcdnKvNamespace.
 
