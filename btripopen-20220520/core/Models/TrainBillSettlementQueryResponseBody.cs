@@ -37,6 +37,22 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string AlipayTradeNo { get; set; }
 
+                [NameInMap("apply_arr_city_code")]
+                [Validation(Required=false)]
+                public string ApplyArrCityCode { get; set; }
+
+                [NameInMap("apply_arr_city_name")]
+                [Validation(Required=false)]
+                public string ApplyArrCityName { get; set; }
+
+                [NameInMap("apply_dep_city_code")]
+                [Validation(Required=false)]
+                public string ApplyDepCityCode { get; set; }
+
+                [NameInMap("apply_dep_city_name")]
+                [Validation(Required=false)]
+                public string ApplyDepCityName { get; set; }
+
                 /// <summary>
                 /// 审批扩展自定义字段
                 /// </summary>
@@ -47,6 +63,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("apply_id")]
                 [Validation(Required=false)]
                 public string ApplyId { get; set; }
+
+                [NameInMap("arr_city_code")]
+                [Validation(Required=false)]
+                public string ArrCityCode { get; set; }
 
                 [NameInMap("arr_date")]
                 [Validation(Required=false)]
@@ -103,6 +123,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("coupon")]
                 [Validation(Required=false)]
                 public double? Coupon { get; set; }
+
+                [NameInMap("dep_city_code")]
+                [Validation(Required=false)]
+                public string DepCityCode { get; set; }
 
                 [NameInMap("department")]
                 [Validation(Required=false)]
@@ -210,6 +234,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("tax_rate")]
                 [Validation(Required=false)]
                 public string TaxRate { get; set; }
+
+                [NameInMap("third_itinerary_id")]
+                [Validation(Required=false)]
+                public string ThirdItineraryId { get; set; }
 
                 [NameInMap("ticket_no")]
                 [Validation(Required=false)]
