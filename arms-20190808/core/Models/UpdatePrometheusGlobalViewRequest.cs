@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("GroupName")]
+        [Validation(Required=false)]
+        public string GroupName { get; set; }
+
+        [NameInMap("MostRegionId")]
+        [Validation(Required=false)]
+        public string MostRegionId { get; set; }
+
         /// <summary>
         /// The region ID.
         /// </summary>

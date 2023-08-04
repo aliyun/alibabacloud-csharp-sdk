@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteTraceAppResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public long? Code { get; set; }
+
         /// <summary>
         /// The response in JSON format, including the HTTP status code, error code, response message, and trace ID.
         /// </summary>
@@ -16,12 +20,20 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string Data { get; set; }
 
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         /// <summary>
         /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class DeleteTraceAppRequest : TeaModel {
+    public class DeleteTraceAppShrinkRequest : TeaModel {
         /// <summary>
         /// The ID of the application that you want to delete. You can call the SearchTraceAppByName operation to query the application ID. For more information, see [SearchTraceAppByName](~~130676~~).
         /// </summary>
@@ -18,27 +18,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         [NameInMap("DeleteReason")]
         [Validation(Required=false)]
-        public DeleteTraceAppRequestDeleteReason DeleteReason { get; set; }
-        public class DeleteTraceAppRequestDeleteReason : TeaModel {
-            [NameInMap("ReasonIds")]
-            [Validation(Required=false)]
-            public List<DeleteTraceAppRequestDeleteReasonReasonIds> ReasonIds { get; set; }
-            public class DeleteTraceAppRequestDeleteReasonReasonIds : TeaModel {
-                [NameInMap("Id")]
-                [Validation(Required=false)]
-                public int? Id { get; set; }
-
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-
-            }
-
-            [NameInMap("Remark")]
-            [Validation(Required=false)]
-            public string Remark { get; set; }
-
-        }
+        public string DeleteReasonShrink { get; set; }
 
         /// <summary>
         /// The PID of the application that you want to delete. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).
