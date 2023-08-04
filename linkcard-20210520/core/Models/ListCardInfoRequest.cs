@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
         [Validation(Required=false)]
         public string Msisdn { get; set; }
 
+        [NameInMap("NetworkType")]
+        [Validation(Required=false)]
+        public string NetworkType { get; set; }
+
         [NameInMap("NotifyId")]
         [Validation(Required=false)]
         public string NotifyId { get; set; }

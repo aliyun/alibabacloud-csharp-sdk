@@ -1648,6 +1648,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520
             {
                 query["Msisdn"] = request.Msisdn;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["NetworkType"] = request.NetworkType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyId))
             {
                 query["NotifyId"] = request.NotifyId;
@@ -1786,6 +1790,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Msisdn))
             {
                 query["Msisdn"] = request.Msisdn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["NetworkType"] = request.NetworkType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyId))
             {

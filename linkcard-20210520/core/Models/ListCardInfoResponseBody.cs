@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
                 [Validation(Required=false)]
                 public string ExpireTime { get; set; }
 
+                [NameInMap("FlowLatestModifiedTime")]
+                [Validation(Required=false)]
+                public string FlowLatestModifiedTime { get; set; }
+
                 [NameInMap("Iccid")]
                 [Validation(Required=false)]
                 public string Iccid { get; set; }
@@ -92,6 +96,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
                 [NameInMap("Msisdn")]
                 [Validation(Required=false)]
                 public List<string> Msisdn { get; set; }
+
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
+                public string NetworkType { get; set; }
 
                 [NameInMap("NotifyId")]
                 [Validation(Required=false)]

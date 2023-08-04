@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Linkcard20210520.Models
                 [Validation(Required=false)]
                 public int? FunctionFee { get; set; }
 
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
+                public string NetworkType { get; set; }
+
                 [NameInMap("OrderDetailUrl")]
                 [Validation(Required=false)]
                 public string OrderDetailUrl { get; set; }
