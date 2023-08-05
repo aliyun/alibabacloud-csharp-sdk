@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetInterceptionRuleDetailRequest : TeaModel {
+        /// <summary>
+        /// The ID of the container cluster.
+        /// 
+        /// > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// The ID of the rule.
+        /// 
+        /// > You can call the [ListInterceptionRulePage](~~ListInterceptionRulePage~~) operation to query the IDs of rules.
+        /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public string RuleId { get; set; }

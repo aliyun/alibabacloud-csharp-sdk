@@ -1,3 +1,6 @@
+2023-08-05 Version: 2.2.1
+- Generated csharp 2018-12-03 for Sas.
+
 2023-07-29 Version: 2.2.0
 - Supported Standard config.
 

@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CheckType { get; set; }
 
         /// <summary>
-        /// The name of container.
+        /// The name of the container.
         /// </summary>
         [NameInMap("ContainerName")]
         [Validation(Required=false)]

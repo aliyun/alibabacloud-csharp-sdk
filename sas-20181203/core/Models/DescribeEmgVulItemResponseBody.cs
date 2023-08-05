@@ -74,6 +74,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Progress { get; set; }
 
+            [NameInMap("RaspDefend")]
+            [Validation(Required=false)]
+            public int? RaspDefend { get; set; }
+
             /// <summary>
             /// The detection status of the urgent vulnerability. Valid values:
             /// 
