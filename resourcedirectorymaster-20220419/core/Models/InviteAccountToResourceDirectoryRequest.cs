@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         public string ParentFolderId { get; set; }
 
         /// <summary>
-        /// The tag value.
+        /// The tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

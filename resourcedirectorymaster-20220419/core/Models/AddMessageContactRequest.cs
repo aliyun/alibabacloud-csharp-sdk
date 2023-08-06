@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         /// 
         /// Specify the mobile phone number in the `<Country code>-<Mobile phone number>` format.
         /// 
+        /// > Only mobile phone numbers in the `86-<Mobile phone number>` format in the Chinese mainland are supported.
+        /// 
         /// After you specify a mobile phone number, you need to call [SendPhoneVerificationForMessageContact](~~SendPhoneVerificationForMessageContact~~) to send verification information to the mobile phone number. After the verification is passed, the mobile phone number takes effect.
         /// </summary>
         [NameInMap("PhoneNumber")]
