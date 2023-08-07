@@ -9,12 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyCommonBandwidthPackageSpecRequest : TeaModel {
+        /// <summary>
+        /// The maximum bandwidth of the EIP bandwidth plan. Unit: Mbit/s.
+        /// 
+        /// Valid values: **1** to **1000**.
+        /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public string Bandwidth { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the EIP bandwidth plan.
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
@@ -29,9 +34,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The maximum bandwidth of the EIP bandwidth plan. Unit: Mbit/s.
+        /// The region ID of the EIP bandwidth plan.
         /// 
-        /// Valid values: **1** to **1000**.
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

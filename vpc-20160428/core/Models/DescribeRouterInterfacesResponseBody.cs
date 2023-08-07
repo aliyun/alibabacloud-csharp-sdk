@@ -284,6 +284,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string ReservationOrderType { get; set; }
 
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
+                public string ResourceGroupId { get; set; }
+
                 /// <summary>
                 /// Indicates whether the router interface is the initiator or acceptor of the peering connection.
                 /// </summary>
@@ -328,6 +332,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTags Tags { get; set; }
+                public class DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTags : TeaModel {
+                    [NameInMap("Tags")]
+                    [Validation(Required=false)]
+                    public List<DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTagsTags> Tags { get; set; }
+                    public class DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTagsTags : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// The ID of the local virtual private cloud (VPC) in the peering connection.

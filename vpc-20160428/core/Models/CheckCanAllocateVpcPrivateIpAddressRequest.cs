@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CheckCanAllocateVpcPrivateIpAddressRequest : TeaModel {
         /// <summary>
-        /// Indicates whether the private IP address is available. Valid values:
+        /// The version of the private IP address. Valid values:
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// *   **ipv4**: IPv4 If you want to query an IPv4 address, this parameter is optional.
+        /// *   **ipv6**: IPv6 If you want to query an IPv6 address, this parameter is required.
         /// </summary>
         [NameInMap("IpVersion")]
         [Validation(Required=false)]
@@ -28,14 +28,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **CheckCanAllocateVpcPrivateIpAddress**.
+        /// To query whether a private IP address is available, the private IP address must belong to the vSwitch specified by the **VSwitchId** parameter.
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// To query whether a private IP address is available, the private IP address must belong to the vSwitch specified by the **VSwitchId** parameter.
+        /// The region ID of the vSwitch to which the private IP address that you want to query belongs.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -50,10 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The version of the private IP address. Valid values:
-        /// 
-        /// *   **ipv4**: IPv4 If you want to query an IPv4 address, this parameter is optional.
-        /// *   **ipv6**: IPv6 If you want to query an IPv6 address, this parameter is required.
+        /// The ID of the vSwitch to which the private IP address to be queried belongs.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
         /// 
         /// *   If no value is returned for **NextToken**, no next queries are sent.
-        /// *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+        /// *   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details about the resource to which the tags are added.
+        /// The tag key.
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]

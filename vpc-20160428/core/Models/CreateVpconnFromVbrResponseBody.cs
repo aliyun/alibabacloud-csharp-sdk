@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpconnFromVbrResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the shared Express Connect circuit.
+        /// </summary>
         [NameInMap("VirtualPhysicalConnection")]
         [Validation(Required=false)]
         public string VirtualPhysicalConnection { get; set; }

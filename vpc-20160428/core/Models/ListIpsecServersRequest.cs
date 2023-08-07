@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListIpsecServersRequest : TeaModel {
+        /// <summary>
+        /// The ID of the IPsec server.
+        /// </summary>
         [NameInMap("IpsecServerId")]
         [Validation(Required=false)]
         public List<string> IpsecServerId { get; set; }
@@ -16,7 +19,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The name of the IPsec server.
         /// 
-        /// The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.
+        /// The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("IpsecServerName")]
         [Validation(Required=false)]
@@ -30,10 +33,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
         /// 
-        /// *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
-        /// *   If a subsequent query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
+        /// *   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.
+        /// *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

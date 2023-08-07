@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientCert { get; set; }
 
         /// <summary>
-        /// The configuration of the client.
+        /// The client configuration.
         /// </summary>
         [NameInMap("ClientConfig")]
         [Validation(Required=false)]
         public string ClientConfig { get; set; }
 
         /// <summary>
-        /// The key of the client.
+        /// The client key.
         /// </summary>
         [NameInMap("ClientKey")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -93,9 +93,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The status of the SSL client certificate. Valid values:
         /// 
-        /// *   **expiring-soon**: The certificate expires in one week.
-        /// *   **normal**: The certificate is active.
-        /// *   **expired**: The certificate has expired.
+        /// *   **expiring-soon**
+        /// *   **normal**
+        /// *   **expired**
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

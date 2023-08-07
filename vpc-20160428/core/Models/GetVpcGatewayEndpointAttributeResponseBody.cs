@@ -9,9 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetVpcGatewayEndpointAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// The time when the endpoint was created. The time follows the ISO 8601 standard in UTC in the YYYY-MM-DDThh:mm:ssZ format.
+        /// </summary>
         [NameInMap("CreationTime")]
         [Validation(Required=false)]
         public string CreationTime { get; set; }
+
+        /// <summary>
+        /// The description of the gateway endpoint.
+        /// </summary>
+        [NameInMap("EndpointDescription")]
+        [Validation(Required=false)]
+        public string EndpointDescription { get; set; }
+
+        /// <summary>
+        /// The ID of the gateway endpoint.
+        /// </summary>
+        [NameInMap("EndpointId")]
+        [Validation(Required=false)]
+        public string EndpointId { get; set; }
+
+        /// <summary>
+        /// The name of the gateway endpoint.
+        /// </summary>
+        [NameInMap("EndpointName")]
+        [Validation(Required=false)]
+        public string EndpointName { get; set; }
 
         /// <summary>
         /// The status of the gateway endpoint. Valid values:
@@ -23,34 +47,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **Dissociating**: being disassociated
         /// *   **Deleting**: being deleted
         /// </summary>
-        [NameInMap("EndpointDescription")]
-        [Validation(Required=false)]
-        public string EndpointDescription { get; set; }
-
-        /// <summary>
-        /// The access policy for the cloud service.
-        /// </summary>
-        [NameInMap("EndpointId")]
-        [Validation(Required=false)]
-        public string EndpointId { get; set; }
-
-        /// <summary>
-        /// The time when the endpoint was created. The time follows the ISO 8601 standard in UTC in the YYYY-MM-DDThh:mm:ssZ format.
-        /// </summary>
-        [NameInMap("EndpointName")]
-        [Validation(Required=false)]
-        public string EndpointName { get; set; }
-
         [NameInMap("EndpointStatus")]
         [Validation(Required=false)]
         public string EndpointStatus { get; set; }
 
+        /// <summary>
+        /// The access policy for the cloud service.
+        /// </summary>
         [NameInMap("PolicyDocument")]
         [Validation(Required=false)]
         public string PolicyDocument { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -60,12 +69,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// The ID of the route table associated with the gateway endpoint.
+        /// </summary>
         [NameInMap("RouteTables")]
         [Validation(Required=false)]
         public List<string> RouteTables { get; set; }
 
         /// <summary>
-        /// The ID of the route table associated with the gateway endpoint.
+        /// The name of the endpoint service.
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
@@ -85,6 +97,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        /// <summary>
+        /// The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.
+        /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

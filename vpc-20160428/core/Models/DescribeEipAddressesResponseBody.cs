@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeEipAddressesResponseBody : TeaModel {
         /// <summary>
-        /// The metering method that is used after the renewal takes effect. Valid values:
-        /// 
-        /// *   **PayByBandwidth**: pay-by-bandwidth
-        /// *   **PayByTraffic**: pay-by-data-transfer
+        /// The details about the EIP.
         /// </summary>
         [NameInMap("EipAddresses")]
         [Validation(Required=false)]
@@ -24,18 +21,97 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeEipAddressesResponseBodyEipAddressesEipAddress> EipAddress { get; set; }
             public class DescribeEipAddressesResponseBodyEipAddressesEipAddress : TeaModel {
                 /// <summary>
-                /// The tag key of the EIP.
+                /// The ID of the EIP.
                 /// </summary>
                 [NameInMap("AllocationId")]
                 [Validation(Required=false)]
                 public string AllocationId { get; set; }
 
                 /// <summary>
-                /// The bandwidth after the renewal takes effect. Unit: Mbit/s.
+                /// The time when the EIP was created. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
                 /// </summary>
                 [NameInMap("AllocationTime")]
                 [Validation(Required=false)]
                 public string AllocationTime { get; set; }
+
+                /// <summary>
+                /// The maximum bandwidth of the EIP. Unit: Mbit/s.
+                /// </summary>
+                [NameInMap("Bandwidth")]
+                [Validation(Required=false)]
+                public string Bandwidth { get; set; }
+
+                /// <summary>
+                /// The maximum bandwidth of the EIP bandwidth plan with which the EIP is associated. Unit: Mbit/s.
+                /// </summary>
+                [NameInMap("BandwidthPackageBandwidth")]
+                [Validation(Required=false)]
+                public string BandwidthPackageBandwidth { get; set; }
+
+                /// <summary>
+                /// The ID of the EIP bandwidth plan.
+                /// </summary>
+                [NameInMap("BandwidthPackageId")]
+                [Validation(Required=false)]
+                public string BandwidthPackageId { get; set; }
+
+                /// <summary>
+                /// The type of the bandwidth. Only **CommonBandwidthPackage** (EIP Bandwidth Plan) is returned.
+                /// </summary>
+                [NameInMap("BandwidthPackageType")]
+                [Validation(Required=false)]
+                public string BandwidthPackageType { get; set; }
+
+                /// <summary>
+                /// The service status of the EIP. Valid values:
+                /// 
+                /// *   **Normal**: active
+                /// *   **FinancialLocked**: locked
+                /// </summary>
+                [NameInMap("BusinessStatus")]
+                [Validation(Required=false)]
+                public string BusinessStatus { get; set; }
+
+                /// <summary>
+                /// The billing method of the EIP. Valid values:
+                /// 
+                /// *   **PostPaid**: pay-as-you-go
+                /// *   **PrePaid**: subscription
+                /// </summary>
+                [NameInMap("ChargeType")]
+                [Validation(Required=false)]
+                public string ChargeType { get; set; }
+
+                /// <summary>
+                /// Indicates whether deletion protection is enabled. Valid values:
+                /// 
+                /// *   **true**: enabled
+                /// *   **false**: disabled
+                /// </summary>
+                [NameInMap("DeletionProtection")]
+                [Validation(Required=false)]
+                public bool? DeletionProtection { get; set; }
+
+                /// <summary>
+                /// The description of the EIP.
+                /// </summary>
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                /// <summary>
+                /// The maximum bandwidth of the EIP when it is not associated with an EIP bandwidth plan. Unit: Mbit/s.
+                /// </summary>
+                [NameInMap("EipBandwidth")]
+                [Validation(Required=false)]
+                public string EipBandwidth { get; set; }
+
+                /// <summary>
+                /// The time when the EIP expires. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
+                /// </summary>
+                [NameInMap("ExpiredTime")]
+                [Validation(Required=false)]
+                public string ExpiredTime { get; set; }
 
                 /// <summary>
                 /// Indicates whether fine-grained monitoring is enabled for the EIP. Valid values:
@@ -43,9 +119,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// *   **false**: no
                 /// *   **true**: yes
                 /// </summary>
-                [NameInMap("Bandwidth")]
+                [NameInMap("HDMonitorStatus")]
                 [Validation(Required=false)]
-                public string Bandwidth { get; set; }
+                public string HDMonitorStatus { get; set; }
+
+                /// <summary>
+                /// Indicates whether renewal data is included.
+                /// 
+                /// *   **false**: no
+                /// *   **true**: yes This parameter returns **true** only when the **IncludeReservationData** parameter is set to **true** and some orders have not taken effect.
+                /// </summary>
+                [NameInMap("HasReservationData")]
+                [Validation(Required=false)]
+                public string HasReservationData { get; set; }
 
                 /// <summary>
                 /// The line type.
@@ -66,132 +152,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// 
                 /// If your services are deployed in China East 1 Finance, **BGP_FinanceCloud** is returned.
                 /// </summary>
-                [NameInMap("BandwidthPackageBandwidth")]
-                [Validation(Required=false)]
-                public string BandwidthPackageBandwidth { get; set; }
-
-                /// <summary>
-                /// Indicates whether level-2 throttling is configured. Valid values:
-                /// 
-                /// *   **true**: yes
-                /// *   **false**: no
-                /// </summary>
-                [NameInMap("BandwidthPackageId")]
-                [Validation(Required=false)]
-                public string BandwidthPackageId { get; set; }
-
-                /// <summary>
-                /// The ID of the IP address pool to which the EIP belongs.
-                /// </summary>
-                [NameInMap("BandwidthPackageType")]
-                [Validation(Required=false)]
-                public string BandwidthPackageType { get; set; }
-
-                /// <summary>
-                /// The edition of Anti-DDoS. 
-                /// 
-                /// - If an empty value is returned, it indicates that Anti-DDoS Origin Basic is used.
-                /// - If **AntiDDoS_Enhanced** is returned, it indicates that Anti-DDoS Pro/Premium is used.
-                /// </summary>
-                [NameInMap("BusinessStatus")]
-                [Validation(Required=false)]
-                public string BusinessStatus { get; set; }
-
-                /// <summary>
-                /// The name of the EIP.
-                /// </summary>
-                [NameInMap("ChargeType")]
-                [Validation(Required=false)]
-                public string ChargeType { get; set; }
-
-                /// <summary>
-                /// The ID of the resource group.
-                /// </summary>
-                [NameInMap("DeletionProtection")]
-                [Validation(Required=false)]
-                public bool? DeletionProtection { get; set; }
-
-                /// <summary>
-                /// The region ID of the associated instance.
-                /// </summary>
-                [NameInMap("Description")]
-                [Validation(Required=false)]
-                public string Description { get; set; }
-
-                /// <summary>
-                /// The maximum bandwidth of the EIP bandwidth plan with which the EIP is associated. Unit: Mbit/s.
-                /// </summary>
-                [NameInMap("EipBandwidth")]
-                [Validation(Required=false)]
-                public string EipBandwidth { get; set; }
-
-                /// <summary>
-                /// The reason why the EIP is locked. Valid values:
-                /// 
-                /// *   **financial**: The EIP is locked due to overdue payments.
-                /// *   **security**: The EIP is locked for security reasons.
-                /// </summary>
-                [NameInMap("ExpiredTime")]
-                [Validation(Required=false)]
-                public string ExpiredTime { get; set; }
-
-                /// <summary>
-                /// The type of the bandwidth. Only **CommonBandwidthPackage** (EIP Bandwidth Plan) is returned.
-                /// </summary>
-                [NameInMap("HDMonitorStatus")]
-                [Validation(Required=false)]
-                public string HDMonitorStatus { get; set; }
-
-                /// <summary>
-                /// The ID of the VPC that has IPv4 gateways enabled and that is deployed in the same region as the EIP. 
-                /// 
-                /// When you associate an EIP with an IP address, the system can enable the IP address to access the Internet based on VPC route configurations. 
-                /// 
-                /// >  This parameter is returned if **InstanceType** is set to **IpAddress**. In this case, the EIP is associated with an IP address.
-                /// </summary>
-                [NameInMap("HasReservationData")]
-                [Validation(Required=false)]
-                public string HasReservationData { get; set; }
-
-                /// <summary>
-                /// The zone of the EIP. 
-                /// 
-                /// This parameter is returned only if your account is included in the whitelist.
-                /// </summary>
                 [NameInMap("ISP")]
                 [Validation(Required=false)]
                 public string ISP { get; set; }
 
                 /// <summary>
-                /// The ID of the EIP.
+                /// The ID of the associated instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The time when the EIP expires. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
+                /// The region ID of the associated instance.
                 /// </summary>
                 [NameInMap("InstanceRegionId")]
                 [Validation(Required=false)]
                 public string InstanceRegionId { get; set; }
-
-                /// <summary>
-                /// The service status of the EIP. Valid values:
-                /// 
-                /// *   **Normal**: active
-                /// *   **FinancialLocked**: locked
-                /// </summary>
-                [NameInMap("InstanceType")]
-                [Validation(Required=false)]
-                public string InstanceType { get; set; }
-
-                /// <summary>
-                /// The tag value of the EIP.
-                /// </summary>
-                [NameInMap("InternetChargeType")]
-                [Validation(Required=false)]
-                public string InternetChargeType { get; set; }
 
                 /// <summary>
                 /// The type of the associated instance. Valid values:
@@ -203,27 +180,44 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// *   **NetworkInterface**: a secondary ENI
                 /// *   **IpAddress**: an IP address
                 /// </summary>
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
+                /// <summary>
+                /// The metering method of the EIP. Valid values:
+                /// 
+                /// *   **PayByBandwidth**: pay-by-bandwidth
+                /// *   **PayByTraffic**: pay-by-data-transfer
+                /// </summary>
+                [NameInMap("InternetChargeType")]
+                [Validation(Required=false)]
+                public string InternetChargeType { get; set; }
+
+                /// <summary>
+                /// The IP address of the EIP.
+                /// </summary>
                 [NameInMap("IpAddress")]
                 [Validation(Required=false)]
                 public string IpAddress { get; set; }
 
                 /// <summary>
-                /// Indicates whether the resource is created by the service account.
-                /// 
-                /// *   **0**: no
-                /// *   **1**: yes
+                /// The name of the EIP.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The maximum bandwidth of the EIP when it is not associated with an EIP bandwidth plan. Unit: Mbit/s.
+                /// The network type. The value is set to **public**, which indicates the Internet.
                 /// </summary>
                 [NameInMap("Netmode")]
                 [Validation(Required=false)]
                 public string Netmode { get; set; }
 
+                /// <summary>
+                /// The details about the locked EIPs.
+                /// </summary>
                 [NameInMap("OperationLocks")]
                 [Validation(Required=false)]
                 public DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks OperationLocks { get; set; }
@@ -232,6 +226,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public List<DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLockReason> LockReason { get; set; }
                     public class DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLockReason : TeaModel {
+                        /// <summary>
+                        /// The reason why the EIP is locked. Valid values:
+                        /// 
+                        /// *   **financial**: The EIP is locked due to overdue payments.
+                        /// *   **security**: The EIP is locked for security reasons.
+                        /// </summary>
                         [NameInMap("LockReason")]
                         [Validation(Required=false)]
                         public string LockReason { get; set; }
@@ -240,65 +240,78 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
+                /// <summary>
+                /// The ID of the IP address pool to which the EIP belongs.
+                /// </summary>
                 [NameInMap("PublicIpAddressPoolId")]
                 [Validation(Required=false)]
                 public string PublicIpAddressPoolId { get; set; }
 
                 /// <summary>
-                /// Indicates whether renewal data is included.
-                /// 
-                /// *   **false**: no
-                /// *   **true**: yes This parameter returns **true** only when the **IncludeReservationData** parameter is set to **true** and some orders have not taken effect.
+                /// The region ID of the EIP.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the EIP bandwidth plan.
+                /// The time when the renewal takes effect. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
                 /// </summary>
                 [NameInMap("ReservationActiveTime")]
                 [Validation(Required=false)]
                 public string ReservationActiveTime { get; set; }
 
                 /// <summary>
-                /// The region ID of the EIP.
+                /// The bandwidth after the renewal takes effect. Unit: Mbit/s.
                 /// </summary>
                 [NameInMap("ReservationBandwidth")]
                 [Validation(Required=false)]
                 public string ReservationBandwidth { get; set; }
 
                 /// <summary>
-                /// The ID of the associated instance.
+                /// The metering method that is used after the renewal takes effect. Valid values:
+                /// 
+                /// *   **PayByBandwidth**: pay-by-bandwidth
+                /// *   **PayByTraffic**: pay-by-data-transfer
                 /// </summary>
                 [NameInMap("ReservationInternetChargeType")]
                 [Validation(Required=false)]
                 public string ReservationInternetChargeType { get; set; }
 
                 /// <summary>
-                /// The maximum bandwidth of the EIP. Unit: Mbit/s.
+                /// The type of the renewal order. Valid values:
+                /// 
+                /// *   **RENEWCHANGE**: renewal with an upgrade or a downgrade
+                /// *   **TEMP_UPGRADE**: temporary upgrade
+                /// *   **UPGRADE**: upgrade
                 /// </summary>
                 [NameInMap("ReservationOrderType")]
                 [Validation(Required=false)]
                 public string ReservationOrderType { get; set; }
 
                 /// <summary>
-                /// The tag list of the EIP.
+                /// The ID of the resource group.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The metering method of the EIP. Valid values:
+                /// Indicates whether level-2 throttling is configured. Valid values:
                 /// 
-                /// *   **PayByBandwidth**: pay-by-bandwidth
-                /// *   **PayByTraffic**: pay-by-data-transfer
+                /// *   **true**: yes
+                /// *   **false**: no
                 /// </summary>
                 [NameInMap("SecondLimited")]
                 [Validation(Required=false)]
                 public bool? SecondLimited { get; set; }
 
+                /// <summary>
+                /// The edition of Anti-DDoS. 
+                /// 
+                /// - If an empty value is returned, it indicates that Anti-DDoS Origin Basic is used.
+                /// - If **AntiDDoS_Enhanced** is returned, it indicates that Anti-DDoS Pro/Premium is used.
+                /// </summary>
                 [NameInMap("SecurityProtectionTypes")]
                 [Validation(Required=false)]
                 public DescribeEipAddressesResponseBodyEipAddressesEipAddressSecurityProtectionTypes SecurityProtectionTypes { get; set; }
@@ -310,29 +323,40 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// Indicates whether deletion protection is enabled. Valid values:
+                /// The IDs of contiguous EIPs.
                 /// 
-                /// *   **true**: enabled
-                /// *   **false**: disabled
+                /// This value is returned only when you query contiguous EIP groups.
                 /// </summary>
                 [NameInMap("SegmentInstanceId")]
                 [Validation(Required=false)]
                 public string SegmentInstanceId { get; set; }
 
                 /// <summary>
-                /// The details about the locked EIPs.
+                /// Indicates whether the resource is created by the service account.
+                /// 
+                /// *   **0**: no
+                /// *   **1**: yes
                 /// </summary>
                 [NameInMap("ServiceManaged")]
                 [Validation(Required=false)]
                 public int? ServiceManaged { get; set; }
 
                 /// <summary>
-                /// The IP address of the EIP.
+                /// The status of the EIP. Valid values:
+                /// 
+                /// *   **Associating**: being associated
+                /// *   **Unassociating**: being disassociated
+                /// *   **InUse**: allocated
+                /// *   **Available**: available
+                /// *   **Releasing**: being released
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// The tag list of the EIP.
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeEipAddressesResponseBodyEipAddressesEipAddressTags Tags { get; set; }
@@ -341,10 +365,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public List<DescribeEipAddressesResponseBodyEipAddressesEipAddressTagsTag> Tag { get; set; }
                     public class DescribeEipAddressesResponseBodyEipAddressesEipAddressTagsTag : TeaModel {
+                        /// <summary>
+                        /// The tag key of the EIP.
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
+                        /// <summary>
+                        /// The tag value of the EIP.
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -353,10 +383,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
+                /// <summary>
+                /// The ID of the VPC that has IPv4 gateways enabled and that is deployed in the same region as the EIP. 
+                /// 
+                /// When you associate an EIP with an IP address, the system can enable the IP address to access the Internet based on VPC route configurations. 
+                /// 
+                /// >  This parameter is returned if **InstanceType** is set to **IpAddress**. In this case, the EIP is associated with an IP address.
+                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
+                /// <summary>
+                /// The zone of the EIP. 
+                /// 
+                /// This parameter is returned only if your account is included in the whitelist.
+                /// </summary>
                 [NameInMap("Zone")]
                 [Validation(Required=false)]
                 public string Zone { get; set; }
@@ -366,33 +408,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The description of the EIP.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The network type. The value is set to **public**, which indicates the Internet.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The billing method of the EIP. Valid values:
-        /// 
-        /// *   **PostPaid**: pay-as-you-go
-        /// *   **PrePaid**: subscription
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The IDs of contiguous EIPs.
-        /// 
-        /// This value is returned only when you query contiguous EIP groups.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

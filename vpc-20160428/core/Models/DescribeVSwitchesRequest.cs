@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVSwitchesRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource group to which the vSwitch belongs.
+        /// Specifies whether to check the request without performing the operation. Valid values:
+        /// 
+        /// *   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+        /// *   **false**: sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed. This is the default value.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// Specifies whether to query the default vSwitch in the specified region. Valid values:
+        /// 
+        /// *   **true**: queries the default vSwitch in the specified region.
+        /// *   **false**: does not query the default vSwitch in the specified region.
+        /// 
+        /// If you do not specify this parameter, the system queries all vSwitches in the specified region by default.
         /// </summary>
         [NameInMap("IsDefault")]
         [Validation(Required=false)]
@@ -32,33 +40,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of the page to return. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// Specifies whether to query the default vSwitch in the specified region. Valid values:
+        /// The region ID of the vSwitch. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// 
-        /// *   **true**: queries the default vSwitch in the specified region.
-        /// *   **false**: does not query the default vSwitch in the specified region.
-        /// 
-        /// If you do not specify this parameter, the system queries all vSwitches in the specified region by default.
+        /// >  You must set at least one of the **RegionId** and **VpcId** parameters.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the resource belongs.
+        /// The ID of the resource group to which the vSwitch belongs.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -73,37 +78,51 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// The ID of the route table.
         /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]
         public string RouteTableId { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeVSwitchesRequestTag> Tag { get; set; }
+        public class DescribeVSwitchesRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
-        /// The name of the vSwitch.
-        /// 
-        /// The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+        /// The ID of the vSwitch that you want to query.
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the route table.
+        /// The name of the vSwitch.
+        /// 
+        /// The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("VSwitchName")]
         [Validation(Required=false)]
         public string VSwitchName { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The ID of the Alibaba Cloud account to which the resource belongs.
         /// </summary>
         [NameInMap("VSwitchOwnerId")]
         [Validation(Required=false)]
         public long? VSwitchOwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the vSwitch. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The ID of the VPC to which the vSwitches belong.
         /// 
         /// >  You must set at least one of the **RegionId** and **VpcId** parameters.
         /// </summary>
@@ -112,10 +131,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// Specifies whether to check the request without performing the operation. Valid values:
-        /// 
-        /// *   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-        /// *   **false**: sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed. This is the default value.
+        /// The ID of the zone to which the vSwitch belongs. You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

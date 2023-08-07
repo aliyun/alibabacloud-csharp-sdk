@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetVpcGatewayEndpointAttributeRequest : TeaModel {
         /// <summary>
-        /// The description of the gateway endpoint.
+        /// The ID of the gateway endpoint.
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
@@ -25,7 +25,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The name of the endpoint service.
+        /// The region ID of the gateway endpoint.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

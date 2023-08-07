@@ -9,25 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteNatGatewayRequest : TeaModel {
-        [NameInMap("Force")]
-        [Validation(Required=false)]
-        public bool? Force { get; set; }
-
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
-        [NameInMap("NatGatewayId")]
-        [Validation(Required=false)]
-        public string NatGatewayId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         /// <summary>
         /// Specifies whether to forcefully delete the NAT gateway. Valid values:
         /// 
@@ -44,6 +25,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         ///     *   If the NAT gateway has SNAT entries, delete them first.
         ///     *   If the NAT gateway has DNAT entries, delete them first.
         ///     *   If the NAT gateway is associated with an EIP, disassociate the EIP from the NAT gateway first.
+        /// </summary>
+        [NameInMap("Force")]
+        [Validation(Required=false)]
+        public bool? Force { get; set; }
+
+        /// <summary>
+        /// The ID of the NAT gateway that you want to delete.
+        /// </summary>
+        [NameInMap("NatGatewayId")]
+        [Validation(Required=false)]
+        public string NatGatewayId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// The ID of the region where the NAT gateway is deployed.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

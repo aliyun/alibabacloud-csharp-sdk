@@ -9,16 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateTrafficMirrorSessionResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The ID of the resource group to which the mirrored traffic belongs.
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the mirrored traffic belongs.
+        /// The ID of the traffic mirror session.
         /// </summary>
         [NameInMap("TrafficMirrorSessionId")]
         [Validation(Required=false)]

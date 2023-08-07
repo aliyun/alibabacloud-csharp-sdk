@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpcAttributeRequest : TeaModel {
         /// <summary>
-        /// The region ID of the VPC.
+        /// Specifies whether to check the request without performing the operation. Valid values:
+        /// 
+        /// *   **true**: checks the request without performing the operation. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are set. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+        /// *   **false**: sends the request. After the request passes the check, a 2xx HTTP status code is returned and the operation is performed. This is the default value.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The name of the VPC.
+        /// Specifies whether the VPC is the default VPC. Valid values:
+        /// 
+        /// *   **false** (default): no
+        /// *   **true**: yes
         /// </summary>
         [NameInMap("IsDefault")]
         [Validation(Required=false)]
@@ -32,7 +38,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account to which the VPC belongs.
+        /// The region ID of the VPC.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -47,10 +55,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Indicates whether the ClassicLink feature is enabled. Valid values:
-        /// 
-        /// *   **true**: yes
-        /// *   **false** (default): no
+        /// The ID of the VPC that you want to query.
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

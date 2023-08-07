@@ -10,17 +10,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeNetworkAclAttributesRequest : TeaModel {
         /// <summary>
-        /// The action to be performed on network traffic that matches the rule. Valid values:
+        /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// *   **accept**: allows network traffic.
-        /// *   **drop**: blocks network traffic.
+        /// You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+        /// 
+        /// >  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** for each API request may be different.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the inbound rule.
+        /// The ID of the network ACL.
         /// </summary>
         [NameInMap("NetworkAclId")]
         [Validation(Required=false)]
@@ -31,7 +32,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The name of the inbound rule.
+        /// The region ID of the network ACL.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

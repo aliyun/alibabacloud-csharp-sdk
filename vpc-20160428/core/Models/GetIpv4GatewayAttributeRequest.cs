@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetIpv4GatewayAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) with which the IPv4 gateway is associated.
+        /// The ID of the IPv4 gateway.
         /// </summary>
         [NameInMap("Ipv4GatewayId")]
         [Validation(Required=false)]
@@ -25,7 +25,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **GetIpv4GatewayAttribute**.
+        /// The region ID of the IPv4 gateway.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

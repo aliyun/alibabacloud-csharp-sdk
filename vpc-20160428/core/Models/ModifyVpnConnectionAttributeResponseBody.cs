@@ -247,22 +247,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string State { get; set; }
 
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
-
                 [NameInMap("TunnelBgpConfig")]
                 [Validation(Required=false)]
                 public ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig TunnelBgpConfig { get; set; }
                 public class ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig : TeaModel {
-                    [NameInMap("BgpStatus")]
-                    [Validation(Required=false)]
-                    public string BgpStatus { get; set; }
-
-                    [NameInMap("EnableBgp")]
-                    [Validation(Required=false)]
-                    public bool? EnableBgp { get; set; }
-
                     [NameInMap("LocalAsn")]
                     [Validation(Required=false)]
                     public long? LocalAsn { get; set; }

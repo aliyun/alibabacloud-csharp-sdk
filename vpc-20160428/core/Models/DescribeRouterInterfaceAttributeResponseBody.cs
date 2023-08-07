@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("FastLinkMode")]
+        [Validation(Required=false)]
+        public string FastLinkMode { get; set; }
+
         /// <summary>
         /// The time when the router interface was modified.
         /// </summary>
@@ -304,6 +308,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ReservationOrderType { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// Indicates whether the router interface is the requester or the acceptor of the peering connection.
         /// </summary>
@@ -378,6 +386,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public DescribeRouterInterfaceAttributeResponseBodyTags Tags { get; set; }
+        public class DescribeRouterInterfaceAttributeResponseBodyTags : TeaModel {
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<DescribeRouterInterfaceAttributeResponseBodyTagsTags> Tags { get; set; }
+            public class DescribeRouterInterfaceAttributeResponseBodyTagsTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+        }
 
         /// <summary>
         /// The ID of the virtual private cloud (VPC) to which the router interface belongs.

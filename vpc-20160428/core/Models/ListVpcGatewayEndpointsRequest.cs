@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListVpcGatewayEndpointsRequest : TeaModel {
         /// <summary>
-        /// The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
+        /// The ID of the gateway endpoint.
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// The region ID of the gateway endpoint.
+        /// The name of the gateway endpoint.
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// The name must be 1 to 128 characters in length.
         /// </summary>
         [NameInMap("EndpointName")]
         [Validation(Required=false)]
         public string EndpointName { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -35,8 +35,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The token that is used for the next query. Valid values:
         /// 
-        /// *   If no value is returned for **NextToken**, no next queries are sent.
-        /// *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
+        /// *   If this is your first query and no next queries are to be sent, ignore this parameter.
+        /// *   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -51,7 +51,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The list of gateway endpoints.
+        /// The region ID of the gateway endpoint.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -70,7 +72,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The name of the endpoint service.
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]

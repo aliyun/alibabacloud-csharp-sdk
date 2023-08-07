@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpnConnectionResponseBody : TeaModel {
         /// <summary>
-        /// The timestamp generated when the IPsec-VPN connection was created. Unit: milliseconds.
+        /// The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.
         /// 
         /// This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
         /// </summary>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

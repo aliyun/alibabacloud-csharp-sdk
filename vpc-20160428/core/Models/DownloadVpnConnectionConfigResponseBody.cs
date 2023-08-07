@@ -240,10 +240,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public string Remote { get; set; }
 
-                    [NameInMap("RightCaCert")]
-                    [Validation(Required=false)]
-                    public string RightCaCert { get; set; }
-
                     [NameInMap("TunnelId")]
                     [Validation(Required=false)]
                     public string TunnelId { get; set; }

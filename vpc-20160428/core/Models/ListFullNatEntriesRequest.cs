@@ -10,40 +10,38 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListFullNatEntriesRequest : TeaModel {
         /// <summary>
-        /// The ID of the FULLNAT table to which the FULLNAT entries to be queried belong.
+        /// The client token that is used to ensure the idempotence of the request.
         /// 
-        /// >  You must specify at least one of the **FullNatTableId** and **NatGatewayId** parameters.
+        /// You can use the client to generate the value, but you must ensure that it is unique among all requests. The token can contain only ASCII characters.
+        /// 
+        /// >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the elastic network interface (ENI) that you want to query. You can specify up to 20 ENIs.
+        /// The ID of the FULLNAT entry that you want to query.
         /// </summary>
         [NameInMap("FullNatEntryId")]
         [Validation(Required=false)]
         public string FullNatEntryId { get; set; }
 
+        /// <summary>
+        /// The name of the FULLNAT entry.
+        /// </summary>
         [NameInMap("FullNatEntryNames")]
         [Validation(Required=false)]
         public List<string> FullNatEntryNames { get; set; }
 
         /// <summary>
-        /// The name of the FULLNAT entry that you want to query. You can enter the names of up to 20 FULLNAT entries.
+        /// The ID of the FULLNAT table to which the FULLNAT entries to be queried belong.
         /// 
-        /// The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+        /// >  You must specify at least one of the **FullNatTableId** and **NatGatewayId** parameters.
         /// </summary>
         [NameInMap("FullNatTableId")]
         [Validation(Required=false)]
         public string FullNatTableId { get; set; }
-
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
-        [NameInMap("IpProtocol")]
-        [Validation(Required=false)]
-        public string IpProtocol { get; set; }
 
         /// <summary>
         /// The protocol of the packets that are forwarded by the port. Valid values:
@@ -51,25 +49,38 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **TCP**
         /// *   **UDP**
         /// </summary>
+        [NameInMap("IpProtocol")]
+        [Validation(Required=false)]
+        public string IpProtocol { get; set; }
+
+        /// <summary>
+        /// The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// The ID of the VPC NAT gateway.
+        /// The ID of the NAT gateway.
+        /// 
+        /// >  You must specify at least one of the **FullNatTableId** and **NatGatewayId** parameters.
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
 
+        /// <summary>
+        /// The IDs of ENIs.
+        /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]
         public List<string> NetworkInterfaceIds { get; set; }
 
         /// <summary>
-        /// The region ID of the virtual private cloud (VPC) NAT gateway to which the FULLNAT entries to be queried belong.
+        /// The token that is used for the next query. Valid values:
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// *   If this is your first query or no next queries are to be sent, ignore this parameter.
+        /// *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -84,9 +95,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the NAT gateway.
+        /// The region ID of the virtual private cloud (VPC) NAT gateway to which the FULLNAT entries to be queried belong.
         /// 
-        /// >  You must specify at least one of the **FullNatTableId** and **NatGatewayId** parameters.
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

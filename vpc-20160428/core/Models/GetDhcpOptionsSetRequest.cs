@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetDhcpOptionsSetRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the DHCP options set.
         /// </summary>
         [NameInMap("DhcpOptionsSetId")]
         [Validation(Required=false)]
@@ -25,12 +25,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The status of the DHCP options set. Valid values:
+        /// The region ID of the DHCP options set that you want to query.
         /// 
-        /// *   **Available**: available
-        /// *   **InUse**: in use
-        /// *   **Deleted**: deleted
-        /// *   **Pending**: being configured
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

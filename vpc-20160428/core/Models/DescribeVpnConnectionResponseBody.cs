@@ -392,10 +392,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public string BgpStatus { get; set; }
 
-                    [NameInMap("EnableBgp")]
-                    [Validation(Required=false)]
-                    public string EnableBgp { get; set; }
-
                     [NameInMap("LocalAsn")]
                     [Validation(Required=false)]
                     public string LocalAsn { get; set; }

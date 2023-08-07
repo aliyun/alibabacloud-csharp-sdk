@@ -10,31 +10,34 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeCommonBandwidthPackagesRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// The ID of the EIP bandwidth plan.
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// Specifies whether to perform a dry run. Valid values:
+        /// 
+        /// *   **true**: performs a dry run. The system checks the required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   **false**: performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed. This is the default value.
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// Specifies whether to return the information about pending orders. Valid values:
+        /// 
+        /// *   **false**: does not return the information about pending orders. This is the default value.
+        /// *   **true**: returns the information about pending orders.
         /// </summary>
         [NameInMap("IncludeReservationData")]
         [Validation(Required=false)]
         public bool? IncludeReservationData { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Valid values:
-        /// 
-        /// *   **true**: performs a dry run. The system checks the required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false**: performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed. This is the default value.
+        /// The name of the EIP bandwidth plan.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -49,31 +52,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:
-        /// 
-        /// *   **false**: disables Anti-DDoS Pro/Premium. This is the default value.
-        /// *   **true**: enables Anti-DDoS Pro/Premium.
+        /// The number of the page to return. Default value: **1**.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The name of the EIP bandwidth plan.
+        /// The region ID of the EIP bandwidth plan.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -88,7 +90,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The number of the returned page.
+        /// Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:
+        /// 
+        /// *   **false**: disables Anti-DDoS Pro/Premium. This is the default value.
+        /// *   **true**: enables Anti-DDoS Pro/Premium.
         /// </summary>
         [NameInMap("SecurityProtectionEnabled")]
         [Validation(Required=false)]

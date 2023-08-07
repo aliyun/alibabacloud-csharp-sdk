@@ -1,3 +1,6 @@
+2023-08-07 Version: 4.0.0
+- DescribeForwardTables offline.
+
 2023-07-04 Version: 3.0.0
 - Interface modification with parameter deletion is incompatible.
 - Remove CreateNatIp remove useless parameter NatIpCidrId, must specify NatIpCidr.

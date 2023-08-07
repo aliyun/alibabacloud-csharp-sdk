@@ -10,16 +10,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListVpcEndpointServicesByEndUserRequest : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// The region ID of the gateway endpoint.
+        /// The token that is used for the next query. Valid values:
         /// 
-        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+        /// *   If this is your first query and no next queries are to be sent, ignore this parameter.
+        /// *   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -34,10 +35,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// The region ID of the gateway endpoint.
         /// 
-        /// *   If no value is returned for **NextToken**, no next queries are sent.
-        /// *   If **NextToken** is returned, the value is the token that is used for the next query.
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
+        /// The name of the endpoint service that you want to query.
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]

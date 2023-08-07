@@ -51,6 +51,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                [NameInMap("FlowLogDeliverErrorMessage")]
+                [Validation(Required=false)]
+                public string FlowLogDeliverErrorMessage { get; set; }
+
+                [NameInMap("FlowLogDeliverStatus")]
+                [Validation(Required=false)]
+                public string FlowLogDeliverStatus { get; set; }
+
                 /// <summary>
                 /// The ID of the flow log.
                 /// </summary>

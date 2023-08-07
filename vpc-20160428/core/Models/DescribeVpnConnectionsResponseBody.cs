@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnConnectionsResponseBody : TeaModel {
         /// <summary>
-        /// The number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The information about the IPsec-VPN connection.
+        /// The tag value.
         /// </summary>
         [NameInMap("VpnConnections")]
         [Validation(Required=false)]
@@ -380,6 +380,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string TransitRouterName { get; set; }
 
+                /// <summary>
+                /// IPsec连接的隧道配置信息。
+                /// 
+                /// 仅查询双隧道模式的IPsec连接会返回**TunnelOptionsSpecification**数组下的参数。
+                /// </summary>
                 [NameInMap("TunnelOptionsSpecification")]
                 [Validation(Required=false)]
                 public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecification TunnelOptionsSpecification { get; set; }
@@ -388,140 +393,267 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public List<DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptions> TunnelOptions { get; set; }
                     public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptions : TeaModel {
+                        /// <summary>
+                        /// 隧道关联的用户网关ID。
+                        /// </summary>
                         [NameInMap("CustomerGatewayId")]
                         [Validation(Required=false)]
                         public string CustomerGatewayId { get; set; }
 
+                        /// <summary>
+                        /// 隧道是否已开启DPD（对等体存活检测）功能。
+                        /// - **false**：未开启。
+                        /// - **true**：已开启。
+                        /// </summary>
                         [NameInMap("EnableDpd")]
                         [Validation(Required=false)]
                         public string EnableDpd { get; set; }
 
+                        /// <summary>
+                        /// 隧道是否已开启NAT穿越功能。
+                        /// 
+                        /// - **false**：未开启。
+                        /// - **true**：已开启。
+                        /// </summary>
                         [NameInMap("EnableNatTraversal")]
                         [Validation(Required=false)]
                         public string EnableNatTraversal { get; set; }
 
+                        /// <summary>
+                        /// 隧道的IP地址。
+                        /// </summary>
                         [NameInMap("InternetIp")]
                         [Validation(Required=false)]
                         public string InternetIp { get; set; }
 
+                        /// <summary>
+                        /// 隧道对端的CA证书。
+                        /// 
+                        /// 仅VPN网关实例的类型为国密型时才会返回当前参数。
+                        /// </summary>
                         [NameInMap("RemoteCaCertificate")]
                         [Validation(Required=false)]
                         public string RemoteCaCertificate { get; set; }
 
+                        /// <summary>
+                        /// 隧道的角色。
+                        /// 
+                        /// - **master**：表示当前隧道为主隧道。
+                        /// - **slave**：表示当前隧道为备隧道。
+                        /// </summary>
                         [NameInMap("Role")]
                         [Validation(Required=false)]
                         public string Role { get; set; }
 
+                        /// <summary>
+                        /// IPsec连接与转发路由器实例的绑定状态。
+                        /// 
+                        /// - **active**：IPsec连接已与VPN网关实例绑定，状态正常。
+                        /// - **init**：IPsec连接未绑定任何资源，IPsec连接初始化。
+                        /// - **attaching**：IPsec连接与转发路由器实例绑定中。
+                        /// - **attached**：IPsec连接已与转发路由器实例绑定。
+                        /// - **detaching**：IPsec连接与转发路由器实例解绑中。
+                        /// - **financialLocked**：欠费锁定。
+                        /// - **provisioning**：资源准备中。
+                        /// - **updating**：更新中。
+                        /// - **upgrading**：升级中。
+                        /// - **deleted**：已删除。
+                        /// </summary>
                         [NameInMap("State")]
                         [Validation(Required=false)]
                         public string State { get; set; }
 
+                        /// <summary>
+                        /// IPsec连接的状态。
+                        /// 
+                        /// - **ike_sa_not_established**：第一阶段协商失败。
+                        /// 
+                        /// - **ike_sa_established**：第一阶段协商成功。
+                        /// 
+                        /// - **ipsec_sa_not_established**：第二阶段协商失败。
+                        /// 
+                        /// - **ipsec_sa_established**：第二阶段协商成功。
+                        /// </summary>
                         [NameInMap("Status")]
                         [Validation(Required=false)]
                         public string Status { get; set; }
 
+                        /// <summary>
+                        /// 隧道的BGP配置信息。
+                        /// </summary>
                         [NameInMap("TunnelBgpConfig")]
                         [Validation(Required=false)]
                         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig TunnelBgpConfig { get; set; }
                         public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig : TeaModel {
+                            /// <summary>
+                            /// BGP的协商状态。
+                            /// 
+                            /// - **success**：正常。
+                            /// - **false**：异常。
+                            /// </summary>
                             [NameInMap("BgpStatus")]
                             [Validation(Required=false)]
                             public string BgpStatus { get; set; }
 
-                            [NameInMap("EnableBgp")]
-                            [Validation(Required=false)]
-                            public string EnableBgp { get; set; }
-
+                            /// <summary>
+                            /// 隧道本端（阿里云侧）的自治系统号。
+                            /// </summary>
                             [NameInMap("LocalAsn")]
                             [Validation(Required=false)]
                             public string LocalAsn { get; set; }
 
+                            /// <summary>
+                            /// 隧道本端（阿里云侧）的BGP地址。
+                            /// </summary>
                             [NameInMap("LocalBgpIp")]
                             [Validation(Required=false)]
                             public string LocalBgpIp { get; set; }
 
+                            /// <summary>
+                            /// 隧道对端的自治系统号。
+                            /// </summary>
                             [NameInMap("PeerAsn")]
                             [Validation(Required=false)]
                             public string PeerAsn { get; set; }
 
+                            /// <summary>
+                            /// 隧道对端的BGP地址。
+                            /// </summary>
                             [NameInMap("PeerBgpIp")]
                             [Validation(Required=false)]
                             public string PeerBgpIp { get; set; }
 
+                            /// <summary>
+                            /// 隧道的BGP网段。
+                            /// </summary>
                             [NameInMap("TunnelCidr")]
                             [Validation(Required=false)]
                             public string TunnelCidr { get; set; }
 
                         }
 
+                        /// <summary>
+                        /// 隧道ID。
+                        /// </summary>
                         [NameInMap("TunnelId")]
                         [Validation(Required=false)]
                         public string TunnelId { get; set; }
 
+                        /// <summary>
+                        /// 第一阶段协商的配置。
+                        /// </summary>
                         [NameInMap("TunnelIkeConfig")]
                         [Validation(Required=false)]
                         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig TunnelIkeConfig { get; set; }
                         public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig : TeaModel {
+                            /// <summary>
+                            /// IKE阶段认证算法。
+                            /// </summary>
                             [NameInMap("IkeAuthAlg")]
                             [Validation(Required=false)]
                             public string IkeAuthAlg { get; set; }
 
+                            /// <summary>
+                            /// IKE阶段加密算法。
+                            /// </summary>
                             [NameInMap("IkeEncAlg")]
                             [Validation(Required=false)]
                             public string IkeEncAlg { get; set; }
 
+                            /// <summary>
+                            /// IKE阶段生存时间。单位：秒。
+                            /// </summary>
                             [NameInMap("IkeLifetime")]
                             [Validation(Required=false)]
                             public string IkeLifetime { get; set; }
 
+                            /// <summary>
+                            /// IKE协商模式。
+                            /// 
+                            /// - **main**：主模式，协商过程安全性高。
+                            /// - **aggressive**：野蛮模式，协商快速且协商成功率高。
+                            /// </summary>
                             [NameInMap("IkeMode")]
                             [Validation(Required=false)]
                             public string IkeMode { get; set; }
 
+                            /// <summary>
+                            /// IKE阶段DH分组。
+                            /// </summary>
                             [NameInMap("IkePfs")]
                             [Validation(Required=false)]
                             public string IkePfs { get; set; }
 
+                            /// <summary>
+                            /// IKE协议版本。
+                            /// </summary>
                             [NameInMap("IkeVersion")]
                             [Validation(Required=false)]
                             public string IkeVersion { get; set; }
 
+                            /// <summary>
+                            /// 隧道本端（阿里云侧）的标识。
+                            /// </summary>
                             [NameInMap("LocalId")]
                             [Validation(Required=false)]
                             public string LocalId { get; set; }
 
+                            /// <summary>
+                            /// 预共享密钥。
+                            /// </summary>
                             [NameInMap("Psk")]
                             [Validation(Required=false)]
                             public string Psk { get; set; }
 
+                            /// <summary>
+                            /// 隧道对端的标识。
+                            /// </summary>
                             [NameInMap("RemoteId")]
                             [Validation(Required=false)]
                             public string RemoteId { get; set; }
 
                         }
 
+                        /// <summary>
+                        /// 第二阶段协商的配置。
+                        /// </summary>
                         [NameInMap("TunnelIpsecConfig")]
                         [Validation(Required=false)]
                         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIpsecConfig TunnelIpsecConfig { get; set; }
                         public class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIpsecConfig : TeaModel {
+                            /// <summary>
+                            /// IPsec阶段认证算法。
+                            /// </summary>
                             [NameInMap("IpsecAuthAlg")]
                             [Validation(Required=false)]
                             public string IpsecAuthAlg { get; set; }
 
+                            /// <summary>
+                            /// IPsec阶段加密算法。
+                            /// </summary>
                             [NameInMap("IpsecEncAlg")]
                             [Validation(Required=false)]
                             public string IpsecEncAlg { get; set; }
 
+                            /// <summary>
+                            /// IPsec阶段生存时间。单位：秒。
+                            /// </summary>
                             [NameInMap("IpsecLifetime")]
                             [Validation(Required=false)]
                             public string IpsecLifetime { get; set; }
 
+                            /// <summary>
+                            /// IPsec阶段DH分组。
+                            /// </summary>
                             [NameInMap("IpsecPfs")]
                             [Validation(Required=false)]
                             public string IpsecPfs { get; set; }
 
                         }
 
+                        /// <summary>
+                        /// 隧道部署的可用区。
+                        /// </summary>
                         [NameInMap("ZoneNo")]
                         [Validation(Required=false)]
                         public string ZoneNo { get; set; }

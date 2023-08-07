@@ -10,31 +10,31 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListGatewayRouteTableEntriesRequest : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// The destination CIDR block of the route in the gateway route table.
         /// </summary>
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
-        /// 
-        /// *   If no value is returned for **NextToken**, no next queries are sent.
-        /// *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+        /// The ID of the gateway route table that you want to query.
         /// </summary>
         [NameInMap("GatewayRouteTableId")]
         [Validation(Required=false)]
         public string GatewayRouteTableId { get; set; }
 
         /// <summary>
-        /// The ID of the gateway route table that you want to query.
+        /// The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The destination CIDR block of the route in the gateway route table.
+        /// The token that determines the start point of the query. Valid values:
+        /// 
+        /// *   If this is your first query and no next queries are to be sent, ignore this parameter.
+        /// *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -49,10 +49,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// The region ID of the gateway route table.
         /// 
-        /// *   If this is your first query and no next queries are to be sent, ignore this parameter.
-        /// *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

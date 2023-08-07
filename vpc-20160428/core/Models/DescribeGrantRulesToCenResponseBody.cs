@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeGrantRulesToCenResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the authorized CEN instance.
+        /// The information about the authorization.
         /// </summary>
         [NameInMap("CenGrantRules")]
         [Validation(Required=false)]
@@ -21,19 +21,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeGrantRulesToCenResponseBodyCenGrantRulesCbnGrantRule> CbnGrantRule { get; set; }
             public class DescribeGrantRulesToCenResponseBodyCenGrantRulesCbnGrantRule : TeaModel {
                 /// <summary>
-                /// The UID of the Alibaba Cloud account to which the authorized CEN instance belongs.
+                /// The ID of the authorized CEN instance.
                 /// </summary>
                 [NameInMap("CenInstanceId")]
                 [Validation(Required=false)]
                 public string CenInstanceId { get; set; }
 
                 /// <summary>
-                /// The time when the instance was created.
+                /// The UID of the Alibaba Cloud account to which the authorized CEN instance belongs.
                 /// </summary>
                 [NameInMap("CenOwnerId")]
                 [Validation(Required=false)]
                 public long? CenOwnerId { get; set; }
 
+                /// <summary>
+                /// The time when the instance was created.
+                /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
@@ -43,28 +46,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The page number of the returned page.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The number of entries returned per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the authorization.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AssociateVpcCidrBlockResponseBody : TeaModel {
         /// <summary>
-        /// The operation that you want to perform. Set the value to **AssociateVpcCidrBlock**.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

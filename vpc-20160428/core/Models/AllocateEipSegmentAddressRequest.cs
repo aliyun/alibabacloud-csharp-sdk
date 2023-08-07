@@ -10,6 +10,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateEipSegmentAddressRequest : TeaModel {
         /// <summary>
+        /// The maximum bandwidth of the EIP. Unit: Mbit/s.
+        /// 
+        /// *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**, the valid values for **Bandwidth** are **1** to **500**.
+        /// *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**, the valid values for **Bandwidth** are **1** to **200**.
+        /// *   When **InstanceChargeType** is set to **PrePaid**, the valid values for **Bandwidth** are **1** to **1000**.
+        /// 
+        /// Default value: **5**. Unit: Mbit/s.
+        /// </summary>
+        [NameInMap("Bandwidth")]
+        [Validation(Required=false)]
+        public string Bandwidth { get; set; }
+
+        /// <summary>
+        /// The client token that is used to ensure the idempotence of the request. 
+        /// 
+        /// You can use the client to generate the token, but you must make sure that the token is unique among all requests. The **client token** can contain only ASCII characters. 
+        /// 
+        /// >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** for each API request may be different.
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// The subnet mask length of the contiguous EIPs. Valid values:
         /// 
         /// - **28**: applies for 16 contiguous EIPs in each call.
@@ -20,22 +44,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// >  The number of contiguous EIPs allocated by the system may be less than the requested number because one, three, or four EIPs may be reserved.
         /// </summary>
-        [NameInMap("Bandwidth")]
+        [NameInMap("EipMask")]
         [Validation(Required=false)]
-        public string Bandwidth { get; set; }
-
-        /// <summary>
-        /// The maximum bandwidth of the EIP. Unit: Mbit/s.
-        /// 
-        /// *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**, the valid values for **Bandwidth** are **1** to **500**.
-        /// *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**, the valid values for **Bandwidth** are **1** to **200**.
-        /// *   When **InstanceChargeType** is set to **PrePaid**, the valid values for **Bandwidth** are **1** to **1000**.
-        /// 
-        /// Default value: **5**. Unit: Mbit/s.
-        /// </summary>
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string EipMask { get; set; }
 
         /// <summary>
         /// The metering method of the contiguous EIPs. Valid values:
@@ -43,9 +54,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// *   **PayByBandwidth** (default): pay-by-bandwidth
         /// *   **PayByTraffic**: pay-by-data-transfer
         /// </summary>
-        [NameInMap("EipMask")]
+        [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
-        public string EipMask { get; set; }
+        public string InternetChargeType { get; set; }
 
         /// <summary>
         /// The line type. Valid values:
@@ -66,19 +77,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// 
         /// If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.
         /// </summary>
-        [NameInMap("InternetChargeType")]
-        [Validation(Required=false)]
-        public string InternetChargeType { get; set; }
-
-        /// <summary>
-        /// The ID of the contiguous EIP group.
-        /// </summary>
         [NameInMap("Isp")]
         [Validation(Required=false)]
         public string Isp { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// Set the value to **public**, which specifies the Internet.
         /// </summary>
         [NameInMap("Netmode")]
         [Validation(Required=false)]
@@ -93,14 +97,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Set the value to **public**, which specifies the Internet.
+        /// The region ID of the contiguous EIPs.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The ID of the resource group.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

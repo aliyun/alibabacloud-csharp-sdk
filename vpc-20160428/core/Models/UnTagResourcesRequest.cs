@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// Specifies whether to remove all tags from the specified resource. Valid values:
         /// 
-        /// *   **true**: removes all tags from the specified resource.
-        /// *   **false**: does not remove all tags from the specified resource. This is the default value.
+        /// *   **true**
+        /// *   **false** (default)
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the resource belongs.
+        /// The region ID of the resource.
         /// 
         /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
@@ -36,6 +36,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The resource ID. You can specify up to 20 resource IDs.
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
@@ -51,18 +54,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// The resource type. Valid values:
         /// 
-        /// *   **VPC**: a virtual private cloud (VPC)
-        /// *   **VSWITCH**: a vSwitch
-        /// *   **ROUTETABLE**: a route table
-        /// *   **EIP**: an elastic IP address (EIP)
-        /// *   **VpnGateway**: a VPN gateway
-        /// *   **NATGATEWAY**: a NAT gateway
-        /// *   **COMMONBANDWIDTHPACKAGE**: an EIP bandwidth plan
+        /// *   **VPC**
+        /// *   **VSWITCH**
+        /// *   **ROUTETABLE**
+        /// *   **EIP**
+        /// *   **VpnGateway**
+        /// *   **NATGATEWAY**
+        /// *   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// The key of the tag that you want to remove. You can specify at most 20 tag keys. It can be an empty string.
+        /// 
+        /// The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+        /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public List<string> TagKey { get; set; }

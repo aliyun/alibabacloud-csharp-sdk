@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnGatewayRequest : TeaModel {
         /// <summary>
-        /// The type of the VPN gateway.
+        /// Specifies whether to return information about pending orders. Valid values:
         /// 
-        /// The value is set to **Normal**, which indicates a standard NAT gateway.
+        /// *   **false** (default)
+        /// *   **true**
         /// </summary>
         [NameInMap("IncludeReservationData")]
         [Validation(Required=false)]
@@ -27,7 +28,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the VPN gateway.
+        /// The region ID of the VPN gateway.
+        /// 
+        /// You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -42,10 +45,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to return information about pending orders. Valid values:
-        /// 
-        /// *   **false** (default): no
-        /// *   **true**: yes
+        /// The ID of the VPN gateway.
         /// </summary>
         [NameInMap("VpnGatewayId")]
         [Validation(Required=false)]
