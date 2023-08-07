@@ -1177,6 +1177,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["CertifyId"] = request.CertifyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultCode))
             {
                 query["ResultCode"] = request.ResultCode;
@@ -1211,6 +1215,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertifyId))
             {
                 query["CertifyId"] = request.CertifyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultCode))
             {

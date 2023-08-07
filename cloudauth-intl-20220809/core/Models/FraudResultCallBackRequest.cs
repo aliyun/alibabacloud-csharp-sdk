@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string CertifyId { get; set; }
 
+        [NameInMap("ExtParams")]
+        [Validation(Required=false)]
+        public string ExtParams { get; set; }
+
         [NameInMap("ResultCode")]
         [Validation(Required=false)]
         public string ResultCode { get; set; }
