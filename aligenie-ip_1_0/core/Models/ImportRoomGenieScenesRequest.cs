@@ -61,6 +61,14 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 
                 }
 
+                [NameInMap("Reply")]
+                [Validation(Required=false)]
+                public string Reply { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public int? Type { get; set; }
+
             }
 
             [NameInMap("Description")]
@@ -87,9 +95,41 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [Validation(Required=false)]
             public List<ImportRoomGenieScenesRequestSceneListTriggers> Triggers { get; set; }
             public class ImportRoomGenieScenesRequestSceneListTriggers : TeaModel {
+                [NameInMap("AttributeValues")]
+                [Validation(Required=false)]
+                public List<ImportRoomGenieScenesRequestSceneListTriggersAttributeValues> AttributeValues { get; set; }
+                public class ImportRoomGenieScenesRequestSceneListTriggersAttributeValues : TeaModel {
+                    [NameInMap("AttributeName")]
+                    [Validation(Required=false)]
+                    public string AttributeName { get; set; }
+
+                    [NameInMap("AttributeValue")]
+                    [Validation(Required=false)]
+                    public string AttributeValue { get; set; }
+
+                }
+
                 [NameInMap("CorpusList")]
                 [Validation(Required=false)]
                 public List<string> CorpusList { get; set; }
+
+                [NameInMap("Device")]
+                [Validation(Required=false)]
+                public ImportRoomGenieScenesRequestSceneListTriggersDevice Device { get; set; }
+                public class ImportRoomGenieScenesRequestSceneListTriggersDevice : TeaModel {
+                    [NameInMap("Category")]
+                    [Validation(Required=false)]
+                    public string Category { get; set; }
+
+                    [NameInMap("DeviceIndex")]
+                    [Validation(Required=false)]
+                    public string DeviceIndex { get; set; }
+
+                    [NameInMap("DeviceNumber")]
+                    [Validation(Required=false)]
+                    public string DeviceNumber { get; set; }
+
+                }
 
                 [NameInMap("Type")]
                 [Validation(Required=false)]
