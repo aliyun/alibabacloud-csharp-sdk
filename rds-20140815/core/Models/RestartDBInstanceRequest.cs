@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// The unique ID of the secondary instance. You can call [DescribeDBInstanceHAConfig](~~26244~~) to query the secondary instance ID.
+        /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }

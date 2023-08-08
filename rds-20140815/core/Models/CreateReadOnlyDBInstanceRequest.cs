@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateReadOnlyDBInstanceRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether payment is automatically made during renewal. Valid values:
+        /// 
+        /// *   **True**: enables automatic payment. Make sure that your Alibaba Cloud account has adequate balance.
+        /// *   **False** (default): disables automatic payment. You have to manually pay the order in the console. Log on to the ApsaraDB RDS console. In the upper-right corner, choose **Expenses > User Center**. In the left-side navigation pane, click **Orders**. On the page that appears, find your order and complete the payment.
+        /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
@@ -26,10 +32,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
 
+        /// <summary>
+        /// This parameter is not publicly available.
+        /// </summary>
         [NameInMap("BpeEnabled")]
         [Validation(Required=false)]
         public string BpeEnabled { get; set; }
 
+        /// <summary>
+        /// This parameter is not publicly available.
+        /// </summary>
         [NameInMap("BurstingEnabled")]
         [Validation(Required=false)]
         public bool? BurstingEnabled { get; set; }

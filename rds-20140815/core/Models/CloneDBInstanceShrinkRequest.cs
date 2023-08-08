@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CloneDBInstanceShrinkRequest : TeaModel {
+        /// <summary>
+        /// Specifies whether to enable automatic payment. Default value: true. Valid values:
+        /// 
+        /// *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
+        /// *   **false**: disables automatic payment. In this case, you must manually pay for the instance. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, click **Expenses**. On the page that appears, select **Orders** from the left-side navigation pane. On the Orders page, find the order and complete the payment.
+        /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
@@ -34,10 +40,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string BackupType { get; set; }
 
+        /// <summary>
+        /// This parameter is not publicly available.
+        /// </summary>
         [NameInMap("BpeEnabled")]
         [Validation(Required=false)]
         public string BpeEnabled { get; set; }
 
+        /// <summary>
+        /// This parameter is not publicly available.
+        /// </summary>
         [NameInMap("BurstingEnabled")]
         [Validation(Required=false)]
         public bool? BurstingEnabled { get; set; }

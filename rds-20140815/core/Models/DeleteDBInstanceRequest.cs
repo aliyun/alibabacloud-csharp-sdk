@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteDBInstanceRequest : TeaModel {
+        /// <summary>
+        /// The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -21,6 +24,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// The policy that is used to retain archived backup files if the instance is released. Default value: None. Valid values:
+        /// 
+        /// *   **None**: No archived backup files are retained.
+        /// *   **Lastest**: Only the last archived backup file is retained.
+        /// *   **All**: All archived backup files are retained.
+        /// 
+        /// > This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
+        /// </summary>
         [NameInMap("ReleasedKeepPolicy")]
         [Validation(Required=false)]
         public string ReleasedKeepPolicy { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDatabasesResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the information about databases.
+        /// The information about databases.
         /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
@@ -61,6 +61,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
                 }
 
+                /// <summary>
+                /// The advanced information about the database.
+                /// 
+                /// > This parameter is returned only for instances that run SQL Server.
+                /// </summary>
                 [NameInMap("AdvancedInfo")]
                 [Validation(Required=false)]
                 public DescribeDatabasesResponseBodyDatabasesDatabaseAdvancedInfo AdvancedInfo { get; set; }
@@ -71,6 +76,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
                 }
 
+                /// <summary>
+                /// The basic information of the database.
+                /// 
+                /// > This parameter is returned only for instances that run SQL Server.
+                /// </summary>
                 [NameInMap("BasicInfo")]
                 [Validation(Required=false)]
                 public DescribeDatabasesResponseBodyDatabasesDatabaseBasicInfo BasicInfo { get; set; }
@@ -91,7 +101,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The collation of the character set. The example value C stands for localization.
                 /// 
-                /// >  This parameter is returned only for instances that run PostgreSQL.
+                /// > This parameter is returned only for instances that run PostgreSQL.
                 /// </summary>
                 [NameInMap("Collate")]
                 [Validation(Required=false)]
@@ -100,7 +110,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The limit on the number of concurrent requests. The value -1 indicates that the number of concurrent requests is unlimited.
                 /// 
-                /// >  This parameter is returned only for instances that run PostgreSQL.
+                /// > This parameter is returned only for instances that run PostgreSQL.
                 /// </summary>
                 [NameInMap("ConnLimit")]
                 [Validation(Required=false)]
@@ -109,7 +119,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The type of the character set.
                 /// 
-                /// >  This parameter is returned only for instances that run PostgreSQL.
+                /// > This parameter is returned only for instances that run PostgreSQL.
                 /// </summary>
                 [NameInMap("Ctype")]
                 [Validation(Required=false)]
@@ -148,18 +158,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBStatus { get; set; }
 
                 /// <summary>
-                /// The database engine of the instance to which the database belongs.
+                /// The database engine of the instance.
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
+                /// <summary>
+                /// A reserved parameter.
+                /// </summary>
                 [NameInMap("PageNumber")]
                 [Validation(Required=false)]
                 public int? PageNumber { get; set; }
 
                 /// <summary>
-                /// The reserved parameter.
+                /// A reserved parameter.
                 /// </summary>
                 [NameInMap("PageSize")]
                 [Validation(Required=false)]
@@ -172,6 +185,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                /// <summary>
+                /// The running of the database.
+                /// 
+                /// > This parameter is returned only for instances that run SQL Server.
+                /// </summary>
                 [NameInMap("RuntimeInfo")]
                 [Validation(Required=false)]
                 public DescribeDatabasesResponseBodyDatabasesDatabaseRuntimeInfo RuntimeInfo { get; set; }
@@ -185,7 +203,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// The tablespace of the database.
                 /// 
-                /// >  This parameter is returned only for instances that run PostgreSQL.
+                /// > This parameter is returned only for instances that run PostgreSQL.
                 /// </summary>
                 [NameInMap("Tablespace")]
                 [Validation(Required=false)]

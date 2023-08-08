@@ -7979,6 +7979,23 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DeleteBackupFileWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          * ### References
+          * > Note Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+          * *   [Release an ApsaraDB RDS for MySQL instance](~~96057~~)
+          * *   [Release an ApsaraDB RDS for PostgreSQL instance](~~96749~~)
+          * *   [Release an ApsaraDB RDS for SQL Server instance](~~95662~~)
+          * *   [Release an ApsaraDB RDS for MariaDB instance](~~97128~~)
+          *
+          * @param request DeleteDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDBInstanceResponse
+         */
         public DeleteDBInstanceResponse DeleteDBInstanceWithOptions(DeleteDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8026,6 +8043,23 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          * ### References
+          * > Note Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+          * *   [Release an ApsaraDB RDS for MySQL instance](~~96057~~)
+          * *   [Release an ApsaraDB RDS for PostgreSQL instance](~~96749~~)
+          * *   [Release an ApsaraDB RDS for SQL Server instance](~~95662~~)
+          * *   [Release an ApsaraDB RDS for MariaDB instance](~~97128~~)
+          *
+          * @param request DeleteDBInstanceRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDBInstanceResponse
+         */
         public async Task<DeleteDBInstanceResponse> DeleteDBInstanceWithOptionsAsync(DeleteDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8073,12 +8107,44 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          * ### References
+          * > Note Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+          * *   [Release an ApsaraDB RDS for MySQL instance](~~96057~~)
+          * *   [Release an ApsaraDB RDS for PostgreSQL instance](~~96749~~)
+          * *   [Release an ApsaraDB RDS for SQL Server instance](~~95662~~)
+          * *   [Release an ApsaraDB RDS for MariaDB instance](~~97128~~)
+          *
+          * @param request DeleteDBInstanceRequest
+          * @return DeleteDBInstanceResponse
+         */
         public DeleteDBInstanceResponse DeleteDBInstance(DeleteDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDBInstanceWithOptions(request, runtime);
         }
 
+        /**
+          * ### Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
+          * ### References
+          * > Note Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+          * *   [Release an ApsaraDB RDS for MySQL instance](~~96057~~)
+          * *   [Release an ApsaraDB RDS for PostgreSQL instance](~~96749~~)
+          * *   [Release an ApsaraDB RDS for SQL Server instance](~~95662~~)
+          * *   [Release an ApsaraDB RDS for MariaDB instance](~~97128~~)
+          *
+          * @param request DeleteDBInstanceRequest
+          * @return DeleteDBInstanceResponse
+         */
         public async Task<DeleteDBInstanceResponse> DeleteDBInstanceAsync(DeleteDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8475,6 +8541,19 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DeleteDBNodesWithOptionsAsync(request, runtime);
         }
 
+        /**
+          * ### Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * ### References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance](~~184921~~)
+          * *   [Configure the dedicated proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](~~418274~~)
+          *
+          * @param request DeleteDBProxyEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDBProxyEndpointAddressResponse
+         */
         public DeleteDBProxyEndpointAddressResponse DeleteDBProxyEndpointAddressWithOptions(DeleteDBProxyEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8522,6 +8601,19 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteDBProxyEndpointAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ### Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * ### References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance](~~184921~~)
+          * *   [Configure the dedicated proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](~~418274~~)
+          *
+          * @param request DeleteDBProxyEndpointAddressRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DeleteDBProxyEndpointAddressResponse
+         */
         public async Task<DeleteDBProxyEndpointAddressResponse> DeleteDBProxyEndpointAddressWithOptionsAsync(DeleteDBProxyEndpointAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8569,12 +8661,36 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DeleteDBProxyEndpointAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /**
+          * ### Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * ### References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance](~~184921~~)
+          * *   [Configure the dedicated proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](~~418274~~)
+          *
+          * @param request DeleteDBProxyEndpointAddressRequest
+          * @return DeleteDBProxyEndpointAddressResponse
+         */
         public DeleteDBProxyEndpointAddressResponse DeleteDBProxyEndpointAddress(DeleteDBProxyEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDBProxyEndpointAddressWithOptions(request, runtime);
         }
 
+        /**
+          * ### Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * ### References
+          * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+          * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance](~~184921~~)
+          * *   [Configure the dedicated proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](~~418274~~)
+          *
+          * @param request DeleteDBProxyEndpointAddressRequest
+          * @return DeleteDBProxyEndpointAddressResponse
+         */
         public async Task<DeleteDBProxyEndpointAddressResponse> DeleteDBProxyEndpointAddressAsync(DeleteDBProxyEndpointAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -17520,7 +17636,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * >  If the specified request parameters are invalid, no database information is returned.
+          * ### Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
           *
           * @param request DescribeDatabasesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17590,7 +17710,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * >  If the specified request parameters are invalid, no database information is returned.
+          * ### Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
           *
           * @param request DescribeDatabasesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -17660,7 +17784,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * >  If the specified request parameters are invalid, no database information is returned.
+          * ### Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
           *
           * @param request DescribeDatabasesRequest
           * @return DescribeDatabasesResponse
@@ -17672,7 +17800,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         }
 
         /**
-          * >  If the specified request parameters are invalid, no database information is returned.
+          * ### Supported database engines
+          * *   MySQL
+          * *   PostgreSQL
+          * *   SQL Server
+          * *   MariaDB
           *
           * @param request DescribeDatabasesRequest
           * @return DescribeDatabasesResponse

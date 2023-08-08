@@ -1,3 +1,6 @@
+2023-08-08 Version: 2.4.4
+- Generated csharp 2014-08-15 for Rds.
+
 2023-08-06 Version: 2.4.3
 - Generated csharp 2014-08-15 for Rds.
 
