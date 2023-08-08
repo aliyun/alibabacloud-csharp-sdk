@@ -68,6 +68,36 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public bool? OperationalMode { get; set; }
 
+            [NameInMap("PathAttributes")]
+            [Validation(Required=false)]
+            public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes PathAttributes { get; set; }
+            public class ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntriesPathAttributes : TeaModel {
+                [NameInMap("AsPaths")]
+                [Validation(Required=false)]
+                public List<string> AsPaths { get; set; }
+
+                [NameInMap("Communities")]
+                [Validation(Required=false)]
+                public List<string> Communities { get; set; }
+
+                [NameInMap("OriginInstanceId")]
+                [Validation(Required=false)]
+                public string OriginInstanceId { get; set; }
+
+                [NameInMap("OriginInstanceType")]
+                [Validation(Required=false)]
+                public string OriginInstanceType { get; set; }
+
+                [NameInMap("OriginRouteType")]
+                [Validation(Required=false)]
+                public string OriginRouteType { get; set; }
+
+                [NameInMap("Preference")]
+                [Validation(Required=false)]
+                public int? Preference { get; set; }
+
+            }
+
             [NameInMap("PrefixListId")]
             [Validation(Required=false)]
             public string PrefixListId { get; set; }

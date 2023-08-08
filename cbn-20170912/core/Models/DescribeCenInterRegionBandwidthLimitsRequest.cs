@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("TrRegionId")]
+        [Validation(Required=false)]
+        public string TrRegionId { get; set; }
+
     }
 
 }

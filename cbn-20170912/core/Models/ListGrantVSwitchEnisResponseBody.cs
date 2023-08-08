@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string NetworkInterfaceId { get; set; }
 
+            [NameInMap("NetworkInterfaceName")]
+            [Validation(Required=false)]
+            public string NetworkInterfaceName { get; set; }
+
+            [NameInMap("PrimaryIpAddress")]
+            [Validation(Required=false)]
+            public string PrimaryIpAddress { get; set; }
+
             [NameInMap("TransitRouterFlag")]
             [Validation(Required=false)]
             public bool? TransitRouterFlag { get; set; }
@@ -34,6 +42,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VpcId { get; set; }
 
         }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public long? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

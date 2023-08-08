@@ -1,3 +1,6 @@
+2023-08-08 Version: 1.0.30
+- Generated csharp 2017-09-12 for Cbn.
+
 2023-05-23 Version: 1.0.29
 - Update API DescribeGrantRulesToCen support ChildInstanceOwnerId and ChildInstanceId.
 
