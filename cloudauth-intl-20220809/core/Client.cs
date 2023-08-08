@@ -369,6 +369,88 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             return await DeletePictureWithOptionsAsync(request, runtime);
         }
 
+        public DeleteVerifyResultResponse DeleteVerifyResultWithOptions(DeleteVerifyResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteAfterQuery))
+            {
+                query["DeleteAfterQuery"] = request.DeleteAfterQuery;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteType))
+            {
+                query["DeleteType"] = request.DeleteType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransactionId))
+            {
+                query["TransactionId"] = request.TransactionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVerifyResult",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVerifyResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteVerifyResultResponse> DeleteVerifyResultWithOptionsAsync(DeleteVerifyResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteAfterQuery))
+            {
+                query["DeleteAfterQuery"] = request.DeleteAfterQuery;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteType))
+            {
+                query["DeleteType"] = request.DeleteType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransactionId))
+            {
+                query["TransactionId"] = request.TransactionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVerifyResult",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVerifyResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteVerifyResultResponse DeleteVerifyResult(DeleteVerifyResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteVerifyResultWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteVerifyResultResponse> DeleteVerifyResultAsync(DeleteVerifyResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteVerifyResultWithOptionsAsync(request, runtime);
+        }
+
         public DescribeAddressLabelsResponse DescribeAddressLabelsWithOptions(DescribeAddressLabelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
