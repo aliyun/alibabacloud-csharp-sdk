@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
-        [NameInMap("vul_list")]
+        [NameInMap("vuls")]
         [Validation(Required=false)]
-        public List<string> VulList { get; set; }
+        public List<string> Vuls { get; set; }
 
     }
 

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterUserKubeconfigResponseBody : TeaModel {
+        /// <summary>
+        /// The content of the kubeconfig file. For more information about the content of the kubeconfig file, see [Configure cluster credentials](~~86494~~).
+        /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
+        /// <summary>
+        /// The expiration time of the kubeconfig file. The value is the UTC time displayed in RFC3339 format.
+        /// </summary>
         [NameInMap("expiration")]
         [Validation(Required=false)]
         public string Expiration { get; set; }

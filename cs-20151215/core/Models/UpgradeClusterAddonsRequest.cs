@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string NextVersion { get; set; }
 
+            [NameInMap("policy")]
+            [Validation(Required=false)]
+            public string Policy { get; set; }
+
             [NameInMap("version")]
             [Validation(Required=false)]
             public string Version { get; set; }

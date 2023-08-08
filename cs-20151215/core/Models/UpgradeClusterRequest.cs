@@ -11,7 +11,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     public class UpgradeClusterRequest : TeaModel {
         [NameInMap("component_name")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ComponentName { get; set; }
+
+        [NameInMap("master_only")]
+        [Validation(Required=false)]
+        public bool? MasterOnly { get; set; }
 
         [NameInMap("next_version")]
         [Validation(Required=false)]
@@ -19,6 +24,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         [NameInMap("version")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Version { get; set; }
 
     }

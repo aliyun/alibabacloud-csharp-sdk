@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string KubernetesVersion { get; set; }
 
+        [NameInMap("runtime_type")]
+        [Validation(Required=false)]
+        public string RuntimeType { get; set; }
+
         [NameInMap("runtime_version")]
         [Validation(Required=false)]
         public string RuntimeVersion { get; set; }

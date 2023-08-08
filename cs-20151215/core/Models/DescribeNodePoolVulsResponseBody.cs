@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("node_name")]
+            [Validation(Required=false)]
+            public string NodeName { get; set; }
+
             [NameInMap("vul_list")]
             [Validation(Required=false)]
             public List<DescribeNodePoolVulsResponseBodyVulRecordsVulList> VulList { get; set; }

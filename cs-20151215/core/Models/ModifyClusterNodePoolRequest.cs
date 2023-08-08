@@ -203,6 +203,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string Platform { get; set; }
 
+            [NameInMap("private_pool_options")]
+            [Validation(Required=false)]
+            public ModifyClusterNodePoolRequestScalingGroupPrivatePoolOptions PrivatePoolOptions { get; set; }
+            public class ModifyClusterNodePoolRequestScalingGroupPrivatePoolOptions : TeaModel {
+                [NameInMap("id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                [NameInMap("match_criteria")]
+                [Validation(Required=false)]
+                public string MatchCriteria { get; set; }
+
+            }
+
             [NameInMap("rds_instances")]
             [Validation(Required=false)]
             public List<string> RdsInstances { get; set; }

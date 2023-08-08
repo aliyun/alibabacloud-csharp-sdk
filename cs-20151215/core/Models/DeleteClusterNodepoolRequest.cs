@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeleteClusterNodepoolRequest : TeaModel {
+        /// <summary>
+        /// false
+        /// </summary>
         [NameInMap("force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }

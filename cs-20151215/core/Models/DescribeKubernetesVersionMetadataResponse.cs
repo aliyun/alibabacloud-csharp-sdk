@@ -75,9 +75,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string Version { get; set; }
 
-            [NameInMap("multi_az")]
+            [NameInMap("release_date")]
             [Validation(Required=false)]
-            public string MultiAz { get; set; }
+            public string ReleaseDate { get; set; }
+
+            [NameInMap("expiration_date")]
+            [Validation(Required=false)]
+            public string ExpirationDate { get; set; }
+
+            [NameInMap("creatable")]
+            [Validation(Required=false)]
+            public bool? Creatable { get; set; }
 
         }
 

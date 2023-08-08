@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string KubernetesVersion { get; set; }
 
+        [NameInMap("Mode")]
+        [Validation(Required=false)]
+        public string Mode { get; set; }
+
         [NameInMap("Profile")]
         [Validation(Required=false)]
         public string Profile { get; set; }

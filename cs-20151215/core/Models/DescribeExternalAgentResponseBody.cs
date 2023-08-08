@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeExternalAgentResponseBody : TeaModel {
+        /// <summary>
+        /// The agent configurations in YAML format.
+        /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public string Config { get; set; }

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeTaskInfoResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the ACK cluster.
+        /// </summary>
         [NameInMap("cluster_id")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// The time when the task was created.
+        /// </summary>
         [NameInMap("created")]
         [Validation(Required=false)]
         public string Created { get; set; }
@@ -95,6 +101,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <summary>
+        /// The state of the task. Valid values:
+        /// 
+        /// *   `running`: The task is running.
+        /// *   `fail`: The task failed.
+        /// *   `success`: The task is complete.
+        /// </summary>
         [NameInMap("state")]
         [Validation(Required=false)]
         public string State { get; set; }
@@ -113,28 +126,50 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <summary>
+        /// The ID of the task.
+        /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
+        /// <summary>
+        /// The execution result of the task.
+        /// </summary>
         [NameInMap("task_result")]
         [Validation(Required=false)]
         public List<DescribeTaskInfoResponseBodyTaskResult> TaskResult { get; set; }
         public class DescribeTaskInfoResponseBodyTaskResult : TeaModel {
+            /// <summary>
+            /// The resources that are managed by the task. For a scale-out task, the value of this parameter the ID of the instance that is added by the task.
+            /// </summary>
             [NameInMap("data")]
             [Validation(Required=false)]
             public string Data { get; set; }
 
+            /// <summary>
+            /// The state of the scaling of the resource. Valid values:
+            /// 
+            /// *   `success`: The scale-out task is successful.
+            /// *   `failed`: The scale-out task failed.
+            /// *   `initail`: The scale-out task is initializing.
+            /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
         }
 
+        /// <summary>
+        /// The task type. A value of `cluster_scaleout` indicates a scale-out task.
+        /// </summary>
         [NameInMap("task_type")]
         [Validation(Required=false)]
         public string TaskType { get; set; }
 
+        /// <summary>
+        /// The time when the task was updated.
+        /// </summary>
         [NameInMap("updated")]
         [Validation(Required=false)]
         public string Updated { get; set; }

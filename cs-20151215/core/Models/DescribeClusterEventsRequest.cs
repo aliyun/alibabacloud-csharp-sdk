@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         [NameInMap("task_id")]
         [Validation(Required=false)]
-        public long? TaskId { get; set; }
+        public string TaskId { get; set; }
 
     }
 

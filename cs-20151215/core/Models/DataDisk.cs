@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string AutoSnapshotPolicyId { get; set; }
 
+        [NameInMap("bursting_enabled")]
+        [Validation(Required=false)]
+        public bool? BurstingEnabled { get; set; }
+
         [NameInMap("category")]
         [Validation(Required=false)]
         public string Category { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("performance_level")]
         [Validation(Required=false)]
         public string PerformanceLevel { get; set; }
+
+        [NameInMap("provisioned_iops")]
+        [Validation(Required=false)]
+        public long? ProvisionedIops { get; set; }
 
         [NameInMap("size")]
         [Validation(Required=false)]

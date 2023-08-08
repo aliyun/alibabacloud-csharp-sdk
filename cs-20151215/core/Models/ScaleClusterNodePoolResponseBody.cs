@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ScaleClusterNodePoolResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the scaling task.
+        /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
