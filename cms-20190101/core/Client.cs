@@ -3028,6 +3028,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             {
                 query["AlertIds"] = request.AlertIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomSchedule))
+            {
+                query["CustomSchedule"] = request.CustomSchedule;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
             {
                 query["Interval"] = request.Interval;
@@ -3087,6 +3091,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertIds))
             {
                 query["AlertIds"] = request.AlertIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomSchedule))
+            {
+                query["CustomSchedule"] = request.CustomSchedule;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
             {
@@ -14860,6 +14868,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             {
                 query["AlertIds"] = request.AlertIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomSchedule))
+            {
+                query["CustomSchedule"] = request.CustomSchedule;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
             {
                 query["Interval"] = request.Interval;
@@ -14921,6 +14933,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertIds))
             {
                 query["AlertIds"] = request.AlertIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomSchedule))
+            {
+                query["CustomSchedule"] = request.CustomSchedule;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
             {

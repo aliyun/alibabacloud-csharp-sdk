@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string AlertIds { get; set; }
 
+        [NameInMap("CustomSchedule")]
+        [Validation(Required=false)]
+        public string CustomSchedule { get; set; }
+
         /// <summary>
         /// The HTTP status code.
         /// 

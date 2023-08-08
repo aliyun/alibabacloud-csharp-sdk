@@ -1,3 +1,6 @@
+2023-08-08 Version: 2.0.6
+- Generated csharp 2019-01-01 for Cms.
+
 2023-07-28 Version: 2.0.5
 - Add batch create once task.
 

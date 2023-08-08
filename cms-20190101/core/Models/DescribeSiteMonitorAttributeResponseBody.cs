@@ -206,6 +206,34 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string AgentGroup { get; set; }
 
+            [NameInMap("CustomSchedule")]
+            [Validation(Required=false)]
+            public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule CustomSchedule { get; set; }
+            public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule : TeaModel {
+                [NameInMap("days")]
+                [Validation(Required=false)]
+                public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomScheduleDays Days { get; set; }
+                public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomScheduleDays : TeaModel {
+                    [NameInMap("days")]
+                    [Validation(Required=false)]
+                    public List<int?> Days { get; set; }
+
+                }
+
+                [NameInMap("end_hour")]
+                [Validation(Required=false)]
+                public int? EndHour { get; set; }
+
+                [NameInMap("start_hour")]
+                [Validation(Required=false)]
+                public int? StartHour { get; set; }
+
+                [NameInMap("time_zone")]
+                [Validation(Required=false)]
+                public string TimeZone { get; set; }
+
+            }
+
             /// <summary>
             /// The name of the site monitoring task.
             /// </summary>
