@@ -4855,6 +4855,134 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0
             return await GetWelcomeTextAndMusicWithOptionsAsync(request, headers, runtime);
         }
 
+        public HotelQrBindResponse HotelQrBindWithOptions(HotelQrBindRequest request, HotelQrBindHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                body["ClientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                body["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtInfo))
+            {
+                body["ExtInfo"] = request.ExtInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotelId))
+            {
+                body["HotelId"] = request.HotelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomNo))
+            {
+                body["RoomNo"] = request.RoomNo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAligenieAccessToken))
+            {
+                realHeaders["x-acs-aligenie-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAligenieAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "HotelQrBind",
+                Version = "ip_1.0",
+                Protocol = "HTTPS",
+                Pathname = "/v1.0/ip/hotelQrBind",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<HotelQrBindResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<HotelQrBindResponse> HotelQrBindWithOptionsAsync(HotelQrBindRequest request, HotelQrBindHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                body["ClientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                body["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtInfo))
+            {
+                body["ExtInfo"] = request.ExtInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotelId))
+            {
+                body["HotelId"] = request.HotelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomNo))
+            {
+                body["RoomNo"] = request.RoomNo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAligenieAccessToken))
+            {
+                realHeaders["x-acs-aligenie-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAligenieAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "HotelQrBind",
+                Version = "ip_1.0",
+                Protocol = "HTTPS",
+                Pathname = "/v1.0/ip/hotelQrBind",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<HotelQrBindResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public HotelQrBindResponse HotelQrBind(HotelQrBindRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            HotelQrBindHeaders headers = new HotelQrBindHeaders();
+            return HotelQrBindWithOptions(request, headers, runtime);
+        }
+
+        public async Task<HotelQrBindResponse> HotelQrBindAsync(HotelQrBindRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            HotelQrBindHeaders headers = new HotelQrBindHeaders();
+            return await HotelQrBindWithOptionsAsync(request, headers, runtime);
+        }
+
         public ImportHotelConfigResponse ImportHotelConfigWithOptions(ImportHotelConfigRequest tmpReq, ImportHotelConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
