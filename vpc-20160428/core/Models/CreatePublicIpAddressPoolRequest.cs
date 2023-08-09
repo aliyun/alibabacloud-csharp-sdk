@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreatePublicIpAddressPoolRequest : TeaModel {
+        [NameInMap("BizType")]
+        [Validation(Required=false)]
+        public string BizType { get; set; }
+
         /// <summary>
         /// The client token that you want to use to ensure the idempotence of the request.
         /// 
@@ -114,6 +118,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("Zones")]
+        [Validation(Required=false)]
+        public List<string> Zones { get; set; }
 
     }
 

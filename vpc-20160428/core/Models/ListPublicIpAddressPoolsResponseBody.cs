@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public List<ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList> PublicIpAddressPoolList { get; set; }
         public class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList : TeaModel {
+            [NameInMap("BizType")]
+            [Validation(Required=false)]
+            public string BizType { get; set; }
+
             /// <summary>
             /// The region ID of the IP address pool.
             /// </summary>
@@ -169,6 +173,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("UserType")]
             [Validation(Required=false)]
             public bool? UserType { get; set; }
+
+            [NameInMap("Zones")]
+            [Validation(Required=false)]
+            public List<string> Zones { get; set; }
 
         }
 

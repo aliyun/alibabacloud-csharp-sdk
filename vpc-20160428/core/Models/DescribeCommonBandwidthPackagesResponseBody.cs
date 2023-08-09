@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string BandwidthPackageId { get; set; }
 
+                [NameInMap("BizType")]
+                [Validation(Required=false)]
+                public string BizType { get; set; }
+
                 /// <summary>
                 /// The service state of the EIP bandwidth plan.
                 /// 
@@ -283,6 +287,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     }
 
                 }
+
+                [NameInMap("Zone")]
+                [Validation(Required=false)]
+                public string Zone { get; set; }
 
             }
 

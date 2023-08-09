@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string BandwidthPackageType { get; set; }
 
+                [NameInMap("BizType")]
+                [Validation(Required=false)]
+                public string BizType { get; set; }
+
                 /// <summary>
                 /// The service status of the EIP. Valid values:
                 /// 

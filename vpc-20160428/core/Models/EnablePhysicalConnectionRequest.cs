@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class EnablePhysicalConnectionRequest : TeaModel {
+        [NameInMap("ByPassSp")]
+        [Validation(Required=false)]
+        public bool? ByPassSp { get; set; }
+
         /// <summary>
         /// The client token that is used to ensure the idempotence of the request.
         /// 
