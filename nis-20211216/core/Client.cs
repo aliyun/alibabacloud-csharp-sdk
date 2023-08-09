@@ -37,6 +37,808 @@ namespace AlibabaCloud.SDK.Nis20211216
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /**
+          * You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the **createNetworkReachableAnalysis** operation.
+          *
+          * @param request CreateAndAnalyzeNetworkPathRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAndAnalyzeNetworkPathResponse
+         */
+        public CreateAndAnalyzeNetworkPathResponse CreateAndAnalyzeNetworkPathWithOptions(CreateAndAnalyzeNetworkPathRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAndAnalyzeNetworkPath",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAndAnalyzeNetworkPathResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the **createNetworkReachableAnalysis** operation.
+          *
+          * @param request CreateAndAnalyzeNetworkPathRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAndAnalyzeNetworkPathResponse
+         */
+        public async Task<CreateAndAnalyzeNetworkPathResponse> CreateAndAnalyzeNetworkPathWithOptionsAsync(CreateAndAnalyzeNetworkPathRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAndAnalyzeNetworkPath",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAndAnalyzeNetworkPathResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the **createNetworkReachableAnalysis** operation.
+          *
+          * @param request CreateAndAnalyzeNetworkPathRequest
+          * @return CreateAndAnalyzeNetworkPathResponse
+         */
+        public CreateAndAnalyzeNetworkPathResponse CreateAndAnalyzeNetworkPath(CreateAndAnalyzeNetworkPathRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAndAnalyzeNetworkPathWithOptions(request, runtime);
+        }
+
+        /**
+          * You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the **createNetworkReachableAnalysis** operation.
+          *
+          * @param request CreateAndAnalyzeNetworkPathRequest
+          * @return CreateAndAnalyzeNetworkPathResponse
+         */
+        public async Task<CreateAndAnalyzeNetworkPathResponse> CreateAndAnalyzeNetworkPathAsync(CreateAndAnalyzeNetworkPathRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAndAnalyzeNetworkPathWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * *   You can call the **CreateNetworkPath** operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.
+          * *   You can create up to 100 network paths within one Alibaba Cloud account.
+          *
+          * @param request CreateNetworkPathRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateNetworkPathResponse
+         */
+        public CreateNetworkPathResponse CreateNetworkPathWithOptions(CreateNetworkPathRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPathDescription))
+            {
+                query["NetworkPathDescription"] = request.NetworkPathDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPathName))
+            {
+                query["NetworkPathName"] = request.NetworkPathName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIpAddress))
+            {
+                query["SourceIpAddress"] = request.SourceIpAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePort))
+            {
+                query["SourcePort"] = request.SourcePort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                query["TargetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetIpAddress))
+            {
+                query["TargetIpAddress"] = request.TargetIpAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetPort))
+            {
+                query["TargetPort"] = request.TargetPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNetworkPath",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNetworkPathResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * *   You can call the **CreateNetworkPath** operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.
+          * *   You can create up to 100 network paths within one Alibaba Cloud account.
+          *
+          * @param request CreateNetworkPathRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateNetworkPathResponse
+         */
+        public async Task<CreateNetworkPathResponse> CreateNetworkPathWithOptionsAsync(CreateNetworkPathRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPathDescription))
+            {
+                query["NetworkPathDescription"] = request.NetworkPathDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPathName))
+            {
+                query["NetworkPathName"] = request.NetworkPathName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIpAddress))
+            {
+                query["SourceIpAddress"] = request.SourceIpAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePort))
+            {
+                query["SourcePort"] = request.SourcePort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                query["TargetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetIpAddress))
+            {
+                query["TargetIpAddress"] = request.TargetIpAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetPort))
+            {
+                query["TargetPort"] = request.TargetPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNetworkPath",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNetworkPathResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * *   You can call the **CreateNetworkPath** operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.
+          * *   You can create up to 100 network paths within one Alibaba Cloud account.
+          *
+          * @param request CreateNetworkPathRequest
+          * @return CreateNetworkPathResponse
+         */
+        public CreateNetworkPathResponse CreateNetworkPath(CreateNetworkPathRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateNetworkPathWithOptions(request, runtime);
+        }
+
+        /**
+          * *   You can call the **CreateNetworkPath** operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.
+          * *   You can create up to 100 network paths within one Alibaba Cloud account.
+          *
+          * @param request CreateNetworkPathRequest
+          * @return CreateNetworkPathResponse
+         */
+        public async Task<CreateNetworkPathResponse> CreateNetworkPathAsync(CreateNetworkPathRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateNetworkPathWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * *   The **CreateNetworkReachableAnalysis** operation is used to create a task for analyzing the reachability of the network path that is created by calling the **CreateNetworkPath** operation and record the analysis results.
+          * *   The **CreateNetworkReachableAnalysis** operation can be called to repeatedly analyze the reachability of a network path.
+          * *   You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.
+          *
+          * @param request CreateNetworkReachableAnalysisRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateNetworkReachableAnalysisResponse
+         */
+        public CreateNetworkReachableAnalysisResponse CreateNetworkReachableAnalysisWithOptions(CreateNetworkReachableAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPathId))
+            {
+                query["NetworkPathId"] = request.NetworkPathId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNetworkReachableAnalysis",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNetworkReachableAnalysisResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * *   The **CreateNetworkReachableAnalysis** operation is used to create a task for analyzing the reachability of the network path that is created by calling the **CreateNetworkPath** operation and record the analysis results.
+          * *   The **CreateNetworkReachableAnalysis** operation can be called to repeatedly analyze the reachability of a network path.
+          * *   You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.
+          *
+          * @param request CreateNetworkReachableAnalysisRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateNetworkReachableAnalysisResponse
+         */
+        public async Task<CreateNetworkReachableAnalysisResponse> CreateNetworkReachableAnalysisWithOptionsAsync(CreateNetworkReachableAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPathId))
+            {
+                query["NetworkPathId"] = request.NetworkPathId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNetworkReachableAnalysis",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNetworkReachableAnalysisResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * *   The **CreateNetworkReachableAnalysis** operation is used to create a task for analyzing the reachability of the network path that is created by calling the **CreateNetworkPath** operation and record the analysis results.
+          * *   The **CreateNetworkReachableAnalysis** operation can be called to repeatedly analyze the reachability of a network path.
+          * *   You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.
+          *
+          * @param request CreateNetworkReachableAnalysisRequest
+          * @return CreateNetworkReachableAnalysisResponse
+         */
+        public CreateNetworkReachableAnalysisResponse CreateNetworkReachableAnalysis(CreateNetworkReachableAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateNetworkReachableAnalysisWithOptions(request, runtime);
+        }
+
+        /**
+          * *   The **CreateNetworkReachableAnalysis** operation is used to create a task for analyzing the reachability of the network path that is created by calling the **CreateNetworkPath** operation and record the analysis results.
+          * *   The **CreateNetworkReachableAnalysis** operation can be called to repeatedly analyze the reachability of a network path.
+          * *   You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.
+          *
+          * @param request CreateNetworkReachableAnalysisRequest
+          * @return CreateNetworkReachableAnalysisResponse
+         */
+        public async Task<CreateNetworkReachableAnalysisResponse> CreateNetworkReachableAnalysisAsync(CreateNetworkReachableAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateNetworkReachableAnalysisWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteNetworkPathResponse DeleteNetworkPathWithOptions(DeleteNetworkPathRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteNetworkPathShrinkRequest request = new DeleteNetworkPathShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NetworkPathIds))
+            {
+                request.NetworkPathIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetworkPathIds, "NetworkPathIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPathIdsShrink))
+            {
+                query["NetworkPathIds"] = request.NetworkPathIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNetworkPath",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNetworkPathResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteNetworkPathResponse> DeleteNetworkPathWithOptionsAsync(DeleteNetworkPathRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteNetworkPathShrinkRequest request = new DeleteNetworkPathShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NetworkPathIds))
+            {
+                request.NetworkPathIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetworkPathIds, "NetworkPathIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPathIdsShrink))
+            {
+                query["NetworkPathIds"] = request.NetworkPathIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNetworkPath",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNetworkPathResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteNetworkPathResponse DeleteNetworkPath(DeleteNetworkPathRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteNetworkPathWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteNetworkPathResponse> DeleteNetworkPathAsync(DeleteNetworkPathRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteNetworkPathWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteNetworkReachableAnalysisResponse DeleteNetworkReachableAnalysisWithOptions(DeleteNetworkReachableAnalysisRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteNetworkReachableAnalysisShrinkRequest request = new DeleteNetworkReachableAnalysisShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NetworkReachableAnalysisIds))
+            {
+                request.NetworkReachableAnalysisIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetworkReachableAnalysisIds, "NetworkReachableAnalysisIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkReachableAnalysisIdsShrink))
+            {
+                query["NetworkReachableAnalysisIds"] = request.NetworkReachableAnalysisIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNetworkReachableAnalysis",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNetworkReachableAnalysisResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteNetworkReachableAnalysisResponse> DeleteNetworkReachableAnalysisWithOptionsAsync(DeleteNetworkReachableAnalysisRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteNetworkReachableAnalysisShrinkRequest request = new DeleteNetworkReachableAnalysisShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NetworkReachableAnalysisIds))
+            {
+                request.NetworkReachableAnalysisIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetworkReachableAnalysisIds, "NetworkReachableAnalysisIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkReachableAnalysisIdsShrink))
+            {
+                query["NetworkReachableAnalysisIds"] = request.NetworkReachableAnalysisIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNetworkReachableAnalysis",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNetworkReachableAnalysisResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteNetworkReachableAnalysisResponse DeleteNetworkReachableAnalysis(DeleteNetworkReachableAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteNetworkReachableAnalysisWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteNetworkReachableAnalysisResponse> DeleteNetworkReachableAnalysisAsync(DeleteNetworkReachableAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteNetworkReachableAnalysisWithOptionsAsync(request, runtime);
+        }
+
+        public GetInternetTupleResponse GetInternetTupleWithOptions(GetInternetTupleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetInternetTupleShrinkRequest request = new GetInternetTupleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceList))
+            {
+                request.InstanceListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceList, "InstanceList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIds))
+            {
+                query["AccountIds"] = request.AccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["BeginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudIp))
+            {
+                query["CloudIp"] = request.CloudIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudIsp))
+            {
+                query["CloudIsp"] = request.CloudIsp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPort))
+            {
+                query["CloudPort"] = request.CloudPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceListShrink))
+            {
+                query["InstanceList"] = request.InstanceListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherCity))
+            {
+                query["OtherCity"] = request.OtherCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherCountry))
+            {
+                query["OtherCountry"] = request.OtherCountry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherIp))
+            {
+                query["OtherIp"] = request.OtherIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherIsp))
+            {
+                query["OtherIsp"] = request.OtherIsp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherPort))
+            {
+                query["OtherPort"] = request.OtherPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopN))
+            {
+                query["TopN"] = request.TopN;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TupleType))
+            {
+                query["TupleType"] = request.TupleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseMultiAccount))
+            {
+                query["UseMultiAccount"] = request.UseMultiAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInternetTuple",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInternetTupleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetInternetTupleResponse> GetInternetTupleWithOptionsAsync(GetInternetTupleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetInternetTupleShrinkRequest request = new GetInternetTupleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceList))
+            {
+                request.InstanceListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceList, "InstanceList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIds))
+            {
+                query["AccountIds"] = request.AccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["BeginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudIp))
+            {
+                query["CloudIp"] = request.CloudIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudIsp))
+            {
+                query["CloudIsp"] = request.CloudIsp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPort))
+            {
+                query["CloudPort"] = request.CloudPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceListShrink))
+            {
+                query["InstanceList"] = request.InstanceListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherCity))
+            {
+                query["OtherCity"] = request.OtherCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherCountry))
+            {
+                query["OtherCountry"] = request.OtherCountry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherIp))
+            {
+                query["OtherIp"] = request.OtherIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherIsp))
+            {
+                query["OtherIsp"] = request.OtherIsp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherPort))
+            {
+                query["OtherPort"] = request.OtherPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopN))
+            {
+                query["TopN"] = request.TopN;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TupleType))
+            {
+                query["TupleType"] = request.TupleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseMultiAccount))
+            {
+                query["UseMultiAccount"] = request.UseMultiAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInternetTuple",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInternetTupleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetInternetTupleResponse GetInternetTuple(GetInternetTupleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetInternetTupleWithOptions(request, runtime);
+        }
+
+        public async Task<GetInternetTupleResponse> GetInternetTupleAsync(GetInternetTupleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetInternetTupleWithOptionsAsync(request, runtime);
+        }
+
         public GetNatTopNResponse GetNatTopNWithOptions(GetNatTopNRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -149,6 +951,114 @@ namespace AlibabaCloud.SDK.Nis20211216
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetNatTopNWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * **GetNetworkReachableAnalysis** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.
+          * *   The **init** state indicates that the task is in progress.
+          * *   The **finish** state indicates that the task is complete. In this state, you can obtain the analysis result.
+          *
+          * @param request GetNetworkReachableAnalysisRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetNetworkReachableAnalysisResponse
+         */
+        public GetNetworkReachableAnalysisResponse GetNetworkReachableAnalysisWithOptions(GetNetworkReachableAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkReachableAnalysisId))
+            {
+                query["NetworkReachableAnalysisId"] = request.NetworkReachableAnalysisId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNetworkReachableAnalysis",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNetworkReachableAnalysisResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * **GetNetworkReachableAnalysis** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.
+          * *   The **init** state indicates that the task is in progress.
+          * *   The **finish** state indicates that the task is complete. In this state, you can obtain the analysis result.
+          *
+          * @param request GetNetworkReachableAnalysisRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return GetNetworkReachableAnalysisResponse
+         */
+        public async Task<GetNetworkReachableAnalysisResponse> GetNetworkReachableAnalysisWithOptionsAsync(GetNetworkReachableAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkReachableAnalysisId))
+            {
+                query["NetworkReachableAnalysisId"] = request.NetworkReachableAnalysisId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNetworkReachableAnalysis",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNetworkReachableAnalysisResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * **GetNetworkReachableAnalysis** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.
+          * *   The **init** state indicates that the task is in progress.
+          * *   The **finish** state indicates that the task is complete. In this state, you can obtain the analysis result.
+          *
+          * @param request GetNetworkReachableAnalysisRequest
+          * @return GetNetworkReachableAnalysisResponse
+         */
+        public GetNetworkReachableAnalysisResponse GetNetworkReachableAnalysis(GetNetworkReachableAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetNetworkReachableAnalysisWithOptions(request, runtime);
+        }
+
+        /**
+          * **GetNetworkReachableAnalysis** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.
+          * *   The **init** state indicates that the task is in progress.
+          * *   The **finish** state indicates that the task is complete. In this state, you can obtain the analysis result.
+          *
+          * @param request GetNetworkReachableAnalysisRequest
+          * @return GetNetworkReachableAnalysisResponse
+         */
+        public async Task<GetNetworkReachableAnalysisResponse> GetNetworkReachableAnalysisAsync(GetNetworkReachableAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetNetworkReachableAnalysisWithOptionsAsync(request, runtime);
         }
 
     }
