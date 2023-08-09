@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? ConfirmStop { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. Valid values:
+        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
         /// 
-        /// *   true: performs a dry run. The system checks the required parameters, the request format, service limits, and available ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   false: performs a dry run and the request is made if the request passes the dry run.
+        /// *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and available ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+        /// *   false: performs a dry run and performs the actual request.
         /// 
         /// Default value: false.
         /// </summary>
@@ -29,10 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// Specifies whether to forcefully stop the instance. Valid values:
+        /// Specifies whether to forcibly stop the instance. Valid values:
         /// 
-        /// *   true: forcefully stops the instance.
-        /// *   false: normally stops the instance.
+        /// *   true
+        /// *   false
         /// 
         /// Default value: false.
         /// </summary>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? ForceStop { get; set; }
 
         /// <summary>
-        /// >  This parameter is in invitational preview and is not available for public use.
+        /// > This parameter is in invitational preview and is not publicly available.
         /// </summary>
         [NameInMap("Hibernate")]
         [Validation(Required=false)]
@@ -71,12 +71,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The stop mode of the pay-as-you-go instance. Default value: Disabled. Valid values:
+        /// The stop mode of the pay-as-you-go instance. Valid values:
         /// 
-        /// *   StopCharging: economical mode. For information about how `StopCharging` takes effect, see the "Prerequisites" section in [Economical mode](~~63353~~).
-        /// *   KeepCharging: standard mode. After the instance is stopped in standard mode, you continue to be charged for it.
+        /// *   StopCharging: economical mode. For information about how `StopCharging` takes effect, see the "Conditions for enabling economical mode" section in [Economical mode](~~63353~~).
+        /// *   KeepCharging: standard mode. You continue to be charged for instances that are stopped in standard mode.
         /// 
-        /// Default value: If the prerequisites required for enabling economical mode are met and you have enabled this mode in the ECS console, the default value is `StopCharging`. For more information, see the "Enable economical mode" section in [Economical mode](~~63353#default~~). Otherwise, the default value is `KeepCharging`.
+        /// Default value: If the conditions for enabling the economical mode are met and you have enabled this mode in the ECS console, the default value is [StopCharging](~~63353#default~~). For more information, see the "Enable economical mode" section in `Economical mode`. Otherwise, the default value is `KeepCharging`.
         /// </summary>
         [NameInMap("StoppedMode")]
         [Validation(Required=false)]

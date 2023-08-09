@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class InstallCloudAssistantRequest : TeaModel {
         /// <summary>
-        /// The IDs of instances. You can specify up to 50 instance IDs in a single request.
+        /// The ID of the instance.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The IDs of instances. You can specify up to 50 instance IDs in a single request.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

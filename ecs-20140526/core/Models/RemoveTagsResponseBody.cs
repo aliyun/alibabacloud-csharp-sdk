@@ -10,15 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RemoveTagsResponseBody : TeaModel {
         /// <summary>
-        /// The type of the resource. Valid values:
-        /// 
-        /// *   disk
-        /// *   instance
-        /// *   image
-        /// *   securitygroup
-        /// *   snapshot
-        /// 
-        /// All the preceding values must be in lowercase.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The order ID.
         /// 
-        /// > This parameter is returned only when the category of a subscription cloud disk or the performance level of a subscription cloud disk is modified.
+        /// >  This parameter is returned only when the category of a subscription disk or the performance level of a subscription ESSD is modified.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The task ID of changing the disk category.
+        /// The ID of the disk category change task.
         /// 
-        /// > If you modify only the performance level of an ESSD, this parameter is not returned.
+        /// >  If you only modify the performance level of an ESSD, this parameter is not returned.
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

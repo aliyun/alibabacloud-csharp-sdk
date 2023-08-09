@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The auto-renewal term of the reserved instance. Valid values:
+        /// The auto-renewal cycle.
         /// 
         /// Valid values: 1 and 3.
         /// </summary>
@@ -27,33 +27,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// The unit of the auto-renewal term.
+        /// The unit of the auto-renewal duration.
         /// 
-        /// Valid value: Year.
+        /// Valid values: Year and Month.
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+        /// The region ID of the reserved instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether to automatically renew the reserved instance. Valid values:
+        /// Specifies whether to automatically renew the reserved instances. Valid values:
         /// 
-        /// *   AutoRenewal: automatically renew the reserved instance.
-        /// *   Normal: manually renew the reserved instance.
+        /// *   AutoRenewal: automatically renews the reserved instances.
+        /// *   Normal: manually renews the reserved instances.
         /// </summary>
         [NameInMap("RenewalStatus")]
         [Validation(Required=false)]
         public string RenewalStatus { get; set; }
 
         /// <summary>
-        /// The ID of reserved instance N.
+        /// The IDs of the reserved instances.
         /// </summary>
         [NameInMap("ReservedInstanceId")]
         [Validation(Required=false)]

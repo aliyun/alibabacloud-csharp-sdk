@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             /// <summary>
                             /// The name of the event type. Valid values:
                             /// 
-                            /// *   Degraded: The performance of the EBS device was degraded.
-                            /// *   SeverelyDegraded: The performance of the EBS device was severely degraded.
-                            /// *   Stalled: The performance of the EBS device was severely affected.
-                            /// *   ErrorDetected: The local disk was damaged.
+                            /// *   Degraded: The performance of the EBS device is degraded.
+                            /// *   SeverelyDegraded: The performance of the EBS device is severely degraded.
+                            /// *   Stalled: The performance of the EBS device is severely affected.
+                            /// *   ErrorDetected: The local disk is damaged.
                             /// </summary>
                             [NameInMap("Name")]
                             [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ID of EBS device N.
+                /// The EBS device ID.
                 /// </summary>
                 [NameInMap("DiskId")]
                 [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ID of the instance that you query.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -167,21 +167,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

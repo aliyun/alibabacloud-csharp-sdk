@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string DestinationSnapshotName { get; set; }
 
+        [NameInMap("DestinationStorageLocationArn")]
+        [Validation(Required=false)]
+        public string DestinationStorageLocationArn { get; set; }
+
         /// <summary>
         /// Specifies whether to encrypt the disk. Valid values:
         /// 

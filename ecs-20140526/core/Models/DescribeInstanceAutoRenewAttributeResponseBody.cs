@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceAutoRenewAttributeResponseBody : TeaModel {
         /// <summary>
-        /// Details about the renewal attributes of instances.
+        /// The renewal attributes of instances.
         /// </summary>
         [NameInMap("InstanceRenewAttributes")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute> InstanceRenewAttribute { get; set; }
             public class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute : TeaModel {
                 /// <summary>
-                /// Indicates whether auto-renewal was enabled.
+                /// Indicates whether auto-renewal is enabled.
                 /// </summary>
                 [NameInMap("AutoRenewEnabled")]
                 [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? Duration { get; set; }
 
                 /// <summary>
-                /// The instance ID.
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// 
                 /// *   AutoRenewal: Auto-renewal is enabled for the instance.
                 /// *   Normal: Auto-renewal is disabled for the instance.
-                /// *   NotRenewal: The instance is not to be renewed. The system no longer sends expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](~~52843~~) operation to change its auto-renewal state to `Normal`. Then, you can manually renew the instance or enable auto-renewal for the instance.
+                /// *   NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](~~52843~~) operation to change its auto-renewal status to `Normal`. Then, you can manually renew the instance or enable auto-renewal for the instance.
                 /// </summary>
                 [NameInMap("RenewalStatus")]
                 [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of instances.
+        /// The total number of queried instances.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

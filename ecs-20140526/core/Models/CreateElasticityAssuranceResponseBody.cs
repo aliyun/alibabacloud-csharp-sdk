@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the elasticity assurance.
+        /// The elasticity assurance ID.
         /// </summary>
         [NameInMap("PrivatePoolOptionsId")]
         [Validation(Required=false)]

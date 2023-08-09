@@ -10,21 +10,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyManagedInstanceResponseBody : TeaModel {
         /// <summary>
-        /// Details of the managed instance.
+        /// The name of the managed instance.
         /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]
         public ModifyManagedInstanceResponseBodyInstance Instance { get; set; }
         public class ModifyManagedInstanceResponseBodyInstance : TeaModel {
-            /// <summary>
-            /// The ID of the managed instance.
-            /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the managed instance.
+            /// The ID of the managed instance.
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
@@ -33,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// Details of the managed instance.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

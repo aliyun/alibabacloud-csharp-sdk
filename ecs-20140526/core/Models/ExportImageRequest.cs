@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OSSBucket { get; set; }
 
         /// <summary>
-        /// The prefix for the name of the OSS object in which you want to store the exported custom image. The prefix must be 1 to 30 characters in length and can contain digits and letters.
+        /// The prefix for the name of the OSS object. The prefix must be 1 to 30 characters in length and can contain digits and letters.
         /// </summary>
         [NameInMap("OSSPrefix")]
         [Validation(Required=false)]

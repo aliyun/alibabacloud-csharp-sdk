@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResult> MetricResult { get; set; }
             public class DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResult : TeaModel {
                 /// <summary>
-                /// An array that consists of the details about the diagnosed issues.
+                /// The diagnosed issues.
                 /// </summary>
                 [NameInMap("Issues")]
                 [Validation(Required=false)]
@@ -126,9 +126,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The state of the diagnostic metric. Valid values:
                 /// 
-                /// *   InProgress: The diagnostic is in progress.
-                /// *   Finished: The diagnostic is complete.
-                /// *   Failed: The diagnostic failed.
+                /// *   InProgress.
+                /// *   Finished.
+                /// *   Failed.
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -153,28 +153,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ReportId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the resource.
+        /// The resource ID.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The resource type. The value of ResourceType can only be instance, which indicates that only instances are supported.
+        /// The type of the resource. ResourceType can only be set to instance, which indicates that only instances are supported.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The severity level of the diagnostic report. The value of this parameter is determined by the metric with the highest severity level among all diagnostic metrics. Valid values:
+        /// The severity level of the diagnostic report. The value of this parameter is determined by the highest severity level of all diagnostic metrics. Valid values:
         /// 
         /// *   Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.
         /// *   Normal: No exceptions were detected.

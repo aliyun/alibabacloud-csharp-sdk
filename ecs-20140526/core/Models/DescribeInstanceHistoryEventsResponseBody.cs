@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceHistoryEventsResponseBody : TeaModel {
         /// <summary>
-        /// Details about historical system events of the instance.
+        /// The information about instance system events.
         /// </summary>
         [NameInMap("InstanceSystemEventSet")]
         [Validation(Required=false)]
@@ -94,10 +94,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute ExtendedAttribute { get; set; }
                 public class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute : TeaModel {
+                    /// <summary>
+                    /// Indicates whether the event can be handled.
+                    /// </summary>
                     [NameInMap("CanAccept")]
                     [Validation(Required=false)]
                     public string CanAccept { get; set; }
 
+                    /// <summary>
+                    /// The code of the security violation.
+                    /// </summary>
                     [NameInMap("Code")]
                     [Validation(Required=false)]
                     public string Code { get; set; }
@@ -126,15 +132,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// The type of the host. Valid values:
                     /// 
-                    /// *   ddh: dedicated host
-                    /// *   managehost: physical machine in a smart hosting pool
+                    /// - ddh: dedicated host
+                    /// - managehost: physical machine in a smart hosting pool
                     /// </summary>
                     [NameInMap("HostType")]
                     [Validation(Required=false)]
                     public string HostType { get; set; }
 
                     /// <summary>
-                    /// Details about the inactive disks that have been released and must be cleared.
+                    /// The information about the inactive disks that have been released and must be cleared.
                     /// </summary>
                     [NameInMap("InactiveDisks")]
                     [Validation(Required=false)]
@@ -158,7 +164,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             /// *   cloud_efficiency: ultra disk
                             /// *   cloud_ssd: standard SSD
                             /// *   cloud_essd: enhanced SSD (ESSD)
-                            /// *   local_ssd_pro: I/O-intensive local disk.
+                            /// *   local_ssd_pro: I/O-intensive local disk
                             /// *   local_hdd_pro: throughput-intensive local disk
                             /// *   ephemeral: retired local disk
                             /// *   ephemeral_ssd: retired local SSD
@@ -196,7 +202,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The migration solution of the instance. Valid value: MigrationPlan. Instances can be migrated only by using migration plans.
+                    /// The migration solution of the instance. Valid value: MigrationPlan, which indicates that instances can be migrated only by using migration plans.
                     /// </summary>
                     [NameInMap("MigrationOptions")]
                     [Validation(Required=false)]
@@ -209,20 +215,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// The online repair policy of the damaged disk. Valid value: IsolateOnly, which indicates that damaged disks are isolated but not repaired.
+                    /// The online repair policy for the damaged disk. Valid value: IsolateOnly, which indicates that damaged disks are isolated but not repaired.
                     /// </summary>
                     [NameInMap("OnlineRepairPolicy")]
                     [Validation(Required=false)]
                     public string OnlineRepairPolicy { get; set; }
 
+                    /// <summary>
+                    /// The illegal domain name.
+                    /// </summary>
                     [NameInMap("PunishDomain")]
                     [Validation(Required=false)]
                     public string PunishDomain { get; set; }
 
+                    /// <summary>
+                    /// The type of the penalty.
+                    /// </summary>
                     [NameInMap("PunishType")]
                     [Validation(Required=false)]
                     public string PunishType { get; set; }
 
+                    /// <summary>
+                    /// The illegal URL.
+                    /// </summary>
                     [NameInMap("PunishUrl")]
                     [Validation(Required=false)]
                     public string PunishUrl { get; set; }
@@ -233,6 +248,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [NameInMap("Rack")]
                     [Validation(Required=false)]
                     public string Rack { get; set; }
+
+                    [NameInMap("ResponseResult")]
+                    [Validation(Required=false)]
+                    public string ResponseResult { get; set; }
 
                 }
 
@@ -251,7 +270,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The start time of the scheduled execution of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                /// The scheduled start time of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("NotBefore")]
                 [Validation(Required=false)]
@@ -265,7 +284,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Reason { get; set; }
 
                 /// <summary>
-                /// The type of a resource. Valid values:
+                /// The type of the resource. Valid values:
                 /// 
                 /// *   instance: ECS instance
                 /// *   ddh: dedicated host
@@ -280,14 +299,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -301,7 +320,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of instances.
+        /// The total number of instances returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

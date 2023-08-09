@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RedeployInstanceRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to forcibly stop the instance that is in the Running (Running) state.
+        /// Specifies whether to forcefully stop the instance that is in the Running state.
         /// 
-        /// Default value: false
+        /// Default value: false.
         /// 
-        /// > A forcible stop is equivalent to a power outage and unsaved data may be lost. We recommend that you redeploy instances that are in the Stopped state.
+        /// > A forced stop is equivalent to a power outage, and unsaved data may be lost. We recommend that you redeploy instances that are in the Stopped state.
         /// </summary>
         [NameInMap("ForceStop")]
         [Validation(Required=false)]

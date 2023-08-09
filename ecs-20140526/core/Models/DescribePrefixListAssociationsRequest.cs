@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePrefixListAssociationsRequest : TeaModel {
         /// <summary>
-        /// The number of entries to return on each page.
-        /// 
-        /// Maximum value: 100.
-        /// 
-        /// Default value: 10.
+        /// The query token that is returned in this call. If the return value is empty, no more data is returned.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The query token. Set the value to the `NextToken` value returned in the previous call to the DescribePrefixListAssociations operation. Leave this parameter empty the first time you call this operation.
+        /// The number of entries to return on each page.
+        /// 
+        /// Maximum value: 100.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the prefix list.
+        /// The query token. Set the value to the `NextToken` value returned in the previous call to the DescribePrefixListAssociations operation. Leave this parameter empty the first time you call this operation.
         /// </summary>
         [NameInMap("PrefixListId")]
         [Validation(Required=false)]
         public string PrefixListId { get; set; }
 
         /// <summary>
-        /// The region ID of the prefix list. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The ID of the prefix list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

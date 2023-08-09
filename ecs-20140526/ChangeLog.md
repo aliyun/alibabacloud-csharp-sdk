@@ -1,3 +1,6 @@
+2023-08-09 Version: 3.0.7
+- Generated csharp 2014-05-26 for Ecs.
+
 2023-05-25 Version: 3.0.6
 - DescribeDemands add PrivatePoolId.
 

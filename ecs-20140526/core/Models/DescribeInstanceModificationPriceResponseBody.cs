@@ -10,37 +10,47 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceModificationPriceResponseBody : TeaModel {
         /// <summary>
-        /// $.parameters[4].schema.enumValueTitles
+        /// Details about the prices and promotion rules.
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribeInstanceModificationPriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribeInstanceModificationPriceResponseBodyPriceInfo : TeaModel {
             /// <summary>
-            /// Queries the pricing information about newly attached subscription data disks or about the new instance types when you upgrade the configurations of unexpired subscription Elastic Compute Service (ECS) instances.
+            /// The price.
             /// </summary>
             [NameInMap("Price")]
             [Validation(Required=false)]
             public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice Price { get; set; }
             public class DescribeInstanceModificationPriceResponseBodyPriceInfoPrice : TeaModel {
+                /// <summary>
+                /// The currency unit.
+                /// 
+                /// Alibaba Cloud China site (aliyun.com): CNY
+                /// 
+                /// Alibaba Cloud International site (alibabacloud.com): USD
+                /// </summary>
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// WB01405484
+                /// The discount.
                 /// </summary>
                 [NameInMap("DiscountPrice")]
                 [Validation(Required=false)]
                 public float? DiscountPrice { get; set; }
 
                 /// <summary>
-                /// DescribeInstanceModificationPrice
+                /// The original price.
                 /// </summary>
                 [NameInMap("OriginalPrice")]
                 [Validation(Required=false)]
                 public float? OriginalPrice { get; set; }
 
+                /// <summary>
+                /// The transaction price, which is equal to the original price minus the discount.
+                /// </summary>
                 [NameInMap("TradePrice")]
                 [Validation(Required=false)]
                 public float? TradePrice { get; set; }
@@ -48,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// $.parameters[5].schema.description
+            /// The promotion rules.
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
@@ -59,14 +69,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public List<DescribeInstanceModificationPriceResponseBodyPriceInfoRulesRule> Rule { get; set; }
                 public class DescribeInstanceModificationPriceResponseBodyPriceInfoRulesRule : TeaModel {
                     /// <summary>
-                    /// $.parameters[5].schema.example
+                    /// The description of the promotion rule.
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// $.parameters[5].schema.enumValueTitles
+                    /// The ID of the promotion rule.
                     /// </summary>
                     [NameInMap("RuleId")]
                     [Validation(Required=false)]
@@ -79,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// $.parameters[4].schema.example
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

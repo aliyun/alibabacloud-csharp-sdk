@@ -27,6 +27,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string AliyunId { get; set; }
 
+                /// <summary>
+                /// The time when the image was shared. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
+                /// </summary>
                 [NameInMap("SharedTime")]
                 [Validation(Required=false)]
                 public string SharedTime { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeCapacityReservationInstancesResponseBody : TeaModel {
         /// <summary>
-        /// Details about the instances that match the capacity reservation.
+        /// The instance ID.
         /// </summary>
         [NameInMap("CapacityReservationItem")]
         [Validation(Required=false)]
@@ -20,9 +20,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet> InstanceIdSet { get; set; }
             public class DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet : TeaModel {
-                /// <summary>
-                /// The instance ID.
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
@@ -32,28 +29,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The maximum number of entries returned per page.
+        /// Details about the instances that match the capacity reservation.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token used to start the next query.
+        /// The request ID.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// The maximum number of entries returned per page.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

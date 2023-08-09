@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePrefixListAssociationsResponseBody : TeaModel {
         /// <summary>
-        /// The query token that is returned in this call. If the return value is empty, no more data is returned.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// Details about the resources that are associated with the prefix list.
+        /// The ID of the resource.
         /// </summary>
         [NameInMap("PrefixListAssociations")]
         [Validation(Required=false)]
@@ -28,15 +28,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribePrefixListAssociationsResponseBodyPrefixListAssociationsPrefixListAssociation> PrefixListAssociation { get; set; }
             public class DescribePrefixListAssociationsResponseBodyPrefixListAssociationsPrefixListAssociation : TeaModel {
                 /// <summary>
-                /// The ID of the resource.
+                /// The type of the resource.
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
-                /// <summary>
-                /// The type of the resource.
-                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
@@ -46,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// Details about the resources that are associated with the prefix list.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

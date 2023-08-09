@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the secondary ENI. By default, all secondary ENIs that are bound to the specified instance are queried.
+        /// The secondary ENI ID. By default, all secondary ENIs that are bound to the specified instance are queried.
         /// </summary>
         [NameInMap("EniId")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The interval at which to retrieve monitored data. Unit: seconds. Valid values:
+        /// The interval at which to retrieve monitoring data. Unit: seconds. Valid values:
         /// 
         /// *   60
         /// *   600
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// The region ID of the secondary ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

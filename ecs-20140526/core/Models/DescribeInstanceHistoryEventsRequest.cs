@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeInstanceHistoryEventsRequestEventPublishTime EventPublishTime { get; set; }
         public class DescribeInstanceHistoryEventsRequestEventPublishTime : TeaModel {
             /// <summary>
-            /// The end time of the query for published system events. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// The end of the time range in which to query published system events. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
             /// </summary>
             [NameInMap("End")]
             [Validation(Required=false)]
             public string End { get; set; }
 
             /// <summary>
-            /// The start time of the query for published system events. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// The beginning of the time range in which to query published system events. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
             /// </summary>
             [NameInMap("Start")]
             [Validation(Required=false)]
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeInstanceHistoryEventsRequestNotBefore NotBefore { get; set; }
         public class DescribeInstanceHistoryEventsRequestNotBefore : TeaModel {
             /// <summary>
-            /// The end time of the scheduled execution of the system event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// The latest scheduled end time for the system event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
             /// </summary>
             [NameInMap("End")]
             [Validation(Required=false)]
             public string End { get; set; }
 
             /// <summary>
-            /// The start time of the scheduled execution of the system event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// The earliest scheduled start time for the system event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
             /// </summary>
             [NameInMap("Start")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The lifecycle state of the system event. This parameter is valid only when the InstanceEventCycleStatus.N parameter is not specified. Valid values:
+        /// The lifecycle state of the system event. This parameter takes effect only when InstanceEventCycleStatus.N is not specified. Valid values:
         /// 
         /// *   Scheduled
         /// *   Avoided
@@ -65,41 +65,41 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EventCycleStatus { get; set; }
 
         /// <summary>
-        /// An array that consists of the IDs of system events. Valid values of N: 1 to 100. Specify multiple event IDs in the repeated list form.
+        /// The ID of system event N. Valid values of N: 1 to 100. You can repeat this parameter to pass multiple values.
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
         public List<string> EventId { get; set; }
 
         /// <summary>
-        /// The type of the system event. This parameter is valid only when the InstanceEventType.N parameter is not specified. Valid values:
+        /// The type of the system event. This parameter takes effect only when InstanceEventType.N is not specified. Valid values:
         /// 
         /// *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
         /// *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
-        /// *   SystemFailure.Reboot: The instance is restarted due to a system failure.
+        /// *   SystemFailure.Reboot: The instance is restarted due to a system error.
         /// *   SystemFailure.Redeploy: The instance is redeployed due to a system error.
         /// *   SystemFailure.Delete: The instance is released due to an instance creation failure.
         /// *   InstanceFailure.Reboot: The instance is restarted due to an instance error.
-        /// *   InstanceExpiration.Stop: The instance is stopped due to subscription expiration.
-        /// *   InstanceExpiration.Delete: The instance is released due to subscription expiration.
+        /// *   InstanceExpiration.Stop: The subscription instance is stopped due to expiration.
+        /// *   InstanceExpiration.Delete: The subscription instance is released due to expiration.
         /// *   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.
         /// *   AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.
         /// 
-        /// > For more information, see [Overview](~~66574~~). The values of this parameter are applicable only to instance-level system events, but not to disk-level system events.
+        /// >  For more information, see [Overview](~~66574~~). The values of this parameter are applicable only to instance system events, but not to disk system events.
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
 
         /// <summary>
-        /// > This parameter is unavailable.
+        /// >  This parameter is not publicly available.
         /// </summary>
         [NameInMap("ImpactLevel")]
         [Validation(Required=false)]
         public string ImpactLevel { get; set; }
 
         /// <summary>
-        /// An array that consists of the lifecycle states of system events. Valid values of N: 1 to 7. Specify multiple states in the repeated list form. Valid values:
+        /// The lifecycle state of system event N. Valid values of N: 1 to 7. You can repeat this parameter to pass multiple values. Valid values:
         /// 
         /// *   Scheduled
         /// *   Avoided
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceEventCycleStatus { get; set; }
 
         /// <summary>
-        /// The type of system event N. Valid values of N: 1 to 30. Specify multiple types in the repeated list form. Valid values:
+        /// The type of system event N. Valid values of N: 1 to 30. You can repeat this parameter to pass multiple values. Valid values:
         /// 
         /// *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
         /// *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
@@ -122,19 +122,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   SystemFailure.Redeploy: The instance is redeployed due to a system error.
         /// *   SystemFailure.Delete: The instance is released due to an instance creation failure.
         /// *   InstanceFailure.Reboot: The instance is restarted due to an instance error.
-        /// *   InstanceExpiration.Stop: The instance is stopped due to subscription expiration.
-        /// *   InstanceExpiration.Delete: The instance is released due to subscription expiration.
+        /// *   InstanceExpiration.Stop: The subscription instance is stopped due to expiration.
+        /// *   InstanceExpiration.Delete: The subscription instance is released due to expiration.
         /// *   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.
         /// *   AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.
         /// 
-        /// > For more information, see [Overview](~~66574~~). The values of this parameter are applicable only to instance system events, but not to disk system events.
+        /// >  For more information, see [Overview](~~66574~~). The values of this parameter are applicable only to instance system events, but not to disk system events.
         /// </summary>
         [NameInMap("InstanceEventType")]
         [Validation(Required=false)]
         public List<string> InstanceEventType { get; set; }
 
         /// <summary>
-        /// The ID of the instance. If this parameter is not specified, the system events of all instances within the specified region are queried.
+        /// The ID of the instance. If this parameter is not specified, the system events of all instances in the specified region are queried.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be a positive integer.
+        /// The page number. Pages start from page 1.
         /// 
         /// Default value: 1.
         /// </summary>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 1 to 100.
+        /// The number of entries per page. Valid values: 1 to 100.
         /// 
         /// Default value: 10.
         /// </summary>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the resource. You can call [DescribeRegions](~~25609~~) to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -181,15 +181,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of resource N. Valid values of N: 1 to 100. Specify multiple resource IDs in the repeated list form. Valid values:
+        /// The ID of resource N. Valid values of N: 1 to 100. You can repeat this parameter to pass multiple values. Valid values:
         /// 
-        /// *   When the `ResourceType` parameter is set to instance, the ResourceId.N parameter specifies the ID of instance N.
-        /// *   When the `ResourceType` parameter is set to ddh, the ResourceId.N parameter specifies the ID of dedicated host N.
-        /// *   When the `ResourceType` parameter is set to managedhost, the ResourceId.N parameter specifies the ID of physical machine N in a smart hosting pool.
+        /// *   When `ResourceType` is set to instance, ResourceId.N specifies the ID of instance N.
+        /// *   When `ResourceType` is set to ddh, ResourceId.N specifies the ID of dedicated host N.
+        /// *   When `ResourceType` is set to managedhost, ResourceId.N specifies the ID of physical machine N from a smart hosting pool.
         /// 
-        /// If this parameter is not specified, the system events of all resources of the resource type specified by `ResourceType` within the region specified by `RegionId` are queried.
+        /// If this parameter is not specified, the system events of all resources of the type specified by `ResourceType` in the region specified by `RegionId` are queried.
         /// 
-        /// > We recommend that you use the `ResourceId.N` parameter to specify one or more resource IDs. If you specify both the ` ResourceId.N  `and `InstanceId` parameters, the `ResourceId.N` parameter takes precedence by default.
+        /// >  We recommend that you use `ResourceId.N` to specify one or more resource IDs. If you specify both `ResourceId.N` and `InstanceId`, `ResourceId.N` takes precedence by default.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -204,9 +204,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of resource. Valid values:
+        /// The type of the resource. Valid values:
         /// 
-        /// *   instance: Elastic Compute Service (ECS) instance
+        /// *   instance: ECS instance
         /// *   ddh: dedicated host
         /// *   managehost: physical machine in a smart hosting pool
         /// 
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// An array that consists of the tags that are supported by system events.
+        /// The list of tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The IDs of diagnostic metrics.
+        /// The ID of diagnostic metric N.
         /// </summary>
         [NameInMap("MetricIds")]
         [Validation(Required=false)]

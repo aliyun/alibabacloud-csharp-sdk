@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDiskResponseBody : TeaModel {
         /// <summary>
-        /// The cloud disk ID.
+        /// The disk ID.
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]

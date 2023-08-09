@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// The ID of diagnostic metric set N.
+        /// </summary>
         [NameInMap("MetricSetIds")]
         [Validation(Required=false)]
         public List<string> MetricSetIds { get; set; }

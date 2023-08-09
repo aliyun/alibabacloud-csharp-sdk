@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeEniMonitorDataResponseBody : TeaModel {
         /// <summary>
-        /// Details about the monitored data of the ENI.
+        /// The details about the monitoring data of the secondary ENI.
         /// </summary>
         [NameInMap("MonitorData")]
         [Validation(Required=false)]
@@ -35,21 +35,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string DropPacketTx { get; set; }
 
                 /// <summary>
-                /// The ID of the secondary ENI.
+                /// The secondary ENI ID.
                 /// </summary>
                 [NameInMap("EniId")]
                 [Validation(Required=false)]
                 public string EniId { get; set; }
 
                 /// <summary>
-                /// The average rate of data traffic received by the secondary ENI over the internal network. Unit: Kbit/s.
+                /// The average rate of data received by the secondary ENI over the internal network. Unit: Kbit/s.
                 /// </summary>
                 [NameInMap("IntranetRx")]
                 [Validation(Required=false)]
                 public string IntranetRx { get; set; }
 
                 /// <summary>
-                /// The average rate of data traffic sent by the secondary ENI over the internal network. Unit: Kbit/s.
+                /// The average rate of data sent by the secondary ENI over the internal network. Unit: Kbit/s.
                 /// </summary>
                 [NameInMap("IntranetTx")]
                 [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string PacketTx { get; set; }
 
                 /// <summary>
-                /// The timestamp of the monitored data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+                /// The timestamp to query the monitoring data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
@@ -81,14 +81,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// The total number of entries returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

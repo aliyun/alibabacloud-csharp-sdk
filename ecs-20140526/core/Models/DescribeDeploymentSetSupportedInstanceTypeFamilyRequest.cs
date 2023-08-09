@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -32,6 +32,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The deployment strategy. Valid values:
+        /// 
+        /// *   Availability: high availability strategy.
+        /// *   AvailabilityGroup: high availability group strategy.
+        /// *   LowLatency: low latency strategy.
+        /// 
+        /// Default value: Availability.
+        /// </summary>
         [NameInMap("Strategy")]
         [Validation(Required=false)]
         public string Strategy { get; set; }

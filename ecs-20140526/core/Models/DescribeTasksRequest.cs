@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number of the page to return.
+        /// The number of the page to return.
         /// 
-        /// Pages start from page 1.
+        /// Page start from page 1.
         /// 
         /// Default value: 1.
         /// </summary>
@@ -53,6 +53,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// The ID of resource N that is associated with the task. Valid values of N: 1 to 100.
+        /// 
+        /// *   If TaskAction is set to ImportImage or ExportImage, set the resource ID to an image ID.
+        /// *   If TaskAction is set to RedeployInstance, set the resource ID to an Elastic Compute Service (ECS) instance ID.
+        /// *   If TaskAction is set to ModifyDiskSpec, set the resource ID to a disk ID.
+        /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public List<string> ResourceIds { get; set; }
@@ -85,20 +92,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TaskAction { get; set; }
 
         /// <summary>
-        /// The IDs of the tasks. You can specify up to 100 tasks at a time. Separate multiple task IDs with commas (,).
+        /// The ID of the task. You can specify up to 100 task IDs at a time. Separate the task IDs with commas (,).
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]
         public string TaskIds { get; set; }
 
         /// <summary>
-        /// The status of the task. Valid values:
+        /// The state of the task. Valid values:
         /// 
         /// *   Finished
         /// *   Processing
         /// *   Failed
         /// 
-        /// This parameter has no default value.
+        /// This parameter is empty by default.
         /// 
         /// >  The system only retrieves tasks in the Finished, Processing, and Failed states and ignores other values.
         /// </summary>

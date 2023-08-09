@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSendFileResultsRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance whose records you want to query.
+        /// The ID of the instance for which you want to query file sending records.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// The name of the file whose records you want to query.
+        /// The name of the file whose sending records you want to query.
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number of the page to return.
+        /// The page number.
         /// 
         /// Pages start from page 1.
         /// 
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// 
-        /// Maximum value: 50.
+        /// Valid values: 1 to 50.
         /// 
         /// Default value: 10.
         /// </summary>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the ECS instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group. After you set this parameter, you need to specify ResourceGroupId when you send files to query the file sending results in the specified resource group.
+        /// The ID of the resource group. After you set this parameter, file sending results in the specified resource group are queried.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -82,14 +82,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The tags list.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeSendFileResultsRequestTag> Tag { get; set; }
         public class DescribeSendFileResultsRequestTag : TeaModel {
+            /// <summary>
+            /// The key of tag N of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+            /// 
+            /// If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.
+            /// 
+            /// The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// The value of tag N of the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

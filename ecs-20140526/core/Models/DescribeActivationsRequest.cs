@@ -10,22 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeActivationsRequest : TeaModel {
         /// <summary>
-        /// The page number of the page to return.
-        /// 
-        /// Pages start from page 1.
-        /// 
-        /// Default value: 1.
+        /// The ID of the activation code.
         /// </summary>
         [NameInMap("ActivationId")]
         [Validation(Required=false)]
         public string ActivationId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
-        /// 
-        /// Maximum value: 50.
-        /// 
-        /// Default value: 10.
+        /// The default instance name prefix.
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
@@ -40,21 +32,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// An array that consists of the tags of the activation code.
+        /// The page number.
+        /// 
+        /// Pages start from page 1.
+        /// 
+        /// Default value: 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The information about the tag of the activation code.
+        /// The number of entries per page.
+        /// 
+        /// Valid values: 1 to 50.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The default instance name prefix.
+        /// The region ID of the command. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
+        /// 
+        /// You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -69,25 +71,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The key of tag N of the activation code. Valid values of N: 1 to 20. The tag key cannot be an empty string.
-        /// 
-        /// Up to 1,000 resources that have the specified tags can be returned in the response. To query more than 1,000 resources that have the specified tags, call the [ListTagResources](~~110425~~) operation.
-        /// 
-        /// The tag key is up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+        /// The tags of the activation code.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeActivationsRequestTag> Tag { get; set; }
         public class DescribeActivationsRequestTag : TeaModel {
             /// <summary>
-            /// The number of entries to return on each page.
+            /// The key of tag N of the activation code. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+            /// 
+            /// If a single tag is specified to query resources, up to 1,000 resources that have this tag can be returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags can be returned. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.
+            /// 
+            /// The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The ID of the request.
+            /// The value of tag N of the activation code. Valid values of N: 1 to 20. The tag value can be an empty string.
+            /// 
+            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelinesRequest : TeaModel {
         /// <summary>
-        /// The IDs of the image templates. You can specify at most 20 IDs.
+        /// The ID of image template N. Valid values of N: 1 to 20.
         /// </summary>
         [NameInMap("ImagePipelineId")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
         /// 
-        /// > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+        /// >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -71,6 +71,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// The key of tag N of the image template. Valid values of N: 1 to 20.
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeImagePipelinesRequestTag> Tag { get; set; }

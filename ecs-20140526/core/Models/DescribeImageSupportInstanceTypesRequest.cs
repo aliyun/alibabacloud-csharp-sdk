@@ -9,29 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageSupportInstanceTypesRequest : TeaModel {
+        /// <summary>
+        /// The scenario in which you want to use the image. Valid values:
+        /// 
+        /// - CreateEcs (default): instance creation
+        /// - ChangeOS: replacement of the system disk or operating system
+        /// </summary>
         [NameInMap("ActionType")]
         [Validation(Required=false)]
         public string ActionType { get; set; }
 
         /// <summary>
-        /// The filters used to filter instance types.
+        /// The number of vCPUs of the instance type.
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeImageSupportInstanceTypesRequestFilter> Filter { get; set; }
         public class DescribeImageSupportInstanceTypesRequestFilter : TeaModel {
             /// <summary>
-            /// The key of filter N. Only the image ID can be used to filter instance types. Valid values:
-            /// 
-            /// *   imagId: image ID
-            /// *   filter: image ID
+            /// Filter N used to filter instance types.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of filter N.
+            /// The ID of the image.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -40,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the image.
+        /// The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// Details about the instance types that are supported by the image.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

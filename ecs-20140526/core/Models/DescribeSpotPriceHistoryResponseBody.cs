@@ -10,32 +10,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSpotPriceHistoryResponseBody : TeaModel {
         /// <summary>
-        /// The currency unit of the price.
-        /// 
-        /// Alibaba Cloud China site (aliyun.com): CNY.
-        /// 
-        /// Alibaba Cloud International site (alibabacloud.com): USD.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("Currency")]
         [Validation(Required=false)]
         public string Currency { get; set; }
 
         /// <summary>
-        /// The start line of the next page. It is the value of the `Offset` request parameter.
+        /// The currency unit of the price.
+        /// 
+        /// Alibaba Cloud China site (aliyun.com): CNY.
+        /// 
+        /// Alibaba Cloud International site (alibabacloud.com): USD.
         /// </summary>
         [NameInMap("NextOffset")]
         [Validation(Required=false)]
         public int? NextOffset { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The line from which the next query starts.
+        /// 
+        /// Default value: 0.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about the price history of the preemptible instance.
+        /// The start line of the next page. It is the value of the `Offset` request parameter.
         /// </summary>
         [NameInMap("SpotPrices")]
         [Validation(Required=false)]
@@ -45,50 +47,44 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType> SpotPriceType { get; set; }
             public class DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType : TeaModel {
-                /// <summary>
-                /// The instance type of the preemptible instance.
-                /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the preemptible instance is I/O optimized.
+                /// Details about the price history of the preemptible instance.
                 /// </summary>
                 [NameInMap("IoOptimized")]
                 [Validation(Required=false)]
                 public string IoOptimized { get; set; }
 
                 /// <summary>
-                /// The network type of the preemptible instance.
+                /// The time that corresponds to the queried spot price. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format.
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
-                /// <summary>
-                /// The price for a pay-as-you-go instance that has the same configurations as the preemptible instance.
-                /// </summary>
                 [NameInMap("OriginPrice")]
                 [Validation(Required=false)]
                 public float? OriginPrice { get; set; }
 
                 /// <summary>
-                /// The spot price (market price) of the preemptible instance.
+                /// The zone ID of the preemptible instance.
                 /// </summary>
                 [NameInMap("SpotPrice")]
                 [Validation(Required=false)]
                 public float? SpotPrice { get; set; }
 
                 /// <summary>
-                /// The time that corresponds to the queried spot price. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format.
+                /// The spot price (market price) of the preemptible instance.
                 /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
                 public string Timestamp { get; set; }
 
                 /// <summary>
-                /// The zone ID of the preemptible instance.
+                /// Indicates whether the preemptible instance is I/O optimized.
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

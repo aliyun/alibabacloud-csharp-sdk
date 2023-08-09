@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public float? CPUAdvanceCreditBalance { get; set; }
 
                 /// <summary>
-                /// The total CPU credits of the burstable instance.
+                /// The total number of CPU credits of the burstable instance.
                 /// </summary>
                 [NameInMap("CPUCreditBalance")]
                 [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? IOPSWrite { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -98,14 +98,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? InternetBandwidth { get; set; }
 
                 /// <summary>
-                /// The public data traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.
+                /// The Internet traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit.
                 /// </summary>
                 [NameInMap("InternetRX")]
                 [Validation(Required=false)]
                 public int? InternetRX { get; set; }
 
                 /// <summary>
-                /// The public data traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.
+                /// The Internet traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit.
                 /// </summary>
                 [NameInMap("InternetTX")]
                 [Validation(Required=false)]
@@ -119,14 +119,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? IntranetBandwidth { get; set; }
 
                 /// <summary>
-                /// The internal data traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.
+                /// The internal data traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit.
                 /// </summary>
                 [NameInMap("IntranetRX")]
                 [Validation(Required=false)]
                 public int? IntranetRX { get; set; }
 
                 /// <summary>
-                /// The internal data traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.
+                /// The internal data traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit.
                 /// </summary>
                 [NameInMap("IntranetTX")]
                 [Validation(Required=false)]

@@ -9,22 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RenewReservedInstancesResponseBody : TeaModel {
-        /// <summary>
-        /// The order ID.
-        /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The IDs of the reserved instances.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The IDs of the reserved instances.
+        /// The ID of the reserved instance.
         /// </summary>
         [NameInMap("ReservedInstanceIdSets")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeReservedInstanceAutoRenewAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The unit of the auto-renewal duration.
                 /// 
-                /// Valid value: Year.
+                /// Valid values: Year and Month.
                 /// </summary>
                 [NameInMap("PeriodUnit")]
                 [Validation(Required=false)]
                 public string PeriodUnit { get; set; }
 
                 /// <summary>
-                /// The auto-renewal state of the reserved instance. Valid values:
+                /// The auto-renewal status of the reserved instance. Valid values:
                 /// 
                 /// *   AutoRenewal: The reserved instance is automatically renewed.
                 /// *   Normal: You must manually renew the reserved instance.

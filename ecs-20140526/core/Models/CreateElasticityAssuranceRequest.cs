@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// The type of the private pool with which the elasticity assurance is associated. Valid values:
             /// 
             /// *   Open: open private pool
-            /// *   Target: targeted private pool
+            /// *   Target: specified private pool
             /// 
             /// Default value: Open.
             /// </summary>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MatchCriteria { get; set; }
 
             /// <summary>
-            /// The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+            /// The name of the elasticity assurance. The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. This value specifies that the elasticity assurance can be applied for an unlimited number of times within its effective period.
+        /// The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. This value indicates that the elasticity assurance can be applied an unlimited number of times within its effective period.
         /// 
         /// Default value: Unlimited.
         /// </summary>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AssuranceTimes { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+        /// The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the token, but make sure that the token is unique among requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
         /// 
-        /// By default, this parameter is empty.
+        /// This parameter is empty by default.
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The total number of instances of an instance type for which you want to reserve capacity.
+        /// The total number of instances for which the capacity of an instance type is reserved.
         /// 
         /// Valid values: 1 to 1000.
         /// </summary>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? InstanceAmount { get; set; }
 
         /// <summary>
-        /// > This parameter is no longer available.
+        /// > This parameter is no longer used.
         /// </summary>
         [NameInMap("InstanceCpuCoreCount")]
         [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// *   When the `PeriodUnit` parameter is set to `Month`, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
         /// *   When the `PeriodUnit` parameter is set to `Year`, the valid values are 1, 2, 3, 4, and 5.
         /// 
-        /// Default value: 1
+        /// Default value: 1.
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -144,21 +144,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The tags that are added to the elasticity assurance.
+        /// The tags to add to the elasticity assurance.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateElasticityAssuranceRequestTag> Tag { get; set; }
         public class CreateElasticityAssuranceRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length, but cannot contain `http://` or `https://`, nor start with `acs:` or `aliyun`.
+            /// The key of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length, but cannot contain `http://` or `https://`, nor start with `acs:`.
+            /// The value of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The zone ID of the elasticity assurance. Currently, an elasticity assurance can be used to reserve resources within a single zone.
+        /// The zone IDs of the elasticity assurances. Currently, an elasticity assurance can be used to reserve resources within a single zone.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

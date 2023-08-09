@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceMaintenanceAttributesRequest : TeaModel {
         /// <summary>
-        /// The IDs of instances. You can specify the IDs of up to 100 instances.
+        /// The instance IDs. You can specify up to 100 instance IDs.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// The page number.
         /// 
         /// Pages start from page 1.
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 1 to 100.
+        /// The number of entries per page. Valid values: 1 to 100.
         /// 
         /// Default value: 10.
         /// </summary>

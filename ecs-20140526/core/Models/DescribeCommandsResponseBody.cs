@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeCommandsResponseBody : TeaModel {
         /// <summary>
-        /// The time when the command was created.
+        /// The queried commands.
         /// </summary>
         [NameInMap("Commands")]
         [Validation(Required=false)]
@@ -21,70 +21,70 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeCommandsResponseBodyCommandsCommand> Command { get; set; }
             public class DescribeCommandsResponseBodyCommandsCommand : TeaModel {
                 /// <summary>
-                /// Indicates whether the common command is of the latest version. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.
+                /// The category of the common command.
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// The category of the common command.
+                /// The Base64-encoded command content.
                 /// </summary>
                 [NameInMap("CommandContent")]
                 [Validation(Required=false)]
                 public string CommandContent { get; set; }
 
                 /// <summary>
-                /// The working directory of the command on the Elastic Compute Service (ECS) instance.
+                /// The command ID.
                 /// </summary>
                 [NameInMap("CommandId")]
                 [Validation(Required=false)]
                 public string CommandId { get; set; }
 
                 /// <summary>
-                /// The type of the command.
+                /// The time when the command was created.
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The version of the common command. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.
+                /// The command description.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The custom parameter names that are parsed from the command content specified when the command was created. If the custom parameter feature is not enabled, an empty list is returned.
+                /// Indicates whether the custom parameter feature was enabled for the command.
                 /// </summary>
                 [NameInMap("EnableParameter")]
                 [Validation(Required=false)]
                 public bool? EnableParameter { get; set; }
 
                 /// <summary>
-                /// The ID of the command.
+                /// The number of tasks created by using the command.
                 /// </summary>
                 [NameInMap("InvokeTimes")]
                 [Validation(Required=false)]
                 public int? InvokeTimes { get; set; }
 
                 /// <summary>
-                /// The name of the command.
+                /// Indicates whether the common command is of the latest version. If multiple common commands from the same provider (`Provider`) belong to the same category and share the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.
                 /// </summary>
                 [NameInMap("Latest")]
                 [Validation(Required=false)]
                 public bool? Latest { get; set; }
 
                 /// <summary>
-                /// Indicates whether the custom parameter feature was enabled for the command.
+                /// The command name.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// Details about the custom parameters.
+                /// The custom parameters.
                 /// </summary>
                 [NameInMap("ParameterDefinitions")]
                 [Validation(Required=false)]
@@ -95,21 +95,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition> ParameterDefinition { get; set; }
                     public class DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition : TeaModel {
                         /// <summary>
-                        /// The name of the custom parameter.
+                        /// The default value of the custom parameter.
                         /// </summary>
                         [NameInMap("DefaultValue")]
                         [Validation(Required=false)]
                         public string DefaultValue { get; set; }
 
                         /// <summary>
-                        /// Download path of the Cloud Assistant client installation package
+                        /// The description of the custom parameter.
                         /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// The valid values of the custom enumeration parameter.
+                        /// The name of the custom parameter.
                         /// </summary>
                         [NameInMap("ParameterName")]
                         [Validation(Required=false)]
@@ -129,7 +129,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// The description of the custom parameter.
+                        /// Indicates whether the custom parameter is required. Valid values:
+                        /// 
+                        /// *   true
+                        /// *   false
+                        /// 
+                        /// Default value: false.
                         /// </summary>
                         [NameInMap("Required")]
                         [Validation(Required=false)]
@@ -140,7 +145,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The custom parameter names that are parsed from the command content specified when the command was created. If the custom parameter feature is disabled, an empty list is returned.
+                /// The custom parameter names that are parsed from the command content specified when the command was being created. If the custom parameter feature is not enabled, an empty list is returned.
                 /// </summary>
                 [NameInMap("ParameterNames")]
                 [Validation(Required=false)]
@@ -153,14 +158,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The Base64-encoded command content.
+                /// The provider of the common command.
                 /// </summary>
                 [NameInMap("Provider")]
                 [Validation(Required=false)]
                 public string Provider { get; set; }
 
                 /// <summary>
-                /// The tags added to the command.
+                /// The tags of the command.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -171,12 +176,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeCommandsResponseBodyCommandsCommandTagsTag> Tag { get; set; }
                     public class DescribeCommandsResponseBodyCommandsCommandTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag value of the command.
+                        /// The key of the tag of the command.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
+                        /// <summary>
+                        /// The value of the tag of the command.
+                        /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         public string TagValue { get; set; }
@@ -186,28 +194,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The number of tasks created by using the command.
+                /// The timeout period.
                 /// </summary>
                 [NameInMap("Timeout")]
                 [Validation(Required=false)]
                 public long? Timeout { get; set; }
 
                 /// <summary>
-                /// The timeout period.
+                /// The command type.
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The provider of the common command.
+                /// The version of the common command. If multiple common commands from the same provider (`Provider`) belong to the same category and share the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public int? Version { get; set; }
 
                 /// <summary>
-                /// The description of the command.
+                /// The working directory of the command.
                 /// </summary>
                 [NameInMap("WorkingDir")]
                 [Validation(Required=false)]
@@ -218,28 +226,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The total number of the commands.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The number of the returned page.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about the commands.
+        /// The total number of commands.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

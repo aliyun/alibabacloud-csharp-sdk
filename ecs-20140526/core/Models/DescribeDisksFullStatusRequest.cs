@@ -14,18 +14,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeDisksFullStatusRequestEventTime EventTime { get; set; }
         public class DescribeDisksFullStatusRequestEventTime : TeaModel {
             /// <summary>
-            /// The end of the time range in which to query occurred events.
+            /// The end of the time range to query occurred events.
             /// 
-            /// The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is specified in UTC.
+            /// Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
             /// </summary>
             [NameInMap("End")]
             [Validation(Required=false)]
             public string End { get; set; }
 
             /// <summary>
-            /// The start of the time range in which to query occurred events.
+            /// The beginning of the time range to query occurred events.
             /// 
-            /// The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time specified in UTC.
+            /// Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
             /// </summary>
             [NameInMap("Start")]
             [Validation(Required=false)]
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> DiskId { get; set; }
 
         /// <summary>
-        /// The ID of the event. Valid values of N: 1 to 100.
+        /// The ID of event N. Valid values of N: 1 to 100.
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
         public List<string> EventId { get; set; }
 
         /// <summary>
-        /// The event type. Valid values:
+        /// The event type of the EBS device. Valid values:
         /// 
         /// *   Degraded: The performance of the EBS device is degraded.
         /// *   SeverelyDegraded: The performance of the EBS device is severely degraded.
@@ -63,8 +63,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// The health status of the EBS device. Valid values:
         /// 
         /// *   Impaired: The EBS device is damaged.
-        /// *   Warning: The performance of the EBS device may be degraded.
-        /// *   Initializing: The disk is being initialized.
+        /// *   Warning: The performance of the EBS device is degraded.
+        /// *   Initializing: The EBS device is being initialized.
         /// *   InsufficientData: The status cannot be determined due to insufficient data.
         /// *   NotApplicable: The EBS device cannot be used.
         /// </summary>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be a positive integer.
+        /// The page number. Pages start from page 1. The value must be a positive integer.
         /// 
         /// Default value: 1.
         /// </summary>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 1 to 100.
+        /// The number of entries per page. Valid values: 1 to 100.
         /// 
         /// Default value: 10.
         /// </summary>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the EBS device belongs. When you use this property to query resources, the number of resources that are contained in the specified resource group cannot exceed 1,000.
+        /// The ID of the resource group to which the EBS device belongs. If you configure this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -123,35 +123,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The lifecycle status of the EBS device. For more information, see [Disk status](~~25689~~). Valid values:
         /// 
-        /// *   In_use: The disk is in use.
-        /// *   Available: The disk can be attached.
-        /// *   Attaching: The disk is being attached.
-        /// *   Detaching: The disk is being detached.
-        /// *   Creating: The disk is being created.
-        /// *   ReIniting: The disk is being initialized.
+        /// *   In_use: The EBS device is in use.
+        /// *   Available: The EBS device can be attached.
+        /// *   Attaching: The EBS device is being attached.
+        /// *   Detaching: The EBS device is being detached.
+        /// *   Creating: The EBS device is being created.
+        /// *   ReIniting: The EBS device is being initialized.
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The tags of the instance.
+        /// The tags to add to the EBS device.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDisksFullStatusRequestTag> Tag { get; set; }
         public class DescribeDisksFullStatusRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N added to the EBS device. A key-value pair consists of a key specified by the Tag.N.Key parameter and a value specified by the `Tag.N.Value` parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.
+            /// The key of tag N to add to the EBS device. A key-value pair consists of a key specified by the Tag.N.Key parameter and a value specified by the `Tag.N.Value` parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.
             /// 
-            /// If a single tag is specified to query resources, up to 1,000 resources that have this tag added are returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added are returned.
+            /// Up to 1,000 resources with the specified tags can be returned in the response.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N added to the EBS device. A key-value pair consists of a key specified by the `Tag.N.Key` parameter and a value specified by the Tag.N.Value parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.
+            /// The value of tag N to add to the EBS device. A key-value pair consists of a key specified by the `Tag.N.Key` parameter and a value specified by the Tag.N.Value parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

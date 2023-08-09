@@ -23,23 +23,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The unit of currency for the bill.
                 /// 
-                /// Alibaba Cloud China site (aliyun.com): CNY.
+                /// Alibaba Cloud China site (aliyun.com): CNY
                 /// 
-                /// Alibaba Cloud International site (alibabacloud.com): USD.
+                /// Alibaba Cloud International site (alibabacloud.com): USD
                 /// </summary>
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// The cost value.
+                /// The charged amount.
                 /// </summary>
                 [NameInMap("Fee")]
                 [Validation(Required=false)]
                 public string Fee { get; set; }
 
                 /// <summary>
-                /// The ID of the dedicated host.
+                /// The IDs of the dedicated hosts.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the order.
+        /// The order ID.
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

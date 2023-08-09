@@ -28,6 +28,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult> LaunchResult { get; set; }
             public class CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult : TeaModel {
                 /// <summary>
+                /// The number of instances. Valid values: 1 to 100000.
+                /// </summary>
+                [NameInMap("Amount")]
+                [Validation(Required=false)]
+                public int? Amount { get; set; }
+
+                /// <summary>
                 /// The error code returned when the instance cannot be created.
                 /// </summary>
                 [NameInMap("ErrorCode")]

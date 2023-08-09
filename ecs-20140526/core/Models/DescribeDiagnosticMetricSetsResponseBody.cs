@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiagnosticMetricSetsResponseBody : TeaModel {
+        /// <summary>
+        /// A collection of diagnostic metrics.
+        /// </summary>
         [NameInMap("MetricSets")]
         [Validation(Required=false)]
         public List<DescribeDiagnosticMetricSetsResponseBodyMetricSets> MetricSets { get; set; }

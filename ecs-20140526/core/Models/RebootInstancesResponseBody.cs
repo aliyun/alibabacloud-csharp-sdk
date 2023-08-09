@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RebootInstancesResponseBody : TeaModel {
         /// <summary>
-        /// Details about the responses returned for the instances, which contain the state of each instance before and after the operation is called, and the results of the operation .
+        /// Details about the responses returned for the instances, which contain the status of each instance before and after the operation is called and the operation results.
         /// </summary>
         [NameInMap("InstanceResponses")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<RebootInstancesResponseBodyInstanceResponsesInstanceResponse> InstanceResponse { get; set; }
             public class RebootInstancesResponseBodyInstanceResponsesInstanceResponse : TeaModel {
                 /// <summary>
-                /// The error code returned for the instance. A return value of 200 indicates success. For more information, see the "Error codes" section in this topic.
+                /// The error code that is returned for the operation on the instance. The value 200 indicates that the operation is successful. For more information, see the "Error codes" section in this topic.
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
                 /// <summary>
-                /// The current state of the instance.
+                /// The current status of the instance.
                 /// </summary>
                 [NameInMap("CurrentStatus")]
                 [Validation(Required=false)]
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The error message for this instance operation. The return value \"Success\" indicates that this operation is successful. For more information, see the "Error codes" section in this topic.
+                /// The error message that is returned for the operation on the instance. The return value Success indicates that the operation is successful. For more information, see the "Error codes" section in this topic.
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// The state of the instance before the operation is called.
+                /// The status of the instance before the operation is called.
                 /// </summary>
                 [NameInMap("PreviousStatus")]
                 [Validation(Required=false)]

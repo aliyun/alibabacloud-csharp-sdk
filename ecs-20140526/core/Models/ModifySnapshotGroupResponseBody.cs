@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifySnapshotGroupResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The new description of the snapshot-consistent group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

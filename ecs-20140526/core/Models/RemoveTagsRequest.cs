@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The key of tag N of the resource. Valid values of N: 1 to 20. It cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.
+        /// The ID of the resource. For example, if you set ResourceType to instance, you must set this parameter to the ID of the related instance.
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -36,32 +36,43 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The key of tag N of the resource.
+        /// The type of the resource. Valid values:
         /// 
-        /// >  We recommend that you use the Tag.N.Key parameter to ensure future compatibility.
+        /// *   instance
+        /// *   disk
+        /// *   snapshot
+        /// *   image
+        /// *   securitygroup
+        /// *   volume
+        /// *   eni
+        /// *   ddh
+        /// *   keypair
+        /// *   launchtemplate
+        /// *   reservedinstance
+        /// *   snapshotpolicy
+        /// 
+        /// All values must be in lowercase.
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The value of tag N of the resource. Valid values of N: 1 to 20. It can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.
+        /// The tags.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<RemoveTagsRequestTag> Tag { get; set; }
         public class RemoveTagsRequestTag : TeaModel {
             /// <summary>
-            /// The value of tag N of the resource.
-            /// 
-            /// >  We recommend that you use the Tag.N.Value parameter to ensure future compatibility.
+            /// The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N of the resource. Valid values of N: 1 to 20. It can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.
+            /// The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag value cannot start with acs: or aliyun.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ImportKeyPairResponseBody : TeaModel {
         /// <summary>
-        /// The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716.
+        /// The fingerprint of the key pair. The MD5 message-digest algorithm is used based on the public key fingerprint format defined in RFC 4716.
         /// </summary>
         [NameInMap("KeyPairFingerPrint")]
         [Validation(Required=false)]

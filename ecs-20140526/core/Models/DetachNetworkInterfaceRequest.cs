@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DetachNetworkInterfaceRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance
+        /// The ID of the trunk ENI.
+        /// 
+        /// >  This parameter is unavailable for use.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the ENI.
+        /// The ID of the instance
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
@@ -32,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The ID of the ENI.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -47,9 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the trunk ENI.
-        /// 
-        /// >  This parameter is unavailable for use.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("TrunkNetworkInstanceId")]
         [Validation(Required=false)]

@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class JoinSecurityGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// The instance ID.
         /// 
-        /// > If this parameter is specified, the `NetworkInterfaceId` parameter cannot be specified.
+        /// > If you configure this parameter, you cannot configure `NetworkInterfaceId`.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the ENI.
+        /// The ENI ID.
         /// 
-        /// > If this parameter is specified, the `InstanceId` parameter cannot be specified.
+        /// > If you configure this parameter, you cannot configure `InstanceId`.
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance or ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// 
-        /// *   You do not need to specify a region ID when you add an instance to a security group.
-        /// *   You must specify a region ID when you add an ENI to a security group.
+        /// *   If you want to add an instance to a security group, you do not need to specify a region ID.
+        /// *   If you want to add an ENI to a security group, you must specify the region ID of the ENI.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the security group to which you want to add the instance or ENI. You can call the [DescribeSecurityGroups](~~25556~~) operation to query available security groups.
+        /// The ID of the security group. You can call the [DescribeSecurityGroups](~~25556~~) operation to query the most recent security group list.
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

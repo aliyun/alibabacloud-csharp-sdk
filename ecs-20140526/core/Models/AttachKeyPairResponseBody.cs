@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AttachKeyPairResponseBody : TeaModel {
         /// <summary>
-        /// The number of instances to which the key pair fails to be bound.
+        /// The number of instances to which the SSH key pair fails to be bound.
         /// </summary>
         [NameInMap("FailCount")]
         [Validation(Required=false)]
         public string FailCount { get; set; }
 
         /// <summary>
-        /// The names of the key pairs.
+        /// The name of the SSH key pair.
         /// </summary>
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeCloudAssistantStatusResponseBody : TeaModel {
         /// <summary>
-        /// The information about Cloud Assistant on the instances.
+        /// The installation states of Cloud Assistant Agent on the instances.
         /// </summary>
         [NameInMap("InstanceCloudAssistantStatusSet")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus> InstanceCloudAssistantStatus { get; set; }
             public class DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus : TeaModel {
                 /// <summary>
-                /// The number of tasks that were run by Cloud Assistant on the instance.
+                /// The number of tasks that Cloud Assistant was running on the instance.
                 /// </summary>
                 [NameInMap("ActiveTaskCount")]
                 [Validation(Required=false)]
@@ -38,28 +38,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CloudAssistantStatus { get; set; }
 
                 /// <summary>
-                /// The version number of the Cloud Assistant client. If the Cloud Assistant client is not installed or is not running, this parameter is left empty.
+                /// The version number of Cloud Assistant Agent. If Cloud Assistant Agent is not installed or is not running, this parameter is left empty.
                 /// </summary>
                 [NameInMap("CloudAssistantVersion")]
                 [Validation(Required=false)]
                 public string CloudAssistantVersion { get; set; }
 
                 /// <summary>
-                /// The instance ID
+                /// The ID of the instance.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The number of tasks that were completed by Cloud Assistant on the instance.
+                /// The number of tasks that Cloud Assistant completed on the instance.
                 /// </summary>
                 [NameInMap("InvocationCount")]
                 [Validation(Required=false)]
                 public long? InvocationCount { get; set; }
 
                 /// <summary>
-                /// The most recent heartbeat time value of Cloud Assistant. The value is updated once every minute.
+                /// The last heartbeat time of Cloud Assistant. The value is updated once every minute.
                 /// </summary>
                 [NameInMap("LastHeartbeatTime")]
                 [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string LastInvokedTime { get; set; }
 
                 /// <summary>
-                /// The operating system of the instance. Valid values:
+                /// The operating system type of the instance. Valid values:
                 /// 
                 /// *   Windows
                 /// *   Linux
@@ -94,14 +94,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of instances.
+        /// The total number of queried instances.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

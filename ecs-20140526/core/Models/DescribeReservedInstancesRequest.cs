@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// The locked mode of the instance. Valid values:
+        /// The reason why the instance is locked. Valid values:
         /// 
-        /// *   financial: Your account has one or more overdue payments or the reserved instance has expired.
+        /// *   financial: You have an overdue payment in your account, or the reserved instance has expired.
         /// *   security: The reserved instance is locked for security reasons.
         /// </summary>
         [NameInMap("LockReason")]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LockReason { get; set; }
 
         /// <summary>
-        /// The payment option for the reserved instance. Valid values:
+        /// The payment option of the reserved instances. Valid values:
         /// 
         /// *   No Upfront
         /// *   Partial Upfront
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number to return. Pages start from page 1.
+        /// The page number. Pages start from page 1.
         /// 
         /// Default value: 1.
         /// </summary>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Maximum value: 100.
+        /// The number of entries per page. Maximum value: 100.
         /// 
         /// Default value: 10.
         /// </summary>
@@ -83,21 +83,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the reserved instances. Valid values of N: 1 to 100.
+        /// The ID of reserved instance N. Valid values of N: 1 to 100.
         /// </summary>
         [NameInMap("ReservedInstanceId")]
         [Validation(Required=false)]
         public List<string> ReservedInstanceId { get; set; }
 
         /// <summary>
-        /// The reserved instance name.
+        /// The name of the reserved instance.
         /// </summary>
         [NameInMap("ReservedInstanceName")]
         [Validation(Required=false)]
@@ -112,10 +112,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The scope of reserved instance N. Valid values:
+        /// The scope of the reserved instances. Valid values:
         /// 
-        /// *   Region: regional
-        /// *   Zone: zonal
+        /// *   Region
+        /// *   Zone
         /// 
         /// Default value: Region.
         /// </summary>
@@ -136,23 +136,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// The tags list.
+        /// The tags to add to the instances.
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeReservedInstancesRequestTag> Tag { get; set; }
         public class DescribeReservedInstancesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N of the reserved instance. Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length. It cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+            /// The key of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.
             /// 
-            /// Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](~~110425~~) operation.
+            /// Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N that belongs to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain [http:// or https://.](http://https://。)
+            /// The value of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag value cannot start with acs:.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The zone ID of the reserved instance is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+        /// The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

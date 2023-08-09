@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// Details about preemptible instances in the zones of the specified region.
         /// 
-        /// > The returned values are sorted based on the historical percentages of average preemptible instance prices relative to pay-as-you-go instance prices for instance types.
+        /// > The return values are sorted based on the historical percentages of average prices of preemptible instances of the specified instance type relative to pay-as-you-go instance prices.
         /// </summary>
         [NameInMap("AvailableSpotZones")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone> AvailableSpotZone { get; set; }
             public class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone : TeaModel {
                 /// <summary>
-                /// Details about preemptible instances in the last 30 days, including release rates and percentages of average preemptible instance prices relative to pay-as-you-go instance prices.
+                /// Details about preemptible instances in the last 30 days, including the release rate of preemptible instances and percentages of average prices of preemptible instances relative to pay-as-you-go instance prices.
                 /// </summary>
                 [NameInMap("AvailableSpotResources")]
                 [Validation(Required=false)]
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource> AvailableSpotResource { get; set; }
                     public class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource : TeaModel {
                         /// <summary>
-                        /// The percentage of the average preemptible instance relative to the pay-as-you-go instance price in the last 30 days. Unit: percentage (%). Valid values: 1 to 100.
+                        /// The percentage of the average preemptible instance price relative to the pay-as-you-go instance price in the last 30 days. Unit: %. Valid values: 1 to 100.
                         /// 
-                        /// You can calculate the average preemptible instance price based on the returned value. For example, if the pay-as-you-go instance price is 1 and the returned value of this parameter is 20, the average preemptible instance price for the last 30 days is 0.2.
+                        /// You can calculate the average preemptible instance price based on the return value. For example, if the pay-as-you-go instance price is 1 and the return value of this parameter is 20, the average preemptible instance price in the last 30 days is 0.2.
                         /// </summary>
                         [NameInMap("AverageSpotDiscount")]
                         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string InstanceType { get; set; }
 
                         /// <summary>
-                        /// The release rate range of preemptible instances in the last 30 days, which corresponds to the ` InterruptionRate  `value. Valid values:
+                        /// The release rate range of preemptible instances in the last 30 days, which corresponds to the value of the `InterruptionRate` parameter. Valid values:
                         /// 
                         /// *   0-3%
                         /// *   3-5%
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string InterruptRateDesc { get; set; }
 
                         /// <summary>
-                        /// The average release rate of preemptible instances forn the last 30 days. Unit: percent (%).
+                        /// The average release rate of preemptible instances in the last 30 days. Unit: %.
                         /// </summary>
                         [NameInMap("InterruptionRate")]
                         [Validation(Required=false)]
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the region where the instance resides.
+        /// The region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

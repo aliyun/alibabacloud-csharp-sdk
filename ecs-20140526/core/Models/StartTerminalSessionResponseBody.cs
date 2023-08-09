@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StartTerminalSessionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the session.
+        /// The session ID.
         /// </summary>
         [NameInMap("SessionId")]
         [Validation(Required=false)]

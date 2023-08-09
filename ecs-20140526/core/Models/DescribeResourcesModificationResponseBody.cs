@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeResourcesModificationResponseBody : TeaModel {
         /// <summary>
-        /// Details about the available zones.
+        /// The information about the queried zones.
         /// </summary>
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZone> AvailableZone { get; set; }
             public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZone : TeaModel {
                 /// <summary>
-                /// Details about the resources available in the zone.
+                /// The resources that are available in the zone.
                 /// </summary>
                 [NameInMap("AvailableResources")]
                 [Validation(Required=false)]
@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource> AvailableResource { get; set; }
                     public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource : TeaModel {
+                        /// <summary>
+                        /// The resource types that resources can be changed to after the resources meet specified conditions.
+                        /// </summary>
                         [NameInMap("ConditionSupportedResources")]
                         [Validation(Required=false)]
                         public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResources ConditionSupportedResources { get; set; }
@@ -39,6 +42,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [Validation(Required=false)]
                             public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResource> ConditionSupportedResource { get; set; }
                             public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResource : TeaModel {
+                                /// <summary>
+                                /// The conditions.
+                                /// </summary>
                                 [NameInMap("Conditions")]
                                 [Validation(Required=false)]
                                 public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResourceConditions Conditions { get; set; }
@@ -47,6 +53,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                     [Validation(Required=false)]
                                     public List<DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResourceConditionsCondition> Condition { get; set; }
                                     public class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResourceConditionsCondition : TeaModel {
+                                        /// <summary>
+                                        /// The condition name. Valid value:
+                                        /// 
+                                        /// DiskCategory, which indicates a disk category change.
+                                        /// </summary>
                                         [NameInMap("Key")]
                                         [Validation(Required=false)]
                                         public string Key { get; set; }
@@ -55,26 +66,51 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                                 }
 
+                                /// <summary>
+                                /// The maximum resource specification value. This parameter is not returned if it has no value.
+                                /// </summary>
                                 [NameInMap("Max")]
                                 [Validation(Required=false)]
                                 public int? Max { get; set; }
 
+                                /// <summary>
+                                /// The minimum resource specification value. This parameter is not returned if it has no value.
+                                /// </summary>
                                 [NameInMap("Min")]
                                 [Validation(Required=false)]
                                 public int? Min { get; set; }
 
+                                /// <summary>
+                                /// The stock status of the resource. Valid values:
+                                /// 
+                                /// - Available
+                                /// - SoldOut
+                                /// </summary>
                                 [NameInMap("Status")]
                                 [Validation(Required=false)]
                                 public string Status { get; set; }
 
+                                /// <summary>
+                                /// The category of resource based on stock status. Valid values:
+                                /// 
+                                /// - WithStock: resources that are in sufficient stock
+                                /// - ClosedWithStock: resources that are in insufficient stock
+                                /// - WithoutStock: resources that are out of stock
+                                /// </summary>
                                 [NameInMap("StatusCategory")]
                                 [Validation(Required=false)]
                                 public string StatusCategory { get; set; }
 
+                                /// <summary>
+                                /// The resource specification unit. This parameter is not returned if it has no value.
+                                /// </summary>
                                 [NameInMap("Unit")]
                                 [Validation(Required=false)]
                                 public string Unit { get; set; }
 
+                                /// <summary>
+                                /// The resource type.
+                                /// </summary>
                                 [NameInMap("Value")]
                                 [Validation(Required=false)]
                                 public string Value { get; set; }
@@ -84,7 +120,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// Details about the resources.
+                        /// The information about the resources.
                         /// </summary>
                         [NameInMap("SupportedResources")]
                         [Validation(Required=false)]
@@ -109,7 +145,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 public int? Min { get; set; }
 
                                 /// <summary>
-                                /// The state of the resource. Valid values:
+                                /// The status of the resource. Valid values:
                                 /// 
                                 /// *   Available
                                 /// *   SoldOut
@@ -122,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 /// The category of resource based on stock status. Valid values:
                                 /// 
                                 /// *   WithStock: resources that are in sufficient stock
-                                /// *   ClosedWithStock: resources that are ininsufficient stock
+                                /// *   ClosedWithStock: resources that are in insufficient stock
                                 /// *   WithoutStock: resources that are out of stock
                                 /// </summary>
                                 [NameInMap("StatusCategory")]
@@ -137,7 +173,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 public string Unit { get; set; }
 
                                 /// <summary>
-                                /// The resource value.
+                                /// The resource type.
                                 /// </summary>
                                 [NameInMap("Value")]
                                 [Validation(Required=false)]
@@ -166,14 +202,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The region ID of the zone.
+                /// The ID of the region.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The state of the resource. Valid values:
+                /// The status of the resource. Valid values:
                 /// 
                 /// *   Available
                 /// *   SoldOut
@@ -205,7 +241,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

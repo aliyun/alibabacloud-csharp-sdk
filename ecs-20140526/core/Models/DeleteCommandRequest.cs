@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteCommandRequest : TeaModel {
-        /// <summary>
-        /// The ID of the command. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.
-        /// </summary>
         [NameInMap("CommandId")]
         [Validation(Required=false)]
         public string CommandId { get; set; }
@@ -25,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// $.parameters[1].schema.enumValueTitles
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

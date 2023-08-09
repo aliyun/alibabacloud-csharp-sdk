@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelineExecutionsResponseBody : TeaModel {
         /// <summary>
-        /// The details of the image creation task.
+        /// Details of the image creation task.
         /// </summary>
         [NameInMap("ImagePipelineExecution")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ImagePipelineId { get; set; }
 
                 /// <summary>
-                /// The data that is returned.
+                /// The data returned.
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -78,14 +78,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// *   SUCCESS
                 /// *   FAILED
                 /// *   CANCELLING
-                /// *   CANCELED
+                /// *   CANCELLED
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// > This parameter is unavailable.
+                /// > This parameter is not publicly available.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -96,14 +96,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag> Tag { get; set; }
                     public class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag : TeaModel {
                         /// <summary>
-                        /// > This parameter is unavailable.
+                        /// > This parameter is not publicly available.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// > This parameter is unavailable.
+                        /// > This parameter is not publicly available.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The number of entries per page.
+        /// The maximum number of entries per page.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

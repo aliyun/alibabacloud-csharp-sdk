@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceAutoRenewAttributeRequest : TeaModel {
         /// <summary>
-        /// The instance ID. You can specify up to 100 subscription instance IDs in a single request. Separate the instance IDs with commas (,).
+        /// The IDs of the instances. You can specify up to 100 subscription instance IDs in a single request. Separate multiple instance IDs with commas (,).
         /// 
-        /// > The `InstanceId` and `RenewalStatus` parameters cannot be left empty at the same time.
+        /// > `InstanceId` and `RenewalStatus` cannot be empty at the same time.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// The number of entries per page.
         /// 
-        /// Maximum value: 100.
+        /// Valid values: 1 to 100.
         /// 
         /// Default value: 10.
         /// </summary>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// *   AutoRenewal: Auto-renewal is enabled for the instance.
         /// *   Normal: Auto-renewal is disabled for the instance.
-        /// *   NotRenewal: The instance is not to be renewed. The system no longer sends expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](~~52843~~) operation to change its auto-renewal state to `Normal`. Then, you can manually renew the instance or enable auto-renewal for the instance.
+        /// *   NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](~~52843~~) operation to change its auto-renewal status to `Normal`. Then, you can manually renew the instance or enable auto-renewal for the instance.
         /// </summary>
         [NameInMap("RenewalStatus")]
         [Validation(Required=false)]

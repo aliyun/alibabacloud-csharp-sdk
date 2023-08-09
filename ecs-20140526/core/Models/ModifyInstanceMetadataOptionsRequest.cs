@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? HttpPutResponseHopLimit { get; set; }
 
         /// <summary>
-        /// Specifies whether to forcibly use the security hardening mode (IMDSv2) to access instance metadata. Valid values:
+        /// Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:
         /// 
-        /// *   optional: does not forcibly use the security hardening mode (IMDSv2).
-        /// *   required: forcibly uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
+        /// *   optional: does not forcefully use the security-enhanced mode (IMDSv2).
+        /// *   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
         /// 
         /// Default value: optional.
         /// 

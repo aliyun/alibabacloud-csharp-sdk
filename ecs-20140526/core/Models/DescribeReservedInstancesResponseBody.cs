@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeReservedInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The returned page number.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance> ReservedInstance { get; set; }
             public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance : TeaModel {
                 /// <summary>
-                /// Indicates the allocation status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:
+                /// Indicates the sharing status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:
                 /// 
                 /// *   allocated: The reserved instance is allocated to another account.
                 /// *   beAllocated: The reserved instance is allocated by another account.
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// The payment options for the reserved instance.
+                /// The payment option.
                 /// </summary>
                 [NameInMap("OfferingType")]
                 [Validation(Required=false)]
@@ -118,15 +118,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The operating system of the image used by the instance. Valid values:
                 /// 
-                /// *   Windows: Windows Server operating system
-                /// *   Linux: Linux and UNIX-like operating system
+                /// *   Windows
+                /// *   Linux
                 /// </summary>
                 [NameInMap("Platform")]
                 [Validation(Required=false)]
                 public string Platform { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the instance resides.
+                /// The region ID.
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -154,14 +154,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// Indicates range.
+                /// The scope.
                 /// </summary>
                 [NameInMap("Scope")]
                 [Validation(Required=false)]
                 public string Scope { get; set; }
 
                 /// <summary>
-                /// The validation time.
+                /// The effective time.
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// Details about the reserved instance tags.
+                /// Details about the tags of the reserved instance.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -186,14 +186,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag> Tag { get; set; }
                     public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag : TeaModel {
                         /// <summary>
-                        /// The key of the reserved instance tag N.
+                        /// The tag key.
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The value of the reserved instance tag N.
+                        /// The tag value.
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]

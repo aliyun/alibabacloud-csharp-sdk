@@ -218,6 +218,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string Size { get; set; }
 
+            /// <summary>
+            /// Specifies whether to enable the burst feature for the system disk. Valid values:
+            /// 
+            /// *   true
+            /// *   false
+            /// 
+            /// > This parameter is available only if you set `SystemDisk.Category` to `cloud_auto`.
+            /// </summary>
             [NameInMap("BurstingEnabled")]
             [Validation(Required=false)]
             public bool? BurstingEnabled { get; set; }
@@ -255,6 +263,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string KMSKeyId { get; set; }
 
+            /// <summary>
+            /// The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
+            /// 
+            /// Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
+            /// 
+            /// > This parameter is available only if you set the SystemDisk.Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
+            /// </summary>
             [NameInMap("ProvisionedIops")]
             [Validation(Required=false)]
             public long? ProvisionedIops { get; set; }
@@ -318,6 +333,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Rolearn { get; set; }
 
         }
+
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
 
         /// <summary>
         /// The time when to automatically release the pay-as-you-go instance. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.

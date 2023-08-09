@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.
+        /// A pagination token. It can be used in the next request to retrieve a new page of results.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about the snapshots.
+        /// The details about the snapshots.
         /// </summary>
         [NameInMap("Snapshots")]
         [Validation(Required=false)]
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSnapshotsResponseBodySnapshotsSnapshot> Snapshot { get; set; }
             public class DescribeSnapshotsResponseBodySnapshotsSnapshot : TeaModel {
                 /// <summary>
-                /// The snapshot type.
+                /// The type of the snapshot.
                 /// 
-                /// >  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.
+                /// >  This parameter will be deprecated in the future. We recommend that you use `InstantAccess` to ensure future compatibility.
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
@@ -81,8 +81,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// Indicates whether the instant access feature is enabled. Valid values:
                 /// 
-                /// *   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-                /// *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
+                /// *   true. This feature can be enabled only for enhanced SSDs (ESSDs).
+                /// *   false. The snapshot is a normal snapshot for which the instant access feature is disabled.
                 /// </summary>
                 [NameInMap("InstantAccess")]
                 [Validation(Required=false)]
@@ -126,21 +126,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Progress { get; set; }
 
                 /// <summary>
-                /// The remaining time required to create the snapshot. Unit: seconds.
+                /// The remaining time that is required to create the snapshot. Unit: seconds.
                 /// </summary>
                 [NameInMap("RemainTime")]
                 [Validation(Required=false)]
                 public int? RemainTime { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// The resource group ID.
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The retention period of the automatic snapshot. Unit: days.
+                /// The retention period of the automatic snapshot. Unit: day.
                 /// </summary>
                 [NameInMap("RetentionDays")]
                 [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string SnapshotId { get; set; }
 
                 /// <summary>
-                /// The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.
+                /// The display name of the snapshot. This parameter is returned only if a snapshot display name was specified when the snapshot was created.
                 /// </summary>
                 [NameInMap("SnapshotName")]
                 [Validation(Required=false)]
@@ -168,25 +168,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string SnapshotSN { get; set; }
 
                 /// <summary>
-                /// The type of snapshot. Valid values:
+                /// The type of the snapshot. Valid values:
                 /// 
-                /// *   auto or timer: automatic snapshot.
-                /// *   user: manual snapshot.
-                /// *   all: all snapshot types.
+                /// *   auto or timer: automatic snapshot
+                /// *   user: manual snapshot
+                /// *   all: all snapshot types
                 /// </summary>
                 [NameInMap("SnapshotType")]
                 [Validation(Required=false)]
                 public string SnapshotType { get; set; }
 
                 /// <summary>
-                /// The ID of the source disk. This parameter is retained even after the source disk is released.
+                /// The source disk ID. This parameter is retained even after the source disk is released.
                 /// </summary>
                 [NameInMap("SourceDiskId")]
                 [Validation(Required=false)]
                 public string SourceDiskId { get; set; }
 
                 /// <summary>
-                /// The capacity of the source disk for which the snapshot was created. Unit: GiB.
+                /// The capacity of the source disk. Unit: GiB.
                 /// </summary>
                 [NameInMap("SourceDiskSize")]
                 [Validation(Required=false)]
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string SourceRegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the source snapshot.
+                /// The source snapshot ID.
                 /// </summary>
                 [NameInMap("SourceSnapshotId")]
                 [Validation(Required=false)]
@@ -219,14 +219,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The type of the source disk.
                 /// 
-                /// > This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+                /// > This parameter will be deprecated in the future. We recommend that you use other parameters to ensure future compatibility.
                 /// </summary>
                 [NameInMap("SourceStorageType")]
                 [Validation(Required=false)]
                 public string SourceStorageType { get; set; }
 
                 /// <summary>
-                /// The snapshot status. Valid values:
+                /// The status of the snapshot. Valid values:
                 /// 
                 /// *   progressing
                 /// *   accomplished
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tags of the snapshot.
+                /// The tags.
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The total number of snapshots.
+        /// The total number of snapshots returned.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv4Prefix { get; set; }
 
         /// <summary>
-        /// The ID of the ENI.
+        /// The secondary private IP addresses to unassign.
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The secondary private IP addresses to unassign.
+        /// Secondary private IP address N to unassign Valid values of N: 1 to 10.
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public List<string> PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The ID of the ENI.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,14 +10,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageSupportInstanceTypesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the image.
+        /// The key of filter N. Only the image ID can be used to filter instance types. Valid values:
+        /// 
+        /// *   imagId: image ID
+        /// *   filter: image ID
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// Details about the instance types that are supported by the image.
+        /// {
+        ///     "RequestId": "CF661E2D-4AFE-4BCD-959A-A65E14416B44",
+        ///     "RegionId": "cn-hangzhou",
+        ///     "ImageId": "ubuntu_16_0402_64_20G_alibase_20180409.vhd",
+        ///     "InstanceTypes": {
+        ///         "InstanceType": [{
+        ///             "InstanceTypeId": "ecs.t1.xsmall",
+        ///             "CpuCoreCount": 1,
+        ///             "MemorySize": 0.5,
+        ///             "InstanceTypeFamily": "ecs.t1"
+        ///         },
+        ///         {
+        ///             "InstanceTypeId": "ecs.t1.small",
+        ///             "CpuCoreCount": 1,
+        ///             "MemorySize": 1,
+        ///             "InstanceTypeFamily": "ecs.t1"
+        ///         }]
+        ///     }
+        /// }
         /// </summary>
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
@@ -35,14 +56,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? CpuCoreCount { get; set; }
 
                 /// <summary>
-                /// The instance family.
+                /// DescribeImageSupportInstanceTypes
                 /// </summary>
                 [NameInMap("InstanceTypeFamily")]
                 [Validation(Required=false)]
                 public string InstanceTypeFamily { get; set; }
 
                 /// <summary>
-                /// The ID of the instance type.
+                /// Queries the instance types supported by an image.
                 /// </summary>
                 [NameInMap("InstanceTypeId")]
                 [Validation(Required=false)]
@@ -60,7 +81,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The region ID of the image.
+        /// {
+        ///     "RequestId": "CF661E2D-4AFE-4BCD-959A-A65E14416B44",
+        ///     "RegionId": "cn-hangzhou",
+        ///     "ImageId": "ubuntu_16_0402_64_20G_alibase_20180409.vhd",
+        ///     "InstanceTypes": {
+        ///         "InstanceType": [{
+        ///             "InstanceTypeId": "ecs.t1.xsmall",
+        ///             "CpuCoreCount": 1,
+        ///             "MemorySize": 0.5,
+        ///             "InstanceTypeFamily": "ecs.t1"
+        ///         },
+        ///         {
+        ///             "InstanceTypeId": "ecs.t1.small",
+        ///             "CpuCoreCount": 1,
+        ///             "MemorySize": 1,
+        ///             "InstanceTypeFamily": "ecs.t1"
+        ///         }]
+        ///     }
+        /// }
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeClassicLinkInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The details about the ClassicLink connections between the instances located in the classic network and the VPCs.
+        /// The details of the ClassicLink connections between the instances reside in the classic network and VPCs.
         /// </summary>
         [NameInMap("Links")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC.
+                /// The VPC ID.
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]

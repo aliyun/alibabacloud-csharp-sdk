@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeHpcClustersResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the HPC cluster.
+        /// The name of the HPC cluster.
         /// </summary>
         [NameInMap("HpcClusters")]
         [Validation(Required=false)]
@@ -25,15 +25,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The name of the HPC cluster.
+                /// The description of the HPC cluster.
                 /// </summary>
                 [NameInMap("HpcClusterId")]
                 [Validation(Required=false)]
                 public string HpcClusterId { get; set; }
 
-                /// <summary>
-                /// The description of the HPC cluster.
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -43,28 +40,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The total number of HPC clusters queried.
+        /// Details about the HPC clusters. The value is an array that consists of the information of each HPC cluster.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The page number.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The total number of HPC clusters.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about the HPC clusters. The value is an array that consists of the information of each HPC cluster.
+        /// The ID of the HPC cluster.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

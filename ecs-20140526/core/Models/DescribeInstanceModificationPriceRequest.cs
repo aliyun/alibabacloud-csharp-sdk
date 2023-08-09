@@ -14,7 +14,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeInstanceModificationPriceRequestSystemDisk SystemDisk { get; set; }
         public class DescribeInstanceModificationPriceRequestSystemDisk : TeaModel {
             /// <summary>
-            /// $.parameters[6].schema.enumValueTitles
+            /// The category of the system disk. You must specify this parameter only when you upgrade a non-I/O optimized instance of a retired instance type to an I/O optimized instance of an available instance type. For more information about instance types, see [Instance families](~~25378~~) and [Retired instance types](~~55263~~).
+            /// 
+            /// Valid values:
+            /// 
+            /// *   cloud_efficiency: ultra disk
+            /// *   cloud_ssd: standard SSD
+            /// 
+            /// This parameter is empty by default.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -23,28 +30,61 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// $.parameters[2].schema.description
+        /// The information about the data disk.
         /// </summary>
         [NameInMap("DataDisk")]
         [Validation(Required=false)]
         public List<DescribeInstanceModificationPriceRequestDataDisk> DataDisk { get; set; }
         public class DescribeInstanceModificationPriceRequestDataDisk : TeaModel {
             /// <summary>
-            /// $.parameters[4].schema.description
+            /// The category of data disk N. You can specify this parameter if you want to query the pricing information about newly attached subscription data disks. Valid values of N: 1 to 16. Valid values:
+            /// 
+            /// *   cloud_efficiency: ultra disk
+            /// *   cloud_ssd: standard SSD
+            /// *   cloud_essd: ESSD
+            /// *   cloud: basic disk
+            /// 
+            /// This parameter is empty by default.
+            /// 
+            /// > When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: `InstanceType` and `DataDisk.N.*`.
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
 
             /// <summary>
-            /// $.parameters[2].schema.example
+            /// The performance level of data disk N that is an enhanced SSD (ESSD). The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Valid values:
+            /// 
+            /// *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+            /// *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+            /// *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+            /// *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+            /// 
+            /// Default value: PL1.
+            /// 
+            /// For more information about ESSD performance levels, see [ESSDs](~~122389~~).
             /// </summary>
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// $.parameters[2].schema.enumValueTitles
+            /// The capacity of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:
+            /// 
+            /// *   Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.
+            /// 
+            /// *   Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.
+            /// 
+            /// *   Valid values when DataDisk.N.Category is set to cloud_essd: depends on the value of `DataDisk.N.PerformanceLevel`.
+            /// 
+            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.
+            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
+            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.
+            ///     *   Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.
+            /// 
+            /// *   Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.
+            /// 
+            /// The default value is the minimum capacity allowed for the specified data disk category.
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
@@ -53,14 +93,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// $.parameters[6].schema.description
+        /// The ID of the instance for which you want to query pricing information for a configuration upgrade.
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// $.parameters[6].schema.example
+        /// The new instance type. We recommend that you call the [DescribeResourcesModification](~~66187~~) operation to query the instance types available for configuration upgrades in a specified zone.
+        /// 
+        /// > When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: `InstanceType` and `DataDisk.N.*`.
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -75,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// $.parameters[6].schema.items.enumValueTitles
+        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

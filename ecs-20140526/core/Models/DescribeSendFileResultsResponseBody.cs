@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSendFileResultsResponseBody : TeaModel {
         /// <summary>
-        /// Details about the file sending records.
+        /// The queried file sending records.
         /// </summary>
         [NameInMap("Invocations")]
         [Validation(Required=false)]
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The content type of the file. Valid values:
                 /// 
-                /// *   PlainText: The file content is not encoded.
-                /// *   Base64: The file content is Base64-encoded.
+                /// *   PlainText
+                /// *   Base64
                 /// </summary>
                 [NameInMap("ContentType")]
                 [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The description.
+                /// The description of the file.
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -75,21 +75,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// The overall sending state of the file. The overall sending state of the file depends on its sending state on all the destination instances. Valid values:
                 /// 
-                /// *   Pending: The file is being verified or sent. If the sending state of the file on at least one instance is Pending, the overall sending state of the file is Pending.
-                /// 
-                /// *   Running: The file creation task is running on the instances. If the sending state of the file on at least one instance is Running, the overall sending state of the file is Running.
-                /// 
-                /// *   Success: If the sending state of the file on all the instances is Success, the overall sending state of the file is Success.
-                /// 
-                /// *   Failed: If the sending state of the file on all the instances is Failed, the overall sending state of the file is Failed. If the sending state of the file on one or more instances is one of the following values, the overall sending state of the file is Failed:
-                /// 
-                ///     *   Invalid: The file is invalid.
-                ///     *   Aborted: The file failed to be sent.
-                ///     *   Failed: The file failed to be created.
-                ///     *   Timeout: The file sending task timed out.
-                ///     *   Error: An error occurred while the file is being sent.
-                /// 
-                /// *   PartialFailed: The file was sent to some of the specified instances and failed to be sent to the others. The overall sending state of the file is PartialFailed only when its sending state is Success on some instances and is Failed on the others.
+                /// *   Pending: The file is being verified or sent.
+                /// *   Invalid: The file is invalid.
+                /// *   Running: The file is being sent to the instances.
+                /// *   Aborted: The file failed to be sent to the instances. To send a file to an instance, make sure that the instance is in the Running state and the file can be sent within 1 minute.
+                /// *   Success: The file is sent.
+                /// *   Failed: The file failed to be created on the instances.
+                /// *   Error: An error occurs and interrupts the file sending task.
+                /// *   Timeout: The file sending task times out.
+                /// *   Cancelled: The file sending task is canceled.
+                /// *   Stopping: The file sending task is being stopped.
+                /// *   Terminated: The file sending task is terminated.
                 /// </summary>
                 [NameInMap("InvocationStatus")]
                 [Validation(Required=false)]
@@ -103,7 +99,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InvokeId { get; set; }
 
                 /// <summary>
-                /// Details about the destination instances.
+                /// The destination instances.
                 /// </summary>
                 [NameInMap("InvokeInstances")]
                 [Validation(Required=false)]
@@ -124,14 +120,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         /// The error code returned when the file failed to be sent to the instance. Valid values:
                         /// 
                         /// *   Null: The file is sent to the instance.
-                        /// *   InstanceNotExists: The instance does not exist or was released.
-                        /// *   InstanceReleased: The instance was released while the file was being sent.
-                        /// *   InstanceNotRunning: The instance was not running when the file sending task was being created.
+                        /// *   InstanceNotExists: The instance does not exist or has been released.
+                        /// *   InstanceReleased: The instance is released while the file is being sent.
+                        /// *   InstanceNotRunning: The instance is not running when the file sending task is being created.
                         /// *   AccountNotExists: The specified account does not exist.
-                        /// *   ClientNotRunning: The Cloud Assistant client is not running.
-                        /// *   ClientNotResponse: The Cloud Assistant client is not responding.
-                        /// *   ClientIsUpgrading: The Cloud Assistant client is being upgraded.
-                        /// *   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.
+                        /// *   ClientNotRunning: Cloud Assistant Agent is not running.
+                        /// *   ClientNotResponse: Cloud Assistant Agent does not respond.
+                        /// *   ClientIsUpgrading: Cloud Assistant Agent is being upgraded.
+                        /// *   ClientNeedUpgrade: Cloud Assistant Agent needs to be upgraded.
                         /// *   DeliveryTimeout: The file sending task timed out.
                         /// *   FileCreateFail: The file failed to be created.
                         /// *   FileAlreadyExists: A file with the same name already exists in the specified directory.
@@ -139,6 +135,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         /// *   FileNameInvalid: The file name is invalid.
                         /// *   FilePathInvalid: The specified directory is invalid.
                         /// *   FileAuthorityInvalid: The specified permissions on the file are invalid.
+                        /// *   UserGroupNotExists: The specified user group does not exist.
                         /// </summary>
                         [NameInMap("ErrorCode")]
                         [Validation(Required=false)]
@@ -148,37 +145,39 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         /// The error message returned when the file failed to be sent or the file sending task failed to be executed. Valid values:
                         /// 
                         /// *   Null: The file is sent to the instance.
-                        /// *   the specified instance does not exists: The specified instance does not exist or was released.
-                        /// *   the instance has released when create task: The specified instance was released when the file was being sent.
-                        /// *   the instance is not running when create task: The specified instance was not running when the file sending task was being created.
-                        /// *   the specified account does not exists: The specified account does not exist.
-                        /// *   the aliyun service is not running on the instance: The Cloud Assistance client is not running.
-                        /// *   the aliyun service in the instance does not response: The Cloud Assistant client is not responding.
-                        /// *   the aliyun service in the instance is upgrading now: The Cloud Assistant client is being upgraded.
-                        /// *   the aliyun service in the instance need upgrade: The Cloud Assistant client needs to be upgraded.
-                        /// *   the command delivery has been timeout: The file sending task timed out.
-                        /// *   Unexpected error during creating: The file failed to be created.
-                        /// *   File already exists: A file with the same name already exists in the specified directory.
-                        /// *   File content error: The file content is invalid.
-                        /// *   File name is invalid: The file name is invalid.
-                        /// *   File path is invalid: The specified directory is invalid.
-                        /// *   Owner not exists: The owner of the file does not exist.
-                        /// *   Group not exists: The user group does not exist.
-                        /// *   Mode is invalid: The specified permissions on the file are invalid.
+                        /// *   the specified instance does not exists
+                        /// *   the specified instance has been released
+                        /// *   the instance is not running when create task
+                        /// *   the specified account does not exists
+                        /// *   the aliyun service is not running on the instance
+                        /// *   the aliyun service in the instance does not response
+                        /// *   the aliyun service in the instance is upgrading now
+                        /// *   the aliyun service in the instance need upgrade
+                        /// *   the command delivery has been timeout
+                        /// *   the file creation is failed due to unknown error
+                        /// *   the authority of file is invalid
+                        /// *   File content is empty
+                        /// *   the content of file is invalid
+                        /// *   File already exists
+                        /// *   File name is invalid
+                        /// *   File path is invalid
+                        /// *   Owner not exists
+                        /// *   Group not exists
+                        /// *   Mode is invalid
                         /// </summary>
                         [NameInMap("ErrorInfo")]
                         [Validation(Required=false)]
                         public string ErrorInfo { get; set; }
 
                         /// <summary>
-                        /// The time when the file sending task finished being executed.
+                        /// The time when the file sending task was completed.
                         /// </summary>
                         [NameInMap("FinishTime")]
                         [Validation(Required=false)]
                         public string FinishTime { get; set; }
 
                         /// <summary>
-                        /// The ID of the instance.
+                        /// The ID of the instance
                         /// </summary>
                         [NameInMap("InstanceId")]
                         [Validation(Required=false)]
@@ -199,7 +198,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string StartTime { get; set; }
 
                         /// <summary>
-                        /// The time when the execution status was last updated.
+                        /// The time when the task status was updated.
                         /// </summary>
                         [NameInMap("UpdateTime")]
                         [Validation(Required=false)]
@@ -223,6 +222,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Overwrite { get; set; }
 
+                /// <summary>
+                /// The tags of the file sending task.
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeSendFileResultsResponseBodyInvocationsInvocationTags Tags { get; set; }
@@ -231,10 +233,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeSendFileResultsResponseBodyInvocationsInvocationTagsTag> Tag { get; set; }
                     public class DescribeSendFileResultsResponseBodyInvocationsInvocationTagsTag : TeaModel {
+                        /// <summary>
+                        /// The tag key of the file sending task.
+                        /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
+                        /// <summary>
+                        /// The tag value of the file sending task.
+                        /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         public string TagValue { get; set; }
@@ -262,28 +270,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of file sending tasks.
+        /// The total number of file sending tasks queried.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

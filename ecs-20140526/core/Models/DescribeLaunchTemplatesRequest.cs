@@ -32,25 +32,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Pages start from page 1.
+        /// The number of entries to return on each page.
         /// 
-        /// Default value: 1.
+        /// Default value: 10.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.
         /// 
-        /// Default value: 10.
+        /// > Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The tags of the launch template.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -65,32 +65,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.
-        /// 
-        /// > Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.
+        /// The IDs of launch templates. You can specify up to 100 launch template IDs. You must specify LaunchTemplateId or LaunchTemplateName to determine a launch template.
         /// </summary>
         [NameInMap("TemplateResourceGroupId")]
         [Validation(Required=false)]
         public string TemplateResourceGroupId { get; set; }
 
         /// <summary>
-        /// The tags of the launch template.
+        /// The tag of the launch template.
         /// </summary>
         [NameInMap("TemplateTag")]
         [Validation(Required=false)]
         public List<DescribeLaunchTemplatesRequestTemplateTag> TemplateTag { get; set; }
         public class DescribeLaunchTemplatesRequestTemplateTag : TeaModel {
             /// <summary>
-            /// The key of tag N of the launch template. Valid values of N: 1 to 20.
-            /// 
-            /// Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](~~110425~~) operation.
+            /// The value of tag N of the launch template. Valid values of N: 1 to 20.
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N of the launch template. Valid values of N: 1 to 20.
+            /// The number of the page to return. Pages start from page 1.
+            /// 
+            /// Default value: 1.
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

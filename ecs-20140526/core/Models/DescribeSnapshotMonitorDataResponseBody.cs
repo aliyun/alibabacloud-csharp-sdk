@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotMonitorDataResponseBody : TeaModel {
         /// <summary>
-        /// Details about the monitoring data of snapshot sizes.
+        /// The monitoring data of snapshot sizes.
         /// </summary>
         [NameInMap("MonitorData")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint> DataPoint { get; set; }
             public class DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint : TeaModel {
                 /// <summary>
-                /// The snapshot size. Unit: bytes.
+                /// The total size of snapshots. Unit: bytes.
                 /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public long? Size { get; set; }
 
                 /// <summary>
-                /// The timestamp that corresponds to the snapshot size.
+                /// The timestamp that corresponds to a snapshot size.
                 /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]

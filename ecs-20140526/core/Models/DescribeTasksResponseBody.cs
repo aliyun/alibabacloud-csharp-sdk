@@ -62,6 +62,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string FinishedTime { get; set; }
 
+                /// <summary>
+                /// The ID of the resource.
+                /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
@@ -88,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
-                /// The status of the task.
+                /// The state of the task.
                 /// </summary>
                 [NameInMap("TaskStatus")]
                 [Validation(Required=false)]

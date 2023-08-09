@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeCapacityReservationInstancesRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class DescribeCapacityReservationInstancesRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// The ID of the capacity reservation.
+            /// The token used to start the next query.
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -23,18 +23,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The number of entries per page.
-        /// 
-        /// Maximum value: 100.
-        /// 
-        /// Default value: 10.
+        /// The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// The ID of the capacity reservation.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -49,7 +45,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+        /// The number of entries per page.
+        /// 
+        /// Maximum value: 100.
+        /// 
+        /// Default value: 10.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

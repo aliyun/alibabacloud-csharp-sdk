@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceMaintenanceAttributesResponseBody : TeaModel {
         /// <summary>
-        /// Details about the maintenance attributes.
+        /// The maintenance attributes.
         /// </summary>
         [NameInMap("MaintenanceAttributes")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string DefaultValue { get; set; }
 
                     /// <summary>
-                    /// Details about the supported maintenance actions.
+                    /// The supported maintenance actions.
                     /// </summary>
                     [NameInMap("SupportedValues")]
                     [Validation(Required=false)]
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// The current maintenance action. Valid values:
                     /// 
-                    /// *   Stop: The instance goes down.
-                    /// *   AutoRecover: The instance is automatically recovered.
-                    /// *   AutoRedeploy: Failover is performed on the instance, which may damage the data disks.
+                    /// *   Stop: stops the instance.
+                    /// *   AutoRecover: automatically recovers the instance.
+                    /// *   AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// The ID of the instance
+                /// The instance ID.
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// Details about the maintenance window.
+                /// The maintenance windows.
                 /// </summary>
                 [NameInMap("MaintenanceWindows")]
                 [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// Indicates whether an event notification was sent before instance shutdown.
+                /// Indicates whether an event notification was sent before maintenance.
                 /// </summary>
                 [NameInMap("NotifyOnMaintenance")]
                 [Validation(Required=false)]
@@ -108,21 +108,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// The page number.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// The number of entries per page.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
