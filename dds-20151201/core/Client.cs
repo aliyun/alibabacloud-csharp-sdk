@@ -460,8 +460,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * This operation is applicable to replica set instances or sharded cluster instances.
-          * >  After you confirm that the data recovery conditions are met by calling this operation, you can call the [CreateDBInstance](~~61763~~) operation to restore data to a new instance.
+          * You can call this operation to check whether an ApsaraDB for MongoDB instance meets the data recovery conditions.
           *
           * @param request CheckRecoveryConditionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -531,8 +530,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * This operation is applicable to replica set instances or sharded cluster instances.
-          * >  After you confirm that the data recovery conditions are met by calling this operation, you can call the [CreateDBInstance](~~61763~~) operation to restore data to a new instance.
+          * You can call this operation to check whether an ApsaraDB for MongoDB instance meets the data recovery conditions.
           *
           * @param request CheckRecoveryConditionRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -602,8 +600,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * This operation is applicable to replica set instances or sharded cluster instances.
-          * >  After you confirm that the data recovery conditions are met by calling this operation, you can call the [CreateDBInstance](~~61763~~) operation to restore data to a new instance.
+          * You can call this operation to check whether an ApsaraDB for MongoDB instance meets the data recovery conditions.
           *
           * @param request CheckRecoveryConditionRequest
           * @return CheckRecoveryConditionResponse
@@ -615,8 +612,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * This operation is applicable to replica set instances or sharded cluster instances.
-          * >  After you confirm that the data recovery conditions are met by calling this operation, you can call the [CreateDBInstance](~~61763~~) operation to restore data to a new instance.
+          * You can call this operation to check whether an ApsaraDB for MongoDB instance meets the data recovery conditions.
           *
           * @param request CheckRecoveryConditionRequest
           * @return CheckRecoveryConditionResponse
@@ -772,9 +768,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
-          * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
-          * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~61884~~) operation.
+          * Creates or clones an ApsaraDB for MongoDB replica set instance.
           *
           * @param request CreateDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -832,6 +826,14 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["DatabaseNames"] = request.DatabaseNames;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Encrypted))
+            {
+                query["Encrypted"] = request.Encrypted;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionKey))
+            {
+                query["EncryptionKey"] = request.EncryptionKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
@@ -916,6 +918,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["StorageType"] = request.StorageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
@@ -948,9 +954,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
-          * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
-          * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~61884~~) operation.
+          * Creates or clones an ApsaraDB for MongoDB replica set instance.
           *
           * @param request CreateDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1008,6 +1012,14 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["DatabaseNames"] = request.DatabaseNames;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Encrypted))
+            {
+                query["Encrypted"] = request.Encrypted;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionKey))
+            {
+                query["EncryptionKey"] = request.EncryptionKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
@@ -1092,6 +1104,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["StorageType"] = request.StorageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
@@ -1124,9 +1140,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
-          * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
-          * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~61884~~) operation.
+          * Creates or clones an ApsaraDB for MongoDB replica set instance.
           *
           * @param request CreateDBInstanceRequest
           * @return CreateDBInstanceResponse
@@ -1138,9 +1152,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
-          * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
-          * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~61884~~) operation.
+          * Creates or clones an ApsaraDB for MongoDB replica set instance.
           *
           * @param request CreateDBInstanceRequest
           * @return CreateDBInstanceResponse
@@ -1498,8 +1510,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-          * This operation is applicable only to sharded cluster instances.
+          * The ID of the request.
           *
           * @param request CreateNodeBatchRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1589,8 +1600,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-          * This operation is applicable only to sharded cluster instances.
+          * The ID of the request.
           *
           * @param request CreateNodeBatchRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1680,8 +1690,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-          * This operation is applicable only to sharded cluster instances.
+          * The ID of the request.
           *
           * @param request CreateNodeBatchRequest
           * @return CreateNodeBatchResponse
@@ -1693,8 +1702,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-          * This operation is applicable only to sharded cluster instances.
+          * The ID of the request.
           *
           * @param request CreateNodeBatchRequest
           * @return CreateNodeBatchResponse
@@ -1707,8 +1715,8 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * *   Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
-          * *   For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
-          * *   To create standalone and replica set instances, you can call the [CreateDBInstance](~~61763~~) operation.
+          * *   For more information about the instance types of ApsaraDB for MongoDB, see [Instance types](~~57141~~).
+          * *   To create standalone instances and replica set instances, you can call the [CreateDBInstance](~~61763~~) operation.
           *
           * @param request CreateShardingDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1741,6 +1749,14 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceDescription))
             {
                 query["DBInstanceDescription"] = request.DBInstanceDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Encrypted))
+            {
+                query["Encrypted"] = request.Encrypted;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionKey))
+            {
+                query["EncryptionKey"] = request.EncryptionKey;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
@@ -1829,6 +1845,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
             {
                 query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -1863,8 +1883,8 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * *   Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
-          * *   For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
-          * *   To create standalone and replica set instances, you can call the [CreateDBInstance](~~61763~~) operation.
+          * *   For more information about the instance types of ApsaraDB for MongoDB, see [Instance types](~~57141~~).
+          * *   To create standalone instances and replica set instances, you can call the [CreateDBInstance](~~61763~~) operation.
           *
           * @param request CreateShardingDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -1897,6 +1917,14 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceDescription))
             {
                 query["DBInstanceDescription"] = request.DBInstanceDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Encrypted))
+            {
+                query["Encrypted"] = request.Encrypted;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionKey))
+            {
+                query["EncryptionKey"] = request.EncryptionKey;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
@@ -1986,6 +2014,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["StorageType"] = request.StorageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
@@ -2019,8 +2051,8 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * *   Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
-          * *   For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
-          * *   To create standalone and replica set instances, you can call the [CreateDBInstance](~~61763~~) operation.
+          * *   For more information about the instance types of ApsaraDB for MongoDB, see [Instance types](~~57141~~).
+          * *   To create standalone instances and replica set instances, you can call the [CreateDBInstance](~~61763~~) operation.
           *
           * @param request CreateShardingDBInstanceRequest
           * @return CreateShardingDBInstanceResponse
@@ -2033,8 +2065,8 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /**
           * *   Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
-          * *   For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
-          * *   To create standalone and replica set instances, you can call the [CreateDBInstance](~~61763~~) operation.
+          * *   For more information about the instance types of ApsaraDB for MongoDB, see [Instance types](~~57141~~).
+          * *   To create standalone instances and replica set instances, you can call the [CreateDBInstance](~~61763~~) operation.
           *
           * @param request CreateShardingDBInstanceRequest
           * @return CreateShardingDBInstanceResponse
@@ -2046,10 +2078,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Ensure that the instance meets the following conditions when you call this operation:
+          * Before you call this operation, make sure that the instance meets the following requirements:
           * *   The instance is in the running state.
-          * *   The billing method of the instance is pay-as-you-go.
-          * >  After an instance is released, all the data in the instance is lost and cannot be retrieved. Exercise caution when you release instances.
+          * *   A pay-as-you-go instance is used.
+          * > After you release an ApsaraDB for MongoDB instance, data in the instance can no longer be recovered. Proceed with caution.
           *
           * @param request DeleteDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2107,10 +2139,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Ensure that the instance meets the following conditions when you call this operation:
+          * Before you call this operation, make sure that the instance meets the following requirements:
           * *   The instance is in the running state.
-          * *   The billing method of the instance is pay-as-you-go.
-          * >  After an instance is released, all the data in the instance is lost and cannot be retrieved. Exercise caution when you release instances.
+          * *   A pay-as-you-go instance is used.
+          * > After you release an ApsaraDB for MongoDB instance, data in the instance can no longer be recovered. Proceed with caution.
           *
           * @param request DeleteDBInstanceRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2168,10 +2200,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Ensure that the instance meets the following conditions when you call this operation:
+          * Before you call this operation, make sure that the instance meets the following requirements:
           * *   The instance is in the running state.
-          * *   The billing method of the instance is pay-as-you-go.
-          * >  After an instance is released, all the data in the instance is lost and cannot be retrieved. Exercise caution when you release instances.
+          * *   A pay-as-you-go instance is used.
+          * > After you release an ApsaraDB for MongoDB instance, data in the instance can no longer be recovered. Proceed with caution.
           *
           * @param request DeleteDBInstanceRequest
           * @return DeleteDBInstanceResponse
@@ -2183,10 +2215,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Ensure that the instance meets the following conditions when you call this operation:
+          * Before you call this operation, make sure that the instance meets the following requirements:
           * *   The instance is in the running state.
-          * *   The billing method of the instance is pay-as-you-go.
-          * >  After an instance is released, all the data in the instance is lost and cannot be retrieved. Exercise caution when you release instances.
+          * *   A pay-as-you-go instance is used.
+          * > After you release an ApsaraDB for MongoDB instance, data in the instance can no longer be recovered. Proceed with caution.
           *
           * @param request DeleteDBInstanceRequest
           * @return DeleteDBInstanceResponse
@@ -2844,9 +2876,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * *   The instance must be in the running state when you call this operation.
-          * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-          * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
+          * The role of the node in the instance. Valid values:
+          * *   **primary**
+          * *   **secondary**
           *
           * @param request DescribeAuditLogFilterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2904,9 +2936,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * *   The instance must be in the running state when you call this operation.
-          * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-          * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
+          * The role of the node in the instance. Valid values:
+          * *   **primary**
+          * *   **secondary**
           *
           * @param request DescribeAuditLogFilterRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -2964,9 +2996,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * *   The instance must be in the running state when you call this operation.
-          * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-          * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
+          * The role of the node in the instance. Valid values:
+          * *   **primary**
+          * *   **secondary**
           *
           * @param request DescribeAuditLogFilterRequest
           * @return DescribeAuditLogFilterResponse
@@ -2978,9 +3010,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * *   The instance must be in the running state when you call this operation.
-          * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-          * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
+          * The role of the node in the instance. Valid values:
+          * *   **primary**
+          * *   **secondary**
           *
           * @param request DescribeAuditLogFilterRequest
           * @return DescribeAuditLogFilterResponse
@@ -3349,6 +3381,218 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAuditRecordsWithOptionsAsync(request, runtime);
+        }
+
+        /**
+          * You can call this operation to query zones in which you can create an ApsaraDB for MongoDB instance.
+          *
+          * @param request DescribeAvailabilityZonesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAvailabilityZonesResponse
+         */
+        public DescribeAvailabilityZonesResponse DescribeAvailabilityZonesWithOptions(DescribeAvailabilityZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeSecondaryZoneId))
+            {
+                query["ExcludeSecondaryZoneId"] = request.ExcludeSecondaryZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeZoneId))
+            {
+                query["ExcludeZoneId"] = request.ExcludeZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
+            {
+                query["InstanceChargeType"] = request.InstanceChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MongoType))
+            {
+                query["MongoType"] = request.MongoType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSupport))
+            {
+                query["StorageSupport"] = request.StorageSupport;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAvailabilityZones",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAvailabilityZonesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /**
+          * You can call this operation to query zones in which you can create an ApsaraDB for MongoDB instance.
+          *
+          * @param request DescribeAvailabilityZonesRequest
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return DescribeAvailabilityZonesResponse
+         */
+        public async Task<DescribeAvailabilityZonesResponse> DescribeAvailabilityZonesWithOptionsAsync(DescribeAvailabilityZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeSecondaryZoneId))
+            {
+                query["ExcludeSecondaryZoneId"] = request.ExcludeSecondaryZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeZoneId))
+            {
+                query["ExcludeZoneId"] = request.ExcludeZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
+            {
+                query["InstanceChargeType"] = request.InstanceChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MongoType))
+            {
+                query["MongoType"] = request.MongoType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSupport))
+            {
+                query["StorageSupport"] = request.StorageSupport;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAvailabilityZones",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAvailabilityZonesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /**
+          * You can call this operation to query zones in which you can create an ApsaraDB for MongoDB instance.
+          *
+          * @param request DescribeAvailabilityZonesRequest
+          * @return DescribeAvailabilityZonesResponse
+         */
+        public DescribeAvailabilityZonesResponse DescribeAvailabilityZones(DescribeAvailabilityZonesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAvailabilityZonesWithOptions(request, runtime);
+        }
+
+        /**
+          * You can call this operation to query zones in which you can create an ApsaraDB for MongoDB instance.
+          *
+          * @param request DescribeAvailabilityZonesRequest
+          * @return DescribeAvailabilityZonesResponse
+         */
+        public async Task<DescribeAvailabilityZonesResponse> DescribeAvailabilityZonesAsync(DescribeAvailabilityZonesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAvailabilityZonesWithOptionsAsync(request, runtime);
         }
 
         public DescribeAvailableEngineVersionResponse DescribeAvailableEngineVersionWithOptions(DescribeAvailableEngineVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4734,11 +4978,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * >  For more information about this function, see [~~131048~~](~~131048~~)Configure TDE.
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   A replica set or sharded cluster instance is used.
-          * *   The storage engine of the instance is WiredTiger.
-          * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version of your instance is earlier than 4.0, you can call [UpgradeDBInstanceEngineVersion](~~67608~~) to upgrade the database engine.
+          * You can call this operation to query whether TDE is enabled for an ApsaraDB for MongoDB instance.
           *
           * @param request DescribeDBInstanceTDEInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4792,11 +5032,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * >  For more information about this function, see [~~131048~~](~~131048~~)Configure TDE.
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   A replica set or sharded cluster instance is used.
-          * *   The storage engine of the instance is WiredTiger.
-          * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version of your instance is earlier than 4.0, you can call [UpgradeDBInstanceEngineVersion](~~67608~~) to upgrade the database engine.
+          * You can call this operation to query whether TDE is enabled for an ApsaraDB for MongoDB instance.
           *
           * @param request DescribeDBInstanceTDEInfoRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -4850,11 +5086,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * >  For more information about this function, see [~~131048~~](~~131048~~)Configure TDE.
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   A replica set or sharded cluster instance is used.
-          * *   The storage engine of the instance is WiredTiger.
-          * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version of your instance is earlier than 4.0, you can call [UpgradeDBInstanceEngineVersion](~~67608~~) to upgrade the database engine.
+          * You can call this operation to query whether TDE is enabled for an ApsaraDB for MongoDB instance.
           *
           * @param request DescribeDBInstanceTDEInfoRequest
           * @return DescribeDBInstanceTDEInfoResponse
@@ -4866,11 +5098,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * >  For more information about this function, see [~~131048~~](~~131048~~)Configure TDE.
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   A replica set or sharded cluster instance is used.
-          * *   The storage engine of the instance is WiredTiger.
-          * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version of your instance is earlier than 4.0, you can call [UpgradeDBInstanceEngineVersion](~~67608~~) to upgrade the database engine.
+          * You can call this operation to query whether TDE is enabled for an ApsaraDB for MongoDB instance.
           *
           * @param request DescribeDBInstanceTDEInfoRequest
           * @return DescribeDBInstanceTDEInfoResponse
@@ -8282,7 +8510,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * Before you call this operation, make sure that the instance meets the following requirements:
           * *   The billing method of the instance is subscription.
           * *   The instance has expired and is in the **Locking** state.
           *
@@ -8350,7 +8578,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * Before you call this operation, make sure that the instance meets the following requirements:
           * *   The billing method of the instance is subscription.
           * *   The instance has expired and is in the **Locking** state.
           *
@@ -8418,7 +8646,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * Before you call this operation, make sure that the instance meets the following requirements:
           * *   The billing method of the instance is subscription.
           * *   The instance has expired and is in the **Locking** state.
           *
@@ -8432,7 +8660,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * Before you call this operation, make sure that the instance meets the following requirements:
           * *   The billing method of the instance is subscription.
           * *   The instance has expired and is in the **Locking** state.
           *
@@ -8446,7 +8674,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading an instance, or upgrading a single node of a sharded cluster instance.
+          * This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading a replica set or sharded cluster instance, or upgrading a single node of the sharded cluster instance.
           * > You can call this operation a maximum of 200 times per minute.
           *
           * @param request EvaluateResourceRequest
@@ -8537,7 +8765,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading an instance, or upgrading a single node of a sharded cluster instance.
+          * This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading a replica set or sharded cluster instance, or upgrading a single node of the sharded cluster instance.
           * > You can call this operation a maximum of 200 times per minute.
           *
           * @param request EvaluateResourceRequest
@@ -8628,7 +8856,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading an instance, or upgrading a single node of a sharded cluster instance.
+          * This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading a replica set or sharded cluster instance, or upgrading a single node of the sharded cluster instance.
           * > You can call this operation a maximum of 200 times per minute.
           *
           * @param request EvaluateResourceRequest
@@ -8641,7 +8869,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading an instance, or upgrading a single node of a sharded cluster instance.
+          * This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading a replica set or sharded cluster instance, or upgrading a single node of the sharded cluster instance.
           * > You can call this operation a maximum of 200 times per minute.
           *
           * @param request EvaluateResourceRequest
@@ -8784,10 +9012,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * ## Precautions
           * *   This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.
           * *   If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the [ReleasePublicNetworkAddress](~~67604~~) operation to release the public endpoint before you call the MigrateAvailableZone operation.
-          * *   Transparent data encryption (TDE) is disabled for the instance.
+          * *   Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.
           * *   The source zone and the destination zone belong to the same region.
           * *   A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see [Work with vSwitches](~~65387~~).
           *
@@ -8851,10 +9078,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * ## Precautions
           * *   This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.
           * *   If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the [ReleasePublicNetworkAddress](~~67604~~) operation to release the public endpoint before you call the MigrateAvailableZone operation.
-          * *   Transparent data encryption (TDE) is disabled for the instance.
+          * *   Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.
           * *   The source zone and the destination zone belong to the same region.
           * *   A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see [Work with vSwitches](~~65387~~).
           *
@@ -8918,10 +9144,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * ## Precautions
           * *   This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.
           * *   If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the [ReleasePublicNetworkAddress](~~67604~~) operation to release the public endpoint before you call the MigrateAvailableZone operation.
-          * *   Transparent data encryption (TDE) is disabled for the instance.
+          * *   Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.
           * *   The source zone and the destination zone belong to the same region.
           * *   A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see [Work with vSwitches](~~65387~~).
           *
@@ -8935,10 +9160,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * ## Precautions
           * *   This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.
           * *   If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the [ReleasePublicNetworkAddress](~~67604~~) operation to release the public endpoint before you call the MigrateAvailableZone operation.
-          * *   Transparent data encryption (TDE) is disabled for the instance.
+          * *   Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.
           * *   The source zone and the destination zone belong to the same region.
           * *   A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see [Work with vSwitches](~~65387~~).
           *
@@ -10460,6 +10684,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["VpcId"] = request.VpcId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -10533,6 +10761,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
                 query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10954,10 +11186,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * TDE can be used to perform real-time I/O encryption and decryption on data files. Data is encrypted before being written to disks, and decrypted before being read from disks to the memory. For more information, see [Configure TDE](~~131048~~).
-          * >  After TDE is enabled, it cannot be disabled.
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   A replica set or sharded cluster instance is used.
+          * TDE allows you to perform real-time I/O encryption and decryption on data files. Data is encrypted before it is written to a disk and is decrypted when it is read from the disk to the memory. For more information, see [Configure TDE](~~131048~~).
+          * > You cannot disable TDE after it is enabled.
+          * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * *   The instance is a replica set or sharded cluster instance.
           * *   The storage engine of the instance is WiredTiger.
           * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
           *
@@ -11029,10 +11261,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * TDE can be used to perform real-time I/O encryption and decryption on data files. Data is encrypted before being written to disks, and decrypted before being read from disks to the memory. For more information, see [Configure TDE](~~131048~~).
-          * >  After TDE is enabled, it cannot be disabled.
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   A replica set or sharded cluster instance is used.
+          * TDE allows you to perform real-time I/O encryption and decryption on data files. Data is encrypted before it is written to a disk and is decrypted when it is read from the disk to the memory. For more information, see [Configure TDE](~~131048~~).
+          * > You cannot disable TDE after it is enabled.
+          * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * *   The instance is a replica set or sharded cluster instance.
           * *   The storage engine of the instance is WiredTiger.
           * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
           *
@@ -11104,10 +11336,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * TDE can be used to perform real-time I/O encryption and decryption on data files. Data is encrypted before being written to disks, and decrypted before being read from disks to the memory. For more information, see [Configure TDE](~~131048~~).
-          * >  After TDE is enabled, it cannot be disabled.
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   A replica set or sharded cluster instance is used.
+          * TDE allows you to perform real-time I/O encryption and decryption on data files. Data is encrypted before it is written to a disk and is decrypted when it is read from the disk to the memory. For more information, see [Configure TDE](~~131048~~).
+          * > You cannot disable TDE after it is enabled.
+          * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * *   The instance is a replica set or sharded cluster instance.
           * *   The storage engine of the instance is WiredTiger.
           * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
           *
@@ -11121,10 +11353,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * TDE can be used to perform real-time I/O encryption and decryption on data files. Data is encrypted before being written to disks, and decrypted before being read from disks to the memory. For more information, see [Configure TDE](~~131048~~).
-          * >  After TDE is enabled, it cannot be disabled.
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   A replica set or sharded cluster instance is used.
+          * TDE allows you to perform real-time I/O encryption and decryption on data files. Data is encrypted before it is written to a disk and is decrypted when it is read from the disk to the memory. For more information, see [Configure TDE](~~131048~~).
+          * > You cannot disable TDE after it is enabled.
+          * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+          * *   The instance is a replica set or sharded cluster instance.
           * *   The storage engine of the instance is WiredTiger.
           * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
           *
@@ -11676,10 +11908,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   A replica set or sharded cluster instance is used.
-          * *   The database version of the instance is 4.0 (with the minor version of mongodb\\_20190408\\_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
-          * *   The instance is in a VPC. If the network type is Classic Network, you can call the [ModifyDBInstanceNetworkType](~~62138~~) operation to switch the network type to VPC.
+          * You can call this operation to enable or disable password-free access from the same VPC as an ApsaraDB for MongoDB instance.
           *
           * @param request ModifyInstanceVpcAuthModeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11741,10 +11970,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   A replica set or sharded cluster instance is used.
-          * *   The database version of the instance is 4.0 (with the minor version of mongodb\\_20190408\\_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
-          * *   The instance is in a VPC. If the network type is Classic Network, you can call the [ModifyDBInstanceNetworkType](~~62138~~) operation to switch the network type to VPC.
+          * You can call this operation to enable or disable password-free access from the same VPC as an ApsaraDB for MongoDB instance.
           *
           * @param request ModifyInstanceVpcAuthModeRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -11806,10 +12032,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   A replica set or sharded cluster instance is used.
-          * *   The database version of the instance is 4.0 (with the minor version of mongodb\\_20190408\\_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
-          * *   The instance is in a VPC. If the network type is Classic Network, you can call the [ModifyDBInstanceNetworkType](~~62138~~) operation to switch the network type to VPC.
+          * You can call this operation to enable or disable password-free access from the same VPC as an ApsaraDB for MongoDB instance.
           *
           * @param request ModifyInstanceVpcAuthModeRequest
           * @return ModifyInstanceVpcAuthModeResponse
@@ -11821,10 +12044,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this operation, make sure that the following requirements are met:
-          * *   A replica set or sharded cluster instance is used.
-          * *   The database version of the instance is 4.0 (with the minor version of mongodb\\_20190408\\_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
-          * *   The instance is in a VPC. If the network type is Classic Network, you can call the [ModifyDBInstanceNetworkType](~~62138~~) operation to switch the network type to VPC.
+          * You can call this operation to enable or disable password-free access from the same VPC as an ApsaraDB for MongoDB instance.
           *
           * @param request ModifyInstanceVpcAuthModeRequest
           * @return ModifyInstanceVpcAuthModeResponse
@@ -12068,8 +12288,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB for MongoDB. For more information, go to the Pricing tab of the ApsaraDB for MongoDB product page at [the international site (alibabacloud.com)](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-          * This operation is applicable only to sharded cluster instances.
+          * Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
+          * This operation is applicable to only sharded cluster instances.
           *
           * @param request ModifyNodeSpecBatchRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12155,8 +12375,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB for MongoDB. For more information, go to the Pricing tab of the ApsaraDB for MongoDB product page at [the international site (alibabacloud.com)](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-          * This operation is applicable only to sharded cluster instances.
+          * Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
+          * This operation is applicable to only sharded cluster instances.
           *
           * @param request ModifyNodeSpecBatchRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12242,8 +12462,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB for MongoDB. For more information, go to the Pricing tab of the ApsaraDB for MongoDB product page at [the international site (alibabacloud.com)](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-          * This operation is applicable only to sharded cluster instances.
+          * Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
+          * This operation is applicable to only sharded cluster instances.
           *
           * @param request ModifyNodeSpecBatchRequest
           * @return ModifyNodeSpecBatchResponse
@@ -12255,8 +12475,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB for MongoDB. For more information, go to the Pricing tab of the ApsaraDB for MongoDB product page at [the international site (alibabacloud.com)](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-          * This operation is applicable only to sharded cluster instances.
+          * Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
+          * This operation is applicable to only sharded cluster instances.
           *
           * @param request ModifyNodeSpecBatchRequest
           * @return ModifyNodeSpecBatchResponse
@@ -12440,7 +12660,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Resource Management enables you to build an organizational structure for resources based on your business needs. You can use a resource directory, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
+          * Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
           *
           * @param request ModifyResourceGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12502,7 +12722,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Resource Management enables you to build an organizational structure for resources based on your business needs. You can use a resource directory, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
+          * Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
           *
           * @param request ModifyResourceGroupRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -12564,7 +12784,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Resource Management enables you to build an organizational structure for resources based on your business needs. You can use a resource directory, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
+          * Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
           *
           * @param request ModifyResourceGroupRequest
           * @return ModifyResourceGroupResponse
@@ -12576,7 +12796,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * Resource Management enables you to build an organizational structure for resources based on your business needs. You can use a resource directory, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
+          * Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
           *
           * @param request ModifyResourceGroupRequest
           * @return ModifyResourceGroupResponse
@@ -13748,9 +13968,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * The instance must be in the running state when you call this operation.
-          * > * This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
-          * > * On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.
+          * The instance must be running when you call this operation.
+          * > 
+          * *   This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
+          * *   On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.
           *
           * @param request SwitchDBInstanceHARequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13816,9 +14037,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * The instance must be in the running state when you call this operation.
-          * > * This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
-          * > * On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.
+          * The instance must be running when you call this operation.
+          * > 
+          * *   This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
+          * *   On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.
           *
           * @param request SwitchDBInstanceHARequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -13884,9 +14106,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * The instance must be in the running state when you call this operation.
-          * > * This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
-          * > * On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.
+          * The instance must be running when you call this operation.
+          * > 
+          * *   This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
+          * *   On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.
           *
           * @param request SwitchDBInstanceHARequest
           * @return SwitchDBInstanceHAResponse
@@ -13898,9 +14121,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * The instance must be in the running state when you call this operation.
-          * > * This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
-          * > * On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.
+          * The instance must be running when you call this operation.
+          * > 
+          * *   This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
+          * *   On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.
           *
           * @param request SwitchDBInstanceHARequest
           * @return SwitchDBInstanceHAResponse
@@ -14488,8 +14712,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * - You can remove up to 20 tags at a time.
-          * - If you remove a tag from all instances, the tag is automatically deleted.
+          * > 
+          * *   You can remove up to 20 tags at a time.
+          * *   If you remove a tag from all instances, the tag is automatically deleted.
           *
           * @param request UntagResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14559,8 +14784,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * - You can remove up to 20 tags at a time.
-          * - If you remove a tag from all instances, the tag is automatically deleted.
+          * > 
+          * *   You can remove up to 20 tags at a time.
+          * *   If you remove a tag from all instances, the tag is automatically deleted.
           *
           * @param request UntagResourcesRequest
           * @param runtime runtime options for this request RuntimeOptions
@@ -14630,8 +14856,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * - You can remove up to 20 tags at a time.
-          * - If you remove a tag from all instances, the tag is automatically deleted.
+          * > 
+          * *   You can remove up to 20 tags at a time.
+          * *   If you remove a tag from all instances, the tag is automatically deleted.
           *
           * @param request UntagResourcesRequest
           * @return UntagResourcesResponse
@@ -14643,8 +14870,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         }
 
         /**
-          * - You can remove up to 20 tags at a time.
-          * - If you remove a tag from all instances, the tag is automatically deleted.
+          * > 
+          * *   You can remove up to 20 tags at a time.
+          * *   If you remove a tag from all instances, the tag is automatically deleted.
           *
           * @param request UntagResourcesRequest
           * @return UntagResourcesResponse

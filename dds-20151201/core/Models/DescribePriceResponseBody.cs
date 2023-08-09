@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribePriceResponseBody : TeaModel {
         /// <summary>
-        /// The list of orders.
+        /// The order.
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public DescribePriceResponseBodyOrder Order { get; set; }
         public class DescribePriceResponseBodyOrder : TeaModel {
             /// <summary>
-            /// Details about the coupons.
+            /// The coupons.
             /// </summary>
             [NameInMap("Coupons")]
             [Validation(Required=false)]
@@ -27,46 +27,61 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 [Validation(Required=false)]
                 public List<DescribePriceResponseBodyOrderCouponsCoupon> Coupon { get; set; }
                 public class DescribePriceResponseBodyOrderCouponsCoupon : TeaModel {
+                    /// <summary>
+                    /// The billing method to which the coupon was applied. Valid values: **payondemand**: subscription. **payasyougo**: pay-as-you-go.
+                    /// </summary>
                     [NameInMap("ActivityCategory")]
                     [Validation(Required=false)]
                     public string ActivityCategory { get; set; }
 
                     /// <summary>
-                    /// The coupon number.
+                    /// The coupon ID.
                     /// </summary>
                     [NameInMap("CouponNo")]
                     [Validation(Required=false)]
                     public string CouponNo { get; set; }
 
                     /// <summary>
-                    /// The description of the topic.
+                    /// The description of the coupon.
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the coupon was selected.
+                    /// Indicates whether the coupon was selected. Valid values:
+                    /// 
+                    /// *   **true**
+                    /// *   **false**
                     /// </summary>
                     [NameInMap("IsSelected")]
                     [Validation(Required=false)]
                     public string IsSelected { get; set; }
 
                     /// <summary>
-                    /// The name of the coupon.
+                    /// The coupon name.
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// The code of the coupon.
+                    /// </summary>
                     [NameInMap("OptionCode")]
                     [Validation(Required=false)]
                     public string OptionCode { get; set; }
 
+                    /// <summary>
+                    /// The promotional option code.
+                    /// </summary>
                     [NameInMap("PromotionOptionCode")]
                     [Validation(Required=false)]
                     public string PromotionOptionCode { get; set; }
 
+                    /// <summary>
+                    /// The rules that match the coupon.
+                    /// </summary>
                     [NameInMap("PromotionRuleIdList")]
                     [Validation(Required=false)]
                     public DescribePriceResponseBodyOrderCouponsCouponPromotionRuleIdList PromotionRuleIdList { get; set; }
@@ -82,10 +97,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             }
 
             /// <summary>
-            /// The type of the currency. Valid values:
-            /// 
-            /// *   USD: United States dollar
-            /// *   JPY: Japanese Yen.
+            /// The currency.
             /// </summary>
             [NameInMap("Currency")]
             [Validation(Required=false)]
@@ -106,7 +118,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string OriginalAmount { get; set; }
 
             /// <summary>
-            /// The list of one or more promotion rule IDs.
+            /// The rules of the order.
             /// </summary>
             [NameInMap("RuleIds")]
             [Validation(Required=false)]
@@ -119,7 +131,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             }
 
             /// <summary>
-            /// The actual price of the order.
+            /// The final price of the order.
             /// </summary>
             [NameInMap("TradeAmount")]
             [Validation(Required=false)]
@@ -128,21 +140,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The order parameters. This parameter is returned if the `OrderParamOut` parameter is set to `true`.
+        /// The order parameters.
+        /// 
+        /// > This parameter is returned only when the **OrderParamOut** parameter is set to **true**.
         /// </summary>
         [NameInMap("OrderParams")]
         [Validation(Required=false)]
         public string OrderParams { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about the promotion rules.
+        /// The promotion rules.
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
@@ -153,7 +167,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribePriceResponseBodyRulesRule> Rule { get; set; }
             public class DescribePriceResponseBodyRulesRule : TeaModel {
                 /// <summary>
-                /// The name of the rule. Valid values
+                /// The name of the rule.
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -178,7 +192,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// Details about the rules that match the coupon.
+        /// The coupon rules.
         /// </summary>
         [NameInMap("SubOrders")]
         [Validation(Required=false)]
@@ -210,7 +224,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string OriginalAmount { get; set; }
 
                 /// <summary>
-                /// The list of one or more promotion rule IDs.
+                /// The promotion rules.
                 /// </summary>
                 [NameInMap("RuleIds")]
                 [Validation(Required=false)]

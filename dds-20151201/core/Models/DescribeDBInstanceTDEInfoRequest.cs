@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstanceTDEInfoRequest : TeaModel {
-        /// <summary>
-        /// The ID of the Message Queue for Apache Kafka instance to be deleted.
-        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }

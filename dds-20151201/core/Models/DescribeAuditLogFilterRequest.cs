@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAuditLogFilterRequest : TeaModel {
-        /// <summary>
-        /// The ID of the instance.
-        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -32,12 +29,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        /// <summary>
-        /// The role of the node in the instance. Valid values:
-        /// 
-        /// *   **primary**
-        /// *   **secondary**
-        /// </summary>
         [NameInMap("RoleType")]
         [Validation(Required=false)]
         public string RoleType { get; set; }

@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string NewConnectionString { get; set; }
 
+        /// <summary>
+        /// this parameter can be used. The new port should be within the range of 1000 to 65535.
+        /// >When the DBInstanceId parameter is passed in as a cloud disk instance ID
+        /// </summary>
         [NameInMap("NewPort")]
         [Validation(Required=false)]
         public int? NewPort { get; set; }

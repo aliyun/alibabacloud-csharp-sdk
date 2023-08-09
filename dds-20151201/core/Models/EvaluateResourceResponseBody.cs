@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceAvailable { get; set; }
 
         /// <summary>
-        /// The database engine of the instance. The returned value is MongoDB.
+        /// The database engine of the instance. Only MongoDB is returned.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The major engine version of the instance.
+        /// The version of the database engine.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]

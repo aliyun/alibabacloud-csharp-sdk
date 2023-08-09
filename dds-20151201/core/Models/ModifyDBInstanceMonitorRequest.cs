@@ -9,16 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceMonitorRequest : TeaModel {
-        /// <summary>
-        /// The ID of the instance.
-        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        /// <summary>
-        /// The collection frequency of monitoring data. Valid values: **1** or **300**. Unit: seconds.
-        /// </summary>
         [NameInMap("Granularity")]
         [Validation(Required=false)]
         public string Granularity { get; set; }

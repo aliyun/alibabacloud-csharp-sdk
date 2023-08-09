@@ -10,20 +10,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CheckRecoveryConditionRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup.
+        /// The point in time to which the instance is restored. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
         /// 
-        /// > * You can call the [DescribeBackups](~~62172~~) operation to query the ID of the backup.
-        /// > * You must specify one of the **RestoreTime** and BackupId parameters.
-        /// > * This parameter is not applicable to sharded cluster instances.
+        /// > * The value can be any time within the past seven days. The time must be earlier than the current time, but later than the time when the instance was created.
+        /// > * You must specify one of the RestoreTime and **BackupId** parameters.
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// The name of the source database. The value is a JSON array.
-        /// 
-        /// >  If you do not specify this parameter, all databases are restored.
+        /// The ID of the source instance.
         /// </summary>
         [NameInMap("DatabaseNames")]
         [Validation(Required=false)]
@@ -38,7 +35,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// The ID of the backup.
+        /// 
+        /// > * You can call the [DescribeBackups](~~62172~~) operation to query the ID of the backup.
+        /// > * You must specify one of the **RestoreTime** and BackupId parameters.
+        /// > * This parameter is not applicable to sharded cluster instances.
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -53,10 +54,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The point in time to which the instance is restored. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// The name of the source database. The value is a JSON array.
         /// 
-        /// > * The value can be any time within the past seven days. The time must be earlier than the current time, but later than the time when the instance was created.
-        /// > * You must specify one of the RestoreTime and **BackupId** parameters.
+        /// >  If you do not specify this parameter, all databases are restored.
         /// </summary>
         [NameInMap("RestoreTime")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the source instance.
+        /// The operation that you want to perform. Set the value to **CheckRecoveryCondition**.
         /// </summary>
         [NameInMap("SourceDBInstance")]
         [Validation(Required=false)]

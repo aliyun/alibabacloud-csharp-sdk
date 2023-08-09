@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeParametersResponseBody : TeaModel {
         /// <summary>
-        /// The list of instance parameters in the configuration template.
+        /// The parameter settings in the configuration template.
         /// </summary>
         [NameInMap("ConfigParameters")]
         [Validation(Required=false)]
@@ -31,17 +31,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// Indicates whether a restart is required for parameter modifications to take effect.
                 /// 
                 /// *   **false**: A restart is not required. Modifications take effect immediately.
-                /// *   **true**: A restart is required for modifications to take effect.
+                /// *   **true**: A restart is required for parameter modifications to take effect.
                 /// </summary>
                 [NameInMap("ForceRestart")]
                 [Validation(Required=false)]
                 public bool? ForceRestart { get; set; }
 
                 /// <summary>
-                /// Indicates whether the parameter is modifiable.
+                /// Indicates whether the parameter value can be changed.
                 /// 
-                /// *   **false**: The parameter is not modifiable.
-                /// *   **true**: The parameter is modifiable.
+                /// *   **false**: The parameter value cannot be changed.
+                /// *   **true**: The parameter value can be changed.
                 /// </summary>
                 [NameInMap("ModifiableStatus")]
                 [Validation(Required=false)]
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// The database engine. Default value: **mongodb**.
+        /// The database engine of the instance. Default value: **mongodb**.
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The version number of the database.
+        /// The version of the database engine.
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of instance parameters that have taken effect.
+        /// The parameter settings for the running instance.
         /// </summary>
         [NameInMap("RunningParameters")]
         [Validation(Required=false)]
@@ -104,6 +104,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeParametersResponseBodyRunningParametersParameter> Parameter { get; set; }
             public class DescribeParametersResponseBodyRunningParametersParameter : TeaModel {
+                /// <summary>
+                /// 实例的角色类型，取值说明：
+                /// 
+                /// - **db**：shard角色。
+                /// - **cs**：config server角色。
+                /// - **mongos**：mongos角色。
+                /// </summary>
                 [NameInMap("CharacterType")]
                 [Validation(Required=false)]
                 public string CharacterType { get; set; }
@@ -119,17 +126,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// Indicates whether a restart is required for parameter modifications to take effect.
                 /// 
                 /// *   **false**: A restart is not required. Modifications take effect immediately.
-                /// *   **true**: A restart is required for modifications to take effect.
+                /// *   **true**: A restart is required for parameter modifications to take effect.
                 /// </summary>
                 [NameInMap("ForceRestart")]
                 [Validation(Required=false)]
                 public string ForceRestart { get; set; }
 
                 /// <summary>
-                /// Indicates whether the parameter is modifiable.
+                /// Indicates whether the parameter value can be changed.
                 /// 
-                /// *   **false**: The parameter is not modifiable.
-                /// *   **true**: The parameter is modifiable.
+                /// *   **false**: The parameter value cannot be changed.
+                /// *   **true**: The parameter value can be changed.
                 /// </summary>
                 [NameInMap("ModifiableStatus")]
                 [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The available database types.
+        /// The supported database types.
         /// </summary>
         [NameInMap("SupportedDBTypes")]
         [Validation(Required=false)]
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public List<DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZone> AvailableZone { get; set; }
                     public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZone : TeaModel {
                         /// <summary>
-                        /// The region ID of the instance.
+                        /// The ID of the region.
                         /// </summary>
                         [NameInMap("RegionId")]
                         [Validation(Required=false)]
                         public string RegionId { get; set; }
 
                         /// <summary>
-                        /// The available storage engine versions.
+                        /// The supported storage engine versions.
                         /// </summary>
                         [NameInMap("SupportedEngineVersions")]
                         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                             public List<DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersion> SupportedEngineVersion { get; set; }
                             public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersion : TeaModel {
                                 /// <summary>
-                                /// The available storage engines.
+                                /// The supported storage engines.
                                 /// </summary>
                                 [NameInMap("SupportedEngines")]
                                 [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                                         public string Engine { get; set; }
 
                                         /// <summary>
-                                        /// The available node types.
+                                        /// The supported instance types.
                                         /// </summary>
                                         [NameInMap("SupportedNodeTypes")]
                                         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                                             public List<DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeType> SupportedNodeType { get; set; }
                                             public class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngineSupportedNodeTypesSupportedNodeType : TeaModel {
                                                 /// <summary>
-                                                /// Details about the available resources.
+                                                /// The details of the available resources.
                                                 /// </summary>
                                                 [NameInMap("AvailableResources")]
                                                 [Validation(Required=false)]
@@ -127,14 +127,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                                                         }
 
                                                         /// <summary>
-                                                        /// The instance class.
+                                                        /// The instance family.
                                                         /// </summary>
                                                         [NameInMap("InstanceClass")]
                                                         [Validation(Required=false)]
                                                         public string InstanceClass { get; set; }
 
                                                         /// <summary>
-                                                        /// The instance type.
+                                                        /// The type of the instance.
                                                         /// </summary>
                                                         [NameInMap("InstanceClassRemark")]
                                                         [Validation(Required=false)]
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         }
 
                         /// <summary>
-                        /// The zone ID of the instance.
+                        /// The ID of the zone.
                         /// </summary>
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]
@@ -191,8 +191,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// The architecture of the instance. Valid values:
                 /// 
-                /// - **normal**: replica set instance
-                /// - **sharding**: sharded cluster instance
+                /// *   **normal**: replica set instance
+                /// *   **sharding**: sharded cluster instance
                 /// </summary>
                 [NameInMap("DbType")]
                 [Validation(Required=false)]

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The ID of the instance.
         /// 
-        /// >  If the instance is deployed in a VPC, you must specify the **Vswitch** parameter.
+        /// > If the instance is deployed in a VPC, you must specify the **Vswitch** parameter.
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The ID of the vSwitch in the destination zone.
         /// 
-        /// >  If the instance is deployed in a VPC, you must specify this parameter.
+        /// > If the instance is deployed in a VPC, you must specify this parameter.
         /// </summary>
         [NameInMap("Vswitch")]
         [Validation(Required=false)]
@@ -58,8 +58,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The ID of the destination zone.
         /// 
-        /// > * The source zone and the destination zone belong to the same region.
-        /// > * You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
+        /// > 
+        /// 
+        /// *   The source zone and the destination zone belong to the same region.
+        /// 
+        /// *   You can call the [DescribeRegions](~~61933~~) operation to query the zone ID.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

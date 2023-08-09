@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

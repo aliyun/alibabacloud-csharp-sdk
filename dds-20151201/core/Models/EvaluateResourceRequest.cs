@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class EvaluateResourceRequest : TeaModel {
         /// <summary>
-        /// The instance type.
+        /// The stype of the instance.
         /// 
         /// > This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see [Instance types](~~57141~~).
         /// </summary>
@@ -33,13 +33,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// The major engine version of the instance. Valid values:
+        /// The version of the database engine. Valid values:
         /// 
-        /// *   **6.0**
         /// *   **5.0**
         /// *   **4.4**
         /// *   **4.2**
         /// *   **4.0**
+        /// *   **3.4**
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of read-only nodes. Valid values: **1** to **5**.
+        /// The number of read-only nodes in the instance. Valid values: **1** to **5**.
         /// 
         /// > This parameter is not required for standalone or serverless instances.
         /// </summary>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ReadonlyReplicas { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// The number of nodes in the instance.
         /// 
-        /// *   Valid values for standalone instances: **1**
+        /// *   Set the value to **1** for standalone instances.
         /// *   Valid values for replica set instances: **3**, **5**, and **7**
         /// 
         /// > This parameter is not required for serverless instances.
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The node information. This parameter is required when you check whether resources are sufficient for creating or upgrading a sharded cluster instance.
+        /// The node information about the sharded cluster instance. This parameter is required when you check whether resources are sufficient for creating or upgrading a sharded cluster instance.
         /// 
         /// To check whether resources are sufficient for creating a sharded cluster instance, specify the specifications of each node in the instance. The value must be a JSON string. Example:
         /// 
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// *   Storage: the storage space of the node.
         /// *   DBInstanceClass: the instance type of the node. For more information, see [Sharded cluster instance types](~~311414~~).
         /// 
-        /// To check whether resources are sufficient for upgrading a node of a sharded cluster instance, specify only the information of the node to be upgraded. The value must be a JSON string. Example:
+        /// To check whether resources are sufficient for upgrading a single node of a sharded cluster instance, specify only the information about the node to be upgraded. The value must be a JSON string. Example:
         /// 
         ///     {
         ///          "NodeId": "d-bp147c4d9ca7****", "NodeClass": "dds.shard.standard"
@@ -131,16 +131,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ShardsInfo { get; set; }
 
         /// <summary>
-        /// The storage capacity of the replica set instance. Unit: GB.
-        /// 
-        /// > This parameter is required for the instances that use cloud disks.
+        /// 副本集的存储空间，单位为GB。
+        /// > 实例规格为云盘型时，该参数必填。</props>
         /// </summary>
         [NameInMap("Storage")]
         [Validation(Required=false)]
         public string Storage { get; set; }
 
         /// <summary>
-        /// The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
+        /// The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the zone ID.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

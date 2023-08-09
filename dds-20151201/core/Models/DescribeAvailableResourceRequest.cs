@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+        /// The ID of the region. You can call the [DescribeRegions](~~61933~~) operation to query the latest available regions.
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
+        /// The ID of the zone. You can call the [DescribeRegions](~~61933~~) operation to query the available zones.
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

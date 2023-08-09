@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ResetAccountPasswordResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The account for which you want to reset the password. Set the value to **root**.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
