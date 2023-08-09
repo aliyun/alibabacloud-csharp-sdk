@@ -1,3 +1,6 @@
+2023-08-09 Version: 1.0.34
+- Generated csharp 2018-01-15 for dcdn.
+
 2023-08-02 Version: 1.0.33
 - Update DescribeDcdnUserDomains.
 
