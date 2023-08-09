@@ -126,6 +126,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
+            [NameInMap("OtherId")]
+            [Validation(Required=false)]
+            public string OtherId { get; set; }
+
             /// <summary>
             /// The POC content.
             /// </summary>

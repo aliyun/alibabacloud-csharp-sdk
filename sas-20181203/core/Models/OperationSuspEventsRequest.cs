@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// The IDs of alert events.
         /// 
-        /// >  You can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to obtain the IDs of alert events from the SecurityEventIds response parameter.
+        /// >  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the IDs of alert events from the SecurityEventIds response parameter.
         /// </summary>
         [NameInMap("SuspiciousEventIds")]
         [Validation(Required=false)]
