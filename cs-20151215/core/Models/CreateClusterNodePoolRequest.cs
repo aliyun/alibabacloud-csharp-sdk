@@ -313,6 +313,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string SpotStrategy { get; set; }
 
+            [NameInMap("system_disk_bursting_enabled")]
+            [Validation(Required=false)]
+            public bool? SystemDiskBurstingEnabled { get; set; }
+
             [NameInMap("system_disk_category")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
@@ -320,6 +324,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("system_disk_performance_level")]
             [Validation(Required=false)]
             public string SystemDiskPerformanceLevel { get; set; }
+
+            [NameInMap("system_disk_provisioned_iops")]
+            [Validation(Required=false)]
+            public long? SystemDiskProvisionedIops { get; set; }
 
             [NameInMap("system_disk_size")]
             [Validation(Required=false)]

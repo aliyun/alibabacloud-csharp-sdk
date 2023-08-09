@@ -201,8 +201,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string NodePortRange { get; set; }
 
+        [NameInMap("nodepools")]
+        [Validation(Required=false)]
+        public List<Nodepool> Nodepools { get; set; }
+
         [NameInMap("num_of_nodes")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? NumOfNodes { get; set; }
 
         [NameInMap("os_type")]
@@ -311,14 +316,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         [NameInMap("worker_auto_renew")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? WorkerAutoRenew { get; set; }
 
         [NameInMap("worker_auto_renew_period")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? WorkerAutoRenewPeriod { get; set; }
 
         [NameInMap("worker_data_disks")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<CreateClusterRequestWorkerDataDisks> WorkerDataDisks { get; set; }
         public class CreateClusterRequestWorkerDataDisks : TeaModel {
             [NameInMap("category")]
@@ -341,38 +349,47 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         [NameInMap("worker_instance_charge_type")]
         [Validation(Required=false)]
+        [Obsolete]
         public string WorkerInstanceChargeType { get; set; }
 
         [NameInMap("worker_instance_types")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<string> WorkerInstanceTypes { get; set; }
 
         [NameInMap("worker_period")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? WorkerPeriod { get; set; }
 
         [NameInMap("worker_period_unit")]
         [Validation(Required=false)]
+        [Obsolete]
         public string WorkerPeriodUnit { get; set; }
 
         [NameInMap("worker_system_disk_category")]
         [Validation(Required=false)]
+        [Obsolete]
         public string WorkerSystemDiskCategory { get; set; }
 
         [NameInMap("worker_system_disk_performance_level")]
         [Validation(Required=false)]
+        [Obsolete]
         public string WorkerSystemDiskPerformanceLevel { get; set; }
 
         [NameInMap("worker_system_disk_size")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? WorkerSystemDiskSize { get; set; }
 
         [NameInMap("worker_system_disk_snapshot_policy_id")]
         [Validation(Required=false)]
+        [Obsolete]
         public string WorkerSystemDiskSnapshotPolicyId { get; set; }
 
         [NameInMap("worker_vswitch_ids")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<string> WorkerVswitchIds { get; set; }
 
         [NameInMap("zone_id")]

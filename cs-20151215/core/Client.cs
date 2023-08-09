@@ -995,6 +995,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["node_port_range"] = request.NodePortRange;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nodepools))
+            {
+                body["nodepools"] = request.Nodepools;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumOfNodes))
             {
                 body["num_of_nodes"] = request.NumOfNodes;
@@ -1370,6 +1374,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodePortRange))
             {
                 body["node_port_range"] = request.NodePortRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nodepools))
+            {
+                body["nodepools"] = request.Nodepools;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumOfNodes))
             {
