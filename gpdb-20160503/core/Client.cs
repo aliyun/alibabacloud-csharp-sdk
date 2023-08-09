@@ -439,6 +439,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["FullTextRetrievalFields"] = request.FullTextRetrievalFields;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HnswM))
+            {
+                query["HnswM"] = request.HnswM;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerAccount))
             {
                 query["ManagerAccount"] = request.ManagerAccount;
@@ -451,6 +455,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["Metadata"] = request.Metadata;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metrics))
+            {
+                query["Metrics"] = request.Metrics;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 query["Namespace"] = request.Namespace;
@@ -462,6 +470,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parser))
             {
                 query["Parser"] = request.Parser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PqEnable))
+            {
+                query["PqEnable"] = request.PqEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -506,6 +518,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["FullTextRetrievalFields"] = request.FullTextRetrievalFields;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HnswM))
+            {
+                query["HnswM"] = request.HnswM;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerAccount))
             {
                 query["ManagerAccount"] = request.ManagerAccount;
@@ -518,6 +534,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["Metadata"] = request.Metadata;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metrics))
+            {
+                query["Metrics"] = request.Metrics;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 query["Namespace"] = request.Namespace;
@@ -529,6 +549,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parser))
             {
                 query["Parser"] = request.Parser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PqEnable))
+            {
+                query["PqEnable"] = request.PqEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1441,6 +1465,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["Dimension"] = request.Dimension;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HnswM))
+            {
+                query["HnswM"] = request.HnswM;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerAccount))
             {
                 query["ManagerAccount"] = request.ManagerAccount;
@@ -1460,6 +1488,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PqEnable))
+            {
+                query["PqEnable"] = request.PqEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1500,6 +1532,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["Dimension"] = request.Dimension;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HnswM))
+            {
+                query["HnswM"] = request.HnswM;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerAccount))
             {
                 query["ManagerAccount"] = request.ManagerAccount;
@@ -1519,6 +1555,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PqEnable))
+            {
+                query["PqEnable"] = request.PqEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3821,6 +3861,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionString))
+            {
+                query["ConnectionString"] = request.ConnectionString;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
@@ -3848,6 +3892,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionString))
+            {
+                query["ConnectionString"] = request.ConnectionString;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
@@ -8041,6 +8089,104 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GrantCollectionWithOptionsAsync(request, runtime);
+        }
+
+        public InitVectorDatabaseResponse InitVectorDatabaseWithOptions(InitVectorDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerAccount))
+            {
+                query["ManagerAccount"] = request.ManagerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerAccountPassword))
+            {
+                query["ManagerAccountPassword"] = request.ManagerAccountPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InitVectorDatabase",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InitVectorDatabaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<InitVectorDatabaseResponse> InitVectorDatabaseWithOptionsAsync(InitVectorDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerAccount))
+            {
+                query["ManagerAccount"] = request.ManagerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerAccountPassword))
+            {
+                query["ManagerAccountPassword"] = request.ManagerAccountPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InitVectorDatabase",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InitVectorDatabaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public InitVectorDatabaseResponse InitVectorDatabase(InitVectorDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return InitVectorDatabaseWithOptions(request, runtime);
+        }
+
+        public async Task<InitVectorDatabaseResponse> InitVectorDatabaseAsync(InitVectorDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await InitVectorDatabaseWithOptionsAsync(request, runtime);
         }
 
         public ListCollectionsResponse ListCollectionsWithOptions(ListCollectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

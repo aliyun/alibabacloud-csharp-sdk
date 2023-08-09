@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public Dictionary<string, string> Metadata { get; set; }
 
+                [NameInMap("Score")]
+                [Validation(Required=false)]
+                public double? Score { get; set; }
+
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public QueryCollectionDataResponseBodyMatchesMatchValues Values { get; set; }
@@ -38,6 +42,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
         }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

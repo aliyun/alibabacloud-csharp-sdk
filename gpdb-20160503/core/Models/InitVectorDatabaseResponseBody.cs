@@ -8,13 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class ModifyAccountDescriptionResponseBody : TeaModel {
-        /// <summary>
-        /// The request ID.
-        /// </summary>
+    public class InitVectorDatabaseResponseBody : TeaModel {
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

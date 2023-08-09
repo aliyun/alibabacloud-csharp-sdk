@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceNetInfoRequest : TeaModel {
+        [NameInMap("ConnectionString")]
+        [Validation(Required=false)]
+        public string ConnectionString { get; set; }
+
         /// <summary>
         /// The ID of the instance.
         /// 

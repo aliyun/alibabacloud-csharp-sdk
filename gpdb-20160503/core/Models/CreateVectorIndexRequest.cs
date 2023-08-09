@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public int? Dimension { get; set; }
 
+        [NameInMap("HnswM")]
+        [Validation(Required=false)]
+        public int? HnswM { get; set; }
+
         [NameInMap("ManagerAccount")]
         [Validation(Required=false)]
         public string ManagerAccount { get; set; }
@@ -43,6 +47,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PqEnable")]
+        [Validation(Required=false)]
+        public int? PqEnable { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
