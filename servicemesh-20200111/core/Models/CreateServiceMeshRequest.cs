@@ -365,6 +365,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public bool? GatewayAPIEnabled { get; set; }
 
+        [NameInMap("GuestCluster")]
+        [Validation(Required=false)]
+        public string GuestCluster { get; set; }
+
         /// <summary>
         /// The IP ranges in CIDR form for which traffic is to be redirected to the sidecar proxy in the ASM instance.
         /// </summary>

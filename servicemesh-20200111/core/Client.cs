@@ -812,6 +812,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["GatewayAPIEnabled"] = request.GatewayAPIEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GuestCluster))
+            {
+                body["GuestCluster"] = request.GuestCluster;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeIPRanges))
             {
                 body["IncludeIPRanges"] = request.IncludeIPRanges;
@@ -1118,6 +1122,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayAPIEnabled))
             {
                 body["GatewayAPIEnabled"] = request.GatewayAPIEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GuestCluster))
+            {
+                body["GuestCluster"] = request.GuestCluster;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeIPRanges))
             {
