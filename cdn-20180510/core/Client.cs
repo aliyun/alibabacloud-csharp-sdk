@@ -78,10 +78,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
             {
                 query["DomainName"] = request.DomainName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalResourcePlan))
-            {
-                query["GlobalResourcePlan"] = request.GlobalResourcePlan;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -159,10 +155,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
             {
                 query["DomainName"] = request.DomainName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalResourcePlan))
-            {
-                query["GlobalResourcePlan"] = request.GlobalResourcePlan;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -7195,138 +7187,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainDetailDataByLayerWithOptionsAsync(request, runtime);
-        }
-
-        /**
-          * > 
-          * *   If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify both StartTime and EndTime, the request returns the data collected within the specified time range.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainFileSizeProportionDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainFileSizeProportionDataResponse
-         */
-        public DescribeDomainFileSizeProportionDataResponse DescribeDomainFileSizeProportionDataWithOptions(DescribeDomainFileSizeProportionDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
-            {
-                query["DomainName"] = request.DomainName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
-            {
-                query["EndTime"] = request.EndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
-            {
-                query["SecurityToken"] = request.SecurityToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["StartTime"] = request.StartTime;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeDomainFileSizeProportionData",
-                Version = "2018-05-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeDomainFileSizeProportionDataResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * > 
-          * *   If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify both StartTime and EndTime, the request returns the data collected within the specified time range.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainFileSizeProportionDataRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeDomainFileSizeProportionDataResponse
-         */
-        public async Task<DescribeDomainFileSizeProportionDataResponse> DescribeDomainFileSizeProportionDataWithOptionsAsync(DescribeDomainFileSizeProportionDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
-            {
-                query["DomainName"] = request.DomainName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
-            {
-                query["EndTime"] = request.EndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
-            {
-                query["SecurityToken"] = request.SecurityToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["StartTime"] = request.StartTime;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeDomainFileSizeProportionData",
-                Version = "2018-05-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeDomainFileSizeProportionDataResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * > 
-          * *   If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify both StartTime and EndTime, the request returns the data collected within the specified time range.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainFileSizeProportionDataRequest
-          * @return DescribeDomainFileSizeProportionDataResponse
-         */
-        public DescribeDomainFileSizeProportionDataResponse DescribeDomainFileSizeProportionData(DescribeDomainFileSizeProportionDataRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeDomainFileSizeProportionDataWithOptions(request, runtime);
-        }
-
-        /**
-          * > 
-          * *   If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify both StartTime and EndTime, the request returns the data collected within the specified time range.
-          * *   You can call this operation up to 10 times per second per account.
-          *
-          * @param request DescribeDomainFileSizeProportionDataRequest
-          * @return DescribeDomainFileSizeProportionDataResponse
-         */
-        public async Task<DescribeDomainFileSizeProportionDataResponse> DescribeDomainFileSizeProportionDataAsync(DescribeDomainFileSizeProportionDataRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeDomainFileSizeProportionDataWithOptionsAsync(request, runtime);
         }
 
         /**
@@ -18060,10 +17920,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
             {
                 query["DomainName"] = request.DomainName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalResourcePlan))
-            {
-                query["GlobalResourcePlan"] = request.GlobalResourcePlan;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyType))
             {
                 query["VerifyType"] = request.VerifyType;
@@ -18101,10 +17957,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
             {
                 query["DomainName"] = request.DomainName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalResourcePlan))
-            {
-                query["GlobalResourcePlan"] = request.GlobalResourcePlan;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyType))
             {

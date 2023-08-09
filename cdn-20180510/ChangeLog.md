@@ -1,3 +1,6 @@
+2023-08-09 Version: 2.0.0
+- Generated csharp 2018-05-10 for Cdn.
+
 2023-08-02 Version: 1.1.13
 - Add DescribeCdnConditionIPBInfo.
 

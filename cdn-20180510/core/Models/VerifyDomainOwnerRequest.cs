@@ -16,10 +16,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("GlobalResourcePlan")]
-        [Validation(Required=false)]
-        public string GlobalResourcePlan { get; set; }
-
         /// <summary>
         /// The verification method. Valid values:
         /// 
