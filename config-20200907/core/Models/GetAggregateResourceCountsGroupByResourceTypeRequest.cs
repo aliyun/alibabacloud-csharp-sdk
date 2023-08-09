@@ -28,12 +28,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string FolderId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the resource resides.
+        /// The region ID.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// The ID of the Alibaba Cloud account to which the resources in the account group belong.
+        /// 
+        /// > You can specify either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you specify the ResourceAccountId parameter.
+        /// </summary>
         [NameInMap("ResourceAccountId")]
         [Validation(Required=false)]
         public long? ResourceAccountId { get; set; }

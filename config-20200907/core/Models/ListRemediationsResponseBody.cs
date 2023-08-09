@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListRemediationsResponseBody : TeaModel {
         /// <summary>
-        /// 修正列表的页码。起始值：1。
+        /// The page number. Pages start from page 1.
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// 分页查询时设置的每页行数。取值范围：1~50。
+        /// The number of entries per page. Valid values: 1 to 50.
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// An array that contains the remediation templates.
+        /// The converted configuration of the remediation template. This parameter is returned only for an OOS remediation template.
         /// </summary>
         [NameInMap("Remediations")]
         [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 修正设置总数。
+        /// The total number of remediation settings.
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

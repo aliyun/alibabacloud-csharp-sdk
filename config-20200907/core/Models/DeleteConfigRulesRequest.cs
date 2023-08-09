@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The rule IDs. Separate multiple rule IDs with commas (,).
         /// 
-        /// For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/609222.html).
+        /// For more information about how to obtain the ID of a rule, see ListConfigRules.
         /// </summary>
         [NameInMap("ConfigRuleIds")]
         [Validation(Required=false)]

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region where the resource resides.
+        /// The ID of the region in which the resource resides.
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// 
         ///     <!-- -->
         /// 
-        /// *   Contains: The object contains the resource.
+        /// *   Contains: The actual value contains the expected value.
         /// 
         ///     <!-- -->
         /// 

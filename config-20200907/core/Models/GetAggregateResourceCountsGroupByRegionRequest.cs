@@ -25,6 +25,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string FolderId { get; set; }
 
+        /// <summary>
+        /// The ID of the Alibaba Cloud account to which the resources in the account group belong.
+        /// 
+        /// > You can use either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you use the ResourceAccountId parameter.
+        /// </summary>
         [NameInMap("ResourceAccountId")]
         [Validation(Required=false)]
         public long? ResourceAccountId { get; set; }
@@ -35,7 +40,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource.
+        /// The resource type.
         /// 
         /// For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
         /// </summary>

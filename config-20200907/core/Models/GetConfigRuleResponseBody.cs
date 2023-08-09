@@ -277,7 +277,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public Dictionary<string, object> OptionalInputParameterDetails { get; set; }
 
                 /// <summary>
-                /// The details of the source of the managed rule.
+                /// The interval at which the rule is triggered. Valid values:
+                /// 
+                /// *   One_Hour: 1 hour
+                /// *   Three_Hours: 3 hours
+                /// *   Six_Hours: 6 hours
+                /// *   Twelve_Hours: 12 hours
+                /// *   TwentyFour_Hours: 24 hours
+                /// 
+                /// > This parameter is returned if the rule is periodically triggered.
                 /// </summary>
                 [NameInMap("SourceDetails")]
                 [Validation(Required=false)]
@@ -375,10 +383,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public int? RiskLevel { get; set; }
 
+            /// <summary>
+            /// The effective scope of the rule.
+            /// </summary>
             [NameInMap("Scope")]
             [Validation(Required=false)]
             public GetConfigRuleResponseBodyConfigRuleScope Scope { get; set; }
             public class GetConfigRuleResponseBodyConfigRuleScope : TeaModel {
+                /// <summary>
+                /// The types of the resources to be evaluated against the rule. You can also view the resource types by using the ResourceTypesScope parameter.
+                /// </summary>
                 [NameInMap("ComplianceResourceTypes")]
                 [Validation(Required=false)]
                 public List<string> ComplianceResourceTypes { get; set; }
@@ -413,7 +427,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// The details of how the rule was created.
+                /// The interval at which the rule is triggered. Valid values:
+                /// 
+                /// *   One_Hour: 1 hour
+                /// *   Three_Hours: 3 hours
+                /// *   Six_Hours: 6 hours
+                /// *   Twelve_Hours: 12 hours
+                /// *   TwentyFour_Hours: 24 hours
+                /// 
+                /// > This parameter is returned if the rule is periodically triggered.
                 /// </summary>
                 [NameInMap("SourceDetails")]
                 [Validation(Required=false)]

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// Indicates whether the request was successful. Valid values:
         /// 
-        /// *   true: The request was successful.
-        /// *   false: The request failed.
+        /// *   true
+        /// *   false
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

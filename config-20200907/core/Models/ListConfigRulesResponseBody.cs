@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListConfigRulesResponseBody : TeaModel {
+        /// <summary>
+        /// The queried rules.
+        /// </summary>
         [NameInMap("ConfigRules")]
         [Validation(Required=false)]
         public ListConfigRulesResponseBodyConfigRules ConfigRules { get; set; }
         public class ListConfigRulesResponseBodyConfigRules : TeaModel {
+            /// <summary>
+            /// The types of resources evaluated by the rule. Separate multiple resource types with commas (,).
+            /// </summary>
             [NameInMap("ConfigRuleList")]
             [Validation(Required=false)]
             public List<ListConfigRulesResponseBodyConfigRulesConfigRuleList> ConfigRuleList { get; set; }
@@ -105,20 +111,32 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             }
 
+            /// <summary>
+            /// The page number.
+            /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
+            /// <summary>
+            /// The number of entries per page.
+            /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
+            /// <summary>
+            /// The total number of rules.
+            /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
 
         }
 
+        /// <summary>
+        /// The request ID.
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

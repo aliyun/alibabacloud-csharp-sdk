@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateResourceConfigurationTimelineResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the configuration timeline.
+        /// The configuration timeline of the resource.
         /// </summary>
         [NameInMap("ResourceConfigurationTimeline")]
         [Validation(Required=false)]
         public GetAggregateResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline ResourceConfigurationTimeline { get; set; }
         public class GetAggregateResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline : TeaModel {
             /// <summary>
-            /// The configuration changes on the configuration timeline.
+            /// The resource name.
             /// </summary>
             [NameInMap("ConfigurationList")]
             [Validation(Required=false)]

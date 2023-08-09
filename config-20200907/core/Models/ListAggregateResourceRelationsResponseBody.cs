@@ -24,21 +24,55 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public ListAggregateResourceRelationsResponseBodyResourceRelations ResourceRelations { get; set; }
         public class ListAggregateResourceRelationsResponseBodyResourceRelations : TeaModel {
             /// <summary>
-            /// The maximum number of entries returned per page.
+            /// The maximum number of entries returned on each page.
             /// </summary>
             [NameInMap("MaxResults")]
             [Validation(Required=false)]
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// A pagination token. It can be used in the next request to retrieve a new page of results.
+            /// The token that was used to initiate the next request.
             /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
             public string NextToken { get; set; }
 
             /// <summary>
-            /// An array that contains the relationships.
+            /// The type of the relationship between the resource and the object.
+            /// 
+            /// Valid values:
+            /// 
+            /// *   IsContained: The object is included as part of the resource.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   IsAttachedTo: The object is added to the resource.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   IsAssociatedIn: The object is associated with the resource.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            /// *   Contains: The actual value contains the expected value.
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
+            /// 
+            ///     <!-- -->
             /// </summary>
             [NameInMap("ResourceRelationList")]
             [Validation(Required=false)]

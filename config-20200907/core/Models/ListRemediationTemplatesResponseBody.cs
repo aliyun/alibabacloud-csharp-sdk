@@ -9,16 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListRemediationTemplatesResponseBody : TeaModel {
+        /// <summary>
+        /// The page number. Pages start from page 1.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries per page. Valid values: 1 to 100.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The details of the remediation template.
+        /// The description of the remediation template.
         /// </summary>
         [NameInMap("RemediationTemplates")]
         [Validation(Required=false)]
@@ -65,6 +71,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// The total number of remediation templates.
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public string TotalCount { get; set; }

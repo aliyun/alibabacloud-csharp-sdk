@@ -52,7 +52,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string CompliancePackTemplateId { get; set; }
 
             /// <summary>
-            /// The rules in the compliance package.
+            /// The risk level of the resources that are not compliant with the rule. Valid values:
+            /// 
+            /// *   1: high
+            /// *   2: medium
+            /// *   3: low
             /// </summary>
             [NameInMap("ConfigRules")]
             [Validation(Required=false)]

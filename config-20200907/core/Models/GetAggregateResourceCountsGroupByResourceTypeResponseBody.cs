@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateResourceCountsGroupByResourceTypeResponseBody : TeaModel {
         /// <summary>
-        /// The statistics on the resources.
+        /// The resource type by which the statistics are collected.
         /// </summary>
         [NameInMap("DiscoveredResourceCountsSummary")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// The request ID.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

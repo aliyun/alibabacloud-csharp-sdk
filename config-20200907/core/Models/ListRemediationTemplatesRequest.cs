@@ -18,10 +18,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ManagedRuleIdentifier { get; set; }
 
+        /// <summary>
+        /// The page number. Pages start from page 1.
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
+        /// <summary>
+        /// The number of entries per page. Valid values: 1 to 100.
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }

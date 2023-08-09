@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The timestamp that specifies the end of the time range to query. The default value indicates the time when the GetAggregateResourceConfigurationTimeline operation is called. Unit: milliseconds.
+        /// The end of the time range to query. The default value indicates the time when the GetAggregateResourceConfigurationTimeline operation is called. Unit: milliseconds.
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used to initiate the next request. If the response of the current request is truncated, this token is used to initiate another request and obtain the remaining entries.
+        /// The `token` that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -48,14 +48,19 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// The ID of the Alibaba Cloud account to which the resource in the account group belongs.
+        /// 
+        /// > You can use either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you use the ResourceAccountId parameter.
+        /// </summary>
         [NameInMap("ResourceAccountId")]
         [Validation(Required=false)]
         public long? ResourceAccountId { get; set; }
 
         /// <summary>
-        /// The ID of the resource.
+        /// The resource ID.
         /// 
-        /// For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
+        /// For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -76,7 +81,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The timestamp that specifies the beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.
+        /// The beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

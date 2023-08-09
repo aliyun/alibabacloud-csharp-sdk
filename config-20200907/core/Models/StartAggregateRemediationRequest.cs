@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// The ID of the account group.
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+        /// For information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
@@ -27,6 +27,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ConfigRuleId { get; set; }
 
+        /// <summary>
+        /// The ID of the Alibaba Cloud account to which the resources to be remediated belong. If this parameter is left empty, non-compliant resources of all accounts in the account group are remediated.
+        /// 
+        /// > You must specify the ID of the current management account or a member account in the account group of the management account.
+        /// </summary>
         [NameInMap("ResourceAccountId")]
         [Validation(Required=false)]
         public long? ResourceAccountId { get; set; }

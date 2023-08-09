@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public ListManagedRulesResponseBodyManagedRules ManagedRules { get; set; }
         public class ListManagedRulesResponseBodyManagedRules : TeaModel {
             /// <summary>
-            /// The details of the managed rules.
+            /// The name of the remediation template.
             /// </summary>
             [NameInMap("ManagedRuleList")]
             [Validation(Required=false)]
