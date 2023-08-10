@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public string Activity { get; set; }
 
+        [NameInMap("addBadge")]
+        [Validation(Required=false)]
+        public int? AddBadge { get; set; }
+
         [NameInMap("afterOpen")]
         [Validation(Required=false)]
         public string AfterOpen { get; set; }
-
-        [NameInMap("badge")]
-        [Validation(Required=false)]
-        public int? Badge { get; set; }
 
         [NameInMap("builderId")]
         [Validation(Required=false)]
@@ -56,6 +56,14 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [NameInMap("playVibrate")]
         [Validation(Required=false)]
         public bool? PlayVibrate { get; set; }
+
+        [NameInMap("rePop")]
+        [Validation(Required=false)]
+        public int? RePop { get; set; }
+
+        [NameInMap("setBadge")]
+        [Validation(Required=false)]
+        public int? SetBadge { get; set; }
 
         [NameInMap("sound")]
         [Validation(Required=false)]
