@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class ListResourceShareInvitationsRequest : TeaModel {
         /// <summary>
-        /// The IDs of the resource sharing invitations.
+        /// The maximum number of entries to return for a single request.
+        /// 
+        /// Valid values: 1 to 100. Default value: 20.
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

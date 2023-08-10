@@ -10,29 +10,63 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class ListResourceSharesResponseBody : TeaModel {
         /// <summary>
-        /// The information of the resource shares.
+        /// The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The time when the resource share was updated.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The name of the resource share.
+        /// The information of the resource shares.
         /// </summary>
         [NameInMap("ResourceShares")]
         [Validation(Required=false)]
         public List<ListResourceSharesResponseBodyResourceShares> ResourceShares { get; set; }
         public class ListResourceSharesResponseBodyResourceShares : TeaModel {
+            /// <summary>
+            /// Indicates whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:
+            /// 
+            /// *   false: Resources in the resource share can be shared only with accounts in the resource directory.
+            /// *   true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.
+            /// </summary>
             [NameInMap("AllowExternalTargets")]
             [Validation(Required=false)]
             public bool? AllowExternalTargets { get; set; }
+
+            /// <summary>
+            /// The time when the resource share was created.
+            /// </summary>
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            /// <summary>
+            /// The ID of the resource share.
+            /// </summary>
+            [NameInMap("ResourceShareId")]
+            [Validation(Required=false)]
+            public string ResourceShareId { get; set; }
+
+            /// <summary>
+            /// The name of the resource share.
+            /// </summary>
+            [NameInMap("ResourceShareName")]
+            [Validation(Required=false)]
+            public string ResourceShareName { get; set; }
+
+            /// <summary>
+            /// The owner of the resource share.
+            /// </summary>
+            [NameInMap("ResourceShareOwner")]
+            [Validation(Required=false)]
+            public string ResourceShareOwner { get; set; }
 
             /// <summary>
             /// The status of the resource share. Valid values:
@@ -44,40 +78,12 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             /// 
             /// >  The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.
             /// </summary>
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            /// <summary>
-            /// Indicates whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:
-            /// 
-            /// *   false: Resources in the resource share can be shared only with accounts in the resource directory.
-            /// *   true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.
-            /// </summary>
-            [NameInMap("ResourceShareId")]
-            [Validation(Required=false)]
-            public string ResourceShareId { get; set; }
-
-            /// <summary>
-            /// The time when the resource share was created.
-            /// </summary>
-            [NameInMap("ResourceShareName")]
-            [Validation(Required=false)]
-            public string ResourceShareName { get; set; }
-
-            /// <summary>
-            /// The ID of the resource share.
-            /// </summary>
-            [NameInMap("ResourceShareOwner")]
-            [Validation(Required=false)]
-            public string ResourceShareOwner { get; set; }
-
             [NameInMap("ResourceShareStatus")]
             [Validation(Required=false)]
             public string ResourceShareStatus { get; set; }
 
             /// <summary>
-            /// The owner of the resource share.
+            /// The time when the resource share was updated.
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]

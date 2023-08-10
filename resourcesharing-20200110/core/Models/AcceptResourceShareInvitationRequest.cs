@@ -13,7 +13,9 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class AcceptResourceShareInvitationRequest : TeaModel {
         /// <summary>
-        /// The ID of the invitation.
+        /// The ID of the resource sharing invitation.
+        /// 
+        /// You can call the [ListResourceShareInvitations](~~450564~~) operation to obtain the ID of a resource sharing invitation.
         /// </summary>
         [NameInMap("ResourceShareInvitationId")]
         [Validation(Required=false)]

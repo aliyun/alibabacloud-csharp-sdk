@@ -8,10 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
-    public class EnableSharingWithResourceDirectoryResponseBody : TeaModel {
-        /// <summary>
-        /// The ID of the request.
-        /// </summary>
+    public class ChangeResourceGroupResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

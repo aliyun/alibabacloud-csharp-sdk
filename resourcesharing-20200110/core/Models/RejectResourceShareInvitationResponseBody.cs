@@ -10,47 +10,60 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class RejectResourceShareInvitationResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the resource share.
+        /// The ID of the request.
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The name of the resource share.
+        /// The information of the resource sharing invitation.
         /// </summary>
         [NameInMap("ResourceShareInvitation")]
         [Validation(Required=false)]
         public RejectResourceShareInvitationResponseBodyResourceShareInvitation ResourceShareInvitation { get; set; }
         public class RejectResourceShareInvitationResponseBodyResourceShareInvitation : TeaModel {
+            /// <summary>
+            /// The time when the invitation was created. The time is displayed in UTC.
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// The Alibaba Cloud account ID of the invitee.
+            /// </summary>
             [NameInMap("ReceiverAccountId")]
             [Validation(Required=false)]
             public string ReceiverAccountId { get; set; }
 
             /// <summary>
-            /// The Alibaba Cloud account ID of the invitee.
+            /// The ID of the resource share.
             /// </summary>
             [NameInMap("ResourceShareId")]
             [Validation(Required=false)]
             public string ResourceShareId { get; set; }
 
             /// <summary>
-            /// The Alibaba Cloud account ID of the inviter.
+            /// The ID of the invitation.
             /// </summary>
             [NameInMap("ResourceShareInvitationId")]
             [Validation(Required=false)]
             public string ResourceShareInvitationId { get; set; }
 
             /// <summary>
-            /// The time when the invitation was created. The time is displayed in UTC.
+            /// The name of the resource share.
             /// </summary>
             [NameInMap("ResourceShareName")]
             [Validation(Required=false)]
             public string ResourceShareName { get; set; }
+
+            /// <summary>
+            /// The Alibaba Cloud account ID of the inviter.
+            /// </summary>
+            [NameInMap("SenderAccountId")]
+            [Validation(Required=false)]
+            public string SenderAccountId { get; set; }
 
             /// <summary>
             /// The status of the invitation. Valid values:
@@ -61,10 +74,6 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             /// *   Rejected: The invitation is rejected.
             /// *   Expired: The invitation has expired.
             /// </summary>
-            [NameInMap("SenderAccountId")]
-            [Validation(Required=false)]
-            public string SenderAccountId { get; set; }
-
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
