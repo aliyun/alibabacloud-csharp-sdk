@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// The ID of the security rule set.
+            /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public long? GroupId { get; set; }
