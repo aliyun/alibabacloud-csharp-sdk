@@ -1648,6 +1648,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowOwn))
+            {
+                query["ShowOwn"] = request.ShowOwn;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {
                 query["SortBy"] = request.SortBy;
@@ -1727,6 +1731,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowOwn))
+            {
+                query["ShowOwn"] = request.ShowOwn;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {

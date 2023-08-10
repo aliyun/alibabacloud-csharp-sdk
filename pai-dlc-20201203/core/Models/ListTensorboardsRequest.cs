@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ShowOwn")]
+        [Validation(Required=false)]
+        public bool? ShowOwn { get; set; }
+
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }

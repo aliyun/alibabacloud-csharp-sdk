@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Caller { get; set; }
 
+        [NameInMap("Driver")]
+        [Validation(Required=false)]
+        public string Driver { get; set; }
+
         [NameInMap("EnableErrorMonitoringInAIMaster")]
         [Validation(Required=false)]
         public bool? EnableErrorMonitoringInAIMaster { get; set; }
