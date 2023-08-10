@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class GenerateMergedTableRequest : TeaModel {
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public Schema Body { get; set; }
+
+        /// <summary>
+        /// \-
+        /// </summary>
         [NameInMap("spec")]
         [Validation(Required=false)]
         public string Spec { get; set; }

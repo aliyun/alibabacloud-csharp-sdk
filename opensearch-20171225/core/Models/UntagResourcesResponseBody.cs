@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class UntagResourcesResponseBody : TeaModel {
+        /// <summary>
+        /// The ID of the request.
+        /// </summary>
         [NameInMap("tequestId")]
         [Validation(Required=false)]
         public string TequestId { get; set; }

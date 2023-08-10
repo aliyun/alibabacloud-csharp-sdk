@@ -9,9 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListDataSourceTableFieldsRequest : TeaModel {
+        /// <summary>
+        /// {}
+        /// </summary>
         [NameInMap("params")]
         [Validation(Required=false)]
         public string Params { get; set; }
+
+        /// <summary>
+        /// Whether to return the original field type of the data source
+        /// </summary>
+        [NameInMap("rawType")]
+        [Validation(Required=false)]
+        public bool? RawType { get; set; }
 
     }
 

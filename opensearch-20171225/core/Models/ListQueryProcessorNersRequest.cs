@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListQueryProcessorNersRequest : TeaModel {
+        /// <summary>
+        /// ECOMMERCE
+        /// </summary>
         [NameInMap("domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }

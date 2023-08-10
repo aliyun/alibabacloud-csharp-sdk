@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListInterventionDictionaryEntriesRequest : TeaModel {
+        /// <summary>
+        /// 1
+        /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// 10
+        /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// Test
+        /// </summary>
         [NameInMap("word")]
         [Validation(Required=false)]
         public string Word { get; set; }

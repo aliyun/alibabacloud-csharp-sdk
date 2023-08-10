@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListQueryProcessorAnalyzerResultsRequest : TeaModel {
+        /// <summary>
+        /// The text to be tested.
+        /// </summary>
         [NameInMap("text")]
         [Validation(Required=false)]
         public string Text { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class UpdateFunctionDefaultInstanceRequest : TeaModel {
+        /// <summary>
+        /// The name of the instance.
+        /// </summary>
         [NameInMap("instanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }

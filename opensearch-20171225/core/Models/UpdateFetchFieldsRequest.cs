@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class UpdateFetchFieldsRequest : TeaModel {
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public List<string> Body { get; set; }
+
+        /// <summary>
+        /// true
+        /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }

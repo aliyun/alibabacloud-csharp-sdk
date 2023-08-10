@@ -37,25 +37,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        public BindESUserAnalyzerResponse BindESUserAnalyzer(string appGroupIdentity, string esInstanceId)
+        public BindESUserAnalyzerResponse BindESUserAnalyzerWithOptions(string appGroupIdentity, string esInstanceId, BindESUserAnalyzerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return BindESUserAnalyzerWithOptions(appGroupIdentity, esInstanceId, headers, runtime);
-        }
-
-        public async Task<BindESUserAnalyzerResponse> BindESUserAnalyzerAsync(string appGroupIdentity, string esInstanceId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await BindESUserAnalyzerWithOptionsAsync(appGroupIdentity, esInstanceId, headers, runtime);
-        }
-
-        public BindESUserAnalyzerResponse BindESUserAnalyzerWithOptions(string appGroupIdentity, string esInstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -72,11 +60,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<BindESUserAnalyzerResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<BindESUserAnalyzerResponse> BindESUserAnalyzerWithOptionsAsync(string appGroupIdentity, string esInstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<BindESUserAnalyzerResponse> BindESUserAnalyzerWithOptionsAsync(string appGroupIdentity, string esInstanceId, BindESUserAnalyzerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -93,25 +83,32 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<BindESUserAnalyzerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public BindEsInstanceResponse BindEsInstance(string appGroupIdentity)
+        public BindESUserAnalyzerResponse BindESUserAnalyzer(string appGroupIdentity, string esInstanceId, BindESUserAnalyzerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return BindEsInstanceWithOptions(appGroupIdentity, headers, runtime);
+            return BindESUserAnalyzerWithOptions(appGroupIdentity, esInstanceId, request, headers, runtime);
         }
 
-        public async Task<BindEsInstanceResponse> BindEsInstanceAsync(string appGroupIdentity)
+        public async Task<BindESUserAnalyzerResponse> BindESUserAnalyzerAsync(string appGroupIdentity, string esInstanceId, BindESUserAnalyzerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await BindEsInstanceWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await BindESUserAnalyzerWithOptionsAsync(appGroupIdentity, esInstanceId, request, headers, runtime);
         }
 
-        public BindEsInstanceResponse BindEsInstanceWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public BindEsInstanceResponse BindEsInstanceWithOptions(string appGroupIdentity, BindEsInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                body["body"] = request.Body;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -128,11 +125,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<BindEsInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<BindEsInstanceResponse> BindEsInstanceWithOptionsAsync(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<BindEsInstanceResponse> BindEsInstanceWithOptionsAsync(string appGroupIdentity, BindEsInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                body["body"] = request.Body;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -149,18 +153,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<BindEsInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CompileSortScriptResponse CompileSortScript(string appGroupIdentity, string scriptName, string appVersionId)
+        public BindEsInstanceResponse BindEsInstance(string appGroupIdentity, BindEsInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CompileSortScriptWithOptions(appGroupIdentity, scriptName, appVersionId, headers, runtime);
+            return BindEsInstanceWithOptions(appGroupIdentity, request, headers, runtime);
         }
 
-        public async Task<CompileSortScriptResponse> CompileSortScriptAsync(string appGroupIdentity, string scriptName, string appVersionId)
+        public async Task<BindEsInstanceResponse> BindEsInstanceAsync(string appGroupIdentity, BindEsInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CompileSortScriptWithOptionsAsync(appGroupIdentity, scriptName, appVersionId, headers, runtime);
+            return await BindEsInstanceWithOptionsAsync(appGroupIdentity, request, headers, runtime);
         }
 
         public CompileSortScriptResponse CompileSortScriptWithOptions(string appGroupIdentity, string scriptName, string appVersionId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -205,25 +209,33 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CompileSortScriptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateABTestExperimentResponse CreateABTestExperiment(string appGroupIdentity, string sceneId, string groupId)
+        public CompileSortScriptResponse CompileSortScript(string appGroupIdentity, string scriptName, string appVersionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateABTestExperimentWithOptions(appGroupIdentity, sceneId, groupId, headers, runtime);
+            return CompileSortScriptWithOptions(appGroupIdentity, scriptName, appVersionId, headers, runtime);
         }
 
-        public async Task<CreateABTestExperimentResponse> CreateABTestExperimentAsync(string appGroupIdentity, string sceneId, string groupId)
+        public async Task<CompileSortScriptResponse> CompileSortScriptAsync(string appGroupIdentity, string scriptName, string appVersionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateABTestExperimentWithOptionsAsync(appGroupIdentity, sceneId, groupId, headers, runtime);
+            return await CompileSortScriptWithOptionsAsync(appGroupIdentity, scriptName, appVersionId, headers, runtime);
         }
 
-        public CreateABTestExperimentResponse CreateABTestExperimentWithOptions(string appGroupIdentity, string sceneId, string groupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateABTestExperimentResponse CreateABTestExperimentWithOptions(string appGroupIdentity, string sceneId, string groupId, CreateABTestExperimentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -240,11 +252,19 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateABTestExperimentResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateABTestExperimentResponse> CreateABTestExperimentWithOptionsAsync(string appGroupIdentity, string sceneId, string groupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateABTestExperimentResponse> CreateABTestExperimentWithOptionsAsync(string appGroupIdentity, string sceneId, string groupId, CreateABTestExperimentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -261,25 +281,33 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateABTestExperimentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateABTestGroupResponse CreateABTestGroup(string appGroupIdentity, string sceneId)
+        public CreateABTestExperimentResponse CreateABTestExperiment(string appGroupIdentity, string sceneId, string groupId, CreateABTestExperimentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateABTestGroupWithOptions(appGroupIdentity, sceneId, headers, runtime);
+            return CreateABTestExperimentWithOptions(appGroupIdentity, sceneId, groupId, request, headers, runtime);
         }
 
-        public async Task<CreateABTestGroupResponse> CreateABTestGroupAsync(string appGroupIdentity, string sceneId)
+        public async Task<CreateABTestExperimentResponse> CreateABTestExperimentAsync(string appGroupIdentity, string sceneId, string groupId, CreateABTestExperimentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateABTestGroupWithOptionsAsync(appGroupIdentity, sceneId, headers, runtime);
+            return await CreateABTestExperimentWithOptionsAsync(appGroupIdentity, sceneId, groupId, request, headers, runtime);
         }
 
-        public CreateABTestGroupResponse CreateABTestGroupWithOptions(string appGroupIdentity, string sceneId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateABTestGroupResponse CreateABTestGroupWithOptions(string appGroupIdentity, string sceneId, CreateABTestGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -296,11 +324,19 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateABTestGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateABTestGroupResponse> CreateABTestGroupWithOptionsAsync(string appGroupIdentity, string sceneId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateABTestGroupResponse> CreateABTestGroupWithOptionsAsync(string appGroupIdentity, string sceneId, CreateABTestGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -317,25 +353,33 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateABTestGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateABTestSceneResponse CreateABTestScene(string appGroupIdentity)
+        public CreateABTestGroupResponse CreateABTestGroup(string appGroupIdentity, string sceneId, CreateABTestGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateABTestSceneWithOptions(appGroupIdentity, headers, runtime);
+            return CreateABTestGroupWithOptions(appGroupIdentity, sceneId, request, headers, runtime);
         }
 
-        public async Task<CreateABTestSceneResponse> CreateABTestSceneAsync(string appGroupIdentity)
+        public async Task<CreateABTestGroupResponse> CreateABTestGroupAsync(string appGroupIdentity, string sceneId, CreateABTestGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateABTestSceneWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await CreateABTestGroupWithOptionsAsync(appGroupIdentity, sceneId, request, headers, runtime);
         }
 
-        public CreateABTestSceneResponse CreateABTestSceneWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateABTestSceneResponse CreateABTestSceneWithOptions(string appGroupIdentity, CreateABTestSceneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -352,11 +396,19 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateABTestSceneResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateABTestSceneResponse> CreateABTestSceneWithOptionsAsync(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateABTestSceneResponse> CreateABTestSceneWithOptionsAsync(string appGroupIdentity, CreateABTestSceneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -373,20 +425,31 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateABTestSceneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateAppResponse CreateApp(string appGroupIdentity, CreateAppRequest request)
+        public CreateABTestSceneResponse CreateABTestScene(string appGroupIdentity, CreateABTestSceneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateAppWithOptions(appGroupIdentity, request, headers, runtime);
+            return CreateABTestSceneWithOptions(appGroupIdentity, request, headers, runtime);
         }
 
-        public async Task<CreateAppResponse> CreateAppAsync(string appGroupIdentity, CreateAppRequest request)
+        public async Task<CreateABTestSceneResponse> CreateABTestSceneAsync(string appGroupIdentity, CreateABTestSceneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateAppWithOptionsAsync(appGroupIdentity, request, headers, runtime);
+            return await CreateABTestSceneWithOptionsAsync(appGroupIdentity, request, headers, runtime);
         }
 
+        /**
+          * *   When you create a standard application, a new version of the application is created if the specified application name already exists.
+          * *   When you create a version of an existing application, you must set the autoSwitch and realtimeShared parameters.
+          * *   When you create a version of an existing application, the value of the quota parameter is the same as that of the quota parameter in the previous version of the application.
+          * *   When you create a version of an existing application, the modification of the quota parameter does not take effect.
+          *
+          * @param request CreateAppRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAppResponse
+         */
         public CreateAppResponse CreateAppWithOptions(string appGroupIdentity, CreateAppRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -399,6 +462,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -415,6 +479,17 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateAppResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   When you create a standard application, a new version of the application is created if the specified application name already exists.
+          * *   When you create a version of an existing application, you must set the autoSwitch and realtimeShared parameters.
+          * *   When you create a version of an existing application, the value of the quota parameter is the same as that of the quota parameter in the previous version of the application.
+          * *   When you create a version of an existing application, the modification of the quota parameter does not take effect.
+          *
+          * @param request CreateAppRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateAppResponse
+         */
         public async Task<CreateAppResponse> CreateAppWithOptionsAsync(string appGroupIdentity, CreateAppRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -427,6 +502,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -443,25 +519,45 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateAppGroupResponse CreateAppGroup()
+        /**
+          * *   When you create a standard application, a new version of the application is created if the specified application name already exists.
+          * *   When you create a version of an existing application, you must set the autoSwitch and realtimeShared parameters.
+          * *   When you create a version of an existing application, the value of the quota parameter is the same as that of the quota parameter in the previous version of the application.
+          * *   When you create a version of an existing application, the modification of the quota parameter does not take effect.
+          *
+          * @param request CreateAppRequest
+          * @return CreateAppResponse
+         */
+        public CreateAppResponse CreateApp(string appGroupIdentity, CreateAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateAppGroupWithOptions(headers, runtime);
+            return CreateAppWithOptions(appGroupIdentity, request, headers, runtime);
         }
 
-        public async Task<CreateAppGroupResponse> CreateAppGroupAsync()
+        /**
+          * *   When you create a standard application, a new version of the application is created if the specified application name already exists.
+          * *   When you create a version of an existing application, you must set the autoSwitch and realtimeShared parameters.
+          * *   When you create a version of an existing application, the value of the quota parameter is the same as that of the quota parameter in the previous version of the application.
+          * *   When you create a version of an existing application, the modification of the quota parameter does not take effect.
+          *
+          * @param request CreateAppRequest
+          * @return CreateAppResponse
+         */
+        public async Task<CreateAppResponse> CreateAppAsync(string appGroupIdentity, CreateAppRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateAppGroupWithOptionsAsync(headers, runtime);
+            return await CreateAppWithOptionsAsync(appGroupIdentity, request, headers, runtime);
         }
 
-        public CreateAppGroupResponse CreateAppGroupWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateAppGroupResponse CreateAppGroupWithOptions(CreateAppGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -478,11 +574,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateAppGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateAppGroupResponse> CreateAppGroupWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateAppGroupResponse> CreateAppGroupWithOptionsAsync(CreateAppGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -499,74 +597,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateAppGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateDataCollectionResponse CreateDataCollection(string appGroupIdentity)
+        public CreateAppGroupResponse CreateAppGroup(CreateAppGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateDataCollectionWithOptions(appGroupIdentity, headers, runtime);
+            return CreateAppGroupWithOptions(request, headers, runtime);
         }
 
-        public async Task<CreateDataCollectionResponse> CreateDataCollectionAsync(string appGroupIdentity)
+        public async Task<CreateAppGroupResponse> CreateAppGroupAsync(CreateAppGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateDataCollectionWithOptionsAsync(appGroupIdentity, headers, runtime);
-        }
-
-        public CreateDataCollectionResponse CreateDataCollectionWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateDataCollection",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/data-collections",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateDataCollectionResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<CreateDataCollectionResponse> CreateDataCollectionWithOptionsAsync(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateDataCollection",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/data-collections",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateDataCollectionResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public CreateFirstRankResponse CreateFirstRank(string appGroupIdentity, string appId, CreateFirstRankRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateFirstRankWithOptions(appGroupIdentity, appId, request, headers, runtime);
-        }
-
-        public async Task<CreateFirstRankResponse> CreateFirstRankAsync(string appGroupIdentity, string appId, CreateFirstRankRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateFirstRankWithOptionsAsync(appGroupIdentity, appId, request, headers, runtime);
+            return await CreateAppGroupWithOptionsAsync(request, headers, runtime);
         }
 
         public CreateFirstRankResponse CreateFirstRankWithOptions(string appGroupIdentity, string appId, CreateFirstRankRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -581,6 +623,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -609,6 +652,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -625,20 +669,28 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateFirstRankResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateFunctionInstanceResponse CreateFunctionInstance(string appGroupIdentity, string functionName, CreateFunctionInstanceRequest request)
+        public CreateFirstRankResponse CreateFirstRank(string appGroupIdentity, string appId, CreateFirstRankRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateFunctionInstanceWithOptions(appGroupIdentity, functionName, request, headers, runtime);
+            return CreateFirstRankWithOptions(appGroupIdentity, appId, request, headers, runtime);
         }
 
-        public async Task<CreateFunctionInstanceResponse> CreateFunctionInstanceAsync(string appGroupIdentity, string functionName, CreateFunctionInstanceRequest request)
+        public async Task<CreateFirstRankResponse> CreateFirstRankAsync(string appGroupIdentity, string appId, CreateFirstRankRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateFunctionInstanceWithOptionsAsync(appGroupIdentity, functionName, request, headers, runtime);
+            return await CreateFirstRankWithOptionsAsync(appGroupIdentity, appId, request, headers, runtime);
         }
 
+        /**
+          * You can call the [GetFunctionCurrentVersion](~~421377~~) operation to query the latest version of the current feature. The response of the operation includes the createParameters parameter that is used to create an algorithm instance, the usageParameters parameter, and the requirements for setting these parameters.
+          *
+          * @param request CreateFunctionInstanceRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateFunctionInstanceResponse
+         */
         public CreateFunctionInstanceResponse CreateFunctionInstanceWithOptions(string appGroupIdentity, string functionName, CreateFunctionInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -691,6 +743,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateFunctionInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call the [GetFunctionCurrentVersion](~~421377~~) operation to query the latest version of the current feature. The response of the operation includes the createParameters parameter that is used to create an algorithm instance, the usageParameters parameter, and the requirements for setting these parameters.
+          *
+          * @param request CreateFunctionInstanceRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateFunctionInstanceResponse
+         */
         public async Task<CreateFunctionInstanceResponse> CreateFunctionInstanceWithOptionsAsync(string appGroupIdentity, string functionName, CreateFunctionInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -743,18 +803,30 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateFunctionInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateFunctionTaskResponse CreateFunctionTask(string appGroupIdentity, string functionName, string instanceName)
+        /**
+          * You can call the [GetFunctionCurrentVersion](~~421377~~) operation to query the latest version of the current feature. The response of the operation includes the createParameters parameter that is used to create an algorithm instance, the usageParameters parameter, and the requirements for setting these parameters.
+          *
+          * @param request CreateFunctionInstanceRequest
+          * @return CreateFunctionInstanceResponse
+         */
+        public CreateFunctionInstanceResponse CreateFunctionInstance(string appGroupIdentity, string functionName, CreateFunctionInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateFunctionTaskWithOptions(appGroupIdentity, functionName, instanceName, headers, runtime);
+            return CreateFunctionInstanceWithOptions(appGroupIdentity, functionName, request, headers, runtime);
         }
 
-        public async Task<CreateFunctionTaskResponse> CreateFunctionTaskAsync(string appGroupIdentity, string functionName, string instanceName)
+        /**
+          * You can call the [GetFunctionCurrentVersion](~~421377~~) operation to query the latest version of the current feature. The response of the operation includes the createParameters parameter that is used to create an algorithm instance, the usageParameters parameter, and the requirements for setting these parameters.
+          *
+          * @param request CreateFunctionInstanceRequest
+          * @return CreateFunctionInstanceResponse
+         */
+        public async Task<CreateFunctionInstanceResponse> CreateFunctionInstanceAsync(string appGroupIdentity, string functionName, CreateFunctionInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateFunctionTaskWithOptionsAsync(appGroupIdentity, functionName, instanceName, headers, runtime);
+            return await CreateFunctionInstanceWithOptionsAsync(appGroupIdentity, functionName, request, headers, runtime);
         }
 
         public CreateFunctionTaskResponse CreateFunctionTaskWithOptions(string appGroupIdentity, string functionName, string instanceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -799,25 +871,46 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateFunctionTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateInterventionDictionaryResponse CreateInterventionDictionary()
+        public CreateFunctionTaskResponse CreateFunctionTask(string appGroupIdentity, string functionName, string instanceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateInterventionDictionaryWithOptions(headers, runtime);
+            return CreateFunctionTaskWithOptions(appGroupIdentity, functionName, instanceName, headers, runtime);
         }
 
-        public async Task<CreateInterventionDictionaryResponse> CreateInterventionDictionaryAsync()
+        public async Task<CreateFunctionTaskResponse> CreateFunctionTaskAsync(string appGroupIdentity, string functionName, string instanceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateInterventionDictionaryWithOptionsAsync(headers, runtime);
+            return await CreateFunctionTaskWithOptionsAsync(appGroupIdentity, functionName, instanceName, headers, runtime);
         }
 
-        public CreateInterventionDictionaryResponse CreateInterventionDictionaryWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateInterventionDictionaryResponse CreateInterventionDictionaryWithOptions(CreateInterventionDictionaryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalyzerType))
+            {
+                body["analyzerType"] = request.AnalyzerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -834,11 +927,32 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateInterventionDictionaryResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateInterventionDictionaryResponse> CreateInterventionDictionaryWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateInterventionDictionaryResponse> CreateInterventionDictionaryWithOptionsAsync(CreateInterventionDictionaryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalyzerType))
+            {
+                body["analyzerType"] = request.AnalyzerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -855,74 +969,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateInterventionDictionaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateModelResponse CreateModel(string appGroupIdentity)
+        public CreateInterventionDictionaryResponse CreateInterventionDictionary(CreateInterventionDictionaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateModelWithOptions(appGroupIdentity, headers, runtime);
+            return CreateInterventionDictionaryWithOptions(request, headers, runtime);
         }
 
-        public async Task<CreateModelResponse> CreateModelAsync(string appGroupIdentity)
+        public async Task<CreateInterventionDictionaryResponse> CreateInterventionDictionaryAsync(CreateInterventionDictionaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateModelWithOptionsAsync(appGroupIdentity, headers, runtime);
-        }
-
-        public CreateModelResponse CreateModelWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateModel",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/models",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateModelResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<CreateModelResponse> CreateModelWithOptionsAsync(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateModel",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/models",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateModelResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public CreateQueryProcessorResponse CreateQueryProcessor(string appGroupIdentity, string appId, CreateQueryProcessorRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateQueryProcessorWithOptions(appGroupIdentity, appId, request, headers, runtime);
-        }
-
-        public async Task<CreateQueryProcessorResponse> CreateQueryProcessorAsync(string appGroupIdentity, string appId, CreateQueryProcessorRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateQueryProcessorWithOptionsAsync(appGroupIdentity, appId, request, headers, runtime);
+            return await CreateInterventionDictionaryWithOptionsAsync(request, headers, runtime);
         }
 
         public CreateQueryProcessorResponse CreateQueryProcessorWithOptions(string appGroupIdentity, string appId, CreateQueryProcessorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -937,6 +995,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -965,6 +1024,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -981,25 +1041,35 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateQueryProcessorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateScheduledTaskResponse CreateScheduledTask(string appGroupIdentity)
+        public CreateQueryProcessorResponse CreateQueryProcessor(string appGroupIdentity, string appId, CreateQueryProcessorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateScheduledTaskWithOptions(appGroupIdentity, headers, runtime);
+            return CreateQueryProcessorWithOptions(appGroupIdentity, appId, request, headers, runtime);
         }
 
-        public async Task<CreateScheduledTaskResponse> CreateScheduledTaskAsync(string appGroupIdentity)
+        public async Task<CreateQueryProcessorResponse> CreateQueryProcessorAsync(string appGroupIdentity, string appId, CreateQueryProcessorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateScheduledTaskWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await CreateQueryProcessorWithOptionsAsync(appGroupIdentity, appId, request, headers, runtime);
         }
 
-        public CreateScheduledTaskResponse CreateScheduledTaskWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * ****
+          *
+          * @param request CreateScheduledTaskRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateScheduledTaskResponse
+         */
+        public CreateScheduledTaskResponse CreateScheduledTaskWithOptions(string appGroupIdentity, CreateScheduledTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1016,11 +1086,21 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateScheduledTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateScheduledTaskResponse> CreateScheduledTaskWithOptionsAsync(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * ****
+          *
+          * @param request CreateScheduledTaskRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return CreateScheduledTaskResponse
+         */
+        public async Task<CreateScheduledTaskResponse> CreateScheduledTaskWithOptionsAsync(string appGroupIdentity, CreateScheduledTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1037,25 +1117,39 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateScheduledTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateSearchStrategyResponse CreateSearchStrategy(string appGroupIdentity, string appId)
+        /**
+          * ****
+          *
+          * @param request CreateScheduledTaskRequest
+          * @return CreateScheduledTaskResponse
+         */
+        public CreateScheduledTaskResponse CreateScheduledTask(string appGroupIdentity, CreateScheduledTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateSearchStrategyWithOptions(appGroupIdentity, appId, headers, runtime);
+            return CreateScheduledTaskWithOptions(appGroupIdentity, request, headers, runtime);
         }
 
-        public async Task<CreateSearchStrategyResponse> CreateSearchStrategyAsync(string appGroupIdentity, string appId)
+        /**
+          * ****
+          *
+          * @param request CreateScheduledTaskRequest
+          * @return CreateScheduledTaskResponse
+         */
+        public async Task<CreateScheduledTaskResponse> CreateScheduledTaskAsync(string appGroupIdentity, CreateScheduledTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateSearchStrategyWithOptionsAsync(appGroupIdentity, appId, headers, runtime);
+            return await CreateScheduledTaskWithOptionsAsync(appGroupIdentity, request, headers, runtime);
         }
 
-        public CreateSearchStrategyResponse CreateSearchStrategyWithOptions(string appGroupIdentity, string appId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateSearchStrategyResponse CreateSearchStrategyWithOptions(string appGroupIdentity, string appId, CreateSearchStrategyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1072,11 +1166,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateSearchStrategyResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateSearchStrategyResponse> CreateSearchStrategyWithOptionsAsync(string appGroupIdentity, string appId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateSearchStrategyResponse> CreateSearchStrategyWithOptionsAsync(string appGroupIdentity, string appId, CreateSearchStrategyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1093,18 +1189,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateSearchStrategyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateSecondRankResponse CreateSecondRank(string appGroupIdentity, string appId, CreateSecondRankRequest request)
+        public CreateSearchStrategyResponse CreateSearchStrategy(string appGroupIdentity, string appId, CreateSearchStrategyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateSecondRankWithOptions(appGroupIdentity, appId, request, headers, runtime);
+            return CreateSearchStrategyWithOptions(appGroupIdentity, appId, request, headers, runtime);
         }
 
-        public async Task<CreateSecondRankResponse> CreateSecondRankAsync(string appGroupIdentity, string appId, CreateSecondRankRequest request)
+        public async Task<CreateSearchStrategyResponse> CreateSearchStrategyAsync(string appGroupIdentity, string appId, CreateSearchStrategyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateSecondRankWithOptionsAsync(appGroupIdentity, appId, request, headers, runtime);
+            return await CreateSearchStrategyWithOptionsAsync(appGroupIdentity, appId, request, headers, runtime);
         }
 
         public CreateSecondRankResponse CreateSecondRankWithOptions(string appGroupIdentity, string appId, CreateSecondRankRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1119,6 +1215,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1147,6 +1244,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1163,18 +1261,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateSecondRankResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateSortScriptResponse CreateSortScript(string appGroupIdentity, string appVersionId)
+        public CreateSecondRankResponse CreateSecondRank(string appGroupIdentity, string appId, CreateSecondRankRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateSortScriptWithOptions(appGroupIdentity, appVersionId, headers, runtime);
+            return CreateSecondRankWithOptions(appGroupIdentity, appId, request, headers, runtime);
         }
 
-        public async Task<CreateSortScriptResponse> CreateSortScriptAsync(string appGroupIdentity, string appVersionId)
+        public async Task<CreateSecondRankResponse> CreateSecondRankAsync(string appGroupIdentity, string appId, CreateSecondRankRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateSortScriptWithOptionsAsync(appGroupIdentity, appVersionId, headers, runtime);
+            return await CreateSecondRankWithOptionsAsync(appGroupIdentity, appId, request, headers, runtime);
         }
 
         public CreateSortScriptResponse CreateSortScriptWithOptions(string appGroupIdentity, string appVersionId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1219,25 +1317,54 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateSortScriptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public CreateUserAnalyzerResponse CreateUserAnalyzer()
+        public CreateSortScriptResponse CreateSortScript(string appGroupIdentity, string appVersionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateUserAnalyzerWithOptions(headers, runtime);
+            return CreateSortScriptWithOptions(appGroupIdentity, appVersionId, headers, runtime);
         }
 
-        public async Task<CreateUserAnalyzerResponse> CreateUserAnalyzerAsync()
+        public async Task<CreateSortScriptResponse> CreateSortScriptAsync(string appGroupIdentity, string appVersionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateUserAnalyzerWithOptionsAsync(headers, runtime);
+            return await CreateSortScriptWithOptionsAsync(appGroupIdentity, appVersionId, headers, runtime);
         }
 
-        public CreateUserAnalyzerResponse CreateUserAnalyzerWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateUserAnalyzerResponse CreateUserAnalyzerWithOptions(CreateUserAnalyzerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Business))
+            {
+                body["business"] = request.Business;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessAppGroupId))
+            {
+                body["businessAppGroupId"] = request.BusinessAppGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
+            {
+                body["businessType"] = request.BusinessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1254,11 +1381,40 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateUserAnalyzerResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<CreateUserAnalyzerResponse> CreateUserAnalyzerWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateUserAnalyzerResponse> CreateUserAnalyzerWithOptionsAsync(CreateUserAnalyzerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Business))
+            {
+                body["business"] = request.Business;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessAppGroupId))
+            {
+                body["businessAppGroupId"] = request.BusinessAppGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
+            {
+                body["businessType"] = request.BusinessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1275,18 +1431,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<CreateUserAnalyzerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteABTestExperimentResponse DeleteABTestExperiment(string appGroupIdentity, string sceneId, string groupId, string experimentId)
+        public CreateUserAnalyzerResponse CreateUserAnalyzer(CreateUserAnalyzerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteABTestExperimentWithOptions(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
+            return CreateUserAnalyzerWithOptions(request, headers, runtime);
         }
 
-        public async Task<DeleteABTestExperimentResponse> DeleteABTestExperimentAsync(string appGroupIdentity, string sceneId, string groupId, string experimentId)
+        public async Task<CreateUserAnalyzerResponse> CreateUserAnalyzerAsync(CreateUserAnalyzerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteABTestExperimentWithOptionsAsync(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
+            return await CreateUserAnalyzerWithOptionsAsync(request, headers, runtime);
         }
 
         public DeleteABTestExperimentResponse DeleteABTestExperimentWithOptions(string appGroupIdentity, string sceneId, string groupId, string experimentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1331,18 +1487,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DeleteABTestExperimentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteABTestGroupResponse DeleteABTestGroup(string appGroupIdentity, string sceneId, string groupId)
+        public DeleteABTestExperimentResponse DeleteABTestExperiment(string appGroupIdentity, string sceneId, string groupId, string experimentId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteABTestGroupWithOptions(appGroupIdentity, sceneId, groupId, headers, runtime);
+            return DeleteABTestExperimentWithOptions(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
         }
 
-        public async Task<DeleteABTestGroupResponse> DeleteABTestGroupAsync(string appGroupIdentity, string sceneId, string groupId)
+        public async Task<DeleteABTestExperimentResponse> DeleteABTestExperimentAsync(string appGroupIdentity, string sceneId, string groupId, string experimentId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteABTestGroupWithOptionsAsync(appGroupIdentity, sceneId, groupId, headers, runtime);
+            return await DeleteABTestExperimentWithOptionsAsync(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
         }
 
         public DeleteABTestGroupResponse DeleteABTestGroupWithOptions(string appGroupIdentity, string sceneId, string groupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1387,18 +1543,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DeleteABTestGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteABTestSceneResponse DeleteABTestScene(string appGroupIdentity, string sceneId)
+        public DeleteABTestGroupResponse DeleteABTestGroup(string appGroupIdentity, string sceneId, string groupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteABTestSceneWithOptions(appGroupIdentity, sceneId, headers, runtime);
+            return DeleteABTestGroupWithOptions(appGroupIdentity, sceneId, groupId, headers, runtime);
         }
 
-        public async Task<DeleteABTestSceneResponse> DeleteABTestSceneAsync(string appGroupIdentity, string sceneId)
+        public async Task<DeleteABTestGroupResponse> DeleteABTestGroupAsync(string appGroupIdentity, string sceneId, string groupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteABTestSceneWithOptionsAsync(appGroupIdentity, sceneId, headers, runtime);
+            return await DeleteABTestGroupWithOptionsAsync(appGroupIdentity, sceneId, groupId, headers, runtime);
         }
 
         public DeleteABTestSceneResponse DeleteABTestSceneWithOptions(string appGroupIdentity, string sceneId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1443,18 +1599,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DeleteABTestSceneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteFunctionInstanceResponse DeleteFunctionInstance(string appGroupIdentity, string functionName, string instanceName)
+        public DeleteABTestSceneResponse DeleteABTestScene(string appGroupIdentity, string sceneId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteFunctionInstanceWithOptions(appGroupIdentity, functionName, instanceName, headers, runtime);
+            return DeleteABTestSceneWithOptions(appGroupIdentity, sceneId, headers, runtime);
         }
 
-        public async Task<DeleteFunctionInstanceResponse> DeleteFunctionInstanceAsync(string appGroupIdentity, string functionName, string instanceName)
+        public async Task<DeleteABTestSceneResponse> DeleteABTestSceneAsync(string appGroupIdentity, string sceneId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteFunctionInstanceWithOptionsAsync(appGroupIdentity, functionName, instanceName, headers, runtime);
+            return await DeleteABTestSceneWithOptionsAsync(appGroupIdentity, sceneId, headers, runtime);
         }
 
         public DeleteFunctionInstanceResponse DeleteFunctionInstanceWithOptions(string appGroupIdentity, string functionName, string instanceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1499,18 +1655,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DeleteFunctionInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteFunctionTaskResponse DeleteFunctionTask(string appGroupIdentity, string functionName, string instanceName, string generation)
+        public DeleteFunctionInstanceResponse DeleteFunctionInstance(string appGroupIdentity, string functionName, string instanceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteFunctionTaskWithOptions(appGroupIdentity, functionName, instanceName, generation, headers, runtime);
+            return DeleteFunctionInstanceWithOptions(appGroupIdentity, functionName, instanceName, headers, runtime);
         }
 
-        public async Task<DeleteFunctionTaskResponse> DeleteFunctionTaskAsync(string appGroupIdentity, string functionName, string instanceName, string generation)
+        public async Task<DeleteFunctionInstanceResponse> DeleteFunctionInstanceAsync(string appGroupIdentity, string functionName, string instanceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteFunctionTaskWithOptionsAsync(appGroupIdentity, functionName, instanceName, generation, headers, runtime);
+            return await DeleteFunctionInstanceWithOptionsAsync(appGroupIdentity, functionName, instanceName, headers, runtime);
         }
 
         public DeleteFunctionTaskResponse DeleteFunctionTaskWithOptions(string appGroupIdentity, string functionName, string instanceName, string generation, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1555,74 +1711,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DeleteFunctionTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteModelResponse DeleteModel(string appGroupIdentity, string modelName)
+        public DeleteFunctionTaskResponse DeleteFunctionTask(string appGroupIdentity, string functionName, string instanceName, string generation)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteModelWithOptions(appGroupIdentity, modelName, headers, runtime);
+            return DeleteFunctionTaskWithOptions(appGroupIdentity, functionName, instanceName, generation, headers, runtime);
         }
 
-        public async Task<DeleteModelResponse> DeleteModelAsync(string appGroupIdentity, string modelName)
+        public async Task<DeleteFunctionTaskResponse> DeleteFunctionTaskAsync(string appGroupIdentity, string functionName, string instanceName, string generation)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteModelWithOptionsAsync(appGroupIdentity, modelName, headers, runtime);
-        }
-
-        public DeleteModelResponse DeleteModelWithOptions(string appGroupIdentity, string modelName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteModel",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/models/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelName),
-                Method = "DELETE",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteModelResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DeleteModelResponse> DeleteModelWithOptionsAsync(string appGroupIdentity, string modelName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteModel",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/models/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelName),
-                Method = "DELETE",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteModelResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DeleteSortScriptResponse DeleteSortScript(string appGroupIdentity, string scriptName, string appVersionId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteSortScriptWithOptions(appGroupIdentity, scriptName, appVersionId, headers, runtime);
-        }
-
-        public async Task<DeleteSortScriptResponse> DeleteSortScriptAsync(string appGroupIdentity, string scriptName, string appVersionId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteSortScriptWithOptionsAsync(appGroupIdentity, scriptName, appVersionId, headers, runtime);
+            return await DeleteFunctionTaskWithOptionsAsync(appGroupIdentity, functionName, instanceName, generation, headers, runtime);
         }
 
         public DeleteSortScriptResponse DeleteSortScriptWithOptions(string appGroupIdentity, string scriptName, string appVersionId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1667,18 +1767,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DeleteSortScriptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DeleteSortScriptFileResponse DeleteSortScriptFile(string appGroupIdentity, string appVersionId, string scriptName, string fileName)
+        public DeleteSortScriptResponse DeleteSortScript(string appGroupIdentity, string scriptName, string appVersionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteSortScriptFileWithOptions(appGroupIdentity, appVersionId, scriptName, fileName, headers, runtime);
+            return DeleteSortScriptWithOptions(appGroupIdentity, scriptName, appVersionId, headers, runtime);
         }
 
-        public async Task<DeleteSortScriptFileResponse> DeleteSortScriptFileAsync(string appGroupIdentity, string appVersionId, string scriptName, string fileName)
+        public async Task<DeleteSortScriptResponse> DeleteSortScriptAsync(string appGroupIdentity, string scriptName, string appVersionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteSortScriptFileWithOptionsAsync(appGroupIdentity, appVersionId, scriptName, fileName, headers, runtime);
+            return await DeleteSortScriptWithOptionsAsync(appGroupIdentity, scriptName, appVersionId, headers, runtime);
         }
 
         public DeleteSortScriptFileResponse DeleteSortScriptFileWithOptions(string appGroupIdentity, string appVersionId, string scriptName, string fileName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1723,18 +1823,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DeleteSortScriptFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeABTestExperimentResponse DescribeABTestExperiment(string appGroupIdentity, string sceneId, string groupId, string experimentId)
+        public DeleteSortScriptFileResponse DeleteSortScriptFile(string appGroupIdentity, string appVersionId, string scriptName, string fileName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeABTestExperimentWithOptions(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
+            return DeleteSortScriptFileWithOptions(appGroupIdentity, appVersionId, scriptName, fileName, headers, runtime);
         }
 
-        public async Task<DescribeABTestExperimentResponse> DescribeABTestExperimentAsync(string appGroupIdentity, string sceneId, string groupId, string experimentId)
+        public async Task<DeleteSortScriptFileResponse> DeleteSortScriptFileAsync(string appGroupIdentity, string appVersionId, string scriptName, string fileName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeABTestExperimentWithOptionsAsync(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
+            return await DeleteSortScriptFileWithOptionsAsync(appGroupIdentity, appVersionId, scriptName, fileName, headers, runtime);
         }
 
         public DescribeABTestExperimentResponse DescribeABTestExperimentWithOptions(string appGroupIdentity, string sceneId, string groupId, string experimentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1779,18 +1879,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeABTestExperimentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeABTestGroupResponse DescribeABTestGroup(string appGroupIdentity, string sceneId, string groupId)
+        public DescribeABTestExperimentResponse DescribeABTestExperiment(string appGroupIdentity, string sceneId, string groupId, string experimentId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeABTestGroupWithOptions(appGroupIdentity, sceneId, groupId, headers, runtime);
+            return DescribeABTestExperimentWithOptions(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
         }
 
-        public async Task<DescribeABTestGroupResponse> DescribeABTestGroupAsync(string appGroupIdentity, string sceneId, string groupId)
+        public async Task<DescribeABTestExperimentResponse> DescribeABTestExperimentAsync(string appGroupIdentity, string sceneId, string groupId, string experimentId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeABTestGroupWithOptionsAsync(appGroupIdentity, sceneId, groupId, headers, runtime);
+            return await DescribeABTestExperimentWithOptionsAsync(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
         }
 
         public DescribeABTestGroupResponse DescribeABTestGroupWithOptions(string appGroupIdentity, string sceneId, string groupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1835,18 +1935,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeABTestGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeABTestSceneResponse DescribeABTestScene(string appGroupIdentity, string sceneId)
+        public DescribeABTestGroupResponse DescribeABTestGroup(string appGroupIdentity, string sceneId, string groupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeABTestSceneWithOptions(appGroupIdentity, sceneId, headers, runtime);
+            return DescribeABTestGroupWithOptions(appGroupIdentity, sceneId, groupId, headers, runtime);
         }
 
-        public async Task<DescribeABTestSceneResponse> DescribeABTestSceneAsync(string appGroupIdentity, string sceneId)
+        public async Task<DescribeABTestGroupResponse> DescribeABTestGroupAsync(string appGroupIdentity, string sceneId, string groupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeABTestSceneWithOptionsAsync(appGroupIdentity, sceneId, headers, runtime);
+            return await DescribeABTestGroupWithOptionsAsync(appGroupIdentity, sceneId, groupId, headers, runtime);
         }
 
         public DescribeABTestSceneResponse DescribeABTestSceneWithOptions(string appGroupIdentity, string sceneId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1891,18 +1991,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeABTestSceneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeAppResponse DescribeApp(string appGroupIdentity, string appId)
+        public DescribeABTestSceneResponse DescribeABTestScene(string appGroupIdentity, string sceneId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeAppWithOptions(appGroupIdentity, appId, headers, runtime);
+            return DescribeABTestSceneWithOptions(appGroupIdentity, sceneId, headers, runtime);
         }
 
-        public async Task<DescribeAppResponse> DescribeAppAsync(string appGroupIdentity, string appId)
+        public async Task<DescribeABTestSceneResponse> DescribeABTestSceneAsync(string appGroupIdentity, string sceneId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeAppWithOptionsAsync(appGroupIdentity, appId, headers, runtime);
+            return await DescribeABTestSceneWithOptionsAsync(appGroupIdentity, sceneId, headers, runtime);
         }
 
         public DescribeAppResponse DescribeAppWithOptions(string appGroupIdentity, string appId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1947,18 +2047,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeAppGroupResponse DescribeAppGroup(string appGroupIdentity)
+        public DescribeAppResponse DescribeApp(string appGroupIdentity, string appId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeAppGroupWithOptions(appGroupIdentity, headers, runtime);
+            return DescribeAppWithOptions(appGroupIdentity, appId, headers, runtime);
         }
 
-        public async Task<DescribeAppGroupResponse> DescribeAppGroupAsync(string appGroupIdentity)
+        public async Task<DescribeAppResponse> DescribeAppAsync(string appGroupIdentity, string appId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeAppGroupWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await DescribeAppWithOptionsAsync(appGroupIdentity, appId, headers, runtime);
         }
 
         public DescribeAppGroupResponse DescribeAppGroupWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2003,152 +2103,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeAppGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeAppGroupDataReportResponse DescribeAppGroupDataReport(string appGroupIdentity, DescribeAppGroupDataReportRequest request)
+        public DescribeAppGroupResponse DescribeAppGroup(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeAppGroupDataReportWithOptions(appGroupIdentity, request, headers, runtime);
+            return DescribeAppGroupWithOptions(appGroupIdentity, headers, runtime);
         }
 
-        public async Task<DescribeAppGroupDataReportResponse> DescribeAppGroupDataReportAsync(string appGroupIdentity, DescribeAppGroupDataReportRequest request)
+        public async Task<DescribeAppGroupResponse> DescribeAppGroupAsync(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeAppGroupDataReportWithOptionsAsync(appGroupIdentity, request, headers, runtime);
-        }
-
-        public DescribeAppGroupDataReportResponse DescribeAppGroupDataReportWithOptions(string appGroupIdentity, DescribeAppGroupDataReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
-            {
-                query["endTime"] = request.EndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["startTime"] = request.StartTime;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeAppGroupDataReport",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/data-report",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeAppGroupDataReportResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeAppGroupDataReportResponse> DescribeAppGroupDataReportWithOptionsAsync(string appGroupIdentity, DescribeAppGroupDataReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
-            {
-                query["endTime"] = request.EndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["startTime"] = request.StartTime;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeAppGroupDataReport",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/data-report",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeAppGroupDataReportResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeAppGroupStatisticsResponse DescribeAppGroupStatistics(string appGroupIdentity)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeAppGroupStatisticsWithOptions(appGroupIdentity, headers, runtime);
-        }
-
-        public async Task<DescribeAppGroupStatisticsResponse> DescribeAppGroupStatisticsAsync(string appGroupIdentity)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeAppGroupStatisticsWithOptionsAsync(appGroupIdentity, headers, runtime);
-        }
-
-        public DescribeAppGroupStatisticsResponse DescribeAppGroupStatisticsWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeAppGroupStatistics",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/statistics",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeAppGroupStatisticsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeAppGroupStatisticsResponse> DescribeAppGroupStatisticsWithOptionsAsync(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeAppGroupStatistics",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/statistics",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeAppGroupStatisticsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeAppStatisticsResponse DescribeAppStatistics(string appGroupIdentity, string appId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeAppStatisticsWithOptions(appGroupIdentity, appId, headers, runtime);
-        }
-
-        public async Task<DescribeAppStatisticsResponse> DescribeAppStatisticsAsync(string appGroupIdentity, string appId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeAppStatisticsWithOptionsAsync(appGroupIdentity, appId, headers, runtime);
+            return await DescribeAppGroupWithOptionsAsync(appGroupIdentity, headers, runtime);
         }
 
         public DescribeAppStatisticsResponse DescribeAppStatisticsWithOptions(string appGroupIdentity, string appId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2193,18 +2159,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeAppStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeAppsResponse DescribeApps(string appGroupIdentity)
+        public DescribeAppStatisticsResponse DescribeAppStatistics(string appGroupIdentity, string appId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeAppsWithOptions(appGroupIdentity, headers, runtime);
+            return DescribeAppStatisticsWithOptions(appGroupIdentity, appId, headers, runtime);
         }
 
-        public async Task<DescribeAppsResponse> DescribeAppsAsync(string appGroupIdentity)
+        public async Task<DescribeAppStatisticsResponse> DescribeAppStatisticsAsync(string appGroupIdentity, string appId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeAppsWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await DescribeAppStatisticsWithOptionsAsync(appGroupIdentity, appId, headers, runtime);
         }
 
         public DescribeAppsResponse DescribeAppsWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2249,18 +2215,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeAppsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeDataCollctionResponse DescribeDataCollction(string appGroupIdentity, string dataCollectionIdentity)
+        public DescribeAppsResponse DescribeApps(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeDataCollctionWithOptions(appGroupIdentity, dataCollectionIdentity, headers, runtime);
+            return DescribeAppsWithOptions(appGroupIdentity, headers, runtime);
         }
 
-        public async Task<DescribeDataCollctionResponse> DescribeDataCollctionAsync(string appGroupIdentity, string dataCollectionIdentity)
+        public async Task<DescribeAppsResponse> DescribeAppsAsync(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeDataCollctionWithOptionsAsync(appGroupIdentity, dataCollectionIdentity, headers, runtime);
+            return await DescribeAppsWithOptionsAsync(appGroupIdentity, headers, runtime);
         }
 
         public DescribeDataCollctionResponse DescribeDataCollctionWithOptions(string appGroupIdentity, string dataCollectionIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2305,18 +2271,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeDataCollctionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeFirstRankResponse DescribeFirstRank(string appGroupIdentity, string appId, string name)
+        public DescribeDataCollctionResponse DescribeDataCollction(string appGroupIdentity, string dataCollectionIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeFirstRankWithOptions(appGroupIdentity, appId, name, headers, runtime);
+            return DescribeDataCollctionWithOptions(appGroupIdentity, dataCollectionIdentity, headers, runtime);
         }
 
-        public async Task<DescribeFirstRankResponse> DescribeFirstRankAsync(string appGroupIdentity, string appId, string name)
+        public async Task<DescribeDataCollctionResponse> DescribeDataCollctionAsync(string appGroupIdentity, string dataCollectionIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeFirstRankWithOptionsAsync(appGroupIdentity, appId, name, headers, runtime);
+            return await DescribeDataCollctionWithOptionsAsync(appGroupIdentity, dataCollectionIdentity, headers, runtime);
         }
 
         public DescribeFirstRankResponse DescribeFirstRankWithOptions(string appGroupIdentity, string appId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2361,18 +2327,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeFirstRankResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeInterventionDictionaryResponse DescribeInterventionDictionary(string name)
+        public DescribeFirstRankResponse DescribeFirstRank(string appGroupIdentity, string appId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeInterventionDictionaryWithOptions(name, headers, runtime);
+            return DescribeFirstRankWithOptions(appGroupIdentity, appId, name, headers, runtime);
         }
 
-        public async Task<DescribeInterventionDictionaryResponse> DescribeInterventionDictionaryAsync(string name)
+        public async Task<DescribeFirstRankResponse> DescribeFirstRankAsync(string appGroupIdentity, string appId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeInterventionDictionaryWithOptionsAsync(name, headers, runtime);
+            return await DescribeFirstRankWithOptionsAsync(appGroupIdentity, appId, name, headers, runtime);
         }
 
         public DescribeInterventionDictionaryResponse DescribeInterventionDictionaryWithOptions(string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2417,74 +2383,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeInterventionDictionaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeModelResponse DescribeModel(string appGroupIdentity, string modelName)
+        public DescribeInterventionDictionaryResponse DescribeInterventionDictionary(string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeModelWithOptions(appGroupIdentity, modelName, headers, runtime);
+            return DescribeInterventionDictionaryWithOptions(name, headers, runtime);
         }
 
-        public async Task<DescribeModelResponse> DescribeModelAsync(string appGroupIdentity, string modelName)
+        public async Task<DescribeInterventionDictionaryResponse> DescribeInterventionDictionaryAsync(string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeModelWithOptionsAsync(appGroupIdentity, modelName, headers, runtime);
-        }
-
-        public DescribeModelResponse DescribeModelWithOptions(string appGroupIdentity, string modelName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeModel",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/models/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelName),
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeModelResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<DescribeModelResponse> DescribeModelWithOptionsAsync(string appGroupIdentity, string modelName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeModel",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/models/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelName),
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeModelResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public DescribeQueryProcessorResponse DescribeQueryProcessor(string appGroupIdentity, string appId, string name)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeQueryProcessorWithOptions(appGroupIdentity, appId, name, headers, runtime);
-        }
-
-        public async Task<DescribeQueryProcessorResponse> DescribeQueryProcessorAsync(string appGroupIdentity, string appId, string name)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeQueryProcessorWithOptionsAsync(appGroupIdentity, appId, name, headers, runtime);
+            return await DescribeInterventionDictionaryWithOptionsAsync(name, headers, runtime);
         }
 
         public DescribeQueryProcessorResponse DescribeQueryProcessorWithOptions(string appGroupIdentity, string appId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2529,18 +2439,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeQueryProcessorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeRegionResponse DescribeRegion()
+        public DescribeQueryProcessorResponse DescribeQueryProcessor(string appGroupIdentity, string appId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeRegionWithOptions(headers, runtime);
+            return DescribeQueryProcessorWithOptions(appGroupIdentity, appId, name, headers, runtime);
         }
 
-        public async Task<DescribeRegionResponse> DescribeRegionAsync()
+        public async Task<DescribeQueryProcessorResponse> DescribeQueryProcessorAsync(string appGroupIdentity, string appId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeRegionWithOptionsAsync(headers, runtime);
+            return await DescribeQueryProcessorWithOptionsAsync(appGroupIdentity, appId, name, headers, runtime);
         }
 
         public DescribeRegionResponse DescribeRegionWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2585,18 +2495,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeRegionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeRegionsResponse DescribeRegions()
+        public DescribeRegionResponse DescribeRegion()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeRegionsWithOptions(headers, runtime);
+            return DescribeRegionWithOptions(headers, runtime);
         }
 
-        public async Task<DescribeRegionsResponse> DescribeRegionsAsync()
+        public async Task<DescribeRegionResponse> DescribeRegionAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeRegionsWithOptionsAsync(headers, runtime);
+            return await DescribeRegionWithOptionsAsync(headers, runtime);
         }
 
         public DescribeRegionsResponse DescribeRegionsWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2641,18 +2551,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeScheduledTaskResponse DescribeScheduledTask(string appGroupIdentity, string taskId)
+        public DescribeRegionsResponse DescribeRegions()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeScheduledTaskWithOptions(appGroupIdentity, taskId, headers, runtime);
+            return DescribeRegionsWithOptions(headers, runtime);
         }
 
-        public async Task<DescribeScheduledTaskResponse> DescribeScheduledTaskAsync(string appGroupIdentity, string taskId)
+        public async Task<DescribeRegionsResponse> DescribeRegionsAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeScheduledTaskWithOptionsAsync(appGroupIdentity, taskId, headers, runtime);
+            return await DescribeRegionsWithOptionsAsync(headers, runtime);
         }
 
         public DescribeScheduledTaskResponse DescribeScheduledTaskWithOptions(string appGroupIdentity, string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2697,18 +2607,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeScheduledTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeSecondRankResponse DescribeSecondRank(string appGroupIdentity, string appId, string name)
+        public DescribeScheduledTaskResponse DescribeScheduledTask(string appGroupIdentity, string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeSecondRankWithOptions(appGroupIdentity, appId, name, headers, runtime);
+            return DescribeScheduledTaskWithOptions(appGroupIdentity, taskId, headers, runtime);
         }
 
-        public async Task<DescribeSecondRankResponse> DescribeSecondRankAsync(string appGroupIdentity, string appId, string name)
+        public async Task<DescribeScheduledTaskResponse> DescribeScheduledTaskAsync(string appGroupIdentity, string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeSecondRankWithOptionsAsync(appGroupIdentity, appId, name, headers, runtime);
+            return await DescribeScheduledTaskWithOptionsAsync(appGroupIdentity, taskId, headers, runtime);
         }
 
         public DescribeSecondRankResponse DescribeSecondRankWithOptions(string appGroupIdentity, string appId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2753,18 +2663,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeSecondRankResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeSlowQueryStatusResponse DescribeSlowQueryStatus(string appGroupIdentity)
+        public DescribeSecondRankResponse DescribeSecondRank(string appGroupIdentity, string appId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeSlowQueryStatusWithOptions(appGroupIdentity, headers, runtime);
+            return DescribeSecondRankWithOptions(appGroupIdentity, appId, name, headers, runtime);
         }
 
-        public async Task<DescribeSlowQueryStatusResponse> DescribeSlowQueryStatusAsync(string appGroupIdentity)
+        public async Task<DescribeSecondRankResponse> DescribeSecondRankAsync(string appGroupIdentity, string appId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeSlowQueryStatusWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await DescribeSecondRankWithOptionsAsync(appGroupIdentity, appId, name, headers, runtime);
         }
 
         public DescribeSlowQueryStatusResponse DescribeSlowQueryStatusWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2809,18 +2719,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeSlowQueryStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DescribeUserAnalyzerResponse DescribeUserAnalyzer(string name, DescribeUserAnalyzerRequest request)
+        public DescribeSlowQueryStatusResponse DescribeSlowQueryStatus(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeUserAnalyzerWithOptions(name, request, headers, runtime);
+            return DescribeSlowQueryStatusWithOptions(appGroupIdentity, headers, runtime);
         }
 
-        public async Task<DescribeUserAnalyzerResponse> DescribeUserAnalyzerAsync(string name, DescribeUserAnalyzerRequest request)
+        public async Task<DescribeSlowQueryStatusResponse> DescribeSlowQueryStatusAsync(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeUserAnalyzerWithOptionsAsync(name, request, headers, runtime);
+            return await DescribeSlowQueryStatusWithOptionsAsync(appGroupIdentity, headers, runtime);
         }
 
         public DescribeUserAnalyzerResponse DescribeUserAnalyzerWithOptions(string name, DescribeUserAnalyzerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2879,18 +2789,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeUserAnalyzerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public DisableSlowQueryResponse DisableSlowQuery(string appGroupIdentity)
+        public DescribeUserAnalyzerResponse DescribeUserAnalyzer(string name, DescribeUserAnalyzerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DisableSlowQueryWithOptions(appGroupIdentity, headers, runtime);
+            return DescribeUserAnalyzerWithOptions(name, request, headers, runtime);
         }
 
-        public async Task<DisableSlowQueryResponse> DisableSlowQueryAsync(string appGroupIdentity)
+        public async Task<DescribeUserAnalyzerResponse> DescribeUserAnalyzerAsync(string name, DescribeUserAnalyzerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DisableSlowQueryWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await DescribeUserAnalyzerWithOptionsAsync(name, request, headers, runtime);
         }
 
         public DisableSlowQueryResponse DisableSlowQueryWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2935,18 +2845,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DisableSlowQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public EnableSlowQueryResponse EnableSlowQuery(string appGroupIdentity)
+        public DisableSlowQueryResponse DisableSlowQuery(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return EnableSlowQueryWithOptions(appGroupIdentity, headers, runtime);
+            return DisableSlowQueryWithOptions(appGroupIdentity, headers, runtime);
         }
 
-        public async Task<EnableSlowQueryResponse> EnableSlowQueryAsync(string appGroupIdentity)
+        public async Task<DisableSlowQueryResponse> DisableSlowQueryAsync(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await EnableSlowQueryWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await DisableSlowQueryWithOptionsAsync(appGroupIdentity, headers, runtime);
         }
 
         public EnableSlowQueryResponse EnableSlowQueryWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2991,18 +2901,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<EnableSlowQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GenerateMergedTableResponse GenerateMergedTable(GenerateMergedTableRequest request)
+        public EnableSlowQueryResponse EnableSlowQuery(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GenerateMergedTableWithOptions(request, headers, runtime);
+            return EnableSlowQueryWithOptions(appGroupIdentity, headers, runtime);
         }
 
-        public async Task<GenerateMergedTableResponse> GenerateMergedTableAsync(GenerateMergedTableRequest request)
+        public async Task<EnableSlowQueryResponse> EnableSlowQueryAsync(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GenerateMergedTableWithOptionsAsync(request, headers, runtime);
+            return await EnableSlowQueryWithOptionsAsync(appGroupIdentity, headers, runtime);
         }
 
         public GenerateMergedTableResponse GenerateMergedTableWithOptions(GenerateMergedTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3017,6 +2927,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3045,6 +2956,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3061,18 +2973,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<GenerateMergedTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetDomainResponse GetDomain(string domainName, GetDomainRequest request)
+        public GenerateMergedTableResponse GenerateMergedTable(GenerateMergedTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetDomainWithOptions(domainName, request, headers, runtime);
+            return GenerateMergedTableWithOptions(request, headers, runtime);
         }
 
-        public async Task<GetDomainResponse> GetDomainAsync(string domainName, GetDomainRequest request)
+        public async Task<GenerateMergedTableResponse> GenerateMergedTableAsync(GenerateMergedTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetDomainWithOptionsAsync(domainName, request, headers, runtime);
+            return await GenerateMergedTableWithOptionsAsync(request, headers, runtime);
         }
 
         public GetDomainResponse GetDomainWithOptions(string domainName, GetDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3131,18 +3043,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<GetDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetFunctionCurrentVersionResponse GetFunctionCurrentVersion(string functionName, GetFunctionCurrentVersionRequest request)
+        public GetDomainResponse GetDomain(string domainName, GetDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetFunctionCurrentVersionWithOptions(functionName, request, headers, runtime);
+            return GetDomainWithOptions(domainName, request, headers, runtime);
         }
 
-        public async Task<GetFunctionCurrentVersionResponse> GetFunctionCurrentVersionAsync(string functionName, GetFunctionCurrentVersionRequest request)
+        public async Task<GetDomainResponse> GetDomainAsync(string domainName, GetDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetFunctionCurrentVersionWithOptionsAsync(functionName, request, headers, runtime);
+            return await GetDomainWithOptionsAsync(domainName, request, headers, runtime);
         }
 
         public GetFunctionCurrentVersionResponse GetFunctionCurrentVersionWithOptions(string functionName, GetFunctionCurrentVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3225,18 +3137,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<GetFunctionCurrentVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetFunctionDefaultInstanceResponse GetFunctionDefaultInstance(string appGroupIdentity, string functionName)
+        public GetFunctionCurrentVersionResponse GetFunctionCurrentVersion(string functionName, GetFunctionCurrentVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetFunctionDefaultInstanceWithOptions(appGroupIdentity, functionName, headers, runtime);
+            return GetFunctionCurrentVersionWithOptions(functionName, request, headers, runtime);
         }
 
-        public async Task<GetFunctionDefaultInstanceResponse> GetFunctionDefaultInstanceAsync(string appGroupIdentity, string functionName)
+        public async Task<GetFunctionCurrentVersionResponse> GetFunctionCurrentVersionAsync(string functionName, GetFunctionCurrentVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetFunctionDefaultInstanceWithOptionsAsync(appGroupIdentity, functionName, headers, runtime);
+            return await GetFunctionCurrentVersionWithOptionsAsync(functionName, request, headers, runtime);
         }
 
         public GetFunctionDefaultInstanceResponse GetFunctionDefaultInstanceWithOptions(string appGroupIdentity, string functionName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3281,18 +3193,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<GetFunctionDefaultInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetFunctionInstanceResponse GetFunctionInstance(string appGroupIdentity, string functionName, string instanceName, GetFunctionInstanceRequest request)
+        public GetFunctionDefaultInstanceResponse GetFunctionDefaultInstance(string appGroupIdentity, string functionName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetFunctionInstanceWithOptions(appGroupIdentity, functionName, instanceName, request, headers, runtime);
+            return GetFunctionDefaultInstanceWithOptions(appGroupIdentity, functionName, headers, runtime);
         }
 
-        public async Task<GetFunctionInstanceResponse> GetFunctionInstanceAsync(string appGroupIdentity, string functionName, string instanceName, GetFunctionInstanceRequest request)
+        public async Task<GetFunctionDefaultInstanceResponse> GetFunctionDefaultInstanceAsync(string appGroupIdentity, string functionName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetFunctionInstanceWithOptionsAsync(appGroupIdentity, functionName, instanceName, request, headers, runtime);
+            return await GetFunctionDefaultInstanceWithOptionsAsync(appGroupIdentity, functionName, headers, runtime);
         }
 
         public GetFunctionInstanceResponse GetFunctionInstanceWithOptions(string appGroupIdentity, string functionName, string instanceName, GetFunctionInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3351,18 +3263,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<GetFunctionInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetFunctionTaskResponse GetFunctionTask(string appGroupIdentity, string functionName, string instanceName, string generation)
+        public GetFunctionInstanceResponse GetFunctionInstance(string appGroupIdentity, string functionName, string instanceName, GetFunctionInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetFunctionTaskWithOptions(appGroupIdentity, functionName, instanceName, generation, headers, runtime);
+            return GetFunctionInstanceWithOptions(appGroupIdentity, functionName, instanceName, request, headers, runtime);
         }
 
-        public async Task<GetFunctionTaskResponse> GetFunctionTaskAsync(string appGroupIdentity, string functionName, string instanceName, string generation)
+        public async Task<GetFunctionInstanceResponse> GetFunctionInstanceAsync(string appGroupIdentity, string functionName, string instanceName, GetFunctionInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetFunctionTaskWithOptionsAsync(appGroupIdentity, functionName, instanceName, generation, headers, runtime);
+            return await GetFunctionInstanceWithOptionsAsync(appGroupIdentity, functionName, instanceName, request, headers, runtime);
         }
 
         public GetFunctionTaskResponse GetFunctionTaskWithOptions(string appGroupIdentity, string functionName, string instanceName, string generation, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3407,18 +3319,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<GetFunctionTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetFunctionVersionResponse GetFunctionVersion(string functionName, string versionId)
+        public GetFunctionTaskResponse GetFunctionTask(string appGroupIdentity, string functionName, string instanceName, string generation)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetFunctionVersionWithOptions(functionName, versionId, headers, runtime);
+            return GetFunctionTaskWithOptions(appGroupIdentity, functionName, instanceName, generation, headers, runtime);
         }
 
-        public async Task<GetFunctionVersionResponse> GetFunctionVersionAsync(string functionName, string versionId)
+        public async Task<GetFunctionTaskResponse> GetFunctionTaskAsync(string appGroupIdentity, string functionName, string instanceName, string generation)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetFunctionVersionWithOptionsAsync(functionName, versionId, headers, runtime);
+            return await GetFunctionTaskWithOptionsAsync(appGroupIdentity, functionName, instanceName, generation, headers, runtime);
         }
 
         public GetFunctionVersionResponse GetFunctionVersionWithOptions(string functionName, string versionId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3463,74 +3375,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<GetFunctionVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetModelProgressResponse GetModelProgress(string appGroupIdentity, string modelName)
+        public GetFunctionVersionResponse GetFunctionVersion(string functionName, string versionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetModelProgressWithOptions(appGroupIdentity, modelName, headers, runtime);
+            return GetFunctionVersionWithOptions(functionName, versionId, headers, runtime);
         }
 
-        public async Task<GetModelProgressResponse> GetModelProgressAsync(string appGroupIdentity, string modelName)
+        public async Task<GetFunctionVersionResponse> GetFunctionVersionAsync(string functionName, string versionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetModelProgressWithOptionsAsync(appGroupIdentity, modelName, headers, runtime);
-        }
-
-        public GetModelProgressResponse GetModelProgressWithOptions(string appGroupIdentity, string modelName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetModelProgress",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/models/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelName) + "/progress",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetModelProgressResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<GetModelProgressResponse> GetModelProgressWithOptionsAsync(string appGroupIdentity, string modelName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetModelProgress",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/models/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelName) + "/progress",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetModelProgressResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public GetModelReportResponse GetModelReport(string appGroupIdentity, string modelName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetModelReportWithOptions(appGroupIdentity, modelName, headers, runtime);
-        }
-
-        public async Task<GetModelReportResponse> GetModelReportAsync(string appGroupIdentity, string modelName)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetModelReportWithOptionsAsync(appGroupIdentity, modelName, headers, runtime);
+            return await GetFunctionVersionWithOptionsAsync(functionName, versionId, headers, runtime);
         }
 
         public GetModelReportResponse GetModelReportWithOptions(string appGroupIdentity, string modelName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3575,18 +3431,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<GetModelReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetScriptFileNamesResponse GetScriptFileNames(string appGroupIdentity, string appVersionId, string scriptName)
+        public GetModelReportResponse GetModelReport(string appGroupIdentity, string modelName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetScriptFileNamesWithOptions(appGroupIdentity, appVersionId, scriptName, headers, runtime);
+            return GetModelReportWithOptions(appGroupIdentity, modelName, headers, runtime);
         }
 
-        public async Task<GetScriptFileNamesResponse> GetScriptFileNamesAsync(string appGroupIdentity, string appVersionId, string scriptName)
+        public async Task<GetModelReportResponse> GetModelReportAsync(string appGroupIdentity, string modelName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetScriptFileNamesWithOptionsAsync(appGroupIdentity, appVersionId, scriptName, headers, runtime);
+            return await GetModelReportWithOptionsAsync(appGroupIdentity, modelName, headers, runtime);
         }
 
         public GetScriptFileNamesResponse GetScriptFileNamesWithOptions(string appGroupIdentity, string appVersionId, string scriptName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3631,18 +3487,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<GetScriptFileNamesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetSearchStrategyResponse GetSearchStrategy(string appGroupIdentity, string appId, string strategyName)
+        public GetScriptFileNamesResponse GetScriptFileNames(string appGroupIdentity, string appVersionId, string scriptName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetSearchStrategyWithOptions(appGroupIdentity, appId, strategyName, headers, runtime);
+            return GetScriptFileNamesWithOptions(appGroupIdentity, appVersionId, scriptName, headers, runtime);
         }
 
-        public async Task<GetSearchStrategyResponse> GetSearchStrategyAsync(string appGroupIdentity, string appId, string strategyName)
+        public async Task<GetScriptFileNamesResponse> GetScriptFileNamesAsync(string appGroupIdentity, string appVersionId, string scriptName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetSearchStrategyWithOptionsAsync(appGroupIdentity, appId, strategyName, headers, runtime);
+            return await GetScriptFileNamesWithOptionsAsync(appGroupIdentity, appVersionId, scriptName, headers, runtime);
         }
 
         public GetSearchStrategyResponse GetSearchStrategyWithOptions(string appGroupIdentity, string appId, string strategyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3687,18 +3543,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<GetSearchStrategyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetSortScriptResponse GetSortScript(string appGroupIdentity, string scriptName, string appVersionId)
+        public GetSearchStrategyResponse GetSearchStrategy(string appGroupIdentity, string appId, string strategyName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetSortScriptWithOptions(appGroupIdentity, scriptName, appVersionId, headers, runtime);
+            return GetSearchStrategyWithOptions(appGroupIdentity, appId, strategyName, headers, runtime);
         }
 
-        public async Task<GetSortScriptResponse> GetSortScriptAsync(string appGroupIdentity, string scriptName, string appVersionId)
+        public async Task<GetSearchStrategyResponse> GetSearchStrategyAsync(string appGroupIdentity, string appId, string strategyName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetSortScriptWithOptionsAsync(appGroupIdentity, scriptName, appVersionId, headers, runtime);
+            return await GetSearchStrategyWithOptionsAsync(appGroupIdentity, appId, strategyName, headers, runtime);
         }
 
         public GetSortScriptResponse GetSortScriptWithOptions(string appGroupIdentity, string scriptName, string appVersionId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3743,18 +3599,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<GetSortScriptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetSortScriptFileResponse GetSortScriptFile(string appGroupIdentity, string scriptName, string appVersionId, string fileName)
+        public GetSortScriptResponse GetSortScript(string appGroupIdentity, string scriptName, string appVersionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetSortScriptFileWithOptions(appGroupIdentity, scriptName, appVersionId, fileName, headers, runtime);
+            return GetSortScriptWithOptions(appGroupIdentity, scriptName, appVersionId, headers, runtime);
         }
 
-        public async Task<GetSortScriptFileResponse> GetSortScriptFileAsync(string appGroupIdentity, string scriptName, string appVersionId, string fileName)
+        public async Task<GetSortScriptResponse> GetSortScriptAsync(string appGroupIdentity, string scriptName, string appVersionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetSortScriptFileWithOptionsAsync(appGroupIdentity, scriptName, appVersionId, fileName, headers, runtime);
+            return await GetSortScriptWithOptionsAsync(appGroupIdentity, scriptName, appVersionId, headers, runtime);
         }
 
         public GetSortScriptFileResponse GetSortScriptFileWithOptions(string appGroupIdentity, string scriptName, string appVersionId, string fileName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3799,158 +3655,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<GetSortScriptFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public GetValidationErrorResponse GetValidationError(string appGroupIdentity, GetValidationErrorRequest request)
+        public GetSortScriptFileResponse GetSortScriptFile(string appGroupIdentity, string scriptName, string appVersionId, string fileName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetValidationErrorWithOptions(appGroupIdentity, request, headers, runtime);
+            return GetSortScriptFileWithOptions(appGroupIdentity, scriptName, appVersionId, fileName, headers, runtime);
         }
 
-        public async Task<GetValidationErrorResponse> GetValidationErrorAsync(string appGroupIdentity, GetValidationErrorRequest request)
+        public async Task<GetSortScriptFileResponse> GetSortScriptFileAsync(string appGroupIdentity, string scriptName, string appVersionId, string fileName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetValidationErrorWithOptionsAsync(appGroupIdentity, request, headers, runtime);
-        }
-
-        public GetValidationErrorResponse GetValidationErrorWithOptions(string appGroupIdentity, GetValidationErrorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorCode))
-            {
-                query["errorCode"] = request.ErrorCode;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetValidationError",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/data/validation-error",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetValidationErrorResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<GetValidationErrorResponse> GetValidationErrorWithOptionsAsync(string appGroupIdentity, GetValidationErrorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorCode))
-            {
-                query["errorCode"] = request.ErrorCode;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetValidationError",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/data/validation-error",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetValidationErrorResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public GetValidationReportResponse GetValidationReport(string appGroupIdentity, GetValidationReportRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetValidationReportWithOptions(appGroupIdentity, request, headers, runtime);
-        }
-
-        public async Task<GetValidationReportResponse> GetValidationReportAsync(string appGroupIdentity, GetValidationReportRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetValidationReportWithOptionsAsync(appGroupIdentity, request, headers, runtime);
-        }
-
-        public GetValidationReportResponse GetValidationReportWithOptions(string appGroupIdentity, GetValidationReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["type"] = request.Type;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetValidationReport",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/data/validation-report",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetValidationReportResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<GetValidationReportResponse> GetValidationReportWithOptionsAsync(string appGroupIdentity, GetValidationReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
-            {
-                query["type"] = request.Type;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetValidationReport",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/data/validation-report",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetValidationReportResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListABTestExperimentsResponse ListABTestExperiments(string appGroupIdentity, string sceneId, string groupId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListABTestExperimentsWithOptions(appGroupIdentity, sceneId, groupId, headers, runtime);
-        }
-
-        public async Task<ListABTestExperimentsResponse> ListABTestExperimentsAsync(string appGroupIdentity, string sceneId, string groupId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListABTestExperimentsWithOptionsAsync(appGroupIdentity, sceneId, groupId, headers, runtime);
+            return await GetSortScriptFileWithOptionsAsync(appGroupIdentity, scriptName, appVersionId, fileName, headers, runtime);
         }
 
         public ListABTestExperimentsResponse ListABTestExperimentsWithOptions(string appGroupIdentity, string sceneId, string groupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3995,18 +3711,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListABTestExperimentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListABTestFixedFlowDividersResponse ListABTestFixedFlowDividers(string appGroupIdentity, string sceneId, string groupId, string experimentId)
+        public ListABTestExperimentsResponse ListABTestExperiments(string appGroupIdentity, string sceneId, string groupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListABTestFixedFlowDividersWithOptions(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
+            return ListABTestExperimentsWithOptions(appGroupIdentity, sceneId, groupId, headers, runtime);
         }
 
-        public async Task<ListABTestFixedFlowDividersResponse> ListABTestFixedFlowDividersAsync(string appGroupIdentity, string sceneId, string groupId, string experimentId)
+        public async Task<ListABTestExperimentsResponse> ListABTestExperimentsAsync(string appGroupIdentity, string sceneId, string groupId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListABTestFixedFlowDividersWithOptionsAsync(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
+            return await ListABTestExperimentsWithOptionsAsync(appGroupIdentity, sceneId, groupId, headers, runtime);
         }
 
         public ListABTestFixedFlowDividersResponse ListABTestFixedFlowDividersWithOptions(string appGroupIdentity, string sceneId, string groupId, string experimentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4051,18 +3767,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListABTestFixedFlowDividersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListABTestGroupsResponse ListABTestGroups(string appGroupIdentity, string sceneId)
+        public ListABTestFixedFlowDividersResponse ListABTestFixedFlowDividers(string appGroupIdentity, string sceneId, string groupId, string experimentId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListABTestGroupsWithOptions(appGroupIdentity, sceneId, headers, runtime);
+            return ListABTestFixedFlowDividersWithOptions(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
         }
 
-        public async Task<ListABTestGroupsResponse> ListABTestGroupsAsync(string appGroupIdentity, string sceneId)
+        public async Task<ListABTestFixedFlowDividersResponse> ListABTestFixedFlowDividersAsync(string appGroupIdentity, string sceneId, string groupId, string experimentId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListABTestGroupsWithOptionsAsync(appGroupIdentity, sceneId, headers, runtime);
+            return await ListABTestFixedFlowDividersWithOptionsAsync(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
         }
 
         public ListABTestGroupsResponse ListABTestGroupsWithOptions(string appGroupIdentity, string sceneId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4107,74 +3823,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListABTestGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListABTestMetricsResponse ListABTestMetrics(string appGroupIdentity, string sceneId, string groupId)
+        public ListABTestGroupsResponse ListABTestGroups(string appGroupIdentity, string sceneId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListABTestMetricsWithOptions(appGroupIdentity, sceneId, groupId, headers, runtime);
+            return ListABTestGroupsWithOptions(appGroupIdentity, sceneId, headers, runtime);
         }
 
-        public async Task<ListABTestMetricsResponse> ListABTestMetricsAsync(string appGroupIdentity, string sceneId, string groupId)
+        public async Task<ListABTestGroupsResponse> ListABTestGroupsAsync(string appGroupIdentity, string sceneId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListABTestMetricsWithOptionsAsync(appGroupIdentity, sceneId, groupId, headers, runtime);
-        }
-
-        public ListABTestMetricsResponse ListABTestMetricsWithOptions(string appGroupIdentity, string sceneId, string groupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListABTestMetrics",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/scenes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sceneId) + "/groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(groupId) + "/metrics",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListABTestMetricsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListABTestMetricsResponse> ListABTestMetricsWithOptionsAsync(string appGroupIdentity, string sceneId, string groupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListABTestMetrics",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/scenes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sceneId) + "/groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(groupId) + "/metrics",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListABTestMetricsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListABTestScenesResponse ListABTestScenes(string appGroupIdentity)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListABTestScenesWithOptions(appGroupIdentity, headers, runtime);
-        }
-
-        public async Task<ListABTestScenesResponse> ListABTestScenesAsync(string appGroupIdentity)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListABTestScenesWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await ListABTestGroupsWithOptionsAsync(appGroupIdentity, sceneId, headers, runtime);
         }
 
         public ListABTestScenesResponse ListABTestScenesWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4219,216 +3879,30 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListABTestScenesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListAppGroupErrorsResponse ListAppGroupErrors(string appGroupIdentity, ListAppGroupErrorsRequest request)
+        public ListABTestScenesResponse ListABTestScenes(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListAppGroupErrorsWithOptions(appGroupIdentity, request, headers, runtime);
+            return ListABTestScenesWithOptions(appGroupIdentity, headers, runtime);
         }
 
-        public async Task<ListAppGroupErrorsResponse> ListAppGroupErrorsAsync(string appGroupIdentity, ListAppGroupErrorsRequest request)
+        public async Task<ListABTestScenesResponse> ListABTestScenesAsync(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListAppGroupErrorsWithOptionsAsync(appGroupIdentity, request, headers, runtime);
+            return await ListABTestScenesWithOptionsAsync(appGroupIdentity, headers, runtime);
         }
 
-        public ListAppGroupErrorsResponse ListAppGroupErrorsWithOptions(string appGroupIdentity, ListAppGroupErrorsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
-            {
-                query["appId"] = request.AppId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["pageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["pageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["startTime"] = request.StartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopTime))
-            {
-                query["stopTime"] = request.StopTime;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListAppGroupErrors",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/errors",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListAppGroupErrorsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListAppGroupErrorsResponse> ListAppGroupErrorsWithOptionsAsync(string appGroupIdentity, ListAppGroupErrorsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
-            {
-                query["appId"] = request.AppId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["pageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["pageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["startTime"] = request.StartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopTime))
-            {
-                query["stopTime"] = request.StopTime;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListAppGroupErrors",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/errors",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListAppGroupErrorsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListAppGroupMetricsResponse ListAppGroupMetrics(string appGroupIdentity, ListAppGroupMetricsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListAppGroupMetricsWithOptions(appGroupIdentity, request, headers, runtime);
-        }
-
-        public async Task<ListAppGroupMetricsResponse> ListAppGroupMetricsAsync(string appGroupIdentity, ListAppGroupMetricsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListAppGroupMetricsWithOptionsAsync(appGroupIdentity, request, headers, runtime);
-        }
-
-        public ListAppGroupMetricsResponse ListAppGroupMetricsWithOptions(string appGroupIdentity, ListAppGroupMetricsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
-            {
-                query["endTime"] = request.EndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Indexes))
-            {
-                query["indexes"] = request.Indexes;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
-            {
-                query["metricType"] = request.MetricType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["startTime"] = request.StartTime;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListAppGroupMetrics",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/metrics",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListAppGroupMetricsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListAppGroupMetricsResponse> ListAppGroupMetricsWithOptionsAsync(string appGroupIdentity, ListAppGroupMetricsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
-            {
-                query["endTime"] = request.EndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Indexes))
-            {
-                query["indexes"] = request.Indexes;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
-            {
-                query["metricType"] = request.MetricType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["startTime"] = request.StartTime;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListAppGroupMetrics",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/metrics",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListAppGroupMetricsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListAppGroupsResponse ListAppGroups(ListAppGroupsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListAppGroupsWithOptions(request, headers, runtime);
-        }
-
-        public async Task<ListAppGroupsResponse> ListAppGroupsAsync(ListAppGroupsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListAppGroupsWithOptionsAsync(request, headers, runtime);
-        }
-
+        /**
+          * *   This operation allows you to query applications by application name, instance ID, and application type.
+          * *   This operation can sort the applications based on their creation time.
+          * *   This operation supports the parameters for paging.
+          *
+          * @param tmpReq ListAppGroupsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAppGroupsResponse
+         */
         public ListAppGroupsResponse ListAppGroupsWithOptions(ListAppGroupsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4491,6 +3965,16 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListAppGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * *   This operation allows you to query applications by application name, instance ID, and application type.
+          * *   This operation can sort the applications based on their creation time.
+          * *   This operation supports the parameters for paging.
+          *
+          * @param tmpReq ListAppGroupsRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ListAppGroupsResponse
+         */
         public async Task<ListAppGroupsResponse> ListAppGroupsWithOptionsAsync(ListAppGroupsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4553,18 +4037,34 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListAppGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListAppsResponse ListApps(ListAppsRequest request)
+        /**
+          * *   This operation allows you to query applications by application name, instance ID, and application type.
+          * *   This operation can sort the applications based on their creation time.
+          * *   This operation supports the parameters for paging.
+          *
+          * @param request ListAppGroupsRequest
+          * @return ListAppGroupsResponse
+         */
+        public ListAppGroupsResponse ListAppGroups(ListAppGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListAppsWithOptions(request, headers, runtime);
+            return ListAppGroupsWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListAppsResponse> ListAppsAsync(ListAppsRequest request)
+        /**
+          * *   This operation allows you to query applications by application name, instance ID, and application type.
+          * *   This operation can sort the applications based on their creation time.
+          * *   This operation supports the parameters for paging.
+          *
+          * @param request ListAppGroupsRequest
+          * @return ListAppGroupsResponse
+         */
+        public async Task<ListAppGroupsResponse> ListAppGroupsAsync(ListAppGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListAppsWithOptionsAsync(request, headers, runtime);
+            return await ListAppGroupsWithOptionsAsync(request, headers, runtime);
         }
 
         public ListAppsResponse ListAppsWithOptions(ListAppsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4639,18 +4139,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListAppsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListDataCollectionsResponse ListDataCollections(string appGroupIdentity, ListDataCollectionsRequest request)
+        public ListAppsResponse ListApps(ListAppsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListDataCollectionsWithOptions(appGroupIdentity, request, headers, runtime);
+            return ListAppsWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListDataCollectionsResponse> ListDataCollectionsAsync(string appGroupIdentity, ListDataCollectionsRequest request)
+        public async Task<ListAppsResponse> ListAppsAsync(ListAppsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListDataCollectionsWithOptionsAsync(appGroupIdentity, request, headers, runtime);
+            return await ListAppsWithOptionsAsync(request, headers, runtime);
         }
 
         public ListDataCollectionsResponse ListDataCollectionsWithOptions(string appGroupIdentity, ListDataCollectionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4717,18 +4217,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListDataCollectionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListDataSourceTableFieldsResponse ListDataSourceTableFields(string dataSourceType, ListDataSourceTableFieldsRequest request)
+        public ListDataCollectionsResponse ListDataCollections(string appGroupIdentity, ListDataCollectionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListDataSourceTableFieldsWithOptions(dataSourceType, request, headers, runtime);
+            return ListDataCollectionsWithOptions(appGroupIdentity, request, headers, runtime);
         }
 
-        public async Task<ListDataSourceTableFieldsResponse> ListDataSourceTableFieldsAsync(string dataSourceType, ListDataSourceTableFieldsRequest request)
+        public async Task<ListDataCollectionsResponse> ListDataCollectionsAsync(string appGroupIdentity, ListDataCollectionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListDataSourceTableFieldsWithOptionsAsync(dataSourceType, request, headers, runtime);
+            return await ListDataCollectionsWithOptionsAsync(appGroupIdentity, request, headers, runtime);
         }
 
         public ListDataSourceTableFieldsResponse ListDataSourceTableFieldsWithOptions(string dataSourceType, ListDataSourceTableFieldsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4738,6 +4238,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
             {
                 query["params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RawType))
+            {
+                query["rawType"] = request.RawType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4767,6 +4271,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 query["params"] = request.Params;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RawType))
+            {
+                query["rawType"] = request.RawType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4787,18 +4295,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListDataSourceTableFieldsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListDataSourceTablesResponse ListDataSourceTables(string dataSourceType, ListDataSourceTablesRequest request)
+        public ListDataSourceTableFieldsResponse ListDataSourceTableFields(string dataSourceType, ListDataSourceTableFieldsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListDataSourceTablesWithOptions(dataSourceType, request, headers, runtime);
+            return ListDataSourceTableFieldsWithOptions(dataSourceType, request, headers, runtime);
         }
 
-        public async Task<ListDataSourceTablesResponse> ListDataSourceTablesAsync(string dataSourceType, ListDataSourceTablesRequest request)
+        public async Task<ListDataSourceTableFieldsResponse> ListDataSourceTableFieldsAsync(string dataSourceType, ListDataSourceTableFieldsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListDataSourceTablesWithOptionsAsync(dataSourceType, request, headers, runtime);
+            return await ListDataSourceTableFieldsWithOptionsAsync(dataSourceType, request, headers, runtime);
         }
 
         public ListDataSourceTablesResponse ListDataSourceTablesWithOptions(string dataSourceType, ListDataSourceTablesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4857,96 +4365,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListDataSourceTablesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListDeployedAlgorithmModelsResponse ListDeployedAlgorithmModels(string appGroupIdentity, ListDeployedAlgorithmModelsRequest request)
+        public ListDataSourceTablesResponse ListDataSourceTables(string dataSourceType, ListDataSourceTablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListDeployedAlgorithmModelsWithOptions(appGroupIdentity, request, headers, runtime);
+            return ListDataSourceTablesWithOptions(dataSourceType, request, headers, runtime);
         }
 
-        public async Task<ListDeployedAlgorithmModelsResponse> ListDeployedAlgorithmModelsAsync(string appGroupIdentity, ListDeployedAlgorithmModelsRequest request)
+        public async Task<ListDataSourceTablesResponse> ListDataSourceTablesAsync(string dataSourceType, ListDataSourceTablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListDeployedAlgorithmModelsWithOptionsAsync(appGroupIdentity, request, headers, runtime);
-        }
-
-        public ListDeployedAlgorithmModelsResponse ListDeployedAlgorithmModelsWithOptions(string appGroupIdentity, ListDeployedAlgorithmModelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlgorithmType))
-            {
-                query["algorithmType"] = request.AlgorithmType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InServiceOnly))
-            {
-                query["inServiceOnly"] = request.InServiceOnly;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListDeployedAlgorithmModels",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/deployed-algorithm-models",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListDeployedAlgorithmModelsResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListDeployedAlgorithmModelsResponse> ListDeployedAlgorithmModelsWithOptionsAsync(string appGroupIdentity, ListDeployedAlgorithmModelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlgorithmType))
-            {
-                query["algorithmType"] = request.AlgorithmType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InServiceOnly))
-            {
-                query["inServiceOnly"] = request.InServiceOnly;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListDeployedAlgorithmModels",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/deployed-algorithm-models",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListDeployedAlgorithmModelsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListFirstRanksResponse ListFirstRanks(string appGroupIdentity, string appId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListFirstRanksWithOptions(appGroupIdentity, appId, headers, runtime);
-        }
-
-        public async Task<ListFirstRanksResponse> ListFirstRanksAsync(string appGroupIdentity, string appId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListFirstRanksWithOptionsAsync(appGroupIdentity, appId, headers, runtime);
+            return await ListDataSourceTablesWithOptionsAsync(dataSourceType, request, headers, runtime);
         }
 
         public ListFirstRanksResponse ListFirstRanksWithOptions(string appGroupIdentity, string appId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4991,18 +4421,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListFirstRanksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListFunctionInstancesResponse ListFunctionInstances(string appGroupIdentity, string functionName, ListFunctionInstancesRequest request)
+        public ListFirstRanksResponse ListFirstRanks(string appGroupIdentity, string appId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListFunctionInstancesWithOptions(appGroupIdentity, functionName, request, headers, runtime);
+            return ListFirstRanksWithOptions(appGroupIdentity, appId, headers, runtime);
         }
 
-        public async Task<ListFunctionInstancesResponse> ListFunctionInstancesAsync(string appGroupIdentity, string functionName, ListFunctionInstancesRequest request)
+        public async Task<ListFirstRanksResponse> ListFirstRanksAsync(string appGroupIdentity, string appId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListFunctionInstancesWithOptionsAsync(appGroupIdentity, functionName, request, headers, runtime);
+            return await ListFirstRanksWithOptionsAsync(appGroupIdentity, appId, headers, runtime);
         }
 
         public ListFunctionInstancesResponse ListFunctionInstancesWithOptions(string appGroupIdentity, string functionName, ListFunctionInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5101,18 +4531,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListFunctionInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListFunctionTasksResponse ListFunctionTasks(string appGroupIdentity, string functionName, string instanceName, ListFunctionTasksRequest request)
+        public ListFunctionInstancesResponse ListFunctionInstances(string appGroupIdentity, string functionName, ListFunctionInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListFunctionTasksWithOptions(appGroupIdentity, functionName, instanceName, request, headers, runtime);
+            return ListFunctionInstancesWithOptions(appGroupIdentity, functionName, request, headers, runtime);
         }
 
-        public async Task<ListFunctionTasksResponse> ListFunctionTasksAsync(string appGroupIdentity, string functionName, string instanceName, ListFunctionTasksRequest request)
+        public async Task<ListFunctionInstancesResponse> ListFunctionInstancesAsync(string appGroupIdentity, string functionName, ListFunctionInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListFunctionTasksWithOptionsAsync(appGroupIdentity, functionName, instanceName, request, headers, runtime);
+            return await ListFunctionInstancesWithOptionsAsync(appGroupIdentity, functionName, request, headers, runtime);
         }
 
         public ListFunctionTasksResponse ListFunctionTasksWithOptions(string appGroupIdentity, string functionName, string instanceName, ListFunctionTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5203,18 +4633,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListFunctionTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListInterventionDictionariesResponse ListInterventionDictionaries(ListInterventionDictionariesRequest request)
+        public ListFunctionTasksResponse ListFunctionTasks(string appGroupIdentity, string functionName, string instanceName, ListFunctionTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListInterventionDictionariesWithOptions(request, headers, runtime);
+            return ListFunctionTasksWithOptions(appGroupIdentity, functionName, instanceName, request, headers, runtime);
         }
 
-        public async Task<ListInterventionDictionariesResponse> ListInterventionDictionariesAsync(ListInterventionDictionariesRequest request)
+        public async Task<ListFunctionTasksResponse> ListFunctionTasksAsync(string appGroupIdentity, string functionName, string instanceName, ListFunctionTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListInterventionDictionariesWithOptionsAsync(request, headers, runtime);
+            return await ListFunctionTasksWithOptionsAsync(appGroupIdentity, functionName, instanceName, request, headers, runtime);
         }
 
         public ListInterventionDictionariesResponse ListInterventionDictionariesWithOptions(ListInterventionDictionariesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5289,18 +4719,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListInterventionDictionariesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListInterventionDictionaryEntriesResponse ListInterventionDictionaryEntries(string name, ListInterventionDictionaryEntriesRequest request)
+        public ListInterventionDictionariesResponse ListInterventionDictionaries(ListInterventionDictionariesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListInterventionDictionaryEntriesWithOptions(name, request, headers, runtime);
+            return ListInterventionDictionariesWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListInterventionDictionaryEntriesResponse> ListInterventionDictionaryEntriesAsync(string name, ListInterventionDictionaryEntriesRequest request)
+        public async Task<ListInterventionDictionariesResponse> ListInterventionDictionariesAsync(ListInterventionDictionariesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListInterventionDictionaryEntriesWithOptionsAsync(name, request, headers, runtime);
+            return await ListInterventionDictionariesWithOptionsAsync(request, headers, runtime);
         }
 
         public ListInterventionDictionaryEntriesResponse ListInterventionDictionaryEntriesWithOptions(string name, ListInterventionDictionaryEntriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5375,18 +4805,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListInterventionDictionaryEntriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListInterventionDictionaryNerResultsResponse ListInterventionDictionaryNerResults(string name, ListInterventionDictionaryNerResultsRequest request)
+        public ListInterventionDictionaryEntriesResponse ListInterventionDictionaryEntries(string name, ListInterventionDictionaryEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListInterventionDictionaryNerResultsWithOptions(name, request, headers, runtime);
+            return ListInterventionDictionaryEntriesWithOptions(name, request, headers, runtime);
         }
 
-        public async Task<ListInterventionDictionaryNerResultsResponse> ListInterventionDictionaryNerResultsAsync(string name, ListInterventionDictionaryNerResultsRequest request)
+        public async Task<ListInterventionDictionaryEntriesResponse> ListInterventionDictionaryEntriesAsync(string name, ListInterventionDictionaryEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListInterventionDictionaryNerResultsWithOptionsAsync(name, request, headers, runtime);
+            return await ListInterventionDictionaryEntriesWithOptionsAsync(name, request, headers, runtime);
         }
 
         public ListInterventionDictionaryNerResultsResponse ListInterventionDictionaryNerResultsWithOptions(string name, ListInterventionDictionaryNerResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5445,18 +4875,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListInterventionDictionaryNerResultsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListInterventionDictionaryRelatedEntitiesResponse ListInterventionDictionaryRelatedEntities(string name)
+        public ListInterventionDictionaryNerResultsResponse ListInterventionDictionaryNerResults(string name, ListInterventionDictionaryNerResultsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListInterventionDictionaryRelatedEntitiesWithOptions(name, headers, runtime);
+            return ListInterventionDictionaryNerResultsWithOptions(name, request, headers, runtime);
         }
 
-        public async Task<ListInterventionDictionaryRelatedEntitiesResponse> ListInterventionDictionaryRelatedEntitiesAsync(string name)
+        public async Task<ListInterventionDictionaryNerResultsResponse> ListInterventionDictionaryNerResultsAsync(string name, ListInterventionDictionaryNerResultsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListInterventionDictionaryRelatedEntitiesWithOptionsAsync(name, headers, runtime);
+            return await ListInterventionDictionaryNerResultsWithOptionsAsync(name, request, headers, runtime);
         }
 
         public ListInterventionDictionaryRelatedEntitiesResponse ListInterventionDictionaryRelatedEntitiesWithOptions(string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5501,18 +4931,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListInterventionDictionaryRelatedEntitiesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListModelsResponse ListModels(string appGroupIdentity, ListModelsRequest request)
+        public ListInterventionDictionaryRelatedEntitiesResponse ListInterventionDictionaryRelatedEntities(string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListModelsWithOptions(appGroupIdentity, request, headers, runtime);
+            return ListInterventionDictionaryRelatedEntitiesWithOptions(name, headers, runtime);
         }
 
-        public async Task<ListModelsResponse> ListModelsAsync(string appGroupIdentity, ListModelsRequest request)
+        public async Task<ListInterventionDictionaryRelatedEntitiesResponse> ListInterventionDictionaryRelatedEntitiesAsync(string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListModelsWithOptionsAsync(appGroupIdentity, request, headers, runtime);
+            return await ListInterventionDictionaryRelatedEntitiesWithOptionsAsync(name, headers, runtime);
         }
 
         public ListModelsResponse ListModelsWithOptions(string appGroupIdentity, ListModelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5587,18 +5017,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListModelsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListProceedingsResponse ListProceedings(string appGroupIdentity, ListProceedingsRequest request)
+        public ListModelsResponse ListModels(string appGroupIdentity, ListModelsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListProceedingsWithOptions(appGroupIdentity, request, headers, runtime);
+            return ListModelsWithOptions(appGroupIdentity, request, headers, runtime);
         }
 
-        public async Task<ListProceedingsResponse> ListProceedingsAsync(string appGroupIdentity, ListProceedingsRequest request)
+        public async Task<ListModelsResponse> ListModelsAsync(string appGroupIdentity, ListModelsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListProceedingsWithOptionsAsync(appGroupIdentity, request, headers, runtime);
+            return await ListModelsWithOptionsAsync(appGroupIdentity, request, headers, runtime);
         }
 
         public ListProceedingsResponse ListProceedingsWithOptions(string appGroupIdentity, ListProceedingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5657,18 +5087,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListProceedingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListQueryProcessorAnalyzerResultsResponse ListQueryProcessorAnalyzerResults(string appGroupIdentity, string appId, string name, ListQueryProcessorAnalyzerResultsRequest request)
+        public ListProceedingsResponse ListProceedings(string appGroupIdentity, ListProceedingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListQueryProcessorAnalyzerResultsWithOptions(appGroupIdentity, appId, name, request, headers, runtime);
+            return ListProceedingsWithOptions(appGroupIdentity, request, headers, runtime);
         }
 
-        public async Task<ListQueryProcessorAnalyzerResultsResponse> ListQueryProcessorAnalyzerResultsAsync(string appGroupIdentity, string appId, string name, ListQueryProcessorAnalyzerResultsRequest request)
+        public async Task<ListProceedingsResponse> ListProceedingsAsync(string appGroupIdentity, ListProceedingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListQueryProcessorAnalyzerResultsWithOptionsAsync(appGroupIdentity, appId, name, request, headers, runtime);
+            return await ListProceedingsWithOptionsAsync(appGroupIdentity, request, headers, runtime);
         }
 
         public ListQueryProcessorAnalyzerResultsResponse ListQueryProcessorAnalyzerResultsWithOptions(string appGroupIdentity, string appId, string name, ListQueryProcessorAnalyzerResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5727,18 +5157,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListQueryProcessorAnalyzerResultsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListQueryProcessorNersResponse ListQueryProcessorNers(ListQueryProcessorNersRequest request)
+        public ListQueryProcessorAnalyzerResultsResponse ListQueryProcessorAnalyzerResults(string appGroupIdentity, string appId, string name, ListQueryProcessorAnalyzerResultsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListQueryProcessorNersWithOptions(request, headers, runtime);
+            return ListQueryProcessorAnalyzerResultsWithOptions(appGroupIdentity, appId, name, request, headers, runtime);
         }
 
-        public async Task<ListQueryProcessorNersResponse> ListQueryProcessorNersAsync(ListQueryProcessorNersRequest request)
+        public async Task<ListQueryProcessorAnalyzerResultsResponse> ListQueryProcessorAnalyzerResultsAsync(string appGroupIdentity, string appId, string name, ListQueryProcessorAnalyzerResultsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListQueryProcessorNersWithOptionsAsync(request, headers, runtime);
+            return await ListQueryProcessorAnalyzerResultsWithOptionsAsync(appGroupIdentity, appId, name, request, headers, runtime);
         }
 
         public ListQueryProcessorNersResponse ListQueryProcessorNersWithOptions(ListQueryProcessorNersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5797,18 +5227,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListQueryProcessorNersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListQueryProcessorsResponse ListQueryProcessors(string appGroupIdentity, string appId, ListQueryProcessorsRequest request)
+        public ListQueryProcessorNersResponse ListQueryProcessorNers(ListQueryProcessorNersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListQueryProcessorsWithOptions(appGroupIdentity, appId, request, headers, runtime);
+            return ListQueryProcessorNersWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListQueryProcessorsResponse> ListQueryProcessorsAsync(string appGroupIdentity, string appId, ListQueryProcessorsRequest request)
+        public async Task<ListQueryProcessorNersResponse> ListQueryProcessorNersAsync(ListQueryProcessorNersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListQueryProcessorsWithOptionsAsync(appGroupIdentity, appId, request, headers, runtime);
+            return await ListQueryProcessorNersWithOptionsAsync(request, headers, runtime);
         }
 
         public ListQueryProcessorsResponse ListQueryProcessorsWithOptions(string appGroupIdentity, string appId, ListQueryProcessorsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5867,18 +5297,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListQueryProcessorsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListQuotaReviewTasksResponse ListQuotaReviewTasks(string appGroupIdentity, ListQuotaReviewTasksRequest request)
+        public ListQueryProcessorsResponse ListQueryProcessors(string appGroupIdentity, string appId, ListQueryProcessorsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListQuotaReviewTasksWithOptions(appGroupIdentity, request, headers, runtime);
+            return ListQueryProcessorsWithOptions(appGroupIdentity, appId, request, headers, runtime);
         }
 
-        public async Task<ListQuotaReviewTasksResponse> ListQuotaReviewTasksAsync(string appGroupIdentity, ListQuotaReviewTasksRequest request)
+        public async Task<ListQueryProcessorsResponse> ListQueryProcessorsAsync(string appGroupIdentity, string appId, ListQueryProcessorsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListQuotaReviewTasksWithOptionsAsync(appGroupIdentity, request, headers, runtime);
+            return await ListQueryProcessorsWithOptionsAsync(appGroupIdentity, appId, request, headers, runtime);
         }
 
         public ListQuotaReviewTasksResponse ListQuotaReviewTasksWithOptions(string appGroupIdentity, ListQuotaReviewTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5945,74 +5375,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListQuotaReviewTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListRamRolesResponse ListRamRoles()
+        public ListQuotaReviewTasksResponse ListQuotaReviewTasks(string appGroupIdentity, ListQuotaReviewTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListRamRolesWithOptions(headers, runtime);
+            return ListQuotaReviewTasksWithOptions(appGroupIdentity, request, headers, runtime);
         }
 
-        public async Task<ListRamRolesResponse> ListRamRolesAsync()
+        public async Task<ListQuotaReviewTasksResponse> ListQuotaReviewTasksAsync(string appGroupIdentity, ListQuotaReviewTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListRamRolesWithOptionsAsync(headers, runtime);
-        }
-
-        public ListRamRolesResponse ListRamRolesWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListRamRoles",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/assist/ram/roles",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListRamRolesResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ListRamRolesResponse> ListRamRolesWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListRamRoles",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/assist/ram/roles",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListRamRolesResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ListScheduledTasksResponse ListScheduledTasks(string appGroupIdentity, ListScheduledTasksRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListScheduledTasksWithOptions(appGroupIdentity, request, headers, runtime);
-        }
-
-        public async Task<ListScheduledTasksResponse> ListScheduledTasksAsync(string appGroupIdentity, ListScheduledTasksRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListScheduledTasksWithOptionsAsync(appGroupIdentity, request, headers, runtime);
+            return await ListQuotaReviewTasksWithOptionsAsync(appGroupIdentity, request, headers, runtime);
         }
 
         public ListScheduledTasksResponse ListScheduledTasksWithOptions(string appGroupIdentity, ListScheduledTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6087,18 +5461,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListScheduledTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListSearchStrategiesResponse ListSearchStrategies(string appGroupIdentity, string appId)
+        public ListScheduledTasksResponse ListScheduledTasks(string appGroupIdentity, ListScheduledTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListSearchStrategiesWithOptions(appGroupIdentity, appId, headers, runtime);
+            return ListScheduledTasksWithOptions(appGroupIdentity, request, headers, runtime);
         }
 
-        public async Task<ListSearchStrategiesResponse> ListSearchStrategiesAsync(string appGroupIdentity, string appId)
+        public async Task<ListScheduledTasksResponse> ListScheduledTasksAsync(string appGroupIdentity, ListScheduledTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListSearchStrategiesWithOptionsAsync(appGroupIdentity, appId, headers, runtime);
+            return await ListScheduledTasksWithOptionsAsync(appGroupIdentity, request, headers, runtime);
         }
 
         public ListSearchStrategiesResponse ListSearchStrategiesWithOptions(string appGroupIdentity, string appId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6143,18 +5517,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListSearchStrategiesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListSecondRanksResponse ListSecondRanks(string appGroupIdentity, string appId)
+        public ListSearchStrategiesResponse ListSearchStrategies(string appGroupIdentity, string appId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListSecondRanksWithOptions(appGroupIdentity, appId, headers, runtime);
+            return ListSearchStrategiesWithOptions(appGroupIdentity, appId, headers, runtime);
         }
 
-        public async Task<ListSecondRanksResponse> ListSecondRanksAsync(string appGroupIdentity, string appId)
+        public async Task<ListSearchStrategiesResponse> ListSearchStrategiesAsync(string appGroupIdentity, string appId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListSecondRanksWithOptionsAsync(appGroupIdentity, appId, headers, runtime);
+            return await ListSearchStrategiesWithOptionsAsync(appGroupIdentity, appId, headers, runtime);
         }
 
         public ListSecondRanksResponse ListSecondRanksWithOptions(string appGroupIdentity, string appId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6199,18 +5573,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListSecondRanksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListSlowQueryCategoriesResponse ListSlowQueryCategories(string appGroupIdentity)
+        public ListSecondRanksResponse ListSecondRanks(string appGroupIdentity, string appId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListSlowQueryCategoriesWithOptions(appGroupIdentity, headers, runtime);
+            return ListSecondRanksWithOptions(appGroupIdentity, appId, headers, runtime);
         }
 
-        public async Task<ListSlowQueryCategoriesResponse> ListSlowQueryCategoriesAsync(string appGroupIdentity)
+        public async Task<ListSecondRanksResponse> ListSecondRanksAsync(string appGroupIdentity, string appId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListSlowQueryCategoriesWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await ListSecondRanksWithOptionsAsync(appGroupIdentity, appId, headers, runtime);
         }
 
         public ListSlowQueryCategoriesResponse ListSlowQueryCategoriesWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6255,18 +5629,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListSlowQueryCategoriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListSlowQueryQueriesResponse ListSlowQueryQueries(string appGroupIdentity, string categoryIndex)
+        public ListSlowQueryCategoriesResponse ListSlowQueryCategories(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListSlowQueryQueriesWithOptions(appGroupIdentity, categoryIndex, headers, runtime);
+            return ListSlowQueryCategoriesWithOptions(appGroupIdentity, headers, runtime);
         }
 
-        public async Task<ListSlowQueryQueriesResponse> ListSlowQueryQueriesAsync(string appGroupIdentity, string categoryIndex)
+        public async Task<ListSlowQueryCategoriesResponse> ListSlowQueryCategoriesAsync(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListSlowQueryQueriesWithOptionsAsync(appGroupIdentity, categoryIndex, headers, runtime);
+            return await ListSlowQueryCategoriesWithOptionsAsync(appGroupIdentity, headers, runtime);
         }
 
         public ListSlowQueryQueriesResponse ListSlowQueryQueriesWithOptions(string appGroupIdentity, string categoryIndex, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6311,18 +5685,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListSlowQueryQueriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListSortExpressionsResponse ListSortExpressions(string appGroupIdentity, string appId)
+        public ListSlowQueryQueriesResponse ListSlowQueryQueries(string appGroupIdentity, string categoryIndex)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListSortExpressionsWithOptions(appGroupIdentity, appId, headers, runtime);
+            return ListSlowQueryQueriesWithOptions(appGroupIdentity, categoryIndex, headers, runtime);
         }
 
-        public async Task<ListSortExpressionsResponse> ListSortExpressionsAsync(string appGroupIdentity, string appId)
+        public async Task<ListSlowQueryQueriesResponse> ListSlowQueryQueriesAsync(string appGroupIdentity, string categoryIndex)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListSortExpressionsWithOptionsAsync(appGroupIdentity, appId, headers, runtime);
+            return await ListSlowQueryQueriesWithOptionsAsync(appGroupIdentity, categoryIndex, headers, runtime);
         }
 
         public ListSortExpressionsResponse ListSortExpressionsWithOptions(string appGroupIdentity, string appId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6367,18 +5741,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListSortExpressionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListSortScriptsResponse ListSortScripts(string appGroupIdentity, string appVersionId)
+        public ListSortExpressionsResponse ListSortExpressions(string appGroupIdentity, string appId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListSortScriptsWithOptions(appGroupIdentity, appVersionId, headers, runtime);
+            return ListSortExpressionsWithOptions(appGroupIdentity, appId, headers, runtime);
         }
 
-        public async Task<ListSortScriptsResponse> ListSortScriptsAsync(string appGroupIdentity, string appVersionId)
+        public async Task<ListSortExpressionsResponse> ListSortExpressionsAsync(string appGroupIdentity, string appId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListSortScriptsWithOptionsAsync(appGroupIdentity, appVersionId, headers, runtime);
+            return await ListSortExpressionsWithOptionsAsync(appGroupIdentity, appId, headers, runtime);
         }
 
         public ListSortScriptsResponse ListSortScriptsWithOptions(string appGroupIdentity, string appVersionId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6423,18 +5797,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListSortScriptsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListStatisticLogsResponse ListStatisticLogs(string appGroupIdentity, string moduleName, ListStatisticLogsRequest request)
+        public ListSortScriptsResponse ListSortScripts(string appGroupIdentity, string appVersionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListStatisticLogsWithOptions(appGroupIdentity, moduleName, request, headers, runtime);
+            return ListSortScriptsWithOptions(appGroupIdentity, appVersionId, headers, runtime);
         }
 
-        public async Task<ListStatisticLogsResponse> ListStatisticLogsAsync(string appGroupIdentity, string moduleName, ListStatisticLogsRequest request)
+        public async Task<ListSortScriptsResponse> ListSortScriptsAsync(string appGroupIdentity, string appVersionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListStatisticLogsWithOptionsAsync(appGroupIdentity, moduleName, request, headers, runtime);
+            return await ListSortScriptsWithOptionsAsync(appGroupIdentity, appVersionId, headers, runtime);
         }
 
         public ListStatisticLogsResponse ListStatisticLogsWithOptions(string appGroupIdentity, string moduleName, ListStatisticLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6549,18 +5923,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListStatisticLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListStatisticReportResponse ListStatisticReport(string appGroupIdentity, string moduleName, ListStatisticReportRequest request)
+        public ListStatisticLogsResponse ListStatisticLogs(string appGroupIdentity, string moduleName, ListStatisticLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListStatisticReportWithOptions(appGroupIdentity, moduleName, request, headers, runtime);
+            return ListStatisticLogsWithOptions(appGroupIdentity, moduleName, request, headers, runtime);
         }
 
-        public async Task<ListStatisticReportResponse> ListStatisticReportAsync(string appGroupIdentity, string moduleName, ListStatisticReportRequest request)
+        public async Task<ListStatisticLogsResponse> ListStatisticLogsAsync(string appGroupIdentity, string moduleName, ListStatisticLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListStatisticReportWithOptionsAsync(appGroupIdentity, moduleName, request, headers, runtime);
+            return await ListStatisticLogsWithOptionsAsync(appGroupIdentity, moduleName, request, headers, runtime);
         }
 
         public ListStatisticReportResponse ListStatisticReportWithOptions(string appGroupIdentity, string moduleName, ListStatisticReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6659,18 +6033,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListStatisticReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
+        public ListStatisticReportResponse ListStatisticReport(string appGroupIdentity, string moduleName, ListStatisticReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListTagResourcesWithOptions(request, headers, runtime);
+            return ListStatisticReportWithOptions(appGroupIdentity, moduleName, request, headers, runtime);
         }
 
-        public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
+        public async Task<ListStatisticReportResponse> ListStatisticReportAsync(string appGroupIdentity, string moduleName, ListStatisticReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListTagResourcesWithOptionsAsync(request, headers, runtime);
+            return await ListStatisticReportWithOptionsAsync(appGroupIdentity, moduleName, request, headers, runtime);
         }
 
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6773,18 +6147,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListUserAnalyzerEntriesResponse ListUserAnalyzerEntries(string name, ListUserAnalyzerEntriesRequest request)
+        public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListUserAnalyzerEntriesWithOptions(name, request, headers, runtime);
+            return ListTagResourcesWithOptions(request, headers, runtime);
         }
 
-        public async Task<ListUserAnalyzerEntriesResponse> ListUserAnalyzerEntriesAsync(string name, ListUserAnalyzerEntriesRequest request)
+        public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListUserAnalyzerEntriesWithOptionsAsync(name, request, headers, runtime);
+            return await ListTagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
         public ListUserAnalyzerEntriesResponse ListUserAnalyzerEntriesWithOptions(string name, ListUserAnalyzerEntriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6859,18 +6233,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListUserAnalyzerEntriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListUserAnalyzersResponse ListUserAnalyzers(ListUserAnalyzersRequest request)
+        public ListUserAnalyzerEntriesResponse ListUserAnalyzerEntries(string name, ListUserAnalyzerEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListUserAnalyzersWithOptions(request, headers, runtime);
+            return ListUserAnalyzerEntriesWithOptions(name, request, headers, runtime);
         }
 
-        public async Task<ListUserAnalyzersResponse> ListUserAnalyzersAsync(ListUserAnalyzersRequest request)
+        public async Task<ListUserAnalyzerEntriesResponse> ListUserAnalyzerEntriesAsync(string name, ListUserAnalyzerEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListUserAnalyzersWithOptionsAsync(request, headers, runtime);
+            return await ListUserAnalyzerEntriesWithOptionsAsync(name, request, headers, runtime);
         }
 
         public ListUserAnalyzersResponse ListUserAnalyzersWithOptions(ListUserAnalyzersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6937,25 +6311,59 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ListUserAnalyzersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ModifyAppGroupResponse ModifyAppGroup(string appGroupIdentity)
+        public ListUserAnalyzersResponse ListUserAnalyzers(ListUserAnalyzersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ModifyAppGroupWithOptions(appGroupIdentity, headers, runtime);
+            return ListUserAnalyzersWithOptions(request, headers, runtime);
         }
 
-        public async Task<ModifyAppGroupResponse> ModifyAppGroupAsync(string appGroupIdentity)
+        public async Task<ListUserAnalyzersResponse> ListUserAnalyzersAsync(ListUserAnalyzersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ModifyAppGroupWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await ListUserAnalyzersWithOptionsAsync(request, headers, runtime);
         }
 
-        public ModifyAppGroupResponse ModifyAppGroupWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=ModifyAppGroup\\&type=ROA\\&version=2017-12-25)
+          *
+          * @param request ModifyAppGroupRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyAppGroupResponse
+         */
+        public ModifyAppGroupResponse ModifyAppGroupWithOptions(string appGroupIdentity, ModifyAppGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentVersion))
+            {
+                body["currentVersion"] = request.CurrentVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                body["domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6972,11 +6380,45 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ModifyAppGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ModifyAppGroupResponse> ModifyAppGroupWithOptionsAsync(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=ModifyAppGroup\\&type=ROA\\&version=2017-12-25)
+          *
+          * @param request ModifyAppGroupRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return ModifyAppGroupResponse
+         */
+        public async Task<ModifyAppGroupResponse> ModifyAppGroupWithOptionsAsync(string appGroupIdentity, ModifyAppGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentVersion))
+            {
+                body["currentVersion"] = request.CurrentVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                body["domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6993,25 +6435,47 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ModifyAppGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ModifyAppGroupQuotaResponse ModifyAppGroupQuota(string appGroupIdentity)
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=ModifyAppGroup\\&type=ROA\\&version=2017-12-25)
+          *
+          * @param request ModifyAppGroupRequest
+          * @return ModifyAppGroupResponse
+         */
+        public ModifyAppGroupResponse ModifyAppGroup(string appGroupIdentity, ModifyAppGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ModifyAppGroupQuotaWithOptions(appGroupIdentity, headers, runtime);
+            return ModifyAppGroupWithOptions(appGroupIdentity, request, headers, runtime);
         }
 
-        public async Task<ModifyAppGroupQuotaResponse> ModifyAppGroupQuotaAsync(string appGroupIdentity)
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=ModifyAppGroup\\&type=ROA\\&version=2017-12-25)
+          *
+          * @param request ModifyAppGroupRequest
+          * @return ModifyAppGroupResponse
+         */
+        public async Task<ModifyAppGroupResponse> ModifyAppGroupAsync(string appGroupIdentity, ModifyAppGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ModifyAppGroupQuotaWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await ModifyAppGroupWithOptionsAsync(appGroupIdentity, request, headers, runtime);
         }
 
-        public ModifyAppGroupQuotaResponse ModifyAppGroupQuotaWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyAppGroupQuotaResponse ModifyAppGroupQuotaWithOptions(string appGroupIdentity, ModifyAppGroupQuotaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7028,11 +6492,19 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ModifyAppGroupQuotaResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ModifyAppGroupQuotaResponse> ModifyAppGroupQuotaWithOptionsAsync(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyAppGroupQuotaResponse> ModifyAppGroupQuotaWithOptionsAsync(string appGroupIdentity, ModifyAppGroupQuotaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7049,18 +6521,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ModifyAppGroupQuotaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ModifyFirstRankResponse ModifyFirstRank(string appGroupIdentity, string appId, string name, ModifyFirstRankRequest request)
+        public ModifyAppGroupQuotaResponse ModifyAppGroupQuota(string appGroupIdentity, ModifyAppGroupQuotaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ModifyFirstRankWithOptions(appGroupIdentity, appId, name, request, headers, runtime);
+            return ModifyAppGroupQuotaWithOptions(appGroupIdentity, request, headers, runtime);
         }
 
-        public async Task<ModifyFirstRankResponse> ModifyFirstRankAsync(string appGroupIdentity, string appId, string name, ModifyFirstRankRequest request)
+        public async Task<ModifyAppGroupQuotaResponse> ModifyAppGroupQuotaAsync(string appGroupIdentity, ModifyAppGroupQuotaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ModifyFirstRankWithOptionsAsync(appGroupIdentity, appId, name, request, headers, runtime);
+            return await ModifyAppGroupQuotaWithOptionsAsync(appGroupIdentity, request, headers, runtime);
         }
 
         public ModifyFirstRankResponse ModifyFirstRankWithOptions(string appGroupIdentity, string appId, string name, ModifyFirstRankRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7075,6 +6547,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7103,6 +6576,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7119,74 +6593,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ModifyFirstRankResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ModifyModelResponse ModifyModel(string appGroupIdentity, string modelName)
+        public ModifyFirstRankResponse ModifyFirstRank(string appGroupIdentity, string appId, string name, ModifyFirstRankRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ModifyModelWithOptions(appGroupIdentity, modelName, headers, runtime);
+            return ModifyFirstRankWithOptions(appGroupIdentity, appId, name, request, headers, runtime);
         }
 
-        public async Task<ModifyModelResponse> ModifyModelAsync(string appGroupIdentity, string modelName)
+        public async Task<ModifyFirstRankResponse> ModifyFirstRankAsync(string appGroupIdentity, string appId, string name, ModifyFirstRankRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ModifyModelWithOptionsAsync(appGroupIdentity, modelName, headers, runtime);
-        }
-
-        public ModifyModelResponse ModifyModelWithOptions(string appGroupIdentity, string modelName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ModifyModel",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/models/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelName),
-                Method = "PUT",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ModifyModelResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ModifyModelResponse> ModifyModelWithOptionsAsync(string appGroupIdentity, string modelName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ModifyModel",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/models/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelName),
-                Method = "PUT",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ModifyModelResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ModifyQueryProcessorResponse ModifyQueryProcessor(string appGroupIdentity, string appId, string name, ModifyQueryProcessorRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ModifyQueryProcessorWithOptions(appGroupIdentity, appId, name, request, headers, runtime);
-        }
-
-        public async Task<ModifyQueryProcessorResponse> ModifyQueryProcessorAsync(string appGroupIdentity, string appId, string name, ModifyQueryProcessorRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ModifyQueryProcessorWithOptionsAsync(appGroupIdentity, appId, name, request, headers, runtime);
+            return await ModifyFirstRankWithOptionsAsync(appGroupIdentity, appId, name, request, headers, runtime);
         }
 
         public ModifyQueryProcessorResponse ModifyQueryProcessorWithOptions(string appGroupIdentity, string appId, string name, ModifyQueryProcessorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7201,6 +6619,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7229,6 +6648,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7245,25 +6665,27 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ModifyQueryProcessorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ModifyScheduledTaskResponse ModifyScheduledTask(string appGroupIdentity, string taskId)
+        public ModifyQueryProcessorResponse ModifyQueryProcessor(string appGroupIdentity, string appId, string name, ModifyQueryProcessorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ModifyScheduledTaskWithOptions(appGroupIdentity, taskId, headers, runtime);
+            return ModifyQueryProcessorWithOptions(appGroupIdentity, appId, name, request, headers, runtime);
         }
 
-        public async Task<ModifyScheduledTaskResponse> ModifyScheduledTaskAsync(string appGroupIdentity, string taskId)
+        public async Task<ModifyQueryProcessorResponse> ModifyQueryProcessorAsync(string appGroupIdentity, string appId, string name, ModifyQueryProcessorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ModifyScheduledTaskWithOptionsAsync(appGroupIdentity, taskId, headers, runtime);
+            return await ModifyQueryProcessorWithOptionsAsync(appGroupIdentity, appId, name, request, headers, runtime);
         }
 
-        public ModifyScheduledTaskResponse ModifyScheduledTaskWithOptions(string appGroupIdentity, string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyScheduledTaskResponse ModifyScheduledTaskWithOptions(string appGroupIdentity, string taskId, ModifyScheduledTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7280,11 +6702,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ModifyScheduledTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ModifyScheduledTaskResponse> ModifyScheduledTaskWithOptionsAsync(string appGroupIdentity, string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyScheduledTaskResponse> ModifyScheduledTaskWithOptionsAsync(string appGroupIdentity, string taskId, ModifyScheduledTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7301,18 +6725,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ModifyScheduledTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ModifySecondRankResponse ModifySecondRank(string appGroupIdentity, string appId, string name, ModifySecondRankRequest request)
+        public ModifyScheduledTaskResponse ModifyScheduledTask(string appGroupIdentity, string taskId, ModifyScheduledTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ModifySecondRankWithOptions(appGroupIdentity, appId, name, request, headers, runtime);
+            return ModifyScheduledTaskWithOptions(appGroupIdentity, taskId, request, headers, runtime);
         }
 
-        public async Task<ModifySecondRankResponse> ModifySecondRankAsync(string appGroupIdentity, string appId, string name, ModifySecondRankRequest request)
+        public async Task<ModifyScheduledTaskResponse> ModifyScheduledTaskAsync(string appGroupIdentity, string taskId, ModifyScheduledTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ModifySecondRankWithOptionsAsync(appGroupIdentity, appId, name, request, headers, runtime);
+            return await ModifyScheduledTaskWithOptionsAsync(appGroupIdentity, taskId, request, headers, runtime);
         }
 
         public ModifySecondRankResponse ModifySecondRankWithOptions(string appGroupIdentity, string appId, string name, ModifySecondRankRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7327,6 +6751,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7355,6 +6780,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7371,18 +6797,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ModifySecondRankResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public PreviewModelResponse PreviewModel(string appGroupIdentity, string modelName, PreviewModelRequest request)
+        public ModifySecondRankResponse ModifySecondRank(string appGroupIdentity, string appId, string name, ModifySecondRankRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PreviewModelWithOptions(appGroupIdentity, modelName, request, headers, runtime);
+            return ModifySecondRankWithOptions(appGroupIdentity, appId, name, request, headers, runtime);
         }
 
-        public async Task<PreviewModelResponse> PreviewModelAsync(string appGroupIdentity, string modelName, PreviewModelRequest request)
+        public async Task<ModifySecondRankResponse> ModifySecondRankAsync(string appGroupIdentity, string appId, string name, ModifySecondRankRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PreviewModelWithOptionsAsync(appGroupIdentity, modelName, request, headers, runtime);
+            return await ModifySecondRankWithOptionsAsync(appGroupIdentity, appId, name, request, headers, runtime);
         }
 
         public PreviewModelResponse PreviewModelWithOptions(string appGroupIdentity, string modelName, PreviewModelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7441,25 +6867,33 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<PreviewModelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public PushInterventionDictionaryEntriesResponse PushInterventionDictionaryEntries(string name)
+        public PreviewModelResponse PreviewModel(string appGroupIdentity, string modelName, PreviewModelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PushInterventionDictionaryEntriesWithOptions(name, headers, runtime);
+            return PreviewModelWithOptions(appGroupIdentity, modelName, request, headers, runtime);
         }
 
-        public async Task<PushInterventionDictionaryEntriesResponse> PushInterventionDictionaryEntriesAsync(string name)
+        public async Task<PreviewModelResponse> PreviewModelAsync(string appGroupIdentity, string modelName, PreviewModelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PushInterventionDictionaryEntriesWithOptionsAsync(name, headers, runtime);
+            return await PreviewModelWithOptionsAsync(appGroupIdentity, modelName, request, headers, runtime);
         }
 
-        public PushInterventionDictionaryEntriesResponse PushInterventionDictionaryEntriesWithOptions(string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public PushInterventionDictionaryEntriesResponse PushInterventionDictionaryEntriesWithOptions(string name, PushInterventionDictionaryEntriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7476,11 +6910,19 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<PushInterventionDictionaryEntriesResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<PushInterventionDictionaryEntriesResponse> PushInterventionDictionaryEntriesWithOptionsAsync(string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<PushInterventionDictionaryEntriesResponse> PushInterventionDictionaryEntriesWithOptionsAsync(string name, PushInterventionDictionaryEntriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7497,25 +6939,38 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<PushInterventionDictionaryEntriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public PushUserAnalyzerEntriesResponse PushUserAnalyzerEntries(string name)
+        public PushInterventionDictionaryEntriesResponse PushInterventionDictionaryEntries(string name, PushInterventionDictionaryEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PushUserAnalyzerEntriesWithOptions(name, headers, runtime);
+            return PushInterventionDictionaryEntriesWithOptions(name, request, headers, runtime);
         }
 
-        public async Task<PushUserAnalyzerEntriesResponse> PushUserAnalyzerEntriesAsync(string name)
+        public async Task<PushInterventionDictionaryEntriesResponse> PushInterventionDictionaryEntriesAsync(string name, PushInterventionDictionaryEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PushUserAnalyzerEntriesWithOptionsAsync(name, headers, runtime);
+            return await PushInterventionDictionaryEntriesWithOptionsAsync(name, request, headers, runtime);
         }
 
-        public PushUserAnalyzerEntriesResponse PushUserAnalyzerEntriesWithOptions(string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public PushUserAnalyzerEntriesResponse PushUserAnalyzerEntriesWithOptions(string name, PushUserAnalyzerEntriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Entries))
+            {
+                body["entries"] = request.Entries;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7532,11 +6987,24 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<PushUserAnalyzerEntriesResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<PushUserAnalyzerEntriesResponse> PushUserAnalyzerEntriesWithOptionsAsync(string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<PushUserAnalyzerEntriesResponse> PushUserAnalyzerEntriesWithOptionsAsync(string name, PushUserAnalyzerEntriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Entries))
+            {
+                body["entries"] = request.Entries;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7553,18 +7021,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<PushUserAnalyzerEntriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public RankPreviewQueryResponse RankPreviewQuery(string appGroupIdentity, string modelName)
+        public PushUserAnalyzerEntriesResponse PushUserAnalyzerEntries(string name, PushUserAnalyzerEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RankPreviewQueryWithOptions(appGroupIdentity, modelName, headers, runtime);
+            return PushUserAnalyzerEntriesWithOptions(name, request, headers, runtime);
         }
 
-        public async Task<RankPreviewQueryResponse> RankPreviewQueryAsync(string appGroupIdentity, string modelName)
+        public async Task<PushUserAnalyzerEntriesResponse> PushUserAnalyzerEntriesAsync(string name, PushUserAnalyzerEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RankPreviewQueryWithOptionsAsync(appGroupIdentity, modelName, headers, runtime);
+            return await PushUserAnalyzerEntriesWithOptionsAsync(name, request, headers, runtime);
         }
 
         public RankPreviewQueryResponse RankPreviewQueryWithOptions(string appGroupIdentity, string modelName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7609,18 +7077,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<RankPreviewQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ReleaseSortScriptResponse ReleaseSortScript(string appGroupIdentity, string scriptName, string appVersionId)
+        public RankPreviewQueryResponse RankPreviewQuery(string appGroupIdentity, string modelName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ReleaseSortScriptWithOptions(appGroupIdentity, scriptName, appVersionId, headers, runtime);
+            return RankPreviewQueryWithOptions(appGroupIdentity, modelName, headers, runtime);
         }
 
-        public async Task<ReleaseSortScriptResponse> ReleaseSortScriptAsync(string appGroupIdentity, string scriptName, string appVersionId)
+        public async Task<RankPreviewQueryResponse> RankPreviewQueryAsync(string appGroupIdentity, string modelName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ReleaseSortScriptWithOptionsAsync(appGroupIdentity, scriptName, appVersionId, headers, runtime);
+            return await RankPreviewQueryWithOptionsAsync(appGroupIdentity, modelName, headers, runtime);
         }
 
         public ReleaseSortScriptResponse ReleaseSortScriptWithOptions(string appGroupIdentity, string scriptName, string appVersionId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7665,20 +7133,27 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ReleaseSortScriptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public RemoveAppResponse RemoveApp(string appGroupIdentity, string appId)
+        public ReleaseSortScriptResponse ReleaseSortScript(string appGroupIdentity, string scriptName, string appVersionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RemoveAppWithOptions(appGroupIdentity, appId, headers, runtime);
+            return ReleaseSortScriptWithOptions(appGroupIdentity, scriptName, appVersionId, headers, runtime);
         }
 
-        public async Task<RemoveAppResponse> RemoveAppAsync(string appGroupIdentity, string appId)
+        public async Task<ReleaseSortScriptResponse> ReleaseSortScriptAsync(string appGroupIdentity, string scriptName, string appVersionId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RemoveAppWithOptionsAsync(appGroupIdentity, appId, headers, runtime);
+            return await ReleaseSortScriptWithOptionsAsync(appGroupIdentity, scriptName, appVersionId, headers, runtime);
         }
 
+        /**
+          * > If an application has two versions, you can delete only the offline version.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveAppResponse
+         */
         public RemoveAppResponse RemoveAppWithOptions(string appGroupIdentity, string appId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -7700,6 +7175,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<RemoveAppResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * > If an application has two versions, you can delete only the offline version.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveAppResponse
+         */
         public async Task<RemoveAppResponse> RemoveAppWithOptionsAsync(string appGroupIdentity, string appId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -7721,20 +7203,38 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<RemoveAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public RemoveAppGroupResponse RemoveAppGroup(string appGroupIdentity)
+        /**
+          * > If an application has two versions, you can delete only the offline version.
+          *
+          * @return RemoveAppResponse
+         */
+        public RemoveAppResponse RemoveApp(string appGroupIdentity, string appId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RemoveAppGroupWithOptions(appGroupIdentity, headers, runtime);
+            return RemoveAppWithOptions(appGroupIdentity, appId, headers, runtime);
         }
 
-        public async Task<RemoveAppGroupResponse> RemoveAppGroupAsync(string appGroupIdentity)
+        /**
+          * > If an application has two versions, you can delete only the offline version.
+          *
+          * @return RemoveAppResponse
+         */
+        public async Task<RemoveAppResponse> RemoveAppAsync(string appGroupIdentity, string appId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RemoveAppGroupWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await RemoveAppWithOptionsAsync(appGroupIdentity, appId, headers, runtime);
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=RemoveAppGroup\\&type=ROA\\&version=2017-12-25)
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveAppGroupResponse
+         */
         public RemoveAppGroupResponse RemoveAppGroupWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -7756,6 +7256,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<RemoveAppGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=RemoveAppGroup\\&type=ROA\\&version=2017-12-25)
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return RemoveAppGroupResponse
+         */
         public async Task<RemoveAppGroupResponse> RemoveAppGroupWithOptionsAsync(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -7777,18 +7285,30 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<RemoveAppGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public RemoveDataCollectionResponse RemoveDataCollection(string appGroupIdentity, string dataCollectionIdentity)
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=RemoveAppGroup\\&type=ROA\\&version=2017-12-25)
+          *
+          * @return RemoveAppGroupResponse
+         */
+        public RemoveAppGroupResponse RemoveAppGroup(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RemoveDataCollectionWithOptions(appGroupIdentity, dataCollectionIdentity, headers, runtime);
+            return RemoveAppGroupWithOptions(appGroupIdentity, headers, runtime);
         }
 
-        public async Task<RemoveDataCollectionResponse> RemoveDataCollectionAsync(string appGroupIdentity, string dataCollectionIdentity)
+        /**
+          * ## Debugging
+          * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=RemoveAppGroup\\&type=ROA\\&version=2017-12-25)
+          *
+          * @return RemoveAppGroupResponse
+         */
+        public async Task<RemoveAppGroupResponse> RemoveAppGroupAsync(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RemoveDataCollectionWithOptionsAsync(appGroupIdentity, dataCollectionIdentity, headers, runtime);
+            return await RemoveAppGroupWithOptionsAsync(appGroupIdentity, headers, runtime);
         }
 
         public RemoveDataCollectionResponse RemoveDataCollectionWithOptions(string appGroupIdentity, string dataCollectionIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7833,18 +7353,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<RemoveDataCollectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public RemoveFirstRankResponse RemoveFirstRank(string appGroupIdentity, string appId, string name)
+        public RemoveDataCollectionResponse RemoveDataCollection(string appGroupIdentity, string dataCollectionIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RemoveFirstRankWithOptions(appGroupIdentity, appId, name, headers, runtime);
+            return RemoveDataCollectionWithOptions(appGroupIdentity, dataCollectionIdentity, headers, runtime);
         }
 
-        public async Task<RemoveFirstRankResponse> RemoveFirstRankAsync(string appGroupIdentity, string appId, string name)
+        public async Task<RemoveDataCollectionResponse> RemoveDataCollectionAsync(string appGroupIdentity, string dataCollectionIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RemoveFirstRankWithOptionsAsync(appGroupIdentity, appId, name, headers, runtime);
+            return await RemoveDataCollectionWithOptionsAsync(appGroupIdentity, dataCollectionIdentity, headers, runtime);
         }
 
         public RemoveFirstRankResponse RemoveFirstRankWithOptions(string appGroupIdentity, string appId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7889,18 +7409,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<RemoveFirstRankResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public RemoveInterventionDictionaryResponse RemoveInterventionDictionary(string name)
+        public RemoveFirstRankResponse RemoveFirstRank(string appGroupIdentity, string appId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RemoveInterventionDictionaryWithOptions(name, headers, runtime);
+            return RemoveFirstRankWithOptions(appGroupIdentity, appId, name, headers, runtime);
         }
 
-        public async Task<RemoveInterventionDictionaryResponse> RemoveInterventionDictionaryAsync(string name)
+        public async Task<RemoveFirstRankResponse> RemoveFirstRankAsync(string appGroupIdentity, string appId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RemoveInterventionDictionaryWithOptionsAsync(name, headers, runtime);
+            return await RemoveFirstRankWithOptionsAsync(appGroupIdentity, appId, name, headers, runtime);
         }
 
         public RemoveInterventionDictionaryResponse RemoveInterventionDictionaryWithOptions(string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7945,18 +7465,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<RemoveInterventionDictionaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public RemoveQueryProcessorResponse RemoveQueryProcessor(string appGroupIdentity, string appId, string name)
+        public RemoveInterventionDictionaryResponse RemoveInterventionDictionary(string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RemoveQueryProcessorWithOptions(appGroupIdentity, appId, name, headers, runtime);
+            return RemoveInterventionDictionaryWithOptions(name, headers, runtime);
         }
 
-        public async Task<RemoveQueryProcessorResponse> RemoveQueryProcessorAsync(string appGroupIdentity, string appId, string name)
+        public async Task<RemoveInterventionDictionaryResponse> RemoveInterventionDictionaryAsync(string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RemoveQueryProcessorWithOptionsAsync(appGroupIdentity, appId, name, headers, runtime);
+            return await RemoveInterventionDictionaryWithOptionsAsync(name, headers, runtime);
         }
 
         public RemoveQueryProcessorResponse RemoveQueryProcessorWithOptions(string appGroupIdentity, string appId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8001,18 +7521,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<RemoveQueryProcessorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public RemoveScheduledTaskResponse RemoveScheduledTask(string appGroupIdentity, string taskId)
+        public RemoveQueryProcessorResponse RemoveQueryProcessor(string appGroupIdentity, string appId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RemoveScheduledTaskWithOptions(appGroupIdentity, taskId, headers, runtime);
+            return RemoveQueryProcessorWithOptions(appGroupIdentity, appId, name, headers, runtime);
         }
 
-        public async Task<RemoveScheduledTaskResponse> RemoveScheduledTaskAsync(string appGroupIdentity, string taskId)
+        public async Task<RemoveQueryProcessorResponse> RemoveQueryProcessorAsync(string appGroupIdentity, string appId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RemoveScheduledTaskWithOptionsAsync(appGroupIdentity, taskId, headers, runtime);
+            return await RemoveQueryProcessorWithOptionsAsync(appGroupIdentity, appId, name, headers, runtime);
         }
 
         public RemoveScheduledTaskResponse RemoveScheduledTaskWithOptions(string appGroupIdentity, string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8057,18 +7577,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<RemoveScheduledTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public RemoveSearchStrategyResponse RemoveSearchStrategy(string appGroupIdentity, string appId, string strategyName)
+        public RemoveScheduledTaskResponse RemoveScheduledTask(string appGroupIdentity, string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RemoveSearchStrategyWithOptions(appGroupIdentity, appId, strategyName, headers, runtime);
+            return RemoveScheduledTaskWithOptions(appGroupIdentity, taskId, headers, runtime);
         }
 
-        public async Task<RemoveSearchStrategyResponse> RemoveSearchStrategyAsync(string appGroupIdentity, string appId, string strategyName)
+        public async Task<RemoveScheduledTaskResponse> RemoveScheduledTaskAsync(string appGroupIdentity, string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RemoveSearchStrategyWithOptionsAsync(appGroupIdentity, appId, strategyName, headers, runtime);
+            return await RemoveScheduledTaskWithOptionsAsync(appGroupIdentity, taskId, headers, runtime);
         }
 
         public RemoveSearchStrategyResponse RemoveSearchStrategyWithOptions(string appGroupIdentity, string appId, string strategyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8113,18 +7633,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<RemoveSearchStrategyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public RemoveSecondRankResponse RemoveSecondRank(string appGroupIdentity, string appId, string name)
+        public RemoveSearchStrategyResponse RemoveSearchStrategy(string appGroupIdentity, string appId, string strategyName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RemoveSecondRankWithOptions(appGroupIdentity, appId, name, headers, runtime);
+            return RemoveSearchStrategyWithOptions(appGroupIdentity, appId, strategyName, headers, runtime);
         }
 
-        public async Task<RemoveSecondRankResponse> RemoveSecondRankAsync(string appGroupIdentity, string appId, string name)
+        public async Task<RemoveSearchStrategyResponse> RemoveSearchStrategyAsync(string appGroupIdentity, string appId, string strategyName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RemoveSecondRankWithOptionsAsync(appGroupIdentity, appId, name, headers, runtime);
+            return await RemoveSearchStrategyWithOptionsAsync(appGroupIdentity, appId, strategyName, headers, runtime);
         }
 
         public RemoveSecondRankResponse RemoveSecondRankWithOptions(string appGroupIdentity, string appId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8169,18 +7689,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<RemoveSecondRankResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public RemoveUserAnalyzerResponse RemoveUserAnalyzer(string name)
+        public RemoveSecondRankResponse RemoveSecondRank(string appGroupIdentity, string appId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RemoveUserAnalyzerWithOptions(name, headers, runtime);
+            return RemoveSecondRankWithOptions(appGroupIdentity, appId, name, headers, runtime);
         }
 
-        public async Task<RemoveUserAnalyzerResponse> RemoveUserAnalyzerAsync(string name)
+        public async Task<RemoveSecondRankResponse> RemoveSecondRankAsync(string appGroupIdentity, string appId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RemoveUserAnalyzerWithOptionsAsync(name, headers, runtime);
+            return await RemoveSecondRankWithOptionsAsync(appGroupIdentity, appId, name, headers, runtime);
         }
 
         public RemoveUserAnalyzerResponse RemoveUserAnalyzerWithOptions(string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8225,18 +7745,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<RemoveUserAnalyzerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public RenewAppGroupResponse RenewAppGroup(string appGroupIdentity, RenewAppGroupRequest request)
+        public RemoveUserAnalyzerResponse RemoveUserAnalyzer(string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RenewAppGroupWithOptions(appGroupIdentity, request, headers, runtime);
+            return RemoveUserAnalyzerWithOptions(name, headers, runtime);
         }
 
-        public async Task<RenewAppGroupResponse> RenewAppGroupAsync(string appGroupIdentity, RenewAppGroupRequest request)
+        public async Task<RemoveUserAnalyzerResponse> RemoveUserAnalyzerAsync(string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RenewAppGroupWithOptionsAsync(appGroupIdentity, request, headers, runtime);
+            return await RemoveUserAnalyzerWithOptionsAsync(name, headers, runtime);
         }
 
         public RenewAppGroupResponse RenewAppGroupWithOptions(string appGroupIdentity, RenewAppGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8251,6 +7771,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8279,6 +7800,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8295,18 +7817,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<RenewAppGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ReplaceAppGroupCommodityCodeResponse ReplaceAppGroupCommodityCode(string appGroupIdentity)
+        public RenewAppGroupResponse RenewAppGroup(string appGroupIdentity, RenewAppGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ReplaceAppGroupCommodityCodeWithOptions(appGroupIdentity, headers, runtime);
+            return RenewAppGroupWithOptions(appGroupIdentity, request, headers, runtime);
         }
 
-        public async Task<ReplaceAppGroupCommodityCodeResponse> ReplaceAppGroupCommodityCodeAsync(string appGroupIdentity)
+        public async Task<RenewAppGroupResponse> RenewAppGroupAsync(string appGroupIdentity, RenewAppGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ReplaceAppGroupCommodityCodeWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await RenewAppGroupWithOptionsAsync(appGroupIdentity, request, headers, runtime);
         }
 
         public ReplaceAppGroupCommodityCodeResponse ReplaceAppGroupCommodityCodeWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8351,25 +7873,36 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ReplaceAppGroupCommodityCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public SaveSortScriptFileResponse SaveSortScriptFile(string appGroupIdentity, string scriptName, string appVersionId, string fileName)
+        public ReplaceAppGroupCommodityCodeResponse ReplaceAppGroupCommodityCode(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return SaveSortScriptFileWithOptions(appGroupIdentity, scriptName, appVersionId, fileName, headers, runtime);
+            return ReplaceAppGroupCommodityCodeWithOptions(appGroupIdentity, headers, runtime);
         }
 
-        public async Task<SaveSortScriptFileResponse> SaveSortScriptFileAsync(string appGroupIdentity, string scriptName, string appVersionId, string fileName)
+        public async Task<ReplaceAppGroupCommodityCodeResponse> ReplaceAppGroupCommodityCodeAsync(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await SaveSortScriptFileWithOptionsAsync(appGroupIdentity, scriptName, appVersionId, fileName, headers, runtime);
+            return await ReplaceAppGroupCommodityCodeWithOptionsAsync(appGroupIdentity, headers, runtime);
         }
 
-        public SaveSortScriptFileResponse SaveSortScriptFileWithOptions(string appGroupIdentity, string scriptName, string appVersionId, string fileName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public SaveSortScriptFileResponse SaveSortScriptFileWithOptions(string appGroupIdentity, string scriptName, string appVersionId, string fileName, SaveSortScriptFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8386,11 +7919,22 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<SaveSortScriptFileResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<SaveSortScriptFileResponse> SaveSortScriptFileWithOptionsAsync(string appGroupIdentity, string scriptName, string appVersionId, string fileName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<SaveSortScriptFileResponse> SaveSortScriptFileWithOptionsAsync(string appGroupIdentity, string scriptName, string appVersionId, string fileName, SaveSortScriptFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8407,18 +7951,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<SaveSortScriptFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public StartSlowQueryAnalyzerResponse StartSlowQueryAnalyzer(string appGroupIdentity)
+        public SaveSortScriptFileResponse SaveSortScriptFile(string appGroupIdentity, string scriptName, string appVersionId, string fileName, SaveSortScriptFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return StartSlowQueryAnalyzerWithOptions(appGroupIdentity, headers, runtime);
+            return SaveSortScriptFileWithOptions(appGroupIdentity, scriptName, appVersionId, fileName, request, headers, runtime);
         }
 
-        public async Task<StartSlowQueryAnalyzerResponse> StartSlowQueryAnalyzerAsync(string appGroupIdentity)
+        public async Task<SaveSortScriptFileResponse> SaveSortScriptFileAsync(string appGroupIdentity, string scriptName, string appVersionId, string fileName, SaveSortScriptFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await StartSlowQueryAnalyzerWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await SaveSortScriptFileWithOptionsAsync(appGroupIdentity, scriptName, appVersionId, fileName, request, headers, runtime);
         }
 
         public StartSlowQueryAnalyzerResponse StartSlowQueryAnalyzerWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8463,18 +8007,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<StartSlowQueryAnalyzerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public TagResourcesResponse TagResources(TagResourcesRequest request)
+        public StartSlowQueryAnalyzerResponse StartSlowQueryAnalyzer(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return TagResourcesWithOptions(request, headers, runtime);
+            return StartSlowQueryAnalyzerWithOptions(appGroupIdentity, headers, runtime);
         }
 
-        public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
+        public async Task<StartSlowQueryAnalyzerResponse> StartSlowQueryAnalyzerAsync(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await TagResourcesWithOptionsAsync(request, headers, runtime);
+            return await StartSlowQueryAnalyzerWithOptionsAsync(appGroupIdentity, headers, runtime);
         }
 
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8549,81 +8093,35 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public TrainModelResponse TrainModel(string appGroupIdentity, string modelName)
+        public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return TrainModelWithOptions(appGroupIdentity, modelName, headers, runtime);
+            return TagResourcesWithOptions(request, headers, runtime);
         }
 
-        public async Task<TrainModelResponse> TrainModelAsync(string appGroupIdentity, string modelName)
+        public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await TrainModelWithOptionsAsync(appGroupIdentity, modelName, headers, runtime);
+            return await TagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
-        public TrainModelResponse TrainModelWithOptions(string appGroupIdentity, string modelName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * The ID of the request.
+          *
+          * @param request UnbindESUserAnalyzerRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnbindESUserAnalyzerResponse
+         */
+        public UnbindESUserAnalyzerResponse UnbindESUserAnalyzerWithOptions(string appGroupIdentity, string esInstanceId, UnbindESUserAnalyzerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "TrainModel",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/models/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelName) + "/actions/train",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<TrainModelResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<TrainModelResponse> TrainModelWithOptionsAsync(string appGroupIdentity, string modelName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "TrainModel",
-                Version = "2017-12-25",
-                Protocol = "HTTPS",
-                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/algorithm/models/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelName) + "/actions/train",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<TrainModelResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public UnbindESUserAnalyzerResponse UnbindESUserAnalyzer(string appGroupIdentity, string esInstanceId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UnbindESUserAnalyzerWithOptions(appGroupIdentity, esInstanceId, headers, runtime);
-        }
-
-        public async Task<UnbindESUserAnalyzerResponse> UnbindESUserAnalyzerAsync(string appGroupIdentity, string esInstanceId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UnbindESUserAnalyzerWithOptionsAsync(appGroupIdentity, esInstanceId, headers, runtime);
-        }
-
-        public UnbindESUserAnalyzerResponse UnbindESUserAnalyzerWithOptions(string appGroupIdentity, string esInstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8640,11 +8138,21 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UnbindESUserAnalyzerResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UnbindESUserAnalyzerResponse> UnbindESUserAnalyzerWithOptionsAsync(string appGroupIdentity, string esInstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /**
+          * The ID of the request.
+          *
+          * @param request UnbindESUserAnalyzerRequest
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UnbindESUserAnalyzerResponse
+         */
+        public async Task<UnbindESUserAnalyzerResponse> UnbindESUserAnalyzerWithOptionsAsync(string appGroupIdentity, string esInstanceId, UnbindESUserAnalyzerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8661,18 +8169,30 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UnbindESUserAnalyzerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UnbindEsInstanceResponse UnbindEsInstance(string appGroupIdentity)
+        /**
+          * The ID of the request.
+          *
+          * @param request UnbindESUserAnalyzerRequest
+          * @return UnbindESUserAnalyzerResponse
+         */
+        public UnbindESUserAnalyzerResponse UnbindESUserAnalyzer(string appGroupIdentity, string esInstanceId, UnbindESUserAnalyzerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UnbindEsInstanceWithOptions(appGroupIdentity, headers, runtime);
+            return UnbindESUserAnalyzerWithOptions(appGroupIdentity, esInstanceId, request, headers, runtime);
         }
 
-        public async Task<UnbindEsInstanceResponse> UnbindEsInstanceAsync(string appGroupIdentity)
+        /**
+          * The ID of the request.
+          *
+          * @param request UnbindESUserAnalyzerRequest
+          * @return UnbindESUserAnalyzerResponse
+         */
+        public async Task<UnbindESUserAnalyzerResponse> UnbindESUserAnalyzerAsync(string appGroupIdentity, string esInstanceId, UnbindESUserAnalyzerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UnbindEsInstanceWithOptionsAsync(appGroupIdentity, headers, runtime);
+            return await UnbindESUserAnalyzerWithOptionsAsync(appGroupIdentity, esInstanceId, request, headers, runtime);
         }
 
         public UnbindEsInstanceResponse UnbindEsInstanceWithOptions(string appGroupIdentity, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8717,18 +8237,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UnbindEsInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
+        public UnbindEsInstanceResponse UnbindEsInstance(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UntagResourcesWithOptions(request, headers, runtime);
+            return UnbindEsInstanceWithOptions(appGroupIdentity, headers, runtime);
         }
 
-        public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
+        public async Task<UnbindEsInstanceResponse> UnbindEsInstanceAsync(string appGroupIdentity)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UntagResourcesWithOptionsAsync(request, headers, runtime);
+            return await UnbindEsInstanceWithOptionsAsync(appGroupIdentity, headers, runtime);
         }
 
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8831,25 +8351,33 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UpdateABTestExperimentResponse UpdateABTestExperiment(string appGroupIdentity, string sceneId, string groupId, string experimentId)
+        public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateABTestExperimentWithOptions(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
+            return UntagResourcesWithOptions(request, headers, runtime);
         }
 
-        public async Task<UpdateABTestExperimentResponse> UpdateABTestExperimentAsync(string appGroupIdentity, string sceneId, string groupId, string experimentId)
+        public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateABTestExperimentWithOptionsAsync(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
+            return await UntagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
-        public UpdateABTestExperimentResponse UpdateABTestExperimentWithOptions(string appGroupIdentity, string sceneId, string groupId, string experimentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateABTestExperimentResponse UpdateABTestExperimentWithOptions(string appGroupIdentity, string sceneId, string groupId, string experimentId, UpdateABTestExperimentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8866,11 +8394,19 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateABTestExperimentResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UpdateABTestExperimentResponse> UpdateABTestExperimentWithOptionsAsync(string appGroupIdentity, string sceneId, string groupId, string experimentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateABTestExperimentResponse> UpdateABTestExperimentWithOptionsAsync(string appGroupIdentity, string sceneId, string groupId, string experimentId, UpdateABTestExperimentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8887,25 +8423,27 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateABTestExperimentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UpdateABTestFixedFlowDividersResponse UpdateABTestFixedFlowDividers(string appGroupIdentity, string sceneId, string groupId, string experimentId)
+        public UpdateABTestExperimentResponse UpdateABTestExperiment(string appGroupIdentity, string sceneId, string groupId, string experimentId, UpdateABTestExperimentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateABTestFixedFlowDividersWithOptions(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
+            return UpdateABTestExperimentWithOptions(appGroupIdentity, sceneId, groupId, experimentId, request, headers, runtime);
         }
 
-        public async Task<UpdateABTestFixedFlowDividersResponse> UpdateABTestFixedFlowDividersAsync(string appGroupIdentity, string sceneId, string groupId, string experimentId)
+        public async Task<UpdateABTestExperimentResponse> UpdateABTestExperimentAsync(string appGroupIdentity, string sceneId, string groupId, string experimentId, UpdateABTestExperimentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateABTestFixedFlowDividersWithOptionsAsync(appGroupIdentity, sceneId, groupId, experimentId, headers, runtime);
+            return await UpdateABTestExperimentWithOptionsAsync(appGroupIdentity, sceneId, groupId, experimentId, request, headers, runtime);
         }
 
-        public UpdateABTestFixedFlowDividersResponse UpdateABTestFixedFlowDividersWithOptions(string appGroupIdentity, string sceneId, string groupId, string experimentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateABTestFixedFlowDividersResponse UpdateABTestFixedFlowDividersWithOptions(string appGroupIdentity, string sceneId, string groupId, string experimentId, UpdateABTestFixedFlowDividersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8922,11 +8460,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateABTestFixedFlowDividersResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UpdateABTestFixedFlowDividersResponse> UpdateABTestFixedFlowDividersWithOptionsAsync(string appGroupIdentity, string sceneId, string groupId, string experimentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateABTestFixedFlowDividersResponse> UpdateABTestFixedFlowDividersWithOptionsAsync(string appGroupIdentity, string sceneId, string groupId, string experimentId, UpdateABTestFixedFlowDividersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8943,25 +8483,33 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateABTestFixedFlowDividersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UpdateABTestGroupResponse UpdateABTestGroup(string appGroupIdentity, string sceneId, string groupId)
+        public UpdateABTestFixedFlowDividersResponse UpdateABTestFixedFlowDividers(string appGroupIdentity, string sceneId, string groupId, string experimentId, UpdateABTestFixedFlowDividersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateABTestGroupWithOptions(appGroupIdentity, sceneId, groupId, headers, runtime);
+            return UpdateABTestFixedFlowDividersWithOptions(appGroupIdentity, sceneId, groupId, experimentId, request, headers, runtime);
         }
 
-        public async Task<UpdateABTestGroupResponse> UpdateABTestGroupAsync(string appGroupIdentity, string sceneId, string groupId)
+        public async Task<UpdateABTestFixedFlowDividersResponse> UpdateABTestFixedFlowDividersAsync(string appGroupIdentity, string sceneId, string groupId, string experimentId, UpdateABTestFixedFlowDividersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateABTestGroupWithOptionsAsync(appGroupIdentity, sceneId, groupId, headers, runtime);
+            return await UpdateABTestFixedFlowDividersWithOptionsAsync(appGroupIdentity, sceneId, groupId, experimentId, request, headers, runtime);
         }
 
-        public UpdateABTestGroupResponse UpdateABTestGroupWithOptions(string appGroupIdentity, string sceneId, string groupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateABTestGroupResponse UpdateABTestGroupWithOptions(string appGroupIdentity, string sceneId, string groupId, UpdateABTestGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8978,11 +8526,19 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateABTestGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UpdateABTestGroupResponse> UpdateABTestGroupWithOptionsAsync(string appGroupIdentity, string sceneId, string groupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateABTestGroupResponse> UpdateABTestGroupWithOptionsAsync(string appGroupIdentity, string sceneId, string groupId, UpdateABTestGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8999,25 +8555,33 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateABTestGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UpdateABTestSceneResponse UpdateABTestScene(string appGroupIdentity, string sceneId)
+        public UpdateABTestGroupResponse UpdateABTestGroup(string appGroupIdentity, string sceneId, string groupId, UpdateABTestGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateABTestSceneWithOptions(appGroupIdentity, sceneId, headers, runtime);
+            return UpdateABTestGroupWithOptions(appGroupIdentity, sceneId, groupId, request, headers, runtime);
         }
 
-        public async Task<UpdateABTestSceneResponse> UpdateABTestSceneAsync(string appGroupIdentity, string sceneId)
+        public async Task<UpdateABTestGroupResponse> UpdateABTestGroupAsync(string appGroupIdentity, string sceneId, string groupId, UpdateABTestGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateABTestSceneWithOptionsAsync(appGroupIdentity, sceneId, headers, runtime);
+            return await UpdateABTestGroupWithOptionsAsync(appGroupIdentity, sceneId, groupId, request, headers, runtime);
         }
 
-        public UpdateABTestSceneResponse UpdateABTestSceneWithOptions(string appGroupIdentity, string sceneId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateABTestSceneResponse UpdateABTestSceneWithOptions(string appGroupIdentity, string sceneId, UpdateABTestSceneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9034,11 +8598,19 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateABTestSceneResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UpdateABTestSceneResponse> UpdateABTestSceneWithOptionsAsync(string appGroupIdentity, string sceneId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateABTestSceneResponse> UpdateABTestSceneWithOptionsAsync(string appGroupIdentity, string sceneId, UpdateABTestSceneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9055,18 +8627,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateABTestSceneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UpdateFetchFieldsResponse UpdateFetchFields(string appGroupIdentity, string appId, UpdateFetchFieldsRequest request)
+        public UpdateABTestSceneResponse UpdateABTestScene(string appGroupIdentity, string sceneId, UpdateABTestSceneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateFetchFieldsWithOptions(appGroupIdentity, appId, request, headers, runtime);
+            return UpdateABTestSceneWithOptions(appGroupIdentity, sceneId, request, headers, runtime);
         }
 
-        public async Task<UpdateFetchFieldsResponse> UpdateFetchFieldsAsync(string appGroupIdentity, string appId, UpdateFetchFieldsRequest request)
+        public async Task<UpdateABTestSceneResponse> UpdateABTestSceneAsync(string appGroupIdentity, string sceneId, UpdateABTestSceneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateFetchFieldsWithOptionsAsync(appGroupIdentity, appId, request, headers, runtime);
+            return await UpdateABTestSceneWithOptionsAsync(appGroupIdentity, sceneId, request, headers, runtime);
         }
 
         public UpdateFetchFieldsResponse UpdateFetchFieldsWithOptions(string appGroupIdentity, string appId, UpdateFetchFieldsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -9081,6 +8653,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9109,6 +8682,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9125,18 +8699,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateFetchFieldsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UpdateFunctionDefaultInstanceResponse UpdateFunctionDefaultInstance(string appGroupIdentity, string functionName, UpdateFunctionDefaultInstanceRequest request)
+        public UpdateFetchFieldsResponse UpdateFetchFields(string appGroupIdentity, string appId, UpdateFetchFieldsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateFunctionDefaultInstanceWithOptions(appGroupIdentity, functionName, request, headers, runtime);
+            return UpdateFetchFieldsWithOptions(appGroupIdentity, appId, request, headers, runtime);
         }
 
-        public async Task<UpdateFunctionDefaultInstanceResponse> UpdateFunctionDefaultInstanceAsync(string appGroupIdentity, string functionName, UpdateFunctionDefaultInstanceRequest request)
+        public async Task<UpdateFetchFieldsResponse> UpdateFetchFieldsAsync(string appGroupIdentity, string appId, UpdateFetchFieldsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateFunctionDefaultInstanceWithOptionsAsync(appGroupIdentity, functionName, request, headers, runtime);
+            return await UpdateFetchFieldsWithOptionsAsync(appGroupIdentity, appId, request, headers, runtime);
         }
 
         public UpdateFunctionDefaultInstanceResponse UpdateFunctionDefaultInstanceWithOptions(string appGroupIdentity, string functionName, UpdateFunctionDefaultInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -9195,18 +8769,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateFunctionDefaultInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UpdateFunctionInstanceResponse UpdateFunctionInstance(string appGroupIdentity, string functionName, string instanceName, UpdateFunctionInstanceRequest request)
+        public UpdateFunctionDefaultInstanceResponse UpdateFunctionDefaultInstance(string appGroupIdentity, string functionName, UpdateFunctionDefaultInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateFunctionInstanceWithOptions(appGroupIdentity, functionName, instanceName, request, headers, runtime);
+            return UpdateFunctionDefaultInstanceWithOptions(appGroupIdentity, functionName, request, headers, runtime);
         }
 
-        public async Task<UpdateFunctionInstanceResponse> UpdateFunctionInstanceAsync(string appGroupIdentity, string functionName, string instanceName, UpdateFunctionInstanceRequest request)
+        public async Task<UpdateFunctionDefaultInstanceResponse> UpdateFunctionDefaultInstanceAsync(string appGroupIdentity, string functionName, UpdateFunctionDefaultInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateFunctionInstanceWithOptionsAsync(appGroupIdentity, functionName, instanceName, request, headers, runtime);
+            return await UpdateFunctionDefaultInstanceWithOptionsAsync(appGroupIdentity, functionName, request, headers, runtime);
         }
 
         public UpdateFunctionInstanceResponse UpdateFunctionInstanceWithOptions(string appGroupIdentity, string functionName, string instanceName, UpdateFunctionInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -9289,25 +8863,27 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateFunctionInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UpdateSearchStrategyResponse UpdateSearchStrategy(string appGroupIdentity, string appId, string strategyName)
+        public UpdateFunctionInstanceResponse UpdateFunctionInstance(string appGroupIdentity, string functionName, string instanceName, UpdateFunctionInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateSearchStrategyWithOptions(appGroupIdentity, appId, strategyName, headers, runtime);
+            return UpdateFunctionInstanceWithOptions(appGroupIdentity, functionName, instanceName, request, headers, runtime);
         }
 
-        public async Task<UpdateSearchStrategyResponse> UpdateSearchStrategyAsync(string appGroupIdentity, string appId, string strategyName)
+        public async Task<UpdateFunctionInstanceResponse> UpdateFunctionInstanceAsync(string appGroupIdentity, string functionName, string instanceName, UpdateFunctionInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateSearchStrategyWithOptionsAsync(appGroupIdentity, appId, strategyName, headers, runtime);
+            return await UpdateFunctionInstanceWithOptionsAsync(appGroupIdentity, functionName, instanceName, request, headers, runtime);
         }
 
-        public UpdateSearchStrategyResponse UpdateSearchStrategyWithOptions(string appGroupIdentity, string appId, string strategyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateSearchStrategyResponse UpdateSearchStrategyWithOptions(string appGroupIdentity, string appId, string strategyName, UpdateSearchStrategyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9324,11 +8900,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateSearchStrategyResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UpdateSearchStrategyResponse> UpdateSearchStrategyWithOptionsAsync(string appGroupIdentity, string appId, string strategyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateSearchStrategyResponse> UpdateSearchStrategyWithOptionsAsync(string appGroupIdentity, string appId, string strategyName, UpdateSearchStrategyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9345,20 +8923,27 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateSearchStrategyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UpdateSortScriptResponse UpdateSortScript(string appGroupIdentity, string appVersionId, string scriptName)
+        public UpdateSearchStrategyResponse UpdateSearchStrategy(string appGroupIdentity, string appId, string strategyName, UpdateSearchStrategyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateSortScriptWithOptions(appGroupIdentity, appVersionId, scriptName, headers, runtime);
+            return UpdateSearchStrategyWithOptions(appGroupIdentity, appId, strategyName, request, headers, runtime);
         }
 
-        public async Task<UpdateSortScriptResponse> UpdateSortScriptAsync(string appGroupIdentity, string appVersionId, string scriptName)
+        public async Task<UpdateSearchStrategyResponse> UpdateSearchStrategyAsync(string appGroupIdentity, string appId, string strategyName, UpdateSearchStrategyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateSortScriptWithOptionsAsync(appGroupIdentity, appVersionId, scriptName, headers, runtime);
+            return await UpdateSearchStrategyWithOptionsAsync(appGroupIdentity, appId, strategyName, request, headers, runtime);
         }
 
+        /**
+          * You can call this operation to modify the description of a sort script.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateSortScriptResponse
+         */
         public UpdateSortScriptResponse UpdateSortScriptWithOptions(string appGroupIdentity, string appVersionId, string scriptName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -9380,6 +8965,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateSortScriptResponse>(CallApi(params_, req, runtime));
         }
 
+        /**
+          * You can call this operation to modify the description of a sort script.
+          *
+          * @param headers map
+          * @param runtime runtime options for this request RuntimeOptions
+          * @return UpdateSortScriptResponse
+         */
         public async Task<UpdateSortScriptResponse> UpdateSortScriptWithOptionsAsync(string appGroupIdentity, string appVersionId, string scriptName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -9401,18 +8993,28 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateSortScriptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public UpdateSummariesResponse UpdateSummaries(string appGroupIdentity, string appId, UpdateSummariesRequest request)
+        /**
+          * You can call this operation to modify the description of a sort script.
+          *
+          * @return UpdateSortScriptResponse
+         */
+        public UpdateSortScriptResponse UpdateSortScript(string appGroupIdentity, string appVersionId, string scriptName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateSummariesWithOptions(appGroupIdentity, appId, request, headers, runtime);
+            return UpdateSortScriptWithOptions(appGroupIdentity, appVersionId, scriptName, headers, runtime);
         }
 
-        public async Task<UpdateSummariesResponse> UpdateSummariesAsync(string appGroupIdentity, string appId, UpdateSummariesRequest request)
+        /**
+          * You can call this operation to modify the description of a sort script.
+          *
+          * @return UpdateSortScriptResponse
+         */
+        public async Task<UpdateSortScriptResponse> UpdateSortScriptAsync(string appGroupIdentity, string appVersionId, string scriptName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateSummariesWithOptionsAsync(appGroupIdentity, appId, request, headers, runtime);
+            return await UpdateSortScriptWithOptionsAsync(appGroupIdentity, appVersionId, scriptName, headers, runtime);
         }
 
         public UpdateSummariesResponse UpdateSummariesWithOptions(string appGroupIdentity, string appId, UpdateSummariesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -9427,6 +9029,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9455,6 +9058,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9471,25 +9075,27 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<UpdateSummariesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ValidateDataSourcesResponse ValidateDataSources()
+        public UpdateSummariesResponse UpdateSummaries(string appGroupIdentity, string appId, UpdateSummariesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ValidateDataSourcesWithOptions(headers, runtime);
+            return UpdateSummariesWithOptions(appGroupIdentity, appId, request, headers, runtime);
         }
 
-        public async Task<ValidateDataSourcesResponse> ValidateDataSourcesAsync()
+        public async Task<UpdateSummariesResponse> UpdateSummariesAsync(string appGroupIdentity, string appId, UpdateSummariesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ValidateDataSourcesWithOptionsAsync(headers, runtime);
+            return await UpdateSummariesWithOptionsAsync(appGroupIdentity, appId, request, headers, runtime);
         }
 
-        public ValidateDataSourcesResponse ValidateDataSourcesWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ValidateDataSourcesResponse ValidateDataSourcesWithOptions(ValidateDataSourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9506,11 +9112,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<ValidateDataSourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ValidateDataSourcesResponse> ValidateDataSourcesWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ValidateDataSourcesResponse> ValidateDataSourcesWithOptionsAsync(ValidateDataSourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9525,6 +9133,20 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
                 BodyType = "json",
             };
             return TeaModel.ToObject<ValidateDataSourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ValidateDataSourcesResponse ValidateDataSources(ValidateDataSourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ValidateDataSourcesWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ValidateDataSourcesResponse> ValidateDataSourcesAsync(ValidateDataSourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ValidateDataSourcesWithOptionsAsync(request, headers, runtime);
         }
 
     }
